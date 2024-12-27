@@ -29,20 +29,16 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 101
     iput-object p1, p0, Lcom/sec/epdg/ipc/EpdgModem$EpdgModemSender;->this$0:Lcom/sec/epdg/ipc/EpdgModem;
 
-    .line 102
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 105
     const/4 v0, 0x4
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/sec/epdg/ipc/EpdgModem$EpdgModemSender;->dataLength:[B
 
-    .line 103
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 114
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, [B
@@ -62,13 +57,11 @@
 
     check-cast v0, [B
 
-    .line 116
     .local v0, "data":[B
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 148
     const-string v4, "[MODEM]"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -99,11 +92,9 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
     :goto_0
     return-void
 
-    .line 120
     :pswitch_0
     :try_start_0
     const-string v4, "1"
@@ -122,18 +113,15 @@
 
     if-eqz v4, :cond_0
 
-    .line 121
     # getter for: Lcom/sec/epdg/ipc/EpdgModem;->mSocket2:Landroid/net/LocalSocket;
     invoke-static {}, Lcom/sec/epdg/ipc/EpdgModem;->access$000()Landroid/net/LocalSocket;
 
     move-result-object v3
 
-    .line 126
     .local v3, "s":Landroid/net/LocalSocket;
     :goto_1
     if-nez v3, :cond_1
 
-    .line 127
     const-string v4, "[MODEM]"
 
     const-string v5, "epdg socket is null!"
@@ -145,12 +133,10 @@
 
     goto :goto_0
 
-    .line 139
     .end local v3    # "s":Landroid/net/LocalSocket;
     :catch_0
     move-exception v1
 
-    .line 140
     .local v1, "ex":Ljava/io/IOException;
     const-string v4, "[MODEM]"
 
@@ -180,7 +166,6 @@
 
     goto :goto_0
 
-    .line 123
     .end local v1    # "ex":Ljava/io/IOException;
     :cond_0
     :try_start_1
@@ -192,21 +177,18 @@
     .restart local v3    # "s":Landroid/net/LocalSocket;
     goto :goto_1
 
-    .line 130
     :cond_1
     iget-object v4, p0, Lcom/sec/epdg/ipc/EpdgModem$EpdgModemSender;->this$0:Lcom/sec/epdg/ipc/EpdgModem;
 
     # operator-- for: Lcom/sec/epdg/ipc/EpdgModem;->mRequestMessagesPending:I
     invoke-static {v4}, Lcom/sec/epdg/ipc/EpdgModem;->access$210(Lcom/sec/epdg/ipc/EpdgModem;)I
 
-    .line 132
     array-length v4, v0
 
     const/16 v5, 0x2000
 
     if-le v4, v5, :cond_2
 
-    .line 133
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -236,12 +218,10 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 142
     .end local v3    # "s":Landroid/net/LocalSocket;
     :catch_1
     move-exception v2
 
-    .line 143
     .local v2, "exc":Ljava/lang/IllegalArgumentException;
     const-string v4, "[MODEM]"
 
@@ -271,7 +251,6 @@
 
     goto/16 :goto_0
 
-    .line 137
     .end local v2    # "exc":Ljava/lang/IllegalArgumentException;
     .restart local v3    # "s":Landroid/net/LocalSocket;
     :cond_2
@@ -282,7 +261,6 @@
 
     invoke-virtual {v4, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 138
     const-string v4, "[MODEM]"
 
     const-string v5, "Successfully written to RIL"
@@ -294,7 +272,6 @@
 
     goto/16 :goto_0
 
-    .line 116
     nop
 
     :pswitch_data_0
@@ -307,6 +284,5 @@
     .locals 0
 
     .prologue
-    .line 110
     return-void
 .end method

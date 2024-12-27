@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 356
     iput-object p1, p0, Lcom/android/server/power/PowerManagerUtil$TraceDumper$1;->this$0:Lcom/android/server/power/PowerManagerUtil$TraceDumper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 3
 
     .prologue
-    .line 359
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_RESTRICTED_DEBUG_LEVEL:Z
 
     if-eqz v0, :cond_0
 
-    .line 360
     const-string v0, "PowerManagerUtil"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -81,7 +78,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -90,7 +86,6 @@
 
     invoke-static {v0, v1}, Landroid/os/Process;->sendSignal(II)V
 
-    .line 363
     :cond_0
     return-void
 .end method

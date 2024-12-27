@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 14302
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$ConnectModeState$4;->this$1:Lcom/android/server/wifi/WifiStateMachine$ConnectModeState;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,9 +41,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 14305
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 14306
     return-void
 .end method

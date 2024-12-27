@@ -29,15 +29,12 @@
     .param p2, "listener"    # Landroid/location/IExerciseLocationListener;
 
     .prologue
-    .line 2116
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2117
     iput-object p2, p0, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->mListener:Landroid/location/IExerciseLocationListener;
 
-    .line 2118
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 2122
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     # getter for: Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
@@ -57,7 +53,6 @@
 
     monitor-enter v1
 
-    .line 2123
     :try_start_0
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
@@ -68,17 +63,14 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2124
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2125
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->mListener:Landroid/location/IExerciseLocationListener;
 
     if-eqz v0, :cond_0
 
-    .line 2126
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->mListener:Landroid/location/IExerciseLocationListener;
 
     invoke-interface {v0}, Landroid/location/IExerciseLocationListener;->asBinder()Landroid/os/IBinder;
@@ -89,11 +81,9 @@
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 2128
     :cond_0
     return-void
 
-    .line 2124
     :catchall_0
     move-exception v0
 

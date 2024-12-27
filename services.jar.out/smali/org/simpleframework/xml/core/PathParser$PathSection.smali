@@ -47,25 +47,20 @@
     .param p3, "end"    # I
 
     .prologue
-    .line 816
     iput-object p1, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 817
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->cache:Ljava/util/List;
 
-    .line 818
     iput p2, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->begin:I
 
-    .line 819
     iput p3, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->end:I
 
-    .line 820
     return-void
 .end method
 
@@ -75,18 +70,14 @@
     .prologue
     const/16 v5, 0x2f
 
-    .line 1021
     const/4 v2, 0x0
 
-    .line 1022
     .local v2, "start":I
     const/4 v0, 0x0
 
-    .line 1023
     .local v0, "last":I
     const/4 v1, 0x0
 
-    .line 1025
     .local v1, "pos":I
     const/4 v1, 0x0
 
@@ -95,7 +86,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 1026
     iget-object v3, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget-object v3, v3, Lorg/simpleframework/xml/core/PathParser;->location:Ljava/lang/String;
@@ -106,12 +96,10 @@
 
     move-result v2
 
-    .line 1025
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1028
     :cond_0
     move v0, v2
 
@@ -120,7 +108,6 @@
 
     if-gt v1, v3, :cond_2
 
-    .line 1029
     iget-object v3, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget-object v3, v3, Lorg/simpleframework/xml/core/PathParser;->location:Ljava/lang/String;
@@ -131,12 +118,10 @@
 
     move-result v0
 
-    .line 1030
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_1
 
-    .line 1031
     iget-object v3, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget-object v3, v3, Lorg/simpleframework/xml/core/PathParser;->location:Ljava/lang/String;
@@ -145,13 +130,11 @@
 
     move-result v0
 
-    .line 1028
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 1034
     :cond_2
     iget-object v3, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
@@ -170,16 +153,13 @@
     .locals 7
 
     .prologue
-    .line 1045
     iget-object v4, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget v1, v4, Lorg/simpleframework/xml/core/PathParser;->start:I
 
-    .line 1046
     .local v1, "last":I
     const/4 v3, 0x0
 
-    .line 1048
     .local v3, "pos":I
     const/4 v0, 0x0
 
@@ -189,17 +169,14 @@
 
     if-gt v0, v4, :cond_0
 
-    .line 1049
     iget-object v4, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget v4, v4, Lorg/simpleframework/xml/core/PathParser;->count:I
 
     if-lt v1, v4, :cond_1
 
-    .line 1050
     add-int/lit8 v1, v1, 0x1
 
-    .line 1059
     :cond_0
     new-instance v4, Ljava/lang/String;
 
@@ -215,7 +192,6 @@
 
     return-object v4
 
-    .line 1053
     :cond_1
     iget-object v4, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
@@ -231,14 +207,12 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 1054
     add-int/lit8 v0, v0, 0x1
 
     iget v4, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->begin:I
 
     if-ne v0, v4, :cond_2
 
-    .line 1055
     move v3, v2
 
     move v1, v2
@@ -264,23 +238,19 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 904
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/PathParser$PathSection;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 906
     .local v0, "path":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 907
     iget-object v1, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     invoke-virtual {v1, v0, p1}, Lorg/simpleframework/xml/core/PathParser;->getAttributePath(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 909
     .end local p1    # "name":Ljava/lang/String;
     :cond_0
     return-object p1
@@ -291,23 +261,19 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 885
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/PathParser$PathSection;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 887
     .local v0, "path":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 888
     iget-object v1, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     invoke-virtual {v1, v0, p1}, Lorg/simpleframework/xml/core/PathParser;->getElementPath(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 890
     .end local p1    # "name":Ljava/lang/String;
     :cond_0
     return-object p1
@@ -317,7 +283,6 @@
     .locals 2
 
     .prologue
-    .line 945
     iget-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget-object v0, v0, Lorg/simpleframework/xml/core/PathParser;->names:Ljava/util/List;
@@ -337,7 +302,6 @@
     .locals 2
 
     .prologue
-    .line 921
     iget-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget-object v0, v0, Lorg/simpleframework/xml/core/PathParser;->indexes:Ljava/util/List;
@@ -361,7 +325,6 @@
     .locals 2
 
     .prologue
-    .line 957
     iget-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget-object v0, v0, Lorg/simpleframework/xml/core/PathParser;->names:Ljava/util/List;
@@ -381,19 +344,16 @@
     .locals 1
 
     .prologue
-    .line 868
     iget-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->section:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 869
     invoke-direct {p0}, Lorg/simpleframework/xml/core/PathParser$PathSection;->getCanonicalPath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->section:Ljava/lang/String;
 
-    .line 871
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->section:Ljava/lang/String;
 
@@ -405,7 +365,6 @@
     .param p1, "from"    # I
 
     .prologue
-    .line 972
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lorg/simpleframework/xml/core/PathParser$PathSection;->getPath(II)Lorg/simpleframework/xml/core/Expression;
@@ -421,7 +380,6 @@
     .param p2, "trim"    # I
 
     .prologue
-    .line 988
     new-instance v0, Lorg/simpleframework/xml/core/PathParser$PathSection;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
@@ -443,7 +401,6 @@
     .locals 2
 
     .prologue
-    .line 933
     iget-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget-object v0, v0, Lorg/simpleframework/xml/core/PathParser;->prefixes:Ljava/util/List;
@@ -465,14 +422,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 853
     iget-object v1, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget-boolean v1, v1, Lorg/simpleframework/xml/core/PathParser;->attribute:Z
 
     if-eqz v1, :cond_0
 
-    .line 854
     iget v1, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->end:I
 
     iget-object v2, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
@@ -489,7 +444,6 @@
 
     const/4 v0, 0x1
 
-    .line 856
     :cond_0
     return v0
 .end method
@@ -498,7 +452,6 @@
     .locals 2
 
     .prologue
-    .line 830
     iget v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->begin:I
 
     iget v1, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->end:I
@@ -522,7 +475,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 841
     iget v1, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->end:I
 
     iget v2, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->begin:I
@@ -553,7 +505,6 @@
     .end annotation
 
     .prologue
-    .line 1000
     iget-object v2, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->cache:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->isEmpty()Z
@@ -562,7 +513,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1001
     iget v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->begin:I
 
     .local v0, "i":I
@@ -571,7 +521,6 @@
 
     if-gt v0, v2, :cond_1
 
-    .line 1002
     iget-object v2, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->this$0:Lorg/simpleframework/xml/core/PathParser;
 
     iget-object v2, v2, Lorg/simpleframework/xml/core/PathParser;->names:Ljava/util/List;
@@ -582,22 +531,18 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1004
     .local v1, "segment":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 1005
     iget-object v2, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->cache:Ljava/util/List;
 
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1001
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1009
     .end local v0    # "i":I
     .end local v1    # "segment":Ljava/lang/String;
     :cond_1
@@ -614,19 +559,16 @@
     .locals 1
 
     .prologue
-    .line 1070
     iget-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->path:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 1071
     invoke-direct {p0}, Lorg/simpleframework/xml/core/PathParser$PathSection;->getFragment()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->path:Ljava/lang/String;
 
-    .line 1073
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/PathParser$PathSection;->path:Ljava/lang/String;
 

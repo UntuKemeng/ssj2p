@@ -49,12 +49,10 @@
     .end annotation
 
     .prologue
-    .line 75
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;-><init>(Ljava/net/Socket;Ljava/net/Socket;Ljava/lang/String;)V
 
-    .line 76
     return-void
 .end method
 
@@ -70,30 +68,24 @@
     .end annotation
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 88
     invoke-virtual {p1}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->from:Ljava/io/InputStream;
 
-    .line 89
     invoke-virtual {p2}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->to:Ljava/io/OutputStream;
 
-    .line 90
     iput-object p3, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->authHeader:Ljava/lang/String;
 
-    .line 91
     invoke-virtual {p0}, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->start()V
 
-    .line 92
     return-void
 .end method
 
@@ -104,7 +96,6 @@
     .param p2, "authHeader"    # Ljava/lang/String;
 
     .prologue
-    .line 190
     if-eqz p2, :cond_0
 
     const-string v3, "Proxy-Authorization: Basic "
@@ -115,17 +106,14 @@
 
     if-nez v3, :cond_0
 
-    .line 192
     const/4 p2, 0x0
 
-    .line 196
     :cond_0
     :try_start_0
     new-instance v1, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;
 
     invoke-direct {v1, p0, p1, p2}, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;-><init>(Ljava/net/Socket;Ljava/net/Socket;Ljava/lang/String;)V
 
-    .line 197
     .local v1, "sc1":Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;
     new-instance v2, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;
 
@@ -133,7 +121,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 199
     .local v2, "sc2":Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;
     :try_start_1
     invoke-virtual {v1}, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->join()V
@@ -141,7 +128,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 203
     :goto_0
     :try_start_2
     invoke-virtual {v2}, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->join()V
@@ -149,23 +135,19 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 209
     .end local v1    # "sc1":Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;
     .end local v2    # "sc2":Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;
     :goto_1
     return-void
 
-    .line 206
     :catch_0
     move-exception v0
 
-    .line 207
     .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 200
     .end local v0    # "e":Ljava/io/IOException;
     .restart local v1    # "sc1":Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;
     .restart local v2    # "sc2":Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;
@@ -174,7 +156,6 @@
 
     goto :goto_0
 
-    .line 204
     :catch_2
     move-exception v3
 
@@ -186,7 +167,6 @@
     .param p0, "line"    # Ljava/lang/String;
 
     .prologue
-    .line 174
     const-string v1, "Content-Length: "
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -195,7 +175,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 176
     :try_start_0
     const-string v1, "Content-Length: "
 
@@ -218,15 +197,12 @@
 
     move-result v1
 
-    .line 184
     :goto_0
     return v1
 
-    .line 177
     :catch_0
     move-exception v0
 
-    .line 178
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string v1, "EnterpriseSocketConnect"
 
@@ -250,7 +226,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 184
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :cond_0
     :goto_1
@@ -258,11 +233,9 @@
 
     goto :goto_0
 
-    .line 179
     :catch_1
     move-exception v0
 
-    .line 180
     .local v0, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     const-string v1, "EnterpriseSocketConnect"
 
@@ -294,7 +267,6 @@
     .param p1, "line"    # Ljava/lang/String;
 
     .prologue
-    .line 212
     const-string v0, "GET "
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -372,12 +344,10 @@
     .locals 6
 
     .prologue
-    .line 108
     const/16 v3, 0x200
 
     new-array v0, v3, [B
 
-    .line 112
     .local v0, "buffer":[B
     :goto_0
     :try_start_0
@@ -387,26 +357,21 @@
 
     move-result v2
 
-    .line 113
     .local v2, "r":I
     if-gez v2, :cond_0
 
-    .line 118
     iget-object v3, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->from:Ljava/io/InputStream;
 
     invoke-virtual {v3}, Ljava/io/InputStream;->close()V
 
-    .line 119
     iget-object v3, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->to:Ljava/io/OutputStream;
 
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
-    .line 123
     .end local v2    # "r":I
     :goto_1
     return-void
 
-    .line 116
     .restart local v2    # "r":I
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->to:Ljava/io/OutputStream;
@@ -419,12 +384,10 @@
 
     goto :goto_0
 
-    .line 120
     .end local v2    # "r":I
     :catch_0
     move-exception v1
 
-    .line 121
     .local v1, "io":Ljava/io/IOException;
     const-string v3, "EnterpriseSocketConnect"
 
@@ -460,31 +423,25 @@
     .param p1, "header"    # Ljava/lang/String;
 
     .prologue
-    .line 131
     const/4 v0, 0x0
 
-    .line 132
     .local v0, "builder":Ljava/lang/StringBuilder;
     const/4 v4, 0x0
 
-    .line 134
     .local v4, "line":Ljava/lang/String;
     const/4 v2, -0x1
 
-    .line 135
     .local v2, "contentLength":I
     const/4 v5, 0x0
 
     .local v5, "useContentLength":Z
     move-object v1, v0
 
-    .line 138
     .end local v0    # "builder":Ljava/lang/StringBuilder;
     .local v1, "builder":Ljava/lang/StringBuilder;
     :goto_0
     if-eqz v5, :cond_0
 
-    .line 139
     :try_start_0
     iget-object v6, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->from:Ljava/io/InputStream;
 
@@ -494,32 +451,26 @@
 
     move-result-object v4
 
-    .line 144
     :goto_1
     const/4 v5, 0x0
 
-    .line 146
     if-nez v4, :cond_1
 
-    .line 166
     iget-object v6, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->from:Ljava/io/InputStream;
 
     invoke-virtual {v6}, Ljava/io/InputStream;->close()V
 
-    .line 167
     iget-object v6, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->to:Ljava/io/OutputStream;
 
     invoke-virtual {v6}, Ljava/io/OutputStream;->close()V
 
     move-object v0, v1
 
-    .line 171
     .end local v1    # "builder":Ljava/lang/StringBuilder;
     .restart local v0    # "builder":Ljava/lang/StringBuilder;
     :goto_2
     return-void
 
-    .line 141
     .end local v0    # "builder":Ljava/lang/StringBuilder;
     .restart local v1    # "builder":Ljava/lang/StringBuilder;
     :cond_0
@@ -533,7 +484,6 @@
 
     goto :goto_1
 
-    .line 148
     :cond_1
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
     :try_end_0
@@ -543,12 +493,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 150
     const/4 v5, 0x1
 
     move-object v0, v1
 
-    .line 164
     .end local v1    # "builder":Ljava/lang/StringBuilder;
     .restart local v0    # "builder":Ljava/lang/StringBuilder;
     :goto_3
@@ -565,7 +513,6 @@
     .restart local v1    # "builder":Ljava/lang/StringBuilder;
     goto :goto_0
 
-    .line 151
     :cond_2
     :try_start_2
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->isLineARequest(Ljava/lang/String;)Z
@@ -574,31 +521,25 @@
 
     if-eqz v6, :cond_3
 
-    .line 152
     const/4 v2, -0x1
 
-    .line 154
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 155
     .end local v1    # "builder":Ljava/lang/StringBuilder;
     .restart local v0    # "builder":Ljava/lang/StringBuilder;
     :try_start_3
     invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 156
     const-string v6, "\r\n"
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 157
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 159
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
@@ -607,7 +548,6 @@
 
     goto :goto_3
 
-    .line 160
     .end local v0    # "builder":Ljava/lang/StringBuilder;
     .restart local v1    # "builder":Ljava/lang/StringBuilder;
     :cond_3
@@ -615,7 +555,6 @@
 
     if-ne v2, v6, :cond_4
 
-    .line 161
     :try_start_4
     invoke-static {v4}, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->getContentLength(Ljava/lang/String;)I
     :try_end_4
@@ -629,7 +568,6 @@
     .restart local v0    # "builder":Ljava/lang/StringBuilder;
     goto :goto_3
 
-    .line 168
     .end local v0    # "builder":Ljava/lang/StringBuilder;
     .restart local v1    # "builder":Ljava/lang/StringBuilder;
     :catch_0
@@ -637,7 +575,6 @@
 
     move-object v0, v1
 
-    .line 169
     .end local v1    # "builder":Ljava/lang/StringBuilder;
     .restart local v0    # "builder":Ljava/lang/StringBuilder;
     .local v3, "io":Ljava/io/IOException;
@@ -670,7 +607,6 @@
 
     goto :goto_2
 
-    .line 168
     .end local v3    # "io":Ljava/io/IOException;
     :catch_1
     move-exception v3
@@ -693,21 +629,17 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->authHeader:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->authHeader:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->performCommunicationWithHeader(Ljava/lang/String;)V
 
-    .line 102
     :goto_0
     return-void
 
-    .line 100
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/proxy/EnterpriseSocketConnect;->performCommunication()V
 

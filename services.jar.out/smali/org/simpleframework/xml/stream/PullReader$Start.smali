@@ -32,41 +32,34 @@
     .param p1, "source"    # Lorg/xmlpull/v1/XmlPullParser;
 
     .prologue
-    .line 370
     invoke-direct {p0}, Lorg/simpleframework/xml/stream/EventElement;-><init>()V
 
-    .line 371
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getNamespace()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->reference:Ljava/lang/String;
 
-    .line 372
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getLineNumber()I
 
     move-result v0
 
     iput v0, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->line:I
 
-    .line 373
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getPrefix()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->prefix:Ljava/lang/String;
 
-    .line 374
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->name:Ljava/lang/String;
 
-    .line 375
     iput-object p1, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->source:Lorg/xmlpull/v1/XmlPullParser;
 
-    .line 376
     return-void
 .end method
 
@@ -76,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 386
     iget v0, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->line:I
 
     return v0
@@ -86,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 397
     iget-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->name:Ljava/lang/String;
 
     return-object v0
@@ -96,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 421
     iget-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->prefix:Ljava/lang/String;
 
     return-object v0
@@ -106,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 409
     iget-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->reference:Ljava/lang/String;
 
     return-object v0
@@ -116,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 432
     iget-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Start;->source:Lorg/xmlpull/v1/XmlPullParser;
 
     return-object v0

@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 2308
     iput-wide p1, p0, Lcom/android/server/power/ShutdownThread$14;->val$ttsVolume:D
 
     iput-object p3, p0, Lcom/android/server/power/ShutdownThread$14;->val$msg:Ljava/lang/String;
@@ -45,22 +44,18 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 2311
     if-nez p1, :cond_0
 
-    .line 2312
     const-string v1, "ShutdownThread"
 
     const-string v2, "!@Text to speech"
 
     invoke-static {v1, v2}, Lcom/android/server/power/ShutdownThread$Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2313
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 2314
     .local v0, "param":Ljava/util/HashMap;
     const-string/jumbo v1, "streamType"
 
@@ -72,7 +67,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2316
     const-string/jumbo v1, "volume"
 
     iget-wide v2, p0, Lcom/android/server/power/ShutdownThread$14;->val$ttsVolume:D
@@ -83,7 +77,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2318
     # getter for: Lcom/android/server/power/ShutdownThread;->mTts:Landroid/speech/tts/TextToSpeech;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$2400()Landroid/speech/tts/TextToSpeech;
 
@@ -95,12 +88,10 @@
 
     invoke-virtual {v1, v2, v3, v0}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 2322
     .end local v0    # "param":Ljava/util/HashMap;
     :goto_0
     return-void
 
-    .line 2320
     :cond_0
     const-string v1, "ShutdownThread"
 

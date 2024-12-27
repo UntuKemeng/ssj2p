@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 589
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$2;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,7 +36,6 @@
     .locals 17
 
     .prologue
-    .line 592
     :try_start_0
     move-object/from16 v0, p0
 
@@ -47,7 +45,6 @@
 
     invoke-static {v14}, Lcom/android/server/enterprise/application/ApplicationPolicy;->reconcileRuntimePermissionGroups(Landroid/content/Context;)V
 
-    .line 593
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/enterprise/application/ApplicationPolicy$2;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -62,20 +59,16 @@
 
     check-cast v12, Landroid/os/UserManager;
 
-    .line 595
     .local v12, "userManager":Landroid/os/UserManager;
     if-eqz v12, :cond_4
 
-    .line 596
     invoke-virtual {v12}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v13
 
-    .line 597
     .local v13, "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-eqz v13, :cond_4
 
-    .line 598
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -94,7 +87,6 @@
 
     check-cast v11, Landroid/content/pm/UserInfo;
 
-    .line 599
     .local v11, "user":Landroid/content/pm/UserInfo;
     invoke-virtual {v11}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
@@ -108,7 +100,6 @@
 
     if-nez v14, :cond_1
 
-    .line 600
     const-string v14, "ApplicationPolicy"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -139,14 +130,12 @@
 
     goto :goto_0
 
-    .line 640
     .end local v11    # "user":Landroid/content/pm/UserInfo;
     .end local v12    # "userManager":Landroid/os/UserManager;
     .end local v13    # "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catch_0
     move-exception v4
 
-    .line 641
     .local v4, "e":Ljava/lang/Exception;
     const-string v14, "ApplicationPolicy"
 
@@ -174,15 +163,12 @@
 
     invoke-static {v14, v15}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 642
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 644
     .end local v4    # "e":Ljava/lang/Exception;
     :goto_1
     return-void
 
-    .line 603
     .restart local v11    # "user":Landroid/content/pm/UserInfo;
     .restart local v12    # "userManager":Landroid/os/UserManager;
     .restart local v13    # "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
@@ -214,14 +200,12 @@
 
     invoke-static {v14, v15}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 604
     iget v14, v11, Landroid/content/pm/UserInfo;->id:I
 
     const/16 v15, 0x64
 
     if-ge v14, v15, :cond_2
 
-    .line 605
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/enterprise/application/ApplicationPolicy$2;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -240,7 +224,6 @@
 
     invoke-virtual/range {v14 .. v16}, Landroid/content/pm/PackageManager;->applyRuntimePermissionsForAllApplications(II)Z
 
-    .line 608
     const/4 v14, 0x2
 
     new-array v10, v14, [Ljava/lang/String;
@@ -257,7 +240,6 @@
 
     aput-object v15, v10, v14
 
-    .line 613
     .local v10, "returnColumns":[Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -280,7 +262,6 @@
 
     move-result-object v3
 
-    .line 617
     .local v3, "cvList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v3, :cond_0
 
@@ -290,7 +271,6 @@
 
     if-nez v14, :cond_0
 
-    .line 618
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -309,7 +289,6 @@
 
     check-cast v2, Landroid/content/ContentValues;
 
-    .line 619
     .local v2, "cv":Landroid/content/ContentValues;
     const-string v14, "adminUid"
 
@@ -321,7 +300,6 @@
 
     move-result v1
 
-    .line 620
     .local v1, "adminUid":I
     const-string/jumbo v14, "packageName"
 
@@ -329,7 +307,6 @@
 
     move-result-object v7
 
-    .line 622
     .local v7, "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -342,7 +319,6 @@
 
     goto :goto_2
 
-    .line 626
     .end local v1    # "adminUid":I
     .end local v2    # "cv":Landroid/content/ContentValues;
     .end local v3    # "cvList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
@@ -370,7 +346,6 @@
 
     move-result-object v9
 
-    .line 628
     .local v9, "pkginfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     if-eqz v9, :cond_0
 
@@ -380,7 +355,6 @@
 
     if-lez v14, :cond_0
 
-    .line 629
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -400,13 +374,11 @@
 
     check-cast v8, Landroid/content/pm/PackageInfo;
 
-    .line 630
     .local v8, "pkg":Landroid/content/pm/PackageInfo;
     iget-object v14, v8, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
     if-eqz v14, :cond_3
 
-    .line 631
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/enterprise/application/ApplicationPolicy$2;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
@@ -422,7 +394,6 @@
 
     goto :goto_3
 
-    .line 639
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v8    # "pkg":Landroid/content/pm/PackageInfo;
     .end local v9    # "pkginfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"

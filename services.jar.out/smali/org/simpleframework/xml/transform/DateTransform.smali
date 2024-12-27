@@ -48,19 +48,16 @@
     .end annotation
 
     .prologue
-    .line 60
     .local p0, "this":Lorg/simpleframework/xml/transform/DateTransform;, "Lorg/simpleframework/xml/transform/DateTransform<TT;>;"
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     new-instance v0, Lorg/simpleframework/xml/transform/DateFactory;
 
     invoke-direct {v0, p1}, Lorg/simpleframework/xml/transform/DateFactory;-><init>(Ljava/lang/Class;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/transform/DateTransform;->factory:Lorg/simpleframework/xml/transform/DateFactory;
 
-    .line 62
     return-void
 .end method
 
@@ -76,7 +73,6 @@
     .end annotation
 
     .prologue
-    .line 44
     .local p0, "this":Lorg/simpleframework/xml/transform/DateTransform;, "Lorg/simpleframework/xml/transform/DateTransform<TT;>;"
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/DateTransform;->read(Ljava/lang/String;)Ljava/util/Date;
 
@@ -103,7 +99,6 @@
     .end annotation
 
     .prologue
-    .line 75
     .local p0, "this":Lorg/simpleframework/xml/transform/DateTransform;, "Lorg/simpleframework/xml/transform/DateTransform<TT;>;"
     monitor-enter p0
 
@@ -112,7 +107,6 @@
 
     move-result-object v0
 
-    .line 76
     .local v0, "date":Ljava/util/Date;
     invoke-virtual {v0}, Ljava/util/Date;->getTime()J
 
@@ -122,7 +116,6 @@
 
     move-result-object v1
 
-    .line 78
     .local v1, "time":Ljava/lang/Long;
     iget-object v2, p0, Lorg/simpleframework/xml/transform/DateTransform;->factory:Lorg/simpleframework/xml/transform/DateFactory;
 
@@ -144,7 +137,6 @@
 
     return-object v2
 
-    .line 75
     .end local v0    # "date":Ljava/util/Date;
     .end local v1    # "time":Ljava/lang/Long;
     :catchall_0
@@ -165,7 +157,6 @@
     .end annotation
 
     .prologue
-    .line 44
     .local p0, "this":Lorg/simpleframework/xml/transform/DateTransform;, "Lorg/simpleframework/xml/transform/DateTransform<TT;>;"
     check-cast p1, Ljava/util/Date;
 
@@ -193,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 92
     .local p0, "this":Lorg/simpleframework/xml/transform/DateTransform;, "Lorg/simpleframework/xml/transform/DateTransform<TT;>;"
     .local p1, "date":Ljava/util/Date;, "TT;"
     monitor-enter p0

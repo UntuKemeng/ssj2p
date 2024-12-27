@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 155
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$2;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 158
     const-string v1, "android.intent.extra.DOCK_STATE"
 
     const/4 v2, 0x0
@@ -48,7 +46,6 @@
 
     move-result v0
 
-    .line 162
     .local v0, "state":I
     # invokes: Lcom/android/server/UiModeManagerService;->isKnoxDesktopDockState(I)Z
     invoke-static {v0}, Lcom/android/server/UiModeManagerService;->access$100(I)Z
@@ -66,17 +63,14 @@
 
     if-nez v1, :cond_0
 
-    .line 163
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$2;->this$0:Lcom/android/server/UiModeManagerService;
 
     # invokes: Lcom/android/server/UiModeManagerService;->updateDesktopDockState(ILandroid/content/Intent;)V
     invoke-static {v1, v0, p2}, Lcom/android/server/UiModeManagerService;->access$300(Lcom/android/server/UiModeManagerService;ILandroid/content/Intent;)V
 
-    .line 169
     :goto_0
     return-void
 
-    .line 168
     :cond_0
     iget-object v1, p0, Lcom/android/server/UiModeManagerService$2;->this$0:Lcom/android/server/UiModeManagerService;
 

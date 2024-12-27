@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 748
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -47,31 +46,25 @@
     .prologue
     const/4 v8, -0x1
 
-    .line 751
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 753
     .local v2, "num":I
     if-nez v2, :cond_0
 
-    .line 754
     new-instance v3, Landroid/net/wifi/RttManager$ParcelableRttResults;
 
     const/4 v5, 0x0
 
     invoke-direct {v3, v5}, Landroid/net/wifi/RttManager$ParcelableRttResults;-><init>([Landroid/net/wifi/RttManager$RttResult;)V
 
-    .line 797
     :goto_0
     return-object v3
 
-    .line 757
     :cond_0
     new-array v4, v2, [Landroid/net/wifi/RttManager$RttResult;
 
-    .line 758
     .local v4, "results":[Landroid/net/wifi/RttManager$RttResult;
     const/4 v0, 0x0
 
@@ -79,14 +72,12 @@
     :goto_1
     if-ge v0, v2, :cond_3
 
-    .line 759
     new-instance v5, Landroid/net/wifi/RttManager$RttResult;
 
     invoke-direct {v5}, Landroid/net/wifi/RttManager$RttResult;-><init>()V
 
     aput-object v5, v4, v0
 
-    .line 760
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
@@ -95,7 +86,6 @@
 
     iput-object v6, v5, Landroid/net/wifi/RttManager$RttResult;->bssid:Ljava/lang/String;
 
-    .line 761
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -104,7 +94,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->burstNumber:I
 
-    .line 762
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -113,7 +102,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->measurementFrameNumber:I
 
-    .line 763
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -122,7 +110,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->successMeasurementFrameNumber:I
 
-    .line 764
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -131,7 +118,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->frameNumberPerBurstPeer:I
 
-    .line 765
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -140,7 +126,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->status:I
 
-    .line 766
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -149,7 +134,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->measurementType:I
 
-    .line 767
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -158,7 +142,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->retryAfterDuration:I
 
-    .line 768
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -167,7 +150,6 @@
 
     iput-wide v6, v5, Landroid/net/wifi/RttManager$RttResult;->ts:J
 
-    .line 769
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -176,7 +158,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->rssi:I
 
-    .line 770
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -185,7 +166,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->rssiSpread:I
 
-    .line 771
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -194,7 +174,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->txRate:I
 
-    .line 772
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -203,7 +182,6 @@
 
     iput-wide v6, v5, Landroid/net/wifi/RttManager$RttResult;->rtt:J
 
-    .line 773
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -212,7 +190,6 @@
 
     iput-wide v6, v5, Landroid/net/wifi/RttManager$RttResult;->rttStandardDeviation:J
 
-    .line 774
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -221,7 +198,6 @@
 
     iput-wide v6, v5, Landroid/net/wifi/RttManager$RttResult;->rttSpread:J
 
-    .line 775
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -230,7 +206,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->distance:I
 
-    .line 776
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -239,7 +214,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->distanceStandardDeviation:I
 
-    .line 777
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -248,7 +222,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->distanceSpread:I
 
-    .line 778
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -257,7 +230,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->burstDuration:I
 
-    .line 779
     aget-object v5, v4, v0
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -266,7 +238,6 @@
 
     iput v6, v5, Landroid/net/wifi/RttManager$RttResult;->negotiatedBurstNum:I
 
-    .line 780
     aget-object v5, v4, v0
 
     new-instance v6, Landroid/net/wifi/RttManager$WifiInformationElement;
@@ -275,7 +246,6 @@
 
     iput-object v6, v5, Landroid/net/wifi/RttManager$RttResult;->LCI:Landroid/net/wifi/RttManager$WifiInformationElement;
 
-    .line 781
     aget-object v5, v4, v0
 
     iget-object v5, v5, Landroid/net/wifi/RttManager$RttResult;->LCI:Landroid/net/wifi/RttManager$WifiInformationElement;
@@ -286,7 +256,6 @@
 
     iput-byte v6, v5, Landroid/net/wifi/RttManager$WifiInformationElement;->id:B
 
-    .line 782
     aget-object v5, v4, v0
 
     iget-object v5, v5, Landroid/net/wifi/RttManager$RttResult;->LCI:Landroid/net/wifi/RttManager$WifiInformationElement;
@@ -295,12 +264,10 @@
 
     if-eq v5, v8, :cond_1
 
-    .line 783
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
 
-    .line 784
     .local v1, "length":B
     aget-object v5, v4, v0
 
@@ -310,7 +277,6 @@
 
     iput-object v6, v5, Landroid/net/wifi/RttManager$WifiInformationElement;->data:[B
 
-    .line 785
     aget-object v5, v4, v0
 
     iget-object v5, v5, Landroid/net/wifi/RttManager$RttResult;->LCI:Landroid/net/wifi/RttManager$WifiInformationElement;
@@ -319,7 +285,6 @@
 
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 787
     .end local v1    # "length":B
     :cond_1
     aget-object v5, v4, v0
@@ -330,7 +295,6 @@
 
     iput-object v6, v5, Landroid/net/wifi/RttManager$RttResult;->LCR:Landroid/net/wifi/RttManager$WifiInformationElement;
 
-    .line 788
     aget-object v5, v4, v0
 
     iget-object v5, v5, Landroid/net/wifi/RttManager$RttResult;->LCR:Landroid/net/wifi/RttManager$WifiInformationElement;
@@ -341,7 +305,6 @@
 
     iput-byte v6, v5, Landroid/net/wifi/RttManager$WifiInformationElement;->id:B
 
-    .line 789
     aget-object v5, v4, v0
 
     iget-object v5, v5, Landroid/net/wifi/RttManager$RttResult;->LCR:Landroid/net/wifi/RttManager$WifiInformationElement;
@@ -350,12 +313,10 @@
 
     if-eq v5, v8, :cond_2
 
-    .line 790
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v1
 
-    .line 791
     .restart local v1    # "length":B
     aget-object v5, v4, v0
 
@@ -365,7 +326,6 @@
 
     iput-object v6, v5, Landroid/net/wifi/RttManager$WifiInformationElement;->data:[B
 
-    .line 792
     aget-object v5, v4, v0
 
     iget-object v5, v5, Landroid/net/wifi/RttManager$RttResult;->LCR:Landroid/net/wifi/RttManager$WifiInformationElement;
@@ -374,20 +334,17 @@
 
     invoke-virtual {p1, v5}, Landroid/os/Parcel;->readByteArray([B)V
 
-    .line 758
     .end local v1    # "length":B
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_1
 
-    .line 796
     :cond_3
     new-instance v3, Landroid/net/wifi/RttManager$ParcelableRttResults;
 
     invoke-direct {v3, v4}, Landroid/net/wifi/RttManager$ParcelableRttResults;-><init>([Landroid/net/wifi/RttManager$RttResult;)V
 
-    .line 797
     .local v3, "parcelableResults":Landroid/net/wifi/RttManager$ParcelableRttResults;
     goto/16 :goto_0
 .end method
@@ -397,7 +354,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 748
     invoke-virtual {p0, p1}, Landroid/net/wifi/RttManager$ParcelableRttResults$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/wifi/RttManager$ParcelableRttResults;
 
     move-result-object v0
@@ -410,7 +366,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 801
     new-array v0, p1, [Landroid/net/wifi/RttManager$ParcelableRttResults;
 
     return-object v0
@@ -421,7 +376,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 748
     invoke-virtual {p0, p1}, Landroid/net/wifi/RttManager$ParcelableRttResults$1;->newArray(I)[Landroid/net/wifi/RttManager$ParcelableRttResults;
 
     move-result-object v0

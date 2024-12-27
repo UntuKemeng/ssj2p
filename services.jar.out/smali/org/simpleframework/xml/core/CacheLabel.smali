@@ -63,160 +63,136 @@
     .end annotation
 
     .prologue
-    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getAnnotation()Ljava/lang/annotation/Annotation;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->annotation:Ljava/lang/annotation/Annotation;
 
-    .line 156
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getExpression()Lorg/simpleframework/xml/core/Expression;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->expression:Lorg/simpleframework/xml/core/Expression;
 
-    .line 157
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getDecorator()Lorg/simpleframework/xml/core/Decorator;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->decorator:Lorg/simpleframework/xml/core/Decorator;
 
-    .line 158
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->isAttribute()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->attribute:Z
 
-    .line 159
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->isCollection()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->collection:Z
 
-    .line 160
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getContact()Lorg/simpleframework/xml/core/Contact;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->contact:Lorg/simpleframework/xml/core/Contact;
 
-    .line 161
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getDependent()Lorg/simpleframework/xml/strategy/Type;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->depend:Lorg/simpleframework/xml/strategy/Type;
 
-    .line 162
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->isRequired()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->required:Z
 
-    .line 163
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getOverride()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->override:Ljava/lang/String;
 
-    .line 164
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->isTextList()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->list:Z
 
-    .line 165
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->isInline()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->inline:Z
 
-    .line 166
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->isUnion()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->union:Z
 
-    .line 167
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getNames()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->names:[Ljava/lang/String;
 
-    .line 168
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getPaths()[Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->paths:[Ljava/lang/String;
 
-    .line 169
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getPath()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->path:Ljava/lang/String;
 
-    .line 170
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->type:Ljava/lang/Class;
 
-    .line 171
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->name:Ljava/lang/String;
 
-    .line 172
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getEntry()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->entry:Ljava/lang/String;
 
-    .line 173
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->isData()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->data:Z
 
-    .line 174
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->isText()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->text:Z
 
-    .line 175
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->key:Ljava/lang/Object;
 
-    .line 176
     iput-object p1, p0, Lorg/simpleframework/xml/core/CacheLabel;->label:Lorg/simpleframework/xml/core/Label;
 
-    .line 177
     return-void
 .end method
 
@@ -226,7 +202,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->annotation:Ljava/lang/annotation/Annotation;
 
     return-object v0
@@ -236,7 +211,6 @@
     .locals 1
 
     .prologue
-    .line 253
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->contact:Lorg/simpleframework/xml/core/Contact;
 
     return-object v0
@@ -252,7 +226,6 @@
     .end annotation
 
     .prologue
-    .line 280
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/core/Label;->getConverter(Lorg/simpleframework/xml/core/Context;)Lorg/simpleframework/xml/core/Converter;
@@ -271,7 +244,6 @@
     .end annotation
 
     .prologue
-    .line 266
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->decorator:Lorg/simpleframework/xml/core/Decorator;
 
     return-object v0
@@ -286,7 +258,6 @@
     .end annotation
 
     .prologue
-    .line 307
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->depend:Lorg/simpleframework/xml/strategy/Type;
 
     return-object v0
@@ -302,7 +273,6 @@
     .end annotation
 
     .prologue
-    .line 294
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/core/Label;->getEmpty(Lorg/simpleframework/xml/core/Context;)Ljava/lang/Object;
@@ -321,7 +291,6 @@
     .end annotation
 
     .prologue
-    .line 330
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->entry:Ljava/lang/String;
 
     return-object v0
@@ -336,7 +305,6 @@
     .end annotation
 
     .prologue
-    .line 367
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->expression:Lorg/simpleframework/xml/core/Expression;
 
     return-object v0
@@ -351,7 +319,6 @@
     .end annotation
 
     .prologue
-    .line 318
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->key:Ljava/lang/Object;
 
     return-object v0
@@ -367,7 +334,6 @@
     .end annotation
 
     .prologue
-    .line 204
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/core/Label;->getLabel(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Label;
@@ -386,7 +352,6 @@
     .end annotation
 
     .prologue
-    .line 343
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->name:Ljava/lang/String;
 
     return-object v0
@@ -401,7 +366,6 @@
     .end annotation
 
     .prologue
-    .line 216
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->names:[Ljava/lang/String;
 
     return-object v0
@@ -411,7 +375,6 @@
     .locals 1
 
     .prologue
-    .line 380
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->override:Ljava/lang/String;
 
     return-object v0
@@ -426,7 +389,6 @@
     .end annotation
 
     .prologue
-    .line 355
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->path:Ljava/lang/String;
 
     return-object v0
@@ -441,7 +403,6 @@
     .end annotation
 
     .prologue
-    .line 229
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->paths:[Ljava/lang/String;
 
     return-object v0
@@ -451,7 +412,6 @@
     .locals 1
 
     .prologue
-    .line 394
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->type:Ljava/lang/Class;
 
     return-object v0
@@ -467,7 +427,6 @@
     .end annotation
 
     .prologue
-    .line 190
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/core/Label;->getType(Ljava/lang/Class;)Lorg/simpleframework/xml/strategy/Type;
@@ -481,7 +440,6 @@
     .locals 1
 
     .prologue
-    .line 454
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->attribute:Z
 
     return v0
@@ -491,7 +449,6 @@
     .locals 1
 
     .prologue
-    .line 467
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->collection:Z
 
     return v0
@@ -501,7 +458,6 @@
     .locals 1
 
     .prologue
-    .line 406
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->data:Z
 
     return v0
@@ -511,7 +467,6 @@
     .locals 1
 
     .prologue
-    .line 443
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->inline:Z
 
     return v0
@@ -521,7 +476,6 @@
     .locals 1
 
     .prologue
-    .line 480
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->required:Z
 
     return v0
@@ -531,7 +485,6 @@
     .locals 1
 
     .prologue
-    .line 418
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->text:Z
 
     return v0
@@ -541,7 +494,6 @@
     .locals 1
 
     .prologue
-    .line 430
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->list:Z
 
     return v0
@@ -551,7 +503,6 @@
     .locals 1
 
     .prologue
-    .line 491
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->union:Z
 
     return v0
@@ -561,7 +512,6 @@
     .locals 1
 
     .prologue
-    .line 504
     iget-object v0, p0, Lorg/simpleframework/xml/core/CacheLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

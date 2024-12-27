@@ -99,17 +99,14 @@
     .locals 1
 
     .prologue
-    .line 72
     const-string v0, "com.android.googlesearch/.GoogleSearch"
 
     sput-object v0, Lcom/android/server/search/Searchables;->GOOGLE_SEARCH_COMPONENT_NAME:Ljava/lang/String;
 
-    .line 74
     const-string v0, "com.google.android.providers.enhancedgooglesearch/.Launcher"
 
     sput-object v0, Lcom/android/server/search/Searchables;->ENHANCED_GOOGLE_SEARCH_COMPONENT_NAME:Ljava/lang/String;
 
-    .line 354
     new-instance v0, Lcom/android/server/search/Searchables$1;
 
     invoke-direct {v0}, Lcom/android/server/search/Searchables$1;-><init>()V
@@ -127,41 +124,30 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     iput-object v0, p0, Lcom/android/server/search/Searchables;->mSearchablesMap:Ljava/util/HashMap;
 
-    .line 62
     iput-object v0, p0, Lcom/android/server/search/Searchables;->mSearchablesList:Ljava/util/ArrayList;
 
-    .line 63
     iput-object v0, p0, Lcom/android/server/search/Searchables;->mSearchablesInGlobalSearchList:Ljava/util/ArrayList;
 
-    .line 65
     iput-object v0, p0, Lcom/android/server/search/Searchables;->mSearchablesInInsightSearchList:Ljava/util/ArrayList;
 
-    .line 69
     iput-object v0, p0, Lcom/android/server/search/Searchables;->mCurrentGlobalSearchActivity:Landroid/content/ComponentName;
 
-    .line 70
     iput-object v0, p0, Lcom/android/server/search/Searchables;->mWebSearchActivity:Landroid/content/ComponentName;
 
-    .line 87
     iput-object p1, p0, Lcom/android/server/search/Searchables;->mContext:Landroid/content/Context;
 
-    .line 88
     iput p2, p0, Lcom/android/server/search/Searchables;->mUserId:I
 
-    .line 89
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/search/Searchables;->mPm:Landroid/content/pm/IPackageManager;
 
-    .line 90
     return-void
 .end method
 
@@ -170,7 +156,6 @@
     .param p0, "x0"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 49
     invoke-static {p0}, Lcom/android/server/search/Searchables;->isSystemApp(Landroid/content/pm/ResolveInfo;)Z
 
     move-result v0
@@ -191,14 +176,12 @@
     .end annotation
 
     .prologue
-    .line 307
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.search.action.GLOBAL_SEARCH"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 308
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v2, 0x10000
 
@@ -206,7 +189,6 @@
 
     move-result-object v0
 
-    .line 310
     .local v0, "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v0, :cond_0
 
@@ -216,12 +198,10 @@
 
     if-nez v2, :cond_0
 
-    .line 312
     sget-object v2, Lcom/android/server/search/Searchables;->GLOBAL_SEARCH_RANKER:Ljava/util/Comparator;
 
     invoke-static {v0, v2}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 315
     :cond_0
     return-object v0
 .end method
@@ -240,13 +220,11 @@
     .end annotation
 
     .prologue
-    .line 324
     .local p1, "installed":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-direct {p0}, Lcom/android/server/search/Searchables;->getGlobalSearchProviderSetting()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 325
     .local v1, "searchProviderSetting":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -254,12 +232,10 @@
 
     if-nez v2, :cond_0
 
-    .line 326
     invoke-static {v1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 328
     .local v0, "globalSearchComponent":Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
@@ -269,7 +245,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 333
     .end local v0    # "globalSearchComponent":Landroid/content/ComponentName;
     :goto_0
     return-object v0
@@ -289,14 +264,11 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 411
     if-nez p1, :cond_0
 
-    .line 425
     :goto_0
     return-object v3
 
-    .line 414
     :cond_0
     new-instance v2, Landroid/content/Intent;
 
@@ -304,7 +276,6 @@
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 415
     .local v2, "intent":Landroid/content/Intent;
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -312,14 +283,12 @@
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 416
     const/high16 v4, 0x10000
 
     invoke-direct {p0, v2, v4}, Lcom/android/server/search/Searchables;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 419
     .local v0, "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v0, :cond_1
 
@@ -329,7 +298,6 @@
 
     if-nez v4, :cond_1
 
-    .line 420
     const/4 v3, 0x0
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -340,7 +308,6 @@
 
     iget-object v1, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 422
     .local v1, "ai":Landroid/content/pm/ActivityInfo;
     new-instance v3, Landroid/content/ComponentName;
 
@@ -352,7 +319,6 @@
 
     goto :goto_0
 
-    .line 424
     .end local v1    # "ai":Landroid/content/pm/ActivityInfo;
     :cond_1
     const-string v4, "Searchables"
@@ -378,7 +344,6 @@
     .end annotation
 
     .prologue
-    .line 391
     .local p1, "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz p1, :cond_0
 
@@ -388,7 +353,6 @@
 
     if-nez v1, :cond_0
 
-    .line 392
     const/4 v1, 0x0
 
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -399,7 +363,6 @@
 
     iget-object v0, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 393
     .local v0, "ai":Landroid/content/pm/ActivityInfo;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -409,12 +372,10 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 397
     .end local v0    # "ai":Landroid/content/pm/ActivityInfo;
     :goto_0
     return-object v1
 
-    .line 396
     :cond_0
     const-string v1, "Searchables"
 
@@ -422,7 +383,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     const/4 v1, 0x0
 
     goto :goto_0
@@ -432,7 +392,6 @@
     .locals 2
 
     .prologue
-    .line 401
     iget-object v0, p0, Lcom/android/server/search/Searchables;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -453,25 +412,21 @@
     .param p1, "globalSearch"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 342
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.search.action.GLOBAL_SEARCH"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 343
     .local v1, "intent":Landroid/content/Intent;
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 345
     const/high16 v2, 0x10000
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/search/Searchables;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 347
     .local v0, "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v0, :cond_0
 
@@ -481,10 +436,8 @@
 
     if-nez v2, :cond_0
 
-    .line 348
     const/4 v2, 0x1
 
-    .line 351
     :goto_0
     return v2
 
@@ -499,7 +452,6 @@
     .param p0, "res"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 383
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -538,10 +490,8 @@
     .end annotation
 
     .prologue
-    .line 429
     const/4 v0, 0x0
 
-    .line 431
     .local v0, "activities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     :try_start_0
     iget-object v1, p0, Lcom/android/server/search/Searchables;->mPm:Landroid/content/pm/IPackageManager;
@@ -564,11 +514,9 @@
 
     move-result-object v0
 
-    .line 438
     :goto_0
     return-object v0
 
-    .line 435
     :catch_0
     move-exception v1
 
@@ -581,30 +529,25 @@
     .locals 33
 
     .prologue
-    .line 210
     new-instance v19, Ljava/util/HashMap;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/HashMap;-><init>()V
 
-    .line 212
     .local v19, "newSearchablesMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Landroid/content/ComponentName;Landroid/app/SearchableInfo;>;"
     new-instance v18, Ljava/util/ArrayList;
 
     invoke-direct/range {v18 .. v18}, Ljava/util/ArrayList;-><init>()V
 
-    .line 214
     .local v18, "newSearchablesList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/SearchableInfo;>;"
     new-instance v16, Ljava/util/ArrayList;
 
     invoke-direct/range {v16 .. v16}, Ljava/util/ArrayList;-><init>()V
 
-    .line 217
     .local v16, "newSearchablesInGlobalSearchList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/SearchableInfo;>;"
     new-instance v17, Ljava/util/ArrayList;
 
     invoke-direct/range {v17 .. v17}, Ljava/util/ArrayList;-><init>()V
 
-    .line 222
     .local v17, "newSearchablesInInsightSearchList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/SearchableInfo;>;"
     new-instance v13, Landroid/content/Intent;
 
@@ -614,13 +557,11 @@
 
     invoke-direct {v13, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 224
     .local v13, "intent":Landroid/content/Intent;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 226
     .local v6, "ident":J
     const/16 v30, 0x80
 
@@ -633,7 +574,6 @@
 
     move-result-object v24
 
-    .line 229
     .local v24, "searchList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     new-instance v28, Landroid/content/Intent;
 
@@ -645,7 +585,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 230
     .local v28, "webSearchIntent":Landroid/content/Intent;
     const/16 v30, 0x80
 
@@ -659,7 +598,6 @@
 
     move-result-object v27
 
-    .line 234
     .local v27, "webSearchInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     new-instance v11, Landroid/content/Intent;
 
@@ -669,7 +607,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 235
     .local v11, "insightSearchIntent":Landroid/content/Intent;
     const/16 v30, 0x80
 
@@ -681,7 +618,6 @@
 
     move-result-object v10
 
-    .line 238
     .local v10, "insightSearchInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     new-instance v22, Landroid/content/Intent;
 
@@ -693,7 +629,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 239
     .local v22, "samsungSearchIntent":Landroid/content/Intent;
     const/16 v30, 0x80
 
@@ -707,7 +642,6 @@
 
     move-result-object v21
 
-    .line 242
     .local v21, "samsungSearchInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-nez v24, :cond_0
 
@@ -717,34 +651,29 @@
 
     if-eqz v21, :cond_a
 
-    .line 243
     :cond_0
     if-nez v24, :cond_2
 
     const/16 v25, 0x0
 
-    .line 244
     .local v25, "search_count":I
     :goto_0
     if-nez v27, :cond_3
 
     const/16 v29, 0x0
 
-    .line 245
     .local v29, "web_search_count":I
     :goto_1
     if-nez v10, :cond_4
 
     const/4 v12, 0x0
 
-    .line 246
     .local v12, "insight_search_count":I
     :goto_2
     if-nez v21, :cond_5
 
     const/16 v23, 0x0
 
-    .line 247
     .local v23, "samsung_search_count":I
     :goto_3
     add-int v30, v25, v29
@@ -753,7 +682,6 @@
 
     add-int v5, v30, v23
 
-    .line 248
     .local v5, "count":I
     const/4 v8, 0x0
 
@@ -761,7 +689,6 @@
     :goto_4
     if-ge v8, v5, :cond_a
 
-    .line 250
     move/from16 v0, v25
 
     if-ge v8, v0, :cond_6
@@ -776,12 +703,10 @@
 
     move-object/from16 v9, v30
 
-    .line 254
     .local v9, "info":Landroid/content/pm/ResolveInfo;
     :goto_5
     iget-object v4, v9, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 256
     .local v4, "ai":Landroid/content/pm/ActivityInfo;
     new-instance v30, Landroid/content/ComponentName;
 
@@ -805,7 +730,6 @@
 
     if-nez v30, :cond_1
 
-    .line 257
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/search/Searchables;->mContext:Landroid/content/Context;
@@ -826,18 +750,15 @@
 
     move-result-object v26
 
-    .line 259
     .local v26, "searchable":Landroid/app/SearchableInfo;
     if-eqz v26, :cond_1
 
-    .line 260
     move-object/from16 v0, v18
 
     move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 261
     invoke-virtual/range {v26 .. v26}, Landroid/app/SearchableInfo;->getSearchActivity()Landroid/content/ComponentName;
 
     move-result-object v30
@@ -850,21 +771,18 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 262
     invoke-virtual/range {v26 .. v26}, Landroid/app/SearchableInfo;->shouldIncludeInGlobalSearch()Z
 
     move-result v30
 
     if-eqz v30, :cond_9
 
-    .line 263
     move-object/from16 v0, v16
 
     move-object/from16 v1, v26
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 248
     .end local v26    # "searchable":Landroid/app/SearchableInfo;
     :cond_1
     :goto_6
@@ -872,7 +790,6 @@
 
     goto :goto_4
 
-    .line 243
     .end local v4    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v5    # "count":I
     .end local v8    # "ii":I
@@ -888,7 +805,6 @@
 
     goto :goto_0
 
-    .line 244
     .restart local v25    # "search_count":I
     :cond_3
     invoke-interface/range {v27 .. v27}, Ljava/util/List;->size()I
@@ -897,7 +813,6 @@
 
     goto :goto_1
 
-    .line 245
     .restart local v29    # "web_search_count":I
     :cond_4
     invoke-interface {v10}, Ljava/util/List;->size()I
@@ -906,7 +821,6 @@
 
     goto :goto_2
 
-    .line 246
     .restart local v12    # "insight_search_count":I
     :cond_5
     invoke-interface/range {v21 .. v21}, Ljava/util/List;->size()I
@@ -915,7 +829,6 @@
 
     goto :goto_3
 
-    .line 250
     .restart local v5    # "count":I
     .restart local v8    # "ii":I
     .restart local v23    # "samsung_search_count":I
@@ -988,7 +901,6 @@
 
     goto/16 :goto_5
 
-    .line 264
     .restart local v4    # "ai":Landroid/content/pm/ActivityInfo;
     .restart local v9    # "info":Landroid/content/pm/ResolveInfo;
     .restart local v26    # "searchable":Landroid/app/SearchableInfo;
@@ -999,7 +911,6 @@
 
     if-eqz v30, :cond_1
 
-    .line 265
     move-object/from16 v0, v17
 
     move-object/from16 v1, v26
@@ -1010,7 +921,6 @@
 
     goto :goto_6
 
-    .line 292
     .end local v4    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v5    # "count":I
     .end local v8    # "ii":I
@@ -1034,7 +944,6 @@
 
     throw v30
 
-    .line 272
     .restart local v10    # "insightSearchInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .restart local v11    # "insightSearchIntent":Landroid/content/Intent;
     .restart local v21    # "samsungSearchInfoList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
@@ -1048,7 +957,6 @@
 
     move-result-object v14
 
-    .line 275
     .local v14, "newGlobalSearchActivities":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     move-object/from16 v0, p0
 
@@ -1056,7 +964,6 @@
 
     move-result-object v15
 
-    .line 279
     .local v15, "newGlobalSearchActivity":Landroid/content/ComponentName;
     move-object/from16 v0, p0
 
@@ -1064,13 +971,11 @@
 
     move-result-object v20
 
-    .line 282
     .local v20, "newWebSearchActivity":Landroid/content/ComponentName;
     monitor-enter p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 283
     :try_start_2
     move-object/from16 v0, v19
 
@@ -1078,56 +983,46 @@
 
     iput-object v0, v1, Lcom/android/server/search/Searchables;->mSearchablesMap:Ljava/util/HashMap;
 
-    .line 284
     move-object/from16 v0, v18
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/search/Searchables;->mSearchablesList:Ljava/util/ArrayList;
 
-    .line 285
     move-object/from16 v0, v16
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/search/Searchables;->mSearchablesInGlobalSearchList:Ljava/util/ArrayList;
 
-    .line 286
     move-object/from16 v0, v17
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/search/Searchables;->mSearchablesInInsightSearchList:Ljava/util/ArrayList;
 
-    .line 287
     move-object/from16 v0, p0
 
     iput-object v14, v0, Lcom/android/server/search/Searchables;->mGlobalSearchActivities:Ljava/util/List;
 
-    .line 288
     move-object/from16 v0, p0
 
     iput-object v15, v0, Lcom/android/server/search/Searchables;->mCurrentGlobalSearchActivity:Landroid/content/ComponentName;
 
-    .line 289
     move-object/from16 v0, v20
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/android/server/search/Searchables;->mWebSearchActivity:Landroid/content/ComponentName;
 
-    .line 290
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 292
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 294
     return-void
 
-    .line 290
     :catchall_1
     move-exception v30
 
@@ -1149,21 +1044,17 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 491
     const-string v2, "Searchable authorities:"
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 492
     monitor-enter p0
 
-    .line 493
     :try_start_0
     iget-object v2, p0, Lcom/android/server/search/Searchables;->mSearchablesList:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_0
 
-    .line 494
     iget-object v2, p0, Lcom/android/server/search/Searchables;->mSearchablesList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -1184,7 +1075,6 @@
 
     check-cast v1, Landroid/app/SearchableInfo;
 
-    .line 495
     .local v1, "info":Landroid/app/SearchableInfo;
     const-string v2, "  "
 
@@ -1198,7 +1088,6 @@
 
     goto :goto_0
 
-    .line 498
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "info":Landroid/app/SearchableInfo;
     :catchall_0
@@ -1216,7 +1105,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 499
     return-void
 .end method
 
@@ -1233,7 +1121,6 @@
     .end annotation
 
     .prologue
-    .line 473
     monitor-enter p0
 
     :try_start_0
@@ -1261,7 +1148,6 @@
     .locals 1
 
     .prologue
-    .line 480
     monitor-enter p0
 
     :try_start_0
@@ -1288,10 +1174,8 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 122
     monitor-enter p0
 
-    .line 123
     :try_start_0
     iget-object v8, p0, Lcom/android/server/search/Searchables;->mSearchablesMap:Ljava/util/HashMap;
 
@@ -1301,7 +1185,6 @@
 
     check-cast v7, Landroid/app/SearchableInfo;
 
-    .line 124
     .local v7, "result":Landroid/app/SearchableInfo;
     if-eqz v7, :cond_0
 
@@ -1309,20 +1192,16 @@
 
     move-object v8, v7
 
-    .line 184
     :goto_0
     return-object v8
 
-    .line 125
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 132
     const/4 v1, 0x0
 
-    .line 134
     .local v1, "ai":Landroid/content/pm/ActivityInfo;
     :try_start_1
     iget-object v8, p0, Lcom/android/server/search/Searchables;->mPm:Landroid/content/pm/IPackageManager;
@@ -1337,15 +1216,12 @@
 
     move-result-object v1
 
-    .line 139
     if-nez v1, :cond_1
 
     move-object v8, v9
 
-    .line 140
     goto :goto_0
 
-    .line 125
     .end local v1    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v7    # "result":Landroid/app/SearchableInfo;
     :catchall_0
@@ -1358,13 +1234,11 @@
 
     throw v8
 
-    .line 135
     .restart local v1    # "ai":Landroid/content/pm/ActivityInfo;
     .restart local v7    # "result":Landroid/app/SearchableInfo;
     :catch_0
     move-exception v4
 
-    .line 136
     .local v4, "re":Landroid/os/RemoteException;
     const-string v8, "Searchables"
 
@@ -1390,53 +1264,42 @@
 
     move-object v8, v9
 
-    .line 137
     goto :goto_0
 
-    .line 142
     .end local v4    # "re":Landroid/os/RemoteException;
     :cond_1
     const/4 v5, 0x0
 
-    .line 145
     .local v5, "refActivityName":Ljava/lang/String;
     iget-object v2, v1, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
-    .line 146
     .local v2, "md":Landroid/os/Bundle;
     if-eqz v2, :cond_2
 
-    .line 147
     const-string v8, "android.app.default_searchable"
 
     invoke-virtual {v2, v8}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 150
     :cond_2
     if-nez v5, :cond_3
 
-    .line 151
     iget-object v8, v1, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v2, v8, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 152
     if-eqz v2, :cond_3
 
-    .line 153
     const-string v8, "android.app.default_searchable"
 
     invoke-virtual {v2, v8}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 158
     :cond_3
     if-eqz v5, :cond_7
 
-    .line 161
     const-string v8, "*"
 
     invoke-virtual {v5, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1447,16 +1310,13 @@
 
     move-object v8, v9
 
-    .line 162
     goto :goto_0
 
-    .line 164
     :cond_4
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 166
     .local v3, "pkg":Ljava/lang/String;
     const/4 v8, 0x0
 
@@ -1468,7 +1328,6 @@
 
     if-ne v8, v10, :cond_5
 
-    .line 167
     new-instance v6, Landroid/content/ComponentName;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1489,12 +1348,10 @@
 
     invoke-direct {v6, v3, v8}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 174
     .local v6, "referredActivity":Landroid/content/ComponentName;
     :goto_1
     monitor-enter p0
 
-    .line 175
     :try_start_3
     iget-object v8, p0, Lcom/android/server/search/Searchables;->mSearchablesMap:Ljava/util/HashMap;
 
@@ -1508,15 +1365,12 @@
 
     move-object v7, v0
 
-    .line 176
     if-eqz v7, :cond_6
 
-    .line 177
     iget-object v8, p0, Lcom/android/server/search/Searchables;->mSearchablesMap:Ljava/util/HashMap;
 
     invoke-virtual {v8, p1, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
@@ -1525,7 +1379,6 @@
 
     goto/16 :goto_0
 
-    .line 169
     .end local v6    # "referredActivity":Landroid/content/ComponentName;
     :cond_5
     new-instance v6, Landroid/content/ComponentName;
@@ -1535,7 +1388,6 @@
     .restart local v6    # "referredActivity":Landroid/content/ComponentName;
     goto :goto_1
 
-    .line 180
     :cond_6
     :try_start_4
     monitor-exit p0
@@ -1545,10 +1397,8 @@
     :cond_7
     move-object v8, v9
 
-    .line 184
     goto/16 :goto_0
 
-    .line 180
     .restart local v3    # "pkg":Ljava/lang/String;
     .restart local v6    # "referredActivity":Landroid/content/ComponentName;
     :catchall_1
@@ -1574,7 +1424,6 @@
     .end annotation
 
     .prologue
-    .line 453
     monitor-enter p0
 
     :try_start_0
@@ -1612,7 +1461,6 @@
     .end annotation
 
     .prologue
-    .line 461
     monitor-enter p0
 
     :try_start_0
@@ -1622,24 +1470,20 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 462
     .local v0, "searchableInfoList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/SearchableInfo;>;"
     if-eqz p1, :cond_0
 
-    .line 463
     iget-object v1, p0, Lcom/android/server/search/Searchables;->mSearchablesInGlobalSearchList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 466
     :cond_0
     monitor-exit p0
 
     return-object v0
 
-    .line 461
     .end local v0    # "searchableInfoList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/SearchableInfo;>;"
     :catchall_0
     move-exception v1
@@ -1662,7 +1506,6 @@
     .end annotation
 
     .prologue
-    .line 445
     monitor-enter p0
 
     :try_start_0
@@ -1674,13 +1517,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 446
     .local v0, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/SearchableInfo;>;"
     monitor-exit p0
 
     return-object v0
 
-    .line 445
     .end local v0    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/SearchableInfo;>;"
     :catchall_0
     move-exception v1
@@ -1694,7 +1535,6 @@
     .locals 1
 
     .prologue
-    .line 487
     monitor-enter p0
 
     :try_start_0

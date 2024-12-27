@@ -109,10 +109,8 @@
     .locals 0
 
     .prologue
-    .line 877
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 878
     return-void
 .end method
 
@@ -127,7 +125,6 @@
 
     const/4 v6, 0x0
 
-    .line 1471
     const-string v3, "Telephony"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -206,16 +203,13 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1473
     const/4 v2, 0x0
 
-    .line 1474
     .local v2, "ret":Ljava/lang/String;
     const/4 v3, 0x4
 
     new-array v1, v3, [B
 
-    .line 1475
     .local v1, "fourBytes":[B
     aget-byte v3, p1, v6
 
@@ -225,7 +219,6 @@
 
     aput-byte v3, v1, v6
 
-    .line 1476
     aget-byte v3, p1, v7
 
     and-int/lit16 v3, v3, 0xff
@@ -234,7 +227,6 @@
 
     aput-byte v3, v1, v7
 
-    .line 1477
     const/4 v3, 0x2
 
     aget-byte v4, p0, p2
@@ -245,7 +237,6 @@
 
     aput-byte v4, v1, v3
 
-    .line 1478
     const/4 v3, 0x3
 
     add-int/lit8 v4, p2, 0x1
@@ -258,7 +249,6 @@
 
     aput-byte v4, v1, v3
 
-    .line 1481
     :try_start_0
     new-instance v2, Ljava/lang/String;
 
@@ -269,21 +259,17 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1486
     .restart local v2    # "ret":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 1482
     .end local v2    # "ret":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1483
     .local v0, "ex":Ljava/io/UnsupportedEncodingException;
     const-string v2, ""
 
-    .line 1484
     .restart local v2    # "ret":Ljava/lang/String;
     const-string v3, "Telephony"
 
@@ -299,7 +285,6 @@
     .param p0, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1338
     const-string v29, "pdus"
 
     move-object/from16 v0, p0
@@ -316,7 +301,6 @@
 
     check-cast v11, [Ljava/lang/Object;
 
-    .line 1339
     .local v11, "messages":[Ljava/lang/Object;
     const-string v29, "format"
 
@@ -328,7 +312,6 @@
 
     move-result-object v5
 
-    .line 1340
     .local v5, "format":Ljava/lang/String;
     const-string v29, "subscription"
 
@@ -346,7 +329,6 @@
 
     move-result v25
 
-    .line 1343
     .local v25, "subId":I
     const-string v29, "Telephony"
 
@@ -374,12 +356,10 @@
 
     invoke-static/range {v29 .. v30}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1345
     array-length v0, v11
 
     move/from16 v20, v0
 
-    .line 1347
     .local v20, "pduCount":I
     const/16 v29, 0x2
 
@@ -389,21 +369,17 @@
 
     move-object/from16 v22, v0
 
-    .line 1348
     .local v22, "shiftBytes":[B
     const/4 v7, 0x0
 
-    .line 1349
     .local v7, "isShiftBytes":Z
     const/16 v23, 0x0
 
-    .line 1353
     .local v23, "startBodyOffset":I
     move/from16 v0, v20
 
     new-array v13, v0, [Landroid/telephony/SmsMessage;
 
-    .line 1355
     .local v13, "msgs":[Landroid/telephony/SmsMessage;
     const/4 v6, 0x0
 
@@ -413,7 +389,6 @@
 
     if-ge v6, v0, :cond_f
 
-    .line 1356
     aget-object v29, v11, v6
 
     check-cast v29, [B
@@ -422,7 +397,6 @@
 
     check-cast v19, [B
 
-    .line 1357
     .local v19, "pdu":[B
     if-eqz v19, :cond_3
 
@@ -434,7 +408,6 @@
 
     if-lez v29, :cond_3
 
-    .line 1358
     move-object/from16 v0, v19
 
     invoke-static {v0, v5}, Landroid/telephony/SmsMessage;->createFromPdu([BLjava/lang/String;)Landroid/telephony/SmsMessage;
@@ -443,10 +416,8 @@
 
     aput-object v29, v13, v6
 
-    .line 1361
     if-eqz v7, :cond_0
 
-    .line 1362
     aget-object v29, v13, v6
 
     move-object/from16 v0, v29
@@ -469,7 +440,6 @@
 
     move-result-object v24
 
-    .line 1363
     .local v24, "str":Ljava/lang/String;
     aget-object v29, v13, v6
 
@@ -483,7 +453,6 @@
 
     move-result-object v10
 
-    .line 1364
     .local v10, "messageBody":Ljava/lang/String;
     new-instance v29, Ljava/lang/StringBuilder;
 
@@ -513,7 +482,6 @@
 
     move-result-object v24
 
-    .line 1365
     aget-object v29, v13, v6
 
     move-object/from16 v0, v29
@@ -528,10 +496,8 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/SmsMessageBase;->replaceMessageBody(Ljava/lang/String;)V
 
-    .line 1366
     const/4 v7, 0x0
 
-    .line 1369
     .end local v10    # "messageBody":Ljava/lang/String;
     .end local v24    # "str":Ljava/lang/String;
     :cond_0
@@ -569,14 +535,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1371
     const-string v29, "Telephony"
 
     const-string v30, "Detect multibyte unicode at the end of page"
 
     invoke-static/range {v29 .. v30}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1372
     aget-object v29, v13, v6
 
     move-object/from16 v0, v29
@@ -589,7 +553,6 @@
 
     move-result-object v9
 
-    .line 1373
     .local v9, "lastbyte":[B
     const/16 v29, 0x0
 
@@ -599,7 +562,6 @@
 
     aput-byte v30, v22, v29
 
-    .line 1374
     const/16 v29, 0x1
 
     const/16 v30, 0x1
@@ -608,7 +570,6 @@
 
     aput-byte v30, v22, v29
 
-    .line 1375
     aget-object v29, v13, v6
 
     move-object/from16 v0, v29
@@ -621,7 +582,6 @@
 
     move-result v23
 
-    .line 1376
     aget-object v29, v13, v6
 
     move-object/from16 v0, v29
@@ -634,7 +594,6 @@
 
     move-result-object v10
 
-    .line 1377
     .restart local v10    # "messageBody":Ljava/lang/String;
     const-string v29, "Telephony"
 
@@ -662,7 +621,6 @@
 
     invoke-static/range {v29 .. v30}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1378
     aget-object v29, v13, v6
 
     move-object/from16 v0, v29
@@ -689,10 +647,8 @@
 
     invoke-virtual/range {v29 .. v30}, Lcom/android/internal/telephony/SmsMessageBase;->replaceMessageBody(Ljava/lang/String;)V
 
-    .line 1379
     const/4 v7, 0x1
 
-    .line 1383
     .end local v9    # "lastbyte":[B
     .end local v10    # "messageBody":Ljava/lang/String;
     :cond_1
@@ -710,18 +666,14 @@
 
     if-le v0, v1, :cond_3
 
-    .line 1384
     const/16 v18, 0x0
 
-    .line 1385
     .local v18, "paginationSuccess":Z
     const/16 v17, 0x0
 
-    .line 1386
     .local v17, "pagination":Ljava/lang/String;
     const/16 v26, 0x0
 
-    .line 1387
     .local v26, "tempMessageBody":Ljava/lang/String;
     aget-object v29, v13, v6
 
@@ -737,7 +689,6 @@
 
     if-eqz v29, :cond_e
 
-    .line 1388
     aget-object v29, v13, v6
 
     move-object/from16 v0, v29
@@ -750,10 +701,8 @@
 
     move-result-object v26
 
-    .line 1390
     const/4 v12, 0x0
 
-    .line 1392
     .local v12, "modifiedMessageBody":Ljava/lang/String;
     const-string v29, "("
 
@@ -779,7 +728,6 @@
 
     if-eqz v29, :cond_5
 
-    .line 1393
     const/16 v29, 0x28
 
     move-object/from16 v0, v26
@@ -812,7 +760,6 @@
 
     move-result-object v17
 
-    .line 1394
     const/16 v29, 0x29
 
     move-object/from16 v0, v26
@@ -833,14 +780,11 @@
 
     move-result-object v26
 
-    .line 1405
     :goto_1
     if-eqz v17, :cond_8
 
-    .line 1406
     move-object/from16 v12, v26
 
-    .line 1407
     const-string v29, "/"
 
     move-object/from16 v0, v17
@@ -851,7 +795,6 @@
 
     move-result-object v15
 
-    .line 1408
     .local v15, "page":[Ljava/lang/String;
     array-length v0, v15
 
@@ -865,22 +808,18 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 1409
     const/16 v18, 0x1
 
-    .line 1452
     :cond_2
     :goto_2
     if-nez v18, :cond_d
 
-    .line 1453
     const-string v29, "Telephony"
 
     const-string v30, "No pagination found"
 
     invoke-static/range {v29 .. v30}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1463
     .end local v12    # "modifiedMessageBody":Ljava/lang/String;
     .end local v15    # "page":[Ljava/lang/String;
     .end local v17    # "pagination":Ljava/lang/String;
@@ -892,7 +831,6 @@
 
     if-eqz v29, :cond_4
 
-    .line 1464
     aget-object v29, v13, v6
 
     move-object/from16 v0, v29
@@ -901,13 +839,11 @@
 
     invoke-virtual {v0, v1}, Landroid/telephony/SmsMessage;->setSubId(I)V
 
-    .line 1355
     :cond_4
     add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_0
 
-    .line 1395
     .restart local v12    # "modifiedMessageBody":Ljava/lang/String;
     .restart local v17    # "pagination":Ljava/lang/String;
     .restart local v18    # "paginationSuccess":Z
@@ -937,7 +873,6 @@
 
     if-eqz v29, :cond_6
 
-    .line 1396
     const/16 v29, 0x5b
 
     move-object/from16 v0, v26
@@ -970,7 +905,6 @@
 
     move-result-object v17
 
-    .line 1397
     const/16 v29, 0x5d
 
     move-object/from16 v0, v26
@@ -993,7 +927,6 @@
 
     goto/16 :goto_1
 
-    .line 1398
     :cond_6
     const-string v29, "{"
 
@@ -1019,7 +952,6 @@
 
     if-eqz v29, :cond_7
 
-    .line 1399
     const/16 v29, 0x7b
 
     move-object/from16 v0, v26
@@ -1052,7 +984,6 @@
 
     move-result-object v17
 
-    .line 1400
     const/16 v29, 0x7d
 
     move-object/from16 v0, v26
@@ -1075,7 +1006,6 @@
 
     goto/16 :goto_1
 
-    .line 1402
     :cond_7
     const-string v29, "Telephony"
 
@@ -1085,7 +1015,6 @@
 
     goto/16 :goto_1
 
-    .line 1412
     :cond_8
     const-string v29, " of "
 
@@ -1097,7 +1026,6 @@
 
     move-result-object v15
 
-    .line 1413
     .restart local v15    # "page":[Ljava/lang/String;
     array-length v0, v15
 
@@ -1111,7 +1039,6 @@
 
     if-lt v0, v1, :cond_9
 
-    .line 1414
     const-string v29, " "
 
     move-object/from16 v0, v26
@@ -1122,7 +1049,6 @@
 
     move-result-object v16
 
-    .line 1415
     .local v16, "pageCount":[Ljava/lang/String;
     move-object/from16 v0, v16
 
@@ -1138,7 +1064,6 @@
 
     if-lt v0, v1, :cond_9
 
-    .line 1417
     const/16 v29, 0x0
 
     :try_start_0
@@ -1150,7 +1075,6 @@
 
     invoke-static/range {v29 .. v29}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    .line 1418
     const/16 v29, 0x2
 
     aget-object v29, v16, v29
@@ -1161,7 +1085,6 @@
 
     invoke-static/range {v29 .. v29}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    .line 1419
     const/16 v29, 0x0
 
     aget-object v29, v16, v29
@@ -1182,7 +1105,6 @@
 
     add-int/lit8 v14, v29, 0x4
 
-    .line 1420
     .local v14, "offset":I
     add-int/lit8 v29, v14, 0x1
 
@@ -1196,17 +1118,14 @@
 
     move-result-object v12
 
-    .line 1421
     const/16 v18, 0x1
 
-    .line 1427
     .end local v14    # "offset":I
     .end local v16    # "pageCount":[Ljava/lang/String;
     :cond_9
     :goto_4
     if-nez v18, :cond_2
 
-    .line 1428
     const-string v29, "/"
 
     move-object/from16 v0, v26
@@ -1217,7 +1136,6 @@
 
     move-result-object v27
 
-    .line 1429
     .local v27, "tempPage":[Ljava/lang/String;
     move-object/from16 v0, v27
 
@@ -1233,7 +1151,6 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 1430
     const/16 v29, 0x1
 
     aget-object v29, v27, v29
@@ -1242,7 +1159,6 @@
 
     move-result-object v28
 
-    .line 1431
     .local v28, "totalNumber":[C
     const/16 v29, 0x0
 
@@ -1252,15 +1168,12 @@
 
     move-result-object v21
 
-    .line 1432
     .local v21, "segmentNumber":[C
     const/4 v4, 0x0
 
-    .line 1433
     .local v4, "firstPartNumeric":Z
     const/4 v8, 0x0
 
-    .line 1434
     .local v8, "j":I
     :goto_5
     aget-char v29, v21, v8
@@ -1285,12 +1198,10 @@
 
     if-ge v8, v0, :cond_a
 
-    .line 1435
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_5
 
-    .line 1422
     .end local v4    # "firstPartNumeric":Z
     .end local v8    # "j":I
     .end local v21    # "segmentNumber":[C
@@ -1300,7 +1211,6 @@
     :catch_0
     move-exception v3
 
-    .line 1423
     .local v3, "ex":Ljava/lang/NumberFormatException;
     const-string v29, "Telephony"
 
@@ -1310,7 +1220,6 @@
 
     goto :goto_4
 
-    .line 1437
     .end local v3    # "ex":Ljava/lang/NumberFormatException;
     .end local v16    # "pageCount":[Ljava/lang/String;
     .restart local v4    # "firstPartNumeric":Z
@@ -1333,17 +1242,13 @@
 
     if-ne v8, v0, :cond_b
 
-    .line 1438
     const/4 v4, 0x1
 
-    .line 1440
     :cond_b
     const/4 v8, 0x0
 
-    .line 1441
     if-eqz v4, :cond_2
 
-    .line 1442
     :goto_6
     aget-char v29, v28, v8
 
@@ -1367,12 +1272,10 @@
 
     if-ge v8, v0, :cond_c
 
-    .line 1443
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_6
 
-    .line 1445
     :cond_c
     const/16 v29, 0x0
 
@@ -1394,12 +1297,10 @@
 
     move-result-object v12
 
-    .line 1446
     const/16 v18, 0x1
 
     goto/16 :goto_2
 
-    .line 1455
     .end local v4    # "firstPartNumeric":Z
     .end local v8    # "j":I
     .end local v21    # "segmentNumber":[C
@@ -1420,7 +1321,6 @@
 
     goto/16 :goto_3
 
-    .line 1458
     .end local v12    # "modifiedMessageBody":Ljava/lang/String;
     .end local v15    # "page":[Ljava/lang/String;
     :cond_e
@@ -1432,7 +1332,6 @@
 
     goto/16 :goto_3
 
-    .line 1467
     .end local v17    # "pagination":Ljava/lang/String;
     .end local v18    # "paginationSuccess":Z
     .end local v19    # "pdu":[B

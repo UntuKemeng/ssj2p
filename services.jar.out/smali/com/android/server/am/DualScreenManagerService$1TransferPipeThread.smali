@@ -44,26 +44,20 @@
     .end annotation
 
     .prologue
-    .line 1984
     iput-object p1, p0, Lcom/android/server/am/DualScreenManagerService$1TransferPipeThread;->this$0:Lcom/android/server/am/DualScreenManagerService;
 
     iput-object p5, p0, Lcom/android/server/am/DualScreenManagerService$1TransferPipeThread;->val$innerPrefix:Ljava/lang/String;
 
-    .line 1985
     const-string v0, "TransferPipeWrite"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 1986
     iput-object p2, p0, Lcom/android/server/am/DualScreenManagerService$1TransferPipeThread;->thread:Landroid/app/IApplicationThread;
 
-    .line 1987
     iput-object p3, p0, Lcom/android/server/am/DualScreenManagerService$1TransferPipeThread;->fd:Ljava/io/FileDescriptor;
 
-    .line 1988
     iput-object p4, p0, Lcom/android/server/am/DualScreenManagerService$1TransferPipeThread;->args:[Ljava/lang/String;
 
-    .line 1989
     return-void
 .end method
 
@@ -73,7 +67,6 @@
     .locals 4
 
     .prologue
-    .line 1994
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/DualScreenManagerService$1TransferPipeThread;->thread:Landroid/app/IApplicationThread;
 
@@ -87,11 +80,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1997
     :goto_0
     return-void
 
-    .line 1995
     :catch_0
     move-exception v0
 

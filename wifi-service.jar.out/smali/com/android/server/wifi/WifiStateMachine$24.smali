@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2563
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$24;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2566
     const-string v0, "android.intent.action.USER_FOREGROUND"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,14 +52,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 2567
     const-string v0, "WifiStateMachine"
 
     const-string v1, "OWNER is foreground"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2568
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$24;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     const/4 v1, 0x1
@@ -69,7 +65,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mUserOwner:Z
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$4402(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 2573
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$24;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -78,10 +73,8 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(II)V
 
-    .line 2574
     return-void
 
-    .line 2569
     :cond_1
     const-string v0, "android.intent.action.USER_BACKGROUND"
 
@@ -95,14 +88,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2570
     const-string v0, "WifiStateMachine"
 
     const-string v1, "OWNER is background"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2571
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$24;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mUserOwner:Z

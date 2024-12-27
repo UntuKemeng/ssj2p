@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 10436
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$30$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$30;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,14 +40,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 10438
     if-eq p1, v2, :cond_0
 
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_2
 
-    .line 10439
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$30$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$30;
 
@@ -58,7 +55,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 10440
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$30$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$30;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager$30;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -71,7 +67,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mOldMouseDockedValue:Z
 
-    .line 10441
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$30$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$30;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager$30;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -80,7 +75,6 @@
 
     iput-boolean v1, v0, Lcom/android/server/policy/PhoneWindowManager;->mMouseDockedFlag:Z
 
-    .line 10446
     :cond_1
     :goto_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$30$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$30;
@@ -89,17 +83,14 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/policy/PhoneWindowManager;->updateRotation(Z)V
 
-    .line 10447
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$30$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$30;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager$30;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->updateOrientationListenerLp()V
 
-    .line 10448
     return-void
 
-    .line 10444
     :cond_2
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$30$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$30;
 

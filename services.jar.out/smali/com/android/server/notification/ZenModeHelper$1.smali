@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 780
     iput-object p1, p0, Lcom/android/server/notification/ZenModeHelper$1;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,71 +40,58 @@
     .param p1, "v1"    # Landroid/service/notification/ZenModeConfig$XmlV1;
 
     .prologue
-    .line 783
     if-nez p1, :cond_0
 
     const/4 v3, 0x0
 
-    .line 842
     :goto_0
     return-object v3
 
-    .line 784
     :cond_0
     new-instance v3, Landroid/service/notification/ZenModeConfig;
 
     invoke-direct {v3}, Landroid/service/notification/ZenModeConfig;-><init>()V
 
-    .line 785
     .local v3, "rt":Landroid/service/notification/ZenModeConfig;
     iget-boolean v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->allowCalls:Z
 
     iput-boolean v6, v3, Landroid/service/notification/ZenModeConfig;->allowCalls:Z
 
-    .line 786
     iget-boolean v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->allowEvents:Z
 
     iput-boolean v6, v3, Landroid/service/notification/ZenModeConfig;->allowEvents:Z
 
-    .line 787
     iget v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->allowFrom:I
 
     iput v6, v3, Landroid/service/notification/ZenModeConfig;->allowCallsFrom:I
 
-    .line 788
     iget-boolean v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->allowMessages:Z
 
     iput-boolean v6, v3, Landroid/service/notification/ZenModeConfig;->allowMessages:Z
 
-    .line 789
     iget v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->allowFrom:I
 
     iput v6, v3, Landroid/service/notification/ZenModeConfig;->allowMessagesFrom:I
 
-    .line 790
     iget-boolean v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->allowReminders:Z
 
     iput-boolean v6, v3, Landroid/service/notification/ZenModeConfig;->allowReminders:Z
 
-    .line 792
     iget-boolean v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->allowAlarms:Z
 
     iput-boolean v6, v3, Landroid/service/notification/ZenModeConfig;->allowAlarms:Z
 
-    .line 795
     iget-object v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepMode:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/service/notification/ZenModeConfig$XmlV1;->tryParseDays(Ljava/lang/String;)[I
 
     move-result-object v2
 
-    .line 796
     .local v2, "days":[I
     new-instance v4, Landroid/service/notification/ZenModeConfig$ZenRule;
 
     invoke-direct {v4}, Landroid/service/notification/ZenModeConfig$ZenRule;-><init>()V
 
-    .line 797
     .local v4, "rule":Landroid/service/notification/ZenModeConfig$ZenRule;
     iget-object v6, p0, Lcom/android/server/notification/ZenModeHelper$1;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
@@ -126,7 +112,6 @@
 
     move-result v0
 
-    .line 799
     .local v0, "allowException":I
     if-nez v0, :cond_1
 
@@ -135,69 +120,56 @@
     :goto_1
     iput v6, v4, Landroid/service/notification/ZenModeConfig$ZenRule;->zenMode:I
 
-    .line 802
     if-eqz v2, :cond_2
 
     array-length v6, v2
 
     if-lez v6, :cond_2
 
-    .line 803
     const-string v6, "ZenModeHelper"
 
     const-string v7, "Migrating existing V1 downtime to single schedule"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 804
     new-instance v5, Landroid/service/notification/ZenModeConfig$ScheduleInfo;
 
     invoke-direct {v5}, Landroid/service/notification/ZenModeConfig$ScheduleInfo;-><init>()V
 
-    .line 805
     .local v5, "schedule":Landroid/service/notification/ZenModeConfig$ScheduleInfo;
     iput-object v2, v5, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->days:[I
 
-    .line 806
     iget v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepStartHour:I
 
     iput v6, v5, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->startHour:I
 
-    .line 807
     iget v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepStartMinute:I
 
     iput v6, v5, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->startMinute:I
 
-    .line 808
     iget v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepEndHour:I
 
     iput v6, v5, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->endHour:I
 
-    .line 809
     iget v6, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->sleepEndMinute:I
 
     iput v6, v5, Landroid/service/notification/ZenModeConfig$ScheduleInfo;->endMinute:I
 
-    .line 819
     iget-boolean v1, p1, Landroid/service/notification/ZenModeConfig$XmlV1;->applyDowntime:Z
 
-    .line 820
     .local v1, "applyDowntime":Z
     iput-boolean v1, v4, Landroid/service/notification/ZenModeConfig$ZenRule;->enabled:Z
 
-    .line 821
     const-string/jumbo v6, "twschedule"
 
     iput-object v6, v4, Landroid/service/notification/ZenModeConfig$ZenRule;->name:Ljava/lang/String;
 
-    .line 822
     invoke-static {v5}, Landroid/service/notification/ZenModeConfig;->toScheduleConditionId(Landroid/service/notification/ZenModeConfig$ScheduleInfo;)Landroid/net/Uri;
 
     move-result-object v6
 
     iput-object v6, v4, Landroid/service/notification/ZenModeConfig$ZenRule;->conditionId:Landroid/net/Uri;
 
-    .line 825
     iget-object v6, v3, Landroid/service/notification/ZenModeConfig;->automaticRules:Landroid/util/ArrayMap;
 
     invoke-virtual {v3}, Landroid/service/notification/ZenModeConfig;->newRuleId()Ljava/lang/String;
@@ -208,7 +180,6 @@
 
     goto :goto_0
 
-    .line 799
     .end local v1    # "applyDowntime":Z
     .end local v5    # "schedule":Landroid/service/notification/ZenModeConfig$ScheduleInfo;
     :cond_1
@@ -216,7 +187,6 @@
 
     goto :goto_1
 
-    .line 827
     :cond_2
     const-string v6, "ZenModeHelper"
 
@@ -224,7 +194,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 833
     iget-object v6, p0, Lcom/android/server/notification/ZenModeHelper$1;->this$0:Lcom/android/server/notification/ZenModeHelper;
 
     # invokes: Lcom/android/server/notification/ZenModeHelper;->appendDefaultTwScheduleRules(Landroid/service/notification/ZenModeConfig;Landroid/service/notification/ZenModeConfig$ZenRule;)V

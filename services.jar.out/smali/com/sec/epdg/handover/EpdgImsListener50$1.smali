@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 74
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener50$1;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     invoke-direct {p0}, Lcom/sec/ims/im/IImSessionListener$Stub;-><init>()V
@@ -43,12 +42,10 @@
     .end annotation
 
     .prologue
-    .line 77
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    .line 78
     .local v0, "message":Landroid/os/Message;
     const-string v1, "[EpdgImsListener]"
 
@@ -72,18 +69,15 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsListener50$1;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->setIpmeStatus(Z)V
     invoke-static {v1, p1}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$200(Lcom/sec/epdg/handover/EpdgImsListener50;Z)V
 
-    .line 80
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsListener50$1;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # invokes: Lcom/sec/epdg/handover/EpdgImsListener50;->informIpmeStatusChangeToHandoverModule(Z)V
     invoke-static {v1, p1}, Lcom/sec/epdg/handover/EpdgImsListener50;->access$300(Lcom/sec/epdg/handover/EpdgImsListener50;Z)V
 
-    .line 81
     return-void
 .end method

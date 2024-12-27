@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 982
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$CachedServiceFetcher;-><init>()V
 
     return-void
@@ -41,21 +40,17 @@
     .param p1, "ctx"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 985
     const-string/jumbo v1, "midi"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 986
     .local v0, "b":Landroid/os/IBinder;
     if-nez v0, :cond_0
 
-    .line 987
     const/4 v1, 0x0
 
-    .line 989
     :goto_0
     return-object v1
 
@@ -76,7 +71,6 @@
     .param p1, "x0"    # Landroid/app/ContextImpl;
 
     .prologue
-    .line 982
     invoke-virtual {p0, p1}, Landroid/app/SystemServiceRegistry$79;->createService(Landroid/app/ContextImpl;)Landroid/media/midi/MidiManager;
 
     move-result-object v0

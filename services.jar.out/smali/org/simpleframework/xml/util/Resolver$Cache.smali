@@ -32,15 +32,12 @@
     .locals 1
 
     .prologue
-    .line 305
     .local p0, "this":Lorg/simpleframework/xml/util/Resolver$Cache;, "Lorg/simpleframework/xml/util/Resolver<TM;>.Cache;"
     iput-object p1, p0, Lorg/simpleframework/xml/util/Resolver$Cache;->this$0:Lorg/simpleframework/xml/util/Resolver;
 
-    .line 306
     const/16 v0, 0x400
 
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/util/LimitedCache;-><init>(I)V
 
-    .line 307
     return-void
 .end method

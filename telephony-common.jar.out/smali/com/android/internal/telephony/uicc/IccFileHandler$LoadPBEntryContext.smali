@@ -49,24 +49,18 @@
     .param p3, "onLoaded"    # Landroid/os/Message;
 
     .prologue
-    .line 216
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 217
     iput p1, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadPBEntryContext;->mEfid:I
 
-    .line 218
     iput p2, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadPBEntryContext;->mRecordNum:I
 
-    .line 219
     iput-object p3, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadPBEntryContext;->mOnLoaded:Landroid/os/Message;
 
-    .line 220
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadPBEntryContext;->mLoadAll:Z
 
-    .line 221
     return-void
 .end method
 
@@ -78,21 +72,15 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 223
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 224
     iput p1, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadPBEntryContext;->mEfid:I
 
-    .line 225
     iput v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadPBEntryContext;->mRecordNum:I
 
-    .line 226
     iput-boolean v0, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadPBEntryContext;->mLoadAll:Z
 
-    .line 227
     iput-object p2, p0, Lcom/android/internal/telephony/uicc/IccFileHandler$LoadPBEntryContext;->mOnLoaded:Landroid/os/Message;
 
-    .line 228
     return-void
 .end method

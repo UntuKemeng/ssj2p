@@ -10,10 +10,8 @@
     .param p2, "type"    # Lorg/simpleframework/xml/strategy/Type;
 
     .prologue
-    .line 51
     invoke-direct {p0, p1, p2}, Lorg/simpleframework/xml/core/Factory;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;)V
 
-    .line 52
     return-void
 .end method
 
@@ -22,7 +20,6 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 158
     const-class v0, Ljava/util/Collection;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -44,7 +41,6 @@
     .end annotation
 
     .prologue
-    .line 136
     const-class v0, Ljava/util/ArrayList;
 
     invoke-virtual {p1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -53,14 +49,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 137
     const-class v0, Ljava/util/ArrayList;
 
-    .line 143
     :goto_0
     return-object v0
 
-    .line 139
     :cond_0
     const-class v0, Ljava/util/HashSet;
 
@@ -70,12 +63,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 140
     const-class v0, Ljava/util/HashSet;
 
     goto :goto_0
 
-    .line 142
     :cond_1
     const-class v0, Ljava/util/TreeSet;
 
@@ -85,12 +76,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 143
     const-class v0, Ljava/util/TreeSet;
 
     goto :goto_0
 
-    .line 145
     :cond_2
     new-instance v0, Lorg/simpleframework/xml/core/InstantiationException;
 
@@ -124,16 +113,13 @@
     .end annotation
 
     .prologue
-    .line 64
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/CollectionFactory;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 65
     .local v0, "expect":Ljava/lang/Class;
     move-object v1, v0
 
-    .line 67
     .local v1, "real":Ljava/lang/Class;
     invoke-static {v1}, Lorg/simpleframework/xml/core/CollectionFactory;->isInstantiable(Ljava/lang/Class;)Z
 
@@ -141,12 +127,10 @@
 
     if-nez v2, :cond_0
 
-    .line 68
     invoke-virtual {p0, v0}, Lorg/simpleframework/xml/core/CollectionFactory;->getConversion(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 70
     :cond_0
     invoke-direct {p0, v1}, Lorg/simpleframework/xml/core/CollectionFactory;->isCollection(Ljava/lang/Class;)Z
 
@@ -154,7 +138,6 @@
 
     if-nez v2, :cond_1
 
-    .line 71
     new-instance v2, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v3, "Invalid collection %s for %s"
@@ -177,7 +160,6 @@
 
     throw v2
 
-    .line 73
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
@@ -196,12 +178,10 @@
     .end annotation
 
     .prologue
-    .line 113
     invoke-interface {p1}, Lorg/simpleframework/xml/strategy/Value;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 115
     .local v0, "expect":Ljava/lang/Class;
     invoke-static {v0}, Lorg/simpleframework/xml/core/CollectionFactory;->isInstantiable(Ljava/lang/Class;)Z
 
@@ -209,12 +189,10 @@
 
     if-nez v1, :cond_0
 
-    .line 116
     invoke-virtual {p0, v0}, Lorg/simpleframework/xml/core/CollectionFactory;->getConversion(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 118
     :cond_0
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/core/CollectionFactory;->isCollection(Ljava/lang/Class;)Z
 
@@ -222,7 +200,6 @@
 
     if-nez v1, :cond_1
 
-    .line 119
     new-instance v1, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v2, "Invalid collection %s for %s"
@@ -245,7 +222,6 @@
 
     throw v1
 
-    .line 121
     :cond_1
     new-instance v1, Lorg/simpleframework/xml/core/ConversionInstance;
 
@@ -266,31 +242,25 @@
     .end annotation
 
     .prologue
-    .line 87
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/CollectionFactory;->getOverride(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/strategy/Value;
 
     move-result-object v1
 
-    .line 88
     .local v1, "value":Lorg/simpleframework/xml/strategy/Value;
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/CollectionFactory;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 90
     .local v0, "expect":Ljava/lang/Class;
     if-eqz v1, :cond_0
 
-    .line 91
     invoke-virtual {p0, v1}, Lorg/simpleframework/xml/core/CollectionFactory;->getInstance(Lorg/simpleframework/xml/strategy/Value;)Lorg/simpleframework/xml/core/Instance;
 
     move-result-object v2
 
-    .line 99
     :goto_0
     return-object v2
 
-    .line 93
     :cond_0
     invoke-static {v0}, Lorg/simpleframework/xml/core/CollectionFactory;->isInstantiable(Ljava/lang/Class;)Z
 
@@ -298,12 +268,10 @@
 
     if-nez v2, :cond_1
 
-    .line 94
     invoke-virtual {p0, v0}, Lorg/simpleframework/xml/core/CollectionFactory;->getConversion(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 96
     :cond_1
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/core/CollectionFactory;->isCollection(Ljava/lang/Class;)Z
 
@@ -311,7 +279,6 @@
 
     if-nez v2, :cond_2
 
-    .line 97
     new-instance v2, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v3, "Invalid collection %s for %s"
@@ -334,7 +301,6 @@
 
     throw v2
 
-    .line 99
     :cond_2
     iget-object v2, p0, Lorg/simpleframework/xml/core/CollectionFactory;->context:Lorg/simpleframework/xml/core/Context;
 

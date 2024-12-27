@@ -48,19 +48,14 @@
     .end annotation
 
     .prologue
-    .line 294
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 295
     iput-object p1, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementListExtractor;->contact:Lorg/simpleframework/xml/core/Contact;
 
-    .line 296
     iput-object p3, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementListExtractor;->format:Lorg/simpleframework/xml/stream/Format;
 
-    .line 297
     iput-object p2, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementListExtractor;->union:Lorg/simpleframework/xml/ElementListUnion;
 
-    .line 298
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 268
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ExtractorFactory$ElementListExtractor;->getAnnotations()[Lorg/simpleframework/xml/ElementList;
 
     move-result-object v0
@@ -87,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 310
     iget-object v0, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementListExtractor;->union:Lorg/simpleframework/xml/ElementListUnion;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/ElementListUnion;->value()[Lorg/simpleframework/xml/ElementList;
@@ -107,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 268
     check-cast p1, Lorg/simpleframework/xml/ElementList;
 
     .end local p1    # "x0":Ljava/lang/annotation/Annotation;
@@ -123,7 +115,6 @@
     .param p1, "element"    # Lorg/simpleframework/xml/ElementList;
 
     .prologue
-    .line 324
     new-instance v0, Lorg/simpleframework/xml/core/ElementListLabel;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementListExtractor;->contact:Lorg/simpleframework/xml/core/Contact;
@@ -145,7 +136,6 @@
     .end annotation
 
     .prologue
-    .line 268
     check-cast p1, Lorg/simpleframework/xml/ElementList;
 
     .end local p1    # "x0":Ljava/lang/annotation/Annotation;
@@ -161,7 +151,6 @@
     .param p1, "element"    # Lorg/simpleframework/xml/ElementList;
 
     .prologue
-    .line 337
     invoke-interface {p1}, Lorg/simpleframework/xml/ElementList;->type()Ljava/lang/Class;
 
     move-result-object v0

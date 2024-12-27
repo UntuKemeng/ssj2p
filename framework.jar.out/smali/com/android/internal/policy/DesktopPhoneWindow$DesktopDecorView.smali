@@ -25,13 +25,10 @@
     .param p3, "featureId"    # I
 
     .prologue
-    .line 237
     iput-object p1, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
-    .line 238
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/policy/PhoneWindow$DecorView;-><init>(Lcom/android/internal/policy/PhoneWindow;Landroid/content/Context;I)V
 
-    .line 239
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 282
     invoke-super {p0, p1}, Lcom/android/internal/policy/PhoneWindow$DecorView;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -56,7 +52,6 @@
     .param p2, "fromDesktop"    # Z
 
     .prologue
-    .line 287
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -69,17 +64,14 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 259
     invoke-super {p0, p1}, Lcom/android/internal/policy/PhoneWindow$DecorView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 260
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeaderView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 261
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->mIsDesktopViewBlocked:Z
@@ -98,7 +90,6 @@
 
     if-nez v0, :cond_1
 
-    .line 262
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
@@ -108,7 +99,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->updateWindowHeaderViewVisibility(I)V
 
-    .line 265
     :cond_1
     return-void
 .end method
@@ -118,17 +108,14 @@
     .param p1, "hasWindowFocus"    # Z
 
     .prologue
-    .line 243
     invoke-super {p0, p1}, Lcom/android/internal/policy/PhoneWindow$DecorView;->onWindowFocusChanged(Z)V
 
-    .line 244
     iget-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     iget-object v1, v1, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeader:Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;
 
     if-eqz v1, :cond_0
 
-    .line 245
     iget-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     iget-object v1, v1, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeader:Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;
@@ -137,14 +124,11 @@
 
     move-result-object v0
 
-    .line 246
     .local v0, "header":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 247
     if-eqz p1, :cond_1
 
-    .line 248
     iget-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->mWindowHeaderFocusedColor:I
@@ -154,13 +138,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 254
     .end local v0    # "header":Landroid/view/View;
     :cond_0
     :goto_0
     return-void
 
-    .line 250
     .restart local v0    # "header":Landroid/view/View;
     :cond_1
     iget-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;

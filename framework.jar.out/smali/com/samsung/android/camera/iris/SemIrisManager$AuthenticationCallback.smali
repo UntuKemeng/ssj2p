@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 638
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "acquireInfo"    # I
 
     .prologue
-    .line 705
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .param p2, "errString"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 658
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 696
     return-void
 .end method
 
@@ -60,7 +56,6 @@
     .param p2, "helpString"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 683
     return-void
 .end method
 
@@ -69,7 +64,6 @@
     .param p1, "result"    # Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationResult;
 
     .prologue
-    .line 690
     return-void
 .end method
 
@@ -80,6 +74,5 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 714
     return-void
 .end method

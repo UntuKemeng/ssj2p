@@ -24,13 +24,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1493
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$OverflowTextMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
-    .line 1494
     invoke-direct {p0, p1, p2}, Landroid/widget/ActionMenuPresenter$SemOverflowText;-><init>(Landroid/widget/ActionMenuPresenter;Landroid/content/Context;)V
 
-    .line 1495
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 1492
     invoke-super {p0}, Landroid/widget/ActionMenuPresenter$SemOverflowText;->jumpDrawablesToCurrentState()V
 
     return-void
@@ -51,7 +47,6 @@
     .param p1, "x0"    # Landroid/view/accessibility/AccessibilityNodeInfo;
 
     .prologue
-    .line 1492
     invoke-super {p0, p1}, Landroid/widget/ActionMenuPresenter$SemOverflowText;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
     return-void
@@ -61,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 1492
     invoke-super {p0}, Landroid/widget/ActionMenuPresenter$SemOverflowText;->performClick()Z
 
     move-result v0

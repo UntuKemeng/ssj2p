@@ -28,10 +28,8 @@
     .locals 0
 
     .prologue
-    .line 257
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 258
     return-void
 .end method
 
@@ -40,7 +38,6 @@
     .param p0, "x0"    # Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;
 
     .prologue
-    .line 249
     invoke-direct {p0}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->width()I
 
     move-result v0
@@ -53,7 +50,6 @@
     .param p0, "x0"    # Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;
 
     .prologue
-    .line 249
     invoke-direct {p0}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->height()I
 
     move-result v0
@@ -67,16 +63,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 268
     invoke-direct {p0}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->width()I
 
     move-result v0
 
-    .line 270
     .local v0, "width":I
     if-lez v0, :cond_0
 
-    .line 271
     invoke-virtual {p0, v1}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->get(I)Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;
 
     move-result-object v1
@@ -85,7 +78,6 @@
 
     move-result v1
 
-    .line 273
     :cond_0
     return v1
 .end method
@@ -94,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 284
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->size()I
 
     move-result v0
@@ -109,7 +100,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 249
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->get(I)Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;
 
     move-result-object v0
@@ -123,7 +113,6 @@
     .param p2, "row"    # I
 
     .prologue
-    .line 333
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->get(I)Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;
 
     move-result-object v0
@@ -142,12 +131,10 @@
     .param p1, "column"    # I
 
     .prologue
-    .line 313
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->size()I
 
     move-result v2
 
-    .line 315
     .local v2, "size":I
     move v0, v2
 
@@ -155,21 +142,17 @@
     :goto_0
     if-gt v0, p1, :cond_0
 
-    .line 316
     new-instance v1, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;
 
     invoke-direct {v1}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;-><init>()V
 
-    .line 317
     .local v1, "list":Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;
     invoke-virtual {p0, v1}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->add(Ljava/lang/Object;)Z
 
-    .line 315
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 319
     .end local v1    # "list":Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;
     :cond_0
     invoke-super {p0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -187,19 +170,15 @@
     .param p2, "column"    # I
 
     .prologue
-    .line 296
     invoke-virtual {p0, p2}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterTable;->get(I)Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;
 
     move-result-object v0
 
-    .line 298
     .local v0, "list":Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;
     if-eqz v0, :cond_0
 
-    .line 299
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;->add(Ljava/lang/Object;)Z
 
-    .line 301
     :cond_0
     return-void
 .end method

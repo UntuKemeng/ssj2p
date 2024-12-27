@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 141
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$2;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 144
     const-string v0, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,18 +50,15 @@
 
     if-eqz v0, :cond_1
 
-    .line 145
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$2;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     # invokes: Lcom/android/server/enterprise/firewall/DomainFilter;->onUserRemoved(Landroid/content/Intent;)V
     invoke-static {v0, p2}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$500(Lcom/android/server/enterprise/firewall/DomainFilter;Landroid/content/Intent;)V
 
-    .line 149
     :cond_0
     :goto_0
     return-void
 
-    .line 146
     :cond_1
     const-string v0, "android.intent.action.USER_ADDED"
 
@@ -77,7 +72,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$2;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     # invokes: Lcom/android/server/enterprise/firewall/DomainFilter;->onUserAdded(Landroid/content/Intent;)V

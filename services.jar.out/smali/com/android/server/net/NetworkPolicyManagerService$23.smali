@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4041
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 4044
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->what:I
@@ -50,13 +48,11 @@
 
     sparse-switch v29, :sswitch_data_0
 
-    .line 4207
     const/16 v29, 0x0
 
     :goto_0
     return v29
 
-    .line 4046
     :sswitch_0
     move-object/from16 v0, p1
 
@@ -64,7 +60,6 @@
 
     move/from16 v27, v0
 
-    .line 4047
     .local v27, "uid":I
     move-object/from16 v0, p1
 
@@ -72,7 +67,6 @@
 
     move/from16 v28, v0
 
-    .line 4048
     .local v28, "uidRules":I
     move-object/from16 v0, p0
 
@@ -89,7 +83,6 @@
 
     move-result v14
 
-    .line 4049
     .local v14, "length":I
     const/4 v10, 0x0
 
@@ -97,7 +90,6 @@
     :goto_1
     if-ge v10, v14, :cond_1
 
-    .line 4050
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -117,11 +109,9 @@
 
     check-cast v15, Landroid/net/INetworkPolicyListener;
 
-    .line 4051
     .local v15, "listener":Landroid/net/INetworkPolicyListener;
     if-eqz v15, :cond_0
 
-    .line 4053
     :try_start_0
     move/from16 v0, v27
 
@@ -131,14 +121,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 4049
     :cond_0
     :goto_2
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 4058
     .end local v15    # "listener":Landroid/net/INetworkPolicyListener;
     :cond_1
     move-object/from16 v0, p0
@@ -154,12 +142,10 @@
 
     invoke-virtual/range {v29 .. v29}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 4059
     const/16 v29, 0x1
 
     goto :goto_0
 
-    .line 4062
     .end local v10    # "i":I
     .end local v14    # "length":I
     .end local v27    # "uid":I
@@ -177,7 +163,6 @@
 
     check-cast v20, [Ljava/lang/String;
 
-    .line 4063
     .local v20, "meteredIfaces":[Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -194,7 +179,6 @@
 
     move-result v14
 
-    .line 4064
     .restart local v14    # "length":I
     const/4 v10, 0x0
 
@@ -202,7 +186,6 @@
     :goto_3
     if-ge v10, v14, :cond_3
 
-    .line 4065
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -222,11 +205,9 @@
 
     check-cast v15, Landroid/net/INetworkPolicyListener;
 
-    .line 4066
     .restart local v15    # "listener":Landroid/net/INetworkPolicyListener;
     if-eqz v15, :cond_2
 
-    .line 4068
     :try_start_1
     move-object/from16 v0, v20
 
@@ -234,14 +215,12 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 4064
     :cond_2
     :goto_4
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_3
 
-    .line 4073
     .end local v15    # "listener":Landroid/net/INetworkPolicyListener;
     :cond_3
     move-object/from16 v0, p0
@@ -257,12 +236,10 @@
 
     invoke-virtual/range {v29 .. v29}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 4074
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4077
     .end local v10    # "i":I
     .end local v14    # "length":I
     .end local v20    # "meteredIfaces":[Ljava/lang/String;
@@ -273,7 +250,6 @@
 
     check-cast v11, Ljava/lang/String;
 
-    .line 4079
     .local v11, "iface":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -283,7 +259,6 @@
 
     invoke-virtual/range {v29 .. v29}, Lcom/android/server/net/NetworkPolicyManagerService;->maybeRefreshTrustedTime()V
 
-    .line 4080
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -298,7 +273,6 @@
 
     monitor-enter v30
 
-    .line 4082
     :try_start_2
     new-instance v12, Ljava/lang/String;
 
@@ -306,7 +280,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4084
     .local v12, "imsIface":Ljava/lang/String;
     :try_start_3
     move-object/from16 v0, p0
@@ -330,11 +303,9 @@
 
     move-result-object v18
 
-    .line 4085
     .local v18, "lp":Landroid/net/LinkProperties;
     if-eqz v18, :cond_4
 
-    .line 4086
     invoke-virtual/range {v18 .. v18}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_0
@@ -342,7 +313,6 @@
 
     move-result-object v12
 
-    .line 4091
     .end local v18    # "lp":Landroid/net/LinkProperties;
     :cond_4
     :goto_5
@@ -392,7 +362,6 @@
 
     if-eqz v29, :cond_6
 
-    .line 4099
     :cond_5
     :try_start_5
     move-object/from16 v0, p0
@@ -411,7 +380,6 @@
     .catch Landroid/os/RemoteException; {:try_start_5 .. :try_end_5} :catch_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 4104
     :goto_6
     :try_start_6
     move-object/from16 v0, p0
@@ -422,7 +390,6 @@
 
     invoke-virtual/range {v29 .. v29}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkEnabledLocked()V
 
-    .line 4105
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -431,20 +398,16 @@
 
     invoke-virtual/range {v29 .. v29}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNotificationsLocked()V
 
-    .line 4107
     :cond_6
     monitor-exit v30
 
-    .line 4108
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4088
     :catch_0
     move-exception v8
 
-    .line 4089
     .local v8, "e":Landroid/os/RemoteException;
     const-string v29, "NetworkPolicy"
 
@@ -458,7 +421,6 @@
 
     goto :goto_5
 
-    .line 4107
     .end local v8    # "e":Landroid/os/RemoteException;
     .end local v12    # "imsIface":Ljava/lang/String;
     :catchall_0
@@ -470,7 +432,6 @@
 
     throw v29
 
-    .line 4111
     .end local v11    # "iface":Ljava/lang/String;
     :sswitch_3
     move-object/from16 v0, p1
@@ -483,7 +444,6 @@
 
     const/16 v26, 0x1
 
-    .line 4112
     .local v26, "restrictBackground":Z
     :goto_7
     move-object/from16 v0, p0
@@ -501,7 +461,6 @@
 
     move-result v14
 
-    .line 4113
     .restart local v14    # "length":I
     const/4 v10, 0x0
 
@@ -509,7 +468,6 @@
     :goto_8
     if-ge v10, v14, :cond_9
 
-    .line 4114
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -529,11 +487,9 @@
 
     check-cast v15, Landroid/net/INetworkPolicyListener;
 
-    .line 4115
     .restart local v15    # "listener":Landroid/net/INetworkPolicyListener;
     if-eqz v15, :cond_7
 
-    .line 4117
     :try_start_7
     move/from16 v0, v26
 
@@ -541,14 +497,12 @@
     :try_end_7
     .catch Landroid/os/RemoteException; {:try_start_7 .. :try_end_7} :catch_3
 
-    .line 4113
     :cond_7
     :goto_9
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_8
 
-    .line 4111
     .end local v10    # "i":I
     .end local v14    # "length":I
     .end local v15    # "listener":Landroid/net/INetworkPolicyListener;
@@ -558,7 +512,6 @@
 
     goto :goto_7
 
-    .line 4122
     .restart local v10    # "i":I
     .restart local v14    # "length":I
     .restart local v26    # "restrictBackground":Z
@@ -576,12 +529,10 @@
 
     invoke-virtual/range {v29 .. v29}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 4123
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4126
     .end local v10    # "i":I
     .end local v14    # "length":I
     .end local v26    # "restrictBackground":Z
@@ -598,14 +549,12 @@
 
     move-result-wide v16
 
-    .line 4130
     .local v16, "lowestRule":J
     const-wide/16 v30, 0x3e8
 
     :try_start_8
     div-long v22, v16, v30
 
-    .line 4131
     .local v22, "persistThreshold":J
     const-string/jumbo v29, "ro.csc.country_code"
 
@@ -613,7 +562,6 @@
 
     move-result-object v7
 
-    .line 4132
     .local v7, "countryCode":Ljava/lang/String;
     const-string v29, "China"
 
@@ -625,10 +573,8 @@
 
     if-eqz v29, :cond_a
 
-    .line 4133
     move-wide/from16 v22, v16
 
-    .line 4135
     :cond_a
     move-object/from16 v0, p0
 
@@ -649,7 +595,6 @@
     :try_end_8
     .catch Landroid/os/RemoteException; {:try_start_8 .. :try_end_8} :catch_4
 
-    .line 4139
     .end local v7    # "countryCode":Ljava/lang/String;
     .end local v22    # "persistThreshold":J
     :goto_a
@@ -657,7 +602,6 @@
 
     goto/16 :goto_0
 
-    .line 4143
     .end local v16    # "lowestRule":J
     :sswitch_5
     move-object/from16 v0, p1
@@ -666,7 +610,6 @@
 
     move/from16 v25, v0
 
-    .line 4145
     .local v25, "reason":I
     const-string v29, "NetworkPolicy"
 
@@ -694,7 +637,6 @@
 
     invoke-static/range {v29 .. v30}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4146
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -719,7 +661,6 @@
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->mProxSensorScreenOff:Z
     invoke-static {v0, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->access$2602(Lcom/android/server/net/NetworkPolicyManagerService;Z)Z
 
-    .line 4147
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -740,18 +681,15 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->updateScreenOn(Z)V
     invoke-static/range {v29 .. v30}, Lcom/android/server/net/NetworkPolicyManagerService;->access$2700(Lcom/android/server/net/NetworkPolicyManagerService;Z)V
 
-    .line 4149
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4146
     :cond_b
     const/16 v29, 0x0
 
     goto :goto_b
 
-    .line 4153
     .end local v25    # "reason":I
     :sswitch_6
     move-object/from16 v0, p1
@@ -760,7 +698,6 @@
 
     move/from16 v27, v0
 
-    .line 4154
     .restart local v27    # "uid":I
     move-object/from16 v0, p1
 
@@ -768,7 +705,6 @@
 
     move/from16 v24, v0
 
-    .line 4155
     .local v24, "procState":I
     move-object/from16 v0, p0
 
@@ -785,12 +721,10 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->updateUidState(II)V
     invoke-static {v0, v1, v2}, Lcom/android/server/net/NetworkPolicyManagerService;->access$2800(Lcom/android/server/net/NetworkPolicyManagerService;II)V
 
-    .line 4156
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4159
     .end local v24    # "procState":I
     .end local v27    # "uid":I
     :sswitch_7
@@ -800,7 +734,6 @@
 
     move/from16 v27, v0
 
-    .line 4160
     .restart local v27    # "uid":I
     move-object/from16 v0, p0
 
@@ -815,17 +748,14 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->removeUidState(I)V
     invoke-static {v0, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->access$2900(Lcom/android/server/net/NetworkPolicyManagerService;I)V
 
-    .line 4161
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4164
     .end local v27    # "uid":I
     :sswitch_8
     const/16 v19, 0x0
 
-    .line 4165
     .local v19, "mEnabled":Z
     move-object/from16 v0, p0
 
@@ -848,7 +778,6 @@
 
     move-result v19
 
-    .line 4166
     const-string/jumbo v29, "ro.csc.country_code"
 
     invoke-static/range {v29 .. v29}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -865,25 +794,21 @@
 
     if-nez v19, :cond_c
 
-    .line 4167
     const-string v29, "NetworkPolicy"
 
     const-string v30, "CHN don\'t use RestrictBackgroundData during PowerSave mode"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4168
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4170
     :cond_c
     move-object/from16 v0, p1
 
     iget v5, v0, Landroid/os/Message;->arg1:I
 
-    .line 4171
     .local v5, "arg":I
     const/16 v29, 0x1
 
@@ -893,7 +818,6 @@
 
     const/4 v9, 0x1
 
-    .line 4172
     .local v9, "enabled":Z
     :goto_c
     move-object/from16 v0, p0
@@ -907,7 +831,6 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->changePowerSaveMode(Z)V
     invoke-static {v0, v9}, Lcom/android/server/net/NetworkPolicyManagerService;->access$3000(Lcom/android/server/net/NetworkPolicyManagerService;Z)V
 
-    .line 4174
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -919,7 +842,6 @@
 
     move-result v6
 
-    .line 4175
     .local v6, "bgEnabled":Z
     const-string v29, "NetworkPolicy"
 
@@ -945,7 +867,6 @@
 
     invoke-static/range {v29 .. v30}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4176
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/net/NetworkPolicyManagerService$23;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
@@ -957,12 +878,10 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->changeRestrictInPowerSaveMode(Z)V
     invoke-static {v0, v6}, Lcom/android/server/net/NetworkPolicyManagerService;->access$3100(Lcom/android/server/net/NetworkPolicyManagerService;Z)V
 
-    .line 4178
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4171
     .end local v6    # "bgEnabled":Z
     .end local v9    # "enabled":Z
     :cond_d
@@ -970,7 +889,6 @@
 
     goto :goto_c
 
-    .line 4182
     .end local v5    # "arg":I
     .end local v19    # "mEnabled":Z
     :sswitch_9
@@ -1010,18 +928,15 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->setRoamingReductionRules(Z)V
     invoke-static {v0, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->access$3200(Lcom/android/server/net/NetworkPolicyManagerService;Z)V
 
-    .line 4183
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4182
     :cond_e
     const/16 v29, 0x0
 
     goto :goto_d
 
-    .line 4187
     :sswitch_a
     move-object/from16 v0, p0
 
@@ -1053,7 +968,6 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->changeRestrictInPowerSaveMode(Z)V
     invoke-static {v0, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->access$3100(Lcom/android/server/net/NetworkPolicyManagerService;Z)V
 
-    .line 4189
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->arg2:I
@@ -1068,7 +982,6 @@
 
     if-ne v0, v1, :cond_f
 
-    .line 4191
     new-instance v13, Landroid/content/Intent;
 
     const-string v29, "com.samsung.settings.ACTION_RESTRICTDATA_COMPLETED"
@@ -1077,7 +990,6 @@
 
     invoke-direct {v13, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4192
     .local v13, "intent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -1094,33 +1006,28 @@
 
     invoke-virtual {v0, v13}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 4193
     const-string v29, "NetworkPolicy"
 
     const-string/jumbo v30, "send com.samsung.settings.ACTION_RESTRICTDATA_COMPLETED"
 
     invoke-static/range {v29 .. v30}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4196
     .end local v13    # "intent":Landroid/content/Intent;
     :cond_f
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4187
     :cond_10
     const/16 v29, 0x0
 
     goto :goto_e
 
-    .line 4201
     :sswitch_b
     move-object/from16 v0, p1
 
     iget v4, v0, Landroid/os/Message;->arg1:I
 
-    .line 4202
     .local v4, "appStatus":I
     move-object/from16 v0, p1
 
@@ -1130,7 +1037,6 @@
 
     check-cast v21, Ljava/lang/String;
 
-    .line 4203
     .local v21, "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1145,12 +1051,10 @@
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->handleCheckFireWallPermission(ILjava/lang/String;)V
     invoke-static {v0, v4, v1}, Lcom/android/server/net/NetworkPolicyManagerService;->access$3300(Lcom/android/server/net/NetworkPolicyManagerService;ILjava/lang/String;)V
 
-    .line 4204
     const/16 v29, 0x1
 
     goto/16 :goto_0
 
-    .line 4054
     .end local v4    # "appStatus":I
     .end local v21    # "packageName":Ljava/lang/String;
     .restart local v10    # "i":I
@@ -1163,7 +1067,6 @@
 
     goto/16 :goto_2
 
-    .line 4069
     .end local v27    # "uid":I
     .end local v28    # "uidRules":I
     .restart local v20    # "meteredIfaces":[Ljava/lang/String;
@@ -1172,7 +1075,6 @@
 
     goto/16 :goto_4
 
-    .line 4118
     .end local v20    # "meteredIfaces":[Ljava/lang/String;
     .restart local v26    # "restrictBackground":Z
     :catch_3
@@ -1180,7 +1082,6 @@
 
     goto/16 :goto_9
 
-    .line 4136
     .end local v10    # "i":I
     .end local v14    # "length":I
     .end local v15    # "listener":Landroid/net/INetworkPolicyListener;
@@ -1191,7 +1092,6 @@
 
     goto/16 :goto_a
 
-    .line 4100
     .end local v16    # "lowestRule":J
     .restart local v11    # "iface":Ljava/lang/String;
     .restart local v12    # "imsIface":Ljava/lang/String;
@@ -1200,7 +1100,6 @@
 
     goto/16 :goto_6
 
-    .line 4044
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0

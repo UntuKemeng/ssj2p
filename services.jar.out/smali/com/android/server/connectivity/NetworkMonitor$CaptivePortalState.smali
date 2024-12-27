@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 963
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/connectivity/NetworkMonitor$1;
 
     .prologue
-    .line 963
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
     return-void
@@ -47,7 +45,6 @@
     .locals 18
 
     .prologue
-    .line 1160
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -65,11 +62,9 @@
 
     check-cast v2, Landroid/app/ActivityManager;
 
-    .line 1162
     .local v2, "activityManager":Landroid/app/ActivityManager;
     const/4 v12, 0x0
 
-    .line 1163
     .local v12, "topActivityPackageName":Ljava/lang/String;
     const/4 v13, 0x1
 
@@ -77,7 +72,6 @@
 
     move-result-object v11
 
-    .line 1164
     .local v11, "tasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -91,14 +85,12 @@
 
     if-eqz v13, :cond_0
 
-    .line 1165
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v10
 
     check-cast v10, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1166
     .local v10, "runningTaskInfo":Landroid/app/ActivityManager$RunningTaskInfo;
     iget-object v13, v10, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
@@ -106,7 +98,6 @@
 
     move-result-object v12
 
-    .line 1167
     const-string v13, "NetworkMonitor"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -131,18 +122,15 @@
 
     goto :goto_0
 
-    .line 1170
     .end local v10    # "runningTaskInfo":Landroid/app/ActivityManager$RunningTaskInfo;
     :cond_0
     invoke-virtual {v2}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
     move-result-object v3
 
-    .line 1171
     .local v3, "app_list":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     if-eqz v3, :cond_1
 
-    .line 1172
     const/4 v4, 0x0
 
     .local v4, "i":I
@@ -153,14 +141,12 @@
 
     if-ge v4, v13, :cond_1
 
-    .line 1173
     invoke-interface {v3, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 1174
     .local v5, "info":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v13, v5, Landroid/app/ActivityManager$RunningAppProcessInfo;->importance:I
 
@@ -176,7 +162,6 @@
 
     if-eqz v13, :cond_4
 
-    .line 1176
     const-string v13, "NetworkMonitor"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -229,7 +214,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1178
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -248,7 +232,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mInitialUid:I
     invoke-static {v13, v14}, Lcom/android/server/connectivity/NetworkMonitor;->access$5202(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 1184
     .end local v4    # "i":I
     .end local v5    # "info":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :cond_1
@@ -272,7 +255,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mCurrentTxByteUid:J
     invoke-static {v13, v14, v15}, Lcom/android/server/connectivity/NetworkMonitor;->access$5302(Lcom/android/server/connectivity/NetworkMonitor;J)J
 
-    .line 1185
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -299,16 +281,13 @@
 
     move-result-object v9
 
-    .line 1187
     .local v9, "pkgs":[Ljava/lang/String;
     if-eqz v9, :cond_3
 
-    .line 1188
     const/4 v13, 0x0
 
     aget-object v8, v9, v13
 
-    .line 1190
     .local v8, "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -321,7 +300,6 @@
 
     if-nez v13, :cond_2
 
-    .line 1191
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -346,7 +324,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityManager:Landroid/net/ConnectivityManager;
     invoke-static {v14, v13}, Lcom/android/server/connectivity/NetworkMonitor;->access$4302(Lcom/android/server/connectivity/NetworkMonitor;Landroid/net/ConnectivityManager;)Landroid/net/ConnectivityManager;
 
-    .line 1193
     :cond_2
     move-object/from16 v0, p0
 
@@ -363,7 +340,6 @@
 
     move-result-object v7
 
-    .line 1195
     .local v7, "mobileInfo":Landroid/net/NetworkInfo;
     move-object/from16 v0, p0
 
@@ -446,7 +422,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1201
     if-eqz v7, :cond_5
 
     invoke-virtual {v7}, Landroid/net/NetworkInfo;->isConnectedOrConnecting()Z
@@ -455,21 +430,18 @@
 
     if-nez v13, :cond_5
 
-    .line 1202
     const-string v13, "NetworkMonitor"
 
     const-string/jumbo v14, "mobile data not connected"
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1225
     .end local v7    # "mobileInfo":Landroid/net/NetworkInfo;
     .end local v8    # "packageName":Ljava/lang/String;
     :cond_3
     :goto_2
     return-void
 
-    .line 1172
     .end local v9    # "pkgs":[Ljava/lang/String;
     .restart local v4    # "i":I
     .restart local v5    # "info":Landroid/app/ActivityManager$RunningAppProcessInfo;
@@ -478,7 +450,6 @@
 
     goto/16 :goto_1
 
-    .line 1204
     .end local v4    # "i":I
     .end local v5    # "info":Landroid/app/ActivityManager$RunningAppProcessInfo;
     .restart local v7    # "mobileInfo":Landroid/net/NetworkInfo;
@@ -498,7 +469,6 @@
 
     if-ne v13, v14, :cond_6
 
-    .line 1205
     const-string v13, "NetworkMonitor"
 
     const-string/jumbo v14, "skip system uid"
@@ -507,7 +477,6 @@
 
     goto :goto_2
 
-    .line 1207
     :cond_6
     move-object/from16 v0, p0
 
@@ -520,14 +489,12 @@
 
     if-eqz v13, :cond_7
 
-    .line 1208
     const-string v13, "NetworkMonitor"
 
     const-string v14, "DO NOT check after captiveportallogin"
 
     invoke-static {v13, v14}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1209
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -539,7 +506,6 @@
 
     goto :goto_2
 
-    .line 1211
     :cond_7
     const-string v13, "com.android.captiveportallogin"
 
@@ -549,7 +515,6 @@
 
     if-eqz v13, :cond_8
 
-    .line 1212
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -559,7 +524,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalLoginActivity:Z
     invoke-static {v13, v14}, Lcom/android/server/connectivity/NetworkMonitor;->access$5502(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 1215
     :cond_8
     move-object/from16 v0, p0
 
@@ -594,7 +558,6 @@
 
     if-nez v13, :cond_3
 
-    .line 1218
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -604,7 +567,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mCaptivePortalTxCheckSec:I
     invoke-static {v13, v14}, Lcom/android/server/connectivity/NetworkMonitor;->access$5702(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 1219
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -614,7 +576,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalAutoConnectMode:Z
     invoke-static {v13, v14}, Lcom/android/server/connectivity/NetworkMonitor;->access$6102(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 1220
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -623,7 +584,6 @@
 
     invoke-virtual {v13, v14}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1221
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -645,26 +605,22 @@
     .locals 14
 
     .prologue
-    .line 966
     invoke-static {}, Landroid/net/wifi/WifiManager;->suppressBrowserOnCaptivePortal()Z
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 967
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const-string v8, "Suppress Browser When Verizon Setup WiFi running"
 
     invoke-virtual {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1093
     :cond_0
     :goto_0
     return-void
 
-    .line 971
     :cond_1
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -672,7 +628,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 973
     invoke-static {}, Landroid/net/wifi/WifiManager;->showWebBrowserAtCaptivePortal()Z
 
     move-result v7
@@ -696,7 +651,6 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 976
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mWifiManager:Landroid/net/wifi/WifiManager;
@@ -708,7 +662,6 @@
 
     move-result-object v6
 
-    .line 977
     .local v6, "wifiInfo":Landroid/net/wifi/WifiInfo;
     invoke-virtual {v6}, Landroid/net/wifi/WifiInfo;->isCaptivePortal()Z
 
@@ -728,7 +681,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 978
     :cond_2
     const-string v7, "NetworkMonitor"
 
@@ -736,7 +688,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 979
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v8, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -749,7 +700,6 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->access$5800(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/internal/util/IState;)V
 
-    .line 983
     .end local v6    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_3
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -780,7 +730,6 @@
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 987
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mDontDisplaySigninNotification:Z
@@ -790,7 +739,6 @@
 
     if-nez v7, :cond_0
 
-    .line 989
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -800,14 +748,12 @@
 
     if-nez v7, :cond_7
 
-    .line 990
     const-string v7, "NetworkMonitor"
 
     const-string/jumbo v8, "mTelephonyManager is null"
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 999
     :cond_4
     :goto_1
     invoke-static {}, Landroid/net/wifi/WifiManager;->showWebBrowserAtCaptivePortal()Z
@@ -833,7 +779,6 @@
 
     if-ne v7, v8, :cond_b
 
-    .line 1003
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -884,7 +829,6 @@
 
     invoke-virtual {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1004
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityServiceHandler:Landroid/os/Handler;
@@ -922,14 +866,12 @@
 
     invoke-virtual {v7, v8}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1010
     const-string v7, "NetworkMonitor"
 
     const-string/jumbo v8, "set WiFi ACTION_LAUNCH_CAPTIVE_PORTAL_APP BroadcastReceiver"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1011
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -952,7 +894,6 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1012
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -975,7 +916,6 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1013
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -998,7 +938,6 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1015
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const/4 v8, 0x0
@@ -1006,7 +945,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalLoginActivityCreated:Z
     invoke-static {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->access$5402(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 1017
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1020,7 +958,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1023
     :goto_2
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1033,7 +970,6 @@
 
     move-result-object v0
 
-    .line 1024
     .local v0, "currentWifiInfo":Landroid/net/wifi/WifiInfo;
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1044,14 +980,12 @@
 
     if-nez v7, :cond_9
 
-    .line 1025
     new-instance v5, Landroid/content/Intent;
 
     const-string v7, "android.net.netmon.launchCaptivePortalApp"
 
     invoke-direct {v5, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1026
     .local v5, "pendingIntent":Landroid/content/Intent;
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1066,7 +1000,6 @@
 
     invoke-virtual {v5, v7}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1029
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v8, 0x8200a
@@ -1103,7 +1036,6 @@
 
     move-result-object v4
 
-    .line 1031
     .local v4, "message":Landroid/os/Message;
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1114,7 +1046,6 @@
 
     invoke-virtual {v7, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1034
     if-eqz v0, :cond_5
 
     invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->isManualConnection()Z
@@ -1138,7 +1069,6 @@
 
     if-nez v7, :cond_8
 
-    .line 1036
     :cond_6
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1146,14 +1076,12 @@
 
     invoke-virtual {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1038
     new-instance v2, Landroid/content/Intent;
 
     const-string v7, "android.intent.action.SEND"
 
     invoke-direct {v2, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1041
     .local v2, "intent":Landroid/content/Intent;
     new-instance v7, Landroid/content/ComponentName;
 
@@ -1165,7 +1093,6 @@
 
     invoke-virtual {v2, v7}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1043
     const-string v7, "android.net.extra.NETWORK"
 
     iget-object v8, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -1179,7 +1106,6 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 1044
     const-string v7, "android.net.extra.CAPTIVE_PORTAL"
 
     new-instance v8, Landroid/net/CaptivePortal;
@@ -1192,12 +1118,10 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 1056
     const/high16 v7, 0x10c00000
 
     invoke-virtual {v2, v7}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 1059
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -1207,7 +1131,6 @@
 
     invoke-virtual {v7, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 1067
     .end local v2    # "intent":Landroid/content/Intent;
     :goto_3
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -1219,7 +1142,6 @@
 
     goto/16 :goto_0
 
-    .line 992
     .end local v0    # "currentWifiInfo":Landroid/net/wifi/WifiInfo;
     .end local v4    # "message":Landroid/os/Message;
     .end local v5    # "pendingIntent":Landroid/content/Intent;
@@ -1233,14 +1155,12 @@
 
     if-nez v7, :cond_4
 
-    .line 993
     new-instance v3, Lcom/android/server/connectivity/NetworkMonitor$NetworkMonitorPhoneStateListner;
 
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {v3, v7}, Lcom/android/server/connectivity/NetworkMonitor$NetworkMonitorPhoneStateListner;-><init>(Lcom/android/server/connectivity/NetworkMonitor;)V
 
-    .line 994
     .local v3, "mPhoneListener":Lcom/android/server/connectivity/NetworkMonitor$NetworkMonitorPhoneStateListner;
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1253,7 +1173,6 @@
 
     invoke-virtual {v7, v3, v8}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 995
     const-string v7, "NetworkMonitor"
 
     const-string v8, "Add listener."
@@ -1262,12 +1181,10 @@
 
     goto/16 :goto_1
 
-    .line 1018
     .end local v3    # "mPhoneListener":Lcom/android/server/connectivity/NetworkMonitor$NetworkMonitorPhoneStateListner;
     :catch_0
     move-exception v1
 
-    .line 1019
     .local v1, "e":Landroid/os/RemoteException;
     const-string v7, "NetworkMonitor"
 
@@ -1275,12 +1192,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1020
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_2
 
-    .line 1062
     .end local v1    # "e":Landroid/os/RemoteException;
     .restart local v0    # "currentWifiInfo":Landroid/net/wifi/WifiInfo;
     .restart local v4    # "message":Landroid/os/Message;
@@ -1292,12 +1207,10 @@
 
     invoke-virtual {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1063
     invoke-direct {p0}, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->checkInitialUid()V
 
     goto :goto_3
 
-    .line 1069
     .end local v4    # "message":Landroid/os/Message;
     .end local v5    # "pendingIntent":Landroid/content/Intent;
     :cond_9
@@ -1324,12 +1237,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 1071
     invoke-direct {p0}, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->checkInitialUid()V
 
     goto/16 :goto_0
 
-    .line 1078
     .end local v0    # "currentWifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_b
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -1341,7 +1252,6 @@
 
     if-nez v7, :cond_c
 
-    .line 1080
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v8, Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
@@ -1365,7 +1275,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mLaunchCaptivePortalAppBroadcastReceiver:Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
     invoke-static {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->access$1402(Lcom/android/server/connectivity/NetworkMonitor;Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;)Lcom/android/server/connectivity/NetworkMonitor$CustomIntentReceiver;
 
-    .line 1085
     :cond_c
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1399,7 +1308,6 @@
 
     move-result-object v4
 
-    .line 1088
     .restart local v4    # "message":Landroid/os/Message;
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1410,7 +1318,6 @@
 
     invoke-virtual {v7, v4}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1090
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v8, 0x8200c
@@ -1428,7 +1335,6 @@
     .locals 3
 
     .prologue
-    .line 1229
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v2, 0x8200c
@@ -1436,7 +1342,6 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->removeMessages(I)V
     invoke-static {v1, v2}, Lcom/android/server/connectivity/NetworkMonitor;->access$6300(Lcom/android/server/connectivity/NetworkMonitor;I)V
 
-    .line 1230
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v2, 0x82010
@@ -1444,7 +1349,6 @@
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->removeMessages(I)V
     invoke-static {v1, v2}, Lcom/android/server/connectivity/NetworkMonitor;->access$6400(Lcom/android/server/connectivity/NetworkMonitor;I)V
 
-    .line 1232
     iget-object v1, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mNetworkAgentInfo:Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -1468,7 +1372,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1236
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1482,16 +1385,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1242
     :cond_0
     :goto_0
     return-void
 
-    .line 1237
     :catch_0
     move-exception v0
 
-    .line 1238
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "NetworkMonitor"
 
@@ -1499,7 +1399,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1239
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
@@ -1518,7 +1417,6 @@
 
     const/4 v6, 0x0
 
-    .line 1097
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1547,18 +1445,15 @@
 
     invoke-virtual {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1098
     iget v7, p1, Landroid/os/Message;->what:I
 
     packed-switch v7, :pswitch_data_0
 
     move v3, v6
 
-    .line 1155
     :goto_0
     return v3
 
-    .line 1100
     :pswitch_0
     invoke-static {}, Landroid/net/wifi/WifiManager;->showWebBrowserAtCaptivePortal()Z
 
@@ -1581,7 +1476,6 @@
 
     if-ne v7, v3, :cond_5
 
-    .line 1103
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalLoginActivityCreated:Z
@@ -1591,7 +1485,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 1104
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const-string v7, "Captive portal login activity already created once."
@@ -1600,7 +1493,6 @@
 
     goto :goto_0
 
-    .line 1108
     :cond_0
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1611,7 +1503,6 @@
 
     if-nez v7, :cond_1
 
-    .line 1109
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const-string v7, "Captive portal - Smart detection is not available for now."
@@ -1620,7 +1511,6 @@
 
     goto :goto_0
 
-    .line 1113
     :cond_1
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1633,7 +1523,6 @@
 
     move-result-wide v4
 
-    .line 1115
     .local v4, "txBytes":J
     const-string v7, "NetworkMonitor"
 
@@ -1691,7 +1580,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1118
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mCaptivePortalTxCheckSec:I
@@ -1703,13 +1591,11 @@
 
     if-ge v7, v8, :cond_4
 
-    .line 1119
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # operator++ for: Lcom/android/server/connectivity/NetworkMonitor;->mCaptivePortalTxCheckSec:I
     invoke-static {v7}, Lcom/android/server/connectivity/NetworkMonitor;->access$5708(Lcom/android/server/connectivity/NetworkMonitor;)I
 
-    .line 1120
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mCurrentTxByteUid:J
@@ -1721,14 +1607,12 @@
 
     if-lez v7, :cond_3
 
-    .line 1121
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const-string v8, "TxBytes increased: start Activity"
 
     invoke-virtual {v7, v8}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1122
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalAutoConnectMode:Z
@@ -1754,13 +1638,11 @@
 
     if-ne v7, v8, :cond_2
 
-    .line 1123
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalAutoConnectMode:Z
     invoke-static {v7, v6}, Lcom/android/server/connectivity/NetworkMonitor;->access$6102(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 1125
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v8, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -1780,7 +1662,6 @@
 
     move-result-object v0
 
-    .line 1127
     .local v0, "notiDismiss":Landroid/os/Message;
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1791,14 +1672,12 @@
 
     invoke-virtual {v7, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1129
     new-instance v2, Landroid/content/Intent;
 
     const-string v7, "android.net.netmon.launchCaptivePortalApp"
 
     invoke-direct {v2, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1130
     .local v2, "pendingIntent":Landroid/content/Intent;
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1813,7 +1692,6 @@
 
     invoke-virtual {v2, v7}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1131
     iget-object v7, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const/4 v8, 0x2
@@ -1844,7 +1722,6 @@
 
     move-result-object v1
 
-    .line 1133
     .local v1, "notiHUN":Landroid/os/Message;
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1855,20 +1732,17 @@
 
     invoke-virtual {v6, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1135
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const-string v7, "HUN"
 
     invoke-virtual {v6, v7}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1136
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalHunNotified:Z
     invoke-static {v6, v3}, Lcom/android/server/connectivity/NetworkMonitor;->access$1302(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 1137
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v7, 0x82011
@@ -1879,7 +1753,6 @@
 
     goto/16 :goto_0
 
-    .line 1139
     .end local v0    # "notiDismiss":Landroid/os/Message;
     .end local v1    # "notiHUN":Landroid/os/Message;
     .end local v2    # "pendingIntent":Landroid/content/Intent;
@@ -1900,7 +1773,6 @@
 
     goto/16 :goto_0
 
-    .line 1143
     :cond_3
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1910,7 +1782,6 @@
 
     goto/16 :goto_0
 
-    .line 1146
     :cond_4
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -1918,7 +1789,6 @@
 
     invoke-virtual {v6, v7}, Lcom/android/server/connectivity/NetworkMonitor;->log(Ljava/lang/String;)V
 
-    .line 1147
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkMonitor$CaptivePortalState;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->removeMessages(I)V
@@ -1930,10 +1800,8 @@
     :cond_5
     move v3, v6
 
-    .line 1155
     goto/16 :goto_0
 
-    .line 1098
     :pswitch_data_0
     .packed-switch 0x82010
         :pswitch_0

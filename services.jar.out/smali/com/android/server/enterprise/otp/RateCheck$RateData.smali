@@ -31,34 +31,26 @@
     .param p5, "result"    # Z
 
     .prologue
-    .line 109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 104
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/otp/RateCheck$RateData;->caller:Ljava/lang/String;
 
-    .line 106
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/enterprise/otp/RateCheck$RateData;->timestamp:J
 
-    .line 107
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/otp/RateCheck$RateData;->result:Z
 
-    .line 110
     iput-object p1, p0, Lcom/android/server/enterprise/otp/RateCheck$RateData;->caller:Ljava/lang/String;
 
-    .line 112
     iput-wide p3, p0, Lcom/android/server/enterprise/otp/RateCheck$RateData;->timestamp:J
 
-    .line 113
     iput-boolean p5, p0, Lcom/android/server/enterprise/otp/RateCheck$RateData;->result:Z
 
-    .line 114
     return-void
 .end method
 
@@ -67,7 +59,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/otp/RateCheck$RateData;
 
     .prologue
-    .line 103
     iget-object v0, p0, Lcom/android/server/enterprise/otp/RateCheck$RateData;->caller:Ljava/lang/String;
 
     return-object v0
@@ -78,7 +69,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/otp/RateCheck$RateData;
 
     .prologue
-    .line 103
     iget-wide v0, p0, Lcom/android/server/enterprise/otp/RateCheck$RateData;->timestamp:J
 
     return-wide v0
@@ -89,7 +79,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/otp/RateCheck$RateData;
 
     .prologue
-    .line 103
     iget-boolean v0, p0, Lcom/android/server/enterprise/otp/RateCheck$RateData;->result:Z
 
     return v0

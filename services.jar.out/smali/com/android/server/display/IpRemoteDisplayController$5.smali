@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 270
     iput-object p1, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     iput-object p2, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->val$params:Ljava/lang/String;
@@ -44,7 +43,6 @@
     .locals 9
 
     .prologue
-    .line 273
     const-string v6, "IpRemoteDisplayController"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -69,7 +67,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     :try_start_0
     new-instance v3, Lorg/json/JSONObject;
 
@@ -77,7 +74,6 @@
 
     invoke-direct {v3, v6}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 276
     .local v3, "jsonObj":Lorg/json/JSONObject;
     const-string/jumbo v6, "ipAddr"
 
@@ -85,7 +81,6 @@
 
     move-result-object v2
 
-    .line 277
     .local v2, "ipAddr":Ljava/lang/String;
     const-string/jumbo v6, "port"
 
@@ -93,7 +88,6 @@
 
     move-result-object v5
 
-    .line 278
     .local v5, "port":Ljava/lang/String;
     const-string v6, "deviceType"
 
@@ -101,7 +95,6 @@
 
     move-result v0
 
-    .line 279
     .local v0, "deviceType":I
     const-string/jumbo v6, "options"
 
@@ -109,7 +102,6 @@
 
     move-result-object v4
 
-    .line 281
     .local v4, "options":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
@@ -120,7 +112,6 @@
 
     if-nez v6, :cond_0
 
-    .line 282
     iget-object v6, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     new-instance v7, Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -130,7 +121,6 @@
     # setter for: Lcom/android/server/display/IpRemoteDisplayController;->mConnectedDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
     invoke-static {v6, v7}, Lcom/android/server/display/IpRemoteDisplayController;->access$802(Lcom/android/server/display/IpRemoteDisplayController;Landroid/net/wifi/p2p/WifiP2pDevice;)Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 283
     iget-object v6, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mConnectedDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -146,7 +136,6 @@
 
     iput-object v7, v6, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceAddress:Ljava/lang/String;
 
-    .line 284
     iget-object v6, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mConnectedDevice:Landroid/net/wifi/p2p/WifiP2pDevice;
@@ -162,7 +151,6 @@
 
     iput-object v7, v6, Landroid/net/wifi/p2p/WifiP2pDevice;->deviceName:Ljava/lang/String;
 
-    .line 285
     iget-object v6, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     const-string/jumbo v7, "uri"
@@ -174,7 +162,6 @@
     # setter for: Lcom/android/server/display/IpRemoteDisplayController;->mConnectedDeviceUri:Ljava/lang/String;
     invoke-static {v6, v7}, Lcom/android/server/display/IpRemoteDisplayController;->access$1102(Lcom/android/server/display/IpRemoteDisplayController;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 286
     iget-object v6, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     const-string/jumbo v7, "isPendingRequest"
@@ -186,7 +173,6 @@
     # setter for: Lcom/android/server/display/IpRemoteDisplayController;->mRequestPendingSetup:Z
     invoke-static {v6, v7}, Lcom/android/server/display/IpRemoteDisplayController;->access$1002(Lcom/android/server/display/IpRemoteDisplayController;Z)Z
 
-    .line 288
     :cond_0
     iget-object v6, p0, Lcom/android/server/display/IpRemoteDisplayController$5;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
@@ -195,7 +181,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 293
     .end local v0    # "deviceType":I
     .end local v2    # "ipAddr":Ljava/lang/String;
     .end local v3    # "jsonObj":Lorg/json/JSONObject;
@@ -204,11 +189,9 @@
     :goto_0
     return-void
 
-    .line 290
     :catch_0
     move-exception v1
 
-    .line 291
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "IpRemoteDisplayController"
 

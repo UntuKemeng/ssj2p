@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "changeSurface"    # Z
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mLock:Ljava/lang/Object;
@@ -51,7 +49,6 @@
 
     monitor-enter v7
 
-    .line 144
     if-eqz p1, :cond_0
 
     :try_start_0
@@ -64,25 +61,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 145
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # invokes: Lcom/android/server/display/MagnifierSurfaceControl;->hide()V
     invoke-static {v0}, Lcom/android/server/display/MagnifierSurfaceControl;->access$200(Lcom/android/server/display/MagnifierSurfaceControl;)V
 
-    .line 146
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # invokes: Lcom/android/server/display/MagnifierSurfaceControl;->destroyMainSurface()V
     invoke-static {v0}, Lcom/android/server/display/MagnifierSurfaceControl;->access$300(Lcom/android/server/display/MagnifierSurfaceControl;)V
 
-    .line 147
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # invokes: Lcom/android/server/display/MagnifierSurfaceControl;->createDefaultSurface()V
     invoke-static {v0}, Lcom/android/server/display/MagnifierSurfaceControl;->access$400(Lcom/android/server/display/MagnifierSurfaceControl;)V
 
-    .line 148
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mListener:Lcom/android/server/display/MagnifierSurfaceControl$Listener;
@@ -92,7 +85,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 149
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mListener:Lcom/android/server/display/MagnifierSurfaceControl$Listener;
@@ -109,7 +101,6 @@
 
     invoke-interface {v0, v1}, Lcom/android/server/display/MagnifierSurfaceControl$Listener;->onChangeSurface(Landroid/view/Surface;)V
 
-    .line 152
     :cond_0
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mBorder:Lcom/android/server/display/MagnifierSurfaceControl$Border;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl;->access$700()Lcom/android/server/display/MagnifierSurfaceControl$Border;
@@ -118,7 +109,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 153
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mPolicy:Lcom/android/server/display/MagnifierDisplayPolicy;
@@ -137,7 +127,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/MagnifierDisplayPolicy;->setPadding(Landroid/graphics/Rect;)V
 
-    .line 154
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mPolicy:Lcom/android/server/display/MagnifierDisplayPolicy;
@@ -147,7 +136,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/display/MagnifierDisplayPolicy;->setPrecision()V
 
-    .line 155
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mBorder:Lcom/android/server/display/MagnifierSurfaceControl$Border;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl;->access$700()Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
@@ -155,7 +143,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->dismiss()V
 
-    .line 158
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
@@ -168,7 +155,6 @@
 
     move-result-object v6
 
-    .line 162
     .local v6, "defaultDisplay":Landroid/view/Display;
     new-instance v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
@@ -217,7 +203,6 @@
     # setter for: Lcom/android/server/display/MagnifierSurfaceControl;->mBorder:Lcom/android/server/display/MagnifierSurfaceControl$Border;
     invoke-static {v0}, Lcom/android/server/display/MagnifierSurfaceControl;->access$702(Lcom/android/server/display/MagnifierSurfaceControl$Border;)Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
-    .line 164
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mState:I
@@ -229,7 +214,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     const/4 v1, 0x3
@@ -237,7 +221,6 @@
     # setter for: Lcom/android/server/display/MagnifierSurfaceControl;->mState:I
     invoke-static {v0, v1}, Lcom/android/server/display/MagnifierSurfaceControl;->access$1002(Lcom/android/server/display/MagnifierSurfaceControl;I)I
 
-    .line 167
     :cond_2
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
@@ -248,7 +231,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 168
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mPoint:Lcom/android/server/display/MagnifierSurfaceControl$HoverPoint;
@@ -258,20 +240,16 @@
 
     invoke-virtual {v0}, Lcom/android/server/display/MagnifierSurfaceControl$HoverPoint;->hide()V
 
-    .line 170
     :cond_3
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # invokes: Lcom/android/server/display/MagnifierSurfaceControl;->showWindowView()V
     invoke-static {v0}, Lcom/android/server/display/MagnifierSurfaceControl;->access$1200(Lcom/android/server/display/MagnifierSurfaceControl;)V
 
-    .line 171
     monitor-exit v7
 
-    .line 172
     return-void
 
-    .line 171
     .end local v6    # "defaultDisplay":Landroid/view/Display;
     :catchall_0
     move-exception v0

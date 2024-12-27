@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 1214
     iput-object p1, p0, Lcom/android/server/display/MagnifierSurfaceControl$2;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -43,10 +42,8 @@
 
     const/4 v2, 0x0
 
-    .line 1216
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 1217
     iget-object v3, p0, Lcom/android/server/display/MagnifierSurfaceControl$2;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mContext:Landroid/content/Context;
@@ -66,12 +63,10 @@
 
     if-ne v3, v1, :cond_1
 
-    .line 1219
     .local v1, "newstate":Z
     :goto_0
     if-nez v1, :cond_0
 
-    .line 1221
     :try_start_0
     iget-object v2, p0, Lcom/android/server/display/MagnifierSurfaceControl$2;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
@@ -83,7 +78,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1226
     :cond_0
     :goto_1
     return-void
@@ -92,15 +86,12 @@
     :cond_1
     move v1, v2
 
-    .line 1217
     goto :goto_0
 
-    .line 1222
     .restart local v1    # "newstate":Z
     :catch_0
     move-exception v0
 
-    .line 1223
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

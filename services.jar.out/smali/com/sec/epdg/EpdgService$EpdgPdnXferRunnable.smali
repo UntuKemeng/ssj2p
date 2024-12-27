@@ -24,13 +24,10 @@
     .param p2, "networkType"    # I
 
     .prologue
-    .line 1375
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
-    .line 1376
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/EpdgService$HORunnable;-><init>(Lcom/sec/epdg/EpdgService;I)V
 
-    .line 1377
     return-void
 .end method
 
@@ -44,12 +41,10 @@
 
     const/4 v4, 0x1
 
-    .line 1381
     invoke-virtual {p0}, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->getNetworkType()I
 
     move-result v0
 
-    .line 1382
     .local v0, "ratType":I
     const-string v1, "[EPDGService]"
 
@@ -73,12 +68,10 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1384
     const/16 v1, 0xd
 
     if-ne v0, v1, :cond_2
 
-    .line 1385
     # invokes: Lcom/sec/epdg/EpdgService;->getIsOnDemandApnConnectionFailed()Ljava/lang/Boolean;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$000()Ljava/lang/Boolean;
 
@@ -90,24 +83,20 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 1386
     # invokes: Lcom/sec/epdg/EpdgService;->setIsOnDemandApnConnectionFailed(Z)V
     invoke-static {v5}, Lcom/sec/epdg/EpdgService;->access$100(Z)V
 
-    .line 1387
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->onSystemSelectTimerFinish()V
     invoke-static {v1}, Lcom/sec/epdg/EpdgService;->access$200(Lcom/sec/epdg/EpdgService;)V
 
-    .line 1389
     :cond_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->moveToLteBasedOnMapcon()V
     invoke-static {v1}, Lcom/sec/epdg/EpdgService;->access$300(Lcom/sec/epdg/EpdgService;)V
 
-    .line 1390
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isInternetKeepAliveEnabled()Ljava/lang/Boolean;
 
     move-result-object v1
@@ -118,7 +107,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1391
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->isKeepAliveRunning()Z
@@ -141,20 +129,17 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 1393
     const-string v1, "[EPDGService]"
 
     const-string v2, "InternetKeepAlive:mPdnXferReceiver:RAT=LTE,EPDG=AVAILABLE so send keep alive packet and start the keep alive timer"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1395
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->pingAsyncInternet()V
     invoke-static {v1}, Lcom/sec/epdg/EpdgService;->access$600(Lcom/sec/epdg/EpdgService;)V
 
-    .line 1396
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgRead:Lcom/sec/epdg/EpdgContentReader;
@@ -175,18 +160,15 @@
     # invokes: Lcom/sec/epdg/EpdgService;->startAlarmForInternetKeepAlive(J)V
     invoke-static {v1, v2, v3}, Lcom/sec/epdg/EpdgService;->access$800(Lcom/sec/epdg/EpdgService;J)V
 
-    .line 1432
     :cond_1
     :goto_0
     return-void
 
-    .line 1399
     :cond_2
     const/16 v1, 0xe
 
     if-ne v0, v1, :cond_4
 
-    .line 1400
     # invokes: Lcom/sec/epdg/EpdgService;->getIsOnDemandApnConnectionFailed()Ljava/lang/Boolean;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$000()Ljava/lang/Boolean;
 
@@ -198,17 +180,14 @@
 
     if-ne v1, v4, :cond_3
 
-    .line 1401
     # invokes: Lcom/sec/epdg/EpdgService;->setIsOnDemandApnConnectionFailed(Z)V
     invoke-static {v5}, Lcom/sec/epdg/EpdgService;->access$100(Z)V
 
-    .line 1402
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->onSystemSelectTimerFinish()V
     invoke-static {v1}, Lcom/sec/epdg/EpdgService;->access$200(Lcom/sec/epdg/EpdgService;)V
 
-    .line 1404
     :cond_3
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -217,7 +196,6 @@
 
     goto :goto_0
 
-    .line 1405
     :cond_4
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorAtt()Ljava/lang/Boolean;
 
@@ -258,7 +236,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 1406
     :cond_6
     # invokes: Lcom/sec/epdg/EpdgService;->getIsOnDemandApnConnectionFailed()Ljava/lang/Boolean;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$000()Ljava/lang/Boolean;
@@ -271,17 +248,14 @@
 
     if-ne v1, v4, :cond_7
 
-    .line 1407
     # invokes: Lcom/sec/epdg/EpdgService;->setIsOnDemandApnConnectionFailed(Z)V
     invoke-static {v5}, Lcom/sec/epdg/EpdgService;->access$100(Z)V
 
-    .line 1408
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->onSystemSelectTimerFinish()V
     invoke-static {v1}, Lcom/sec/epdg/EpdgService;->access$200(Lcom/sec/epdg/EpdgService;)V
 
-    .line 1410
     :cond_7
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -290,7 +264,6 @@
 
     goto :goto_0
 
-    .line 1411
     :cond_8
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorRogers()Ljava/lang/Boolean;
 
@@ -391,7 +364,6 @@
 
     if-eqz v1, :cond_c
 
-    .line 1415
     :cond_a
     # invokes: Lcom/sec/epdg/EpdgService;->getIsOnDemandApnConnectionFailed()Ljava/lang/Boolean;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$000()Ljava/lang/Boolean;
@@ -404,17 +376,14 @@
 
     if-ne v1, v4, :cond_b
 
-    .line 1416
     # invokes: Lcom/sec/epdg/EpdgService;->setIsOnDemandApnConnectionFailed(Z)V
     invoke-static {v5}, Lcom/sec/epdg/EpdgService;->access$100(Z)V
 
-    .line 1417
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->onSystemSelectTimerFinish()V
     invoke-static {v1}, Lcom/sec/epdg/EpdgService;->access$200(Lcom/sec/epdg/EpdgService;)V
 
-    .line 1419
     :cond_b
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -423,7 +392,6 @@
 
     goto/16 :goto_0
 
-    .line 1420
     :cond_c
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getCpThresholdConditionForHandover()Z
 
@@ -431,14 +399,12 @@
 
     if-ne v1, v4, :cond_d
 
-    .line 1422
     const-string v1, "[EPDGService]"
 
     const-string v2, "CS Preferred mode but all cs was not available. So, need to handover to WIFI."
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1423
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgPdnXferRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
@@ -454,11 +420,9 @@
 
     goto/16 :goto_0
 
-    .line 1424
     :cond_d
     if-nez v0, :cond_e
 
-    .line 1425
     const-string v1, "[EPDGService]"
 
     const-string v2, "IMS on ePDG and no LTE available allowing IMS to continue"
@@ -467,7 +431,6 @@
 
     goto/16 :goto_0
 
-    .line 1428
     :cond_e
     const-string v1, "[EPDGService]"
 

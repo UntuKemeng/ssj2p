@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/net/ProxySelector;-><init>()V
 
     return-void
@@ -28,25 +27,21 @@
     .locals 2
 
     .prologue
-    .line 58
     const-string v1, "connectivity"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 59
     .local v0, "binder":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
-    .line 60
     invoke-static {v0}, Landroid/net/IConnectivityManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/net/IConnectivityManager;
 
     move-result-object v1
 
     iput-object v1, p0, Landroid/net/EnterpriseProxySelector;->mConnectivityService:Landroid/net/IConnectivityManager;
 
-    .line 63
     :cond_0
     iget-object v1, p0, Landroid/net/EnterpriseProxySelector;->mConnectivityService:Landroid/net/IConnectivityManager;
 
@@ -62,14 +57,12 @@
     .param p3, "ioe"    # Ljava/io/IOException;
 
     .prologue
-    .line 104
     const-string v0, "EnterpriseProxySelector"
 
     const-string v1, "connectFailed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     return-void
 .end method
 
@@ -89,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 68
     const-string v4, "EnterpriseProxySelector"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -116,12 +108,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 69
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 71
     .local v3, "proxyList":Ljava/util/List;, "Ljava/util/List<Ljava/net/Proxy;>;"
     invoke-direct {p0}, Landroid/net/EnterpriseProxySelector;->getConnectivityManagerService()Landroid/net/IConnectivityManager;
 
@@ -129,7 +119,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 74
     :try_start_0
     iget-object v4, p0, Landroid/net/EnterpriseProxySelector;->mConnectivityService:Landroid/net/IConnectivityManager;
 
@@ -139,11 +128,9 @@
 
     move-result-object v2
 
-    .line 75
     .local v2, "proxyInfo":Landroid/net/ProxyInfo;
     if-eqz v2, :cond_2
 
-    .line 76
     const-string v4, "EnterpriseProxySelector"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -170,7 +157,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     new-instance v1, Ljava/net/Proxy;
 
     sget-object v4, Ljava/net/Proxy$Type;->HTTP:Ljava/net/Proxy$Type;
@@ -189,11 +175,9 @@
 
     invoke-direct {v1, v4, v5}, Ljava/net/Proxy;-><init>(Ljava/net/Proxy$Type;Ljava/net/SocketAddress;)V
 
-    .line 80
     .local v1, "proxy":Ljava/net/Proxy;
     if-eqz v1, :cond_0
 
-    .line 81
     const-string v4, "EnterpriseProxySelector"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -220,13 +204,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 94
     .end local v1    # "proxy":Ljava/net/Proxy;
     .end local v2    # "proxyInfo":Landroid/net/ProxyInfo;
     :cond_0
@@ -237,23 +219,19 @@
 
     if-nez v4, :cond_1
 
-    .line 95
     const-string v4, "EnterpriseProxySelector"
 
     const-string v5, "No proxy selected, go directly"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 96
     sget-object v4, Ljava/net/Proxy;->NO_PROXY:Ljava/net/Proxy;
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 99
     :cond_1
     return-object v3
 
-    .line 85
     .restart local v2    # "proxyInfo":Landroid/net/ProxyInfo;
     :cond_2
     :try_start_1
@@ -268,12 +246,10 @@
 
     goto :goto_0
 
-    .line 87
     .end local v2    # "proxyInfo":Landroid/net/ProxyInfo;
     :catch_0
     move-exception v0
 
-    .line 88
     .local v0, "e":Landroid/os/RemoteException;
     const-string v4, "EnterpriseProxySelector"
 
@@ -283,12 +259,10 @@
 
     goto :goto_0
 
-    .line 89
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 90
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v4, "EnterpriseProxySelector"
 

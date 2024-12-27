@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 10604
     iput-object p1, p0, Lcom/android/server/audio/AudioService$7;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Landroid/hardware/display/ExtendedDisplayListener;-><init>()V
@@ -38,6 +37,5 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 10619
     return-void
 .end method

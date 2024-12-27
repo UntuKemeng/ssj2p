@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6396
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$16;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Landroid/hardware/camera2/CameraManager$TorchCallback;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 6407
     const-string v0, "AccessibilityManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -89,7 +87,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6408
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$16;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mCameraId:Ljava/lang/String;
@@ -112,11 +109,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 6409
     # setter for: Lcom/android/server/accessibility/AccessibilityManagerService;->bIsTorchOn:Z
     invoke-static {p2}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8702(Z)Z
 
-    .line 6411
     :cond_0
     return-void
 .end method
@@ -126,7 +121,6 @@
     .param p1, "cameraId"    # Ljava/lang/String;
 
     .prologue
-    .line 6399
     const-string v0, "AccessibilityManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -166,7 +160,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6400
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityManagerService$16;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mCameraId:Ljava/lang/String;
@@ -189,13 +182,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 6401
     const/4 v0, 0x1
 
     # setter for: Lcom/android/server/accessibility/AccessibilityManagerService;->bIsTorchOn:Z
     invoke-static {v0}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8702(Z)Z
 
-    .line 6403
     :cond_0
     return-void
 .end method

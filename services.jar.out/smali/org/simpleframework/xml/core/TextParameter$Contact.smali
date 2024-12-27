@@ -31,10 +31,8 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 273
     invoke-direct {p0, p1, p2, p3}, Lorg/simpleframework/xml/core/ParameterContact;-><init>(Ljava/lang/annotation/Annotation;Ljava/lang/reflect/Constructor;I)V
 
-    .line 274
     return-void
 .end method
 
@@ -44,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 285
     const-string v0, ""
 
     return-object v0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4743
     iput-object p1, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 4745
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4746
     .local v0, "action":Ljava/lang/String;
     const-string v1, "MountService"
 
@@ -52,7 +49,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4747
     iget-object v1, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
 
     iget-object v2, p0, Lcom/android/server/MountService$3;->this$0:Lcom/android/server/MountService;
@@ -69,6 +65,5 @@
     # invokes: Lcom/android/server/MountService;->ApplyCurrentSdCardPolicy(Z)V
     invoke-static {v1, v2}, Lcom/android/server/MountService;->access$3800(Lcom/android/server/MountService;Z)V
 
-    .line 4748
     return-void
 .end method

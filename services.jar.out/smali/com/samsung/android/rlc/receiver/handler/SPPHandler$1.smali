@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 99
     invoke-static {}, Lcom/samsung/android/rlc/common/Extra$PushErrorCode;->values()[Lcom/samsung/android/rlc/common/Extra$PushErrorCode;
 
     move-result-object v0

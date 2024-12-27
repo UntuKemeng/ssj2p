@@ -22,19 +22,14 @@
     .param p3, "actual"    # Ljava/lang/Class;
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     iput-object p3, p0, Lorg/simpleframework/xml/convert/Reference;->actual:Ljava/lang/Class;
 
-    .line 61
     iput-object p1, p0, Lorg/simpleframework/xml/convert/Reference;->value:Lorg/simpleframework/xml/strategy/Value;
 
-    .line 62
     iput-object p2, p0, Lorg/simpleframework/xml/convert/Reference;->data:Ljava/lang/Object;
 
-    .line 63
     return-void
 .end method
 
@@ -44,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     return v0
@@ -54,19 +48,16 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Lorg/simpleframework/xml/convert/Reference;->data:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
 
-    .line 85
     iget-object v0, p0, Lorg/simpleframework/xml/convert/Reference;->data:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 87
     :goto_0
     return-object v0
 
@@ -80,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Lorg/simpleframework/xml/convert/Reference;->data:Ljava/lang/Object;
 
     return-object v0
@@ -90,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 107
     const/4 v0, 0x1
 
     return v0
@@ -101,20 +90,16 @@
     .param p1, "data"    # Ljava/lang/Object;
 
     .prologue
-    .line 118
     iget-object v0, p0, Lorg/simpleframework/xml/convert/Reference;->value:Lorg/simpleframework/xml/strategy/Value;
 
     if-eqz v0, :cond_0
 
-    .line 119
     iget-object v0, p0, Lorg/simpleframework/xml/convert/Reference;->value:Lorg/simpleframework/xml/strategy/Value;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/strategy/Value;->setValue(Ljava/lang/Object;)V
 
-    .line 121
     :cond_0
     iput-object p1, p0, Lorg/simpleframework/xml/convert/Reference;->data:Ljava/lang/Object;
 
-    .line 122
     return-void
 .end method

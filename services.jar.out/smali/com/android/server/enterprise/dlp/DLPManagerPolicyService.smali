@@ -105,7 +105,6 @@
 
     const/4 v2, 0x1
 
-    .line 88
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v0
@@ -117,26 +116,22 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
 
-    .line 89
     const-string v0, "DLPManagerPolicyService"
 
     sput-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
-    .line 99
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPConnectionMap:Ljava/util/Map;
 
-    .line 100
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->SERVICECONNECTIONWAIT:Ljava/lang/Object;
 
-    .line 103
     const/16 v0, 0x19
 
     new-array v0, v0, [Ljava/lang/String;
@@ -283,17 +278,14 @@
 
     sput-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->FIXED_EXTENSIONS:[Ljava/lang/String;
 
-    .line 112
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sInstance:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
-    .line 122
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 1293
     new-array v0, v7, [Ljava/lang/String;
 
     const-string v3, "com.microsoft.office"
@@ -319,7 +311,6 @@
     :cond_0
     move v0, v2
 
-    .line 88
     goto/16 :goto_0
 .end method
 
@@ -330,62 +321,48 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 267
     invoke-direct {p0}, Lcom/sec/enterprise/knox/dlp/IDLPManagerPolicy$Stub;-><init>()V
 
-    .line 87
     iput-object v2, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
-    .line 98
     iput-object v2, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
-    .line 108
     iput-object v2, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->receiver:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$EnterpriseDLPpolicyReciever;
 
-    .line 259
     new-instance v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPProcessObserver;
 
     invoke-direct {v1, p0, v2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPProcessObserver;-><init>(Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPProcessObserver:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPProcessObserver;
 
-    .line 268
     sget-boolean v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
 
     if-eqz v1, :cond_0
 
-    .line 269
     sget-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v2, "DLPManagerPolicyService Constructor"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 270
     :cond_0
     iput-object p1, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
-    .line 272
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->registerEnterpriseDLPpolicyReciever()V
 
-    .line 273
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->registerBootReceiver()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 279
     :goto_0
     sput-object p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sInstance:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
-    .line 280
     return-void
 
-    .line 274
     :catch_0
     move-exception v0
 
-    .line 275
     .local v0, "e":Ljava/lang/Exception;
     sget-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -393,7 +370,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -414,17 +390,14 @@
     .end annotation
 
     .prologue
-    .line 679
     .local p2, "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;>;"
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 680
     :cond_0
     const/4 v0, 0x0
 
-    .line 683
     :goto_0
     return v0
 
@@ -443,13 +416,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1183
     if-nez p1, :cond_0
 
-    .line 1184
     const/4 v0, 0x0
 
-    .line 1187
     :goto_0
     return-object v0
 
@@ -479,13 +449,10 @@
     .end annotation
 
     .prologue
-    .line 736
     if-nez p1, :cond_0
 
-    .line 737
     const/4 v0, 0x0
 
-    .line 740
     :goto_0
     return-object v0
 
@@ -514,17 +481,14 @@
     .end annotation
 
     .prologue
-    .line 713
     .local p2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 714
     :cond_0
     const/4 v0, 0x0
 
-    .line 717
     :goto_0
     return v0
 
@@ -544,35 +508,28 @@
     .param p2, "config"    # Landroid/os/Bundle;
 
     .prologue
-    .line 916
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     move/from16 v23, v0
 
-    .line 917
     .local v23, "userId":I
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->_getDLPConfig(Landroid/app/enterprise/ContextInfo;)Landroid/os/Bundle;
 
     move-result-object v21
 
-    .line 919
     .local v21, "oldConfig":Landroid/os/Bundle;
     const/4 v15, 0x1
 
-    .line 920
     .local v15, "finalRes":Z
     const/16 v20, 0x0
 
-    .line 921
     .local v20, "notifyDLPService":Z
     if-eqz p2, :cond_e
 
-    .line 924
     const/16 v22, 0x0
 
-    .line 925
     .local v22, "res":Z
     :try_start_0
     const-string v25, "ExpiryAfter"
@@ -587,7 +544,6 @@
 
     if-eqz v25, :cond_0
 
-    .line 926
     const-string v25, "ExpiryAfter"
 
     const/16 v26, 0x0
@@ -602,7 +558,6 @@
 
     move-result v12
 
-    .line 928
     .local v12, "expiry_after":I
     const-string v25, "ExpiryAfter"
 
@@ -622,7 +577,6 @@
 
     if-eq v12, v0, :cond_0
 
-    .line 929
     sget-object v25, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -661,7 +615,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 930
     move-object/from16 v0, p0
 
     move/from16 v1, v23
@@ -670,14 +623,12 @@
 
     move-result v22
 
-    .line 932
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
     move-result-wide v8
 
-    .line 934
     .local v8, "calling_uid":J
     :try_start_1
     move-object/from16 v0, p0
@@ -690,7 +641,6 @@
 
     move-result-object v11
 
-    .line 935
     .local v11, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     const/16 v25, 0x3
 
@@ -730,18 +680,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 937
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 940
     if-eqz v15, :cond_8
 
     if-eqz v22, :cond_8
 
     const/4 v15, 0x1
 
-    .line 941
     :goto_0
     const-string v25, "Activate"
 
@@ -755,15 +702,12 @@
 
     if-eqz v25, :cond_0
 
-    .line 942
     const/16 v20, 0x1
 
-    .line 943
     new-instance v17, Landroid/content/Intent;
 
     invoke-direct/range {v17 .. v17}, Landroid/content/Intent;-><init>()V
 
-    .line 944
     .local v17, "in":Landroid/content/Intent;
     const-string v25, "android.intent.extra.user_handle"
 
@@ -775,14 +719,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 945
     move-object/from16 v0, v17
 
     move-object/from16 v1, p2
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 947
     new-instance v6, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
 
     const/16 v25, 0x1
@@ -793,7 +735,6 @@
 
     invoke-direct {v6, v0, v1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;-><init>(Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;I)V
 
-    .line 948
     .local v6, "bindAsyncTask":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
     const/16 v25, 0x1
 
@@ -813,7 +754,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 959
     .end local v6    # "bindAsyncTask":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
     .end local v8    # "calling_uid":J
     .end local v11    # "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
@@ -830,10 +770,8 @@
 
     if-eqz v25, :cond_3
 
-    .line 960
     const/16 v22, 0x0
 
-    .line 961
     const-string v25, "Extensions"
 
     move-object/from16 v0, p2
@@ -846,7 +784,6 @@
 
     if-eqz v25, :cond_3
 
-    .line 962
     const-string v25, "Extensions"
 
     move-object/from16 v0, p2
@@ -857,7 +794,6 @@
 
     move-result-object v13
 
-    .line 963
     .local v13, "extendedExtensions":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -865,7 +801,6 @@
 
     move-result-object v14
 
-    .line 964
     .local v14, "extensions":Ljava/lang/String;
     if-eqz v14, :cond_2
 
@@ -875,7 +810,6 @@
 
     if-nez v25, :cond_2
 
-    .line 965
     move-object/from16 v0, p0
 
     move/from16 v1, v23
@@ -884,10 +818,8 @@
 
     move-result v22
 
-    .line 966
     if-eqz v22, :cond_1
 
-    .line 967
     sget-object v25, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -932,7 +864,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 968
     :cond_1
     move-object/from16 v0, p0
 
@@ -942,7 +873,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 971
     :cond_2
     if-eqz v15, :cond_9
 
@@ -950,14 +880,12 @@
 
     const/4 v15, 0x1
 
-    .line 981
     .end local v13    # "extendedExtensions":Ljava/lang/String;
     .end local v14    # "extensions":Ljava/lang/String;
     :cond_3
     :goto_2
     const/16 v22, 0x0
 
-    .line 982
     :try_start_4
     const-string v25, "Lock"
 
@@ -971,7 +899,6 @@
 
     if-eqz v25, :cond_5
 
-    .line 983
     const-string v25, "Lock"
 
     move-object/from16 v0, p2
@@ -982,7 +909,6 @@
 
     move-result v19
 
-    .line 984
     .local v19, "isLocked":Z
     sget-object v25, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -1010,7 +936,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 986
     const-string v25, "Lock"
 
     move-object/from16 v0, v21
@@ -1027,10 +952,8 @@
 
     if-eq v0, v1, :cond_5
 
-    .line 987
     if-eqz v19, :cond_a
 
-    .line 989
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
@@ -1045,11 +968,9 @@
 
     move-result-object v4
 
-    .line 990
     .local v4, "DLPAppList":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;>;"
     if-eqz v4, :cond_a
 
-    .line 991
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v16
@@ -1069,15 +990,12 @@
 
     check-cast v7, Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
 
-    .line 992
     .local v7, "dpi":Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
     iget-object v5, v7, Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;->appIdentity:Lcom/sec/enterprise/AppIdentity;
 
-    .line 993
     .local v5, "ai":Lcom/sec/enterprise/AppIdentity;
     if-eqz v5, :cond_4
 
-    .line 994
     invoke-virtual {v5}, Lcom/sec/enterprise/AppIdentity;->getPackageName()Ljava/lang/String;
 
     move-result-object v25
@@ -1094,7 +1012,6 @@
 
     goto :goto_3
 
-    .line 1004
     .end local v4    # "DLPAppList":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;>;"
     .end local v5    # "ai":Lcom/sec/enterprise/AppIdentity;
     .end local v7    # "dpi":Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
@@ -1103,11 +1020,9 @@
     :catch_0
     move-exception v10
 
-    .line 1005
     .local v10, "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1006
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     move-result-object v25
@@ -1142,16 +1057,13 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;->addDumpLog(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 1007
     const/4 v15, 0x0
 
-    .line 1011
     .end local v10    # "e":Ljava/lang/Exception;
     :cond_5
     :goto_4
     const/16 v22, 0x0
 
-    .line 1013
     :try_start_5
     const-string v25, "Activate"
 
@@ -1165,7 +1077,6 @@
 
     if-eqz v25, :cond_7
 
-    .line 1014
     const-string v25, "Activate"
 
     move-object/from16 v0, p2
@@ -1176,7 +1087,6 @@
 
     move-result v18
 
-    .line 1017
     .local v18, "isActivated":Z
     const-string v25, "Activate"
 
@@ -1194,7 +1104,6 @@
 
     if-eq v0, v1, :cond_7
 
-    .line 1018
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
@@ -1209,11 +1118,9 @@
 
     move-result-object v24
 
-    .line 1020
     .local v24, "whiteList":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;>;"
     if-eqz v24, :cond_c
 
-    .line 1021
     invoke-interface/range {v24 .. v24}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v16
@@ -1233,15 +1140,12 @@
 
     check-cast v7, Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
 
-    .line 1022
     .restart local v7    # "dpi":Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
     iget-object v5, v7, Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;->appIdentity:Lcom/sec/enterprise/AppIdentity;
 
-    .line 1023
     .restart local v5    # "ai":Lcom/sec/enterprise/AppIdentity;
     if-eqz v5, :cond_6
 
-    .line 1024
     invoke-virtual {v5}, Lcom/sec/enterprise/AppIdentity;->getPackageName()Ljava/lang/String;
 
     move-result-object v25
@@ -1258,7 +1162,6 @@
 
     goto :goto_5
 
-    .line 1045
     .end local v5    # "ai":Lcom/sec/enterprise/AppIdentity;
     .end local v7    # "dpi":Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
     .end local v16    # "i$":Ljava/util/Iterator;
@@ -1267,11 +1170,9 @@
     :catch_1
     move-exception v10
 
-    .line 1046
     .restart local v10    # "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1047
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     move-result-object v25
@@ -1306,10 +1207,8 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;->addDumpLog(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 1048
     const/4 v15, 0x0
 
-    .line 1055
     .end local v10    # "e":Ljava/lang/Exception;
     .end local v22    # "res":Z
     :cond_7
@@ -1339,7 +1238,6 @@
     :goto_7
     return v25
 
-    .line 937
     .restart local v8    # "calling_uid":J
     .restart local v12    # "expiry_after":I
     .restart local v22    # "res":Z
@@ -1353,17 +1251,14 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 952
     .end local v8    # "calling_uid":J
     .end local v12    # "expiry_after":I
     :catch_2
     move-exception v10
 
-    .line 953
     .restart local v10    # "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 954
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     move-result-object v25
@@ -1398,12 +1293,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;->addDumpLog(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 955
     const/4 v15, 0x0
 
     goto/16 :goto_1
 
-    .line 940
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v8    # "calling_uid":J
     .restart local v11    # "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
@@ -1413,7 +1306,6 @@
 
     goto/16 :goto_0
 
-    .line 971
     .end local v8    # "calling_uid":J
     .end local v11    # "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     .end local v12    # "expiry_after":I
@@ -1424,17 +1316,14 @@
 
     goto/16 :goto_2
 
-    .line 974
     .end local v13    # "extendedExtensions":Ljava/lang/String;
     .end local v14    # "extensions":Ljava/lang/String;
     :catch_3
     move-exception v10
 
-    .line 975
     .restart local v10    # "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 976
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     move-result-object v25
@@ -1471,7 +1360,6 @@
 
     goto/16 :goto_2
 
-    .line 999
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v19    # "isLocked":Z
     :cond_a
@@ -1488,7 +1376,6 @@
 
     move-result v22
 
-    .line 1001
     if-eqz v15, :cond_b
 
     if-eqz v22, :cond_b
@@ -1503,7 +1390,6 @@
 
     goto :goto_8
 
-    .line 1029
     .end local v19    # "isLocked":Z
     .restart local v18    # "isActivated":Z
     .restart local v24    # "whiteList":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;>;"
@@ -1519,7 +1405,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->forceStopPackage(ILjava/lang/String;)V
 
-    .line 1031
     sget-object v25, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -1546,15 +1431,12 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1032
     if-nez v20, :cond_d
 
-    .line 1033
     new-instance v17, Landroid/content/Intent;
 
     invoke-direct/range {v17 .. v17}, Landroid/content/Intent;-><init>()V
 
-    .line 1034
     .restart local v17    # "in":Landroid/content/Intent;
     const-string v25, "android.intent.extra.user_handle"
 
@@ -1566,14 +1448,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1035
     move-object/from16 v0, v17
 
     move-object/from16 v1, p2
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 1037
     new-instance v6, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
 
     const/16 v25, 0x2
@@ -1584,7 +1464,6 @@
 
     invoke-direct {v6, v0, v1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;-><init>(Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;I)V
 
-    .line 1038
     .restart local v6    # "bindAsyncTask":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
     const/16 v25, 0x1
 
@@ -1602,7 +1481,6 @@
 
     invoke-virtual {v6, v0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 1040
     .end local v6    # "bindAsyncTask":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
     .end local v17    # "in":Landroid/content/Intent;
     :cond_d
@@ -1616,7 +1494,6 @@
 
     if-nez v25, :cond_7
 
-    .line 1041
     sget-object v25, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -1647,7 +1524,6 @@
 
     goto/16 :goto_6
 
-    .line 1051
     .end local v18    # "isActivated":Z
     .end local v22    # "res":Z
     .end local v24    # "whiteList":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;>;"
@@ -1658,12 +1534,10 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1052
     const/4 v15, 0x0
 
     goto/16 :goto_6
 
-    .line 1055
     :cond_f
     const/16 v25, 0x0
 
@@ -1674,7 +1548,6 @@
     .locals 1
 
     .prologue
-    .line 86
     sget-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -1686,7 +1559,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->registerOrUnregisterProcessObserver(Z)Z
 
     move-result v0
@@ -1701,7 +1573,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getPackageMetaData(Ljava/lang/String;I)Landroid/os/Bundle;
 
     move-result-object v0
@@ -1713,7 +1584,6 @@
     .locals 1
 
     .prologue
-    .line 86
     sget-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPConnectionMap:Ljava/util/Map;
 
     return-object v0
@@ -1723,7 +1593,6 @@
     .locals 1
 
     .prologue
-    .line 86
     sget-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-object v0
@@ -1734,7 +1603,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     return-object v0
@@ -1747,7 +1615,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sendSetExtensionEPMDCommand(Ljava/lang/String;I)V
 
     return-void
@@ -1757,7 +1624,6 @@
     .locals 1
 
     .prologue
-    .line 86
     sget-boolean v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
 
     return v0
@@ -1768,7 +1634,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     .prologue
-    .line 86
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     move-result-object v0
@@ -1782,7 +1647,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPInterface(I)Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;
 
     move-result-object v0
@@ -1796,7 +1660,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->bindToDLPService(I)V
 
     return-void
@@ -1808,7 +1671,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 86
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isMdmActivated(I)Z
 
     move-result v0
@@ -1821,12 +1683,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 579
     sget-boolean v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
 
     if-eqz v17, :cond_0
 
-    .line 580
     sget-object v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1853,7 +1713,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 581
     :cond_0
     new-instance v5, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPServiceConnection;
 
@@ -1861,7 +1720,6 @@
 
     invoke-direct {v5, v0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPServiceConnection;-><init>(I)V
 
-    .line 582
     .local v5, "connection":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPServiceConnection;
     new-instance v9, Landroid/content/Intent;
 
@@ -1871,13 +1729,11 @@
 
     invoke-direct {v9, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 583
     .local v9, "intent":Landroid/content/Intent;
     sget-boolean v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
 
     if-eqz v17, :cond_1
 
-    .line 584
     sget-object v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -1904,13 +1760,11 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 585
     :cond_1
     sget-object v18, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->SERVICECONNECTIONWAIT:Ljava/lang/Object;
 
     monitor-enter v18
 
-    .line 587
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -1918,7 +1772,6 @@
 
     move-result-wide v10
 
-    .line 589
     .local v10, "id":J
     :try_start_1
     move-object/from16 v0, p0
@@ -1931,7 +1784,6 @@
 
     move-result-object v12
 
-    .line 590
     .local v12, "pm":Landroid/content/pm/PackageManager;
     new-instance v16, Landroid/os/UserHandle;
 
@@ -1941,11 +1793,9 @@
 
     invoke-direct {v0, v1}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 591
     .local v16, "userHandle":Landroid/os/UserHandle;
     if-eqz v12, :cond_4
 
-    .line 592
     const/16 v17, 0x0
 
     move/from16 v0, v17
@@ -1956,7 +1806,6 @@
 
     move-result-object v14
 
-    .line 593
     .local v14, "resList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v14, :cond_2
 
@@ -1966,7 +1815,6 @@
 
     if-lez v17, :cond_2
 
-    .line 594
     invoke-interface {v14}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -1985,11 +1833,9 @@
 
     check-cast v13, Landroid/content/pm/ResolveInfo;
 
-    .line 595
     .local v13, "resInfo":Landroid/content/pm/ResolveInfo;
     iget-object v15, v13, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
-    .line 596
     .local v15, "servInfo":Landroid/content/pm/ServiceInfo;
     sget-object v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -2027,7 +1873,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 597
     new-instance v4, Landroid/content/ComponentName;
 
     iget-object v0, v15, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2050,7 +1895,6 @@
 
     invoke-direct {v4, v0, v1}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 598
     .local v4, "cn":Landroid/content/ComponentName;
     sget-object v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -2062,10 +1906,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
     invoke-virtual {v9, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 600
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
@@ -2086,7 +1928,6 @@
 
     if-eqz v17, :cond_3
 
-    .line 601
     sget-object v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v19, "In bindToService: Success >>> Bind DLP service"
@@ -2099,7 +1940,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 603
     :try_start_2
     new-instance v17, Ljava/util/concurrent/CountDownLatch;
 
@@ -2113,7 +1953,6 @@
 
     sput-object v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 604
     sget-object v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     const-wide/32 v20, 0x30d40
@@ -2130,11 +1969,9 @@
 
     move-result v6
 
-    .line 605
     .local v6, "countDownTimeout":Z
     if-nez v6, :cond_2
 
-    .line 606
     sget-object v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v19, "In bindToService: CoutnDownLatch return false"
@@ -2148,7 +1985,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 621
     .end local v4    # "cn":Landroid/content/ComponentName;
     .end local v6    # "countDownTimeout":Z
     .end local v8    # "i$":Ljava/util/Iterator;
@@ -2160,15 +1996,12 @@
     :try_start_3
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 623
     monitor-exit v18
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 624
     return-void
 
-    .line 608
     .restart local v4    # "cn":Landroid/content/ComponentName;
     .restart local v8    # "i$":Ljava/util/Iterator;
     .restart local v13    # "resInfo":Landroid/content/pm/ResolveInfo;
@@ -2177,7 +2010,6 @@
     :catch_0
     move-exception v7
 
-    .line 609
     .local v7, "e":Ljava/lang/InterruptedException;
     :try_start_4
     sget-object v17, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
@@ -2194,7 +2026,6 @@
 
     goto :goto_1
 
-    .line 621
     .end local v4    # "cn":Landroid/content/ComponentName;
     .end local v7    # "e":Ljava/lang/InterruptedException;
     .end local v8    # "i$":Ljava/util/Iterator;
@@ -2211,7 +2042,6 @@
 
     throw v17
 
-    .line 623
     .end local v10    # "id":J
     :catchall_1
     move-exception v17
@@ -2222,7 +2052,6 @@
 
     throw v17
 
-    .line 613
     .restart local v4    # "cn":Landroid/content/ComponentName;
     .restart local v8    # "i$":Ljava/util/Iterator;
     .restart local v10    # "id":J
@@ -2245,7 +2074,6 @@
 
     goto/16 :goto_0
 
-    .line 618
     .end local v4    # "cn":Landroid/content/ComponentName;
     .end local v8    # "i$":Ljava/util/Iterator;
     .end local v13    # "resInfo":Landroid/content/pm/ResolveInfo;
@@ -2271,16 +2099,13 @@
     .locals 6
 
     .prologue
-    .line 1428
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 1429
     .local v0, "callerPid":I
     const/4 v2, 0x0
 
-    .line 1431
     .local v2, "packageName":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -2293,7 +2118,6 @@
 
     move-result-object v2
 
-    .line 1437
     :goto_0
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -2331,14 +2155,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1438
     return-object v2
 
-    .line 1432
     :catch_0
     move-exception v1
 
-    .line 1434
     .local v1, "e":Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -2353,20 +2174,16 @@
 
     const/4 v6, 0x0
 
-    .line 1395
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->checkCaller()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1396
     .local v1, "callerPackage":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 1397
     .local v2, "isDLPWhitelisted":Z
     const/4 v3, 0x0
 
-    .line 1398
     .local v3, "isSignaturePlatform":Z
     iget-object v8, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
@@ -2374,7 +2191,6 @@
 
     const/4 v4, 0x0
 
-    .line 1399
     .local v4, "packageManager":Landroid/content/pm/PackageManager;
     :goto_0
     if-eqz v1, :cond_0
@@ -2389,26 +2205,21 @@
 
     if-nez v8, :cond_0
 
-    .line 1402
     const/4 v3, 0x1
 
-    .line 1405
     :cond_0
     if-nez v3, :cond_3
 
-    .line 1406
     sget-object v7, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v8, "checkDLPCaller(). Called from non-platform app. Return false"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1423
     :cond_1
     :goto_1
     return v6
 
-    .line 1398
     .end local v4    # "packageManager":Landroid/content/pm/PackageManager;
     :cond_2
     iget-object v8, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
@@ -2419,14 +2230,12 @@
 
     goto :goto_0
 
-    .line 1410
     .restart local v4    # "packageManager":Landroid/content/pm/PackageManager;
     :cond_3
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 1411
     .local v5, "uid":I
     if-eqz v1, :cond_5
 
@@ -2436,7 +2245,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 1412
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     move-result-object v8
@@ -2449,17 +2257,14 @@
 
     move-result v0
 
-    .line 1413
     .local v0, "appType":I
     if-eq v0, v7, :cond_4
 
     if-nez v0, :cond_5
 
-    .line 1414
     :cond_4
     const/4 v2, 0x1
 
-    .line 1418
     .end local v0    # "appType":I
     :cond_5
     sget-object v8, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
@@ -2494,14 +2299,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1420
     if-eqz v2, :cond_1
 
     if-eqz v3, :cond_1
 
     move v6, v7
 
-    .line 1421
     goto :goto_1
 .end method
 
@@ -2516,28 +2319,23 @@
     .param p6, "realCallingUid"    # I
 
     .prologue
-    .line 1283
     sget-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sInstance:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     if-nez v0, :cond_1
 
-    .line 1284
     sget-boolean v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
 
     if-eqz v0, :cond_0
 
-    .line 1285
     sget-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v1, "checkLaunchIntentForAccessDLP() DLP is not instantiated"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1287
     :cond_0
     const/4 v0, 0x1
 
-    .line 1290
     :goto_0
     return v0
 
@@ -2580,23 +2378,19 @@
     .end annotation
 
     .prologue
-    .line 886
     .local p2, "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/AppIdentity;>;"
     invoke-virtual {p1}, Lcom/sec/enterprise/knox/container/KnoxContainerManager;->getApplicationPolicy()Landroid/app/enterprise/ApplicationPolicy;
 
     move-result-object v1
 
-    .line 887
     .local v1, "applicationPolicy":Landroid/app/enterprise/ApplicationPolicy;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 888
     .local v4, "pkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .line 889
     .local v2, "i":I
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2616,7 +2410,6 @@
 
     check-cast v0, Lcom/sec/enterprise/AppIdentity;
 
-    .line 890
     .local v0, "app":Lcom/sec/enterprise/AppIdentity;
     invoke-virtual {v0}, Lcom/sec/enterprise/AppIdentity;->getPackageName()Ljava/lang/String;
 
@@ -2624,7 +2417,6 @@
 
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 891
     sget-object v6, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2665,7 +2457,6 @@
 
     goto :goto_0
 
-    .line 893
     .end local v0    # "app":Lcom/sec/enterprise/AppIdentity;
     :cond_0
     invoke-virtual {v1, v4}, Landroid/app/enterprise/ApplicationPolicy;->removePackagesFromDisableClipboardBlackList(Ljava/util/List;)Z
@@ -2690,13 +2481,11 @@
     .end annotation
 
     .prologue
-    .line 897
     .local p2, "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/AppIdentity;>;"
     invoke-virtual {p1}, Lcom/sec/enterprise/knox/container/KnoxContainerManager;->getFirewall()Lcom/sec/enterprise/firewall/Firewall;
 
     move-result-object v1
 
-    .line 898
     .local v1, "firewall":Lcom/sec/enterprise/firewall/Firewall;
     const/4 v7, 0x0
 
@@ -2704,11 +2493,9 @@
 
     move-result-object v5
 
-    .line 899
     .local v5, "response":Lcom/sec/enterprise/firewall/FirewallResponse;
     if-eqz v5, :cond_0
 
-    .line 900
     sget-object v7, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2735,7 +2522,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 901
     sget-object v7, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2762,23 +2548,19 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 905
     :goto_0
     invoke-virtual {p1}, Lcom/sec/enterprise/knox/container/KnoxContainerManager;->getFirewallPolicy()Landroid/app/enterprise/FirewallPolicy;
 
     move-result-object v2
 
-    .line 906
     .local v2, "firewallPolicy":Landroid/app/enterprise/FirewallPolicy;
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 907
     .local v6, "rulesList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 908
     .local v3, "i":I
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2798,7 +2580,6 @@
 
     check-cast v0, Lcom/sec/enterprise/AppIdentity;
 
-    .line 909
     .local v0, "app":Lcom/sec/enterprise/AppIdentity;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2830,7 +2611,6 @@
 
     invoke-interface {v6, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 910
     sget-object v8, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2871,7 +2651,6 @@
 
     goto :goto_1
 
-    .line 903
     .end local v0    # "app":Lcom/sec/enterprise/AppIdentity;
     .end local v2    # "firewallPolicy":Landroid/app/enterprise/FirewallPolicy;
     .end local v3    # "i":I
@@ -2886,7 +2665,6 @@
 
     goto :goto_0
 
-    .line 912
     .restart local v2    # "firewallPolicy":Landroid/app/enterprise/FirewallPolicy;
     .restart local v3    # "i":I
     .restart local v4    # "i$":Ljava/util/Iterator;
@@ -2904,7 +2682,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 635
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -2924,28 +2701,23 @@
     .param p2, "config"    # Landroid/os/Bundle;
 
     .prologue
-    .line 794
     if-nez p2, :cond_1
 
-    .line 851
     :cond_0
     :goto_0
     return-void
 
-    .line 799
     :cond_1
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 800
     .local v3, "callerUid":I
     move-object/from16 v0, p1
 
     iget v5, v0, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 801
     .local v5, "containerId":I
     sget-object v13, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -2979,7 +2751,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 802
     new-instance v13, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     move-object/from16 v0, p0
@@ -2992,11 +2763,9 @@
 
     move-result v6
 
-    .line 804
     .local v6, "containerOwner":I
     if-ne v3, v6, :cond_5
 
-    .line 806
     move-object/from16 v0, p0
 
     invoke-direct {v0, v5}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isMdmActivated(I)Z
@@ -3005,21 +2774,18 @@
 
     if-nez v13, :cond_0
 
-    .line 807
     sget-object v13, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v14, "setDLPConfig: called by MDM - updating DBEntries for system and disabling the receiver"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 812
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-wide v8
 
-    .line 814
     .local v8, "id":J
     :try_start_1
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -3030,7 +2796,6 @@
 
     move-result v2
 
-    .line 815
     .local v2, "adminUid":I
     sget-object v13, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -3068,7 +2833,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 818
     new-instance v10, Landroid/app/enterprise/ContextInfo;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -3077,7 +2841,6 @@
 
     invoke-direct {v10, v13, v5}, Landroid/app/enterprise/ContextInfo;-><init>(II)V
 
-    .line 819
     .local v10, "newCtxInfo":Landroid/app/enterprise/ContextInfo;
     move-object/from16 v0, p0
 
@@ -3087,11 +2850,9 @@
 
     move-result-object v11
 
-    .line 820
     .local v11, "oldConfig":Landroid/os/Bundle;
     const/4 v12, 0x0
 
-    .line 821
     .local v12, "res":Z
     const-string v13, "Activate"
 
@@ -3111,7 +2872,6 @@
 
     if-eqz v13, :cond_4
 
-    .line 822
     const-string v13, "CLIPBOARD"
 
     invoke-virtual {v11, v13}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -3120,7 +2880,6 @@
 
     if-nez v13, :cond_2
 
-    .line 823
     int-to-long v14, v2
 
     const/4 v13, 0x1
@@ -3131,7 +2890,6 @@
 
     move-result v12
 
-    .line 824
     sget-object v13, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -3154,7 +2912,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 826
     :cond_2
     const-string v13, "NETWORK"
 
@@ -3164,7 +2921,6 @@
 
     if-nez v13, :cond_3
 
-    .line 827
     int-to-long v14, v2
 
     const/4 v13, 0x0
@@ -3175,7 +2931,6 @@
 
     move-result v12
 
-    .line 828
     sget-object v13, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -3198,7 +2953,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 835
     :cond_3
     :goto_1
     move-object/from16 v0, p0
@@ -3213,7 +2967,6 @@
 
     move-result v4
 
-    .line 836
     .local v4, "cnt":I
     sget-object v13, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -3245,7 +2998,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 839
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_2
@@ -3253,7 +3005,6 @@
 
     goto/16 :goto_0
 
-    .line 847
     .end local v2    # "adminUid":I
     .end local v3    # "callerUid":I
     .end local v4    # "cnt":I
@@ -3266,11 +3017,9 @@
     :catch_0
     move-exception v7
 
-    .line 848
     .local v7, "e":Ljava/lang/Exception;
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 849
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     move-result-object v13
@@ -3303,7 +3052,6 @@
 
     goto/16 :goto_0
 
-    .line 831
     .end local v7    # "e":Ljava/lang/Exception;
     .restart local v2    # "adminUid":I
     .restart local v3    # "callerUid":I
@@ -3318,7 +3066,6 @@
 
     goto :goto_1
 
-    .line 839
     .end local v2    # "adminUid":I
     .end local v10    # "newCtxInfo":Landroid/app/enterprise/ContextInfo;
     .end local v11    # "oldConfig":Landroid/os/Bundle;
@@ -3331,7 +3078,6 @@
 
     throw v13
 
-    .line 844
     .end local v8    # "id":J
     :cond_5
     sget-object v13, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
@@ -3377,27 +3123,22 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 297
     if-nez p2, :cond_0
 
-    .line 335
     :goto_0
     return-void
 
-    .line 301
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 304
     .local v4, "id":J
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getActivityManager()Landroid/app/ActivityManager;
 
     move-result-object v0
 
-    .line 305
     .local v0, "am":Landroid/app/ActivityManager;
     const-string v10, "activity"
 
@@ -3407,7 +3148,6 @@
 
     check-cast v1, Lcom/android/server/am/ActivityManagerService;
 
-    .line 307
     .local v1, "ams":Lcom/android/server/am/ActivityManagerService;
     const/16 v10, 0x14
 
@@ -3417,7 +3157,6 @@
 
     move-result-object v9
 
-    .line 312
     .local v9, "tasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RecentTaskInfo;>;"
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3438,7 +3177,6 @@
 
     check-cast v7, Landroid/app/ActivityManager$RecentTaskInfo;
 
-    .line 313
     .local v7, "recentTaskInfo":Landroid/app/ActivityManager$RecentTaskInfo;
     iget-object v10, v7, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
@@ -3452,7 +3190,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 315
     iget-object v10, v7, Landroid/app/ActivityManager$RecentTaskInfo;->baseIntent:Landroid/content/Intent;
 
     invoke-virtual {v10}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
@@ -3463,7 +3200,6 @@
 
     move-result-object v8
 
-    .line 316
     .local v8, "taskPackage":Ljava/lang/String;
     invoke-virtual {p2, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -3471,7 +3207,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 317
     iget v10, v7, Landroid/app/ActivityManager$RecentTaskInfo;->persistentId:I
 
     const/4 v11, 0x0
@@ -3482,14 +3217,12 @@
 
     if-eqz v10, :cond_1
 
-    .line 318
     invoke-virtual {v1, v8, p1}, Lcom/android/server/am/ActivityManagerService;->forceStopPackage(Ljava/lang/String;I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_1
 
-    .line 333
     .end local v0    # "am":Landroid/app/ActivityManager;
     .end local v1    # "ams":Lcom/android/server/am/ActivityManagerService;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -3503,7 +3236,6 @@
 
     throw v10
 
-    .line 323
     .restart local v0    # "am":Landroid/app/ActivityManager;
     .restart local v1    # "ams":Lcom/android/server/am/ActivityManagerService;
     .restart local v3    # "i$":Ljava/util/Iterator;
@@ -3512,33 +3244,27 @@
     :try_start_1
     invoke-virtual {v1, p2, p1}, Lcom/android/server/am/ActivityManagerService;->killBackgroundProcesses(Ljava/lang/String;I)V
 
-    .line 324
     invoke-virtual {v1, p2, p1}, Lcom/android/server/am/ActivityManagerService;->forceStopPackage(Ljava/lang/String;I)V
 
-    .line 326
     new-instance v6, Landroid/content/Intent;
 
     invoke-direct {v6}, Landroid/content/Intent;-><init>()V
 
-    .line 327
     .local v6, "in":Landroid/content/Intent;
     const-string v10, "android.intent.extra.user_handle"
 
     invoke-virtual {v6, v10, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 328
     const-string v10, "android.intent.extra.PACKAGE_NAME"
 
     invoke-virtual {v6, v10, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 330
     new-instance v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
 
     const/4 v10, 0x3
 
     invoke-direct {v2, p0, v10}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;-><init>(Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;I)V
 
-    .line 331
     .local v2, "bindAsyncTask":Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$BindAsyncTask;
     const/4 v10, 0x1
 
@@ -3552,7 +3278,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 333
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -3566,28 +3291,23 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1236
     const/4 v0, 0x0
 
-    .line 1239
     .local v0, "accessInfo":I
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sInstance:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     if-nez v3, :cond_1
 
-    .line 1240
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v4, "DLP is not instantiated"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1261
     :cond_0
     :goto_0
     return v2
 
-    .line 1244
     :cond_1
     invoke-static {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isActivated(I)Z
 
@@ -3595,7 +3315,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1248
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sInstance:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     invoke-direct {v2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
@@ -3606,14 +3325,11 @@
 
     move-result v1
 
-    .line 1250
     .local v1, "app_type":I
     if-nez v1, :cond_3
 
-    .line 1251
     const/16 v0, 0x80
 
-    .line 1259
     :cond_2
     :goto_1
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
@@ -3670,21 +3386,17 @@
 
     move v2, v0
 
-    .line 1261
     goto :goto_0
 
-    .line 1252
     :cond_3
     const/4 v2, 0x1
 
     if-ne v1, v2, :cond_4
 
-    .line 1253
     const/16 v0, 0x100
 
     goto :goto_1
 
-    .line 1254
     :cond_4
     const-string v2, "com.android.providers.media"
 
@@ -3694,12 +3406,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 1255
     const/16 v0, 0x80
 
     goto :goto_1
 
-    .line 1256
     :cond_5
     const-string v2, "com.android.providers.downloads"
 
@@ -3709,7 +3419,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1257
     const/16 v0, 0x80
 
     goto :goto_1
@@ -3719,12 +3428,10 @@
     .locals 2
 
     .prologue
-    .line 283
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mActivityManager:Landroid/app/ActivityManager;
 
     if-nez v0, :cond_0
 
-    .line 284
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
     const-string v1, "activity"
@@ -3737,7 +3444,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mActivityManager:Landroid/app/ActivityManager;
 
-    .line 287
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mActivityManager:Landroid/app/ActivityManager;
 
@@ -3748,12 +3454,10 @@
     .locals 1
 
     .prologue
-    .line 338
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     if-nez v0, :cond_0
 
-    .line 339
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
@@ -3762,7 +3466,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
-    .line 341
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -3778,7 +3481,6 @@
 
     const/4 v3, 0x1
 
-    .line 510
     sget-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPConnectionMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3791,7 +3493,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 511
     sget-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPConnectionMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3808,17 +3509,14 @@
 
     move-result-object v1
 
-    .line 529
     :goto_0
     return-object v1
 
-    .line 513
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 515
     .local v8, "id":J
     :try_start_0
     const-string/jumbo v1, "package"
@@ -3831,7 +3529,6 @@
 
     move-result-object v0
 
-    .line 518
     .local v0, "pm":Landroid/content/pm/IPackageManager;
     const-string v1, "com.samsung.android.dlp.service"
 
@@ -3841,7 +3538,6 @@
 
     if-eq v1, v3, :cond_1
 
-    .line 519
     const-string v1, "com.samsung.android.dlp.service"
 
     const/4 v2, 0x1
@@ -3854,7 +3550,6 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/content/pm/IPackageManager;->setApplicationEnabledSetting(Ljava/lang/String;IIILjava/lang/String;)V
 
-    .line 521
     sget-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v2, "DLP : dlp service enabled"
@@ -3864,7 +3559,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 526
     :cond_1
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -3872,21 +3566,17 @@
     :goto_1
     move-object v1, v7
 
-    .line 529
     goto :goto_0
 
-    .line 523
     :catch_0
     move-exception v6
 
-    .line 524
     .local v6, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 526
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -3904,7 +3594,6 @@
     .locals 2
 
     .prologue
-    .line 262
     const-string v1, "dlp"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -3913,7 +3602,6 @@
 
     check-cast v0, Lcom/android/server/DLPManagerService;
 
-    .line 264
     .local v0, "service":Lcom/android/server/DLPManagerService;
     return-object v0
 .end method
@@ -3932,7 +3620,6 @@
     .end annotation
 
     .prologue
-    .line 1111
     .local p1, "extnList":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     if-eqz p1, :cond_0
 
@@ -3942,21 +3629,17 @@
 
     if-eqz v3, :cond_1
 
-    .line 1112
     :cond_0
     const-string v3, ""
 
-    .line 1123
     :goto_0
     return-object v3
 
-    .line 1113
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1114
     .local v2, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -3977,7 +3660,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 1115
     .local v0, "ext":Ljava/lang/String;
     if-eqz v0, :cond_2
 
@@ -3987,7 +3669,6 @@
 
     if-nez v3, :cond_2
 
-    .line 1116
     invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v3
@@ -3996,17 +3677,14 @@
 
     move-result-object v0
 
-    .line 1117
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1119
     const-string v3, ","
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 1122
     .end local v0    # "ext":Ljava/lang/String;
     :cond_3
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
@@ -4035,7 +3713,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1123
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v3
@@ -4047,12 +3724,10 @@
     .locals 2
 
     .prologue
-    .line 627
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 628
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -4065,7 +3740,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 631
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -4077,13 +3751,10 @@
     .param p1, "extendedExt"    # Ljava/lang/String;
 
     .prologue
-    .line 1095
     if-nez p1, :cond_0
 
-    .line 1096
     const-string p1, ""
 
-    .line 1097
     :cond_0
     const-string v3, ","
 
@@ -4091,11 +3762,9 @@
 
     move-result-object v1
 
-    .line 1098
     .local v1, "extendedExtensions":[Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 1099
     .local v2, "mergedExtnSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     if-eqz v1, :cond_1
 
@@ -4103,14 +3772,12 @@
 
     if-nez v3, :cond_2
 
-    .line 1100
     :cond_1
     new-instance v2, Ljava/util/HashSet;
 
     .end local v2    # "mergedExtnSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-direct {v2}, Ljava/util/HashSet;-><init>()V
 
-    .line 1104
     .restart local v2    # "mergedExtnSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :goto_0
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->FIXED_EXTENSIONS:[Ljava/lang/String;
@@ -4121,12 +3788,10 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 1105
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDelimFormattedExtensionList(Ljava/util/HashSet;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1106
     .local v0, "delimString":Ljava/lang/String;
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -4150,10 +3815,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1107
     return-object v0
 
-    .line 1102
     .end local v0    # "delimString":Ljava/lang/String;
     :cond_2
     new-instance v2, Ljava/util/HashSet;
@@ -4175,7 +3838,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 440
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4198,7 +3860,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 442
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -4210,11 +3871,9 @@
 
     move-result-object v1
 
-    .line 443
     .local v1, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-eqz v1, :cond_0
 
-    .line 444
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -4251,23 +3910,19 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 445
     iget-object v2, v1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 450
     .end local v1    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :goto_0
     return-object v2
 
-    .line 447
     :catch_0
     move-exception v0
 
-    .line 448
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -4295,7 +3950,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_0
     const/4 v2, 0x0
@@ -4312,23 +3966,19 @@
 
     const/4 v2, 0x0
 
-    .line 1267
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sInstance:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     if-nez v3, :cond_0
 
-    .line 1268
     sget-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "isActivated() DLP is not instantiated"
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1276
     :goto_0
     return v2
 
-    .line 1272
     :cond_0
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sInstance:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
@@ -4340,7 +3990,6 @@
 
     move-result v0
 
-    .line 1276
     .local v0, "activated":I
     if-ne v0, v1, :cond_1
 
@@ -4361,10 +4010,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 773
     const/4 v0, 0x0
 
-    .line 775
     .local v0, "dev":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v1, Ljava/io/FileOutputStream;
@@ -4377,18 +4024,15 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 782
     .end local v0    # "dev":Ljava/io/FileOutputStream;
     .local v1, "dev":Ljava/io/FileOutputStream;
     if-eqz v1, :cond_0
 
-    .line 783
     :try_start_1
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 790
     :cond_0
     :goto_0
     const/4 v5, 0x1
@@ -4401,30 +4045,25 @@
     :goto_1
     return v5
 
-    .line 785
     .end local v0    # "dev":Ljava/io/FileOutputStream;
     .restart local v1    # "dev":Ljava/io/FileOutputStream;
     :catch_0
     move-exception v2
 
-    .line 786
     .local v2, "err":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 776
     .end local v1    # "dev":Ljava/io/FileOutputStream;
     .end local v2    # "err":Ljava/io/IOException;
     .restart local v0    # "dev":Ljava/io/FileOutputStream;
     :catch_1
     move-exception v3
 
-    .line 782
     .local v3, "fnfe":Ljava/io/FileNotFoundException;
     if-eqz v0, :cond_1
 
-    .line 783
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -4432,27 +4071,22 @@
 
     goto :goto_1
 
-    .line 785
     :catch_2
     move-exception v2
 
-    .line 786
     .restart local v2    # "err":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 778
     .end local v2    # "err":Ljava/io/IOException;
     .end local v3    # "fnfe":Ljava/io/FileNotFoundException;
     :catch_3
     move-exception v4
 
-    .line 782
     .local v4, "ioe":Ljava/io/IOException;
     if-eqz v0, :cond_1
 
-    .line 783
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -4460,41 +4094,33 @@
 
     goto :goto_1
 
-    .line 785
     :catch_4
     move-exception v2
 
-    .line 786
     .restart local v2    # "err":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 781
     .end local v2    # "err":Ljava/io/IOException;
     .end local v4    # "ioe":Ljava/io/IOException;
     :catchall_0
     move-exception v5
 
-    .line 782
     if-eqz v0, :cond_2
 
-    .line 783
     :try_start_4
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_5
 
-    .line 787
     :cond_2
     :goto_2
     throw v5
 
-    .line 785
     :catch_5
     move-exception v2
 
-    .line 786
     .restart local v2    # "err":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
@@ -4509,16 +4135,13 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 1442
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 1443
     .local v0, "containerId":I
     const/4 v5, 0x0
 
-    .line 1444
     .local v5, "isConsumerApp":Z
     invoke-static {v0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isActivated(I)Z
 
@@ -4534,7 +4157,6 @@
 
     if-eq v10, v11, :cond_0
 
-    .line 1445
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v10
@@ -4543,24 +4165,20 @@
 
     move-result-object v8
 
-    .line 1446
     .local v8, "pkgNames":[Ljava/lang/String;
     if-nez v8, :cond_1
 
-    .line 1447
     sget-object v10, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v11, "pkgNames is null"
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1481
     .end local v8    # "pkgNames":[Ljava/lang/String;
     :cond_0
     :goto_0
     return v9
 
-    .line 1450
     .restart local v8    # "pkgNames":[Ljava/lang/String;
     :cond_1
     const/4 v6, 0x0
@@ -4571,7 +4189,6 @@
 
     if-ge v6, v10, :cond_2
 
-    .line 1451
     const/16 v10, 0x100
 
     aget-object v11, v8, v6
@@ -4582,7 +4199,6 @@
 
     if-ne v10, v11, :cond_3
 
-    .line 1452
     sget-object v10, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -4607,29 +4223,23 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1453
     const/4 v5, 0x1
 
-    .line 1457
     :cond_2
     if-eqz v5, :cond_0
 
-    .line 1458
     new-instance v1, Landroid/app/enterprise/EnterpriseDeviceManager;
 
     invoke-direct {v1, p0}, Landroid/app/enterprise/EnterpriseDeviceManager;-><init>(Landroid/content/Context;)V
 
-    .line 1459
     .local v1, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->getFirewall()Lcom/sec/enterprise/firewall/Firewall;
 
     move-result-object v2
 
-    .line 1460
     .local v2, "firewallPolicy":Lcom/sec/enterprise/firewall/Firewall;
     if-eqz v2, :cond_7
 
-    .line 1461
     const/4 v10, 0x2
 
     sget-object v11, Lcom/sec/enterprise/firewall/FirewallRule$Status;->ENABLED:Lcom/sec/enterprise/firewall/FirewallRule$Status;
@@ -4638,7 +4248,6 @@
 
     move-result-object v3
 
-    .line 1462
     .local v3, "firewallRule":[Lcom/sec/enterprise/firewall/FirewallRule;
     const/4 v4, 0x0
 
@@ -4648,12 +4257,10 @@
 
     if-ge v4, v10, :cond_0
 
-    .line 1463
     aget-object v10, v3, v4
 
     if-eqz v10, :cond_6
 
-    .line 1464
     const-string v10, "*"
 
     aget-object v11, v3, v4
@@ -4682,7 +4289,6 @@
 
     if-eqz v10, :cond_5
 
-    .line 1465
     const/4 v7, 0x0
 
     .local v7, "k":I
@@ -4691,7 +4297,6 @@
 
     if-ge v7, v10, :cond_6
 
-    .line 1466
     aget-object v10, v3, v4
 
     invoke-virtual {v10}, Lcom/sec/enterprise/firewall/FirewallRule;->getPackageName()Ljava/lang/String;
@@ -4706,7 +4311,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 1467
     sget-object v9, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -4741,12 +4345,10 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1468
     const/4 v9, 0x1
 
     goto/16 :goto_0
 
-    .line 1450
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .end local v2    # "firewallPolicy":Lcom/sec/enterprise/firewall/Firewall;
     .end local v3    # "firewallRule":[Lcom/sec/enterprise/firewall/FirewallRule;
@@ -4757,7 +4359,6 @@
 
     goto/16 :goto_1
 
-    .line 1465
     .restart local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     .restart local v2    # "firewallPolicy":Lcom/sec/enterprise/firewall/Firewall;
     .restart local v3    # "firewallRule":[Lcom/sec/enterprise/firewall/FirewallRule;
@@ -4768,7 +4369,6 @@
 
     goto :goto_3
 
-    .line 1472
     .end local v7    # "k":I
     :cond_5
     sget-object v10, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
@@ -4777,13 +4377,11 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1462
     :cond_6
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 1477
     .end local v3    # "firewallRule":[Lcom/sec/enterprise/firewall/FirewallRule;
     .end local v4    # "i":I
     :cond_7
@@ -4805,23 +4403,19 @@
 
     const/4 v2, 0x0
 
-    .line 1382
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sInstance:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     if-nez v3, :cond_0
 
-    .line 1383
     sget-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v3, "isLocked() DLP is not instantiated"
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1391
     :goto_0
     return v2
 
-    .line 1387
     :cond_0
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->sInstance:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
@@ -4833,7 +4427,6 @@
 
     move-result v0
 
-    .line 1389
     .local v0, "isLocked":I
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -4857,7 +4450,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1391
     if-ne v0, v1, :cond_1
 
     :goto_1
@@ -4876,22 +4468,18 @@
     .param p1, "userID"    # I
 
     .prologue
-    .line 156
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     move-result-object v4
 
-    .line 157
     .local v4, "dbHelper":Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
     const/4 v7, 0x0
 
-    .line 158
     .local v7, "isMdmActivated":Z
     invoke-virtual {v4}, Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;->getPolicyConfigOwners()Landroid/util/SparseLongArray;
 
     move-result-object v8
 
-    .line 159
     .local v8, "policyConfigOwners":Landroid/util/SparseLongArray;
     if-eqz v8, :cond_3
 
@@ -4901,14 +4489,12 @@
 
     if-lez v9, :cond_3
 
-    .line 160
     new-instance v5, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v9, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
     invoke-direct {v5, v9}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
-    .line 161
     .local v5, "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     const/4 v6, 0x0
 
@@ -4920,27 +4506,22 @@
 
     if-ge v6, v9, :cond_0
 
-    .line 162
     invoke-virtual {v8, v6}, Landroid/util/SparseLongArray;->keyAt(I)I
 
     move-result v1
 
-    .line 163
     .local v1, "containerId":I
     if-ne p1, v1, :cond_2
 
-    .line 164
     invoke-virtual {v8, v1}, Landroid/util/SparseLongArray;->get(I)J
 
     move-result-wide v2
 
-    .line 166
     .local v2, "adminUid":J
     invoke-virtual {v5, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getMUMContainerOwnerUid(I)I
 
     move-result v0
 
-    .line 167
     .local v0, "actualOwnerUid":I
     invoke-static {v1, v0}, Landroid/os/UserHandle;->getUid(II)I
 
@@ -4948,7 +4529,6 @@
 
     int-to-long v10, v9
 
-    .line 168
     .local v10, "realContainerOwnerUid":J
     sget-object v9, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -4982,7 +4562,6 @@
 
     invoke-static {v9, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     cmp-long v9, v2, v10
 
     if-nez v9, :cond_1
@@ -4997,13 +4576,11 @@
     :goto_1
     move v9, v7
 
-    .line 178
     .end local v5    # "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .end local v6    # "i":I
     :goto_2
     return v9
 
-    .line 170
     .restart local v0    # "actualOwnerUid":I
     .restart local v1    # "containerId":I
     .restart local v2    # "adminUid":J
@@ -5015,7 +4592,6 @@
 
     goto :goto_1
 
-    .line 161
     .end local v0    # "actualOwnerUid":I
     .end local v2    # "adminUid":J
     .end local v10    # "realContainerOwnerUid":J
@@ -5024,7 +4600,6 @@
 
     goto :goto_0
 
-    .line 175
     .end local v1    # "containerId":I
     .end local v5    # "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .end local v6    # "i":I
@@ -5035,7 +4610,6 @@
 
     invoke-static {v9, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     const/4 v9, 0x0
 
     goto :goto_2
@@ -5045,19 +4619,16 @@
     .locals 3
 
     .prologue
-    .line 125
     sget-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v1, :cond_0
 
-    .line 126
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 127
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     new-instance v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;
 
@@ -5065,14 +4636,12 @@
 
     sput-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 151
     iget-object v1, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 153
     .end local v0    # "intentFilter":Landroid/content/IntentFilter;
     :cond_0
     return-void
@@ -5083,19 +4652,15 @@
     .param p1, "isActivated"    # Z
 
     .prologue
-    .line 1144
     iget-object v2, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPProcessObserver:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPProcessObserver;
 
     if-nez v2, :cond_0
 
-    .line 1146
     const/4 v2, 0x0
 
-    .line 1161
     :goto_0
     return v2
 
-    .line 1148
     :cond_0
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -5103,22 +4668,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1150
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1152
     .local v0, "token":J
     if-eqz p1, :cond_1
 
-    .line 1153
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPProcessObserver:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPProcessObserver;
 
     invoke-virtual {v2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPProcessObserver;->registerObserver()V
 
-    .line 1156
     :goto_1
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -5128,15 +4689,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1158
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1161
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 1155
     :cond_1
     :try_start_1
     iget-object v2, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mDLPProcessObserver:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$DLPProcessObserver;
@@ -5147,7 +4705,6 @@
 
     goto :goto_1
 
-    .line 1158
     :catchall_0
     move-exception v2
 
@@ -5167,10 +4724,8 @@
 
     const/4 v6, 0x0
 
-    .line 854
     const/4 v1, 0x1
 
-    .line 855
     .local v1, "finalRes":Z
     iget-object v7, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -5178,31 +4733,25 @@
 
     move-result-object v3
 
-    .line 857
     .local v3, "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/AppIdentity;>;"
     if-eqz v3, :cond_5
 
-    .line 858
     invoke-static {}, Lcom/sec/enterprise/knox/EnterpriseKnoxManager;->getInstance()Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
 
     move-result-object v0
 
-    .line 860
     .local v0, "ekm":Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
     if-eqz v0, :cond_4
 
-    .line 861
     iget-object v7, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, v7, p1}, Lcom/sec/enterprise/knox/EnterpriseKnoxManager;->getKnoxContainerManager(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;)Lcom/sec/enterprise/knox/container/KnoxContainerManager;
 
     move-result-object v2
 
-    .line 862
     .local v2, "kcm":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     if-nez v2, :cond_0
 
-    .line 863
     sget-object v5, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -5227,28 +4776,23 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 882
     .end local v0    # "ekm":Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
     .end local v2    # "kcm":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     :goto_0
     return v6
 
-    .line 866
     .restart local v0    # "ekm":Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
     .restart local v2    # "kcm":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     :cond_0
     const/4 v4, 0x0
 
-    .line 867
     .local v4, "res":Z
     if-eqz p4, :cond_2
 
-    .line 868
     invoke-direct {p0, v2, v3}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->enableClipboard(Lcom/sec/enterprise/knox/container/KnoxContainerManager;Ljava/util/List;)Z
 
     move-result v4
 
-    .line 869
     if-eqz v1, :cond_1
 
     if-eqz v4, :cond_1
@@ -5261,7 +4805,6 @@
     :goto_1
     move v6, v1
 
-    .line 882
     goto :goto_0
 
     .restart local v0    # "ekm":Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
@@ -5270,16 +4813,13 @@
     :cond_1
     move v1, v6
 
-    .line 869
     goto :goto_1
 
-    .line 871
     :cond_2
     invoke-direct {p0, v2, v3}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->enableNetwork(Lcom/sec/enterprise/knox/container/KnoxContainerManager;Ljava/util/List;)Z
 
     move-result v4
 
-    .line 872
     if-eqz v1, :cond_3
 
     if-eqz v4, :cond_3
@@ -5294,7 +4834,6 @@
 
     goto :goto_2
 
-    .line 876
     .end local v2    # "kcm":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     .end local v4    # "res":Z
     :cond_4
@@ -5324,7 +4863,6 @@
 
     goto :goto_0
 
-    .line 880
     .end local v0    # "ekm":Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
     :cond_5
     sget-object v5, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
@@ -5342,20 +4880,16 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1127
     if-nez p1, :cond_0
 
-    .line 1128
     sget-object v4, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v5, "Extended extension is null, making it empty"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1129
     const-string p1, ""
 
-    .line 1131
     :cond_0
     new-instance v4, Ljava/util/HashSet;
 
@@ -5375,7 +4909,6 @@
 
     move-result-object v3
 
-    .line 1132
     .local v3, "extendedExtns":Ljava/lang/String;
     sget-object v4, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -5399,12 +4932,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1134
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1136
     .local v0, "calling_uid":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
@@ -5413,7 +4944,6 @@
 
     move-result-object v2
 
-    .line 1137
     .local v2, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     const/4 v4, 0x5
 
@@ -5439,13 +4969,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1139
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1141
     return-void
 
-    .line 1139
     .end local v2    # "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     :catchall_0
     move-exception v4
@@ -5461,16 +4988,13 @@
     .param p2, "expiry"    # I
 
     .prologue
-    .line 1060
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1061
     .local v0, "calling_uid":J
     const/4 v2, 0x0
 
-    .line 1063
     .local v2, "res":Z
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPManagerService()Lcom/android/server/DLPManagerService;
@@ -5483,13 +5007,10 @@
 
     move-result v2
 
-    .line 1065
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1067
     return v2
 
-    .line 1065
     :catchall_0
     move-exception v3
 
@@ -5504,16 +5025,13 @@
     .param p2, "mergedExtensions"    # Ljava/lang/String;
 
     .prologue
-    .line 1083
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1084
     .local v0, "calling_uid":J
     const/4 v2, 0x0
 
-    .line 1086
     .local v2, "res":Z
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPManagerService()Lcom/android/server/DLPManagerService;
@@ -5526,13 +5044,10 @@
 
     move-result v2
 
-    .line 1088
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1090
     return v2
 
-    .line 1088
     :catchall_0
     move-exception v3
 
@@ -5547,16 +5062,13 @@
     .param p2, "lockStatus"    # Z
 
     .prologue
-    .line 1071
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1072
     .local v0, "calling_uid":J
     const/4 v2, 0x0
 
-    .line 1074
     .local v2, "res":Z
     if-eqz p2, :cond_0
 
@@ -5571,14 +5083,11 @@
 
     move-result v2
 
-    .line 1077
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1079
     return v2
 
-    .line 1074
     :cond_0
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPManagerService()Lcom/android/server/DLPManagerService;
@@ -5593,7 +5102,6 @@
 
     goto :goto_0
 
-    .line 1077
     :catchall_0
     move-exception v3
 
@@ -5628,22 +5136,18 @@
     .local p2, "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;>;"
     const/4 v6, 0x0
 
-    .line 642
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->enforceKnoxDLPPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 643
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 675
     :cond_0
     :goto_0
     return v6
 
-    .line 647
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -5651,7 +5155,6 @@
 
     if-nez v7, :cond_2
 
-    .line 648
     sget-object v7, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v8, "In addPackagesToAllowDLPWhiteList: DLPHelper is not initialized"
@@ -5660,11 +5163,9 @@
 
     goto :goto_0
 
-    .line 652
     :cond_2
     iget v5, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 654
     .local v5, "userId":I
     iget-object v6, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -5674,14 +5175,12 @@
 
     invoke-direct {p0, p1, v6}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->feederToMdmMigration(Landroid/app/enterprise/ContextInfo;Landroid/os/Bundle;)V
 
-    .line 656
     invoke-static {v5}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isActivated(I)Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
-    .line 657
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -5701,29 +5200,23 @@
 
     check-cast v1, Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
 
-    .line 659
     .local v1, "dpi":Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
     if-eqz v1, :cond_3
 
-    .line 663
     iget-object v0, v1, Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;->appIdentity:Lcom/sec/enterprise/AppIdentity;
 
-    .line 664
     .local v0, "ai":Lcom/sec/enterprise/AppIdentity;
     if-eqz v0, :cond_3
 
-    .line 665
     invoke-virtual {v0}, Lcom/sec/enterprise/AppIdentity;->getPackageName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 666
     .local v3, "packageName":Ljava/lang/String;
     invoke-virtual {v0}, Lcom/sec/enterprise/AppIdentity;->getSignature()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 667
     .local v4, "signature":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -5733,12 +5226,10 @@
 
     if-nez v6, :cond_3
 
-    .line 669
     invoke-direct {p0, v5, v3}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->forceStopPackage(ILjava/lang/String;)V
 
     goto :goto_1
 
-    .line 675
     .end local v0    # "ai":Lcom/sec/enterprise/AppIdentity;
     .end local v1    # "dpi":Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -5763,41 +5254,33 @@
     .param p7, "realCallingUid"    # I
 
     .prologue
-    .line 1300
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 1301
     :cond_0
     const/4 v1, 0x1
 
-    .line 1368
     :goto_0
     return v1
 
-    .line 1304
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 1306
     .local v2, "uri":Landroid/net/Uri;
     if-nez v2, :cond_2
 
-    .line 1307
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1310
     :cond_2
     invoke-virtual {v2}, Landroid/net/Uri;->getAuthority()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1313
     .local v8, "authority":Ljava/lang/String;
     :try_start_0
     move-object/from16 v0, p2
@@ -5806,7 +5289,6 @@
 
     iget-object v9, v1, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
-    .line 1315
     .local v9, "calleePkgName":Ljava/lang/String;
     move-object/from16 v0, p2
 
@@ -5818,20 +5300,16 @@
 
     move-result v18
 
-    .line 1317
     .local v18, "userid":I
     if-nez v9, :cond_3
 
-    .line 1318
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1321
     :cond_3
     const/4 v15, 0x0
 
-    .line 1322
     .local v15, "isInterestedApp":Z
     sget-object v7, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->ContentProviderRestrictingApps:[Ljava/lang/String;
 
@@ -5851,7 +5329,6 @@
 
     aget-object v17, v7, v14
 
-    .line 1323
     .local v17, "pkgName":Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -5861,27 +5338,22 @@
 
     if-eqz v1, :cond_5
 
-    .line 1324
     const/4 v15, 0x1
 
-    .line 1329
     .end local v17    # "pkgName":Ljava/lang/String;
     :cond_4
     if-nez v15, :cond_6
 
-    .line 1330
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1322
     .restart local v17    # "pkgName":Ljava/lang/String;
     :cond_5
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_1
 
-    .line 1333
     .end local v17    # "pkgName":Ljava/lang/String;
     :cond_6
     invoke-static/range {v18 .. v18}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isActivated(I)Z
@@ -5890,12 +5362,10 @@
 
     if-nez v1, :cond_7
 
-    .line 1334
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1337
     :cond_7
     move/from16 v0, v18
 
@@ -5907,12 +5377,10 @@
 
     if-eq v1, v3, :cond_8
 
-    .line 1338
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 1341
     :cond_8
     const-string/jumbo v1, "media"
 
@@ -5982,7 +5450,6 @@
 
     if-eqz v1, :cond_c
 
-    .line 1342
     :cond_9
     invoke-virtual {v2}, Landroid/net/Uri;->getEncodedUserInfo()Ljava/lang/String;
 
@@ -5990,7 +5457,6 @@
 
     if-nez v1, :cond_a
 
-    .line 1343
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6045,7 +5511,6 @@
 
     move-result-object v2
 
-    .line 1346
     :cond_a
     move-object/from16 v0, p0
 
@@ -6075,25 +5540,21 @@
 
     move-result-object v10
 
-    .line 1348
     .local v10, "cur":Landroid/database/Cursor;
     if-eqz v10, :cond_c
 
-    .line 1349
     invoke-interface {v10}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v1
 
     if-eqz v1, :cond_b
 
-    .line 1352
     const/4 v1, 0x0
 
     invoke-interface {v10, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 1354
     .local v13, "filepath":Ljava/lang/String;
     if-eqz v13, :cond_b
 
@@ -6105,7 +5566,6 @@
 
     if-eqz v1, :cond_b
 
-    .line 1355
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6128,7 +5588,6 @@
 
     move-result-object v12
 
-    .line 1356
     .local v12, "file_uri":Landroid/net/Uri;
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
@@ -6138,7 +5597,6 @@
 
     invoke-virtual {v0, v12, v1}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1360
     .end local v12    # "file_uri":Landroid/net/Uri;
     .end local v13    # "filepath":Ljava/lang/String;
     :cond_b
@@ -6146,7 +5604,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1368
     .end local v7    # "arr$":[Ljava/lang/String;
     .end local v9    # "calleePkgName":Ljava/lang/String;
     .end local v10    # "cur":Landroid/database/Cursor;
@@ -6160,11 +5617,9 @@
 
     goto/16 :goto_0
 
-    .line 1364
     :catch_0
     move-exception v11
 
-    .line 1365
     .local v11, "e":Ljava/lang/Exception;
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -6178,7 +5633,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 1643
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.DUMP"
@@ -6189,7 +5643,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1644
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -6240,11 +5693,9 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 1650
     :goto_0
     return-void
 
-    .line 1649
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -6267,18 +5718,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1166
     const/4 v0, 0x0
 
-    .line 1168
     .local v0, "ret":Landroid/os/Bundle;
     if-nez p1, :cond_0
 
-    .line 1179
     :goto_0
     return-object v1
 
-    .line 1172
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -6286,7 +5733,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1173
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v3, "In getDLPConfig: DLPHelper is not initialized"
@@ -6295,7 +5741,6 @@
 
     goto :goto_0
 
-    .line 1177
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->_getDLPConfig(Landroid/app/enterprise/ContextInfo;)Landroid/os/Bundle;
 
@@ -6303,7 +5748,6 @@
 
     move-object v1, v0
 
-    .line 1179
     goto :goto_0
 .end method
 
@@ -6331,14 +5775,11 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 723
     if-nez p1, :cond_0
 
-    .line 732
     :goto_0
     return-object v0
 
-    .line 727
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -6346,7 +5787,6 @@
 
     if-nez v1, :cond_1
 
-    .line 728
     sget-object v1, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v2, "In getPackagesFromAllowDLPWhiteList: DLPHelper is not initialized"
@@ -6355,7 +5795,6 @@
 
     goto :goto_0
 
-    .line 732
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->_getPackagesFromAllowDLPWhiteList(Landroid/app/enterprise/ContextInfo;)Ljava/util/List;
 
@@ -6369,7 +5808,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1372
     invoke-static {p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isActivated(I)Z
 
     move-result v0
@@ -6382,7 +5820,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1376
     invoke-static {p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isLocked(I)Z
 
     move-result v0
@@ -6399,10 +5836,8 @@
     .param p5, "callingUid"    # I
 
     .prologue
-    .line 1485
     const/4 v13, 0x1
 
-    .line 1487
     .local v13, "isShareAllowed":Z
     :try_start_0
     invoke-static/range {p4 .. p4}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isActivated(I)Z
@@ -6411,7 +5846,6 @@
 
     if-eqz v22, :cond_c
 
-    .line 1488
     const/16 v22, -0x1
 
     invoke-virtual/range {p3 .. p3}, Ljava/lang/String;->hashCode()I
@@ -6424,21 +5858,17 @@
     :goto_0
     packed-switch v22, :pswitch_data_1
 
-    .line 1561
     sget-object v22, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v23, "In the default case"
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1562
     const/16 v22, 0x0
 
-    .line 1571
     :goto_1
     return v22
 
-    .line 1488
     :pswitch_0
     const-string/jumbo v23, "isAllowedToShare"
 
@@ -6456,37 +5886,30 @@
 
     goto :goto_0
 
-    .line 1490
     :pswitch_1
     if-nez p2, :cond_1
 
-    .line 1491
     sget-object v22, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v23, "isShareAllowed. selectionArgs is null. return true"
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1492
     const/16 v22, 0x1
 
     goto :goto_1
 
-    .line 1494
     :cond_1
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getPackagesFromAllowDLPWhiteList(Landroid/app/enterprise/ContextInfo;)Ljava/util/List;
 
     move-result-object v17
 
-    .line 1495
     .local v17, "pkgInfoList":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;>;"
     const/4 v11, 0x0
 
-    .line 1496
     .local v11, "isConsumerAppDLP":Z
     const/4 v10, 0x0
 
-    .line 1497
     .local v10, "isCallerAppDLP":Z
     if-eqz v17, :cond_a
 
@@ -6496,7 +5919,6 @@
 
     if-lez v22, :cond_a
 
-    .line 1499
     const-string/jumbo v22, "package"
 
     invoke-static/range {v22 .. v22}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -6507,7 +5929,6 @@
 
     move-result-object v19
 
-    .line 1500
     .local v19, "pm":Landroid/content/pm/IPackageManager;
     move-object/from16 v0, p0
 
@@ -6531,7 +5952,6 @@
 
     move-result-object v5
 
-    .line 1501
     .local v5, "ctx":Landroid/content/Context;
     move-object/from16 v0, p2
 
@@ -6547,7 +5967,6 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 1502
     const/16 v22, 0x0
 
     aget-object v22, p2, v22
@@ -6556,7 +5975,6 @@
 
     move-result v21
 
-    .line 1503
     .local v21, "uid":I
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6576,7 +5994,6 @@
 
     check-cast v16, Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
 
-    .line 1504
     .local v16, "pkgInfo":Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
     move-object/from16 v0, v16
 
@@ -6588,7 +6005,6 @@
 
     move-result-object v14
 
-    .line 1505
     .local v14, "packageName":Ljava/lang/String;
     move-object/from16 v0, v16
 
@@ -6600,7 +6016,6 @@
 
     move-result-object v20
 
-    .line 1507
     .local v20, "signature":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -6608,7 +6023,6 @@
 
     move-result-wide v8
 
-    .line 1509
     .local v8, "identity":J
     :try_start_1
     invoke-static/range {v20 .. v20}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -6625,7 +6039,6 @@
 
     if-eqz v22, :cond_4
 
-    .line 1510
     :cond_2
     move-object/from16 v0, v19
 
@@ -6637,7 +6050,6 @@
 
     move-result v18
 
-    .line 1511
     .local v18, "pkguid":I
     move/from16 v0, v21
 
@@ -6645,10 +6057,8 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 1513
     const/4 v11, 0x1
 
-    .line 1515
     :cond_3
     move/from16 v0, p5
 
@@ -6656,10 +6066,8 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 1517
     const/4 v10, 0x1
 
-    .line 1521
     .end local v18    # "pkguid":I
     :cond_4
     :try_start_2
@@ -6669,7 +6077,6 @@
 
     goto :goto_2
 
-    .line 1567
     .end local v5    # "ctx":Landroid/content/Context;
     .end local v7    # "i$":Ljava/util/Iterator;
     .end local v8    # "identity":J
@@ -6684,11 +6091,9 @@
     :catch_0
     move-exception v6
 
-    .line 1568
     .local v6, "e":Ljava/lang/Exception;
     const/4 v13, 0x0
 
-    .line 1569
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
     .end local v6    # "e":Ljava/lang/Exception;
@@ -6696,10 +6101,8 @@
     :goto_3
     move/from16 v22, v13
 
-    .line 1571
     goto/16 :goto_1
 
-    .line 1521
     .restart local v5    # "ctx":Landroid/content/Context;
     .restart local v7    # "i$":Ljava/util/Iterator;
     .restart local v8    # "identity":J
@@ -6719,7 +6122,6 @@
 
     throw v22
 
-    .line 1525
     .end local v7    # "i$":Ljava/util/Iterator;
     .end local v8    # "identity":J
     .end local v14    # "packageName":Ljava/lang/String;
@@ -6735,7 +6137,6 @@
 
     move-result v21
 
-    .line 1526
     .restart local v21    # "uid":I
     const/16 v22, 0x1
 
@@ -6745,7 +6146,6 @@
 
     move-result v15
 
-    .line 1527
     .local v15, "pid":I
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -6757,7 +6157,6 @@
 
     move-result-object v4
 
-    .line 1528
     .local v4, "consumerPkgName":Ljava/lang/String;
     sget-object v22, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -6809,7 +6208,6 @@
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1529
     invoke-interface/range {v17 .. v17}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -6828,7 +6226,6 @@
 
     check-cast v16, Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
 
-    .line 1530
     .restart local v16    # "pkgInfo":Lcom/sec/enterprise/knox/dlp/DLPPackageInfo;
     move-object/from16 v0, v16
 
@@ -6840,7 +6237,6 @@
 
     move-result-object v14
 
-    .line 1531
     .restart local v14    # "packageName":Ljava/lang/String;
     move-object/from16 v0, v16
 
@@ -6852,7 +6248,6 @@
 
     move-result-object v20
 
-    .line 1532
     .restart local v20    # "signature":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_3
@@ -6860,7 +6255,6 @@
 
     move-result-wide v8
 
-    .line 1534
     .restart local v8    # "identity":J
     :try_start_4
     invoke-static/range {v20 .. v20}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -6877,7 +6271,6 @@
 
     if-eqz v22, :cond_9
 
-    .line 1535
     :cond_7
     move-object/from16 v0, v19
 
@@ -6887,7 +6280,6 @@
 
     move-result v18
 
-    .line 1536
     .restart local v18    # "pkguid":I
     invoke-virtual {v14, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_4
@@ -6897,10 +6289,8 @@
 
     if-eqz v22, :cond_8
 
-    .line 1538
     const/4 v11, 0x1
 
-    .line 1540
     :cond_8
     move/from16 v0, p5
 
@@ -6908,10 +6298,8 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 1542
     const/4 v10, 0x1
 
-    .line 1546
     .end local v18    # "pkguid":I
     :cond_9
     :try_start_5
@@ -6926,7 +6314,6 @@
 
     throw v22
 
-    .line 1552
     .end local v4    # "consumerPkgName":Ljava/lang/String;
     .end local v5    # "ctx":Landroid/content/Context;
     .end local v7    # "i$":Ljava/util/Iterator;
@@ -6940,12 +6327,10 @@
     :cond_a
     if-eqz v10, :cond_5
 
-    .line 1553
     invoke-static/range {p4 .. p4}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isLocked(I)Z
 
     move-result v12
 
-    .line 1554
     .local v12, "isLocked":Z
     if-eqz v11, :cond_b
 
@@ -6953,7 +6338,6 @@
 
     if-eqz v12, :cond_5
 
-    .line 1555
     :cond_b
     sget-object v22, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -7003,12 +6387,10 @@
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1556
     const/4 v13, 0x0
 
     goto/16 :goto_3
 
-    .line 1565
     .end local v10    # "isCallerAppDLP":Z
     .end local v11    # "isConsumerAppDLP":Z
     .end local v12    # "isLocked":Z
@@ -7024,7 +6406,6 @@
 
     goto/16 :goto_3
 
-    .line 1488
     nop
 
     :pswitch_data_0
@@ -7050,23 +6431,19 @@
     .end annotation
 
     .prologue
-    .line 1606
     const/4 v8, 0x0
 
-    .line 1608
     .local v8, "ret":Z
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v9
 
-    .line 1609
     .local v9, "uid":I
     sget-boolean v10, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
 
     if-eqz v10, :cond_0
 
-    .line 1610
     sget-object v10, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -7127,7 +6504,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1614
     :cond_0
     iget-object v10, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
@@ -7135,7 +6511,6 @@
 
     move-result-object v6
 
-    .line 1615
     .local v6, "packageManager":Landroid/content/pm/PackageManager;
     const-string v10, "com.android.providers.media"
 
@@ -7161,7 +6536,6 @@
 
     if-eq v9, v10, :cond_1
 
-    .line 1617
     sget-object v10, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v11, "notifyDLPOpenedFile() caller is not authorised permission denied"
@@ -7170,20 +6544,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1619
     const/4 v10, 0x0
 
-    .line 1638
     .end local v6    # "packageManager":Landroid/content/pm/PackageManager;
     .end local v9    # "uid":I
     :goto_0
     return v10
 
-    .line 1621
     :catch_0
     move-exception v4
 
-    .line 1622
     .local v4, "e":Ljava/lang/Exception;
     sget-object v10, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -7211,12 +6581,10 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1623
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 1625
     .end local v4    # "e":Ljava/lang/Exception;
     .restart local v6    # "packageManager":Landroid/content/pm/PackageManager;
     .restart local v9    # "uid":I
@@ -7225,7 +6593,6 @@
 
     move-result-wide v2
 
-    .line 1627
     .local v2, "calling_uid":J
     :try_start_1
     move-object/from16 v0, p1
@@ -7238,7 +6605,6 @@
 
     move-result-object v7
 
-    .line 1628
     .local v7, "realPath":Ljava/lang/String;
     if-eqz v7, :cond_2
 
@@ -7248,13 +6614,11 @@
 
     if-eqz v10, :cond_4
 
-    .line 1629
     :cond_2
     sget-boolean v10, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
 
     if-eqz v10, :cond_3
 
-    .line 1630
     sget-object v10, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -7279,11 +6643,9 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1631
     :cond_3
     move-object/from16 v7, p3
 
-    .line 1633
     :cond_4
     iget-object v10, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
@@ -7291,7 +6653,6 @@
 
     move-result-object v5
 
-    .line 1634
     .local v5, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     const/4 v10, 0x4
 
@@ -7331,15 +6692,12 @@
 
     move-result v8
 
-    .line 1636
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v10, v8
 
-    .line 1638
     goto :goto_0
 
-    .line 1636
     .end local v5    # "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     .end local v7    # "realPath":Ljava/lang/String;
     :catchall_0
@@ -7355,7 +6713,6 @@
     .param p1, "arg0"    # I
 
     .prologue
-    .line 1217
     return-void
 .end method
 
@@ -7364,7 +6721,6 @@
     .param p1, "arg0"    # I
 
     .prologue
-    .line 1222
     return-void
 .end method
 
@@ -7373,7 +6729,6 @@
     .param p1, "arg0"    # I
 
     .prologue
-    .line 1227
     return-void
 .end method
 
@@ -7383,19 +6738,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 498
     sget-boolean v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->DBG:Z
 
     if-eqz v0, :cond_0
 
-    .line 499
     sget-object v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "registerEnterpriseDLPpolicyReciever - Binding the receiver"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 500
     :cond_0
     new-instance v0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$EnterpriseDLPpolicyReciever;
 
@@ -7403,28 +6755,23 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->receiver:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$EnterpriseDLPpolicyReciever;
 
-    .line 501
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 502
     .local v3, "systemFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 503
     const-string v0, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 504
     const-string/jumbo v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 505
     iget-object v0, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->receiver:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$EnterpriseDLPpolicyReciever;
@@ -7435,7 +6782,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 506
     return-void
 .end method
 
@@ -7450,33 +6796,26 @@
     .end annotation
 
     .prologue
-    .line 1192
     const/4 v0, 0x0
 
-    .line 1194
     .local v0, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->enforceKnoxDLPPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1195
     if-nez p1, :cond_1
 
-    .line 1196
     const/4 v0, 0x0
 
-    .line 1210
     .end local v0    # "ret":Z
     :cond_0
     :goto_0
     return v0
 
-    .line 1199
     .restart local v0    # "ret":Z
     :cond_1
     iget v2, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 1200
     .local v2, "userId":I
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPInterface(I)Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;
 
@@ -7484,10 +6823,8 @@
 
     if-nez v3, :cond_2
 
-    .line 1201
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->bindToDLPService(I)V
 
-    .line 1203
     :cond_2
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -7513,23 +6850,19 @@
 
     invoke-virtual {v3, p1, v4}, Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;->addDumpLog(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 1204
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPInterface(I)Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;
 
     move-result-object v1
 
-    .line 1205
     .local v1, "serviceConn":Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;
     if-eqz v1, :cond_0
 
-    .line 1206
     sget-object v3, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v4, "DLP : notify DLPService"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1207
     invoke-interface {v1, p2}, Lcom/sec/enterprise/knox/dlp/IFrameworkConnector;->removeDLPFiles(Z)Z
 
     move-result v0
@@ -7561,22 +6894,18 @@
     .local p2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 688
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->enforceKnoxDLPPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 689
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 709
     :cond_0
     :goto_0
     return v3
 
-    .line 693
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -7584,7 +6913,6 @@
 
     if-nez v4, :cond_2
 
-    .line 694
     sget-object v4, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v5, "In removePackagesFromAllowDLPWhiteList: DLPHelper is not initialized"
@@ -7593,7 +6921,6 @@
 
     goto :goto_0
 
-    .line 698
     :cond_2
     iget-object v3, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -7603,10 +6930,8 @@
 
     invoke-direct {p0, p1, v3}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->feederToMdmMigration(Landroid/app/enterprise/ContextInfo;Landroid/os/Bundle;)V
 
-    .line 700
     iget v2, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 701
     .local v2, "userId":I
     invoke-static {v2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isActivated(I)Z
 
@@ -7614,7 +6939,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 702
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -7634,7 +6958,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 703
     .local v1, "packageName":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -7646,12 +6969,10 @@
 
     if-eqz v3, :cond_3
 
-    .line 704
     invoke-direct {p0, v2, v1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->forceStopPackage(ILjava/lang/String;)V
 
     goto :goto_1
 
-    .line 709
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "packageName":Ljava/lang/String;
     :cond_4
@@ -7675,30 +6996,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 746
     const/4 v0, 0x0
 
-    .line 748
     .local v0, "ret":Z
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->enforceKnoxDLPPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 749
     if-nez p1, :cond_0
 
-    .line 750
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v3, "DLP: cxtInfo is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 769
     :goto_0
     return v1
 
-    .line 754
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isDLPKernelEnabled()Z
 
@@ -7706,7 +7021,6 @@
 
     if-nez v2, :cond_1
 
-    .line 755
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
     move-result-object v2
@@ -7715,7 +7029,6 @@
 
     invoke-virtual {v2, p1, v3}, Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;->addDumpLog(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 757
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v3, "In setDLPConfig: /dev/sdp_dlp is not found"
@@ -7724,7 +7037,6 @@
 
     goto :goto_0
 
-    .line 761
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->getDLPHelperInstance()Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
 
@@ -7732,7 +7044,6 @@
 
     if-nez v2, :cond_2
 
-    .line 762
     sget-object v2, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string v3, "In setDLPConfig: DLPHelper is not initialized"
@@ -7741,18 +7052,15 @@
 
     goto :goto_0
 
-    .line 766
     :cond_2
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->feederToMdmMigration(Landroid/app/enterprise/ContextInfo;Landroid/os/Bundle;)V
 
-    .line 767
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->_setDLPConfig(Landroid/app/enterprise/ContextInfo;Landroid/os/Bundle;)Z
 
     move-result v0
 
     move v1, v0
 
-    .line 769
     goto :goto_0
 .end method
 
@@ -7770,10 +7078,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1577
     const/4 v4, 0x0
 
-    .line 1578
     .local v4, "ret":Z
     sget-object v6, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -7819,31 +7125,26 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1582
     invoke-direct {p0}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->checkDLPCaller()Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 1583
     sget-object v6, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v7, "setExpiryDate() caller is not authorised permission denied"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1600
     :goto_0
     return v5
 
-    .line 1587
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1589
     .local v0, "calling_uid":J
     :try_start_0
     iget v5, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
@@ -7852,7 +7153,6 @@
 
     move-result-object v3
 
-    .line 1590
     .local v3, "realPath":Ljava/lang/String;
     if-eqz v3, :cond_1
 
@@ -7862,7 +7162,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 1591
     :cond_1
     sget-object v5, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
 
@@ -7886,10 +7185,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1592
     move-object v3, p2
 
-    .line 1594
     :cond_2
     iget-object v5, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
 
@@ -7897,7 +7194,6 @@
 
     move-result-object v2
 
-    .line 1595
     .local v2, "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     const/4 v5, 0x2
 
@@ -7935,15 +7231,12 @@
 
     move-result v4
 
-    .line 1597
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v5, v4
 
-    .line 1600
     goto :goto_0
 
-    .line 1597
     .end local v2    # "epm":Lcom/sec/knox/container/util/EnterprisePartitionManager;
     .end local v3    # "realPath":Ljava/lang/String;
     :catchall_0
@@ -7958,6 +7251,5 @@
     .locals 0
 
     .prologue
-    .line 1232
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 7420
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$7;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iput p2, p0, Lcom/android/server/pm/PersonaManagerService$7;->val$personaHandle:I
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 7423
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$7;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaDbLock:Ljava/lang/Object;
@@ -54,7 +52,6 @@
 
     monitor-enter v1
 
-    .line 7424
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$7;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -67,13 +64,10 @@
 
     invoke-virtual {v0, v2}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 7425
     monitor-exit v1
 
-    .line 7426
     return-void
 
-    .line 7425
     :catchall_0
     move-exception v0
 

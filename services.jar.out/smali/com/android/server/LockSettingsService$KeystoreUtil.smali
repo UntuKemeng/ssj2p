@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 192
     iput-object p1, p0, Lcom/android/server/LockSettingsService$KeystoreUtil;->this$0:Lcom/android/server/LockSettingsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/LockSettingsService$1;
 
     .prologue
-    .line 191
     invoke-direct {p0, p1}, Lcom/android/server/LockSettingsService$KeystoreUtil;-><init>(Lcom/android/server/LockSettingsService;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 191
     invoke-direct {p0, p1, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUpdate(Ljava/lang/String;I)Z
 
     move-result v0
@@ -65,7 +62,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 191
     invoke-direct {p0, p1, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUnlock(Ljava/lang/String;I)Z
 
     move-result v0
@@ -81,10 +77,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 417
     invoke-static {}, Lcom/sec/sdp/internal/SDPLog;->i()V
 
-    .line 418
     const/4 v1, 0x4
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -113,7 +107,6 @@
 
     invoke-static {v1}, Lcom/sec/sdp/internal/SDPLog;->p([Ljava/lang/Object;)V
 
-    .line 419
     iget-object v1, p0, Lcom/android/server/LockSettingsService$KeystoreUtil;->this$0:Lcom/android/server/LockSettingsService;
 
     # invokes: Lcom/android/server/LockSettingsService;->migrateMDFPPKeystore(Ljava/lang/String;IZ)Z
@@ -121,7 +114,6 @@
 
     move-result v0
 
-    .line 421
     .local v0, "result":Z
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -143,7 +135,6 @@
 
     invoke-static {v1}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 422
     return v0
 .end method
 
@@ -157,10 +148,8 @@
 
     const/4 v1, 0x0
 
-    .line 394
     invoke-static {}, Lcom/sec/sdp/internal/SDPLog;->i()V
 
-    .line 395
     const/4 v2, 0x4
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -187,7 +176,6 @@
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->p([Ljava/lang/Object;)V
 
-    .line 397
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -204,7 +192,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 400
     .local v0, "result":Z
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -227,14 +214,12 @@
 
     invoke-static {v1}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 401
     return v0
 
     .end local v0    # "result":Z
     :cond_0
     move v0, v1
 
-    .line 397
     goto :goto_0
 .end method
 
@@ -244,10 +229,8 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 380
     invoke-static {}, Lcom/sec/sdp/internal/SDPLog;->i()V
 
-    .line 381
     const/4 v2, 0x4
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -278,12 +261,10 @@
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->p([Ljava/lang/Object;)V
 
-    .line 383
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v0
 
-    .line 384
     .local v0, "ks":Landroid/security/KeyStore;
     invoke-virtual {p0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->isUninitialized(I)Z
 
@@ -291,16 +272,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 385
     invoke-virtual {v0, p2}, Landroid/security/KeyStore;->onUserAdded(I)V
 
-    .line 387
     :cond_0
     invoke-virtual {v0, p2, p1}, Landroid/security/KeyStore;->onUserPasswordChanged(ILjava/lang/String;)Z
 
     move-result v1
 
-    .line 389
     .local v1, "result":Z
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -322,7 +300,6 @@
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 390
     return v1
 .end method
 
@@ -334,7 +311,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 277
     invoke-virtual {p0, p1, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doBruteForceKeyAdjustment(Ljava/lang/String;I)Z
 
     move-result v0
@@ -348,7 +324,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 317
     const/4 v0, 0x2
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doBruteForceHashAdjustment(Ljava/lang/String;II)Z
@@ -364,12 +339,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 271
     invoke-static {p1}, Lcom/android/internal/widget/LockPatternUtils;->patternStringToBaseZero(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 273
     .local v0, "zeroBased":Ljava/lang/String;
     invoke-virtual {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doBruteForceKeyAdjustment(Ljava/lang/String;I)Z
 
@@ -384,7 +357,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 313
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doBruteForceHashAdjustment(Ljava/lang/String;II)Z
@@ -407,10 +379,8 @@
 
     const/4 v6, 0x1
 
-    .line 321
     invoke-static {}, Lcom/sec/sdp/internal/SDPLog;->i()V
 
-    .line 322
     const/4 v8, 0x6
 
     new-array v8, v8, [Ljava/lang/Object;
@@ -449,22 +419,17 @@
 
     invoke-static {v8}, Lcom/sec/sdp/internal/SDPLog;->p([Ljava/lang/Object;)V
 
-    .line 324
     const/4 v3, 0x0
 
-    .line 325
     .local v3, "result":Z
     const/4 v2, 0x0
 
-    .line 326
     .local v2, "matched":Z
     const/4 v1, 0x0
 
-    .line 327
     .local v1, "hash":[B
     const/4 v0, 0x0
 
-    .line 329
     .local v0, "encodedCredential":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/LockSettingsService$KeystoreUtil;->this$0:Lcom/android/server/LockSettingsService;
 
@@ -473,7 +438,6 @@
 
     move-result-object v4
 
-    .line 330
     .local v4, "storedHash":Lcom/android/server/LockSettingsStorage$CredentialHash;
     if-eqz v4, :cond_0
 
@@ -487,13 +451,11 @@
 
     if-nez v8, :cond_1
 
-    .line 331
     :cond_0
     const-string v6, "Adjustment - Failed to read hash..."
 
     invoke-static {v6}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 375
     :goto_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -515,10 +477,8 @@
 
     invoke-static {v6}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 376
     return v3
 
-    .line 332
     :cond_1
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -526,18 +486,15 @@
 
     if-eqz v8, :cond_2
 
-    .line 333
     const-string v6, "Adjustment - Empty credential..."
 
     invoke-static {v6}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 335
     :cond_2
     if-ne p3, v6, :cond_5
 
-    .line 336
     invoke-static {p1}, Lcom/android/internal/widget/LockPatternUtils;->stringToPattern(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v8
@@ -546,34 +503,28 @@
 
     move-result-object v1
 
-    .line 344
     :cond_3
     :goto_1
     if-eqz v1, :cond_4
 
-    .line 345
     iget-object v8, v4, Lcom/android/server/LockSettingsStorage$CredentialHash;->hash:[B
 
     invoke-static {v1, v8}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v2
 
-    .line 346
     :cond_4
     if-nez v2, :cond_6
 
-    .line 347
     const-string v6, "Adjustment - Credential mismatch..."
 
     invoke-static {v6}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 338
     :cond_5
     if-ne p3, v11, :cond_3
 
-    .line 339
     iget-object v8, p0, Lcom/android/server/LockSettingsService$KeystoreUtil;->this$0:Lcom/android/server/LockSettingsService;
 
     # invokes: Lcom/android/server/LockSettingsService;->getEncodedCredential(Ljava/lang/String;I)Ljava/lang/String;
@@ -581,10 +532,8 @@
 
     move-result-object v0
 
-    .line 340
     if-eqz v0, :cond_3
 
-    .line 341
     iget-object v8, p0, Lcom/android/server/LockSettingsService$KeystoreUtil;->this$0:Lcom/android/server/LockSettingsService;
 
     # getter for: Lcom/android/server/LockSettingsService;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
@@ -598,28 +547,23 @@
 
     goto :goto_1
 
-    .line 349
     :cond_6
     const-string v8, "Adjustment - Credential matched..."
 
     invoke-static {v8}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 356
     invoke-virtual {p0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->isLocked(I)Z
 
     move-result v8
 
     if-eqz v8, :cond_7
 
-    .line 357
     if-ne p3, v6, :cond_9
 
-    .line 358
     invoke-static {p1}, Lcom/android/internal/widget/LockPatternUtils;->patternStringToBaseZero(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 360
     .local v5, "zeroBased":Ljava/lang/String;
     invoke-direct {p0, v5, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUnlock(Ljava/lang/String;I)Z
 
@@ -627,7 +571,6 @@
 
     if-eqz v8, :cond_8
 
-    .line 372
     .end local v5    # "zeroBased":Ljava/lang/String;
     :cond_7
     :goto_2
@@ -642,7 +585,6 @@
     :goto_3
     goto :goto_0
 
-    .line 362
     .restart local v5    # "zeroBased":Ljava/lang/String;
     :cond_8
     iget-object v8, p0, Lcom/android/server/LockSettingsService$KeystoreUtil;->this$0:Lcom/android/server/LockSettingsService;
@@ -652,7 +594,6 @@
 
     move-result-object v0
 
-    .line 364
     .end local v5    # "zeroBased":Ljava/lang/String;
     :cond_9
     invoke-direct {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUnlock(Ljava/lang/String;I)Z
@@ -661,14 +602,12 @@
 
     if-nez v8, :cond_7
 
-    .line 365
     invoke-direct {p0, p1, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUnlock(Ljava/lang/String;I)Z
 
     move-result v8
 
     if-nez v8, :cond_7
 
-    .line 366
     const-string v8, "_nullPassword012"
 
     invoke-direct {p0, v8, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUnlock(Ljava/lang/String;I)Z
@@ -677,17 +616,14 @@
 
     if-nez v8, :cond_7
 
-    .line 367
     const-string v8, "Adjustment - Unlock failed..."
 
     invoke-static {v8}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 368
     const-string v8, "Adjustment - Resetting the keystore..."
 
     invoke-static {v8}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 369
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v8
@@ -699,7 +635,6 @@
     :cond_a
     move v3, v7
 
-    .line 372
     goto :goto_3
 .end method
 
@@ -709,10 +644,8 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 244
     invoke-static {}, Lcom/sec/sdp/internal/SDPLog;->i()V
 
-    .line 245
     const/4 v2, 0x4
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -743,10 +676,8 @@
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->p([Ljava/lang/Object;)V
 
-    .line 247
     const/4 v1, 0x0
 
-    .line 248
     .local v1, "result":Z
     iget-object v2, p0, Lcom/android/server/LockSettingsService$KeystoreUtil;->this$0:Lcom/android/server/LockSettingsService;
 
@@ -755,16 +686,13 @@
 
     move-result-object v0
 
-    .line 249
     .local v0, "encodedCredential":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 250
     const-string v2, "Migration - Failed to retrieve hash..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 266
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -786,23 +714,19 @@
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 267
     return v1
 
-    .line 252
     :cond_0
     const-string v2, "Migration - Passward has been hashed..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 259
     invoke-direct {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doMDFPPKeystoreMigration(Ljava/lang/String;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 264
     :cond_1
     :goto_1
     invoke-direct {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUpdate(Ljava/lang/String;I)Z
@@ -811,7 +735,6 @@
 
     goto :goto_0
 
-    .line 260
     :cond_2
     invoke-direct {p0, p1, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doMDFPPKeystoreMigration(Ljava/lang/String;I)Z
 
@@ -819,7 +742,6 @@
 
     if-nez v2, :cond_1
 
-    .line 261
     const-string v2, "_nullPassword012"
 
     invoke-direct {p0, v2, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doMDFPPKeystoreMigration(Ljava/lang/String;I)Z
@@ -828,7 +750,6 @@
 
     if-nez v2, :cond_1
 
-    .line 262
     const-string v2, "Migration - Recovery failed..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
@@ -842,10 +763,8 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 281
     invoke-static {}, Lcom/sec/sdp/internal/SDPLog;->i()V
 
-    .line 282
     const/4 v2, 0x4
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -876,10 +795,8 @@
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->p([Ljava/lang/Object;)V
 
-    .line 284
     const/4 v1, 0x0
 
-    .line 285
     .local v1, "result":Z
     iget-object v2, p0, Lcom/android/server/LockSettingsService$KeystoreUtil;->this$0:Lcom/android/server/LockSettingsService;
 
@@ -888,16 +805,13 @@
 
     move-result-object v0
 
-    .line 286
     .local v0, "encodedCredential":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 287
     const-string v2, "Adjustment - Unverified by SKMM..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 308
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -919,30 +833,25 @@
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 309
     return v1
 
-    .line 289
     :cond_0
     const-string v2, "Adjustment - Verified by SKMM..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 296
     invoke-virtual {p0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->isLocked(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 297
     invoke-direct {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUnlock(Ljava/lang/String;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 305
     :cond_1
     :goto_1
     invoke-direct {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUpdate(Ljava/lang/String;I)Z
@@ -951,7 +860,6 @@
 
     goto :goto_0
 
-    .line 298
     :cond_2
     invoke-direct {p0, p1, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUnlock(Ljava/lang/String;I)Z
 
@@ -959,7 +867,6 @@
 
     if-nez v2, :cond_1
 
-    .line 299
     const-string v2, "_nullPassword012"
 
     invoke-direct {p0, v2, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUnlock(Ljava/lang/String;I)Z
@@ -968,17 +875,14 @@
 
     if-nez v2, :cond_1
 
-    .line 300
     const-string v2, "Adjustment - Unlock failed..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 301
     const-string v2, "Adjustment - Resetting the keystore..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 302
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v2
@@ -994,10 +898,8 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 205
     invoke-static {}, Lcom/sec/sdp/internal/SDPLog;->i()V
 
-    .line 206
     const/4 v2, 0x4
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1028,10 +930,8 @@
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->p([Ljava/lang/Object;)V
 
-    .line 208
     const/4 v1, 0x0
 
-    .line 209
     .local v1, "result":Z
     iget-object v2, p0, Lcom/android/server/LockSettingsService$KeystoreUtil;->this$0:Lcom/android/server/LockSettingsService;
 
@@ -1040,16 +940,13 @@
 
     move-result-object v0
 
-    .line 210
     .local v0, "encodedCredential":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 211
     const-string v2, "Migration - Unverified by SKMM..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 229
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1071,23 +968,19 @@
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 230
     return v1
 
-    .line 213
     :cond_0
     const-string v2, "Migration - Verified by SKMM..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 220
     invoke-direct {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doMDFPPKeystoreMigration(Ljava/lang/String;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 227
     :cond_1
     :goto_1
     invoke-direct {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doUpdate(Ljava/lang/String;I)Z
@@ -1096,7 +989,6 @@
 
     goto :goto_0
 
-    .line 221
     :cond_2
     invoke-direct {p0, p1, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doMDFPPKeystoreMigration(Ljava/lang/String;I)Z
 
@@ -1104,7 +996,6 @@
 
     if-nez v2, :cond_1
 
-    .line 222
     const-string v2, "_nullPassword012"
 
     invoke-direct {p0, v2, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doMDFPPKeystoreMigration(Ljava/lang/String;I)Z
@@ -1113,17 +1004,14 @@
 
     if-nez v2, :cond_1
 
-    .line 223
     const-string v2, "Migration - Recovery failed..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 224
     const-string v2, "Migration - Removing the old keystore..."
 
     invoke-static {v2}, Lcom/sec/sdp/internal/SDPLog;->d(Ljava/lang/String;)V
 
-    .line 225
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v2
@@ -1138,7 +1026,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 413
     sget-object v0, Landroid/security/KeyStore$State;->LOCKED:Landroid/security/KeyStore$State;
 
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
@@ -1161,7 +1048,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 405
     sget-object v0, Landroid/security/KeyStore$State;->UNINITIALIZED:Landroid/security/KeyStore$State;
 
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
@@ -1184,7 +1070,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 409
     sget-object v0, Landroid/security/KeyStore$State;->UNLOCKED:Landroid/security/KeyStore$State;
 
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
@@ -1208,7 +1093,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 201
     invoke-virtual {p0, p1, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doBruteForceKeyMigration(Ljava/lang/String;I)Z
 
     move-result v0
@@ -1222,7 +1106,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 240
     invoke-virtual {p0, p1, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doBruteForceHashMigration(Ljava/lang/String;I)Z
 
     move-result v0
@@ -1236,12 +1119,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 195
     invoke-static {p1}, Lcom/android/internal/widget/LockPatternUtils;->patternStringToBaseZero(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 197
     .local v0, "zeroBased":Ljava/lang/String;
     invoke-virtual {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doBruteForceKeyMigration(Ljava/lang/String;I)Z
 
@@ -1256,12 +1137,10 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 234
     invoke-static {p1}, Lcom/android/internal/widget/LockPatternUtils;->patternStringToBaseZero(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 236
     .local v0, "zeroBased":Ljava/lang/String;
     invoke-virtual {p0, v0, p2}, Lcom/android/server/LockSettingsService$KeystoreUtil;->doBruteForceHashMigration(Ljava/lang/String;I)Z
 

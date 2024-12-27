@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 555
     iput-object p1, p0, Lcom/android/server/wm/WindowManagerService$1;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 558
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 559
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 560
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$1;->this$0:Lcom/android/server/wm/WindowManagerService;
 
     # getter for: Lcom/android/server/wm/WindowManagerService;->mKeyguardDisableHandler:Lcom/android/server/wm/KeyguardDisableHandler;
@@ -66,12 +62,10 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wm/KeyguardDisableHandler;->sendEmptyMessage(I)Z
 
-    .line 566
     :cond_0
     :goto_0
     return-void
 
-    .line 562
     :cond_1
     const-string v2, "android.app.action.DEBUG_RECONFIGURE"
 
@@ -81,7 +75,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 563
     const-string v2, "WM_DEBUG"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
@@ -94,7 +87,6 @@
 
     check-cast v1, [Z
 
-    .line 564
     .local v1, "wm_debug":[Z
     iget-object v2, p0, Lcom/android/server/wm/WindowManagerService$1;->this$0:Lcom/android/server/wm/WindowManagerService;
 

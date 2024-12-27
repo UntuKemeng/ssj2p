@@ -34,14 +34,12 @@
     .locals 1
 
     .prologue
-    .line 2790
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iput-object p2, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->val$callbacks:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2819
     new-instance v0, Lcom/android/server/display/DisplayManagerService$LocalService$1$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/DisplayManagerService$LocalService$1$1;-><init>(Lcom/android/server/display/DisplayManagerService$LocalService$1;)V
@@ -59,7 +57,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 2790
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/display/DisplayManagerService$LocalService$1;->requestDesiredDisplayState(III)V
 
     return-void
@@ -74,20 +71,16 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 2835
     if-eq p2, v1, :cond_1
 
-    .line 2836
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_GED_SETINTERACTIVE_ORDER:Z
 
     if-nez v0, :cond_0
 
-    .line 2837
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->val$callbacks:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;
 
     invoke-interface {v0, p1, p2}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;->onSetInteractiveNeeded(II)V
 
-    .line 2842
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
@@ -96,7 +89,6 @@
     # invokes: Lcom/android/server/display/DisplayManagerService;->requestGlobalDisplayStateInternal(II)V
     invoke-static {v0, p2, p3}, Lcom/android/server/display/DisplayManagerService;->access$5100(Lcom/android/server/display/DisplayManagerService;II)V
 
-    .line 2844
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v0, v0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -108,31 +100,25 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/display/DisplayPowerController;->setActualDisplayState(II)V
 
-    .line 2845
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->mRequestDisplayStateDoneListener:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 2848
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_GED_SETINTERACTIVE_ORDER:Z
 
     if-eqz v0, :cond_1
 
-    .line 2849
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->val$callbacks:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;
 
     invoke-interface {v0, p1, p2}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;->onSetInteractiveNeeded(II)V
 
-    .line 2853
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->val$callbacks:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;
 
     invoke-interface {v0, p1, p2}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;->onDisplayStateChange(II)V
 
-    .line 2855
     if-ne p2, v1, :cond_2
 
-    .line 2859
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v0, v0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -140,7 +126,6 @@
     # invokes: Lcom/android/server/display/DisplayManagerService;->requestGlobalDisplayStateInternal(II)V
     invoke-static {v0, p2, p3}, Lcom/android/server/display/DisplayManagerService;->access$5100(Lcom/android/server/display/DisplayManagerService;II)V
 
-    .line 2861
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v0, v0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -152,17 +137,14 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/display/DisplayPowerController;->setActualDisplayState(II)V
 
-    .line 2862
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->mRequestDisplayStateDoneListener:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 2865
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->val$callbacks:Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;
 
     invoke-interface {v0, p1, p2}, Landroid/hardware/display/DisplayManagerInternal$DisplayPowerCallbacks;->onSetInteractiveNeeded(II)V
 
-    .line 2867
     :cond_2
     return-void
 .end method
@@ -175,7 +157,6 @@
     .param p2, "r"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 2874
     iget-object v0, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v0, v0, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -187,33 +168,26 @@
 
     monitor-enter v1
 
-    .line 2877
     if-nez p1, :cond_1
 
-    .line 2878
     :try_start_0
     iput-object p2, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->mRequestDisplayStateDoneListener:Ljava/lang/Runnable;
 
-    .line 2883
     :cond_0
     :goto_0
     monitor-exit v1
 
-    .line 2884
     return-void
 
-    .line 2879
     :cond_1
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 2880
     iput-object p2, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->mRequestSubDisplayStateDoneListener:Ljava/lang/Runnable;
 
     goto :goto_0
 
-    .line 2883
     :catchall_0
     move-exception v0
 
@@ -230,12 +204,10 @@
     .param p2, "brightness"    # I
 
     .prologue
-    .line 2793
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0, p1, p2}, Lcom/android/server/display/DisplayManagerService$LocalService$1;->requestDisplayState(III)V
 
-    .line 2794
     return-void
 .end method
 
@@ -246,7 +218,6 @@
     .param p3, "brightness"    # I
 
     .prologue
-    .line 2798
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v1, v1, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -258,20 +229,17 @@
 
     monitor-enter v2
 
-    .line 2799
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     # setter for: Lcom/android/server/display/DisplayManagerService$LocalService;->mRequestingID:I
     invoke-static {v1, p1}, Lcom/android/server/display/DisplayManagerService$LocalService;->access$4302(Lcom/android/server/display/DisplayManagerService$LocalService;I)I
 
-    .line 2800
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     # setter for: Lcom/android/server/display/DisplayManagerService$LocalService;->mRequestingState:I
     invoke-static {v1, p2}, Lcom/android/server/display/DisplayManagerService$LocalService;->access$4402(Lcom/android/server/display/DisplayManagerService$LocalService;I)I
 
-    .line 2801
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
@@ -286,7 +254,6 @@
 
     move-result v0
 
-    .line 2802
     .local v0, "displayBit":I
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
@@ -301,7 +268,6 @@
     # setter for: Lcom/android/server/display/DisplayManagerService$LocalService;->mRequestingBrightness:I
     invoke-static {v1, p3}, Lcom/android/server/display/DisplayManagerService$LocalService;->access$4602(Lcom/android/server/display/DisplayManagerService$LocalService;I)I
 
-    .line 2811
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v1, v1, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -313,7 +279,6 @@
 
     if-nez v1, :cond_0
 
-    .line 2812
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v1, v1, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -323,7 +288,6 @@
     # setter for: Lcom/android/server/display/DisplayManagerService;->mPendingrequestDisplayState:Z
     invoke-static {v1, v3}, Lcom/android/server/display/DisplayManagerService;->access$4702(Lcom/android/server/display/DisplayManagerService;Z)Z
 
-    .line 2813
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService$LocalService;->blankUnblankRunnableExcuteTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
@@ -333,7 +297,6 @@
 
     invoke-virtual {v1}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 2814
     iget-object v1, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
 
     iget-object v1, v1, Lcom/android/server/display/DisplayManagerService$LocalService;->this$0:Lcom/android/server/display/DisplayManagerService;
@@ -347,14 +310,11 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2816
     :cond_0
     monitor-exit v2
 
-    .line 2817
     return-void
 
-    .line 2802
     .restart local p3    # "brightness":I
     :cond_1
     iget-object v3, p0, Lcom/android/server/display/DisplayManagerService$LocalService$1;->this$1:Lcom/android/server/display/DisplayManagerService$LocalService;
@@ -366,7 +326,6 @@
 
     goto :goto_0
 
-    .line 2816
     .end local v0    # "displayBit":I
     .end local p3    # "brightness":I
     :catchall_0

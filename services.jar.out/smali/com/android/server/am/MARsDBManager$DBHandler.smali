@@ -23,13 +23,10 @@
     .locals 0
 
     .prologue
-    .line 316
     iput-object p1, p0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
 
-    .line 317
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 318
     return-void
 .end method
 
@@ -40,20 +37,17 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 322
     move-object/from16 v0, p1
 
     iget v3, v0, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 449
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 324
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -64,7 +58,6 @@
 
     goto :goto_0
 
-    .line 327
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -75,11 +68,9 @@
 
     goto :goto_0
 
-    .line 330
     :pswitch_3
     const/4 v14, 0x3
 
-    .line 332
     .local v14, "columns":I
     move-object/from16 v0, p0
 
@@ -91,10 +82,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 333
     const/16 v14, 0xb
 
-    .line 336
     :cond_1
     move-object/from16 v0, p0
 
@@ -107,7 +96,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 337
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -126,18 +114,15 @@
 
     goto :goto_0
 
-    .line 341
     .end local v14    # "columns":I
     :pswitch_4
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v15
 
-    .line 342
     .local v15, "extras":Landroid/os/Bundle;
     if-eqz v15, :cond_0
 
-    .line 343
     const-string/jumbo v3, "packageName"
 
     const/4 v5, 0x0
@@ -146,7 +131,6 @@
 
     move-result-object v4
 
-    .line 344
     .local v4, "pkgName":Ljava/lang/String;
     const-string/jumbo v3, "time"
 
@@ -158,7 +142,6 @@
 
     move-result-wide v18
 
-    .line 345
     .local v18, "time":J
     const-string/jumbo v3, "strExtras"
 
@@ -168,15 +151,12 @@
 
     move-result-object v6
 
-    .line 346
     .local v6, "strExtras":Ljava/lang/String;
     const/4 v14, 0x0
 
-    .line 347
     .restart local v14    # "columns":I
     const/4 v2, 0x0
 
-    .line 349
     .local v2, "value":Lcom/android/server/am/MARsDBManager$SMDBValue;
     if-eqz v4, :cond_0
 
@@ -186,7 +166,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 350
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -197,10 +176,8 @@
 
     if-nez v3, :cond_2
 
-    .line 351
     const/4 v14, 0x3
 
-    .line 352
     new-instance v2, Lcom/android/server/am/MARsDBManager$SMDBValue;
 
     .end local v2    # "value":Lcom/android/server/am/MARsDBManager$SMDBValue;
@@ -214,7 +191,6 @@
 
     invoke-direct {v2, v3, v4, v5, v6}, Lcom/android/server/am/MARsDBManager$SMDBValue;-><init>(Lcom/android/server/am/MARsDBManager;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 359
     .restart local v2    # "value":Lcom/android/server/am/MARsDBManager$SMDBValue;
     :goto_1
     move-object/from16 v0, p0
@@ -226,7 +202,6 @@
 
     goto/16 :goto_0
 
-    .line 354
     :cond_2
     const-string/jumbo v3, "strAutoRun"
 
@@ -236,11 +211,9 @@
 
     move-result-object v7
 
-    .line 355
     .local v7, "strAutoRun":Ljava/lang/String;
     const/16 v14, 0xb
 
-    .line 356
     new-instance v2, Lcom/android/server/am/MARsDBManager$SMDBValue;
 
     .end local v2    # "value":Lcom/android/server/am/MARsDBManager$SMDBValue;
@@ -257,7 +230,6 @@
     .restart local v2    # "value":Lcom/android/server/am/MARsDBManager$SMDBValue;
     goto :goto_1
 
-    .line 364
     .end local v2    # "value":Lcom/android/server/am/MARsDBManager$SMDBValue;
     .end local v4    # "pkgName":Ljava/lang/String;
     .end local v6    # "strExtras":Ljava/lang/String;
@@ -270,11 +242,9 @@
 
     move-result-object v15
 
-    .line 365
     .restart local v15    # "extras":Landroid/os/Bundle;
     if-eqz v15, :cond_0
 
-    .line 366
     const-string/jumbo v3, "onUpgrade"
 
     const/4 v5, 0x0
@@ -283,7 +253,6 @@
 
     move-result v16
 
-    .line 367
     .local v16, "onUpgrade":Z
     move-object/from16 v0, p0
 
@@ -295,7 +264,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 368
     const-string v3, "MARsDBManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -339,11 +307,9 @@
 
     invoke-static {v3, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
     :cond_3
     if-nez v16, :cond_4
 
-    .line 374
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -355,7 +321,6 @@
 
     if-nez v3, :cond_0
 
-    .line 375
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -371,7 +336,6 @@
     # invokes: Lcom/android/server/am/MARsDBManager;->updateDBForApp(ZLjava/util/ArrayList;Z)V
     invoke-static {v3, v5, v8, v0}, Lcom/android/server/am/MARsDBManager;->access$700(Lcom/android/server/am/MARsDBManager;ZLjava/util/ArrayList;Z)V
 
-    .line 376
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -383,7 +347,6 @@
 
     goto/16 :goto_0
 
-    .line 379
     :cond_4
     move-object/from16 v0, p0
 
@@ -393,7 +356,6 @@
 
     iput-boolean v5, v3, Lcom/android/server/am/MARsDBManager;->mOldVersion:Z
 
-    .line 380
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -411,7 +373,6 @@
 
     goto/16 :goto_0
 
-    .line 385
     .end local v15    # "extras":Landroid/os/Bundle;
     .end local v16    # "onUpgrade":Z
     :pswitch_6
@@ -425,7 +386,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 386
     const-string v3, "MARsDBManager"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -461,7 +421,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 390
     :cond_5
     move-object/from16 v0, p0
 
@@ -478,12 +437,10 @@
 
     if-lez v3, :cond_0
 
-    .line 391
     new-instance v17, Ljava/util/ArrayList;
 
     invoke-direct/range {v17 .. v17}, Ljava/util/ArrayList;-><init>()V
 
-    .line 392
     .local v17, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MARsDBManager$SMDBValue;>;"
     move-object/from16 v0, p0
 
@@ -502,7 +459,6 @@
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 393
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -514,7 +470,6 @@
     # invokes: Lcom/android/server/am/MARsDBManager;->updateDBAll(ILjava/util/ArrayList;)V
     invoke-static {v3, v5, v0}, Lcom/android/server/am/MARsDBManager;->access$400(Lcom/android/server/am/MARsDBManager;ILjava/util/ArrayList;)V
 
-    .line 395
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -528,7 +483,6 @@
 
     goto/16 :goto_0
 
-    .line 401
     .end local v17    # "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/MARsDBManager$SMDBValue;>;"
     :pswitch_7
     move-object/from16 v0, p0
@@ -539,16 +493,13 @@
 
     if-nez v3, :cond_0
 
-    .line 402
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v15
 
-    .line 403
     .restart local v15    # "extras":Landroid/os/Bundle;
     if-eqz v15, :cond_0
 
-    .line 404
     const-string/jumbo v3, "packageName"
 
     const/4 v5, 0x0
@@ -557,11 +508,9 @@
 
     move-result-object v4
 
-    .line 405
     .restart local v4    # "pkgName":Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 406
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -571,7 +520,6 @@
 
     goto/16 :goto_0
 
-    .line 412
     .end local v4    # "pkgName":Ljava/lang/String;
     .end local v15    # "extras":Landroid/os/Bundle;
     :pswitch_8
@@ -583,16 +531,13 @@
 
     if-nez v3, :cond_0
 
-    .line 413
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v15
 
-    .line 414
     .restart local v15    # "extras":Landroid/os/Bundle;
     if-eqz v15, :cond_0
 
-    .line 415
     const-string/jumbo v3, "packageName"
 
     const/4 v5, 0x0
@@ -601,11 +546,9 @@
 
     move-result-object v4
 
-    .line 416
     .restart local v4    # "pkgName":Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 417
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -615,7 +558,6 @@
 
     goto/16 :goto_0
 
-    .line 423
     .end local v4    # "pkgName":Ljava/lang/String;
     .end local v15    # "extras":Landroid/os/Bundle;
     :pswitch_9
@@ -627,7 +569,6 @@
 
     if-nez v3, :cond_0
 
-    .line 424
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/am/MARsDBManager$DBHandler;->this$0:Lcom/android/server/am/MARsDBManager;
@@ -637,7 +578,6 @@
 
     goto/16 :goto_0
 
-    .line 428
     :pswitch_a
     move-object/from16 v0, p0
 
@@ -648,7 +588,6 @@
 
     goto/16 :goto_0
 
-    .line 431
     :pswitch_b
     move-object/from16 v0, p0
 
@@ -659,17 +598,14 @@
 
     goto/16 :goto_0
 
-    .line 435
     :pswitch_c
     invoke-virtual/range {p1 .. p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v15
 
-    .line 436
     .restart local v15    # "extras":Landroid/os/Bundle;
     if-eqz v15, :cond_0
 
-    .line 437
     const-string v3, "callee"
 
     const/4 v5, 0x0
@@ -678,7 +614,6 @@
 
     move-result-object v9
 
-    .line 438
     .local v9, "callee":Ljava/lang/String;
     const-string v3, "caller"
 
@@ -688,7 +623,6 @@
 
     move-result-object v10
 
-    .line 439
     .local v10, "caller":Ljava/lang/String;
     const-string/jumbo v3, "isblock"
 
@@ -698,7 +632,6 @@
 
     move-result v11
 
-    .line 440
     .local v11, "isblocked":Z
     const-string/jumbo v3, "requesttime"
 
@@ -712,7 +645,6 @@
 
     move-result-wide v12
 
-    .line 441
     .local v12, "requestTime":J
     move-object/from16 v0, p0
 
@@ -723,7 +655,6 @@
 
     goto/16 :goto_0
 
-    .line 445
     .end local v9    # "callee":Ljava/lang/String;
     .end local v10    # "caller":Ljava/lang/String;
     .end local v11    # "isblocked":Z
@@ -740,7 +671,6 @@
 
     goto/16 :goto_0
 
-    .line 322
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

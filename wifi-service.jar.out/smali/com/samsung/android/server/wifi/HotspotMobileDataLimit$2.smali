@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 63
     iput-object p1, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 65
     # getter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$100()Z
 
@@ -49,7 +47,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 66
     const-string v0, "HotspotMobileDataLimit"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -82,19 +79,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     :cond_0
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_2
 
-    .line 68
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     # setter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->isDataConnected:Z
     invoke-static {v0, v3}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$202(Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;Z)Z
 
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     # getter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->isStarted:Z
@@ -104,13 +98,11 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 70
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     # setter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->isAgain:Z
     invoke-static {v0, v3}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$402(Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;Z)Z
 
-    .line 71
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     iget-object v1, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
@@ -133,7 +125,6 @@
     # setter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mResumeData:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$502(Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 72
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     iget-object v1, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
@@ -150,7 +141,6 @@
     # setter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mBaseTxBytes:J
     invoke-static {v0, v2, v3}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$702(Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;J)J
 
-    .line 73
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     iget-object v1, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
@@ -167,7 +157,6 @@
     # setter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mBaseRxBytes:J
     invoke-static {v0, v2, v3}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$902(Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;J)J
 
-    .line 74
     const-string v0, "HotspotMobileDataLimit"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -214,7 +203,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     # getter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mApData:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$CountApData;
@@ -228,7 +216,6 @@
 
     if-nez v0, :cond_1
 
-    .line 76
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     # getter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mApData:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$CountApData;
@@ -238,16 +225,13 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$CountApData;->resume()V
 
-    .line 85
     :cond_1
     :goto_0
     return-void
 
-    .line 79
     :cond_2
     if-nez p1, :cond_1
 
-    .line 80
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     const/4 v1, 0x0
@@ -255,7 +239,6 @@
     # setter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->isDataConnected:Z
     invoke-static {v0, v1}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$202(Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;Z)Z
 
-    .line 81
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     # getter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mApData:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$CountApData;
@@ -269,7 +252,6 @@
 
     if-ne v0, v3, :cond_1
 
-    .line 82
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$2;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     # getter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mApData:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$CountApData;

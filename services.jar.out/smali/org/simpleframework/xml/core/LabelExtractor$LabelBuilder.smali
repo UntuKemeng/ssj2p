@@ -29,12 +29,10 @@
     .param p2, "label"    # Ljava/lang/Class;
 
     .prologue
-    .line 386
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lorg/simpleframework/xml/core/LabelExtractor$LabelBuilder;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V
 
-    .line 387
     return-void
 .end method
 
@@ -45,19 +43,14 @@
     .param p3, "entry"    # Ljava/lang/Class;
 
     .prologue
-    .line 398
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 399
     iput-object p3, p0, Lorg/simpleframework/xml/core/LabelExtractor$LabelBuilder;->entry:Ljava/lang/Class;
 
-    .line 400
     iput-object p2, p0, Lorg/simpleframework/xml/core/LabelExtractor$LabelBuilder;->label:Ljava/lang/Class;
 
-    .line 401
     iput-object p1, p0, Lorg/simpleframework/xml/core/LabelExtractor$LabelBuilder;->type:Ljava/lang/Class;
 
-    .line 402
     return-void
 .end method
 
@@ -71,7 +64,6 @@
     .end annotation
 
     .prologue
-    .line 426
     iget-object v0, p0, Lorg/simpleframework/xml/core/LabelExtractor$LabelBuilder;->type:Ljava/lang/Class;
 
     const/4 v1, 0x3
@@ -112,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 440
     iget-object v0, p0, Lorg/simpleframework/xml/core/LabelExtractor$LabelBuilder;->type:Ljava/lang/Class;
 
     const/4 v1, 0x4
@@ -157,12 +148,10 @@
     .end annotation
 
     .prologue
-    .line 412
     iget-object v0, p0, Lorg/simpleframework/xml/core/LabelExtractor$LabelBuilder;->entry:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
-    .line 413
     iget-object v0, p0, Lorg/simpleframework/xml/core/LabelExtractor$LabelBuilder;->label:Ljava/lang/Class;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/LabelExtractor$LabelBuilder;->entry:Ljava/lang/Class;
@@ -171,7 +160,6 @@
 
     move-result-object v0
 
-    .line 415
     :goto_0
     return-object v0
 

@@ -23,16 +23,13 @@
     .locals 1
 
     .prologue
-    .line 2437
     iput-object p1, p0, Landroid/os/DVFSHelper$ModelGRL;->this$0:Landroid/os/DVFSHelper;
 
     invoke-direct {p0, p1}, Landroid/os/DVFSHelper$ModelHRL;-><init>(Landroid/os/DVFSHelper;)V
 
-    .line 2438
     const v0, 0x130b00
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelGRL;->CONTACT_SCROLL_ARM_FREQ:I
 
-    .line 2439
     return-void
 .end method

@@ -58,7 +58,6 @@
 
     const/4 v4, 0x4
 
-    .line 74
     new-instance v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     const-string v1, "ER04"
@@ -67,7 +66,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER04:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
-    .line 76
     new-instance v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     const-string v1, "ER041"
@@ -78,7 +76,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER041:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
-    .line 79
     new-instance v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     const-string v1, "ER081"
@@ -89,7 +86,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER081:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
-    .line 82
     new-instance v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     const-string v1, "ER082"
@@ -100,7 +96,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER082:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
-    .line 84
     new-instance v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     const-string v1, "ER101"
@@ -111,7 +106,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER101:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
-    .line 87
     new-instance v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     const-string v1, "ER111"
@@ -124,7 +118,6 @@
 
     sput-object v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER111:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
-    .line 72
     const/4 v0, 0x6
 
     new-array v0, v0, [Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
@@ -170,13 +163,10 @@
     .end annotation
 
     .prologue
-    .line 91
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 92
     iput p3, p0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->wfcErrorCode:I
 
-    .line 93
     return-void
 .end method
 
@@ -185,10 +175,8 @@
     .param p0, "error"    # Lcom/sec/epdg/IWlanError;
 
     .prologue
-    .line 99
     const/4 v0, -0x1
 
-    .line 100
     .local v0, "ikeErrorCode":I
     invoke-virtual {p0}, Lcom/sec/epdg/IWlanError;->getIkeError()Lcom/sec/epdg/IWlanError$IkeError;
 
@@ -196,7 +184,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 101
     invoke-virtual {p0}, Lcom/sec/epdg/IWlanError;->getIkeError()Lcom/sec/epdg/IWlanError$IkeError;
 
     move-result-object v1
@@ -205,7 +192,6 @@
 
     move-result v0
 
-    .line 102
     :cond_0
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorTmo()Ljava/lang/Boolean;
 
@@ -217,7 +203,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 103
     invoke-virtual {p0}, Lcom/sec/epdg/IWlanError;->getError()Lcom/sec/epdg/IWlanError$EpdgError;
 
     move-result-object v1
@@ -226,25 +211,21 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 104
     const/16 v1, 0x18
 
     if-ne v0, v1, :cond_6
 
-    .line 105
     sget-object v1, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER101:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     invoke-virtual {v1}, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->getCode()I
 
     move-result v0
 
-    .line 121
     .end local v0    # "ikeErrorCode":I
     :cond_1
     :goto_0
     return v0
 
-    .line 107
     .restart local v0    # "ikeErrorCode":I
     :cond_2
     invoke-virtual {p0}, Lcom/sec/epdg/IWlanError;->getError()Lcom/sec/epdg/IWlanError$EpdgError;
@@ -255,7 +236,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 108
     sget-object v1, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER081:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     invoke-virtual {v1}, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->getCode()I
@@ -264,7 +244,6 @@
 
     goto :goto_0
 
-    .line 109
     :cond_3
     invoke-virtual {p0}, Lcom/sec/epdg/IWlanError;->getError()Lcom/sec/epdg/IWlanError$EpdgError;
 
@@ -274,7 +253,6 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 110
     sget-object v1, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER111:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     invoke-virtual {v1}, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->getCode()I
@@ -283,7 +261,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_4
     invoke-virtual {p0}, Lcom/sec/epdg/IWlanError;->getError()Lcom/sec/epdg/IWlanError$EpdgError;
 
@@ -293,7 +270,6 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 112
     sget-object v1, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER041:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     invoke-virtual {v1}, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->getCode()I
@@ -302,7 +278,6 @@
 
     goto :goto_0
 
-    .line 113
     :cond_5
     invoke-virtual {p0}, Lcom/sec/epdg/IWlanError;->getError()Lcom/sec/epdg/IWlanError$EpdgError;
 
@@ -312,7 +287,6 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 114
     sget-object v1, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER04:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     invoke-virtual {v1}, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->getCode()I
@@ -321,7 +295,6 @@
 
     goto :goto_0
 
-    .line 116
     :cond_6
     sget-object v1, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->ER082:Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
@@ -331,11 +304,9 @@
 
     goto :goto_0
 
-    .line 118
     :cond_7
     if-nez v0, :cond_1
 
-    .line 119
     const/4 v0, -0x1
 
     goto :goto_0
@@ -346,7 +317,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     const-class v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -362,7 +332,6 @@
     .locals 1
 
     .prologue
-    .line 72
     sget-object v0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->$VALUES:[Lcom/sec/epdg/IWlanEnum$WfcErrorCode;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->clone()Ljava/lang/Object;
@@ -380,7 +349,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget v0, p0, Lcom/sec/epdg/IWlanEnum$WfcErrorCode;->wfcErrorCode:I
 
     return v0

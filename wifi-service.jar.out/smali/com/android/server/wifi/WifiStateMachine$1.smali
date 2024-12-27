@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 569
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$1;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 573
     :try_start_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$1;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -68,7 +66,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mMptcpSettingEnabled:Z
     invoke-static {v2, v1}, Lcom/android/server/wifi/WifiStateMachine;->access$002(Lcom/android/server/wifi/WifiStateMachine;Z)Z
 
-    .line 575
     const-string v1, "WifiStateMachine"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -100,21 +97,17 @@
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 579
     :goto_1
     return-void
 
-    .line 573
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 576
     :catch_0
     move-exception v0
 
-    .line 577
     .local v0, "e":Landroid/provider/Settings$SettingNotFoundException;
     const-string v1, "WifiStateMachine"
 

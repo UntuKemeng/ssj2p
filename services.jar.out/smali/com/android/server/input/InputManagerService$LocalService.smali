@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3783
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/hardware/input/InputManagerInternal;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/input/InputManagerService$1;
 
     .prologue
-    .line 3783
     invoke-direct {p0, p1}, Lcom/android/server/input/InputManagerService$LocalService;-><init>(Lcom/android/server/input/InputManagerService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p3, "mode"    # I
 
     .prologue
-    .line 3844
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->injectInputEventInternal(Landroid/view/InputEvent;II)Z
@@ -69,13 +66,11 @@
     .param p2, "externalTouchViewport"    # Landroid/hardware/display/DisplayViewport;
 
     .prologue
-    .line 3839
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->setDisplayViewportsInternal(Landroid/hardware/display/DisplayViewport;Landroid/hardware/display/DisplayViewport;)V
     invoke-static {v0, p1, p2}, Lcom/android/server/input/InputManagerService;->access$3000(Lcom/android/server/input/InputManagerService;Landroid/hardware/display/DisplayViewport;Landroid/hardware/display/DisplayViewport;)V
 
-    .line 3840
     return-void
 .end method
 
@@ -95,13 +90,11 @@
     .end annotation
 
     .prologue
-    .line 3788
     .local p1, "defaultViewports":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/hardware/display/DisplayViewport;>;"
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/input/InputManagerService;->setDisplayViewportsInternal(Ljava/util/ArrayList;Landroid/hardware/display/DisplayViewport;)V
 
-    .line 3789
     return-void
 .end method
 
@@ -110,7 +103,6 @@
     .param p1, "interactive"    # Z
 
     .prologue
-    .line 3849
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mPtr:J
@@ -121,7 +113,6 @@
     # invokes: Lcom/android/server/input/InputManagerService;->nativeSetInteractive(JZ)V
     invoke-static {v0, v1, p1}, Lcom/android/server/input/InputManagerService;->access$3200(JZ)V
 
-    .line 3850
     return-void
 .end method
 
@@ -130,7 +121,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 3831
     const-string v0, "InputManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -159,7 +149,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3832
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mPtr:J
@@ -170,7 +159,6 @@
     # invokes: Lcom/android/server/input/InputManagerService;->nativeSetMouseControlType(JI)V
     invoke-static {v0, v1, p1}, Lcom/android/server/input/InputManagerService;->access$2900(JI)V
 
-    .line 3833
     return-void
 .end method
 
@@ -179,7 +167,6 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 3824
     const-string v0, "InputManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -208,7 +195,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3825
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mPtr:J
@@ -219,7 +205,6 @@
     # invokes: Lcom/android/server/input/InputManagerService;->nativeSetMouseCursorVisibility(JZ)V
     invoke-static {v0, v1, p1}, Lcom/android/server/input/InputManagerService;->access$2800(JZ)V
 
-    .line 3826
     return-void
 .end method
 
@@ -228,7 +213,6 @@
     .param p1, "interactive"    # Z
 
     .prologue
-    .line 3817
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mPtr:J
@@ -239,7 +223,6 @@
     # invokes: Lcom/android/server/input/InputManagerService;->nativeSetSubInteractive(JZ)V
     invoke-static {v0, v1, p1}, Lcom/android/server/input/InputManagerService;->access$2700(JZ)V
 
-    .line 3818
     return-void
 .end method
 
@@ -249,7 +232,6 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 3793
     const-string v2, "InputManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -288,21 +270,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3796
     if-nez p1, :cond_0
 
-    .line 3797
     const-string v1, "/sys/class/sec/tsp/cmd"
 
-    .line 3805
     .local v1, "path":Ljava/lang/String;
     :goto_0
     if-eqz p2, :cond_2
 
-    .line 3806
     const-string/jumbo v0, "set_lpgw_mode,1"
 
-    .line 3811
     .local v0, "command":Ljava/lang/String;
     :goto_1
     iget-object v2, p0, Lcom/android/server/input/InputManagerService$LocalService;->this$0:Lcom/android/server/input/InputManagerService;
@@ -310,25 +287,21 @@
     # invokes: Lcom/android/server/input/InputManagerService;->sysfsWrite(Ljava/lang/String;Ljava/lang/String;)Z
     invoke-static {v2, v1, v0}, Lcom/android/server/input/InputManagerService;->access$2600(Lcom/android/server/input/InputManagerService;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 3812
     .end local v0    # "command":Ljava/lang/String;
     .end local v1    # "path":Ljava/lang/String;
     :goto_2
     return-void
 
-    .line 3798
     :cond_0
     const/4 v2, 0x1
 
     if-ne p1, v2, :cond_1
 
-    .line 3799
     const-string v1, "/sys/class/sec/tsp2/cmd"
 
     .restart local v1    # "path":Ljava/lang/String;
     goto :goto_0
 
-    .line 3801
     .end local v1    # "path":Ljava/lang/String;
     :cond_1
     const-string v2, "InputManager"
@@ -339,7 +312,6 @@
 
     goto :goto_2
 
-    .line 3808
     .restart local v1    # "path":Ljava/lang/String;
     :cond_2
     const-string/jumbo v0, "set_lpgw_mode,0"

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 272
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Landroid/app/IUiModeManager$Stub;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 290
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 292
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
@@ -54,7 +51,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 293
     :try_start_1
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -64,33 +60,27 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/UiModeManagerService;->setCarModeLocked(ZI)V
 
-    .line 294
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     iget-boolean v2, v2, Lcom/android/server/UiModeManagerService;->mSystemReady:Z
 
     if-eqz v2, :cond_0
 
-    .line 295
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, v4, p1}, Lcom/android/server/UiModeManagerService;->updateLocked(II)V
 
-    .line 297
     :cond_0
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 299
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 301
     return-void
 
-    .line 297
     :catchall_0
     move-exception v2
 
@@ -104,7 +94,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 299
     :catchall_1
     move-exception v2
 
@@ -120,7 +109,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 350
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/UiModeManagerService;->getContext()Landroid/content/Context;
@@ -135,7 +123,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 353
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -174,11 +161,9 @@
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 360
     :goto_0
     return-void
 
-    .line 359
     :cond_0
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -192,12 +177,10 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 275
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 277
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
@@ -208,7 +191,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 278
     :try_start_1
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -216,33 +198,27 @@
 
     invoke-virtual {v2, v4, p1}, Lcom/android/server/UiModeManagerService;->setCarModeLocked(ZI)V
 
-    .line 279
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     iget-boolean v2, v2, Lcom/android/server/UiModeManagerService;->mSystemReady:Z
 
     if-eqz v2, :cond_0
 
-    .line 280
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, p1, v4}, Lcom/android/server/UiModeManagerService;->updateLocked(II)V
 
-    .line 282
     :cond_0
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 284
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 286
     return-void
 
-    .line 282
     :catchall_0
     move-exception v2
 
@@ -256,7 +232,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 284
     :catchall_1
     move-exception v2
 
@@ -269,12 +244,10 @@
     .locals 4
 
     .prologue
-    .line 305
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 307
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
@@ -285,7 +258,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 308
     :try_start_1
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -297,12 +269,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 311
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
 
-    .line 309
     :catchall_0
     move-exception v2
 
@@ -316,7 +286,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 311
     :catchall_1
     move-exception v2
 
@@ -329,14 +298,12 @@
     .locals 2
 
     .prologue
-    .line 343
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     iget-object v1, v0, Lcom/android/server/UiModeManagerService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 344
     :try_start_0
     iget-object v0, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -349,7 +316,6 @@
 
     return v0
 
-    .line 345
     :catchall_0
     move-exception v0
 
@@ -365,10 +331,8 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 317
     packed-switch p1, :pswitch_data_0
 
-    .line 323
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -393,13 +357,11 @@
 
     throw v2
 
-    .line 326
     :pswitch_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 328
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
@@ -410,7 +372,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 329
     :try_start_1
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
@@ -421,7 +382,6 @@
 
     if-eq v2, p1, :cond_0
 
-    .line 330
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/UiModeManagerService;->getContext()Landroid/content/Context;
@@ -436,13 +396,11 @@
 
     invoke-static {v2, v4, p1}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 332
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     # setter for: Lcom/android/server/UiModeManagerService;->mNightMode:I
     invoke-static {v2, p1}, Lcom/android/server/UiModeManagerService;->access$602(Lcom/android/server/UiModeManagerService;I)I
 
-    .line 333
     iget-object v2, p0, Lcom/android/server/UiModeManagerService$6;->this$0:Lcom/android/server/UiModeManagerService;
 
     const/4 v4, 0x0
@@ -451,19 +409,15 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/UiModeManagerService;->updateLocked(II)V
 
-    .line 335
     :cond_0
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 337
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 339
     return-void
 
-    .line 335
     :catchall_0
     move-exception v2
 
@@ -477,7 +431,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 337
     :catchall_1
     move-exception v2
 
@@ -485,7 +438,6 @@
 
     throw v2
 
-    .line 317
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

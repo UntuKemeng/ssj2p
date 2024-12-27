@@ -29,16 +29,12 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 4924
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$DozeLock;->this$0:Lcom/android/server/power/PowerManagerService;
 
-    .line 4925
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4926
     iput-object p2, p0, Lcom/android/server/power/PowerManagerService$DozeLock;->binder:Landroid/os/IBinder;
 
-    .line 4929
     const/4 v1, 0x0
 
     :try_start_0
@@ -46,15 +42,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4933
     :goto_0
     return-void
 
-    .line 4930
     :catch_0
     move-exception v0
 
-    .line 4931
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerService$DozeLock;->binderDied()V
 
@@ -67,14 +60,12 @@
     .locals 2
 
     .prologue
-    .line 4935
     const-string v0, "PowerManagerService"
 
     const-string v1, "Doze binder is died"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4936
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$DozeLock;->this$0:Lcom/android/server/power/PowerManagerService;
 
     const/4 v1, 0x0
@@ -82,12 +73,10 @@
     # invokes: Lcom/android/server/power/PowerManagerService;->setDozeModeBySysfs(I)V
     invoke-static {v0, v1}, Lcom/android/server/power/PowerManagerService;->access$4700(Lcom/android/server/power/PowerManagerService;I)V
 
-    .line 4937
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$DozeLock;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # invokes: Lcom/android/server/power/PowerManagerService;->initDoze()V
     invoke-static {v0}, Lcom/android/server/power/PowerManagerService;->access$4800(Lcom/android/server/power/PowerManagerService;)V
 
-    .line 4938
     return-void
 .end method

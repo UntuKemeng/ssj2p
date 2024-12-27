@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 15512
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$12;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -45,7 +44,6 @@
 
     const/4 v5, 0x0
 
-    .line 15515
     const-string v2, "PersonaManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -88,7 +86,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 15516
     const-string/jumbo v2, "hide_secure_folder_flag"
 
     invoke-static {v2}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -103,7 +100,6 @@
 
     if-nez p3, :cond_1
 
-    .line 15517
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$12;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mContext:Landroid/content/Context;
@@ -121,7 +117,6 @@
 
     move-result v0
 
-    .line 15519
     .local v0, "hideSecureFolderFlag":I
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$12;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -132,19 +127,16 @@
 
     if-eq v2, v6, :cond_0
 
-    .line 15520
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$12;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # invokes: Lcom/android/server/pm/PersonaManagerService;->showSecureFolder(I)V
     invoke-static {v2, v0}, Lcom/android/server/pm/PersonaManagerService;->access$9900(Lcom/android/server/pm/PersonaManagerService;I)V
 
-    .line 15529
     .end local v0    # "hideSecureFolderFlag":I
     :cond_0
     :goto_0
     return-void
 
-    .line 15522
     :cond_1
     const-string/jumbo v2, "secure_folder_name"
 
@@ -160,7 +152,6 @@
 
     if-nez p3, :cond_0
 
-    .line 15523
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$12;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mContext:Landroid/content/Context;
@@ -178,7 +169,6 @@
 
     move-result-object v1
 
-    .line 15525
     .local v1, "sfTitle":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$12;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -189,7 +179,6 @@
 
     if-eq v2, v6, :cond_0
 
-    .line 15526
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$12;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # invokes: Lcom/android/server/pm/PersonaManagerService;->changeSfTitle(Ljava/lang/String;)V

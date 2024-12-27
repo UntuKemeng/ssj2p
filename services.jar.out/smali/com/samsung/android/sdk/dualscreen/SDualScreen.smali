@@ -31,7 +31,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 37
     const-class v0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -40,10 +39,8 @@
 
     sput-object v0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->TAG:Ljava/lang/String;
 
-    .line 42
     sput-boolean v1, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->enableQueried:Z
 
-    .line 43
     sput-boolean v1, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->isDualScreenEnabled:Z
 
     return-void
@@ -53,17 +50,14 @@
     .locals 3
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     new-instance v1, Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;
 
     invoke-direct {v1}, Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->mDualScreenReflector:Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;
 
-    .line 56
     :try_start_0
     const-string v1, "android.app.ActivityThread"
 
@@ -71,7 +65,6 @@
 
     move-result-object v0
 
-    .line 58
     .local v0, "activityThreadClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     iget-object v1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->mDualScreenReflector:Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;
 
@@ -83,7 +76,6 @@
 
     invoke-static {v0, v2, v1}, Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;->putMethod(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;)V
 
-    .line 59
     iget-object v1, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->mDualScreenReflector:Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;
 
     const-string v2, "getSystemContext"
@@ -96,15 +88,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 63
     .end local v0    # "activityThreadClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     invoke-direct {p0}, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->initDualScreenFeature()V
 
-    .line 64
     return-void
 
-    .line 60
     :catch_0
     move-exception v1
 
@@ -115,21 +104,17 @@
     .locals 6
 
     .prologue
-    .line 122
     :try_start_0
     sget-boolean v4, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->enableQueried:Z
 
     if-nez v4, :cond_2
 
-    .line 123
     const/4 v4, 0x1
 
     sput-boolean v4, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->enableQueried:Z
 
-    .line 125
     const/4 v2, 0x0
 
-    .line 126
     .local v2, "context":Landroid/content/Context;
     const-string v4, "android.app.ActivityThread"
 
@@ -137,13 +122,11 @@
 
     move-result-object v0
 
-    .line 127
     .local v0, "activityThreadClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
 
     move-result-object v1
 
-    .line 129
     .local v1, "activityThreadObj":Landroid/app/ActivityThread;
     iget-object v4, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->mDualScreenReflector:Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;
 
@@ -155,7 +138,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 130
     iget-object v4, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->mDualScreenReflector:Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;
 
     const-string v5, "getApplication"
@@ -171,7 +153,6 @@
     .end local v2    # "context":Landroid/content/Context;
     check-cast v2, Landroid/content/Context;
 
-    .line 133
     .restart local v2    # "context":Landroid/content/Context;
     :cond_0
     if-nez v2, :cond_1
@@ -186,7 +167,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 134
     iget-object v4, p0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->mDualScreenReflector:Lcom/samsung/android/sdk/dualscreen/SDualScreenReflector;
 
     const-string v5, "getSystemContext"
@@ -202,21 +182,17 @@
     .end local v2    # "context":Landroid/content/Context;
     check-cast v2, Landroid/content/Context;
 
-    .line 138
     .restart local v2    # "context":Landroid/content/Context;
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 139
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 141
     .local v3, "pm":Landroid/content/pm/PackageManager;
     if-eqz v3, :cond_2
 
-    .line 142
     sget-object v4, Lcom/samsung/android/sdk/dualscreen/SDualScreenConstantsReflector$PackageManager;->FEATURE_DUALSCREEN:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
@@ -227,7 +203,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     .end local v0    # "activityThreadClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v1    # "activityThreadObj":Landroid/app/ActivityThread;
     .end local v2    # "context":Landroid/content/Context;
@@ -236,7 +211,6 @@
     :goto_0
     return-void
 
-    .line 146
     :catch_0
     move-exception v4
 
@@ -249,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 107
     const/16 v0, 0x9
 
     return v0
@@ -259,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 117
     const-string v0, "0.8b"
 
     return-object v0
@@ -275,14 +247,12 @@
     .end annotation
 
     .prologue
-    .line 72
     invoke-static {}, Lcom/samsung/android/sdk/SsdkVendorCheck;->isSamsungDevice()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 73
     new-instance v0, Lcom/samsung/android/sdk/SsdkUnsupportedException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -311,13 +281,11 @@
 
     throw v0
 
-    .line 77
     :cond_0
     sget-boolean v0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->isDualScreenEnabled:Z
 
     if-nez v0, :cond_1
 
-    .line 78
     new-instance v0, Lcom/samsung/android/sdk/SsdkUnsupportedException;
 
     const-string v1, "The device is not supported."
@@ -328,7 +296,6 @@
 
     throw v0
 
-    .line 81
     :cond_1
     return-void
 .end method
@@ -338,22 +305,18 @@
     .param p1, "feature"    # I
 
     .prologue
-    .line 91
     packed-switch p1, :pswitch_data_0
 
-    .line 96
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 93
     :pswitch_0
     sget-boolean v0, Lcom/samsung/android/sdk/dualscreen/SDualScreen;->isDualScreenEnabled:Z
 
     goto :goto_0
 
-    .line 91
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

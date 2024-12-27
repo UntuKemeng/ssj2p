@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 732
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$RCPPolicyChangedReceiver;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v11, -0x1
 
-    .line 738
     const-string v8, "RCPPolicyChangedReceiver"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -75,7 +73,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 740
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -84,7 +81,6 @@
 
     if-nez v8, :cond_2
 
-    .line 741
     :cond_0
     const-string v8, "RCPPolicyChangedReceiver"
 
@@ -92,11 +88,9 @@
 
     invoke-static {v8, v9}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 779
     :cond_1
     return-void
 
-    .line 746
     :cond_2
     const-string/jumbo v8, "samsung.knox.intent.action.RCP_POLICY_CHANGED"
 
@@ -110,7 +104,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 747
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v8
@@ -121,33 +114,27 @@
 
     move-result-object v4
 
-    .line 749
     .local v4, "policyChangedBundleExport":Landroid/os/Bundle;
     if-eqz v4, :cond_3
 
-    .line 750
     const-string/jumbo v8, "personaId"
 
     invoke-virtual {v4, v8, v11}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 751
     .local v3, "personaId":I
     if-eq v3, v11, :cond_3
 
-    .line 752
     const-string/jumbo v8, "syncerList"
 
     invoke-virtual {v4, v8}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v6
 
-    .line 754
     .local v6, "syncerListExport":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .line 755
     .local v2, "mSyncerName":Ljava/lang/String;
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -161,7 +148,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 756
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -169,7 +155,6 @@
     .end local v2    # "mSyncerName":Ljava/lang/String;
     check-cast v2, Ljava/lang/String;
 
-    .line 757
     .restart local v2    # "mSyncerName":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/bridge/BridgeProxy$RCPPolicyChangedReceiver;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
@@ -180,7 +165,6 @@
 
     goto :goto_0
 
-    .line 762
     .end local v0    # "iter":Ljava/util/Iterator;
     .end local v2    # "mSyncerName":Ljava/lang/String;
     .end local v3    # "personaId":I
@@ -196,29 +180,24 @@
 
     move-result-object v5
 
-    .line 764
     .local v5, "policyChangedBundleImport":Landroid/os/Bundle;
     if-eqz v5, :cond_1
 
-    .line 765
     const-string/jumbo v8, "personaId"
 
     invoke-virtual {v5, v8, v11}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 766
     .restart local v3    # "personaId":I
     if-eq v3, v11, :cond_1
 
-    .line 767
     const-string/jumbo v8, "syncerList"
 
     invoke-virtual {v5, v8}, Landroid/os/Bundle;->getStringArrayList(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v7
 
-    .line 769
     .local v7, "syncerListImport":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string/jumbo v8, "policyName"
 
@@ -228,11 +207,9 @@
 
     move-result-object v1
 
-    .line 770
     .local v1, "mPolicyName":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 771
     .restart local v2    # "mSyncerName":Ljava/lang/String;
     invoke-virtual {v7}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -246,7 +223,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 772
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
@@ -254,7 +230,6 @@
     .end local v2    # "mSyncerName":Ljava/lang/String;
     check-cast v2, Ljava/lang/String;
 
-    .line 773
     .restart local v2    # "mSyncerName":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/bridge/BridgeProxy$RCPPolicyChangedReceiver;->this$0:Lcom/android/server/bridge/BridgeProxy;
 

@@ -15,7 +15,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,14 +29,12 @@
     .param p3, "requestLine"    # [Ljava/lang/String;
 
     .prologue
-    .line 44
     const-string v0, "NoCredentialsAuthenticator"
 
     const-string v1, "Called buildAuthenticationHeader on NoCredentialsAuthenticator"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Should not call buildAuthenticationHeader on this authenticator"
@@ -51,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const-string v0, "NoCredentials"
 
     return-object v0
@@ -61,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     return v0
@@ -74,14 +69,12 @@
     .param p3, "requestLine"    # [Ljava/lang/String;
 
     .prologue
-    .line 50
     const-string v0, "NoCredentialsAuthenticator"
 
     const-string v1, "Called verifyAuthenticationCredentials on NoCredentialsAuthenticator"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 51
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Should not call verifyAuthenticationCredentials on this authenticator"

@@ -20,16 +20,12 @@
     .param p2, "throwable"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lcom/samsung/android/media/fmradio/SemFmPlayerException;->msg:Ljava/lang/String;
 
-    .line 28
     iput-object p2, p0, Lcom/samsung/android/media/fmradio/SemFmPlayerException;->mThrowable:Ljava/lang/Throwable;
 
-    .line 29
     return-void
 .end method
 
@@ -39,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/samsung/android/media/fmradio/SemFmPlayerException;->msg:Ljava/lang/String;
 
     return-object v0
@@ -49,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 35
     iget-object v0, p0, Lcom/samsung/android/media/fmradio/SemFmPlayerException;->mThrowable:Ljava/lang/Throwable;
 
     return-object v0

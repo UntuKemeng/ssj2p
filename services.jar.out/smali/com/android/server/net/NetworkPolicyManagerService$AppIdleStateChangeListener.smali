@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4019
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$AppIdleStateChangeListener;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/app/usage/UsageStatsManagerInternal$AppIdleStateChangeListener;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/net/NetworkPolicyManagerService$1;
 
     .prologue
-    .line 4019
     invoke-direct {p0, p1}, Lcom/android/server/net/NetworkPolicyManagerService$AppIdleStateChangeListener;-><init>(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p3, "idle"    # Z
 
     .prologue
-    .line 4025
     :try_start_0
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$AppIdleStateChangeListener;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -69,7 +66,6 @@
 
     move-result v0
 
-    .line 4026
     .local v0, "uid":I
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$AppIdleStateChangeListener;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -79,21 +75,17 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4027
     :try_start_1
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$AppIdleStateChangeListener;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v1, v0}, Lcom/android/server/net/NetworkPolicyManagerService;->updateRuleForAppIdleLocked(I)V
 
-    .line 4028
     monitor-exit v2
 
-    .line 4031
     .end local v0    # "uid":I
     :goto_0
     return-void
 
-    .line 4028
     .restart local v0    # "uid":I
     :catchall_0
     move-exception v1
@@ -107,7 +99,6 @@
     :try_end_2
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 4029
     .end local v0    # "uid":I
     :catch_0
     move-exception v1
@@ -120,26 +111,21 @@
     .param p1, "isParoleOn"    # Z
 
     .prologue
-    .line 4035
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$AppIdleStateChangeListener;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v1, v0, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 4036
     :try_start_0
     iget-object v0, p0, Lcom/android/server/net/NetworkPolicyManagerService$AppIdleStateChangeListener;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/net/NetworkPolicyManagerService;->updateRulesForAppIdleParoleLocked()V
 
-    .line 4037
     monitor-exit v1
 
-    .line 4038
     return-void
 
-    .line 4037
     :catchall_0
     move-exception v0
 

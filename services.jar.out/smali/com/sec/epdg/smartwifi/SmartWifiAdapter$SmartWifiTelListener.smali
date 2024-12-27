@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1276
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/smartwifi/SmartWifiAdapter$1;
 
     .prologue
-    .line 1276
     invoke-direct {p0, p1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;-><init>(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;)V
 
     return-void
@@ -51,7 +49,6 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 1279
     const-string v0, "[SMARTWIFI]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -74,11 +71,9 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1280
     # setter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mIsCallInProgress:I
     invoke-static {p1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$3502(I)I
 
-    .line 1281
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->isCdmaProfilingRequired()Z
@@ -88,16 +83,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 1282
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-virtual {v0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->startCdmaProfiling()V
 
-    .line 1286
     :goto_0
     return-void
 
-    .line 1284
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -112,7 +104,6 @@
     .param p2, "networkType"    # I
 
     .prologue
-    .line 1314
     const-string v0, "[SMARTWIFI]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -145,7 +136,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1316
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -166,7 +156,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1317
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -186,7 +175,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1318
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     const/4 v1, 0x0
@@ -194,7 +182,6 @@
     # setter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mMetHoThreshold:Z
     invoke-static {v0, v1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2402(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;Z)Z
 
-    .line 1319
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     iget-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
@@ -207,7 +194,6 @@
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->postRunnableToEpdg(Ljava/lang/Runnable;)V
     invoke-static {v0, v1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$3100(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;Ljava/lang/Runnable;)V
 
-    .line 1322
     :cond_1
     return-void
 .end method
@@ -217,7 +203,6 @@
     .param p1, "serviceState"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 1298
     const-string v0, "[SMARTWIFI]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -244,7 +229,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1299
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -255,7 +239,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1300
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mMetHoThreshold:Z
@@ -274,7 +257,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1301
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     const/4 v1, 0x0
@@ -282,7 +264,6 @@
     # setter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mMetHoThreshold:Z
     invoke-static {v0, v1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$2402(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;Z)Z
 
-    .line 1302
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     iget-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
@@ -295,7 +276,6 @@
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->postRunnableToEpdg(Ljava/lang/Runnable;)V
     invoke-static {v0, v1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$3100(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;Ljava/lang/Runnable;)V
 
-    .line 1307
     :cond_0
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isNeededToSendDeregOnWifiOnly()Ljava/lang/Boolean;
 
@@ -307,13 +287,11 @@
 
     if-eqz v0, :cond_1
 
-    .line 1308
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # invokes: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->calculateWeakWifiLevelAndRssiDb()V
     invoke-static {v0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->access$3900(Lcom/sec/epdg/smartwifi/SmartWifiAdapter;)V
 
-    .line 1310
     :cond_1
     return-void
 .end method
@@ -323,7 +301,6 @@
     .param p1, "signalStrength"    # Landroid/telephony/SignalStrength;
 
     .prologue
-    .line 1290
     const-string v0, "[SMARTWIFI]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -357,7 +334,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1292
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTelListener;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mSmartWifiHandler:Landroid/os/Handler;
@@ -377,6 +353,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1294
     return-void
 .end method

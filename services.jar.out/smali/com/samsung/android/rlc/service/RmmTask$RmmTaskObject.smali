@@ -27,13 +27,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 304
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 305
     iput-object p1, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskObject;->intent:Landroid/content/Intent;
 
-    .line 306
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p1, "another"    # Ljava/lang/Object;
 
     .prologue
-    .line 310
     const/4 v0, 0x0
 
     return v0

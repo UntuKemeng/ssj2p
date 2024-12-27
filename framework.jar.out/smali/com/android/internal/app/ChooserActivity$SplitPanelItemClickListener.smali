@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 1868
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$SplitPanelItemClickListener;->this$0:Lcom/android/internal/app/ChooserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 1872
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$SplitPanelItemClickListener;->this$0:Lcom/android/internal/app/ChooserActivity;
 
@@ -62,7 +60,6 @@
 
     move-result p3
 
-    .line 1873
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$SplitPanelItemClickListener;->this$0:Lcom/android/internal/app/ChooserActivity;
 
     const/4 v1, 0x0
@@ -71,7 +68,6 @@
 
     invoke-virtual {v0, p3, v1, v2}, Lcom/android/internal/app/ChooserActivity;->startSelected(IZZ)V
 
-    .line 1874
     return-void
 .end method
 
@@ -94,7 +90,6 @@
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     const/4 v2, 0x1
 
-    .line 1878
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$SplitPanelItemClickListener;->this$0:Lcom/android/internal/app/ChooserActivity;
 
     # invokes: Lcom/android/internal/app/ChooserActivity;->convertSplitPanelPosition(Landroid/widget/AdapterView;I)I
@@ -102,7 +97,6 @@
 
     move-result p3
 
-    .line 1880
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$SplitPanelItemClickListener;->this$0:Lcom/android/internal/app/ChooserActivity;
 
     # getter for: Lcom/android/internal/app/ChooserActivity;->mChooserListAdapter:Lcom/android/internal/app/ChooserActivity$ChooserListAdapter;
@@ -114,12 +108,10 @@
 
     move-result-object v0
 
-    .line 1881
     .local v0, "ri":Landroid/content/pm/ResolveInfo;
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$SplitPanelItemClickListener;->this$0:Lcom/android/internal/app/ChooserActivity;
 
     invoke-virtual {v1, v0}, Lcom/android/internal/app/ChooserActivity;->showAppDetails(Landroid/content/pm/ResolveInfo;)V
 
-    .line 1882
     return v2
 .end method

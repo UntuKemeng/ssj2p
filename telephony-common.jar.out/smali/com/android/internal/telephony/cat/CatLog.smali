@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 35
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -35,7 +33,6 @@
 
     move-result-object v0
 
-    .line 36
     .local v0, "className":Ljava/lang/String;
     const-string v1, "CAT"
 
@@ -75,7 +72,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 38
     return-void
 .end method
 
@@ -86,7 +82,6 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 64
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -95,7 +90,6 @@
 
     move-result-object v0
 
-    .line 65
     .local v0, "className":Ljava/lang/String;
     const-string v1, "CAT"
 
@@ -151,7 +145,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     return-void
 .end method
 
@@ -161,7 +154,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     const-string v0, "CAT"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -188,7 +180,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     return-void
 .end method
 
@@ -198,7 +189,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 49
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -207,7 +197,6 @@
 
     move-result-object v0
 
-    .line 50
     .local v0, "className":Ljava/lang/String;
     const-string v1, "CAT"
 
@@ -247,7 +236,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     return-void
 .end method
 
@@ -257,7 +245,6 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     const-string v0, "CAT"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -284,7 +271,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     return-void
 .end method
 
@@ -292,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 88
     sget-boolean v0, Lcom/android/internal/telephony/TelephonyFeatures;->SHIP_BUILD:Z
 
     if-nez v0, :cond_0
@@ -315,18 +300,15 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     invoke-static {}, Lcom/android/internal/telephony/cat/CatLog;->isDebuggable()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 85
     :goto_0
     return-void
 
-    .line 82
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -336,7 +318,6 @@
 
     move-result-object v0
 
-    .line 83
     .local v0, "className":Ljava/lang/String;
     const-string v1, "CAT"
 
@@ -401,18 +382,15 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     invoke-static {}, Lcom/android/internal/telephony/cat/CatLog;->isDebuggable()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 75
     :goto_0
     return-void
 
-    .line 74
     :cond_0
     const-string v0, "CAT"
 

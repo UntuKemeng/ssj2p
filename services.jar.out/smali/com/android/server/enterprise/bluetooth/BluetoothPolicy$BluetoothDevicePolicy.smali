@@ -25,13 +25,10 @@
     .param p3, "table"    # Ljava/lang/String;
 
     .prologue
-    .line 1599
     iput-object p1, p0, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$BluetoothDevicePolicy;->this$0:Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
 
-    .line 1600
     invoke-direct {p0, p2, p3}, Lcom/android/server/enterprise/BlackWhiteListPolicy;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 1601
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p1, "adminUid"    # I
 
     .prologue
-    .line 1604
     :try_start_0
     iget-object v1, p0, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$BluetoothDevicePolicy;->this$0:Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
 
@@ -61,15 +57,12 @@
 
     move-result v1
 
-    .line 1609
     :goto_0
     return v1
 
-    .line 1606
     :catch_0
     move-exception v0
 
-    .line 1607
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "BluetoothPolicyService"
 
@@ -79,7 +72,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->s(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1609
     const/4 v1, 0x0
 
     goto :goto_0

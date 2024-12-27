@@ -27,16 +27,12 @@
     .param p2, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
     iput-object p1, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ExtractorBuilder;->label:Ljava/lang/Class;
 
-    .line 159
     iput-object p2, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ExtractorBuilder;->type:Ljava/lang/Class;
 
-    .line 160
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .end annotation
 
     .prologue
-    .line 137
     invoke-direct {p0}, Lorg/simpleframework/xml/core/ExtractorFactory$ExtractorBuilder;->getConstructor()Ljava/lang/reflect/Constructor;
 
     move-result-object v0
@@ -67,7 +62,6 @@
     .end annotation
 
     .prologue
-    .line 170
     iget-object v0, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ExtractorBuilder;->type:Ljava/lang/Class;
 
     const/4 v1, 0x3

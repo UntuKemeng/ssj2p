@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1762
     iput-object p1, p0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$SMIMEIntentReceiver;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1765
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1766
     .local v2, "action":Ljava/lang/String;
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
@@ -68,26 +65,21 @@
 
     invoke-static {v3, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1767
     const/16 v24, 0x0
 
-    .line 1768
     .local v24, "userHandleId":I
     if-nez v2, :cond_1
 
-    .line 1769
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     const-string/jumbo v8, "failed. action is null."
 
     invoke-static {v3, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1868
     :cond_0
     :goto_0
     return-void
 
-    .line 1772
     :cond_1
     const-string v3, "com.samsung.edm.intent.action.EXCHANGE_SMIME_INSTALL_STATUS"
 
@@ -97,7 +89,6 @@
 
     if-eqz v3, :cond_8
 
-    .line 1773
     const-string/jumbo v3, "result"
 
     const/4 v8, 0x0
@@ -108,7 +99,6 @@
 
     move-result v22
 
-    .line 1774
     .local v22, "status":I
     const-string v3, "account_id"
 
@@ -120,7 +110,6 @@
 
     move-result-wide v6
 
-    .line 1775
     .local v6, "accId":J
     const-string v3, "certificate_result_id"
 
@@ -132,7 +121,6 @@
 
     move-result-wide v18
 
-    .line 1776
     .local v18, "resultId":J
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -158,11 +146,9 @@
 
     move-result-object v17
 
-    .line 1777
     .local v17, "mCert":Lcom/android/server/enterprise/email/AccountSMIMECertificate;
     if-nez v17, :cond_2
 
-    .line 1778
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -189,7 +175,6 @@
 
     goto :goto_0
 
-    .line 1782
     :cond_2
     const/4 v3, -0x1
 
@@ -203,7 +188,6 @@
 
     if-lez v3, :cond_0
 
-    .line 1783
     const-string/jumbo v3, "smime_type"
 
     const/4 v8, 0x1
@@ -214,7 +198,6 @@
 
     move-result v21
 
-    .line 1784
     .local v21, "smime_type":I
     move-object/from16 v0, v17
 
@@ -222,7 +205,6 @@
 
     iget v4, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1785
     .local v4, "adminUid":I
     move-object/from16 v0, v17
 
@@ -230,11 +212,9 @@
 
     iget v5, v3, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 1786
     .local v5, "containerId":I
     const/16 v20, 0x0
 
-    .line 1787
     .local v20, "ret":Z
     const/4 v3, 0x2
 
@@ -248,7 +228,6 @@
 
     if-ne v0, v3, :cond_4
 
-    .line 1788
     :cond_3
     move-object/from16 v0, p0
 
@@ -263,7 +242,6 @@
 
     move-result v20
 
-    .line 1789
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -288,7 +266,6 @@
 
     invoke-static {v3, v8}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1791
     :cond_4
     const/4 v3, 0x3
 
@@ -302,7 +279,6 @@
 
     if-ne v0, v3, :cond_6
 
-    .line 1792
     :cond_5
     move-object/from16 v0, p0
 
@@ -317,7 +293,6 @@
 
     move-result v20
 
-    .line 1793
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -342,11 +317,9 @@
 
     invoke-static {v3, v8}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1796
     :cond_6
     if-eqz v20, :cond_7
 
-    .line 1797
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -373,7 +346,6 @@
 
     goto/16 :goto_0
 
-    .line 1800
     :cond_7
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
@@ -401,7 +373,6 @@
 
     goto/16 :goto_0
 
-    .line 1803
     .end local v4    # "adminUid":I
     .end local v5    # "containerId":I
     .end local v6    # "accId":J
@@ -419,14 +390,12 @@
 
     if-eqz v3, :cond_12
 
-    .line 1804
     const-string v3, "ExchangeAccountPolicy"
 
     const-string v8, "Received - ACTION_ENFORCE_SMIME_ALIAS_EMAIL_INTERNAL"
 
     invoke-static {v3, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1806
     const-string/jumbo v3, "result"
 
     const/4 v8, 0x0
@@ -437,7 +406,6 @@
 
     move-result v22
 
-    .line 1807
     .restart local v22    # "status":I
     const-string v3, "account_id"
 
@@ -449,7 +417,6 @@
 
     move-result-wide v6
 
-    .line 1808
     .restart local v6    # "accId":J
     const-string/jumbo v3, "smime_type"
 
@@ -461,7 +428,6 @@
 
     move-result v23
 
-    .line 1809
     .local v23, "type":I
     const-string v3, "certificate_result_id"
 
@@ -473,7 +439,6 @@
 
     move-result-wide v18
 
-    .line 1811
     .restart local v18    # "resultId":J
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -500,18 +465,15 @@
 
     move-result-object v17
 
-    .line 1812
     .restart local v17    # "mCert":Lcom/android/server/enterprise/email/AccountSMIMECertificate;
     if-eqz v17, :cond_11
 
-    .line 1813
     move-object/from16 v0, v17
 
     iget-object v3, v0, Lcom/android/server/enterprise/email/AccountSMIMECertificate;->mCxtInfo:Landroid/app/enterprise/ContextInfo;
 
     iget v4, v3, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1814
     .restart local v4    # "adminUid":I
     move-object/from16 v0, v17
 
@@ -519,7 +481,6 @@
 
     iget v5, v3, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 1815
     .restart local v5    # "containerId":I
     const/4 v3, -0x1
 
@@ -533,21 +494,17 @@
 
     if-lez v3, :cond_b
 
-    .line 1816
     const/16 v20, 0x0
 
-    .line 1817
     .restart local v20    # "ret":Z
     if-nez v23, :cond_9
 
-    .line 1818
     move-object/from16 v0, v17
 
     iget-object v3, v0, Lcom/android/server/enterprise/email/AccountSMIMECertificate;->mPath:Ljava/lang/String;
 
     if-nez v3, :cond_c
 
-    .line 1819
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$SMIMEIntentReceiver;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
@@ -569,14 +526,12 @@
 
     move-result v20
 
-    .line 1820
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     const-string/jumbo v8, "release SMIME Certificate for Enryption (Alias) by null."
 
     invoke-static {v3, v8}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1829
     :cond_9
     :goto_1
     const/4 v3, 0x1
@@ -585,14 +540,12 @@
 
     if-ne v0, v3, :cond_a
 
-    .line 1830
     move-object/from16 v0, v17
 
     iget-object v3, v0, Lcom/android/server/enterprise/email/AccountSMIMECertificate;->mPath:Ljava/lang/String;
 
     if-nez v3, :cond_d
 
-    .line 1831
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$SMIMEIntentReceiver;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
@@ -614,26 +567,22 @@
 
     move-result v20
 
-    .line 1832
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     const-string/jumbo v8, "release SMIME Certificate for Signing (Alias) by null."
 
     invoke-static {v3, v8}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1838
     :cond_a
     :goto_2
     if-eqz v20, :cond_f
 
-    .line 1839
     move-object/from16 v0, v17
 
     iget-object v3, v0, Lcom/android/server/enterprise/email/AccountSMIMECertificate;->mPath:Ljava/lang/String;
 
     if-nez v3, :cond_e
 
-    .line 1840
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -660,7 +609,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1858
     .end local v4    # "adminUid":I
     .end local v5    # "containerId":I
     .end local v17    # "mCert":Lcom/android/server/enterprise/email/AccountSMIMECertificate;
@@ -675,7 +623,6 @@
 
     invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1859
     .local v16, "intentRec":Landroid/content/Intent;
     const-string v3, "account_id"
 
@@ -693,7 +640,6 @@
 
     invoke-virtual {v0, v3, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 1860
     const-string/jumbo v3, "result"
 
     const-string/jumbo v8, "result"
@@ -710,7 +656,6 @@
 
     invoke-virtual {v0, v3, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1861
     const-string v3, "com.samsung.edm.intent.extra.ENFORCE_SMIME_ALIAS_TYPE"
 
     const-string/jumbo v8, "smime_type"
@@ -727,7 +672,6 @@
 
     invoke-virtual {v0, v3, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1862
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/server/enterprise/email/ExchangeAccountPolicy$SMIMEIntentReceiver;->this$0:Lcom/android/server/enterprise/email/ExchangeAccountPolicy;
@@ -747,7 +691,6 @@
 
     goto/16 :goto_0
 
-    .line 1823
     .end local v16    # "intentRec":Landroid/content/Intent;
     .restart local v4    # "adminUid":I
     .restart local v5    # "containerId":I
@@ -768,7 +711,6 @@
 
     move-result v20
 
-    .line 1824
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -797,7 +739,6 @@
 
     goto/16 :goto_1
 
-    .line 1854
     .end local v4    # "adminUid":I
     .end local v5    # "containerId":I
     .end local v17    # "mCert":Lcom/android/server/enterprise/email/AccountSMIMECertificate;
@@ -805,7 +746,6 @@
     :catch_0
     move-exception v15
 
-    .line 1855
     .local v15, "e":Ljava/lang/Exception;
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
@@ -815,7 +755,6 @@
 
     goto :goto_3
 
-    .line 1834
     .end local v15    # "e":Ljava/lang/Exception;
     .restart local v4    # "adminUid":I
     .restart local v5    # "containerId":I
@@ -836,7 +775,6 @@
 
     move-result v20
 
-    .line 1835
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -863,7 +801,6 @@
 
     goto/16 :goto_2
 
-    .line 1842
     :cond_e
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
@@ -891,7 +828,6 @@
 
     goto/16 :goto_3
 
-    .line 1845
     :cond_f
     move-object/from16 v0, v17
 
@@ -899,7 +835,6 @@
 
     if-nez v3, :cond_10
 
-    .line 1846
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -926,7 +861,6 @@
 
     goto/16 :goto_3
 
-    .line 1848
     :cond_10
     const-string v3, "ExchangeAccountPolicy/Receiver"
 
@@ -954,7 +888,6 @@
 
     goto/16 :goto_3
 
-    .line 1852
     .end local v4    # "adminUid":I
     .end local v5    # "containerId":I
     .end local v20    # "ret":Z
@@ -987,7 +920,6 @@
 
     goto/16 :goto_3
 
-    .line 1866
     .end local v6    # "accId":J
     .end local v17    # "mCert":Lcom/android/server/enterprise/email/AccountSMIMECertificate;
     .end local v18    # "resultId":J

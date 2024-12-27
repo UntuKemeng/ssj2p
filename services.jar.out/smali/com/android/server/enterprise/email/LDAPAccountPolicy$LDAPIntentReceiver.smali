@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 374
     iput-object p1, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPIntentReceiver;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 376
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 377
     .local v1, "action":Ljava/lang/String;
     const-string v7, "edm.intent.action.ldap.createacct.internal"
 
@@ -54,30 +51,25 @@
 
     if-eqz v7, :cond_0
 
-    .line 379
     const-string v7, "LDAPAccountPolicyService"
 
     const-string v8, "LDAPIntentReceiver: Received intent : ACTION_LDAP_CREATE_ACCT"
 
     invoke-static {v7, v8}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 380
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
 
-    .line 381
     .local v3, "extras":Landroid/os/Bundle;
     if-eqz v3, :cond_0
 
-    .line 382
     new-instance v0, Landroid/content/Intent;
 
     const-string v7, "edm.intent.action.ldap.createacct.result"
 
     invoke-direct {v0, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 383
     .local v0, "_intent":Landroid/content/Intent;
     const-string v7, "edm.intent.extra.ldap.user.id"
 
@@ -85,7 +77,6 @@
 
     move-result v6
 
-    .line 384
     .local v6, "userId":I
     const-string v7, "edm.intent.extra.ldap.result"
 
@@ -97,7 +88,6 @@
 
     invoke-virtual {v0, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 385
     const-string v7, "edm.intent.extra.ldap.acct.id"
 
     const-string v8, "edm.intent.extra.ldap.acct.id"
@@ -108,17 +98,14 @@
 
     invoke-virtual {v0, v7, v8, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 386
     const-string v7, "edm.intent.extra.ldap.user.id"
 
     invoke-virtual {v0, v7, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 387
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 389
     .local v4, "token":J
     :try_start_0
     iget-object v7, p0, Lcom/android/server/enterprise/email/LDAPAccountPolicy$LDAPIntentReceiver;->this$0:Lcom/android/server/enterprise/email/LDAPAccountPolicy;
@@ -134,7 +121,6 @@
 
     invoke-virtual {v7, v0, v8, v9}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 391
     const-string v7, "LDAPAccountPolicyService"
 
     const-string v8, "LDAPReceiver: success to send result Intent. "
@@ -144,10 +130,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 395
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 400
     .end local v0    # "_intent":Landroid/content/Intent;
     .end local v3    # "extras":Landroid/os/Bundle;
     .end local v4    # "token":J
@@ -156,7 +140,6 @@
     :goto_0
     return-void
 
-    .line 392
     .restart local v0    # "_intent":Landroid/content/Intent;
     .restart local v3    # "extras":Landroid/os/Bundle;
     .restart local v4    # "token":J
@@ -164,7 +147,6 @@
     :catch_0
     move-exception v2
 
-    .line 393
     .local v2, "ex":Ljava/lang/Exception;
     :try_start_1
     const-string v7, "LDAPAccountPolicyService"
@@ -175,7 +157,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 395
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0

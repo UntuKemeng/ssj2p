@@ -132,7 +132,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 104
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -144,21 +143,18 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->DBG2:Z
 
-    .line 135
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceMap:Ljava/util/Map;
 
-    .line 137
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
-    .line 139
     const-string v0, "/data/system/"
 
     sput-object v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->LOCAL_FILE_PATH:Ljava/lang/String;
@@ -177,117 +173,92 @@
 
     const/4 v1, 0x1
 
-    .line 377
     invoke-direct {p0}, Lcom/sec/enterprise/knox/IEnterpriseSSOPolicy$Stub;-><init>()V
 
-    .line 106
     const-string v0, "EnterpriseSSOPolicyService"
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->TAG:Ljava/lang/String;
 
-    .line 107
     const-string v0, "API Not Supported"
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->UNKNOWNAPI:Ljava/lang/String;
 
-    .line 108
     const-string v0, "com.samsung.safe.auth.mgmt"
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->CONTAINER_ACTION_SSO_SERVICE:Ljava/lang/String;
 
-    .line 109
     const-string v0, "com.samsung.safe.auth.mgmt2"
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->CONTAINER_ACTION_SSO_SERVICE2:Ljava/lang/String;
 
-    .line 110
     const-string/jumbo v0, "sec_container_1.com.samsung.safe.auth.mgmt"
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->CONTAINER1_ACTION_SSO_SERVICE:Ljava/lang/String;
 
-    .line 118
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->SSO_TYPE_VALUE:I
 
-    .line 119
     iput v2, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->SSO_BIND_SUCCESS:I
 
-    .line 120
     iput v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->SSO_BIND_FAILURE:I
 
-    .line 121
     iput v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->CONTAINER_1:I
 
-    .line 122
     iput v2, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->SSO_BIND_RESULT_FAILURE:I
 
-    .line 123
     iput v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->SSO_BIND_RESULT_SUCCESS:I
 
-    .line 124
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->SSO_BIND_RESULT_DUPLICATE_REQ:I
 
-    .line 126
     new-instance v0, Ljava/util/concurrent/LinkedBlockingQueue;
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/LinkedBlockingQueue;-><init>(I)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->interfaceQueueKnox2:Ljava/util/concurrent/BlockingQueue;
 
-    .line 131
     iput-object v3, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
-    .line 132
     iput-boolean v2, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
-    .line 138
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
-    .line 140
     iput-object v3, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mEdmStorageBaseProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 162
     new-instance v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$1;-><init>(Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mBroadCastReciever:Landroid/content/BroadcastReceiver;
 
-    .line 334
     new-instance v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$2;-><init>(Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->cSignConnect1:Landroid/content/ServiceConnection;
 
-    .line 1711
     new-instance v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$3;-><init>(Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;)V
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mBReciever:Landroid/content/BroadcastReceiver;
 
-    .line 378
     new-instance v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
-    .line 379
     iput-object p1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
-    .line 380
     invoke-virtual {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->registerReciever()V
 
-    .line 383
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
@@ -296,7 +267,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mEdmStorageBaseProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 384
     return-void
 .end method
 
@@ -307,10 +277,8 @@
     .param p3, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 260
     const/4 v2, 0x0
 
-    .line 261
     .local v2, "bTakeInterface":Z
     const-string v8, "EnterpriseSSOPolicyService"
 
@@ -318,10 +286,8 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     const/4 v7, 0x0
 
-    .line 265
     .local v7, "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     :try_start_0
     iget-object v8, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->interfaceQueueKnox2:Ljava/util/concurrent/BlockingQueue;
@@ -342,11 +308,9 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 270
     :goto_0
     if-nez v7, :cond_0
 
-    .line 271
     const-string v8, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v9, "get SSO Interface failed"
@@ -355,19 +319,16 @@
 
     move v3, v2
 
-    .line 298
     .end local v2    # "bTakeInterface":Z
     .local v3, "bTakeInterface":I
     :goto_1
     return v3
 
-    .line 266
     .end local v3    # "bTakeInterface":I
     .restart local v2    # "bTakeInterface":Z
     :catch_0
     move-exception v4
 
-    .line 267
     .local v4, "e":Ljava/lang/InterruptedException;
     const-string v8, "EnterpriseSSOPolicyService"
 
@@ -375,12 +336,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 268
     invoke-virtual {v4}, Ljava/lang/InterruptedException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 275
     .end local v4    # "e":Ljava/lang/InterruptedException;
     :cond_0
     sget-object v8, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceMap:Ljava/util/Map;
@@ -391,7 +350,6 @@
 
     invoke-interface {v8, v9}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 276
     sget-object v8, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceMap:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -400,12 +358,10 @@
 
     invoke-interface {v8, v9, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 278
     new-instance v6, Lcom/android/server/enterprise/utils/SSOTypeMapData;
 
     invoke-direct {v6, p1, p2, p3, v7}, Lcom/android/server/enterprise/utils/SSOTypeMapData;-><init>(IILjava/lang/String;Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;)V
 
-    .line 279
     .local v6, "mSSOTypeMapData":Lcom/android/server/enterprise/utils/SSOTypeMapData;
     sget-object v8, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
@@ -415,7 +371,6 @@
 
     invoke-interface {v8, v9}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 280
     sget-object v8, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -424,10 +379,8 @@
 
     invoke-interface {v8, v9, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 282
     invoke-direct {p0, p2, p3}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->updateClintEntry(ILjava/lang/String;)V
 
-    .line 284
     const-string v8, "EnterpriseSSOPolicyService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -450,7 +403,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     const-string v8, "EnterpriseSSOPolicyService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -473,7 +425,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     const-string v8, "EnterpriseSSOPolicyService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -496,7 +447,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     const-string v8, "EnterpriseSSOPolicyService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -519,38 +469,31 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     new-instance v5, Landroid/content/Intent;
 
     const-string/jumbo v8, "sso.enterprise.container.setup.success"
 
     invoke-direct {v5, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 292
     .local v5, "mIntent":Landroid/content/Intent;
     const-string v8, "containerid"
 
     invoke-virtual {v5, v8, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 293
     const-string/jumbo v8, "packageName"
 
     invoke-virtual {v5, v8, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 294
     iget-object v8, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8, v5}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 295
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 297
     const/4 v2, 0x1
 
     move v3, v2
 
-    .line 298
     .restart local v3    # "bTakeInterface":I
     goto/16 :goto_1
 .end method
@@ -559,7 +502,6 @@
     .locals 1
 
     .prologue
-    .line 101
     sget-boolean v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->DBG2:Z
 
     return v0
@@ -571,7 +513,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 101
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->isSSOServiceInstalled(I)Z
 
     move-result v0
@@ -585,7 +526,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 101
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfaces(I)I
 
     move-result v0
@@ -598,7 +538,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     return-object v0
@@ -609,7 +548,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -621,7 +559,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 101
     iput-boolean p1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
     return p1
@@ -631,7 +568,6 @@
     .locals 1
 
     .prologue
-    .line 101
     sget-object v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceMap:Ljava/util/Map;
 
     return-object v0
@@ -641,7 +577,6 @@
     .locals 1
 
     .prologue
-    .line 101
     sget-object v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
     return-object v0
@@ -652,7 +587,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;
 
     .prologue
-    .line 101
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
     return-void
@@ -664,7 +598,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 101
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->removeClintEntry(I)V
 
     return-void
@@ -677,7 +610,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 202
     const-string v4, "EnterpriseSSOPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -700,20 +632,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     const/4 v3, 0x0
 
-    .line 205
     .local v3, "result":I
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 206
     .local v2, "bundle":Landroid/os/Bundle;
     packed-switch p1, :pswitch_data_0
 
-    .line 221
     const-string v4, "EnterpriseSSOPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -736,11 +664,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     :goto_0
     return v3
 
-    .line 208
     :pswitch_0
     iget-object v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
@@ -748,12 +674,10 @@
 
     if-nez v4, :cond_1
 
-    .line 209
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 210
     .local v0, "backupUID":J
     iget-object v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
@@ -771,16 +695,13 @@
 
     if-ne v7, v4, :cond_0
 
-    .line 211
     const/4 v3, 0x1
 
-    .line 213
     :cond_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 216
     .end local v0    # "backupUID":J
     :cond_1
     const-string v4, "EnterpriseSSOPolicyService"
@@ -789,13 +710,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 217
     const/4 v3, 0x2
 
-    .line 219
     goto :goto_0
 
-    .line 206
     nop
 
     :pswitch_data_0
@@ -813,7 +731,6 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 230
     const-string v7, "EnterpriseSSOPolicyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -836,7 +753,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     const-string v7, "EnterpriseSSOPolicyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -859,7 +775,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     const-string v7, "EnterpriseSSOPolicyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -882,16 +797,13 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     const/4 v5, 0x0
 
-    .line 236
     .local v5, "result":I
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 237
     .local v2, "bundle":Landroid/os/Bundle;
     const-string v7, "2.0"
 
@@ -907,18 +819,15 @@
 
     if-eqz v7, :cond_0
 
-    .line 238
     new-instance v6, Landroid/os/UserHandle;
 
     invoke-direct {v6, p2}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 239
     .local v6, "uHandle":Landroid/os/UserHandle;
     new-instance v3, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOConnection;
 
     invoke-direct {v3, p0, p1, p2, p3}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOConnection;-><init>(Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;IILjava/lang/String;)V
 
-    .line 240
     .local v3, "cSSOConnect":Landroid/content/ServiceConnection;
     new-instance v4, Landroid/content/Intent;
 
@@ -926,27 +835,22 @@
 
     invoke-direct {v4, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 241
     .local v4, "intent":Landroid/content/Intent;
     invoke-virtual {v4, p3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 242
     const/16 v7, 0x20
 
     invoke-virtual {v4, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 243
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 244
     .local v0, "backupUID":J
     iget-object v7, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->interfaceQueueKnox2:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v7}, Ljava/util/concurrent/BlockingQueue;->clear()V
 
-    .line 245
     iget-object v7, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7, v4, v3, v10, v6}, Landroid/content/Context;->bindServiceAsUser(Landroid/content/Intent;Landroid/content/ServiceConnection;ILandroid/os/UserHandle;)Z
@@ -955,21 +859,17 @@
 
     if-ne v10, v7, :cond_2
 
-    .line 246
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->TakeInterfaceOnBlockingQueueKnox2(IILjava/lang/String;)Z
 
     move-result v7
 
     if-ne v10, v7, :cond_1
 
-    .line 247
     const/4 v5, 0x1
 
-    .line 253
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 255
     .end local v0    # "backupUID":J
     .end local v3    # "cSSOConnect":Landroid/content/ServiceConnection;
     .end local v4    # "intent":Landroid/content/Intent;
@@ -977,10 +877,8 @@
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 256
     return v5
 
-    .line 249
     .restart local v0    # "backupUID":J
     .restart local v3    # "cSSOConnect":Landroid/content/ServiceConnection;
     .restart local v4    # "intent":Landroid/content/Intent;
@@ -994,7 +892,6 @@
 
     goto :goto_0
 
-    .line 251
     :cond_2
     const-string v7, "EnterpriseSSOPolicyService"
 
@@ -1027,7 +924,6 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 552
     monitor-enter p0
 
     :try_start_0
@@ -1037,7 +933,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 553
     iget v7, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     iget v8, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
@@ -1046,18 +941,15 @@
 
     move-result v1
 
-    .line 554
     .local v1, "bNewOrExistingClient":Z
     const/4 v5, 0x0
 
-    .line 555
     .local v5, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v5, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v5    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v5}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 556
     .restart local v5    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     const/4 v7, 0x1
 
@@ -1067,14 +959,12 @@
 
     invoke-virtual {v5, v7}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 557
     const/4 v7, 0x1
 
     const/16 v8, 0xa
 
     invoke-virtual {v5, v7, v8}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 559
     if-nez v1, :cond_0
 
     const-string v7, "com.centrify.sso.samsung"
@@ -1093,7 +983,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 560
     :cond_0
     sget-object v7, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
@@ -1107,11 +996,9 @@
 
     move-result v0
 
-    .line 561
     .local v0, "bIsContainKey":Z
     if-eqz v0, :cond_2
 
-    .line 562
     sget-object v7, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
     iget v8, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -1126,7 +1013,6 @@
 
     check-cast v4, Lcom/android/server/enterprise/utils/SSOTypeMapData;
 
-    .line 564
     .local v4, "mSSOTypeMapData":Lcom/android/server/enterprise/utils/SSOTypeMapData;
     invoke-virtual {v4}, Lcom/android/server/enterprise/utils/SSOTypeMapData;->getSSOInterface()Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
 
@@ -1150,14 +1036,12 @@
 
     if-eqz v7, :cond_2
 
-    .line 566
     const-string v7, "EnterpriseSSOPolicyService"
 
     const-string v8, "bindSSOInterfacesSync() - already bound"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 567
     const/4 v7, 0x0
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1166,7 +1050,6 @@
 
     invoke-virtual {v5, v7}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 568
     const/4 v7, 0x0
 
     const/4 v8, 0x0
@@ -1175,7 +1058,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 599
     .end local v0    # "bIsContainKey":Z
     .end local v4    # "mSSOTypeMapData":Lcom/android/server/enterprise/utils/SSOTypeMapData;
     :cond_1
@@ -1184,7 +1066,6 @@
 
     return-object v5
 
-    .line 573
     .restart local v0    # "bIsContainKey":Z
     :cond_2
     :try_start_1
@@ -1196,7 +1077,6 @@
 
     move-result v6
 
-    .line 574
     .local v6, "result":I
     const-string v7, "EnterpriseSSOPolicyService"
 
@@ -1232,14 +1112,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 575
     if-eq v10, v6, :cond_3
 
     const/4 v7, 0x2
 
     if-ne v7, v6, :cond_1
 
-    .line 576
     :cond_3
     const/4 v7, 0x0
 
@@ -1249,14 +1127,12 @@
 
     invoke-virtual {v5, v7}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 577
     const/4 v7, 0x0
 
     const/4 v8, 0x0
 
     invoke-virtual {v5, v7, v8}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 578
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1293,7 +1169,6 @@
 
     move-result-object v2
 
-    .line 579
     .local v2, "clientHandle":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
@@ -1303,7 +1178,6 @@
 
     if-nez v7, :cond_4
 
-    .line 580
     const-string v7, "EnterpriseSSOPolicyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1326,19 +1200,16 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 581
     iget v7, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     invoke-direct {p0, v7}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->removeClintEntry(I)V
 
-    .line 582
     iget-object v7, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 584
     :try_start_2
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->writeListToFile()V
     :try_end_2
@@ -1347,11 +1218,9 @@
 
     goto/16 :goto_0
 
-    .line 585
     :catch_0
     move-exception v3
 
-    .line 586
     .local v3, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v7, "EnterpriseSSOPolicyService"
@@ -1360,14 +1229,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 587
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto/16 :goto_0
 
-    .line 552
     .end local v0    # "bIsContainKey":Z
     .end local v1    # "bNewOrExistingClient":Z
     .end local v2    # "clientHandle":Ljava/lang/String;
@@ -1381,7 +1248,6 @@
 
     throw v7
 
-    .line 590
     .restart local v0    # "bIsContainKey":Z
     .restart local v1    # "bNewOrExistingClient":Z
     .restart local v2    # "clientHandle":Ljava/lang/String;
@@ -1413,7 +1279,6 @@
 
     goto/16 :goto_0
 
-    .line 595
     .end local v0    # "bIsContainKey":Z
     .end local v2    # "clientHandle":Ljava/lang/String;
     .end local v6    # "result":I
@@ -1426,7 +1291,6 @@
 
     invoke-virtual {v5, v7}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 596
     const/4 v7, 0x1
 
     const/4 v8, 0x1
@@ -1443,7 +1307,6 @@
     .param p1, "nContainerId"    # I
 
     .prologue
-    .line 603
     monitor-enter p0
 
     :try_start_0
@@ -1453,14 +1316,12 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 604
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
     if-nez v14, :cond_1
 
-    .line 605
     const-string v14, "EnterpriseSSOPolicyService"
 
     const-string v15, "clientsList is null"
@@ -1469,31 +1330,25 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 673
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 609
     :cond_1
     const/4 v2, 0x0
 
-    .line 610
     .local v2, "bNeedBind":Z
     const/4 v4, -0x1
 
-    .line 611
     .local v4, "clientUid":I
     const/4 v5, -0x1
 
-    .line 612
     .local v5, "containerId":I
     :try_start_1
     const-string v9, ""
 
-    .line 614
     .local v9, "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1518,7 +1373,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 615
     .local v3, "clientInfo":Ljava/lang/String;
     const-string v14, "EnterpriseSSOPolicyService"
 
@@ -1542,7 +1396,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 616
     const/4 v14, 0x1
 
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
@@ -1551,14 +1404,12 @@
 
     if-eq v14, v15, :cond_2
 
-    .line 619
     new-instance v13, Ljava/util/StringTokenizer;
 
     const-string v14, "-"
 
     invoke-direct {v13, v3, v14}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 620
     .local v13, "tokenizer":Ljava/util/StringTokenizer;
     invoke-virtual {v13}, Ljava/util/StringTokenizer;->countTokens()I
 
@@ -1568,7 +1419,6 @@
 
     if-ge v14, v15, :cond_3
 
-    .line 621
     const-string v14, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v15, "token count is not enough"
@@ -1579,7 +1429,6 @@
 
     goto :goto_1
 
-    .line 603
     .end local v2    # "bNeedBind":Z
     .end local v3    # "clientInfo":Ljava/lang/String;
     .end local v4    # "clientUid":I
@@ -1594,7 +1443,6 @@
 
     throw v14
 
-    .line 626
     .restart local v2    # "bNeedBind":Z
     .restart local v3    # "clientInfo":Ljava/lang/String;
     .restart local v4    # "clientUid":I
@@ -1608,24 +1456,20 @@
 
     move-result-object v11
 
-    .line 627
     .local v11, "strClientUid":Ljava/lang/String;
     invoke-static {v11}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 628
     invoke-virtual {v13}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 629
     .local v12, "strContainerId":Ljava/lang/String;
     invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 630
     invoke-virtual {v13}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
     :try_end_2
     .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_0
@@ -1633,12 +1477,10 @@
 
     move-result-object v9
 
-    .line 637
     move/from16 v0, p1
 
     if-ne v0, v5, :cond_2
 
-    .line 641
     :try_start_3
     const-string v14, "EnterpriseSSOPolicyService"
 
@@ -1662,7 +1504,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 642
     const-string v14, "EnterpriseSSOPolicyService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -1685,7 +1526,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 643
     const-string v14, "EnterpriseSSOPolicyService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -1708,7 +1548,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 646
     sget-object v14, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1719,13 +1558,11 @@
 
     move-result v1
 
-    .line 647
     .local v1, "bIsContainKey":Z
     const/4 v14, 0x1
 
     if-ne v14, v1, :cond_6
 
-    .line 648
     const-string v14, "EnterpriseSSOPolicyService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -1748,7 +1585,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 649
     sget-object v14, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1761,7 +1597,6 @@
 
     check-cast v8, Lcom/android/server/enterprise/utils/SSOTypeMapData;
 
-    .line 650
     .local v8, "mSSOTypeMapData":Lcom/android/server/enterprise/utils/SSOTypeMapData;
     invoke-virtual {v8}, Lcom/android/server/enterprise/utils/SSOTypeMapData;->getSSOInterface()Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
 
@@ -1785,17 +1620,14 @@
 
     if-eqz v14, :cond_5
 
-    .line 652
     const-string v14, "EnterpriseSSOPolicyService"
 
     const-string v15, "Parse clientsList - SSO Service is already bound: "
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 653
     const/4 v2, 0x0
 
-    .line 669
     .end local v1    # "bIsContainKey":Z
     .end local v3    # "clientInfo":Ljava/lang/String;
     .end local v8    # "mSSOTypeMapData":Lcom/android/server/enterprise/utils/SSOTypeMapData;
@@ -1808,14 +1640,12 @@
 
     if-ne v14, v2, :cond_0
 
-    .line 670
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4, v5, v9}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfaces(IILjava/lang/String;)I
 
     move-result v10
 
-    .line 671
     .local v10, "result":I
     const-string v14, "EnterpriseSSOPolicyService"
 
@@ -1841,14 +1671,12 @@
 
     goto/16 :goto_0
 
-    .line 631
     .end local v10    # "result":I
     .restart local v3    # "clientInfo":Ljava/lang/String;
     .restart local v13    # "tokenizer":Ljava/util/StringTokenizer;
     :catch_0
     move-exception v6
 
-    .line 632
     .local v6, "e":Ljava/lang/NumberFormatException;
     const-string v14, "EnterpriseSSOPolicyService"
 
@@ -1856,12 +1684,10 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 633
     invoke-virtual {v6}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
     goto/16 :goto_1
 
-    .line 655
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     .restart local v1    # "bIsContainKey":Z
     .restart local v8    # "mSSOTypeMapData":Lcom/android/server/enterprise/utils/SSOTypeMapData;
@@ -1876,17 +1702,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 658
     const/4 v2, 0x1
 
     goto :goto_2
 
-    .line 663
     .end local v8    # "mSSOTypeMapData":Lcom/android/server/enterprise/utils/SSOTypeMapData;
     :cond_6
     const/4 v2, 0x1
 
-    .line 666
     goto :goto_2
 .end method
 
@@ -1894,7 +1717,6 @@
     .locals 2
 
     .prologue
-    .line 367
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1903,7 +1725,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermission(Ljava/lang/String;)V
 
-    .line 368
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -1916,7 +1737,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 372
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1927,12 +1747,10 @@
 
     move-result-object p1
 
-    .line 373
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     invoke-static {v0}, Lcom/sec/enterprise/knox/EnterpriseContainerManager;->enforceContainerPermission(I)I
 
-    .line 374
     return-object p1
 .end method
 
@@ -1940,19 +1758,16 @@
     .locals 2
 
     .prologue
-    .line 142
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 143
     const-string v0, "EnterpriseSSOPolicyService"
 
     const-string v1, "SSO: getEDM()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -1965,7 +1780,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 147
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -1977,10 +1791,8 @@
     .param p1, "containerID"    # I
 
     .prologue
-    .line 1509
     const/4 v1, 0x0
 
-    .line 1510
     .local v1, "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     sget-object v2, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceMap:Ljava/util/Map;
 
@@ -1992,7 +1804,6 @@
 
     move-result v0
 
-    .line 1511
     .local v0, "bIsContainKey":Z
     const-string v2, "EnterpriseSSOPolicyService"
 
@@ -2026,7 +1837,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1512
     sget-object v2, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2039,7 +1849,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1513
     sget-object v2, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2053,12 +1862,10 @@
     .end local v1    # "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     check-cast v1, Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
 
-    .line 1517
     .restart local v1    # "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     :cond_0
     if-nez v1, :cond_1
 
-    .line 1518
     const-string v2, "EnterpriseSSOPolicyService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2081,7 +1888,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1520
     :cond_1
     return-object v1
 .end method
@@ -2092,7 +1898,6 @@
     .param p2, "containerId"    # I
 
     .prologue
-    .line 1452
     const-string v3, "EnterpriseSSOPolicyService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2137,10 +1942,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1453
     const/4 v2, 0x1
 
-    .line 1455
     .local v2, "ret":Z
     iget-object v3, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
@@ -2163,7 +1966,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1456
     .local v1, "item":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2197,7 +1999,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 1457
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2232,32 +2033,26 @@
 
     if-nez v3, :cond_2
 
-    .line 1458
     const-string v3, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v4, "isExistingOrFirstClient: got another client already in the clientsList"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1459
     const/4 v2, 0x0
 
-    .line 1466
     .end local v1    # "item":Ljava/lang/String;
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 1467
     const-string v3, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v4, "leaving isExistingOrNewClient "
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1468
     return v2
 
-    .line 1462
     .restart local v1    # "item":Ljava/lang/String;
     :cond_2
     const-string v3, "EnterpriseSSOPolicyService"
@@ -2276,12 +2071,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 388
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 389
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "2.0"
 
@@ -2297,7 +2090,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 409
     :cond_0
     return v3
 .end method
@@ -2311,18 +2103,14 @@
     .end annotation
 
     .prologue
-    .line 1659
     const/4 v1, 0x0
 
-    .line 1660
     .local v1, "f":Ljava/io/FileInputStream;
     const/4 v5, 0x0
 
-    .line 1661
     .local v5, "s":Ljava/io/ObjectInputStream;
     const/4 v3, 0x0
 
-    .line 1664
     .local v3, "file":Ljava/io/File;
     :try_start_0
     new-instance v4, Ljava/io/File;
@@ -2355,7 +2143,6 @@
     .local v4, "file":Ljava/io/File;
     move-object v3, v4
 
-    .line 1670
     .end local v4    # "file":Ljava/io/File;
     .restart local v3    # "file":Ljava/io/File;
     :goto_0
@@ -2366,14 +2153,12 @@
 
     if-eqz v7, :cond_0
 
-    .line 1671
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1672
     .end local v1    # "f":Ljava/io/FileInputStream;
     .local v2, "f":Ljava/io/FileInputStream;
     :try_start_2
@@ -2383,7 +2168,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 1673
     .end local v5    # "s":Ljava/io/ObjectInputStream;
     .local v6, "s":Ljava/io/ObjectInputStream;
     :try_start_3
@@ -2403,7 +2187,6 @@
     .restart local v5    # "s":Ljava/io/ObjectInputStream;
     move-object v1, v2
 
-    .line 1683
     .end local v2    # "f":Ljava/io/FileInputStream;
     .restart local v1    # "f":Ljava/io/FileInputStream;
     :cond_0
@@ -2432,26 +2215,21 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1684
     if-eqz v5, :cond_1
 
     invoke-virtual {v5}, Ljava/io/ObjectInputStream;->close()V
 
-    .line 1685
     :cond_1
     if-eqz v1, :cond_2
 
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
 
-    .line 1686
     :cond_2
     return-void
 
-    .line 1665
     :catch_0
     move-exception v0
 
-    .line 1666
     .local v0, "e":Ljava/lang/Exception;
     const-string v7, "EnterpriseSSOPolicyService"
 
@@ -2459,30 +2237,25 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1667
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1676
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 1677
     .restart local v0    # "e":Ljava/lang/Exception;
     :goto_2
     if-eqz v5, :cond_3
 
     invoke-virtual {v5}, Ljava/io/ObjectInputStream;->close()V
 
-    .line 1678
     :cond_3
     if-eqz v1, :cond_4
 
     invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
 
-    .line 1679
     :cond_4
     const-string v7, "EnterpriseSSOPolicyService"
 
@@ -2490,12 +2263,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1680
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 1676
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "f":Ljava/io/FileInputStream;
     .restart local v2    # "f":Ljava/io/FileInputStream;
@@ -2530,7 +2301,6 @@
     .locals 3
 
     .prologue
-    .line 151
     const-string v0, "EnterpriseSSOPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2555,7 +2325,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     const-string v0, "EnterpriseSSOPolicyService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2580,7 +2349,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     return-void
 .end method
 
@@ -2589,16 +2357,13 @@
     .param p1, "containerId"    # I
 
     .prologue
-    .line 1690
     iget-object v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
     if-nez v4, :cond_0
 
-    .line 1709
     :goto_0
     return-void
 
-    .line 1692
     :cond_0
     new-instance v3, Ljava/util/ArrayList;
 
@@ -2606,7 +2371,6 @@
 
     invoke-direct {v3, v4}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1694
     .local v3, "removedEntries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
@@ -2618,7 +2382,6 @@
 
     if-ge v1, v4, :cond_2
 
-    .line 1695
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -2631,7 +2394,6 @@
 
     move-result-object v2
 
-    .line 1696
     .local v2, "items":[Ljava/lang/String;
     const/4 v4, 0x1
 
@@ -2661,14 +2423,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 1697
     const-string v4, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v5, "found entery to remove."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1698
     iget-object v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2677,13 +2437,11 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1694
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 1702
     .end local v2    # "items":[Ljava/lang/String;
     :cond_2
     :try_start_0
@@ -2691,7 +2449,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1708
     :goto_2
     const-string v4, "EnterpriseSSOPolicyService"
 
@@ -2719,11 +2476,9 @@
 
     goto :goto_0
 
-    .line 1703
     :catch_0
     move-exception v0
 
-    .line 1704
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "EnterpriseSSOPolicyService"
 
@@ -2731,7 +2486,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1705
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
@@ -2743,7 +2497,6 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1614
     const-string v5, "EnterpriseSSOPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2776,10 +2529,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1615
     const/4 v4, 0x0
 
-    .line 1616
     .local v4, "uid":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
@@ -2802,7 +2553,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1617
     .local v2, "item":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2836,14 +2586,12 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 1618
     new-instance v3, Ljava/util/StringTokenizer;
 
     const-string v5, "-"
 
     invoke-direct {v3, v2, v5}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1619
     .local v3, "toknizer":Ljava/util/StringTokenizer;
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -2871,12 +2619,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1620
     invoke-virtual {v3}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1621
     const-string v5, "EnterpriseSSOPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2901,16 +2647,13 @@
 
     goto :goto_0
 
-    .line 1624
     .end local v2    # "item":Ljava/lang/String;
     .end local v3    # "toknizer":Ljava/util/StringTokenizer;
     :cond_1
     if-eqz v4, :cond_2
 
-    .line 1625
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->removeClintEntry(I)V
 
-    .line 1626
     iget-object v5, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2947,22 +2690,18 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1628
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->writeListToFile()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1634
     :cond_2
     :goto_1
     return-void
 
-    .line 1629
     :catch_0
     move-exception v0
 
-    .line 1630
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -2970,7 +2709,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1631
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -2985,18 +2723,14 @@
     .end annotation
 
     .prologue
-    .line 1636
     const/4 v3, 0x0
 
-    .line 1637
     .local v3, "file":Ljava/io/File;
     const/4 v1, 0x0
 
-    .line 1638
     .local v1, "f":Ljava/io/FileOutputStream;
     const/4 v5, 0x0
 
-    .line 1640
     .local v5, "s":Ljava/io/ObjectOutputStream;
     const-string v7, "EnterpriseSSOPolicyService"
 
@@ -3022,7 +2756,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1642
     :try_start_0
     new-instance v4, Ljava/io/File;
 
@@ -3050,7 +2783,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1643
     .end local v3    # "file":Ljava/io/File;
     .local v4, "file":Ljava/io/File;
     :try_start_1
@@ -3060,7 +2792,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1644
     .end local v1    # "f":Ljava/io/FileOutputStream;
     .local v2, "f":Ljava/io/FileOutputStream;
     :try_start_2
@@ -3070,7 +2801,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 1645
     .end local v5    # "s":Ljava/io/ObjectOutputStream;
     .local v6, "s":Ljava/io/ObjectOutputStream;
     :try_start_3
@@ -3090,7 +2820,6 @@
     .restart local v1    # "f":Ljava/io/FileOutputStream;
     move-object v3, v4
 
-    .line 1654
     .end local v4    # "file":Ljava/io/File;
     .restart local v3    # "file":Ljava/io/File;
     :goto_0
@@ -3098,34 +2827,28 @@
 
     invoke-virtual {v5}, Ljava/io/ObjectOutputStream;->close()V
 
-    .line 1655
     :cond_0
     if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 1656
     :cond_1
     return-void
 
-    .line 1646
     :catch_0
     move-exception v0
 
-    .line 1647
     .local v0, "e":Ljava/lang/Exception;
     :goto_1
     if-eqz v5, :cond_2
 
     invoke-virtual {v5}, Ljava/io/ObjectOutputStream;->close()V
 
-    .line 1648
     :cond_2
     if-eqz v1, :cond_3
 
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
 
-    .line 1650
     :cond_3
     const-string v7, "EnterpriseSSOPolicyService"
 
@@ -3133,12 +2856,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1651
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1646
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v3    # "file":Ljava/io/File;
     .restart local v4    # "file":Ljava/io/File;
@@ -3219,7 +2940,6 @@
     .end annotation
 
     .prologue
-    .line 873
     .local p5, "packageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v11, "EnterpriseSSOPolicyService"
 
@@ -3227,7 +2947,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 874
     const-string v11, "EnterpriseSSOPolicyService"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -3264,15 +2983,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 876
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 878
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 879
     .local v1, "bundle":Landroid/os/Bundle;
     const-string v11, "2.0"
 
@@ -3288,20 +3004,16 @@
 
     if-eqz v11, :cond_8
 
-    .line 880
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 881
     const/4 v8, 0x0
 
-    .line 882
     .local v8, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v8, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v8}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 883
     .restart local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     const/4 v11, 0x1
 
@@ -3311,24 +3023,20 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 884
     const/4 v11, 0x1
 
     const/16 v12, 0xa
 
     invoke-virtual {v8, v11, v12}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 887
     if-nez p3, :cond_0
 
-    .line 888
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string v12, " deleteSSOWhiteList: parameter type is Null"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 889
     const/4 v11, 0x1
 
     const/16 v12, 0x9
@@ -3337,26 +3045,22 @@
 
     move-object v9, v8
 
-    .line 999
     .end local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .local v9, "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :goto_0
     return-object v9
 
-    .line 893
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_0
     if-nez p5, :cond_1
 
-    .line 894
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string v12, " deleteSSOWhiteList: packageName is Null"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 895
     const/4 v11, 0x1
 
     const/4 v12, 0x4
@@ -3365,24 +3069,20 @@
 
     move-object v9, v8
 
-    .line 896
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 899
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_1
     move/from16 v0, p2
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfacesWithClientsList(I)V
 
-    .line 902
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 904
     .local v3, "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface/range {p5 .. p5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3403,7 +3103,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 905
     .local v7, "mPackage":Ljava/lang/String;
     if-eqz v7, :cond_2
 
@@ -3413,21 +3112,18 @@
 
     if-nez v11, :cond_2
 
-    .line 906
     invoke-interface {v3, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 929
     .end local v3    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v7    # "mPackage":Ljava/lang/String;
     :catch_0
     move-exception v5
 
-    .line 930
     .local v5, "e":Ljava/lang/Exception;
     const-string v11, "EnterpriseSSOPolicyService"
 
@@ -3440,11 +3136,9 @@
     :goto_2
     move-object v9, v8
 
-    .line 932
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 910
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v3    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v6    # "i$":Ljava/util/Iterator;
@@ -3456,14 +3150,12 @@
 
     if-nez v11, :cond_5
 
-    .line 911
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string v12, "deleteSSOWhiteList: packageName List has only one Null item"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 912
     const/4 v11, 0x1
 
     const/16 v12, 0x9
@@ -3472,11 +3164,9 @@
 
     move-object v9, v8
 
-    .line 914
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 917
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_5
     const-string v11, "centrify"
@@ -3499,7 +3189,6 @@
 
     if-eqz v11, :cond_7
 
-    .line 918
     :cond_6
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -3513,7 +3202,6 @@
 
     check-cast v4, [Ljava/lang/String;
 
-    .line 919
     .local v4, "deletePackageList":[Ljava/lang/String;
     iget v11, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
@@ -3521,11 +3209,9 @@
 
     move-result-object v10
 
-    .line 920
     .local v10, "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     if-eqz v10, :cond_3
 
-    .line 921
     const/4 v11, 0x0
 
     invoke-interface {v10, v4, v11}, Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;->setAppAllowedState([Ljava/lang/String;Z)I
@@ -3538,7 +3224,6 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 922
     const/4 v11, 0x0
 
     const/4 v12, 0x0
@@ -3547,7 +3232,6 @@
 
     goto :goto_2
 
-    .line 926
     .end local v4    # "deletePackageList":[Ljava/lang/String;
     .end local v10    # "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     :cond_7
@@ -3561,24 +3245,20 @@
 
     goto :goto_2
 
-    .line 934
     .end local v3    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_8
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission()I
 
-    .line 935
     const/4 v8, 0x0
 
-    .line 936
     .restart local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v8, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v8}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 937
     .restart local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     const/4 v11, 0x1
 
@@ -3588,30 +3268,25 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 938
     const/4 v11, 0x1
 
     const/16 v12, 0xa
 
     invoke-virtual {v8, v11, v12}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 941
     iget-boolean v11, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
     if-nez v11, :cond_9
 
     move-object v9, v8
 
-    .line 942
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 946
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_9
     if-nez p3, :cond_a
 
-    .line 947
     :try_start_2
     const-string v11, "EnterpriseSSOPolicyService"
 
@@ -3619,7 +3294,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 948
     const/4 v11, 0x1
 
     const/16 v12, 0x9
@@ -3628,23 +3302,19 @@
 
     move-object v9, v8
 
-    .line 950
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 953
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_a
     if-nez p5, :cond_b
 
-    .line 954
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string v12, " deleteSSOWhiteList: packageName is Null"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 955
     const/4 v11, 0x1
 
     const/4 v12, 0x4
@@ -3653,22 +3323,18 @@
 
     move-object v9, v8
 
-    .line 957
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 960
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_b
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 962
     .restart local v3    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .line 963
     .local v2, "conPackageName":Ljava/lang/String;
     invoke-interface/range {p5 .. p5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3689,7 +3355,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 964
     .restart local v7    # "mPackage":Ljava/lang/String;
     if-eqz v7, :cond_c
 
@@ -3699,7 +3364,6 @@
 
     if-nez v11, :cond_c
 
-    .line 965
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -3726,14 +3390,12 @@
 
     move-result-object v2
 
-    .line 966
     invoke-interface {v3, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_3
 
-    .line 996
     .end local v2    # "conPackageName":Ljava/lang/String;
     .end local v3    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v6    # "i$":Ljava/util/Iterator;
@@ -3741,7 +3403,6 @@
     :catch_1
     move-exception v5
 
-    .line 997
     .restart local v5    # "e":Ljava/lang/Exception;
     const-string v11, "EnterpriseSSOPolicyService"
 
@@ -3754,11 +3415,9 @@
     :goto_4
     move-object v9, v8
 
-    .line 999
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 970
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v2    # "conPackageName":Ljava/lang/String;
     .restart local v3    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -3771,14 +3430,12 @@
 
     if-nez v11, :cond_f
 
-    .line 971
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string v12, "deleteSSOWhiteList: packageName List has only one Null item"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 972
     const/4 v11, 0x1
 
     const/16 v12, 0x9
@@ -3787,11 +3444,9 @@
 
     move-object v9, v8
 
-    .line 974
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 977
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_f
     const-string v11, "centrify"
@@ -3804,7 +3459,6 @@
 
     if-eqz v11, :cond_10
 
-    .line 978
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v11
@@ -3817,13 +3471,11 @@
 
     check-cast v4, [Ljava/lang/String;
 
-    .line 980
     .restart local v4    # "deletePackageList":[Ljava/lang/String;
     packed-switch p2, :pswitch_data_0
 
     goto :goto_4
 
-    .line 982
     :pswitch_0
     iget-object v11, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
@@ -3835,7 +3487,6 @@
 
     if-eqz v11, :cond_d
 
-    .line 983
     iget-object v11, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     iget-object v11, v11, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;->ssoInterface:Lcom/centrify/auth/aidl/IEnterpriseSecurityManager;
@@ -3852,7 +3503,6 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 984
     const/4 v11, 0x0
 
     const/4 v12, 0x0
@@ -3861,7 +3511,6 @@
 
     goto :goto_4
 
-    .line 992
     .end local v4    # "deletePackageList":[Ljava/lang/String;
     :cond_10
     const/4 v11, -0x1
@@ -3872,7 +3521,6 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 993
     const/4 v11, 0x1
 
     const/4 v12, 0x1
@@ -3883,7 +3531,6 @@
 
     goto :goto_4
 
-    .line 980
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -3916,14 +3563,12 @@
 
     const/4 v8, 0x1
 
-    .line 1192
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v6, "forceReauthenticate called"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1193
     const-string v5, "EnterpriseSSOPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -3960,15 +3605,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1195
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 1197
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1198
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v5, "2.0"
 
@@ -3984,20 +3626,16 @@
 
     if-eqz v5, :cond_4
 
-    .line 1199
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 1200
     const/4 v2, 0x0
 
-    .line 1201
     .local v2, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1202
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4005,37 +3643,30 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1203
     invoke-virtual {v2, v8, v10}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1206
     if-nez p3, :cond_0
 
-    .line 1207
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string v6, " forceReauthenticate: parameter type is Null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1208
     invoke-virtual {v2, v8, v9}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
     move-object v3, v2
 
-    .line 1273
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .local v3, "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :goto_0
     return-object v3
 
-    .line 1212
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfacesWithClientsList(I)V
 
-    .line 1215
     :try_start_0
     const-string v5, "centrify"
 
@@ -4053,7 +3684,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 1216
     :cond_1
     iget v5, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
@@ -4061,11 +3691,9 @@
 
     move-result-object v4
 
-    .line 1217
     .local v4, "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     if-eqz v4, :cond_2
 
-    .line 1218
     invoke-interface {v4}, Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;->forceReauthenticate()I
 
     move-result v5
@@ -4076,14 +3704,12 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1219
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
     invoke-virtual {v2, v5, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1220
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string v6, " forceReauthenticate. CONTAINER_1"
@@ -4095,11 +3721,9 @@
     :goto_1
     move-object v3, v2
 
-    .line 1230
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1224
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_3
     const/4 v5, 0x1
@@ -4112,11 +3736,9 @@
 
     goto :goto_1
 
-    .line 1227
     :catch_0
     move-exception v1
 
-    .line 1228
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -4126,23 +3748,19 @@
 
     goto :goto_1
 
-    .line 1233
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_4
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission()I
 
-    .line 1234
     const/4 v2, 0x0
 
-    .line 1235
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1236
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -4150,26 +3768,21 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1237
     invoke-virtual {v2, v8, v10}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1240
     iget-boolean v5, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
     if-nez v5, :cond_5
 
     move-object v3, v2
 
-    .line 1241
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1245
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_5
     if-nez p3, :cond_6
 
-    .line 1246
     :try_start_1
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -4177,7 +3790,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1247
     const/4 v5, 0x1
 
     const/16 v6, 0x9
@@ -4186,11 +3798,9 @@
 
     move-object v3, v2
 
-    .line 1249
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1252
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_6
     const-string v5, "centrify"
@@ -4201,10 +3811,8 @@
 
     if-eqz v5, :cond_8
 
-    .line 1253
     packed-switch p2, :pswitch_data_0
 
-    .line 1261
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string v6, " forceReauthenticate. default"
@@ -4215,11 +3823,9 @@
     :goto_2
     move-object v3, v2
 
-    .line 1273
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 1255
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :pswitch_0
     iget-object v5, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
@@ -4232,7 +3838,6 @@
 
     if-eqz v5, :cond_7
 
-    .line 1256
     iget-object v5, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     iget-object v5, v5, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;->ssoInterface:Lcom/centrify/auth/aidl/IEnterpriseSecurityManager;
@@ -4247,7 +3852,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1257
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -4258,11 +3862,9 @@
 
     goto :goto_2
 
-    .line 1270
     :catch_1
     move-exception v1
 
-    .line 1271
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -4272,7 +3874,6 @@
 
     goto :goto_2
 
-    .line 1266
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_8
     const/4 v5, -0x1
@@ -4284,7 +3885,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1267
     const/4 v5, 0x1
 
     const/4 v6, 0x1
@@ -4295,7 +3895,6 @@
 
     goto :goto_2
 
-    .line 1253
     nop
 
     :pswitch_data_0
@@ -4326,14 +3925,12 @@
     .end annotation
 
     .prologue
-    .line 1005
     const-string v6, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v7, "getAppAllowedState called"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1006
     const-string v6, "EnterpriseSSOPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -4370,15 +3967,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1008
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 1010
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1011
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v6, "2.0"
 
@@ -4394,20 +3988,16 @@
 
     if-eqz v6, :cond_6
 
-    .line 1012
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 1013
     const/4 v3, 0x0
 
-    .line 1014
     .local v3, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     new-instance v3, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     invoke-direct {v3}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1015
     .restart local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     const/4 v6, 0x0
 
@@ -4417,24 +4007,20 @@
 
     invoke-virtual {v3, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1016
     const/4 v6, 0x1
 
     const/16 v7, 0xa
 
     invoke-virtual {v3, v6, v7}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1019
     if-nez p3, :cond_0
 
-    .line 1020
     const-string v6, "EnterpriseSSOPolicyService"
 
     const-string v7, " getAppAllowedState: parameter type is Null"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1021
     const/4 v6, 0x1
 
     const/16 v7, 0x9
@@ -4443,13 +4029,11 @@
 
     move-object v4, v3
 
-    .line 1100
     .end local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     .local v4, "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     :goto_0
     return-object v4
 
-    .line 1025
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     .restart local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     :cond_0
@@ -4461,7 +4045,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 1026
     :cond_1
     const-string v6, "EnterpriseSSOPolicyService"
 
@@ -4469,7 +4052,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1027
     const/4 v6, 0x1
 
     const/4 v7, 0x4
@@ -4478,16 +4060,13 @@
 
     move-object v4, v3
 
-    .line 1028
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     goto :goto_0
 
-    .line 1031
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfacesWithClientsList(I)V
 
-    .line 1034
     :try_start_0
     const-string v6, "centrify"
 
@@ -4505,7 +4084,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 1035
     :cond_3
     iget v6, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
@@ -4513,11 +4091,9 @@
 
     move-result-object v5
 
-    .line 1036
     .local v5, "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     if-eqz v5, :cond_4
 
-    .line 1037
     invoke-interface {v5, p4}, Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;->getAppAllowedState(Ljava/lang/String;)Z
 
     move-result v6
@@ -4528,7 +4104,6 @@
 
     invoke-virtual {v3, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1038
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -4540,11 +4115,9 @@
     :goto_1
     move-object v4, v3
 
-    .line 1048
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     goto :goto_0
 
-    .line 1042
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     :cond_5
     const/4 v6, 0x1
@@ -4557,11 +4130,9 @@
 
     goto :goto_1
 
-    .line 1045
     :catch_0
     move-exception v2
 
-    .line 1046
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseSSOPolicyService"
 
@@ -4571,23 +4142,19 @@
 
     goto :goto_1
 
-    .line 1051
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     :cond_6
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission()I
 
-    .line 1052
     const/4 v3, 0x0
 
-    .line 1053
     .restart local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     new-instance v3, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     invoke-direct {v3}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1054
     .restart local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     const/4 v6, 0x0
 
@@ -4597,30 +4164,25 @@
 
     invoke-virtual {v3, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1055
     const/4 v6, 0x1
 
     const/16 v7, 0xa
 
     invoke-virtual {v3, v6, v7}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1058
     iget-boolean v6, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
     if-nez v6, :cond_7
 
     move-object v4, v3
 
-    .line 1059
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     goto :goto_0
 
-    .line 1063
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     :cond_7
     if-nez p3, :cond_8
 
-    .line 1064
     :try_start_1
     const-string v6, "EnterpriseSSOPolicyService"
 
@@ -4628,7 +4190,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1065
     const/4 v6, 0x1
 
     const/16 v7, 0x9
@@ -4637,11 +4198,9 @@
 
     move-object v4, v3
 
-    .line 1067
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     goto/16 :goto_0
 
-    .line 1070
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     :cond_8
     if-eqz p4, :cond_9
@@ -4652,7 +4211,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 1071
     :cond_9
     const-string v6, "EnterpriseSSOPolicyService"
 
@@ -4660,7 +4218,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1072
     const/4 v6, 0x1
 
     const/4 v7, 0x4
@@ -4669,16 +4226,13 @@
 
     move-object v4, v3
 
-    .line 1074
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     goto/16 :goto_0
 
-    .line 1077
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     :cond_a
     const/4 v1, 0x0
 
-    .line 1078
     .local v1, "conPackageName":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -4706,7 +4260,6 @@
 
     move-result-object v1
 
-    .line 1080
     const-string v6, "centrify"
 
     invoke-virtual {p3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4715,10 +4268,8 @@
 
     if-eqz v6, :cond_c
 
-    .line 1081
     packed-switch p2, :pswitch_data_0
 
-    .line 1089
     const-string v6, "EnterpriseSSOPolicyService"
 
     const-string v7, " getAppAllowedState. default"
@@ -4730,11 +4281,9 @@
     :goto_2
     move-object v4, v3
 
-    .line 1100
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     goto/16 :goto_0
 
-    .line 1083
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     .restart local v1    # "conPackageName":Ljava/lang/String;
     :pswitch_0
@@ -4748,7 +4297,6 @@
 
     if-eqz v6, :cond_b
 
-    .line 1084
     iget-object v6, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     iget-object v6, v6, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;->ssoInterface:Lcom/centrify/auth/aidl/IEnterpriseSecurityManager;
@@ -4763,7 +4311,6 @@
 
     invoke-virtual {v3, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1085
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -4774,12 +4321,10 @@
 
     goto :goto_2
 
-    .line 1097
     .end local v1    # "conPackageName":Ljava/lang/String;
     :catch_1
     move-exception v2
 
-    .line 1098
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseSSOPolicyService"
 
@@ -4789,7 +4334,6 @@
 
     goto :goto_2
 
-    .line 1094
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v1    # "conPackageName":Ljava/lang/String;
     :cond_c
@@ -4804,7 +4348,6 @@
 
     goto :goto_2
 
-    .line 1081
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4835,14 +4378,12 @@
 
     const/4 v7, 0x0
 
-    .line 677
     const-string v4, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v5, "getSSOCustomerId called"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 678
     const-string v4, "EnterpriseSSOPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -4879,15 +4420,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 682
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 683
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v4, "2.0"
 
@@ -4903,82 +4441,66 @@
 
     if-eqz v4, :cond_0
 
-    .line 684
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 685
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfacesWithClientsList(I)V
 
-    .line 686
     const/4 v2, 0x0
 
-    .line 687
     .local v2, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 688
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     const-string/jumbo v4, "null"
 
     invoke-virtual {v2, v4}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 689
     invoke-virtual {v2, v7, v7}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
     move-object v3, v2
 
-    .line 733
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     .local v3, "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     :goto_0
     return-object v3
 
-    .line 692
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission()I
 
-    .line 693
     const/4 v2, 0x0
 
-    .line 694
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 695
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     const-string/jumbo v4, "null"
 
     invoke-virtual {v2, v4}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 696
     const/16 v4, 0xa
 
     invoke-virtual {v2, v8, v4}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 699
     iget-boolean v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
     if-nez v4, :cond_1
 
     move-object v3, v2
 
-    .line 700
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     goto :goto_0
 
-    .line 704
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     :cond_1
     if-nez p3, :cond_2
 
-    .line 705
     :try_start_0
     const-string v4, "EnterpriseSSOPolicyService"
 
@@ -4986,7 +4508,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 706
     const/4 v4, 0x1
 
     const/16 v5, 0x9
@@ -4995,11 +4516,9 @@
 
     move-object v3, v2
 
-    .line 708
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     goto :goto_0
 
-    .line 711
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     :cond_2
     const-string v4, "centrify"
@@ -5010,10 +4529,8 @@
 
     if-eqz v4, :cond_4
 
-    .line 712
     packed-switch p2, :pswitch_data_0
 
-    .line 720
     const-string v4, "EnterpriseSSOPolicyService"
 
     const-string v5, " getSSOCustomerId. default"
@@ -5024,11 +4541,9 @@
     :goto_1
     move-object v3, v2
 
-    .line 733
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     goto :goto_0
 
-    .line 714
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/String;>;"
     :pswitch_0
     iget-object v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
@@ -5041,7 +4556,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 715
     iget-object v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     iget-object v4, v4, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;->ssoInterface:Lcom/centrify/auth/aidl/IEnterpriseSecurityManager;
@@ -5052,7 +4566,6 @@
 
     invoke-virtual {v2, v4}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 716
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -5063,11 +4576,9 @@
 
     goto :goto_1
 
-    .line 729
     :catch_0
     move-exception v1
 
-    .line 730
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "EnterpriseSSOPolicyService"
 
@@ -5077,7 +4588,6 @@
 
     goto :goto_1
 
-    .line 725
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_4
     :try_start_1
@@ -5085,7 +4595,6 @@
 
     invoke-virtual {v2, v4}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 726
     const/4 v4, 0x1
 
     const/4 v5, 0x1
@@ -5096,7 +4605,6 @@
 
     goto :goto_1
 
-    .line 712
     nop
 
     :pswitch_data_0
@@ -5110,12 +4618,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1728
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 1729
     .local v0, "userId":I
     const-string v1, "EnterpriseSSOPolicyService"
 
@@ -5139,7 +4645,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1730
     return v0
 .end method
 
@@ -5169,10 +4674,8 @@
 
     const/4 v7, 0x0
 
-    .line 1524
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 1525
     const-string v4, "EnterpriseSSOPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -5205,20 +4708,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1526
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 1527
     const/4 v3, 0x0
 
-    .line 1528
     .local v3, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     new-instance v3, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     invoke-direct {v3}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1529
     .restart local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Boolean;>;"
     invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -5226,33 +4725,26 @@
 
     invoke-virtual {v3, v4}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1530
     const/16 v4, 0xa
 
     invoke-virtual {v3, v8, v4}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1533
     if-nez p3, :cond_0
 
-    .line 1534
     const-string v4, "EnterpriseSSOPolicyService"
 
     const-string v5, " isSSOReady: parameter type is Null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1535
     invoke-virtual {v3, v8, v9}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1568
     :goto_0
     return-object v3
 
-    .line 1540
     :cond_0
     const/4 v2, 0x0
 
-    .line 1541
     .local v2, "packageName":Ljava/lang/String;
     const-string v4, "centrify"
 
@@ -5262,10 +4754,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 1542
     const-string v2, "com.centrify.sso.samsung"
 
-    .line 1552
     :goto_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -5303,7 +4793,6 @@
 
     move-result-object v0
 
-    .line 1553
     .local v0, "clientHandle":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
@@ -5313,7 +4802,6 @@
 
     if-nez v4, :cond_3
 
-    .line 1554
     const-string v4, "EnterpriseSSOPolicyService"
 
     const-string v5, " isSSOReady: SSO for assigned type is not ready"
@@ -5322,7 +4810,6 @@
 
     goto :goto_0
 
-    .line 1543
     .end local v0    # "clientHandle":Ljava/lang/String;
     :cond_1
     const-string/jumbo v4, "samsung"
@@ -5333,12 +4820,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 1544
     const-string v2, "com.sec.android.service.singlesignon"
 
     goto :goto_1
 
-    .line 1546
     :cond_2
     const-string v4, "EnterpriseSSOPolicyService"
 
@@ -5346,12 +4831,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1547
     invoke-virtual {v3, v8, v9}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
     goto :goto_0
 
-    .line 1559
     .restart local v0    # "clientHandle":Ljava/lang/String;
     :cond_3
     :try_start_0
@@ -5369,12 +4852,10 @@
 
     if-eqz v4, :cond_4
 
-    .line 1560
     sget-object v4, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
     invoke-virtual {v3, v4}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1564
     :goto_2
     const/4 v4, 0x0
 
@@ -5386,11 +4867,9 @@
 
     goto :goto_0
 
-    .line 1565
     :catch_0
     move-exception v1
 
-    .line 1566
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "EnterpriseSSOPolicyService"
 
@@ -5400,7 +4879,6 @@
 
     goto :goto_0
 
-    .line 1562
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_4
     :try_start_1
@@ -5418,7 +4896,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1422
     return-void
 .end method
 
@@ -5427,7 +4904,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1428
     return-void
 .end method
 
@@ -5436,7 +4912,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1473
     const-string v9, "EnterpriseSSOPolicyService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -5459,23 +4934,19 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1474
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 1475
     new-instance v6, Ljava/util/ArrayList;
 
     iget-object v9, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
     invoke-direct {v6, v9}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 1476
     .local v6, "removedEntries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 1477
     .local v1, "bundle":Landroid/os/Bundle;
     const-string v9, "2.0"
 
@@ -5491,7 +4962,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 1478
     sget-object v9, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5500,7 +4970,6 @@
 
     invoke-interface {v9, v10}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1479
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -5520,7 +4989,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 1480
     .local v4, "item":Ljava/lang/String;
     new-instance v8, Ljava/util/StringTokenizer;
 
@@ -5528,13 +4996,11 @@
 
     invoke-direct {v8, v4, v9}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1481
     .local v8, "toknizer":Ljava/util/StringTokenizer;
     invoke-virtual {v8}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1482
     .local v5, "oldUid":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -5560,18 +5026,15 @@
 
     if-eqz v9, :cond_0
 
-    .line 1483
     invoke-virtual {v8}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1484
     .local v0, "ContainerId":Ljava/lang/String;
     invoke-virtual {v8}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1485
     .local v7, "sso":Ljava/lang/String;
     const-string v9, "EnterpriseSSOPolicyService"
 
@@ -5615,18 +5078,15 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1486
     iget-object v9, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v4}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1488
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->writeListToFile()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1493
     :goto_1
     sget-object v9, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceMap:Ljava/util/Map;
 
@@ -5640,7 +5100,6 @@
 
     invoke-interface {v9, v10}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1494
     const-string v9, "EnterpriseSSOPolicyService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -5665,7 +5124,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1495
     sget-object v9, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOTypeMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5676,11 +5134,9 @@
 
     goto/16 :goto_0
 
-    .line 1489
     :catch_0
     move-exception v2
 
-    .line 1490
     .local v2, "e":Ljava/lang/Exception;
     const-string v9, "EnterpriseSSOPolicyService"
 
@@ -5688,12 +5144,10 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1491
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 1499
     .end local v0    # "ContainerId":Ljava/lang/String;
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -5704,7 +5158,6 @@
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 1500
     const-string v9, "EnterpriseSSOPolicyService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -5727,7 +5180,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1501
     return-void
 .end method
 
@@ -5755,14 +5207,12 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 1368
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v6, "pushSSOData called"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1369
     const-string v5, "EnterpriseSSOPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -5799,15 +5249,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1371
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 1373
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1374
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v5, "2.0"
 
@@ -5823,20 +5270,16 @@
 
     if-eqz v5, :cond_4
 
-    .line 1376
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 1377
     const/4 v2, 0x0
 
-    .line 1378
     .local v2, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1379
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5844,41 +5287,34 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1380
     const/16 v5, 0xa
 
     invoke-virtual {v2, v8, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1383
     if-nez p3, :cond_0
 
-    .line 1384
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string v6, " pushSSOData: parameter type is Null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1385
     const/16 v5, 0x9
 
     invoke-virtual {v2, v8, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
     move-object v3, v2
 
-    .line 1415
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .local v3, "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :goto_0
     return-object v3
 
-    .line 1390
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfacesWithClientsList(I)V
 
-    .line 1393
     :try_start_0
     const-string v5, "centrify"
 
@@ -5896,7 +5332,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 1394
     :cond_1
     iget v5, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
@@ -5904,11 +5339,9 @@
 
     move-result-object v4
 
-    .line 1395
     .local v4, "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     if-eqz v4, :cond_2
 
-    .line 1396
     invoke-interface {v4, p4}, Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;->pushSSOData(Landroid/os/Bundle;)I
 
     move-result v5
@@ -5919,7 +5352,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1397
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -5931,11 +5363,9 @@
     :goto_1
     move-object v3, v2
 
-    .line 1407
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1401
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_3
     const/4 v5, 0x1
@@ -5948,11 +5378,9 @@
 
     goto :goto_1
 
-    .line 1404
     :catch_0
     move-exception v1
 
-    .line 1405
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -5962,20 +5390,17 @@
 
     goto :goto_1
 
-    .line 1409
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_4
     const/4 v2, 0x0
 
-    .line 1410
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1412
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -5983,12 +5408,10 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1413
     invoke-virtual {v2, v8, v8}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
     move-object v3, v2
 
-    .line 1415
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 .end method
@@ -5999,104 +5422,86 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 304
     new-instance v6, Landroid/content/IntentFilter;
 
     invoke-direct {v6}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 305
     .local v6, "containerFilter":Landroid/content/IntentFilter;
     const-string v0, "enterprise.container.setup.success"
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 306
     const-string v0, "enterprise.container.uninstalled"
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 307
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mBroadCastReciever:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 309
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 310
     .local v3, "systemFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.PACKAGE_RESTARTED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 311
     const-string/jumbo v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 312
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mBroadCastReciever:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 314
     const-string v0, "android.intent.action.PACKAGE_REPLACED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 315
     const-string/jumbo v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 316
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mBroadCastReciever:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 318
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 319
     const-string/jumbo v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 320
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mBroadCastReciever:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 323
     new-instance v3, Landroid/content/IntentFilter;
 
     .end local v3    # "systemFilter":Landroid/content/IntentFilter;
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 324
     .restart local v3    # "systemFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 325
     const-string/jumbo v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 326
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mBReciever:Landroid/content/BroadcastReceiver;
@@ -6107,19 +5512,16 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 328
     new-instance v3, Landroid/content/IntentFilter;
 
     .end local v3    # "systemFilter":Landroid/content/IntentFilter;
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 329
     .restart local v3    # "systemFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 330
     iget-object v0, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mBReciever:Landroid/content/BroadcastReceiver;
@@ -6130,7 +5532,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 331
     return-void
 .end method
 
@@ -6158,14 +5559,12 @@
     .end annotation
 
     .prologue
-    .line 1106
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v6, "setCustomerInfo called"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1107
     const-string v5, "EnterpriseSSOPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -6202,15 +5601,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1109
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 1111
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1112
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v5, "2.0"
 
@@ -6226,20 +5622,16 @@
 
     if-eqz v5, :cond_3
 
-    .line 1113
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 1114
     const/4 v2, 0x0
 
-    .line 1115
     .local v2, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1116
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     const/4 v5, 0x1
 
@@ -6249,24 +5641,20 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1117
     const/4 v5, 0x1
 
     const/16 v6, 0xa
 
     invoke-virtual {v2, v5, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1120
     if-nez p3, :cond_0
 
-    .line 1121
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string v6, " setCustomerInfo: parameter type is Null"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1122
     const/4 v5, 0x1
 
     const/16 v6, 0x9
@@ -6275,19 +5663,16 @@
 
     move-object v3, v2
 
-    .line 1186
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .local v3, "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :goto_0
     return-object v3
 
-    .line 1126
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfacesWithClientsList(I)V
 
-    .line 1129
     :try_start_0
     const-string v5, "centrify"
 
@@ -6297,18 +5682,15 @@
 
     if-eqz v5, :cond_2
 
-    .line 1130
     iget v5, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->getSSOnterface(I)Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
 
     move-result-object v4
 
-    .line 1131
     .local v4, "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     if-eqz v4, :cond_1
 
-    .line 1132
     invoke-interface {v4, p4, p5}, Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;->setCustomerInfo(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v5
@@ -6319,7 +5701,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1133
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -6331,11 +5712,9 @@
     :goto_1
     move-object v3, v2
 
-    .line 1144
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1137
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_2
     const/4 v5, -0x1
@@ -6346,7 +5725,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1138
     const/4 v5, 0x1
 
     const/4 v6, 0x1
@@ -6357,11 +5735,9 @@
 
     goto :goto_1
 
-    .line 1141
     :catch_0
     move-exception v1
 
-    .line 1142
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -6371,23 +5747,19 @@
 
     goto :goto_1
 
-    .line 1146
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_3
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission()I
 
-    .line 1147
     const/4 v2, 0x0
 
-    .line 1148
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1149
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     const/4 v5, 0x1
 
@@ -6397,30 +5769,25 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1150
     const/4 v5, 0x1
 
     const/16 v6, 0xa
 
     invoke-virtual {v2, v5, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1153
     iget-boolean v5, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
     if-nez v5, :cond_4
 
     move-object v3, v2
 
-    .line 1154
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1158
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_4
     if-nez p3, :cond_5
 
-    .line 1159
     :try_start_1
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -6428,7 +5795,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1160
     const/4 v5, 0x1
 
     const/16 v6, 0x9
@@ -6437,11 +5803,9 @@
 
     move-object v3, v2
 
-    .line 1162
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1165
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_5
     const-string v5, "centrify"
@@ -6452,10 +5816,8 @@
 
     if-eqz v5, :cond_7
 
-    .line 1166
     packed-switch p2, :pswitch_data_0
 
-    .line 1174
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string v6, " setCustomerInfo. default"
@@ -6466,11 +5828,9 @@
     :goto_2
     move-object v3, v2
 
-    .line 1186
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1168
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :pswitch_0
     iget-object v5, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
@@ -6483,7 +5843,6 @@
 
     if-eqz v5, :cond_6
 
-    .line 1169
     iget-object v5, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     iget-object v5, v5, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;->ssoInterface:Lcom/centrify/auth/aidl/IEnterpriseSecurityManager;
@@ -6498,7 +5857,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1170
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -6509,11 +5867,9 @@
 
     goto :goto_2
 
-    .line 1183
     :catch_1
     move-exception v1
 
-    .line 1184
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -6523,7 +5879,6 @@
 
     goto :goto_2
 
-    .line 1179
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_7
     const/4 v5, -0x1
@@ -6535,7 +5890,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1180
     const/4 v5, 0x1
 
     const/4 v6, 0x1
@@ -6546,7 +5900,6 @@
 
     goto :goto_2
 
-    .line 1166
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -6579,14 +5932,12 @@
 
     const/4 v6, 0x0
 
-    .line 415
     const-string v3, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v4, "setSSOCustomerId - called"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 416
     const-string v3, "EnterpriseSSOPolicyService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -6623,15 +5974,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 418
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 420
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 422
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v3, "2.0"
 
@@ -6647,32 +5995,25 @@
 
     if-eqz v3, :cond_2
 
-    .line 423
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 425
     if-nez p3, :cond_1
 
-    .line 426
     const-string v3, "EnterpriseSSOPolicyService"
 
     const-string v4, " setSSOCustomerId: wrong parameter !"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 427
     const/4 v2, 0x0
 
-    .line 481
     :cond_0
     :goto_0
     return-object v2
 
-    .line 430
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfacesWithClientsList(I)V
 
-    .line 432
     const-string v3, "EnterpriseSSOPolicyService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -6695,17 +6036,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 433
     const/4 v2, 0x0
 
-    .line 434
     .local v2, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 435
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6713,27 +6051,22 @@
 
     invoke-virtual {v2, v3}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 436
     invoke-virtual {v2, v6, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
     goto :goto_0
 
-    .line 440
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_2
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission()I
 
-    .line 441
     const/4 v2, 0x0
 
-    .line 442
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 443
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -6741,20 +6074,16 @@
 
     invoke-virtual {v2, v3}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 444
     const/16 v3, 0xa
 
     invoke-virtual {v2, v7, v3}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 447
     iget-boolean v3, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
     if-eqz v3, :cond_0
 
-    .line 452
     if-nez p3, :cond_3
 
-    .line 453
     :try_start_0
     const-string v3, "EnterpriseSSOPolicyService"
 
@@ -6762,7 +6091,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     const/4 v3, 0x1
 
     const/16 v4, 0x9
@@ -6773,11 +6101,9 @@
 
     goto :goto_0
 
-    .line 478
     :catch_0
     move-exception v1
 
-    .line 479
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "EnterpriseSSOPolicyService"
 
@@ -6787,7 +6113,6 @@
 
     goto :goto_0
 
-    .line 459
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     :try_start_1
@@ -6799,10 +6124,8 @@
 
     if-eqz v3, :cond_4
 
-    .line 460
     packed-switch p2, :pswitch_data_0
 
-    .line 469
     const-string v3, "EnterpriseSSOPolicyService"
 
     const-string v4, " setSSOCustomerId. default"
@@ -6811,7 +6134,6 @@
 
     goto :goto_0
 
-    .line 462
     :pswitch_0
     iget-object v3, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
@@ -6823,7 +6145,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 463
     iget-object v3, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     iget-object v3, v3, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;->ssoInterface:Lcom/centrify/auth/aidl/IEnterpriseSecurityManager;
@@ -6838,14 +6159,12 @@
 
     invoke-virtual {v2, v3}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 464
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, v3, v4}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 465
     const-string v3, "EnterpriseSSOPolicyService"
 
     const-string v4, " setSSOCustomerId. CONTAINER_1"
@@ -6854,7 +6173,6 @@
 
     goto/16 :goto_0
 
-    .line 474
     :cond_4
     const/4 v3, -0x1
 
@@ -6864,7 +6182,6 @@
 
     invoke-virtual {v2, v3}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 475
     const/4 v3, 0x1
 
     const/4 v4, 0x1
@@ -6875,7 +6192,6 @@
 
     goto/16 :goto_0
 
-    .line 460
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -6907,7 +6223,6 @@
     .end annotation
 
     .prologue
-    .line 739
     .local p5, "packageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v11, "EnterpriseSSOPolicyService"
 
@@ -6915,7 +6230,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 740
     const-string v11, "EnterpriseSSOPolicyService"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -6952,15 +6266,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 742
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 744
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 745
     .local v2, "bundle":Landroid/os/Bundle;
     const-string v11, "2.0"
 
@@ -6976,20 +6287,16 @@
 
     if-eqz v11, :cond_8
 
-    .line 746
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 747
     const/4 v8, 0x0
 
-    .line 748
     .local v8, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v8, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v8}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 749
     .restart local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     const/4 v11, 0x1
 
@@ -6999,24 +6306,20 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 750
     const/4 v11, 0x1
 
     const/16 v12, 0xa
 
     invoke-virtual {v8, v11, v12}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 753
     if-nez p3, :cond_0
 
-    .line 754
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string v12, " setSSOWhiteList: parameter type is Null"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 755
     const/4 v11, 0x1
 
     const/16 v12, 0x9
@@ -7025,26 +6328,22 @@
 
     move-object v9, v8
 
-    .line 867
     .end local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .local v9, "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :goto_0
     return-object v9
 
-    .line 759
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_0
     if-nez p5, :cond_1
 
-    .line 760
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string v12, " setSSOWhiteList: packageName is Null"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 761
     const/4 v11, 0x1
 
     const/4 v12, 0x4
@@ -7053,24 +6352,20 @@
 
     move-object v9, v8
 
-    .line 762
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 765
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_1
     move/from16 v0, p2
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfacesWithClientsList(I)V
 
-    .line 768
     :try_start_0
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 770
     .local v4, "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface/range {p5 .. p5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -7091,7 +6386,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 771
     .local v7, "mPackage":Ljava/lang/String;
     if-eqz v7, :cond_2
 
@@ -7101,21 +6395,18 @@
 
     if-nez v11, :cond_2
 
-    .line 772
     invoke-interface {v4, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 795
     .end local v4    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v7    # "mPackage":Ljava/lang/String;
     :catch_0
     move-exception v5
 
-    .line 796
     .local v5, "e":Ljava/lang/Exception;
     const-string v11, "EnterpriseSSOPolicyService"
 
@@ -7128,11 +6419,9 @@
     :goto_2
     move-object v9, v8
 
-    .line 798
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 776
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v4    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v6    # "i$":Ljava/util/Iterator;
@@ -7144,14 +6433,12 @@
 
     if-nez v11, :cond_5
 
-    .line 777
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v12, "setSSOWhiteList: packageName list is empty"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 778
     const/4 v11, 0x1
 
     const/16 v12, 0x9
@@ -7160,11 +6447,9 @@
 
     move-object v9, v8
 
-    .line 780
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 783
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_5
     const-string v11, "centrify"
@@ -7187,7 +6472,6 @@
 
     if-eqz v11, :cond_7
 
-    .line 784
     :cond_6
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -7201,7 +6485,6 @@
 
     check-cast v1, [Ljava/lang/String;
 
-    .line 785
     .local v1, "addPackageList":[Ljava/lang/String;
     iget v11, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
@@ -7209,11 +6492,9 @@
 
     move-result-object v10
 
-    .line 786
     .local v10, "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     if-eqz v10, :cond_3
 
-    .line 787
     const/4 v11, 0x1
 
     invoke-interface {v10, v1, v11}, Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;->setAppAllowedState([Ljava/lang/String;Z)I
@@ -7226,7 +6507,6 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 788
     const/4 v11, 0x0
 
     const/4 v12, 0x0
@@ -7235,7 +6515,6 @@
 
     goto :goto_2
 
-    .line 792
     .end local v1    # "addPackageList":[Ljava/lang/String;
     .end local v10    # "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     :cond_7
@@ -7249,24 +6528,20 @@
 
     goto :goto_2
 
-    .line 801
     .end local v4    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_8
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission()I
 
-    .line 802
     const/4 v8, 0x0
 
-    .line 803
     .restart local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v8, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v8}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 804
     .restart local v8    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     const/4 v11, 0x1
 
@@ -7276,30 +6551,25 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 805
     const/4 v11, 0x1
 
     const/16 v12, 0xa
 
     invoke-virtual {v8, v11, v12}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 808
     iget-boolean v11, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
     if-nez v11, :cond_9
 
     move-object v9, v8
 
-    .line 809
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 813
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_9
     if-nez p3, :cond_a
 
-    .line 814
     :try_start_2
     const-string v11, "EnterpriseSSOPolicyService"
 
@@ -7307,7 +6577,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 815
     const/4 v11, 0x1
 
     const/16 v12, 0x9
@@ -7316,23 +6585,19 @@
 
     move-object v9, v8
 
-    .line 817
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 820
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_a
     if-nez p5, :cond_b
 
-    .line 821
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string v12, " setSSOWhiteList: packageName is Null"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 822
     const/4 v11, 0x1
 
     const/4 v12, 0x4
@@ -7341,22 +6606,18 @@
 
     move-object v9, v8
 
-    .line 824
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 827
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_b
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 829
     .restart local v4    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 830
     .local v3, "conPackageName":Ljava/lang/String;
     invoke-interface/range {p5 .. p5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -7377,7 +6638,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 831
     .restart local v7    # "mPackage":Ljava/lang/String;
     if-eqz v7, :cond_c
 
@@ -7387,7 +6647,6 @@
 
     if-nez v11, :cond_c
 
-    .line 832
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -7414,14 +6673,12 @@
 
     move-result-object v3
 
-    .line 833
     invoke-interface {v4, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_3
 
-    .line 864
     .end local v3    # "conPackageName":Ljava/lang/String;
     .end local v4    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v6    # "i$":Ljava/util/Iterator;
@@ -7429,7 +6686,6 @@
     :catch_1
     move-exception v5
 
-    .line 865
     .restart local v5    # "e":Ljava/lang/Exception;
     const-string v11, "EnterpriseSSOPolicyService"
 
@@ -7442,11 +6698,9 @@
     :goto_4
     move-object v9, v8
 
-    .line 867
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 837
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v3    # "conPackageName":Ljava/lang/String;
     .restart local v4    # "containerizedPackageName":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -7459,14 +6713,12 @@
 
     if-nez v11, :cond_f
 
-    .line 838
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v12, "setSSOWhiteList: packageName List has only one Null item"
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 839
     const/4 v11, 0x1
 
     const/16 v12, 0x9
@@ -7475,11 +6727,9 @@
 
     move-object v9, v8
 
-    .line 841
     .restart local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 844
     .end local v9    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_f
     const-string v11, "centrify"
@@ -7492,7 +6742,6 @@
 
     if-eqz v11, :cond_10
 
-    .line 845
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v11
@@ -7505,11 +6754,9 @@
 
     check-cast v1, [Ljava/lang/String;
 
-    .line 847
     .restart local v1    # "addPackageList":[Ljava/lang/String;
     packed-switch p2, :pswitch_data_0
 
-    .line 855
     const-string v11, "EnterpriseSSOPolicyService"
 
     const-string v12, " setSSOWhiteList. default"
@@ -7518,7 +6765,6 @@
 
     goto :goto_4
 
-    .line 849
     :pswitch_0
     iget-object v11, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
@@ -7530,7 +6776,6 @@
 
     if-eqz v11, :cond_d
 
-    .line 850
     iget-object v11, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     iget-object v11, v11, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;->ssoInterface:Lcom/centrify/auth/aidl/IEnterpriseSecurityManager;
@@ -7547,7 +6792,6 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 851
     const/4 v11, 0x0
 
     const/4 v12, 0x0
@@ -7556,7 +6800,6 @@
 
     goto :goto_4
 
-    .line 860
     .end local v1    # "addPackageList":[Ljava/lang/String;
     :cond_10
     const/4 v11, -0x1
@@ -7567,7 +6810,6 @@
 
     invoke-virtual {v8, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 861
     const/4 v11, 0x1
 
     const/4 v12, 0x1
@@ -7578,7 +6820,6 @@
 
     goto :goto_4
 
-    .line 847
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -7609,14 +6850,12 @@
 
     const/4 v8, 0x1
 
-    .line 487
     const-string v5, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v6, "setupSSO called"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 488
     const-string v5, "EnterpriseSSOPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -7653,7 +6892,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     const-string v5, "EnterpriseSSOPolicyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -7676,15 +6914,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 491
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 493
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 494
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v5, "2.0"
 
@@ -7700,20 +6935,16 @@
 
     if-eqz v5, :cond_1
 
-    .line 495
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 496
     const/4 v2, 0x0
 
-    .line 497
     .local v2, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 498
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7721,13 +6952,10 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 499
     invoke-virtual {v2, v8, v9}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 503
     if-nez p3, :cond_0
 
-    .line 504
     :try_start_0
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -7735,7 +6963,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
     const/4 v5, 0x1
 
     const/4 v6, 0x4
@@ -7744,13 +6971,11 @@
 
     move-object v3, v2
 
-    .line 547
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .local v3, "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :goto_0
     return-object v3
 
-    .line 509
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_0
@@ -7763,16 +6988,13 @@
     :goto_1
     move-object v3, v2
 
-    .line 513
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 510
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :catch_0
     move-exception v1
 
-    .line 511
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -7782,23 +7004,19 @@
 
     goto :goto_1
 
-    .line 516
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_1
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission()I
 
-    .line 517
     const/4 v2, 0x0
 
-    .line 518
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v2, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v2}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 519
     .restart local v2    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -7806,13 +7024,10 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 520
     invoke-virtual {v2, v8, v9}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 524
     if-nez p3, :cond_2
 
-    .line 525
     :try_start_1
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -7820,7 +7035,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 526
     const/4 v5, 0x1
 
     const/4 v6, 0x4
@@ -7829,11 +7043,9 @@
 
     move-object v3, v2
 
-    .line 528
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 531
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_2
     const-string v5, "com.centrify.sso.samsung"
@@ -7844,12 +7056,10 @@
 
     if-eqz v5, :cond_5
 
-    .line 532
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfaces(I)I
 
     move-result v4
 
-    .line 533
     .local v4, "result":I
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -7883,14 +7093,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 534
     if-eq v8, v4, :cond_3
 
     const/4 v5, 0x2
 
     if-ne v5, v4, :cond_4
 
-    .line 535
     :cond_3
     const/4 v5, 0x0
 
@@ -7900,7 +7108,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 536
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -7912,11 +7119,9 @@
     :goto_2
     move-object v3, v2
 
-    .line 547
     .restart local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 540
     .end local v3    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_5
     const/4 v5, -0x1
@@ -7927,7 +7132,6 @@
 
     invoke-virtual {v2, v5}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 541
     const/4 v5, 0x1
 
     const/4 v6, 0x1
@@ -7938,11 +7142,9 @@
 
     goto :goto_2
 
-    .line 544
     :catch_1
     move-exception v1
 
-    .line 545
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseSSOPolicyService"
 
@@ -7959,23 +7161,19 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1432
     const-string v4, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v5, "inside systemReady laoding list from file."
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1434
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->loadListFromFile()V
 
-    .line 1435
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1440
     :goto_0
     iget-object v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
@@ -7989,7 +7187,6 @@
 
     if-lez v4, :cond_1
 
-    .line 1441
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -8002,7 +7199,6 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 1442
     iget-object v4, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->clientsList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -8017,7 +7213,6 @@
 
     move-result-object v3
 
-    .line 1443
     .local v3, "items":[Ljava/lang/String;
     const/4 v4, 0x1
 
@@ -8029,14 +7224,12 @@
 
     if-nez v4, :cond_0
 
-    .line 1444
     aget-object v4, v3, v6
 
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 1445
     .local v0, "clientId":I
     const/4 v4, 0x2
 
@@ -8044,20 +7237,17 @@
 
     invoke-direct {p0, v0, v6, v4}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfaces(IILjava/lang/String;)I
 
-    .line 1441
     .end local v0    # "clientId":I
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1436
     .end local v2    # "i":I
     .end local v3    # "items":[Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 1437
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "EnterpriseSSOPolicyService"
 
@@ -8065,12 +7255,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1438
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1449
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     return-void
@@ -8102,14 +7290,12 @@
 
     const/4 v9, 0x1
 
-    .line 1279
     const-string v6, "EnterpriseSSOPolicyService"
 
     const-string/jumbo v7, "unenroll called"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1280
     const-string v6, "EnterpriseSSOPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -8166,15 +7352,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1282
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->printArtifacts()V
 
-    .line 1284
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxInfo()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1285
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v6, "2.0"
 
@@ -8190,20 +7373,16 @@
 
     if-eqz v6, :cond_4
 
-    .line 1286
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 1287
     const/4 v3, 0x0
 
-    .line 1288
     .local v3, "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v3, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v3}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1289
     .restart local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -8211,37 +7390,30 @@
 
     invoke-virtual {v3, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1290
     invoke-virtual {v3, v9, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1293
     if-nez p3, :cond_0
 
-    .line 1294
     const-string v6, "EnterpriseSSOPolicyService"
 
     const-string v7, " unenroll: parameter type is Null"
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1295
     invoke-virtual {v3, v9, v10}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
     move-object v4, v3
 
-    .line 1362
     .end local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .local v4, "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :goto_0
     return-object v4
 
-    .line 1300
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     .restart local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->bindSSOInterfacesWithClientsList(I)V
 
-    .line 1303
     :try_start_0
     const-string v6, "centrify"
 
@@ -8259,7 +7431,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 1304
     :cond_1
     iget v6, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
@@ -8267,23 +7438,19 @@
 
     move-result-object v5
 
-    .line 1305
     .local v5, "ssoInterface":Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;
     if-eqz v5, :cond_2
 
-    .line 1306
     const-string v6, "EnterpriseSSOPolicyService"
 
     const-string v7, "calling unenroll on ssointerface.."
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1307
     invoke-interface {v5}, Lcom/sec/android/service/singlesignon/IEnterpriseSecurityManager2;->unenroll()I
 
     move-result v2
 
-    .line 1308
     .local v2, "res":I
     const-string v6, "EnterpriseSSOPolicyService"
 
@@ -8307,14 +7474,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1309
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
     invoke-virtual {v3, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1310
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -8327,11 +7492,9 @@
     :goto_1
     move-object v4, v3
 
-    .line 1320
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1314
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_3
     const/4 v6, 0x1
@@ -8344,11 +7507,9 @@
 
     goto :goto_1
 
-    .line 1317
     :catch_0
     move-exception v1
 
-    .line 1318
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseSSOPolicyService"
 
@@ -8358,23 +7519,19 @@
 
     goto :goto_1
 
-    .line 1322
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_4
     invoke-direct {p0}, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->enforceEnterpriseSSOPermission()I
 
-    .line 1323
     const/4 v3, 0x0
 
-    .line 1324
     .restart local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     new-instance v3, Landroid/app/enterprise/EnterpriseResponseData;
 
     .end local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-direct {v3}, Landroid/app/enterprise/EnterpriseResponseData;-><init>()V
 
-    .line 1325
     .restart local v3    # "responseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -8382,26 +7539,21 @@
 
     invoke-virtual {v3, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1326
     invoke-virtual {v3, v9, v11}, Landroid/app/enterprise/EnterpriseResponseData;->setStatus(II)V
 
-    .line 1329
     iget-boolean v6, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOServiceInitialized:Z
 
     if-nez v6, :cond_5
 
     move-object v4, v3
 
-    .line 1330
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto :goto_0
 
-    .line 1334
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_5
     if-nez p3, :cond_6
 
-    .line 1335
     :try_start_1
     const-string v6, "EnterpriseSSOPolicyService"
 
@@ -8409,7 +7561,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1336
     const/4 v6, 0x1
 
     const/16 v7, 0x9
@@ -8418,11 +7569,9 @@
 
     move-object v4, v3
 
-    .line 1338
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 1341
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :cond_6
     const-string v6, "centrify"
@@ -8433,10 +7582,8 @@
 
     if-eqz v6, :cond_8
 
-    .line 1342
     packed-switch p2, :pswitch_data_0
 
-    .line 1350
     const-string v6, "EnterpriseSSOPolicyService"
 
     const-string v7, " unenroll. default"
@@ -8447,11 +7594,9 @@
     :goto_2
     move-object v4, v3
 
-    .line 1362
     .restart local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     goto/16 :goto_0
 
-    .line 1344
     .end local v4    # "responseData":Ljava/lang/Object;, "Landroid/app/enterprise/EnterpriseResponseData<Ljava/lang/Integer;>;"
     :pswitch_0
     iget-object v6, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
@@ -8464,7 +7609,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 1345
     iget-object v6, p0, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy;->mSSOInterfaceList1:Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;
 
     iget-object v6, v6, Lcom/android/server/enterprise/container/EnterpriseSSOPolicy$SSOInterfaceList1;->ssoInterface:Lcom/centrify/auth/aidl/IEnterpriseSecurityManager;
@@ -8479,7 +7623,6 @@
 
     invoke-virtual {v3, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1346
     const/4 v6, 0x0
 
     const/4 v7, 0x0
@@ -8490,11 +7633,9 @@
 
     goto :goto_2
 
-    .line 1359
     :catch_1
     move-exception v1
 
-    .line 1360
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseSSOPolicyService"
 
@@ -8504,7 +7645,6 @@
 
     goto :goto_2
 
-    .line 1355
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_8
     const/4 v6, -0x1
@@ -8516,7 +7656,6 @@
 
     invoke-virtual {v3, v6}, Landroid/app/enterprise/EnterpriseResponseData;->setData(Ljava/lang/Object;)V
 
-    .line 1356
     const/4 v6, 0x1
 
     const/4 v7, 0x1
@@ -8527,7 +7666,6 @@
 
     goto :goto_2
 
-    .line 1342
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

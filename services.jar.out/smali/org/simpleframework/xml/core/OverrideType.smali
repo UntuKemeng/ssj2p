@@ -19,16 +19,12 @@
     .param p2, "override"    # Ljava/lang/Class;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput-object p2, p0, Lorg/simpleframework/xml/core/OverrideType;->override:Ljava/lang/Class;
 
-    .line 56
     iput-object p1, p0, Lorg/simpleframework/xml/core/OverrideType;->type:Lorg/simpleframework/xml/strategy/Type;
 
-    .line 57
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 70
     .local p1, "label":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/core/OverrideType;->type:Lorg/simpleframework/xml/strategy/Type;
 
@@ -62,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-object v0, p0, Lorg/simpleframework/xml/core/OverrideType;->override:Ljava/lang/Class;
 
     return-object v0
@@ -72,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Lorg/simpleframework/xml/core/OverrideType;->type:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

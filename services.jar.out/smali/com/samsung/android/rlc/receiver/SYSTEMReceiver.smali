@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 15
     const-class v0, Lcom/samsung/android/rlc/receiver/SYSTEMReceiver;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -28,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -42,7 +40,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 20
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -51,7 +48,6 @@
 
     if-nez v2, :cond_2
 
-    .line 21
     :cond_0
     sget-object v2, Lcom/samsung/android/rlc/receiver/SYSTEMReceiver;->TAG:Ljava/lang/String;
 
@@ -59,18 +55,15 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/rlc/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 38
     :cond_1
     :goto_0
     return-void
 
-    .line 25
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 26
     .local v0, "action":Ljava/lang/String;
     sget-object v2, Lcom/samsung/android/rlc/receiver/SYSTEMReceiver;->TAG:Ljava/lang/String;
 
@@ -94,12 +87,10 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/rlc/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 28
     invoke-static {p1}, Lcom/samsung/android/rlc/util/PushUtil;->getPushTypeList(Landroid/content/Context;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 30
     .local v1, "pushTypeList":[Ljava/lang/String;
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
@@ -109,7 +100,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 32
     sget-object v2, Lcom/samsung/android/rlc/receiver/SYSTEMReceiver;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -136,7 +126,6 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
     sget-object v2, Lcom/samsung/android/rlc/receiver/SYSTEMReceiver;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -163,7 +152,6 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 35
     const/4 v2, 0x0
 
     const/4 v3, 0x1

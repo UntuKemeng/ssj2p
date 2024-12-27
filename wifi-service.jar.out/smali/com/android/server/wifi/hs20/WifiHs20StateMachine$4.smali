@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 2365
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$4;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iput p2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$4;->val$id:I
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 2368
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$4;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$4;->val$id:I
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2369
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$4;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$4;->val$id:I
@@ -67,7 +64,6 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->sendPolicyUpdateMessage(II)V
     invoke-static {v0, v1, v2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$1500(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;II)V
 
-    .line 2370
     :cond_0
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 179
     iput-object p1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$1;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,6 +38,5 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 202
     return-void
 .end method

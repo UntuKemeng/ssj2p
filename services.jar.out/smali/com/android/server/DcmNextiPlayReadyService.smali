@@ -52,7 +52,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 103
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "z yyyy-MM-dd HH:mm:ss"
@@ -61,10 +60,8 @@
 
     sput-object v0, Lcom/android/server/DcmNextiPlayReadyService;->DATE_FORMAT:Ljava/text/DateFormat;
 
-    .line 108
     sput v2, Lcom/android/server/DcmNextiPlayReadyService;->THREAD_EXECUTING:I
 
-    .line 109
     sput v2, Lcom/android/server/DcmNextiPlayReadyService;->GotDataBeforeBootComplete:I
 
     return-void
@@ -74,10 +71,8 @@
     .locals 1
 
     .prologue
-    .line 100
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 116
     const/4 v0, 0x0
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -86,7 +81,6 @@
 
     iput-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService;->isSuspendedBefore:Ljava/lang/Boolean;
 
-    .line 379
     return-void
 .end method
 
@@ -96,7 +90,6 @@
     .param p2, "x1"    # J
 
     .prologue
-    .line 100
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/DcmNextiPlayReadyService;->nitzReceived(JJ)V
 
     return-void
@@ -109,7 +102,6 @@
     .locals 2
 
     .prologue
-    .line 262
     new-instance v0, Lcom/android/server/DcmNextiPlayReadyService$MainThread;
 
     const-string/jumbo v1, "https://tts.spmode.ne.jp:443"
@@ -118,12 +110,10 @@
 
     iput-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService;->mMainThread:Lcom/android/server/DcmNextiPlayReadyService$MainThread;
 
-    .line 263
     iget-object v0, p0, Lcom/android/server/DcmNextiPlayReadyService;->mMainThread:Lcom/android/server/DcmNextiPlayReadyService$MainThread;
 
     invoke-virtual {v0}, Lcom/android/server/DcmNextiPlayReadyService$MainThread;->start()V
 
-    .line 264
     return-void
 .end method
 
@@ -139,12 +129,10 @@
     .locals 4
 
     .prologue
-    .line 273
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    .line 274
     .local v0, "handler":Landroid/os/Handler;
     new-instance v1, Lcom/android/server/DcmNextiPlayReadyService$1;
 
@@ -154,7 +142,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 286
     return-void
 .end method
 
@@ -163,7 +150,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 246
     const/4 v0, 0x0
 
     return-object v0
@@ -173,7 +159,6 @@
     .locals 3
 
     .prologue
-    .line 178
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "ServiceStartArguments"
@@ -182,18 +167,15 @@
 
     invoke-direct {v0, v1, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;I)V
 
-    .line 180
     .local v0, "thread":Landroid/os/HandlerThread;
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 183
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/DcmNextiPlayReadyService;->mServiceLooper:Landroid/os/Looper;
 
-    .line 184
     new-instance v1, Lcom/android/server/DcmNextiPlayReadyService$ServiceHandler;
 
     iget-object v2, p0, Lcom/android/server/DcmNextiPlayReadyService;->mServiceLooper:Landroid/os/Looper;
@@ -202,7 +184,6 @@
 
     iput-object v1, p0, Lcom/android/server/DcmNextiPlayReadyService;->mServiceHandler:Lcom/android/server/DcmNextiPlayReadyService$ServiceHandler;
 
-    .line 185
     return-void
 .end method
 
@@ -210,7 +191,6 @@
     .locals 0
 
     .prologue
-    .line 252
     return-void
 .end method
 
@@ -218,17 +198,14 @@
     .locals 2
 
     .prologue
-    .line 257
     const-string v0, "DcmNextiPlayReadyService"
 
     const-string v1, "DrmEventService : OnLowMemory....Save the Phone"
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     invoke-super {p0}, Landroid/app/Service;->onLowMemory()V
 
-    .line 259
     return-void
 .end method
 
@@ -240,7 +217,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 267
     cmp-long v0, p1, v2
 
     if-lez v0, :cond_0
@@ -249,10 +225,8 @@
 
     if-lez v0, :cond_0
 
-    .line 268
     invoke-static {p1, p2, p3, p4}, Lcom/android/server/DcmNextiPlayReadyService;->ntpReceived(JJ)V
 
-    .line 270
     :cond_0
     return-void
 .end method
@@ -268,21 +242,17 @@
 
     const/4 v5, 0x1
 
-    .line 192
     iget-object v3, p0, Lcom/android/server/DcmNextiPlayReadyService;->mServiceHandler:Lcom/android/server/DcmNextiPlayReadyService$ServiceHandler;
 
     invoke-virtual {v3}, Lcom/android/server/DcmNextiPlayReadyService$ServiceHandler;->obtainMessage()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 193
     .local v0, "msg":Landroid/os/Message;
     iput p3, v0, Landroid/os/Message;->arg1:I
 
-    .line 194
     if-eqz p1, :cond_0
 
-    .line 196
     const-string v3, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -295,20 +265,16 @@
 
     if-eqz v3, :cond_1
 
-    .line 198
     iput v5, v0, Landroid/os/Message;->what:I
 
-    .line 238
     :cond_0
     :goto_0
     iget-object v3, p0, Lcom/android/server/DcmNextiPlayReadyService;->mServiceHandler:Lcom/android/server/DcmNextiPlayReadyService$ServiceHandler;
 
     invoke-virtual {v3, v0}, Lcom/android/server/DcmNextiPlayReadyService$ServiceHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 240
     return v5
 
-    .line 200
     :cond_1
     const-string v3, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -322,7 +288,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 202
     const-string/jumbo v3, "networkInfo"
 
     invoke-virtual {p1, v3}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -331,16 +296,13 @@
 
     check-cast v1, Landroid/net/NetworkInfo;
 
-    .line 203
     .local v1, "net":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_0
 
-    .line 205
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v2
 
-    .line 206
     .local v2, "st":Landroid/net/NetworkInfo$State;
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
 
@@ -356,19 +318,16 @@
 
     if-eqz v3, :cond_2
 
-    .line 207
     const-string v3, "DcmNextiPlayReadyService"
 
     const-string v4, "Current action is Wifi Connected"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     iput v6, v0, Landroid/os/Message;->what:I
 
     goto :goto_0
 
-    .line 210
     :cond_2
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
 
@@ -376,14 +335,12 @@
 
     if-nez v3, :cond_0
 
-    .line 212
     const-string v3, "DcmNextiPlayReadyService"
 
     const-string v4, "Current action is mobile data Connected"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     sget-object v3, Landroid/net/NetworkInfo$State;->SUSPENDED:Landroid/net/NetworkInfo$State;
 
     invoke-virtual {v2, v3}, Landroid/net/NetworkInfo$State;->equals(Ljava/lang/Object;)Z
@@ -392,14 +349,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 215
     const-string v3, "DcmNextiPlayReadyService"
 
     const-string v4, "Current action is Data suspended"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
@@ -408,7 +363,6 @@
 
     goto :goto_0
 
-    .line 218
     :cond_3
     sget-object v3, Landroid/net/NetworkInfo$State;->CONNECTED:Landroid/net/NetworkInfo$State;
 
@@ -426,19 +380,16 @@
 
     if-nez v3, :cond_4
 
-    .line 220
     const-string v3, "DcmNextiPlayReadyService"
 
     const-string v4, "Current action is Data connected and previous action was not suspended"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     iput v6, v0, Landroid/os/Message;->what:I
 
     goto :goto_0
 
-    .line 225
     :cond_4
     const/4 v3, 0x0
 
@@ -450,7 +401,6 @@
 
     goto :goto_0
 
-    .line 230
     .end local v1    # "net":Landroid/net/NetworkInfo;
     .end local v2    # "st":Landroid/net/NetworkInfo$State;
     :cond_5
@@ -466,21 +416,18 @@
 
     if-eqz v3, :cond_6
 
-    .line 231
     const-string v3, "DcmNextiPlayReadyService"
 
     const-string v4, "Current action is nitz set time"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     const/4 v3, 0x3
 
     iput v3, v0, Landroid/os/Message;->what:I
 
     goto/16 :goto_0
 
-    .line 235
     :cond_6
     const-string v3, "DcmNextiPlayReadyService"
 

@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 1511
     iput-object p1, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->this$1:Landroid/widget/MultiSelectPopupWindow$HandleView;
 
     iput p2, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->val$drawableTargetWidth:I
@@ -50,14 +49,12 @@
 
     const/4 v5, 0x0
 
-    .line 1513
     iget-object v6, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->this$1:Landroid/widget/MultiSelectPopupWindow$HandleView;
 
     invoke-virtual {v6}, Landroid/widget/MultiSelectPopupWindow$HandleView;->getHorizontalOffset()I
 
     move-result v2
 
-    .line 1514
     .local v2, "left":I
     iget-object v6, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->this$1:Landroid/widget/MultiSelectPopupWindow$HandleView;
 
@@ -71,7 +68,6 @@
 
     move v1, v4
 
-    .line 1515
     .local v1, "isRtl":Z
     :goto_0
     iget-object v6, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->this$1:Landroid/widget/MultiSelectPopupWindow$HandleView;
@@ -84,11 +80,9 @@
 
     move-result v0
 
-    .line 1516
     .local v0, "hotspot":I
     const/4 v3, 0x0
 
-    .line 1518
     .local v3, "offset":I
     iget-object v6, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->this$1:Landroid/widget/MultiSelectPopupWindow$HandleView;
 
@@ -99,12 +93,10 @@
     :goto_1
     if-ne v1, v4, :cond_2
 
-    .line 1519
     iget v4, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->val$drawableTargetWidth:I
 
     div-int/lit8 v3, v4, 0x4
 
-    .line 1523
     :goto_2
     iget-object v4, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->this$1:Landroid/widget/MultiSelectPopupWindow$HandleView;
 
@@ -126,19 +118,16 @@
 
     invoke-virtual {v4, v6, v5, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 1524
     iget-object v4, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->this$1:Landroid/widget/MultiSelectPopupWindow$HandleView;
 
     iget-object v4, v4, Landroid/widget/MultiSelectPopupWindow$HandleView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->invalidateSelf()V
 
-    .line 1525
     iget-object v4, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->this$1:Landroid/widget/MultiSelectPopupWindow$HandleView;
 
     invoke-virtual {v4}, Landroid/widget/MultiSelectPopupWindow$HandleView;->invalidate()V
 
-    .line 1526
     return-void
 
     .end local v0    # "hotspot":I
@@ -147,7 +136,6 @@
     :cond_0
     move v1, v5
 
-    .line 1514
     goto :goto_0
 
     .restart local v0    # "hotspot":I
@@ -156,10 +144,8 @@
     :cond_1
     move v4, v5
 
-    .line 1518
     goto :goto_1
 
-    .line 1521
     :cond_2
     iget v4, p0, Landroid/widget/MultiSelectPopupWindow$HandleView$2;->val$drawableTargetWidth:I
 

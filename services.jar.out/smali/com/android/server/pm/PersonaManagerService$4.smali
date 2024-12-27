@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4841
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 4843
     const-string v2, "PersonaManagerService"
 
     const-string v3, "Received the DPM state change broadcast"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4844
     const-string/jumbo v2, "userhandle"
 
     const/4 v3, 0x0
@@ -55,7 +52,6 @@
 
     move-result v1
 
-    .line 4845
     .local v1, "userid":I
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -70,11 +66,9 @@
 
     move-result-object v0
 
-    .line 4846
     .local v0, "msg":Landroid/os/Message;
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 4847
     iget-object v2, p0, Lcom/android/server/pm/PersonaManagerService$4;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaHandler:Lcom/android/server/pm/PersonaManagerService$PersonaHandler;
@@ -84,6 +78,5 @@
 
     invoke-virtual {v2, v0}, Lcom/android/server/pm/PersonaManagerService$PersonaHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 4848
     return-void
 .end method

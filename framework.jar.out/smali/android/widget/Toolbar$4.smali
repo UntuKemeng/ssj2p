@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 462
     iput-object p1, p0, Landroid/widget/Toolbar$4;->this$0:Landroid/widget/Toolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,36 +44,30 @@
 
     const/4 v11, 0x0
 
-    .line 464
     const/4 v9, 0x2
 
     new-array v7, v9, [I
 
-    .line 465
     .local v7, "screenPos":[I
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
-    .line 466
     .local v1, "contentFrame":Landroid/graphics/Rect;
     iget-object v9, p0, Landroid/widget/Toolbar$4;->this$0:Landroid/widget/Toolbar;
 
     invoke-virtual {v9, v7}, Landroid/widget/Toolbar;->getLocationOnScreen([I)V
 
-    .line 467
     iget-object v9, p0, Landroid/widget/Toolbar$4;->this$0:Landroid/widget/Toolbar;
 
     invoke-virtual {v9, v1}, Landroid/widget/Toolbar;->getWindowVisibleContentFrame(Landroid/graphics/Rect;)V
 
-    .line 469
     iget-object v9, p0, Landroid/widget/Toolbar$4;->this$0:Landroid/widget/Toolbar;
 
     invoke-virtual {v9}, Landroid/widget/Toolbar;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    .line 470
     .local v2, "context":Landroid/content/Context;
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -86,7 +79,6 @@
 
     move-result v8
 
-    .line 471
     .local v8, "statusBarHeight":I
     iget-object v9, p0, Landroid/widget/Toolbar$4;->this$0:Landroid/widget/Toolbar;
 
@@ -94,7 +86,6 @@
 
     move-result v3
 
-    .line 472
     .local v3, "height":I
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -106,7 +97,6 @@
 
     iget v6, v9, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 475
     .local v6, "screenHeight":I
     invoke-virtual {p1}, Landroid/view/View;->getLayoutDirection()I
 
@@ -114,10 +104,8 @@
 
     if-nez v9, :cond_1
 
-    .line 476
     const/4 v4, 0x5
 
-    .line 482
     .local v4, "horizontalGravity":I
     :goto_0
     iget-object v9, p0, Landroid/widget/Toolbar$4;->this$0:Landroid/widget/Toolbar;
@@ -135,11 +123,9 @@
 
     move-result-object v0
 
-    .line 484
     .local v0, "cheatSheet":Landroid/widget/Toast;
     const/4 v5, 0x0
 
-    .line 485
     .local v5, "offsetY":I
     aget v9, v7, v12
 
@@ -155,27 +141,22 @@
 
     if-ne v3, v9, :cond_2
 
-    .line 486
     :cond_0
     aget v9, v7, v12
 
     sub-int v5, v9, v8
 
-    .line 487
     or-int/lit8 v9, v4, 0x30
 
     add-int v10, v3, v5
 
     invoke-virtual {v0, v9, v11, v10}, Landroid/widget/Toast;->setGravity(III)V
 
-    .line 493
     :goto_1
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 494
     return v12
 
-    .line 478
     .end local v0    # "cheatSheet":Landroid/widget/Toast;
     .end local v4    # "horizontalGravity":I
     .end local v5    # "offsetY":I
@@ -185,7 +166,6 @@
     .restart local v4    # "horizontalGravity":I
     goto :goto_0
 
-    .line 489
     .restart local v0    # "cheatSheet":Landroid/widget/Toast;
     .restart local v5    # "offsetY":I
     :cond_2
@@ -193,7 +173,6 @@
 
     sub-int v5, v6, v9
 
-    .line 490
     or-int/lit8 v9, v4, 0x50
 
     add-int v10, v3, v5

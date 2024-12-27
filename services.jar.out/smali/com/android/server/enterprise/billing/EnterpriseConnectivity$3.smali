@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 366
     iput-object p1, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$3;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 369
     const-string v4, "android.intent.action.SIM_STATE_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,7 +52,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 370
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$3;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
@@ -80,13 +77,11 @@
 
     check-cast v1, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 371
     .local v1, "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->onSimStateChanged()V
 
     goto :goto_0
 
-    .line 373
     .end local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_0
@@ -102,7 +97,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 374
     const-string v4, "android.intent.extra.user_handle"
 
     const/4 v5, -0x1
@@ -111,7 +105,6 @@
 
     move-result v3
 
-    .line 375
     .local v3, "user":I
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -142,7 +135,6 @@
     # invokes: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->slogd(Ljava/lang/String;)V
     invoke-static {v4}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->access$500(Ljava/lang/String;)V
 
-    .line 377
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$3;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
@@ -168,7 +160,6 @@
 
     check-cast v1, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 378
     .restart local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getUserHandle()Ljava/util/List;
 
@@ -184,14 +175,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 379
     const/16 v4, 0x3f5
 
     invoke-virtual {v1, v4}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->sendMessage(I)V
 
     goto :goto_1
 
-    .line 381
     :cond_1
     const/16 v4, 0x3f6
 
@@ -199,7 +188,6 @@
 
     goto :goto_1
 
-    .line 384
     .end local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "user":I
@@ -216,18 +204,15 @@
 
     if-eqz v4, :cond_5
 
-    .line 385
     const-string v4, "apnType"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 386
     .local v0, "apnType":Ljava/lang/String;
     if-eqz v0, :cond_7
 
-    .line 387
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$3;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
@@ -254,7 +239,6 @@
 
     check-cast v1, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 388
     .restart local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     invoke-virtual {v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;->getApn()Ljava/lang/String;
 
@@ -266,7 +250,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 389
     const-string/jumbo v4, "networkUnvailable"
 
     invoke-virtual {p2, v4, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
@@ -287,7 +270,6 @@
 
     goto :goto_3
 
-    .line 394
     .end local v0    # "apnType":Ljava/lang/String;
     .end local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -304,7 +286,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 395
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$3;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
@@ -330,7 +311,6 @@
 
     check-cast v1, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 396
     .restart local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     const/16 v4, 0x3f4
 
@@ -338,7 +318,6 @@
 
     goto :goto_4
 
-    .line 398
     .end local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_6
@@ -354,7 +333,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 399
     iget-object v4, p0, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$3;->this$0:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     # getter for: Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->mConnections:Ljava/util/ArrayList;
@@ -380,7 +358,6 @@
 
     check-cast v1, Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
 
-    .line 400
     .restart local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     const/16 v4, 0x3f7
 
@@ -388,7 +365,6 @@
 
     goto :goto_5
 
-    .line 403
     .end local v1    # "c":Lcom/android/server/enterprise/billing/EnterpriseConnectivity$Connection;
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_7

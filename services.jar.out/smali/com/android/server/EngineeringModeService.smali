@@ -35,17 +35,14 @@
     .locals 1
 
     .prologue
-    .line 31
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/EngineeringModeService;->ERRORBYTE_NO_PERMISSION:[B
 
-    .line 34
     const-string v0, "engmode"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 35
     return-void
 .end method
 
@@ -54,20 +51,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 49
     invoke-direct {p0}, Lcom/samsung/android/service/EngineeringMode/IEngineeringModeService$Stub;-><init>()V
 
-    .line 50
     sput-object p1, Lcom/android/server/EngineeringModeService;->mContext:Landroid/content/Context;
 
-    .line 51
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/EngineeringModeService;->mAllowedUIDs:Ljava/util/ArrayList;
 
-    .line 54
     iget-object v0, p0, Lcom/android/server/EngineeringModeService;->mAllowedUIDs:Ljava/util/ArrayList;
 
     const/16 v1, 0x3e8
@@ -78,7 +71,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 55
     return-void
 .end method
 
@@ -87,10 +79,8 @@
     .param p1, "callingUid"    # I
 
     .prologue
-    .line 59
     const/4 v1, 0x0
 
-    .line 61
     .local v1, "ret":Z
     const/4 v0, 0x0
 
@@ -104,7 +94,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 62
     iget-object v2, p0, Lcom/android/server/EngineeringModeService;->mAllowedUIDs:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -119,14 +108,11 @@
 
     if-ne v2, p1, :cond_2
 
-    .line 63
     const/4 v1, 0x1
 
-    .line 68
     :cond_0
     if-nez v1, :cond_1
 
-    .line 69
     const-string v2, "EngineeringModeService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -155,11 +141,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     :cond_1
     return v1
 
-    .line 61
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -196,14 +180,12 @@
     .locals 2
 
     .prologue
-    .line 127
     const-string v0, "EngineeringModeService"
 
     const-string/jumbo v1, "getID() is called."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -214,10 +196,8 @@
 
     if-nez v0, :cond_0
 
-    .line 130
     sget-object v0, Lcom/android/server/EngineeringModeService;->ERRORBYTE_NO_PERMISSION:[B
 
-    .line 132
     :goto_0
     return-object v0
 
@@ -233,14 +213,12 @@
     .locals 2
 
     .prologue
-    .line 137
     const-string v0, "EngineeringModeService"
 
     const-string/jumbo v1, "getNumOfModes() is called."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 139
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -251,10 +229,8 @@
 
     if-nez v0, :cond_0
 
-    .line 140
     const/16 v0, -0x514
 
-    .line 142
     :goto_0
     return v0
 
@@ -274,14 +250,12 @@
     .param p4, "validityCount"    # I
 
     .prologue
-    .line 83
     const-string v0, "EngineeringModeService"
 
     const-string/jumbo v1, "getRequestMsg() is called."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -292,14 +266,11 @@
 
     if-nez v0, :cond_0
 
-    .line 86
     sget-object v0, Lcom/android/server/EngineeringModeService;->ERRORBYTE_NO_PERMISSION:[B
 
-    .line 91
     :goto_0
     return-object v0
 
-    .line 88
     :cond_0
     sget-object v0, Lcom/android/server/EngineeringModeService;->mContext:Landroid/content/Context;
 
@@ -313,7 +284,6 @@
 
     iput-object v0, p0, Lcom/android/server/EngineeringModeService;->mModel:Ljava/lang/String;
 
-    .line 89
     sget-object v0, Lcom/android/server/EngineeringModeService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/EngineeringModeDeviceInfo;->getInstance(Landroid/content/Context;)Lcom/android/server/EngineeringModeDeviceInfo;
@@ -326,7 +296,6 @@
 
     iput-object v0, p0, Lcom/android/server/EngineeringModeService;->mImei:Ljava/lang/String;
 
-    .line 91
     iget-object v5, p0, Lcom/android/server/EngineeringModeService;->mModel:Ljava/lang/String;
 
     iget-object v6, p0, Lcom/android/server/EngineeringModeService;->mImei:Ljava/lang/String;
@@ -353,14 +322,12 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 76
     const-string v0, "EngineeringModeService"
 
     const-string/jumbo v1, "getStatus() is called."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     invoke-direct {p0, p1}, Lcom/android/server/EngineeringModeService;->nativeGetStatus(I)I
 
     move-result v0
@@ -373,14 +340,12 @@
     .param p1, "token"    # [B
 
     .prologue
-    .line 96
     const-string v0, "EngineeringModeService"
 
     const-string/jumbo v1, "installToken() is called."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -391,10 +356,8 @@
 
     if-nez v0, :cond_0
 
-    .line 99
     const/16 v0, -0x514
 
-    .line 101
     :goto_0
     return v0
 
@@ -410,14 +373,12 @@
     .locals 2
 
     .prologue
-    .line 106
     const-string v0, "EngineeringModeService"
 
     const-string/jumbo v1, "isTokenInstalled() is called."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 108
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -428,10 +389,8 @@
 
     if-nez v0, :cond_0
 
-    .line 109
     const/16 v0, -0x514
 
-    .line 111
     :goto_0
     return v0
 
@@ -447,14 +406,12 @@
     .locals 2
 
     .prologue
-    .line 117
     const-string v0, "EngineeringModeService"
 
     const-string/jumbo v1, "removeToken() is called."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -465,10 +422,8 @@
 
     if-nez v0, :cond_0
 
-    .line 120
     const/16 v0, -0x514
 
-    .line 122
     :goto_0
     return v0
 
@@ -484,14 +439,12 @@
     .locals 2
 
     .prologue
-    .line 147
     const-string v0, "EngineeringModeService"
 
     const-string/jumbo v1, "sendFuseCmd() is called."
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 149
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -502,10 +455,8 @@
 
     if-nez v0, :cond_0
 
-    .line 150
     const/16 v0, -0x514
 
-    .line 152
     :goto_0
     return v0
 

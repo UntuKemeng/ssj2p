@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 10332
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$26;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 10335
     const-string v3, "android.intent.action.PACKAGE_REPLACED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,12 +50,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 10336
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 10337
     .local v2, "uri":Landroid/net/Uri;
     if-eqz v2, :cond_1
 
@@ -65,7 +61,6 @@
 
     move-result-object v1
 
-    .line 10338
     .local v1, "pkgName":Ljava/lang/String;
     :goto_0
     if-eqz v1, :cond_0
@@ -78,7 +73,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 10339
     new-instance v3, Landroid/app/AlertDialog$Builder;
 
     iget-object v4, p0, Lcom/android/server/policy/PhoneWindowManager$26;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -113,7 +107,6 @@
 
     move-result-object v0
 
-    .line 10348
     .local v0, "dialog":Landroid/app/AlertDialog;
     invoke-virtual {v0}, Landroid/app/AlertDialog;->getWindow()Landroid/view/Window;
 
@@ -123,17 +116,14 @@
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setType(I)V
 
-    .line 10349
     invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
 
-    .line 10352
     .end local v0    # "dialog":Landroid/app/AlertDialog;
     .end local v1    # "pkgName":Ljava/lang/String;
     .end local v2    # "uri":Landroid/net/Uri;
     :cond_0
     return-void
 
-    .line 10337
     .restart local v2    # "uri":Landroid/net/Uri;
     :cond_1
     const/4 v1, 0x0

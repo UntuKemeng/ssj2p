@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 44
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/URLTransform;->read(Ljava/lang/String;)Ljava/net/URL;
 
     move-result-object v0
@@ -59,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 57
     new-instance v0, Ljava/net/URL;
 
     invoke-direct {v0, p1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
@@ -77,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 44
     check-cast p1, Ljava/net/URL;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -98,7 +94,6 @@
     .end annotation
 
     .prologue
-    .line 71
     invoke-virtual {p1}, Ljava/net/URL;->toString()Ljava/lang/String;
 
     move-result-object v0

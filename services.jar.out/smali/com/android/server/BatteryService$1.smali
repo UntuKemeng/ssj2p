@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 304
     iput-object p1, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 306
     iget-object v0, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLock:Ljava/lang/Object;
@@ -50,7 +48,6 @@
 
     monitor-enter v1
 
-    .line 307
     :try_start_0
     iget-object v0, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
@@ -65,20 +62,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 308
     iget-object v0, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
     # invokes: Lcom/android/server/BatteryService;->shutdownIfWeakChargerVoltageCheckLocked()V
     invoke-static {v0}, Lcom/android/server/BatteryService;->access$200(Lcom/android/server/BatteryService;)V
 
-    .line 311
     :goto_0
     monitor-exit v1
 
-    .line 312
     return-void
 
-    .line 310
     :cond_0
     iget-object v0, p0, Lcom/android/server/BatteryService$1;->this$0:Lcom/android/server/BatteryService;
 
@@ -87,7 +80,6 @@
 
     goto :goto_0
 
-    .line 311
     :catchall_0
     move-exception v0
 

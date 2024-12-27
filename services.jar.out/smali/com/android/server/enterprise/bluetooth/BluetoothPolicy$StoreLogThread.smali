@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1029
     iput-object p1, p0, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$StoreLogThread;->this$0:Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,10 +36,8 @@
     .locals 11
 
     .prologue
-    .line 1031
     const/4 v5, 0x0
 
-    .line 1034
     .local v5, "log":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -62,27 +59,22 @@
 
     move-object v5, v0
 
-    .line 1035
     if-eqz v5, :cond_0
 
-    .line 1036
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v2
 
-    .line 1037
     .local v2, "calendar":Ljava/util/Calendar;
     invoke-virtual {v2}, Ljava/util/Calendar;->getTimeInMillis()J
 
     move-result-wide v6
 
-    .line 1038
     .local v6, "time":J
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1039
     .local v3, "cv":Landroid/content/ContentValues;
     const-string/jumbo v8, "time"
 
@@ -92,12 +84,10 @@
 
     invoke-virtual {v3, v8, v9}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1040
     const-string/jumbo v8, "log"
 
     invoke-virtual {v3, v8, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1041
     const-string v8, "BluetoothPolicyService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -120,7 +110,6 @@
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1042
     iget-object v8, p0, Lcom/android/server/enterprise/bluetooth/BluetoothPolicy$StoreLogThread;->this$0:Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;
 
     # getter for: Lcom/android/server/enterprise/bluetooth/BluetoothPolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -136,7 +125,6 @@
 
     if-nez v8, :cond_0
 
-    .line 1043
     const-string v8, "BluetoothPolicyService"
 
     const-string v9, "StoreLogThread - Failed on inserting log"
@@ -147,14 +135,12 @@
 
     goto :goto_0
 
-    .line 1046
     .end local v2    # "calendar":Ljava/util/Calendar;
     .end local v3    # "cv":Landroid/content/ContentValues;
     .end local v6    # "time":J
     :catch_0
     move-exception v4
 
-    .line 1047
     .local v4, "iex":Ljava/lang/InterruptedException;
     const-string v8, "BluetoothPolicyService"
 

@@ -40,23 +40,18 @@
     .param p3, "r"    # Lcom/sec/epdg/smartwifi/SmartWifiAdapter$ResultRunnable;
 
     .prologue
-    .line 1492
     iput-object p1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 1493
     iput-object p2, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->mHandler:Landroid/os/Handler;
 
-    .line 1494
     iput-object p3, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->mReturnRunnable:Lcom/sec/epdg/smartwifi/SmartWifiAdapter$ResultRunnable;
 
-    .line 1495
     sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     invoke-static {v0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->setDefaultExecutor(Ljava/util/concurrent/Executor;)V
 
-    .line 1496
     return-void
 .end method
 
@@ -67,7 +62,6 @@
     .param p1, "cbs"    # [Ljava/util/concurrent/Callable;
 
     .prologue
-    .line 1506
     move-object v0, p1
 
     .local v0, "arr$":[Ljava/util/concurrent/Callable;
@@ -82,7 +76,6 @@
 
     aget-object v1, v0, v3
 
-    .line 1507
     .local v1, "cb":Ljava/util/concurrent/Callable;
     const-string v5, "[SMARTWIFI]"
 
@@ -90,7 +83,6 @@
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1509
     :try_start_0
     invoke-interface {v1}, Ljava/util/concurrent/Callable;->call()Ljava/lang/Object;
 
@@ -101,17 +93,14 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1516
     .end local v1    # "cb":Ljava/util/concurrent/Callable;
     :goto_1
     return-object v5
 
-    .line 1510
     .restart local v1    # "cb":Ljava/util/concurrent/Callable;
     :catch_0
     move-exception v2
 
-    .line 1511
     .local v2, "e":Ljava/lang/InterruptedException;
     const-string v5, "[SMARTWIFI]"
 
@@ -119,24 +108,20 @@
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1506
     .end local v2    # "e":Ljava/lang/InterruptedException;
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1512
     :catch_1
     move-exception v2
 
-    .line 1513
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 1516
     .end local v1    # "cb":Ljava/util/concurrent/Callable;
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_0
@@ -154,7 +139,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 1488
     check-cast p1, [Ljava/util/concurrent/Callable;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -170,32 +154,27 @@
     .param p1, "ret"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 1521
     const-string v0, "[SMARTWIFI]"
 
     const-string v1, "onPostExecute"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1522
     invoke-virtual {p0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->isCancelled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1523
     const-string v0, "[SMARTWIFI]"
 
     const-string v1, "result for cancelled task.. ignore"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1529
     :goto_0
     return-void
 
-    .line 1526
     :cond_0
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->mReturnRunnable:Lcom/sec/epdg/smartwifi/SmartWifiAdapter$ResultRunnable;
 
@@ -205,14 +184,12 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$ResultRunnable;->setReturn(Z)V
 
-    .line 1527
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->mHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->mReturnRunnable:Lcom/sec/epdg/smartwifi/SmartWifiAdapter$ResultRunnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1528
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mOutStandingTasks:Ljava/util/List;
@@ -230,7 +207,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 1488
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -243,7 +219,6 @@
     .locals 1
 
     .prologue
-    .line 1500
     iget-object v0, p0, Lcom/sec/epdg/smartwifi/SmartWifiAdapter$SmartWifiTask;->this$0:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
     # getter for: Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->mOutStandingTasks:Ljava/util/List;
@@ -253,6 +228,5 @@
 
     invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1501
     return-void
 .end method

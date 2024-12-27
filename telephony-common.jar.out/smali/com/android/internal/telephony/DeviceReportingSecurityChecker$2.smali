@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 115
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -35,19 +34,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 118
     const-string v1, "DeviceReportingSecurityChecker"
 
     const-string v2, "onReceive mSysScopeReceiver"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 121
     .local v0, "action":Ljava/lang/String;
     const-string v1, "com.sec.intent.action.SYSSCOPESTATUS"
 
@@ -57,7 +53,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 122
     const-string v1, "status"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
@@ -72,7 +67,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 123
     const-string v1, "Result"
 
     invoke-virtual {p2, v1, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -82,7 +76,6 @@
     # setter for: Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->sysScopeResult:I
     invoke-static {v1}, Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->access$302(I)I
 
-    .line 124
     const-string v1, "DeviceReportingSecurityChecker"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -110,7 +103,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     # getter for: Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->sysScopeResult:I
     invoke-static {}, Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->access$300()I
 
@@ -135,12 +127,10 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 126
     :cond_0
     # setter for: Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->mIsSysScopeStatus:Z
     invoke-static {v4}, Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->access$602(Z)Z
 
-    .line 131
     :cond_1
     :goto_0
     const-string v1, "DeviceReportingSecurityChecker"
@@ -170,10 +160,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 132
     return-void
 
-    .line 128
     :cond_2
     const/4 v1, 0x1
 

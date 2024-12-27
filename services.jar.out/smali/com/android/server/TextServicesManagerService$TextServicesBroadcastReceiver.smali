@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 237
     iput-object p1, p0, Lcom/android/server/TextServicesManagerService$TextServicesBroadcastReceiver;->this$0:Lcom/android/server/TextServicesManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 240
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 241
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.USER_ADDED"
 
@@ -62,17 +59,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 243
     :cond_0
     iget-object v1, p0, Lcom/android/server/TextServicesManagerService$TextServicesBroadcastReceiver;->this$0:Lcom/android/server/TextServicesManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/TextServicesManagerService;->updateCurrentProfileIds()V
 
-    .line 247
     :goto_0
     return-void
 
-    .line 246
     :cond_1
     # getter for: Lcom/android/server/TextServicesManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/TextServicesManagerService;->access$1000()Ljava/lang/String;

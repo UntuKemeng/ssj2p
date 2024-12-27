@@ -32,33 +32,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 106
     invoke-direct {p0}, Landroid/app/enterprise/IDateTimePolicy$Stub;-><init>()V
 
-    .line 98
     iput-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 100
     iput-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 103
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfoLock:Ljava/lang/Object;
 
-    .line 638
     new-instance v1, Lcom/android/server/enterprise/datetime/DateTimePolicy$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/datetime/DateTimePolicy$1;-><init>(Lcom/android/server/enterprise/datetime/DateTimePolicy;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 108
     iput-object p1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
-    .line 110
     new-instance v1, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
@@ -67,25 +60,21 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 111
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 112
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 113
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 114
     new-instance v1, Landroid/app/enterprise/NtpInfo;
 
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
@@ -94,7 +83,6 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
-    .line 116
     return-void
 .end method
 
@@ -103,7 +91,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/datetime/DateTimePolicy;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfoLock:Ljava/lang/Object;
 
     return-object v0
@@ -114,7 +101,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/datetime/DateTimePolicy;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     return-object v0
@@ -125,7 +111,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/datetime/DateTimePolicy;
 
     .prologue
-    .line 93
     invoke-direct {p0}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->sendBroadcastToNtpServices()V
 
     return-void
@@ -136,7 +121,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 120
     invoke-direct {p0}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -155,7 +139,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 126
     invoke-direct {p0}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -173,12 +156,10 @@
     .locals 2
 
     .prologue
-    .line 132
     iget-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 134
     iget-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -191,7 +172,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 140
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -202,12 +182,10 @@
     .locals 12
 
     .prologue
-    .line 526
     iget-object v8, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfoLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 527
     :try_start_0
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -217,13 +195,11 @@
 
     move-result-object v2
 
-    .line 529
     .local v2, "ntpServer":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     invoke-virtual {v7, v2}, Landroid/app/enterprise/NtpInfo;->setServer(Ljava/lang/String;)V
 
-    .line 530
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string/jumbo v9, "ntpMaxAttempts"
@@ -234,11 +210,9 @@
 
     move-result-object v1
 
-    .line 532
     .local v1, "maxAttempts":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 534
     :try_start_1
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
@@ -251,7 +225,6 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 542
     :goto_0
     :try_start_2
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -264,11 +237,9 @@
 
     move-result-object v3
 
-    .line 544
     .local v3, "pollingInterval":Ljava/lang/String;
     if-eqz v3, :cond_1
 
-    .line 546
     :try_start_3
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
@@ -281,7 +252,6 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 554
     :goto_1
     :try_start_4
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -294,11 +264,9 @@
 
     move-result-object v4
 
-    .line 556
     .local v4, "pollingIntervalShorter":Ljava/lang/String;
     if-eqz v4, :cond_2
 
-    .line 558
     :try_start_5
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
@@ -311,7 +279,6 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_5 .. :try_end_5} :catch_2
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 566
     :goto_2
     :try_start_6
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -324,11 +291,9 @@
 
     move-result-object v6
 
-    .line 568
     .local v6, "timeout":Ljava/lang/String;
     if-eqz v6, :cond_3
 
-    .line 570
     :try_start_7
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
@@ -341,7 +306,6 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 578
     :goto_3
     :try_start_8
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -354,11 +318,9 @@
 
     move-result-object v5
 
-    .line 580
     .local v5, "timeErrorThreshold":Ljava/lang/String;
     if-eqz v5, :cond_4
 
-    .line 582
     :try_start_9
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
@@ -371,15 +333,12 @@
     .catch Ljava/lang/NumberFormatException; {:try_start_9 .. :try_end_9} :catch_4
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 590
     :goto_4
     :try_start_a
     monitor-exit v8
 
-    .line 591
     return-void
 
-    .line 535
     .end local v3    # "pollingInterval":Ljava/lang/String;
     .end local v4    # "pollingIntervalShorter":Ljava/lang/String;
     .end local v5    # "timeErrorThreshold":Ljava/lang/String;
@@ -387,7 +346,6 @@
     :catch_0
     move-exception v0
 
-    .line 536
     .local v0, "ex":Ljava/lang/NumberFormatException;
     const-string v7, "DateTimePolicyService"
 
@@ -395,7 +353,6 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 537
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     const/4 v9, 0x0
@@ -404,7 +361,6 @@
 
     goto :goto_0
 
-    .line 590
     .end local v0    # "ex":Ljava/lang/NumberFormatException;
     .end local v1    # "maxAttempts":Ljava/lang/String;
     .end local v2    # "ntpServer":Ljava/lang/String;
@@ -417,7 +373,6 @@
 
     throw v7
 
-    .line 540
     .restart local v1    # "maxAttempts":Ljava/lang/String;
     .restart local v2    # "ntpServer":Ljava/lang/String;
     :cond_0
@@ -430,12 +385,10 @@
 
     goto :goto_0
 
-    .line 547
     .restart local v3    # "pollingInterval":Ljava/lang/String;
     :catch_1
     move-exception v0
 
-    .line 548
     .restart local v0    # "ex":Ljava/lang/NumberFormatException;
     const-string v7, "DateTimePolicyService"
 
@@ -443,7 +396,6 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 549
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     const-wide/16 v10, 0x0
@@ -452,7 +404,6 @@
 
     goto :goto_1
 
-    .line 552
     .end local v0    # "ex":Ljava/lang/NumberFormatException;
     :cond_1
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
@@ -463,12 +414,10 @@
 
     goto :goto_1
 
-    .line 559
     .restart local v4    # "pollingIntervalShorter":Ljava/lang/String;
     :catch_2
     move-exception v0
 
-    .line 560
     .restart local v0    # "ex":Ljava/lang/NumberFormatException;
     const-string v7, "DateTimePolicyService"
 
@@ -476,7 +425,6 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 561
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     const-wide/16 v10, 0x0
@@ -485,7 +433,6 @@
 
     goto :goto_2
 
-    .line 564
     .end local v0    # "ex":Ljava/lang/NumberFormatException;
     :cond_2
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
@@ -496,12 +443,10 @@
 
     goto :goto_2
 
-    .line 571
     .restart local v6    # "timeout":Ljava/lang/String;
     :catch_3
     move-exception v0
 
-    .line 572
     .restart local v0    # "ex":Ljava/lang/NumberFormatException;
     const-string v7, "DateTimePolicyService"
 
@@ -509,7 +454,6 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 573
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     const-wide/16 v10, 0x0
@@ -518,7 +462,6 @@
 
     goto :goto_3
 
-    .line 576
     .end local v0    # "ex":Ljava/lang/NumberFormatException;
     :cond_3
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
@@ -529,12 +472,10 @@
 
     goto :goto_3
 
-    .line 583
     .restart local v5    # "timeErrorThreshold":Ljava/lang/String;
     :catch_4
     move-exception v0
 
-    .line 584
     .restart local v0    # "ex":Ljava/lang/NumberFormatException;
     const-string v7, "DateTimePolicyService"
 
@@ -542,7 +483,6 @@
 
     invoke-static {v7, v9}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 585
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     const/4 v9, 0x0
@@ -551,7 +491,6 @@
 
     goto :goto_4
 
-    .line 588
     .end local v0    # "ex":Ljava/lang/NumberFormatException;
     :cond_4
     iget-object v7, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
@@ -573,14 +512,12 @@
 
     const/4 v8, 0x0
 
-    .line 594
     const-string v0, "DateTimePolicyService"
 
     const-string/jumbo v1, "resetNtpInfo"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 595
     const/4 v1, 0x0
 
     move-object v0, p0
@@ -611,10 +548,8 @@
     .param p10, "uid"    # I
 
     .prologue
-    .line 601
     const/4 v0, 0x0
 
-    .line 603
     .local v0, "ret":Z
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -624,7 +559,6 @@
 
     move-result v0
 
-    .line 605
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string/jumbo v3, "ntpTimeout"
@@ -644,7 +578,6 @@
 
     and-int/2addr v0, v1
 
-    .line 607
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string/jumbo v3, "ntpPollInterval"
@@ -664,7 +597,6 @@
 
     and-int/2addr v0, v1
 
-    .line 610
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string/jumbo v3, "ntpPollInterShorter"
@@ -684,7 +616,6 @@
 
     and-int/2addr v0, v1
 
-    .line 613
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string/jumbo v3, "ntpMaxAttempts"
@@ -700,7 +631,6 @@
 
     and-int/2addr v0, v1
 
-    .line 615
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string/jumbo v3, "ntpThreshould"
@@ -716,37 +646,30 @@
 
     and-int/2addr v0, v1
 
-    .line 618
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     invoke-virtual {v1, p1}, Landroid/app/enterprise/NtpInfo;->setServer(Ljava/lang/String;)V
 
-    .line 619
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     invoke-virtual {v1, p8}, Landroid/app/enterprise/NtpInfo;->setMaxAttempts(I)V
 
-    .line 620
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     invoke-virtual {v1, p2, p3}, Landroid/app/enterprise/NtpInfo;->setTimeout(J)V
 
-    .line 621
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     invoke-virtual {v1, p4, p5}, Landroid/app/enterprise/NtpInfo;->setPollingInterval(J)V
 
-    .line 622
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     invoke-virtual {v1, p6, p7}, Landroid/app/enterprise/NtpInfo;->setPollingIntervalShorter(J)V
 
-    .line 623
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
     invoke-virtual {v1, p9}, Landroid/app/enterprise/NtpInfo;->setTimeErrorThreshold(I)V
 
-    .line 624
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string/jumbo v3, "ntpLastAdminUid"
@@ -762,10 +685,8 @@
 
     and-int/2addr v0, v1
 
-    .line 627
     return v0
 
-    .line 605
     :cond_0
     invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -773,7 +694,6 @@
 
     goto :goto_0
 
-    .line 607
     :cond_1
     invoke-static {p4, p5}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -781,7 +701,6 @@
 
     goto :goto_1
 
-    .line 610
     :cond_2
     invoke-static {p6, p7}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
@@ -789,7 +708,6 @@
 
     goto :goto_2
 
-    .line 613
     :cond_3
     invoke-static {p8}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -797,7 +715,6 @@
 
     goto :goto_3
 
-    .line 615
     :cond_4
     invoke-static {p9}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -805,7 +722,6 @@
 
     goto :goto_4
 
-    .line 624
     :cond_5
     invoke-static/range {p10 .. p10}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -818,12 +734,10 @@
     .locals 8
 
     .prologue
-    .line 631
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 632
     .local v2, "token":J
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
@@ -831,7 +745,6 @@
 
     move-result-object v0
 
-    .line 633
     .local v0, "ntpTrustedTime":Landroid/util/NtpTrustedTime;
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
@@ -849,7 +762,6 @@
 
     invoke-virtual {v0, v1, v4, v6, v7}, Landroid/util/NtpTrustedTime;->setNtpInfoInternal(Landroid/content/Context;Ljava/lang/String;J)Z
 
-    .line 634
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
     new-instance v4, Landroid/content/Intent;
@@ -860,10 +772,8 @@
 
     invoke-virtual {v1, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 635
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 636
     return-void
 .end method
 
@@ -876,7 +786,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 374
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -902,10 +811,8 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 328
     const/4 v1, 0x0
 
-    .line 330
     .local v1, "dateFormat":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
@@ -923,7 +830,6 @@
 
     move-result-object v0
 
-    .line 331
     .local v0, "d":Llibcore/icu/LocaleData;
     iget-object v2, v0, Llibcore/icu/LocaleData;->shortDateFormat4:Ljava/lang/String;
 
@@ -931,7 +837,6 @@
 
     move-result-object v1
 
-    .line 332
     return-object v1
 .end method
 
@@ -940,7 +845,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 185
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
@@ -957,7 +861,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 383
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v1
@@ -966,7 +869,6 @@
 
     move-result-object v0
 
-    .line 385
     .local v0, "tz":Ljava/util/TimeZone;
     new-instance v1, Ljava/util/Date;
 
@@ -984,17 +886,14 @@
     .param p1, "ctxInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 519
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->enforceOwnerOnlyAndDateTimePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 520
     iget-object v1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfoLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 521
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfo:Landroid/app/enterprise/NtpInfo;
 
@@ -1002,7 +901,6 @@
 
     return-object v0
 
-    .line 522
     :catchall_0
     move-exception v0
 
@@ -1018,22 +916,18 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 305
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 306
     .local v1, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 307
     .local v2, "token":J
     const/4 v0, 0x0
 
-    .line 309
     .local v0, "timeFormat":Ljava/lang/String;
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
@@ -1050,13 +944,10 @@
 
     move-result-object v0
 
-    .line 312
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 314
     return-object v0
 
-    .line 312
     :catchall_0
     move-exception v4
 
@@ -1070,7 +961,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 244
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
@@ -1093,15 +983,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 655
     if-nez p1, :cond_1
 
-    .line 659
     :cond_0
     :goto_0
     return-object v1
 
-    .line 655
     :cond_1
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -1120,11 +1007,9 @@
 
     goto :goto_0
 
-    .line 656
     :catch_0
     move-exception v0
 
-    .line 657
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1136,10 +1021,8 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 459
     const/4 v1, 0x1
 
-    .line 461
     .local v1, "ret":Z
     iget-object v4, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1151,7 +1034,6 @@
 
     move-result-object v3
 
-    .line 467
     .local v3, "values":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Boolean;>;"
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1175,14 +1057,11 @@
 
     move-result v2
 
-    .line 469
     .local v2, "value":Z
     if-nez v2, :cond_0
 
-    .line 471
     move v1, v2
 
-    .line 479
     .end local v2    # "value":Z
     :cond_1
     return v1
@@ -1193,7 +1072,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 396
     return-void
 .end method
 
@@ -1202,7 +1080,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 401
     iget-object v3, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string/jumbo v4, "ntpLastAdminUid"
@@ -1211,14 +1088,11 @@
 
     move-result-object v0
 
-    .line 403
     .local v0, "adminUid":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 404
     const/4 v2, -0x1
 
-    .line 406
     .local v2, "lastUid":I
     :try_start_0
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1227,49 +1101,39 @@
 
     move-result v2
 
-    .line 410
     :goto_0
     if-ne v2, p1, :cond_0
 
-    .line 411
     const-string v3, "DateTimePolicyService"
 
     const-string v4, "admin removed, reverting ntp info"
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 413
     iget-object v4, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfoLock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 414
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->resetNtpInfo()Z
 
-    .line 415
     invoke-direct {p0}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->sendBroadcastToNtpServices()V
 
-    .line 416
     monitor-exit v4
 
-    .line 419
     .end local v2    # "lastUid":I
     :cond_0
     return-void
 
-    .line 407
     .restart local v2    # "lastUid":I
     :catch_0
     move-exception v1
 
-    .line 408
     .local v1, "ignore":Ljava/lang/NumberFormatException;
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 416
     .end local v1    # "ignore":Ljava/lang/NumberFormatException;
     :catchall_0
     move-exception v3
@@ -1286,7 +1150,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 432
     return-void
 .end method
 
@@ -1300,37 +1163,31 @@
 
     const/4 v8, 0x0
 
-    .line 339
     new-instance v1, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
     iget-object v6, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v6}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;-><init>(Landroid/content/Context;)V
 
-    .line 341
     .local v1, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->enforceOwnerOnlyAndDateTimePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 343
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->isDateTimeChangeEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v6
 
     if-nez v6, :cond_0
 
-    .line 366
     :goto_0
     return v8
 
-    .line 347
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 349
     .local v4, "token":J
     iget-object v6, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
@@ -1349,7 +1206,6 @@
 
     move-result v2
 
-    .line 352
     .local v2, "ret":Z
     iget-object v6, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
@@ -1368,18 +1224,15 @@
 
     and-int/2addr v2, v6
 
-    .line 355
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v3
 
-    .line 356
     .local v3, "userId":I
     if-eqz v2, :cond_1
 
     if-nez v3, :cond_1
 
-    .line 358
     :try_start_0
     const-string v6, "Datetime"
 
@@ -1393,14 +1246,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 364
     :cond_1
     :goto_3
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v8, v2
 
-    .line 366
     goto :goto_0
 
     .end local v2    # "ret":Z
@@ -1408,22 +1259,18 @@
     :cond_2
     move v6, v8
 
-    .line 349
     goto :goto_1
 
     .restart local v2    # "ret":Z
     :cond_3
     move v7, v8
 
-    .line 352
     goto :goto_2
 
-    .line 359
     .restart local v3    # "userId":I
     :catch_0
     move-exception v0
 
-    .line 360
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1436,7 +1283,6 @@
     .param p2, "format"    # Ljava/lang/String;
 
     .prologue
-    .line 321
     const/4 v0, 0x1
 
     return v0
@@ -1450,12 +1296,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 149
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->enforceOwnerOnlyAndDateTimePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 154
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->getAutomaticTime(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v3
@@ -1468,12 +1312,10 @@
 
     if-nez v3, :cond_1
 
-    .line 174
     :cond_0
     :goto_0
     return v2
 
-    .line 162
     :cond_1
     const-wide/16 v4, 0x3e8
 
@@ -1485,19 +1327,15 @@
 
     if-gez v3, :cond_0
 
-    .line 164
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 166
     .local v0, "token":J
     invoke-static {p2, p3}, Landroid/os/SystemClock;->setCurrentTimeMillis(J)Z
 
-    .line 168
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 170
     const/4 v2, 0x1
 
     goto :goto_0
@@ -1509,12 +1347,10 @@
     .param p2, "enable"    # Z
 
     .prologue
-    .line 439
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->enforceOwnerOnlyAndDateTimePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 440
     iget-object v4, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v5, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -1527,26 +1363,22 @@
 
     move-result v2
 
-    .line 442
     .local v2, "ret":Z
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v3
 
-    .line 443
     .local v3, "userId":I
     if-eqz v2, :cond_0
 
     if-nez v3, :cond_0
 
-    .line 444
     new-instance v1, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
     iget-object v4, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v4}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;-><init>(Landroid/content/Context;)V
 
-    .line 446
     .local v1, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :try_start_0
     const-string v4, "Datetime"
@@ -1559,7 +1391,6 @@
 
     invoke-virtual {v1, v4, v5, v6}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;->SetBooleanTypePolicy(Ljava/lang/String;Ljava/lang/String;Z)I
 
-    .line 447
     const-string v4, "DateTimePolicyService"
 
     const-string/jumbo v5, "setDateTimeChangeEnabled calling gearPolicyManager  "
@@ -1568,18 +1399,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 452
     .end local v1    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :cond_0
     :goto_0
     return v2
 
-    .line 448
     .restart local v1    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :catch_0
     move-exception v0
 
-    .line 449
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1592,33 +1420,26 @@
     .param p2, "ntpInfo"    # Landroid/app/enterprise/NtpInfo;
 
     .prologue
-    .line 484
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->enforceOwnerOnlyAndDateTimePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 486
     if-nez p2, :cond_0
 
-    .line 487
     const-string v2, "DateTimePolicyService"
 
     const-string v12, "NtpInfo object should not be null!"
 
     invoke-static {v2, v12}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 488
     const/4 v13, 0x0
 
-    .line 511
     :goto_0
     return v13
 
-    .line 491
     :cond_0
     const/4 v13, 0x0
 
-    .line 492
     .local v13, "ret":Z
     move-object/from16 v0, p0
 
@@ -1626,46 +1447,38 @@
 
     monitor-enter v14
 
-    .line 493
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Landroid/app/enterprise/NtpInfo;->getServer()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 494
     .local v3, "serverHostname":Ljava/lang/String;
     if-eqz v3, :cond_3
 
-    .line 495
     invoke-virtual/range {p2 .. p2}, Landroid/app/enterprise/NtpInfo;->getTimeout()J
 
     move-result-wide v4
 
-    .line 496
     .local v4, "timeout":J
     invoke-virtual/range {p2 .. p2}, Landroid/app/enterprise/NtpInfo;->getPollingInterval()J
 
     move-result-wide v6
 
-    .line 497
     .local v6, "polInterval":J
     invoke-virtual/range {p2 .. p2}, Landroid/app/enterprise/NtpInfo;->getPollingIntervalShorter()J
 
     move-result-wide v8
 
-    .line 498
     .local v8, "polInterShort":J
     invoke-virtual/range {p2 .. p2}, Landroid/app/enterprise/NtpInfo;->getMaxAttempts()I
 
     move-result v10
 
-    .line 499
     .local v10, "maxAttempts":I
     invoke-virtual/range {p2 .. p2}, Landroid/app/enterprise/NtpInfo;->getTimeErrorThreshold()I
 
     move-result v11
 
-    .line 500
     .local v11, "timeThreshold":I
     const-wide/16 v16, 0x0
 
@@ -1689,7 +1502,6 @@
 
     if-gez v11, :cond_2
 
-    .line 502
     :cond_1
     const-string v2, "DateTimePolicyService"
 
@@ -1697,7 +1509,6 @@
 
     invoke-static {v2, v12}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 503
     const/4 v2, 0x0
 
     monitor-exit v14
@@ -1706,7 +1517,6 @@
 
     goto :goto_0
 
-    .line 505
     :cond_2
     move-object/from16 v0, p1
 
@@ -1718,7 +1528,6 @@
 
     move-result v13
 
-    .line 510
     .end local v4    # "timeout":J
     .end local v6    # "polInterval":J
     .end local v8    # "polInterShort":J
@@ -1727,12 +1536,10 @@
     :goto_1
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->sendBroadcastToNtpServices()V
 
-    .line 511
     monitor-exit v14
 
     goto :goto_0
 
-    .line 512
     .end local v3    # "serverHostname":Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -1743,7 +1550,6 @@
 
     throw v2
 
-    .line 508
     .restart local v3    # "serverHostname":Ljava/lang/String;
     :cond_3
     :try_start_1
@@ -1764,28 +1570,23 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 253
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->enforceDateTimePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 254
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 257
     .local v5, "userId":I
     const/16 v8, 0x64
 
     if-lt v5, v8, :cond_1
 
-    .line 297
     :cond_0
     :goto_0
     return v3
 
-    .line 262
     :cond_1
     iget-object v8, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
@@ -1795,13 +1596,11 @@
 
     move-result-object v0
 
-    .line 264
     .local v0, "context":Landroid/content/Context;
     if-eqz v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 268
     const-string v8, "12"
 
     invoke-virtual {p2, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1818,20 +1617,17 @@
 
     if-nez v8, :cond_2
 
-    .line 270
     const/4 v3, 0x0
 
     .local v3, "ret":Z
     goto :goto_0
 
-    .line 274
     .end local v3    # "ret":Z
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 276
     .local v6, "token":J
     iget-object v8, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
@@ -1845,7 +1641,6 @@
 
     move-result v3
 
-    .line 280
     .restart local v3    # "ret":Z
     new-instance v4, Landroid/content/Intent;
 
@@ -1853,25 +1648,21 @@
 
     invoke-direct {v4, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 282
     .local v4, "timeChanged":Landroid/content/Intent;
     iget-object v8, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 283
     if-eqz v3, :cond_3
 
     if-nez v5, :cond_3
 
-    .line 284
     new-instance v2, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
     iget-object v8, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
 
     invoke-direct {v2, v8}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;-><init>(Landroid/content/Context;)V
 
-    .line 286
     .local v2, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :try_start_0
     const-string v8, "Datetime"
@@ -1884,7 +1675,6 @@
 
     invoke-virtual {v2, v8, v9, v10}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;->SetStringTypePolicy(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
     const-string v8, "DateTimePolicyService"
 
     const-string/jumbo v9, "setTimeFormat calling gearPolicyManager  "
@@ -1893,7 +1683,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 293
     .end local v2    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :cond_3
     :goto_1
@@ -1901,12 +1690,10 @@
 
     goto :goto_0
 
-    .line 288
     .restart local v2    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :catch_0
     move-exception v1
 
-    .line 289
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1919,22 +1706,17 @@
     .param p2, "timeZone"    # Ljava/lang/String;
 
     .prologue
-    .line 194
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->enforceOwnerOnlyAndDateTimePermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
-    .line 195
     invoke-virtual {p0, p2}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->getValidStr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 196
     const/4 v3, 0x0
 
-    .line 197
     .local v3, "ret":Z
     if-nez p2, :cond_0
 
-    .line 198
     const-string v8, "DateTimePolicyService"
 
     const-string/jumbo v9, "setTimeZone() has failed : Invalid input."
@@ -1943,13 +1725,11 @@
 
     move v4, v3
 
-    .line 235
     .end local v3    # "ret":Z
     .local v4, "ret":I
     :goto_0
     return v4
 
-    .line 203
     .end local v4    # "ret":I
     .restart local v3    # "ret":Z
     :cond_0
@@ -1965,7 +1745,6 @@
 
     if-nez v8, :cond_2
 
-    .line 204
     :cond_1
     const-string v8, "DateTimePolicyService"
 
@@ -1975,24 +1754,20 @@
 
     move v4, v3
 
-    .line 205
     .restart local v4    # "ret":I
     goto :goto_0
 
-    .line 210
     .end local v4    # "ret":I
     :cond_2
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v5
 
-    .line 212
     .local v5, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 214
     .local v6, "token":J
     :try_start_0
     iget-object v8, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
@@ -2005,19 +1780,15 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 216
     .local v0, "alarm":Landroid/app/AlarmManager;
     invoke-virtual {v0, p2}, Landroid/app/AlarmManager;->setTimeZone(Ljava/lang/String;)V
 
-    .line 217
     const/4 v3, 0x1
 
-    .line 218
     if-nez v5, :cond_3
 
     if-eqz v3, :cond_3
 
-    .line 219
     new-instance v2, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
     iget-object v8, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy;->mContext:Landroid/content/Context;
@@ -2027,7 +1798,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 221
     .local v2, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :try_start_1
     const-string v8, "Datetime"
@@ -2040,7 +1810,6 @@
 
     invoke-virtual {v2, v8, v9, v10}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;->SetStringTypePolicy(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     const-string v8, "DateTimePolicyService"
 
     const-string/jumbo v9, "setTimeZone calling gearPolicyManager  "
@@ -2050,7 +1819,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 231
     .end local v2    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :cond_3
     :goto_1
@@ -2060,18 +1828,15 @@
     :goto_2
     move v4, v3
 
-    .line 235
     .restart local v4    # "ret":I
     goto :goto_0
 
-    .line 223
     .end local v4    # "ret":I
     .restart local v0    # "alarm":Landroid/app/AlarmManager;
     .restart local v2    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :catch_0
     move-exception v1
 
-    .line 224
     .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
@@ -2081,18 +1846,15 @@
 
     goto :goto_1
 
-    .line 227
     .end local v0    # "alarm":Landroid/app/AlarmManager;
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v2    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :catch_1
     move-exception v1
 
-    .line 228
     .restart local v1    # "e":Ljava/lang/Exception;
     const/4 v3, 0x0
 
-    .line 229
     :try_start_3
     const-string v8, "DateTimePolicyService"
 
@@ -2102,7 +1864,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 231
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
@@ -2120,9 +1881,7 @@
     .locals 0
 
     .prologue
-    .line 424
     invoke-direct {p0}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->loadNtpInfo()V
 
-    .line 425
     return-void
 .end method

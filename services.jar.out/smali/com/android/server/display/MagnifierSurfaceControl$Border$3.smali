@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1031
     iput-object p1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$3;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1037
     const-string v1, "Magnifier.Border"
 
     const-string/jumbo v2, "onClick"
@@ -50,10 +48,8 @@
 
     move-object v0, p1
 
-    .line 1039
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 1041
     .local v0, "mIv":Landroid/widget/ImageView;
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewClose:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$2800()Landroid/widget/ImageView;
@@ -66,7 +62,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1042
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$3;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
@@ -84,7 +79,6 @@
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1057
     :cond_0
     return-void
 .end method

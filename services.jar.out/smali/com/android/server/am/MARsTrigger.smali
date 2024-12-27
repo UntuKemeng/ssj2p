@@ -152,131 +152,106 @@
 
     const-wide/32 v2, 0x493e0
 
-    .line 118
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mLastSPCMWorkingTime:J
 
-    .line 57
     const-wide/16 v0, 0x7530
 
     iput-wide v0, p0, Lcom/android/server/am/MARsTrigger;->SPCM_COOL_TIME:J
 
-    .line 69
     const-wide/32 v0, 0x927c0
 
     iput-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAppLockerPolicyInterval:J
 
-    .line 70
     const-wide/32 v0, 0x36ee80
 
     iput-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAppLockerRepeatAlarmInterval:J
 
-    .line 78
     const-wide/16 v0, 0x3a98
 
     iput-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mGcmLockerPolicyInterval:J
 
-    .line 79
     iput-wide v2, p0, Lcom/android/server/am/MARsTrigger;->mGcmLockerRepeatAlarmInterval:J
 
-    .line 94
     iput-wide v2, p0, Lcom/android/server/am/MARsTrigger;->mAutoRunPolicyInterval:J
 
-    .line 95
     iput-wide v2, p0, Lcom/android/server/am/MARsTrigger;->mAutoRunRepeatAlarmInterval:J
 
-    .line 96
     const-wide/16 v0, 0x7d0
 
     iput-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAutoRunTrafficStatCollectorInterval:J
 
-    .line 97
     iput-boolean v4, p0, Lcom/android/server/am/MARsTrigger;->mTriggerAutoRunPolicyImmediately:Z
 
-    .line 116
     iput-boolean v4, p0, Lcom/android/server/am/MARsTrigger;->receiverRegistered:Z
 
-    .line 372
     new-instance v0, Lcom/android/server/am/MARsTrigger$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$1;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 470
     new-instance v0, Lcom/android/server/am/MARsTrigger$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$2;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mPolicyIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 565
     new-instance v0, Lcom/android/server/am/MARsTrigger$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$3;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mPolicyUDSIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 600
     new-instance v0, Lcom/android/server/am/MARsTrigger$4;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$4;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mPolicySBikeIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 625
     new-instance v0, Lcom/android/server/am/MARsTrigger$5;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$5;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mPkgIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 639
     new-instance v0, Lcom/android/server/am/MARsTrigger$6;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$6;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mTimeIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 660
     new-instance v0, Lcom/android/server/am/MARsTrigger$7;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$7;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mScpmUpdateIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 672
     new-instance v0, Lcom/android/server/am/MARsTrigger$8;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$8;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mUserIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 688
     new-instance v0, Lcom/android/server/am/MARsTrigger$9;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$9;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mEmergencyStateChangedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 720
     new-instance v0, Lcom/android/server/am/MARsTrigger$10;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/MARsTrigger$10;-><init>(Lcom/android/server/am/MARsTrigger;)V
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mAppStartUpReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 119
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
-    .line 120
     iput-object p2, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
-    .line 121
     new-instance v0, Landroid/os/UserHandle;
 
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
@@ -289,7 +264,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->user:Landroid/os/UserHandle;
 
-    .line 124
     new-instance v0, Lcom/android/server/am/MARsTrigger$MARsTriggerHandler;
 
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
@@ -306,21 +280,18 @@
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mHandler:Lcom/android/server/am/MARsTrigger$MARsTriggerHandler;
 
-    .line 126
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mLastTimeChangeClockTime:J
 
-    .line 127
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mLastTimeChangeRealtime:J
 
-    .line 128
     return-void
 .end method
 
@@ -329,7 +300,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mGcmLockerPolicyInterval:J
 
     return-wide v0
@@ -342,7 +312,6 @@
     .param p2, "x2"    # J
 
     .prologue
-    .line 43
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/am/MARsTrigger;->setAlarm(Ljava/lang/String;J)V
 
     return-void
@@ -353,7 +322,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -364,7 +332,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyTrafficStatAlarmIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -375,7 +342,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunTrafficStatRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -387,7 +353,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     invoke-direct {p0, p1}, Lcom/android/server/am/MARsTrigger;->actionToString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -402,7 +367,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/MARsTrigger;->triggerPolicy(ILjava/lang/String;)V
 
     return-void
@@ -413,7 +377,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mGcmLockerRepeatAlarmInterval:J
 
     return-wide v0
@@ -424,7 +387,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mLastSPCMWorkingTime:J
 
     return-wide v0
@@ -436,7 +398,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 43
     iput-wide p1, p0, Lcom/android/server/am/MARsTrigger;->mLastSPCMWorkingTime:J
 
     return-wide p1
@@ -447,7 +408,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAppLockerRepeatAlarmInterval:J
 
     return-wide v0
@@ -458,7 +418,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAutoRunRepeatAlarmInterval:J
 
     return-wide v0
@@ -470,7 +429,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     invoke-direct {p0, p1}, Lcom/android/server/am/MARsTrigger;->policyNameToInt(Ljava/lang/String;)I
 
     move-result v0
@@ -483,7 +441,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAppLockerPolicyInterval:J
 
     return-wide v0
@@ -494,7 +451,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mLastTimeChangeClockTime:J
 
     return-wide v0
@@ -506,7 +462,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 43
     iput-wide p1, p0, Lcom/android/server/am/MARsTrigger;->mLastTimeChangeClockTime:J
 
     return-wide p1
@@ -517,7 +472,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mLastTimeChangeRealtime:J
 
     return-wide v0
@@ -529,7 +483,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 43
     iput-wide p1, p0, Lcom/android/server/am/MARsTrigger;->mLastTimeChangeRealtime:J
 
     return-wide p1
@@ -541,7 +494,6 @@
     .param p1, "x1"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 43
     invoke-direct {p0, p1}, Lcom/android/server/am/MARsTrigger;->getContextForUser(Landroid/os/UserHandle;)Landroid/content/Context;
 
     move-result-object v0
@@ -554,7 +506,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-boolean v0, p0, Lcom/android/server/am/MARsTrigger;->mTriggerAutoRunPolicyImmediately:Z
 
     return v0
@@ -565,7 +516,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -576,7 +526,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
 
     return-object v0
@@ -587,7 +536,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -598,7 +546,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -609,7 +556,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -620,7 +566,6 @@
     .param p0, "x0"    # Lcom/android/server/am/MARsTrigger;
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyAlarmIntent:Landroid/app/PendingIntent;
 
     return-object v0
@@ -631,7 +576,6 @@
     .param p1, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 321
     const-string v0, "com.android.server.am.ACTION_MEMROY_NOT_ENOUGH"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -640,14 +584,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 322
     const-string v0, "Memory Not Enough"
 
-    .line 352
     :goto_0
     return-object v0
 
-    .line 323
     :cond_0
     const-string v0, "com.android.server.am.ACTION_ADJ14BG_KILLED"
 
@@ -657,12 +598,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 324
     const-string v0, "Adj 14 BG Killed"
 
     goto :goto_0
 
-    .line 325
     :cond_1
     const-string v0, "com.android.server.am.ACTION_UI_SET_ALWAYS_OPTIMIZING"
 
@@ -672,12 +611,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 326
     const-string v0, "User Set Always Optimizing"
 
     goto :goto_0
 
-    .line 327
     :cond_2
     const-string v0, "com.android.server.am.ACTION_PACKAGE_NOTUSED_RECENTLY"
 
@@ -687,12 +624,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 328
     const-string v0, "Package Not Used Recently"
 
     goto :goto_0
 
-    .line 329
     :cond_3
     const-string v0, "com.android.server.am.ACTION_SMUI_SETTING_TRUN_ON"
 
@@ -702,12 +637,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 330
     const-string v0, "Ui Setting --- Turn On"
 
     goto :goto_0
 
-    .line 331
     :cond_4
     const-string v0, "MARS_GCM_LOCKER_POLICY_ALARM"
 
@@ -717,12 +650,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 332
     const-string v0, "GCM Locker 15s-kill"
 
     goto :goto_0
 
-    .line 333
     :cond_5
     const-string v0, "MARS_GCM_LOCKER_REPEAT_ALARM"
 
@@ -732,12 +663,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 334
     const-string v0, "GCM Locker 5Min-kill"
 
     goto :goto_0
 
-    .line 335
     :cond_6
     const-string v0, "MARS_APP_LOCKER_POLICY_ALARM"
 
@@ -747,12 +676,10 @@
 
     if-eqz v0, :cond_7
 
-    .line 336
     const-string v0, "App Locker -- 10Min"
 
     goto :goto_0
 
-    .line 337
     :cond_7
     const-string v0, "MARS_APP_LOCKER_REPEAT_ALARM"
 
@@ -762,12 +689,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 338
     const-string v0, "App Locker 1Hour-kill"
 
     goto :goto_0
 
-    .line 339
     :cond_8
     const-string v0, "MARS_AUTO_RUN_POLICY_ALARM"
 
@@ -777,12 +702,10 @@
 
     if-eqz v0, :cond_9
 
-    .line 340
     const-string v0, "Auto Run Off(China Model)"
 
     goto :goto_0
 
-    .line 341
     :cond_9
     const-string v0, "MARS_AUTO_RUN_REPEAT_ALARM"
 
@@ -792,12 +715,10 @@
 
     if-eqz v0, :cond_a
 
-    .line 342
     const-string v0, "Auto Run 1Hour-kill"
 
     goto :goto_0
 
-    .line 343
     :cond_a
     const-string v0, "com.android.server.am.ACTION_UI_SET_AUTORUN_OFF"
 
@@ -807,12 +728,10 @@
 
     if-eqz v0, :cond_b
 
-    .line 344
     const-string v0, "User Set Auto Run Off(China Model)"
 
     goto :goto_0
 
-    .line 345
     :cond_b
     const-string v0, "com.samsung.android.server.am.ACTION_UI_TRIGGER_POLICY"
 
@@ -822,12 +741,10 @@
 
     if-eqz v0, :cond_c
 
-    .line 346
     const-string v0, "User Trigger Policy"
 
     goto/16 :goto_0
 
-    .line 347
     :cond_c
     const-string v0, "com.android.server.am.MARS_TRIGGER_UDS_POLICY"
 
@@ -837,12 +754,10 @@
 
     if-eqz v0, :cond_d
 
-    .line 348
     const-string v0, "Trigger UDS(Ultra Data Saving) Policy"
 
     goto/16 :goto_0
 
-    .line 349
     :cond_d
     const-string v0, "com.android.server.am.MARS_TRIGGER_SBIKE_MODE_POLICY"
 
@@ -852,12 +767,10 @@
 
     if-eqz v0, :cond_e
 
-    .line 350
     const-string v0, "Trigger S Bike Policy"
 
     goto/16 :goto_0
 
-    .line 352
     :cond_e
     const/4 v0, 0x0
 
@@ -869,7 +782,6 @@
     .param p1, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 712
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -887,15 +799,12 @@
 
     move-result-object v1
 
-    .line 715
     :goto_0
     return-object v1
 
-    .line 713
     :catch_0
     move-exception v0
 
-    .line 715
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -907,7 +816,6 @@
     .param p1, "policyName"    # Ljava/lang/String;
 
     .prologue
-    .line 356
     const-string/jumbo v0, "spcm"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -916,14 +824,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 357
     const/4 v0, 0x1
 
-    .line 369
     :goto_0
     return v0
 
-    .line 358
     :cond_0
     const-string/jumbo v0, "gcmlocker"
 
@@ -933,12 +838,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 359
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 360
     :cond_1
     const-string v0, "applocker"
 
@@ -948,12 +851,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 361
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 362
     :cond_2
     const-string v0, "autorun"
 
@@ -963,12 +864,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 363
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 364
     :cond_3
     const-string/jumbo v0, "udspolicy"
 
@@ -978,12 +877,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 365
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 366
     :cond_4
     const-string/jumbo v0, "sbikepolicy"
 
@@ -993,12 +890,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 367
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 369
     :cond_5
     const/4 v0, 0x0
 
@@ -1017,7 +912,6 @@
 
     const/4 v5, 0x0
 
-    .line 755
     const-string v1, "MARS_GCM_LOCKER_POLICY_ALARM"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1026,12 +920,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 756
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_0
 
-    .line 757
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -1046,7 +938,6 @@
 
     move-result-object v0
 
-    .line 760
     .local v0, "pendingIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -1058,7 +949,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 763
     .end local v0    # "pendingIntent":Landroid/content/Intent;
     :cond_0
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -1073,12 +963,10 @@
 
     invoke-virtual {v1, v6, v2, v3, v4}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
-    .line 843
     :cond_1
     :goto_0
     return-void
 
-    .line 766
     :cond_2
     const-string v1, "MARS_GCM_LOCKER_REPEAT_ALARM"
 
@@ -1088,12 +976,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 767
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_3
 
-    .line 768
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -1108,7 +994,6 @@
 
     move-result-object v0
 
-    .line 771
     .restart local v0    # "pendingIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -1120,7 +1005,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 774
     .end local v0    # "pendingIntent":Landroid/content/Intent;
     :cond_3
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -1137,7 +1021,6 @@
 
     goto :goto_0
 
-    .line 777
     :cond_4
     const-string v1, "MARS_APP_LOCKER_POLICY_ALARM"
 
@@ -1147,12 +1030,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 778
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_5
 
-    .line 779
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -1167,7 +1048,6 @@
 
     move-result-object v0
 
-    .line 782
     .restart local v0    # "pendingIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -1179,7 +1059,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 785
     .end local v0    # "pendingIntent":Landroid/content/Intent;
     :cond_5
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -1196,7 +1075,6 @@
 
     goto :goto_0
 
-    .line 788
     :cond_6
     const-string v1, "MARS_APP_LOCKER_REPEAT_ALARM"
 
@@ -1206,12 +1084,10 @@
 
     if-eqz v1, :cond_8
 
-    .line 789
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_7
 
-    .line 790
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -1226,7 +1102,6 @@
 
     move-result-object v0
 
-    .line 793
     .restart local v0    # "pendingIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -1238,7 +1113,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 796
     .end local v0    # "pendingIntent":Landroid/content/Intent;
     :cond_7
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -1255,7 +1129,6 @@
 
     goto/16 :goto_0
 
-    .line 799
     :cond_8
     const-string v1, "MARS_AUTO_RUN_POLICY_ALARM"
 
@@ -1265,12 +1138,10 @@
 
     if-eqz v1, :cond_a
 
-    .line 800
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyAlarmIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_9
 
-    .line 801
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -1285,7 +1156,6 @@
 
     move-result-object v0
 
-    .line 804
     .restart local v0    # "pendingIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -1297,7 +1167,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 807
     .end local v0    # "pendingIntent":Landroid/content/Intent;
     :cond_9
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -1314,7 +1183,6 @@
 
     goto/16 :goto_0
 
-    .line 810
     :cond_a
     const-string v1, "MARS_AUTO_RUN_REPEAT_ALARM"
 
@@ -1324,12 +1192,10 @@
 
     if-eqz v1, :cond_c
 
-    .line 811
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_b
 
-    .line 812
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -1344,7 +1210,6 @@
 
     move-result-object v0
 
-    .line 815
     .restart local v0    # "pendingIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -1356,7 +1221,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunRepeatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 818
     .end local v0    # "pendingIntent":Landroid/content/Intent;
     :cond_b
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -1373,7 +1237,6 @@
 
     goto/16 :goto_0
 
-    .line 821
     :cond_c
     const-string v1, "MARS_AUTO_RUN_POLICY_TRAFFIC_STAT_ALARM"
 
@@ -1383,12 +1246,10 @@
 
     if-eqz v1, :cond_e
 
-    .line 822
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyTrafficStatAlarmIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_d
 
-    .line 823
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -1403,7 +1264,6 @@
 
     move-result-object v0
 
-    .line 826
     .restart local v0    # "pendingIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -1415,7 +1275,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyTrafficStatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 829
     .end local v0    # "pendingIntent":Landroid/content/Intent;
     :cond_d
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -1432,7 +1291,6 @@
 
     goto/16 :goto_0
 
-    .line 832
     :cond_e
     const-string v1, "MARS_AUTO_RUN_TRAFFIC_STAT_REPEAT_ALARM"
 
@@ -1442,12 +1300,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 833
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunTrafficStatRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_f
 
-    .line 834
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
@@ -1462,7 +1318,6 @@
 
     move-result-object v0
 
-    .line 837
     .restart local v0    # "pendingIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -1474,7 +1329,6 @@
 
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunTrafficStatRepeatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 840
     .end local v0    # "pendingIntent":Landroid/content/Intent;
     :cond_f
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -1498,12 +1352,10 @@
     .param p2, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 735
     const-wide/16 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/server/am/MARsTrigger;->triggerPolicyDelayed(ILjava/lang/String;J)V
 
-    .line 736
     return-void
 .end method
 
@@ -1514,23 +1366,19 @@
     .param p3, "delayMillis"    # J
 
     .prologue
-    .line 739
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 741
     .local v0, "extras":Landroid/os/Bundle;
     const-string/jumbo v2, "policy-num"
 
     invoke-virtual {v0, v2, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 742
     const-string/jumbo v2, "trigger-reason"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 744
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mHandler:Lcom/android/server/am/MARsTrigger$MARsTriggerHandler;
 
     const/16 v3, 0x385
@@ -1539,16 +1387,13 @@
 
     move-result-object v1
 
-    .line 745
     .local v1, "msg":Landroid/os/Message;
     invoke-virtual {v1, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 746
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mHandler:Lcom/android/server/am/MARsTrigger$MARsTriggerHandler;
 
     invoke-virtual {v2, v1, p3, p4}, Lcom/android/server/am/MARsTrigger$MARsTriggerHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 747
     return-void
 .end method
 
@@ -1556,14 +1401,12 @@
     .locals 2
 
     .prologue
-    .line 750
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mHandler:Lcom/android/server/am/MARsTrigger$MARsTriggerHandler;
 
     const/16 v1, 0x386
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/MARsTrigger$MARsTriggerHandler;->sendEmptyMessage(I)Z
 
-    .line 751
     return-void
 .end method
 
@@ -1573,7 +1416,6 @@
     .locals 2
 
     .prologue
-    .line 865
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAppLockerPolicyInterval:J
 
     return-wide v0
@@ -1583,7 +1425,6 @@
     .locals 2
 
     .prologue
-    .line 874
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAppLockerRepeatAlarmInterval:J
 
     return-wide v0
@@ -1593,7 +1434,6 @@
     .locals 2
 
     .prologue
-    .line 847
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAutoRunPolicyInterval:J
 
     return-wide v0
@@ -1603,7 +1443,6 @@
     .locals 2
 
     .prologue
-    .line 856
     iget-wide v0, p0, Lcom/android/server/am/MARsTrigger;->mAutoRunRepeatAlarmInterval:J
 
     return-wide v0
@@ -1613,25 +1452,21 @@
     .locals 3
 
     .prologue
-    .line 310
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 311
     .local v0, "emStateFilter":Landroid/content/IntentFilter;
     const-string v1, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 313
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mEmergencyStateChangedReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 314
     return-void
 .end method
 
@@ -1640,187 +1475,152 @@
     .param p1, "boot"    # Z
 
     .prologue
-    .line 182
     iget-boolean v8, p0, Lcom/android/server/am/MARsTrigger;->receiverRegistered:Z
 
     if-eqz v8, :cond_1
 
-    .line 254
     :cond_0
     :goto_0
     return-void
 
-    .line 185
     :cond_1
     new-instance v2, Landroid/content/IntentFilter;
 
     invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 186
     .local v2, "filter":Landroid/content/IntentFilter;
     const-string v8, "android.intent.action.SCREEN_ON"
 
     invoke-virtual {v2, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 187
     const-string v8, "android.intent.action.SCREEN_OFF"
 
     invoke-virtual {v2, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 188
     sget-object v8, Landroid/app/UiModeManager;->ACTION_ENTER_CAR_MODE:Ljava/lang/String;
 
     invoke-virtual {v2, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 189
     sget-object v8, Landroid/app/UiModeManager;->ACTION_EXIT_CAR_MODE:Ljava/lang/String;
 
     invoke-virtual {v2, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 190
     const-string v8, "MARS_REQUEST_PKG_INFO"
 
     invoke-virtual {v2, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 191
     const-string v8, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v2, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 194
     new-instance v5, Landroid/content/IntentFilter;
 
     invoke-direct {v5}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 195
     .local v5, "policyFilter":Landroid/content/IntentFilter;
     const-string v8, "com.android.server.am.ACTION_MEMROY_NOT_ENOUGH"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 196
     const-string v8, "com.android.server.am.ACTION_ADJ14BG_KILLED"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 197
     const-string v8, "MARS_GCM_LOCKER_POLICY_ALARM"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 198
     const-string v8, "MARS_GCM_LOCKER_REPEAT_ALARM"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 199
     const-string v8, "com.android.server.am.ACTION_UI_SET_ALWAYS_OPTIMIZING"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 200
     const-string v8, "com.android.server.am.ACTION_PACKAGE_NOTUSED_RECENTLY"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 201
     const-string v8, "com.android.server.am.ACTION_SMUI_SETTING_TRUN_ON"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 202
     const-string v8, "MARS_APP_LOCKER_POLICY_ALARM"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 203
     const-string v8, "MARS_APP_LOCKER_REPEAT_ALARM"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 204
     const-string v8, "MARS_AUTO_RUN_POLICY_ALARM"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 205
     const-string v8, "MARS_AUTO_RUN_REPEAT_ALARM"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 206
     const-string v8, "com.android.server.am.ACTION_UI_SET_AUTORUN_OFF"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 207
     const-string v8, "MARS_AUTO_RUN_POLICY_TRAFFIC_STAT_ALARM"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 208
     const-string v8, "MARS_AUTO_RUN_TRAFFIC_STAT_REPEAT_ALARM"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 209
     const-string v8, "android.intent.action.SET_RUNNING_LOCATION"
 
     invoke-virtual {v5, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 212
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 213
     .local v0, "UserPolicyFilter":Landroid/content/IntentFilter;
     const-string v8, "com.samsung.android.server.am.ACTION_UI_TRIGGER_POLICY"
 
     invoke-virtual {v0, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 216
     new-instance v6, Landroid/content/IntentFilter;
 
     invoke-direct {v6}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 217
     .local v6, "scpmUpdateFilter":Landroid/content/IntentFilter;
     const-string/jumbo v8, "sec.app.policy.UPDATE.MARs"
 
     invoke-virtual {v6, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 220
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 221
     .local v1, "appStartUpFilter":Landroid/content/IntentFilter;
     const-string v8, "android.intent.action.ACTION_SHUTDOWN"
 
     invoke-virtual {v1, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 222
     const-string v8, "android.intent.action.REBOOT"
 
     invoke-virtual {v1, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 225
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v9, p0, Lcom/android/server/am/MARsTrigger;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v8, v9, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 226
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v9, p0, Lcom/android/server/am/MARsTrigger;->mPolicyIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v8, v9, v5}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 227
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v9, p0, Lcom/android/server/am/MARsTrigger;->mPolicyIntentReceiver:Landroid/content/BroadcastReceiver;
@@ -1831,88 +1631,73 @@
 
     invoke-virtual {v8, v9, v0, v10, v11}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 228
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v9, p0, Lcom/android/server/am/MARsTrigger;->mScpmUpdateIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v8, v9, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 230
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v9, p0, Lcom/android/server/am/MARsTrigger;->mAppStartUpReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v8, v9, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 233
     if-eqz p1, :cond_2
 
-    .line 234
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 235
     .local v4, "pkgFilter":Landroid/content/IntentFilter;
     const-string v8, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v4, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 236
     const-string v8, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v4, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 237
     const-string/jumbo v8, "package"
 
     invoke-virtual {v4, v8}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 238
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v9, p0, Lcom/android/server/am/MARsTrigger;->mPkgIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v8, v9, v4}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 241
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 242
     .local v3, "multiUserFilter":Landroid/content/IntentFilter;
     const-string v8, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v3, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 243
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v9, p0, Lcom/android/server/am/MARsTrigger;->mUserIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v8, v9, v3}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 245
     new-instance v7, Landroid/content/IntentFilter;
 
     invoke-direct {v7}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 246
     .local v7, "timeFilter":Landroid/content/IntentFilter;
     const-string v8, "android.intent.action.TIME_SET"
 
     invoke-virtual {v7, v8}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 247
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v9, p0, Lcom/android/server/am/MARsTrigger;->mTimeIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v8, v9, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 250
     .end local v3    # "multiUserFilter":Landroid/content/IntentFilter;
     .end local v4    # "pkgFilter":Landroid/content/IntentFilter;
     .end local v7    # "timeFilter":Landroid/content/IntentFilter;
@@ -1921,12 +1706,10 @@
 
     iput-boolean v8, p0, Lcom/android/server/am/MARsTrigger;->receiverRegistered:Z
 
-    .line 252
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
 
     if-nez v8, :cond_0
 
-    .line 253
     iget-object v8, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     const-string v9, "alarm"
@@ -1946,30 +1729,25 @@
     .locals 3
 
     .prologue
-    .line 296
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 297
     .local v0, "policyFilter":Landroid/content/IntentFilter;
     const-string v1, "com.android.server.am.MARS_TRIGGER_SBIKE_MODE_POLICY"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 298
     const-string v1, "com.android.server.am.MARS_CANCEL_SBIKE_MODE_POLICY"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 300
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mPolicySBikeIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 301
     return-void
 .end method
 
@@ -1977,30 +1755,25 @@
     .locals 3
 
     .prologue
-    .line 282
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 283
     .local v0, "policyFilter":Landroid/content/IntentFilter;
     const-string v1, "com.android.server.am.MARS_TRIGGER_UDS_POLICY"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 284
     const-string v1, "com.android.server.am.MARS_CANCEL_UDS_POLICY"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 286
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mPolicyUDSIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 287
     return-void
 .end method
 
@@ -2009,10 +1782,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 869
     iput-wide p1, p0, Lcom/android/server/am/MARsTrigger;->mAppLockerPolicyInterval:J
 
-    .line 870
     return-void
 .end method
 
@@ -2021,10 +1792,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 878
     iput-wide p1, p0, Lcom/android/server/am/MARsTrigger;->mAppLockerRepeatAlarmInterval:J
 
-    .line 879
     return-void
 .end method
 
@@ -2033,10 +1802,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 851
     iput-wide p1, p0, Lcom/android/server/am/MARsTrigger;->mAutoRunPolicyInterval:J
 
-    .line 852
     return-void
 .end method
 
@@ -2045,10 +1812,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 860
     iput-wide p1, p0, Lcom/android/server/am/MARsTrigger;->mAutoRunRepeatAlarmInterval:J
 
-    .line 861
     return-void
 .end method
 
@@ -2059,82 +1824,64 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 132
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_0
 
-    .line 133
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 134
     :cond_0
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_1
 
-    .line 135
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsGCMLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 136
     :cond_1
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_2
 
-    .line 137
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 138
     :cond_2
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_3
 
-    .line 139
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAppLockerRepeatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 140
     :cond_3
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyAlarmIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_4
 
-    .line 141
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 142
     :cond_4
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_5
 
-    .line 143
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunRepeatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 144
     :cond_5
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyTrafficStatAlarmIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_6
 
-    .line 145
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunPolicyTrafficStatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 146
     :cond_6
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunTrafficStatRepeatAlarmIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_7
 
-    .line 147
     iput-object v1, p0, Lcom/android/server/am/MARsTrigger;->mMARsAutoRunTrafficStatRepeatAlarmIntent:Landroid/app/PendingIntent;
 
-    .line 149
     :cond_7
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
-    .line 150
     new-instance v0, Landroid/os/UserHandle;
 
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
@@ -2147,7 +1894,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->user:Landroid/os/UserHandle;
 
-    .line 151
     return-void
 .end method
 
@@ -2155,14 +1901,12 @@
     .locals 2
 
     .prologue
-    .line 317
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mEmergencyStateChangedReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 318
     return-void
 .end method
 
@@ -2171,20 +1915,16 @@
     .param p1, "multiUser"    # Z
 
     .prologue
-    .line 257
     iget-boolean v1, p0, Lcom/android/server/am/MARsTrigger;->receiverRegistered:Z
 
     if-nez v1, :cond_0
 
-    .line 278
     :goto_0
     return-void
 
-    .line 261
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 262
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -2192,21 +1932,18 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 263
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mUserIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 264
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mTimeIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 267
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
@@ -2214,21 +1951,18 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 268
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mPolicyIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 269
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mScpmUpdateIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 271
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger;->mAppStartUpReceiver:Landroid/content/BroadcastReceiver;
@@ -2237,7 +1971,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 277
     :goto_1
     const/4 v1, 0x0
 
@@ -2245,11 +1978,9 @@
 
     goto :goto_0
 
-    .line 273
     :catch_0
     move-exception v0
 
-    .line 274
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
@@ -2260,14 +1991,12 @@
     .locals 2
 
     .prologue
-    .line 304
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mPolicySBikeIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 305
     return-void
 .end method
 
@@ -2275,13 +2004,11 @@
     .locals 2
 
     .prologue
-    .line 290
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger;->mPolicyUDSIntentReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 291
     return-void
 .end method

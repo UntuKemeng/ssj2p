@@ -17,10 +17,8 @@
     .param p2, "tagName"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Lmf/org/apache/xerces/dom/ElementImpl;-><init>(Lmf/org/apache/xerces/dom/CoreDocumentImpl;Ljava/lang/String;)V
 
-    .line 34
     return-void
 .end method
 
@@ -32,10 +30,8 @@
     .param p2, "defaultValue"    # I
 
     .prologue
-    .line 78
     move v0, p2
 
-    .line 80
     .local v0, "ret":I
     const-string v2, "emptyok"
 
@@ -46,12 +42,10 @@
     .local v1, "value":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 81
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 82
     :cond_0
     return v0
 .end method
@@ -62,10 +56,8 @@
     .param p2, "defaultValue"    # Z
 
     .prologue
-    .line 65
     move v0, p2
 
-    .line 67
     .local v0, "ret":Z
     const-string v2, "emptyok"
 
@@ -76,7 +68,6 @@
     .local v1, "value":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 68
     const-string v2, "true"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -85,10 +76,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 69
     const/4 v0, 0x1
 
-    .line 70
     :cond_0
     return v0
 .end method
@@ -97,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 41
     const-string v0, "class"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -111,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const-string v0, "id"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -125,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const-string v0, "xml:lang"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -141,7 +127,6 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 74
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -156,7 +141,6 @@
 
     invoke-virtual {p0, p1, v0}, Lmf/org/apache/wml/dom/WMLElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 75
     return-void
 .end method
 
@@ -166,7 +150,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 61
     if-eqz p2, :cond_0
 
     const-string v0, "true"
@@ -174,10 +157,8 @@
     :goto_0
     invoke-virtual {p0, p1, v0}, Lmf/org/apache/wml/dom/WMLElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 62
     return-void
 
-    .line 61
     :cond_0
     const-string v0, "false"
 
@@ -189,12 +170,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     const-string v0, "class"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 38
     return-void
 .end method
 
@@ -203,12 +182,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     const-string v0, "id"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 54
     return-void
 .end method
 
@@ -217,11 +194,9 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     const-string v0, "xml:lang"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46
     return-void
 .end method

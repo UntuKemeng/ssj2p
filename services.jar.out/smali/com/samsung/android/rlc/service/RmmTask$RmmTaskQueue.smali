@@ -59,38 +59,29 @@
     .local p3, "Que":Ljava/util/concurrent/BlockingQueue;, "Ljava/util/concurrent/BlockingQueue<Lcom/samsung/android/rlc/service/RmmTask$RmmTaskObject;>;"
     const/4 v1, 0x0
 
-    .line 337
     iput-object p1, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->this$0:Lcom/samsung/android/rlc/service/RmmTask;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 316
     iput-object v1, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->queue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 317
     iput-object v1, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->mContext:Landroid/content/Context;
 
-    .line 318
     iput-object v1, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->thread:Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue$RmmTaskThread;
 
-    .line 339
     :try_start_0
     iput-object p3, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->queue:Ljava/util/concurrent/BlockingQueue;
 
-    .line 340
     iput-object p2, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->mContext:Landroid/content/Context;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 344
     :goto_0
     return-void
 
-    .line 341
     :catch_0
     move-exception v0
 
-    .line 342
     .local v0, "ex":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -102,7 +93,6 @@
     .param p0, "x0"    # Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;
 
     .prologue
-    .line 314
     iget-object v0, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->queue:Ljava/util/concurrent/BlockingQueue;
 
     return-object v0
@@ -115,7 +105,6 @@
     .param p1, "intent"    # Lcom/samsung/android/rlc/service/RmmTask$RmmTaskObject;
 
     .prologue
-    .line 322
     monitor-enter p0
 
     :try_start_0
@@ -131,7 +120,6 @@
 
     if-nez v1, :cond_1
 
-    .line 323
     :cond_0
     sget-object v1, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
 
@@ -139,21 +127,18 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 324
     new-instance v1, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue$RmmTaskThread;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue$RmmTaskThread;-><init>(Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;)V
 
     iput-object v1, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->thread:Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue$RmmTaskThread;
 
-    .line 325
     iget-object v1, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->thread:Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue$RmmTaskThread;
 
     invoke-virtual {v1}, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue$RmmTaskThread;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 329
     :cond_1
     :try_start_1
     iget-object v1, p0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->queue:Ljava/util/concurrent/BlockingQueue;
@@ -163,7 +148,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 334
     :goto_0
     :try_start_2
     sget-object v1, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
@@ -196,16 +180,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 335
     monitor-exit p0
 
     return-void
 
-    .line 330
     :catch_0
     move-exception v0
 
-    .line 331
     .local v0, "e":Ljava/lang/InterruptedException;
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/InterruptedException;->printStackTrace()V
@@ -214,7 +195,6 @@
 
     goto :goto_0
 
-    .line 322
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v1

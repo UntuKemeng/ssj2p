@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 127
     iput-object p1, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 131
     iget-object v6, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     iget-object v6, v6, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->mContext:Landroid/content/Context;
@@ -52,17 +50,14 @@
 
     check-cast v3, Landroid/os/UserManager;
 
-    .line 132
     .local v3, "um":Landroid/os/UserManager;
     invoke-virtual {v3}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v5
 
-    .line 133
     .local v5, "userInfo":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-nez v5, :cond_1
 
-    .line 134
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
 
@@ -72,11 +67,9 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     :cond_0
     return-void
 
-    .line 137
     :cond_1
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -97,7 +90,6 @@
 
     check-cast v4, Landroid/content/pm/UserInfo;
 
-    .line 138
     .local v4, "user":Landroid/content/pm/UserInfo;
     iget v6, v4, Landroid/content/pm/UserInfo;->id:I
 
@@ -107,7 +99,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 139
     iget-object v6, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     const/4 v7, 0x1
@@ -115,7 +106,6 @@
     # invokes: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->registerOrUnregisterProcessObserver(Z)Z
     invoke-static {v6, v7}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$100(Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;Z)Z
 
-    .line 140
     const/16 v6, 0x10e
 
     invoke-static {v6}, Landroid/os/PersonaManager;->isKnoxVersionSupported(I)Z
@@ -124,7 +114,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 141
     iget-object v6, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->dlpHelper:Lcom/android/server/enterprise/storage/EdmDLPStorageHelper;
@@ -146,7 +135,6 @@
 
     move-result-object v0
 
-    .line 142
     .local v0, "config":Landroid/os/Bundle;
     # getter for: Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->access$000()Ljava/lang/String;
@@ -189,14 +177,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 143
     const-string v6, "Extensions"
 
     invoke-virtual {v0, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 144
     .local v1, "extendedExtensions":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService$1;->this$0:Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 541
     iput-object p1, p0, Lcom/samsung/android/multiwindow/ui/GuideView$2;->this$0:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 548
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/GuideView$2;->this$0:Lcom/samsung/android/multiwindow/ui/GuideView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/multiwindow/ui/GuideView;->setFakeHeaderVisibility(Z)V
 
-    .line 549
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 545
     return-void
 .end method
 
@@ -66,6 +62,5 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 543
     return-void
 .end method

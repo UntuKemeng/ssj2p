@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 442
     iput-object p1, p0, Lcom/android/server/policy/BarController$1;->this$0:Lcom/android/server/policy/BarController;
 
     iput p2, p0, Lcom/android/server/policy/BarController$1;->val$state:I
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 446
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/BarController$1;->this$0:Lcom/android/server/policy/BarController;
 
@@ -56,11 +54,9 @@
 
     move-result-object v1
 
-    .line 447
     .local v1, "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     if-eqz v1, :cond_0
 
-    .line 452
     iget-object v2, p0, Lcom/android/server/policy/BarController$1;->this$0:Lcom/android/server/policy/BarController;
 
     # getter for: Lcom/android/server/policy/BarController;->mStatusBarManagerId:I
@@ -74,17 +70,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 462
     .end local v1    # "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     :cond_0
     :goto_0
     return-void
 
-    .line 457
     :catch_0
     move-exception v0
 
-    .line 458
     .local v0, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/policy/BarController;->DEBUG:Z
     invoke-static {}, Lcom/android/server/policy/BarController;->access$100()Z
@@ -101,7 +94,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 460
     :cond_1
     iget-object v2, p0, Lcom/android/server/policy/BarController$1;->this$0:Lcom/android/server/policy/BarController;
 

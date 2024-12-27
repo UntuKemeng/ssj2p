@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 10238
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$8;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 10241
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 10242
     .local v0, "action":Ljava/lang/String;
     const-string v3, "ActivityManager"
 
@@ -68,7 +65,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10244
     const-string v3, "android.intent.WIDGETSSR.WIDGETADD"
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -77,12 +73,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 10245
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 10246
     .local v1, "bundle":Landroid/os/Bundle;
     const-string/jumbo v3, "pkgname"
 
@@ -90,7 +84,6 @@
 
     move-result-object v2
 
-    .line 10247
     .local v2, "pkgName":Ljava/lang/String;
     const-string v3, "ActivityManager"
 
@@ -114,7 +107,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10248
     sget-object v3, Lcom/android/server/am/DynamicHiddenApp;->WIDGET_ON_HOMESCREEN:Ljava/util/HashSet;
 
     invoke-virtual {v3, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
@@ -123,7 +115,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 10249
     const-string v3, "ActivityManager"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -152,14 +143,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10255
     .end local v1    # "bundle":Landroid/os/Bundle;
     .end local v2    # "pkgName":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 10251
     .restart local v1    # "bundle":Landroid/os/Bundle;
     .restart local v2    # "pkgName":Ljava/lang/String;
     :cond_1
@@ -191,7 +180,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10252
     sget-object v3, Lcom/android/server/am/DynamicHiddenApp;->WIDGET_ON_HOMESCREEN:Ljava/util/HashSet;
 
     invoke-virtual {v3, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z

@@ -22,7 +22,6 @@
     .locals 4
 
     .prologue
-    .line 36
     const-class v0, Lcom/samsung/android/rlc/receiver/GCMReceiver;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -31,7 +30,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
-    .line 46
     const/4 v0, 0x1
 
     new-array v0, v0, [Landroid/content/pm/Signature;
@@ -55,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -66,7 +63,6 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 53
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -80,7 +76,6 @@
 
     move-result-object v1
 
-    .line 54
     .local v1, "pi":Landroid/content/pm/PackageInfo;
     sget-object v2, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
@@ -108,19 +103,15 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 55
     const/4 v2, 0x1
 
-    .line 59
     .end local v1    # "pi":Landroid/content/pm/PackageInfo;
     :goto_0
     return v2
 
-    .line 56
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-object v2, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
@@ -148,7 +139,6 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 59
     const/4 v2, 0x0
 
     goto :goto_0
@@ -161,10 +151,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 63
     const/4 v4, 0x0
 
-    .line 66
     .local v4, "signatureMatch":Z
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -179,15 +167,12 @@
 
     move-result-object v2
 
-    .line 68
     .local v2, "pkgInfo":Landroid/content/pm/PackageInfo;
     iget-object v5, v2, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 70
     .local v5, "signatures":[Landroid/content/pm/Signature;
     if-eqz v5, :cond_2
 
-    .line 71
     sget-object v7, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -222,7 +207,6 @@
 
     invoke-static {v7, v8}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 72
     array-length v7, v5
 
     :goto_0
@@ -230,7 +214,6 @@
 
     aget-object v3, v5, v6
 
-    .line 73
     .local v3, "signature":Landroid/content/pm/Signature;
     const/4 v1, 0x0
 
@@ -242,7 +225,6 @@
 
     if-ge v1, v8, :cond_0
 
-    .line 74
     sget-object v8, Lcom/samsung/android/rlc/receiver/GCMReceiver;->SIGNATURES:[Landroid/content/pm/Signature;
 
     aget-object v8, v8, v1
@@ -255,22 +237,18 @@
 
     if-eqz v8, :cond_1
 
-    .line 75
     const/4 v4, 0x1
 
-    .line 72
     :cond_0
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 73
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 81
     .end local v1    # "i":I
     .end local v2    # "pkgInfo":Landroid/content/pm/PackageInfo;
     .end local v3    # "signature":Landroid/content/pm/Signature;
@@ -278,7 +256,6 @@
     :catch_0
     move-exception v0
 
-    .line 82
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-object v6, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
@@ -306,10 +283,8 @@
 
     invoke-static {v6, v7}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
     const/4 v4, 0x0
 
-    .line 85
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :cond_2
     return v4
@@ -323,7 +298,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 90
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -332,7 +306,6 @@
 
     if-nez v3, :cond_2
 
-    .line 91
     :cond_0
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
@@ -340,12 +313,10 @@
 
     invoke-static {v3, v4}, Lcom/samsung/android/rlc/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 137
     :cond_1
     :goto_0
     return-void
 
-    .line 95
     :cond_2
     invoke-static {p1}, Lcom/samsung/android/rlc/receiver/GCMReceiver;->isInstalled(Landroid/content/Context;)Z
 
@@ -353,7 +324,6 @@
 
     if-nez v3, :cond_3
 
-    .line 96
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
     const-string v4, "GSF package\'s not been installed"
@@ -362,7 +332,6 @@
 
     goto :goto_0
 
-    .line 99
     :cond_3
     invoke-static {p1}, Lcom/samsung/android/rlc/receiver/GCMReceiver;->isSignatureMatch(Landroid/content/Context;)Z
 
@@ -370,7 +339,6 @@
 
     if-nez v3, :cond_4
 
-    .line 100
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
     const-string v4, "GSF package\'s signature not been matched"
@@ -379,13 +347,11 @@
 
     goto :goto_0
 
-    .line 103
     :cond_4
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 104
     .local v0, "action":Ljava/lang/String;
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
@@ -409,7 +375,6 @@
 
     invoke-static {v3, v4}, Lcom/samsung/android/rlc/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 107
     const-string v3, "com.google.android.c2dm.intent.REGISTRATION"
 
     invoke-virtual {v3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -418,14 +383,12 @@
 
     if-eqz v3, :cond_5
 
-    .line 109
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
     const-string v4, "ACTION_GCM_REGISTRATION"
 
     invoke-static {v3, v4}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 112
     :try_start_0
     invoke-static {p1, p2}, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->handleRegistration(Landroid/content/Context;Landroid/content/Intent;)V
     :try_end_0
@@ -433,11 +396,9 @@
 
     goto :goto_0
 
-    .line 114
     :catch_0
     move-exception v1
 
-    .line 115
     .local v1, "e":Ljava/lang/Exception;
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
@@ -467,7 +428,6 @@
 
     goto :goto_0
 
-    .line 118
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_5
     const-string v3, "com.google.android.c2dm.intent.RECEIVE"
@@ -478,10 +438,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 119
     invoke-static {p1}, Lcom/samsung/android/rlc/util/WakeLockUtil;->acquireWakeLock(Landroid/content/Context;)V
 
-    .line 122
     if-eqz p2, :cond_1
 
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -496,7 +454,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 123
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v3
@@ -507,7 +464,6 @@
 
     move-result-object v2
 
-    .line 125
     .local v2, "msg":Ljava/lang/String;
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
@@ -515,14 +471,12 @@
 
     invoke-static {v3, v4}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 126
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
     const-string v4, "CHECKPOINT1 - RECEIVED PUSH MESSAGE WITH GCM"
 
     invoke-static {v3, v4}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -545,7 +499,6 @@
 
     invoke-static {v3, v4}, Lcom/samsung/android/rlc/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 130
     :try_start_1
     invoke-static {p1, v2}, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->handlePushMsg(Landroid/content/Context;Ljava/lang/String;)V
     :try_end_1
@@ -553,11 +506,9 @@
 
     goto/16 :goto_0
 
-    .line 132
     :catch_1
     move-exception v1
 
-    .line 133
     .restart local v1    # "e":Ljava/lang/Exception;
     sget-object v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;->TAG:Ljava/lang/String;
 

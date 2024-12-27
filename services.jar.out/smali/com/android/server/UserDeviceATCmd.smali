@@ -60,13 +60,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     sput-object p1, Lcom/android/server/UserDeviceATCmd;->mContext:Landroid/content/Context;
 
-    .line 47
     new-instance v0, Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
@@ -77,7 +74,6 @@
 
     iput-object v0, p0, Lcom/android/server/UserDeviceATCmd;->mEMMgr:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
-    .line 48
     return-void
 .end method
 
@@ -85,7 +81,6 @@
     .locals 3
 
     .prologue
-    .line 197
     const-string v0, "factory"
 
     const-string/jumbo v1, "ro.factory.factory_binary"
@@ -109,12 +104,10 @@
     .param p2, "resTok"    # Ljava/lang/String;
 
     .prologue
-    .line 166
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
-    .line 168
     .local v0, "result":Ljava/lang/String;
     const-string v1, "2"
 
@@ -132,10 +125,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 169
     const-string v0, "OK,"
 
-    .line 174
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -163,10 +154,8 @@
 
     move-result-object v0
 
-    .line 176
     return-object v0
 
-    .line 171
     :cond_0
     const-string v0, "NG,"
 
@@ -178,10 +167,8 @@
     .param p1, "cmd"    # Ljava/lang/String;
 
     .prologue
-    .line 181
     const/4 v2, 0x0
 
-    .line 184
     .local v2, "result":[Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -194,7 +181,6 @@
 
     move-result-object v1
 
-    .line 185
     .local v1, "params":Ljava/lang/String;
     const-string v3, ","
 
@@ -204,20 +190,16 @@
 
     move-result-object v2
 
-    .line 193
     .end local v1    # "params":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 187
     :catch_0
     move-exception v0
 
-    .line 189
     .local v0, "e":Ljava/lang/Exception;
     const/4 v2, 0x0
 
-    .line 190
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
@@ -229,16 +211,13 @@
     .locals 1
 
     .prologue
-    .line 52
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
-    .line 53
     .local v0, "response":Ljava/lang/String;
     const-string v0, "URDEVICE"
 
-    .line 54
     return-object v0
 .end method
 
@@ -255,18 +234,15 @@
 
     const/4 v8, 0x0
 
-    .line 59
     new-instance v4, Ljava/lang/String;
 
     invoke-direct {v4}, Ljava/lang/String;-><init>()V
 
-    .line 60
     .local v4, "result":Ljava/lang/String;
     invoke-direct {p0, p1}, Lcom/android/server/UserDeviceATCmd;->parsingParam(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 62
     .local v3, "params":[Ljava/lang/String;
     const/4 v7, 0x4
 
@@ -288,43 +264,35 @@
 
     aput-object v7, v5, v11
 
-    .line 69
     .local v5, "supportedParams":[Ljava/lang/String;
     if-nez v3, :cond_0
 
-    .line 70
     const-string v7, "UserDeviceATCmd"
 
     const-string/jumbo v8, "processCmd: params is null"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     const-string v7, "NG (INVALID_PARAM)"
 
-    .line 161
     :goto_0
     return-object v7
 
-    .line 74
     :cond_0
     iget-object v7, p0, Lcom/android/server/UserDeviceATCmd;->mEMMgr:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
     if-nez v7, :cond_1
 
-    .line 75
     const-string v7, "UserDeviceATCmd"
 
     const-string v8, "Cannot connect to em service"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     const-string v7, "NG (FAILED CONNECTION)"
 
     goto :goto_0
 
-    .line 79
     :cond_1
     iget-object v7, p0, Lcom/android/server/UserDeviceATCmd;->mEMMgr:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
@@ -334,19 +302,16 @@
 
     if-nez v7, :cond_2
 
-    .line 80
     const-string v7, "UserDeviceATCmd"
 
     const-string v8, "Failed to connect to em service"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     const-string v7, "NG (FAILED CONNECTION)"
 
     goto :goto_0
 
-    .line 85
     :cond_2
     :try_start_0
     new-instance v7, Ljava/lang/StringBuilder;
@@ -371,7 +336,6 @@
 
     move-result-object v4
 
-    .line 88
     const/4 v7, 0x0
 
     aget-object v7, v5, v7
@@ -396,14 +360,12 @@
 
     if-eqz v7, :cond_4
 
-    .line 90
     const-string v7, "UserDeviceATCmd"
 
     const-string v8, "AT+URDEVICE=0,0,0,0"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 91
     iget-object v7, p0, Lcom/android/server/UserDeviceATCmd;->mEMMgr:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
     invoke-virtual {v7}, Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;->removeToken()I
@@ -414,7 +376,6 @@
 
     if-ne v7, v10, :cond_3
 
-    .line 92
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -433,7 +394,6 @@
 
     move-result-object v4
 
-    .line 96
     :goto_1
     const-string v7, "UserDeviceATCmd"
 
@@ -444,10 +404,8 @@
     :goto_2
     move-object v7, v4
 
-    .line 161
     goto :goto_0
 
-    .line 94
     :cond_3
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -469,7 +427,6 @@
 
     goto :goto_1
 
-    .line 99
     :cond_4
     const/4 v7, 0x1
 
@@ -495,19 +452,16 @@
 
     if-eqz v7, :cond_9
 
-    .line 101
     const-string v7, "UserDeviceATCmd"
 
     const-string v8, "AT+URDEVICE=1,0,0,0"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     new-instance v0, Ljava/lang/String;
 
     invoke-direct {v0}, Ljava/lang/String;-><init>()V
 
-    .line 105
     .local v0, "devStatus":Ljava/lang/String;
     const-string/jumbo v7, "ro.boot.em.status"
 
@@ -515,7 +469,6 @@
 
     move-result-object v2
 
-    .line 107
     .local v2, "emProp":Ljava/lang/String;
     const-string v7, "0x0"
 
@@ -533,17 +486,14 @@
 
     if-eqz v7, :cond_6
 
-    .line 108
     :cond_5
     const-string v0, "2"
 
-    .line 115
     :goto_3
     new-instance v6, Ljava/lang/String;
 
     invoke-direct {v6}, Ljava/lang/String;-><init>()V
 
-    .line 116
     .local v6, "tokStatus":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/UserDeviceATCmd;->mEMMgr:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
@@ -555,10 +505,8 @@
 
     if-ne v7, v10, :cond_8
 
-    .line 117
     const-string v6, "EMTOKEN"
 
-    .line 121
     :goto_4
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -580,7 +528,6 @@
 
     move-result-object v4
 
-    .line 123
     const-string v7, "UserDeviceATCmd"
 
     const-string v8, "1,0,0,0 is complete."
@@ -591,14 +538,12 @@
 
     goto :goto_2
 
-    .line 156
     .end local v0    # "devStatus":Ljava/lang/String;
     .end local v2    # "emProp":Ljava/lang/String;
     .end local v6    # "tokStatus":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 157
     .local v1, "e":Ljava/lang/Exception;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -618,12 +563,10 @@
 
     move-result-object v4
 
-    .line 158
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_2
 
-    .line 109
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "devStatus":Ljava/lang/String;
     .restart local v2    # "emProp":Ljava/lang/String;
@@ -637,25 +580,21 @@
 
     if-eqz v7, :cond_7
 
-    .line 110
     const-string v0, "1"
 
     goto :goto_3
 
-    .line 112
     :cond_7
     const-string v0, "0"
 
     goto :goto_3
 
-    .line 119
     .restart local v6    # "tokStatus":Ljava/lang/String;
     :cond_8
     const-string v6, "NONE"
 
     goto :goto_4
 
-    .line 126
     .end local v0    # "devStatus":Ljava/lang/String;
     .end local v2    # "emProp":Ljava/lang/String;
     .end local v6    # "tokStatus":Ljava/lang/String;
@@ -684,28 +623,24 @@
 
     if-eqz v7, :cond_b
 
-    .line 128
     const-string v7, "UserDeviceATCmd"
 
     const-string v8, "AT+URDEVICE=0,1,0,0"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     invoke-direct {p0}, Lcom/android/server/UserDeviceATCmd;->isFactoryBinary()Z
 
     move-result v7
 
     if-ne v7, v10, :cond_a
 
-    .line 131
     const-string/jumbo v7, "sys.powerctl"
 
     const-string/jumbo v8, "reboot,em_mode_force_user"
 
     invoke-static {v7, v8}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 132
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -724,7 +659,6 @@
 
     move-result-object v4
 
-    .line 136
     :goto_5
     const-string v7, "UserDeviceATCmd"
 
@@ -734,7 +668,6 @@
 
     goto/16 :goto_2
 
-    .line 134
     :cond_a
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -756,7 +689,6 @@
 
     goto :goto_5
 
-    .line 139
     :cond_b
     const/4 v7, 0x3
 
@@ -782,21 +714,18 @@
 
     if-eqz v7, :cond_e
 
-    .line 141
     const-string v7, "UserDeviceATCmd"
 
     const-string v8, "AT+URDEVICE=0,2,0,0"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     invoke-direct {p0}, Lcom/android/server/UserDeviceATCmd;->isFactoryBinary()Z
 
     move-result v7
 
     if-ne v7, v10, :cond_d
 
-    .line 143
     iget-object v7, p0, Lcom/android/server/UserDeviceATCmd;->mEMMgr:Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;
 
     invoke-virtual {v7}, Lcom/samsung/android/service/EngineeringMode/EngineeringModeManager;->sendFuseCmd()I
@@ -807,7 +736,6 @@
 
     if-ne v7, v10, :cond_c
 
-    .line 144
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -826,7 +754,6 @@
 
     move-result-object v4
 
-    .line 150
     :goto_6
     const-string v7, "UserDeviceATCmd"
 
@@ -836,7 +763,6 @@
 
     goto/16 :goto_2
 
-    .line 146
     :cond_c
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -858,7 +784,6 @@
 
     goto :goto_6
 
-    .line 148
     :cond_d
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -880,7 +805,6 @@
 
     goto :goto_6
 
-    .line 153
     :cond_e
     new-instance v7, Ljava/lang/StringBuilder;
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 470
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 473
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 475
     .local v2, "action":Ljava/lang/String;
     const-string v14, "MARS_GCM_LOCKER_POLICY_ALARM"
 
@@ -62,7 +59,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 477
     :cond_0
     move-object/from16 v0, p0
 
@@ -86,7 +82,6 @@
     # invokes: Lcom/android/server/am/MARsTrigger;->triggerPolicy(ILjava/lang/String;)V
     invoke-static/range {v14 .. v16}, Lcom/android/server/am/MARsTrigger;->access$1400(Lcom/android/server/am/MARsTrigger;ILjava/lang/String;)V
 
-    .line 478
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -107,12 +102,10 @@
     # invokes: Lcom/android/server/am/MARsTrigger;->setAlarm(Ljava/lang/String;J)V
     invoke-static/range {v14 .. v17}, Lcom/android/server/am/MARsTrigger;->access$100(Lcom/android/server/am/MARsTrigger;Ljava/lang/String;J)V
 
-    .line 561
     :cond_1
     :goto_0
     return-void
 
-    .line 481
     :cond_2
     const-string v14, "com.android.server.am.ACTION_MEMROY_NOT_ENOUGH"
 
@@ -130,13 +123,11 @@
 
     if-eqz v14, :cond_4
 
-    .line 482
     :cond_3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 483
     .local v4, "currentTime":J
     move-object/from16 v0, p0
 
@@ -165,7 +156,6 @@
 
     if-ltz v14, :cond_1
 
-    .line 485
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -179,7 +169,6 @@
     # setter for: Lcom/android/server/am/MARsTrigger;->mLastSPCMWorkingTime:J
     invoke-static {v14, v0, v1}, Lcom/android/server/am/MARsTrigger;->access$1602(Lcom/android/server/am/MARsTrigger;J)J
 
-    .line 486
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -204,7 +193,6 @@
 
     goto :goto_0
 
-    .line 490
     .end local v4    # "currentTime":J
     :cond_4
     const-string v14, "com.android.server.am.ACTION_UI_SET_ALWAYS_OPTIMIZING"
@@ -231,7 +219,6 @@
 
     if-eqz v14, :cond_6
 
-    .line 493
     :cond_5
     move-object/from16 v0, p0
 
@@ -257,7 +244,6 @@
 
     goto :goto_0
 
-    .line 495
     :cond_6
     const-string v14, "MARS_APP_LOCKER_POLICY_ALARM"
 
@@ -275,7 +261,6 @@
 
     if-eqz v14, :cond_8
 
-    .line 497
     :cond_7
     move-object/from16 v0, p0
 
@@ -299,7 +284,6 @@
     # invokes: Lcom/android/server/am/MARsTrigger;->triggerPolicy(ILjava/lang/String;)V
     invoke-static/range {v14 .. v16}, Lcom/android/server/am/MARsTrigger;->access$1400(Lcom/android/server/am/MARsTrigger;ILjava/lang/String;)V
 
-    .line 498
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -322,7 +306,6 @@
 
     goto/16 :goto_0
 
-    .line 501
     :cond_8
     const-string v14, "com.android.server.am.ACTION_UI_SET_AUTORUN_OFF"
 
@@ -332,7 +315,6 @@
 
     if-eqz v14, :cond_9
 
-    .line 502
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -357,7 +339,6 @@
 
     goto/16 :goto_0
 
-    .line 504
     :cond_9
     const-string v14, "MARS_AUTO_RUN_POLICY_ALARM"
 
@@ -375,7 +356,6 @@
 
     if-eqz v14, :cond_b
 
-    .line 506
     :cond_a
     move-object/from16 v0, p0
 
@@ -399,7 +379,6 @@
     # invokes: Lcom/android/server/am/MARsTrigger;->triggerPolicy(ILjava/lang/String;)V
     invoke-static/range {v14 .. v16}, Lcom/android/server/am/MARsTrigger;->access$1400(Lcom/android/server/am/MARsTrigger;ILjava/lang/String;)V
 
-    .line 510
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -418,7 +397,6 @@
 
     goto/16 :goto_0
 
-    .line 523
     :cond_b
     const-string v14, "MARS_AUTO_RUN_POLICY_TRAFFIC_STAT_ALARM"
 
@@ -428,7 +406,6 @@
 
     if-eqz v14, :cond_c
 
-    .line 524
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -437,7 +414,6 @@
 
     invoke-virtual {v14}, Lcom/android/server/am/MARsPolicyManager;->updateTrafficStat()V
 
-    .line 525
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -461,7 +437,6 @@
 
     goto/16 :goto_0
 
-    .line 527
     :cond_c
     const-string v14, "MARS_AUTO_RUN_TRAFFIC_STAT_REPEAT_ALARM"
 
@@ -471,7 +446,6 @@
 
     if-eqz v14, :cond_d
 
-    .line 528
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -480,7 +454,6 @@
 
     invoke-virtual {v14}, Lcom/android/server/am/MARsPolicyManager;->updateTrafficStat()V
 
-    .line 529
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -504,7 +477,6 @@
 
     goto/16 :goto_0
 
-    .line 531
     :cond_d
     const-string v14, "android.intent.action.SET_RUNNING_LOCATION"
 
@@ -514,7 +486,6 @@
 
     if-eqz v14, :cond_e
 
-    .line 532
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -527,7 +498,6 @@
 
     goto/16 :goto_0
 
-    .line 534
     :cond_e
     const-string v14, "com.samsung.android.server.am.ACTION_UI_TRIGGER_POLICY"
 
@@ -537,16 +507,13 @@
 
     if-eqz v14, :cond_1
 
-    .line 535
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v6
 
-    .line 536
     .local v6, "extras":Landroid/os/Bundle;
     if-eqz v6, :cond_1
 
-    .line 537
     const-string v14, "POLICY_NAME"
 
     const-string v15, ""
@@ -555,7 +522,6 @@
 
     move-result-object v12
 
-    .line 538
     .local v12, "policyName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -566,7 +532,6 @@
 
     move-result v13
 
-    .line 539
     .local v13, "policyNum":I
     const-string v14, "PACKAGE_NAME"
 
@@ -574,17 +539,14 @@
 
     move-result-object v9
 
-    .line 540
     .local v9, "packageList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez v9, :cond_f
 
-    .line 541
     new-instance v9, Ljava/util/ArrayList;
 
     .end local v9    # "packageList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 542
     .restart local v9    # "packageList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_f
     const-string v14, "PID"
@@ -593,11 +555,9 @@
 
     move-result-object v11
 
-    .line 543
     .local v11, "pidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     if-eqz v11, :cond_13
 
-    .line 544
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -608,7 +568,6 @@
 
     monitor-enter v15
 
-    .line 545
     const/4 v7, 0x0
 
     .local v7, "i":I
@@ -636,7 +595,6 @@
 
     if-ge v7, v14, :cond_12
 
-    .line 546
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -653,7 +611,6 @@
 
     check-cast v3, Lcom/android/server/am/ProcessRecord;
 
-    .line 547
     .local v3, "app":Lcom/android/server/am/ProcessRecord;
     invoke-virtual {v11}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -673,7 +630,6 @@
 
     check-cast v10, Ljava/lang/Integer;
 
-    .line 548
     .local v10, "pid":Ljava/lang/Integer;
     iget v14, v3, Lcom/android/server/am/ProcessRecord;->pid:I
 
@@ -685,24 +641,20 @@
 
     if-ne v14, v0, :cond_10
 
-    .line 549
     iget-object v14, v3, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
     iget-object v14, v14, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v9, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 550
     invoke-virtual {v11, v10}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 545
     .end local v10    # "pid":Ljava/lang/Integer;
     :cond_11
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 555
     .end local v3    # "app":Lcom/android/server/am/ProcessRecord;
     .end local v8    # "i$":Ljava/util/Iterator;
     :cond_12
@@ -710,7 +662,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 557
     .end local v7    # "i":I
     :cond_13
     if-eqz v13, :cond_1
@@ -721,7 +672,6 @@
 
     if-nez v14, :cond_1
 
-    .line 558
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -732,7 +682,6 @@
 
     goto/16 :goto_0
 
-    .line 555
     .restart local v7    # "i":I
     :catchall_0
     move-exception v14

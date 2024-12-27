@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 154
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$MARsTriggerHandler;->this$0:Lcom/android/server/am/MARsTrigger;
 
-    .line 155
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 156
     return-void
 .end method
 
@@ -41,27 +38,22 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 160
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 178
     :cond_0
     :goto_0
     return-void
 
-    .line 164
     :pswitch_0
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 165
     .local v0, "extras":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 166
     const-string/jumbo v3, "policy-num"
 
     const/4 v4, 0x0
@@ -70,7 +62,6 @@
 
     move-result v1
 
-    .line 167
     .local v1, "policy_num":I
     const-string/jumbo v3, "trigger-reason"
 
@@ -80,11 +71,9 @@
 
     move-result-object v2
 
-    .line 169
     .local v2, "reason":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 170
     iget-object v3, p0, Lcom/android/server/am/MARsTrigger$MARsTriggerHandler;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v3, v3, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
@@ -101,7 +90,6 @@
 
     goto :goto_0
 
-    .line 175
     .end local v0    # "extras":Landroid/os/Bundle;
     .end local v1    # "policy_num":I
     .end local v2    # "reason":Ljava/lang/String;
@@ -114,7 +102,6 @@
 
     goto :goto_0
 
-    .line 160
     nop
 
     :pswitch_data_0

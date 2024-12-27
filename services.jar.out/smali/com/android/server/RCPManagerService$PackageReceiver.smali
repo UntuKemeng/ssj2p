@@ -26,20 +26,16 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1263
     iput-object p1, p0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 1259
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/RCPManagerService$PackageReceiver;->mUserId:I
 
-    .line 1264
     iput p2, p0, Lcom/android/server/RCPManagerService$PackageReceiver;->mUserId:I
 
-    .line 1265
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1270
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -61,7 +56,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1271
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v20
@@ -74,7 +68,6 @@
 
     if-eqz v20, :cond_3
 
-    .line 1273
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v20
@@ -83,7 +76,6 @@
 
     move-result-object v3
 
-    .line 1274
     .local v3, "addedPackage":Ljava/lang/String;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -112,21 +104,17 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1276
     if-nez v3, :cond_1
 
-    .line 1389
     .end local v3    # "addedPackage":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 1279
     .restart local v3    # "addedPackage":Ljava/lang/String;
     :cond_1
     const/4 v5, -0x1
 
-    .line 1282
     .local v5, "appUid":I
     :try_start_0
     const-string/jumbo v20, "package"
@@ -139,7 +127,6 @@
 
     move-result-object v13
 
-    .line 1284
     .local v13, "iPM":Landroid/content/pm/IPackageManager;
     const/16 v20, 0x80
 
@@ -157,15 +144,12 @@
 
     move-result-object v4
 
-    .line 1286
     .local v4, "appInfo":Landroid/content/pm/ApplicationInfo;
     iget-object v7, v4, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 1287
     .local v7, "bundle":Landroid/os/Bundle;
     if-eqz v7, :cond_0
 
-    .line 1288
     const-string/jumbo v20, "proxyName"
 
     move-object/from16 v0, v20
@@ -174,11 +158,9 @@
 
     move-result-object v15
 
-    .line 1289
     .local v15, "proxyName":Ljava/lang/String;
     iget v5, v4, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 1292
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -192,7 +174,6 @@
 
     if-eqz v20, :cond_0
 
-    .line 1293
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -206,7 +187,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 1294
     const-string v20, "Bridge_PROXY"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -231,7 +211,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1297
     :cond_2
     if-eqz v15, :cond_0
 
@@ -245,12 +224,10 @@
 
     if-eqz v20, :cond_0
 
-    .line 1300
     invoke-static {v5}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v19
 
-    .line 1301
     .local v19, "userId":I
     move-object/from16 v0, p0
 
@@ -292,7 +269,6 @@
 
     move-result-object v17
 
-    .line 1303
     .local v17, "rCPProxyScanSP":Landroid/content/SharedPreferences;
     invoke-interface/range {v17 .. v17}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -306,7 +282,6 @@
 
     invoke-interface/range {v20 .. v20}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1305
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -324,7 +299,6 @@
 
     goto/16 :goto_0
 
-    .line 1309
     .end local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v7    # "bundle":Landroid/os/Bundle;
     .end local v13    # "iPM":Landroid/content/pm/IPackageManager;
@@ -334,7 +308,6 @@
     :catch_0
     move-exception v11
 
-    .line 1310
     .local v11, "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -369,7 +342,6 @@
 
     goto/16 :goto_0
 
-    .line 1313
     .end local v3    # "addedPackage":Ljava/lang/String;
     .end local v5    # "appUid":I
     .end local v11    # "e":Ljava/lang/Exception;
@@ -386,7 +358,6 @@
 
     if-eqz v20, :cond_4
 
-    .line 1318
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v20
@@ -395,7 +366,6 @@
 
     move-result-object v18
 
-    .line 1320
     .local v18, "removedPackage":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -439,7 +409,6 @@
 
     move-result-object v16
 
-    .line 1322
     .local v16, "proxyPreferences":Landroid/content/SharedPreferences;
     const-string v20, "RCPProxy"
 
@@ -465,7 +434,6 @@
 
     if-eqz v20, :cond_0
 
-    .line 1325
     invoke-interface/range {v16 .. v16}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v20
@@ -478,7 +446,6 @@
 
     invoke-interface/range {v20 .. v20}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1326
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -492,7 +459,6 @@
 
     monitor-enter v21
 
-    .line 1327
     :try_start_1
     move-object/from16 v0, p0
 
@@ -513,7 +479,6 @@
     # invokes: Lcom/android/server/RCPManagerService;->unregisterBridgeProxy(I)V
     invoke-static {v0, v1}, Lcom/android/server/RCPManagerService;->access$1000(Lcom/android/server/RCPManagerService;I)V
 
-    .line 1328
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -533,7 +498,6 @@
     # invokes: Lcom/android/server/RCPManagerService;->clearBridgeProxyPrefs(I)V
     invoke-static {v0, v1}, Lcom/android/server/RCPManagerService;->access$1800(Lcom/android/server/RCPManagerService;I)V
 
-    .line 1329
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -561,7 +525,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1330
     monitor-exit v21
 
     goto/16 :goto_0
@@ -575,7 +538,6 @@
 
     throw v20
 
-    .line 1333
     .end local v16    # "proxyPreferences":Landroid/content/SharedPreferences;
     .end local v18    # "removedPackage":Ljava/lang/String;
     :cond_4
@@ -591,7 +553,6 @@
 
     if-eqz v20, :cond_0
 
-    .line 1335
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v20
@@ -600,7 +561,6 @@
 
     move-result-object v8
 
-    .line 1337
     .local v8, "changedPackage":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -615,7 +575,6 @@
 
     if-eqz v20, :cond_5
 
-    .line 1338
     const-string v20, "Bridge_PROXY"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -640,7 +599,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1342
     :cond_5
     move-object/from16 v0, p0
 
@@ -684,7 +642,6 @@
 
     move-result-object v16
 
-    .line 1344
     .restart local v16    # "proxyPreferences":Landroid/content/SharedPreferences;
     const-string v20, "RCPProxy"
 
@@ -708,7 +665,6 @@
 
     if-eqz v20, :cond_0
 
-    .line 1347
     const-string v20, "android.intent.extra.changed_component_name_list"
 
     move-object/from16 v0, p2
@@ -719,7 +675,6 @@
 
     move-result-object v10
 
-    .line 1349
     .local v10, "components":[Ljava/lang/String;
     if-eqz v10, :cond_0
 
@@ -729,7 +684,6 @@
 
     if-lez v20, :cond_0
 
-    .line 1350
     move-object v6, v10
 
     .local v6, "arr$":[Ljava/lang/String;
@@ -744,7 +698,6 @@
 
     aget-object v9, v6, v12
 
-    .line 1351
     .local v9, "component":Ljava/lang/String;
     invoke-virtual {v9, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -752,7 +705,6 @@
 
     if-eqz v20, :cond_7
 
-    .line 1353
     :try_start_2
     const-string/jumbo v20, "package"
 
@@ -764,7 +716,6 @@
 
     move-result-object v13
 
-    .line 1355
     .restart local v13    # "iPM":Landroid/content/pm/IPackageManager;
     const/16 v20, 0x80
 
@@ -782,7 +733,6 @@
 
     move-result-object v4
 
-    .line 1357
     .restart local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     move-object/from16 v0, p0
 
@@ -797,7 +747,6 @@
 
     if-eqz v20, :cond_6
 
-    .line 1358
     const-string v20, "Bridge_PROXY"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -836,7 +785,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1362
     :cond_6
     iget-boolean v0, v4, Landroid/content/pm/ApplicationInfo;->enabled:Z
 
@@ -844,7 +792,6 @@
 
     if-eqz v20, :cond_8
 
-    .line 1364
     invoke-interface/range {v16 .. v16}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v20
@@ -857,7 +804,6 @@
 
     invoke-interface/range {v20 .. v20}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1366
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -877,13 +823,11 @@
 
     goto/16 :goto_0
 
-    .line 1378
     .end local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v13    # "iPM":Landroid/content/pm/IPackageManager;
     :catch_1
     move-exception v11
 
-    .line 1379
     .restart local v11    # "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
@@ -898,14 +842,12 @@
 
     invoke-static {v0, v1, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1350
     .end local v11    # "e":Ljava/lang/Exception;
     :cond_7
     add-int/lit8 v12, v12, 0x1
 
     goto/16 :goto_1
 
-    .line 1369
     .restart local v4    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v13    # "iPM":Landroid/content/pm/IPackageManager;
     :cond_8
@@ -925,7 +867,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 1370
     :try_start_4
     move-object/from16 v0, p0
 
@@ -946,7 +887,6 @@
     # invokes: Lcom/android/server/RCPManagerService;->unregisterBridgeProxy(I)V
     invoke-static {v0, v1}, Lcom/android/server/RCPManagerService;->access$1000(Lcom/android/server/RCPManagerService;I)V
 
-    .line 1371
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/RCPManagerService$PackageReceiver;->this$0:Lcom/android/server/RCPManagerService;
@@ -974,7 +914,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1372
     invoke-interface/range {v16 .. v16}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v20
@@ -995,7 +934,6 @@
 
     invoke-interface/range {v20 .. v20}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1375
     monitor-exit v21
 
     goto/16 :goto_0

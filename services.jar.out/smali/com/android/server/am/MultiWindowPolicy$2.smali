@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 395
     iput-object p1, p0, Lcom/android/server/am/MultiWindowPolicy$2;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 397
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 398
     .local v0, "action":Ljava/lang/String;
     const-string v1, "com.android.settings.LaunchGlanceView"
 
@@ -54,7 +51,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 399
     iget-object v1, p0, Lcom/android/server/am/MultiWindowPolicy$2;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     iget-object v1, v1, Lcom/android/server/am/MultiWindowPolicy;->mHandler:Lcom/android/server/am/MultiWindowPolicy$H;
@@ -71,12 +67,10 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/am/MultiWindowPolicy$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 403
     :cond_0
     :goto_0
     return-void
 
-    .line 400
     :cond_1
     const-string v1, "com.samsung.android.multiwindow.MINIMIZE_ALL"
 
@@ -86,7 +80,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 401
     iget-object v1, p0, Lcom/android/server/am/MultiWindowPolicy$2;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     iget-object v1, v1, Lcom/android/server/am/MultiWindowPolicy;->mHandler:Lcom/android/server/am/MultiWindowPolicy$H;

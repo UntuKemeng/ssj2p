@@ -24,10 +24,8 @@
     .end annotation
 
     .prologue
-    .line 62
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     new-instance v0, Lorg/simpleframework/xml/core/DefaultDetail;
 
     sget-object v1, Lorg/simpleframework/xml/DefaultType;->FIELD:Lorg/simpleframework/xml/DefaultType;
@@ -36,7 +34,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->detail:Lorg/simpleframework/xml/core/Detail;
 
-    .line 64
     new-instance v0, Lorg/simpleframework/xml/core/ObjectScanner;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/DefaultScanner;->detail:Lorg/simpleframework/xml/core/Detail;
@@ -45,7 +42,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
-    .line 65
     return-void
 .end method
 
@@ -56,7 +52,6 @@
     .param p1, "context"    # Lorg/simpleframework/xml/core/Context;
 
     .prologue
-    .line 147
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/core/Scanner;->getCaller(Lorg/simpleframework/xml/core/Context;)Lorg/simpleframework/xml/core/Caller;
@@ -70,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getCommit()Lorg/simpleframework/xml/core/Function;
@@ -84,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 276
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getComplete()Lorg/simpleframework/xml/core/Function;
@@ -98,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getDecorator()Lorg/simpleframework/xml/core/Decorator;
@@ -112,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getInstantiator()Lorg/simpleframework/xml/core/Instantiator;
@@ -126,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getName()Ljava/lang/String;
@@ -140,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 186
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getOrder()Lorg/simpleframework/xml/Order;
@@ -154,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getParameters()Lorg/simpleframework/xml/core/ParameterMap;
@@ -168,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 263
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getPersist()Lorg/simpleframework/xml/core/Function;
@@ -182,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 289
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getReplace()Lorg/simpleframework/xml/core/Function;
@@ -196,7 +182,6 @@
     .locals 1
 
     .prologue
-    .line 302
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getResolve()Lorg/simpleframework/xml/core/Function;
@@ -210,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getRevision()Lorg/simpleframework/xml/Version;
@@ -224,7 +208,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getSection()Lorg/simpleframework/xml/core/Section;
@@ -238,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getSignature()Lorg/simpleframework/xml/core/Signature;
@@ -261,7 +243,6 @@
     .end annotation
 
     .prologue
-    .line 88
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getSignatures()Ljava/util/List;
@@ -275,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getText()Lorg/simpleframework/xml/core/Label;
@@ -289,7 +269,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getType()Ljava/lang/Class;
@@ -303,7 +282,6 @@
     .locals 1
 
     .prologue
-    .line 250
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getValidate()Lorg/simpleframework/xml/core/Function;
@@ -317,7 +295,6 @@
     .locals 1
 
     .prologue
-    .line 198
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->getVersion()Lorg/simpleframework/xml/core/Label;
@@ -331,7 +308,6 @@
     .locals 1
 
     .prologue
-    .line 326
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->isEmpty()Z
@@ -345,7 +321,6 @@
     .locals 1
 
     .prologue
-    .line 314
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->isPrimitive()Z
@@ -359,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 340
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultScanner;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Scanner;->isStrict()Z

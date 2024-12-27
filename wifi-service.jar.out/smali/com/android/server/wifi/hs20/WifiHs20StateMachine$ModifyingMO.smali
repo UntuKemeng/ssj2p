@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1686
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,10 +36,8 @@
     .locals 3
 
     .prologue
-    .line 1689
     invoke-super {p0}, Lcom/android/internal/util/State;->enter()V
 
-    .line 1690
     const-string v0, "HS20StateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -67,7 +64,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1699
     return-void
 .end method
 
@@ -82,21 +78,17 @@
 
     const/4 v3, 0x0
 
-    .line 1703
     const/4 v0, 0x0
 
-    .line 1704
     .local v0, "bRetVal":Z
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 1759
     :goto_0
     :sswitch_0
     return v0
 
-    .line 1706
     :sswitch_1
     const-string v1, "HS20StateMachine"
 
@@ -104,19 +96,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1707
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->deferMessage(Landroid/os/Message;)V
     invoke-static {v1, p1}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$8000(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Landroid/os/Message;)V
 
-    .line 1708
     const/4 v0, 0x1
 
-    .line 1709
     goto :goto_0
 
-    .line 1711
     :sswitch_2
     const-string v1, "HS20StateMachine"
 
@@ -124,19 +112,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1712
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->deferMessage(Landroid/os/Message;)V
     invoke-static {v1, p1}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$8100(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Landroid/os/Message;)V
 
-    .line 1713
     const/4 v0, 0x1
 
-    .line 1714
     goto :goto_0
 
-    .line 1716
     :sswitch_3
     const-string v1, "HS20StateMachine"
 
@@ -144,12 +128,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1717
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iput v4, v1, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->statusProvisioning:I
 
-    .line 1718
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
@@ -162,13 +144,10 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$8200(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1719
     const/4 v0, 0x1
 
-    .line 1720
     goto :goto_0
 
-    .line 1722
     :sswitch_4
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -182,13 +161,10 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$8400(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1723
     const/4 v0, 0x1
 
-    .line 1724
     goto :goto_0
 
-    .line 1726
     :sswitch_5
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -196,7 +172,6 @@
 
     iput v2, v1, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->statusProvisioning:I
 
-    .line 1727
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
@@ -209,13 +184,10 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$8500(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1728
     const/4 v0, 0x1
 
-    .line 1729
     goto :goto_0
 
-    .line 1731
     :sswitch_6
     iget v1, p1, Landroid/os/Message;->arg1:I
 
@@ -223,30 +195,25 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1732
     iput v5, p1, Landroid/os/Message;->arg1:I
 
-    .line 1733
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iput-boolean v3, v1, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->update:Z
 
     goto :goto_0
 
-    .line 1734
     :cond_0
     iget v1, p1, Landroid/os/Message;->arg1:I
 
     if-ne v1, v5, :cond_1
 
-    .line 1735
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iput-boolean v4, v1, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->update:Z
 
     goto :goto_0
 
-    .line 1737
     :cond_1
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -254,7 +221,6 @@
 
     goto :goto_0
 
-    .line 1745
     :sswitch_7
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$ModifyingMO;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -262,13 +228,10 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->sendMessage(I)V
 
-    .line 1746
     const/4 v0, 0x1
 
-    .line 1747
     goto :goto_0
 
-    .line 1704
     nop
 
     :sswitch_data_0

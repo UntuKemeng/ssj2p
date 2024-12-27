@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 2692
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 2695
     # getter for: Lcom/android/server/bridge/BridgeProxy;->KNOX_DEBUG:Z
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$4900()Z
 
@@ -39,10 +37,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2696
     invoke-static {p0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2697
     :cond_0
     return-void
 .end method
@@ -54,7 +50,6 @@
     .param p2, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 2725
     # getter for: Lcom/android/server/bridge/BridgeProxy;->KNOX_DEBUG:Z
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$4900()Z
 
@@ -62,10 +57,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2726
     invoke-static {p0, p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2727
     :cond_0
     return-void
 .end method
@@ -76,10 +69,8 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 2709
     invoke-static {p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2710
     return-void
 .end method
 
@@ -90,10 +81,8 @@
     .param p2, "ex"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 2713
     invoke-static {p0, p1, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2714
     return-void
 .end method
 
@@ -102,7 +91,6 @@
     .param p0, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 2730
     invoke-static {p0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
@@ -116,7 +104,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 2700
     # getter for: Lcom/android/server/bridge/BridgeProxy;->KNOX_DEBUG:Z
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$4900()Z
 
@@ -124,10 +111,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2701
     invoke-static {p0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2702
     :cond_0
     return-void
 .end method
@@ -139,7 +124,6 @@
     .param p2, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 2734
     # getter for: Lcom/android/server/bridge/BridgeProxy;->KNOX_DEBUG:Z
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$4900()Z
 
@@ -147,10 +131,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 2735
     invoke-static {p0, p1, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2736
     :cond_0
     return-void
 .end method
@@ -161,10 +143,8 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 2705
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2706
     return-void
 .end method
 
@@ -175,10 +155,8 @@
     .param p2, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 2717
     invoke-static {p0, p1, p2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2718
     return-void
 .end method
 
@@ -188,9 +166,7 @@
     .param p1, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 2721
     invoke-static {p0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2722
     return-void
 .end method

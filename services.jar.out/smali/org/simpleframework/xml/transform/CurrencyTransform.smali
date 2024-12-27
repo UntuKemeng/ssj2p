@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 44
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/CurrencyTransform;->read(Ljava/lang/String;)Ljava/util/Currency;
 
     move-result-object v0
@@ -54,7 +52,6 @@
     .param p1, "symbol"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     invoke-static {p1}, Ljava/util/Currency;->getInstance(Ljava/lang/String;)Ljava/util/Currency;
 
     move-result-object v0
@@ -72,7 +69,6 @@
     .end annotation
 
     .prologue
-    .line 44
     check-cast p1, Ljava/util/Currency;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -88,7 +84,6 @@
     .param p1, "currency"    # Ljava/util/Currency;
 
     .prologue
-    .line 71
     invoke-virtual {p1}, Ljava/util/Currency;->toString()Ljava/lang/String;
 
     move-result-object v0

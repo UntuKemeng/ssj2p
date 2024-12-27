@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 95
     iput-object p1, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$1;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,21 +38,17 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 97
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 98
     .local v0, "action":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 106
     :cond_0
     :goto_0
     return-void
 
-    .line 100
     :cond_1
     const-string v1, "android.intent.action.ACTION_POWER_DISCONNECTED"
 
@@ -63,7 +58,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 102
     iget-object v1, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$1;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     const/16 v2, 0x2710
@@ -73,7 +67,6 @@
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->sendMsg(II)V
     invoke-static {v1, v2, v3}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$000(Lcom/android/server/KiesConnectivity/KiesUsbObserver;II)V
 
-    .line 103
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$100()Ljava/lang/String;
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 482
     iput-object p1, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v7, 0x1
 
-    .line 485
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     # getter for: Lcom/android/server/connectivity/Tethering;->mContext:Landroid/content/Context;
@@ -59,7 +57,6 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    .line 486
     .local v0, "mWifiManager":Landroid/net/wifi/WifiManager;
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
@@ -76,19 +73,16 @@
 
     check-cast v2, Landroid/telephony/TelephonyManager;
 
-    .line 487
     .local v2, "tm":Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getWifiApState()I
 
     move-result v3
 
-    .line 488
     .local v3, "wifiApState":I
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getDataState()I
 
     move-result v1
 
-    .line 489
     .local v1, "mobileDataState":I
     const/16 v4, 0xb
 
@@ -98,12 +92,10 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 507
     :cond_0
     :goto_0
     return-void
 
-    .line 493
     :cond_1
     const-string v4, "Tethering"
 
@@ -137,7 +129,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     const/4 v4, 0x2
 
     if-eq p1, v4, :cond_2
@@ -158,25 +149,21 @@
 
     if-nez v4, :cond_3
 
-    .line 496
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     # setter for: Lcom/android/server/connectivity/Tethering;->isApSuspended:Z
     invoke-static {v4, v7}, Lcom/android/server/connectivity/Tethering;->access$202(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 497
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     # invokes: Lcom/android/server/connectivity/Tethering;->suspendWifiApIcon(Z)V
     invoke-static {v4, v7}, Lcom/android/server/connectivity/Tethering;->access$300(Lcom/android/server/connectivity/Tethering;Z)V
 
-    .line 498
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     # invokes: Lcom/android/server/connectivity/Tethering;->clearTetheredVendorNotification()V
     invoke-static {v4}, Lcom/android/server/connectivity/Tethering;->access$400(Lcom/android/server/connectivity/Tethering;)V
 
-    .line 499
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     const v5, 0x1080793
@@ -184,7 +171,6 @@
     # invokes: Lcom/android/server/connectivity/Tethering;->showTetheredVendorNotification(I)V
     invoke-static {v4, v5}, Lcom/android/server/connectivity/Tethering;->access$500(Lcom/android/server/connectivity/Tethering;I)V
 
-    .line 501
     :cond_3
     if-nez p1, :cond_0
 
@@ -197,25 +183,21 @@
 
     if-eqz v4, :cond_0
 
-    .line 502
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     # setter for: Lcom/android/server/connectivity/Tethering;->isApSuspended:Z
     invoke-static {v4, v8}, Lcom/android/server/connectivity/Tethering;->access$202(Lcom/android/server/connectivity/Tethering;Z)Z
 
-    .line 503
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     # invokes: Lcom/android/server/connectivity/Tethering;->suspendWifiApIcon(Z)V
     invoke-static {v4, v8}, Lcom/android/server/connectivity/Tethering;->access$300(Lcom/android/server/connectivity/Tethering;Z)V
 
-    .line 504
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     # invokes: Lcom/android/server/connectivity/Tethering;->clearTetheredVendorNotification()V
     invoke-static {v4}, Lcom/android/server/connectivity/Tethering;->access$400(Lcom/android/server/connectivity/Tethering;)V
 
-    .line 505
     iget-object v4, p0, Lcom/android/server/connectivity/Tethering$1;->this$0:Lcom/android/server/connectivity/Tethering;
 
     const v5, 0x10807fc

@@ -82,32 +82,26 @@
     .locals 1
 
     .prologue
-    .line 76
     const/4 v0, 0x0
 
     sput v0, Lcom/sec/epdg/IPSecAdapterForEris;->CISCO_TESTING:I
 
-    .line 78
     const/4 v0, 0x1
 
     sput v0, Lcom/sec/epdg/IPSecAdapterForEris;->INSIDE_SECURE:I
 
-    .line 80
     const/4 v0, 0x2
 
     sput v0, Lcom/sec/epdg/IPSecAdapterForEris;->SETCOM_TESTING:I
 
-    .line 82
     sget v0, Lcom/sec/epdg/IPSecAdapterForEris;->CISCO_TESTING:I
 
     sput v0, Lcom/sec/epdg/IPSecAdapterForEris;->TESTING_TYPE:I
 
-    .line 96
     const-string v0, "CONN"
 
     sput-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->conn_prefix:Ljava/lang/String;
 
-    .line 99
     const-string v0, "/64"
 
     sput-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->IPV6PREFIX:Ljava/lang/String;
@@ -120,38 +114,31 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mConnectionDb:Ljava/util/HashMap;
 
-    .line 92
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mContext:Landroid/content/Context;
 
-    .line 94
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mbStarted:Z
 
-    .line 107
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "IpSecAdapterThread"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 108
     .local v0, "handlerThread":Landroid/os/HandlerThread;
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 109
     new-instance v1, Lcom/sec/epdg/IPSecAdapterForEris$IpSecAdapterHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -162,7 +149,6 @@
 
     iput-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mHandler:Lcom/sec/epdg/IPSecAdapterForEris$IpSecAdapterHandler;
 
-    .line 110
     const-string v1, "connectivity"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -173,7 +159,6 @@
 
     iput-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mConnMgr:Landroid/net/ConnectivityManager;
 
-    .line 112
     const-string v1, "power"
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -184,7 +169,6 @@
 
     iput-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mPowerMgr:Landroid/os/PowerManager;
 
-    .line 113
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mPowerMgr:Landroid/os/PowerManager;
 
     const/4 v2, 0x1
@@ -197,13 +181,10 @@
 
     iput-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mDPDWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 114
     iput-object p1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mContext:Landroid/content/Context;
 
-    .line 115
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecAdapterForEris;->initIpSecClient(Landroid/content/Context;)V
 
-    .line 116
     return-void
 .end method
 
@@ -213,7 +194,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 58
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecAdapterForEris;->onDisconnectRequestRecv(I)V
 
     return-void
@@ -226,7 +206,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 58
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/IPSecAdapterForEris;->onCheckConnectionRequestRecv(II)V
 
     return-void
@@ -238,7 +217,6 @@
     .param p1, "x1"    # Lcom/sec/erisclient/ErisError;
 
     .prologue
-    .line 58
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecAdapterForEris;->onIpSecAdapterServiceStatusChanged(Lcom/sec/erisclient/ErisError;)V
 
     return-void
@@ -250,7 +228,6 @@
     .param p1, "x1"    # Lcom/sec/epdg/IPSecAdapterForEris$ErisEventInfo;
 
     .prologue
-    .line 58
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecAdapterForEris;->onIpSecAdapterConnectionStatusChanged(Lcom/sec/epdg/IPSecAdapterForEris$ErisEventInfo;)V
 
     return-void
@@ -263,7 +240,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 58
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/IPSecAdapterForEris;->onConnectRequestRecv(Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;I)V
 
     return-void
@@ -275,14 +251,12 @@
     .param p2, "connection"    # Lcom/sec/erisclient/IPSecConnection;
 
     .prologue
-    .line 207
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v1, "Adding IPSecConnection to DB addIPsecConnectionDb()"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 208
     iget-object v0, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mConnectionDb:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -291,14 +265,12 @@
 
     invoke-virtual {v0, v1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v1, "Added IPSecConnection to DB"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 210
     return-void
 .end method
 
@@ -307,7 +279,6 @@
     .param p1, "conn"    # Lcom/sec/erisclient/IPSecConnection;
 
     .prologue
-    .line 601
     const-string v3, "[IPSECADAPTER_ERIS]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -330,7 +301,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 602
     iget-object v3, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mConnectionDb:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -341,7 +311,6 @@
 
     move-result-object v1
 
-    .line 603
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -350,14 +319,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 605
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 606
     .local v2, "key":Ljava/lang/Integer;
     iget-object v3, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mConnectionDb:Ljava/util/HashMap;
 
@@ -367,7 +334,6 @@
 
     check-cast v0, Lcom/sec/erisclient/IPSecConnection;
 
-    .line 607
     .local v0, "ipsecconn":Lcom/sec/erisclient/IPSecConnection;
     const-string v3, "[IPSECADAPTER_ERIS]"
 
@@ -395,32 +361,27 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 610
     invoke-virtual {v0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 611
     const-string v3, "[IPSECADAPTER_ERIS]"
 
     const-string v4, "Connection Object Found in DB"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 612
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
-    .line 616
     .end local v0    # "ipsecconn":Lcom/sec/erisclient/IPSecConnection;
     .end local v2    # "key":Ljava/lang/Integer;
     :goto_0
     return v3
 
-    .line 615
     :cond_1
     const-string v3, "[IPSECADAPTER_ERIS]"
 
@@ -428,7 +389,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 616
     const/4 v3, -0x1
 
     goto :goto_0
@@ -441,7 +401,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 577
     const-string v1, "[IPSECADAPTER_ERIS]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -464,12 +423,10 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 578
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mConnectionDb:Ljava/util/HashMap;
 
     if-eqz v1, :cond_0
 
-    .line 579
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mConnectionDb:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -482,35 +439,29 @@
 
     check-cast v11, Lcom/sec/erisclient/IPSecConnection;
 
-    .line 580
     .local v11, "conn":Lcom/sec/erisclient/IPSecConnection;
     if-nez v11, :cond_1
 
-    .line 581
     const-string v1, "[IPSECADAPTER_ERIS]"
 
     const-string v2, "getConnectionInformation(): null conn"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 597
     .end local v11    # "conn":Lcom/sec/erisclient/IPSecConnection;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 584
     .restart local v11    # "conn":Lcom/sec/erisclient/IPSecConnection;
     :cond_1
     invoke-virtual {v11}, Lcom/sec/erisclient/IPSecConnection;->getState()Lcom/sec/erisclient/IPSecConnectionState;
 
     move-result-object v12
 
-    .line 585
     .local v12, "state":Lcom/sec/erisclient/IPSecConnectionState;
     if-eqz v12, :cond_2
 
-    .line 586
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -543,7 +494,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 587
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -566,7 +516,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 588
     new-instance v0, Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;
 
     invoke-virtual {v12}, Lcom/sec/erisclient/IPSecConnectionState;->getIpv4prefixlen()I
@@ -613,7 +562,6 @@
 
     goto :goto_0
 
-    .line 593
     :cond_2
     const-string v1, "[IPSECADAPTER_ERIS]"
 
@@ -630,7 +578,6 @@
     .param p2, "ikeErrorCode"    # I
 
     .prologue
-    .line 639
     sget-object v0, Lcom/sec/epdg/IPSecAdapterForEris$1;->$SwitchMap$com$sec$erisclient$ErisError:[I
 
     invoke-virtual {p1}, Lcom/sec/erisclient/ErisError;->ordinal()I
@@ -641,7 +588,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 688
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -664,7 +610,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 689
     new-instance v0, Lcom/sec/epdg/IWlanError;
 
     sget-object v1, Lcom/sec/epdg/IWlanError$EpdgError;->VENDOR_ERROR:Lcom/sec/epdg/IWlanError$EpdgError;
@@ -680,7 +625,6 @@
     :goto_0
     return-object v0
 
-    .line 677
     :pswitch_0
     new-instance v0, Lcom/sec/epdg/IWlanError;
 
@@ -694,7 +638,6 @@
 
     goto :goto_0
 
-    .line 680
     :pswitch_1
     new-instance v0, Lcom/sec/epdg/IWlanError;
 
@@ -708,7 +651,6 @@
 
     goto :goto_0
 
-    .line 683
     :pswitch_2
     new-instance v0, Lcom/sec/epdg/IWlanError;
 
@@ -722,7 +664,6 @@
 
     goto :goto_0
 
-    .line 685
     :pswitch_3
     new-instance v0, Lcom/sec/epdg/IWlanError;
 
@@ -744,7 +685,6 @@
 
     goto :goto_0
 
-    .line 639
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -799,7 +739,6 @@
     .prologue
     const/16 v0, 0x32
 
-    .line 620
     sget-object v1, Lcom/sec/epdg/IPSecAdapterForEris$1;->$SwitchMap$com$sec$erisclient$ErisEvent:[I
 
     invoke-virtual {p1}, Lcom/sec/erisclient/ErisEvent;->ordinal()I
@@ -810,42 +749,35 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 634
     :goto_0
     :pswitch_0
     return v0
 
-    .line 622
     :pswitch_1
     const/16 v0, 0x2d
 
     goto :goto_0
 
-    .line 624
     :pswitch_2
     const/16 v0, 0x30
 
     goto :goto_0
 
-    .line 626
     :pswitch_3
     const/16 v0, 0x2e
 
     goto :goto_0
 
-    .line 628
     :pswitch_4
     const/16 v0, 0x2f
 
     goto :goto_0
 
-    .line 630
     :pswitch_5
     const/16 v0, 0x31
 
     goto :goto_0
 
-    .line 620
     nop
 
     :pswitch_data_0
@@ -864,7 +796,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 135
     const-class v1, Lcom/sec/epdg/IPSecAdapterForEris;
 
     monitor-enter v1
@@ -874,32 +805,27 @@
 
     if-nez v0, :cond_0
 
-    .line 136
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v2, "Creating IPSecAdapterForEris"
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 137
     new-instance v0, Lcom/sec/epdg/IPSecAdapterForEris;
 
     invoke-direct {v0, p0}, Lcom/sec/epdg/IPSecAdapterForEris;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mInstance:Lcom/sec/epdg/IPSecAdapterForEris;
 
-    .line 138
     sget-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mInstance:Lcom/sec/epdg/IPSecAdapterForEris;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 142
     :goto_0
     monitor-exit v1
 
     return-object v0
 
-    .line 141
     :cond_0
     :try_start_1
     const-string v0, "[IPSECADAPTER_ERIS]"
@@ -908,14 +834,12 @@
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 142
     sget-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mInstance:Lcom/sec/epdg/IPSecAdapterForEris;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 135
     :catchall_0
     move-exception v0
 
@@ -930,7 +854,6 @@
     .param p1, "hdlr"    # Landroid/os/Handler;
 
     .prologue
-    .line 119
     const-class v1, Lcom/sec/epdg/IPSecAdapterForEris;
 
     monitor-enter v1
@@ -940,35 +863,29 @@
 
     if-nez v0, :cond_0
 
-    .line 120
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v2, "Creating IPSecAdapterForEris"
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 121
     new-instance v0, Lcom/sec/epdg/IPSecAdapterForEris;
 
     invoke-direct {v0, p0}, Lcom/sec/epdg/IPSecAdapterForEris;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mInstance:Lcom/sec/epdg/IPSecAdapterForEris;
 
-    .line 122
     sput-object p1, Lcom/sec/epdg/IPSecAdapterForEris;->mOemHandler:Landroid/os/Handler;
 
-    .line 123
     sget-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mInstance:Lcom/sec/epdg/IPSecAdapterForEris;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 128
     :goto_0
     monitor-exit v1
 
     return-object v0
 
-    .line 126
     :cond_0
     :try_start_1
     const-string v0, "[IPSECADAPTER_ERIS]"
@@ -977,17 +894,14 @@
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     sput-object p1, Lcom/sec/epdg/IPSecAdapterForEris;->mOemHandler:Landroid/os/Handler;
 
-    .line 128
     sget-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mInstance:Lcom/sec/epdg/IPSecAdapterForEris;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 119
     :catchall_0
     move-exception v0
 
@@ -1001,19 +915,16 @@
     .param p1, "cid"    # I
 
     .prologue
-    .line 200
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v1, "getIpSecConnectionbyCid()"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 201
     iget-object v0, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mConnectionDb:Ljava/util/HashMap;
 
     if-eqz v0, :cond_0
 
-    .line 202
     iget-object v0, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mConnectionDb:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1026,7 +937,6 @@
 
     check-cast v0, Lcom/sec/erisclient/IPSecConnection;
 
-    .line 203
     :goto_0
     return-object v0
 
@@ -1041,29 +951,24 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 179
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v1, "Initalizing IPSec Library"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 180
     invoke-static {p1}, Lcom/sec/erisclient/ErisClient;->getInstance(Landroid/content/Context;)Lcom/sec/erisclient/ErisClient;
 
     move-result-object v0
 
     sput-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mIPsecClient:Lcom/sec/erisclient/ErisClient;
 
-    .line 181
     sget-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mIPsecClient:Lcom/sec/erisclient/ErisClient;
 
     invoke-virtual {v0, p0}, Lcom/sec/erisclient/ErisClient;->setListener(Lcom/sec/erisclient/IErisListener;)V
 
-    .line 182
     invoke-static {}, Lcom/sec/epdg/IPSecAdapterForEris;->startService()V
 
-    .line 184
     return-void
 .end method
 
@@ -1080,23 +985,19 @@
     .end annotation
 
     .prologue
-    .line 214
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     const-string v20, "mapIwlanSettingToIPsecConnection()"
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 215
     const/4 v14, 0x0
 
-    .line 216
     .local v14, "inetAddress":Ljava/net/InetAddress;
     new-instance v5, Lcom/sec/erisclient/IPSecConnection;
 
     invoke-direct {v5}, Lcom/sec/erisclient/IPSecConnection;-><init>()V
 
-    .line 217
     .local v5, "connection":Lcom/sec/erisclient/IPSecConnection;
     invoke-static {}, Lcom/sec/epdg/EpdgServerSelection;->getInstance()Lcom/sec/epdg/EpdgServerSelection;
 
@@ -1106,16 +1007,13 @@
 
     move-result-object v14
 
-    .line 218
     const/4 v10, 0x0
 
-    .line 220
     .local v10, "hostAddress":Ljava/lang/String;
     move/from16 v0, p4
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setConnID(I)V
 
-    .line 221
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIWlanSettingName()Ljava/lang/String;
 
     move-result-object v19
@@ -1124,7 +1022,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setName(Ljava/lang/String;)V
 
-    .line 222
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -1151,33 +1048,27 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setVirtualAdapterName(Ljava/lang/String;)V
 
-    .line 225
     if-nez v14, :cond_1
 
-    .line 226
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     const-string v20, "Error, wifi is connected still epdg server ip is null, returning null"
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 227
     const/4 v5, 0x0
 
-    .line 410
     .end local v5    # "connection":Lcom/sec/erisclient/IPSecConnection;
     :cond_0
     :goto_0
     return-object v5
 
-    .line 230
     .restart local v5    # "connection":Lcom/sec/erisclient/IPSecConnection;
     :cond_1
     invoke-virtual {v14}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 231
     const/16 v19, 0x0
 
     const-string v20, "[IPSECADAPTER_ERIS]"
@@ -1204,7 +1095,6 @@
 
     invoke-static/range {v19 .. v21}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 234
     if-eqz v10, :cond_b
 
     invoke-static {v10}, Lorg/apache/http/conn/util/InetAddressUtils;->isIPv4Address(Ljava/lang/String;)Z
@@ -1219,18 +1109,15 @@
 
     if-eqz v19, :cond_b
 
-    .line 236
     :cond_2
     invoke-virtual {v5, v10}, Lcom/sec/erisclient/IPSecConnection;->setGateway(Ljava/lang/String;)V
 
-    .line 241
     const/16 v19, 0x0
 
     move/from16 v0, v19
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setUserAuthentication(Z)V
 
-    .line 243
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getmIpSecIpType()Lcom/sec/epdg/IWlanEnum$IPSecIpType;
 
     move-result-object v19
@@ -1239,7 +1126,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setSubnetType(Lcom/sec/epdg/IWlanEnum$IPSecIpType;)V
 
-    .line 247
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getmOwnUriType()Lcom/sec/epdg/IWlanEnum$IdentityType;
 
     move-result-object v19
@@ -1264,7 +1150,6 @@
 
     invoke-virtual {v5, v0, v1}, Lcom/sec/erisclient/IPSecConnection;->setOwnIdentity(Lcom/sec/epdg/IWlanEnum$IdentityType;Ljava/lang/String;)V
 
-    .line 249
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIWlanSettingName()Ljava/lang/String;
 
     move-result-object v19
@@ -1277,19 +1162,16 @@
 
     if-eqz v19, :cond_c
 
-    .line 250
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     const-string v20, "Set Testing type to Inside Secure"
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 251
     sget v19, Lcom/sec/epdg/IPSecAdapterForEris;->INSIDE_SECURE:I
 
     sput v19, Lcom/sec/epdg/IPSecAdapterForEris;->TESTING_TYPE:I
 
-    .line 260
     :goto_1
     sget v19, Lcom/sec/epdg/IPSecAdapterForEris;->TESTING_TYPE:I
 
@@ -1301,7 +1183,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 261
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getmRemoteUriType()Lcom/sec/epdg/IWlanEnum$IdentityType;
 
     move-result-object v19
@@ -1316,7 +1197,6 @@
 
     invoke-virtual {v5, v0, v1}, Lcom/sec/erisclient/IPSecConnection;->setRemoteIdentity(Lcom/sec/epdg/IWlanEnum$IdentityType;Ljava/lang/String;)V
 
-    .line 262
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/epdg/IPSecAdapterForEris;->mContext:Landroid/content/Context;
@@ -1335,7 +1215,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setUsername(Ljava/lang/String;)V
 
-    .line 263
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
     move-result-object v19
@@ -1348,7 +1227,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setEapMethod(Lcom/sec/epdg/IWlanEnum$IkeEapType;)V
 
-    .line 266
     :cond_3
     const-string v19, "[IPSECADAPTER_ERIS]"
 
@@ -1390,7 +1268,6 @@
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 267
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getmPfsval()Lcom/sec/epdg/IWlanEnum$PfsState;
 
     move-result-object v19
@@ -1403,14 +1280,12 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 268
     const/16 v19, 0x1
 
     move/from16 v0, v19
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setPerfectForwardSecrecy(Z)V
 
-    .line 272
     :cond_4
     :goto_2
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getmIpSecauthType()Lcom/sec/epdg/IWlanEnum$IPSecAuthType;
@@ -1421,7 +1296,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setHostAuthentication(Lcom/sec/epdg/IWlanEnum$IPSecAuthType;)V
 
-    .line 274
     sget v19, Lcom/sec/epdg/IPSecAdapterForEris;->TESTING_TYPE:I
 
     sget v20, Lcom/sec/epdg/IPSecAdapterForEris;->INSIDE_SECURE:I
@@ -1432,7 +1306,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 275
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/epdg/IPSecAdapterForEris;->mContext:Landroid/content/Context;
@@ -1455,14 +1328,12 @@
 
     if-eqz v19, :cond_f
 
-    .line 276
     const-string v19, "batikgeologic"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setPreSharedKey(Ljava/lang/String;)V
 
-    .line 285
     :cond_5
     :goto_3
     const/16 v19, 0x0
@@ -1471,7 +1342,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setGlobalDnsConfiguration(Z)V
 
-    .line 287
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIpsecsetting()Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;
 
     move-result-object v19
@@ -1484,7 +1354,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setTunnelMode(Lcom/sec/epdg/IWlanEnum$TunnelModeType;)V
 
-    .line 288
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIpsecsetting()Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;
 
     move-result-object v19
@@ -1497,7 +1366,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setIPsecEncryption(Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;)V
 
-    .line 290
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIpsecsetting()Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;
 
     move-result-object v19
@@ -1510,7 +1378,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setIPsecIntegrity(Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;)V
 
-    .line 292
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIpsecsetting()Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;
 
     move-result-object v19
@@ -1523,14 +1390,12 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setIPsecGroup(Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;)V
 
-    .line 296
     const/16 v19, 0x1
 
     move/from16 v0, v19
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setIPsecAntiReplay(Z)V
 
-    .line 297
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIpsecsetting()Lcom/sec/epdg/IWlanApnSetting$IPSecSetting;
 
     move-result-object v19
@@ -1553,7 +1418,6 @@
 
     invoke-virtual {v5, v0, v1}, Lcom/sec/erisclient/IPSecConnection;->setIPsecLife(Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;I)V
 
-    .line 300
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isUsingCaCertificate()Ljava/lang/Boolean;
 
     move-result-object v19
@@ -1564,20 +1428,16 @@
 
     if-eqz v19, :cond_8
 
-    .line 301
     const/4 v3, 0x0
 
-    .line 302
     .local v3, "caCert":Ljava/security/cert/X509Certificate;
     const/4 v15, 0x0
 
-    .line 303
     .local v15, "input":Ljava/io/FileInputStream;
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->caCertificatePath()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 305
     .local v2, "ca":Ljava/lang/String;
     :try_start_0
     new-instance v16, Ljava/io/FileInputStream;
@@ -1590,7 +1450,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 306
     .end local v15    # "input":Ljava/io/FileInputStream;
     .local v16, "input":Ljava/io/FileInputStream;
     :try_start_1
@@ -1600,7 +1459,6 @@
 
     move-result-object v4
 
-    .line 307
     .local v4, "cf":Ljava/security/cert/CertificateFactory;
     move-object/from16 v0, v16
 
@@ -1614,7 +1472,6 @@
 
     move-object v3, v0
 
-    .line 308
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     const-string v20, "Success to generate CA"
@@ -1625,7 +1482,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_7
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 315
     if-eqz v16, :cond_6
 
     :try_start_2
@@ -1636,7 +1492,6 @@
     :cond_6
     move-object/from16 v15, v16
 
-    .line 321
     .end local v4    # "cf":Ljava/security/cert/CertificateFactory;
     .end local v16    # "input":Ljava/io/FileInputStream;
     .restart local v15    # "input":Ljava/io/FileInputStream;
@@ -1644,7 +1499,6 @@
     :goto_4
     if-eqz v3, :cond_8
 
-    .line 322
     :try_start_3
     invoke-virtual {v5, v3}, Lcom/sec/erisclient/IPSecConnection;->setCaCertWithVerifying(Ljava/security/cert/X509Certificate;)Z
 
@@ -1652,7 +1506,6 @@
 
     if-eqz v19, :cond_12
 
-    .line 323
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     const-string v20, "Success to setCaCertWithVerifying"
@@ -1661,7 +1514,6 @@
     :try_end_3
     .catch Ljava/security/cert/CertificateEncodingException; {:try_start_3 .. :try_end_3} :catch_6
 
-    .line 335
     .end local v2    # "ca":Ljava/lang/String;
     .end local v3    # "caCert":Ljava/security/cert/X509Certificate;
     .end local v15    # "input":Ljava/io/FileInputStream;
@@ -1679,7 +1531,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setIkeVersion(Lcom/sec/epdg/IWlanEnum$Ikeversion;)V
 
-    .line 337
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
     move-result-object v19
@@ -1692,7 +1543,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setIkeIntegrity(Lcom/sec/epdg/IWlanEnum$IkeIntegrity;)V
 
-    .line 339
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
     move-result-object v19
@@ -1705,7 +1555,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setIkeEncryption(Lcom/sec/epdg/IWlanEnum$IkeEncryption;)V
 
-    .line 341
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
     move-result-object v19
@@ -1718,7 +1567,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setGroup(Lcom/sec/epdg/IWlanEnum$IkeDhGroup;)V
 
-    .line 343
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
     move-result-object v19
@@ -1731,7 +1579,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setIkeLife(I)V
 
-    .line 344
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
     move-result-object v19
@@ -1744,7 +1591,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setIkeWindowSize(I)V
 
-    .line 346
     sget v19, Lcom/sec/epdg/IPSecAdapterForEris;->TESTING_TYPE:I
 
     sget v20, Lcom/sec/epdg/IPSecAdapterForEris;->SETCOM_TESTING:I
@@ -1755,7 +1601,6 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 347
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/epdg/IPSecAdapterForEris;->mContext:Landroid/content/Context;
@@ -1774,7 +1619,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setUsername(Ljava/lang/String;)V
 
-    .line 348
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
     move-result-object v19
@@ -1787,7 +1631,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setEapMethod(Lcom/sec/epdg/IWlanEnum$IkeEapType;)V
 
-    .line 349
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getmRemoteUriType()Lcom/sec/epdg/IWlanEnum$IdentityType;
 
     move-result-object v19
@@ -1802,7 +1645,6 @@
 
     invoke-virtual {v5, v0, v1}, Lcom/sec/erisclient/IPSecConnection;->setRemoteIdentity(Lcom/sec/epdg/IWlanEnum$IdentityType;Ljava/lang/String;)V
 
-    .line 352
     :cond_9
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
@@ -1816,7 +1658,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setConnectTimeout(I)V
 
-    .line 354
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
     move-result-object v19
@@ -1829,7 +1670,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setDpdTimeout(I)V
 
-    .line 355
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIkesetting()Lcom/sec/epdg/IWlanApnSetting$IKeSetting;
 
     move-result-object v19
@@ -1842,7 +1682,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setNattKeepaliveTimeout(I)V
 
-    .line 357
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getmIkeVirtualAdapterConf()Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
     move-result-object v19
@@ -1851,7 +1690,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setVirtualAdapterConfiguration(Lcom/sec/epdg/IWlanEnum$AdapterConf;)V
 
-    .line 361
     const/16 v19, 0x0
 
     const-string v20, "[IPSECADAPTER_ERIS]"
@@ -1894,7 +1732,6 @@
 
     invoke-static/range {v19 .. v21}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 364
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -1917,23 +1754,19 @@
 
     move-result-object v17
 
-    .line 365
     .local v17, "ipv6HandoverAddrWidPrefix":Ljava/lang/String;
     move-object/from16 v0, p2
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setRequestedRacIPv4Address(Ljava/lang/String;)V
 
-    .line 366
     move-object/from16 v0, v17
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setRequestedRacIPv6Address(Ljava/lang/String;)V
 
-    .line 368
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getPcscfattributes()Lcom/sec/epdg/IWlanEnum$PcscfConf;
 
     move-result-object v18
 
-    .line 370
     .local v18, "pcscfattribute":Lcom/sec/epdg/IWlanEnum$PcscfConf;
     sget-object v19, Lcom/sec/epdg/IWlanEnum$PcscfConf;->PCSCF_CONF_NONE:Lcom/sec/epdg/IWlanEnum$PcscfConf;
 
@@ -1943,7 +1776,6 @@
 
     if-eq v0, v1, :cond_15
 
-    .line 371
     sget-object v19, Lcom/sec/epdg/IWlanEnum$PcscfConf;->PCSCF_CONF_V4:Lcom/sec/epdg/IWlanEnum$PcscfConf;
 
     move-object/from16 v0, v18
@@ -1952,14 +1784,12 @@
 
     if-ne v0, v1, :cond_13
 
-    .line 372
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     const-string v20, "Vendor Attribute is set to PCSCF_CONF_V4"
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 373
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getPcscfv4VendorAttr()I
 
     move-result v19
@@ -1968,13 +1798,11 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setPcscfv4VendorAttr(I)V
 
-    .line 385
     :goto_6
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getImeiVendorAttrVal()Lcom/sec/epdg/IWlanEnum$Imei;
 
     move-result-object v12
 
-    .line 386
     .local v12, "imeiVendorAttrVal":Lcom/sec/epdg/IWlanEnum$Imei;
     sget-object v19, Lcom/sec/epdg/IWlanEnum$Imei;->DEVICE_IMEI:Lcom/sec/epdg/IWlanEnum$Imei;
 
@@ -1982,19 +1810,16 @@
 
     if-ne v0, v12, :cond_16
 
-    .line 387
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     const-string v20, "Adding IMEI vendor attribute to IKE connection"
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 388
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getImeiVendorAttributeType()I
 
     move-result v11
 
-    .line 389
     .local v11, "imeiVendorAttrType":I
     move-object/from16 v0, p0
 
@@ -2006,7 +1831,6 @@
 
     move-result-object v13
 
-    .line 390
     .local v13, "imeiVendorAttrValue":Ljava/lang/String;
     invoke-virtual {v13}, Ljava/lang/String;->getBytes()[B
 
@@ -2016,7 +1840,6 @@
 
     invoke-virtual {v5, v11, v0}, Lcom/sec/erisclient/IPSecConnection;->setImeiVendorAttr(I[B)V
 
-    .line 391
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -2063,7 +1886,6 @@
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 397
     .end local v11    # "imeiVendorAttrType":I
     :goto_7
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getPeriodicDpdTimer()I
@@ -2074,7 +1896,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setPeriodicDpdTimer(I)V
 
-    .line 399
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -2101,7 +1922,6 @@
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 400
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getIwlanInterfaceName()Ljava/lang/String;
 
     move-result-object v19
@@ -2110,7 +1930,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->addInterface(Ljava/lang/String;)V
 
-    .line 402
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     new-instance v20, Ljava/lang/StringBuilder;
@@ -2151,7 +1970,6 @@
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 404
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getMobikeattributes()Lcom/sec/epdg/IWlanEnum$Mobike;
 
     move-result-object v19
@@ -2164,7 +1982,6 @@
 
     if-ne v0, v1, :cond_17
 
-    .line 405
     const/16 v19, 0x1
 
     move/from16 v0, v19
@@ -2173,7 +1990,6 @@
 
     goto/16 :goto_0
 
-    .line 238
     .end local v12    # "imeiVendorAttrVal":Lcom/sec/epdg/IWlanEnum$Imei;
     .end local v17    # "ipv6HandoverAddrWidPrefix":Ljava/lang/String;
     .end local v18    # "pcscfattribute":Lcom/sec/epdg/IWlanEnum$PcscfConf;
@@ -2184,12 +2000,10 @@
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 252
     :cond_c
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getIWlanSettingName()Ljava/lang/String;
 
@@ -2203,21 +2017,18 @@
 
     if-eqz v19, :cond_d
 
-    .line 253
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     const-string v20, "Set Testing type to setcom"
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 254
     sget v19, Lcom/sec/epdg/IPSecAdapterForEris;->SETCOM_TESTING:I
 
     sput v19, Lcom/sec/epdg/IPSecAdapterForEris;->TESTING_TYPE:I
 
     goto/16 :goto_1
 
-    .line 256
     :cond_d
     const-string v19, "[IPSECADAPTER_ERIS]"
 
@@ -2225,14 +2036,12 @@
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 257
     sget v19, Lcom/sec/epdg/IPSecAdapterForEris;->CISCO_TESTING:I
 
     sput v19, Lcom/sec/epdg/IPSecAdapterForEris;->TESTING_TYPE:I
 
     goto/16 :goto_1
 
-    .line 269
     :cond_e
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getmPfsval()Lcom/sec/epdg/IWlanEnum$PfsState;
 
@@ -2246,7 +2055,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 270
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -2255,7 +2063,6 @@
 
     goto/16 :goto_2
 
-    .line 278
     :cond_f
     move-object/from16 v0, p0
 
@@ -2279,7 +2086,6 @@
 
     if-eqz v19, :cond_10
 
-    .line 279
     const-string v19, "hostelrybumped"
 
     move-object/from16 v0, v19
@@ -2288,7 +2094,6 @@
 
     goto/16 :goto_3
 
-    .line 280
     :cond_10
     move-object/from16 v0, p0
 
@@ -2312,14 +2117,12 @@
 
     if-eqz v19, :cond_5
 
-    .line 281
     const-string v19, "harrowedregularizes"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setPreSharedKey(Ljava/lang/String;)V
 
-    .line 282
     sget-object v19, Lcom/sec/epdg/IWlanEnum$IPSecIpType;->IP_VERSION_V4V6:Lcom/sec/epdg/IWlanEnum$IPSecIpType;
 
     move-object/from16 v0, v19
@@ -2328,7 +2131,6 @@
 
     goto/16 :goto_3
 
-    .line 316
     .restart local v2    # "ca":Ljava/lang/String;
     .restart local v3    # "caCert":Ljava/security/cert/X509Certificate;
     .restart local v4    # "cf":Ljava/security/cert/CertificateFactory;
@@ -2336,7 +2138,6 @@
     :catch_0
     move-exception v9
 
-    .line 317
     .local v9, "eio":Ljava/io/IOException;
     const-string v19, "[IPSECADAPTER_ERIS]"
 
@@ -2364,18 +2165,15 @@
 
     move-object/from16 v15, v16
 
-    .line 319
     .end local v16    # "input":Ljava/io/FileInputStream;
     .restart local v15    # "input":Ljava/io/FileInputStream;
     goto/16 :goto_4
 
-    .line 309
     .end local v4    # "cf":Ljava/security/cert/CertificateFactory;
     .end local v9    # "eio":Ljava/io/IOException;
     :catch_1
     move-exception v6
 
-    .line 310
     .local v6, "e":Ljava/security/cert/CertificateException;
     :goto_8
     :try_start_4
@@ -2405,7 +2203,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 315
     if-eqz v15, :cond_7
 
     :try_start_5
@@ -2415,11 +2212,9 @@
 
     goto/16 :goto_4
 
-    .line 316
     :catch_2
     move-exception v9
 
-    .line 317
     .restart local v9    # "eio":Ljava/io/IOException;
     const-string v19, "[IPSECADAPTER_ERIS]"
 
@@ -2447,13 +2242,11 @@
 
     goto/16 :goto_4
 
-    .line 311
     .end local v6    # "e":Ljava/security/cert/CertificateException;
     .end local v9    # "eio":Ljava/io/IOException;
     :catch_3
     move-exception v8
 
-    .line 312
     .local v8, "e2":Ljava/io/IOException;
     :goto_9
     :try_start_6
@@ -2483,7 +2276,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 315
     if-eqz v15, :cond_7
 
     :try_start_7
@@ -2493,11 +2285,9 @@
 
     goto/16 :goto_4
 
-    .line 316
     :catch_4
     move-exception v9
 
-    .line 317
     .restart local v9    # "eio":Ljava/io/IOException;
     const-string v19, "[IPSECADAPTER_ERIS]"
 
@@ -2525,13 +2315,11 @@
 
     goto/16 :goto_4
 
-    .line 314
     .end local v8    # "e2":Ljava/io/IOException;
     .end local v9    # "eio":Ljava/io/IOException;
     :catchall_0
     move-exception v19
 
-    .line 315
     :goto_a
     if-eqz v15, :cond_11
 
@@ -2540,16 +2328,13 @@
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 318
     :cond_11
     :goto_b
     throw v19
 
-    .line 316
     :catch_5
     move-exception v9
 
-    .line 317
     .restart local v9    # "eio":Ljava/io/IOException;
     const-string v20, "[IPSECADAPTER_ERIS]"
 
@@ -2577,7 +2362,6 @@
 
     goto :goto_b
 
-    .line 325
     .end local v9    # "eio":Ljava/io/IOException;
     :cond_12
     :try_start_9
@@ -2591,11 +2375,9 @@
 
     goto/16 :goto_5
 
-    .line 327
     :catch_6
     move-exception v7
 
-    .line 328
     .local v7, "e1":Ljava/security/cert/CertificateEncodingException;
     const-string v19, "[IPSECADAPTER_ERIS]"
 
@@ -2623,7 +2405,6 @@
 
     goto/16 :goto_5
 
-    .line 374
     .end local v2    # "ca":Ljava/lang/String;
     .end local v3    # "caCert":Ljava/security/cert/X509Certificate;
     .end local v7    # "e1":Ljava/security/cert/CertificateEncodingException;
@@ -2639,14 +2420,12 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 375
     const-string v19, "[IPSECADAPTER_ERIS]"
 
     const-string v20, "Vendor Attribute is set to PCSCF_CONF_V6"
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 376
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getPcscfv6VendorAttr()I
 
     move-result v19
@@ -2657,7 +2436,6 @@
 
     goto/16 :goto_6
 
-    .line 378
     :cond_14
     const-string v19, "[IPSECADAPTER_ERIS]"
 
@@ -2665,7 +2443,6 @@
 
     invoke-static/range {v19 .. v20}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 379
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getPcscfv4VendorAttr()I
 
     move-result v19
@@ -2674,7 +2451,6 @@
 
     invoke-virtual {v5, v0}, Lcom/sec/erisclient/IPSecConnection;->setPcscfv4VendorAttr(I)V
 
-    .line 380
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getPcscfv6VendorAttr()I
 
     move-result v19
@@ -2685,7 +2461,6 @@
 
     goto/16 :goto_6
 
-    .line 383
     :cond_15
     const-string v19, "[IPSECADAPTER_ERIS]"
 
@@ -2695,7 +2470,6 @@
 
     goto/16 :goto_6
 
-    .line 394
     .restart local v12    # "imeiVendorAttrVal":Lcom/sec/epdg/IWlanEnum$Imei;
     :cond_16
     const-string v19, "[IPSECADAPTER_ERIS]"
@@ -2706,7 +2480,6 @@
 
     goto/16 :goto_7
 
-    .line 406
     :cond_17
     invoke-virtual/range {p1 .. p1}, Lcom/sec/epdg/IWlanApnSetting;->getMobikeattributes()Lcom/sec/epdg/IWlanEnum$Mobike;
 
@@ -2720,7 +2493,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 407
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -2729,7 +2501,6 @@
 
     goto/16 :goto_0
 
-    .line 314
     .end local v12    # "imeiVendorAttrVal":Lcom/sec/epdg/IWlanEnum$Imei;
     .end local v17    # "ipv6HandoverAddrWidPrefix":Ljava/lang/String;
     .end local v18    # "pcscfattribute":Lcom/sec/epdg/IWlanEnum$PcscfConf;
@@ -2745,7 +2516,6 @@
     .restart local v15    # "input":Ljava/io/FileInputStream;
     goto/16 :goto_a
 
-    .line 311
     .end local v15    # "input":Ljava/io/FileInputStream;
     .restart local v16    # "input":Ljava/io/FileInputStream;
     :catch_7
@@ -2757,7 +2527,6 @@
     .restart local v15    # "input":Ljava/io/FileInputStream;
     goto/16 :goto_9
 
-    .line 309
     .end local v15    # "input":Ljava/io/FileInputStream;
     .restart local v16    # "input":Ljava/io/FileInputStream;
     :catch_8
@@ -2776,33 +2545,27 @@
     .param p2, "timeout"    # I
 
     .prologue
-    .line 544
     iget-boolean v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mbStarted:Z
 
     if-nez v1, :cond_0
 
-    .line 545
     const-string v1, "[IPSECADAPTER_ERIS]"
 
     const-string v2, "IPSecService is not connected yet"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 561
     :goto_0
     return-void
 
-    .line 549
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecAdapterForEris;->getIpSecConnectionbyCid(I)Lcom/sec/erisclient/IPSecConnection;
 
     move-result-object v0
 
-    .line 550
     .local v0, "conn":Lcom/sec/erisclient/IPSecConnection;
     if-eqz v0, :cond_2
 
-    .line 551
     const-string v1, "[IPSECADAPTER_ERIS]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2835,7 +2598,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 552
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mDPDWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v1, :cond_1
@@ -2848,19 +2610,16 @@
 
     if-nez v1, :cond_1
 
-    .line 553
     const-string v1, "[IPSECADAPTER_ERIS]"
 
     const-string v2, "checkConnection wake lock"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 554
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mDPDWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 556
     :cond_1
     sget-object v1, Lcom/sec/epdg/IPSecAdapterForEris;->mIPsecClient:Lcom/sec/erisclient/ErisClient;
 
@@ -2868,7 +2627,6 @@
 
     goto :goto_0
 
-    .line 558
     :cond_2
     const-string v1, "[IPSECADAPTER_ERIS]"
 
@@ -2907,7 +2665,6 @@
 
     const/4 v9, -0x1
 
-    .line 415
     const-string v6, "[IPSECADAPTER_ERIS]"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2930,44 +2687,36 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 416
     const/4 v2, 0x0
 
-    .line 417
     .local v2, "ipsecconn":Lcom/sec/erisclient/IPSecConnection;
     # invokes: Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;->getIWlanSettingInfo()Lcom/sec/epdg/IWlanApnSetting;
     invoke-static {p1}, Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;->access$400(Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;)Lcom/sec/epdg/IWlanApnSetting;
 
     move-result-object v3
 
-    .line 419
     .local v3, "iwlanSetting":Lcom/sec/epdg/IWlanApnSetting;
     iget-boolean v6, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mbStarted:Z
 
     if-nez v6, :cond_0
 
-    .line 420
     const-string v6, "[IPSECADAPTER_ERIS]"
 
     const-string v7, "IPsecservice not started"
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 421
     sget-object v6, Lcom/sec/epdg/IPSecAdapterForEris;->mOemHandler:Landroid/os/Handler;
 
     invoke-static {v6}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v4
 
-    .line 422
     .local v4, "msg":Landroid/os/Message;
     iput v11, v4, Landroid/os/Message;->what:I
 
-    .line 423
     iput p2, v4, Landroid/os/Message;->arg1:I
 
-    .line 424
     new-instance v6, Lcom/sec/epdg/IWlanConnectResult;
 
     sget-object v7, Lcom/sec/erisclient/ErisError;->ERIS_GENERIC_FAILED:Lcom/sec/erisclient/ErisError;
@@ -2980,14 +2729,11 @@
 
     iput-object v6, v4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 426
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 462
     :goto_0
     return-void
 
-    .line 431
     .end local v4    # "msg":Landroid/os/Message;
     :cond_0
     :try_start_0
@@ -3007,11 +2753,9 @@
 
     move-result-object v2
 
-    .line 438
     :goto_1
     if-nez v2, :cond_1
 
-    .line 439
     const-string v6, "[IPSECADAPTER_ERIS]"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -3034,21 +2778,17 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 440
     sget-object v6, Lcom/sec/epdg/IPSecAdapterForEris;->mOemHandler:Landroid/os/Handler;
 
     invoke-static {v6}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v4
 
-    .line 441
     .restart local v4    # "msg":Landroid/os/Message;
     iput v11, v4, Landroid/os/Message;->what:I
 
-    .line 442
     iput p2, v4, Landroid/os/Message;->arg1:I
 
-    .line 443
     new-instance v6, Lcom/sec/epdg/IWlanConnectResult;
 
     sget-object v7, Lcom/sec/erisclient/ErisError;->ERIS_GENERIC_FAILED:Lcom/sec/erisclient/ErisError;
@@ -3061,17 +2801,14 @@
 
     iput-object v6, v4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 445
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0
 
-    .line 433
     .end local v4    # "msg":Landroid/os/Message;
     :catch_0
     move-exception v1
 
-    .line 434
     .local v1, "e":Ljava/text/ParseException;
     const-string v6, "[IPSECADAPTER_ERIS]"
 
@@ -3095,12 +2832,10 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 435
     invoke-virtual {v1}, Ljava/text/ParseException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 448
     .end local v1    # "e":Ljava/text/ParseException;
     :cond_1
     sget-object v6, Lcom/sec/epdg/IPSecAdapterForEris;->mIPsecClient:Lcom/sec/erisclient/ErisClient;
@@ -3109,7 +2844,6 @@
 
     move-result-object v5
 
-    .line 450
     .local v5, "result":Lcom/sec/erisclient/ErisError;
     sget-object v6, Lcom/sec/epdg/IPSecAdapterForEris;->mOemHandler:Landroid/os/Handler;
 
@@ -3117,21 +2851,17 @@
 
     move-result-object v4
 
-    .line 451
     .restart local v4    # "msg":Landroid/os/Message;
     iput p2, v4, Landroid/os/Message;->arg1:I
 
-    .line 452
     sget-object v6, Lcom/sec/erisclient/ErisError;->ERIS_OK:Lcom/sec/erisclient/ErisError;
 
     if-ne v5, v6, :cond_2
 
-    .line 453
     invoke-direct {p0, p2, v2}, Lcom/sec/epdg/IPSecAdapterForEris;->addIPsecConnectionDb(ILcom/sec/erisclient/IPSecConnection;)V
 
     goto :goto_0
 
-    .line 455
     :cond_2
     const-string v6, "[IPSECADAPTER_ERIS]"
 
@@ -3155,12 +2885,10 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 456
     const/16 v6, 0x30
 
     iput v6, v4, Landroid/os/Message;->what:I
 
-    .line 457
     new-instance v6, Lcom/sec/epdg/IWlanConnectResult;
 
     invoke-direct {p0, v5, v9}, Lcom/sec/epdg/IPSecAdapterForEris;->getIWlanErrorFromErisError(Lcom/sec/erisclient/ErisError;I)Lcom/sec/epdg/IWlanError;
@@ -3171,15 +2899,12 @@
 
     iput-object v6, v4, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 458
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 459
     new-instance v0, Lcom/sec/erisclient/ErisEventData;
 
     invoke-direct {v0, v2, v5, v9}, Lcom/sec/erisclient/ErisEventData;-><init>(Lcom/sec/erisclient/IPSecConnection;Lcom/sec/erisclient/ErisError;I)V
 
-    .line 460
     .local v0, "data":Lcom/sec/erisclient/ErisEventData;
     sget-object v6, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTION_SETUP_FAILURE:Lcom/sec/erisclient/ErisEvent;
 
@@ -3193,35 +2918,29 @@
     .param p1, "cid"    # I
 
     .prologue
-    .line 524
     iget-boolean v2, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mbStarted:Z
 
     if-nez v2, :cond_0
 
-    .line 525
     const-string v2, "[IPSECADAPTER_ERIS]"
 
     const-string v3, "IPSecService is not connected yet"
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 526
     sget-object v2, Lcom/sec/epdg/IPSecAdapterForEris;->mOemHandler:Landroid/os/Handler;
 
     invoke-static {v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 527
     .local v1, "msg":Landroid/os/Message;
     const/16 v2, 0x32
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 528
     iput p1, v1, Landroid/os/Message;->arg1:I
 
-    .line 529
     new-instance v2, Lcom/sec/epdg/IWlanConnectResult;
 
     const/4 v3, 0x0
@@ -3238,32 +2957,26 @@
 
     iput-object v2, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 530
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 541
     .end local v1    # "msg":Landroid/os/Message;
     :goto_0
     return-void
 
-    .line 534
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecAdapterForEris;->getIpSecConnectionbyCid(I)Lcom/sec/erisclient/IPSecConnection;
 
     move-result-object v0
 
-    .line 535
     .local v0, "conn":Lcom/sec/erisclient/IPSecConnection;
     if-eqz v0, :cond_1
 
-    .line 536
     sget-object v2, Lcom/sec/epdg/IPSecAdapterForEris;->mIPsecClient:Lcom/sec/erisclient/ErisClient;
 
     invoke-virtual {v2, v0}, Lcom/sec/erisclient/ErisClient;->disconnect(Lcom/sec/erisclient/IPSecConnection;)Lcom/sec/erisclient/ErisError;
 
     goto :goto_0
 
-    .line 538
     :cond_1
     const-string v2, "[IPSECADAPTER_ERIS]"
 
@@ -3297,14 +3010,11 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 695
     iget-object v2, p1, Lcom/sec/epdg/IPSecAdapterForEris$ErisEventInfo;->event:Lcom/sec/erisclient/ErisEvent;
 
-    .line 696
     .local v2, "event":Lcom/sec/erisclient/ErisEvent;
     iget-object v1, p1, Lcom/sec/epdg/IPSecAdapterForEris$ErisEventInfo;->data:Lcom/sec/erisclient/ErisEventData;
 
-    .line 697
     .local v1, "data":Lcom/sec/erisclient/ErisEventData;
     const-string v4, "[IPSECADAPTER_ERIS]"
 
@@ -3328,7 +3038,6 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 699
     invoke-virtual {v1}, Lcom/sec/erisclient/ErisEventData;->getConnection()Lcom/sec/erisclient/IPSecConnection;
 
     move-result-object v4
@@ -3337,25 +3046,21 @@
 
     move-result v0
 
-    .line 700
     .local v0, "cid":I
     const/4 v4, -0x1
 
     if-ne v0, v4, :cond_1
 
-    .line 701
     const-string v4, "[IPSECADAPTER_ERIS]"
 
     const-string v5, "Spurious Connection event no matching entity in connection Db so no action taken"
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 739
     :cond_0
     :goto_0
     return-void
 
-    .line 704
     :cond_1
     const-string v4, "[IPSECADAPTER_ERIS]"
 
@@ -3379,15 +3084,12 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 707
     invoke-direct {p0, v2, v1}, Lcom/sec/epdg/IPSecAdapterForEris;->showToastOnConnectionStatusChanged(Lcom/sec/erisclient/ErisEvent;Lcom/sec/erisclient/ErisEventData;)V
 
-    .line 709
     sget-object v4, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTION_ACTIVE:Lcom/sec/erisclient/ErisEvent;
 
     if-ne v2, v4, :cond_2
 
-    .line 711
     iget-object v4, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mDPDWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v4, :cond_0
@@ -3400,27 +3102,23 @@
 
     if-eqz v4, :cond_0
 
-    .line 712
     const-string v4, "[IPSECADAPTER_ERIS]"
 
     const-string v5, "checkConnection wake lock release : IPSEC_EVENT_CONNECTION_ACTIVE"
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 713
     iget-object v4, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mDPDWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v4}, Landroid/os/PowerManager$WakeLock;->release()V
 
     goto :goto_0
 
-    .line 717
     :cond_2
     sget-object v4, Lcom/sec/erisclient/ErisEvent;->EVENT_PEER_DISCONNECTED:Lcom/sec/erisclient/ErisEvent;
 
     if-ne v2, v4, :cond_3
 
-    .line 718
     iget-object v4, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mDPDWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v4, :cond_3
@@ -3433,19 +3131,16 @@
 
     if-eqz v4, :cond_3
 
-    .line 719
     const-string v4, "[IPSECADAPTER_ERIS]"
 
     const-string v5, "checkConnection wake lock release : IPSEC_EVENT_PEER_DISCONNECTED"
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 720
     iget-object v4, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mDPDWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v4}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 723
     :cond_3
     sget-object v4, Lcom/sec/epdg/IPSecAdapterForEris;->mOemHandler:Landroid/os/Handler;
 
@@ -3453,18 +3148,15 @@
 
     move-result-object v3
 
-    .line 724
     .local v3, "msg":Landroid/os/Message;
     iput v0, v3, Landroid/os/Message;->arg1:I
 
-    .line 725
     invoke-direct {p0, v2}, Lcom/sec/epdg/IPSecAdapterForEris;->getIWlanEventbyIPSecEvent(Lcom/sec/erisclient/ErisEvent;)I
 
     move-result v4
 
     iput v4, v3, Landroid/os/Message;->what:I
 
-    .line 728
     invoke-virtual {v1}, Lcom/sec/erisclient/ErisEventData;->getError()Lcom/sec/erisclient/ErisError;
 
     move-result-object v4
@@ -3473,7 +3165,6 @@
 
     if-eq v4, v5, :cond_4
 
-    .line 729
     new-instance v4, Lcom/sec/epdg/IWlanConnectResult;
 
     invoke-virtual {v1}, Lcom/sec/erisclient/ErisEventData;->getError()Lcom/sec/erisclient/ErisError;
@@ -3492,19 +3183,16 @@
 
     iput-object v4, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 738
     :goto_1
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
 
     goto/16 :goto_0
 
-    .line 732
     :cond_4
     sget-object v4, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTED:Lcom/sec/erisclient/ErisEvent;
 
     if-ne v2, v4, :cond_5
 
-    .line 733
     invoke-direct {p0, v0}, Lcom/sec/epdg/IPSecAdapterForEris;->getConnectionInformation(I)Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;
 
     move-result-object v4
@@ -3513,7 +3201,6 @@
 
     goto :goto_1
 
-    .line 735
     :cond_5
     iput-object v7, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -3525,7 +3212,6 @@
     .param p1, "event"    # Lcom/sec/erisclient/ErisError;
 
     .prologue
-    .line 565
     monitor-enter p0
 
     :try_start_0
@@ -3533,41 +3219,35 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 566
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v1, "onIpSecAdapterServiceStatusChanged() Service ChangedService started"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 567
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mbStarted:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 574
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 568
     :cond_0
     :try_start_1
     sget-object v0, Lcom/sec/erisclient/ErisError;->ERIS_DAEMON_STOPPED:Lcom/sec/erisclient/ErisError;
 
     if-ne p1, v0, :cond_1
 
-    .line 569
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v1, "onIpSecAdapterServiceStatusChanged() Service ChangedService stopped"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 570
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mbStarted:Z
@@ -3576,7 +3256,6 @@
 
     goto :goto_0
 
-    .line 565
     :catchall_0
     move-exception v0
 
@@ -3584,7 +3263,6 @@
 
     throw v0
 
-    .line 572
     :cond_1
     :try_start_2
     const-string v0, "[IPSECADAPTER_ERIS]"
@@ -3604,28 +3282,23 @@
     .param p2, "data"    # Lcom/sec/erisclient/ErisEventData;
 
     .prologue
-    .line 466
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 467
     .local v1, "status":Ljava/lang/StringBuffer;
     new-instance v2, Ljava/lang/String;
 
     invoke-direct {v2}, Ljava/lang/String;-><init>()V
 
-    .line 468
     .local v2, "toasttext":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 469
     .local v0, "destroyConnection":Z
     sget-object v3, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTED:Lcom/sec/erisclient/ErisEvent;
 
     if-ne p1, v3, :cond_2
 
-    .line 470
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3656,31 +3329,26 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 472
     const-string v3, "[IPSECADAPTER_ERIS]"
 
     const-string v4, "Received Connected event"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 473
     const-string v2, "ERIS_EVENT_CONNECTED"
 
-    .line 514
     :cond_0
     :goto_0
     const/4 v3, 0x1
 
     if-ne v0, v3, :cond_1
 
-    .line 515
     const-string v3, "[IPSECADAPTER_ERIS]"
 
     const-string v4, "IPSecConnection is eligible for removal from DB"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 518
     :cond_1
     const-string v3, "[IPSECADAPTER_ERIS]"
 
@@ -3712,16 +3380,13 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 521
     return-void
 
-    .line 474
     :cond_2
     sget-object v3, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTION_SETUP_FAILURE:Lcom/sec/erisclient/ErisEvent;
 
     if-ne p1, v3, :cond_3
 
-    .line 475
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3746,69 +3411,55 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 477
     const/4 v0, 0x1
 
-    .line 478
     const-string v2, "ERIS_EVENT_SETUP_FAILURE"
 
     goto :goto_0
 
-    .line 480
     :cond_3
     sget-object v3, Lcom/sec/erisclient/ErisEvent;->EVENT_DISCONNECTED:Lcom/sec/erisclient/ErisEvent;
 
     if-ne p1, v3, :cond_4
 
-    .line 481
     const-string v3, "Ipsec connection is disconnected"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 482
     const/4 v0, 0x1
 
-    .line 483
     const-string v2, "ERIS_EVENT_DISCONNECTED"
 
     goto :goto_0
 
-    .line 485
     :cond_4
     sget-object v3, Lcom/sec/erisclient/ErisEvent;->EVENT_PEER_DISCONNECTED:Lcom/sec/erisclient/ErisEvent;
 
     if-ne p1, v3, :cond_5
 
-    .line 486
     const-string v3, "Ipsec connection is disconnected by peer"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 487
     const/4 v0, 0x1
 
-    .line 488
     const-string v2, "ERIS_EVENT_PEER_DISCONNECTED"
 
     goto :goto_0
 
-    .line 490
     :cond_5
     sget-object v3, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTION_ACTIVE:Lcom/sec/erisclient/ErisEvent;
 
     if-ne p1, v3, :cond_6
 
-    .line 491
     const-string v3, "Ipsec connection is active"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 492
     const-string v2, "ERIS_EVENT_CONNECTION_ACTIVE"
 
     goto :goto_0
 
-    .line 494
     :cond_6
     sget-object v3, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTION_RESET:Lcom/sec/erisclient/ErisEvent;
 
@@ -3822,48 +3473,39 @@
 
     if-ne p1, v3, :cond_a
 
-    .line 498
     :cond_7
     const-string v3, "IPsec connection is disconnected by peer"
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 499
     const/4 v0, 0x1
 
-    .line 500
     sget-object v3, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTION_RESET:Lcom/sec/erisclient/ErisEvent;
 
     if-ne p1, v3, :cond_8
 
-    .line 501
     const-string v2, "ERIS_EVENT_CONNECTION_RESET"
 
     goto/16 :goto_0
 
-    .line 504
     :cond_8
     sget-object v3, Lcom/sec/erisclient/ErisEvent;->EVENT_ERROR:Lcom/sec/erisclient/ErisEvent;
 
     if-ne p1, v3, :cond_9
 
-    .line 505
     const-string v2, "ERIS_EVENT_ERROR"
 
     goto/16 :goto_0
 
-    .line 506
     :cond_9
     sget-object v3, Lcom/sec/erisclient/ErisEvent;->EVENT_PEER_DISCONNECTED:Lcom/sec/erisclient/ErisEvent;
 
     if-ne p1, v3, :cond_0
 
-    .line 507
     const-string v2, "ERIS_EVENT_PEER_DISCONNECTED"
 
     goto/16 :goto_0
 
-    .line 509
     :cond_a
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3885,10 +3527,8 @@
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 510
     const/4 v0, 0x1
 
-    .line 511
     const-string v2, "ERIS_EVENT_UNKNOWN"
 
     goto/16 :goto_0
@@ -3898,19 +3538,16 @@
     .locals 2
 
     .prologue
-    .line 188
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v1, "Starting IPSec Service"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 189
     sget-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mIPsecClient:Lcom/sec/erisclient/ErisClient;
 
     invoke-virtual {v0}, Lcom/sec/erisclient/ErisClient;->startService()V
 
-    .line 190
     return-void
 .end method
 
@@ -3918,19 +3555,16 @@
     .locals 2
 
     .prologue
-    .line 194
     sget-object v0, Lcom/sec/epdg/IPSecAdapterForEris;->mIPsecClient:Lcom/sec/erisclient/ErisClient;
 
     invoke-virtual {v0}, Lcom/sec/erisclient/ErisClient;->stopService()V
 
-    .line 195
     const-string v0, "[IPSECADAPTER_ERIS]"
 
     const-string v1, "Stopping IPSec Service"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 197
     return-void
 .end method
 
@@ -3942,47 +3576,38 @@
     .param p2, "data"    # Lcom/sec/erisclient/ErisEventData;
 
     .prologue
-    .line 819
     const-string v2, "[IPSECADAPTER_ERIS]"
 
     const-string v3, "IPSecAdapterForEris:onConnectionChanged()"
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 820
     new-instance v0, Lcom/sec/epdg/IPSecAdapterForEris$ErisEventInfo;
 
     const/4 v2, 0x0
 
     invoke-direct {v0, v2}, Lcom/sec/epdg/IPSecAdapterForEris$ErisEventInfo;-><init>(Lcom/sec/epdg/IPSecAdapterForEris$1;)V
 
-    .line 821
     .local v0, "eventInfo":Lcom/sec/epdg/IPSecAdapterForEris$ErisEventInfo;
     iput-object p1, v0, Lcom/sec/epdg/IPSecAdapterForEris$ErisEventInfo;->event:Lcom/sec/erisclient/ErisEvent;
 
-    .line 822
     iput-object p2, v0, Lcom/sec/epdg/IPSecAdapterForEris$ErisEventInfo;->data:Lcom/sec/erisclient/ErisEventData;
 
-    .line 824
     iget-object v2, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mHandler:Lcom/sec/epdg/IPSecAdapterForEris$IpSecAdapterHandler;
 
     invoke-static {v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 825
     .local v1, "msg":Landroid/os/Message;
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 826
     const/4 v2, 0x2
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 827
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 828
     return-void
 .end method
 
@@ -3991,33 +3616,27 @@
     .param p1, "error"    # Lcom/sec/erisclient/ErisError;
 
     .prologue
-    .line 805
     const-string v1, "[IPSECADAPTER_ERIS]"
 
     const-string v2, "IPSecAdapterForEris:onServiceChanged()"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 806
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mHandler:Lcom/sec/epdg/IPSecAdapterForEris$IpSecAdapterHandler;
 
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 807
     .local v0, "msg":Landroid/os/Message;
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 808
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 809
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 810
     return-void
 .end method
 
@@ -4028,32 +3647,25 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 170
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mHandler:Lcom/sec/epdg/IPSecAdapterForEris$IpSecAdapterHandler;
 
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 171
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x5
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 172
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 173
     iput p2, v0, Landroid/os/Message;->arg2:I
 
-    .line 174
     iput-object p3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 175
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 176
     return-void
 .end method
 
@@ -4066,14 +3678,12 @@
     .param p5, "ipv6addr"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     new-instance v0, Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;
 
     const/4 v2, 0x0
 
     invoke-direct {v0, v2}, Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;-><init>(Lcom/sec/epdg/IPSecAdapterForEris$1;)V
 
-    .line 149
     .local v0, "info":Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;
     check-cast p3, Lcom/sec/epdg/IWlanApnSetting;
 
@@ -4081,40 +3691,31 @@
     # invokes: Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;->setIWlanSettingInfo(Lcom/sec/epdg/IWlanApnSetting;)V
     invoke-static {v0, p3}, Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;->access$100(Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;Lcom/sec/epdg/IWlanApnSetting;)V
 
-    .line 150
     # invokes: Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;->setHandoverIpv4Addr(Ljava/lang/String;)V
     invoke-static {v0, p4}, Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;->access$200(Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;Ljava/lang/String;)V
 
-    .line 151
     # invokes: Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;->setHandoverIpv6Addr(Ljava/lang/String;)V
     invoke-static {v0, p5}, Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;->access$300(Lcom/sec/epdg/IPSecAdapterForEris$ConnectInfo;Ljava/lang/String;)V
 
-    .line 152
     iget-object v2, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mHandler:Lcom/sec/epdg/IPSecAdapterForEris$IpSecAdapterHandler;
 
     invoke-static {v2}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v1
 
-    .line 153
     .local v1, "msg":Landroid/os/Message;
     const/4 v2, 0x3
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 154
     iput p1, v1, Landroid/os/Message;->arg1:I
 
-    .line 155
     iput p2, v1, Landroid/os/Message;->arg2:I
 
-    .line 156
     iput-object v0, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 157
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 158
     return-void
 .end method
 
@@ -4125,31 +3726,24 @@
     .param p3, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 161
     iget-object v1, p0, Lcom/sec/epdg/IPSecAdapterForEris;->mHandler:Lcom/sec/epdg/IPSecAdapterForEris$IpSecAdapterHandler;
 
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 162
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x4
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 163
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 164
     iput p2, v0, Landroid/os/Message;->arg2:I
 
-    .line 165
     iput-object p3, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 166
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 167
     return-void
 .end method

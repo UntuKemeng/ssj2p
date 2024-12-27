@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
     return-void
@@ -48,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 42
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ContactMap;->values()Ljava/util/Collection;
 
     move-result-object v0

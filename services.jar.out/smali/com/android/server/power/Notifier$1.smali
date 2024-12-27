@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 397
     iput-object p1, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
     iput-boolean p2, p0, Lcom/android/server/power/Notifier$1;->val$interactive:Z
@@ -52,7 +51,6 @@
     .locals 3
 
     .prologue
-    .line 401
     iget-object v0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mInteractiveForNet:Z
@@ -64,7 +62,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 403
     :try_start_0
     iget-object v0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
@@ -81,7 +78,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 407
     :goto_0
     iget-object v0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
@@ -90,7 +86,6 @@
     # setter for: Lcom/android/server/power/Notifier;->mInteractiveForNet:Z
     invoke-static {v0, v1}, Lcom/android/server/power/Notifier;->access$002(Lcom/android/server/power/Notifier;Z)Z
 
-    .line 410
     :cond_0
     iget-object v0, p0, Lcom/android/server/power/Notifier$1;->this$0:Lcom/android/server/power/Notifier;
 
@@ -103,10 +98,8 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ActivityManagerInternal;->onWakefulnessChanged(I)V
 
-    .line 411
     return-void
 
-    .line 404
     :catch_0
     move-exception v0
 

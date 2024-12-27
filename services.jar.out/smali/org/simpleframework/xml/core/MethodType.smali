@@ -43,7 +43,6 @@
 
     const/4 v2, 0x3
 
-    .line 39
     new-instance v0, Lorg/simpleframework/xml/core/MethodType;
 
     const-string v1, "GET"
@@ -52,7 +51,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/core/MethodType;->GET:Lorg/simpleframework/xml/core/MethodType;
 
-    .line 44
     new-instance v0, Lorg/simpleframework/xml/core/MethodType;
 
     const-string v1, "IS"
@@ -61,7 +59,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/core/MethodType;->IS:Lorg/simpleframework/xml/core/MethodType;
 
-    .line 49
     new-instance v0, Lorg/simpleframework/xml/core/MethodType;
 
     const-string v1, "SET"
@@ -70,7 +67,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/core/MethodType;->SET:Lorg/simpleframework/xml/core/MethodType;
 
-    .line 54
     new-instance v0, Lorg/simpleframework/xml/core/MethodType;
 
     const-string v1, "NONE"
@@ -79,7 +75,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/core/MethodType;->NONE:Lorg/simpleframework/xml/core/MethodType;
 
-    .line 34
     const/4 v0, 0x4
 
     new-array v0, v0, [Lorg/simpleframework/xml/core/MethodType;
@@ -115,13 +110,10 @@
     .end annotation
 
     .prologue
-    .line 68
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 69
     iput p3, p0, Lorg/simpleframework/xml/core/MethodType;->prefix:I
 
-    .line 70
     return-void
 .end method
 
@@ -130,7 +122,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 34
     const-class v0, Lorg/simpleframework/xml/core/MethodType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -146,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 34
     sget-object v0, Lorg/simpleframework/xml/core/MethodType;->$VALUES:[Lorg/simpleframework/xml/core/MethodType;
 
     invoke-virtual {v0}, [Lorg/simpleframework/xml/core/MethodType;->clone()Ljava/lang/Object;
@@ -164,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget v0, p0, Lorg/simpleframework/xml/core/MethodType;->prefix:I
 
     return v0

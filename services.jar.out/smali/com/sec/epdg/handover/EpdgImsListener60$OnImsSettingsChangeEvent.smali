@@ -30,16 +30,12 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 400
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 401
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener60$OnImsSettingsChangeEvent;->mKey:Ljava/lang/String;
 
-    .line 402
     iput-object p2, p0, Lcom/sec/epdg/handover/EpdgImsListener60$OnImsSettingsChangeEvent;->mValue:Ljava/lang/String;
 
-    .line 403
     return-void
 .end method
 
@@ -49,14 +45,12 @@
     .locals 3
 
     .prologue
-    .line 406
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onImsSettingsChangeEvent: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 407
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$700()Lcom/sec/epdg/handover/EpdgImsSettings;
 
@@ -68,6 +62,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/sec/epdg/handover/EpdgImsSettings;->updateImsSettings(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 408
     return-void
 .end method

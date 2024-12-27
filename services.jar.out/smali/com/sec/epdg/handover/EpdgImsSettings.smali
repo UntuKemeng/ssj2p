@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 44
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsSettings;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
@@ -76,16 +75,12 @@
 
     const/high16 v3, -0x80000000
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mEpdgSettingsWriter:Lcom/sec/epdg/EpdgSettingsWriter;
 
-    .line 55
     iput-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
-    .line 56
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -114,45 +109,34 @@
 
     iput-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mSettingFieldsStr:[Ljava/lang/String;
 
-    .line 64
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mContext:Landroid/content/Context;
 
-    .line 65
     iput-object p2, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mePdgHandler:Landroid/os/Handler;
 
-    .line 66
     invoke-static {p1}, Lcom/sec/epdg/EpdgSettingsWriter;->getInstance(Landroid/content/Context;)Lcom/sec/epdg/EpdgSettingsWriter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mEpdgSettingsWriter:Lcom/sec/epdg/EpdgSettingsWriter;
 
-    .line 68
     iput v3, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteEnabled:I
 
-    .line 69
     iput v3, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsLvcEnabled:I
 
-    .line 70
     iput v3, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteProvisioned:I
 
-    .line 71
     iput v3, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVoWifiProvisioned:I
 
-    .line 72
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-direct {v0, p0}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;-><init>(Lcom/sec/epdg/handover/EpdgImsSettings;)V
 
     iput-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
-    .line 73
     if-eqz p3, :cond_0
 
-    .line 74
     invoke-direct {p0, p3, v4}, Lcom/sec/epdg/handover/EpdgImsSettings;->update(Landroid/util/SparseArray;Z)V
 
-    .line 76
     :cond_0
     return-void
 .end method
@@ -162,7 +146,6 @@
     .param p0, "x0"    # Lcom/sec/epdg/handover/EpdgImsSettings;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mEpdgSettingsWriter:Lcom/sec/epdg/EpdgSettingsWriter;
 
     return-object v0
@@ -186,20 +169,17 @@
     .end annotation
 
     .prologue
-    .line 89
     .local p2, "sp":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Ljava/lang/String;>;"
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsSettings;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
     if-nez v0, :cond_0
 
-    .line 90
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsSettings;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/sec/epdg/handover/EpdgImsSettings;-><init>(Landroid/content/Context;Landroid/os/Handler;Landroid/util/SparseArray;)V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsSettings;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
-    .line 92
     :cond_0
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsSettings;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
@@ -211,10 +191,8 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 433
     const/high16 v0, -0x80000000
 
-    .line 434
     .local v0, "ret":I
     const-string v1, "1"
 
@@ -224,15 +202,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 435
     const/4 v0, 0x1
 
-    .line 440
     :cond_0
     :goto_0
     return v0
 
-    .line 436
     :cond_1
     const-string v1, "0"
 
@@ -242,7 +217,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 437
     const/4 v0, 0x0
 
     goto :goto_0
@@ -253,26 +227,21 @@
     .param p1, "bootup"    # Z
 
     .prologue
-    .line 454
     if-eqz p1, :cond_0
 
-    .line 455
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mePdgHandler:Landroid/os/Handler;
 
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 456
     .local v0, "msg":Landroid/os/Message;
     const/16 v1, 0x4c
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 457
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 459
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     return-void
@@ -285,31 +254,25 @@
     .param p3, "arg1"    # I
 
     .prologue
-    .line 444
     sget-boolean v1, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_VOWIFI_PROVISIONING:Z
 
     if-eqz v1, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 446
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mePdgHandler:Landroid/os/Handler;
 
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 447
     .local v0, "msg":Landroid/os/Message;
     iput p2, v0, Landroid/os/Message;->what:I
 
-    .line 448
     iput p3, v0, Landroid/os/Message;->arg1:I
 
-    .line 449
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 451
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     return-void
@@ -321,12 +284,10 @@
     .param p2, "bootup"    # Z
 
     .prologue
-    .line 166
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 167
     .local v2, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -347,7 +308,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 168
     .local v1, "key":Ljava/lang/String;
     invoke-virtual {p1, v1}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -355,16 +315,13 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 169
     .local v3, "value":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 172
     invoke-direct {p0, v1, v3, p2}, Lcom/sec/epdg/handover/EpdgImsSettings;->updateInternal(Ljava/lang/String;Ljava/lang/String;Z)V
 
     goto :goto_0
 
-    .line 174
     .end local v1    # "key":Ljava/lang/String;
     .end local v3    # "value":Ljava/lang/String;
     :cond_1
@@ -394,14 +351,12 @@
 
     const/16 v7, 0x5d
 
-    .line 215
     iget-object v4, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     if-eqz v4, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 216
     :cond_0
     const-string v4, "[EpdgImsSettings]"
 
@@ -409,11 +364,9 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 244
     :goto_0
     return-void
 
-    .line 219
     :cond_1
     invoke-virtual {p1, v5}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -421,7 +374,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 220
     invoke-virtual {p1, v5}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -432,7 +384,6 @@
 
     move-result v2
 
-    .line 221
     .local v2, "isVolteEnabled":I
     const-string v4, "[EpdgImsSettings]"
 
@@ -456,15 +407,12 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 222
     iput v2, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteEnabled:I
 
-    .line 223
     const/16 v4, 0x3f
 
     invoke-direct {p0, p2, v4, v2}, Lcom/sec/epdg/handover/EpdgImsSettings;->postToEpdgService(ZII)V
 
-    .line 225
     .end local v2    # "isVolteEnabled":I
     :cond_2
     invoke-virtual {p1, v8}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -473,7 +421,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 226
     invoke-virtual {p1, v8}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -484,7 +431,6 @@
 
     move-result v0
 
-    .line 227
     .local v0, "isLVCEnabled":I
     const-string v4, "[EpdgImsSettings]"
 
@@ -508,10 +454,8 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 228
     iput v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsLvcEnabled:I
 
-    .line 230
     .end local v0    # "isLVCEnabled":I
     :cond_3
     invoke-virtual {p1, v7}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -520,7 +464,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 231
     invoke-virtual {p1, v7}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -531,7 +474,6 @@
 
     move-result v3
 
-    .line 232
     .local v3, "isVolteProvisioned":I
     const-string v4, "[EpdgImsSettings]"
 
@@ -555,15 +497,12 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 233
     iput v3, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteProvisioned:I
 
-    .line 234
     const/16 v4, 0x42
 
     invoke-direct {p0, p2, v4, v3}, Lcom/sec/epdg/handover/EpdgImsSettings;->postToEpdgService(ZII)V
 
-    .line 236
     .end local v3    # "isVolteProvisioned":I
     :cond_4
     invoke-virtual {p1, v9}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -572,7 +511,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 237
     invoke-virtual {p1, v9}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -583,7 +521,6 @@
 
     move-result v1
 
-    .line 238
     .local v1, "isVoWifiProvisioned":I
     const-string v4, "[EpdgImsSettings]"
 
@@ -607,20 +544,16 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
     iput v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVoWifiProvisioned:I
 
-    .line 240
     const/16 v4, 0x43
 
     invoke-direct {p0, p2, v4, v1}, Lcom/sec/epdg/handover/EpdgImsSettings;->postToEpdgService(ZII)V
 
-    .line 242
     .end local v1    # "isVoWifiProvisioned":I
     :cond_5
     invoke-direct {p0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings;->updateOmadmSettings(Landroid/util/SparseArray;)V
 
-    .line 243
     invoke-direct {p0, p2}, Lcom/sec/epdg/handover/EpdgImsSettings;->postImsReadyToEpdgService(Z)V
 
     goto/16 :goto_0
@@ -633,7 +566,6 @@
     .param p3, "bootup"    # Z
 
     .prologue
-    .line 176
     const-string v4, "content://com.sec.ims.settings/imsswitch/mmtel"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -642,12 +574,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 177
     invoke-direct {p0, p2}, Lcom/sec/epdg/handover/EpdgImsSettings;->getInt(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 178
     .local v2, "isVolteEnabled":I
     const-string v4, "[EpdgImsSettings]"
 
@@ -671,28 +601,23 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 179
     iget v4, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteEnabled:I
 
     if-ne v2, v4, :cond_1
 
-    .line 212
     .end local v2    # "isVolteEnabled":I
     :cond_0
     :goto_0
     return-void
 
-    .line 182
     .restart local v2    # "isVolteEnabled":I
     :cond_1
     iput v2, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteEnabled:I
 
-    .line 183
     const/16 v4, 0x3f
 
     invoke-direct {p0, p3, v4, v2}, Lcom/sec/epdg/handover/EpdgImsSettings;->postToEpdgService(ZII)V
 
-    .line 185
     .end local v2    # "isVolteEnabled":I
     :cond_2
     const-string v4, "content://com.sec.ims.settings/imsswitch/mmtel-video"
@@ -703,12 +628,10 @@
 
     if-eqz v4, :cond_3
 
-    .line 186
     invoke-direct {p0, p2}, Lcom/sec/epdg/handover/EpdgImsSettings;->getInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 187
     .local v0, "isLVCEnabled":I
     const-string v4, "[EpdgImsSettings]"
 
@@ -732,15 +655,12 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
     iget v4, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsLvcEnabled:I
 
     if-eq v0, v4, :cond_0
 
-    .line 191
     iput v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsLvcEnabled:I
 
-    .line 193
     .end local v0    # "isLVCEnabled":I
     :cond_3
     sget-object v4, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->IMS_SETTING_VOLTE_PROVISIONED:Ljava/lang/String;
@@ -751,12 +671,10 @@
 
     if-eqz v4, :cond_4
 
-    .line 194
     invoke-direct {p0, p2}, Lcom/sec/epdg/handover/EpdgImsSettings;->getInt(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 195
     .local v3, "isVolteProvisioned":I
     const-string v4, "[EpdgImsSettings]"
 
@@ -780,20 +698,16 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 196
     iget v4, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteProvisioned:I
 
     if-eq v3, v4, :cond_0
 
-    .line 199
     iput v3, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteProvisioned:I
 
-    .line 200
     const/16 v4, 0x42
 
     invoke-direct {p0, p3, v4, v3}, Lcom/sec/epdg/handover/EpdgImsSettings;->postToEpdgService(ZII)V
 
-    .line 202
     .end local v3    # "isVolteProvisioned":I
     :cond_4
     sget-object v4, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->IMS_SETTING_VWF_PROVISIONED:Ljava/lang/String;
@@ -804,18 +718,15 @@
 
     if-eqz v4, :cond_5
 
-    .line 203
     invoke-direct {p0, p2}, Lcom/sec/epdg/handover/EpdgImsSettings;->getInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 204
     .local v1, "isVoWifiProvisioned":I
     iget v4, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVoWifiProvisioned:I
 
     if-eq v1, v4, :cond_0
 
-    .line 207
     const-string v4, "[EpdgImsSettings]"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -838,15 +749,12 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 208
     iput v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVoWifiProvisioned:I
 
-    .line 209
     const/16 v4, 0x43
 
     invoke-direct {p0, p3, v4, v1}, Lcom/sec/epdg/handover/EpdgImsSettings;->postToEpdgService(ZII)V
 
-    .line 211
     .end local v1    # "isVoWifiProvisioned":I
     :cond_5
     invoke-direct {p0, p3}, Lcom/sec/epdg/handover/EpdgImsSettings;->postImsReadyToEpdgService(Z)V
@@ -867,53 +775,43 @@
     .end annotation
 
     .prologue
-    .line 421
     .local p1, "sp":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->setTepdg1xTimer(Landroid/util/SparseArray;)V
 
-    .line 422
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->setTepdgLteTimer(Landroid/util/SparseArray;)V
 
-    .line 423
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->setTepdgWifiTimer(Landroid/util/SparseArray;)V
 
-    .line 424
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->setCdmaRssi(Landroid/util/SparseArray;)V
 
-    .line 425
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->setLteRsrp1(Landroid/util/SparseArray;)V
 
-    .line 426
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->setLteRsrp2(Landroid/util/SparseArray;)V
 
-    .line 427
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->setLteRsrp3(Landroid/util/SparseArray;)V
 
-    .line 428
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->setWifiRssiA(Landroid/util/SparseArray;)V
 
-    .line 429
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->setWifiRssiB(Landroid/util/SparseArray;)V
 
-    .line 430
     return-void
 .end method
 
@@ -932,7 +830,6 @@
     .end annotation
 
     .prologue
-    .line 86
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mSettingFieldsStr:[Ljava/lang/String;
 
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
@@ -956,7 +853,6 @@
     .end annotation
 
     .prologue
-    .line 79
     .local p1, "map":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual {p1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -980,7 +876,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 80
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -988,7 +883,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 81
     .local v2, "key":Ljava/lang/String;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -996,7 +890,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 82
     .local v3, "value":Ljava/lang/String;
     const/4 v4, 0x1
 
@@ -1004,7 +897,6 @@
 
     goto :goto_0
 
-    .line 84
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v2    # "key":Ljava/lang/String;
     .end local v3    # "value":Ljava/lang/String;
@@ -1022,7 +914,6 @@
 
     const/16 v3, 0x86
 
-    .line 115
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     if-eqz v1, :cond_0
@@ -1031,7 +922,6 @@
 
     if-nez p1, :cond_2
 
-    .line 116
     :cond_0
     const-string v1, "[EpdgImsSettings]"
 
@@ -1039,12 +929,10 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 156
     :cond_1
     :goto_0
     return-void
 
-    .line 119
     :cond_2
     new-instance v0, Landroid/util/SparseArray;
 
@@ -1052,7 +940,6 @@
 
     invoke-direct {v0, v1}, Landroid/util/SparseArray;-><init>(I)V
 
-    .line 120
     .local v0, "paramMap":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Ljava/lang/String;>;"
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
@@ -1066,7 +953,6 @@
 
     if-eq v1, v2, :cond_3
 
-    .line 121
     const/16 v1, 0x89
 
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getCdmaRssi()I
@@ -1079,7 +965,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 123
     :cond_3
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
@@ -1093,7 +978,6 @@
 
     if-eq v1, v2, :cond_4
 
-    .line 124
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getLteRsrp1()I
 
     move-result v1
@@ -1104,7 +988,6 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 126
     :cond_4
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
@@ -1118,7 +1001,6 @@
 
     if-eq v1, v2, :cond_5
 
-    .line 127
     const/16 v1, 0x87
 
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getLteRsrp2()I
@@ -1131,7 +1013,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 129
     :cond_5
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
@@ -1145,7 +1026,6 @@
 
     if-eq v1, v2, :cond_6
 
-    .line 130
     const/16 v1, 0x88
 
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getLteRsrp3()I
@@ -1158,7 +1038,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 132
     :cond_6
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
@@ -1172,7 +1051,6 @@
 
     if-eq v1, v2, :cond_7
 
-    .line 133
     const/16 v1, 0x8e
 
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getTepdg1xTimer()I
@@ -1185,7 +1063,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 135
     :cond_7
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
@@ -1199,7 +1076,6 @@
 
     if-eq v1, v2, :cond_8
 
-    .line 136
     const/16 v1, 0x8c
 
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getTepdgLteTimer()I
@@ -1212,7 +1088,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 138
     :cond_8
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
@@ -1226,7 +1101,6 @@
 
     if-eq v1, v2, :cond_9
 
-    .line 139
     const/16 v1, 0x8d
 
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getSysSelTimer()I
@@ -1239,7 +1113,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 141
     :cond_9
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
@@ -1251,7 +1124,6 @@
 
     if-eqz v1, :cond_c
 
-    .line 142
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     invoke-virtual {v1}, Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;->getWifiRssiA()I
@@ -1264,7 +1136,6 @@
 
     if-eq v1, v2, :cond_a
 
-    .line 143
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getWifiRssiRoveInVoice()I
 
     move-result v1
@@ -1275,7 +1146,6 @@
 
     invoke-virtual {v0, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 150
     :cond_a
     :goto_1
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
@@ -1290,7 +1160,6 @@
 
     if-eq v1, v2, :cond_b
 
-    .line 151
     const/16 v1, 0x8b
 
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getWifiRssiB()I
@@ -1303,7 +1172,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 153
     :cond_b
     const/4 v1, 0x0
 
@@ -1313,12 +1181,10 @@
 
     if-lt v1, v3, :cond_1
 
-    .line 154
     invoke-interface {p1, v0}, Lcom/samsung/commonimsinterface/imsinterface/IMSInterfaceForGeneral;->updateIMSSettingValues(Landroid/util/SparseArray;)Z
 
     goto/16 :goto_0
 
-    .line 146
     :cond_c
     iget-object v1, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
@@ -1332,7 +1198,6 @@
 
     if-eq v1, v2, :cond_a
 
-    .line 147
     invoke-virtual {p2}, Lcom/sec/epdg/EpdgSettings;->getWifiRssiA()I
 
     move-result v1
@@ -1352,7 +1217,6 @@
     .param p2, "settings"    # Lcom/sec/epdg/EpdgSettings;
 
     .prologue
-    .line 108
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mOmadmEpdgSettings:Lcom/sec/epdg/handover/EpdgImsSettings$OmadmEpdgSettings;
 
     if-eqz v0, :cond_0
@@ -1361,7 +1225,6 @@
 
     if-nez p1, :cond_1
 
-    .line 109
     :cond_0
     const-string v0, "[EpdgImsSettings]"
 
@@ -1369,7 +1232,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 113
     :cond_1
     return-void
 .end method
@@ -1378,7 +1240,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsLvcEnabled:I
 
     invoke-static {v0}, Lcom/sec/epdg/EpdgConstants$TriState;->get(I)Lcom/sec/epdg/EpdgConstants$TriState;
@@ -1392,7 +1253,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteEnabled:I
 
     invoke-static {v0}, Lcom/sec/epdg/EpdgConstants$TriState;->get(I)Lcom/sec/epdg/EpdgConstants$TriState;
@@ -1406,7 +1266,6 @@
     .locals 1
 
     .prologue
-    .line 96
     iget v0, p0, Lcom/sec/epdg/handover/EpdgImsSettings;->mIsVolteProvisioned:I
 
     invoke-static {v0}, Lcom/sec/epdg/EpdgConstants$TriState;->get(I)Lcom/sec/epdg/EpdgConstants$TriState;
@@ -1429,13 +1288,11 @@
     .end annotation
 
     .prologue
-    .line 162
     .local p1, "sp":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/sec/epdg/handover/EpdgImsSettings;->update(Landroid/util/SparseArray;Z)V
 
-    .line 163
     return-void
 .end method
 
@@ -1445,11 +1302,9 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 159
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/sec/epdg/handover/EpdgImsSettings;->updateInternal(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 160
     return-void
 .end method

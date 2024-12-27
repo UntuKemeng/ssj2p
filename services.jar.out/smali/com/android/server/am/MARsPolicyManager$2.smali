@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1566
     iput-object p1, p0, Lcom/android/server/am/MARsPolicyManager$2;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageStatsObserver$Stub;-><init>()V
@@ -44,10 +43,8 @@
     .end annotation
 
     .prologue
-    .line 1569
     if-eqz p2, :cond_1
 
-    .line 1570
     iget-wide v4, p1, Landroid/content/pm/PackageStats;->codeSize:J
 
     iget-wide v6, p1, Landroid/content/pm/PackageStats;->dataSize:J
@@ -78,7 +75,6 @@
 
     add-long v2, v4, v6
 
-    .line 1573
     .local v2, "totalPkgSize":J
     const-string v4, "MARsPolicyManager"
 
@@ -108,7 +104,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1574
     iget-object v4, p0, Lcom/android/server/am/MARsPolicyManager$2;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     # getter for: Lcom/android/server/am/MARsPolicyManager;->mStorageStatPeriodMap:Ljava/util/Map;
@@ -124,7 +119,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1575
     iget-object v4, p0, Lcom/android/server/am/MARsPolicyManager$2;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     # getter for: Lcom/android/server/am/MARsPolicyManager;->mStorageStatPeriodMap:Ljava/util/Map;
@@ -144,7 +138,6 @@
 
     move-result-wide v0
 
-    .line 1576
     .local v0, "prevPkgSize":J
     const-string v4, "MARsPolicyManager"
 
@@ -176,7 +169,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1577
     iget-object v4, p0, Lcom/android/server/am/MARsPolicyManager$2;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     # getter for: Lcom/android/server/am/MARsPolicyManager;->mStorageStatDiffMap:Ljava/util/Map;
@@ -194,7 +186,6 @@
 
     invoke-interface {v4, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1579
     .end local v0    # "prevPkgSize":J
     :cond_0
     iget-object v4, p0, Lcom/android/server/am/MARsPolicyManager$2;->this$0:Lcom/android/server/am/MARsPolicyManager;
@@ -212,7 +203,6 @@
 
     invoke-interface {v4, v5, v6}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1581
     .end local v2    # "totalPkgSize":J
     :cond_1
     return-void

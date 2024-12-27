@@ -35,10 +35,8 @@
     .locals 1
 
     .prologue
-    .line 228
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 229
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -53,7 +51,6 @@
     .param p1, "x0"    # Landroid/util/secutil/CustomizedTextParser$1;
 
     .prologue
-    .line 228
     invoke-direct {p0}, Landroid/util/secutil/CustomizedTextParser$CscNodeList;-><init>()V
 
     return-void
@@ -66,12 +63,10 @@
     .param p1, "newChild"    # Lorg/w3c/dom/Node;
 
     .prologue
-    .line 232
     iget-object v0, p0, Landroid/util/secutil/CustomizedTextParser$CscNodeList;->children:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 233
     return-void
 .end method
 
@@ -79,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget-object v0, p0, Landroid/util/secutil/CustomizedTextParser$CscNodeList;->children:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -94,7 +88,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 242
     iget-object v0, p0, Landroid/util/secutil/CustomizedTextParser$CscNodeList;->children:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;

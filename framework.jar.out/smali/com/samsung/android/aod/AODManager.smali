@@ -20,16 +20,12 @@
     .param p2, "service"    # Lcom/samsung/android/aod/IAODManager;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-object p1, p0, Lcom/samsung/android/aod/AODManager;->mContext:Landroid/content/Context;
 
-    .line 38
     iput-object p2, p0, Lcom/samsung/android/aod/AODManager;->mService:Lcom/samsung/android/aod/IAODManager;
 
-    .line 39
     return-void
 .end method
 
@@ -38,7 +34,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 26
     const-string v0, "AODManagerService"
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -54,19 +49,16 @@
     .locals 3
 
     .prologue
-    .line 42
     iget-object v1, p0, Lcom/samsung/android/aod/AODManager;->mService:Lcom/samsung/android/aod/IAODManager;
 
     if-nez v1, :cond_0
 
-    .line 43
     const-string v1, "AODManagerService"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 44
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/samsung/android/aod/IAODManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/samsung/android/aod/IAODManager;
 
@@ -74,21 +66,18 @@
 
     iput-object v1, p0, Lcom/samsung/android/aod/AODManager;->mService:Lcom/samsung/android/aod/IAODManager;
 
-    .line 46
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/aod/AODManager;->mService:Lcom/samsung/android/aod/IAODManager;
 
     if-nez v1, :cond_1
 
-    .line 47
     const-string v1, "AODManager"
 
     const-string v2, "getService fail!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/aod/AODManager;->mService:Lcom/samsung/android/aod/IAODManager;
 
@@ -101,17 +90,14 @@
     .locals 3
 
     .prologue
-    .line 58
     invoke-direct {p0}, Lcom/samsung/android/aod/AODManager;->getService()Lcom/samsung/android/aod/IAODManager;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 59
     const/4 v1, 0x0
 
-    .line 62
     :goto_0
     return v1
 
@@ -127,11 +113,9 @@
 
     goto :goto_0
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -146,18 +130,15 @@
     .locals 3
 
     .prologue
-    .line 97
     invoke-direct {p0}, Lcom/samsung/android/aod/AODManager;->getService()Lcom/samsung/android/aod/IAODManager;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 105
     :goto_0
     return-void
 
-    .line 101
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/aod/AODManager;->mService:Lcom/samsung/android/aod/IAODManager;
@@ -168,11 +149,9 @@
 
     goto :goto_0
 
-    .line 102
     :catch_0
     move-exception v0
 
-    .line 103
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -191,18 +170,15 @@
     .param p4, "y"    # I
 
     .prologue
-    .line 80
     invoke-direct {p0}, Lcom/samsung/android/aod/AODManager;->getService()Lcom/samsung/android/aod/IAODManager;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 89
     :goto_0
     return-void
 
-    .line 84
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/aod/AODManager;->mService:Lcom/samsung/android/aod/IAODManager;
@@ -213,11 +189,9 @@
 
     goto :goto_0
 
-    .line 85
     :catch_0
     move-exception v0
 
-    .line 86
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -242,7 +216,6 @@
     .end annotation
 
     .prologue
-    .line 115
     .local p2, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/samsung/android/aod/AODManager;->getService()Lcom/samsung/android/aod/IAODManager;
 
@@ -250,11 +223,9 @@
 
     if-nez v1, :cond_0
 
-    .line 123
     :goto_0
     return-void
 
-    .line 119
     :cond_0
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/aod/AODManager;->mService:Lcom/samsung/android/aod/IAODManager;
@@ -265,11 +236,9 @@
 
     goto :goto_0
 
-    .line 120
     :catch_0
     move-exception v0
 
-    .line 121
     .local v0, "e":Landroid/os/RemoteException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -289,18 +258,15 @@
     .param p5, "arg3"    # Ljava/lang/String;
 
     .prologue
-    .line 137
     invoke-direct {p0}, Lcom/samsung/android/aod/AODManager;->getService()Lcom/samsung/android/aod/IAODManager;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 145
     :goto_0
     return-void
 
-    .line 141
     :cond_0
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/aod/AODManager;->mService:Lcom/samsung/android/aod/IAODManager;
@@ -321,11 +287,9 @@
 
     goto :goto_0
 
-    .line 142
     :catch_0
     move-exception v6
 
-    .line 143
     .local v6, "e":Landroid/os/RemoteException;
     new-instance v0, Ljava/lang/RuntimeException;
 

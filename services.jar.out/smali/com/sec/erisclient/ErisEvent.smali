@@ -49,7 +49,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/sec/erisclient/ErisEvent;
 
     const-string v1, "EVENT_NONE"
@@ -58,7 +57,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisEvent;->EVENT_NONE:Lcom/sec/erisclient/ErisEvent;
 
-    .line 5
     new-instance v0, Lcom/sec/erisclient/ErisEvent;
 
     const-string v1, "EVENT_CONNECTED"
@@ -67,7 +65,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTED:Lcom/sec/erisclient/ErisEvent;
 
-    .line 6
     new-instance v0, Lcom/sec/erisclient/ErisEvent;
 
     const-string v1, "EVENT_DISCONNECTED"
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisEvent;->EVENT_DISCONNECTED:Lcom/sec/erisclient/ErisEvent;
 
-    .line 7
     new-instance v0, Lcom/sec/erisclient/ErisEvent;
 
     const-string v1, "EVENT_CONNECTION_ACTIVE"
@@ -85,7 +81,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTION_ACTIVE:Lcom/sec/erisclient/ErisEvent;
 
-    .line 8
     new-instance v0, Lcom/sec/erisclient/ErisEvent;
 
     const-string v1, "EVENT_PEER_DISCONNECTED"
@@ -94,7 +89,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisEvent;->EVENT_PEER_DISCONNECTED:Lcom/sec/erisclient/ErisEvent;
 
-    .line 9
     new-instance v0, Lcom/sec/erisclient/ErisEvent;
 
     const-string v1, "EVENT_CONNECTION_SETUP_FAILURE"
@@ -105,7 +99,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTION_SETUP_FAILURE:Lcom/sec/erisclient/ErisEvent;
 
-    .line 10
     new-instance v0, Lcom/sec/erisclient/ErisEvent;
 
     const-string v1, "EVENT_CONNECTION_RESET"
@@ -116,7 +109,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisEvent;->EVENT_CONNECTION_RESET:Lcom/sec/erisclient/ErisEvent;
 
-    .line 11
     new-instance v0, Lcom/sec/erisclient/ErisEvent;
 
     const-string v1, "EVENT_ERROR"
@@ -127,7 +119,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisEvent;->EVENT_ERROR:Lcom/sec/erisclient/ErisEvent;
 
-    .line 3
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/sec/erisclient/ErisEvent;
@@ -184,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -195,7 +185,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/sec/erisclient/ErisEvent;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -211,7 +200,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/sec/erisclient/ErisEvent;->$VALUES:[Lcom/sec/erisclient/ErisEvent;
 
     invoke-virtual {v0}, [Lcom/sec/erisclient/ErisEvent;->clone()Ljava/lang/Object;

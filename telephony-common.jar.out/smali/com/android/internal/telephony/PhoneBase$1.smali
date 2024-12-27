@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 155
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,22 +40,18 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 159
     if-nez p2, :cond_1
 
-    .line 160
     const-string v4, "PhoneBase"
 
     const-string v5, "Intent is null"
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     :cond_0
     :goto_0
     return-void
 
-    .line 164
     :cond_1
     const-string v4, "PhoneBase"
 
@@ -84,7 +79,6 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     const-string v4, "android:phone_id"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->hasExtra(Ljava/lang/String;)Z
@@ -93,14 +87,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 166
     const-string v4, "android:phone_id"
 
     invoke-virtual {p2, v4, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 168
     .local v1, "extraPhoneId":I
     const-string v4, "PhoneBase"
 
@@ -124,7 +116,6 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     if-eq v1, v7, :cond_0
 
     iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
@@ -135,14 +126,12 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 175
     .end local v1    # "extraPhoneId":I
     :cond_2
     sget-object v5, Lcom/android/internal/telephony/PhoneProxy;->lockForRadioTechnologyChange:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 176
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -156,12 +145,10 @@
 
     if-eqz v4, :cond_7
 
-    .line 178
     sget-boolean v4, Lcom/android/internal/telephony/PhoneBase;->mUsedLegacyIms:Z
 
     if-eqz v4, :cond_3
 
-    .line 179
     iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     const/4 v6, 0x0
@@ -169,12 +156,10 @@
     # setter for: Lcom/android/internal/telephony/PhoneBase;->mImsServiceReady:Z
     invoke-static {v4, v6}, Lcom/android/internal/telephony/PhoneBase;->access$002(Lcom/android/internal/telephony/PhoneBase;Z)Z
 
-    .line 180
     monitor-exit v5
 
     goto :goto_0
 
-    .line 196
     :catchall_0
     move-exception v4
 
@@ -184,7 +169,6 @@
 
     throw v4
 
-    .line 183
     :cond_3
     :try_start_1
     iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
@@ -194,12 +178,10 @@
     # setter for: Lcom/android/internal/telephony/PhoneBase;->mImsServiceReady:Z
     invoke-static {v4, v6}, Lcom/android/internal/telephony/PhoneBase;->access$002(Lcom/android/internal/telephony/PhoneBase;Z)Z
 
-    .line 184
     iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/PhoneBase;->updateImsPhone()V
 
-    .line 185
     iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     iget-object v4, v4, Lcom/android/internal/telephony/PhoneBase;->mContext:Landroid/content/Context;
@@ -212,14 +194,12 @@
 
     invoke-static {v4, v6, v7}, Lcom/android/ims/ImsManager;->updateImsServiceConfig(Landroid/content/Context;IZ)V
 
-    .line 196
     :cond_4
     :goto_1
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 198
     const/4 v4, 0x7
 
     invoke-static {v4}, Lcom/android/internal/telephony/TelephonyFeatures;->getNtcFeature(I)Z
@@ -240,14 +220,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 199
     const-string v4, "brandalpha"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 200
     .local v0, "brandAlpha":Ljava/lang/String;
     const-string v4, "networkcode"
 
@@ -255,7 +233,6 @@
 
     move-result-object v2
 
-    .line 201
     .local v2, "networkCode":Ljava/lang/String;
     const-string v4, "resellerid"
 
@@ -263,7 +240,6 @@
 
     move-result-object v3
 
-    .line 203
     .local v3, "resellerId":Ljava/lang/String;
     if-eqz v0, :cond_5
 
@@ -273,7 +249,6 @@
 
     if-nez v4, :cond_5
 
-    .line 204
     const-string v4, "PhoneBase"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -308,12 +283,10 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 205
     sget-object v4, Lcom/android/internal/telephony/PhoneBase;->PROPERTY_CDMA_HOME_OPERATOR_ALPHA:Ljava/lang/String;
 
     invoke-static {v4, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 207
     :cond_5
     if-eqz v2, :cond_6
 
@@ -323,7 +296,6 @@
 
     if-nez v4, :cond_6
 
-    .line 208
     const-string v4, "PhoneBase"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -358,12 +330,10 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     sget-object v4, Lcom/android/internal/telephony/PhoneBase;->PROPERTY_CDMA_HOME_OPERATOR_NUMERIC:Ljava/lang/String;
 
     invoke-static {v4, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 211
     :cond_6
     if-eqz v3, :cond_0
 
@@ -373,7 +343,6 @@
 
     if-nez v4, :cond_0
 
-    .line 212
     const-string v4, "PhoneBase"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -408,14 +377,12 @@
 
     invoke-static {v4, v5}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     sget-object v4, Lcom/android/internal/telephony/PhoneBase;->PROPERTY_CDMA_HOME_OPERATOR_RESELLERID:Ljava/lang/String;
 
     invoke-static {v4, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 186
     .end local v0    # "brandAlpha":Ljava/lang/String;
     .end local v2    # "networkCode":Ljava/lang/String;
     .end local v3    # "resellerId":Ljava/lang/String;
@@ -433,12 +400,10 @@
 
     if-eqz v4, :cond_4
 
-    .line 188
     sget-boolean v4, Lcom/android/internal/telephony/PhoneBase;->mUsedLegacyIms:Z
 
     if-eqz v4, :cond_8
 
-    .line 189
     iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     const/4 v6, 0x0
@@ -446,12 +411,10 @@
     # setter for: Lcom/android/internal/telephony/PhoneBase;->mImsServiceReady:Z
     invoke-static {v4, v6}, Lcom/android/internal/telephony/PhoneBase;->access$002(Lcom/android/internal/telephony/PhoneBase;Z)Z
 
-    .line 190
     monitor-exit v5
 
     goto/16 :goto_0
 
-    .line 193
     :cond_8
     iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
@@ -460,7 +423,6 @@
     # setter for: Lcom/android/internal/telephony/PhoneBase;->mImsServiceReady:Z
     invoke-static {v4, v6}, Lcom/android/internal/telephony/PhoneBase;->access$002(Lcom/android/internal/telephony/PhoneBase;Z)Z
 
-    .line 194
     iget-object v4, p0, Lcom/android/internal/telephony/PhoneBase$1;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
     invoke-virtual {v4}, Lcom/android/internal/telephony/PhoneBase;->updateImsPhone()V

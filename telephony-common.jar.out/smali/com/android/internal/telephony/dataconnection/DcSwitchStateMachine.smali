@@ -92,145 +92,118 @@
 
     const/4 v1, 0x0
 
-    .line 138
     invoke-direct {p0, p2}, Lcom/android/internal/util/StateMachine;-><init>(Ljava/lang/String;)V
 
-    .line 73
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$IdleState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$IdleState;-><init>(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIdleState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$IdleState;
 
-    .line 74
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;-><init>(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mEmergencyState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;
 
-    .line 75
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachingState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachingState;-><init>(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mAttachingState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachingState;
 
-    .line 76
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachedState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachedState;-><init>(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mAttachedState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachedState;
 
-    .line 77
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DetachingState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DetachingState;-><init>(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDetachingState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DetachingState;
 
-    .line 78
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DefaultState;
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DefaultState;-><init>(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDefaultState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DefaultState;
 
-    .line 91
     iput v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mRetryCountForDDS:I
 
-    .line 92
     new-array v0, v3, [I
 
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->RETRY_DDS_TIME:[I
 
-    .line 93
     iput v3, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->MAX_RETRY_COUNT_FOR_DDS:I
 
-    .line 95
     iput v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIsInCall:I
 
-    .line 96
     iput-boolean v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIsTransitionFromAttached:Z
 
-    .line 99
     new-instance v0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;-><init>(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mHandler:Landroid/os/Handler;
 
-    .line 139
     const-string v0, "DcSwitchState constructor E"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->log(Ljava/lang/String;)V
 
-    .line 140
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mPhone:Lcom/android/internal/telephony/Phone;
 
-    .line 141
     iput p3, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mId:I
 
-    .line 143
     iput-boolean v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mWaitForDataDisconnect:Z
 
-    .line 146
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDefaultState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DefaultState;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->addState(Lcom/android/internal/util/State;)V
 
-    .line 147
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIdleState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$IdleState;
 
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDefaultState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DefaultState;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 148
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mEmergencyState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;
 
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDefaultState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DefaultState;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 149
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mAttachingState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachingState;
 
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDefaultState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DefaultState;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 150
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mAttachedState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachedState;
 
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDefaultState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DefaultState;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 151
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDetachingState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DetachingState;
 
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDefaultState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DefaultState;
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->addState(Lcom/android/internal/util/State;Lcom/android/internal/util/State;)V
 
-    .line 152
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIdleState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$IdleState;
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->setInitialState(Lcom/android/internal/util/State;)V
 
-    .line 154
     const-string v0, "DcSwitchState constructor X"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->log(Ljava/lang/String;)V
 
-    .line 155
     return-void
 
-    .line 92
     :array_0
     .array-data 4
         0xbb8
@@ -245,7 +218,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->loge(Ljava/lang/String;)V
 
     return-void
@@ -256,7 +228,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mAttachingState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachingState;
 
     return-object v0
@@ -268,7 +239,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -279,7 +249,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mAttachedState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$AttachedState;
 
     return-object v0
@@ -291,7 +260,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -303,7 +271,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->loge(Ljava/lang/String;)V
 
     return-void
@@ -315,7 +282,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->deferMessage(Landroid/os/Message;)V
 
     return-void
@@ -326,7 +292,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mPreEmergencyState:Lcom/android/internal/util/IState;
 
     return-object v0
@@ -338,7 +303,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mPreEmergencyState:Lcom/android/internal/util/IState;
 
     return-object p1
@@ -350,7 +314,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -362,7 +325,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -374,7 +336,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->loge(Ljava/lang/String;)V
 
     return-void
@@ -386,7 +347,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->deferMessage(Landroid/os/Message;)V
 
     return-void
@@ -398,7 +358,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -410,7 +369,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -421,7 +379,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-boolean v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIsTransitionFromAttached:Z
 
     return v0
@@ -433,7 +390,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 54
     iput-boolean p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIsTransitionFromAttached:Z
 
     return p1
@@ -444,7 +400,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIdleState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$IdleState;
 
     return-object v0
@@ -456,7 +411,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -467,7 +421,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mRetryCountForDDS:I
 
     return v0
@@ -479,7 +432,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 54
     iput p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mRetryCountForDDS:I
 
     return p1
@@ -490,7 +442,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mRetryCountForDDS:I
 
     add-int/lit8 v1, v0, 0x1
@@ -505,7 +456,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mDetachingState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$DetachingState;
 
     return-object v0
@@ -517,7 +467,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -528,7 +477,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->RETRY_DDS_TIME:[I
 
     return-object v0
@@ -540,7 +488,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -552,7 +499,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -564,7 +510,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -576,7 +521,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->deferMessage(Landroid/os/Message;)V
 
     return-void
@@ -587,7 +531,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-boolean v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mWaitForDataDisconnect:Z
 
     return v0
@@ -599,7 +542,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 54
     iput-boolean p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mWaitForDataDisconnect:Z
 
     return p1
@@ -611,7 +553,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -623,7 +564,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -635,7 +575,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -647,7 +586,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -659,7 +597,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->deferMessage(Landroid/os/Message;)V
 
     return-void
@@ -671,7 +608,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -683,7 +619,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->loge(Ljava/lang/String;)V
 
     return-void
@@ -695,7 +630,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->loge(Ljava/lang/String;)V
 
     return-void
@@ -707,7 +641,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -719,7 +652,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -730,7 +662,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mAc:Lcom/android/internal/util/AsyncChannel;
 
     return-object v0
@@ -742,7 +673,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/AsyncChannel;
 
     .prologue
-    .line 54
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mAc:Lcom/android/internal/util/AsyncChannel;
 
     return-object p1
@@ -753,7 +683,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->getCurrentState()Lcom/android/internal/util/IState;
 
     move-result-object v0
@@ -766,7 +695,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->getCurrentState()Lcom/android/internal/util/IState;
 
     move-result-object v0
@@ -779,7 +707,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->getCurrentState()Lcom/android/internal/util/IState;
 
     move-result-object v0
@@ -792,7 +719,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     invoke-virtual {p0}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->getCurrentState()Lcom/android/internal/util/IState;
 
     move-result-object v0
@@ -805,7 +731,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mEmergencyState:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$EmergencyState;
 
     return-object v0
@@ -817,7 +742,6 @@
     .param p1, "x1"    # Lcom/android/internal/util/IState;
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
 
     return-void
@@ -829,7 +753,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 54
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->broadcastDefaultDataSubIdChanged(I)V
 
     return-void
@@ -840,7 +763,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mPhone:Lcom/android/internal/telephony/Phone;
 
     return-object v0
@@ -851,7 +773,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mId:I
 
     return v0
@@ -862,7 +783,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     .prologue
-    .line 54
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIsInCall:I
 
     return v0
@@ -874,7 +794,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 54
     iput p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIsInCall:I
 
     return p1
@@ -885,7 +804,6 @@
     .param p1, "subId"    # I
 
     .prologue
-    .line 880
     const-string v2, "ril.datacross.slotid"
 
     const/4 v3, -0x1
@@ -894,7 +812,6 @@
 
     move-result v0
 
-    .line 881
     .local v0, "datacrossSlotId":I
     const-string v2, "DcSwitchSM"
 
@@ -928,28 +845,23 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 882
     if-gez v0, :cond_0
 
-    .line 883
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.ACTION_DEFAULT_DATA_SUBSCRIPTION_CHANGED"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 884
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v2, 0x20000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 885
     const-string v2, "subscription"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 886
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mPhone:Lcom/android/internal/telephony/Phone;
 
     invoke-interface {v2}, Lcom/android/internal/telephony/Phone;->getContext()Landroid/content/Context;
@@ -960,7 +872,6 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 888
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_0
     const-string v2, "ril.dds.progressing"
@@ -969,7 +880,6 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 889
     return-void
 .end method
 
@@ -979,7 +889,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -989,7 +898,6 @@
     .locals 1
 
     .prologue
-    .line 894
     iget v0, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mIsInCall:I
 
     return v0
@@ -1000,7 +908,6 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 875
     const-string v0, "DcSwitchSM"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1037,6 +944,5 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 876
     return-void
 .end method

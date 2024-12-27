@@ -27,17 +27,14 @@
 
     const/4 v1, 0x0
 
-    .line 1153
     iput-object p1, p0, Lcom/android/server/ConnectivityService$MPTCPObserver;->this$0:Lcom/android/server/ConnectivityService;
 
-    .line 1154
     new-instance v2, Landroid/os/Handler;
 
     invoke-direct {v2}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1156
     # getter for: Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
     invoke-static {p1}, Lcom/android/server/ConnectivityService;->access$500(Lcom/android/server/ConnectivityService;)Landroid/content/Context;
 
@@ -59,7 +56,6 @@
     # setter for: Lcom/android/server/ConnectivityService;->mMPTCPEnabled:Z
     invoke-static {p1, v0}, Lcom/android/server/ConnectivityService;->access$402(Lcom/android/server/ConnectivityService;Z)Z
 
-    .line 1158
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,17 +82,14 @@
     # invokes: Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$600(Ljava/lang/String;)V
 
-    .line 1159
     # invokes: Lcom/android/server/ConnectivityService;->updateMptcpDefaultRoute()V
     invoke-static {p1}, Lcom/android/server/ConnectivityService;->access$700(Lcom/android/server/ConnectivityService;)V
 
-    .line 1160
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 1156
     goto :goto_0
 .end method
 
@@ -111,7 +104,6 @@
 
     const/4 v1, 0x0
 
-    .line 1172
     iget-object v2, p0, Lcom/android/server/ConnectivityService$MPTCPObserver;->this$0:Lcom/android/server/ConnectivityService;
 
     iget-object v3, p0, Lcom/android/server/ConnectivityService$MPTCPObserver;->this$0:Lcom/android/server/ConnectivityService;
@@ -137,7 +129,6 @@
     # setter for: Lcom/android/server/ConnectivityService;->mMPTCPEnabled:Z
     invoke-static {v2, v0}, Lcom/android/server/ConnectivityService;->access$402(Lcom/android/server/ConnectivityService;Z)Z
 
-    .line 1174
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -166,19 +157,16 @@
     # invokes: Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$600(Ljava/lang/String;)V
 
-    .line 1175
     iget-object v0, p0, Lcom/android/server/ConnectivityService$MPTCPObserver;->this$0:Lcom/android/server/ConnectivityService;
 
     # invokes: Lcom/android/server/ConnectivityService;->updateMptcpDefaultRoute()V
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->access$700(Lcom/android/server/ConnectivityService;)V
 
-    .line 1176
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 1172
     goto :goto_0
 .end method
 
@@ -187,7 +175,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1163
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -202,7 +189,6 @@
 
     invoke-virtual {v0, v1, v2, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1165
     return-void
 .end method
 
@@ -211,13 +197,11 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1168
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 1169
     return-void
 .end method

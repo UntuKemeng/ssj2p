@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 680
     iput-object p1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
-    .line 681
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 682
     return-void
 .end method
 
@@ -43,23 +40,19 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 686
     iget v1, p1, Landroid/os/Message;->what:I
 
     if-ne v1, v3, :cond_1
 
-    .line 688
     iget-object v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # invokes: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->closeLauncherApp()V
     invoke-static {v1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->access$1400(Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;)V
 
-    .line 695
     :cond_0
     :goto_0
     return-void
 
-    .line 689
     :cond_1
     iget v1, p1, Landroid/os/Message;->what:I
 
@@ -67,25 +60,21 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 690
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "android.intent.action.AIRPLANE_MODE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 691
     .local v0, "intent":Landroid/content/Intent;
     const/high16 v1, 0x20000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 692
     const-string v1, "state"
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 693
     iget-object v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;

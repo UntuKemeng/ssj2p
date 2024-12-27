@@ -24,17 +24,14 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1665
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
-    .line 1666
     invoke-virtual {p2}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1667
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p3, "x2"    # Lcom/samsung/android/camera/iris/SemIrisManager$1;
 
     .prologue
-    .line 1664
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;-><init>(Lcom/samsung/android/camera/iris/SemIrisManager;Landroid/content/Context;)V
 
     return-void
@@ -56,13 +52,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1669
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
-    .line 1670
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1671
     return-void
 .end method
 
@@ -73,7 +66,6 @@
     .param p3, "x2"    # Lcom/samsung/android/camera/iris/SemIrisManager$1;
 
     .prologue
-    .line 1664
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;-><init>(Lcom/samsung/android/camera/iris/SemIrisManager;Landroid/os/Looper;)V
 
     return-void
@@ -85,7 +77,6 @@
     .param p3, "acquireInfo"    # I
 
     .prologue
-    .line 1777
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mRequestCallback:Lcom/samsung/android/camera/iris/SemIrisManager$RequestCallback;
@@ -103,7 +94,6 @@
 
     if-ne p3, v1, :cond_2
 
-    .line 1779
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -114,12 +104,10 @@
 
     invoke-virtual {v1, p3}, Lcom/samsung/android/camera/iris/SemIrisManager$RequestCallback;->onRequested(I)V
 
-    .line 1798
     :cond_1
     :goto_0
     return-void
 
-    .line 1782
     :cond_2
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -130,7 +118,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 1783
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthenticationCallback:Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;
@@ -140,7 +127,6 @@
 
     invoke-virtual {v1, p3}, Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;->onAuthenticationAcquired(I)V
 
-    .line 1785
     :cond_3
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -149,11 +135,9 @@
 
     move-result-object v0
 
-    .line 1786
     .local v0, "msg":Ljava/lang/String;
     if-eqz v0, :cond_1
 
-    .line 1790
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
@@ -163,7 +147,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 1791
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
@@ -175,7 +158,6 @@
 
     goto :goto_0
 
-    .line 1792
     :cond_4
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -186,10 +168,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 1793
     if-eqz v0, :cond_1
 
-    .line 1796
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthenticationCallback:Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;
@@ -206,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 1771
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthenticationCallback:Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;
@@ -216,7 +195,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1772
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthenticationCallback:Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;
@@ -226,7 +204,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;->onAuthenticationFailed()V
 
-    .line 1774
     :cond_0
     return-void
 .end method
@@ -236,7 +213,6 @@
     .param p1, "ir"    # Lcom/samsung/android/camera/iris/Iris;
 
     .prologue
-    .line 1763
     const-string v1, "SemIrisManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -259,7 +235,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1764
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthenticationCallback:Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;
@@ -269,7 +244,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1765
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationResult;
 
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
@@ -281,7 +255,6 @@
 
     invoke-direct {v0, v1, p1}, Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationResult;-><init>(Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;Lcom/samsung/android/camera/iris/Iris;)V
 
-    .line 1766
     .local v0, "result":Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationResult;
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -292,7 +265,6 @@
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;->onAuthenticationSucceeded(Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationResult;)V
 
-    .line 1768
     .end local v0    # "result":Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationResult;
     :cond_0
     return-void
@@ -303,7 +275,6 @@
     .param p1, "fidoResultData"    # [B
 
     .prologue
-    .line 1756
     const-string v0, "SemIrisManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -330,7 +301,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1757
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mCryptoObject:Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;
@@ -340,7 +310,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1758
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mCryptoObject:Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;
@@ -351,7 +320,6 @@
     # invokes: Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->setFidoResultData([B)V
     invoke-static {v0, p1}, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->access$1400(Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;[B)V
 
-    .line 1760
     :cond_0
     return-void
 .end method
@@ -362,7 +330,6 @@
     .param p2, "remaining"    # I
 
     .prologue
-    .line 1749
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
@@ -372,7 +339,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1750
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
@@ -382,7 +348,6 @@
 
     invoke-virtual {v0, p2}, Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;->onEnrollmentProgress(I)V
 
-    .line 1753
     :cond_0
     return-void
 .end method
@@ -393,7 +358,6 @@
     .param p3, "errMsgId"    # I
 
     .prologue
-    .line 1728
     const-string v0, "SemIrisManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -416,17 +380,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1729
     const/4 v0, 0x4
 
     if-ne p3, v0, :cond_1
 
-    .line 1746
     :cond_0
     :goto_0
     return-void
 
-    .line 1732
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -437,7 +398,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1733
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
@@ -456,7 +416,6 @@
 
     goto :goto_0
 
-    .line 1734
     :cond_2
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -467,7 +426,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1736
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
@@ -525,15 +483,12 @@
 
     if-nez v0, :cond_3
 
-    .line 1738
     const/16 v0, 0x3e8
 
     if-le p3, v0, :cond_3
 
-    .line 1739
     const/4 p3, 0x4
 
-    .line 1742
     :cond_3
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -553,7 +508,6 @@
 
     goto :goto_0
 
-    .line 1743
     :cond_4
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -564,7 +518,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1744
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mRemovalCallback:Lcom/samsung/android/camera/iris/SemIrisManager$RemovalCallback;
@@ -598,7 +551,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 1704
     const-string v0, "SemIrisManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -631,7 +583,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1705
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
@@ -641,7 +592,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1706
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
@@ -651,7 +601,6 @@
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;->onIRImage([BII)V
 
-    .line 1708
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -662,7 +611,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1709
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthenticationCallback:Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;
@@ -672,7 +620,6 @@
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;->onIRImage([BII)V
 
-    .line 1711
     :cond_1
     return-void
 .end method
@@ -684,7 +631,6 @@
     .param p4, "groupId"    # I
 
     .prologue
-    .line 1714
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mRemovalCallback:Lcom/samsung/android/camera/iris/SemIrisManager$RemovalCallback;
@@ -694,7 +640,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1715
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mRemovalIris:Lcom/samsung/android/camera/iris/Iris;
@@ -706,7 +651,6 @@
 
     move-result v1
 
-    .line 1716
     .local v1, "reqIrisId":I
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -719,11 +663,9 @@
 
     move-result v0
 
-    .line 1717
     .local v0, "reqGroupId":I
     if-eq p3, v1, :cond_0
 
-    .line 1718
     const-string v2, "SemIrisManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -756,11 +698,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1720
     :cond_0
     if-eq p4, v0, :cond_1
 
-    .line 1721
     const-string v2, "SemIrisManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -793,7 +733,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1723
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
@@ -811,7 +750,6 @@
 
     invoke-virtual {v2, v3}, Lcom/samsung/android/camera/iris/SemIrisManager$RemovalCallback;->onRemovalSucceeded(Lcom/samsung/android/camera/iris/Iris;)V
 
-    .line 1725
     .end local v0    # "reqGroupId":I
     .end local v1    # "reqIrisId":I
     :cond_2
@@ -825,16 +763,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1675
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1701
     :goto_0
     return-void
 
-    .line 1677
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -846,7 +781,6 @@
 
     goto :goto_0
 
-    .line 1680
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -862,7 +796,6 @@
 
     goto :goto_0
 
-    .line 1683
     :pswitch_2
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -874,7 +807,6 @@
 
     goto :goto_0
 
-    .line 1686
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -884,13 +816,11 @@
 
     goto :goto_0
 
-    .line 1689
     :pswitch_4
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;->sendAuthenticatedFailed()V
 
     goto :goto_0
 
-    .line 1692
     :pswitch_5
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -906,7 +836,6 @@
 
     goto :goto_0
 
-    .line 1695
     :pswitch_6
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -924,7 +853,6 @@
 
     goto :goto_0
 
-    .line 1698
     :pswitch_7
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -940,7 +868,6 @@
 
     goto :goto_0
 
-    .line 1675
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0

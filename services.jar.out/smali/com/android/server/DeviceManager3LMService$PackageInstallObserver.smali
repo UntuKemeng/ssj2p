@@ -27,12 +27,10 @@
     .locals 1
 
     .prologue
-    .line 2318
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$PackageInstallObserver;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageInstallObserver$Stub;-><init>()V
 
-    .line 2320
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/DeviceManager3LMService$PackageInstallObserver;->doneFlag:Z
@@ -46,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 2339
     iget v0, p0, Lcom/android/server/DeviceManager3LMService$PackageInstallObserver;->returnCode:I
 
     return v0
@@ -56,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 2334
     const/4 v0, 0x1
 
     return v0
@@ -68,6 +64,5 @@
     .param p2, "returnCode"    # I
 
     .prologue
-    .line 2324
     return-void
 .end method

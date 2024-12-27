@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1387
     iput-object p1, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-direct {p0}, Lcom/samsung/android/multiwindow/IMultiWindowFacade$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/am/MultiWindowFacadeService$1;
 
     .prologue
-    .line 1387
     invoke-direct {p0, p1}, Lcom/android/server/am/MultiWindowFacadeService$BinderService;-><init>(Lcom/android/server/am/MultiWindowFacadeService;)V
 
     return-void
@@ -50,12 +48,10 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1537
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->addTab(Landroid/os/IBinder;)V
 
-    .line 1538
     return-void
 .end method
 
@@ -69,12 +65,10 @@
     .end annotation
 
     .prologue
-    .line 1578
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->appMinimizingStarted(Landroid/os/IBinder;)V
 
-    .line 1579
     return-void
 .end method
 
@@ -85,7 +79,6 @@
     .param p3, "bMinimize"    # Z
 
     .prologue
-    .line 1481
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/am/MultiWindowFacadeService;->changeTaskToCascade(Landroid/graphics/Point;IZ)Z
@@ -100,12 +93,10 @@
     .param p1, "zone"    # I
 
     .prologue
-    .line 1477
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->changeTaskToFull(I)V
 
-    .line 1478
     return-void
 .end method
 
@@ -114,7 +105,6 @@
     .param p1, "force"    # Z
 
     .prologue
-    .line 1648
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->closeMultiWindowPanel(Z)Z
@@ -130,7 +120,6 @@
     .param p2, "zone2"    # I
 
     .prologue
-    .line 1429
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->exchangeTopTaskToZone(II)Z
@@ -145,12 +134,10 @@
     .param p1, "taskId"    # I
 
     .prologue
-    .line 1453
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->exitByCloseBtn(I)V
 
-    .line 1454
     return-void
 .end method
 
@@ -160,12 +147,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1569
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->finishAllTasks(Landroid/os/IBinder;I)V
 
-    .line 1570
     return-void
 .end method
 
@@ -179,12 +164,10 @@
     .end annotation
 
     .prologue
-    .line 1690
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->forceHideStackFrame(Z)V
 
-    .line 1691
     return-void
 .end method
 
@@ -192,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 1457
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getArrangeState()I
@@ -206,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 1489
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getAvailableMultiInstanceCnt()I
@@ -221,7 +202,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1397
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getCenterBarPoint(I)Landroid/graphics/Point;
@@ -240,7 +220,6 @@
     .end annotation
 
     .prologue
-    .line 1583
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getCurrentOrientation()I
@@ -260,7 +239,6 @@
     .end annotation
 
     .prologue
-    .line 1608
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getDragAndDropModeOfStack(Landroid/os/IBinder;)Z
@@ -274,7 +252,6 @@
     .locals 2
 
     .prologue
-    .line 1628
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getEnabledFeaturesFlags()J
@@ -288,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 1425
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getExpectedOrientation()I
@@ -302,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 1461
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getFocusedStackLayer()I
@@ -316,7 +291,6 @@
     .locals 1
 
     .prologue
-    .line 1465
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getFocusedZone()I
@@ -331,7 +305,6 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 1445
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getFrontActivityMultiWindowStyle(I)Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -345,7 +318,6 @@
     .locals 1
 
     .prologue
-    .line 1473
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getGlobalSystemUiVisibility()I
@@ -368,7 +340,6 @@
     .end annotation
 
     .prologue
-    .line 1437
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getMultiWindowAppList()Ljava/util/List;
@@ -383,7 +354,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1409
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getMultiWindowStyle(Landroid/os/IBinder;)Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -398,7 +368,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 1638
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getPreferenceThroughSystemProcess(Ljava/lang/String;)I
@@ -419,7 +388,6 @@
     .end annotation
 
     .prologue
-    .line 1588
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->getRecentTaskSize(II)I
@@ -433,7 +401,6 @@
     .locals 1
 
     .prologue
-    .line 1653
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getRunningPenWindowCnt()I
@@ -462,7 +429,6 @@
     .end annotation
 
     .prologue
-    .line 1593
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getRunningScaleWindows()Ljava/util/List;
@@ -487,7 +453,6 @@
     .end annotation
 
     .prologue
-    .line 1449
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->getRunningTasks(II)Ljava/util/List;
@@ -501,7 +466,6 @@
     .locals 1
 
     .prologue
-    .line 1517
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getSplitMaxWeight()F
@@ -515,7 +479,6 @@
     .locals 1
 
     .prologue
-    .line 1513
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getSplitMinWeight()F
@@ -530,7 +493,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1417
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getStackBound(Landroid/os/IBinder;)Landroid/graphics/Rect;
@@ -545,7 +507,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1553
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getStackId(Landroid/os/IBinder;)I
@@ -560,7 +521,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1421
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getStackOriginalBound(Landroid/os/IBinder;)Landroid/graphics/Rect;
@@ -575,7 +535,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1529
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getStackPosition(Landroid/os/IBinder;)Landroid/graphics/Point;
@@ -589,7 +548,6 @@
     .locals 1
 
     .prologue
-    .line 1573
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getSystemDisplayInfo()Landroid/view/DisplayInfo;
@@ -612,7 +570,6 @@
     .end annotation
 
     .prologue
-    .line 1545
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->getTabs()Ljava/util/List;
@@ -627,7 +584,6 @@
     .param p1, "zone"    # I
 
     .prologue
-    .line 1441
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->getZoneBounds(I)Landroid/graphics/Rect;
@@ -642,7 +598,6 @@
     .param p1, "notIncludeTaskId"    # I
 
     .prologue
-    .line 1521
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->isEnableMakePenWindow(I)Z
@@ -656,7 +611,6 @@
     .locals 1
 
     .prologue
-    .line 1684
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->isKnoxDesktopMode()Z
@@ -671,7 +625,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1525
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->isPenWindowableOnly(Landroid/os/IBinder;)Z
@@ -686,7 +639,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1674
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->isRotatingCascade(I)Z
@@ -701,7 +653,6 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1658
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->isSplitSupportedForTask(Landroid/os/IBinder;)Z
@@ -718,7 +669,6 @@
     .param p3, "stayResumed"    # Z
 
     .prologue
-    .line 1485
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/am/MultiWindowFacadeService;->minimizeTask(ILandroid/graphics/Point;Z)Z
@@ -733,12 +683,10 @@
     .param p1, "activityToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1389
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->minimizeWindow(Landroid/os/IBinder;)V
 
-    .line 1390
     return-void
 .end method
 
@@ -749,12 +697,10 @@
     .param p3, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 1679
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/am/MultiWindowFacadeService;->moveAllTasksToBack(Landroid/os/IBinder;ILjava/lang/String;)V
 
-    .line 1680
     return-void
 .end method
 
@@ -766,12 +712,10 @@
     .param p4, "style"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 1505
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/am/MultiWindowFacadeService;->moveOnlySpecificTaskToFront(ILandroid/os/Bundle;ILcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 1506
     return-void
 .end method
 
@@ -779,7 +723,6 @@
     .locals 1
 
     .prologue
-    .line 1433
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->needHideTrayBar()Z
@@ -794,7 +737,6 @@
     .param p1, "taskId"    # I
 
     .prologue
-    .line 1501
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->needMoveOnlySpecificTaskToFront(I)Z
@@ -813,7 +755,6 @@
     .end annotation
 
     .prologue
-    .line 1598
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0}, Lcom/android/server/am/MultiWindowFacadeService;->needToExposureTitleBarMenu()Z
@@ -828,12 +769,10 @@
     .param p1, "observer"    # Landroid/sec/multiwindow/impl/IMultiWindowStyleChangedCallback;
 
     .prologue
-    .line 1663
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->registerMultiWindowStyleChangedCallback(Landroid/sec/multiwindow/impl/IMultiWindowStyleChangedCallback;)V
 
-    .line 1664
     return-void
 .end method
 
@@ -847,12 +786,10 @@
     .end annotation
 
     .prologue
-    .line 1613
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->registerTaskController(Lcom/samsung/android/multiwindow/ITaskController;)V
 
-    .line 1614
     return-void
 .end method
 
@@ -867,12 +804,10 @@
     .end annotation
 
     .prologue
-    .line 1618
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->registerTaskControllerWithType(Lcom/samsung/android/multiwindow/ITaskController;I)V
 
-    .line 1619
     return-void
 .end method
 
@@ -883,12 +818,10 @@
     .param p3, "logging"    # Z
 
     .prologue
-    .line 1565
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/am/MultiWindowFacadeService;->removeAllTasks(Landroid/os/IBinder;IZ)V
 
-    .line 1566
     return-void
 .end method
 
@@ -897,7 +830,6 @@
     .param p1, "stackId"    # I
 
     .prologue
-    .line 1541
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->removeTab(I)Z
@@ -913,12 +845,10 @@
     .param p2, "visible"    # Z
 
     .prologue
-    .line 1561
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->setAppVisibility(Landroid/os/IBinder;Z)V
 
-    .line 1562
     return-void
 .end method
 
@@ -928,12 +858,10 @@
     .param p2, "point"    # Landroid/graphics/Point;
 
     .prologue
-    .line 1393
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->setCenterBarPoint(ILandroid/graphics/Point;)V
 
-    .line 1394
     return-void
 .end method
 
@@ -948,12 +876,10 @@
     .end annotation
 
     .prologue
-    .line 1603
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->setDragAndDropModeOfStack(Landroid/os/IBinder;Z)V
 
-    .line 1604
     return-void
 .end method
 
@@ -962,12 +888,10 @@
     .param p1, "zone"    # I
 
     .prologue
-    .line 1493
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->setFocusAppByZone(I)V
 
-    .line 1494
     return-void
 .end method
 
@@ -977,12 +901,10 @@
     .param p2, "tapOutSide"    # Z
 
     .prologue
-    .line 1549
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->setFocusedStack(IZ)V
 
-    .line 1550
     return-void
 .end method
 
@@ -992,12 +914,10 @@
     .param p2, "style"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 1401
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->setMultiWindowStyle(Landroid/os/IBinder;Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 1402
     return-void
 .end method
 
@@ -1008,12 +928,10 @@
     .param p3, "loggingReason"    # I
 
     .prologue
-    .line 1405
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/am/MultiWindowFacadeService;->setMultiWindowStyleWithLogging(Landroid/os/IBinder;Lcom/samsung/android/multiwindow/MultiWindowStyle;I)V
 
-    .line 1406
     return-void
 .end method
 
@@ -1022,12 +940,10 @@
     .param p1, "open"    # Z
 
     .prologue
-    .line 1469
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->setMultiWindowTrayOpenState(Z)V
 
-    .line 1470
     return-void
 .end method
 
@@ -1037,12 +953,10 @@
     .param p2, "bound"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 1413
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->setStackBound(Landroid/os/IBinder;Landroid/graphics/Rect;)V
 
-    .line 1414
     return-void
 .end method
 
@@ -1052,12 +966,10 @@
     .param p2, "bound"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 1557
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->setStackBoundByStackId(ILandroid/graphics/Rect;)V
 
-    .line 1558
     return-void
 .end method
 
@@ -1068,12 +980,10 @@
     .param p3, "style"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 1509
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/am/MultiWindowFacadeService;->startActivityFromRecentMultiWindow(ILandroid/os/Bundle;Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 1510
     return-void
 .end method
 
@@ -1082,12 +992,10 @@
     .param p1, "observer"    # Landroid/sec/multiwindow/impl/IMultiWindowStyleChangedCallback;
 
     .prologue
-    .line 1668
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->unregisterMultiWindowStyleChangedCallback(Landroid/sec/multiwindow/impl/IMultiWindowStyleChangedCallback;)V
 
-    .line 1669
     return-void
 .end method
 
@@ -1101,12 +1009,10 @@
     .end annotation
 
     .prologue
-    .line 1623
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->unregisterTaskController(Lcom/samsung/android/multiwindow/ITaskController;)V
 
-    .line 1624
     return-void
 .end method
 
@@ -1115,12 +1021,10 @@
     .param p1, "point"    # Landroid/graphics/Point;
 
     .prologue
-    .line 1497
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/MultiWindowFacadeService;->updateIsolatedCenterPoint(Landroid/graphics/Point;)V
 
-    .line 1498
     return-void
 .end method
 
@@ -1130,12 +1034,10 @@
     .param p2, "size"    # [I
 
     .prologue
-    .line 1533
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->updateMinimizeSize(Landroid/os/IBinder;[I)V
 
-    .line 1534
     return-void
 .end method
 
@@ -1146,12 +1048,10 @@
     .param p3, "enable"    # Z
 
     .prologue
-    .line 1643
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/am/MultiWindowFacadeService;->updateMultiWindowSetting(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1644
     return-void
 .end method
 
@@ -1161,11 +1061,9 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 1633
     iget-object v0, p0, Lcom/android/server/am/MultiWindowFacadeService$BinderService;->this$0:Lcom/android/server/am/MultiWindowFacadeService;
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/am/MultiWindowFacadeService;->updatePreferenceThroughSystemProcess(Ljava/lang/String;I)V
 
-    .line 1634
     return-void
 .end method

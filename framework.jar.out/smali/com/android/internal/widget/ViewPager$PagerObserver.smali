@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2783
     iput-object p1, p0, Lcom/android/internal/widget/ViewPager$PagerObserver;->this$0:Lcom/android/internal/widget/ViewPager;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/widget/ViewPager$1;
 
     .prologue
-    .line 2783
     invoke-direct {p0, p1}, Lcom/android/internal/widget/ViewPager$PagerObserver;-><init>(Lcom/android/internal/widget/ViewPager;)V
 
     return-void
@@ -49,12 +47,10 @@
     .locals 1
 
     .prologue
-    .line 2786
     iget-object v0, p0, Lcom/android/internal/widget/ViewPager$PagerObserver;->this$0:Lcom/android/internal/widget/ViewPager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/ViewPager;->dataSetChanged()V
 
-    .line 2787
     return-void
 .end method
 
@@ -62,11 +58,9 @@
     .locals 1
 
     .prologue
-    .line 2790
     iget-object v0, p0, Lcom/android/internal/widget/ViewPager$PagerObserver;->this$0:Lcom/android/internal/widget/ViewPager;
 
     invoke-virtual {v0}, Lcom/android/internal/widget/ViewPager;->dataSetChanged()V
 
-    .line 2791
     return-void
 .end method

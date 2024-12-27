@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,14 +44,12 @@
 
     const/4 v3, 0x0
 
-    .line 55
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-eq v0, v2, :cond_0
 
-    .line 56
     new-instance v0, Lorg/simpleframework/xml/transform/InvalidFormatException;
 
     const-string v1, "Cannot convert \'%s\' to a character"
@@ -65,7 +62,6 @@
 
     throw v0
 
-    .line 58
     :cond_0
     invoke-virtual {p1, v3}, Ljava/lang/String;->charAt(I)C
 
@@ -88,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 42
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/CharacterTransform;->read(Ljava/lang/String;)Ljava/lang/Character;
 
     move-result-object v0
@@ -106,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 72
     invoke-virtual {p1}, Ljava/lang/Character;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -124,7 +118,6 @@
     .end annotation
 
     .prologue
-    .line 42
     check-cast p1, Ljava/lang/Character;
 
     .end local p1    # "x0":Ljava/lang/Object;

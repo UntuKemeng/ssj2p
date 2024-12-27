@@ -25,22 +25,18 @@
     .locals 1
 
     .prologue
-    .line 1327
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1328
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$RequestIdGenerator;->fraction:I
 
-    .line 1329
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$RequestIdGenerator;->random:Ljava/util/Random;
 
-    .line 1330
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .locals 3
 
     .prologue
-    .line 1333
     iget v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$RequestIdGenerator;->fraction:I
 
     add-int/lit8 v0, v0, 0x1
@@ -61,12 +56,10 @@
 
     if-le v0, v1, :cond_0
 
-    .line 1334
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$RequestIdGenerator;->fraction:I
 
-    .line 1336
     :cond_0
     iget v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$RequestIdGenerator;->fraction:I
 

@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const-class v0, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -54,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lcom/samsung/android/rlc/receiver/handler/PushMsgHandler;-><init>()V
 
     return-void
@@ -67,27 +65,23 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 222
     sget-object v1, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     const-string v2, "[decertifyGCM]"
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 223
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.google.android.c2dm.intent.UNREGISTER"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 224
     .local v0, "unregIntent":Landroid/content/Intent;
     const-string v1, "com.google.android.gsf"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 225
     const-string v1, "app"
 
     new-instance v2, Landroid/content/Intent;
@@ -100,10 +94,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 226
     invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 227
     return-void
 .end method
 
@@ -118,12 +110,10 @@
     .end annotation
 
     .prologue
-    .line 173
     const-string v0, "GCM"
 
     invoke-static {p0, p1, v0}, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->handleMsg(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 174
     return-void
 .end method
 
@@ -140,14 +130,12 @@
     .prologue
     const/16 v7, 0xb
 
-    .line 100
     const-string v4, "registration_id"
 
     invoke-virtual {p1, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 101
     .local v2, "registrationID":Ljava/lang/String;
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
@@ -155,7 +143,6 @@
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 102
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -178,18 +165,15 @@
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
     const-string v4, "error"
 
     invoke-virtual {p1, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 105
     .local v1, "error":Ljava/lang/String;
     if-eqz v1, :cond_6
 
-    .line 107
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -218,7 +202,6 @@
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 109
     const-string v4, "SERVICE_NOT_AVAILABLE"
 
     invoke-virtual {v4, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -235,7 +218,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 111
     :cond_0
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
@@ -259,19 +241,16 @@
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 112
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
     invoke-static {p0, v4, v7}, Lcom/samsung/android/rlc/util/PushUtil;->retryBackoff(Landroid/content/Context;Landroid/os/Bundle;I)I
 
-    .line 151
     :cond_1
     :goto_0
     return-void
 
-    .line 114
     :cond_2
     const-string v4, "ACCOUNT_MISSING"
 
@@ -281,7 +260,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 115
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     const-string v5, "ACCOUNT_MISSING"
@@ -290,7 +268,6 @@
 
     goto :goto_0
 
-    .line 118
     :cond_3
     const-string v4, "AUTHENTICATION_FAILED"
 
@@ -300,14 +277,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 119
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     const-string v5, "AUTHENTICATION_FAILED"
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 120
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
@@ -316,7 +291,6 @@
 
     goto :goto_0
 
-    .line 122
     :cond_4
     const-string v4, "TOO_MANY_REGISTRATIONS"
 
@@ -326,7 +300,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 123
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     const-string v5, "TOO_MANY_REGISTRATIONS"
@@ -335,7 +308,6 @@
 
     goto :goto_0
 
-    .line 125
     :cond_5
     const-string v4, "INVALID_SENDER"
 
@@ -345,7 +317,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 126
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     const-string v5, "INVALID_SENDER"
@@ -354,7 +325,6 @@
 
     goto :goto_0
 
-    .line 130
     :cond_6
     const-string v4, "unregistered"
 
@@ -364,50 +334,41 @@
 
     if-eqz v4, :cond_7
 
-    .line 132
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     const-string v5, "Unregistration done."
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 134
     const-string v4, "GCM"
 
     invoke-static {p0, v4}, Lcom/samsung/android/rlc/util/PreferencesUtil;->clearRegistraionID(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 135
     const-string v4, "GCM"
 
     invoke-static {p0, v4}, Lcom/samsung/android/rlc/util/PreferencesUtil;->unmarkMGRegistered(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 136
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->clearGCMBackoff(Landroid/content/Context;)V
 
     goto :goto_0
 
-    .line 138
     :cond_7
     if-eqz v2, :cond_1
 
-    .line 140
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     const-string v5, "Registration_id complete"
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 141
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->clearGCMBackoff(Landroid/content/Context;)V
 
-    .line 143
     const-string v4, "GCM"
 
     invoke-static {p0, v4}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getRegistraionID(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 144
     .local v3, "savedRegistrationId":Ljava/lang/String;
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
@@ -431,7 +392,6 @@
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     sget-object v4, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -454,19 +414,16 @@
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
     const-string v4, "GCM"
 
     invoke-static {p0, v2, v4}, Lcom/samsung/android/rlc/util/PreferencesUtil;->setRegistraionID(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 148
     const-string v4, "GCM"
 
     invoke-static {p0, v4}, Lcom/samsung/android/rlc/receiver/handler/MgRegistrationHandler;->makeMgRegistrationBundle(Landroid/content/Context;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 149
     .local v0, "bundle":Landroid/os/Bundle;
     const/4 v4, 0x5
 
@@ -482,34 +439,29 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 206
     sget-object v1, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     const-string v2, "[certifyGCM]"
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 207
     sget-object v1, Lcom/samsung/android/rlc/receiver/handler/GCMHandler;->TAG:Ljava/lang/String;
 
     const-string v2, "certifyGCM: 131980721158"
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 208
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.google.android.c2dm.intent.REGISTER"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 209
     .local v0, "registrationIntent":Landroid/content/Intent;
     const-string v1, "com.google.android.gsf"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 210
     const-string v1, "app"
 
     new-instance v2, Landroid/content/Intent;
@@ -522,16 +474,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 211
     const-string v1, "sender"
 
     const-string v2, "131980721158"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 212
     invoke-virtual {p0, v0}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 213
     return-void
 .end method

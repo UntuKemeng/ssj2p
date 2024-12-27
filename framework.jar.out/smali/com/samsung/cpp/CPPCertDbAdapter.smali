@@ -45,13 +45,10 @@
     .param p1, "_context"    # Landroid/content/Context;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->context:Landroid/content/Context;
 
-    .line 45
     new-instance v0, Lcom/samsung/cpp/CPPCertDbAdapter$CertDbHelper;
 
     iget-object v1, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->context:Landroid/content/Context;
@@ -60,7 +57,6 @@
 
     iput-object v0, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->mCertDbHelper:Lcom/samsung/cpp/CPPCertDbAdapter$CertDbHelper;
 
-    .line 46
     return-void
 .end method
 
@@ -70,19 +66,16 @@
     .locals 2
 
     .prologue
-    .line 56
     const-string v0, "CPPCertDbAdapter"
 
     const-string v1, "Close cdb!!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 57
     iget-object v0, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 58
     return-void
 .end method
 
@@ -91,7 +84,6 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 123
     const-string v0, "CPPCertDbAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -114,14 +106,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     const/4 v9, 0x0
 
-    .line 125
     .local v9, "mCursor":Landroid/database/Cursor;
     const/4 v8, 0x0
 
-    .line 127
     .local v8, "ca":Ljava/lang/String;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -147,13 +136,11 @@
 
     move-result-object v3
 
-    .line 128
     .local v3, "_selection":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 130
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -173,19 +160,16 @@
 
     move-result-object v9
 
-    .line 131
     iget-object v0, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 133
     iget-object v0, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 137
     if-eqz v9, :cond_0
 
     :try_start_1
@@ -195,7 +179,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 138
     const-string v0, "cert_ca"
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -208,14 +191,11 @@
 
     move-result-object v8
 
-    .line 140
     :cond_0
     if-eqz v9, :cond_1
 
-    .line 141
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 144
     :cond_1
     const-string v0, "CPPCertDbAdapter"
 
@@ -239,10 +219,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     return-object v8
 
-    .line 133
     :catchall_0
     move-exception v0
 
@@ -252,13 +230,11 @@
 
     throw v0
 
-    .line 140
     :catchall_1
     move-exception v0
 
     if-eqz v9, :cond_2
 
-    .line 141
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -274,14 +250,12 @@
     .end annotation
 
     .prologue
-    .line 49
     const-string v0, "CPPCertDbAdapter"
 
     const-string v1, "CPPCertDbAdapter.open()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 50
     iget-object v0, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->mCertDbHelper:Lcom/samsung/cpp/CPPCertDbAdapter$CertDbHelper;
 
     invoke-virtual {v0}, Lcom/samsung/cpp/CPPCertDbAdapter$CertDbHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
@@ -290,14 +264,12 @@
 
     iput-object v0, p0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 51
     const-string v0, "CPPCertDbAdapter"
 
     const-string v1, "CPPCertDbAdapter.open() -- completed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 52
     return-object p0
 .end method
 
@@ -306,14 +278,12 @@
     .param p1, "cert"    # [B
 
     .prologue
-    .line 78
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v13}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 80
     :try_start_0
     move-object/from16 v0, p0
 
@@ -329,21 +299,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 82
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v13}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 84
     const-string v13, "CPPCertDbAdapter"
 
     const-string v14, "updateCert() Old cert deletion"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 87
     :try_start_1
     new-instance v11, Lorg/json/JSONObject;
 
@@ -355,7 +322,6 @@
 
     invoke-direct {v11, v13}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 88
     .local v11, "result":Lorg/json/JSONObject;
     const-string v13, "data"
 
@@ -363,7 +329,6 @@
 
     move-result-object v5
 
-    .line 90
     .local v5, "data":Lorg/json/JSONArray;
     const/4 v7, 0x0
 
@@ -375,12 +340,10 @@
 
     if-ge v7, v13, :cond_0
 
-    .line 91
     invoke-virtual {v5, v7}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v9
 
-    .line 92
     .local v9, "jsonObject":Lorg/json/JSONObject;
     const-string v13, "CA"
 
@@ -388,7 +351,6 @@
 
     move-result-object v1
 
-    .line 93
     .local v1, "CAs":Lorg/json/JSONArray;
     const-string v13, "URL"
 
@@ -396,7 +358,6 @@
 
     move-result-object v2
 
-    .line 95
     .local v2, "URLs":Lorg/json/JSONArray;
     const/4 v8, 0x0
 
@@ -408,12 +369,10 @@
 
     if-ge v8, v13, :cond_2
 
-    .line 96
     invoke-virtual {v1, v8}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 97
     .local v3, "ca":Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -425,29 +384,24 @@
 
     if-ge v10, v13, :cond_1
 
-    .line 98
     invoke-virtual {v2, v10}, Lorg/json/JSONArray;->optString(I)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 103
     .local v12, "url":Ljava/lang/String;
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 104
     .local v4, "certValues":Landroid/content/ContentValues;
     const-string v13, "cert_ca"
 
     invoke-virtual {v4, v13, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 105
     const-string v13, "cert_url"
 
     invoke-virtual {v4, v13, v12}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 107
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -456,7 +410,6 @@
     :try_end_1
     .catch Lorg/json/JSONException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 109
     :try_start_2
     move-object/from16 v0, p0
 
@@ -468,7 +421,6 @@
 
     invoke-virtual {v13, v14, v15, v4}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 110
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/samsung/cpp/CPPCertDbAdapter;->cdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -477,7 +429,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 112
     :try_start_3
     move-object/from16 v0, p0
 
@@ -487,12 +438,10 @@
     :try_end_3
     .catch Lorg/json/JSONException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 97
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_2
 
-    .line 82
     .end local v1    # "CAs":Lorg/json/JSONArray;
     .end local v2    # "URLs":Lorg/json/JSONArray;
     .end local v3    # "ca":Ljava/lang/String;
@@ -515,7 +464,6 @@
 
     throw v13
 
-    .line 112
     .restart local v1    # "CAs":Lorg/json/JSONArray;
     .restart local v2    # "URLs":Lorg/json/JSONArray;
     .restart local v3    # "ca":Ljava/lang/String;
@@ -541,7 +489,6 @@
     :try_end_4
     .catch Lorg/json/JSONException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 117
     .end local v1    # "CAs":Lorg/json/JSONArray;
     .end local v2    # "URLs":Lorg/json/JSONArray;
     .end local v3    # "ca":Ljava/lang/String;
@@ -556,16 +503,13 @@
     :catch_0
     move-exception v6
 
-    .line 118
     .local v6, "e":Lorg/json/JSONException;
     invoke-virtual {v6}, Lorg/json/JSONException;->printStackTrace()V
 
-    .line 120
     .end local v6    # "e":Lorg/json/JSONException;
     :cond_0
     return-void
 
-    .line 95
     .restart local v1    # "CAs":Lorg/json/JSONArray;
     .restart local v2    # "URLs":Lorg/json/JSONArray;
     .restart local v3    # "ca":Ljava/lang/String;
@@ -580,7 +524,6 @@
 
     goto :goto_1
 
-    .line 90
     .end local v3    # "ca":Ljava/lang/String;
     .end local v10    # "k":I
     :cond_2

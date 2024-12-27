@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2278
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$6;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2281
     const-string v2, "availableArray"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 2283
     .local v1, "available":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v2, "activeArray"
 
@@ -54,7 +51,6 @@
 
     move-result-object v0
 
-    .line 2285
     .local v0, "active":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$300()Z
@@ -103,7 +99,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2286
     :cond_0
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$6;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -117,6 +112,5 @@
 
     invoke-virtual {v2, v3, v4}, Lcom/android/server/wifi/WifiStateMachine;->sendMessage(ILjava/lang/Object;)V
 
-    .line 2287
     return-void
 .end method

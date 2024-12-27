@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 847
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$7;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,19 +38,16 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 850
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$7;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     const-string v1, "Data National Roaming Mode is changed"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 851
     iget-object v0, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$7;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     # invokes: Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->updateNationalRoamingMode()V
     invoke-static {v0}, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->access$3200(Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;)V
 
-    .line 852
     return-void
 .end method

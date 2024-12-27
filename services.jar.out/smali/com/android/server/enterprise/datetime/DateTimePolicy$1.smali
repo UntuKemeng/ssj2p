@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 638
     iput-object p1, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy$1;->this$0:Lcom/android/server/enterprise/datetime/DateTimePolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 641
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 642
     iget-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy$1;->this$0:Lcom/android/server/enterprise/datetime/DateTimePolicy;
 
     # getter for: Lcom/android/server/enterprise/datetime/DateTimePolicy;->mNtpInfoLock:Ljava/lang/Object;
@@ -62,7 +59,6 @@
 
     monitor-enter v1
 
-    .line 645
     :try_start_0
     iget-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy$1;->this$0:Lcom/android/server/enterprise/datetime/DateTimePolicy;
 
@@ -86,21 +82,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 646
     iget-object v0, p0, Lcom/android/server/enterprise/datetime/DateTimePolicy$1;->this$0:Lcom/android/server/enterprise/datetime/DateTimePolicy;
 
     # invokes: Lcom/android/server/enterprise/datetime/DateTimePolicy;->sendBroadcastToNtpServices()V
     invoke-static {v0}, Lcom/android/server/enterprise/datetime/DateTimePolicy;->access$200(Lcom/android/server/enterprise/datetime/DateTimePolicy;)V
 
-    .line 648
     :cond_0
     monitor-exit v1
 
-    .line 650
     :cond_1
     return-void
 
-    .line 648
     :catchall_0
     move-exception v0
 

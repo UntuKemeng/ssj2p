@@ -26,20 +26,16 @@
     .param p1, "detail"    # Lorg/simpleframework/xml/core/Detail;
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     new-instance v0, Lorg/simpleframework/xml/core/PrimitiveScanner$EmptySection;
 
     invoke-direct {v0, p0}, Lorg/simpleframework/xml/core/PrimitiveScanner$EmptySection;-><init>(Lorg/simpleframework/xml/core/Scanner;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveScanner;->section:Lorg/simpleframework/xml/core/Section;
 
-    .line 63
     iput-object p1, p0, Lorg/simpleframework/xml/core/PrimitiveScanner;->detail:Lorg/simpleframework/xml/core/Detail;
 
-    .line 64
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .param p1, "context"    # Lorg/simpleframework/xml/core/Context;
 
     .prologue
-    .line 146
     new-instance v0, Lorg/simpleframework/xml/core/Caller;
 
     invoke-direct {v0, p0, p1}, Lorg/simpleframework/xml/core/Caller;-><init>(Lorg/simpleframework/xml/core/Scanner;Lorg/simpleframework/xml/core/Context;)V
@@ -62,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 236
     const/4 v0, 0x0
 
     return-object v0
@@ -72,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 275
     const/4 v0, 0x0
 
     return-object v0
@@ -82,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 134
     const/4 v0, 0x0
 
     return-object v0
@@ -92,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 110
     const/4 v0, 0x0
 
     return-object v0
@@ -102,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 223
     const/4 v0, 0x0
 
     return-object v0
@@ -112,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 185
     const/4 v0, 0x0
 
     return-object v0
@@ -122,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 98
     new-instance v0, Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/core/ParameterMap;-><init>()V
@@ -134,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 262
     const/4 v0, 0x0
 
     return-object v0
@@ -144,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 288
     const/4 v0, 0x0
 
     return-object v0
@@ -154,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 301
     const/4 v0, 0x0
 
     return-object v0
@@ -164,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 172
     const/4 v0, 0x0
 
     return-object v0
@@ -174,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 159
     iget-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveScanner;->section:Lorg/simpleframework/xml/core/Section;
 
     return-object v0
@@ -184,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 75
     const/4 v0, 0x0
 
     return-object v0
@@ -203,7 +185,6 @@
     .end annotation
 
     .prologue
-    .line 87
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
@@ -215,7 +196,6 @@
     .locals 1
 
     .prologue
-    .line 210
     const/4 v0, 0x0
 
     return-object v0
@@ -225,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 121
     iget-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveScanner;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getType()Ljava/lang/Class;
@@ -239,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 249
     const/4 v0, 0x0
 
     return-object v0
@@ -249,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 197
     const/4 v0, 0x0
 
     return-object v0
@@ -259,7 +236,6 @@
     .locals 1
 
     .prologue
-    .line 325
     const/4 v0, 0x1
 
     return v0
@@ -269,7 +245,6 @@
     .locals 1
 
     .prologue
-    .line 313
     const/4 v0, 0x1
 
     return v0
@@ -279,7 +254,6 @@
     .locals 1
 
     .prologue
-    .line 339
     const/4 v0, 0x1
 
     return v0

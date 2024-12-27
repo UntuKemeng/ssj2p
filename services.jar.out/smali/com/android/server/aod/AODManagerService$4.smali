@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 608
     invoke-static {}, Lcom/android/server/aod/AODManagerService$AODConnectionCause;->values()[Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     move-result-object v0

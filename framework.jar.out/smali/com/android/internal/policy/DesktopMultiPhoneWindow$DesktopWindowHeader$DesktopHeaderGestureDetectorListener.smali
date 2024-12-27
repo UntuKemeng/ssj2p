@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1853
     iput-object p1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;
 
     .prologue
-    .line 1853
     invoke-direct {p0, p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;-><init>(Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1856
     const/4 v0, 0x0
 
     return v0
@@ -67,7 +64,6 @@
     .param p4, "velocityY"    # F
 
     .prologue
-    .line 1901
     const/4 v0, 0x0
 
     return v0
@@ -82,7 +78,6 @@
 
     const/4 v5, 0x0
 
-    .line 1878
     iget-object v3, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     iget-object v3, v3, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -109,7 +104,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 1879
     new-instance v2, Landroid/graphics/Point;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -126,7 +120,6 @@
 
     invoke-direct {v2, v3, v4}, Landroid/graphics/Point;-><init>(II)V
 
-    .line 1880
     .local v2, "touchP":Landroid/graphics/Point;
     iget-object v3, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
@@ -140,7 +133,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1881
     iget-object v3, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
@@ -152,7 +144,6 @@
     # setter for: Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->mLastHandledX:I
     invoke-static {v3, v4}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->access$502(Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;I)I
 
-    .line 1882
     iget-object v3, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
@@ -164,13 +155,11 @@
     # setter for: Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->mLastHandledY:I
     invoke-static {v3, v4}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->access$602(Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;I)I
 
-    .line 1897
     .end local v2    # "touchP":Landroid/graphics/Point;
     :cond_0
     :goto_0
     return-void
 
-    .line 1885
     :cond_1
     iget-object v3, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
@@ -186,7 +175,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1886
     iget-object v3, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     iget-object v3, v3, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -197,7 +185,6 @@
 
     check-cast v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;
 
-    .line 1887
     .local v0, "decor":Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;
     invoke-virtual {v0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->isPenWindowResizing()Z
 
@@ -214,7 +201,6 @@
 
     if-nez v3, :cond_3
 
-    .line 1888
     :cond_2
     sget-boolean v3, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->DEBUG:Z
 
@@ -258,7 +244,6 @@
 
     goto :goto_0
 
-    .line 1892
     :cond_3
     iget-object v3, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
@@ -276,7 +261,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 1893
     new-instance v1, Landroid/graphics/Rect;
 
     iget-object v3, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -287,7 +271,6 @@
 
     invoke-direct {v1, v3}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 1894
     .local v1, "tempStackBound":Landroid/graphics/Rect;
     iget v3, v1, Landroid/graphics/Rect;->top:I
 
@@ -301,7 +284,6 @@
 
     iput v3, v1, Landroid/graphics/Rect;->top:I
 
-    .line 1895
     iget-object v3, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader$DesktopHeaderGestureDetectorListener;->this$1:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     iget-object v3, v3, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -319,7 +301,6 @@
     .param p4, "distanceY"    # F
 
     .prologue
-    .line 1871
     const/4 v0, 0x0
 
     return v0
@@ -330,7 +311,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1861
     return-void
 .end method
 
@@ -339,7 +319,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1865
     const/4 v0, 0x0
 
     return v0

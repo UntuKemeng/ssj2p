@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 611
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$1$3;->this$0:Lcom/android/server/power/ShutdownThread$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 614
     iget-object v0, p0, Lcom/android/server/power/ShutdownThread$1$3;->this$0:Lcom/android/server/power/ShutdownThread$1;
 
     invoke-virtual {v0}, Lcom/android/server/power/ShutdownThread$1;->dismiss()V
 
-    .line 615
     return-void
 .end method

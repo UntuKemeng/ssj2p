@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 4379
     iput-object p1, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p2, "x1"    # Landroid/widget/AbsListView$1;
 
     .prologue
-    .line 4379
     invoke-direct {p0, p1}, Landroid/widget/AbsListView$CheckForDoublePenClick;-><init>(Landroid/widget/AbsListView;)V
 
     return-void
@@ -62,10 +60,8 @@
 
     const/4 v8, 0x0
 
-    .line 4384
     const/4 v2, 0x0
 
-    .line 4386
     .local v2, "isNeedActionMode":Z
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
@@ -82,7 +78,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 4388
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mTwDragSelectedItemSize:I
@@ -92,7 +87,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 4389
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v3, v3, Landroid/widget/AbsListView;->mCheckStates:Landroid/util/SparseBooleanArray;
@@ -113,7 +107,6 @@
 
     if-ne v3, v5, :cond_5
 
-    .line 4392
     :cond_0
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
@@ -141,7 +134,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 4393
     .local v0, "dragSelectedViewPosition":Ljava/lang/Integer;
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
@@ -157,12 +149,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 4394
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 4398
     .end local v0    # "dragSelectedViewPosition":Ljava/lang/Integer;
     :cond_2
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
@@ -171,7 +161,6 @@
 
     if-ne v3, v5, :cond_3
 
-    .line 4399
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v3, v3, Landroid/widget/AbsListView;->mChoiceActionMode:Landroid/view/ActionMode;
@@ -180,7 +169,6 @@
 
     if-ne v2, v6, :cond_3
 
-    .line 4400
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
     iget-object v4, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
@@ -195,7 +183,6 @@
 
     iput-object v4, v3, Landroid/widget/AbsListView;->mChoiceActionMode:Landroid/view/ActionMode;
 
-    .line 4404
     :cond_3
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
@@ -206,7 +193,6 @@
 
     if-ne v3, v6, :cond_5
 
-    .line 4405
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
     # getter for: Landroid/widget/AbsListView;->mTwDragSelectedItemArray:Ljava/util/ArrayList;
@@ -232,7 +218,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 4406
     .restart local v0    # "dragSelectedViewPosition":Ljava/lang/Integer;
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
@@ -248,7 +233,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 4407
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
     const/4 v4, 0x0
@@ -271,7 +255,6 @@
 
     goto :goto_1
 
-    .line 4413
     .end local v0    # "dragSelectedViewPosition":Ljava/lang/Integer;
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_5
@@ -284,7 +267,6 @@
     # invokes: Landroid/widget/AbsListView;->totwNotifyMultiSelectedStop(II)V
     invoke-static {v3, v4, v5}, Landroid/widget/AbsListView;->access$2100(Landroid/widget/AbsListView;II)V
 
-    .line 4416
     :cond_6
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
@@ -295,19 +277,16 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 4417
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
     # setter for: Landroid/widget/AbsListView;->mTwDragSelectedItemSize:I
     invoke-static {v3, v8}, Landroid/widget/AbsListView;->access$1802(Landroid/widget/AbsListView;I)I
 
-    .line 4419
     :cond_7
     iget-object v3, p0, Landroid/widget/AbsListView$CheckForDoublePenClick;->this$0:Landroid/widget/AbsListView;
 
     # setter for: Landroid/widget/AbsListView;->mIsFirstPenClick:Z
     invoke-static {v3, v8}, Landroid/widget/AbsListView;->access$1702(Landroid/widget/AbsListView;Z)Z
 
-    .line 4420
     return-void
 .end method

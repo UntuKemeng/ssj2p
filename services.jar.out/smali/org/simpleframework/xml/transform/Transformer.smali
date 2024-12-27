@@ -35,31 +35,26 @@
     .param p1, "matcher"    # Lorg/simpleframework/xml/transform/Matcher;
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     new-instance v0, Lorg/simpleframework/xml/util/ConcurrentCache;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/util/ConcurrentCache;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/transform/Transformer;->cache:Lorg/simpleframework/xml/util/Cache;
 
-    .line 85
     new-instance v0, Lorg/simpleframework/xml/util/ConcurrentCache;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/util/ConcurrentCache;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/transform/Transformer;->error:Lorg/simpleframework/xml/util/Cache;
 
-    .line 86
     new-instance v0, Lorg/simpleframework/xml/transform/DefaultMatcher;
 
     invoke-direct {v0, p1}, Lorg/simpleframework/xml/transform/DefaultMatcher;-><init>(Lorg/simpleframework/xml/transform/Matcher;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/transform/Transformer;->matcher:Lorg/simpleframework/xml/transform/Matcher;
 
-    .line 87
     return-void
 .end method
 
@@ -73,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 155
     iget-object v1, p0, Lorg/simpleframework/xml/transform/Transformer;->error:Lorg/simpleframework/xml/util/Cache;
 
     invoke-interface {v1, p1}, Lorg/simpleframework/xml/util/Cache;->contains(Ljava/lang/Object;)Z
@@ -82,7 +76,6 @@
 
     if-nez v1, :cond_1
 
-    .line 156
     iget-object v1, p0, Lorg/simpleframework/xml/transform/Transformer;->cache:Lorg/simpleframework/xml/util/Cache;
 
     invoke-interface {v1, p1}, Lorg/simpleframework/xml/util/Cache;->fetch(Ljava/lang/Object;)Ljava/lang/Object;
@@ -91,16 +84,13 @@
 
     check-cast v0, Lorg/simpleframework/xml/transform/Transform;
 
-    .line 158
     .local v0, "transform":Lorg/simpleframework/xml/transform/Transform;
     if-eqz v0, :cond_0
 
-    .line 163
     .end local v0    # "transform":Lorg/simpleframework/xml/transform/Transform;
     :goto_0
     return-object v0
 
-    .line 161
     .restart local v0    # "transform":Lorg/simpleframework/xml/transform/Transform;
     :cond_0
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/transform/Transformer;->match(Ljava/lang/Class;)Lorg/simpleframework/xml/transform/Transform;
@@ -109,7 +99,6 @@
 
     goto :goto_0
 
-    .line 163
     .end local v0    # "transform":Lorg/simpleframework/xml/transform/Transform;
     :cond_1
     const/4 v0, 0x0
@@ -127,27 +116,22 @@
     .end annotation
 
     .prologue
-    .line 177
     iget-object v1, p0, Lorg/simpleframework/xml/transform/Transformer;->matcher:Lorg/simpleframework/xml/transform/Matcher;
 
     invoke-interface {v1, p1}, Lorg/simpleframework/xml/transform/Matcher;->match(Ljava/lang/Class;)Lorg/simpleframework/xml/transform/Transform;
 
     move-result-object v0
 
-    .line 179
     .local v0, "transform":Lorg/simpleframework/xml/transform/Transform;
     if-eqz v0, :cond_0
 
-    .line 180
     iget-object v1, p0, Lorg/simpleframework/xml/transform/Transformer;->cache:Lorg/simpleframework/xml/util/Cache;
 
     invoke-interface {v1, p1, v0}, Lorg/simpleframework/xml/util/Cache;->cache(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 184
     :goto_0
     return-object v0
 
-    .line 182
     :cond_0
     iget-object v1, p0, Lorg/simpleframework/xml/transform/Transformer;->error:Lorg/simpleframework/xml/util/Cache;
 
@@ -169,16 +153,13 @@
     .end annotation
 
     .prologue
-    .line 101
     invoke-direct {p0, p2}, Lorg/simpleframework/xml/transform/Transformer;->lookup(Ljava/lang/Class;)Lorg/simpleframework/xml/transform/Transform;
 
     move-result-object v0
 
-    .line 103
     .local v0, "transform":Lorg/simpleframework/xml/transform/Transform;
     if-nez v0, :cond_0
 
-    .line 104
     new-instance v1, Lorg/simpleframework/xml/transform/TransformException;
 
     const-string v2, "Transform of %s not supported"
@@ -195,7 +176,6 @@
 
     throw v1
 
-    .line 106
     :cond_0
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/transform/Transform;->read(Ljava/lang/String;)Ljava/lang/Object;
 
@@ -214,7 +194,6 @@
     .end annotation
 
     .prologue
-    .line 141
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/transform/Transformer;->lookup(Ljava/lang/Class;)Lorg/simpleframework/xml/transform/Transform;
 
     move-result-object v0
@@ -243,16 +222,13 @@
     .end annotation
 
     .prologue
-    .line 121
     invoke-direct {p0, p2}, Lorg/simpleframework/xml/transform/Transformer;->lookup(Ljava/lang/Class;)Lorg/simpleframework/xml/transform/Transform;
 
     move-result-object v0
 
-    .line 123
     .local v0, "transform":Lorg/simpleframework/xml/transform/Transform;
     if-nez v0, :cond_0
 
-    .line 124
     new-instance v1, Lorg/simpleframework/xml/transform/TransformException;
 
     const-string v2, "Transform of %s not supported"
@@ -269,7 +245,6 @@
 
     throw v1
 
-    .line 126
     :cond_0
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/transform/Transform;->write(Ljava/lang/Object;)Ljava/lang/String;
 

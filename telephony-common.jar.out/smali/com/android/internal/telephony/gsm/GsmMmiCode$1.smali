@@ -27,7 +27,6 @@
     .locals 3
 
     .prologue
-    .line 2685
     invoke-static {}, Lcom/android/internal/telephony/CommandException$Error;->values()[Lcom/android/internal/telephony/CommandException$Error;
 
     move-result-object v0
@@ -117,7 +116,6 @@
     :try_end_4
     .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_16
 
-    .line 546
     :goto_4
     invoke-static {}, Lcom/android/internal/telephony/gsm/SsData$ServiceType;->values()[Lcom/android/internal/telephony/gsm/SsData$ServiceType;
 
@@ -400,7 +398,6 @@
     :try_end_15
     .catch Ljava/lang/NoSuchFieldError; {:try_start_15 .. :try_end_15} :catch_5
 
-    .line 502
     :goto_15
     invoke-static {}, Lcom/android/internal/telephony/gsm/SsData$RequestType;->values()[Lcom/android/internal/telephony/gsm/SsData$RequestType;
 
@@ -519,7 +516,6 @@
 
     goto :goto_16
 
-    .line 546
     :catch_5
     move-exception v0
 
@@ -605,7 +601,6 @@
 
     goto/16 :goto_5
 
-    .line 2685
     :catch_16
     move-exception v0
 

@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 12739
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v8, 0x1
 
-    .line 12746
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -55,7 +53,6 @@
 
     invoke-virtual {v0, v1, v8}, Lcom/android/server/wifi/WifiNative;->callSECApiInt(II)I
 
-    .line 12751
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -65,7 +62,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/wifi/WifiNative;->disconnect()Z
 
-    .line 12752
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mSupplicantStateTracker:Lcom/android/server/wifi/SupplicantStateTracker;
@@ -104,7 +100,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/SupplicantStateTracker;->sendMessage(Landroid/os/Message;)V
 
-    .line 12756
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mOperationalMode:I
@@ -114,7 +109,6 @@
 
     iput v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->mLastOperationMode:I
 
-    .line 12757
     iget v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->mLastOperationMode:I
 
     const/4 v1, 0x2
@@ -127,14 +121,12 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 12759
     :cond_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->skipWifiStateBroadcast(Z)V
     invoke-static {v0, v9}, Lcom/android/server/wifi/WifiStateMachine;->access$11800(Lcom/android/server/wifi/WifiStateMachine;Z)V
 
-    .line 12761
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -146,12 +138,10 @@
 
     invoke-virtual {v0, v1, v8}, Lcom/android/server/wifi/WifiNative;->callSECApiBoolean(IZ)I
 
-    .line 12763
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iput-boolean v9, v0, Lcom/android/server/wifi/WifiStateMachine;->mSkipScanAssoc:Z
 
-    .line 12764
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -163,7 +153,6 @@
 
     invoke-virtual {v0, v1, v8}, Lcom/android/server/wifi/WifiNative;->callSECApiBoolean(IZ)I
 
-    .line 12767
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -175,7 +164,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiNative;->callSECApiVoid(I)I
 
-    .line 12769
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mContext:Landroid/content/Context;
@@ -195,7 +183,6 @@
 
     if-ne v0, v8, :cond_1
 
-    .line 12770
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -207,7 +194,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/WifiNative;->setVariable(Ljava/lang/String;)Z
 
-    .line 12774
     :cond_1
     return-void
 .end method
@@ -216,7 +202,6 @@
     .locals 3
 
     .prologue
-    .line 12901
     iget-object v0, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -230,7 +215,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/wifi/WifiNative;->callSECApiInt(II)I
 
-    .line 12906
     return-void
 .end method
 
@@ -247,30 +231,25 @@
 
     const/4 v7, 0x1
 
-    .line 12777
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->logStateAndMessage(Landroid/os/Message;Lcom/android/internal/util/State;)V
     invoke-static {v5, p1, p0}, Lcom/android/server/wifi/WifiStateMachine;->access$6000(Lcom/android/server/wifi/WifiStateMachine;Landroid/os/Message;Lcom/android/internal/util/State;)V
 
-    .line 12779
     iget v5, p1, Landroid/os/Message;->what:I
 
     sparse-switch v5, :sswitch_data_0
 
     move v5, v6
 
-    .line 12894
     :goto_0
     return v5
 
     :sswitch_0
     move v5, v6
 
-    .line 12790
     goto :goto_0
 
-    .line 12793
     :sswitch_1
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -279,16 +258,13 @@
 
     move v5, v6
 
-    .line 12794
     goto :goto_0
 
-    .line 12796
     :sswitch_2
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     if-ne v5, v7, :cond_b
 
-    .line 12797
     iget v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->mLastOperationMode:I
 
     const/4 v8, 0x2
@@ -299,7 +275,6 @@
 
     if-ne v5, v9, :cond_2
 
-    .line 12801
     :cond_0
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -310,7 +285,6 @@
 
     invoke-virtual {v5, v7}, Lcom/android/server/wifi/WifiNative;->setFirstScan(Z)V
 
-    .line 12802
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiConfigStore:Lcom/android/server/wifi/WifiConfigStore;
@@ -320,7 +294,6 @@
 
     invoke-virtual {v5}, Lcom/android/server/wifi/WifiConfigStore;->loadAndEnableAllNetworks()V
 
-    .line 12808
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiP2pChannel:Lcom/android/internal/util/AsyncChannel;
@@ -332,7 +305,6 @@
 
     invoke-virtual {v5, v8}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 12810
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -344,7 +316,6 @@
 
     invoke-virtual {v5, v8, v6}, Lcom/android/server/wifi/WifiNative;->callSECApiBoolean(IZ)I
 
-    .line 12818
     :goto_1
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -359,7 +330,6 @@
 
     if-lez v5, :cond_3
 
-    .line 12819
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mUnstableAps:Ljava/util/HashMap;
@@ -394,7 +364,6 @@
 
     move-result v1
 
-    .line 12820
     .local v1, "networkId":I
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -413,7 +382,6 @@
 
     check-cast v3, Lcom/samsung/android/server/wifi/UnstableApInfo;
 
-    .line 12821
     .local v3, "unstableApInfo":Lcom/samsung/android/server/wifi/UnstableApInfo;
     if-eqz v3, :cond_1
 
@@ -429,7 +397,6 @@
 
     if-nez v5, :cond_1
 
-    .line 12822
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiConfigStore:Lcom/android/server/wifi/WifiConfigStore;
@@ -443,7 +410,6 @@
 
     goto :goto_2
 
-    .line 12813
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "networkId":I
     .end local v3    # "unstableApInfo":Lcom/samsung/android/server/wifi/UnstableApInfo;
@@ -459,7 +425,6 @@
 
     goto :goto_1
 
-    .line 12829
     :cond_3
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -480,7 +445,6 @@
 
     if-ne v5, v7, :cond_4
 
-    .line 12830
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -492,14 +456,12 @@
 
     invoke-virtual {v5, v8}, Lcom/android/server/wifi/WifiNative;->setVariable(Ljava/lang/String;)Z
 
-    .line 12831
     const-string v5, "WifiStateMachine"
 
     const-string v8, "interwoking works again"
 
     invoke-static {v5, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 12835
     :cond_4
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiConnectionTypeCsc:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$16300()Z
@@ -508,7 +470,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 12836
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mContext:Landroid/content/Context;
@@ -530,12 +491,10 @@
 
     move v4, v7
 
-    .line 12838
     .local v4, "wifiConnectionType":Z
     :goto_3
     if-ne v4, v7, :cond_7
 
-    .line 12839
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -547,7 +506,6 @@
 
     invoke-virtual {v5, v8, v4}, Lcom/android/server/wifi/WifiNative;->callSECApiBoolean(IZ)I
 
-    .line 12863
     .end local v4    # "wifiConnectionType":Z
     :goto_4
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -559,31 +517,26 @@
 
     invoke-virtual {v5, v10}, Lcom/android/server/wifi/WifiConfigStore;->setLastSelectedConfiguration(I)V
 
-    .line 12866
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mLastManualConnectedNetId:I
     invoke-static {v5, v10}, Lcom/android/server/wifi/WifiStateMachine;->access$20802(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 12868
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->mOperationalMode:I
     invoke-static {v5, v7}, Lcom/android/server/wifi/WifiStateMachine;->access$15102(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 12869
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->skipWifiStateBroadcast(Z)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiStateMachine;->access$11800(Lcom/android/server/wifi/WifiStateMachine;Z)V
 
-    .line 12870
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->setWifiState(I)V
     invoke-static {v5, v9}, Lcom/android/server/wifi/WifiStateMachine;->access$12300(Lcom/android/server/wifi/WifiStateMachine;I)V
 
-    .line 12871
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v6, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -600,16 +553,13 @@
     :goto_5
     move v5, v7
 
-    .line 12894
     goto/16 :goto_0
 
     :cond_6
     move v4, v6
 
-    .line 12836
     goto :goto_3
 
-    .line 12841
     .restart local v4    # "wifiConnectionType":Z
     :cond_7
     const-string v5, "SKT"
@@ -622,7 +572,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 12842
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -634,7 +583,6 @@
 
     goto :goto_4
 
-    .line 12844
     :cond_8
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -647,7 +595,6 @@
 
     goto :goto_4
 
-    .line 12848
     .end local v4    # "wifiConnectionType":Z
     :cond_9
     const-string v5, "SKT"
@@ -660,7 +607,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 12849
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->mWifiNative:Lcom/android/server/wifi/WifiNative;
@@ -672,7 +618,6 @@
 
     goto :goto_4
 
-    .line 12851
     :cond_a
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -685,13 +630,11 @@
 
     goto :goto_4
 
-    .line 12872
     :cond_b
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     if-ne v5, v9, :cond_c
 
-    .line 12873
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->setWifiState(I)V
@@ -699,22 +642,18 @@
 
     move v5, v7
 
-    .line 12875
     goto/16 :goto_0
 
     :cond_c
     move v5, v7
 
-    .line 12878
     goto/16 :goto_0
 
     :sswitch_3
     move v5, v6
 
-    .line 12886
     goto/16 :goto_0
 
-    .line 12888
     :sswitch_4
     iget-object v5, p0, Lcom/android/server/wifi/WifiStateMachine$ScanModeState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -723,7 +662,6 @@
 
     move-result-object v2
 
-    .line 12889
     .local v2, "state":Landroid/net/wifi/SupplicantState;
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$300()Z
@@ -756,7 +694,6 @@
 
     goto :goto_5
 
-    .line 12779
     nop
 
     :sswitch_data_0

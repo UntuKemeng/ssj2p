@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 124
     iput-object p1, p0, Lcom/android/internal/widget/FloatingToolbar$2;->this$0:Lcom/android/internal/widget/FloatingToolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 127
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$2;->this$0:Lcom/android/internal/widget/FloatingToolbar;
 
     # getter for: Lcom/android/internal/widget/FloatingToolbar;->mPopup:Lcom/android/internal/widget/FloatingToolbar$FloatingToolbarPopup;
@@ -86,7 +84,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 128
     :cond_1
     iget-object v0, p0, Lcom/android/internal/widget/FloatingToolbar$2;->this$0:Lcom/android/internal/widget/FloatingToolbar;
 
@@ -95,7 +92,6 @@
     # setter for: Lcom/android/internal/widget/FloatingToolbar;->mWidthChanged:Z
     invoke-static {v0, v1}, Lcom/android/internal/widget/FloatingToolbar;->access$302(Lcom/android/internal/widget/FloatingToolbar;Z)Z
 
-    .line 133
     :cond_2
     return-void
 .end method
@@ -104,6 +100,5 @@
     .locals 0
 
     .prologue
-    .line 136
     return-void
 .end method

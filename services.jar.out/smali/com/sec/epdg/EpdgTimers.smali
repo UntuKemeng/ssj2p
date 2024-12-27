@@ -35,12 +35,10 @@
     .locals 1
 
     .prologue
-    .line 15
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/epdg/EpdgTimers;->mEdpgTimers:Lcom/sec/epdg/EpdgTimers;
 
-    .line 16
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/sec/epdg/EpdgTimers$EpdgTimer;
@@ -55,20 +53,16 @@
     .param p1, "hdlr"    # Landroid/os/Handler;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     const/16 v0, 0x8
 
     new-array v0, v0, [I
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgTimers;->mTimerValue:[I
 
-    .line 34
     iput-object p1, p0, Lcom/sec/epdg/EpdgTimers;->mePdgHandler:Landroid/os/Handler;
 
-    .line 35
     return-void
 .end method
 
@@ -78,7 +72,6 @@
     .param p1, "x1"    # Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
     .prologue
-    .line 10
     invoke-direct {p0, p1}, Lcom/sec/epdg/EpdgTimers;->onTimerFinished(Lcom/sec/epdg/EpdgTimers$EpdgTimerType;)V
 
     return-void
@@ -97,19 +90,16 @@
     .param p8, "tWifiIpConfig"    # I
 
     .prologue
-    .line 38
     sget-object v0, Lcom/sec/epdg/EpdgTimers;->mEdpgTimers:Lcom/sec/epdg/EpdgTimers;
 
     if-nez v0, :cond_0
 
-    .line 39
     new-instance v0, Lcom/sec/epdg/EpdgTimers;
 
     invoke-direct {v0, p0}, Lcom/sec/epdg/EpdgTimers;-><init>(Landroid/os/Handler;)V
 
     sput-object v0, Lcom/sec/epdg/EpdgTimers;->mEdpgTimers:Lcom/sec/epdg/EpdgTimers;
 
-    .line 41
     :cond_0
     sget-object v0, Lcom/sec/epdg/EpdgTimers;->mEdpgTimers:Lcom/sec/epdg/EpdgTimers;
 
@@ -131,7 +121,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/sec/epdg/EpdgTimers;->setTimerValue(IIIIIIII)V
 
-    .line 43
     sget-object v0, Lcom/sec/epdg/EpdgTimers;->mEdpgTimers:Lcom/sec/epdg/EpdgTimers;
 
     return-object v0
@@ -142,14 +131,12 @@
     .param p1, "tType"    # Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
     .prologue
-    .line 99
     iget-object v1, p0, Lcom/sec/epdg/EpdgTimers;->mePdgHandler:Landroid/os/Handler;
 
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 100
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {p1}, Lcom/sec/epdg/EpdgTimers$EpdgTimerType;->getTimerCommand()I
 
@@ -157,10 +144,8 @@
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 101
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 102
     return-void
 .end method
 
@@ -176,7 +161,6 @@
     .param p8, "tWifiIpConfig"    # I
 
     .prologue
-    .line 52
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -215,7 +199,6 @@
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgTimers;->mTimerValue:[I
 
-    .line 53
     return-void
 .end method
 
@@ -226,14 +209,12 @@
     .param p1, "tType"    # Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
     .prologue
-    .line 56
     invoke-virtual {p1}, Lcom/sec/epdg/EpdgTimers$EpdgTimerType;->getTimerId()I
 
     move-result v1
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 57
     .local v0, "index":I
     sget-object v1, Lcom/sec/epdg/EpdgTimers;->mTimers:[Lcom/sec/epdg/EpdgTimers$EpdgTimer;
 
@@ -259,7 +240,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 59
     const-string v1, "[EPDGTimers]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -286,10 +266,8 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     const/4 v1, 0x1
 
-    .line 62
     :goto_0
     return v1
 
@@ -305,20 +283,17 @@
     .param p2, "epdgTimerValue"    # I
 
     .prologue
-    .line 47
     invoke-virtual {p1}, Lcom/sec/epdg/EpdgTimers$EpdgTimerType;->getTimerId()I
 
     move-result v1
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 48
     .local v0, "index":I
     iget-object v1, p0, Lcom/sec/epdg/EpdgTimers;->mTimerValue:[I
 
     aput p2, v1, v0
 
-    .line 49
     return-void
 .end method
 
@@ -327,18 +302,15 @@
     .param p1, "tType"    # Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
     .prologue
-    .line 66
     invoke-virtual {p1}, Lcom/sec/epdg/EpdgTimers$EpdgTimerType;->getTimerId()I
 
     move-result v1
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 67
     .local v0, "index":I
     const/4 v8, 0x0
 
-    .line 68
     .local v8, "result":Z
     sget-object v1, Lcom/sec/epdg/EpdgTimers;->mTimers:[Lcom/sec/epdg/EpdgTimers$EpdgTimer;
 
@@ -358,7 +330,6 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 70
     :cond_0
     iget-object v1, p0, Lcom/sec/epdg/EpdgTimers;->mTimerValue:[I
 
@@ -366,7 +337,6 @@
 
     if-nez v1, :cond_1
 
-    .line 71
     const-string v1, "[EPDGTimers]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -395,13 +365,11 @@
 
     move v9, v8
 
-    .line 85
     .end local v8    # "result":Z
     .local v9, "result":I
     :goto_0
     return v9
 
-    .line 75
     .end local v9    # "result":I
     .restart local v8    # "result":Z
     :cond_1
@@ -413,7 +381,6 @@
 
     if-ne p1, v1, :cond_3
 
-    .line 76
     :cond_2
     sget-boolean v1, Lcom/sec/epdg/EpdgOperatorConstants;->CDMA_PROFILING:Z
 
@@ -421,11 +388,9 @@
 
     move v9, v8
 
-    .line 77
     .restart local v9    # "result":I
     goto :goto_0
 
-    .line 80
     .end local v9    # "result":I
     :cond_3
     sget-object v10, Lcom/sec/epdg/EpdgTimers;->mTimers:[Lcom/sec/epdg/EpdgTimers$EpdgTimer;
@@ -452,17 +417,14 @@
 
     aput-object v1, v10, v0
 
-    .line 81
     sget-object v1, Lcom/sec/epdg/EpdgTimers;->mTimers:[Lcom/sec/epdg/EpdgTimers$EpdgTimer;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1}, Lcom/sec/epdg/EpdgTimers$EpdgTimer;->start()Landroid/os/CountDownTimer;
 
-    .line 82
     const/4 v8, 0x1
 
-    .line 83
     const-string v1, "[EPDGTimers]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -492,7 +454,6 @@
     :cond_4
     move v9, v8
 
-    .line 85
     .restart local v9    # "result":I
     goto :goto_0
 .end method
@@ -502,14 +463,12 @@
     .param p1, "tType"    # Lcom/sec/epdg/EpdgTimers$EpdgTimerType;
 
     .prologue
-    .line 89
     invoke-virtual {p1}, Lcom/sec/epdg/EpdgTimers$EpdgTimerType;->getTimerId()I
 
     move-result v1
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 90
     .local v0, "index":I
     sget-object v1, Lcom/sec/epdg/EpdgTimers;->mTimers:[Lcom/sec/epdg/EpdgTimers$EpdgTimer;
 
@@ -535,21 +494,18 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 92
     sget-object v1, Lcom/sec/epdg/EpdgTimers;->mTimers:[Lcom/sec/epdg/EpdgTimers$EpdgTimer;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1}, Lcom/sec/epdg/EpdgTimers$EpdgTimer;->cancel()V
 
-    .line 93
     sget-object v1, Lcom/sec/epdg/EpdgTimers;->mTimers:[Lcom/sec/epdg/EpdgTimers$EpdgTimer;
 
     const/4 v2, 0x0
 
     aput-object v2, v1, v0
 
-    .line 94
     const-string v1, "[EPDGTimers]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -576,7 +532,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 96
     :cond_0
     return-void
 .end method
@@ -585,12 +540,10 @@
     .locals 4
 
     .prologue
-    .line 23
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 24
     .local v1, "status":Ljava/lang/StringBuffer;
     const/4 v0, 0x0
 
@@ -602,14 +555,12 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 25
     sget-object v2, Lcom/sec/epdg/EpdgTimers;->mTimers:[Lcom/sec/epdg/EpdgTimers$EpdgTimer;
 
     aget-object v2, v2, v0
 
     if-eqz v2, :cond_0
 
-    .line 26
     sget-object v2, Lcom/sec/epdg/EpdgTimers;->mTimers:[Lcom/sec/epdg/EpdgTimers$EpdgTimer;
 
     aget-object v2, v2, v0
@@ -622,7 +573,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 27
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -661,13 +611,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 24
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 30
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 

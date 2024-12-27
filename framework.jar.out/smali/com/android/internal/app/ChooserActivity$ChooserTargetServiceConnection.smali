@@ -36,30 +36,24 @@
     .param p2, "dri"    # Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     .prologue
-    .line 1415
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1392
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mLock:Ljava/lang/Object;
 
-    .line 1394
     new-instance v0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection$1;-><init>(Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;)V
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserTargetResult:Landroid/service/chooser/IChooserTargetResult;
 
-    .line 1416
     iput-object p1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
-    .line 1417
     iput-object p2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mOriginalTarget:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
-    .line 1418
     return-void
 .end method
 
@@ -68,7 +62,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;
 
     .prologue
-    .line 1388
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mConnectedComponent:Landroid/content/ComponentName;
 
     return-object v0
@@ -79,7 +72,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;
 
     .prologue
-    .line 1388
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mOriginalTarget:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
 
     return-object v0
@@ -90,7 +82,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;
 
     .prologue
-    .line 1388
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -101,7 +92,6 @@
     .param p0, "x0"    # Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;
 
     .prologue
-    .line 1388
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     return-object v0
@@ -113,24 +103,19 @@
     .locals 2
 
     .prologue
-    .line 1467
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1468
     const/4 v0, 0x0
 
     :try_start_0
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
-    .line 1469
     monitor-exit v1
 
-    .line 1470
     return-void
 
-    .line 1469
     :catchall_0
     move-exception v0
 
@@ -147,32 +132,26 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1423
     iget-object v3, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1424
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     if-nez v2, :cond_0
 
-    .line 1425
     const-string v2, "ChooserActivity"
 
     const-string v4, "destroyed ChooserTargetServiceConnection got onServiceConnected"
 
     invoke-static {v2, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1426
     monitor-exit v3
 
-    .line 1441
     :goto_0
     return-void
 
-    .line 1429
     :cond_0
     invoke-static {p2}, Landroid/service/chooser/IChooserTargetService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/chooser/IChooserTargetService;
     :try_end_0
@@ -180,7 +159,6 @@
 
     move-result-object v1
 
-    .line 1431
     .local v1, "icts":Landroid/service/chooser/IChooserTargetService;
     :try_start_1
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mOriginalTarget:Lcom/android/internal/app/ResolverActivity$DisplayResolveInfo;
@@ -204,7 +182,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1440
     :goto_1
     :try_start_2
     monitor-exit v3
@@ -221,12 +198,10 @@
 
     throw v2
 
-    .line 1433
     .restart local v1    # "icts":Landroid/service/chooser/IChooserTargetService;
     :catch_0
     move-exception v0
 
-    .line 1434
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v2, "ChooserActivity"
@@ -257,12 +232,10 @@
 
     invoke-static {v2, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1435
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     invoke-virtual {v2, p0}, Lcom/android/internal/app/ChooserActivity;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1437
     iget-object v2, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     # getter for: Lcom/android/internal/app/ChooserActivity;->mServiceConnections:Ljava/util/List;
@@ -272,7 +245,6 @@
 
     invoke-interface {v2, p0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 1438
     invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->destroy()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -285,38 +257,31 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1446
     iget-object v1, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 1447
     :try_start_0
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     if-nez v0, :cond_0
 
-    .line 1448
     const-string v0, "ChooserActivity"
 
     const-string v2, "destroyed ChooserTargetServiceConnection got onServiceDisconnected"
 
     invoke-static {v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1450
     monitor-exit v1
 
-    .line 1464
     :goto_0
     return-void
 
-    .line 1453
     :cond_0
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     invoke-virtual {v0, p0}, Lcom/android/internal/app/ChooserActivity;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1455
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     # getter for: Lcom/android/internal/app/ChooserActivity;->mServiceConnections:Ljava/util/List;
@@ -326,7 +291,6 @@
 
     invoke-interface {v0, p0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 1456
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     # getter for: Lcom/android/internal/app/ChooserActivity;->mServiceConnections:Ljava/util/List;
@@ -340,7 +304,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1457
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     # getter for: Lcom/android/internal/app/ChooserActivity;->mChooserHandler:Landroid/os/Handler;
@@ -352,21 +315,17 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1459
     iget-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mChooserActivity:Lcom/android/internal/app/ChooserActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ChooserActivity;->sendVoiceChoicesIfNeeded()V
 
-    .line 1461
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->destroy()V
 
-    .line 1462
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/app/ChooserActivity$ChooserTargetServiceConnection;->mConnectedComponent:Landroid/content/ComponentName;
 
-    .line 1463
     monitor-exit v1
 
     goto :goto_0
@@ -385,7 +344,6 @@
     .locals 2
 
     .prologue
-    .line 1474
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

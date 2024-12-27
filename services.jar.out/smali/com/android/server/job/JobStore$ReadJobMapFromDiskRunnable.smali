@@ -46,16 +46,13 @@
     .end annotation
 
     .prologue
-    .line 419
     .local p2, "jobSet":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Lcom/android/server/job/controllers/JobStatus;>;"
     iput-object p1, p0, Lcom/android/server/job/JobStore$ReadJobMapFromDiskRunnable;->this$0:Lcom/android/server/job/JobStore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 420
     iput-object p2, p0, Lcom/android/server/job/JobStore$ReadJobMapFromDiskRunnable;->jobSet:Landroid/util/ArraySet;
 
-    .line 421
     return-void
 .end method
 
@@ -71,7 +68,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 649
     const-string/jumbo v4, "jobid"
 
     invoke-interface {p1, v5, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -86,7 +82,6 @@
 
     move-result v2
 
-    .line 650
     .local v2, "jobId":I
     const-string/jumbo v4, "package"
 
@@ -94,7 +89,6 @@
 
     move-result-object v3
 
-    .line 651
     .local v3, "packageName":Ljava/lang/String;
     const-string v4, "class"
 
@@ -102,13 +96,11 @@
 
     move-result-object v0
 
-    .line 652
     .local v0, "className":Ljava/lang/String;
     new-instance v1, Landroid/content/ComponentName;
 
     invoke-direct {v1, v3, v0}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 654
     .local v1, "cname":Landroid/content/ComponentName;
     new-instance v4, Landroid/app/job/JobInfo$Builder;
 
@@ -127,23 +119,19 @@
 
     const/4 v2, 0x0
 
-    .line 658
     const-string/jumbo v1, "unmetered"
 
     invoke-interface {p2, v2, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 659
     .local v0, "val":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 660
     const/4 v1, 0x2
 
     invoke-virtual {p1, v1}, Landroid/app/job/JobInfo$Builder;->setRequiredNetworkType(I)Landroid/app/job/JobInfo$Builder;
 
-    .line 662
     :cond_0
     const-string v1, "connectivity"
 
@@ -151,13 +139,10 @@
 
     move-result-object v0
 
-    .line 663
     if-eqz v0, :cond_1
 
-    .line 664
     invoke-virtual {p1, v3}, Landroid/app/job/JobInfo$Builder;->setRequiredNetworkType(I)Landroid/app/job/JobInfo$Builder;
 
-    .line 666
     :cond_1
     const-string/jumbo v1, "idle"
 
@@ -165,13 +150,10 @@
 
     move-result-object v0
 
-    .line 667
     if-eqz v0, :cond_2
 
-    .line 668
     invoke-virtual {p1, v3}, Landroid/app/job/JobInfo$Builder;->setRequiresDeviceIdle(Z)Landroid/app/job/JobInfo$Builder;
 
-    .line 670
     :cond_2
     const-string v1, "charging"
 
@@ -179,13 +161,10 @@
 
     move-result-object v0
 
-    .line 671
     if-eqz v0, :cond_3
 
-    .line 672
     invoke-virtual {p1, v3}, Landroid/app/job/JobInfo$Builder;->setRequiresCharging(Z)Landroid/app/job/JobInfo$Builder;
 
-    .line 674
     :cond_3
     return-void
 .end method
@@ -213,26 +192,21 @@
     .end annotation
 
     .prologue
-    .line 699
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v18
 
-    .line 700
     .local v18, "nowWallclock":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v16
 
-    .line 702
     .local v16, "nowElapsed":J
     const-wide/16 v4, 0x0
 
-    .line 703
     .local v4, "earliestRunTimeElapsed":J
     const-wide v8, 0x7fffffffffffffffL
 
-    .line 704
     .local v8, "latestRunTimeElapsed":J
     const/16 v21, 0x0
 
@@ -248,11 +222,9 @@
 
     move-result-object v20
 
-    .line 705
     .local v20, "val":Ljava/lang/String;
     if-eqz v20, :cond_0
 
-    .line 706
     invoke-static/range {v20 .. v20}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v21
@@ -261,7 +233,6 @@
 
     move-result-wide v10
 
-    .line 707
     .local v10, "latestRuntimeWallclock":J
     sub-long v22, v10, v18
 
@@ -271,11 +242,9 @@
 
     move-result-wide v12
 
-    .line 709
     .local v12, "maxDelayElapsed":J
     add-long v8, v16, v12
 
-    .line 711
     .end local v10    # "latestRuntimeWallclock":J
     .end local v12    # "maxDelayElapsed":J
     :cond_0
@@ -293,10 +262,8 @@
 
     move-result-object v20
 
-    .line 712
     if-eqz v20, :cond_1
 
-    .line 713
     invoke-static/range {v20 .. v20}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v21
@@ -305,7 +272,6 @@
 
     move-result-wide v6
 
-    .line 714
     .local v6, "earliestRuntimeWallclock":J
     sub-long v22, v6, v18
 
@@ -315,11 +281,9 @@
 
     move-result-wide v14
 
-    .line 716
     .local v14, "minDelayElapsed":J
     add-long v4, v16, v14
 
-    .line 719
     .end local v6    # "earliestRuntimeWallclock":J
     .end local v14    # "minDelayElapsed":J
     :cond_1
@@ -346,18 +310,15 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 681
     const-string/jumbo v4, "initial-backoff"
 
     invoke-interface {p2, v5, v4}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 682
     .local v1, "val":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 683
     invoke-static {v1}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v4
@@ -366,7 +327,6 @@
 
     move-result-wide v2
 
-    .line 684
     .local v2, "initialBackoff":J
     const-string v4, "backoff-policy"
 
@@ -374,7 +334,6 @@
 
     move-result-object v1
 
-    .line 685
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v4
@@ -383,11 +342,9 @@
 
     move-result v0
 
-    .line 686
     .local v0, "backoffPolicy":I
     invoke-virtual {p1, v2, v3, v0}, Landroid/app/job/JobInfo$Builder;->setBackoffCriteria(JI)Landroid/app/job/JobInfo$Builder;
 
-    .line 688
     .end local v0    # "backoffPolicy":I
     .end local v2    # "initialBackoff":J
     :cond_0
@@ -423,12 +380,10 @@
 
     const/4 v8, 0x0
 
-    .line 454
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v4
 
-    .line 455
     .local v4, "parser":Lorg/xmlpull/v1/XmlPullParser;
     sget-object v9, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -438,27 +393,22 @@
 
     invoke-interface {v4, p1, v9}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 457
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
 
-    .line 458
     .local v1, "eventType":I
     :goto_0
     if-eq v1, v12, :cond_1
 
     if-eq v1, v11, :cond_1
 
-    .line 460
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
 
-    .line 461
     const-string v3, "Start tag:"
 
-    .line 462
     .local v3, "name":Ljava/lang/String;
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
@@ -466,7 +416,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 463
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -487,7 +436,6 @@
 
     move-result-object v3
 
-    .line 466
     :goto_1
     const-string v9, "JobStore"
 
@@ -495,7 +443,6 @@
 
     goto :goto_0
 
-    .line 465
     :cond_0
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -517,24 +464,20 @@
 
     goto :goto_1
 
-    .line 468
     .end local v3    # "name":Ljava/lang/String;
     :cond_1
     if-ne v1, v11, :cond_2
 
     move-object v2, v8
 
-    .line 511
     :goto_2
     return-object v2
 
-    .line 475
     :cond_2
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 476
     .local v6, "tagName":Ljava/lang/String;
     const-string/jumbo v9, "job-info"
 
@@ -544,12 +487,10 @@
 
     if-eqz v9, :cond_7
 
-    .line 477
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 480
     .local v2, "jobs":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/job/controllers/JobStatus;>;"
     const/4 v9, 0x0
 
@@ -568,11 +509,9 @@
 
     move-result v7
 
-    .line 481
     .local v7, "version":I
     if-eqz v7, :cond_3
 
-    .line 482
     const-string v9, "JobStore"
 
     const-string v10, "Invalid version number, aborting jobs file read."
@@ -583,15 +522,12 @@
 
     move-object v2, v8
 
-    .line 483
     goto :goto_2
 
-    .line 485
     .end local v7    # "version":I
     :catch_0
     move-exception v0
 
-    .line 486
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string v9, "JobStore"
 
@@ -601,10 +537,8 @@
 
     move-object v2, v8
 
-    .line 487
     goto :goto_2
 
-    .line 489
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     .restart local v7    # "version":I
     :cond_3
@@ -612,16 +546,13 @@
 
     move-result v1
 
-    .line 492
     :cond_4
     if-ne v1, v12, :cond_5
 
-    .line 493
     invoke-interface {v4}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 495
     const-string/jumbo v8, "job"
 
     invoke-virtual {v8, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -630,19 +561,15 @@
 
     if-eqz v8, :cond_5
 
-    .line 496
     invoke-direct {p0, v4}, Lcom/android/server/job/JobStore$ReadJobMapFromDiskRunnable;->restoreJobFromXml(Lorg/xmlpull/v1/XmlPullParser;)Lcom/android/server/job/controllers/JobStatus;
 
     move-result-object v5
 
-    .line 497
     .local v5, "persistedJob":Lcom/android/server/job/controllers/JobStatus;
     if-eqz v5, :cond_6
 
-    .line 501
     invoke-interface {v2, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 507
     .end local v5    # "persistedJob":Lcom/android/server/job/controllers/JobStatus;
     :cond_5
     :goto_3
@@ -650,12 +577,10 @@
 
     move-result v1
 
-    .line 508
     if-ne v1, v11, :cond_4
 
     goto :goto_2
 
-    .line 503
     .restart local v5    # "persistedJob":Lcom/android/server/job/controllers/JobStatus;
     :cond_6
     const-string v8, "JobStore"
@@ -672,7 +597,6 @@
     :cond_7
     move-object v2, v8
 
-    .line 511
     goto :goto_2
 .end method
 
@@ -687,13 +611,11 @@
     .end annotation
 
     .prologue
-    .line 526
     :try_start_0
     invoke-direct/range {p0 .. p1}, Lcom/android/server/job/JobStore$ReadJobMapFromDiskRunnable;->buildBuilderFromXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/app/job/JobInfo$Builder;
 
     move-result-object v21
 
-    .line 527
     .local v21, "jobBuilder":Landroid/app/job/JobInfo$Builder;
     const/4 v5, 0x1
 
@@ -701,7 +623,6 @@
 
     invoke-virtual {v0, v5}, Landroid/app/job/JobInfo$Builder;->setPersisted(Z)Landroid/app/job/JobInfo$Builder;
 
-    .line 528
     const/4 v5, 0x0
 
     const-string/jumbo v6, "uid"
@@ -722,14 +643,12 @@
 
     move-result v7
 
-    .line 537
     .local v7, "uid":I
     :cond_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v19
 
-    .line 538
     .local v19, "eventType":I
     const/4 v5, 0x4
 
@@ -737,7 +656,6 @@
 
     if-eq v0, v5, :cond_0
 
-    .line 540
     const/4 v5, 0x2
 
     move/from16 v0, v19
@@ -756,22 +674,18 @@
 
     if-nez v5, :cond_2
 
-    .line 543
     :cond_1
     const/4 v5, 0x0
 
-    .line 643
     .end local v7    # "uid":I
     .end local v19    # "eventType":I
     .end local v21    # "jobBuilder":Landroid/app/job/JobInfo$Builder;
     :goto_0
     return-object v5
 
-    .line 529
     :catch_0
     move-exception v4
 
-    .line 530
     .local v4, "e":Ljava/lang/NumberFormatException;
     const-string v5, "JobStore"
 
@@ -779,12 +693,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 531
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 546
     .end local v4    # "e":Ljava/lang/NumberFormatException;
     .restart local v7    # "uid":I
     .restart local v19    # "eventType":I
@@ -801,39 +713,32 @@
     :try_end_1
     .catch Ljava/lang/NumberFormatException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 551
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 555
     :cond_3
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v19
 
-    .line 556
     const/4 v5, 0x4
 
     move/from16 v0, v19
 
     if-eq v0, v5, :cond_3
 
-    .line 557
     const/4 v5, 0x2
 
     move/from16 v0, v19
 
     if-eq v0, v5, :cond_4
 
-    .line 558
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 547
     :catch_1
     move-exception v4
 
-    .line 548
     .restart local v4    # "e":Ljava/lang/NumberFormatException;
     const-string v5, "JobStore"
 
@@ -841,12 +746,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 549
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 564
     .end local v4    # "e":Ljava/lang/NumberFormatException;
     :cond_4
     :try_start_2
@@ -856,13 +759,11 @@
 
     move-result-object v18
 
-    .line 572
     .local v18, "elapsedRuntimes":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Long;Ljava/lang/Long;>;"
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v16
 
-    .line 573
     .local v16, "elapsedNow":J
     const-string/jumbo v5, "periodic"
 
@@ -876,7 +777,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 575
     const/4 v5, 0x0
 
     :try_start_3
@@ -888,7 +788,6 @@
 
     move-result-object v24
 
-    .line 576
     .local v24, "val":Ljava/lang/String;
     invoke-static/range {v24 .. v24}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
@@ -898,11 +797,9 @@
 
     move-result-wide v22
 
-    .line 577
     .local v22, "periodMillis":J
     invoke-virtual/range {v21 .. v23}, Landroid/app/job/JobInfo$Builder;->setPeriodic(J)Landroid/app/job/JobInfo$Builder;
 
-    .line 582
     move-object/from16 v0, v18
 
     iget-object v5, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -923,10 +820,8 @@
 
     if-lez v5, :cond_5
 
-    .line 583
     add-long v12, v16, v22
 
-    .line 584
     .local v12, "clampedEarlyRuntimeElapsed":J
     const-wide/16 v8, 0x2
 
@@ -934,7 +829,6 @@
 
     add-long v14, v16, v8
 
-    .line 585
     .local v14, "clampedLateRuntimeElapsed":J
     const-string v6, "JobStore"
 
@@ -1026,7 +920,6 @@
 
     invoke-static {v6, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 596
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
@@ -1041,7 +934,6 @@
 
     move-result-object v18
 
-    .line 623
     .end local v12    # "clampedEarlyRuntimeElapsed":J
     .end local v14    # "clampedLateRuntimeElapsed":J
     .end local v22    # "periodMillis":J
@@ -1056,23 +948,19 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/job/JobStore$ReadJobMapFromDiskRunnable;->maybeBuildBackoffPolicyFromXml(Landroid/app/job/JobInfo$Builder;Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 625
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 629
     :cond_6
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v19
 
-    .line 630
     const/4 v5, 0x4
 
     move/from16 v0, v19
 
     if-eq v0, v5, :cond_6
 
-    .line 631
     const/4 v5, 0x2
 
     move/from16 v0, v19
@@ -1091,32 +979,27 @@
 
     if-nez v5, :cond_b
 
-    .line 636
     :cond_7
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 565
     .end local v16    # "elapsedNow":J
     .end local v18    # "elapsedRuntimes":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Long;Ljava/lang/Long;>;"
     :catch_2
     move-exception v4
 
-    .line 569
     .restart local v4    # "e":Ljava/lang/NumberFormatException;
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 599
     .end local v4    # "e":Ljava/lang/NumberFormatException;
     .restart local v16    # "elapsedNow":J
     .restart local v18    # "elapsedRuntimes":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Long;Ljava/lang/Long;>;"
     :catch_3
     move-exception v4
 
-    .line 600
     .restart local v4    # "e":Ljava/lang/NumberFormatException;
     const-string v5, "JobStore"
 
@@ -1124,12 +1007,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 601
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 603
     .end local v4    # "e":Ljava/lang/NumberFormatException;
     :cond_8
     const-string/jumbo v5, "one-off"
@@ -1144,7 +1025,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 605
     :try_start_4
     move-object/from16 v0, v18
 
@@ -1162,7 +1042,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 606
     move-object/from16 v0, v18
 
     iget-object v5, v0, Landroid/util/Pair;->first:Ljava/lang/Object;
@@ -1179,7 +1058,6 @@
 
     invoke-virtual {v0, v8, v9}, Landroid/app/job/JobInfo$Builder;->setMinimumLatency(J)Landroid/app/job/JobInfo$Builder;
 
-    .line 608
     :cond_9
     move-object/from16 v0, v18
 
@@ -1197,7 +1075,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 609
     move-object/from16 v0, v18
 
     iget-object v5, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -1218,11 +1095,9 @@
 
     goto/16 :goto_1
 
-    .line 612
     :catch_4
     move-exception v4
 
-    .line 613
     .restart local v4    # "e":Ljava/lang/NumberFormatException;
     const-string v5, "JobStore"
 
@@ -1230,25 +1105,21 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 614
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 621
     .end local v4    # "e":Ljava/lang/NumberFormatException;
     :cond_a
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 639
     :cond_b
     invoke-static/range {p1 .. p1}, Landroid/os/PersistableBundle;->restoreFromXml(Lorg/xmlpull/v1/XmlPullParser;)Landroid/os/PersistableBundle;
 
     move-result-object v20
 
-    .line 640
     .local v20, "extras":Landroid/os/PersistableBundle;
     move-object/from16 v0, v21
 
@@ -1256,10 +1127,8 @@
 
     invoke-virtual {v0, v1}, Landroid/app/job/JobInfo$Builder;->setExtras(Landroid/os/PersistableBundle;)Landroid/app/job/JobInfo$Builder;
 
-    .line 641
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 643
     new-instance v5, Lcom/android/server/job/controllers/JobStatus;
 
     invoke-virtual/range {v21 .. v21}, Landroid/app/job/JobInfo$Builder;->build()Landroid/app/job/JobInfo;
@@ -1297,7 +1166,6 @@
     .locals 6
 
     .prologue
-    .line 427
     :try_start_0
     iget-object v3, p0, Lcom/android/server/job/JobStore$ReadJobMapFromDiskRunnable;->this$0:Lcom/android/server/job/JobStore;
 
@@ -1310,7 +1178,6 @@
 
     move-result-object v0
 
-    .line 428
     .local v0, "fis":Ljava/io/FileInputStream;
     iget-object v4, p0, Lcom/android/server/job/JobStore$ReadJobMapFromDiskRunnable;->this$0:Lcom/android/server/job/JobStore;
 
@@ -1320,17 +1187,14 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 429
     :try_start_1
     invoke-direct {p0, v0}, Lcom/android/server/job/JobStore$ReadJobMapFromDiskRunnable;->readJobMapImpl(Ljava/io/FileInputStream;)Ljava/util/List;
 
     move-result-object v2
 
-    .line 430
     .local v2, "jobs":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/job/controllers/JobStatus;>;"
     if-eqz v2, :cond_0
 
-    .line 431
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -1341,7 +1205,6 @@
 
     if-ge v1, v3, :cond_0
 
-    .line 432
     iget-object v3, p0, Lcom/android/server/job/JobStore$ReadJobMapFromDiskRunnable;->jobSet:Landroid/util/ArraySet;
 
     invoke-interface {v2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1350,19 +1213,16 @@
 
     invoke-virtual {v3, v5}, Landroid/util/ArraySet;->add(Ljava/lang/Object;)Z
 
-    .line 431
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 435
     .end local v1    # "i":I
     :cond_0
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 436
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -1370,13 +1230,11 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 450
     .end local v0    # "fis":Ljava/io/FileInputStream;
     .end local v2    # "jobs":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/job/controllers/JobStatus;>;"
     :goto_1
     return-void
 
-    .line 435
     .restart local v0    # "fis":Ljava/io/FileInputStream;
     :catchall_0
     move-exception v3
@@ -1393,20 +1251,17 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_4 .. :try_end_4} :catch_2
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 437
     .end local v0    # "fis":Ljava/io/FileInputStream;
     :catch_0
     move-exception v3
 
     goto :goto_1
 
-    .line 445
     :catch_1
     move-exception v3
 
     goto :goto_1
 
-    .line 441
     :catch_2
     move-exception v3
 

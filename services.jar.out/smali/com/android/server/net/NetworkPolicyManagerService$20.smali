@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 2510
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$20;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 2513
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$20;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->getRestrictBackgroundInLowerPowerMode()Z
@@ -49,7 +47,6 @@
 
     move-result v0
 
-    .line 2514
     .local v0, "enabled":Z
     const-string v2, "NetworkPolicy"
 
@@ -73,7 +70,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2516
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$20;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v2, v2, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -84,7 +80,6 @@
 
     move-result-object v1
 
-    .line 2517
     .local v1, "msg":Landroid/os/Message;
     if-eqz v0, :cond_0
 
@@ -93,16 +88,12 @@
     :goto_0
     iput v2, v1, Landroid/os/Message;->arg1:I
 
-    .line 2518
     iput v3, v1, Landroid/os/Message;->arg2:I
 
-    .line 2519
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2521
     return-void
 
-    .line 2517
     :cond_0
     const/4 v2, 0x0
 

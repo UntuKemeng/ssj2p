@@ -39,25 +39,18 @@
     .param p5, "clientData"    # Ljava/lang/String;
 
     .prologue
-    .line 1127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1128
     iput p1, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mFailureCount:I
 
-    .line 1129
     iput-object p2, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mNoticeMessage:Ljava/lang/String;
 
-    .line 1130
     iput-object p5, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mClientData:Ljava/lang/String;
 
-    .line 1131
     iput-object p4, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mRequesterName:Ljava/lang/String;
 
-    .line 1132
     iput-object p3, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mPhoneNumber:Ljava/lang/String;
 
-    .line 1133
     return-void
 .end method
 
@@ -67,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 1177
     iget-object v0, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mClientData:Ljava/lang/String;
 
     return-object v0
@@ -77,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 1137
     iget v0, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mFailureCount:I
 
     return v0
@@ -87,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 1147
     iget-object v0, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mNoticeMessage:Ljava/lang/String;
 
     return-object v0
@@ -97,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 1157
     iget-object v0, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mPhoneNumber:Ljava/lang/String;
 
     return-object v0
@@ -107,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 1167
     iget-object v0, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mRequesterName:Ljava/lang/String;
 
     return-object v0
@@ -118,10 +106,8 @@
     .param p1, "clientData"    # Ljava/lang/String;
 
     .prologue
-    .line 1182
     iput-object p1, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mClientData:Ljava/lang/String;
 
-    .line 1183
     return-void
 .end method
 
@@ -130,10 +116,8 @@
     .param p1, "failureCount"    # I
 
     .prologue
-    .line 1142
     iput p1, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mFailureCount:I
 
-    .line 1143
     return-void
 .end method
 
@@ -142,10 +126,8 @@
     .param p1, "noticeMessage"    # Ljava/lang/String;
 
     .prologue
-    .line 1152
     iput-object p1, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mNoticeMessage:Ljava/lang/String;
 
-    .line 1153
     return-void
 .end method
 
@@ -154,10 +136,8 @@
     .param p1, "phoneNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 1162
     iput-object p1, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mPhoneNumber:Ljava/lang/String;
 
-    .line 1163
     return-void
 .end method
 
@@ -166,9 +146,7 @@
     .param p1, "requesterName"    # Ljava/lang/String;
 
     .prologue
-    .line 1172
     iput-object p1, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$RlcVaultData;->mRequesterName:Ljava/lang/String;
 
-    .line 1173
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 658
     iput-object p1, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$1;->this$0:Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;
 
     invoke-direct {p0}, Lcom/android/internal/widget/IRemoteLockMonitorCallback$Stub;-><init>()V
@@ -43,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 662
     const-string v0, "RlcManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -68,7 +66,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 663
     return-void
 .end method
 
@@ -77,10 +74,8 @@
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 668
     const/4 v1, -0x1
 
-    .line 670
     .local v1, "failureCount":I
     const-string v2, "RlcManager"
 
@@ -88,7 +83,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 674
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$1;->this$0:Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;
 
@@ -96,10 +90,8 @@
 
     move-result v1
 
-    .line 675
     if-nez v1, :cond_0
 
-    .line 676
     # getter for: Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;->mRemoteLockControlListener:Lcom/samsung/android/service/RemoteLockControl/IRemoteLockControlListener;
     invoke-static {}, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;->access$000()Lcom/samsung/android/service/RemoteLockControl/IRemoteLockControlListener;
 
@@ -107,7 +99,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 677
     # getter for: Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;->mRemoteLockControlListener:Lcom/samsung/android/service/RemoteLockControl/IRemoteLockControlListener;
     invoke-static {}, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;->access$000()Lcom/samsung/android/service/RemoteLockControl/IRemoteLockControlListener;
 
@@ -115,12 +106,10 @@
 
     invoke-interface {v2}, Lcom/samsung/android/service/RemoteLockControl/IRemoteLockControlListener;->onUnlockedByPasscode()V
 
-    .line 691
     :cond_0
     :goto_0
     return v1
 
-    .line 679
     :cond_1
     const-string v2, "RlcManager"
 
@@ -132,15 +121,12 @@
 
     goto :goto_0
 
-    .line 682
     :catch_0
     move-exception v0
 
-    .line 684
     .local v0, "e":Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlException;
     invoke-virtual {v0}, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlException;->printStackTrace()V
 
-    .line 687
     # getter for: Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;->mCompleteUnlockingDone:Z
     invoke-static {}, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;->access$100()Z
 
@@ -148,7 +134,6 @@
 
     if-nez v2, :cond_0
 
-    .line 688
     new-instance v2, Ljava/lang/RuntimeException;
 
     const-string v3, "Error in RLC Manager internally"

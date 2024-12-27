@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 356
     iput-object p1, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     invoke-direct {p0}, Lcom/android/internal/content/PackageMonitor;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/pm/LauncherAppsService$1;
 
     .prologue
-    .line 356
     invoke-direct {p0, p1}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;-><init>(Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;)V
 
     return-void
@@ -54,7 +52,6 @@
 
     const/4 v5, 0x0
 
-    .line 362
     invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v6
@@ -65,11 +62,9 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 395
     :goto_0
     return v4
 
-    .line 368
     :cond_0
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -99,16 +94,13 @@
 
     move v4, v5
 
-    .line 370
     goto :goto_0
 
-    .line 374
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 376
     .local v0, "ident":J
     :try_start_0
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
@@ -126,7 +118,6 @@
 
     move-result-object v3
 
-    .line 377
     .local v3, "userInfo":Landroid/content/pm/UserInfo;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -143,7 +134,6 @@
 
     move-result-object v2
 
-    .line 378
     .local v2, "listeningUserInfo":Landroid/content/pm/UserInfo;
     if-eqz v3, :cond_2
 
@@ -169,7 +159,6 @@
 
     if-nez v6, :cond_3
 
-    .line 395
     :cond_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -200,7 +189,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 401
     new-instance v5, Landroid/os/UserHandle;
 
     invoke-virtual {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->getChangingUserId()I
@@ -209,7 +197,6 @@
 
     invoke-direct {v5, v6}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 402
     .local v5, "user":Landroid/os/UserHandle;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -222,7 +209,6 @@
 
     move-result v3
 
-    .line 403
     .local v3, "n":I
     const/4 v0, 0x0
 
@@ -230,7 +216,6 @@
     :goto_0
     if-ge v0, v3, :cond_1
 
-    .line 404
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     # getter for: Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
@@ -244,7 +229,6 @@
 
     check-cast v1, Landroid/content/pm/IOnAppsChangedListener;
 
-    .line 405
     .local v1, "listener":Landroid/content/pm/IOnAppsChangedListener;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -259,7 +243,6 @@
 
     check-cast v2, Landroid/os/UserHandle;
 
-    .line 406
     .local v2, "listeningUser":Landroid/os/UserHandle;
     const-string/jumbo v6, "onPackageAdded"
 
@@ -269,13 +252,11 @@
 
     if-nez v6, :cond_0
 
-    .line 403
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 408
     :cond_0
     :try_start_0
     invoke-interface {v1, v5, p1}, Landroid/content/pm/IOnAppsChangedListener;->onPackageAdded(Landroid/os/UserHandle;Ljava/lang/String;)V
@@ -284,11 +265,9 @@
 
     goto :goto_1
 
-    .line 409
     :catch_0
     move-exception v4
 
-    .line 410
     .local v4, "re":Landroid/os/RemoteException;
     const-string v6, "LauncherAppsService"
 
@@ -298,7 +277,6 @@
 
     goto :goto_1
 
-    .line 413
     .end local v1    # "listener":Landroid/content/pm/IOnAppsChangedListener;
     .end local v2    # "listeningUser":Landroid/os/UserHandle;
     .end local v4    # "re":Landroid/os/RemoteException;
@@ -312,10 +290,8 @@
 
     invoke-virtual {v6}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->finishBroadcast()V
 
-    .line 415
     invoke-super {p0, p1, p2}, Lcom/android/internal/content/PackageMonitor;->onPackageAdded(Ljava/lang/String;I)V
 
-    .line 416
     return-void
 .end method
 
@@ -324,7 +300,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 439
     new-instance v5, Landroid/os/UserHandle;
 
     invoke-virtual {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->getChangingUserId()I
@@ -333,7 +308,6 @@
 
     invoke-direct {v5, v6}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 440
     .local v5, "user":Landroid/os/UserHandle;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -346,7 +320,6 @@
 
     move-result v3
 
-    .line 441
     .local v3, "n":I
     const/4 v0, 0x0
 
@@ -354,7 +327,6 @@
     :goto_0
     if-ge v0, v3, :cond_1
 
-    .line 442
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     # getter for: Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
@@ -368,7 +340,6 @@
 
     check-cast v1, Landroid/content/pm/IOnAppsChangedListener;
 
-    .line 443
     .local v1, "listener":Landroid/content/pm/IOnAppsChangedListener;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -383,7 +354,6 @@
 
     check-cast v2, Landroid/os/UserHandle;
 
-    .line 444
     .local v2, "listeningUser":Landroid/os/UserHandle;
     const-string/jumbo v6, "onPackageModified"
 
@@ -393,13 +363,11 @@
 
     if-nez v6, :cond_0
 
-    .line 441
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 446
     :cond_0
     :try_start_0
     invoke-interface {v1, v5, p1}, Landroid/content/pm/IOnAppsChangedListener;->onPackageChanged(Landroid/os/UserHandle;Ljava/lang/String;)V
@@ -408,11 +376,9 @@
 
     goto :goto_1
 
-    .line 447
     :catch_0
     move-exception v4
 
-    .line 448
     .local v4, "re":Landroid/os/RemoteException;
     const-string v6, "LauncherAppsService"
 
@@ -422,7 +388,6 @@
 
     goto :goto_1
 
-    .line 451
     .end local v1    # "listener":Landroid/content/pm/IOnAppsChangedListener;
     .end local v2    # "listeningUser":Landroid/os/UserHandle;
     .end local v4    # "re":Landroid/os/RemoteException;
@@ -436,10 +401,8 @@
 
     invoke-virtual {v6}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->finishBroadcast()V
 
-    .line 453
     invoke-super {p0, p1}, Lcom/android/internal/content/PackageMonitor;->onPackageModified(Ljava/lang/String;)V
 
-    .line 454
     return-void
 .end method
 
@@ -449,7 +412,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 420
     new-instance v5, Landroid/os/UserHandle;
 
     invoke-virtual {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->getChangingUserId()I
@@ -458,7 +420,6 @@
 
     invoke-direct {v5, v6}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 421
     .local v5, "user":Landroid/os/UserHandle;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -471,7 +432,6 @@
 
     move-result v3
 
-    .line 422
     .local v3, "n":I
     const/4 v0, 0x0
 
@@ -479,7 +439,6 @@
     :goto_0
     if-ge v0, v3, :cond_1
 
-    .line 423
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     # getter for: Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
@@ -493,7 +452,6 @@
 
     check-cast v1, Landroid/content/pm/IOnAppsChangedListener;
 
-    .line 424
     .local v1, "listener":Landroid/content/pm/IOnAppsChangedListener;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -508,7 +466,6 @@
 
     check-cast v2, Landroid/os/UserHandle;
 
-    .line 425
     .local v2, "listeningUser":Landroid/os/UserHandle;
     const-string/jumbo v6, "onPackageRemoved"
 
@@ -518,13 +475,11 @@
 
     if-nez v6, :cond_0
 
-    .line 422
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 427
     :cond_0
     :try_start_0
     invoke-interface {v1, v5, p1}, Landroid/content/pm/IOnAppsChangedListener;->onPackageRemoved(Landroid/os/UserHandle;Ljava/lang/String;)V
@@ -533,11 +488,9 @@
 
     goto :goto_1
 
-    .line 428
     :catch_0
     move-exception v4
 
-    .line 429
     .local v4, "re":Landroid/os/RemoteException;
     const-string v6, "LauncherAppsService"
 
@@ -547,7 +500,6 @@
 
     goto :goto_1
 
-    .line 432
     .end local v1    # "listener":Landroid/content/pm/IOnAppsChangedListener;
     .end local v2    # "listeningUser":Landroid/os/UserHandle;
     .end local v4    # "re":Landroid/os/RemoteException;
@@ -561,10 +513,8 @@
 
     invoke-virtual {v6}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->finishBroadcast()V
 
-    .line 434
     invoke-super {p0, p1, p2}, Lcom/android/internal/content/PackageMonitor;->onPackageRemoved(Ljava/lang/String;I)V
 
-    .line 435
     return-void
 .end method
 
@@ -573,7 +523,6 @@
     .param p1, "packages"    # [Ljava/lang/String;
 
     .prologue
-    .line 458
     new-instance v5, Landroid/os/UserHandle;
 
     invoke-virtual {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->getChangingUserId()I
@@ -582,7 +531,6 @@
 
     invoke-direct {v5, v6}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 459
     .local v5, "user":Landroid/os/UserHandle;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -595,7 +543,6 @@
 
     move-result v3
 
-    .line 460
     .local v3, "n":I
     const/4 v0, 0x0
 
@@ -603,7 +550,6 @@
     :goto_0
     if-ge v0, v3, :cond_1
 
-    .line 461
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     # getter for: Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
@@ -617,7 +563,6 @@
 
     check-cast v1, Landroid/content/pm/IOnAppsChangedListener;
 
-    .line 462
     .local v1, "listener":Landroid/content/pm/IOnAppsChangedListener;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -632,7 +577,6 @@
 
     check-cast v2, Landroid/os/UserHandle;
 
-    .line 463
     .local v2, "listeningUser":Landroid/os/UserHandle;
     const-string/jumbo v6, "onPackagesAvailable"
 
@@ -642,13 +586,11 @@
 
     if-nez v6, :cond_0
 
-    .line 460
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 465
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->isReplacing()Z
@@ -661,11 +603,9 @@
 
     goto :goto_1
 
-    .line 466
     :catch_0
     move-exception v4
 
-    .line 467
     .local v4, "re":Landroid/os/RemoteException;
     const-string v6, "LauncherAppsService"
 
@@ -675,7 +615,6 @@
 
     goto :goto_1
 
-    .line 470
     .end local v1    # "listener":Landroid/content/pm/IOnAppsChangedListener;
     .end local v2    # "listeningUser":Landroid/os/UserHandle;
     .end local v4    # "re":Landroid/os/RemoteException;
@@ -689,10 +628,8 @@
 
     invoke-virtual {v6}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->finishBroadcast()V
 
-    .line 472
     invoke-super {p0, p1}, Lcom/android/internal/content/PackageMonitor;->onPackagesAvailable([Ljava/lang/String;)V
 
-    .line 473
     return-void
 .end method
 
@@ -701,7 +638,6 @@
     .param p1, "packages"    # [Ljava/lang/String;
 
     .prologue
-    .line 477
     new-instance v5, Landroid/os/UserHandle;
 
     invoke-virtual {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->getChangingUserId()I
@@ -710,7 +646,6 @@
 
     invoke-direct {v5, v6}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 478
     .local v5, "user":Landroid/os/UserHandle;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -723,7 +658,6 @@
 
     move-result v3
 
-    .line 479
     .local v3, "n":I
     const/4 v0, 0x0
 
@@ -731,7 +665,6 @@
     :goto_0
     if-ge v0, v3, :cond_1
 
-    .line 480
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
     # getter for: Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;->mListeners:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;
@@ -745,7 +678,6 @@
 
     check-cast v1, Landroid/content/pm/IOnAppsChangedListener;
 
-    .line 481
     .local v1, "listener":Landroid/content/pm/IOnAppsChangedListener;
     iget-object v6, p0, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->this$1:Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl;
 
@@ -760,7 +692,6 @@
 
     check-cast v2, Landroid/os/UserHandle;
 
-    .line 482
     .local v2, "listeningUser":Landroid/os/UserHandle;
     const-string/jumbo v6, "onPackagesUnavailable"
 
@@ -770,13 +701,11 @@
 
     if-nez v6, :cond_0
 
-    .line 479
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 484
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$MyPackageMonitor;->isReplacing()Z
@@ -789,11 +718,9 @@
 
     goto :goto_1
 
-    .line 485
     :catch_0
     move-exception v4
 
-    .line 486
     .local v4, "re":Landroid/os/RemoteException;
     const-string v6, "LauncherAppsService"
 
@@ -803,7 +730,6 @@
 
     goto :goto_1
 
-    .line 489
     .end local v1    # "listener":Landroid/content/pm/IOnAppsChangedListener;
     .end local v2    # "listeningUser":Landroid/os/UserHandle;
     .end local v4    # "re":Landroid/os/RemoteException;
@@ -817,9 +743,7 @@
 
     invoke-virtual {v6}, Lcom/android/server/pm/LauncherAppsService$LauncherAppsImpl$PackageCallbackList;->finishBroadcast()V
 
-    .line 491
     invoke-super {p0, p1}, Lcom/android/internal/content/PackageMonitor;->onPackagesUnavailable([Ljava/lang/String;)V
 
-    .line 492
     return-void
 .end method

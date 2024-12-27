@@ -37,21 +37,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 4778
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4779
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mMotionEnabled:Z
 
-    .line 4780
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mMotionRegistered:Z
 
-    .line 4781
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickUpMissedEventExist:Z
 
-    .line 4782
     const/4 v0, 0x5
 
     new-array v0, v0, [J
@@ -60,12 +55,10 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickUpVibratePattern:[J
 
-    .line 4784
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupManager:Lcom/samsung/android/motion/MotionRecognitionManager;
 
-    .line 4785
     new-instance v0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/notification/NotificationManagerService$PickupPlayer$1;-><init>(Lcom/android/server/notification/NotificationManagerService$PickupPlayer;)V
@@ -74,7 +67,6 @@
 
     return-void
 
-    .line 4782
     nop
 
     :array_0
@@ -93,7 +85,6 @@
     .param p2, "x1"    # Lcom/android/server/notification/NotificationManagerService$1;
 
     .prologue
-    .line 4778
     invoke-direct {p0, p1}, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;-><init>(Lcom/android/server/notification/NotificationManagerService;)V
 
     return-void
@@ -104,7 +95,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/NotificationManagerService$PickupPlayer;
 
     .prologue
-    .line 4778
     invoke-direct {p0}, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->unregister()V
 
     return-void
@@ -115,7 +105,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/NotificationManagerService$PickupPlayer;
 
     .prologue
-    .line 4778
     invoke-direct {p0}, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->register()V
 
     return-void
@@ -126,7 +115,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/NotificationManagerService$PickupPlayer;
 
     .prologue
-    .line 4778
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickUpVibratePattern:[J
 
     return-object v0
@@ -138,20 +126,17 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 4828
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v5, v4, Lcom/android/server/notification/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
 
     monitor-enter v5
 
-    .line 4829
     const/4 v4, 0x0
 
     :try_start_0
     iput-boolean v4, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickUpMissedEventExist:Z
 
-    .line 4831
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v4, v4, Lcom/android/server/notification/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
@@ -160,13 +145,11 @@
 
     move-result v0
 
-    .line 4832
     .local v0, "N":I
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
 
-    .line 4833
     .local v1, "currentUser":I
     const/4 v2, 0x0
 
@@ -174,7 +157,6 @@
     :goto_0
     if-ge v2, v0, :cond_4
 
-    .line 4834
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     iget-object v4, v4, Lcom/android/server/notification/NotificationManagerService;->mNotificationList:Ljava/util/ArrayList;
@@ -185,7 +167,6 @@
 
     check-cast v3, Lcom/android/server/notification/NotificationRecord;
 
-    .line 4835
     .local v3, "r":Lcom/android/server/notification/NotificationRecord;
     const-string v4, "com.android.server.telecom"
 
@@ -274,7 +255,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 4840
     :cond_3
     invoke-virtual {v3}, Lcom/android/server/notification/NotificationRecord;->getNotification()Landroid/app/Notification;
 
@@ -290,33 +270,28 @@
 
     if-lez v4, :cond_6
 
-    .line 4841
     invoke-virtual {v3}, Lcom/android/server/notification/NotificationRecord;->getUserId()I
 
     move-result v4
 
     if-ne v1, v4, :cond_6
 
-    .line 4842
     const-string v4, "NotificationService"
 
     const-string v6, "Pickup - Found Missed Event"
 
     invoke-static {v4, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4843
     const/4 v4, 0x1
 
     iput-boolean v4, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickUpMissedEventExist:Z
 
-    .line 4849
     .end local v3    # "r":Lcom/android/server/notification/NotificationRecord;
     :cond_4
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4851
     iget-boolean v4, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mMotionEnabled:Z
 
     if-eqz v4, :cond_5
@@ -325,12 +300,10 @@
 
     if-eqz v4, :cond_5
 
-    .line 4852
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupManager:Lcom/samsung/android/motion/MotionRecognitionManager;
 
     if-eqz v4, :cond_5
 
-    .line 4853
     iget-object v4, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupManager:Lcom/samsung/android/motion/MotionRecognitionManager;
 
     iget-object v5, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupListener:Lcom/samsung/android/motion/MRListener;
@@ -339,28 +312,23 @@
 
     invoke-virtual {v4, v5, v6}, Lcom/samsung/android/motion/MotionRecognitionManager;->registerListenerEvent(Lcom/samsung/android/motion/MRListener;I)V
 
-    .line 4855
     iput-boolean v7, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mMotionRegistered:Z
 
-    .line 4856
     const-string v4, "NotificationService"
 
     const-string v5, "Pickup - registerListener"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4859
     :cond_5
     return-void
 
-    .line 4833
     .restart local v3    # "r":Lcom/android/server/notification/NotificationRecord;
     :cond_6
     add-int/lit8 v2, v2, 0x1
 
     goto/16 :goto_0
 
-    .line 4849
     .end local v0    # "N":I
     .end local v1    # "currentUser":I
     .end local v2    # "i":I
@@ -380,7 +348,6 @@
     .locals 2
 
     .prologue
-    .line 4862
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mMotionEnabled:Z
 
     if-eqz v0, :cond_0
@@ -389,31 +356,26 @@
 
     if-eqz v0, :cond_0
 
-    .line 4863
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupManager:Lcom/samsung/android/motion/MotionRecognitionManager;
 
     if-eqz v0, :cond_0
 
-    .line 4864
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupManager:Lcom/samsung/android/motion/MotionRecognitionManager;
 
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupListener:Lcom/samsung/android/motion/MRListener;
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/motion/MotionRecognitionManager;->unregisterListener(Lcom/samsung/android/motion/MRListener;)V
 
-    .line 4865
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mMotionRegistered:Z
 
-    .line 4866
     const-string v0, "NotificationService"
 
     const-string v1, "Pickup - unregisterListener"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4869
     :cond_0
     return-void
 .end method
@@ -425,7 +387,6 @@
     .param p1, "enableMotion"    # Z
 
     .prologue
-    .line 4810
     const-string v0, "NotificationService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -448,15 +409,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4812
     if-eqz p1, :cond_1
 
-    .line 4813
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupManager:Lcom/samsung/android/motion/MotionRecognitionManager;
 
     if-nez v0, :cond_0
 
-    .line 4814
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -473,32 +431,26 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupManager:Lcom/samsung/android/motion/MotionRecognitionManager;
 
-    .line 4816
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mMotionEnabled:Z
 
-    .line 4825
     :cond_0
     :goto_0
     return-void
 
-    .line 4819
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mMotionRegistered:Z
 
     if-eqz v0, :cond_2
 
-    .line 4820
     invoke-direct {p0}, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->unregister()V
 
-    .line 4822
     :cond_2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mPickupManager:Lcom/samsung/android/motion/MotionRecognitionManager;
 
-    .line 4823
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/notification/NotificationManagerService$PickupPlayer;->mMotionEnabled:Z

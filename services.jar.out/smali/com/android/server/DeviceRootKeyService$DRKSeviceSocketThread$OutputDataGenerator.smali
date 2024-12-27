@@ -35,31 +35,24 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 753
     iput-object p1, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->this$1:Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 754
     iput-byte v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mVersion:B
 
-    .line 755
     iput-short v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mCommandID:S
 
-    .line 756
     iput-short v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mErrorCode:S
 
-    .line 757
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawDataSize:I
 
-    .line 758
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawData:[B
 
-    .line 759
     return-void
 .end method
 
@@ -68,23 +61,19 @@
     .param p1, "in"    # I
 
     .prologue
-    .line 819
     const/4 v1, 0x4
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 820
     .local v0, "bb":Ljava/nio/ByteBuffer;
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 821
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 822
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
@@ -97,23 +86,19 @@
     .param p1, "in"    # S
 
     .prologue
-    .line 811
     const/4 v1, 0x2
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v0
 
-    .line 812
     .local v0, "bb":Ljava/nio/ByteBuffer;
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 813
     invoke-virtual {v0, p1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 814
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
 
     move-result-object v1
@@ -129,14 +114,12 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 791
     iget v4, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawDataSize:I
 
     add-int/lit8 v4, v4, 0x9
 
     new-array v3, v4, [B
 
-    .line 792
     .local v3, "result":[B
     iget-short v4, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mCommandID:S
 
@@ -144,7 +127,6 @@
 
     move-result-object v0
 
-    .line 793
     .local v0, "commandID":[B
     iget-short v4, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mErrorCode:S
 
@@ -152,7 +134,6 @@
 
     move-result-object v1
 
-    .line 794
     .local v1, "errorCode":[B
     iget v4, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawDataSize:I
 
@@ -160,39 +141,33 @@
 
     move-result-object v2
 
-    .line 796
     .local v2, "rawDataSize":[B
     iget-byte v4, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mVersion:B
 
     aput-byte v4, v3, v7
 
-    .line 797
     const/4 v4, 0x1
 
     array-length v5, v0
 
     invoke-static {v0, v7, v3, v4, v5}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 798
     const/4 v4, 0x3
 
     array-length v5, v1
 
     invoke-static {v1, v7, v3, v4, v5}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 799
     const/4 v4, 0x5
 
     array-length v5, v2
 
     invoke-static {v2, v7, v3, v4, v5}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 801
     iget v4, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawDataSize:I
 
     if-lez v4, :cond_0
 
-    .line 802
     iget-object v4, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawData:[B
 
     const/16 v5, 0x9
@@ -201,7 +176,6 @@
 
     invoke-static {v4, v7, v3, v5, v6}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 804
     :cond_0
     const-string v4, "DeviceRootKeyServiceSocket"
 
@@ -227,7 +201,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 806
     return-object v3
 .end method
 
@@ -236,10 +209,8 @@
     .param p1, "commandID"    # S
 
     .prologue
-    .line 768
     iput-short p1, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mCommandID:S
 
-    .line 769
     return-void
 .end method
 
@@ -248,10 +219,8 @@
     .param p1, "errorCode"    # S
 
     .prologue
-    .line 773
     iput-short p1, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mErrorCode:S
 
-    .line 774
     return-void
 .end method
 
@@ -260,21 +229,18 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 778
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawData:[B
 
-    .line 779
     iget-object v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawData:[B
 
     array-length v0, v0
 
     iput v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawDataSize:I
 
-    .line 780
     return-void
 .end method
 
@@ -285,26 +251,22 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 784
     array-length v0, p1
 
     iput v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawDataSize:I
 
-    .line 785
     iget v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawDataSize:I
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawData:[B
 
-    .line 786
     iget-object v0, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawData:[B
 
     iget v1, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mRawDataSize:I
 
     invoke-static {p1, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 787
     return-void
 .end method
 
@@ -313,9 +275,7 @@
     .param p1, "version"    # B
 
     .prologue
-    .line 763
     iput-byte p1, p0, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread$OutputDataGenerator;->mVersion:B
 
-    .line 764
     return-void
 .end method

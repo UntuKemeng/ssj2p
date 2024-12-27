@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 641
     iput-object p1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 679
     return-void
 .end method
 
@@ -55,7 +53,6 @@
 
     const/4 v10, 0x2
 
-    .line 644
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mLightSensorDelay:I
@@ -65,13 +62,11 @@
 
     if-nez v0, :cond_3
 
-    .line 645
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # invokes: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->getRgbFromLightSensor()V
     invoke-static {v0}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$1200(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;)V
 
-    .line 646
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mSensorValueValid:Z
@@ -81,7 +76,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 647
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mLightSensorR:I
@@ -89,7 +83,6 @@
 
     move-result v1
 
-    .line 648
     .local v1, "r":I
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -98,7 +91,6 @@
 
     move-result v2
 
-    .line 649
     .local v2, "g":I
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -107,7 +99,6 @@
 
     move-result v3
 
-    .line 650
     .local v3, "b":I
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -115,7 +106,6 @@
 
     float-to-int v4, v0
 
-    .line 651
     .local v4, "lux":I
     iget-object v0, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -125,7 +115,6 @@
 
     float-to-int v5, v0
 
-    .line 653
     .local v5, "cct":I
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -136,20 +125,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 654
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # setter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mInitSensorNameForLowLux:Z
     invoke-static {v0, v9}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$1702(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;Z)Z
 
-    .line 655
     iget-object v0, p1, Landroid/hardware/SensorEvent;->sensor:Landroid/hardware/Sensor;
 
     invoke-virtual {v0}, Landroid/hardware/Sensor;->getName()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 656
     .local v7, "mSensorName":Ljava/lang/String;
     const-string v0, "AdaptiveDisplayColorService"
 
@@ -173,7 +159,6 @@
 
     invoke-static {v0, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 657
     const/4 v6, 0x0
 
     .local v6, "i":I
@@ -189,7 +174,6 @@
 
     if-ge v6, v0, :cond_0
 
-    .line 658
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->SENSOR_NAMES:[Ljava/lang/String;
@@ -205,7 +189,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 659
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     const/16 v8, 0x20
@@ -213,7 +196,6 @@
     # setter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mLowLuxValue:I
     invoke-static {v0, v8}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$1902(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;I)I
 
-    .line 665
     .end local v6    # "i":I
     .end local v7    # "mSensorName":Ljava/lang/String;
     :cond_0
@@ -222,7 +204,6 @@
     # invokes: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->handleRgbSensorEvent(IIIII)V
     invoke-static/range {v0 .. v5}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$2000(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;IIIII)V
 
-    .line 667
     .end local v1    # "r":I
     .end local v2    # "g":I
     .end local v3    # "b":I
@@ -234,11 +215,9 @@
     # setter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mLightSensorDelay:I
     invoke-static {v0, v10}, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->access$1102(Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;I)I
 
-    .line 675
     :goto_1
     return-void
 
-    .line 657
     .restart local v1    # "r":I
     .restart local v2    # "g":I
     .restart local v3    # "b":I
@@ -251,7 +230,6 @@
 
     goto :goto_0
 
-    .line 669
     .end local v1    # "r":I
     .end local v2    # "g":I
     .end local v3    # "b":I
@@ -278,7 +256,6 @@
 
     if-lez v0, :cond_4
 
-    .line 670
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # operator-- for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mLightSensorDelay:I
@@ -286,7 +263,6 @@
 
     goto :goto_1
 
-    .line 673
     :cond_4
     iget-object v0, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$2;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 

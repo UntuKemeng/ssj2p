@@ -40,31 +40,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3117
     iput-object p1, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
 
-    .line 3118
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 3109
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mIsHoverExitCalled:Z
 
-    .line 3110
     iput-object v1, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mDismissPopupRunnable:Ljava/lang/Runnable;
 
-    .line 3112
     iput-object v1, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mContainerDismissHandler:Landroid/os/Handler;
 
-    .line 3121
     new-instance v0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer$1;
 
     invoke-direct {v0, p0, p1}, Landroid/widget/HoverPopupWindow$TouchablePopupContainer$1;-><init>(Landroid/widget/HoverPopupWindow$TouchablePopupContainer;Landroid/widget/HoverPopupWindow;)V
 
     iput-object v0, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mContainerDismissHandler:Landroid/os/Handler;
 
-    .line 3135
     return-void
 .end method
 
@@ -75,18 +68,15 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3170
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
 
-    .line 3172
     .local v0, "action":I
     const/16 v2, 0xa
 
     if-ne v0, v2, :cond_2
 
-    .line 3173
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
@@ -103,26 +93,22 @@
 
     if-eqz v2, :cond_1
 
-    .line 3175
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mIsHoverExitCalled:Z
 
-    .line 3176
     new-instance v2, Landroid/widget/HoverPopupWindow$TouchablePopupContainer$3;
 
     invoke-direct {v2, p0}, Landroid/widget/HoverPopupWindow$TouchablePopupContainer$3;-><init>(Landroid/widget/HoverPopupWindow$TouchablePopupContainer;)V
 
     iput-object v2, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mDismissPopupRunnable:Ljava/lang/Runnable;
 
-    .line 3181
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mDismissPopupRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v4, 0x64
 
     invoke-virtual {p0, v2, v4, v5}, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 3193
     :cond_0
     :goto_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
@@ -132,13 +118,11 @@
     :goto_1
     return v1
 
-    .line 3185
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result v1
 
-    .line 3186
     .local v1, "superRet":Z
     iget-object v2, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->this$0:Landroid/widget/HoverPopupWindow;
 
@@ -146,7 +130,6 @@
 
     goto :goto_1
 
-    .line 3189
     .end local v1    # "superRet":Z
     :cond_2
     const/4 v2, 0x7
@@ -164,7 +147,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 3190
     invoke-virtual {p0}, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->resetTimeout()V
 
     goto :goto_0
@@ -175,7 +157,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3141
     iget-boolean v1, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mIsHoverExitCalled:Z
 
     if-eqz v1, :cond_0
@@ -184,28 +165,23 @@
 
     if-eqz v1, :cond_0
 
-    .line 3143
     iget-object v1, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mDismissPopupRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v1}, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 3144
     const/4 v1, 0x0
 
     iput-object v1, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mDismissPopupRunnable:Ljava/lang/Runnable;
 
-    .line 3145
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mIsHoverExitCalled:Z
 
-    .line 3148
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 3150
     .local v0, "superRet":Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -224,7 +200,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 3151
     new-instance v1, Landroid/widget/HoverPopupWindow$TouchablePopupContainer$2;
 
     invoke-direct {v1, p0}, Landroid/widget/HoverPopupWindow$TouchablePopupContainer$2;-><init>(Landroid/widget/HoverPopupWindow$TouchablePopupContainer;)V
@@ -233,7 +208,6 @@
 
     invoke-virtual {p0, v1, v2, v3}, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 3158
     :cond_1
     return v0
 .end method
@@ -244,12 +218,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 3197
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mContainerDismissHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_2
 
-    .line 3198
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mContainerDismissHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->hasMessages(I)Z
@@ -258,12 +230,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 3199
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mContainerDismissHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 3202
     :cond_0
     sget-object v0, Landroid/os/Build;->PRODUCT:Ljava/lang/String;
 
@@ -289,7 +259,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 3203
     :cond_1
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mContainerDismissHandler:Landroid/os/Handler;
 
@@ -303,12 +272,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3208
     :cond_2
     :goto_0
     return-void
 
-    .line 3205
     :cond_3
     iget-object v0, p0, Landroid/widget/HoverPopupWindow$TouchablePopupContainer;->mContainerDismissHandler:Landroid/os/Handler;
 

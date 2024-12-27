@@ -56,36 +56,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 689
     iput-object p1, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->this$1:Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase;
 
-    .line 690
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
-    .line 686
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->elementStack:Ljava/util/Stack;
 
-    .line 687
     iput-object v1, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->mInfo:Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
-    .line 694
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->privilegedApps:Ljava/util/List;
 
-    .line 695
     iput-object v1, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->owner:Lcom/sec/enterprise/knox/sdp/engine/SdpDomain;
 
-    .line 691
     iput-object p2, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->mInfo:Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
-    .line 692
     return-void
 .end method
 
@@ -94,7 +86,6 @@
     .param p0, "x0"    # Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;
 
     .prologue
-    .line 685
     invoke-direct {p0}, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->getSdpPolicy()Lcom/android/server/sdp/engine/SdpPolicy;
 
     move-result-object v0
@@ -106,7 +97,6 @@
     .locals 4
 
     .prologue
-    .line 698
     new-instance v0, Lcom/android/server/sdp/engine/SdpPolicy;
 
     iget-object v1, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->mInfo:Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
@@ -134,7 +124,6 @@
     .end annotation
 
     .prologue
-    .line 748
     const-string v0, "SdpServiceKeeper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -161,7 +150,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 750
     return-void
 .end method
 
@@ -174,14 +162,12 @@
     .end annotation
 
     .prologue
-    .line 709
     const-string v0, "SdpServiceKeeper"
 
     const-string v1, "end document     : "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 710
     return-void
 .end method
 
@@ -199,12 +185,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 732
     iget-object v0, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->elementStack:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
-    .line 733
     const-string v0, "SdpServiceKeeper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -227,7 +211,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 734
     const-string/jumbo v0, "privileged_app"
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -236,7 +219,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 735
     iget-object v0, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->mInfo:Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
     invoke-virtual {v0}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getAlias()Ljava/lang/String;
@@ -259,7 +241,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 736
     iget-object v0, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->privilegedApps:Ljava/util/List;
 
     new-instance v1, Lcom/sec/enterprise/knox/sdp/engine/SdpDomain;
@@ -272,18 +253,14 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 742
     :cond_0
     :goto_0
     iput-object v4, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->attrAlias:Ljava/lang/String;
 
-    .line 743
     iput-object v4, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->attrPkgName:Ljava/lang/String;
 
-    .line 744
     return-void
 
-    .line 737
     :cond_1
     const-string/jumbo v0, "owner"
 
@@ -293,7 +270,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 738
     iget-object v0, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->mInfo:Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
     invoke-virtual {v0}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getAlias()Ljava/lang/String;
@@ -316,7 +292,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 739
     new-instance v0, Lcom/sec/enterprise/knox/sdp/engine/SdpDomain;
 
     iget-object v1, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->attrAlias:Ljava/lang/String;
@@ -339,14 +314,12 @@
     .end annotation
 
     .prologue
-    .line 705
     const-string v0, "SdpServiceKeeper"
 
     const-string/jumbo v1, "start document   : "
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 706
     return-void
 .end method
 
@@ -363,12 +336,10 @@
     .end annotation
 
     .prologue
-    .line 715
     iget-object v0, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->elementStack:Ljava/util/Stack;
 
     invoke-virtual {v0, p3}, Ljava/util/Stack;->push(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 716
     const-string v0, "SdpServiceKeeper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -391,7 +362,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 718
     const-string/jumbo v0, "privileged_app"
 
     invoke-virtual {p3, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -408,7 +378,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 721
     :cond_0
     const-string v0, "SdpServiceKeeper"
 
@@ -438,7 +407,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 722
     const-string v0, "SdpServiceKeeper"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -467,7 +435,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 725
     const-string v0, "alias"
 
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -476,7 +443,6 @@
 
     iput-object v0, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->attrAlias:Ljava/lang/String;
 
-    .line 726
     const-string/jumbo v0, "pkg_name"
 
     invoke-interface {p4, v0}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
@@ -485,7 +451,6 @@
 
     iput-object v0, p0, Lcom/android/server/SdpServiceKeeper$SdpPolicyDatabase$PolicyXmlHandler;->attrPkgName:Ljava/lang/String;
 
-    .line 728
     :cond_1
     return-void
 .end method

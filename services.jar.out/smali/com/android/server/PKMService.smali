@@ -83,7 +83,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 31
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -95,7 +94,6 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/PKMService;->DBG:Z
 
-    .line 55
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
@@ -110,13 +108,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 63
     invoke-direct {p0}, Landroid/service/tima/IPKMService$Stub;-><init>()V
 
-    .line 64
     iput-object p1, p0, Lcom/android/server/PKMService;->mContext:Landroid/content/Context;
 
-    .line 67
     const/4 v0, 0x1
 
     invoke-direct {p0}, Lcom/android/server/PKMService;->makePKMHandler()Z
@@ -125,10 +120,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 68
     invoke-direct {p0}, Lcom/android/server/PKMService;->startPKMTimer()V
 
-    .line 71
     :cond_0
     return-void
 .end method
@@ -137,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 29
     sget-boolean v0, Lcom/android/server/PKMService;->DBG:Z
 
     return v0
@@ -148,12 +140,10 @@
     .param p1, "event"    # Ljava/lang/String;
 
     .prologue
-    .line 159
     sget-boolean v20, Lcom/android/server/PKMService;->DBG:Z
 
     if-eqz v20, :cond_0
 
-    .line 160
     const-string v20, "PKMService"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -180,16 +170,13 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     :cond_0
     if-nez p1, :cond_2
 
-    .line 292
     :cond_1
     :goto_0
     return-void
 
-    .line 165
     :cond_2
     sget-object v20, Lcom/android/server/PKMService;->mEventList:Ljava/util/LinkedList;
 
@@ -205,16 +192,13 @@
 
     if-lt v0, v1, :cond_3
 
-    .line 166
     sget-object v20, Lcom/android/server/PKMService;->mEventList:Ljava/util/LinkedList;
 
     invoke-virtual/range {v20 .. v20}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
-    .line 169
     :cond_3
     const-string v19, " "
 
-    .line 171
     .local v19, "time":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
@@ -231,7 +215,6 @@
 
     move-result-object v19
 
-    .line 176
     :cond_4
     :goto_1
     sget-object v20, Lcom/android/server/PKMService;->mEventList:Ljava/util/LinkedList;
@@ -268,7 +251,6 @@
 
     invoke-virtual/range {v20 .. v21}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 179
     const-string v20, "TIMA_STATUS="
 
     move-object/from16 v0, p1
@@ -279,7 +261,6 @@
 
     move-result v16
 
-    .line 180
     .local v16, "statusIdx":I
     const/16 v20, 0x3b
 
@@ -293,7 +274,6 @@
 
     move-result v15
 
-    .line 181
     .local v15, "sepIdx":I
     const/16 v20, -0x1
 
@@ -309,7 +289,6 @@
 
     if-ne v15, v0, :cond_6
 
-    .line 182
     :cond_5
     const-string v20, "PKMService"
 
@@ -339,19 +318,16 @@
 
     goto/16 :goto_0
 
-    .line 172
     .end local v15    # "sepIdx":I
     .end local v16    # "statusIdx":I
     :catch_0
     move-exception v9
 
-    .line 173
     .local v9, "e":Ljava/lang/Exception;
     sget-boolean v20, Lcom/android/server/PKMService;->DBG:Z
 
     if-eqz v20, :cond_4
 
-    .line 174
     const-string v20, "PKMService"
 
     const-string/jumbo v21, "toLocalString() exception"
@@ -360,7 +336,6 @@
 
     goto :goto_1
 
-    .line 187
     .end local v9    # "e":Ljava/lang/Exception;
     .restart local v15    # "sepIdx":I
     .restart local v16    # "statusIdx":I
@@ -389,12 +364,10 @@
 
     if-eqz v20, :cond_7
 
-    .line 188
     sget-boolean v20, Lcom/android/server/PKMService;->DBG:Z
 
     if-eqz v20, :cond_1
 
-    .line 189
     const-string v20, "PKMService"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -423,7 +396,6 @@
 
     goto/16 :goto_0
 
-    .line 191
     :cond_7
     const-string v20, "1"
 
@@ -449,12 +421,10 @@
 
     if-eqz v20, :cond_8
 
-    .line 192
     sget-boolean v20, Lcom/android/server/PKMService;->DBG:Z
 
     if-eqz v20, :cond_1
 
-    .line 193
     const-string v20, "PKMService"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -483,7 +453,6 @@
 
     goto/16 :goto_0
 
-    .line 198
     :cond_8
     const-string v20, "MSG="
 
@@ -495,7 +464,6 @@
 
     move-result v14
 
-    .line 199
     .local v14, "msgIdx":I
     const/16 v20, 0x3b
 
@@ -507,10 +475,8 @@
 
     move-result v15
 
-    .line 200
     const-string v13, ""
 
-    .line 201
     .local v13, "msg":Ljava/lang/String;
     const/16 v20, -0x1
 
@@ -524,13 +490,11 @@
 
     if-ne v15, v0, :cond_a
 
-    .line 202
     :cond_9
     sget-boolean v20, Lcom/android/server/PKMService;->DBG:Z
 
     if-eqz v20, :cond_1
 
-    .line 203
     const-string v20, "PKMService"
 
     new-instance v21, Ljava/lang/StringBuilder;
@@ -559,7 +523,6 @@
 
     goto/16 :goto_0
 
-    .line 206
     :cond_a
     new-instance v3, Landroid/content/Intent;
 
@@ -569,7 +532,6 @@
 
     invoke-direct {v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 208
     .local v3, "TimaEventIntent":Landroid/content/Intent;
     const-string v20, "MSG="
 
@@ -587,7 +549,6 @@
 
     move-result-object v13
 
-    .line 211
     const-string/jumbo v20, "lkm_modified"
 
     move-object/from16 v0, v20
@@ -598,7 +559,6 @@
 
     if-eqz v20, :cond_b
 
-    .line 212
     const-string v20, "TIMA_STATUS="
 
     const/16 v21, 0x1
@@ -609,7 +569,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 225
     :goto_2
     new-instance v7, Ljava/text/SimpleDateFormat;
 
@@ -619,7 +578,6 @@
 
     invoke-direct {v7, v0}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 226
     .local v7, "dateFormat":Ljava/text/DateFormat;
     new-instance v20, Ljava/util/Date;
 
@@ -631,7 +589,6 @@
 
     move-result-object v6
 
-    .line 229
     .local v6, "date":Ljava/lang/String;
     :try_start_1
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -644,7 +601,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 235
     :goto_3
     :try_start_2
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -657,7 +613,6 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 241
     :goto_4
     :try_start_3
     new-instance v8, Ljava/io/File;
@@ -668,13 +623,11 @@
 
     invoke-direct {v8, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 242
     .local v8, "delAllTimaLogFile":Ljava/io/File;
     invoke-virtual {v8}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v10
 
-    .line 244
     .local v10, "files":[Ljava/io/File;
     move-object v5, v10
 
@@ -690,18 +643,15 @@
 
     aget-object v18, v5, v11
 
-    .line 245
     .local v18, "timafile":Ljava/io/File;
     invoke-virtual/range {v18 .. v18}, Ljava/io/File;->delete()Z
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 244
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_5
 
-    .line 213
     .end local v5    # "arr$":[Ljava/io/File;
     .end local v6    # "date":Ljava/lang/String;
     .end local v7    # "dateFormat":Ljava/text/DateFormat;
@@ -721,7 +671,6 @@
 
     if-eqz v20, :cond_c
 
-    .line 214
     const-string v20, "TIMA_STATUS="
 
     const/16 v21, 0x2
@@ -734,7 +683,6 @@
 
     goto :goto_2
 
-    .line 215
     :cond_c
     const-string/jumbo v20, "kern_modified"
 
@@ -746,7 +694,6 @@
 
     if-eqz v20, :cond_d
 
-    .line 216
     const-string v20, "TIMA_STATUS="
 
     const/16 v21, 0x3
@@ -759,7 +706,6 @@
 
     goto :goto_2
 
-    .line 217
     :cond_d
     const-string/jumbo v20, "kern_metadata_modified"
 
@@ -771,7 +717,6 @@
 
     if-eqz v20, :cond_e
 
-    .line 218
     const-string v20, "TIMA_STATUS="
 
     const/16 v21, 0x4
@@ -784,13 +729,11 @@
 
     goto/16 :goto_2
 
-    .line 220
     :cond_e
     sget-boolean v20, Lcom/android/server/PKMService;->DBG:Z
 
     if-eqz v20, :cond_1
 
-    .line 221
     const-string v20, "PKMService"
 
     const-string v21, "TIMA: Unknown message from TIMA APPs. Not notifying the user"
@@ -799,13 +742,11 @@
 
     goto/16 :goto_0
 
-    .line 230
     .restart local v6    # "date":Ljava/lang/String;
     .restart local v7    # "dateFormat":Ljava/text/DateFormat;
     :catch_1
     move-exception v9
 
-    .line 231
     .local v9, "e":Ljava/io/IOException;
     const-string v20, "PKMService"
 
@@ -815,12 +756,10 @@
 
     goto :goto_3
 
-    .line 236
     .end local v9    # "e":Ljava/io/IOException;
     :catch_2
     move-exception v9
 
-    .line 237
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v20, "PKMService"
 
@@ -830,16 +769,13 @@
 
     goto :goto_4
 
-    .line 248
     .end local v9    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v9
 
-    .line 249
     .local v9, "e":Ljava/lang/Exception;
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 252
     .end local v9    # "e":Ljava/lang/Exception;
     :cond_f
     new-instance v20, Ljava/lang/StringBuilder;
@@ -862,7 +798,6 @@
 
     move-result-object v17
 
-    .line 255
     .local v17, "tima_log_file":Ljava/lang/String;
     :try_start_4
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -895,7 +830,6 @@
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 261
     :goto_6
     :try_start_5
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -928,13 +862,11 @@
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 266
     :goto_7
     sget-boolean v20, Lcom/android/server/TimaService;->iBootCompleted:Z
 
     if-nez v20, :cond_10
 
-    .line 267
     const-string v20, "PKMService"
 
     const-string v21, "displayEvent(): iBootCompleted==false"
@@ -943,11 +875,9 @@
 
     goto/16 :goto_0
 
-    .line 256
     :catch_4
     move-exception v9
 
-    .line 257
     .local v9, "e":Ljava/io/IOException;
     const-string v20, "PKMService"
 
@@ -977,12 +907,10 @@
 
     goto :goto_6
 
-    .line 262
     .end local v9    # "e":Ljava/io/IOException;
     :catch_5
     move-exception v9
 
-    .line 263
     .restart local v9    # "e":Ljava/io/IOException;
     const-string v20, "PKMService"
 
@@ -1012,7 +940,6 @@
 
     goto :goto_7
 
-    .line 270
     .end local v9    # "e":Ljava/io/IOException;
     :cond_10
     const-string v20, "com.samsung.android.securitylogagent"
@@ -1021,7 +948,6 @@
 
     invoke-virtual {v3, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 271
     const-string v20, "TIMA_LOG_FILE"
 
     move-object/from16 v0, v20
@@ -1030,7 +956,6 @@
 
     invoke-virtual {v3, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 272
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PKMService;->mContext:Landroid/content/Context;
@@ -1045,7 +970,6 @@
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    .line 274
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PKMService;->mContext:Landroid/content/Context;
@@ -1066,7 +990,6 @@
 
     if-eqz v20, :cond_1
 
-    .line 275
     new-instance v4, Landroid/content/Intent;
 
     const-string/jumbo v20, "samsung.intent.action.knox.TIMA_NOTIFICATION"
@@ -1075,7 +998,6 @@
 
     invoke-direct {v4, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 276
     .local v4, "TimaSmartManagerIntent":Landroid/content/Intent;
     const-string v20, "com.samsung.android.sm"
 
@@ -1083,7 +1005,6 @@
 
     invoke-virtual {v4, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 277
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/PKMService;->mContext:Landroid/content/Context;
@@ -1109,16 +1030,13 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 295
     const/4 v1, 0x0
 
-    .line 296
     .local v1, "info":Landroid/content/pm/PackageInfo;
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 298
     .local v2, "pm":Landroid/content/pm/PackageManager;
     const/16 v4, 0x80
 
@@ -1129,22 +1047,17 @@
 
     move-result-object v1
 
-    .line 299
     if-eqz v1, :cond_0
 
-    .line 300
     const/4 v3, 0x1
 
-    .line 305
     :cond_0
     :goto_0
     return v3
 
-    .line 304
     :catch_0
     move-exception v0
 
-    .line 305
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     goto :goto_0
 .end method
@@ -1153,23 +1066,19 @@
     .locals 5
 
     .prologue
-    .line 90
     sget-boolean v3, Lcom/android/server/PKMService;->DBG:Z
 
     if-eqz v3, :cond_0
 
-    .line 91
     const-string v3, "PKMService"
 
     const-string/jumbo v4, "makePKMHandler"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     :cond_0
     const/4 v2, 0x0
 
-    .line 93
     .local v2, "ret":Z
     new-instance v1, Landroid/os/HandlerThread;
 
@@ -1177,41 +1086,33 @@
 
     invoke-direct {v1, v3}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 94
     .local v1, "pkmThread":Landroid/os/HandlerThread;
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    .line 95
     invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 96
     .local v0, "pkmLooper":Landroid/os/Looper;
     if-eqz v0, :cond_1
 
-    .line 97
     new-instance v3, Lcom/android/server/PKMService$PKMServiceHandler;
 
     invoke-direct {v3, p0, v0}, Lcom/android/server/PKMService$PKMServiceHandler;-><init>(Lcom/android/server/PKMService;Landroid/os/Looper;)V
 
     iput-object v3, p0, Lcom/android/server/PKMService;->mPKMServiceHandler:Lcom/android/server/PKMService$PKMServiceHandler;
 
-    .line 98
     const/4 v2, 0x1
 
-    .line 99
     const-string v3, "PKMService"
 
     const-string v4, "Success to get looper for PKMServiceHandler"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     :goto_0
     return v2
 
-    .line 101
     :cond_1
     const-string v3, "PKMService"
 
@@ -1228,19 +1129,16 @@
     .prologue
     const-wide/32 v2, 0x493e0
 
-    .line 108
     sget-boolean v0, Lcom/android/server/PKMService;->DBG:Z
 
     if-eqz v0, :cond_0
 
-    .line 109
     const-string v0, "PKMService"
 
     const-string/jumbo v1, "startPKMTimer"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     :cond_0
     new-instance v0, Ljava/util/Timer;
 
@@ -1248,7 +1146,6 @@
 
     iput-object v0, p0, Lcom/android/server/PKMService;->mTimer:Ljava/util/Timer;
 
-    .line 111
     new-instance v0, Lcom/android/server/PKMService$PKMTimerTask;
 
     const/4 v1, 0x0
@@ -1257,7 +1154,6 @@
 
     iput-object v0, p0, Lcom/android/server/PKMService;->mTimerTask:Ljava/util/TimerTask;
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/PKMService;->mTimer:Ljava/util/Timer;
 
     iget-object v1, p0, Lcom/android/server/PKMService;->mTimerTask:Ljava/util/TimerTask;
@@ -1266,7 +1162,6 @@
 
     invoke-virtual/range {v0 .. v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;JJ)V
 
-    .line 113
     return-void
 .end method
 
@@ -1285,7 +1180,6 @@
     .locals 5
 
     .prologue
-    .line 132
     monitor-enter p0
 
     :try_start_0
@@ -1299,7 +1193,6 @@
 
     check-cast v0, Landroid/os/PowerManager;
 
-    .line 133
     .local v0, "mPowerManager":Landroid/os/PowerManager;
     const/4 v3, 0x1
 
@@ -1309,11 +1202,9 @@
 
     move-result-object v1
 
-    .line 135
     .local v1, "mWakeLock":Landroid/os/PowerManager$WakeLock;
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 136
     const v3, 0xc350
 
     const/16 v4, 0x2710
@@ -1322,21 +1213,17 @@
 
     move-result-object v2
 
-    .line 137
     .local v2, "pkmResult":Ljava/lang/String;
     invoke-virtual {v1}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 139
     invoke-direct {p0, v2}, Lcom/android/server/PKMService;->displayEvent(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 141
     monitor-exit p0
 
     return-object v2
 
-    .line 132
     .end local v0    # "mPowerManager":Landroid/os/PowerManager;
     .end local v1    # "mWakeLock":Landroid/os/PowerManager$WakeLock;
     .end local v2    # "pkmResult":Ljava/lang/String;
@@ -1354,7 +1241,6 @@
     .param p2, "subject"    # I
 
     .prologue
-    .line 145
     monitor-enter p0
 
     :try_start_0
@@ -1394,24 +1280,20 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 148
     :cond_0
     invoke-static {p1, p2}, Lcom/android/server/PKMService;->timaCheckHistory(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 149
     .local v0, "timaResult":Ljava/lang/String;
     invoke-direct {p0, v0}, Lcom/android/server/PKMService;->displayEvent(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 150
     monitor-exit p0
 
     return-object v0
 
-    .line 145
     .end local v0    # "timaResult":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -1425,7 +1307,6 @@
     .locals 7
 
     .prologue
-    .line 74
     monitor-enter p0
 
     :try_start_0
@@ -1433,20 +1314,17 @@
 
     if-eqz v4, :cond_0
 
-    .line 75
     const-string v4, "PKMService"
 
     const-string v5, "TIMA: timaDumpLog"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 77
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 78
     .local v1, "uid":I
     if-eqz v1, :cond_1
 
@@ -1458,7 +1336,6 @@
 
     if-eq v1, v4, :cond_1
 
-    .line 79
     const-string v4, "PKMService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1483,29 +1360,24 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 80
     const/4 v0, 0x0
 
-    .line 86
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 83
     :cond_1
     :try_start_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 84
     .local v2, "token":J
     invoke-static {}, Lcom/android/server/PKMService;->timaDumpLog()[B
 
     move-result-object v0
 
-    .line 85
     .local v0, "result":[B
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_1
@@ -1513,7 +1385,6 @@
 
     goto :goto_0
 
-    .line 74
     .end local v0    # "result":[B
     .end local v1    # "uid":I
     .end local v2    # "token":J
@@ -1539,7 +1410,6 @@
     .end annotation
 
     .prologue
-    .line 155
     sget-object v0, Lcom/android/server/PKMService;->mEventList:Ljava/util/LinkedList;
 
     return-object v0

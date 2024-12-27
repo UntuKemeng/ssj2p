@@ -33,22 +33,18 @@
     .param p4, "fileList"    # Landroid/database/Cursor;
 
     .prologue
-    .line 2386
     iput-object p1, p0, Landroid/media/MediaScanner$WplHandler;->this$0:Landroid/media/MediaScanner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2387
     iput-object p2, p0, Landroid/media/MediaScanner$WplHandler;->playListDirectory:Ljava/lang/String;
 
-    .line 2389
     new-instance v2, Landroid/sax/RootElement;
 
     const-string/jumbo v4, "smil"
 
     invoke-direct {v2, v4}, Landroid/sax/RootElement;-><init>(Ljava/lang/String;)V
 
-    .line 2390
     .local v2, "root":Landroid/sax/RootElement;
     const-string v4, "body"
 
@@ -56,7 +52,6 @@
 
     move-result-object v0
 
-    .line 2391
     .local v0, "body":Landroid/sax/Element;
     const-string/jumbo v4, "seq"
 
@@ -64,7 +59,6 @@
 
     move-result-object v3
 
-    .line 2392
     .local v3, "seq":Landroid/sax/Element;
     const-string/jumbo v4, "media"
 
@@ -72,18 +66,15 @@
 
     move-result-object v1
 
-    .line 2393
     .local v1, "media":Landroid/sax/Element;
     invoke-virtual {v1, p0}, Landroid/sax/Element;->setElementListener(Landroid/sax/ElementListener;)V
 
-    .line 2395
     invoke-virtual {v2}, Landroid/sax/RootElement;->getContentHandler()Lorg/xml/sax/ContentHandler;
 
     move-result-object v4
 
     iput-object v4, p0, Landroid/media/MediaScanner$WplHandler;->handler:Lorg/xml/sax/ContentHandler;
 
-    .line 2396
     return-void
 .end method
 
@@ -93,7 +84,6 @@
     .locals 0
 
     .prologue
-    .line 2408
     return-void
 .end method
 
@@ -101,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 2411
     iget-object v0, p0, Landroid/media/MediaScanner$WplHandler;->handler:Lorg/xml/sax/ContentHandler;
 
     return-object v0
@@ -112,7 +101,6 @@
     .param p1, "attributes"    # Lorg/xml/sax/Attributes;
 
     .prologue
-    .line 2400
     const-string v1, ""
 
     const-string/jumbo v2, "src"
@@ -121,11 +109,9 @@
 
     move-result-object v0
 
-    .line 2401
     .local v0, "path":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 2402
     iget-object v1, p0, Landroid/media/MediaScanner$WplHandler;->this$0:Landroid/media/MediaScanner;
 
     iget-object v2, p0, Landroid/media/MediaScanner$WplHandler;->playListDirectory:Ljava/lang/String;
@@ -133,7 +119,6 @@
     # invokes: Landroid/media/MediaScanner;->cachePlaylistEntry(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v0, v2}, Landroid/media/MediaScanner;->access$4900(Landroid/media/MediaScanner;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2404
     :cond_0
     return-void
 .end method

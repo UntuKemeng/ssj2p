@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3225
     iput-object p1, p0, Landroid/widget/ScrollView$4;->this$0:Landroid/widget/ScrollView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 3228
     iget-object v0, p0, Landroid/widget/ScrollView$4;->this$0:Landroid/widget/ScrollView;
 
     const/4 v1, 0x0
@@ -48,6 +46,5 @@
     # invokes: Landroid/widget/ScrollView;->semSetupGoToTop(I)V
     invoke-static {v0, v1}, Landroid/widget/ScrollView;->access$300(Landroid/widget/ScrollView;I)V
 
-    .line 3229
     return-void
 .end method

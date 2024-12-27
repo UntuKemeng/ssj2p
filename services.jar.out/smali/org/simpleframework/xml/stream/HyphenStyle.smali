@@ -17,17 +17,14 @@
     .locals 2
 
     .prologue
-    .line 59
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 60
     new-instance v0, Lorg/simpleframework/xml/stream/HyphenBuilder;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/stream/HyphenBuilder;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/HyphenStyle;->style:Lorg/simpleframework/xml/stream/Style;
 
-    .line 61
     new-instance v0, Lorg/simpleframework/xml/stream/Builder;
 
     iget-object v1, p0, Lorg/simpleframework/xml/stream/HyphenStyle;->style:Lorg/simpleframework/xml/stream/Style;
@@ -36,7 +33,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/HyphenStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
-    .line 62
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     iget-object v0, p0, Lorg/simpleframework/xml/stream/HyphenStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/stream/Builder;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -62,7 +57,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     iget-object v0, p0, Lorg/simpleframework/xml/stream/HyphenStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/stream/Builder;->getElement(Ljava/lang/String;)Ljava/lang/String;
@@ -78,12 +72,10 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     iget-object v0, p0, Lorg/simpleframework/xml/stream/HyphenStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
     invoke-virtual {v0, p1, p2}, Lorg/simpleframework/xml/stream/Builder;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 89
     return-void
 .end method
 
@@ -93,11 +85,9 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 115
     iget-object v0, p0, Lorg/simpleframework/xml/stream/HyphenStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
     invoke-virtual {v0, p1, p2}, Lorg/simpleframework/xml/stream/Builder;->setElement(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
     return-void
 .end method

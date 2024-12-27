@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 20
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 21
     const-string v0, "android.media.IVolumeController"
 
     invoke-virtual {p0, p0, v0}, Landroid/media/IVolumeController$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 22
     return-void
 .end method
 
@@ -63,17 +60,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 29
     if-nez p0, :cond_0
 
-    .line 30
     const/4 v0, 0x0
 
-    .line 36
     :goto_0
     return-object v0
 
-    .line 32
     :cond_0
     const-string v1, "android.media.IVolumeController"
 
@@ -81,7 +74,6 @@
 
     move-result-object v0
 
-    .line 33
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -89,12 +81,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 34
     check-cast v0, Landroid/media/IVolumeController;
 
     goto :goto_0
 
-    .line 36
     :cond_1
     new-instance v0, Landroid/media/IVolumeController$Stub$Proxy;
 
@@ -110,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 40
     return-object p0
 .end method
 
@@ -129,10 +118,8 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 44
     sparse-switch p1, :sswitch_data_0
 
-    .line 106
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v4
@@ -140,7 +127,6 @@
     :goto_0
     return v4
 
-    .line 48
     :sswitch_0
     const-string v3, "android.media.IVolumeController"
 
@@ -148,48 +134,40 @@
 
     goto :goto_0
 
-    .line 53
     :sswitch_1
     const-string v3, "android.media.IVolumeController"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 55
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 56
     .local v0, "_arg0":I
     invoke-virtual {p0, v0}, Landroid/media/IVolumeController$Stub;->displaySafeVolumeWarning(I)V
 
     goto :goto_0
 
-    .line 61
     .end local v0    # "_arg0":I
     :sswitch_2
     const-string v3, "android.media.IVolumeController"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 63
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 65
     .restart local v0    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 66
     .local v1, "_arg1":I
     invoke-virtual {p0, v0, v1}, Landroid/media/IVolumeController$Stub;->volumeChanged(II)V
 
     goto :goto_0
 
-    .line 71
     .end local v0    # "_arg0":I
     .end local v1    # "_arg1":I
     :sswitch_3
@@ -197,63 +175,52 @@
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 73
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 74
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/media/IVolumeController$Stub;->masterMuteChanged(I)V
 
     goto :goto_0
 
-    .line 79
     .end local v0    # "_arg0":I
     :sswitch_4
     const-string v3, "android.media.IVolumeController"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 81
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 82
     .restart local v0    # "_arg0":I
     invoke-virtual {p0, v0}, Landroid/media/IVolumeController$Stub;->setLayoutDirection(I)V
 
     goto :goto_0
 
-    .line 87
     .end local v0    # "_arg0":I
     :sswitch_5
     const-string v3, "android.media.IVolumeController"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 88
     invoke-virtual {p0}, Landroid/media/IVolumeController$Stub;->dismiss()V
 
     goto :goto_0
 
-    .line 93
     :sswitch_6
     const-string v3, "android.media.IVolumeController"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 94
     invoke-virtual {p0}, Landroid/media/IVolumeController$Stub;->isSafeVolumeDialogShowing()Z
 
     move-result v2
 
-    .line 95
     .local v2, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 96
     if-eqz v2, :cond_0
 
     move v3, v4
@@ -268,19 +235,16 @@
 
     goto :goto_1
 
-    .line 101
     .end local v2    # "_result":Z
     :sswitch_7
     const-string v3, "android.media.IVolumeController"
 
     invoke-virtual {p2, v3}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 102
     invoke-virtual {p0}, Landroid/media/IVolumeController$Stub;->displayVolumeLimiterToast()V
 
     goto :goto_0
 
-    .line 44
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

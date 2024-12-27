@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 7659
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$12;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 8
 
     .prologue
-    .line 7661
     const/4 v2, 0x0
 
-    .line 7664
     .local v2, "process":Ljava/lang/Process;
     :try_start_0
     new-instance v0, Ljava/io/File;
@@ -52,7 +49,6 @@
 
     invoke-direct {v0, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7665
     .local v0, "dataLogDirectory":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -60,10 +56,8 @@
 
     if-nez v5, :cond_0
 
-    .line 7666
     invoke-virtual {v0}, Ljava/io/File;->mkdir()Z
 
-    .line 7669
     :cond_0
     const/4 v5, 0x3
 
@@ -87,7 +81,6 @@
 
     aput-object v6, v4, v5
 
-    .line 7671
     .local v4, "shellCommandForLogcat":[Ljava/lang/String;
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -97,10 +90,8 @@
 
     move-result-object v2
 
-    .line 7672
     invoke-virtual {v2}, Ljava/lang/Process;->waitFor()I
 
-    .line 7674
     const/4 v5, 0x3
 
     new-array v3, v5, [Ljava/lang/String;
@@ -123,7 +114,6 @@
 
     aput-object v6, v3, v5
 
-    .line 7675
     .local v3, "shellCommandForDumpsys":[Ljava/lang/String;
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -133,14 +123,12 @@
 
     move-result-object v2
 
-    .line 7676
     invoke-virtual {v2}, Ljava/lang/Process;->waitFor()I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 7685
     .end local v0    # "dataLogDirectory":Ljava/io/File;
     .end local v3    # "shellCommandForDumpsys":[Ljava/lang/String;
     .end local v4    # "shellCommandForLogcat":[Ljava/lang/String;
@@ -151,14 +139,11 @@
 
     invoke-static {v5, v6}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7686
     return-void
 
-    .line 7677
     :catch_0
     move-exception v1
 
-    .line 7678
     .local v1, "exception":Ljava/io/IOException;
     const-string v5, "PowerManagerService"
 
@@ -184,12 +169,10 @@
 
     goto :goto_0
 
-    .line 7679
     .end local v1    # "exception":Ljava/io/IOException;
     :catch_1
     move-exception v1
 
-    .line 7680
     .local v1, "exception":Ljava/lang/SecurityException;
     const-string v5, "PowerManagerService"
 
@@ -215,12 +198,10 @@
 
     goto :goto_0
 
-    .line 7681
     .end local v1    # "exception":Ljava/lang/SecurityException;
     :catch_2
     move-exception v1
 
-    .line 7682
     .local v1, "exception":Ljava/lang/InterruptedException;
     const-string v5, "PowerManagerService"
 

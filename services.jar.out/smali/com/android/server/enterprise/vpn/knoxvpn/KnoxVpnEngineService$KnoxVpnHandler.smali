@@ -68,13 +68,10 @@
     .param p2, "loop"    # Landroid/os/Looper;
 
     .prologue
-    .line 3279
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
-    .line 3280
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 3281
     return-void
 .end method
 
@@ -85,31 +82,26 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 3285
     const-string v9, "KnoxVpnEngineService"
 
     const-string/jumbo v10, "vpn handle : Message received"
 
     invoke-static {v9, v10}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3286
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/os/Bundle;
 
-    .line 3287
     .local v1, "map":Landroid/os/Bundle;
     iget v9, p1, Landroid/os/Message;->what:I
 
     packed-switch v9, :pswitch_data_0
 
-    .line 3371
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 3289
     :pswitch_1
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -118,7 +110,6 @@
 
     goto :goto_0
 
-    .line 3292
     :pswitch_2
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -127,7 +118,6 @@
 
     goto :goto_0
 
-    .line 3295
     :pswitch_3
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -135,7 +125,6 @@
 
     goto :goto_0
 
-    .line 3298
     :pswitch_4
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -144,7 +133,6 @@
 
     goto :goto_0
 
-    .line 3304
     :pswitch_5
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -153,14 +141,12 @@
 
     goto :goto_0
 
-    .line 3310
     :pswitch_6
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->initializeHashtable()V
     invoke-static {v9}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$1800(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;)V
 
-    .line 3311
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->addBlockingRulesForPackages()V
@@ -168,7 +154,6 @@
 
     goto :goto_0
 
-    .line 3314
     :pswitch_7
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -177,7 +162,6 @@
 
     goto :goto_0
 
-    .line 3317
     :pswitch_8
     const-string v9, "android.intent.extra.user_handle"
 
@@ -187,20 +171,17 @@
 
     move-result v8
 
-    .line 3318
     .local v8, "userId":I
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->initializeVpnVendorsForContainer(I)V
     invoke-static {v9, v8}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$2100(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;I)V
 
-    .line 3319
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->handleActionUserStarted(I)V
     invoke-static {v9, v8}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$2200(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;I)V
 
-    .line 3320
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->updateProxyForProfile(I)V
@@ -208,7 +189,6 @@
 
     goto :goto_0
 
-    .line 3326
     .end local v8    # "userId":I
     :pswitch_9
     const-string v9, "extra_profile_name"
@@ -217,7 +197,6 @@
 
     move-result-object v6
 
-    .line 3327
     .local v6, "temp":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -226,7 +205,6 @@
 
     goto :goto_0
 
-    .line 3330
     .end local v6    # "temp":Ljava/lang/String;
     :pswitch_a
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
@@ -236,7 +214,6 @@
 
     goto :goto_0
 
-    .line 3333
     :pswitch_b
     const-string/jumbo v9, "profileName"
 
@@ -244,7 +221,6 @@
 
     move-result-object v3
 
-    .line 3334
     .local v3, "profileName":Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -257,7 +233,6 @@
 
     goto :goto_0
 
-    .line 3337
     .end local v3    # "profileName":Ljava/lang/String;
     :pswitch_c
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
@@ -267,7 +242,6 @@
 
     goto :goto_0
 
-    .line 3340
     :pswitch_d
     const-string/jumbo v9, "uid"
 
@@ -275,7 +249,6 @@
 
     move-result v7
 
-    .line 3341
     .local v7, "uid":I
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -284,7 +257,6 @@
 
     goto :goto_0
 
-    .line 3344
     .end local v7    # "uid":I
     :pswitch_e
     const-string/jumbo v9, "uid"
@@ -293,7 +265,6 @@
 
     move-result v0
 
-    .line 3345
     .local v0, "adminUid":I
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -302,7 +273,6 @@
 
     goto/16 :goto_0
 
-    .line 3348
     .end local v0    # "adminUid":I
     :pswitch_f
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
@@ -312,7 +282,6 @@
 
     goto/16 :goto_0
 
-    .line 3351
     :pswitch_10
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -321,7 +290,6 @@
 
     goto/16 :goto_0
 
-    .line 3354
     :pswitch_11
     const-string/jumbo v9, "reason"
 
@@ -329,20 +297,17 @@
 
     move-result v2
 
-    .line 3355
     .local v2, "modeStatus":I
     const/4 v9, 0x5
 
     if-ne v2, v9, :cond_0
 
-    .line 3356
     const-string v9, "KnoxVpnEngineService"
 
     const-string/jumbo v10, "ultra power saving mode has been disabled and turning on the vpn connection"
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3357
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->startVpnConnectionForAllClients()V
@@ -350,7 +315,6 @@
 
     goto/16 :goto_0
 
-    .line 3361
     .end local v2    # "modeStatus":I
     :pswitch_12
     const-string/jumbo v9, "uid"
@@ -359,7 +323,6 @@
 
     move-result v4
 
-    .line 3362
     .local v4, "startuid":I
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -368,7 +331,6 @@
 
     goto/16 :goto_0
 
-    .line 3365
     .end local v4    # "startuid":I
     :pswitch_13
     const-string/jumbo v9, "uid"
@@ -377,7 +339,6 @@
 
     move-result v5
 
-    .line 3366
     .local v5, "stopuid":I
     iget-object v9, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$KnoxVpnHandler;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -386,7 +347,6 @@
 
     goto/16 :goto_0
 
-    .line 3287
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

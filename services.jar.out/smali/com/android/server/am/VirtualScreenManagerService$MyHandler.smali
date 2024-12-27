@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 98
     iput-object p1, p0, Lcom/android/server/am/VirtualScreenManagerService$MyHandler;->this$0:Lcom/android/server/am/VirtualScreenManagerService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/am/VirtualScreenManagerService$1;
 
     .prologue
-    .line 98
     invoke-direct {p0, p1}, Lcom/android/server/am/VirtualScreenManagerService$MyHandler;-><init>(Lcom/android/server/am/VirtualScreenManagerService;)V
 
     return-void
@@ -50,16 +48,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 101
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 109
     :goto_0
     return-void
 
-    .line 103
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -69,7 +64,6 @@
 
     move-result v0
 
-    .line 104
     .local v0, "displayId":I
     const-string v1, "VirtualScreenManagerService"
 
@@ -93,7 +87,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     iget-object v1, p0, Lcom/android/server/am/VirtualScreenManagerService$MyHandler;->this$0:Lcom/android/server/am/VirtualScreenManagerService;
 
     # invokes: Lcom/android/server/am/VirtualScreenManagerService;->handlePauseVirtualScreen(I)V
@@ -101,7 +94,6 @@
 
     goto :goto_0
 
-    .line 101
     nop
 
     :pswitch_data_0

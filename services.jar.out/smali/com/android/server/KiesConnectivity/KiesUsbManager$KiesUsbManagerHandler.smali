@@ -24,13 +24,10 @@
     .param p2, "l"    # Landroid/os/Looper;
 
     .prologue
-    .line 367
     iput-object p1, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
-    .line 368
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 369
     return-void
 .end method
 
@@ -41,32 +38,27 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 373
     :try_start_0
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 435
     const-string v2, "KiesUsbManager"
 
     const-string v3, "SCSI -> unknow"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     :cond_0
     :goto_0
     return-void
 
-    .line 376
     :sswitch_0
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbManager;->setCDFSInsert()V
     invoke-static {v2}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->access$300(Lcom/android/server/KiesConnectivity/KiesUsbManager;)V
 
-    .line 377
     const-string v2, "KiesUsbManager"
 
     const-string v3, "KiesUsbManagerHandler -> UsbMode.online"
@@ -77,11 +69,9 @@
 
     goto :goto_0
 
-    .line 440
     :catch_0
     move-exception v1
 
-    .line 441
     .local v1, "e":Ljava/lang/Exception;
     sget-object v2, Ljava/lang/System;->err:Ljava/io/PrintStream;
 
@@ -89,7 +79,6 @@
 
     goto :goto_0
 
-    .line 382
     .end local v1    # "e":Ljava/lang/Exception;
     :sswitch_1
     :try_start_1
@@ -101,7 +90,6 @@
 
     goto :goto_0
 
-    .line 388
     :sswitch_2
     const-string v2, "KiesUsbManager"
 
@@ -109,14 +97,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 389
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     invoke-virtual {v2}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->stopCDFSEjectTimer()V
 
     goto :goto_0
 
-    .line 395
     :sswitch_3
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
@@ -131,21 +117,17 @@
 
     move-result v0
 
-    .line 396
     .local v0, "bEnabled_ACM":Z
     if-nez v0, :cond_0
 
-    .line 397
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     invoke-virtual {v2}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->stopCDFSEjectTimer()V
 
-    .line 398
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     invoke-virtual {v2}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->startCDFSEjectTimer()V
 
-    .line 399
     const-string v2, "KiesUsbManager"
 
     const-string v3, "KiesUsbManagerHandler -> UsbMode.time_reset"
@@ -154,7 +136,6 @@
 
     goto :goto_0
 
-    .line 405
     .end local v0    # "bEnabled_ACM":Z
     :sswitch_4
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -170,11 +151,9 @@
 
     move-result v0
 
-    .line 406
     .restart local v0    # "bEnabled_ACM":Z
     if-nez v0, :cond_0
 
-    .line 407
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbManager;->usbManager:Landroid/hardware/usb/UsbManager;
@@ -186,7 +165,6 @@
 
     invoke-virtual {v2, v3}, Landroid/hardware/usb/UsbManager;->setCurrentFunction(Ljava/lang/String;)V
 
-    .line 408
     const-string v2, "KiesUsbManager"
 
     const-string v3, "Enabled_ACM -> mass_storage,acm"
@@ -195,7 +173,6 @@
 
     goto :goto_0
 
-    .line 414
     .end local v0    # "bEnabled_ACM":Z
     :sswitch_5
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -205,7 +182,6 @@
 
     goto :goto_0
 
-    .line 420
     :sswitch_6
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbManager;->kiesusbobserver:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->access$100()Lcom/android/server/KiesConnectivity/KiesUsbObserver;
@@ -214,7 +190,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 421
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbManager;->setUsbCurrentSettingMode()V
@@ -222,7 +197,6 @@
 
     goto :goto_0
 
-    .line 427
     :sswitch_7
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbManager$KiesUsbManagerHandler;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
@@ -233,7 +207,6 @@
 
     goto/16 :goto_0
 
-    .line 373
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_1

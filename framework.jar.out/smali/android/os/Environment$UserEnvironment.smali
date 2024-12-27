@@ -24,13 +24,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 81
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 82
     iput p1, p0, Landroid/os/Environment$UserEnvironment;->mUserId:I
 
-    .line 83
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 4
 
     .prologue
-    .line 157
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -72,7 +68,6 @@
     .locals 4
 
     .prologue
-    .line 161
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -105,7 +100,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 181
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -148,7 +142,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 165
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -185,7 +178,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 177
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -228,7 +220,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 169
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -265,7 +256,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 173
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -302,7 +292,6 @@
     .param p1, "type"    # Ljava/lang/String;
 
     .prologue
-    .line 153
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -330,17 +319,14 @@
 
     const/4 v11, 0x0
 
-    .line 87
     iget v8, p0, Landroid/os/Environment$UserEnvironment;->mUserId:I
 
     const/16 v9, 0x64
 
     if-lt v8, v9, :cond_7
 
-    .line 88
     const/4 v1, 0x0
 
-    .line 90
     .local v1, "extPolicy":Z
     :try_start_0
     const-string/jumbo v8, "persona"
@@ -353,7 +339,6 @@
 
     move-result-object v4
 
-    .line 91
     .local v4, "personaService":Landroid/os/IPersonaManager;
     iget v8, p0, Landroid/os/Environment$UserEnvironment;->mUserId:I
 
@@ -363,7 +348,6 @@
 
     move-result v1
 
-    .line 104
     .end local v4    # "personaService":Landroid/os/IPersonaManager;
     :goto_0
     iget v8, p0, Landroid/os/Environment$UserEnvironment;->mUserId:I
@@ -372,17 +356,14 @@
 
     move-result-object v7
 
-    .line 105
     .local v7, "volumes":[Landroid/os/storage/StorageVolume;
     array-length v8, v7
 
     new-array v2, v8, [Ljava/io/File;
 
-    .line 106
     .local v2, "files":[Ljava/io/File;
     const/4 v5, 0x0
 
-    .line 107
     .local v5, "resized":I
     const/4 v3, 0x0
 
@@ -392,7 +373,6 @@
 
     if-ge v3, v8, :cond_4
 
-    .line 108
     aget-object v8, v7, v3
 
     invoke-virtual {v8}, Landroid/os/storage/StorageVolume;->getPathFile()Ljava/io/File;
@@ -411,14 +391,12 @@
 
     if-eqz v8, :cond_1
 
-    .line 107
     :cond_0
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 92
     .end local v2    # "files":[Ljava/io/File;
     .end local v3    # "i":I
     .end local v5    # "resized":I
@@ -426,16 +404,13 @@
     :catch_0
     move-exception v0
 
-    .line 93
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
-    .line 94
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 111
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v2    # "files":[Ljava/io/File;
     .restart local v3    # "i":I
@@ -452,11 +427,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 114
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
-    .line 115
     aget-object v8, v7, v3
 
     invoke-virtual {v8}, Landroid/os/storage/StorageVolume;->isRemovable()Z
@@ -465,7 +438,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 116
     aget-object v8, v7, v3
 
     invoke-virtual {v8}, Landroid/os/storage/StorageVolume;->getPathFile()Ljava/io/File;
@@ -496,7 +468,6 @@
 
     goto :goto_2
 
-    .line 119
     :cond_3
     aget-object v8, v7, v3
 
@@ -508,28 +479,23 @@
 
     goto :goto_2
 
-    .line 122
     :cond_4
     array-length v8, v7
 
     if-ge v5, v8, :cond_6
 
-    .line 123
     new-array v6, v5, [Ljava/io/File;
 
-    .line 124
     .local v6, "resizedfiles":[Ljava/io/File;
     const/4 v3, 0x0
 
     :goto_3
     if-ge v3, v5, :cond_5
 
-    .line 125
     aget-object v8, v2, v3
 
     aput-object v8, v6, v3
 
-    .line 124
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
@@ -537,7 +503,6 @@
     :cond_5
     move-object v2, v6
 
-    .line 139
     .end local v1    # "extPolicy":Z
     .end local v2    # "files":[Ljava/io/File;
     .end local v5    # "resized":I
@@ -545,7 +510,6 @@
     :cond_6
     return-object v2
 
-    .line 133
     .end local v3    # "i":I
     .end local v7    # "volumes":[Landroid/os/storage/StorageVolume;
     :cond_7
@@ -555,13 +519,11 @@
 
     move-result-object v7
 
-    .line 135
     .restart local v7    # "volumes":[Landroid/os/storage/StorageVolume;
     array-length v8, v7
 
     new-array v2, v8, [Ljava/io/File;
 
-    .line 136
     .restart local v2    # "files":[Ljava/io/File;
     const/4 v3, 0x0
 
@@ -571,7 +533,6 @@
 
     if-ge v3, v8, :cond_6
 
-    .line 137
     aget-object v8, v7, v3
 
     invoke-virtual {v8}, Landroid/os/storage/StorageVolume;->getPathFile()Ljava/io/File;
@@ -580,7 +541,6 @@
 
     aput-object v8, v2, v3
 
-    .line 136
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_4
@@ -592,7 +552,6 @@
     .end annotation
 
     .prologue
-    .line 144
     invoke-virtual {p0}, Landroid/os/Environment$UserEnvironment;->getExternalDirs()[Ljava/io/File;
 
     move-result-object v0
@@ -611,7 +570,6 @@
     .end annotation
 
     .prologue
-    .line 149
     invoke-virtual {p0, p1}, Landroid/os/Environment$UserEnvironment;->buildExternalStoragePublicDirs(Ljava/lang/String;)[Ljava/io/File;
 
     move-result-object v0

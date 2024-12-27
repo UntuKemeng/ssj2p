@@ -28,13 +28,10 @@
     .param p1, "enterpriseProxyServer"    # Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
     .prologue
-    .line 183
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
-    .line 184
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$CacheCleaner;->enterpriseProxyServer:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
-    .line 185
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p3, "expectedAuthenticator"    # Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
 
     .prologue
-    .line 242
     invoke-interface {p1}, Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;->getType()Ljava/lang/String;
 
     move-result-object v0
@@ -60,7 +56,6 @@
 
     if-nez v0, :cond_0
 
-    .line 243
     const-string v0, "CacheCleaner"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,7 +78,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
     # getter for: Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyAuthenticationTypeCache:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->access$000()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -91,7 +85,6 @@
 
     invoke-virtual {v0, p2, p3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 247
     :cond_0
     return-void
 .end method
@@ -104,7 +97,6 @@
     .param p4, "credentials"    # Ljava/lang/String;
 
     .prologue
-    .line 225
     new-instance v0, Ljava/net/Proxy;
 
     sget-object v2, Ljava/net/Proxy$Type;->HTTP:Ljava/net/Proxy$Type;
@@ -143,17 +135,14 @@
 
     invoke-direct {v0, v2, v3}, Ljava/net/Proxy;-><init>(Ljava/net/Proxy$Type;Ljava/net/SocketAddress;)V
 
-    .line 229
     .local v0, "proxy":Ljava/net/Proxy;
     invoke-interface {p3, p4, v0, p1}, Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;->verifyAuthenticationCredentials(Ljava/lang/String;Ljava/net/Proxy;[Ljava/lang/String;)I
 
     move-result v1
 
-    .line 231
     .local v1, "result":I
     if-eqz v1, :cond_0
 
-    .line 232
     const-string v2, "CacheCleaner"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -176,7 +165,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     # getter for: Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyCredentialsCache:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->access$200()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -184,11 +172,9 @@
 
     invoke-virtual {v2, p2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
     :goto_0
     return-void
 
-    .line 236
     :cond_0
     const-string v2, "CacheCleaner"
 
@@ -227,16 +213,13 @@
     .locals 10
 
     .prologue
-    .line 189
     iget-object v7, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$CacheCleaner;->enterpriseProxyServer:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
     if-nez v7, :cond_1
 
-    .line 221
     :cond_0
     return-void
 
-    .line 193
     :cond_1
     const-string v7, "CacheCleaner"
 
@@ -244,7 +227,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     # getter for: Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyAuthenticationTypeCache:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->access$000()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -254,7 +236,6 @@
 
     move-result-object v2
 
-    .line 196
     .local v2, "entries":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;>;>;"
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -275,7 +256,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 199
     .local v0, "authenticationTypeEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;>;"
     const/4 v7, 0x2
 
@@ -293,7 +273,6 @@
 
     aput-object v8, v6, v7
 
-    .line 202
     .local v6, "requestLine":[Ljava/lang/String;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -301,7 +280,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 204
     .local v5, "proxyString":Ljava/lang/String;
     const-string v7, "CacheCleaner"
 
@@ -325,7 +303,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     iget-object v7, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$CacheCleaner;->enterpriseProxyServer:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
     # invokes: Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->getRequiredAuthenticationType(Ljava/lang/String;[Ljava/lang/String;)Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
@@ -333,7 +310,6 @@
 
     move-result-object v3
 
-    .line 208
     .local v3, "expectedAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -343,14 +319,12 @@
 
     invoke-direct {p0, v7, v5, v3}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$CacheCleaner;->updateAuthenticatorCacheIfNeeded(Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;Ljava/lang/String;Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;)V
 
-    .line 210
     invoke-interface {v3}, Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;->isCredentialRequired()Z
 
     move-result v7
 
     if-eqz v7, :cond_3
 
-    .line 211
     # getter for: Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyCredentialsCache:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->access$200()Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -362,16 +336,13 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 212
     .local v1, "credentials":Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    .line 213
     invoke-direct {p0, v6, v5, v3, v1}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$CacheCleaner;->updateCredentialsCacheIfNeeded([Ljava/lang/String;Ljava/lang/String;Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 217
     .end local v1    # "credentials":Ljava/lang/String;
     :cond_3
     const-string v7, "CacheCleaner"
@@ -396,7 +367,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     # getter for: Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyCredentialsCache:Ljava/util/concurrent/ConcurrentHashMap;
     invoke-static {}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->access$200()Ljava/util/concurrent/ConcurrentHashMap;
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 5900
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$9;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     invoke-direct {p0}, Landroid/net/INetworkPolicyListener$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "meteredIfaces"    # [Ljava/lang/String;
 
     .prologue
-    .line 5921
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .param p1, "restrictBackground"    # Z
 
     .prologue
-    .line 5926
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p2, "uidRules"    # I
 
     .prologue
-    .line 5903
     iget-object v3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$9;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     # getter for: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->vpnConfig:Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileConfig;
@@ -87,7 +83,6 @@
 
     check-cast v2, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
 
-    .line 5904
     .local v2, "profileEntry":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     invoke-virtual {v2}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->getVendorUid()I
 
@@ -95,18 +90,15 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 5905
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 5906
     .local v1, "map":Landroid/os/Bundle;
     const-string/jumbo v3, "uid"
 
     invoke-virtual {v1, v3, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 5907
     const-string v3, "KnoxVpnEngineService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -139,10 +131,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5908
     if-nez p2, :cond_2
 
-    .line 5909
     iget-object v3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$9;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     const/16 v4, 0x17
@@ -150,14 +140,12 @@
     # invokes: Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->sendMessageToHandler(ILandroid/os/Bundle;)V
     invoke-static {v3, v4, v1}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;->access$1300(Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;ILandroid/os/Bundle;)V
 
-    .line 5917
     .end local v1    # "map":Landroid/os/Bundle;
     .end local v2    # "profileEntry":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     :cond_1
     :goto_0
     return-void
 
-    .line 5911
     .restart local v1    # "map":Landroid/os/Bundle;
     .restart local v2    # "profileEntry":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;
     :cond_2
@@ -169,7 +157,6 @@
 
     if-ne p2, v3, :cond_0
 
-    .line 5912
     :cond_3
     iget-object v3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService$9;->this$0:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 

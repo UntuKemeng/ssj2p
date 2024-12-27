@@ -20,7 +20,6 @@
 
     const/4 v1, 0x0
 
-    .line 34
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v2
@@ -32,7 +31,6 @@
     :cond_0
     sput-boolean v0, Lcom/samsung/android/multidisplay/common/MultiDisplayFeatures;->SAFE_DEBUG:Z
 
-    .line 35
     sput-boolean v1, Lcom/samsung/android/multidisplay/common/MultiDisplayFeatures;->DEBUG_MULTIDISPLAY:Z
 
     return-void
@@ -42,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

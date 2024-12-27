@@ -45,13 +45,10 @@
     .locals 0
 
     .prologue
-    .line 546
     iput-object p1, p0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
 
-    .line 547
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 548
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 551
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->what:I
@@ -71,28 +67,23 @@
 
     packed-switch v59, :pswitch_data_0
 
-    .line 1004
     :cond_0
     :goto_0
     return-void
 
-    .line 554
     :pswitch_0
     const/16 v47, 0x0
 
-    .line 555
     .local v47, "ret":Z
     move-object/from16 v0, p1
 
     iget v5, v0, Landroid/os/Message;->arg1:I
 
-    .line 556
     .local v5, "adminUID":I
     invoke-static {v5}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 557
     .local v4, "adminId":Ljava/lang/String;
     const/16 v59, 0x1
 
@@ -108,7 +99,6 @@
 
     aput-object v60, v48, v59
 
-    .line 560
     .local v48, "sColumns":[Ljava/lang/String;
     const/16 v59, 0x1
 
@@ -122,7 +112,6 @@
 
     aput-object v4, v49, v59
 
-    .line 566
     .local v49, "sValues":[Ljava/lang/String;
     :try_start_0
     move-object/from16 v0, p0
@@ -152,7 +141,6 @@
 
     move-result v47
 
-    .line 572
     :cond_1
     :goto_1
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
@@ -186,11 +174,9 @@
 
     goto :goto_0
 
-    .line 568
     :catch_0
     move-exception v19
 
-    .line 569
     .local v19, "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$700()Z
@@ -199,7 +185,6 @@
 
     if-eqz v59, :cond_1
 
-    .line 570
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -231,7 +216,6 @@
 
     goto :goto_1
 
-    .line 577
     .end local v4    # "adminId":Ljava/lang/String;
     .end local v5    # "adminUID":I
     .end local v19    # "e":Ljava/lang/Exception;
@@ -250,7 +234,6 @@
 
     goto/16 :goto_0
 
-    .line 581
     :pswitch_2
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -261,14 +244,12 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->arg1:I
 
     move/from16 v55, v0
 
-    .line 583
     .local v55, "userId":I
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -299,14 +280,12 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 584
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v59
 
     if-eqz v59, :cond_2
 
-    .line 585
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -316,13 +295,11 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 587
     :try_start_1
     new-instance v18, Landroid/os/Bundle;
 
     invoke-direct/range {v18 .. v18}, Landroid/os/Bundle;-><init>()V
 
-    .line 588
     .local v18, "data":Landroid/os/Bundle;
     const-string/jumbo v59, "userId"
 
@@ -334,7 +311,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 589
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v59
@@ -353,7 +329,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/sec/enterprise/knox/ucm/core/IUcmService;->notifyChangeToPlugin(Ljava/lang/String;ILandroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 590
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v59
@@ -366,7 +341,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 595
     .end local v18    # "data":Landroid/os/Bundle;
     :cond_2
     :goto_2
@@ -383,7 +357,6 @@
     # invokes: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->performUserCleanup(I)V
     invoke-static {v0, v1}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$900(Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;I)V
 
-    .line 596
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -395,11 +368,9 @@
 
     goto/16 :goto_0
 
-    .line 591
     :catch_1
     move-exception v19
 
-    .line 592
     .restart local v19    # "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -432,7 +403,6 @@
 
     goto :goto_2
 
-    .line 600
     .end local v19    # "e":Ljava/lang/Exception;
     .end local v55    # "userId":I
     :pswitch_3
@@ -445,7 +415,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 602
     :try_start_2
     move-object/from16 v0, p0
 
@@ -458,7 +427,6 @@
 
     move-result-object v52
 
-    .line 603
     .local v52, "ucsAdmins":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     move-object/from16 v0, p0
 
@@ -473,7 +441,6 @@
 
     if-eqz v59, :cond_3
 
-    .line 604
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -491,7 +458,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
-    .line 605
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -509,7 +475,6 @@
 
     if-lez v59, :cond_3
 
-    .line 606
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -552,7 +517,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 612
     .end local v52    # "ucsAdmins":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_3
     :goto_3
@@ -565,7 +529,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 613
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -583,7 +546,6 @@
 
     move-result-object v39
 
-    .line 614
     .local v39, "msg1":Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -604,18 +566,15 @@
 
     goto/16 :goto_0
 
-    .line 609
     .end local v39    # "msg1":Landroid/os/Message;
     :catch_2
     move-exception v19
 
-    .line 610
     .restart local v19    # "e":Ljava/lang/Exception;
     invoke-virtual/range {v19 .. v19}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
 
-    .line 618
     .end local v19    # "e":Ljava/lang/Exception;
     :pswitch_4
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
@@ -627,7 +586,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 620
     :try_start_3
     move-object/from16 v0, p1
 
@@ -643,7 +601,6 @@
 
     move-object v10, v0
 
-    .line 621
     .local v10, "appsUid":[I
     if-eqz v10, :cond_c
 
@@ -653,7 +610,6 @@
 
     if-lez v59, :cond_c
 
-    .line 622
     move-object v11, v10
 
     .local v11, "arr$":[I
@@ -684,7 +640,6 @@
 
     move-result-object v53
 
-    .line 623
     .local v53, "uid":Ljava/lang/Integer;
     invoke-virtual/range {v53 .. v53}, Ljava/lang/Integer;->intValue()I
 
@@ -694,7 +649,6 @@
 
     move-result v55
 
-    .line 624
     .restart local v55    # "userId":I
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -739,7 +693,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 626
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -761,7 +714,6 @@
 
     if-eqz v59, :cond_4
 
-    .line 627
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -771,7 +723,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 628
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -785,7 +736,6 @@
     # invokes: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->notifyAdminUninstall(I)V
     invoke-static/range {v59 .. v60}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$1200(Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;I)V
 
-    .line 629
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -799,7 +749,6 @@
     # invokes: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->performAdminCleanup(I)V
     invoke-static/range {v59 .. v60}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$1300(Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;I)V
 
-    .line 630
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -817,7 +766,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 634
     :cond_4
     move-object/from16 v0, p0
 
@@ -840,7 +788,6 @@
 
     if-eqz v59, :cond_8
 
-    .line 635
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -862,7 +809,6 @@
 
     check-cast v45, Ljava/lang/String;
 
-    .line 636
     .local v45, "pluginPkg":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -907,7 +853,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 637
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -923,7 +868,6 @@
 
     move-result-object v7
 
-    .line 638
     .local v7, "adminUids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz v7, :cond_6
 
@@ -933,7 +877,6 @@
 
     if-lez v59, :cond_6
 
-    .line 639
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v29
@@ -952,7 +895,6 @@
 
     check-cast v6, Ljava/lang/Integer;
 
-    .line 640
     .local v6, "adminUid":Ljava/lang/Integer;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -981,7 +923,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1001,11 +942,9 @@
 
     move-result-object v44
 
-    .line 642
     .local v44, "pkgs":[Ljava/lang/String;
     if-eqz v44, :cond_5
 
-    .line 643
     move-object/from16 v12, v44
 
     .local v12, "arr$":[Ljava/lang/String;
@@ -1026,7 +965,6 @@
 
     aget-object v43, v12, v30
 
-    .line 644
     .local v43, "pkgName":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -1057,7 +995,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 645
     new-instance v41, Landroid/content/Intent;
 
     const-string v59, "com.sec.enterprise.intent.action.UCM_NOTIFY_EVENT"
@@ -1068,7 +1005,6 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 646
     .local v41, "notifyIntent":Landroid/content/Intent;
     move-object/from16 v0, v41
 
@@ -1076,12 +1012,10 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 647
     new-instance v18, Landroid/os/Bundle;
 
     invoke-direct/range {v18 .. v18}, Landroid/os/Bundle;-><init>()V
 
-    .line 648
     .restart local v18    # "data":Landroid/os/Bundle;
     const-string v59, "event_id"
 
@@ -1095,7 +1029,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 649
     const-string/jumbo v59, "package_name"
 
     move-object/from16 v0, v18
@@ -1106,7 +1039,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 650
     move-object/from16 v0, v41
 
     move-object/from16 v1, v18
@@ -1115,7 +1047,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_4
 
-    .line 653
     :try_start_4
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -1126,7 +1057,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 654
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1164,17 +1094,14 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 643
     :goto_6
     add-int/lit8 v30, v30, 0x1
 
     goto/16 :goto_5
 
-    .line 657
     :catch_3
     move-exception v50
 
-    .line 658
     .local v50, "se":Ljava/lang/Exception;
     :try_start_5
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
@@ -1210,7 +1137,6 @@
 
     goto :goto_6
 
-    .line 702
     .end local v6    # "adminUid":Ljava/lang/Integer;
     .end local v7    # "adminUids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v10    # "appsUid":[I
@@ -1228,13 +1154,11 @@
     :catch_4
     move-exception v19
 
-    .line 703
     .restart local v19    # "e":Ljava/lang/Exception;
     invoke-virtual/range {v19 .. v19}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 665
     .end local v19    # "e":Ljava/lang/Exception;
     .restart local v7    # "adminUids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .restart local v10    # "appsUid":[I
@@ -1253,7 +1177,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 667
     .end local v31    # "i$":I
     :cond_7
     move-object/from16 v0, p0
@@ -1273,7 +1196,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 668
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1287,7 +1209,6 @@
     # invokes: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->performStorageCleanup(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$1600(Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;Ljava/lang/String;)V
 
-    .line 672
     .end local v7    # "adminUids":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v45    # "pluginPkg":Ljava/lang/String;
     :cond_8
@@ -1312,7 +1233,6 @@
 
     if-eqz v59, :cond_9
 
-    .line 673
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1334,7 +1254,6 @@
 
     check-cast v42, Ljava/lang/String;
 
-    .line 674
     .local v42, "packageName":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -1379,7 +1298,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 675
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1395,7 +1313,6 @@
     # invokes: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->performWhitelistAppCleanup(ILjava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$1800(Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;ILjava/lang/String;)V
 
-    .line 676
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1413,7 +1330,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 680
     .end local v42    # "packageName":Ljava/lang/String;
     :cond_9
     move-object/from16 v0, p0
@@ -1437,7 +1353,6 @@
 
     if-eqz v59, :cond_a
 
-    .line 681
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1459,7 +1374,6 @@
 
     check-cast v42, Ljava/lang/String;
 
-    .line 682
     .restart local v42    # "packageName":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -1504,7 +1418,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 683
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1520,7 +1433,6 @@
     # invokes: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->performExemptedAppCleanup(ILjava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$2000(Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;ILjava/lang/String;)V
 
-    .line 684
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1538,7 +1450,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 687
     .end local v42    # "packageName":Ljava/lang/String;
     :cond_a
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
@@ -1547,7 +1458,6 @@
 
     if-eqz v59, :cond_b
 
-    .line 688
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -1559,13 +1469,11 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
 
-    .line 690
     :try_start_7
     new-instance v18, Landroid/os/Bundle;
 
     invoke-direct/range {v18 .. v18}, Landroid/os/Bundle;-><init>()V
 
-    .line 691
     .restart local v18    # "data":Landroid/os/Bundle;
     const-string/jumbo v59, "userId"
 
@@ -1577,7 +1485,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 692
     const-string/jumbo v59, "packageUid"
 
     invoke-virtual/range {v53 .. v53}, Ljava/lang/Integer;->intValue()I
@@ -1592,7 +1499,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 693
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v59
@@ -1613,7 +1519,6 @@
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 622
     .end local v18    # "data":Landroid/os/Bundle;
     :cond_b
     :goto_7
@@ -1626,12 +1531,10 @@
     .restart local v31    # "i$":I
     goto/16 :goto_4
 
-    .line 694
     .end local v31    # "i$":I
     :catch_5
     move-exception v19
 
-    .line 695
     .restart local v19    # "e":Ljava/lang/Exception;
     :try_start_8
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
@@ -1665,7 +1568,6 @@
 
     goto :goto_7
 
-    .line 700
     .end local v19    # "e":Ljava/lang/Exception;
     .end local v53    # "uid":Ljava/lang/Integer;
     .end local v55    # "userId":I
@@ -1683,7 +1585,6 @@
 
     goto/16 :goto_0
 
-    .line 708
     .end local v10    # "appsUid":[I
     :pswitch_5
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
@@ -1695,7 +1596,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 710
     :try_start_9
     move-object/from16 v0, p0
 
@@ -1708,7 +1608,6 @@
 
     move-result-object v16
 
-    .line 711
     .local v16, "cvList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     if-eqz v16, :cond_10
 
@@ -1718,14 +1617,11 @@
 
     if-lez v59, :cond_10
 
-    .line 712
     const/16 v42, 0x0
 
-    .line 713
     .restart local v42    # "packageName":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 714
     .local v9, "appUid":I
     invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1746,7 +1642,6 @@
 
     check-cast v58, Landroid/content/ContentValues;
 
-    .line 715
     .local v58, "value":Landroid/content/ContentValues;
     const-string/jumbo v59, "storagePackageName"
 
@@ -1754,7 +1649,6 @@
 
     move-result-object v42
 
-    .line 716
     const-string v59, "appUid"
 
     invoke-virtual/range {v58 .. v59}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1767,7 +1661,6 @@
 
     move-result v9
 
-    .line 718
     const/16 v59, 0x3e8
 
     move/from16 v0, v59
@@ -1776,7 +1669,6 @@
 
     if-eqz v9, :cond_d
 
-    .line 721
     :try_start_a
     move-object/from16 v0, p0
 
@@ -1799,7 +1691,6 @@
 
     if-nez v59, :cond_d
 
-    .line 722
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1823,7 +1714,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 723
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -1869,11 +1759,9 @@
 
     goto :goto_8
 
-    .line 725
     :catch_6
     move-exception v19
 
-    .line 726
     .restart local v19    # "e":Ljava/lang/Exception;
     :try_start_b
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
@@ -1909,7 +1797,6 @@
 
     goto/16 :goto_8
 
-    .line 740
     .end local v9    # "appUid":I
     .end local v16    # "cvList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     .end local v19    # "e":Ljava/lang/Exception;
@@ -1919,7 +1806,6 @@
     :catch_7
     move-exception v19
 
-    .line 741
     .restart local v19    # "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -1950,7 +1836,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 743
     .end local v19    # "e":Ljava/lang/Exception;
     :cond_e
     :goto_9
@@ -1963,7 +1848,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 745
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -1981,7 +1865,6 @@
 
     move-result-object v40
 
-    .line 746
     .local v40, "msg2":Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -2002,7 +1885,6 @@
 
     goto/16 :goto_0
 
-    .line 730
     .end local v40    # "msg2":Landroid/os/Message;
     .restart local v9    # "appUid":I
     .restart local v16    # "cvList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
@@ -2029,7 +1911,6 @@
 
     move-result-object v24
 
-    .line 731
     .local v24, "entries":Ljava/util/Iterator;
     :goto_a
     invoke-interface/range {v24 .. v24}, Ljava/util/Iterator;->hasNext()Z
@@ -2038,14 +1919,12 @@
 
     if-eqz v59, :cond_e
 
-    .line 732
     invoke-interface/range {v24 .. v24}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v27
 
     check-cast v27, Ljava/util/Map$Entry;
 
-    .line 733
     .local v27, "entry":Ljava/util/Map$Entry;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -2053,7 +1932,6 @@
 
     check-cast v34, Ljava/lang/Integer;
 
-    .line 734
     .local v34, "key":Ljava/lang/Integer;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -2061,7 +1939,6 @@
 
     check-cast v58, Ljava/lang/String;
 
-    .line 735
     .local v58, "value":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -2108,7 +1985,6 @@
 
     goto :goto_a
 
-    .line 738
     .end local v9    # "appUid":I
     .end local v24    # "entries":Ljava/util/Iterator;
     .end local v27    # "entry":Ljava/util/Map$Entry;
@@ -2130,7 +2006,6 @@
 
     goto/16 :goto_9
 
-    .line 751
     .end local v16    # "cvList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     :pswitch_6
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
@@ -2142,7 +2017,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 753
     :try_start_d
     move-object/from16 v0, p0
 
@@ -2155,7 +2029,6 @@
 
     move-result-object v16
 
-    .line 754
     .restart local v16    # "cvList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     if-eqz v16, :cond_14
 
@@ -2165,7 +2038,6 @@
 
     if-lez v59, :cond_14
 
-    .line 755
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -2195,14 +2067,11 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 756
     const/16 v42, 0x0
 
-    .line 757
     .restart local v42    # "packageName":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 758
     .restart local v9    # "appUid":I
     invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2223,7 +2092,6 @@
 
     check-cast v58, Landroid/content/ContentValues;
 
-    .line 759
     .local v58, "value":Landroid/content/ContentValues;
     const-string v59, "appPackage"
 
@@ -2231,7 +2099,6 @@
 
     move-result-object v42
 
-    .line 760
     const-string v59, "appUid"
 
     invoke-virtual/range {v58 .. v59}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -2244,7 +2111,6 @@
 
     move-result v9
 
-    .line 762
     :try_start_e
     const-string v59, "*"
 
@@ -2258,7 +2124,6 @@
 
     if-nez v59, :cond_11
 
-    .line 765
     const/16 v59, 0x3e8
 
     move/from16 v0, v59
@@ -2267,7 +2132,6 @@
 
     if-eqz v9, :cond_11
 
-    .line 768
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -2289,7 +2153,6 @@
 
     if-nez v59, :cond_11
 
-    .line 769
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -2313,7 +2176,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 770
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -2359,11 +2221,9 @@
 
     goto/16 :goto_b
 
-    .line 772
     :catch_8
     move-exception v19
 
-    .line 773
     .restart local v19    # "e":Ljava/lang/Exception;
     :try_start_f
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
@@ -2399,7 +2259,6 @@
 
     goto/16 :goto_b
 
-    .line 822
     .end local v9    # "appUid":I
     .end local v16    # "cvList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     .end local v19    # "e":Ljava/lang/Exception;
@@ -2409,7 +2268,6 @@
     :catch_9
     move-exception v19
 
-    .line 823
     .restart local v19    # "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -2440,7 +2298,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 825
     .end local v19    # "e":Ljava/lang/Exception;
     :cond_12
     :goto_c
@@ -2455,7 +2312,6 @@
 
     goto/16 :goto_0
 
-    .line 777
     .restart local v9    # "appUid":I
     .restart local v16    # "cvList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     .restart local v29    # "i$":Ljava/util/Iterator;
@@ -2481,7 +2337,6 @@
 
     move-result-object v24
 
-    .line 778
     .restart local v24    # "entries":Ljava/util/Iterator;
     :goto_d
     invoke-interface/range {v24 .. v24}, Ljava/util/Iterator;->hasNext()Z
@@ -2490,14 +2345,12 @@
 
     if-eqz v59, :cond_15
 
-    .line 779
     invoke-interface/range {v24 .. v24}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v27
 
     check-cast v27, Ljava/util/Map$Entry;
 
-    .line 780
     .restart local v27    # "entry":Ljava/util/Map$Entry;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -2505,7 +2358,6 @@
 
     check-cast v34, Ljava/lang/Integer;
 
-    .line 781
     .restart local v34    # "key":Ljava/lang/Integer;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -2513,7 +2365,6 @@
 
     check-cast v58, Ljava/lang/String;
 
-    .line 782
     .local v58, "value":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -2560,7 +2411,6 @@
 
     goto :goto_d
 
-    .line 785
     .end local v9    # "appUid":I
     .end local v24    # "entries":Ljava/util/Iterator;
     .end local v27    # "entry":Ljava/util/Map$Entry;
@@ -2578,7 +2428,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 788
     :cond_15
     move-object/from16 v0, p0
 
@@ -2591,7 +2440,6 @@
 
     move-result-object v17
 
-    .line 789
     .local v17, "cvList1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     if-eqz v17, :cond_18
 
@@ -2601,7 +2449,6 @@
 
     if-lez v59, :cond_18
 
-    .line 790
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -2631,14 +2478,11 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 791
     const/16 v42, 0x0
 
-    .line 792
     .restart local v42    # "packageName":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 793
     .restart local v9    # "appUid":I
     invoke-virtual/range {v17 .. v17}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -2659,7 +2503,6 @@
 
     check-cast v58, Landroid/content/ContentValues;
 
-    .line 794
     .local v58, "value":Landroid/content/ContentValues;
     const-string v59, "appPackage"
 
@@ -2667,7 +2510,6 @@
 
     move-result-object v42
 
-    .line 795
     const-string v59, "appUid"
 
     invoke-virtual/range {v58 .. v59}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -2680,7 +2522,6 @@
 
     move-result v9
 
-    .line 797
     :try_start_11
     const-string v59, "com.samsung.knox.virtual.wifi"
 
@@ -2694,7 +2535,6 @@
 
     if-nez v59, :cond_16
 
-    .line 800
     const/16 v59, 0x3e8
 
     move/from16 v0, v59
@@ -2703,7 +2543,6 @@
 
     if-eqz v9, :cond_16
 
-    .line 803
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -2725,7 +2564,6 @@
 
     if-nez v59, :cond_16
 
-    .line 804
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -2749,7 +2587,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 805
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -2795,11 +2632,9 @@
 
     goto/16 :goto_e
 
-    .line 807
     :catch_a
     move-exception v19
 
-    .line 808
     .restart local v19    # "e":Ljava/lang/Exception;
     :try_start_12
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
@@ -2833,7 +2668,6 @@
 
     goto/16 :goto_e
 
-    .line 812
     .end local v19    # "e":Ljava/lang/Exception;
     .end local v58    # "value":Landroid/content/ContentValues;
     :cond_17
@@ -2856,7 +2690,6 @@
 
     move-result-object v24
 
-    .line 813
     .restart local v24    # "entries":Ljava/util/Iterator;
     :goto_f
     invoke-interface/range {v24 .. v24}, Ljava/util/Iterator;->hasNext()Z
@@ -2865,14 +2698,12 @@
 
     if-eqz v59, :cond_12
 
-    .line 814
     invoke-interface/range {v24 .. v24}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v27
 
     check-cast v27, Ljava/util/Map$Entry;
 
-    .line 815
     .restart local v27    # "entry":Ljava/util/Map$Entry;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -2880,7 +2711,6 @@
 
     check-cast v34, Ljava/lang/Integer;
 
-    .line 816
     .restart local v34    # "key":Ljava/lang/Integer;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -2888,7 +2718,6 @@
 
     check-cast v58, Ljava/lang/String;
 
-    .line 817
     .local v58, "value":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -2935,7 +2764,6 @@
 
     goto :goto_f
 
-    .line 820
     .end local v9    # "appUid":I
     .end local v24    # "entries":Ljava/util/Iterator;
     .end local v27    # "entry":Ljava/util/Map$Entry;
@@ -2957,7 +2785,6 @@
 
     goto/16 :goto_c
 
-    .line 829
     .end local v16    # "cvList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     .end local v17    # "cvList1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ContentValues;>;"
     :pswitch_7
@@ -2970,13 +2797,11 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 831
     :try_start_13
     new-instance v18, Landroid/os/Bundle;
 
     invoke-direct/range {v18 .. v18}, Landroid/os/Bundle;-><init>()V
 
-    .line 832
     .restart local v18    # "data":Landroid/os/Bundle;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
@@ -2996,7 +2821,6 @@
 
     invoke-interface {v0, v1, v2, v3}, Lcom/sec/enterprise/knox/ucm/core/IUcmService;->notifyChangeToPlugin(Ljava/lang/String;ILandroid/os/Bundle;)Landroid/os/Bundle;
 
-    .line 833
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -3008,7 +2832,6 @@
 
     move-result-object v8
 
-    .line 834
     .local v8, "allUsers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz v8, :cond_1a
 
@@ -3018,7 +2841,6 @@
 
     if-lez v59, :cond_1a
 
-    .line 835
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -3038,13 +2860,11 @@
 
     check-cast v38, Landroid/os/UserManager;
 
-    .line 836
     .local v38, "mUm":Landroid/os/UserManager;
     invoke-virtual/range {v38 .. v38}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v57
 
-    .line 837
     .local v57, "userInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface/range {v57 .. v57}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3065,7 +2885,6 @@
 
     check-cast v56, Landroid/content/pm/UserInfo;
 
-    .line 838
     .local v56, "userInfo":Landroid/content/pm/UserInfo;
     move-object/from16 v0, v56
 
@@ -3073,7 +2892,6 @@
 
     move/from16 v55, v0
 
-    .line 839
     .restart local v55    # "userId":I
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -3104,7 +2922,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 840
     invoke-static/range {v55 .. v55}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v59
@@ -3117,7 +2934,6 @@
 
     if-eqz v59, :cond_19
 
-    .line 841
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -3147,7 +2963,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 842
     invoke-static/range {v55 .. v55}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v59
@@ -3160,7 +2975,6 @@
 
     goto :goto_10
 
-    .line 852
     .end local v8    # "allUsers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v18    # "data":Landroid/os/Bundle;
     .end local v29    # "i$":Ljava/util/Iterator;
@@ -3171,7 +2985,6 @@
     :catch_b
     move-exception v19
 
-    .line 853
     .restart local v19    # "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -3202,20 +3015,17 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 856
     .end local v19    # "e":Ljava/lang/Exception;
     :cond_1a
     new-instance v54, Ljava/util/ArrayList;
 
     invoke-direct/range {v54 .. v54}, Ljava/util/ArrayList;-><init>()V
 
-    .line 857
     .local v54, "uninstalledAppUid":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v46
 
-    .line 859
     .local v46, "pm":Landroid/content/pm/IPackageManager;
     :try_start_14
     move-object/from16 v0, p0
@@ -3248,7 +3058,6 @@
 
     check-cast v4, Ljava/lang/Integer;
 
-    .line 860
     .local v4, "adminId":Ljava/lang/Integer;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -3277,7 +3086,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 861
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -3297,11 +3105,9 @@
 
     move-result-object v44
 
-    .line 862
     .restart local v44    # "pkgs":[Ljava/lang/String;
     if-nez v44, :cond_24
 
-    .line 863
     move-object/from16 v0, v54
 
     invoke-interface {v0, v4}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -3310,7 +3116,6 @@
 
     if-nez v59, :cond_1b
 
-    .line 864
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -3338,7 +3143,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 865
     move-object/from16 v0, v54
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -3347,14 +3151,12 @@
 
     goto :goto_11
 
-    .line 878
     .end local v4    # "adminId":Ljava/lang/Integer;
     .end local v29    # "i$":Ljava/util/Iterator;
     .end local v44    # "pkgs":[Ljava/lang/String;
     :catch_c
     move-exception v20
 
-    .line 879
     .local v20, "e1":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -3385,7 +3187,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 883
     .end local v20    # "e1":Ljava/lang/Exception;
     :cond_1c
     :try_start_15
@@ -3408,7 +3209,6 @@
 
     move-result-object v24
 
-    .line 884
     .restart local v24    # "entries":Ljava/util/Iterator;
     :cond_1d
     :goto_12
@@ -3418,14 +3218,12 @@
 
     if-eqz v59, :cond_1e
 
-    .line 885
     invoke-interface/range {v24 .. v24}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v27
 
     check-cast v27, Ljava/util/Map$Entry;
 
-    .line 886
     .restart local v27    # "entry":Ljava/util/Map$Entry;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -3433,7 +3231,6 @@
 
     check-cast v34, Ljava/lang/Integer;
 
-    .line 887
     .restart local v34    # "key":Ljava/lang/Integer;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -3441,7 +3238,6 @@
 
     check-cast v58, Ljava/lang/String;
 
-    .line 888
     .restart local v58    # "value":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -3472,7 +3268,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 889
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -3502,7 +3297,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 890
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -3522,11 +3316,9 @@
 
     move-result-object v44
 
-    .line 891
     .restart local v44    # "pkgs":[Ljava/lang/String;
     if-nez v44, :cond_27
 
-    .line 892
     move-object/from16 v0, v54
 
     move-object/from16 v1, v34
@@ -3537,7 +3329,6 @@
 
     if-nez v59, :cond_1d
 
-    .line 893
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -3567,7 +3358,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 894
     move-object/from16 v0, v54
 
     move-object/from16 v1, v34
@@ -3578,7 +3368,6 @@
 
     goto/16 :goto_12
 
-    .line 905
     .end local v24    # "entries":Ljava/util/Iterator;
     .end local v27    # "entry":Ljava/util/Map$Entry;
     .end local v34    # "key":Ljava/lang/Integer;
@@ -3587,7 +3376,6 @@
     :catch_d
     move-exception v21
 
-    .line 906
     .local v21, "e2":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -3618,7 +3406,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 910
     .end local v21    # "e2":Ljava/lang/Exception;
     :cond_1e
     :try_start_16
@@ -3641,7 +3428,6 @@
 
     move-result-object v25
 
-    .line 911
     .local v25, "entries1":Ljava/util/Iterator;
     :cond_1f
     :goto_13
@@ -3651,14 +3437,12 @@
 
     if-eqz v59, :cond_20
 
-    .line 912
     invoke-interface/range {v25 .. v25}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v27
 
     check-cast v27, Ljava/util/Map$Entry;
 
-    .line 913
     .restart local v27    # "entry":Ljava/util/Map$Entry;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -3666,7 +3450,6 @@
 
     check-cast v34, Ljava/lang/Integer;
 
-    .line 914
     .restart local v34    # "key":Ljava/lang/Integer;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -3697,7 +3480,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 915
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -3717,11 +3499,9 @@
 
     move-result-object v44
 
-    .line 916
     .restart local v44    # "pkgs":[Ljava/lang/String;
     if-nez v44, :cond_1f
 
-    .line 917
     move-object/from16 v0, v54
 
     move-object/from16 v1, v34
@@ -3732,7 +3512,6 @@
 
     if-nez v59, :cond_1f
 
-    .line 918
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -3762,7 +3541,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 919
     move-object/from16 v0, v54
 
     move-object/from16 v1, v34
@@ -3773,7 +3551,6 @@
 
     goto :goto_13
 
-    .line 923
     .end local v25    # "entries1":Ljava/util/Iterator;
     .end local v27    # "entry":Ljava/util/Map$Entry;
     .end local v34    # "key":Ljava/lang/Integer;
@@ -3781,7 +3558,6 @@
     :catch_e
     move-exception v22
 
-    .line 924
     .local v22, "e3":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -3812,7 +3588,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 928
     .end local v22    # "e3":Ljava/lang/Exception;
     :cond_20
     :try_start_17
@@ -3835,7 +3610,6 @@
 
     move-result-object v26
 
-    .line 929
     .local v26, "entries2":Ljava/util/Iterator;
     :cond_21
     :goto_14
@@ -3845,14 +3619,12 @@
 
     if-eqz v59, :cond_22
 
-    .line 930
     invoke-interface/range {v26 .. v26}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v27
 
     check-cast v27, Ljava/util/Map$Entry;
 
-    .line 931
     .restart local v27    # "entry":Ljava/util/Map$Entry;
     invoke-interface/range {v27 .. v27}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -3860,7 +3632,6 @@
 
     check-cast v34, Ljava/lang/Integer;
 
-    .line 932
     .restart local v34    # "key":Ljava/lang/Integer;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -3891,7 +3662,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 933
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -3911,11 +3681,9 @@
 
     move-result-object v44
 
-    .line 934
     .restart local v44    # "pkgs":[Ljava/lang/String;
     if-nez v44, :cond_21
 
-    .line 935
     move-object/from16 v0, v54
 
     move-object/from16 v1, v34
@@ -3926,7 +3694,6 @@
 
     if-nez v59, :cond_21
 
-    .line 936
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -3956,7 +3723,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 937
     move-object/from16 v0, v54
 
     move-object/from16 v1, v34
@@ -3967,7 +3733,6 @@
 
     goto :goto_14
 
-    .line 941
     .end local v26    # "entries2":Ljava/util/Iterator;
     .end local v27    # "entry":Ljava/util/Map$Entry;
     .end local v34    # "key":Ljava/lang/Integer;
@@ -3975,7 +3740,6 @@
     :catch_f
     move-exception v23
 
-    .line 942
     .local v23, "e4":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -4006,7 +3770,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 945
     .end local v23    # "e4":Ljava/lang/Exception;
     :cond_22
     invoke-interface/range {v54 .. v54}, Ljava/util/List;->size()I
@@ -4015,7 +3778,6 @@
 
     if-lez v59, :cond_2a
 
-    .line 946
     invoke-interface/range {v54 .. v54}, Ljava/util/List;->size()I
 
     move-result v59
@@ -4024,11 +3786,9 @@
 
     new-array v14, v0, [I
 
-    .line 947
     .local v14, "cleanUids":[I
     const/16 v28, 0x0
 
-    .line 948
     .local v28, "i":I
     invoke-interface/range {v54 .. v54}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4048,7 +3808,6 @@
 
     check-cast v32, Ljava/lang/Integer;
 
-    .line 949
     .local v32, "id":Ljava/lang/Integer;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -4079,20 +3838,16 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 950
     invoke-virtual/range {v32 .. v32}, Ljava/lang/Integer;->intValue()I
 
     move-result v59
 
     aput v59, v14, v28
 
-    .line 951
     add-int/lit8 v28, v28, 0x1
 
-    .line 952
     goto :goto_15
 
-    .line 845
     .end local v14    # "cleanUids":[I
     .end local v28    # "i":I
     .end local v32    # "id":Ljava/lang/Integer;
@@ -4121,7 +3876,6 @@
 
     check-cast v55, Ljava/lang/Integer;
 
-    .line 846
     .local v55, "userId":Ljava/lang/Integer;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -4152,7 +3906,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 847
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -4170,7 +3923,6 @@
 
     move-result-object v13
 
-    .line 848
     .local v13, "cleanMsg":Landroid/os/Message;
     invoke-virtual/range {v55 .. v55}, Ljava/lang/Integer;->intValue()I
 
@@ -4180,7 +3932,6 @@
 
     iput v0, v13, Landroid/os/Message;->arg1:I
 
-    .line 849
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -4200,7 +3951,6 @@
 
     goto :goto_16
 
-    .line 869
     .end local v8    # "allUsers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v13    # "cleanMsg":Landroid/os/Message;
     .end local v18    # "data":Landroid/os/Bundle;
@@ -4249,7 +3999,6 @@
 
     if-nez v59, :cond_26
 
-    .line 871
     :cond_25
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -4262,7 +4011,6 @@
 
     goto/16 :goto_11
 
-    .line 873
     :cond_26
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -4273,7 +4021,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 874
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -4291,7 +4038,6 @@
 
     goto/16 :goto_11
 
-    .line 897
     .end local v4    # "adminId":Ljava/lang/Integer;
     .end local v29    # "i$":Ljava/util/Iterator;
     .restart local v24    # "entries":Ljava/util/Iterator;
@@ -4318,7 +4064,6 @@
 
     if-nez v59, :cond_28
 
-    .line 898
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -4330,7 +4075,6 @@
 
     goto/16 :goto_12
 
-    .line 900
     :cond_28
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -4341,7 +4085,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 901
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -4362,7 +4105,6 @@
 
     goto/16 :goto_12
 
-    .line 954
     .end local v24    # "entries":Ljava/util/Iterator;
     .end local v27    # "entry":Ljava/util/Map$Entry;
     .end local v34    # "key":Ljava/lang/Integer;
@@ -4389,11 +4131,9 @@
 
     move-result-object v13
 
-    .line 955
     .restart local v13    # "cleanMsg":Landroid/os/Message;
     iput-object v14, v13, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 956
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -4403,7 +4143,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 957
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -4419,7 +4158,6 @@
 
     invoke-virtual {v0, v13}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 960
     .end local v13    # "cleanMsg":Landroid/os/Message;
     .end local v14    # "cleanUids":[I
     .end local v28    # "i":I
@@ -4436,7 +4174,6 @@
 
     goto/16 :goto_0
 
-    .line 964
     .end local v46    # "pm":Landroid/content/pm/IPackageManager;
     .end local v54    # "uninstalledAppUid":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :pswitch_8
@@ -4449,14 +4186,12 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 965
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v59
 
     if-eqz v59, :cond_2b
 
-    .line 966
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
 
@@ -4466,7 +4201,6 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 968
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService$UCSMHandler;->this$0:Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;
@@ -4486,20 +4220,17 @@
 
     check-cast v35, Landroid/app/KeyguardManager;
 
-    .line 969
     .local v35, "km":Landroid/app/KeyguardManager;
     invoke-virtual/range {v35 .. v35}, Landroid/app/KeyguardManager;->isKeyguardLocked()Z
 
     move-result v33
 
-    .line 971
     .local v33, "isLocked":Z
     :try_start_1b
     new-instance v18, Landroid/os/Bundle;
 
     invoke-direct/range {v18 .. v18}, Landroid/os/Bundle;-><init>()V
 
-    .line 972
     .restart local v18    # "data":Landroid/os/Bundle;
     const-string/jumbo v59, "userId"
 
@@ -4513,10 +4244,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 973
     if-eqz v33, :cond_2c
 
-    .line 974
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v59
@@ -4537,7 +4266,6 @@
     :try_end_1b
     .catch Ljava/lang/Exception; {:try_start_1b .. :try_end_1b} :catch_10
 
-    .line 981
     .end local v18    # "data":Landroid/os/Bundle;
     .end local v33    # "isLocked":Z
     .end local v35    # "km":Landroid/app/KeyguardManager;
@@ -4554,7 +4282,6 @@
 
     goto/16 :goto_0
 
-    .line 976
     .restart local v18    # "data":Landroid/os/Bundle;
     .restart local v33    # "isLocked":Z
     .restart local v35    # "km":Landroid/app/KeyguardManager;
@@ -4582,12 +4309,10 @@
 
     goto :goto_17
 
-    .line 977
     .end local v18    # "data":Landroid/os/Bundle;
     :catch_10
     move-exception v19
 
-    .line 978
     .restart local v19    # "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -4620,7 +4345,6 @@
 
     goto :goto_17
 
-    .line 985
     .end local v19    # "e":Ljava/lang/Exception;
     .end local v33    # "isLocked":Z
     .end local v35    # "km":Landroid/app/KeyguardManager;
@@ -4631,12 +4355,10 @@
 
     if-eqz v59, :cond_0
 
-    .line 986
     move-object/from16 v0, p1
 
     iget v15, v0, Landroid/os/Message;->arg1:I
 
-    .line 987
     .local v15, "containerId":I
     move-object/from16 v0, p1
 
@@ -4644,7 +4366,6 @@
 
     move/from16 v51, v0
 
-    .line 988
     .local v51, "status":I
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -4687,13 +4408,11 @@
 
     invoke-static/range {v59 .. v60}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 990
     :try_start_1d
     new-instance v18, Landroid/os/Bundle;
 
     invoke-direct/range {v18 .. v18}, Landroid/os/Bundle;-><init>()V
 
-    .line 991
     .restart local v18    # "data":Landroid/os/Bundle;
     const-string/jumbo v59, "userId"
 
@@ -4703,7 +4422,6 @@
 
     invoke-virtual {v0, v1, v15}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 992
     const/16 v59, 0x1
 
     move/from16 v0, v51
@@ -4712,7 +4430,6 @@
 
     if-eq v0, v1, :cond_2d
 
-    .line 993
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v59
@@ -4735,12 +4452,10 @@
 
     goto/16 :goto_0
 
-    .line 997
     .end local v18    # "data":Landroid/os/Bundle;
     :catch_11
     move-exception v19
 
-    .line 998
     .restart local v19    # "e":Ljava/lang/Exception;
     # getter for: Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ucm/UniversalCredentialManagerService;->access$000()Ljava/lang/String;
@@ -4773,7 +4488,6 @@
 
     goto/16 :goto_0
 
-    .line 995
     .end local v19    # "e":Ljava/lang/Exception;
     .restart local v18    # "data":Landroid/os/Bundle;
     :cond_2d
@@ -4800,7 +4514,6 @@
 
     goto/16 :goto_0
 
-    .line 551
     nop
 
     :pswitch_data_0

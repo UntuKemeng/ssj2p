@@ -29,20 +29,16 @@
     .param p6, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 764
     iput-object p1, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
-    .line 765
     invoke-direct/range {p0 .. p6}, Landroid/os/CustomFrequencyManager$FrequencyRequest;-><init>(Landroid/os/CustomFrequencyManager;IIJLjava/lang/String;)V
 
-    .line 758
     new-instance v0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest$1;
 
     invoke-direct {v0, p0}, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest$1;-><init>(Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;)V
 
     iput-object v0, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->mPCIePSMDisableReleaser:Ljava/lang/Runnable;
 
-    .line 766
     return-void
 .end method
 
@@ -52,12 +48,10 @@
     .locals 5
 
     .prologue
-    .line 784
     iget-object v2, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->mToken:Landroid/os/IBinder;
 
     monitor-enter v2
 
-    .line 786
     :try_start_0
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
@@ -67,7 +61,6 @@
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 787
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     iget-object v1, v1, Landroid/os/CustomFrequencyManager;->mService:Landroid/os/ICustomFrequencyManager;
@@ -81,26 +74,21 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 791
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 792
     return-void
 
-    .line 788
     :catch_0
     move-exception v0
 
-    .line 789
     .local v0, "e":Ljava/lang/Exception;
     # invokes: Landroid/os/CustomFrequencyManager;->printExceptionTrace(Ljava/lang/Exception;)V
     invoke-static {v0}, Landroid/os/CustomFrequencyManager;->access$100(Ljava/lang/Exception;)V
 
     goto :goto_0
 
-    .line 791
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -116,7 +104,6 @@
     .locals 8
 
     .prologue
-    .line 769
     const-string v1, "CustomFrequencyManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -154,12 +141,10 @@
     # invokes: Landroid/os/CustomFrequencyManager;->logOnEng(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2}, Landroid/os/CustomFrequencyManager;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 771
     iget-object v2, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->mToken:Landroid/os/IBinder;
 
     monitor-enter v2
 
-    .line 773
     :try_start_0
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
@@ -171,7 +156,6 @@
 
     invoke-interface {v1, v3, v4}, Landroid/os/ICustomFrequencyManager;->enablePCIePSMDisable(Landroid/os/IBinder;Ljava/lang/String;)V
 
-    .line 774
     iget-wide v4, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->mTimeoutMs:J
 
     const-wide/16 v6, -0x1
@@ -180,7 +164,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 775
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$PCIePSMDisableRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     iget-object v1, v1, Landroid/os/CustomFrequencyManager;->mHandler:Landroid/os/Handler;
@@ -194,27 +177,22 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 780
     :cond_0
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 781
     return-void
 
-    .line 777
     :catch_0
     move-exception v0
 
-    .line 778
     .local v0, "e":Ljava/lang/Exception;
     # invokes: Landroid/os/CustomFrequencyManager;->printExceptionTrace(Ljava/lang/Exception;)V
     invoke-static {v0}, Landroid/os/CustomFrequencyManager;->access$100(Ljava/lang/Exception;)V
 
     goto :goto_0
 
-    .line 780
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1

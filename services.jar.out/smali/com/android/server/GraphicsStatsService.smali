@@ -52,46 +52,38 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 76
     invoke-direct {p0}, Landroid/view/IGraphicsStats$Stub;-><init>()V
 
-    .line 70
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/GraphicsStatsService;->mLock:Ljava/lang/Object;
 
-    .line 71
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/GraphicsStatsService;->mActive:Ljava/util/ArrayList;
 
-    .line 72
     const/16 v0, 0x14
 
     new-array v0, v0, [Lcom/android/server/GraphicsStatsService$HistoricalData;
 
     iput-object v0, p0, Lcom/android/server/GraphicsStatsService;->mHistoricalLog:[Lcom/android/server/GraphicsStatsService$HistoricalData;
 
-    .line 73
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/GraphicsStatsService;->mNextHistoricalSlot:I
 
-    .line 74
     const/16 v0, 0x100
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/server/GraphicsStatsService;->mTempBuffer:[B
 
-    .line 77
     iput-object p1, p0, Lcom/android/server/GraphicsStatsService;->mContext:Landroid/content/Context;
 
-    .line 78
     return-void
 .end method
 
@@ -102,7 +94,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 62
     invoke-direct {p0, p1, p2}, Lcom/android/server/GraphicsStatsService;->removeHistoricalDataLocked(ILjava/lang/String;)Lcom/android/server/GraphicsStatsService$HistoricalData;
 
     move-result-object v0
@@ -116,7 +107,6 @@
     .param p1, "x1"    # Lcom/android/server/GraphicsStatsService$ActiveBuffer;
 
     .prologue
-    .line 62
     invoke-direct {p0, p1}, Lcom/android/server/GraphicsStatsService;->processDied(Lcom/android/server/GraphicsStatsService$ActiveBuffer;)V
 
     return-void
@@ -135,14 +125,12 @@
     .end annotation
 
     .prologue
-    .line 148
     iget-object v1, p0, Lcom/android/server/GraphicsStatsService;->mActive:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v8
 
-    .line 149
     .local v8, "size":I
     const/4 v7, 0x0
 
@@ -150,7 +138,6 @@
     :goto_0
     if-ge v7, v8, :cond_1
 
-    .line 150
     iget-object v1, p0, Lcom/android/server/GraphicsStatsService;->mActive:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -159,7 +146,6 @@
 
     check-cast v0, Lcom/android/server/GraphicsStatsService$ActiveBuffer;
 
-    .line 151
     .local v0, "buffers":Lcom/android/server/GraphicsStatsService$ActiveBuffer;
     iget v1, v0, Lcom/android/server/GraphicsStatsService$ActiveBuffer;->mPid:I
 
@@ -169,17 +155,14 @@
 
     if-ne v1, p2, :cond_0
 
-    .line 160
     :goto_1
     return-object v0
 
-    .line 149
     :cond_0
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 158
     .end local v0    # "buffers":Lcom/android/server/GraphicsStatsService$ActiveBuffer;
     :cond_1
     :try_start_0
@@ -197,7 +180,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/GraphicsStatsService$ActiveBuffer;-><init>(Lcom/android/server/GraphicsStatsService;Landroid/os/IBinder;IILjava/lang/String;)V
 
-    .line 159
     .restart local v0    # "buffers":Lcom/android/server/GraphicsStatsService$ActiveBuffer;
     iget-object v1, p0, Lcom/android/server/GraphicsStatsService;->mActive:Ljava/util/ArrayList;
 
@@ -207,12 +189,10 @@
 
     goto :goto_1
 
-    .line 161
     .end local v0    # "buffers":Lcom/android/server/GraphicsStatsService$ActiveBuffer;
     :catch_0
     move-exception v6
 
-    .line 162
     .local v6, "ex":Ljava/io/IOException;
     new-instance v1, Landroid/os/RemoteException;
 
@@ -228,7 +208,6 @@
     .param p1, "file"    # Landroid/os/MemoryFile;
 
     .prologue
-    .line 114
     :try_start_0
     new-instance v1, Landroid/os/ParcelFileDescriptor;
 
@@ -242,11 +221,9 @@
 
     return-object v1
 
-    .line 115
     :catch_0
     move-exception v0
 
-    .line 116
     .local v0, "ex":Ljava/io/IOException;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -265,7 +242,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 82
     :try_start_0
     iget-object v2, p0, Lcom/android/server/GraphicsStatsService;->mContext:Landroid/content/Context;
 
@@ -279,7 +255,6 @@
 
     move-result-object v0
 
-    .line 85
     .local v0, "info":Landroid/content/pm/PackageInfo;
     iget-object v2, v0, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -295,13 +270,11 @@
 
     const/4 v1, 0x1
 
-    .line 89
     .end local v0    # "info":Landroid/content/pm/PackageInfo;
     :cond_0
     :goto_0
     return v1
 
-    .line 87
     :catch_0
     move-exception v2
 
@@ -315,18 +288,15 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 127
     iget-object v2, p0, Lcom/android/server/GraphicsStatsService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 128
     :try_start_0
     iget-object v1, p0, Lcom/android/server/GraphicsStatsService;->mActive:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 129
     const-string v1, "GraphicsStats"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -355,38 +325,30 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 131
     iget-object v0, p1, Lcom/android/server/GraphicsStatsService$ActiveBuffer;->mPreviousData:Lcom/android/server/GraphicsStatsService$HistoricalData;
 
-    .line 132
     .local v0, "data":Lcom/android/server/GraphicsStatsService$HistoricalData;
     iput-object v5, p1, Lcom/android/server/GraphicsStatsService$ActiveBuffer;->mPreviousData:Lcom/android/server/GraphicsStatsService$HistoricalData;
 
-    .line 133
     if-nez v0, :cond_0
 
-    .line 134
     iget-object v1, p0, Lcom/android/server/GraphicsStatsService;->mHistoricalLog:[Lcom/android/server/GraphicsStatsService$HistoricalData;
 
     iget v2, p0, Lcom/android/server/GraphicsStatsService;->mNextHistoricalSlot:I
 
     aget-object v0, v1, v2
 
-    .line 135
     if-nez v0, :cond_0
 
-    .line 136
     new-instance v0, Lcom/android/server/GraphicsStatsService$HistoricalData;
 
     .end local v0    # "data":Lcom/android/server/GraphicsStatsService$HistoricalData;
     invoke-direct {v0, v5}, Lcom/android/server/GraphicsStatsService$HistoricalData;-><init>(Lcom/android/server/GraphicsStatsService$1;)V
 
-    .line 139
     .restart local v0    # "data":Lcom/android/server/GraphicsStatsService$HistoricalData;
     :cond_0
     iget-object v1, p1, Lcom/android/server/GraphicsStatsService$ActiveBuffer;->mPackageName:Ljava/lang/String;
@@ -397,17 +359,14 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/GraphicsStatsService$HistoricalData;->update(Ljava/lang/String;ILandroid/os/MemoryFile;)V
 
-    .line 140
     invoke-virtual {p1}, Lcom/android/server/GraphicsStatsService$ActiveBuffer;->closeAllBuffers()V
 
-    .line 142
     iget-object v1, p0, Lcom/android/server/GraphicsStatsService;->mHistoricalLog:[Lcom/android/server/GraphicsStatsService$HistoricalData;
 
     iget v2, p0, Lcom/android/server/GraphicsStatsService;->mNextHistoricalSlot:I
 
     aput-object v0, v1, v2
 
-    .line 143
     iget v1, p0, Lcom/android/server/GraphicsStatsService;->mNextHistoricalSlot:I
 
     add-int/lit8 v1, v1, 0x1
@@ -420,10 +379,8 @@
 
     iput v1, p0, Lcom/android/server/GraphicsStatsService;->mNextHistoricalSlot:I
 
-    .line 144
     return-void
 
-    .line 130
     .end local v0    # "data":Lcom/android/server/GraphicsStatsService$HistoricalData;
     :catchall_0
     move-exception v1
@@ -444,7 +401,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 167
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -455,12 +411,10 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 168
     iget-object v3, p0, Lcom/android/server/GraphicsStatsService;->mHistoricalLog:[Lcom/android/server/GraphicsStatsService$HistoricalData;
 
     aget-object v0, v3, v1
 
-    .line 169
     .local v0, "data":Lcom/android/server/GraphicsStatsService$HistoricalData;
     if-eqz v0, :cond_1
 
@@ -476,22 +430,18 @@
 
     if-eqz v3, :cond_1
 
-    .line 171
     iget v3, p0, Lcom/android/server/GraphicsStatsService;->mNextHistoricalSlot:I
 
     if-ne v1, v3, :cond_0
 
-    .line 172
     iget-object v3, p0, Lcom/android/server/GraphicsStatsService;->mHistoricalLog:[Lcom/android/server/GraphicsStatsService$HistoricalData;
 
     aput-object v2, v3, v1
 
-    .line 180
     .end local v0    # "data":Lcom/android/server/GraphicsStatsService$HistoricalData;
     :goto_1
     return-object v0
 
-    .line 174
     .restart local v0    # "data":Lcom/android/server/GraphicsStatsService$HistoricalData;
     :cond_0
     iget-object v3, p0, Lcom/android/server/GraphicsStatsService;->mHistoricalLog:[Lcom/android/server/GraphicsStatsService$HistoricalData;
@@ -504,7 +454,6 @@
 
     aput-object v4, v3, v1
 
-    .line 175
     iget-object v3, p0, Lcom/android/server/GraphicsStatsService;->mHistoricalLog:[Lcom/android/server/GraphicsStatsService$HistoricalData;
 
     iget v4, p0, Lcom/android/server/GraphicsStatsService;->mNextHistoricalSlot:I
@@ -513,7 +462,6 @@
 
     goto :goto_1
 
-    .line 167
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
@@ -523,7 +471,6 @@
     :cond_2
     move-object v0, v2
 
-    .line 180
     goto :goto_1
 .end method
 
@@ -540,12 +487,10 @@
     .end annotation
 
     .prologue
-    .line 122
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/GraphicsStatsService;->fetchActiveBuffersLocked(Landroid/os/IBinder;IILjava/lang/String;)Lcom/android/server/GraphicsStatsService$ActiveBuffer;
 
     move-result-object v0
 
-    .line 123
     .local v0, "buffer":Lcom/android/server/GraphicsStatsService$ActiveBuffer;
     iget-object v1, v0, Lcom/android/server/GraphicsStatsService$ActiveBuffer;->mProcessBuffer:Landroid/os/MemoryFile;
 
@@ -565,7 +510,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 185
     iget-object v6, p0, Lcom/android/server/GraphicsStatsService;->mContext:Landroid/content/Context;
 
     const-string v7, "android.permission.DUMP"
@@ -574,12 +518,10 @@
 
     invoke-virtual {v6, v7, v8}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 186
     iget-object v7, p0, Lcom/android/server/GraphicsStatsService;->mLock:Ljava/lang/Object;
 
     monitor-enter v7
 
-    .line 187
     const/4 v3, 0x0
 
     .local v3, "i":I
@@ -593,7 +535,6 @@
 
     if-ge v3, v6, :cond_0
 
-    .line 188
     iget-object v6, p0, Lcom/android/server/GraphicsStatsService;->mActive:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -602,23 +543,19 @@
 
     check-cast v1, Lcom/android/server/GraphicsStatsService$ActiveBuffer;
 
-    .line 189
     .local v1, "buffer":Lcom/android/server/GraphicsStatsService$ActiveBuffer;
     const-string v6, "Package: "
 
     invoke-virtual {p2, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 190
     iget-object v6, v1, Lcom/android/server/GraphicsStatsService$ActiveBuffer;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p2, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 191
     invoke-virtual {p2}, Ljava/io/PrintWriter;->flush()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 193
     :try_start_1
     iget-object v6, v1, Lcom/android/server/GraphicsStatsService$ActiveBuffer;->mProcessBuffer:Landroid/os/MemoryFile;
 
@@ -632,7 +569,6 @@
 
     invoke-virtual {v6, v8, v9, v10, v11}, Landroid/os/MemoryFile;->readBytes([BIII)I
 
-    .line 194
     iget-object v6, p0, Lcom/android/server/GraphicsStatsService;->mTempBuffer:[B
 
     invoke-static {v6, p1}, Landroid/view/ThreadedRenderer;->dumpProfileData([BLjava/io/FileDescriptor;)V
@@ -640,21 +576,17 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 198
     :goto_1
     :try_start_2
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 187
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 195
     :catch_0
     move-exception v2
 
-    .line 196
     .local v2, "e":Ljava/io/IOException;
     const-string v6, "Failed to dump"
 
@@ -662,7 +594,6 @@
 
     goto :goto_1
 
-    .line 208
     .end local v1    # "buffer":Lcom/android/server/GraphicsStatsService$ActiveBuffer;
     .end local v2    # "e":Ljava/io/IOException;
     :catchall_0
@@ -674,7 +605,6 @@
 
     throw v6
 
-    .line 200
     :cond_0
     :try_start_3
     iget-object v0, p0, Lcom/android/server/GraphicsStatsService;->mHistoricalLog:[Lcom/android/server/GraphicsStatsService$HistoricalData;
@@ -691,48 +621,39 @@
 
     aget-object v1, v0, v4
 
-    .line 201
     .local v1, "buffer":Lcom/android/server/GraphicsStatsService$HistoricalData;
     if-nez v1, :cond_1
 
-    .line 200
     :goto_3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 202
     :cond_1
     const-string v6, "Package: "
 
     invoke-virtual {p2, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 203
     iget-object v6, v1, Lcom/android/server/GraphicsStatsService$HistoricalData;->mPackageName:Ljava/lang/String;
 
     invoke-virtual {p2, v6}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 204
     invoke-virtual {p2}, Ljava/io/PrintWriter;->flush()V
 
-    .line 205
     iget-object v6, v1, Lcom/android/server/GraphicsStatsService$HistoricalData;->mBuffer:[B
 
     invoke-static {v6, p1}, Landroid/view/ThreadedRenderer;->dumpProfileData([BLjava/io/FileDescriptor;)V
 
-    .line 206
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
     goto :goto_3
 
-    .line 208
     .end local v1    # "buffer":Lcom/android/server/GraphicsStatsService$HistoricalData;
     :cond_2
     monitor-exit v7
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 209
     return-void
 .end method
 
@@ -747,28 +668,23 @@
     .end annotation
 
     .prologue
-    .line 95
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v4
 
-    .line 96
     .local v4, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v3
 
-    .line 97
     .local v3, "pid":I
     const/4 v2, 0x0
 
-    .line 98
     .local v2, "pfd":Landroid/os/ParcelFileDescriptor;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 100
     .local v0, "callingIdentity":J
     :try_start_0
     invoke-direct {p0, v4, p1}, Lcom/android/server/GraphicsStatsService;->isValid(ILjava/lang/String;)Z
@@ -777,7 +693,6 @@
 
     if-nez v5, :cond_0
 
-    .line 101
     new-instance v5, Landroid/os/RemoteException;
 
     const-string v6, "Invalid package name"
@@ -788,7 +703,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 107
     :catchall_0
     move-exception v5
 
@@ -796,7 +710,6 @@
 
     throw v5
 
-    .line 103
     :cond_0
     :try_start_1
     iget-object v6, p0, Lcom/android/server/GraphicsStatsService;->mLock:Ljava/lang/Object;
@@ -805,24 +718,19 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 104
     :try_start_2
     invoke-direct {p0, p2, v4, v3, p1}, Lcom/android/server/GraphicsStatsService;->requestBufferForProcessLocked(Landroid/os/IBinder;IILjava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v2
 
-    .line 105
     monitor-exit v6
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 107
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 109
     return-object v2
 
-    .line 105
     :catchall_1
     move-exception v5
 

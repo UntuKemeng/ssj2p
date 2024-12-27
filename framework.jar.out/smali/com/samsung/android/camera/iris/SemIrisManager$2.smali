@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 1069
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$2;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     iput-object p2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$2;->val$token:[B
@@ -64,7 +63,6 @@
     .locals 7
 
     .prologue
-    .line 1071
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$2;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$2;->val$token:[B
@@ -82,6 +80,5 @@
     # invokes: Lcom/samsung/android/camera/iris/SemIrisManager;->checkEnrollViewWindowToken([BLandroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;Landroid/os/Bundle;Landroid/view/View;)V
     invoke-static/range {v0 .. v6}, Lcom/samsung/android/camera/iris/SemIrisManager;->access$500(Lcom/samsung/android/camera/iris/SemIrisManager;[BLandroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;Landroid/os/Bundle;Landroid/view/View;)V
 
-    .line 1072
     return-void
 .end method

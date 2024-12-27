@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 514
     iput-object p1, p0, Lcom/android/internal/telephony/ServiceStateTracker$SIMStateBroadcastReceiver;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/ServiceStateTracker$1;
 
     .prologue
-    .line 514
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/ServiceStateTracker$SIMStateBroadcastReceiver;-><init>(Lcom/android/internal/telephony/ServiceStateTracker;)V
 
     return-void
@@ -51,7 +49,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 517
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$SIMStateBroadcastReceiver;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     iget-object v2, v2, Lcom/android/internal/telephony/ServiceStateTracker;->mPhoneBase:Lcom/android/internal/telephony/PhoneBase;
@@ -60,7 +57,6 @@
 
     if-nez v2, :cond_1
 
-    .line 518
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$SIMStateBroadcastReceiver;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -89,18 +85,15 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/ServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 530
     :cond_0
     :goto_0
     return-void
 
-    .line 521
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 522
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.internal_sim_state_changed"
 
@@ -110,14 +103,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 523
     const-string v2, "ss"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 524
     .local v1, "stateExtra":Ljava/lang/String;
     const-string v2, "LOADED"
 
@@ -127,21 +118,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 525
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$SIMStateBroadcastReceiver;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     const-string v3, "OPLMN updated force re-poll"
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/ServiceStateTracker;->log(Ljava/lang/String;)V
 
-    .line 526
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$SIMStateBroadcastReceiver;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     const/4 v3, 0x1
 
     iput-boolean v3, v2, Lcom/android/internal/telephony/ServiceStateTracker;->mForceHasChanged:Z
 
-    .line 527
     iget-object v2, p0, Lcom/android/internal/telephony/ServiceStateTracker$SIMStateBroadcastReceiver;->this$0:Lcom/android/internal/telephony/ServiceStateTracker;
 
     invoke-virtual {v2}, Lcom/android/internal/telephony/ServiceStateTracker;->pollState()V

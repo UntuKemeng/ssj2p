@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 56
     iput-object p1, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$1;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$1;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     # invokes: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->handleEvent(Landroid/content/Context;Landroid/content/Intent;)V
     invoke-static {v0, p1, p2}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$000(Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 60
     return-void
 .end method

@@ -312,21 +312,18 @@
 
     const/4 v3, 0x0
 
-    .line 127
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
-    .line 130
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
-    .line 137
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -337,7 +334,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -348,7 +344,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -359,7 +354,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -370,7 +364,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 141
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/4 v1, 0x4
@@ -383,7 +376,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 142
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/4 v1, 0x5
@@ -396,7 +388,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 143
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/4 v1, 0x6
@@ -409,7 +400,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 144
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -420,7 +410,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 145
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x8
@@ -433,7 +422,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 146
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x9
@@ -446,7 +434,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 147
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0xa
@@ -459,7 +446,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 148
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0xb
@@ -472,7 +458,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 149
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0xc
@@ -485,7 +470,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 150
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0xd
@@ -498,7 +482,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 151
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0xe
@@ -511,7 +494,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 152
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0xf
@@ -524,7 +506,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 153
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x10
@@ -537,7 +518,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 154
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x11
@@ -550,7 +530,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 155
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x12
@@ -563,7 +542,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 156
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x13
@@ -576,7 +554,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 157
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x14
@@ -589,7 +566,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x15
@@ -602,7 +578,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x16
@@ -615,7 +590,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 160
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x17
@@ -628,7 +602,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 161
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x18
@@ -641,7 +614,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x19
@@ -654,7 +626,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 163
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x1a
@@ -667,7 +638,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 164
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x1b
@@ -680,7 +650,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 165
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x1c
@@ -693,7 +662,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 166
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x1d
@@ -706,7 +674,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x1e
@@ -719,7 +686,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 168
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x1f
@@ -732,7 +698,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 169
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x20
@@ -745,7 +710,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x21
@@ -758,7 +722,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 171
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x22
@@ -771,7 +734,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 172
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x23
@@ -784,7 +746,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 173
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x24
@@ -797,7 +758,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x25
@@ -810,7 +770,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x26
@@ -823,7 +782,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 176
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x27
@@ -836,7 +794,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x28
@@ -849,7 +806,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x29
@@ -862,7 +818,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x2a
@@ -875,7 +830,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 180
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x2b
@@ -888,7 +842,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 181
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x2c
@@ -901,7 +854,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x2d
@@ -914,7 +866,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 183
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x2e
@@ -927,7 +878,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 184
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x2f
@@ -940,7 +890,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 185
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x30
@@ -953,7 +902,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 186
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x31
@@ -966,7 +914,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 187
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x32
@@ -979,7 +926,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 188
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x33
@@ -992,7 +938,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 189
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x34
@@ -1005,7 +950,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 190
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x35
@@ -1018,7 +962,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 191
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x36
@@ -1031,7 +974,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 192
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x37
@@ -1044,7 +986,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 193
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x38
@@ -1057,7 +998,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 194
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x39
@@ -1070,7 +1010,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 195
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x3a
@@ -1083,7 +1022,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 196
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x3b
@@ -1096,7 +1034,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 197
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x3c
@@ -1109,7 +1046,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x3d
@@ -1122,7 +1058,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 199
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x3e
@@ -1135,7 +1070,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x3f
@@ -1148,7 +1082,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 201
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x40
@@ -1161,7 +1094,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 202
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x41
@@ -1174,7 +1106,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 203
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x42
@@ -1187,7 +1118,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 204
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x43
@@ -1200,7 +1130,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x44
@@ -1213,7 +1142,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x45
@@ -1226,7 +1154,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 207
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x46
@@ -1239,7 +1166,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 208
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x47
@@ -1252,7 +1178,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x48
@@ -1265,7 +1190,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 210
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x49
@@ -1278,7 +1202,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 211
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x4a
@@ -1291,7 +1214,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 212
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x4b
@@ -1304,7 +1226,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 213
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x4c
@@ -1317,7 +1238,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 214
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x4d
@@ -1330,7 +1250,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 215
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x4e
@@ -1343,7 +1262,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 216
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x4f
@@ -1356,7 +1274,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 217
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x50
@@ -1369,7 +1286,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 218
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x51
@@ -1382,7 +1298,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 219
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x52
@@ -1395,7 +1310,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 220
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x53
@@ -1408,7 +1322,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 221
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x54
@@ -1421,7 +1334,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 223
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x201
@@ -1434,7 +1346,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 224
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x202
@@ -1447,7 +1358,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 225
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x203
@@ -1460,7 +1370,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 226
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x204
@@ -1473,7 +1382,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x205
@@ -1486,7 +1394,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 228
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x206
@@ -1499,7 +1406,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 229
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x207
@@ -1512,7 +1418,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 230
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x208
@@ -1525,7 +1430,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 231
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x209
@@ -1538,7 +1442,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 232
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x20a
@@ -1551,7 +1454,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 233
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x20b
@@ -1564,7 +1466,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x20c
@@ -1577,7 +1478,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x300
@@ -1590,7 +1490,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x301
@@ -1603,7 +1502,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x302
@@ -1616,7 +1514,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x303
@@ -1629,7 +1526,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 239
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x304
@@ -1642,7 +1538,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 240
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x305
@@ -1655,7 +1550,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 241
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x306
@@ -1668,7 +1562,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x307
@@ -1681,7 +1574,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 243
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x308
@@ -1694,7 +1586,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 244
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x309
@@ -1707,7 +1598,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 245
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x30a
@@ -1720,7 +1610,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 246
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x30b
@@ -1733,7 +1622,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 247
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x30c
@@ -1746,7 +1634,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x30d
@@ -1759,7 +1646,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 249
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x30e
@@ -1772,7 +1658,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 250
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x30f
@@ -1785,7 +1670,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 251
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x310
@@ -1798,7 +1682,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 252
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x311
@@ -1811,7 +1694,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 253
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x312
@@ -1824,7 +1706,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 254
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x313
@@ -1837,7 +1718,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 255
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x314
@@ -1850,7 +1730,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 256
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x315
@@ -1863,7 +1742,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 257
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x316
@@ -1876,7 +1754,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 258
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x317
@@ -1889,7 +1766,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x318
@@ -1902,7 +1778,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 260
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x319
@@ -1915,7 +1790,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 261
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x31a
@@ -1928,7 +1802,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 262
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
     const/16 v1, 0x31b
@@ -1941,7 +1814,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 264
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1952,7 +1824,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 265
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1963,7 +1834,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 266
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1974,7 +1844,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 267
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1985,7 +1854,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 268
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1996,7 +1864,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 269
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x8
@@ -2009,7 +1876,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 270
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x9
@@ -2022,7 +1888,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 271
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0xe
@@ -2035,7 +1900,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 272
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x10
@@ -2048,7 +1912,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 273
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x11
@@ -2061,7 +1924,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 274
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x12
@@ -2074,7 +1936,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 275
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x13
@@ -2087,7 +1948,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 276
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x14
@@ -2100,7 +1960,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 277
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x15
@@ -2113,7 +1972,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 278
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x16
@@ -2126,7 +1984,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 279
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x17
@@ -2139,7 +1996,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 280
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x18
@@ -2152,7 +2008,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 281
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x19
@@ -2165,7 +2020,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 282
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x1a
@@ -2178,7 +2032,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 283
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x1b
@@ -2191,7 +2044,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 284
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x1c
@@ -2204,7 +2056,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 285
     sget-object v0, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
     const/16 v1, 0x1d
@@ -2217,7 +2068,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 286
     return-void
 .end method
 
@@ -2226,13 +2076,10 @@
     .param p1, "pdu"    # [B
 
     .prologue
-    .line 398
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 399
     iput-object p1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
-    .line 400
     return-void
 .end method
 
@@ -2243,17 +2090,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 735
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     aget-byte v1, v1, p1
 
     if-nez v1, :cond_0
 
-    .line 736
     iput v0, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 739
     :goto_0
     return v0
 
@@ -2267,17 +2111,14 @@
     .locals 4
 
     .prologue
-    .line 749
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
     if-nez v1, :cond_0
 
-    .line 750
     iget-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
     long-to-int v0, v2
 
-    .line 751
     .local v0, "binaryContentType":I
     sget-object v1, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_MIME_TYPES:Ljava/util/HashMap;
 
@@ -2293,12 +2134,10 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 755
     .end local v0    # "binaryContentType":I
     :goto_0
     return-void
 
-    .line 753
     :cond_0
     const-wide/16 v2, -0x1
 
@@ -2318,27 +2157,21 @@
 
     const/4 v6, 0x0
 
-    .line 660
     const/4 v3, 0x0
 
-    .line 662
     .local v3, "totalRead":I
     if-lez p2, :cond_8
 
-    .line 663
     iget-object v8, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     aget-byte v1, v8, p1
 
-    .line 664
     .local v1, "nextByte":B
     const/4 v4, 0x0
 
-    .line 665
     .local v4, "value":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 666
     .local v2, "param":Ljava/lang/String;
     and-int/lit16 v8, v1, 0x80
 
@@ -2348,18 +2181,14 @@
 
     if-le v1, v8, :cond_3
 
-    .line 667
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeTokenText(I)Z
 
-    .line 668
     iget-object v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 669
     iget v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v3, v6
 
-    .line 695
     :cond_0
     add-int v6, p1, v3
 
@@ -2369,22 +2198,18 @@
 
     if-eqz v6, :cond_5
 
-    .line 696
     iget v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v3, v6
 
-    .line 697
     const/4 v4, 0x0
 
-    .line 717
     :cond_1
     :goto_0
     iget-object v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mContentParameters:Ljava/util/HashMap;
 
     invoke-virtual {v6, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 718
     add-int v6, p1, v3
 
     sub-int v7, p2, v3
@@ -2395,7 +2220,6 @@
 
     move-result v6
 
-    .line 723
     .end local v1    # "nextByte":B
     .end local v2    # "param":Ljava/lang/String;
     .end local v4    # "value":Ljava/lang/String;
@@ -2403,7 +2227,6 @@
     :goto_1
     return v6
 
-    .line 671
     .restart local v1    # "nextByte":B
     .restart local v2    # "param":Ljava/lang/String;
     .restart local v4    # "value":Ljava/lang/String;
@@ -2414,17 +2237,14 @@
 
     if-eqz v8, :cond_2
 
-    .line 672
     iget v8, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v3, v8
 
-    .line 673
     iget-wide v8, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
     long-to-int v5, v8
 
-    .line 674
     .local v5, "wellKnownParameterValue":I
     sget-object v8, Lcom/android/internal/telephony/WspTypeDecoder;->WELL_KNOWN_PARAMETERS:Ljava/util/HashMap;
 
@@ -2439,11 +2259,9 @@
     .end local v2    # "param":Ljava/lang/String;
     check-cast v2, Ljava/lang/String;
 
-    .line 675
     .restart local v2    # "param":Ljava/lang/String;
     if-nez v2, :cond_4
 
-    .line 676
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -2468,11 +2286,9 @@
 
     move-result-object v2
 
-    .line 679
     :cond_4
     if-nez v5, :cond_0
 
-    .line 680
     add-int v7, p1, v3
 
     invoke-virtual {p0, v7}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeUintvarInteger(I)Z
@@ -2481,24 +2297,20 @@
 
     if-eqz v7, :cond_2
 
-    .line 681
     iget v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v3, v6
 
-    .line 682
     iget-wide v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
     invoke-static {v6, v7}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 683
     iget-object v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mContentParameters:Ljava/util/HashMap;
 
     invoke-virtual {v6, v2, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 684
     add-int v6, p1, v3
 
     sub-int v7, p2, v3
@@ -2511,7 +2323,6 @@
 
     goto :goto_1
 
-    .line 698
     .end local v5    # "wellKnownParameterValue":I
     :cond_5
     add-int v6, p1, v3
@@ -2522,26 +2333,21 @@
 
     if-eqz v6, :cond_7
 
-    .line 699
     iget v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v3, v6
 
-    .line 700
     iget-wide v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
     long-to-int v0, v6
 
-    .line 702
     .local v0, "intValue":I
     if-nez v0, :cond_6
 
-    .line 703
     const-string v4, ""
 
     goto :goto_0
 
-    .line 705
     :cond_6
     invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -2549,22 +2355,18 @@
 
     goto :goto_0
 
-    .line 709
     .end local v0    # "intValue":I
     :cond_7
     add-int v6, p1, v3
 
     invoke-virtual {p0, v6}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeTokenText(I)Z
 
-    .line 710
     iget v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v3, v6
 
-    .line 711
     iget-object v4, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 712
     const-string v6, "\""
 
     invoke-virtual {v4, v6}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -2573,14 +2375,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 714
     invoke-virtual {v4, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v4
 
     goto/16 :goto_0
 
-    .line 722
     .end local v1    # "nextByte":B
     .end local v2    # "param":Ljava/lang/String;
     .end local v4    # "value":Ljava/lang/String;
@@ -2589,7 +2389,6 @@
 
     move v6, v7
 
-    .line 723
     goto/16 :goto_1
 .end method
 
@@ -2602,19 +2401,16 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 587
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeShortInteger(I)Z
 
     move-result v1
 
     if-ne v1, v0, :cond_0
 
-    .line 588
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 591
     :goto_0
     return v0
 
@@ -2631,7 +2427,6 @@
     .param p1, "startIndex"    # I
 
     .prologue
-    .line 767
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeIntegerValue(I)Z
 
     move-result v0
@@ -2644,7 +2439,6 @@
     .param p1, "startIndex"    # I
 
     .prologue
-    .line 780
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeTextString(I)Z
 
     move-result v0
@@ -2661,14 +2455,12 @@
 
     const/4 v8, 0x0
 
-    .line 609
     new-instance v9, Ljava/util/HashMap;
 
     invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
 
     iput-object v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mContentParameters:Ljava/util/HashMap;
 
-    .line 612
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeValueLength(I)Z
 
@@ -2676,37 +2468,30 @@
 
     if-nez v9, :cond_1
 
-    .line 613
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeConstrainedEncoding(I)Z
 
     move-result v1
 
-    .line 614
     .local v1, "found":Z
     if-eqz v1, :cond_0
 
-    .line 615
     invoke-direct {p0}, Lcom/android/internal/telephony/WspTypeDecoder;->expandWellKnownMimeType()V
 
-    .line 655
     .end local v1    # "found":Z
     :cond_0
     :goto_0
     return v1
 
-    .line 619
     :cond_1
     iget-wide v10, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
     long-to-int v2, v10
 
-    .line 620
     .local v2, "headersLength":I
     invoke-virtual {p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
     move-result v3
 
-    .line 621
     .local v3, "mediaPrefixLength":I
     add-int v9, p1, v3
 
@@ -2716,33 +2501,26 @@
 
     if-ne v9, v1, :cond_3
 
-    .line 622
     iget v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v9, v3
 
     iput v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 623
     iget v5, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 624
     .local v5, "readLength":I
     const/4 v9, 0x0
 
     iput-object v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 625
     invoke-direct {p0}, Lcom/android/internal/telephony/WspTypeDecoder;->expandWellKnownMimeType()V
 
-    .line 626
     iget-wide v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 627
     .local v6, "wellKnownValue":J
     iget-object v4, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 628
     .local v4, "mimeType":Ljava/lang/String;
     iget v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
@@ -2762,22 +2540,18 @@
 
     if-eqz v9, :cond_2
 
-    .line 630
     iget v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v9, v5
 
     iput v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 631
     iput-wide v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 632
     iput-object v4, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 651
     .end local v2    # "headersLength":I
     .end local v3    # "mediaPrefixLength":I
     .end local v4    # "mimeType":Ljava/lang/String;
@@ -2789,7 +2563,6 @@
     .local v0, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     move v1, v8
 
-    .line 653
     goto :goto_0
 
     .end local v0    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
@@ -2801,10 +2574,8 @@
     :cond_2
     move v1, v8
 
-    .line 635
     goto :goto_0
 
-    .line 637
     .end local v4    # "mimeType":Ljava/lang/String;
     .end local v5    # "readLength":I
     .end local v6    # "wellKnownValue":J
@@ -2817,28 +2588,22 @@
 
     if-ne v9, v1, :cond_4
 
-    .line 638
     iget v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v9, v3
 
     iput v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 639
     iget v5, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 640
     .restart local v5    # "readLength":I
     invoke-direct {p0}, Lcom/android/internal/telephony/WspTypeDecoder;->expandWellKnownMimeType()V
 
-    .line 641
     iget-wide v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 642
     .restart local v6    # "wellKnownValue":J
     iget-object v4, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 643
     .restart local v4    # "mimeType":Ljava/lang/String;
     iget v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
@@ -2858,17 +2623,14 @@
 
     if-eqz v9, :cond_4
 
-    .line 645
     iget v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/2addr v9, v5
 
     iput v9, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 646
     iput-wide v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 647
     iput-object v4, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
@@ -2881,7 +2643,6 @@
     :cond_4
     move v1, v8
 
-    .line 655
     goto :goto_0
 .end method
 
@@ -2892,30 +2653,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 561
     move v0, p1
 
-    .line 562
     .local v0, "index":I
     iput v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 563
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 564
     iget-object v3, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     array-length v1, v3
 
-    .line 565
     .local v1, "length":I
     if-ge v0, v1, :cond_0
 
     const/4 v2, 0x1
 
-    .line 567
     .local v2, "rtrn":Z
     :cond_0
     :goto_0
@@ -2927,12 +2682,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 568
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 571
     :cond_1
     sub-int v3, v0, p1
 
@@ -2940,7 +2693,6 @@
 
     iput v3, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 572
     new-instance v3, Ljava/lang/String;
 
     iget-object v4, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
@@ -2953,7 +2705,6 @@
 
     iput-object v3, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 574
     return v2
 .end method
 
@@ -2964,14 +2715,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 496
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeShortInteger(I)Z
 
     move-result v1
 
     if-ne v1, v0, :cond_0
 
-    .line 499
     :goto_0
     return v0
 
@@ -2988,40 +2737,33 @@
     .param p1, "startIndex"    # I
 
     .prologue
-    .line 473
     iget-object v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     aget-byte v2, v2, p1
 
     and-int/lit16 v1, v2, 0xff
 
-    .line 475
     .local v1, "lengthMultiOctet":I
     const/16 v2, 0x1e
 
     if-le v1, v2, :cond_0
 
-    .line 476
     const/4 v2, 0x0
 
-    .line 483
     :goto_0
     return v2
 
-    .line 478
     :cond_0
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 479
     const/4 v0, 0x1
 
     .local v0, "i":I
     :goto_1
     if-gt v0, v1, :cond_1
 
-    .line 480
     iget-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
     const/16 v4, 0x8
@@ -3042,18 +2784,15 @@
 
     iput-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 479
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 482
     :cond_1
     add-int/lit8 v2, v1, 0x1
 
     iput v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 483
     const/4 v2, 0x1
 
     goto :goto_0
@@ -3066,7 +2805,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 455
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     aget-byte v1, v1, p1
@@ -3075,14 +2813,11 @@
 
     if-nez v1, :cond_0
 
-    .line 456
     const/4 v0, 0x0
 
-    .line 460
     :goto_0
     return v0
 
-    .line 458
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
@@ -3094,7 +2829,6 @@
 
     iput-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 459
     iput v0, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     goto :goto_0
@@ -3105,10 +2839,8 @@
     .param p1, "startIndex"    # I
 
     .prologue
-    .line 412
     move v0, p1
 
-    .line 413
     .local v0, "index":I
     :goto_0
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
@@ -3117,12 +2849,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 414
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 416
     :cond_0
     sub-int v1, v0, p1
 
@@ -3130,7 +2860,6 @@
 
     iput v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 417
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     aget-byte v1, v1, p1
@@ -3139,7 +2868,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 418
     new-instance v1, Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
@@ -3154,13 +2882,11 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 422
     :goto_1
     const/4 v1, 0x1
 
     return v1
 
-    .line 420
     :cond_1
     new-instance v1, Ljava/lang/String;
 
@@ -3182,10 +2908,8 @@
     .param p1, "startIndex"    # I
 
     .prologue
-    .line 435
     move v0, p1
 
-    .line 436
     .local v0, "index":I
     :goto_0
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
@@ -3194,12 +2918,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 437
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 439
     :cond_0
     sub-int v1, v0, p1
 
@@ -3207,7 +2929,6 @@
 
     iput v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 440
     new-instance v1, Ljava/lang/String;
 
     iget-object v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
@@ -3220,7 +2941,6 @@
 
     iput-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 442
     const/4 v1, 0x1
 
     return v1
@@ -3233,16 +2953,13 @@
     .prologue
     const/4 v6, 0x7
 
-    .line 512
     move v0, p1
 
-    .line 514
     .local v0, "index":I
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 515
     :goto_0
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
@@ -3252,21 +2969,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 516
     sub-int v1, v0, p1
 
     const/4 v2, 0x4
 
     if-lt v1, v2, :cond_0
 
-    .line 517
     const/4 v1, 0x0
 
-    .line 524
     :goto_1
     return v1
 
-    .line 519
     :cond_0
     iget-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
@@ -3284,12 +2997,10 @@
 
     iput-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 520
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 522
     :cond_1
     iget-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
@@ -3307,14 +3018,12 @@
 
     iput-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 523
     sub-int v1, v0, p1
 
     add-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
-    .line 524
     const/4 v1, 0x1
 
     goto :goto_1
@@ -3329,7 +3038,6 @@
 
     const/4 v0, 0x1
 
-    .line 537
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     aget-byte v1, v1, p1
@@ -3338,14 +3046,11 @@
 
     if-le v1, v2, :cond_0
 
-    .line 538
     const/4 v0, 0x0
 
-    .line 547
     :goto_0
     return v0
 
-    .line 540
     :cond_0
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
@@ -3353,7 +3058,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 541
     iget-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     aget-byte v1, v1, p1
@@ -3362,18 +3066,15 @@
 
     iput-wide v2, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 542
     iput v0, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     goto :goto_0
 
-    .line 544
     :cond_1
     add-int/lit8 v1, p1, 0x1
 
     invoke-virtual {p0, v1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeUintvarInteger(I)Z
 
-    .line 545
     iget v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     add-int/lit8 v1, v1, 0x1
@@ -3390,19 +3091,16 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 794
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeIntegerValue(I)Z
 
     move-result v1
 
     if-ne v1, v0, :cond_0
 
-    .line 795
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
-    .line 798
     :goto_0
     return v0
 
@@ -3419,7 +3117,6 @@
     .param p1, "startIndex"    # I
 
     .prologue
-    .line 875
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeTextString(I)Z
 
     move-result v0
@@ -3432,7 +3129,6 @@
     .param p1, "startIndex"    # I
 
     .prologue
-    .line 888
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeTextString(I)Z
 
     move-result v0
@@ -3454,7 +3150,6 @@
     .end annotation
 
     .prologue
-    .line 923
     iget-object v0, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mContentParameters:Ljava/util/HashMap;
 
     return-object v0
@@ -3464,7 +3159,6 @@
     .locals 1
 
     .prologue
-    .line 895
     iget v0, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mDataLength:I
 
     return v0
@@ -3484,16 +3178,13 @@
     .end annotation
 
     .prologue
-    .line 938
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 939
     .local v8, "ret":Ljava/util/HashMap;
     move/from16 v3, p1
 
-    .line 942
     .local v3, "pos":I
     :cond_0
     :goto_0
@@ -3505,7 +3196,6 @@
 
     if-nez v9, :cond_4
 
-    .line 944
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeTextString(I)Z
@@ -3514,12 +3204,10 @@
 
     if-eqz v9, :cond_3
 
-    .line 945
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValueString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 946
     .local v4, "headerName":Ljava/lang/String;
     const-string v9, "WAP PUSH"
 
@@ -3553,14 +3241,12 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 947
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
     move-result v9
 
     add-int/2addr v3, v9
 
-    .line 950
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeTextString(I)Z
@@ -3569,12 +3255,10 @@
 
     if-eqz v9, :cond_2
 
-    .line 951
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValueString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 952
     .local v6, "headerValue":Ljava/lang/String;
     const-string v9, "WAP PUSH"
 
@@ -3608,13 +3292,10 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 953
     if-eqz v6, :cond_1
 
-    .line 954
     invoke-virtual {v8, v4, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 956
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
@@ -3622,10 +3303,8 @@
 
     add-int/2addr v3, v9
 
-    .line 957
     goto :goto_0
 
-    .line 959
     .end local v6    # "headerValue":Ljava/lang/String;
     :cond_2
     const-string v9, "WAP PUSH"
@@ -3650,12 +3329,10 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1205
     .end local v4    # "headerName":Ljava/lang/String;
     :goto_1
     return-object v8
 
-    .line 963
     :cond_3
     const-string v9, "WAP PUSH"
 
@@ -3681,13 +3358,11 @@
 
     goto :goto_1
 
-    .line 967
     :cond_4
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
 
     move-result-wide v4
 
-    .line 968
     .local v4, "headerName":J
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
@@ -3695,7 +3370,6 @@
 
     add-int/2addr v3, v9
 
-    .line 969
     const-string v9, "WAP PUSH"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -3746,12 +3420,10 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 972
     long-to-int v9, v4
 
     packed-switch v9, :pswitch_data_0
 
-    .line 1195
     :pswitch_0
     const-string v9, "WAP PUSH"
 
@@ -3759,13 +3431,11 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1200
     :goto_2
     add-int v9, p2, p3
 
     if-lt v3, v9, :cond_0
 
-    .line 1201
     const-string v9, "WAP PUSH"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -3814,7 +3484,6 @@
 
     goto/16 :goto_1
 
-    .line 976
     :pswitch_1
     const-wide/16 v12, 0x46
 
@@ -3832,7 +3501,6 @@
 
     if-ne v9, v12, :cond_5
 
-    .line 977
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
@@ -3841,7 +3509,6 @@
 
     int-to-long v6, v9
 
-    .line 978
     .local v6, "headerValue":J
     const-string v9, "WAP PUSH"
 
@@ -3893,7 +3560,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 979
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3906,13 +3572,10 @@
 
     invoke-virtual {v8, v9, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 980
     add-int/lit8 v3, v3, 0x1
 
-    .line 981
     goto/16 :goto_2
 
-    .line 982
     .end local v6    # "headerValue":J
     :cond_5
     const-string v9, "WAP PUSH"
@@ -3939,7 +3602,6 @@
 
     goto/16 :goto_2
 
-    .line 1000
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -3949,12 +3611,10 @@
 
     if-eqz v9, :cond_6
 
-    .line 1001
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
 
     move-result-wide v6
 
-    .line 1002
     .restart local v6    # "headerValue":J
     const-string v9, "WAP PUSH"
 
@@ -4006,7 +3666,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1003
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4019,17 +3678,14 @@
 
     invoke-virtual {v8, v9, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1004
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
     move-result v9
 
     add-int/2addr v3, v9
 
-    .line 1006
     goto/16 :goto_2
 
-    .line 1007
     .end local v6    # "headerValue":J
     :cond_6
     const-string v9, "WAP PUSH"
@@ -4056,7 +3712,6 @@
 
     goto/16 :goto_2
 
-    .line 1036
     :pswitch_3
     const-wide/16 v12, 0x8
 
@@ -4155,7 +3810,6 @@
 
     if-ne v9, v12, :cond_d
 
-    .line 1042
     :cond_c
     move-object/from16 v0, p0
 
@@ -4165,7 +3819,6 @@
 
     int-to-long v6, v9
 
-    .line 1043
     .restart local v6    # "headerValue":J
     const-string v9, "WAP PUSH"
 
@@ -4217,7 +3870,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1044
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4230,10 +3882,8 @@
 
     invoke-virtual {v8, v9, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1045
     add-int/lit8 v3, v3, 0x1
 
-    .line 1047
     goto/16 :goto_2
 
     .end local v6    # "headerValue":J
@@ -4246,12 +3896,10 @@
 
     if-eqz v9, :cond_f
 
-    .line 1048
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
 
     move-result-wide v10
 
-    .line 1049
     .local v10, "valueLength":J
     const-wide/16 v12, 0x0
 
@@ -4259,12 +3907,10 @@
 
     if-lez v9, :cond_e
 
-    .line 1050
     long-to-int v9, v10
 
     new-array v2, v9, [B
 
-    .line 1051
     .local v2, "data":[B
     move-object/from16 v0, p0
 
@@ -4276,7 +3922,6 @@
 
     invoke-static {v9, v3, v2, v12, v13}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1052
     const-string v9, "WAP PUSH"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -4299,7 +3944,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1053
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4308,7 +3952,6 @@
 
     invoke-virtual {v8, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1055
     .end local v2    # "data":[B
     :cond_e
     int-to-long v12, v3
@@ -4325,10 +3968,8 @@
 
     long-to-int v3, v12
 
-    .line 1057
     goto/16 :goto_2
 
-    .line 1058
     .end local v10    # "valueLength":J
     :cond_f
     const-string v9, "WAP PUSH"
@@ -4355,7 +3996,6 @@
 
     goto/16 :goto_2
 
-    .line 1084
     :pswitch_4
     const-wide/16 v12, 0x4
 
@@ -4444,7 +4084,6 @@
 
     if-ne v9, v12, :cond_14
 
-    .line 1091
     :cond_13
     move-object/from16 v0, p0
 
@@ -4454,7 +4093,6 @@
 
     int-to-long v6, v9
 
-    .line 1092
     .restart local v6    # "headerValue":J
     const-string v9, "WAP PUSH"
 
@@ -4506,7 +4144,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1093
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4519,10 +4156,8 @@
 
     invoke-virtual {v8, v9, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1094
     add-int/lit8 v3, v3, 0x1
 
-    .line 1096
     goto/16 :goto_2
 
     .end local v6    # "headerValue":J
@@ -4535,12 +4170,10 @@
 
     if-eqz v9, :cond_16
 
-    .line 1097
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValueString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1098
     .local v6, "headerValue":Ljava/lang/String;
     const-string v9, "WAP PUSH"
 
@@ -4574,10 +4207,8 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1099
     if-eqz v6, :cond_15
 
-    .line 1100
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4586,7 +4217,6 @@
 
     invoke-virtual {v8, v9, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1102
     :cond_15
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
@@ -4594,10 +4224,8 @@
 
     add-int/2addr v3, v9
 
-    .line 1103
     goto/16 :goto_2
 
-    .line 1104
     .end local v6    # "headerValue":Ljava/lang/String;
     :cond_16
     const-string v9, "WAP PUSH"
@@ -4624,7 +4252,6 @@
 
     goto/16 :goto_2
 
-    .line 1117
     :pswitch_5
     const-wide/16 v12, 0xc
 
@@ -4659,11 +4286,9 @@
 
     if-ne v9, v12, :cond_19
 
-    .line 1119
     :cond_18
     const-string v6, "*"
 
-    .line 1120
     .restart local v6    # "headerValue":Ljava/lang/String;
     const-string v9, "WAP PUSH"
 
@@ -4697,7 +4322,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1121
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4706,10 +4330,8 @@
 
     invoke-virtual {v8, v9, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1122
     add-int/lit8 v3, v3, 0x1
 
-    .line 1124
     goto/16 :goto_2
 
     .end local v6    # "headerValue":Ljava/lang/String;
@@ -4722,12 +4344,10 @@
 
     if-eqz v9, :cond_1a
 
-    .line 1125
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
 
     move-result-wide v6
 
-    .line 1126
     .local v6, "headerValue":J
     const-string v9, "WAP PUSH"
 
@@ -4779,7 +4399,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1127
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4792,14 +4411,12 @@
 
     invoke-virtual {v8, v9, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1128
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
     move-result v9
 
     add-int/2addr v3, v9
 
-    .line 1130
     goto/16 :goto_2
 
     .end local v6    # "headerValue":J
@@ -4812,12 +4429,10 @@
 
     if-eqz v9, :cond_1c
 
-    .line 1131
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValueString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1132
     .local v6, "headerValue":Ljava/lang/String;
     const-string v9, "WAP PUSH"
 
@@ -4851,10 +4466,8 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1133
     if-eqz v6, :cond_1b
 
-    .line 1134
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4863,7 +4476,6 @@
 
     invoke-virtual {v8, v9, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1136
     :cond_1b
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
@@ -4871,10 +4483,8 @@
 
     add-int/2addr v3, v9
 
-    .line 1138
     goto/16 :goto_2
 
-    .line 1139
     .end local v6    # "headerValue":Ljava/lang/String;
     :cond_1c
     const-string v9, "WAP PUSH"
@@ -4901,7 +4511,6 @@
 
     goto/16 :goto_2
 
-    .line 1156
     :pswitch_6
     const-wide/16 v12, 0x0
 
@@ -4955,11 +4564,9 @@
 
     if-ne v9, v12, :cond_20
 
-    .line 1160
     :cond_1f
     const-string v6, "*"
 
-    .line 1161
     .restart local v6    # "headerValue":Ljava/lang/String;
     const-string v9, "WAP PUSH"
 
@@ -4993,7 +4600,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1162
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5002,10 +4608,8 @@
 
     invoke-virtual {v8, v9, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1163
     add-int/lit8 v3, v3, 0x1
 
-    .line 1165
     goto/16 :goto_2
 
     .end local v6    # "headerValue":Ljava/lang/String;
@@ -5018,12 +4622,10 @@
 
     if-eqz v9, :cond_22
 
-    .line 1166
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
 
     move-result-wide v10
 
-    .line 1167
     .restart local v10    # "valueLength":J
     const-wide/16 v12, 0x0
 
@@ -5031,12 +4633,10 @@
 
     if-lez v9, :cond_21
 
-    .line 1168
     long-to-int v9, v10
 
     new-array v2, v9, [B
 
-    .line 1169
     .restart local v2    # "data":[B
     move-object/from16 v0, p0
 
@@ -5048,7 +4648,6 @@
 
     invoke-static {v9, v3, v2, v12, v13}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 1170
     const-string v9, "WAP PUSH"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -5085,7 +4684,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1171
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5094,7 +4692,6 @@
 
     invoke-virtual {v8, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1173
     .end local v2    # "data":[B
     :cond_21
     int-to-long v12, v3
@@ -5111,7 +4708,6 @@
 
     long-to-int v3, v12
 
-    .line 1175
     goto/16 :goto_2
 
     .end local v10    # "valueLength":J
@@ -5124,12 +4720,10 @@
 
     if-eqz v9, :cond_23
 
-    .line 1176
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
 
     move-result-wide v6
 
-    .line 1177
     .local v6, "headerValue":J
     const-string v9, "WAP PUSH"
 
@@ -5181,7 +4775,6 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1178
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5194,14 +4787,12 @@
 
     invoke-virtual {v8, v9, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1179
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
     move-result v9
 
     add-int/2addr v3, v9
 
-    .line 1181
     goto/16 :goto_2
 
     .end local v6    # "headerValue":J
@@ -5214,12 +4805,10 @@
 
     if-eqz v9, :cond_25
 
-    .line 1182
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValueString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1183
     .local v6, "headerValue":Ljava/lang/String;
     const-string v9, "WAP PUSH"
 
@@ -5253,10 +4842,8 @@
 
     invoke-static {v9, v12}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1184
     if-eqz v6, :cond_24
 
-    .line 1185
     long-to-int v9, v4
 
     invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5265,7 +4852,6 @@
 
     invoke-virtual {v8, v9, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1187
     :cond_24
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
@@ -5273,10 +4859,8 @@
 
     add-int/2addr v3, v9
 
-    .line 1189
     goto/16 :goto_2
 
-    .line 1190
     .end local v6    # "headerValue":Ljava/lang/String;
     :cond_25
     const-string v9, "WAP PUSH"
@@ -5303,7 +4887,6 @@
 
     goto/16 :goto_2
 
-    .line 972
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_6
@@ -5388,7 +4971,6 @@
     .locals 2
 
     .prologue
-    .line 902
     iget-wide v0, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
     return-wide v0
@@ -5398,7 +4980,6 @@
     .locals 1
 
     .prologue
-    .line 909
     iget-object v0, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mStringValue:Ljava/lang/String;
 
     return-object v0
@@ -5414,17 +4995,14 @@
 
     const/4 v4, 0x0
 
-    .line 811
     move v2, p1
 
-    .line 814
     .local v2, "index":I
     move v2, p1
 
     :goto_0
     if-gt v2, p2, :cond_0
 
-    .line 819
     :try_start_0
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeIntegerValue(I)Z
 
@@ -5432,36 +5010,30 @@
 
     if-eqz v5, :cond_1
 
-    .line 820
     invoke-virtual {p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getValue32()J
 
     move-result-wide v6
 
     long-to-int v1, v6
 
-    .line 822
     .local v1, "fieldValue":I
     const/16 v5, 0x2f
 
     if-ne v1, v5, :cond_2
 
-    .line 823
     add-int/lit8 v5, v2, 0x1
 
     int-to-long v6, v5
 
     iput-wide v6, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mUnsigned32bit:J
 
-    .line 824
     const/4 v4, 0x1
 
-    .line 862
     .end local v1    # "fieldValue":I
     :cond_0
     :goto_1
     return v4
 
-    .line 827
     :cond_1
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeTextString(I)Z
 
@@ -5469,7 +5041,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 829
     :cond_2
     invoke-virtual {p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
@@ -5477,15 +5048,12 @@
 
     add-int/2addr v2, v5
 
-    .line 830
     if-gt v2, p2, :cond_0
 
-    .line 843
     iget-object v5, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     aget-byte v3, v5, v2
 
-    .line 844
     .local v3, "val":B
     if-ltz v3, :cond_3
 
@@ -5493,7 +5061,6 @@
 
     if-gt v3, v5, :cond_3
 
-    .line 845
     iget-object v5, p0, Lcom/android/internal/telephony/WspTypeDecoder;->mWspData:[B
 
     aget-byte v5, v5, v2
@@ -5504,26 +5071,21 @@
 
     goto :goto_0
 
-    .line 846
     :cond_3
     if-ne v3, v8, :cond_4
 
-    .line 847
     add-int/lit8 v5, v2, 0x1
 
     if-ge v5, p2, :cond_0
 
-    .line 848
     add-int/lit8 v2, v2, 0x1
 
-    .line 849
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeUintvarInteger(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 850
     invoke-virtual {p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
 
     move-result v5
@@ -5532,7 +5094,6 @@
 
     goto :goto_0
 
-    .line 851
     :cond_4
     if-ge v8, v3, :cond_5
 
@@ -5540,14 +5101,12 @@
 
     if-gt v3, v5, :cond_5
 
-    .line 852
     invoke-virtual {p0, v2}, Lcom/android/internal/telephony/WspTypeDecoder;->decodeTextString(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 853
     invoke-virtual {p0}, Lcom/android/internal/telephony/WspTypeDecoder;->getDecodedDataLength()I
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
@@ -5558,18 +5117,15 @@
 
     goto :goto_0
 
-    .line 855
     :cond_5
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 858
     .end local v3    # "val":B
     :catch_0
     move-exception v0
 
-    .line 860
     .local v0, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     goto :goto_1
 .end method

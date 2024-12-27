@@ -38,7 +38,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 27
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -58,18 +57,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mEdge:I
 
-    .line 45
     iput-object p1, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
-    .line 46
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -84,7 +79,6 @@
 
     sput v0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mWidth:F
 
-    .line 47
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -99,7 +93,6 @@
 
     sput v0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mHeight:F
 
-    .line 48
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -114,7 +107,6 @@
 
     sput v0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mHeightForPen:F
 
-    .line 49
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->isSupportCocktailBar(Landroid/content/Context;)Z
@@ -123,7 +115,6 @@
 
     sput-boolean v0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mIsSupportCocktailBar:Z
 
-    .line 50
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/android/cocktailbar/CocktailBarFeatures;->isSupportCocktailPanel(Landroid/content/Context;)Z
@@ -132,7 +123,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 51
     sget v0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mWidth:F
 
     iget-object v1, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
@@ -151,7 +141,6 @@
 
     sput v0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mWidth:F
 
-    .line 53
     :cond_0
     return-void
 .end method
@@ -163,7 +152,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 128
     const/4 v0, 0x5
 
     if-ne p1, v0, :cond_2
@@ -178,16 +166,13 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 130
     :cond_0
     const/4 p1, 0x0
 
-    .line 135
     :cond_1
     :goto_0
     return p1
 
-    .line 131
     :cond_2
     const/16 v0, 0x9
 
@@ -201,7 +186,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 133
     :cond_3
     const/4 p1, 0x0
 
@@ -214,22 +198,18 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 106
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v2
 
-    .line 107
     .local v2, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v3
 
-    .line 108
     .local v3, "y":F
     const/4 v0, 0x0
 
-    .line 109
     .local v0, "flag":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionIndex()I
 
@@ -243,12 +223,10 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 110
     sget v4, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mHeightForPen:F
 
     sput v4, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mHeight:F
 
-    .line 112
     :cond_0
     sget v4, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mHeight:F
 
@@ -258,29 +236,24 @@
 
     move v1, v0
 
-    .line 124
     .end local v0    # "flag":I
     .local v1, "flag":I
     :goto_0
     return v1
 
-    .line 115
     .end local v1    # "flag":I
     .restart local v0    # "flag":I
     :cond_1
     const/4 v0, 0x1
 
-    .line 117
     sget v4, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mWidth:F
 
     cmpg-float v4, v2, v4
 
     if-gez v4, :cond_5
 
-    .line 118
     or-int/lit8 v0, v0, 0x4
 
-    .line 122
     :cond_2
     :goto_1
     sget-boolean v4, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->DEBUG:Z
@@ -380,12 +353,10 @@
     :cond_4
     move v1, v0
 
-    .line 124
     .end local v0    # "flag":I
     .restart local v1    # "flag":I
     goto :goto_0
 
-    .line 119
     .end local v1    # "flag":I
     .restart local v0    # "flag":I
     :cond_5
@@ -399,12 +370,10 @@
 
     if-lez v4, :cond_2
 
-    .line 120
     or-int/lit8 v0, v0, 0x8
 
     goto :goto_1
 
-    .line 122
     :cond_6
     const-string v4, ""
 
@@ -422,7 +391,6 @@
 
     const/4 v1, 0x1
 
-    .line 97
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getButtonState()I
@@ -509,7 +477,6 @@
     .locals 2
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -524,12 +491,10 @@
 
     iput v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mScreenWidth:I
 
-    .line 57
     sget-boolean v0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mIsSupportCocktailBar:Z
 
     if-eqz v0, :cond_0
 
-    .line 58
     iget-object v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "window"
@@ -550,7 +515,6 @@
 
     iput v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mRotation:I
 
-    .line 60
     :cond_0
     return-void
 .end method
@@ -559,7 +523,6 @@
     .locals 2
 
     .prologue
-    .line 88
     iget v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mEdge:I
 
     const/4 v1, 0x5
@@ -591,12 +554,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 63
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->isEdge()Z
 
     move-result v0
 
-    .line 64
     .local v0, "lastResizing":Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -604,10 +565,8 @@
 
     if-nez v1, :cond_4
 
-    .line 65
     invoke-virtual {p0}, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->init()V
 
-    .line 66
     iget v1, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mScreenWidth:I
 
     invoke-static {v1, p1}, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->getEdgeFlag(ILandroid/view/MotionEvent;)I
@@ -616,12 +575,10 @@
 
     iput v1, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mEdge:I
 
-    .line 67
     sget-boolean v1, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mIsSupportCocktailBar:Z
 
     if-eqz v1, :cond_0
 
-    .line 68
     iget v1, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mEdge:I
 
     invoke-direct {p0, v1}, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->checkCocktailBar(I)I
@@ -630,7 +587,6 @@
 
     iput v1, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mEdge:I
 
-    .line 70
     :cond_0
     iget v1, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mEdge:I
 
@@ -644,11 +600,9 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 71
     :cond_1
     const/4 v0, 0x1
 
-    .line 75
     :goto_0
     if-eqz v0, :cond_2
 
@@ -658,13 +612,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 76
     iput v3, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mEdge:I
 
-    .line 77
     const/4 v0, 0x0
 
-    .line 78
     sget-boolean v1, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->DEBUG:Z
 
     if-eqz v1, :cond_2
@@ -675,18 +626,15 @@
 
     invoke-static {v1, v2}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     :cond_2
     :goto_1
     return v0
 
-    .line 73
     :cond_3
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 80
     :cond_4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -704,7 +652,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 82
     :cond_5
     iput v3, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mEdge:I
 
@@ -715,7 +662,6 @@
     .locals 2
 
     .prologue
-    .line 92
     sget-boolean v0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -726,13 +672,11 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     :cond_0
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mEdge:I
 
-    .line 94
     return-void
 .end method
 
@@ -740,7 +684,6 @@
     .locals 4
 
     .prologue
-    .line 139
     const/4 v2, 0x0
 
     invoke-direct {p0, v2}, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->notMultiWindowEdgeSupport(Landroid/view/MotionEvent;)Z
@@ -749,7 +692,6 @@
 
     if-nez v2, :cond_0
 
-    .line 141
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -757,7 +699,6 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 142
     .local v1, "multiWindowUIIntent":Landroid/content/Intent;
     iget-object v2, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
@@ -767,31 +708,26 @@
 
     if-eqz v2, :cond_1
 
-    .line 143
     const-string v2, "com.android.systemui"
 
     const-string v3, "com.android.systemui.multiwindow.centerbarwindow.CenterBarWindowService"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 147
     :goto_0
     const-string v2, "com.sec.android.multiwindow.gesture.overlayHelp"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 148
     iget-object v2, p0, Lcom/samsung/android/multiwindow/ui/MultiWindowEdgeDetector;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2, v1}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 153
     .end local v1    # "multiWindowUIIntent":Landroid/content/Intent;
     :cond_0
     :goto_1
     return-void
 
-    .line 145
     .restart local v1    # "multiWindowUIIntent":Landroid/content/Intent;
     :cond_1
     const-string v2, "com.sec.android.app.FlashBarService"
@@ -804,12 +740,10 @@
 
     goto :goto_0
 
-    .line 149
     .end local v1    # "multiWindowUIIntent":Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 150
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

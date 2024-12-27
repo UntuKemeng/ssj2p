@@ -35,16 +35,12 @@
     .param p2, "storage"    # Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     iput-object p1, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mContext:Landroid/content/Context;
 
-    .line 30
     iput-object p2, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mStorage:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 31
     new-instance v0, Lcom/android/server/enterprise/utils/CertificateUtil;
 
     iget-object v1, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mContext:Landroid/content/Context;
@@ -53,14 +49,12 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mUtils:Lcom/android/server/enterprise/utils/CertificateUtil;
 
-    .line 32
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
-    .line 33
     return-void
 .end method
 
@@ -84,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 87
     .local p1, "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     invoke-interface {p1, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -92,14 +85,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 88
     invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/List;
 
-    .line 89
     .local v0, "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -107,21 +98,17 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 94
     :goto_0
     invoke-interface {p1, p2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 95
     return-void
 
-    .line 91
     .end local v0    # "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 92
     .restart local v0    # "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -147,23 +134,19 @@
     .end annotation
 
     .prologue
-    .line 163
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 165
     .local v3, "keyList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-nez p1, :cond_2
 
-    .line 168
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mUtils:Lcom/android/server/enterprise/utils/CertificateUtil;
 
     invoke-virtual {v5}, Lcom/android/server/enterprise/utils/CertificateUtil;->getAllUsersId()Ljava/util/List;
 
     move-result-object v0
 
-    .line 169
     .local v0, "allUsersId":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -184,7 +167,6 @@
 
     check-cast v4, Ljava/lang/Integer;
 
-    .line 170
     .local v4, "userId1":Ljava/lang/Integer;
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
@@ -196,7 +178,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 173
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mStorage:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
@@ -207,23 +188,19 @@
 
     move-result v1
 
-    .line 174
     .local v1, "containerOwner":I
     if-ne v1, p2, :cond_0
 
-    .line 175
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 178
     .end local v1    # "containerOwner":I
     :cond_1
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 182
     .end local v0    # "allUsersId":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "userId1":Ljava/lang/Integer;
@@ -234,7 +211,6 @@
 
     invoke-interface {v3, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 184
     :cond_3
     return-object v3
 .end method
@@ -259,7 +235,6 @@
     .end annotation
 
     .prologue
-    .line 132
     .local p1, "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     invoke-interface {p1, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -267,7 +242,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 133
     invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -280,7 +254,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 134
     invoke-interface {p1, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -293,10 +266,8 @@
 
     if-nez v0, :cond_0
 
-    .line 135
     invoke-interface {p1, p2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
     :cond_0
     return-void
 .end method
@@ -318,7 +289,6 @@
     .end annotation
 
     .prologue
-    .line 69
     .local p3, "aliases":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     monitor-enter p0
 
@@ -327,7 +297,6 @@
 
     move-result-object v3
 
-    .line 71
     .local v3, "keyList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -350,7 +319,6 @@
 
     move-result v5
 
-    .line 72
     .local v5, "userId":I
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -370,7 +338,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 73
     .local v0, "alias":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
@@ -384,7 +351,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 74
     iget-object v6, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -403,7 +369,6 @@
 
     goto :goto_0
 
-    .line 69
     .end local v0    # "alias":Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "keyList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -415,7 +380,6 @@
 
     throw v6
 
-    .line 76
     .restart local v0    # "alias":Ljava/lang/String;
     .restart local v2    # "i$":Ljava/util/Iterator;
     .restart local v3    # "keyList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -426,11 +390,9 @@
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 77
     .local v4, "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     invoke-direct {p0, v4, v0, p2}, Lcom/android/server/enterprise/certificate/CertificateCache;->addToUserCache(Ljava/util/Map;Ljava/lang/String;I)V
 
-    .line 78
     iget-object v6, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -443,7 +405,6 @@
 
     goto :goto_0
 
-    .line 82
     .end local v0    # "alias":Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v4    # "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
@@ -458,7 +419,6 @@
     .locals 1
 
     .prologue
-    .line 188
     monitor-enter p0
 
     :try_start_0
@@ -468,12 +428,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 189
     monitor-exit p0
 
     return-void
 
-    .line 188
     :catchall_0
     move-exception v0
 
@@ -488,16 +446,13 @@
     .param p2, "cacheName"    # Ljava/lang/String;
 
     .prologue
-    .line 192
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 193
     .local v3, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {v3, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 196
     iget-object v8, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-interface {v8}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -522,21 +477,17 @@
 
     check-cast v7, Ljava/lang/Integer;
 
-    .line 197
     .local v7, "userId":Ljava/lang/Integer;
     const-string v8, "Certificate cache for userId "
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 198
     invoke-virtual {v3, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 199
     const-string v8, " {"
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 201
     iget-object v8, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-interface {v8, v7}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -545,11 +496,9 @@
 
     check-cast v4, Ljava/util/Map;
 
-    .line 202
     .local v4, "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     if-eqz v4, :cond_3
 
-    .line 204
     invoke-interface {v4}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v8
@@ -558,7 +507,6 @@
 
     move-result-object v6
 
-    .line 205
     .local v6, "userCacheIt":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;>;"
     :cond_0
     :goto_1
@@ -568,14 +516,12 @@
 
     if-eqz v8, :cond_3
 
-    .line 206
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/util/Map$Entry;
 
-    .line 208
     .local v5, "userCacheEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -583,21 +529,17 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 209
     .local v1, "alias":Ljava/lang/String;
     const-string v8, "[alias: "
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 210
     invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 211
     const-string v8, ", adminList: "
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 213
     invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v8
@@ -608,7 +550,6 @@
 
     move-result-object v0
 
-    .line 214
     .local v0, "adminUidIt":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_1
     :goto_2
@@ -618,7 +559,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 215
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
@@ -629,41 +569,35 @@
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 217
     invoke-interface {v0}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v8
 
     if-eqz v8, :cond_1
 
-    .line 218
     const-string v8, ", "
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 221
     :cond_2
     const-string v8, "]"
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 224
     invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    .line 225
     const-string v8, ", "
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_1
 
-    .line 229
     .end local v0    # "adminUidIt":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     .end local v1    # "alias":Ljava/lang/String;
     .end local v5    # "userCacheEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
@@ -673,21 +607,18 @@
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 230
     invoke-static {}, Ljava/lang/System;->lineSeparator()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 231
     invoke-static {}, Ljava/lang/System;->lineSeparator()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 233
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
@@ -696,7 +627,6 @@
 
     goto/16 :goto_0
 
-    .line 235
     .end local v4    # "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     .end local v7    # "userId":Ljava/lang/Integer;
     :cond_4
@@ -708,7 +638,6 @@
     .param p1, "key"    # I
 
     .prologue
-    .line 142
     monitor-enter p0
 
     :try_start_0
@@ -724,27 +653,22 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 143
     .local v0, "entry":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     if-eqz v0, :cond_0
 
-    .line 144
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    .line 145
     .local v1, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz v1, :cond_0
 
-    .line 146
     invoke-interface {v1}, Ljava/util/Set;->size()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v2
 
-    .line 149
     .end local v1    # "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :goto_0
     monitor-exit p0
@@ -756,7 +680,6 @@
 
     goto :goto_0
 
-    .line 142
     .end local v0    # "entry":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     :catchall_0
     move-exception v2
@@ -771,12 +694,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 36
     monitor-enter p0
 
     const/4 v2, 0x0
 
-    .line 37
     .local v2, "numAliases":I
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
@@ -791,7 +712,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 38
     iget-object v3, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -826,7 +746,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 39
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -842,10 +761,8 @@
 
     add-int/2addr v2, v3
 
-    .line 40
     goto :goto_0
 
-    .line 42
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_0
@@ -853,7 +770,6 @@
 
     return v2
 
-    .line 36
     :catchall_0
     move-exception v3
 
@@ -867,7 +783,6 @@
     .param p1, "dbColumn"    # Ljava/lang/String;
 
     .prologue
-    .line 48
     monitor-enter p0
 
     const/4 v10, 0x1
@@ -879,7 +794,6 @@
 
     aput-object p1, v2, v10
 
-    .line 49
     .local v2, "columns":[Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mUtils:Lcom/android/server/enterprise/utils/CertificateUtil;
 
@@ -887,7 +801,6 @@
 
     move-result-object v9
 
-    .line 50
     .local v9, "userIdsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -910,7 +823,6 @@
 
     move-result v8
 
-    .line 51
     .local v8, "userId":I
     iget-object v10, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mStorage:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -920,7 +832,6 @@
 
     move-result-object v4
 
-    .line 53
     .local v4, "cvList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -941,24 +852,20 @@
 
     check-cast v3, Landroid/content/ContentValues;
 
-    .line 55
     .local v3, "cv":Landroid/content/ContentValues;
     invoke-virtual {v3, p1}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 56
     .local v7, "stringList":Ljava/lang/String;
     if-eqz v7, :cond_1
 
-    .line 58
     const-string v10, "adminUid"
 
     invoke-virtual {v3, v10}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 60
     .local v0, "adminUid":Ljava/lang/Integer;
     const-string v10, ","
 
@@ -966,7 +873,6 @@
 
     move-result-object v1
 
-    .line 61
     .local v1, "aliases":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -978,7 +884,6 @@
 
     goto :goto_0
 
-    .line 48
     .end local v0    # "adminUid":Ljava/lang/Integer;
     .end local v1    # "aliases":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "columns":[Ljava/lang/String;
@@ -995,7 +900,6 @@
 
     throw v10
 
-    .line 65
     .restart local v2    # "columns":[Ljava/lang/String;
     .restart local v9    # "userIdsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_2
@@ -1010,7 +914,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 99
     monitor-enter p0
 
     :try_start_0
@@ -1026,7 +929,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 100
     iget-object v1, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1039,7 +941,6 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 101
     .local v0, "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     if-eqz v0, :cond_0
 
@@ -1051,10 +952,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 102
     const/4 v1, 0x1
 
-    .line 105
     .end local v0    # "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     :goto_0
     monitor-exit p0
@@ -1066,7 +965,6 @@
 
     goto :goto_0
 
-    .line 99
     :catchall_0
     move-exception v1
 
@@ -1082,7 +980,6 @@
     .param p3, "adminUid"    # I
 
     .prologue
-    .line 153
     monitor-enter p0
 
     :try_start_0
@@ -1098,7 +995,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 154
     iget-object v1, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1111,7 +1007,6 @@
 
     check-cast v0, Ljava/util/Map;
 
-    .line 155
     .local v0, "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     invoke-interface {v0, p2}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -1119,7 +1014,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 156
     invoke-interface {v0, p2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -1136,7 +1030,6 @@
 
     move-result v1
 
-    .line 159
     .end local v0    # "userCache":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/Integer;>;>;"
     :goto_0
     monitor-exit p0
@@ -1148,7 +1041,6 @@
 
     goto :goto_0
 
-    .line 153
     :catchall_0
     move-exception v1
 
@@ -1172,7 +1064,6 @@
     .end annotation
 
     .prologue
-    .line 109
     .local p3, "aliases":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     monitor-enter p0
 
@@ -1181,7 +1072,6 @@
 
     move-result-object v3
 
-    .line 111
     .local v3, "keyList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1204,7 +1094,6 @@
 
     move-result v4
 
-    .line 112
     .local v4, "userId":I
     invoke-interface {p3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1225,7 +1114,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 113
     .local v0, "alias":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
@@ -1239,7 +1127,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 114
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1254,7 +1141,6 @@
 
     invoke-direct {p0, v5, v0, p2}, Lcom/android/server/enterprise/certificate/CertificateCache;->removeFromUserCache(Ljava/util/Map;Ljava/lang/String;I)V
 
-    .line 115
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1277,7 +1163,6 @@
 
     if-nez v5, :cond_1
 
-    .line 116
     iget-object v5, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1290,7 +1175,6 @@
 
     goto :goto_0
 
-    .line 109
     .end local v0    # "alias":Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "keyList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -1302,7 +1186,6 @@
 
     throw v5
 
-    .line 121
     .restart local v3    # "keyList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :cond_2
     monitor-exit p0
@@ -1315,7 +1198,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 124
     monitor-enter p0
 
     :try_start_0
@@ -1331,7 +1213,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 125
     iget-object v0, p0, Lcom/android/server/enterprise/certificate/CertificateCache;->mCache:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1342,13 +1223,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 127
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 124
     :catchall_0
     move-exception v0
 

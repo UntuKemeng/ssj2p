@@ -133,7 +133,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 104
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -160,27 +159,22 @@
 
     const/4 v7, 0x0
 
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 115
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mHandler:Landroid/os/Handler;
 
-    .line 116
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mLock:Ljava/lang/Object;
 
-    .line 120
     iput v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mStatusBarHeight:I
 
-    .line 126
     new-instance v0, Lcom/android/server/policy/BarController;
 
     const-string v1, "StatusBar"
@@ -197,88 +191,64 @@
 
     iput-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mStatusBarController:Lcom/android/server/policy/BarController;
 
-    .line 134
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mIsRecentUI:Z
 
-    .line 135
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mIsTrayBarUI:Z
 
-    .line 137
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mFloatingPadding:Landroid/graphics/Rect;
 
-    .line 138
     iput v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mMinimizeSize:I
 
-    .line 139
     iput v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mScaleWindowResizableSize:I
 
-    .line 141
     iput v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mDesktopScaleWindowResizableSize:I
 
-    .line 143
     iput-object v8, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mMultiWindowUIIntent:Landroid/content/Intent;
 
-    .line 144
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mStatusBarTransient:Z
 
-    .line 151
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mTopFullScreenOpaqueWindowStates:Ljava/util/ArrayList;
 
-    .line 152
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mConsumeBackKeyUp:Z
 
-    .line 153
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mFirstRecentKeyClick:Z
 
-    .line 154
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mFirstMultiWindowSettingOn:Z
 
-    .line 155
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mForceHideCascade:Z
 
-    .line 160
     iput v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mEnableMultiWindowUISetting:I
 
-    .line 162
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mIsMultiWindowTrayOpen:Z
 
-    .line 163
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mForceHideCenterBar:Z
 
-    .line 164
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mForceHideStatusBar:Z
 
-    .line 165
     iput-boolean v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowController:Z
 
-    .line 166
     iput v9, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mForceHidePenWindowControllerStackId:I
 
-    .line 167
     iput v9, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mGrantPermissionStackId:I
 
-    .line 169
     iput-object v8, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mLongPressedMinimizeIcon:Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 172
     iput-object v8, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mDesktopManager:Lcom/samsung/android/desktop/DesktopManager;
 
-    .line 179
     new-instance v0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$1;-><init>(Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;)V
 
     iput-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mMultiuserReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 789
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -295,7 +265,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 1466
     :try_start_0
     iget-object v7, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
@@ -303,7 +272,6 @@
 
     move-result-object v6
 
-    .line 1467
     .local v6, "pm":Landroid/content/pm/PackageManager;
     invoke-interface {p1}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
@@ -315,7 +283,6 @@
 
     move-result-object v5
 
-    .line 1468
     .local v5, "parts":[Ljava/lang/String;
     array-length v7, v5
 
@@ -325,14 +292,12 @@
 
     move-object v1, v8
 
-    .line 1486
     .end local v5    # "parts":[Ljava/lang/String;
     .end local v6    # "pm":Landroid/content/pm/PackageManager;
     :cond_0
     :goto_0
     return-object v1
 
-    .line 1470
     .restart local v5    # "parts":[Ljava/lang/String;
     .restart local v6    # "pm":Landroid/content/pm/PackageManager;
     :cond_1
@@ -340,7 +305,6 @@
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1471
     .local v3, "i":Landroid/content/Intent;
     new-instance v7, Landroid/content/ComponentName;
 
@@ -356,14 +320,12 @@
 
     invoke-virtual {v3, v7}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1472
     const/4 v7, 0x0
 
     invoke-virtual {v6, v3, v7}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v4
 
-    .line 1473
     .local v4, "l":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/4 v7, 0x0
 
@@ -375,31 +337,25 @@
 
     iget-object v0, v7, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 1474
     .local v0, "ai":Landroid/content/pm/ActivityInfo;
     const/4 v1, 0x0
 
-    .line 1475
     .local v1, "appName":Ljava/lang/CharSequence;
     if-eqz v0, :cond_2
 
-    .line 1476
     invoke-virtual {v0, v6}, Landroid/content/pm/ActivityInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
 
     move-result-object v1
 
-    .line 1478
     :cond_2
     if-nez v1, :cond_0
 
-    .line 1479
     const-string v1, ""
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 1482
     .end local v0    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v1    # "appName":Ljava/lang/CharSequence;
     .end local v3    # "i":Landroid/content/Intent;
@@ -409,7 +365,6 @@
     :catch_0
     move-exception v2
 
-    .line 1483
     .local v2, "e":Ljava/lang/Exception;
     const-string v7, "MultiPhoneWindowManager"
 
@@ -433,12 +388,10 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1484
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v1, v8
 
-    .line 1486
     goto :goto_0
 .end method
 
@@ -446,7 +399,6 @@
     .locals 1
 
     .prologue
-    .line 755
     const/4 v0, 0x0
 
     return v0
@@ -456,7 +408,6 @@
     .locals 4
 
     .prologue
-    .line 734
     iget-object v2, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mTopFullScreenOpaqueWindowStates:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -477,7 +428,6 @@
 
     check-cast v1, Landroid/view/WindowManagerPolicy$WindowState;
 
-    .line 735
     .local v1, "win":Landroid/view/WindowManagerPolicy$WindowState;
     invoke-interface {v1}, Landroid/view/WindowManagerPolicy$WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -491,10 +441,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 736
     const/4 v2, 0x1
 
-    .line 739
     .end local v1    # "win":Landroid/view/WindowManagerPolicy$WindowState;
     :goto_0
     return v2
@@ -509,7 +457,6 @@
     .locals 1
 
     .prologue
-    .line 892
     const/4 v0, 0x0
 
     return v0
@@ -519,14 +466,12 @@
     .locals 3
 
     .prologue
-    .line 1420
     iget-object v1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mTopApplicationWindowState:Landroid/view/WindowManagerPolicy$WindowState;
 
     invoke-interface {v1}, Landroid/view/WindowManagerPolicy$WindowState;->getOwningPackage()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1421
     .local v0, "pkgName":Ljava/lang/String;
     const-string v1, "com.sec.knox.foldercontainer"
 
@@ -536,17 +481,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 1422
     const-string v1, "MultiPhoneWindowManager"
 
     const-string v2, "KnoxFolderContainer is top. startMultiWindowRecentsActivity"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1423
     const/4 v1, 0x1
 
-    .line 1425
     :goto_0
     return v1
 
@@ -560,7 +502,6 @@
     .locals 1
 
     .prologue
-    .line 747
     const/4 v0, 0x0
 
     return v0
@@ -570,7 +511,6 @@
     .locals 1
 
     .prologue
-    .line 777
     const/4 v0, 0x0
 
     return v0
@@ -580,7 +520,6 @@
     .locals 1
 
     .prologue
-    .line 770
     const/4 v0, 0x0
 
     return v0
@@ -593,7 +532,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 1252
     return-void
 .end method
 
@@ -603,7 +541,6 @@
     .param p2, "attrs"    # Landroid/view/WindowManager$LayoutParams;
 
     .prologue
-    .line 547
     return-void
 .end method
 
@@ -611,7 +548,6 @@
     .locals 0
 
     .prologue
-    .line 495
     return-void
 .end method
 
@@ -620,7 +556,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 1221
     const/4 v0, -0x1
 
     return v0
@@ -631,7 +566,6 @@
     .param p1, "forceClose"    # Z
 
     .prologue
-    .line 959
     const/4 v0, 0x0
 
     return v0
@@ -643,7 +577,6 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 1270
     return-void
 .end method
 
@@ -652,7 +585,6 @@
     .param p1, "topFullscreenOpaqueWindowState"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 655
     return-void
 .end method
 
@@ -661,10 +593,8 @@
     .param p1, "forceHide"    # Z
 
     .prologue
-    .line 674
     iput-boolean p1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mForceHideCenterBar:Z
 
-    .line 675
     return-void
 .end method
 
@@ -673,7 +603,6 @@
     .param p1, "win"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 826
     const/4 v0, 0x0
 
     return v0
@@ -684,7 +613,6 @@
     .param p1, "win"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 799
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
@@ -699,7 +627,6 @@
     .param p3, "topFullScreenOpaqueWindowState"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 1209
     const/4 v0, 0x0
 
     return v0
@@ -709,7 +636,6 @@
     .locals 1
 
     .prologue
-    .line 873
     const/4 v0, 0x0
 
     return-object v0
@@ -719,7 +645,6 @@
     .locals 1
 
     .prologue
-    .line 865
     const/4 v0, 0x0
 
     return v0
@@ -732,40 +657,33 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 831
     if-nez p1, :cond_1
 
-    .line 856
     :cond_0
     :goto_0
     return v6
 
-    .line 835
     :cond_1
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getTopFullWindowInSameTask()Landroid/view/WindowManagerPolicy$WindowState;
 
     move-result-object v0
 
-    .line 836
     .local v0, "mainWin":Landroid/view/WindowManagerPolicy$WindowState;
     if-eqz v0, :cond_5
 
     move-object v4, v0
 
-    .line 838
     .local v4, "targetWin":Landroid/view/WindowManagerPolicy$WindowState;
     :goto_1
     invoke-interface {p1}, Landroid/view/WindowManagerPolicy$WindowState;->getSystemUiVisibility()I
 
     move-result v5
 
-    .line 839
     .local v5, "winSysUiFl":I
     invoke-interface {v4}, Landroid/view/WindowManagerPolicy$WindowState;->getSystemUiVisibility()I
 
     move-result v3
 
-    .line 841
     .local v3, "targetSysUiFl":I
     if-eq p1, v4, :cond_6
 
@@ -785,7 +703,6 @@
 
     const/4 v2, 0x1
 
-    .line 845
     .local v2, "needNavigationBarHeight":Z
     :goto_2
     invoke-interface {v4}, Landroid/view/WindowManagerPolicy$WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -805,7 +722,6 @@
     :cond_2
     if-eqz v2, :cond_7
 
-    .line 847
     :cond_3
     iget-object v6, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mPhoneWindowManager:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -813,13 +729,11 @@
 
     move-result v1
 
-    .line 848
     .local v1, "navigationBarHeight":I
     sget-boolean v6, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->SAFE_DEBUG:Z
 
     if-eqz v6, :cond_4
 
-    .line 849
     const-string v6, "MultiPhoneWindowManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -865,7 +779,6 @@
     :cond_4
     move v6, v1
 
-    .line 851
     goto :goto_0
 
     .end local v1    # "navigationBarHeight":I
@@ -876,7 +789,6 @@
     :cond_5
     move-object v4, p1
 
-    .line 836
     goto :goto_1
 
     .restart local v3    # "targetSysUiFl":I
@@ -885,17 +797,14 @@
     :cond_6
     move v2, v6
 
-    .line 841
     goto :goto_2
 
-    .line 853
     .restart local v2    # "needNavigationBarHeight":Z
     :cond_7
     sget-boolean v7, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->SAFE_DEBUG:Z
 
     if-eqz v7, :cond_0
 
-    .line 854
     const-string v7, "MultiPhoneWindowManager"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -941,7 +850,6 @@
     .locals 1
 
     .prologue
-    .line 887
     const/4 v0, 0x0
 
     return v0
@@ -951,7 +859,6 @@
     .locals 1
 
     .prologue
-    .line 1415
     const/4 v0, 0x0
 
     return v0
@@ -961,7 +868,6 @@
     .locals 1
 
     .prologue
-    .line 786
     const/4 v0, 0x0
 
     return v0
@@ -976,14 +882,12 @@
     .param p5, "phoneWindowManager"    # Lcom/android/server/policy/PhoneWindowManager;
 
     .prologue
-    .line 248
     const-string v0, "MultiPhoneWindowManager"
 
     const-string/jumbo v1, "init() is skipped because of mutliwindow disabled"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 250
     return-void
 .end method
 
@@ -995,7 +899,6 @@
     .param p4, "topFullscreenOpaqueWindowState"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 358
     const/4 v0, 0x0
 
     return v0
@@ -1005,14 +908,11 @@
     .locals 8
 
     .prologue
-    .line 1279
     const/16 v1, 0x3a
 
-    .line 1280
     .local v1, "ENABLED_SERVICES_SEPARATOR":C
     const-string v0, "com.google.android.marvin.talkback"
 
-    .line 1281
     .local v0, "DEFAULT_SCREENREADER_NAME":Ljava/lang/String;
     new-instance v5, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -1020,7 +920,6 @@
 
     invoke-direct {v5, v6}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 1283
     .local v5, "splitter":Landroid/text/TextUtils$SimpleStringSplitter;
     iget-object v6, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
 
@@ -1034,18 +933,14 @@
 
     move-result-object v4
 
-    .line 1286
     .local v4, "enabledServicesSetting":Ljava/lang/String;
     if-nez v4, :cond_0
 
-    .line 1287
     const-string v4, ""
 
-    .line 1290
     :cond_0
     invoke-virtual {v5, v4}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 1292
     :cond_1
     invoke-virtual {v5}, Landroid/text/TextUtils$SimpleStringSplitter;->hasNext()Z
 
@@ -1053,22 +948,18 @@
 
     if-eqz v6, :cond_2
 
-    .line 1293
     invoke-virtual {v5}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1294
     .local v2, "componentNameString":Ljava/lang/String;
     invoke-static {v2}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v3
 
-    .line 1296
     .local v3, "enabledService":Landroid/content/ComponentName;
     if-eqz v3, :cond_1
 
-    .line 1297
     const-string v6, "com.google.android.marvin.talkback"
 
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -1081,10 +972,8 @@
 
     if-eqz v6, :cond_1
 
-    .line 1298
     const/4 v6, 0x1
 
-    .line 1301
     .end local v2    # "componentNameString":Ljava/lang/String;
     .end local v3    # "enabledService":Landroid/content/ComponentName;
     :goto_0
@@ -1100,7 +989,6 @@
     .locals 1
 
     .prologue
-    .line 1512
     iget-boolean v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mForceHideCascade:Z
 
     return v0
@@ -1110,7 +998,6 @@
     .locals 1
 
     .prologue
-    .line 269
     const/4 v0, 0x0
 
     return v0
@@ -1120,7 +1007,6 @@
     .locals 1
 
     .prologue
-    .line 667
     const/4 v0, 0x0
 
     return v0
@@ -1130,7 +1016,6 @@
     .locals 1
 
     .prologue
-    .line 259
     const/4 v0, 0x0
 
     return v0
@@ -1146,7 +1031,6 @@
     .param p6, "attachedWindowStyle"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 1171
     const/4 v0, 0x0
 
     return v0
@@ -1158,7 +1042,6 @@
     .param p2, "hasDisableTrayFlag"    # Landroid/util/MutableBoolean;
 
     .prologue
-    .line 1086
     const/4 v0, 0x0
 
     return v0
@@ -1169,7 +1052,6 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 1100
     return-void
 .end method
 
@@ -1178,7 +1060,6 @@
     .param p1, "keyguardDelegate"    # Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     .prologue
-    .line 764
     return-void
 .end method
 
@@ -1188,7 +1069,6 @@
     .param p2, "attrs"    # Landroid/view/WindowManager$LayoutParams;
 
     .prologue
-    .line 725
     const/4 v0, 0x0
 
     return v0
@@ -1199,7 +1079,6 @@
     .param p1, "win"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 692
     return-void
 .end method
 
@@ -1207,7 +1086,6 @@
     .locals 0
 
     .prologue
-    .line 310
     return-void
 .end method
 
@@ -1216,7 +1094,6 @@
     .param p1, "open"    # Z
 
     .prologue
-    .line 1181
     return-void
 .end method
 
@@ -1226,7 +1103,6 @@
     .param p2, "win"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 1490
     invoke-interface {p2}, Landroid/view/WindowManagerPolicy$WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
@@ -1237,10 +1113,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1491
     const/4 v0, 0x0
 
-    .line 1505
     :goto_0
     return v0
 
@@ -1255,7 +1129,6 @@
     .param p1, "extra"    # Z
 
     .prologue
-    .line 1462
     return-void
 .end method
 
@@ -1263,7 +1136,6 @@
     .locals 0
 
     .prologue
-    .line 1263
     return-void
 .end method
 
@@ -1272,14 +1144,12 @@
     .param p1, "topFullscreenOpaqueWindowState"    # Landroid/view/WindowManagerPolicy$WindowState;
 
     .prologue
-    .line 919
     const-string v0, "MultiPhoneWindowManager"
 
     const-string v1, "MULTIWINDOW_ENABLED == false"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 920
     const/4 v0, 0x0
 
     return v0
@@ -1289,7 +1159,6 @@
     .locals 0
 
     .prologue
-    .line 1241
     return-void
 .end method
 
@@ -1298,7 +1167,6 @@
     .param p1, "forceShow"    # Z
 
     .prologue
-    .line 997
     return-void
 .end method
 
@@ -1306,7 +1174,6 @@
     .locals 0
 
     .prologue
-    .line 478
     return-void
 .end method
 
@@ -1315,7 +1182,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 289
     const/4 v0, -0x1
 
     return v0

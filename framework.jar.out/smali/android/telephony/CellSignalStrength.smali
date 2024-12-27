@@ -24,7 +24,6 @@
     .locals 3
 
     .prologue
-    .line 38
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -68,10 +67,8 @@
     .locals 0
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     return-void
 .end method
 

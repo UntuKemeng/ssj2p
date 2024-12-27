@@ -44,7 +44,6 @@
 
     const/4 v3, 0x0
 
-    .line 482
     new-instance v0, Landroid/app/wallpaperbackup/Controller$REQ_SIZE;
 
     const-string v1, "SUCCESS"
@@ -63,7 +62,6 @@
 
     sput-object v0, Landroid/app/wallpaperbackup/Controller$REQ_SIZE;->MINIMUM_SIZE:Landroid/app/wallpaperbackup/Controller$REQ_SIZE;
 
-    .line 481
     const/4 v0, 0x2
 
     new-array v0, v0, [Landroid/app/wallpaperbackup/Controller$REQ_SIZE;
@@ -91,18 +89,14 @@
     .end annotation
 
     .prologue
-    .line 485
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 483
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/app/wallpaperbackup/Controller$REQ_SIZE;->value:I
 
-    .line 486
     iput p3, p0, Landroid/app/wallpaperbackup/Controller$REQ_SIZE;->value:I
 
-    .line 487
     return-void
 .end method
 
@@ -111,7 +105,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 481
     const-class v0, Landroid/app/wallpaperbackup/Controller$REQ_SIZE;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -127,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 481
     sget-object v0, Landroid/app/wallpaperbackup/Controller$REQ_SIZE;->$VALUES:[Landroid/app/wallpaperbackup/Controller$REQ_SIZE;
 
     invoke-virtual {v0}, [Landroid/app/wallpaperbackup/Controller$REQ_SIZE;->clone()Ljava/lang/Object;
@@ -145,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 490
     iget v0, p0, Landroid/app/wallpaperbackup/Controller$REQ_SIZE;->value:I
 
     return v0

@@ -15,12 +15,10 @@
     .param p1, "method"    # Ljava/lang/reflect/Method;
 
     .prologue
-    .line 52
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/core/Function;-><init>(Ljava/lang/reflect/Method;Z)V
 
-    .line 53
     return-void
 .end method
 
@@ -30,16 +28,12 @@
     .param p2, "contextual"    # Z
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     iput-boolean p2, p0, Lorg/simpleframework/xml/core/Function;->contextual:Z
 
-    .line 65
     iput-object p1, p0, Lorg/simpleframework/xml/core/Function;->method:Ljava/lang/reflect/Method;
 
-    .line 66
     return-void
 .end method
 
@@ -58,27 +52,22 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 79
     if-eqz p2, :cond_1
 
-    .line 80
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Context;->getSession()Lorg/simpleframework/xml/core/Session;
 
     move-result-object v0
 
-    .line 81
     .local v0, "session":Lorg/simpleframework/xml/core/Session;
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/Session;->getMap()Ljava/util/Map;
 
     move-result-object v1
 
-    .line 83
     .local v1, "table":Ljava/util/Map;
     iget-boolean v2, p0, Lorg/simpleframework/xml/core/Function;->contextual:Z
 
     if-eqz v2, :cond_0
 
-    .line 84
     iget-object v2, p0, Lorg/simpleframework/xml/core/Function;->method:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x1
@@ -91,13 +80,11 @@
 
     move-result-object v2
 
-    .line 88
     .end local v0    # "session":Lorg/simpleframework/xml/core/Session;
     .end local v1    # "table":Ljava/util/Map;
     :goto_0
     return-object v2
 
-    .line 86
     .restart local v0    # "session":Lorg/simpleframework/xml/core/Session;
     .restart local v1    # "table":Ljava/util/Map;
     :cond_0
@@ -111,7 +98,6 @@
 
     goto :goto_0
 
-    .line 88
     .end local v0    # "session":Lorg/simpleframework/xml/core/Session;
     .end local v1    # "table":Ljava/util/Map;
     :cond_1

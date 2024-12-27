@@ -26,24 +26,20 @@
     .param p1, "event"    # Ljavax/xml/stream/events/XMLEvent;
 
     .prologue
-    .line 340
     invoke-direct {p0}, Lorg/simpleframework/xml/stream/EventElement;-><init>()V
 
-    .line 341
     invoke-interface {p1}, Ljavax/xml/stream/events/XMLEvent;->asStartElement()Ljavax/xml/stream/events/StartElement;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/StreamReader$Start;->element:Ljavax/xml/stream/events/StartElement;
 
-    .line 342
     invoke-interface {p1}, Ljavax/xml/stream/events/XMLEvent;->getLocation()Ljavax/xml/stream/Location;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/StreamReader$Start;->location:Ljavax/xml/stream/Location;
 
-    .line 343
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .end annotation
 
     .prologue
-    .line 399
     iget-object v0, p0, Lorg/simpleframework/xml/stream/StreamReader$Start;->element:Ljavax/xml/stream/events/StartElement;
 
     invoke-interface {v0}, Ljavax/xml/stream/events/StartElement;->getAttributes()Ljava/util/Iterator;
@@ -76,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 353
     iget-object v0, p0, Lorg/simpleframework/xml/stream/StreamReader$Start;->location:Ljavax/xml/stream/Location;
 
     invoke-interface {v0}, Ljavax/xml/stream/Location;->getLineNumber()I
@@ -90,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 364
     iget-object v0, p0, Lorg/simpleframework/xml/stream/StreamReader$Start;->element:Ljavax/xml/stream/events/StartElement;
 
     invoke-interface {v0}, Ljavax/xml/stream/events/StartElement;->getName()Ljavax/xml/namespace/QName;
@@ -108,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 376
     iget-object v0, p0, Lorg/simpleframework/xml/stream/StreamReader$Start;->element:Ljavax/xml/stream/events/StartElement;
 
     invoke-interface {v0}, Ljavax/xml/stream/events/StartElement;->getName()Ljavax/xml/namespace/QName;
@@ -126,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 388
     iget-object v0, p0, Lorg/simpleframework/xml/stream/StreamReader$Start;->element:Ljavax/xml/stream/events/StartElement;
 
     invoke-interface {v0}, Ljavax/xml/stream/events/StartElement;->getName()Ljavax/xml/namespace/QName;
@@ -144,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 410
     iget-object v0, p0, Lorg/simpleframework/xml/stream/StreamReader$Start;->element:Ljavax/xml/stream/events/StartElement;
 
     return-object v0

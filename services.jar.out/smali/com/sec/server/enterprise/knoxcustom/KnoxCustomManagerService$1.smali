@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 381
     iput-object p1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 385
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -54,10 +52,8 @@
 
     if-eqz v3, :cond_5
 
-    .line 387
     const/4 v2, 0x0
 
-    .line 390
     .local v2, "speakerOn":Z
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
@@ -79,11 +75,9 @@
 
     move-result v2
 
-    .line 395
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 396
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -99,11 +93,9 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 397
     .local v0, "am":Landroid/media/AudioManager;
     invoke-virtual {v0, v8}, Landroid/media/AudioManager;->setForceSpeakerOn(Z)V
 
-    .line 400
     .end local v0    # "am":Landroid/media/AudioManager;
     :cond_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
@@ -114,7 +106,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 401
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     invoke-virtual {v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getUsbMassStorageState()Z
@@ -123,18 +114,15 @@
 
     if-eqz v3, :cond_6
 
-    .line 402
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # invokes: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->startProKioskMode()V
     invoke-static {v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->access$200(Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;)V
 
-    .line 403
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     invoke-virtual {v3, v8}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbMassStorageState(Z)I
 
-    .line 410
     :cond_1
     :goto_1
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
@@ -142,7 +130,6 @@
     # invokes: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->refreshStatusbar()V
     invoke-static {v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->access$300(Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;)V
 
-    .line 414
     :try_start_1
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
@@ -165,7 +152,6 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 415
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -183,7 +169,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 416
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -203,7 +188,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 422
     :cond_2
     :goto_2
     :try_start_2
@@ -226,7 +210,6 @@
 
     if-nez v3, :cond_3
 
-    .line 423
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -244,7 +227,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 424
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -264,7 +246,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 430
     :cond_3
     :goto_3
     :try_start_3
@@ -287,7 +268,6 @@
 
     if-nez v3, :cond_4
 
-    .line 431
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -305,7 +285,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 432
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     # getter for: Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -325,7 +304,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 439
     :cond_4
     :goto_4
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
@@ -337,7 +315,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 440
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     invoke-virtual {v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getSettingsHiddenState()I
@@ -348,24 +325,20 @@
 
     if-eqz v3, :cond_5
 
-    .line 441
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     const/16 v4, 0x1800
 
     invoke-virtual {v3, v8, v4}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setSettingsHiddenState(ZI)I
 
-    .line 456
     .end local v2    # "speakerOn":Z
     :cond_5
     return-void
 
-    .line 391
     .restart local v2    # "speakerOn":Z
     :catch_0
     move-exception v1
 
-    .line 392
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -391,7 +364,6 @@
 
     goto/16 :goto_0
 
-    .line 405
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_6
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
@@ -401,19 +373,16 @@
 
     goto/16 :goto_1
 
-    .line 434
     :catch_1
     move-exception v3
 
     goto :goto_4
 
-    .line 426
     :catch_2
     move-exception v3
 
     goto :goto_3
 
-    .line 418
     :catch_3
     move-exception v3
 

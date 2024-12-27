@@ -37,13 +37,10 @@
     .param p1, "root"    # Ljava/lang/Class;
 
     .prologue
-    .line 92
     invoke-direct {p0}, Lorg/simpleframework/xml/util/ConcurrentCache;-><init>()V
 
-    .line 93
     iput-object p1, p0, Lorg/simpleframework/xml/convert/ScannerBuilder$Entry;->root:Ljava/lang/Class;
 
-    .line 94
     return-void
 .end method
 
@@ -60,40 +57,32 @@
     .end annotation
 
     .prologue
-    .line 128
     .local p1, "label":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/convert/ScannerBuilder$Entry;->root:Ljava/lang/Class;
 
-    .line 130
     .local v0, "type":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 131
     invoke-virtual {v0, p1}, Ljava/lang/Class;->getAnnotation(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
 
     move-result-object v1
 
-    .line 133
     .local v1, "value":Ljava/lang/annotation/Annotation;, "TT;"
     if-eqz v1, :cond_0
 
-    .line 138
     .end local v1    # "value":Ljava/lang/annotation/Annotation;, "TT;"
     :goto_1
     return-object v1
 
-    .line 136
     .restart local v1    # "value":Ljava/lang/annotation/Annotation;, "TT;"
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 137
     goto :goto_0
 
-    .line 138
     .end local v1    # "value":Ljava/lang/annotation/Annotation;, "TT;"
     :cond_1
     const/4 v1, 0x0
@@ -116,7 +105,6 @@
     .end annotation
 
     .prologue
-    .line 107
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/convert/ScannerBuilder$Entry;->contains(Ljava/lang/Object;)Z
 
@@ -124,21 +112,17 @@
 
     if-nez v1, :cond_0
 
-    .line 108
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/convert/ScannerBuilder$Entry;->find(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;
 
     move-result-object v0
 
-    .line 110
     .local v0, "value":Ljava/lang/annotation/Annotation;, "TT;"
     if-eqz p1, :cond_0
 
     if-eqz v0, :cond_0
 
-    .line 111
     invoke-virtual {p0, p1, v0}, Lorg/simpleframework/xml/convert/ScannerBuilder$Entry;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 114
     .end local v0    # "value":Ljava/lang/annotation/Annotation;, "TT;"
     :cond_0
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/convert/ScannerBuilder$Entry;->get(Ljava/lang/Object;)Ljava/lang/Object;

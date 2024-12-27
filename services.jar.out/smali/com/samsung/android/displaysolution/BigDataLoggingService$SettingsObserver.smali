@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 129
     iput-object p1, p0, Lcom/samsung/android/displaysolution/BigDataLoggingService$SettingsObserver;->this$0:Lcom/samsung/android/displaysolution/BigDataLoggingService;
 
-    .line 130
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 131
     return-void
 .end method
 
@@ -42,6 +39,5 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 134
     return-void
 .end method

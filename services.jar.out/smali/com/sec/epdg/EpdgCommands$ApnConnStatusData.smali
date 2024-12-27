@@ -36,25 +36,18 @@
     .param p5, "prop"    # Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;
 
     .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
     iput p1, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mCid:I
 
-    .line 92
     iput-object p2, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mApnType:Ljava/lang/String;
 
-    .line 93
     iput-boolean p3, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mIsConnSuccess:Z
 
-    .line 94
     iput-boolean p4, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mIsHandover:Z
 
-    .line 95
     iput-object p5, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mLinkProp:Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;
 
-    .line 96
     return-void
 .end method
 
@@ -64,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget-object v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mApnType:Ljava/lang/String;
 
     return-object v0
@@ -74,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mCid:I
 
     return v0
@@ -84,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mLinkProp:Lcom/sec/epdg/EpdgRilInterface$IWlanLinkProperties;
 
     return-object v0
@@ -94,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mIsConnSuccess:Z
 
     return v0
@@ -104,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-boolean v0, p0, Lcom/sec/epdg/EpdgCommands$ApnConnStatusData;->mIsHandover:Z
 
     return v0
@@ -114,7 +102,6 @@
     .locals 3
 
     .prologue
-    .line 113
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceHandler()Landroid/os/Handler;
 
     move-result-object v0
@@ -131,6 +118,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 116
     return-void
 .end method

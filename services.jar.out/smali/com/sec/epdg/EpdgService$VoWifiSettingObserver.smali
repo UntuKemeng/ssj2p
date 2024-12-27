@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 2422
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$VoWifiSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
-    .line 2423
     invoke-direct {p0, p2}, Lcom/sec/epdg/EpdgContentObserverBase;-><init>(Landroid/os/Handler;)V
 
-    .line 2424
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 2428
     sget-object v3, Lcom/sec/epdg/VoWifiSettings;->CONTENT_URI_VOWIFISETTING_TABLE:Landroid/net/Uri;
 
     invoke-virtual {p2, v3}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -53,7 +49,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 2429
     iget-object v3, p0, Lcom/sec/epdg/EpdgService$VoWifiSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->getVowifiSetting()I
@@ -61,7 +56,6 @@
 
     move-result v0
 
-    .line 2430
     .local v0, "enable":I
     iget-object v3, p0, Lcom/sec/epdg/EpdgService$VoWifiSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -70,7 +64,6 @@
 
     move-result v1
 
-    .line 2431
     .local v1, "preferred":I
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isSharePreferredModeViaProperty()Z
 
@@ -80,7 +73,6 @@
 
     if-lez v1, :cond_0
 
-    .line 2432
     const-string v3, "[EPDGService]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -103,7 +95,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2433
     const-string v3, "ril.epdg.preferred.mode"
 
     invoke-static {v1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -112,7 +103,6 @@
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2436
     :cond_0
     # getter for: Lcom/sec/epdg/EpdgService;->mVoWifiState:I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$3700()I
@@ -128,7 +118,6 @@
 
     if-eq v3, v1, :cond_2
 
-    .line 2437
     :cond_1
     const-string v3, "[EPDGService]"
 
@@ -136,25 +125,20 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2438
     # setter for: Lcom/sec/epdg/EpdgService;->mVoWifiState:I
     invoke-static {v0}, Lcom/sec/epdg/EpdgService;->access$3702(I)I
 
-    .line 2439
     # setter for: Lcom/sec/epdg/EpdgService;->mVoWifiPref:I
     invoke-static {v1}, Lcom/sec/epdg/EpdgService;->access$3802(I)I
 
-    .line 2440
     iget-object v3, p0, Lcom/sec/epdg/EpdgService$VoWifiSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->setVowifiUserSetting(I)V
     invoke-static {v3, v0}, Lcom/sec/epdg/EpdgService;->access$3900(Lcom/sec/epdg/EpdgService;I)V
 
-    .line 2441
     # setter for: Lcom/sec/epdg/EpdgService;->mSetupFailureCount:I
     invoke-static {v6}, Lcom/sec/epdg/EpdgService;->access$4002(I)I
 
-    .line 2442
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1900()Landroid/os/Handler;
 
@@ -168,7 +152,6 @@
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2445
     :cond_2
     iget-object v3, p0, Lcom/sec/epdg/EpdgService$VoWifiSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -177,7 +160,6 @@
 
     move-result v2
 
-    .line 2446
     .local v2, "romingpreferred":I
     # getter for: Lcom/sec/epdg/EpdgService;->mVoWifiRoamPref:I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$4200()I
@@ -186,18 +168,15 @@
 
     if-eq v3, v2, :cond_3
 
-    .line 2447
     const-string v3, "[EPDGService]"
 
     const-string v4, "EpdgContentObserver - Roaming WIFI perferred mode changed"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2448
     # setter for: Lcom/sec/epdg/EpdgService;->mVoWifiRoamPref:I
     invoke-static {v2}, Lcom/sec/epdg/EpdgService;->access$4202(I)I
 
-    .line 2449
     iget-object v3, p0, Lcom/sec/epdg/EpdgService$VoWifiSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     sget-object v4, Lcom/sec/epdg/EpdgService$PolicyUpdateReason;->PREFERRED_MODE_CHANGED:Lcom/sec/epdg/EpdgService$PolicyUpdateReason;
@@ -205,7 +184,6 @@
     # invokes: Lcom/sec/epdg/EpdgService;->setPolicyTable(Lcom/sec/epdg/EpdgService$PolicyUpdateReason;)V
     invoke-static {v3, v4}, Lcom/sec/epdg/EpdgService;->access$4300(Lcom/sec/epdg/EpdgService;Lcom/sec/epdg/EpdgService$PolicyUpdateReason;)V
 
-    .line 2452
     .end local v0    # "enable":I
     .end local v1    # "preferred":I
     .end local v2    # "romingpreferred":I

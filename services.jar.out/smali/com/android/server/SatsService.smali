@@ -86,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 64
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -105,40 +104,32 @@
 
     const/4 v3, 0x0
 
-    .line 73
     invoke-direct {p0}, Lcom/samsung/android/service/sats/ISatsService$Stub;-><init>()V
 
-    .line 66
     iput-boolean v4, p0, Lcom/android/server/SatsService;->mThreadUartGoWait:Z
 
-    .line 69
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/SatsService;->serviceInterfaces:Ljava/util/ArrayList;
 
-    .line 70
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/SatsService;->cmdList:Ljava/util/ArrayList;
 
-    .line 107
     new-instance v0, Lcom/android/server/SatsService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/SatsService$1;-><init>(Lcom/android/server/SatsService;)V
 
     iput-object v0, p0, Lcom/android/server/SatsService;->mUEventObserver:Landroid/os/UEventObserver;
 
-    .line 74
     sput-object p1, Lcom/android/server/SatsService;->mContext:Landroid/content/Context;
 
-    .line 75
     iput v3, p0, Lcom/android/server/SatsService;->mErrorCode:I
 
-    .line 77
     iget-object v0, p0, Lcom/android/server/SatsService;->serviceInterfaces:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/ReactiveATCmd;
@@ -151,14 +142,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 78
     iget-object v0, p0, Lcom/android/server/SatsService;->cmdList:Ljava/util/ArrayList;
 
     const-string v1, "AT+REACTIVE"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 81
     iget-object v0, p0, Lcom/android/server/SatsService;->serviceInterfaces:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/HdcptestATCmd;
@@ -171,14 +160,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 82
     iget-object v0, p0, Lcom/android/server/SatsService;->cmdList:Ljava/util/ArrayList;
 
     const-string v1, "AT+HDCPTEST"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 85
     iget-object v0, p0, Lcom/android/server/SatsService;->serviceInterfaces:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/DevRootKeyATCmd;
@@ -191,14 +178,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 86
     iget-object v0, p0, Lcom/android/server/SatsService;->cmdList:Ljava/util/ArrayList;
 
     const-string v1, "AT+DEVROOTK"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 89
     iget-object v0, p0, Lcom/android/server/SatsService;->serviceInterfaces:Ljava/util/ArrayList;
 
     new-instance v1, Lcom/android/server/UserDeviceATCmd;
@@ -211,14 +196,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 90
     iget-object v0, p0, Lcom/android/server/SatsService;->cmdList:Ljava/util/ArrayList;
 
     const-string v1, "AT+URDEVICE"
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 93
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/SatsService$AtCmdHandler;
@@ -231,7 +214,6 @@
 
     iput-object v0, p0, Lcom/android/server/SatsService;->mThreadUart:Ljava/lang/Thread;
 
-    .line 94
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/SatsService$AtCmdHandler;
@@ -244,24 +226,20 @@
 
     iput-object v0, p0, Lcom/android/server/SatsService;->mThreadUsb:Ljava/lang/Thread;
 
-    .line 95
     iget-object v0, p0, Lcom/android/server/SatsService;->mThreadUart:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 96
     iget-object v0, p0, Lcom/android/server/SatsService;->mThreadUsb:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 99
     iget-object v0, p0, Lcom/android/server/SatsService;->mUEventObserver:Landroid/os/UEventObserver;
 
     const-string v1, "SWITCH_NAME"
 
     invoke-virtual {v0, v1}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
-    .line 100
     return-void
 .end method
 
@@ -269,7 +247,6 @@
     .locals 1
 
     .prologue
-    .line 40
     sget-object v0, Lcom/android/server/SatsService;->mLockUEvent:Ljava/lang/Object;
 
     return-object v0
@@ -280,7 +257,6 @@
     .param p0, "x0"    # Lcom/android/server/SatsService;
 
     .prologue
-    .line 40
     iget-boolean v0, p0, Lcom/android/server/SatsService;->mThreadUartGoWait:Z
 
     return v0
@@ -292,7 +268,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 40
     iput-boolean p1, p0, Lcom/android/server/SatsService;->mThreadUartGoWait:Z
 
     return p1
@@ -303,7 +278,6 @@
     .param p0, "x0"    # Lcom/android/server/SatsService;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/android/server/SatsService;->mThreadUart:Ljava/lang/Thread;
 
     return-object v0
@@ -314,7 +288,6 @@
     .param p0, "x0"    # Lcom/android/server/SatsService;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/android/server/SatsService;->cmdList:Ljava/util/ArrayList;
 
     return-object v0
@@ -325,7 +298,6 @@
     .param p0, "x0"    # Lcom/android/server/SatsService;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/android/server/SatsService;->serviceInterfaces:Ljava/util/ArrayList;
 
     return-object v0

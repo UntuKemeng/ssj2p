@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2056
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$17;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v0, 0x1
 
-    .line 2059
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$17;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v3, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
@@ -74,7 +72,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 2060
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v2
@@ -85,7 +82,6 @@
 
     if-ne p2, v2, :cond_1
 
-    .line 2061
     # getter for: Lcom/android/server/policy/GlobalActions;->mProKioskOptionShown:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$5200()Z
 
@@ -93,11 +89,9 @@
 
     if-nez v2, :cond_1
 
-    .line 2063
     # setter for: Lcom/android/server/policy/GlobalActions;->mProKioskOptionShown:Z
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->access$5202(Z)Z
 
-    .line 2064
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$700()Z
 
@@ -105,7 +99,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2065
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$17;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mLinearLayout:Landroid/widget/LinearLayout;
@@ -140,7 +133,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 2066
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$17;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mLandscapeLinearLayout:Landroid/widget/LinearLayout;
@@ -175,7 +167,6 @@
 
     invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 2067
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$17;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mItems:Ljava/util/ArrayList;
@@ -197,7 +188,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 2071
     :goto_0
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$17;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -208,11 +198,9 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 2076
     :goto_1
     return v0
 
-    .line 2069
     :cond_0
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$17;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -240,6 +228,5 @@
     :cond_1
     move v0, v1
 
-    .line 2076
     goto :goto_1
 .end method

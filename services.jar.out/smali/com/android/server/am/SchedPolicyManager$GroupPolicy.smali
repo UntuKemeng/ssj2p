@@ -41,7 +41,6 @@
     .param p4, "_actGroupMax"    # I
 
     .prologue
-    .line 220
     const/4 v3, 0x0
 
     const/4 v4, 0x5
@@ -58,7 +57,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;-><init>(ZZIIII)V
 
-    .line 221
     return-void
 .end method
 
@@ -72,7 +70,6 @@
     .param p6, "_actGroupMax"    # I
 
     .prologue
-    .line 224
     const/4 v5, -0x1
 
     const/16 v6, 0x10
@@ -93,7 +90,6 @@
 
     invoke-direct/range {v0 .. v8}, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;-><init>(ZZIIIIII)V
 
-    .line 225
     return-void
 .end method
 
@@ -109,33 +105,23 @@
     .param p8, "_actGroupMax"    # I
 
     .prologue
-    .line 227
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 228
     iput-boolean p1, p0, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;->isHighPriority:Z
 
-    .line 229
     iput-boolean p2, p0, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;->allowConnection:Z
 
-    .line 230
     iput p5, p0, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;->condStateOver:I
 
-    .line 231
     iput p6, p0, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;->condStateBelow:I
 
-    .line 232
     iput p3, p0, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;->condGroupOver:I
 
-    .line 233
     iput p4, p0, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;->condGroupBelow:I
 
-    .line 234
     iput p7, p0, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;->actGroupMin:I
 
-    .line 235
     iput p8, p0, Lcom/android/server/am/SchedPolicyManager$GroupPolicy;->actGroupMax:I
 
-    .line 236
     return-void
 .end method

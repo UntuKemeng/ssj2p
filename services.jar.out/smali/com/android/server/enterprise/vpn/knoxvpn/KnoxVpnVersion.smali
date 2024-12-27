@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -28,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 43
     const-string v0, "6"
 
     return-object v0
@@ -38,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const-string v0, "2.3.0"
 
     return-object v0
@@ -48,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 48
     const-string v0, "KnoxVpnVersion"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -75,7 +71,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     const-string/jumbo v0, "net.knoxvpn.version"
 
     invoke-static {}, Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnVersion;->getVersion()Ljava/lang/String;
@@ -84,6 +79,5 @@
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     return-void
 .end method

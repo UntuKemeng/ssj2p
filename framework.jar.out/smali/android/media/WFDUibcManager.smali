@@ -70,7 +70,6 @@
     .locals 2
 
     .prologue
-    .line 70
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -103,131 +102,106 @@
 
     const/4 v1, 0x0
 
-    .line 138
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     iput-object v0, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
-    .line 74
     iput-object v0, p0, Landroid/media/WFDUibcManager;->mEventDispatcherThread:Ljava/lang/Thread;
 
-    .line 77
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/media/WFDUibcManager;->mOrientation:I
 
-    .line 78
     iput-boolean v1, p0, Landroid/media/WFDUibcManager;->mCoupleShot:Z
 
-    .line 80
     const/high16 v0, 0x44f00000    # 1920.0f
 
     iput v0, p0, Landroid/media/WFDUibcManager;->mNegRs_X:F
 
-    .line 81
     const/high16 v0, 0x44870000    # 1080.0f
 
     iput v0, p0, Landroid/media/WFDUibcManager;->mNegRs_Y:F
 
-    .line 83
     iput-boolean v1, p0, Landroid/media/WFDUibcManager;->mIsSlideShowVideoPlaying:Z
 
-    .line 85
     const-string v0, "com.samsung.android.video.START_PRESENTATION"
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->VIDEOPLAY_START_ACTION:Ljava/lang/String;
 
-    .line 86
     const-string v0, "com.samsung.android.video.END_PRESENTATION"
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->VIDEOPLAY_STOP_ACTION:Ljava/lang/String;
 
-    .line 87
     const-string v0, "android.intent.action.gallery.slideshow.start"
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->SLIDESHOW_START_ACTION:Ljava/lang/String;
 
-    .line 88
     const-string v0, "android.intent.action.gallery.slideshow.finish"
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->SLIDESHOW_STOP_ACTION:Ljava/lang/String;
 
-    .line 89
     const-string v0, "com.samsung.intent.action.SEC_PRESENTATION_START"
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->PRESENTATION_START_ACTION:Ljava/lang/String;
 
-    .line 90
     const-string v0, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->PRESENTATION_STOP_ACTION:Ljava/lang/String;
 
-    .line 91
     const-string v0, "android.intent.action.SEC_UIBC_GET_FOCUS"
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->SEC_UIBC_GET_FOCUS:Ljava/lang/String;
 
-    .line 108
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->mIntentFilter:Landroid/content/IntentFilter;
 
-    .line 109
     new-instance v0, Landroid/media/WFDUibcManager$1;
 
     invoke-direct {v0, p0}, Landroid/media/WFDUibcManager$1;-><init>(Landroid/media/WFDUibcManager;)V
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 139
     iput-object p1, p0, Landroid/media/WFDUibcManager;->mContext:Landroid/content/Context;
 
-    .line 141
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "com.samsung.intent.action.SEC_PRESENTATION_START"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 142
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 143
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "com.samsung.android.video.START_PRESENTATION"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 144
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "com.samsung.android.video.END_PRESENTATION"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 145
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.gallery.slideshow.start"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 146
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mIntentFilter:Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.gallery.slideshow.finish"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 147
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Landroid/media/WFDUibcManager;->mReceiver:Landroid/content/BroadcastReceiver;
@@ -236,14 +210,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 148
     const-string v0, "WFDUibcManager"
 
     const-string v1, "WFDUibcManager"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     new-instance v0, Landroid/media/WFDUibcManager$2;
 
     iget-object v1, p0, Landroid/media/WFDUibcManager;->mContext:Landroid/content/Context;
@@ -252,7 +224,6 @@
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->mOrientationListener:Landroid/view/OrientationEventListener;
 
-    .line 159
     return-void
 .end method
 
@@ -260,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 67
     sget-boolean v0, Landroid/media/WFDUibcManager;->DEBUG:Z
 
     return v0
@@ -271,7 +241,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager;
 
     .prologue
-    .line 67
     iget v0, p0, Landroid/media/WFDUibcManager;->mPresentDisplayID:I
 
     return v0
@@ -283,7 +252,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 67
     iput p1, p0, Landroid/media/WFDUibcManager;->mPresentDisplayID:I
 
     return p1
@@ -294,7 +262,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager;
 
     .prologue
-    .line 67
     iget-boolean v0, p0, Landroid/media/WFDUibcManager;->mIsSlideShowVideoPlaying:Z
 
     return v0
@@ -306,7 +273,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 67
     iput-boolean p1, p0, Landroid/media/WFDUibcManager;->mIsSlideShowVideoPlaying:Z
 
     return p1
@@ -317,7 +283,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager;
 
     .prologue
-    .line 67
     iget v0, p0, Landroid/media/WFDUibcManager;->mOrientation:I
 
     return v0
@@ -329,7 +294,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 67
     iput p1, p0, Landroid/media/WFDUibcManager;->mOrientation:I
 
     return p1
@@ -340,7 +304,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager;
 
     .prologue
-    .line 67
     iget v0, p0, Landroid/media/WFDUibcManager;->mNegRs_X:F
 
     return v0
@@ -351,7 +314,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager;
 
     .prologue
-    .line 67
     iget v0, p0, Landroid/media/WFDUibcManager;->mNegRs_Y:F
 
     return v0
@@ -362,7 +324,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager;
 
     .prologue
-    .line 67
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -373,7 +334,6 @@
     .param p0, "x0"    # Landroid/media/WFDUibcManager;
 
     .prologue
-    .line 67
     iget-boolean v0, p0, Landroid/media/WFDUibcManager;->mCoupleShot:Z
 
     return v0
@@ -386,10 +346,8 @@
     .param p1, "isCoupleShot"    # Z
 
     .prologue
-    .line 261
     iput-boolean p1, p0, Landroid/media/WFDUibcManager;->mCoupleShot:Z
 
-    .line 262
     return-void
 .end method
 
@@ -399,13 +357,10 @@
     .param p2, "negRs_Y"    # F
 
     .prologue
-    .line 254
     iput p1, p0, Landroid/media/WFDUibcManager;->mNegRs_X:F
 
-    .line 255
     iput p2, p0, Landroid/media/WFDUibcManager;->mNegRs_Y:F
 
-    .line 256
     return-void
 .end method
 
@@ -413,14 +368,12 @@
     .locals 2
 
     .prologue
-    .line 210
     new-instance v0, Landroid/media/WFDUibcManager$EventDispatcher;
 
     invoke-direct {v0, p0}, Landroid/media/WFDUibcManager$EventDispatcher;-><init>(Landroid/media/WFDUibcManager;)V
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
-    .line 212
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
@@ -429,29 +382,24 @@
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->mEventDispatcherThread:Ljava/lang/Thread;
 
-    .line 213
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
     invoke-static {v0}, Landroid/media/RemoteDisplay;->nativeStartUIBC(Ljava/lang/Object;)V
 
-    .line 214
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mEventDispatcherThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 215
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mOrientationListener:Landroid/view/OrientationEventListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->enable()V
 
-    .line 217
     const-string v0, "WFDUibcManager"
 
     const-string v1, "Uibc Manager started"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     const/4 v0, 0x1
 
     return v0
@@ -462,14 +410,12 @@
     .param p1, "mSessionId"    # I
 
     .prologue
-    .line 167
     new-instance v0, Landroid/media/WFDUibcManager$EventDispatcher;
 
     invoke-direct {v0, p0}, Landroid/media/WFDUibcManager$EventDispatcher;-><init>(Landroid/media/WFDUibcManager;)V
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
-    .line 170
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
@@ -478,24 +424,20 @@
 
     iput-object v0, p0, Landroid/media/WFDUibcManager;->mEventDispatcherThread:Ljava/lang/Thread;
 
-    .line 172
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mEventDispatcherThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 173
     iget-object v0, p0, Landroid/media/WFDUibcManager;->mOrientationListener:Landroid/view/OrientationEventListener;
 
     invoke-virtual {v0}, Landroid/view/OrientationEventListener;->enable()V
 
-    .line 175
     const-string v0, "WFDUibcManager"
 
     const-string v1, "Uibc Manager start with sessionId"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 176
     const/4 v0, 0x1
 
     return v0
@@ -511,7 +453,6 @@
 
     const/4 v4, 0x0
 
-    .line 227
     iget-object v2, p0, Landroid/media/WFDUibcManager;->mContext:Landroid/content/Context;
 
     const-string v3, "display"
@@ -522,7 +463,6 @@
 
     check-cast v1, Landroid/hardware/display/DisplayManager;
 
-    .line 228
     .local v1, "mDm":Landroid/hardware/display/DisplayManager;
     invoke-virtual {v1}, Landroid/hardware/display/DisplayManager;->isAuSLServiceRunning()Z
 
@@ -530,7 +470,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 230
     iget-object v2, p0, Landroid/media/WFDUibcManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -545,7 +484,6 @@
 
     if-nez v2, :cond_0
 
-    .line 231
     iget-object v2, p0, Landroid/media/WFDUibcManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -556,33 +494,27 @@
 
     invoke-static {v2, v3, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 235
     :cond_0
     iget-object v2, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
     if-nez v2, :cond_1
 
-    .line 250
     :goto_0
     return v5
 
-    .line 236
     :cond_1
     iget-object v2, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
     iput-boolean v4, v2, Landroid/media/WFDUibcManager$EventDispatcher;->running:Z
 
-    .line 237
     invoke-static {}, Landroid/media/RemoteDisplay;->nativeStopUIBC()V
 
-    .line 239
     const-string v2, "WFDUibcManager"
 
     const-string v3, "Going to stop Uibc manager"
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     :try_start_0
     iget-object v2, p0, Landroid/media/WFDUibcManager;->mEventDispatcherThread:Ljava/lang/Thread;
 
@@ -590,7 +522,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 246
     :goto_1
     const-string v2, "WFDUibcManager"
 
@@ -598,19 +529,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 247
     iput-object v6, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
-    .line 248
     iput-object v6, p0, Landroid/media/WFDUibcManager;->mEventDispatcherThread:Ljava/lang/Thread;
 
     goto :goto_0
 
-    .line 242
     :catch_0
     move-exception v0
 
-    .line 243
     .local v0, "e":Ljava/lang/InterruptedException;
     const-string v2, "WFDUibcManager"
 
@@ -630,21 +557,17 @@
 
     const/4 v3, 0x1
 
-    .line 185
     iget-object v1, p0, Landroid/media/WFDUibcManager;->mOrientationListener:Landroid/view/OrientationEventListener;
 
     invoke-virtual {v1}, Landroid/view/OrientationEventListener;->disable()V
 
-    .line 186
     iget-object v1, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
     if-nez v1, :cond_0
 
-    .line 200
     :goto_0
     return v3
 
-    .line 187
     :cond_0
     iget-object v1, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
@@ -652,14 +575,12 @@
 
     iput-boolean v2, v1, Landroid/media/WFDUibcManager$EventDispatcher;->running:Z
 
-    .line 189
     const-string v1, "WFDUibcManager"
 
     const-string v2, "Going to stop Uibc manager"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 191
     :try_start_0
     iget-object v1, p0, Landroid/media/WFDUibcManager;->mEventDispatcherThread:Ljava/lang/Thread;
 
@@ -667,7 +588,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 196
     :goto_1
     const-string v1, "WFDUibcManager"
 
@@ -675,19 +595,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     iput-object v4, p0, Landroid/media/WFDUibcManager;->mEventDispatcher:Landroid/media/WFDUibcManager$EventDispatcher;
 
-    .line 198
     iput-object v4, p0, Landroid/media/WFDUibcManager;->mEventDispatcherThread:Ljava/lang/Thread;
 
     goto :goto_0
 
-    .line 192
     :catch_0
     move-exception v0
 
-    .line 193
     .local v0, "e":Ljava/lang/InterruptedException;
     const-string v1, "WFDUibcManager"
 

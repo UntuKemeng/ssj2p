@@ -30,19 +30,14 @@
     .param p3, "numCpus"    # I
 
     .prologue
-    .line 330
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 331
     iput-object p1, p0, Lcom/android/internal/os/PowerProfile$CpuClusterKey;->timeKey:Ljava/lang/String;
 
-    .line 332
     iput-object p2, p0, Lcom/android/internal/os/PowerProfile$CpuClusterKey;->powerKey:Ljava/lang/String;
 
-    .line 333
     iput p3, p0, Lcom/android/internal/os/PowerProfile$CpuClusterKey;->numCpus:I
 
-    .line 334
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p4, "x3"    # Lcom/android/internal/os/PowerProfile$1;
 
     .prologue
-    .line 325
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/os/PowerProfile$CpuClusterKey;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
     return-void
@@ -65,7 +59,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/PowerProfile$CpuClusterKey;
 
     .prologue
-    .line 325
     iget v0, p0, Lcom/android/internal/os/PowerProfile$CpuClusterKey;->numCpus:I
 
     return v0
@@ -76,7 +69,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/PowerProfile$CpuClusterKey;
 
     .prologue
-    .line 325
     iget-object v0, p0, Lcom/android/internal/os/PowerProfile$CpuClusterKey;->timeKey:Ljava/lang/String;
 
     return-object v0
@@ -87,7 +79,6 @@
     .param p0, "x0"    # Lcom/android/internal/os/PowerProfile$CpuClusterKey;
 
     .prologue
-    .line 325
     iget-object v0, p0, Lcom/android/internal/os/PowerProfile$CpuClusterKey;->powerKey:Ljava/lang/String;
 
     return-object v0

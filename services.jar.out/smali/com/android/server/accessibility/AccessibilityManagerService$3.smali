@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 517
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$3;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;-><init>()V
@@ -42,14 +41,12 @@
 
     const/4 v3, 0x1
 
-    .line 519
     invoke-virtual {p1}, Lcom/samsung/android/sdk/cover/ScoverState;->getSwitchState()Z
 
     move-result v1
 
     if-ne v1, v3, :cond_1
 
-    .line 520
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$3;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->isScoverClosed:Z
@@ -59,7 +56,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 521
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$3;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mContext:Landroid/content/Context;
@@ -75,7 +71,6 @@
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 523
     :try_start_0
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$400()Landroid/hardware/display/IDisplayManager;
@@ -88,22 +83,18 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 536
     :cond_0
     :goto_0
     return-void
 
-    .line 524
     :catch_0
     move-exception v0
 
-    .line 525
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 529
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$3;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
@@ -125,13 +116,11 @@
 
     if-ne v1, v3, :cond_2
 
-    .line 530
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$3;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     # setter for: Lcom/android/server/accessibility/AccessibilityManagerService;->isScoverClosed:Z
     invoke-static {v1, v3}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$302(Lcom/android/server/accessibility/AccessibilityManagerService;Z)Z
 
-    .line 531
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$3;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mContext:Landroid/content/Context;
@@ -149,7 +138,6 @@
 
     goto :goto_0
 
-    .line 533
     :cond_2
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$3;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 

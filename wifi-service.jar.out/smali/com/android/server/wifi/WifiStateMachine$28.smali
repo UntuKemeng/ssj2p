@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 19951
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$28;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "group"    # Landroid/net/wifi/p2p/WifiP2pGroup;
 
     .prologue
-    .line 19954
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$300()Z
 
@@ -71,15 +69,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19955
     :cond_0
     if-nez p1, :cond_1
 
-    .line 19970
     :goto_0
     return-void
 
-    .line 19957
     :cond_1
     invoke-virtual {p1}, Landroid/net/wifi/p2p/WifiP2pGroup;->isGroupOwner()Z
 
@@ -87,24 +82,20 @@
 
     if-nez v3, :cond_2
 
-    .line 19958
     const-string v3, "WifiStateMachine"
 
     const-string v4, "startShareProfileServer - onGroupInfoAvailable - send PING to GO"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19959
     const-string v1, "192.168.49.1"
 
-    .line 19962
     .local v1, "ip":Ljava/lang/String;
     :try_start_0
     invoke-static {v1}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v2
 
-    .line 19963
     .local v2, "ipAddress":Ljava/net/InetAddress;
     const/4 v3, 0x5
 
@@ -112,7 +103,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 19969
     .end local v1    # "ip":Ljava/lang/String;
     .end local v2    # "ipAddress":Ljava/net/InetAddress;
     :cond_2
@@ -128,12 +118,10 @@
 
     goto :goto_0
 
-    .line 19964
     .restart local v1    # "ip":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 19965
     .local v0, "e":Ljava/io/IOException;
     # getter for: Lcom/android/server/wifi/WifiStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiStateMachine;->access$300()Z
@@ -164,7 +152,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 19966
     :cond_3
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 

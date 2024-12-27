@@ -26,10 +26,8 @@
     .locals 1
 
     .prologue
-    .line 1751
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1752
     new-instance v0, Lcom/android/server/enterprise/general/MiscPolicy$ClearClipboardData$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/general/MiscPolicy$ClearClipboardData$1;-><init>(Lcom/android/server/enterprise/general/MiscPolicy$ClearClipboardData;)V
@@ -44,7 +42,6 @@
     .param p1, "x0"    # Lcom/android/server/enterprise/general/MiscPolicy$1;
 
     .prologue
-    .line 1751
     invoke-direct {p0}, Lcom/android/server/enterprise/general/MiscPolicy$ClearClipboardData;-><init>()V
 
     return-void
@@ -56,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 1774
     iget-object v0, p0, Lcom/android/server/enterprise/general/MiscPolicy$ClearClipboardData;->mBinder:Landroid/sec/clipboard/IClipboardWorkingFormUiInterface$Stub;
 
     return-object v0
@@ -72,14 +68,12 @@
     .end annotation
 
     .prologue
-    .line 1779
     const-string v0, "MiscPolicy"
 
     const-string/jumbo v1, "setClipboardDataListChange"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1780
     return-void
 .end method
 
@@ -93,19 +87,16 @@
     .end annotation
 
     .prologue
-    .line 1784
     const-string v2, "MiscPolicy"
 
     const-string/jumbo v3, "setClipboardDataMgr"
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1785
     invoke-interface {p1}, Landroid/sec/clipboard/data/IClipboardDataList;->size()I
 
     move-result v1
 
-    .line 1786
     .local v1, "size":I
     const-string v2, "MiscPolicy"
 
@@ -129,26 +120,22 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1787
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 1788
     sub-int v2, v1, v0
 
     add-int/lit8 v2, v2, -0x1
 
     invoke-interface {p1, v2}, Landroid/sec/clipboard/data/IClipboardDataList;->removeData(I)Z
 
-    .line 1787
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1790
     :cond_0
     return-void
 .end method
@@ -163,13 +150,11 @@
     .end annotation
 
     .prologue
-    .line 1794
     const-string v0, "MiscPolicy"
 
     const-string/jumbo v1, "setClipboardDataUiEvent"
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1795
     return-void
 .end method

@@ -278,26 +278,20 @@
 
     const/4 v4, 0x0
 
-    .line 55
     sput-boolean v4, Lcom/android/server/am/DynamicHiddenApp;->DEBUG_Component:Z
 
-    .line 56
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->debuggingR:Lcom/android/server/am/ProcessRecord;
 
-    .line 57
     sput-boolean v4, Lcom/android/server/am/DynamicHiddenApp;->isLogPrinted:Z
 
-    .line 63
     sput-boolean v4, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
-    .line 76
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->curTopApp:Lcom/android/server/am/ProcessRecord;
 
-    .line 78
     const-string/jumbo v0, "ro.config.fha_enable"
 
     const-string/jumbo v1, "false"
@@ -312,7 +306,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->FHA_ENABLE:Z
 
-    .line 79
     const-string/jumbo v0, "ro.config.dha_hotness_enable"
 
     const-string/jumbo v1, "false"
@@ -327,14 +320,12 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
 
-    .line 132
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->WIDGET_ON_HOMESCREEN:Ljava/util/HashSet;
 
-    .line 140
     const-string/jumbo v0, "ro.config.dha_cached_max"
 
     const-string v1, "6"
@@ -349,7 +340,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->INIT_CACHED_APPS:I
 
-    .line 143
     const-string/jumbo v0, "ro.config.dha_cached_min"
 
     const-string v1, "4"
@@ -364,7 +354,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->MIN_CACHED_APPS:I
 
-    .line 153
     const-string/jumbo v0, "ro.config.dha_cached_max"
 
     const-string v1, "6"
@@ -379,7 +368,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->MAX_CACHED_APPS:I
 
-    .line 159
     const-string/jumbo v0, "ro.config.dha_empty_init"
 
     const-string v1, "30"
@@ -394,7 +382,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->INIT_EMPTY_APPS:I
 
-    .line 161
     const-string/jumbo v0, "ro.config.dha_empty_min"
 
     const-string v1, "8"
@@ -409,7 +396,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->MIN_EMPTY_APPS_FOR_DHA:I
 
-    .line 163
     const-string/jumbo v0, "ro.config.dha_empty_max"
 
     const-string v1, "30"
@@ -424,7 +410,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->MAX_EMPTY_APPS:I
 
-    .line 173
     const-string/jumbo v0, "ro.config.ldha_es_enable"
 
     const-string/jumbo v1, "false"
@@ -439,7 +424,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->LDHA_ES_ENABLE:Z
 
-    .line 175
     const-string/jumbo v0, "ro.config.ldha_spc_enable"
 
     const-string/jumbo v1, "true"
@@ -454,7 +438,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->LDHA_SPC_ENABLE:Z
 
-    .line 187
     const-string/jumbo v0, "ro.config.pre_max_kill_enable"
 
     const-string/jumbo v1, "false"
@@ -469,7 +452,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->PRE_MAX_KILL_ENABLE:Z
 
-    .line 189
     const-string/jumbo v0, "ro.config.pre_cached_kill"
 
     const-string/jumbo v1, "true"
@@ -484,7 +466,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->PRE_CACHED_KILL:Z
 
-    .line 191
     const-string/jumbo v0, "ro.config.pre_empty_kill"
 
     const-string/jumbo v1, "true"
@@ -499,7 +480,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->PRE_EMPTY_KILL:Z
 
-    .line 193
     const-string/jumbo v0, "ro.config.pre_decrement_sync"
 
     const-string/jumbo v1, "true"
@@ -514,7 +494,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->PRE_DECREMENT_SYNC:Z
 
-    .line 195
     const-string/jumbo v0, "ro.config.pre_support_increment"
 
     const-string/jumbo v1, "true"
@@ -529,7 +508,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->PRE_SUPPORT_INCREMENT:Z
 
-    .line 197
     const-string/jumbo v0, "ro.config.dha_adj_cached_factor"
 
     const-string/jumbo v1, "false"
@@ -544,7 +522,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->DHA_ADJ_CACHED_FACTOR:Z
 
-    .line 202
     const-string/jumbo v0, "ro.config.64bit_lmk_enable"
 
     const-string/jumbo v1, "true"
@@ -559,7 +536,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->mb64bitLMKEnable:Z
 
-    .line 205
     const-string/jumbo v0, "ro.config.dha_ils_enable"
 
     const-string/jumbo v1, "true"
@@ -574,7 +550,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->mILS_Enable:Z
 
-    .line 207
     const-string/jumbo v0, "ro.config.dha_ils_2nd_enable"
 
     const-string/jumbo v1, "false"
@@ -589,7 +564,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->mILS_2nd_Enable:Z
 
-    .line 211
     const-string/jumbo v0, "ro.config.dha_ils_rate"
 
     const-string v1, "1.5"
@@ -604,7 +578,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->mSzILSRate:F
 
-    .line 213
     const-string/jumbo v0, "ro.config.dha_ils_sdha_rate"
 
     const-string v1, "1.8"
@@ -619,10 +592,8 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->mSzILS_SDHARate:F
 
-    .line 215
     sput-boolean v4, Lcom/android/server/am/DynamicHiddenApp;->mSzILSFlag:Z
 
-    .line 223
     const-string/jumbo v0, "ro.config.dha_pwhitelist_enable"
 
     const-string v1, "0"
@@ -637,7 +608,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->mDhaKeepEmptyEnable:I
 
-    .line 233
     const-string/jumbo v0, "ro.config.dha_lmk_scale"
 
     const-string v1, "-1"
@@ -652,7 +622,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->mLMKScale:F
 
-    .line 235
     const-string/jumbo v0, "ro.config.dha_lmk_array"
 
     const-string/jumbo v1, "none"
@@ -663,7 +632,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->mLMKArray:Ljava/lang/String;
 
-    .line 237
     const-string/jumbo v0, "ro.config.ams_exception_enable"
 
     const-string/jumbo v1, "true"
@@ -678,7 +646,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->mAMSExceptionEnable:Z
 
-    .line 239
     const-string/jumbo v0, "ro.config.ams_knoxexpt_enable"
 
     const-string/jumbo v1, "true"
@@ -693,7 +660,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->mKnoxAMSExceptionEnable:Z
 
-    .line 246
     const-string/jumbo v0, "ro.config.fall_prevent_enable"
 
     const-string/jumbo v1, "false"
@@ -708,7 +674,6 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->FALL_PREVENT_ENABLE:Z
 
-    .line 248
     const-string/jumbo v0, "ro.config.dha_package_enable"
 
     const-string/jumbo v1, "false"
@@ -723,12 +688,10 @@
 
     sput-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->DHA_PACKAGE_ENABLE:Z
 
-    .line 256
     const-wide/32 v0, 0x200000
 
     sput-wide v0, Lcom/android/server/am/DynamicHiddenApp;->DHA_INCREASE_THRESHOLD:J
 
-    .line 259
     const-string/jumbo v0, "ro.config.hotness_LRU_Min"
 
     const-string v1, "6"
@@ -743,7 +706,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_LRU_PROTECT_MIN:I
 
-    .line 260
     const-string/jumbo v0, "ro.config.hotness_LFU_CaRate"
 
     const-string v1, "1.0"
@@ -758,7 +720,6 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_LFU_MINCachedRate:F
 
-    .line 261
     const-string/jumbo v0, "ro.config.hotness_LFU_EmRate"
 
     const-string v1, "2.0"
@@ -773,17 +734,14 @@
 
     sput v0, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_LFU_MINEmptyRate:F
 
-    .line 264
     const-string/jumbo v0, "unknown"
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->strPrevAppForActivityHotness:Ljava/lang/String;
 
-    .line 265
     const-string/jumbo v0, "unknown"
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->strPrevAppForEmptyHotness:Ljava/lang/String;
 
-    .line 286
     const/16 v0, 0xd
 
     new-array v0, v0, [Ljava/lang/String;
@@ -858,7 +816,6 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->DHA_DYNAMICEXCEPT_PROC_ARRAY:[Ljava/lang/String;
 
-    .line 294
     const/4 v0, 0x6
 
     new-array v0, v0, [[Ljava/lang/String;
@@ -939,21 +896,18 @@
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->DHA_STATICEXCEPT_PROC_ARRAY:[[Ljava/lang/String;
 
-    .line 300
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->dha_keepempty_set:Ljava/util/HashSet;
 
-    .line 302
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/am/DynamicHiddenApp;->dha_amsexcept_map:Ljava/util/HashMap;
 
-    .line 305
     const-string/jumbo v0, "ro.config.dha_pwhl_key"
 
     const-string v1, "7682"
@@ -979,10 +933,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 325
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 125
     const/4 v0, 0x6
 
     new-array v0, v0, [I
@@ -991,125 +943,98 @@
 
     iput-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mOomAdj:[I
 
-    .line 131
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mWidgetList:Ljava/lang/Object;
 
-    .line 136
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
-    .line 167
     const-wide/32 v0, 0x2000000
 
     iput-wide v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAThreshold:J
 
-    .line 169
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAStep:I
 
-    .line 171
     const/high16 v0, 0x40000000    # 2.0f
 
     iput v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAThresholdRate:F
 
-    .line 199
     iput v2, p0, Lcom/android/server/am/DynamicHiddenApp;->retCacheLimit:I
 
-    .line 217
     sget v0, Lcom/android/server/am/DynamicHiddenApp;->INIT_EMPTY_APPS:I
 
     iput v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
-    .line 219
     sget v0, Lcom/android/server/am/DynamicHiddenApp;->INIT_CACHED_APPS:I
 
     iput v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 250
     iput-boolean v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mDynamicLMKFlag:Z
 
-    .line 263
     const v0, 0xf4240
 
     iput v0, p0, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_MAX_VALUE:I
 
-    .line 267
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
-    .line 268
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
 
-    .line 269
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mLastKillTimeMap:Ljava/util/HashMap;
 
-    .line 315
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
 
-    .line 316
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
-    .line 318
     iput v2, p0, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
 
-    .line 319
     iput v2, p0, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
 
-    .line 320
     iput v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mNumCachedHiddenProcs:I
 
-    .line 321
     iput v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
 
-    .line 322
     iput v2, p0, Lcom/android/server/am/DynamicHiddenApp;->hotnessCached:I
 
-    .line 323
     iput v2, p0, Lcom/android/server/am/DynamicHiddenApp;->hotnessEmpty:I
 
-    .line 326
     iput-object p1, p0, Lcom/android/server/am/DynamicHiddenApp;->mAm:Lcom/android/server/am/ActivityManagerService;
 
-    .line 327
     iput-object p2, p0, Lcom/android/server/am/DynamicHiddenApp;->mProcessList:Lcom/android/server/am/ProcessList;
 
-    .line 329
     new-instance v0, Lcom/android/internal/util/MemInfoReader;
 
     invoke-direct {v0}, Lcom/android/internal/util/MemInfoReader;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mInfo:Lcom/android/internal/util/MemInfoReader;
 
-    .line 331
     invoke-virtual {p0}, Lcom/android/server/am/DynamicHiddenApp;->initProperty()V
 
-    .line 332
     return-void
 
-    .line 125
     :array_0
     .array-data 4
         0x0
@@ -1126,7 +1051,6 @@
     .param p0, "x0"    # Lcom/android/server/am/DynamicHiddenApp;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     return-object v0
@@ -1137,7 +1061,6 @@
     .param p1, "totalProcessLimit"    # I
 
     .prologue
-    .line 696
     sget-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -1146,7 +1069,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 697
     const-string v0, "ActivityManager_LDHA_ES"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1181,7 +1103,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 698
     :cond_0
     iget v0, p0, Lcom/android/server/am/DynamicHiddenApp;->retCacheLimit:I
 
@@ -1203,7 +1124,6 @@
     .end annotation
 
     .prologue
-    .line 494
     .local p1, "cchListExcludeService":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ProcessRecord;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->size()I
 
@@ -1215,14 +1135,12 @@
     :goto_0
     if-ltz v4, :cond_6
 
-    .line 495
     invoke-virtual {p1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/server/am/ProcessRecord;
 
-    .line 498
     .local v0, "app":Lcom/android/server/am/ProcessRecord;
     iget-object v7, v0, Lcom/android/server/am/ProcessRecord;->pubProviders:Landroid/util/ArrayMap;
 
@@ -1236,7 +1154,6 @@
     :goto_1
     if-ltz v6, :cond_4
 
-    .line 499
     iget-object v7, v0, Lcom/android/server/am/ProcessRecord;->pubProviders:Landroid/util/ArrayMap;
 
     invoke-virtual {v7, v6}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
@@ -1245,7 +1162,6 @@
 
     check-cast v3, Lcom/android/server/am/ContentProviderRecord;
 
-    .line 500
     .local v3, "cpr":Lcom/android/server/am/ContentProviderRecord;
     iget-object v7, v3, Lcom/android/server/am/ContentProviderRecord;->connections:Ljava/util/ArrayList;
 
@@ -1259,7 +1175,6 @@
     :goto_2
     if-ltz v5, :cond_3
 
-    .line 501
     iget-object v7, v3, Lcom/android/server/am/ContentProviderRecord;->connections:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1268,22 +1183,18 @@
 
     check-cast v2, Lcom/android/server/am/ContentProviderConnection;
 
-    .line 502
     .local v2, "conn":Lcom/android/server/am/ContentProviderConnection;
     iget-object v1, v2, Lcom/android/server/am/ContentProviderConnection;->client:Lcom/android/server/am/ProcessRecord;
 
-    .line 503
     .local v1, "client":Lcom/android/server/am/ProcessRecord;
     if-ne v1, v0, :cond_1
 
-    .line 500
     :cond_0
     :goto_3
     add-int/lit8 v5, v5, -0x1
 
     goto :goto_2
 
-    .line 504
     :cond_1
     iget v7, v0, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
@@ -1291,12 +1202,10 @@
 
     if-ge v7, v8, :cond_0
 
-    .line 505
     sget-boolean v7, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v7, :cond_2
 
-    .line 506
     const-string v7, "ActivityManager_Hotness"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1357,7 +1266,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 510
     :cond_2
     iget v7, v1, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
@@ -1365,7 +1273,6 @@
 
     goto :goto_3
 
-    .line 498
     .end local v1    # "client":Lcom/android/server/am/ProcessRecord;
     .end local v2    # "conn":Lcom/android/server/am/ContentProviderConnection;
     :cond_3
@@ -1373,7 +1280,6 @@
 
     goto :goto_1
 
-    .line 515
     .end local v3    # "cpr":Lcom/android/server/am/ContentProviderRecord;
     .end local v5    # "j":I
     :cond_4
@@ -1381,7 +1287,6 @@
 
     if-eqz v7, :cond_5
 
-    .line 516
     const-string v7, "ActivityManager_Hotness"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1418,13 +1323,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     :cond_5
     add-int/lit8 v4, v4, -0x1
 
     goto/16 :goto_0
 
-    .line 518
     .end local v0    # "app":Lcom/android/server/am/ProcessRecord;
     .end local v6    # "provi":I
     :cond_6
@@ -1453,7 +1356,6 @@
 
     const/4 v2, 0x0
 
-    .line 713
     aget-object v0, p2, v2
 
     const-string v1, "CONTACTS"
@@ -1464,7 +1366,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 714
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -1489,11 +1390,9 @@
 
     invoke-virtual {p1, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 722
     :goto_0
     return-void
 
-    .line 715
     :cond_0
     aget-object v0, p2, v2
 
@@ -1505,7 +1404,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 716
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -1532,7 +1430,6 @@
 
     goto :goto_0
 
-    .line 717
     :cond_1
     aget-object v0, p2, v2
 
@@ -1544,7 +1441,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 718
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -1571,7 +1467,6 @@
 
     goto :goto_0
 
-    .line 720
     :cond_2
     aget-object v0, p2, v2
 
@@ -1606,7 +1501,6 @@
     .end annotation
 
     .prologue
-    .line 702
     .local p1, "set":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const-string v0, "CONTACTS"
 
@@ -1616,7 +1510,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 703
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -1631,11 +1524,9 @@
 
     invoke-virtual {p1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 711
     :goto_0
     return-void
 
-    .line 704
     :cond_0
     const-string v0, "MMS"
 
@@ -1645,7 +1536,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 705
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -1662,7 +1552,6 @@
 
     goto :goto_0
 
-    .line 706
     :cond_1
     const-string v0, "CALENDAR"
 
@@ -1672,7 +1561,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 707
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -1689,7 +1577,6 @@
 
     goto :goto_0
 
-    .line 709
     :cond_2
     invoke-virtual {p1, p2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
@@ -1702,10 +1589,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 375
     const/4 v0, 0x0
 
-    .line 376
     .local v0, "strPreferredIME":Ljava/lang/String;
     iget-object v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -1721,7 +1606,6 @@
 
     move-result-object v0
 
-    .line 378
     if-eqz v0, :cond_0
 
     const-string v2, "/"
@@ -1732,14 +1616,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 380
     const-string v2, "/"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 381
     .local v1, "tmp":[Ljava/lang/String;
     aget-object v2, v1, v4
 
@@ -1749,10 +1631,8 @@
 
     if-lez v2, :cond_0
 
-    .line 382
     aget-object v0, v1, v4
 
-    .line 386
     .end local v1    # "tmp":[Ljava/lang/String;
     :cond_0
     return-object v0
@@ -1765,25 +1645,21 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 390
     new-instance v2, Landroid/content/Intent;
 
     const-string v6, "android.intent.action.MAIN"
 
     invoke-direct {v2, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 391
     .local v2, "homeIntent":Landroid/content/Intent;
     const-string v6, "android.intent.category.HOME"
 
     invoke-virtual {v2, v6}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 392
     invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 394
     .local v3, "pm":Landroid/content/pm/IPackageManager;
     const/4 v6, 0x0
 
@@ -1794,7 +1670,6 @@
 
     move-result-object v4
 
-    .line 395
     .local v4, "resolveInfo":Landroid/content/pm/ResolveInfo;
     if-eqz v4, :cond_0
 
@@ -1802,12 +1677,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 396
     iget-object v6, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v6, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 397
     .local v0, "currentLauncher":Ljava/lang/String;
     const-string v6, "ActivityManager"
 
@@ -1833,17 +1706,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 403
     .end local v0    # "currentLauncher":Ljava/lang/String;
     .end local v4    # "resolveInfo":Landroid/content/pm/ResolveInfo;
     :goto_0
     return-object v0
 
-    .line 400
     :catch_0
     move-exception v1
 
-    .line 401
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1851,7 +1721,6 @@
     :cond_0
     move-object v0, v5
 
-    .line 403
     goto :goto_0
 .end method
 
@@ -1862,15 +1731,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 453
     if-nez p1, :cond_0
 
-    .line 455
     sget-object v3, Lcom/android/server/am/DynamicHiddenApp;->dha_keepempty_set:Ljava/util/HashSet;
 
     invoke-virtual {v3}, Ljava/util/HashSet;->clear()V
 
-    .line 459
     :cond_0
     const/4 v1, 0x0
 
@@ -1885,7 +1751,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 463
     sget v3, Lcom/android/server/am/DynamicHiddenApp;->mDhaKeepEmptyEnable:I
 
     if-ne v3, v5, :cond_1
@@ -1896,7 +1761,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 464
     sget-object v3, Lcom/android/server/am/DynamicHiddenApp;->dha_keepempty_set:Ljava/util/HashSet;
 
     sget-object v4, Lcom/android/server/am/DynamicHiddenApp;->DHA_DYNAMICEXCEPT_PROC_ARRAY:[Ljava/lang/String;
@@ -1905,16 +1769,13 @@
 
     invoke-direct {p0, v3, v4}, Lcom/android/server/am/DynamicHiddenApp;->dhaAddPackageName(Ljava/util/HashSet;Ljava/lang/String;)V
 
-    .line 469
     :cond_1
     shl-int/lit8 v0, v0, 0x1
 
-    .line 459
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 472
     :cond_2
     sget-object v3, Lcom/android/server/am/DynamicHiddenApp;->dha_amsexcept_map:Ljava/util/HashMap;
 
@@ -1926,7 +1787,6 @@
 
     move-result-object v2
 
-    .line 473
     .local v2, "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_1
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -1935,7 +1795,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 474
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -1946,7 +1805,6 @@
 
     goto :goto_1
 
-    .line 476
     :cond_3
     return-void
 .end method
@@ -1955,24 +1813,20 @@
     .locals 5
 
     .prologue
-    .line 738
     iget v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
     invoke-direct {p0, v2}, Lcom/android/server/am/DynamicHiddenApp;->computeDHAEmptyProcessLimit(I)I
 
     move-result v1
 
-    .line 739
     .local v1, "emptyProcessLimit":I
     iget v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 741
     .local v0, "cachedProcessLimit":I
     sget v2, Lcom/android/server/am/DynamicHiddenApp;->MIN_EMPTY_APPS_FOR_DHA:I
 
     if-ge v1, v2, :cond_0
 
-    .line 742
     iget v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
     sget v3, Lcom/android/server/am/DynamicHiddenApp;->MIN_EMPTY_APPS_FOR_DHA:I
@@ -1983,17 +1837,14 @@
 
     if-gt v2, v3, :cond_2
 
-    .line 743
     sget v1, Lcom/android/server/am/DynamicHiddenApp;->MIN_EMPTY_APPS_FOR_DHA:I
 
-    .line 749
     :cond_0
     :goto_0
     sget v2, Lcom/android/server/am/DynamicHiddenApp;->MIN_CACHED_APPS:I
 
     if-ge v0, v2, :cond_1
 
-    .line 750
     iget v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
     sget v3, Lcom/android/server/am/DynamicHiddenApp;->MIN_EMPTY_APPS_FOR_DHA:I
@@ -2004,27 +1855,21 @@
 
     if-gt v2, v3, :cond_3
 
-    .line 751
     sget v0, Lcom/android/server/am/DynamicHiddenApp;->MIN_CACHED_APPS:I
 
-    .line 758
     :cond_1
     :goto_1
     iput v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
-    .line 759
     iput v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 760
     return-void
 
-    .line 746
     :cond_2
     iget v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
     goto :goto_0
 
-    .line 754
     :cond_3
     iget v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
@@ -2036,21 +1881,17 @@
     .param p0, "pName"    # Ljava/lang/String;
 
     .prologue
-    .line 1429
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->mILS_Enable:Z
 
     if-nez v1, :cond_1
 
-    .line 1438
     :cond_0
     :goto_0
     return-void
 
-    .line 1431
     :cond_1
     sget-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->mSzILSFlag:Z
 
-    .line 1433
     .local v0, "ILSPrevFlag":Z
     invoke-static {p0}, Lcom/android/server/am/DynamicHiddenApp$ILS_Q;->isAppsLaunchFreq(Ljava/lang/String;)Z
 
@@ -2058,12 +1899,10 @@
 
     sput-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->mSzILSFlag:Z
 
-    .line 1435
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->mSzILSFlag:Z
 
     if-eq v0, v1, :cond_0
 
-    .line 1436
     const-string v1, "ActivityManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2119,19 +1958,16 @@
     .param p2, "nHotnessType"    # I
 
     .prologue
-    .line 650
     if-eqz p1, :cond_0
 
     iget-object v1, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    .line 673
     :cond_0
     :goto_0
     return-void
 
-    .line 653
     :cond_1
     sget-object v1, Lcom/android/server/am/DynamicHiddenApp;->strPrevAppForEmptyHotness:Ljava/lang/String;
 
@@ -2143,17 +1979,14 @@
 
     if-nez v1, :cond_0
 
-    .line 656
     iget-object v1, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     sput-object v1, Lcom/android/server/am/DynamicHiddenApp;->strPrevAppForEmptyHotness:Ljava/lang/String;
 
-    .line 657
     const-string/jumbo v1, "unknown"
 
     sput-object v1, Lcom/android/server/am/DynamicHiddenApp;->strPrevAppForActivityHotness:Ljava/lang/String;
 
-    .line 658
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v1, :cond_2
@@ -2182,13 +2015,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 660
     :cond_2
     iget-object v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 661
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
@@ -2200,7 +2031,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 662
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     iget-object v3, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -2211,7 +2041,6 @@
 
     check-cast v0, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
 
-    .line 664
     .local v0, "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
@@ -2255,7 +2084,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 666
     :cond_3
     invoke-virtual {v0, p2}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->getHotness(I)I
 
@@ -2263,17 +2091,14 @@
 
     if-lez v1, :cond_4
 
-    .line 667
     invoke-virtual {v0, p2}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->decreaseHotness(I)V
 
-    .line 668
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     iget-object v3, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 670
     :cond_4
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
@@ -2329,7 +2154,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 672
     .end local v0    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :cond_5
     monitor-exit v2
@@ -2356,14 +2180,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 908
     add-int v5, p1, p2
 
     iget v6, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAStep:I
 
     sub-int v2, v5, v6
 
-    .line 909
     .local v2, "mUpdateMax":I
     if-gt p1, p2, :cond_0
 
@@ -2373,13 +2195,11 @@
 
     add-int/lit8 v2, v2, 0x1
 
-    .line 911
     :cond_0
     iget v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
     if-le v5, v2, :cond_4
 
-    .line 912
     sget v5, Lcom/android/server/am/DynamicHiddenApp;->MIN_EMPTY_APPS_FOR_DHA:I
 
     sget v6, Lcom/android/server/am/DynamicHiddenApp;->MIN_CACHED_APPS:I
@@ -2388,22 +2208,18 @@
 
     if-ge v2, v5, :cond_1
 
-    .line 913
     sget v5, Lcom/android/server/am/DynamicHiddenApp;->MIN_EMPTY_APPS_FOR_DHA:I
 
     sget v6, Lcom/android/server/am/DynamicHiddenApp;->MIN_CACHED_APPS:I
 
     add-int v2, v5, v6
 
-    .line 920
     :cond_1
     :goto_0
     if-le p1, p2, :cond_5
 
-    .line 921
     iput p2, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 939
     :cond_2
     :goto_1
     iget v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
@@ -2412,27 +2228,22 @@
 
     iput v4, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 940
     :cond_3
     return v2
 
-    .line 917
     :cond_4
     iget v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
     goto :goto_0
 
-    .line 924
     :cond_5
     iget v3, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 925
     .local v3, "prevMaxCached":I
     add-int/lit8 v5, p2, -0x1
 
     iput v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 926
     iget v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
     if-le v5, v2, :cond_6
@@ -2441,7 +2252,6 @@
 
     iput v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 928
     :cond_6
     if-eqz p4, :cond_7
 
@@ -2449,10 +2259,8 @@
 
     if-le v3, v5, :cond_7
 
-    .line 929
     iput v3, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 930
     :cond_7
     sget-boolean v5, Lcom/android/server/am/DynamicHiddenApp;->PRE_MAX_KILL_ENABLE:Z
 
@@ -2472,13 +2280,10 @@
 
     if-lt v5, v6, :cond_2
 
-    .line 931
     if-eqz p3, :cond_2
 
-    .line 932
     iget v0, p3, Lcom/android/server/am/ProcessRecord;->curProcState:I
 
-    .line 933
     .local v0, "appState":I
     const/16 v5, 0xe
 
@@ -2490,7 +2295,6 @@
 
     move v1, v4
 
-    .line 934
     .local v1, "killedBySPC":Z
     :goto_2
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2522,19 +2326,16 @@
 
     invoke-virtual {p3, v5, v4}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 935
     iput v3, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
     goto :goto_1
 
-    .line 933
     .end local v1    # "killedBySPC":Z
     :cond_8
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 934
     .restart local v1    # "killedBySPC":Z
     :cond_9
     const-string v5, "cached #"
@@ -2552,51 +2353,41 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 964
     iget v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAStep:I
 
     sub-int v3, p1, v5
 
-    .line 966
     .local v3, "ret":I
     iget v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
     if-le v5, v3, :cond_5
 
-    .line 967
     sget v5, Lcom/android/server/am/DynamicHiddenApp;->MIN_EMPTY_APPS_FOR_DHA:I
 
     if-ge v3, v5, :cond_0
 
-    .line 968
     sget v3, Lcom/android/server/am/DynamicHiddenApp;->MIN_EMPTY_APPS_FOR_DHA:I
 
-    .line 970
     :cond_0
     sget v5, Lcom/android/server/am/DynamicHiddenApp;->MIN_CACHED_APPS:I
 
     if-le p2, v5, :cond_2
 
-    .line 971
     iget v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 972
     .local v2, "prevMaxCached":I
     add-int/lit8 v5, p2, -0x1
 
     iput v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 974
     if-eqz p4, :cond_1
 
     iget v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
     if-le v2, v5, :cond_1
 
-    .line 975
     iput v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 976
     :cond_1
     sget-boolean v5, Lcom/android/server/am/DynamicHiddenApp;->PRE_MAX_KILL_ENABLE:Z
 
@@ -2610,13 +2401,10 @@
 
     if-le v2, v5, :cond_2
 
-    .line 977
     if-eqz p3, :cond_2
 
-    .line 978
     iget v0, p3, Lcom/android/server/am/ProcessRecord;->curProcState:I
 
-    .line 979
     .local v0, "appState":I
     const/16 v5, 0xe
 
@@ -2628,7 +2416,6 @@
 
     move v1, v4
 
-    .line 980
     .local v1, "killedBySPC":Z
     :goto_0
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2660,10 +2447,8 @@
 
     invoke-virtual {p3, v5, v4}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 981
     iput v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 989
     .end local v0    # "appState":I
     .end local v1    # "killedBySPC":Z
     .end local v2    # "prevMaxCached":I
@@ -2671,7 +2456,6 @@
     :goto_2
     return v3
 
-    .line 979
     .restart local v0    # "appState":I
     .restart local v2    # "prevMaxCached":I
     :cond_3
@@ -2679,14 +2463,12 @@
 
     goto :goto_0
 
-    .line 980
     .restart local v1    # "killedBySPC":Z
     :cond_4
     const-string v5, "cached #"
 
     goto :goto_1
 
-    .line 987
     .end local v0    # "appState":I
     .end local v1    # "killedBySPC":Z
     .end local v2    # "prevMaxCached":I
@@ -2712,49 +2494,41 @@
     .end annotation
 
     .prologue
-    .line 1009
     .local p1, "lruList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ProcessRecord;>;"
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1010
     .local v7, "DHACachedLFU":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ProcessRecord;>;"
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1012
     .local v9, "DHAEmptyLFU":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ProcessRecord;>;"
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1013
     .local v8, "DHACachedLRU":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ProcessRecord;>;"
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1015
     .local v10, "DHAEmptyLRU":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/ProcessRecord;>;"
     invoke-virtual/range {p1 .. p1}, Ljava/util/ArrayList;->size()I
 
     move-result v12
 
-    .line 1016
     .local v12, "N":I
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v28
 
-    .line 1017
     .local v28, "now":J
     const-wide/32 v34, 0x1b7740
 
     sub-long v30, v28, v34
 
-    .line 1019
     .local v30, "oldTime":J
     const/16 v34, 0x0
 
@@ -2764,7 +2538,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
 
-    .line 1020
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -2773,7 +2546,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
 
-    .line 1021
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -2782,7 +2554,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
 
-    .line 1022
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -2791,7 +2562,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumCachedHiddenProcs:I
 
-    .line 1023
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -2800,7 +2570,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->hotnessCached:I
 
-    .line 1024
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -2809,20 +2578,16 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->hotnessEmpty:I
 
-    .line 1026
     const/16 v26, 0x0
 
-    .line 1027
     .local v26, "lastCachedProcess":Lcom/android/server/am/ProcessRecord;
     const/16 v32, 0x0
 
-    .line 1029
     .local v32, "preventAggressiveKill":Z
     if-nez p2, :cond_6
 
     const/16 v33, 0x0
 
-    .line 1032
     .local v33, "topState":I
     :goto_0
     sget v34, Lcom/android/server/am/DynamicHiddenApp;->curTopState:I
@@ -2835,15 +2600,12 @@
 
     sput v33, Lcom/android/server/am/DynamicHiddenApp;->curTopState:I
 
-    .line 1034
     :cond_0
     const/16 v21, 0x0
 
-    .line 1035
     .local v21, "isPreCachedMaxKill":Z
     const/16 v22, 0x0
 
-    .line 1036
     .local v22, "isPreEmptyMaxKill":Z
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->PRE_MAX_KILL_ENABLE:Z
 
@@ -2873,16 +2635,13 @@
 
     if-eqz v34, :cond_3
 
-    .line 1037
     :cond_1
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->PRE_EMPTY_KILL:Z
 
     if-eqz v34, :cond_2
 
-    .line 1038
     const/16 v22, 0x1
 
-    .line 1039
     :cond_2
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->PRE_CACHED_KILL:Z
 
@@ -2944,27 +2703,21 @@
 
     if-lez v34, :cond_3
 
-    .line 1040
     const/16 v21, 0x1
 
-    .line 1043
     :cond_3
     const-wide/16 v14, 0x0
 
-    .line 1044
     .local v14, "appUss":J
     const/16 v18, 0x0
 
-    .line 1047
     .local v18, "isDhaKeepEmpty":Z
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->LDHA_ES_ENABLE:Z
 
     if-eqz v34, :cond_4
 
-    .line 1048
     invoke-direct/range {p0 .. p0}, Lcom/android/server/am/DynamicHiddenApp;->setProcessLimit()V
 
-    .line 1051
     :cond_4
     add-int/lit8 v17, v12, -0x1
 
@@ -2972,7 +2725,6 @@
     :goto_1
     if-ltz v17, :cond_4a
 
-    .line 1052
     move-object/from16 v0, p1
 
     move/from16 v1, v17
@@ -2983,11 +2735,9 @@
 
     check-cast v13, Lcom/android/server/am/ProcessRecord;
 
-    .line 1053
     .local v13, "app":Lcom/android/server/am/ProcessRecord;
     const/16 v18, 0x0
 
-    .line 1056
     iget-boolean v0, v13, Lcom/android/server/am/ProcessRecord;->killedByAm:Z
 
     move/from16 v34, v0
@@ -3000,12 +2750,10 @@
 
     if-eqz v34, :cond_5
 
-    .line 1057
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->mAMSExceptionEnable:Z
 
     if-eqz v34, :cond_a
 
-    .line 1060
     iget v0, v13, Lcom/android/server/am/ProcessRecord;->uid:I
 
     move/from16 v34, v0
@@ -3022,7 +2770,6 @@
 
     if-ge v0, v1, :cond_9
 
-    .line 1061
     sget-object v34, Lcom/android/server/am/DynamicHiddenApp;->dha_amsexcept_map:Ljava/util/HashMap;
 
     iget-object v0, v13, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -3059,14 +2806,12 @@
 
     if-gt v0, v1, :cond_a
 
-    .line 1051
     :cond_5
     :goto_2
     add-int/lit8 v17, v17, -0x1
 
     goto :goto_1
 
-    .line 1029
     .end local v13    # "app":Lcom/android/server/am/ProcessRecord;
     .end local v14    # "appUss":J
     .end local v17    # "i":I
@@ -3125,7 +2870,6 @@
 
     goto/16 :goto_0
 
-    .line 1065
     .restart local v13    # "app":Lcom/android/server/am/ProcessRecord;
     .restart local v14    # "appUss":J
     .restart local v17    # "i":I
@@ -3150,7 +2894,6 @@
 
     if-eqz v34, :cond_a
 
-    .line 1067
     sget-object v34, Lcom/android/server/am/DynamicHiddenApp;->dha_amsexcept_map:Ljava/util/HashMap;
 
     iget-object v0, v13, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -3175,7 +2918,6 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 1069
     sget-object v34, Lcom/android/server/am/DynamicHiddenApp;->dha_amsexcept_map:Ljava/util/HashMap;
 
     iget-object v0, v13, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -3194,10 +2936,8 @@
 
     if-nez v34, :cond_a
 
-    .line 1070
     const/16 v18, 0x1
 
-    .line 1077
     :cond_a
     sget v34, Lcom/android/server/am/DynamicHiddenApp;->mDhaKeepEmptyEnable:I
 
@@ -3223,11 +2963,9 @@
 
     const/16 v18, 0x1
 
-    .line 1081
     :cond_b
     const/16 v25, 0x0
 
-    .line 1082
     .local v25, "killedBy":Ljava/lang/String;
     iget v0, v13, Lcom/android/server/am/ProcessRecord;->curProcState:I
 
@@ -3235,7 +2973,6 @@
 
     packed-switch v34, :pswitch_data_0
 
-    .line 1214
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
@@ -3250,7 +2987,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
 
-    .line 1221
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->LDHA_SPC_ENABLE:Z
 
     if-eqz v34, :cond_5
@@ -3267,10 +3003,8 @@
 
     if-lt v0, v1, :cond_5
 
-    .line 1222
     if-eqz v18, :cond_2d
 
-    .line 1223
     iget-object v0, v13, Lcom/android/server/am/ProcessRecord;->activities:Ljava/util/ArrayList;
 
     move-object/from16 v34, v0
@@ -3319,7 +3053,6 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setHotness(II)V
 
-    .line 1224
     :cond_c
     move-object/from16 v0, p0
 
@@ -3337,13 +3070,11 @@
 
     goto/16 :goto_2
 
-    .line 1084
     :pswitch_0
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_PACKAGE_ENABLE:Z
 
     if-nez v34, :cond_5
 
-    .line 1086
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -3359,7 +3090,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumCachedHiddenProcs:I
 
-    .line 1087
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
@@ -3374,7 +3104,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
 
-    .line 1089
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
@@ -3426,7 +3155,6 @@
     :cond_d
     const/16 v19, 0x1
 
-    .line 1090
     .local v19, "isDhaKill":Z
     :goto_3
     if-eqz v21, :cond_12
@@ -3482,14 +3210,12 @@
     :cond_e
     const/16 v23, 0x1
 
-    .line 1098
     .local v23, "isPreKill":Z
     :goto_4
     if-eqz v19, :cond_13
 
     const-string v25, "DHA"
 
-    .line 1102
     :cond_f
     :goto_5
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
@@ -3538,14 +3264,12 @@
 
     const/16 v20, 0x1
 
-    .line 1104
     .local v20, "isHotness":Z
     :goto_6
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
 
     if-eqz v34, :cond_17
 
-    .line 1105
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -3584,18 +3308,15 @@
 
     move-result v20
 
-    .line 1106
     :goto_7
     if-eqz v20, :cond_16
 
-    .line 1107
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v7, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1108
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -3618,10 +3339,8 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setIsHotness(ZI)V
 
-    .line 1109
     if-eqz v25, :cond_10
 
-    .line 1110
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -3674,14 +3393,12 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 1111
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1112
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mNumCachedHiddenProcs:I
@@ -3696,7 +3413,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumCachedHiddenProcs:I
 
-    .line 1113
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
@@ -3711,7 +3427,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
 
-    .line 1115
     :cond_10
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
@@ -3791,7 +3506,6 @@
 
     goto/16 :goto_2
 
-    .line 1089
     .end local v19    # "isDhaKill":Z
     .end local v20    # "isHotness":Z
     .end local v23    # "isPreKill":Z
@@ -3800,14 +3514,12 @@
 
     goto/16 :goto_3
 
-    .line 1090
     .restart local v19    # "isDhaKill":Z
     :cond_12
     const/16 v23, 0x0
 
     goto/16 :goto_4
 
-    .line 1099
     .restart local v23    # "isPreKill":Z
     :cond_13
     if-eqz v23, :cond_f
@@ -3816,20 +3528,17 @@
 
     goto/16 :goto_5
 
-    .line 1102
     :cond_14
     const/16 v20, 0x0
 
     goto/16 :goto_6
 
-    .line 1105
     .restart local v20    # "isHotness":Z
     :cond_15
     const/16 v20, 0x0
 
     goto/16 :goto_7
 
-    .line 1119
     :cond_16
     const/16 v34, 0x0
 
@@ -3837,18 +3546,15 @@
 
     invoke-virtual {v8, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1122
     :cond_17
     if-eqz v25, :cond_1c
 
-    .line 1124
     invoke-static {}, Landroid/util/GateConfig;->isGateEnabled()Z
 
     move-result v34
 
     if-eqz v34, :cond_18
 
-    .line 1125
     const-string v34, "com.android.vending"
 
     iget-object v0, v13, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -3861,18 +3567,15 @@
 
     if-eqz v34, :cond_18
 
-    .line 1126
     const-string v34, "GATE"
 
     const-string v35, "<GATE-M> MARKET_LAUNCHED_FAIL </GATE-M>"
 
     invoke-static/range {v34 .. v35}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1133
     :cond_18
     if-eqz v18, :cond_1a
 
-    .line 1134
     const-string v34, "ActivityManager"
 
     new-instance v35, Ljava/lang/StringBuilder;
@@ -3905,7 +3608,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1135
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mAm:Lcom/android/server/am/ActivityManagerService;
@@ -3952,7 +3654,6 @@
 
     invoke-virtual {v0, v13, v1}, Lcom/android/server/am/ActivityStackSupervisor;->scheduleDestroyAllActivities(Lcom/android/server/am/ProcessRecord;Ljava/lang/String;)V
 
-    .line 1147
     :cond_19
     :goto_8
     move-object/from16 v0, p0
@@ -3969,7 +3670,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumCachedHiddenProcs:I
 
-    .line 1148
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
@@ -3986,7 +3686,6 @@
 
     goto/16 :goto_2
 
-    .line 1137
     :cond_1a
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->FALL_PREVENT_ENABLE:Z
 
@@ -4012,7 +3711,6 @@
 
     if-nez v34, :cond_1b
 
-    .line 1138
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mInfo:Lcom/android/internal/util/MemInfoReader;
@@ -4027,7 +3725,6 @@
 
     move-result-wide v14
 
-    .line 1139
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
@@ -4048,7 +3745,6 @@
 
     invoke-virtual/range {v34 .. v36}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1140
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
@@ -4063,7 +3759,6 @@
 
     iput-wide v0, v2, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
-    .line 1141
     const-string v34, "ActivityManager"
 
     new-instance v35, Ljava/lang/StringBuilder;
@@ -4110,7 +3805,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1143
     :cond_1b
     new-instance v34, Ljava/lang/StringBuilder;
 
@@ -4158,37 +3852,30 @@
 
     invoke-virtual {v13, v0, v1}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 1144
     if-nez v19, :cond_19
 
     if-nez v32, :cond_19
 
-    .line 1145
     const/16 v32, 0x1
 
     goto/16 :goto_8
 
-    .line 1150
     :cond_1c
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
 
     if-eqz v34, :cond_1d
 
-    .line 1151
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v7, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1152
     :cond_1d
     move-object/from16 v26, v13
 
-    .line 1155
     goto/16 :goto_2
 
-    .line 1157
     .end local v19    # "isDhaKill":Z
     .end local v20    # "isHotness":Z
     .end local v23    # "isPreKill":Z
@@ -4215,7 +3902,6 @@
 
     if-gez v34, :cond_1e
 
-    .line 1159
     new-instance v34, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v34 .. v34}, Ljava/lang/StringBuilder;-><init>()V
@@ -4268,7 +3954,6 @@
 
     goto/16 :goto_2
 
-    .line 1163
     :cond_1e
     move-object/from16 v0, p0
 
@@ -4284,7 +3969,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
 
-    .line 1165
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
@@ -4336,7 +4020,6 @@
     :cond_1f
     const/16 v19, 0x1
 
-    .line 1166
     .restart local v19    # "isDhaKill":Z
     :goto_9
     if-eqz v22, :cond_24
@@ -4392,21 +4075,18 @@
     :cond_20
     const/16 v23, 0x1
 
-    .line 1172
     .restart local v23    # "isPreKill":Z
     :goto_a
     if-eqz v19, :cond_25
 
     const-string v25, "DHA"
 
-    .line 1175
     :cond_21
     :goto_b
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
 
     if-eqz v34, :cond_28
 
-    .line 1176
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -4445,19 +4125,16 @@
 
     move-result v20
 
-    .line 1177
     .restart local v20    # "isHotness":Z
     :goto_c
     if-eqz v20, :cond_27
 
-    .line 1178
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v9, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1179
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -4480,10 +4157,8 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setIsHotness(ZI)V
 
-    .line 1180
     if-eqz v25, :cond_22
 
-    .line 1181
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -4536,14 +4211,12 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 1182
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1183
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
@@ -4558,7 +4231,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
 
-    .line 1186
     :cond_22
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
@@ -4638,7 +4310,6 @@
 
     goto/16 :goto_2
 
-    .line 1165
     .end local v19    # "isDhaKill":Z
     .end local v20    # "isHotness":Z
     .end local v23    # "isPreKill":Z
@@ -4647,14 +4318,12 @@
 
     goto/16 :goto_9
 
-    .line 1166
     .restart local v19    # "isDhaKill":Z
     :cond_24
     const/16 v23, 0x0
 
     goto/16 :goto_a
 
-    .line 1173
     .restart local v23    # "isPreKill":Z
     :cond_25
     if-eqz v23, :cond_21
@@ -4663,13 +4332,11 @@
 
     goto/16 :goto_b
 
-    .line 1176
     :cond_26
     const/16 v20, 0x0
 
     goto/16 :goto_c
 
-    .line 1190
     .restart local v20    # "isHotness":Z
     :cond_27
     const/16 v34, 0x0
@@ -4678,12 +4345,10 @@
 
     invoke-virtual {v10, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1194
     .end local v20    # "isHotness":Z
     :cond_28
     if-eqz v18, :cond_2a
 
-    .line 1195
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -4722,7 +4387,6 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setHotness(II)V
 
-    .line 1196
     :cond_29
     move-object/from16 v0, p0
 
@@ -4740,11 +4404,9 @@
 
     goto/16 :goto_2
 
-    .line 1198
     :cond_2a
     if-eqz v25, :cond_2c
 
-    .line 1199
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->FALL_PREVENT_ENABLE:Z
 
     if-eqz v34, :cond_2b
@@ -4769,7 +4431,6 @@
 
     if-nez v34, :cond_2b
 
-    .line 1200
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mInfo:Lcom/android/internal/util/MemInfoReader;
@@ -4784,7 +4445,6 @@
 
     move-result-wide v14
 
-    .line 1201
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
@@ -4805,7 +4465,6 @@
 
     invoke-virtual/range {v34 .. v36}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1202
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
@@ -4820,7 +4479,6 @@
 
     iput-wide v0, v2, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
-    .line 1203
     const-string v34, "ActivityManager"
 
     new-instance v35, Ljava/lang/StringBuilder;
@@ -4867,7 +4525,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1205
     :cond_2b
     new-instance v34, Ljava/lang/StringBuilder;
 
@@ -4915,7 +4572,6 @@
 
     invoke-virtual {v13, v0, v1}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 1206
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
@@ -4932,13 +4588,11 @@
 
     goto/16 :goto_2
 
-    .line 1208
     :cond_2c
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
 
     if-eqz v34, :cond_5
 
-    .line 1209
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -4947,7 +4601,6 @@
 
     goto/16 :goto_2
 
-    .line 1229
     .end local v19    # "isDhaKill":Z
     .end local v23    # "isPreKill":Z
     :cond_2d
@@ -4961,7 +4614,6 @@
 
     if-lez v34, :cond_3d
 
-    .line 1230
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
@@ -4976,7 +4628,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
 
-    .line 1231
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
@@ -5028,7 +4679,6 @@
     :cond_2e
     const/16 v19, 0x1
 
-    .line 1232
     .restart local v19    # "isDhaKill":Z
     :goto_d
     if-eqz v21, :cond_33
@@ -5084,21 +4734,18 @@
     :cond_2f
     const/16 v23, 0x1
 
-    .line 1235
     .restart local v23    # "isPreKill":Z
     :goto_e
     if-eqz v19, :cond_34
 
     const-string v25, "DHA"
 
-    .line 1238
     :cond_30
     :goto_f
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
 
     if-eqz v34, :cond_37
 
-    .line 1239
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -5137,19 +4784,16 @@
 
     move-result v20
 
-    .line 1240
     .restart local v20    # "isHotness":Z
     :goto_10
     if-eqz v20, :cond_36
 
-    .line 1241
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v7, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1242
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -5172,10 +4816,8 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setIsHotness(ZI)V
 
-    .line 1243
     if-eqz v25, :cond_31
 
-    .line 1244
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -5228,14 +4870,12 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 1245
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1246
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
@@ -5250,7 +4890,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
 
-    .line 1247
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
@@ -5265,7 +4904,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
 
-    .line 1250
     :cond_31
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
@@ -5345,7 +4983,6 @@
 
     goto/16 :goto_2
 
-    .line 1231
     .end local v19    # "isDhaKill":Z
     .end local v20    # "isHotness":Z
     .end local v23    # "isPreKill":Z
@@ -5354,14 +4991,12 @@
 
     goto/16 :goto_d
 
-    .line 1232
     .restart local v19    # "isDhaKill":Z
     :cond_33
     const/16 v23, 0x0
 
     goto/16 :goto_e
 
-    .line 1236
     .restart local v23    # "isPreKill":Z
     :cond_34
     if-eqz v23, :cond_30
@@ -5370,13 +5005,11 @@
 
     goto/16 :goto_f
 
-    .line 1239
     :cond_35
     const/16 v20, 0x0
 
     goto/16 :goto_10
 
-    .line 1254
     .restart local v20    # "isHotness":Z
     :cond_36
     const/16 v34, 0x0
@@ -5385,19 +5018,16 @@
 
     invoke-virtual {v8, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1258
     .end local v20    # "isHotness":Z
     :cond_37
     if-eqz v25, :cond_3b
 
-    .line 1260
     invoke-static {}, Landroid/util/GateConfig;->isGateEnabled()Z
 
     move-result v34
 
     if-eqz v34, :cond_38
 
-    .line 1261
     const-string v34, "com.android.vending"
 
     iget-object v0, v13, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -5410,14 +5040,12 @@
 
     if-eqz v34, :cond_38
 
-    .line 1262
     const-string v34, "GATE"
 
     const-string v35, "<GATE-M> MARKET_LAUNCHED_FAIL </GATE-M>"
 
     invoke-static/range {v34 .. v35}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1270
     :cond_38
     move-object/from16 v0, p0
 
@@ -5433,7 +5061,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
 
-    .line 1271
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->FALL_PREVENT_ENABLE:Z
 
     if-eqz v34, :cond_39
@@ -5458,7 +5085,6 @@
 
     if-nez v34, :cond_39
 
-    .line 1272
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mInfo:Lcom/android/internal/util/MemInfoReader;
@@ -5473,7 +5099,6 @@
 
     move-result-wide v14
 
-    .line 1273
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
@@ -5494,7 +5119,6 @@
 
     invoke-virtual/range {v34 .. v36}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1274
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
@@ -5509,7 +5133,6 @@
 
     iput-wide v0, v2, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
-    .line 1275
     const-string v34, "ActivityManager"
 
     new-instance v35, Ljava/lang/StringBuilder;
@@ -5556,7 +5179,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1277
     :cond_39
     new-instance v34, Ljava/lang/StringBuilder;
 
@@ -5604,15 +5226,12 @@
 
     invoke-virtual {v13, v0, v1}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 1278
     if-nez v19, :cond_3a
 
     if-nez v32, :cond_3a
 
-    .line 1279
     const/16 v32, 0x1
 
-    .line 1281
     :cond_3a
     move-object/from16 v0, p0
 
@@ -5630,26 +5249,22 @@
 
     goto/16 :goto_2
 
-    .line 1283
     :cond_3b
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
 
     if-eqz v34, :cond_3c
 
-    .line 1284
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v7, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1285
     :cond_3c
     move-object/from16 v26, v13
 
     goto/16 :goto_2
 
-    .line 1288
     .end local v19    # "isDhaKill":Z
     .end local v23    # "isPreKill":Z
     :cond_3d
@@ -5667,7 +5282,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
 
-    .line 1289
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
@@ -5719,7 +5333,6 @@
     :cond_3e
     const/16 v19, 0x1
 
-    .line 1290
     .restart local v19    # "isDhaKill":Z
     :goto_11
     if-eqz v22, :cond_43
@@ -5775,21 +5388,18 @@
     :cond_3f
     const/16 v23, 0x1
 
-    .line 1292
     .restart local v23    # "isPreKill":Z
     :goto_12
     if-eqz v19, :cond_44
 
     const-string v25, "DHA"
 
-    .line 1295
     :cond_40
     :goto_13
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
 
     if-eqz v34, :cond_47
 
-    .line 1296
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -5828,19 +5438,16 @@
 
     move-result v20
 
-    .line 1297
     .restart local v20    # "isHotness":Z
     :goto_14
     if-eqz v20, :cond_46
 
-    .line 1298
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v9, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1299
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -5863,10 +5470,8 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setIsHotness(ZI)V
 
-    .line 1300
     if-eqz v25, :cond_41
 
-    .line 1301
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -5919,14 +5524,12 @@
 
     invoke-virtual/range {v34 .. v36}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 1302
     const/16 v34, 0x0
 
     move/from16 v0, v34
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1303
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
@@ -5941,7 +5544,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
 
-    .line 1304
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
@@ -5956,7 +5558,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
 
-    .line 1307
     :cond_41
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
@@ -6036,7 +5637,6 @@
 
     goto/16 :goto_2
 
-    .line 1289
     .end local v19    # "isDhaKill":Z
     .end local v20    # "isHotness":Z
     .end local v23    # "isPreKill":Z
@@ -6045,14 +5645,12 @@
 
     goto/16 :goto_11
 
-    .line 1290
     .restart local v19    # "isDhaKill":Z
     :cond_43
     const/16 v23, 0x0
 
     goto/16 :goto_12
 
-    .line 1293
     .restart local v23    # "isPreKill":Z
     :cond_44
     if-eqz v23, :cond_40
@@ -6061,13 +5659,11 @@
 
     goto/16 :goto_13
 
-    .line 1296
     :cond_45
     const/16 v20, 0x0
 
     goto/16 :goto_14
 
-    .line 1311
     .restart local v20    # "isHotness":Z
     :cond_46
     const/16 v34, 0x0
@@ -6076,12 +5672,10 @@
 
     invoke-virtual {v10, v0, v13}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1314
     .end local v20    # "isHotness":Z
     :cond_47
     if-eqz v25, :cond_49
 
-    .line 1315
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
@@ -6096,7 +5690,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
 
-    .line 1316
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->FALL_PREVENT_ENABLE:Z
 
     if-eqz v34, :cond_48
@@ -6121,7 +5714,6 @@
 
     if-nez v34, :cond_48
 
-    .line 1317
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mInfo:Lcom/android/internal/util/MemInfoReader;
@@ -6136,7 +5728,6 @@
 
     move-result-wide v14
 
-    .line 1318
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
@@ -6157,7 +5748,6 @@
 
     invoke-virtual/range {v34 .. v36}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1319
     move-object/from16 v0, p0
 
     iget-wide v0, v0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
@@ -6172,7 +5762,6 @@
 
     iput-wide v0, v2, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
-    .line 1320
     const-string v34, "ActivityManager"
 
     new-instance v35, Ljava/lang/StringBuilder;
@@ -6219,7 +5808,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1322
     :cond_48
     new-instance v34, Ljava/lang/StringBuilder;
 
@@ -6267,7 +5855,6 @@
 
     invoke-virtual {v13, v0, v1}, Lcom/android/server/am/ProcessRecord;->kill(Ljava/lang/String;Z)V
 
-    .line 1323
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
@@ -6284,13 +5871,11 @@
 
     goto/16 :goto_2
 
-    .line 1325
     :cond_49
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
 
     if-eqz v34, :cond_5
 
-    .line 1326
     const/16 v34, 0x0
 
     move/from16 v0, v34
@@ -6299,7 +5884,6 @@
 
     goto/16 :goto_2
 
-    .line 1335
     .end local v13    # "app":Lcom/android/server/am/ProcessRecord;
     .end local v19    # "isDhaKill":Z
     .end local v23    # "isPreKill":Z
@@ -6309,7 +5893,6 @@
 
     if-eqz v34, :cond_56
 
-    .line 1336
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
@@ -6318,7 +5901,6 @@
 
     invoke-virtual/range {v34 .. v34}, Ljava/util/ArrayList;->clear()V
 
-    .line 1337
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
     move-result v34
@@ -6329,7 +5911,6 @@
     :goto_15
     if-ltz v24, :cond_4c
 
-    .line 1339
     move/from16 v0, v24
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -6338,7 +5919,6 @@
 
     check-cast v13, Lcom/android/server/am/ProcessRecord;
 
-    .line 1340
     .restart local v13    # "app":Lcom/android/server/am/ProcessRecord;
     move-object/from16 v0, p0
 
@@ -6356,7 +5936,6 @@
 
     if-eqz v34, :cond_4b
 
-    .line 1341
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -6383,13 +5962,11 @@
 
     iput v0, v13, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
-    .line 1337
     :goto_16
     add-int/lit8 v24, v24, -0x1
 
     goto :goto_15
 
-    .line 1343
     :cond_4b
     const/16 v34, 0x0
 
@@ -6399,7 +5976,6 @@
 
     goto :goto_16
 
-    .line 1345
     .end local v13    # "app":Lcom/android/server/am/ProcessRecord;
     :cond_4c
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
@@ -6411,7 +5987,6 @@
     :goto_17
     if-ltz v24, :cond_4e
 
-    .line 1347
     move/from16 v0, v24
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -6420,7 +5995,6 @@
 
     check-cast v13, Lcom/android/server/am/ProcessRecord;
 
-    .line 1348
     .restart local v13    # "app":Lcom/android/server/am/ProcessRecord;
     move-object/from16 v0, p0
 
@@ -6438,7 +6012,6 @@
 
     if-eqz v34, :cond_4d
 
-    .line 1349
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -6465,13 +6038,11 @@
 
     iput v0, v13, Lcom/android/server/am/ProcessRecord;->hotnessAdj:I
 
-    .line 1345
     :goto_18
     add-int/lit8 v24, v24, -0x1
 
     goto :goto_17
 
-    .line 1351
     :cond_4d
     const/16 v34, 0x0
 
@@ -6481,7 +6052,6 @@
 
     goto :goto_18
 
-    .line 1353
     .end local v13    # "app":Lcom/android/server/am/ProcessRecord;
     :cond_4e
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
@@ -6502,7 +6072,6 @@
 
     mul-float v6, v34, v35
 
-    .line 1354
     .local v6, "CachedLFUMax":F
     invoke-virtual {v9}, Ljava/util/ArrayList;->size()I
 
@@ -6530,7 +6099,6 @@
 
     mul-float v11, v6, v34
 
-    .line 1355
     .local v11, "EmptyLFUMax":F
     :goto_19
     const/16 v34, 0x0
@@ -6539,7 +6107,6 @@
 
     if-lez v34, :cond_56
 
-    .line 1357
     new-instance v34, Lcom/android/server/am/DynamicHiddenApp$2;
 
     move-object/from16 v0, v34
@@ -6552,12 +6119,10 @@
 
     invoke-static {v7, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1368
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/android/server/am/DynamicHiddenApp;->computeHotnessAdjLocked(Ljava/util/ArrayList;)V
 
-    .line 1369
     new-instance v34, Lcom/android/server/am/DynamicHiddenApp$3;
 
     move-object/from16 v0, v34
@@ -6570,12 +6135,10 @@
 
     invoke-static {v9, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1380
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/android/server/am/DynamicHiddenApp;->computeHotnessAdjLocked(Ljava/util/ArrayList;)V
 
-    .line 1381
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v34, :cond_4f
@@ -6616,7 +6179,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1382
     :cond_4f
     move-object/from16 v0, p0
 
@@ -6626,7 +6188,6 @@
 
     monitor-enter v35
 
-    .line 1383
     :try_start_0
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
@@ -6658,7 +6219,6 @@
 
     if-ltz v34, :cond_52
 
-    .line 1385
     move/from16 v0, v27
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -6667,7 +6227,6 @@
 
     check-cast v13, Lcom/android/server/am/ProcessRecord;
 
-    .line 1386
     .restart local v13    # "app":Lcom/android/server/am/ProcessRecord;
     move-object/from16 v0, p0
 
@@ -6689,7 +6248,6 @@
 
     if-eqz v34, :cond_50
 
-    .line 1388
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -6710,7 +6268,6 @@
 
     check-cast v16, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
 
-    .line 1389
     .local v16, "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     const/16 v34, 0x1
 
@@ -6724,7 +6281,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setIsHotness(ZI)V
 
-    .line 1390
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -6743,7 +6299,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1391
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
@@ -6754,7 +6309,6 @@
 
     invoke-virtual {v0, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1392
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->hotnessCached:I
@@ -6769,7 +6323,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->hotnessCached:I
 
-    .line 1393
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v34, :cond_50
@@ -6804,14 +6357,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1383
     .end local v16    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :cond_50
     add-int/lit8 v27, v27, -0x1
 
     goto/16 :goto_1a
 
-    .line 1354
     .end local v11    # "EmptyLFUMax":F
     .end local v13    # "app":Lcom/android/server/am/ProcessRecord;
     .end local v27    # "nCnt":I
@@ -6820,7 +6371,6 @@
 
     goto/16 :goto_19
 
-    .line 1396
     .restart local v11    # "EmptyLFUMax":F
     .restart local v27    # "nCnt":I
     :cond_52
@@ -6853,7 +6403,6 @@
 
     if-ltz v34, :cond_54
 
-    .line 1398
     move/from16 v0, v27
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -6862,7 +6411,6 @@
 
     check-cast v13, Lcom/android/server/am/ProcessRecord;
 
-    .line 1399
     .restart local v13    # "app":Lcom/android/server/am/ProcessRecord;
     move-object/from16 v0, p0
 
@@ -6884,7 +6432,6 @@
 
     if-eqz v34, :cond_53
 
-    .line 1401
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -6905,7 +6452,6 @@
 
     check-cast v16, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
 
-    .line 1402
     .restart local v16    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     const/16 v34, 0x1
 
@@ -6919,7 +6465,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setIsHotness(ZI)V
 
-    .line 1403
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
@@ -6938,7 +6483,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1404
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
@@ -6949,7 +6493,6 @@
 
     invoke-virtual {v0, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1405
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->hotnessEmpty:I
@@ -6964,7 +6507,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->hotnessEmpty:I
 
-    .line 1406
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v34, :cond_53
@@ -6999,21 +6541,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1396
     .end local v16    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :cond_53
     add-int/lit8 v27, v27, -0x1
 
     goto/16 :goto_1b
 
-    .line 1409
     .end local v13    # "app":Lcom/android/server/am/ProcessRecord;
     :cond_54
     monitor-exit v35
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1410
     sget-boolean v34, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v34, :cond_55
@@ -7062,7 +6601,6 @@
 
     invoke-static/range {v34 .. v35}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1411
     :cond_55
     move-object/from16 v0, p0
 
@@ -7080,7 +6618,6 @@
 
     invoke-static/range {v34 .. v35}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1424
     .end local v6    # "CachedLFUMax":F
     .end local v11    # "EmptyLFUMax":F
     .end local v24    # "j":I
@@ -7118,10 +6655,8 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
-    .line 1425
     return-void
 
-    .line 1409
     .restart local v6    # "CachedLFUMax":F
     .restart local v11    # "EmptyLFUMax":F
     .restart local v24    # "j":I
@@ -7135,7 +6670,6 @@
 
     throw v34
 
-    .line 1082
     :pswitch_data_0
     .packed-switch 0xe
         :pswitch_1
@@ -7161,12 +6695,10 @@
 
     const/4 v0, -0x1
 
-    .line 117
     if-eq p2, v0, :cond_0
 
     if-ne p6, v0, :cond_2
 
-    .line 118
     :cond_0
     const-string v0, "ActivityManager_Hotness"
 
@@ -7262,11 +6794,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     :goto_0
     if-eqz p7, :cond_1
 
-    .line 122
     const-string v0, "ActivityManager_Hotness"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7289,11 +6819,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 123
     :cond_1
     return-void
 
-    .line 120
     :cond_2
     const-string v0, "ActivityManager_Hotness"
 
@@ -7368,17 +6896,14 @@
 
     const/4 v8, 0x0
 
-    .line 684
     const-string v3, "ACTIVITY MANAGER DHA Hotness (dumpsys activity dhahot)"
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 686
     const-string v3, " hotnessAdj value (mHotnessAdjMap) --"
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 687
     iget-object v3, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -7389,7 +6914,6 @@
 
     move-result-object v2
 
-    .line 688
     .local v2, "it":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -7398,14 +6922,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 689
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 690
     .local v1, "entryHotness":Ljava/util/Map$Entry;
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -7417,7 +6939,6 @@
 
     check-cast v0, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
 
-    .line 691
     .local v0, "TempHotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -7493,7 +7014,6 @@
 
     goto :goto_0
 
-    .line 693
     .end local v0    # "TempHotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     .end local v1    # "entryHotness":Ljava/util/Map$Entry;
     :cond_0
@@ -7505,40 +7025,33 @@
     .param p1, "kind"    # I
 
     .prologue
-    .line 480
     packed-switch p1, :pswitch_data_0
 
-    .line 490
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 482
     :pswitch_0
     iget v0, p0, Lcom/android/server/am/DynamicHiddenApp;->numCached:I
 
     goto :goto_0
 
-    .line 484
     :pswitch_1
     iget v0, p0, Lcom/android/server/am/DynamicHiddenApp;->numEmpty:I
 
     goto :goto_0
 
-    .line 486
     :pswitch_2
     iget v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mNumCachedHiddenProcs:I
 
     goto :goto_0
 
-    .line 488
     :pswitch_3
     iget v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mNumNonCachedProcs:I
 
     goto :goto_0
 
-    .line 480
     nop
 
     :pswitch_data_0
@@ -7560,13 +7073,10 @@
 
     const/4 v6, 0x0
 
-    .line 84
     if-eqz p1, :cond_8
 
-    .line 85
     move-object v0, p1
 
-    .line 86
     .local v0, "shortPkgName":Ljava/lang/String;
     const-string v1, "com."
 
@@ -7576,7 +7086,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 87
     const-string v1, "com."
 
     const-string v2, ""
@@ -7585,7 +7094,6 @@
 
     move-result-object v0
 
-    .line 89
     :cond_0
     const-string v1, "android."
 
@@ -7595,7 +7103,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 90
     const-string v1, "android."
 
     const-string v2, ""
@@ -7604,7 +7111,6 @@
 
     move-result-object v0
 
-    .line 92
     :cond_1
     const-string/jumbo v1, "samsung."
 
@@ -7614,7 +7120,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 93
     const-string/jumbo v1, "samsung."
 
     const-string v2, ""
@@ -7623,7 +7128,6 @@
 
     move-result-object v0
 
-    .line 95
     :cond_2
     const-string/jumbo v1, "sec."
 
@@ -7633,7 +7137,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 96
     const-string/jumbo v1, "sec."
 
     const-string v2, ""
@@ -7642,7 +7145,6 @@
 
     move-result-object v0
 
-    .line 98
     :cond_3
     const-string v1, "app."
 
@@ -7652,7 +7154,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 99
     const-string v1, "app."
 
     const-string v2, ""
@@ -7661,7 +7162,6 @@
 
     move-result-object v0
 
-    .line 101
     :cond_4
     const-string/jumbo v1, "google."
 
@@ -7671,7 +7171,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 102
     const-string/jumbo v1, "google."
 
     const-string v2, ""
@@ -7680,7 +7179,6 @@
 
     move-result-object v0
 
-    .line 104
     :cond_5
     const-string/jumbo v1, "org."
 
@@ -7690,7 +7188,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 105
     const-string/jumbo v1, "org."
 
     const-string v2, ""
@@ -7699,7 +7196,6 @@
 
     move-result-object v0
 
-    .line 107
     :cond_6
     const-string v1, ".service"
 
@@ -7709,7 +7205,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 108
     const-string v1, ".service"
 
     const-string v2, ""
@@ -7718,7 +7213,6 @@
 
     move-result-object v0
 
-    .line 111
     :cond_7
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -7780,7 +7274,6 @@
 
     move-result-object v1
 
-    .line 113
     .end local v0    # "shortPkgName":Ljava/lang/String;
     :goto_0
     return-object v1
@@ -7855,55 +7348,45 @@
     .locals 4
 
     .prologue
-    .line 944
     iget v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
     iget v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAStep:I
 
     add-int v0, v1, v2
 
-    .line 946
     .local v0, "mUpdateMax":I
     sget v1, Lcom/android/server/am/DynamicHiddenApp;->MAX_EMPTY_APPS:I
 
     if-le v0, v1, :cond_0
 
-    .line 947
     sget v0, Lcom/android/server/am/DynamicHiddenApp;->MAX_EMPTY_APPS:I
 
-    .line 949
     :cond_0
     iput v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 951
     iget v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
     sget v2, Lcom/android/server/am/DynamicHiddenApp;->MAX_CACHED_APPS:I
 
     if-le v1, v2, :cond_1
 
-    .line 952
     sget v1, Lcom/android/server/am/DynamicHiddenApp;->MAX_CACHED_APPS:I
 
     iput v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 955
     :cond_1
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->FALL_PREVENT_ENABLE:Z
 
     if-eqz v1, :cond_2
 
-    .line 956
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 957
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
-    .line 960
     :cond_2
     return v0
 .end method
@@ -7912,39 +7395,32 @@
     .locals 4
 
     .prologue
-    .line 993
     iget v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
     iget v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAStep:I
 
     add-int v0, v1, v2
 
-    .line 995
     .local v0, "ret":I
     sget v1, Lcom/android/server/am/DynamicHiddenApp;->MAX_EMPTY_APPS:I
 
     if-le v0, v1, :cond_0
 
-    .line 996
     sget v0, Lcom/android/server/am/DynamicHiddenApp;->MAX_EMPTY_APPS:I
 
-    .line 999
     :cond_0
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->FALL_PREVENT_ENABLE:Z
 
     if-eqz v1, :cond_1
 
-    .line 1000
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 1001
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
-    .line 1004
     :cond_1
     return v0
 .end method
@@ -7953,13 +7429,10 @@
     .locals 0
 
     .prologue
-    .line 337
     invoke-virtual {p0}, Lcom/android/server/am/DynamicHiddenApp;->setSkipPackageForLauncher()V
 
-    .line 339
     invoke-virtual {p0}, Lcom/android/server/am/DynamicHiddenApp;->runDecreaseHotnessScoreThread()V
 
-    .line 340
     return-void
 .end method
 
@@ -7967,7 +7440,6 @@
     .locals 6
 
     .prologue
-    .line 424
     const/4 v0, 0x0
 
     .local v0, "idx":I
@@ -7978,7 +7450,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 425
     sget-object v1, Lcom/android/server/am/DynamicHiddenApp;->dha_amsexcept_map:Ljava/util/HashMap;
 
     sget-object v2, Lcom/android/server/am/DynamicHiddenApp;->DHA_STATICEXCEPT_PROC_ARRAY:[[Ljava/lang/String;
@@ -7987,23 +7458,19 @@
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/am/DynamicHiddenApp;->dhaAddPackageName(Ljava/util/HashMap;[Ljava/lang/String;)V
 
-    .line 424
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 430
     :cond_0
     const/4 v1, 0x1
 
     invoke-direct {p0, v1}, Lcom/android/server/am/DynamicHiddenApp;->makeLists(Z)V
 
-    .line 432
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mProcessList:Lcom/android/server/am/ProcessList;
 
     invoke-virtual {v1}, Lcom/android/server/am/ProcessList;->updateLMKThreshold()V
 
-    .line 434
     const-string/jumbo v1, "ro.config.dha_step"
 
     iget v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAStep:I
@@ -8022,7 +7489,6 @@
 
     iput v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAStep:I
 
-    .line 435
     const-string/jumbo v1, "ro.config.dha_th_rate"
 
     iget v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAThresholdRate:F
@@ -8041,7 +7507,6 @@
 
     iput v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAThresholdRate:F
 
-    .line 436
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mProcessList:Lcom/android/server/am/ProcessList;
 
     const-string/jumbo v2, "ro.config.dha_th_level"
@@ -8066,7 +7531,6 @@
 
     iput-wide v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAThreshold:J
 
-    .line 437
     const-string/jumbo v1, "ro.config.dha_increase_th"
 
     sget-wide v2, Lcom/android/server/am/DynamicHiddenApp;->DHA_INCREASE_THRESHOLD:J
@@ -8085,7 +7549,6 @@
 
     sput-wide v2, Lcom/android/server/am/DynamicHiddenApp;->DHA_INCREASE_THRESHOLD:J
 
-    .line 441
     const-string v1, "DHA_PROPERTY"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -8110,7 +7573,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 442
     const-string v1, "DHA_PROPERTY"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -8135,7 +7597,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 443
     const-string v1, "DHA_PROPERTY"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -8160,7 +7621,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
     const-string v1, "DHA_PROPERTY"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -8185,7 +7645,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     return-void
 .end method
 
@@ -8194,7 +7653,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 797
     sget-object v0, Lcom/android/server/am/DynamicHiddenApp;->WIDGET_ON_HOMESCREEN:Ljava/util/HashSet;
 
     if-eqz v0, :cond_0
@@ -8207,7 +7665,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 798
     const-string v0, "ActivityManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -8236,14 +7693,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 799
     const/4 v0, 0x1
 
-    .line 802
     :goto_0
     return v0
 
-    .line 801
     :cond_0
     const-string v0, "ActivityManager"
 
@@ -8273,7 +7727,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 802
     const/4 v0, 0x0
 
     goto :goto_0
@@ -8287,7 +7740,6 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 724
     iget-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -8300,7 +7752,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 725
     iget-wide v2, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
     iget-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
@@ -8323,17 +7774,14 @@
 
     iput-wide v0, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
-    .line 726
     iget-wide v0, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
     cmp-long v0, v0, v4
 
     if-gez v0, :cond_0
 
-    .line 727
     iput-wide v4, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUssTotal:J
 
-    .line 730
     :cond_0
     const-string v0, "ActivityManager"
 
@@ -8379,7 +7827,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 732
     iget-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->killingProcessesUss:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -8388,7 +7835,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 734
     :cond_1
     return-void
 .end method
@@ -8397,7 +7843,6 @@
     .locals 2
 
     .prologue
-    .line 345
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$1;
 
     const-string v1, "DecreaseHotnessScoreThread"
@@ -8406,12 +7851,10 @@
 
     iput-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mDecreaseHotnessScoreThread:Ljava/lang/Thread;
 
-    .line 371
     iget-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mDecreaseHotnessScoreThread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 372
     return-void
 .end method
 
@@ -8421,14 +7864,12 @@
     .param p2, "caller"    # Lcom/android/server/am/ProcessRecord;
 
     .prologue
-    .line 537
     if-eqz p1, :cond_0
 
     iget-object v1, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     if-nez v1, :cond_2
 
-    .line 538
     :cond_0
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
@@ -8440,12 +7881,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 560
     :cond_1
     :goto_0
     return-void
 
-    .line 542
     :cond_2
     if-eqz p2, :cond_3
 
@@ -8453,7 +7892,6 @@
 
     if-nez v1, :cond_4
 
-    .line 543
     :cond_3
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
@@ -8467,13 +7905,11 @@
 
     goto :goto_0
 
-    .line 547
     :cond_4
     iget-object v2, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 548
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
@@ -8485,7 +7921,6 @@
 
     if-eqz v1, :cond_7
 
-    .line 549
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     iget-object v3, p2, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -8496,7 +7931,6 @@
 
     check-cast v0, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
 
-    .line 550
     .local v0, "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     const/4 v1, 0x0
 
@@ -8506,7 +7940,6 @@
 
     if-lez v1, :cond_6
 
-    .line 551
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->getHotness(I)I
@@ -8515,7 +7948,6 @@
 
     iput v1, p1, Lcom/android/server/am/ProcessRecord;->callerHotnessAdj:I
 
-    .line 552
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v1, :cond_5
@@ -8568,7 +8000,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     .end local v0    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :cond_5
     :goto_1
@@ -8585,7 +8016,6 @@
 
     throw v1
 
-    .line 554
     .restart local v0    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :cond_6
     :try_start_1
@@ -8637,7 +8067,6 @@
 
     goto :goto_1
 
-    .line 557
     .end local v0    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :cond_7
     sget-boolean v1, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
@@ -8697,7 +8126,6 @@
     .param p2, "skip"    # Z
 
     .prologue
-    .line 523
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -8706,7 +8134,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 524
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -8715,15 +8142,12 @@
 
     check-cast v0, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
 
-    .line 525
     .local v0, "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     iput-boolean p2, v0, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->skipPackage:Z
 
-    .line 532
     :goto_0
     return-void
 
-    .line 528
     .end local v0    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :cond_0
     new-instance v0, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
@@ -8732,11 +8156,9 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;-><init>(Lcom/android/server/am/DynamicHiddenApp;I)V
 
-    .line 529
     .restart local v0    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     iput-boolean p2, v0, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->skipPackage:Z
 
-    .line 530
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -8748,20 +8170,17 @@
     .locals 8
 
     .prologue
-    .line 408
     new-instance v1, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.MAIN"
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 409
     .local v1, "intent":Landroid/content/Intent;
     const-string v5, "android.intent.category.HOME"
 
     invoke-virtual {v1, v5}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 410
     iget-object v5, p0, Lcom/android/server/am/DynamicHiddenApp;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v5, v5, Lcom/android/server/am/ActivityManagerService;->mContext:Landroid/content/Context;
@@ -8770,7 +8189,6 @@
 
     move-result-object v3
 
-    .line 411
     .local v3, "pm":Landroid/content/pm/PackageManager;
     const/16 v5, 0x80
 
@@ -8778,11 +8196,9 @@
 
     move-result-object v2
 
-    .line 413
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v2, :cond_2
 
-    .line 414
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -8802,7 +8218,6 @@
 
     check-cast v4, Landroid/content/pm/ResolveInfo;
 
-    .line 415
     .local v4, "ri":Landroid/content/pm/ResolveInfo;
     iget-object v5, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -8814,7 +8229,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 416
     sget-boolean v5, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v5, :cond_1
@@ -8845,7 +8259,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 417
     :cond_1
     iget-object v5, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
@@ -8857,7 +8270,6 @@
 
     goto :goto_0
 
-    .line 421
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v4    # "ri":Landroid/content/pm/ResolveInfo;
     :cond_2
@@ -8868,13 +8280,11 @@
     .locals 11
 
     .prologue
-    .line 765
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v0
 
-    .line 766
     .local v0, "currentUserId":I
     new-instance v1, Ljava/io/File;
 
@@ -8886,25 +8296,21 @@
 
     invoke-direct {v1, v7, v8}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 767
     .local v1, "file":Ljava/io/File;
     new-instance v4, Ljava/io/FileInputStream;
 
     invoke-direct {v4, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 768
     .local v4, "stream":Ljava/io/InputStream;
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v2
 
-    .line 769
     .local v2, "parser":Lorg/xmlpull/v1/XmlPullParser;
     const/4 v7, 0x0
 
     invoke-interface {v2, v4, v7}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 770
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mWidgetList:Ljava/lang/Object;
 
     monitor-enter v8
@@ -8913,10 +8319,8 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 771
     const/4 v6, 0x0
 
-    .line 773
     .local v6, "type":I
     :cond_0
     :try_start_1
@@ -8924,17 +8328,14 @@
 
     move-result v6
 
-    .line 774
     const/4 v7, 0x2
 
     if-ne v6, v7, :cond_1
 
-    .line 775
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 776
     .local v5, "tag":Ljava/lang/String;
     const-string/jumbo v7, "p"
 
@@ -8944,7 +8345,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 777
     const/4 v7, 0x0
 
     const-string/jumbo v9, "pkg"
@@ -8953,7 +8353,6 @@
 
     move-result-object v3
 
-    .line 778
     .local v3, "pkg":Ljava/lang/String;
     sget-object v7, Lcom/android/server/am/DynamicHiddenApp;->WIDGET_ON_HOMESCREEN:Ljava/util/HashSet;
 
@@ -8963,7 +8362,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 779
     const-string v7, "ActivityManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -8986,7 +8384,6 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 786
     .end local v3    # "pkg":Ljava/lang/String;
     .end local v5    # "tag":Ljava/lang/String;
     :cond_1
@@ -8995,10 +8392,8 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 787
     monitor-exit v8
 
-    .line 792
     .end local v0    # "currentUserId":I
     .end local v1    # "file":Ljava/io/File;
     .end local v2    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -9007,7 +8402,6 @@
     :goto_1
     return-void
 
-    .line 781
     .restart local v0    # "currentUserId":I
     .restart local v1    # "file":Ljava/io/File;
     .restart local v2    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -9044,14 +8438,12 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 782
     sget-object v7, Lcom/android/server/am/DynamicHiddenApp;->WIDGET_ON_HOMESCREEN:Ljava/util/HashSet;
 
     invoke-virtual {v7, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 787
     .end local v3    # "pkg":Ljava/lang/String;
     .end local v5    # "tag":Ljava/lang/String;
     :catchall_0
@@ -9068,7 +8460,6 @@
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_2 .. :try_end_2} :catch_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 788
     .end local v0    # "currentUserId":I
     .end local v1    # "file":Ljava/io/File;
     .end local v2    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -9079,13 +8470,11 @@
 
     goto :goto_1
 
-    .line 790
     :catch_1
     move-exception v7
 
     goto :goto_1
 
-    .line 789
     :catch_2
     move-exception v7
 
@@ -9096,45 +8485,35 @@
     .locals 13
 
     .prologue
-    .line 1522
     :try_start_0
     const-string v8, ""
 
-    .line 1523
     .local v8, "result":Ljava/lang/String;
     const-string v5, ""
 
-    .line 1524
     .local v5, "name":Ljava/lang/String;
     const-string v9, ""
 
-    .line 1525
     .local v9, "value":Ljava/lang/String;
     const-string v0, "[=:]"
 
-    .line 1526
     .local v0, "SEPATOR":Ljava/lang/String;
     const-string v4, "/data/log/dha_parameter.dat"
 
-    .line 1527
     .local v4, "filepath":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 1528
     .local v1, "buf":Ljava/io/BufferedReader;
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1530
     .local v3, "file":Ljava/io/File;
     const/4 v7, 0x0
 
-    .line 1531
     .local v7, "refreshList":Z
     const/4 v6, 0x0
 
-    .line 1533
     .local v6, "refreshLMK":Z
     const-string v10, "ActivityManager"
 
@@ -9142,21 +8521,18 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1535
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
     move-result v10
 
     if-eqz v10, :cond_25
 
-    .line 1536
     const-string v10, "ActivityManager"
 
     const-string/jumbo v11, "updateDHAParameter exist"
 
     invoke-static {v10, v11}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1537
     new-instance v1, Ljava/io/BufferedReader;
 
     .end local v1    # "buf":Ljava/io/BufferedReader;
@@ -9166,7 +8542,6 @@
 
     invoke-direct {v1, v10}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 1538
     .restart local v1    # "buf":Ljava/io/BufferedReader;
     :cond_0
     :goto_0
@@ -9176,7 +8551,6 @@
 
     if-eqz v8, :cond_22
 
-    .line 1539
     invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
 
     move-result v10
@@ -9207,7 +8581,6 @@
 
     if-nez v10, :cond_0
 
-    .line 1543
     const-string v10, "[=:]"
 
     invoke-virtual {v8, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -9222,7 +8595,6 @@
 
     move-result-object v5
 
-    .line 1544
     const-string v10, "[=:]"
 
     invoke-virtual {v8, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -9237,7 +8609,6 @@
 
     move-result-object v9
 
-    .line 1546
     const-string v10, "ActivityManager"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -9276,7 +8647,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1547
     const-string v10, "MAX_CACHED_APPS"
 
     invoke-virtual {v10, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -9285,7 +8655,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 1548
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
@@ -9297,7 +8666,6 @@
 
     goto :goto_0
 
-    .line 1717
     .end local v0    # "SEPATOR":Ljava/lang/String;
     .end local v1    # "buf":Ljava/io/BufferedReader;
     .end local v3    # "file":Ljava/io/File;
@@ -9310,16 +8678,13 @@
     :catch_0
     move-exception v2
 
-    .line 1718
     .local v2, "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1722
     .end local v2    # "e":Ljava/io/IOException;
     :goto_1
     return-void
 
-    .line 1550
     .restart local v0    # "SEPATOR":Ljava/lang/String;
     .restart local v1    # "buf":Ljava/io/BufferedReader;
     .restart local v3    # "file":Ljava/io/File;
@@ -9339,7 +8704,6 @@
 
     if-eqz v10, :cond_2
 
-    .line 1551
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
@@ -9351,7 +8715,6 @@
 
     goto/16 :goto_0
 
-    .line 1719
     .end local v0    # "SEPATOR":Ljava/lang/String;
     .end local v1    # "buf":Ljava/io/BufferedReader;
     .end local v3    # "file":Ljava/io/File;
@@ -9364,13 +8727,11 @@
     :catch_1
     move-exception v2
 
-    .line 1720
     .local v2, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     invoke-virtual {v2}, Ljava/lang/ArrayIndexOutOfBoundsException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 1553
     .end local v2    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     .restart local v0    # "SEPATOR":Ljava/lang/String;
     .restart local v1    # "buf":Ljava/io/BufferedReader;
@@ -9391,7 +8752,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 1554
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
@@ -9400,7 +8760,6 @@
 
     goto/16 :goto_0
 
-    .line 1556
     :cond_3
     const-string v10, "MIN_EMPTY_APPS"
 
@@ -9410,7 +8769,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 1557
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
@@ -9419,7 +8777,6 @@
 
     goto/16 :goto_0
 
-    .line 1559
     :cond_4
     const-string v10, "INIT_EMPTY_APPS"
 
@@ -9429,7 +8786,6 @@
 
     if-eqz v10, :cond_5
 
-    .line 1560
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
@@ -9438,7 +8794,6 @@
 
     goto/16 :goto_0
 
-    .line 1562
     :cond_5
     const-string/jumbo v10, "mSzDHAStep"
 
@@ -9448,7 +8803,6 @@
 
     if-eqz v10, :cond_6
 
-    .line 1563
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
@@ -9457,7 +8811,6 @@
 
     goto/16 :goto_0
 
-    .line 1565
     :cond_6
     const-string/jumbo v10, "mSzDHAThreshold"
 
@@ -9467,7 +8820,6 @@
 
     if-eqz v10, :cond_7
 
-    .line 1566
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
@@ -9478,7 +8830,6 @@
 
     goto/16 :goto_0
 
-    .line 1568
     :cond_7
     const-string/jumbo v10, "ro.config.dha_th_rate"
 
@@ -9488,7 +8839,6 @@
 
     if-eqz v10, :cond_8
 
-    .line 1569
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v10
@@ -9497,7 +8847,6 @@
 
     goto/16 :goto_0
 
-    .line 1571
     :cond_8
     const-string v10, "DHA_INCREASE_THRESHOLD"
 
@@ -9507,7 +8856,6 @@
 
     if-eqz v10, :cond_9
 
-    .line 1572
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
@@ -9518,7 +8866,6 @@
 
     goto/16 :goto_0
 
-    .line 1574
     :cond_9
     const-string/jumbo v10, "ro.config.dha_lmk_scale"
 
@@ -9528,19 +8875,16 @@
 
     if-eqz v10, :cond_a
 
-    .line 1575
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v10
 
     sput v10, Lcom/android/server/am/DynamicHiddenApp;->mLMKScale:F
 
-    .line 1576
     const/4 v6, 0x1
 
     goto/16 :goto_0
 
-    .line 1578
     :cond_a
     const-string/jumbo v10, "ro.config.dha_lmk_array"
 
@@ -9550,13 +8894,10 @@
 
     if-eqz v10, :cond_b
 
-    .line 1579
     sput-object v9, Lcom/android/server/am/DynamicHiddenApp;->mLMKArray:Ljava/lang/String;
 
-    .line 1580
     const/4 v6, 0x1
 
-    .line 1581
     const-string v10, "ActivityManager"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -9583,7 +8924,6 @@
 
     goto/16 :goto_0
 
-    .line 1583
     :cond_b
     const-string/jumbo v10, "ro.config.dha_ils_enable"
 
@@ -9593,7 +8933,6 @@
 
     if-eqz v10, :cond_c
 
-    .line 1584
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9602,7 +8941,6 @@
 
     goto/16 :goto_0
 
-    .line 1586
     :cond_c
     const-string/jumbo v10, "ro.config.dha_ils_rate"
 
@@ -9612,7 +8950,6 @@
 
     if-eqz v10, :cond_d
 
-    .line 1587
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v10
@@ -9621,7 +8958,6 @@
 
     goto/16 :goto_0
 
-    .line 1589
     :cond_d
     const-string/jumbo v10, "ro.config.dha_ils_sdha_rate"
 
@@ -9631,7 +8967,6 @@
 
     if-eqz v10, :cond_e
 
-    .line 1590
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v10
@@ -9640,7 +8975,6 @@
 
     goto/16 :goto_0
 
-    .line 1596
     :cond_e
     const-string/jumbo v10, "ro.config.dha_pwhitelist_enable"
 
@@ -9650,19 +8984,16 @@
 
     if-eqz v10, :cond_f
 
-    .line 1597
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
 
     sput v10, Lcom/android/server/am/DynamicHiddenApp;->mDhaKeepEmptyEnable:I
 
-    .line 1598
     const/4 v7, 0x1
 
     goto/16 :goto_0
 
-    .line 1604
     :cond_f
     const-string/jumbo v10, "ro.config.dha_pwhl_key"
 
@@ -9672,19 +9003,16 @@
 
     if-eqz v10, :cond_10
 
-    .line 1605
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
 
     sput v10, Lcom/android/server/am/DynamicHiddenApp;->dha_keepempty_key:I
 
-    .line 1606
     const/4 v7, 0x1
 
     goto/16 :goto_0
 
-    .line 1618
     :cond_10
     const-string/jumbo v10, "ro.config.64bit_lmk_enable"
 
@@ -9694,19 +9022,16 @@
 
     if-eqz v10, :cond_11
 
-    .line 1619
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
 
     sput-boolean v10, Lcom/android/server/am/DynamicHiddenApp;->mb64bitLMKEnable:Z
 
-    .line 1620
     const/4 v6, 0x1
 
     goto/16 :goto_0
 
-    .line 1622
     :cond_11
     const-string/jumbo v10, "ro.config.ldha_es_enable"
 
@@ -9716,7 +9041,6 @@
 
     if-eqz v10, :cond_12
 
-    .line 1623
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9725,7 +9049,6 @@
 
     goto/16 :goto_0
 
-    .line 1625
     :cond_12
     const-string/jumbo v10, "ro.config.ldha_spc_enable"
 
@@ -9735,7 +9058,6 @@
 
     if-eqz v10, :cond_13
 
-    .line 1626
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9744,7 +9066,6 @@
 
     goto/16 :goto_0
 
-    .line 1643
     :cond_13
     const-string/jumbo v10, "ro.config.ams_exception_enable"
 
@@ -9754,7 +9075,6 @@
 
     if-eqz v10, :cond_14
 
-    .line 1644
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9763,7 +9083,6 @@
 
     goto/16 :goto_0
 
-    .line 1646
     :cond_14
     const-string/jumbo v10, "ro.config.ams_knoxexpt_enable"
 
@@ -9773,7 +9092,6 @@
 
     if-eqz v10, :cond_15
 
-    .line 1647
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9782,7 +9100,6 @@
 
     goto/16 :goto_0
 
-    .line 1649
     :cond_15
     const-string/jumbo v10, "ro.config.fha_enable"
 
@@ -9792,19 +9109,16 @@
 
     if-eqz v10, :cond_16
 
-    .line 1650
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
 
     sput-boolean v10, Lcom/android/server/am/DynamicHiddenApp;->FHA_ENABLE:Z
 
-    .line 1651
     const/4 v6, 0x1
 
     goto/16 :goto_0
 
-    .line 1665
     :cond_16
     const-string/jumbo v10, "ro.config.pre_max_kill_enable"
 
@@ -9814,7 +9128,6 @@
 
     if-eqz v10, :cond_17
 
-    .line 1666
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9823,7 +9136,6 @@
 
     goto/16 :goto_0
 
-    .line 1668
     :cond_17
     const-string/jumbo v10, "ro.config.pre_cached_kill"
 
@@ -9833,7 +9145,6 @@
 
     if-eqz v10, :cond_18
 
-    .line 1669
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9842,7 +9153,6 @@
 
     goto/16 :goto_0
 
-    .line 1671
     :cond_18
     const-string/jumbo v10, "ro.config.pre_empty_kill"
 
@@ -9852,7 +9162,6 @@
 
     if-eqz v10, :cond_19
 
-    .line 1672
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9861,7 +9170,6 @@
 
     goto/16 :goto_0
 
-    .line 1674
     :cond_19
     const-string/jumbo v10, "ro.config.pre_decrement_sync"
 
@@ -9871,7 +9179,6 @@
 
     if-eqz v10, :cond_1a
 
-    .line 1675
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9880,7 +9187,6 @@
 
     goto/16 :goto_0
 
-    .line 1677
     :cond_1a
     const-string/jumbo v10, "ro.config.pre_support_increment"
 
@@ -9890,7 +9196,6 @@
 
     if-eqz v10, :cond_1b
 
-    .line 1678
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9899,7 +9204,6 @@
 
     goto/16 :goto_0
 
-    .line 1680
     :cond_1b
     const-string/jumbo v10, "ro.config.dha_adj_cached_factor"
 
@@ -9909,7 +9213,6 @@
 
     if-eqz v10, :cond_1c
 
-    .line 1681
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9918,7 +9221,6 @@
 
     goto/16 :goto_0
 
-    .line 1683
     :cond_1c
     const-string/jumbo v10, "ro.config.fall_prevent_enable"
 
@@ -9928,7 +9230,6 @@
 
     if-eqz v10, :cond_1d
 
-    .line 1684
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9937,7 +9238,6 @@
 
     goto/16 :goto_0
 
-    .line 1686
     :cond_1d
     const-string/jumbo v10, "ro.config.dha_package_enable"
 
@@ -9947,7 +9247,6 @@
 
     if-eqz v10, :cond_1e
 
-    .line 1687
     invoke-static {v9}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
 
     move-result v10
@@ -9956,7 +9255,6 @@
 
     goto/16 :goto_0
 
-    .line 1689
     :cond_1e
     const-string/jumbo v10, "ro.config.hotness_LRU_Min"
 
@@ -9966,7 +9264,6 @@
 
     if-eqz v10, :cond_1f
 
-    .line 1690
     invoke-static {v9}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v10
@@ -9975,7 +9272,6 @@
 
     goto/16 :goto_0
 
-    .line 1692
     :cond_1f
     const-string/jumbo v10, "ro.config.ro.config.hotness_LFU_CaRate"
 
@@ -9985,7 +9281,6 @@
 
     if-eqz v10, :cond_20
 
-    .line 1693
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v10
@@ -9994,7 +9289,6 @@
 
     goto/16 :goto_0
 
-    .line 1695
     :cond_20
     const-string/jumbo v10, "ro.config.hotness_LFU_EmRate"
 
@@ -10004,7 +9298,6 @@
 
     if-eqz v10, :cond_21
 
-    .line 1696
     invoke-static {v9}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
 
     move-result v10
@@ -10013,7 +9306,6 @@
 
     goto/16 :goto_0
 
-    .line 1699
     :cond_21
     const-string v10, "ActivityManager"
 
@@ -10023,28 +9315,22 @@
 
     goto/16 :goto_0
 
-    .line 1702
     :cond_22
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
 
-    .line 1703
     if-eqz v7, :cond_23
 
-    .line 1704
     const/4 v10, 0x0
 
     invoke-direct {p0, v10}, Lcom/android/server/am/DynamicHiddenApp;->makeLists(Z)V
 
-    .line 1706
     :cond_23
     if-eqz v6, :cond_24
 
-    .line 1707
     iget-object v10, p0, Lcom/android/server/am/DynamicHiddenApp;->mProcessList:Lcom/android/server/am/ProcessList;
 
     invoke-virtual {v10}, Lcom/android/server/am/ProcessList;->updateLMKThreshold()V
 
-    .line 1708
     iget-object v10, p0, Lcom/android/server/am/DynamicHiddenApp;->mProcessList:Lcom/android/server/am/ProcessList;
 
     const-string/jumbo v11, "ro.config.dha_th_level"
@@ -10069,7 +9355,6 @@
 
     iput-wide v10, p0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAThreshold:J
 
-    .line 1712
     :cond_24
     const-string v10, "ActivityManager"
 
@@ -10079,7 +9364,6 @@
 
     goto/16 :goto_1
 
-    .line 1715
     :cond_25
     const-string v10, "ActivityManager"
 
@@ -10101,12 +9385,10 @@
     .param p4, "preventAggressiveKill"    # Z
 
     .prologue
-    .line 810
     move-object/from16 v0, p0
 
     iget v10, v0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
-    .line 812
     .local v10, "ret":I
     move-object/from16 v0, p0
 
@@ -10116,7 +9398,6 @@
 
     if-eqz v18, :cond_8
 
-    .line 814
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mInfo:Lcom/android/internal/util/MemInfoReader;
@@ -10125,7 +9406,6 @@
 
     invoke-virtual/range {v18 .. v18}, Lcom/android/internal/util/MemInfoReader;->readLightMemInfo()V
 
-    .line 817
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mInfo:Lcom/android/internal/util/MemInfoReader;
@@ -10136,7 +9416,6 @@
 
     move-result-wide v16
 
-    .line 820
     .local v16, "szFreeMem":J
     move-object/from16 v0, p0
 
@@ -10148,11 +9427,9 @@
 
     move-result-wide v14
 
-    .line 821
     .local v14, "szCachedMem":J
     add-long v12, v16, v14
 
-    .line 828
     .local v12, "szAvailableMem":J
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->LDHA_ES_ENABLE:Z
 
@@ -10172,7 +9449,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 830
     :cond_0
     move-object/from16 v0, p0
 
@@ -10188,7 +9464,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 831
     sget v18, Lcom/android/server/am/DynamicHiddenApp;->MIN_CACHED_APPS:I
 
     move/from16 v0, v18
@@ -10197,7 +9472,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 833
     :cond_1
     move-object/from16 v0, p0
 
@@ -10213,7 +9487,6 @@
 
     if-le v0, v1, :cond_2
 
-    .line 834
     sget v18, Lcom/android/server/am/DynamicHiddenApp;->MAX_CACHED_APPS:I
 
     move/from16 v0, v18
@@ -10222,7 +9495,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 837
     :cond_2
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->mSzILSFlag:Z
 
@@ -10232,7 +9504,6 @@
 
     if-eqz v18, :cond_3
 
-    .line 838
     sget v18, Lcom/android/server/am/DynamicHiddenApp;->MIN_CACHED_APPS:I
 
     move/from16 v0, v18
@@ -10241,16 +9512,13 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 841
     :cond_3
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v18, :cond_4
 
-    .line 842
     const/4 v9, 0x0
 
-    .line 843
     .local v9, "maxBG":I
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->LDHA_ES_ENABLE:Z
 
@@ -10260,7 +9528,6 @@
 
     iget v9, v0, Lcom/android/server/am/DynamicHiddenApp;->mMaxEmpty:I
 
-    .line 846
     :goto_0
     const-string v18, "ActivityManager"
 
@@ -10426,7 +9693,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 853
     .end local v9    # "maxBG":I
     :cond_4
     const-wide/16 v18, 0x0
@@ -10437,7 +9703,6 @@
 
     move v11, v10
 
-    .line 904
     .end local v10    # "ret":I
     .end local v12    # "szAvailableMem":J
     .end local v14    # "szCachedMem":J
@@ -10446,7 +9711,6 @@
     :goto_1
     return v11
 
-    .line 844
     .end local v11    # "ret":I
     .restart local v9    # "maxBG":I
     .restart local v10    # "ret":I
@@ -10470,20 +9734,17 @@
 
     goto/16 :goto_0
 
-    .line 856
     .end local v9    # "maxBG":I
     :cond_6
     move-object/from16 v0, p0
 
     iget v8, v0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAThresholdRate:F
 
-    .line 859
     .local v8, "mFinalDHAThresholdRate":F
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->mSzILSFlag:Z
 
     if-eqz v18, :cond_7
 
-    .line 860
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mSzDHAThresholdRate:F
@@ -10494,7 +9755,6 @@
 
     mul-float v8, v18, v19
 
-    .line 864
     :cond_7
     move-object/from16 v0, p0
 
@@ -10510,11 +9770,9 @@
 
     mul-float v7, v18, v8
 
-    .line 866
     .local v7, "mFinalDHAThreshold":F
     const/4 v6, 0x0
 
-    .line 867
     .local v6, "curProcess":I
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->LDHA_ES_ENABLE:Z
 
@@ -10522,7 +9780,6 @@
 
     add-int v6, p1, p2
 
-    .line 871
     :goto_2
     move-object/from16 v0, p0
 
@@ -10542,12 +9799,10 @@
 
     if-gez v18, :cond_b
 
-    .line 872
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->LDHA_ES_ENABLE:Z
 
     if-eqz v18, :cond_a
 
-    .line 873
     move-object/from16 v0, p0
 
     move/from16 v1, p2
@@ -10562,7 +9817,6 @@
 
     move-result v10
 
-    .line 874
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
@@ -10575,13 +9829,11 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->retCacheLimit:I
 
-    .line 877
     :goto_3
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v18, :cond_8
 
-    .line 878
     const-string v18, "ActivityManager"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -10632,12 +9884,10 @@
     :goto_4
     move v11, v10
 
-    .line 904
     .end local v10    # "ret":I
     .restart local v11    # "ret":I
     goto/16 :goto_1
 
-    .line 868
     .end local v11    # "ret":I
     .restart local v6    # "curProcess":I
     .restart local v7    # "mFinalDHAThreshold":F
@@ -10651,7 +9901,6 @@
 
     goto :goto_2
 
-    .line 876
     :cond_a
     move-object/from16 v0, p0
 
@@ -10669,7 +9918,6 @@
 
     goto :goto_3
 
-    .line 882
     :cond_b
     long-to-float v0, v12
 
@@ -10735,18 +9983,15 @@
 
     if-lt v0, v1, :cond_e
 
-    .line 885
     :cond_c
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->LDHA_ES_ENABLE:Z
 
     if-eqz v18, :cond_d
 
-    .line 886
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/DynamicHiddenApp;->incrementAppCount()I
 
     move-result v10
 
-    .line 887
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -10755,13 +10000,11 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->retCacheLimit:I
 
-    .line 890
     :goto_5
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v18, :cond_8
 
-    .line 891
     const-string v18, "ActivityManager"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -10804,7 +10047,6 @@
 
     goto/16 :goto_4
 
-    .line 889
     :cond_d
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/am/DynamicHiddenApp;->incrementEmptyAppCount()I
 
@@ -10812,18 +10054,15 @@
 
     goto :goto_5
 
-    .line 895
     :cond_e
     sget-boolean v18, Lcom/android/server/am/DynamicHiddenApp;->LDHA_ES_ENABLE:Z
 
     if-eqz v18, :cond_8
 
-    .line 896
     move-object/from16 v0, p0
 
     iput v10, v0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 897
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
@@ -10838,7 +10077,6 @@
 
     if-le v0, v1, :cond_f
 
-    .line 898
     sget v18, Lcom/android/server/am/DynamicHiddenApp;->MAX_CACHED_APPS:I
 
     move/from16 v0, v18
@@ -10847,7 +10085,6 @@
 
     iput v0, v1, Lcom/android/server/am/DynamicHiddenApp;->mMaxCached:I
 
-    .line 900
     :cond_f
     const/16 v18, 0x0
 
@@ -10866,12 +10103,10 @@
     .param p2, "nHotnessType"    # I
 
     .prologue
-    .line 563
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/am/DynamicHiddenApp;->updateHotnessAdj(Lcom/android/server/am/ProcessRecord;ILcom/android/server/am/ProcessRecord;)V
 
-    .line 564
     return-void
 .end method
 
@@ -10884,19 +10119,16 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 569
     if-eqz p1, :cond_0
 
     iget-object v8, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     if-nez v8, :cond_1
 
-    .line 647
     :cond_0
     :goto_0
     return-void
 
-    .line 572
     :cond_1
     sget-object v8, Lcom/android/server/am/DynamicHiddenApp;->curTopApp:Lcom/android/server/am/ProcessRecord;
 
@@ -10920,12 +10152,10 @@
 
     if-eqz v8, :cond_2
 
-    .line 573
     sget-boolean v8, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v8, :cond_0
 
-    .line 574
     const-string v8, "ActivityManager_Hotness"
 
     const-string v9, "TOP app is same!"
@@ -10934,7 +10164,6 @@
 
     goto :goto_0
 
-    .line 578
     :cond_2
     sget-object v8, Lcom/android/server/am/DynamicHiddenApp;->strPrevAppForActivityHotness:Ljava/lang/String;
 
@@ -10946,22 +10175,18 @@
 
     if-nez v8, :cond_0
 
-    .line 581
     iget-object v8, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     sput-object v8, Lcom/android/server/am/DynamicHiddenApp;->strPrevAppForActivityHotness:Ljava/lang/String;
 
-    .line 582
     const-string/jumbo v8, "unknown"
 
     sput-object v8, Lcom/android/server/am/DynamicHiddenApp;->strPrevAppForEmptyHotness:Ljava/lang/String;
 
-    .line 584
     iget-object v9, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     monitor-enter v9
 
-    .line 585
     :try_start_0
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
@@ -10973,7 +10198,6 @@
 
     if-eqz v8, :cond_d
 
-    .line 586
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     iget-object v10, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
@@ -10984,31 +10208,26 @@
 
     check-cast v4, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
 
-    .line 588
     .local v4, "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     iget-boolean v8, v4, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->skipPackage:Z
 
     if-eqz v8, :cond_4
 
-    .line 589
     sget-boolean v8, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v8, :cond_3
 
-    .line 590
     const-string v8, "ActivityManager_Hotness"
 
     const-string/jumbo v10, "we don\'t need to update hotness"
 
     invoke-static {v8, v10}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 591
     :cond_3
     monitor-exit v9
 
     goto :goto_0
 
-    .line 642
     .end local v4    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :catchall_0
     move-exception v8
@@ -11019,12 +10238,10 @@
 
     throw v8
 
-    .line 594
     .restart local v4    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :cond_4
     if-ne p2, v11, :cond_b
 
-    .line 595
     :try_start_1
     iget v8, p1, Lcom/android/server/am/ProcessRecord;->callerHotnessAdj:I
 
@@ -11036,12 +10253,10 @@
 
     if-le v8, v10, :cond_5
 
-    .line 596
     iget v8, p1, Lcom/android/server/am/ProcessRecord;->callerHotnessAdj:I
 
     invoke-virtual {v4, v8, p2}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setHotness(II)V
 
-    .line 601
     :cond_5
     :goto_1
     iget v8, p0, Lcom/android/server/am/DynamicHiddenApp;->hotnessCached:I
@@ -11072,7 +10287,6 @@
 
     if-le v10, v8, :cond_7
 
-    .line 605
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
@@ -11085,7 +10299,6 @@
     :goto_2
     if-ltz v5, :cond_6
 
-    .line 607
     invoke-virtual {v4, p2}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->getHotness(I)I
 
     move-result v10
@@ -11110,7 +10323,6 @@
 
     if-ge v10, v8, :cond_c
 
-    .line 612
     :cond_6
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
 
@@ -11118,12 +10330,10 @@
 
     invoke-virtual {v8, v10, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 613
     const/4 v8, 0x1
 
     invoke-virtual {v4, v8, p2}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setIsHotness(ZI)V
 
-    .line 615
     iget-object v10, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
@@ -11150,7 +10360,6 @@
 
     check-cast v7, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
 
-    .line 616
     .local v7, "tmp":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     const/4 v8, 0x0
 
@@ -11158,14 +10367,12 @@
 
     invoke-virtual {v7, v8, v10}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setIsHotness(ZI)V
 
-    .line 617
     const/4 v8, 0x0
 
     const/4 v10, 0x1
 
     invoke-virtual {v7, v8, v10}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setIsHotness(ZI)V
 
-    .line 618
     iget-object v10, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
@@ -11188,7 +10395,6 @@
 
     invoke-virtual {v10, v8, v7}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 619
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
 
     iget-object v10, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessLFU:Ljava/util/ArrayList;
@@ -11201,7 +10407,6 @@
 
     invoke-virtual {v8, v10}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 620
     sget-boolean v8, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v8, :cond_7
@@ -11212,7 +10417,6 @@
 
     invoke-static {v8, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 622
     .end local v5    # "i":I
     .end local v7    # "tmp":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     :cond_7
@@ -11222,7 +10426,6 @@
 
     invoke-virtual {v8, v10, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 623
     sget-boolean v8, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v8, :cond_8
@@ -11275,7 +10478,6 @@
 
     invoke-static {v8, v10}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 630
     :cond_8
     :goto_3
     sget-boolean v8, Lcom/android/server/am/DynamicHiddenApp;->DHA_HOTNESS_ENABLE:Z
@@ -11290,7 +10492,6 @@
 
     if-le v8, v10, :cond_e
 
-    .line 631
     sget-boolean v8, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v8, :cond_9
@@ -11301,7 +10502,6 @@
 
     invoke-static {v8, v10}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 633
     :cond_9
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
@@ -11313,7 +10513,6 @@
 
     move-result-object v6
 
-    .line 634
     .local v6, "it":Ljava/util/Iterator;
     :cond_a
     :goto_4
@@ -11323,14 +10522,12 @@
 
     if-eqz v8, :cond_e
 
-    .line 635
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 636
     .local v3, "entryHotness":Ljava/util/Map$Entry;
     invoke-interface {v3}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -11344,11 +10541,9 @@
 
     move-object v2, v0
 
-    .line 637
     .local v2, "TempHotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     invoke-virtual {v2, p2}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;->setHalf(I)V
 
-    .line 638
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -11361,7 +10556,6 @@
 
     invoke-virtual {v8, v10, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 639
     sget-boolean v8, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v8, :cond_a
@@ -11412,7 +10606,6 @@
 
     goto :goto_4
 
-    .line 599
     .end local v2    # "TempHotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     .end local v3    # "entryHotness":Ljava/util/Map$Entry;
     .end local v6    # "it":Ljava/util/Iterator;
@@ -11421,14 +10614,12 @@
 
     goto/16 :goto_1
 
-    .line 605
     .restart local v5    # "i":I
     :cond_c
     add-int/lit8 v5, v5, -0x1
 
     goto/16 :goto_2
 
-    .line 625
     .end local v4    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     .end local v5    # "i":I
     :cond_d
@@ -11436,7 +10627,6 @@
 
     invoke-direct {v4, p0, p2}, Lcom/android/server/am/DynamicHiddenApp$HotnessValue;-><init>(Lcom/android/server/am/DynamicHiddenApp;I)V
 
-    .line 626
     .restart local v4    # "hotness":Lcom/android/server/am/DynamicHiddenApp$HotnessValue;
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mHotnessAdjMap:Ljava/util/HashMap;
 
@@ -11444,7 +10634,6 @@
 
     invoke-virtual {v8, v10, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 627
     sget-boolean v8, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v8, :cond_8
@@ -11499,13 +10688,11 @@
 
     goto/16 :goto_3
 
-    .line 642
     :cond_e
     monitor-exit v9
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 643
     sget-boolean v8, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v8, :cond_f
@@ -11570,7 +10757,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->secV(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 645
     :cond_f
     iget-object v8, p0, Lcom/android/server/am/DynamicHiddenApp;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -11578,7 +10764,6 @@
 
     move-result-object v1
 
-    .line 646
     .local v1, "TOP_ACT":Lcom/android/server/am/ActivityRecord;
     if-eqz v1, :cond_10
 
@@ -11601,25 +10786,21 @@
     .param p2, "now"    # J
 
     .prologue
-    .line 676
     if-eqz p1, :cond_0
 
     iget-object v0, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 682
     :cond_0
     :goto_0
     return-void
 
-    .line 678
     :cond_1
     iget-object v1, p0, Lcom/android/server/am/DynamicHiddenApp;->mLastKillTimeMap:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 679
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/DynamicHiddenApp;->mLastKillTimeMap:Ljava/util/HashMap;
 
@@ -11631,12 +10812,10 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 680
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 681
     sget-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -11689,7 +10868,6 @@
 
     goto :goto_0
 
-    .line 680
     :catchall_0
     move-exception v0
 

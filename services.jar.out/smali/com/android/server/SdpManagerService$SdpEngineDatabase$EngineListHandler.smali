@@ -41,12 +41,10 @@
     .locals 0
 
     .prologue
-    .line 1841
     iput-object p1, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;->this$1:Lcom/android/server/SdpManagerService$SdpEngineDatabase;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1935
     return-void
 .end method
 
@@ -56,7 +54,6 @@
     .param p2, "x1"    # Lcom/android/server/SdpManagerService$1;
 
     .prologue
-    .line 1841
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;-><init>(Lcom/android/server/SdpManagerService$SdpEngineDatabase;)V
 
     return-void
@@ -67,7 +64,6 @@
     .param p0, "x0"    # Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;
 
     .prologue
-    .line 1841
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;->updateEngineListLocked()I
 
     move-result v0
@@ -80,7 +76,6 @@
     .param p0, "x0"    # Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;
 
     .prologue
-    .line 1841
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;->getEngineListLocked()Landroid/util/SparseArray;
 
     move-result-object v0
@@ -103,23 +98,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1916
     new-instance v2, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;
 
     invoke-direct {v2, p0}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;-><init>(Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;)V
 
-    .line 1917
     .local v2, "handler":Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;
     const/4 v1, 0x0
 
-    .line 1920
     .local v1, "f":Ljava/io/File;
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;->getEngineListXmlFile()Ljava/io/File;
 
     move-result-object v1
 
-    .line 1921
     iget-object v4, p0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;->this$1:Lcom/android/server/SdpManagerService$SdpEngineDatabase;
 
     new-instance v5, Ljava/io/FileInputStream;
@@ -132,7 +123,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1932
     # invokes: Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->getEngineList()Landroid/util/SparseArray;
     invoke-static {v2}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;->access$1300(Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler$EngineListXmlHandler;)Landroid/util/SparseArray;
 
@@ -141,15 +131,12 @@
     :goto_0
     return-object v3
 
-    .line 1922
     :catch_0
     move-exception v0
 
-    .line 1923
     .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1924
     const-string v4, "SdpManagerService"
 
     const-string/jumbo v5, "failed to get engine list"
@@ -158,16 +145,13 @@
 
     goto :goto_0
 
-    .line 1926
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 1927
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1928
     const-string v4, "SdpManagerService"
 
     const-string/jumbo v5, "failed to get engine list"
@@ -186,7 +170,6 @@
     .end annotation
 
     .prologue
-    .line 1849
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/users/sdp_engine_list.xml"
@@ -200,10 +183,8 @@
     .locals 25
 
     .prologue
-    .line 1853
     const/4 v10, 0x0
 
-    .line 1855
     .local v10, "f":Ljava/io/File;
     :try_start_0
     invoke-direct/range {p0 .. p0}, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;->getEngineListXmlFile()Ljava/io/File;
@@ -212,7 +193,6 @@
 
     move-result-object v10
 
-    .line 1862
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;->this$1:Lcom/android/server/SdpManagerService$SdpEngineDatabase;
@@ -236,37 +216,29 @@
 
     if-nez v22, :cond_0
 
-    .line 1863
     invoke-virtual {v10}, Ljava/io/File;->delete()Z
 
-    .line 1864
     const/16 v22, 0x0
 
-    .line 1912
     :goto_0
     return v22
 
-    .line 1856
     :catch_0
     move-exception v8
 
-    .line 1857
     .local v8, "e":Ljava/io/IOException;
     invoke-virtual {v8}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1858
     const-string v22, "SdpManagerService"
 
     const-string v23, " putPolicy failed"
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1859
     const/16 v22, -0x63
 
     goto :goto_0
 
-    .line 1868
     .end local v8    # "e":Ljava/io/IOException;
     :cond_0
     :try_start_1
@@ -274,19 +246,16 @@
 
     move-result-object v7
 
-    .line 1869
     .local v7, "docFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v7}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v6
 
-    .line 1871
     .local v6, "docBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual {v6}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
 
     move-result-object v5
 
-    .line 1872
     .local v5, "doc":Lorg/w3c/dom/Document;
     const-string v22, "engine_list"
 
@@ -296,13 +265,11 @@
 
     move-result-object v17
 
-    .line 1873
     .local v17, "rootElement":Lorg/w3c/dom/Element;
     move-object/from16 v0, v17
 
     invoke-interface {v5, v0}, Lorg/w3c/dom/Document;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1875
     const/4 v11, 0x0
 
     .local v11, "i":I
@@ -331,7 +298,6 @@
     :goto_1
     if-ge v11, v14, :cond_1
 
-    .line 1876
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/SdpManagerService$SdpEngineDatabase$EngineListHandler;->this$1:Lcom/android/server/SdpManagerService$SdpEngineDatabase;
@@ -355,7 +321,6 @@
 
     move-result v12
 
-    .line 1877
     .local v12, "id":I
     move-object/from16 v0, p0
 
@@ -382,7 +347,6 @@
 
     check-cast v13, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
 
-    .line 1878
     .local v13, "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     const-string v22, "engine"
 
@@ -392,7 +356,6 @@
 
     move-result-object v9
 
-    .line 1880
     .local v9, "engineElement":Lorg/w3c/dom/Element;
     const-string v22, "SdpManagerService"
 
@@ -432,7 +395,6 @@
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1883
     const-string v22, "alias"
 
     move-object/from16 v0, v22
@@ -441,7 +403,6 @@
 
     move-result-object v3
 
-    .line 1884
     .local v3, "attrAlias":Lorg/w3c/dom/Attr;
     const-string/jumbo v22, "id"
 
@@ -451,7 +412,6 @@
 
     move-result-object v4
 
-    .line 1885
     .local v4, "attrId":Lorg/w3c/dom/Attr;
     invoke-virtual {v13}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getAlias()Ljava/lang/String;
 
@@ -461,7 +421,6 @@
 
     invoke-interface {v3, v0}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 1886
     invoke-static {v12}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v22
@@ -470,23 +429,18 @@
 
     invoke-interface {v4, v0}, Lorg/w3c/dom/Attr;->setValue(Ljava/lang/String;)V
 
-    .line 1887
     invoke-interface {v9, v3}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 1888
     invoke-interface {v9, v4}, Lorg/w3c/dom/Element;->setAttributeNode(Lorg/w3c/dom/Attr;)Lorg/w3c/dom/Attr;
 
-    .line 1890
     move-object/from16 v0, v17
 
     invoke-interface {v0, v9}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1875
     add-int/lit8 v11, v11, 0x1
 
     goto/16 :goto_1
 
-    .line 1894
     .end local v3    # "attrAlias":Lorg/w3c/dom/Attr;
     .end local v4    # "attrId":Lorg/w3c/dom/Attr;
     .end local v9    # "engineElement":Lorg/w3c/dom/Element;
@@ -497,13 +451,11 @@
 
     move-result-object v21
 
-    .line 1895
     .local v21, "transformerFactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual/range {v21 .. v21}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v20
 
-    .line 1896
     .local v20, "transformer":Ljavax/xml/transform/Transformer;
     const-string/jumbo v22, "indent"
 
@@ -517,14 +469,12 @@
 
     invoke-virtual {v0, v1, v2}, Ljavax/xml/transform/Transformer;->setOutputProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1897
     new-instance v18, Ljavax/xml/transform/dom/DOMSource;
 
     move-object/from16 v0, v18
 
     invoke-direct {v0, v5}, Ljavax/xml/transform/dom/DOMSource;-><init>(Lorg/w3c/dom/Node;)V
 
-    .line 1898
     .local v18, "source":Ljavax/xml/transform/dom/DOMSource;
     new-instance v16, Ljavax/xml/transform/stream/StreamResult;
 
@@ -532,7 +482,6 @@
 
     invoke-direct {v0, v10}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/File;)V
 
-    .line 1900
     .local v16, "result":Ljavax/xml/transform/stream/StreamResult;
     move-object/from16 v0, v20
 
@@ -545,12 +494,10 @@
     .catch Ljavax/xml/parsers/ParserConfigurationException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljavax/xml/transform/TransformerException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 1912
     const/16 v22, 0x0
 
     goto/16 :goto_0
 
-    .line 1902
     .end local v5    # "doc":Lorg/w3c/dom/Document;
     .end local v6    # "docBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v7    # "docFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
@@ -564,39 +511,32 @@
     :catch_1
     move-exception v15
 
-    .line 1903
     .local v15, "pce":Ljavax/xml/parsers/ParserConfigurationException;
     invoke-virtual {v15}, Ljavax/xml/parsers/ParserConfigurationException;->printStackTrace()V
 
-    .line 1904
     const-string v22, "SdpManagerService"
 
     const-string v23, " putPolicy failed"
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1905
     const/16 v22, -0x63
 
     goto/16 :goto_0
 
-    .line 1906
     .end local v15    # "pce":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_2
     move-exception v19
 
-    .line 1907
     .local v19, "tfe":Ljavax/xml/transform/TransformerException;
     invoke-virtual/range {v19 .. v19}, Ljavax/xml/transform/TransformerException;->printStackTrace()V
 
-    .line 1908
     const-string v22, "SdpManagerService"
 
     const-string v23, " putPolicy failed"
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1909
     const/16 v22, -0x63
 
     goto/16 :goto_0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1480
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 1513
     return-void
 .end method
 
@@ -55,7 +53,6 @@
 
     const/4 v4, 0x0
 
-    .line 1483
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorEnabled:Z
@@ -65,18 +62,15 @@
 
     if-eqz v1, :cond_2
 
-    .line 1484
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 1485
     .local v2, "time":J
     iget-object v1, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v1, v4
 
-    .line 1488
     .local v0, "lux":F
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -87,7 +81,6 @@
 
     monitor-enter v4
 
-    .line 1489
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
@@ -98,7 +91,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1490
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mPersonalAutoBrightness:Lcom/android/server/display/AutomaticBrightnessController$PersonalAutoBrightness;
@@ -115,7 +107,6 @@
 
     invoke-virtual {v1, v0, v5}, Lcom/android/server/display/AutomaticBrightnessController$PersonalAutoBrightness;->addPoint(FI)V
 
-    .line 1491
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     const/4 v5, 0x0
@@ -123,13 +114,11 @@
     # setter for: Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
     invoke-static {v1, v5}, Lcom/android/server/display/AutomaticBrightnessController;->access$2802(Lcom/android/server/display/AutomaticBrightnessController;I)I
 
-    .line 1493
     :cond_0
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1495
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
@@ -139,7 +128,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1496
     const-string v1, "AutomaticBrightnessController"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -162,14 +150,12 @@
 
     invoke-static {v1, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1500
     :cond_1
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # invokes: Lcom/android/server/display/AutomaticBrightnessController;->handleLightSensorEvent(JF)V
     invoke-static {v1, v2, v3, v0}, Lcom/android/server/display/AutomaticBrightnessController;->access$2900(Lcom/android/server/display/AutomaticBrightnessController;JF)V
 
-    .line 1502
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
@@ -179,19 +165,16 @@
 
     invoke-virtual {v1, v6}, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->removeMessages(I)V
 
-    .line 1503
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # setter for: Lcom/android/server/display/AutomaticBrightnessController;->lastLightSensorEventTime:J
     invoke-static {v1, v2, v3}, Lcom/android/server/display/AutomaticBrightnessController;->access$3002(Lcom/android/server/display/AutomaticBrightnessController;J)J
 
-    .line 1504
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # setter for: Lcom/android/server/display/AutomaticBrightnessController;->lastLightSensorValue:F
     invoke-static {v1, v0}, Lcom/android/server/display/AutomaticBrightnessController;->access$3102(Lcom/android/server/display/AutomaticBrightnessController;F)F
 
-    .line 1505
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController$5;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
@@ -205,13 +188,11 @@
 
     invoke-virtual {v1, v6, v4, v5}, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->sendEmptyMessageAtTime(IJ)Z
 
-    .line 1508
     .end local v0    # "lux":F
     .end local v2    # "time":J
     :cond_2
     return-void
 
-    .line 1493
     .restart local v0    # "lux":F
     .restart local v2    # "time":J
     :catchall_0

@@ -90,21 +90,18 @@
     .locals 1
 
     .prologue
-    .line 134
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->SERVICECONNECTIONWAIT:Ljava/lang/Object;
 
-    .line 160
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mCacheLock:Ljava/lang/Object;
 
-    .line 165
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
@@ -117,47 +114,38 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 236
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 155
     const-string/jumbo v0, "genericsso_unenroll_ad_authenticator"
 
     iput-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->UNENROLL_SSO_AD_AUTHENTICATOR:Ljava/lang/String;
 
-    .line 166
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->genericSSOService:Lcom/android/server/enterprise/sso/GenericSSOService;
 
-    .line 237
     iput-object p1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
-    .line 238
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
-    .line 239
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
-    .line 240
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getUserId()I
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->initAuthenticationConfigDoc(I)V
 
-    .line 241
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->registerPersonaStateObserver()V
 
-    .line 242
     return-void
 .end method
 
@@ -167,64 +155,52 @@
     .param p2, "request"    # Lcom/sec/enterprise/identity/AuthenticationConfig;
 
     .prologue
-    .line 1269
     const/4 v7, 0x0
 
-    .line 1270
     .local v7, "isRegistered":Z
     const/4 v4, 0x0
 
-    .line 1271
     .local v4, "enrolledEnterpriseIdAuthenticator":Ljava/lang/String;
     :try_start_0
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getAuthConfigForUserId(I)Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     move-result-object v1
 
-    .line 1272
     .local v1, "configDoc":Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->getAuthIDProvider()Lorg/w3c/dom/Node;
     invoke-static {v1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->access$1500(Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v5
 
-    .line 1274
     .local v5, "enterpriseIdAuthenticator":Lorg/w3c/dom/Node;
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1275
     iget-object v2, v1, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
-    .line 1276
     .local v2, "doc":Lorg/w3c/dom/Document;
     const/4 v9, 0x0
 
-    .line 1277
     .local v9, "newSolution":Lorg/w3c/dom/Element;
     if-nez v5, :cond_9
 
-    .line 1278
     const-string v12, "authenticationprovider"
 
     invoke-interface {v2, v12}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v9
 
-    .line 1279
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isNullOrEmpty(Ljava/lang/String;)Z
 
     move-result v12
 
     if-nez v12, :cond_0
 
-    .line 1280
     const-string/jumbo v12, "servicepackagename"
 
     invoke-interface {v9, v12, v4}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1283
     :cond_0
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgSignature()Ljava/lang/String;
 
@@ -236,7 +212,6 @@
 
     if-nez v12, :cond_1
 
-    .line 1284
     const-string/jumbo v12, "servicepackagesignature"
 
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgSignature()Ljava/lang/String;
@@ -245,7 +220,6 @@
 
     invoke-interface {v9, v12, v13}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1288
     :cond_1
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getHideEnterpriseIdentityLock()Z
 
@@ -259,21 +233,18 @@
 
     if-eqz v12, :cond_4
 
-    .line 1290
     const-string v12, "EnterpriseIdentity"
 
     const-string v13, "In _setAuthenticationConfig: Incorrect configuration. Both hide and enforce set to true."
 
     invoke-static {v12, v13}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1292
     const-string/jumbo v12, "hideEnterpriseIDLock"
 
     const-string/jumbo v13, "false"
 
     invoke-interface {v9, v12, v13}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1299
     :goto_0
     const-string/jumbo v13, "forceEnterpriseIDLock"
 
@@ -288,7 +259,6 @@
     :goto_1
     invoke-interface {v9, v13, v12}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1303
     const-string v13, "enforceRemoteAuthAlways"
 
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getEnforceRemoteAuthAlways()Z
@@ -302,7 +272,6 @@
     :goto_2
     invoke-interface {v9, v13, v12}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1306
     const-string/jumbo v13, "isConfiguredByMDM"
 
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->isConfiguredByMDM()Z
@@ -316,7 +285,6 @@
     :goto_3
     invoke-interface {v9, v13, v12}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1310
     const-string v12, "EnterpriseIdentity"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -345,7 +313,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1311
     const-string v12, "EnterpriseIdentity"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -374,7 +341,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1312
     const-string v12, "EnterpriseIdentity"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -403,7 +369,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1313
     const-string v12, "EnterpriseIdentity"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -432,7 +397,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1314
     const-string v12, "EnterpriseIdentity"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -461,13 +425,11 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1357
     :goto_4
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorConfig()Landroid/os/Bundle;
 
     move-result-object v11
 
-    .line 1358
     .local v11, "requestConfig":Landroid/os/Bundle;
     invoke-direct {p0, v11}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isNullOrEmpty(Landroid/os/Bundle;)Z
 
@@ -475,7 +437,6 @@
 
     if-nez v12, :cond_12
 
-    .line 1359
     invoke-virtual {v11}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v12
@@ -499,7 +460,6 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 1362
     .local v8, "key":Ljava/lang/String;
     const-string v12, "EnterpriseIdentity"
 
@@ -523,7 +483,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1363
     sget-object v12, Landroid/app/enterprise/sso/GenericSSOConstants;->AUTHENTICATION_STATUS:Ljava/lang/String;
 
     invoke-virtual {v8, v12}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -548,7 +507,6 @@
 
     if-nez v12, :cond_2
 
-    .line 1368
     invoke-virtual {v11, v8}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
@@ -559,10 +517,8 @@
 
     if-nez v12, :cond_2
 
-    .line 1369
     const/4 v10, 0x0
 
-    .line 1371
     .local v10, "node":Lorg/w3c/dom/Element;
     invoke-direct {p0, v5, v8}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->existedNode(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
@@ -571,24 +527,19 @@
     .end local v10    # "node":Lorg/w3c/dom/Element;
     check-cast v10, Lorg/w3c/dom/Element;
 
-    .line 1373
     .restart local v10    # "node":Lorg/w3c/dom/Element;
     if-nez v10, :cond_3
 
-    .line 1374
     iget-object v12, v1, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v12, v8}, Lorg/w3c/dom/Document;->createElement(Ljava/lang/String;)Lorg/w3c/dom/Element;
 
     move-result-object v10
 
-    .line 1375
     if-nez v7, :cond_11
 
-    .line 1376
     invoke-interface {v9, v10}, Lorg/w3c/dom/Element;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1380
     :cond_3
     :goto_6
     const-string/jumbo v12, "value"
@@ -599,12 +550,10 @@
 
     invoke-interface {v10, v12, v13}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1383
     sget-boolean v12, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v12, :cond_2
 
-    .line 1384
     const-string v12, "EnterpriseIdentity"
 
     new-instance v13, Ljava/lang/StringBuilder;
@@ -657,7 +606,6 @@
 
     goto/16 :goto_5
 
-    .line 1399
     .end local v1    # "configDoc":Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
     .end local v2    # "doc":Lorg/w3c/dom/Document;
     .end local v5    # "enterpriseIdAuthenticator":Lorg/w3c/dom/Node;
@@ -669,18 +617,15 @@
     :catch_0
     move-exception v3
 
-    .line 1400
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1402
     .end local v3    # "e":Ljava/lang/Exception;
     :goto_7
     const/4 v12, 0x0
 
     return v12
 
-    .line 1295
     .restart local v1    # "configDoc":Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
     .restart local v2    # "doc":Lorg/w3c/dom/Document;
     .restart local v5    # "enterpriseIdAuthenticator":Lorg/w3c/dom/Node;
@@ -707,36 +652,30 @@
 
     goto :goto_8
 
-    .line 1299
     :cond_6
     const-string/jumbo v12, "false"
 
     goto/16 :goto_1
 
-    .line 1303
     :cond_7
     const-string/jumbo v12, "false"
 
     goto/16 :goto_2
 
-    .line 1306
     :cond_8
     const-string/jumbo v12, "false"
 
     goto/16 :goto_3
 
-    .line 1320
     :cond_9
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->removeAll(Lorg/w3c/dom/Node;)V
 
-    .line 1321
     move-object v0, v5
 
     check-cast v0, Lorg/w3c/dom/Element;
 
     move-object v3, v0
 
-    .line 1322
     .local v3, "e":Lorg/w3c/dom/Element;
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isNullOrEmpty(Ljava/lang/String;)Z
 
@@ -744,12 +683,10 @@
 
     if-nez v12, :cond_a
 
-    .line 1323
     const-string/jumbo v12, "servicepackagename"
 
     invoke-interface {v3, v12, v4}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1326
     :cond_a
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgSignature()Ljava/lang/String;
 
@@ -761,7 +698,6 @@
 
     if-nez v12, :cond_b
 
-    .line 1327
     const-string/jumbo v12, "servicepackagesignature"
 
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgSignature()Ljava/lang/String;
@@ -770,7 +706,6 @@
 
     invoke-interface {v3, v12, v13}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1330
     :cond_b
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getHideEnterpriseIdentityLock()Z
 
@@ -784,21 +719,18 @@
 
     if-eqz v12, :cond_c
 
-    .line 1332
     const-string v12, "EnterpriseIdentity"
 
     const-string v13, "In setAuthenticationConfig when node not null: Incorrect configuration. Both hide and enforce set to true."
 
     invoke-static {v12, v13}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1334
     const-string/jumbo v12, "hideEnterpriseIDLock"
 
     const-string/jumbo v13, "false"
 
     invoke-interface {v3, v12, v13}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1341
     :goto_9
     const-string/jumbo v13, "forceEnterpriseIDLock"
 
@@ -813,7 +745,6 @@
     :goto_a
     invoke-interface {v3, v13, v12}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1345
     const-string v13, "enforceRemoteAuthAlways"
 
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getEnforceRemoteAuthAlways()Z
@@ -827,7 +758,6 @@
     :goto_b
     invoke-interface {v3, v13, v12}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1347
     const-string/jumbo v13, "isConfiguredByMDM"
 
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->isConfiguredByMDM()Z
@@ -841,12 +771,10 @@
     :goto_c
     invoke-interface {v3, v13, v12}, Lorg/w3c/dom/Element;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1354
     const/4 v7, 0x1
 
     goto/16 :goto_4
 
-    .line 1337
     :cond_c
     const-string/jumbo v13, "hideEnterpriseIDLock"
 
@@ -868,25 +796,21 @@
 
     goto :goto_d
 
-    .line 1341
     :cond_e
     const-string/jumbo v12, "false"
 
     goto :goto_a
 
-    .line 1345
     :cond_f
     const-string/jumbo v12, "false"
 
     goto :goto_b
 
-    .line 1347
     :cond_10
     const-string/jumbo v12, "false"
 
     goto :goto_c
 
-    .line 1378
     .end local v3    # "e":Lorg/w3c/dom/Element;
     .restart local v6    # "i$":Ljava/util/Iterator;
     .restart local v8    # "key":Ljava/lang/String;
@@ -897,14 +821,12 @@
 
     goto/16 :goto_6
 
-    .line 1392
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v8    # "key":Ljava/lang/String;
     .end local v10    # "node":Lorg/w3c/dom/Element;
     :cond_12
     if-nez v7, :cond_13
 
-    .line 1393
     iget-object v12, v1, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v12}, Lorg/w3c/dom/Document;->getFirstChild()Lorg/w3c/dom/Node;
@@ -913,7 +835,6 @@
 
     invoke-interface {v12, v9}, Lorg/w3c/dom/Node;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1394
     :cond_13
     iget-object v12, v1, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
@@ -923,21 +844,18 @@
 
     invoke-interface {v12}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 1395
     const/16 v12, 0x64
 
     move/from16 v0, p1
 
     if-lt v0, v12, :cond_14
 
-    .line 1396
     move/from16 v0, p1
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->updateCacheAndFile(ILcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;)V
 
     goto/16 :goto_7
 
-    .line 1398
     :cond_14
     move/from16 v0, p1
 
@@ -952,7 +870,6 @@
     .locals 1
 
     .prologue
-    .line 109
     sget-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
     return-object v0
@@ -963,7 +880,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
     .prologue
-    .line 109
     sput-object p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
     return-object p0
@@ -974,7 +890,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/EnterpriseIdentity;
 
     .prologue
-    .line 109
     iget-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -987,7 +902,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isGenericSSOEnrolled(Ljava/lang/String;I)Z
 
     move-result v0
@@ -1002,7 +916,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->bindToEnterpriseIdAuthenticator(ILjava/lang/String;)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v0
@@ -1014,7 +927,6 @@
     .locals 1
 
     .prologue
-    .line 109
     sget-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
     return-object v0
@@ -1026,7 +938,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getPersonaInfo(I)Landroid/content/pm/PersonaInfo;
 
     move-result-object v0
@@ -1041,7 +952,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->setNetworkAuthenticationEnforced(ZI)Z
 
     move-result v0
@@ -1053,7 +963,6 @@
     .locals 1
 
     .prologue
-    .line 109
     sget-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     return-object v0
@@ -1065,7 +974,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->initAuthenticationConfigDoc(I)V
 
     return-void
@@ -1075,7 +983,6 @@
     .locals 1
 
     .prologue
-    .line 109
     sget-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
     return-object v0
@@ -1088,7 +995,6 @@
     .param p2, "x2"    # Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     .prologue
-    .line 109
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->updateCacheAndFile(ILcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;)V
 
     return-void
@@ -1100,7 +1006,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getEnterpriseIdAuthenticationConfig(I)Landroid/os/Bundle;
 
     move-result-object v0
@@ -1113,7 +1018,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/sso/EnterpriseIdentity;
 
     .prologue
-    .line 109
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getSSOService()Lcom/android/server/enterprise/sso/GenericSSOService;
 
     move-result-object v0
@@ -1127,7 +1031,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->removeFileAndCacheEntry(I)V
 
     return-void
@@ -1140,7 +1043,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 109
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isEnterpriseSSOEnrolled(Ljava/lang/String;I)Z
 
     move-result v0
@@ -1154,12 +1056,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 807
     new-instance v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity$EnterpriseIdServiceConnection;
 
     invoke-direct {v0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$EnterpriseIdServiceConnection;-><init>(I)V
 
-    .line 808
     .local v0, "connection":Lcom/android/server/enterprise/sso/EnterpriseIdentity$EnterpriseIdServiceConnection;
     sget-object v4, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
@@ -1173,19 +1073,16 @@
 
     if-eqz v4, :cond_1
 
-    .line 809
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 810
     const-string v4, "EnterpriseIdentity"
 
     const-string v5, "In bindToEnterpriseIdAuthenticator: The EnterpriseIdService is already bound"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 812
     :cond_0
     sget-object v4, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
@@ -1203,22 +1100,18 @@
 
     move-result-object v4
 
-    .line 851
     :goto_0
     return-object v4
 
-    .line 816
     :cond_1
     :try_start_0
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 817
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {v3, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 818
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1239,12 +1132,10 @@
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 820
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_2
 
-    .line 821
     const-string v4, "EnterpriseIdentity"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1271,7 +1162,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 823
     :cond_2
     sget-object v5, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->SERVICECONNECTIONWAIT:Ljava/lang/Object;
 
@@ -1280,7 +1170,6 @@
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 824
     :try_start_1
     const-string v4, "EnterpriseIdentity"
 
@@ -1288,7 +1177,6 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 825
     iget-object v4, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const/4 v6, 0x1
@@ -1305,7 +1193,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 828
     :try_start_2
     new-instance v4, Ljava/util/concurrent/CountDownLatch;
 
@@ -1315,7 +1202,6 @@
 
     sput-object v4, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
-    .line 829
     sget-object v4, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->countDownLatch:Ljava/util/concurrent/CountDownLatch;
 
     const-wide/16 v6, 0x4e20
@@ -1326,16 +1212,13 @@
 
     move-result v1
 
-    .line 832
     .local v1, "countDownTimeout":Z
     if-nez v1, :cond_3
 
-    .line 833
     sget-boolean v4, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v4, :cond_3
 
-    .line 834
     const-string v4, "EnterpriseIdentity"
 
     const-string v6, "In bindToEnterpriseIdAuthenticator: CoutnDownLatch return false"
@@ -1345,7 +1228,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 844
     .end local v1    # "countDownTimeout":Z
     :cond_3
     :goto_1
@@ -1354,7 +1236,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 845
     :try_start_4
     invoke-virtual {v0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$EnterpriseIdServiceConnection;->getService()Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     :try_end_4
@@ -1365,11 +1246,9 @@
 
     goto :goto_0
 
-    .line 837
     :catch_0
     move-exception v2
 
-    .line 838
     .local v2, "e":Ljava/lang/InterruptedException;
     :try_start_5
     const-string v4, "EnterpriseIdentity"
@@ -1380,7 +1259,6 @@
 
     goto :goto_1
 
-    .line 844
     .end local v2    # "e":Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v4
@@ -1395,12 +1273,10 @@
     .catch Ljava/lang/NullPointerException; {:try_start_6 .. :try_end_6} :catch_1
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_2
 
-    .line 846
     .end local v3    # "intent":Landroid/content/Intent;
     :catch_1
     move-exception v2
 
-    .line 847
     .local v2, "e":Ljava/lang/NullPointerException;
     const-string v4, "EnterpriseIdentity"
 
@@ -1408,14 +1284,12 @@
 
     invoke-static {v4, v5, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 851
     .end local v2    # "e":Ljava/lang/NullPointerException;
     :goto_2
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 842
     .restart local v3    # "intent":Landroid/content/Intent;
     :cond_4
     :try_start_7
@@ -1429,12 +1303,10 @@
 
     goto :goto_1
 
-    .line 848
     .end local v3    # "intent":Landroid/content/Intent;
     :catch_2
     move-exception v2
 
-    .line 849
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "EnterpriseIdentity"
 
@@ -1450,7 +1322,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 563
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1469,7 +1340,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 568
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -1491,7 +1361,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 930
     if-eqz p1, :cond_0
 
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isNullOrEmpty(Ljava/lang/String;)Z
@@ -1503,24 +1372,20 @@
     :cond_0
     move-object v5, v6
 
-    .line 952
     :goto_0
     return-object v5
 
-    .line 934
     :cond_1
     :try_start_0
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
 
-    .line 935
     .local v0, "children":Lorg/w3c/dom/NodeList;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 936
     .local v4, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     const/4 v2, 0x0
 
@@ -1532,12 +1397,10 @@
 
     if-ge v2, v5, :cond_3
 
-    .line 937
     invoke-interface {v0, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 938
     .local v3, "node":Lorg/w3c/dom/Node;
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -1557,16 +1420,13 @@
 
     if-eqz v5, :cond_2
 
-    .line 940
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 936
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 943
     .end local v3    # "node":Lorg/w3c/dom/Node;
     :cond_3
     if-eqz v4, :cond_4
@@ -1577,7 +1437,6 @@
 
     if-lez v5, :cond_4
 
-    .line 944
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1594,17 +1453,14 @@
     :cond_4
     move-object v5, v6
 
-    .line 946
     goto :goto_0
 
-    .line 947
     .end local v0    # "children":Lorg/w3c/dom/NodeList;
     .end local v2    # "i":I
     .end local v4    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     :catch_0
     move-exception v1
 
-    .line 948
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v5, "EnterpriseIdentity"
 
@@ -1616,14 +1472,11 @@
     :goto_2
     move-object v5, v6
 
-    .line 952
     goto :goto_0
 
-    .line 949
     :catch_1
     move-exception v1
 
-    .line 950
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseIdentity"
 
@@ -1640,7 +1493,6 @@
     .param p2, "attirbuteName"    # Ljava/lang/String;
 
     .prologue
-    .line 915
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -1651,11 +1503,9 @@
 
     if-nez v0, :cond_1
 
-    .line 917
     :cond_0
     const/4 v0, 0x0
 
-    .line 918
     :goto_0
     return-object v0
 
@@ -1676,7 +1526,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 797
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1715,7 +1564,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 715
     :try_start_0
     sget-object v1, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -1725,10 +1573,8 @@
 
     if-nez v1, :cond_0
 
-    .line 716
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->initAuthenticationConfigDoc(I)V
 
-    .line 717
     :cond_0
     sget-object v1, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -1740,15 +1586,12 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 720
     :goto_0
     return-object v1
 
-    .line 718
     :catch_0
     move-exception v0
 
-    .line 719
     .local v0, "npe":Ljava/lang/NullPointerException;
     const-string v1, "EnterpriseIdentity"
 
@@ -1756,7 +1599,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 720
     const/4 v1, 0x0
 
     goto :goto_0
@@ -1780,30 +1622,25 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 889
     if-nez p1, :cond_1
 
     move-object v4, v5
 
-    .line 907
     :cond_0
     :goto_0
     return-object v4
 
-    .line 892
     :cond_1
     :try_start_0
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
 
-    .line 893
     .local v0, "children":Lorg/w3c/dom/NodeList;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 895
     .local v4, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     const/4 v2, 0x0
 
@@ -1815,12 +1652,10 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 896
     invoke-interface {v0, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 897
     .local v3, "node":Lorg/w3c/dom/Node;
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -1830,19 +1665,16 @@
 
     if-ne v6, v7, :cond_2
 
-    .line 898
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 895
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 902
     .end local v0    # "children":Lorg/w3c/dom/NodeList;
     .end local v2    # "i":I
     .end local v3    # "node":Lorg/w3c/dom/Node;
@@ -1850,7 +1682,6 @@
     :catch_0
     move-exception v1
 
-    .line 903
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v6, "EnterpriseIdentity"
 
@@ -1862,14 +1693,11 @@
     :goto_2
     move-object v4, v5
 
-    .line 907
     goto :goto_0
 
-    .line 904
     :catch_1
     move-exception v1
 
-    .line 905
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseIdentity"
 
@@ -1900,7 +1728,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 861
     if-eqz p1, :cond_0
 
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isNullOrEmpty(Ljava/lang/String;)Z
@@ -1912,25 +1739,21 @@
     :cond_0
     move-object v4, v5
 
-    .line 880
     :cond_1
     :goto_0
     return-object v4
 
-    .line 865
     :cond_2
     :try_start_0
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v0
 
-    .line 866
     .local v0, "children":Lorg/w3c/dom/NodeList;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 867
     .local v4, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/w3c/dom/Node;>;"
     const/4 v2, 0x0
 
@@ -1942,12 +1765,10 @@
 
     if-ge v2, v6, :cond_1
 
-    .line 868
     invoke-interface {v0, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v3
 
-    .line 869
     .local v3, "node":Lorg/w3c/dom/Node;
     invoke-interface {v3}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -1967,19 +1788,16 @@
 
     if-eqz v6, :cond_3
 
-    .line 871
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 867
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 875
     .end local v0    # "children":Lorg/w3c/dom/NodeList;
     .end local v2    # "i":I
     .end local v3    # "node":Lorg/w3c/dom/Node;
@@ -1987,7 +1805,6 @@
     :catch_0
     move-exception v1
 
-    .line 876
     .local v1, "e":Ljava/lang/NullPointerException;
     const-string v6, "EnterpriseIdentity"
 
@@ -1999,14 +1816,11 @@
     :goto_2
     move-object v4, v5
 
-    .line 880
     goto :goto_0
 
-    .line 877
     :catch_1
     move-exception v1
 
-    .line 878
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseIdentity"
 
@@ -2021,12 +1835,10 @@
     .locals 2
 
     .prologue
-    .line 576
     iget-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 577
     iget-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -2039,7 +1851,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 580
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -2051,23 +1862,19 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 641
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getAuthConfigForUserId(I)Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     move-result-object v1
 
-    .line 642
     .local v1, "configDoc":Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
     # invokes: Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->getAuthIDProvider()Lorg/w3c/dom/Node;
     invoke-static {v1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->access$1500(Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
-    .line 644
     .local v2, "enterpriseIdAuthenticator":Lorg/w3c/dom/Node;
     if-nez v2, :cond_1
 
-    .line 645
     const-string v7, "EnterpriseIdentity"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2090,26 +1897,21 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 646
     const/4 v6, 0x0
 
-    .line 660
     :cond_0
     return-object v6
 
-    .line 648
     :cond_1
     new-instance v6, Landroid/os/Bundle;
 
     invoke-direct {v6}, Landroid/os/Bundle;-><init>()V
 
-    .line 650
     .local v6, "ret":Landroid/os/Bundle;
     invoke-interface {v2}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v4
 
-    .line 651
     .local v4, "list":Lorg/w3c/dom/NodeList;
     const/4 v3, 0x0
 
@@ -2121,12 +1923,10 @@
 
     if-ge v3, v7, :cond_0
 
-    .line 652
     invoke-interface {v4, v3}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
-    .line 653
     .local v0, "childNode":Lorg/w3c/dom/Node;
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeType()S
 
@@ -2136,14 +1936,12 @@
 
     if-eq v7, v8, :cond_3
 
-    .line 651
     :cond_2
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 655
     :cond_3
     const-string/jumbo v7, "value"
 
@@ -2151,11 +1949,9 @@
 
     move-result-object v5
 
-    .line 656
     .local v5, "mNode":Lorg/w3c/dom/Node;
     if-eqz v5, :cond_2
 
-    .line 657
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
     move-result-object v7
@@ -2173,17 +1969,14 @@
     .locals 4
 
     .prologue
-    .line 538
     iget-object v2, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mHandler:Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;
 
     if-nez v2, :cond_0
 
-    .line 539
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 540
     .local v0, "token":J
     new-instance v2, Landroid/os/HandlerThread;
 
@@ -2193,12 +1986,10 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 541
     iget-object v2, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
-    .line 542
     new-instance v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;
 
     iget-object v3, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mHandlerThread:Landroid/os/HandlerThread;
@@ -2211,10 +2002,8 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mHandler:Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;
 
-    .line 543
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 545
     .end local v0    # "token":J
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mHandler:Lcom/android/server/enterprise/sso/EnterpriseIdentity$GenericSSOHandler;
@@ -2228,23 +2017,19 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 610
     const/4 v8, 0x0
 
-    .line 611
     .local v8, "pkgCert":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 613
     .local v12, "token":J
     :try_start_0
     sget-boolean v14, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v14, :cond_0
 
-    .line 614
     const-string v14, "EnterpriseIdentity"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -2269,7 +2054,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 615
     :cond_0
     move-object/from16 v0, p0
 
@@ -2279,7 +2063,6 @@
 
     move-result-object v6
 
-    .line 617
     .local v6, "mPackageManagerAdapter":Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
     const/16 v14, 0x40
 
@@ -2291,11 +2074,9 @@
 
     move-result-object v9
 
-    .line 619
     .local v9, "pkgInfo":Landroid/content/pm/PackageInfo;
     if-nez v9, :cond_1
 
-    .line 620
     const-string v14, "EnterpriseIdentity"
 
     const-string v15, "In getPackageCertForPkgname: pkgInfo is null"
@@ -2306,26 +2087,21 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 621
     const/4 v14, 0x0
 
-    .line 635
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 637
     .end local v6    # "mPackageManagerAdapter":Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
     .end local v9    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :goto_0
     return-object v14
 
-    .line 623
     .restart local v6    # "mPackageManagerAdapter":Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
     .restart local v9    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :cond_1
     :try_start_1
     iget-object v11, v9, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 624
     .local v11, "signs":[Landroid/content/pm/Signature;
     move-object v2, v11
 
@@ -2341,11 +2117,9 @@
 
     aget-object v10, v2, v4
 
-    .line 625
     .local v10, "sign":Landroid/content/pm/Signature;
     if-eqz v10, :cond_3
 
-    .line 626
     invoke-virtual {v10}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
     :try_end_1
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_0
@@ -2354,7 +2128,6 @@
 
     move-result-object v8
 
-    .line 635
     .end local v10    # "sign":Landroid/content/pm/Signature;
     :cond_2
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -2368,10 +2141,8 @@
     :goto_2
     move-object v14, v8
 
-    .line 637
     goto :goto_0
 
-    .line 624
     .restart local v2    # "arr$":[Landroid/content/pm/Signature;
     .restart local v4    # "i$":I
     .restart local v5    # "len$":I
@@ -2384,7 +2155,6 @@
 
     goto :goto_1
 
-    .line 630
     .end local v2    # "arr$":[Landroid/content/pm/Signature;
     .end local v4    # "i$":I
     .end local v5    # "len$":I
@@ -2395,7 +2165,6 @@
     :catch_0
     move-exception v7
 
-    .line 631
     .local v7, "npe":Ljava/lang/NullPointerException;
     :try_start_2
     const-string v14, "EnterpriseIdentity"
@@ -2406,17 +2175,14 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 635
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
 
-    .line 632
     .end local v7    # "npe":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v3
 
-    .line 633
     .local v3, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v14, "EnterpriseIdentity"
@@ -2427,7 +2193,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 635
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
@@ -2446,7 +2211,6 @@
     .param p1, "personaID"    # I
 
     .prologue
-    .line 550
     iget-object v1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
     const-string/jumbo v2, "persona"
@@ -2457,7 +2221,6 @@
 
     check-cast v0, Landroid/os/PersonaManager;
 
-    .line 552
     .local v0, "mPersona":Landroid/os/PersonaManager;
     invoke-virtual {v0, p1}, Landroid/os/PersonaManager;->getPersonaInfo(I)Landroid/content/pm/PersonaInfo;
 
@@ -2470,10 +2233,8 @@
     .locals 5
 
     .prologue
-    .line 226
     const/4 v2, 0x0
 
-    .line 228
     .local v2, "ssoPolicy":Lcom/android/server/enterprise/sso/EnterpriseUserSpaceSSOPolicy;
     :try_start_0
     const-string v3, "enterprise_user_space_sso_policy"
@@ -2490,15 +2251,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 233
     :goto_0
     return-object v2
 
-    .line 230
     :catch_0
     move-exception v1
 
-    .line 231
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "EnterpriseIdentity"
 
@@ -2513,12 +2271,10 @@
     .locals 3
 
     .prologue
-    .line 214
     iget-object v1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->genericSSOService:Lcom/android/server/enterprise/sso/GenericSSOService;
 
     if-nez v1, :cond_0
 
-    .line 216
     :try_start_0
     const-string/jumbo v1, "genericssoservice"
 
@@ -2532,18 +2288,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 222
     :cond_0
     :goto_0
     iget-object v1, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->genericSSOService:Lcom/android/server/enterprise/sso/GenericSSOService;
 
     return-object v1
 
-    .line 218
     :catch_0
     move-exception v0
 
-    .line 219
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "EnterpriseIdentity"
 
@@ -2560,7 +2313,6 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 1424
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getEnterpriseIdAuthenticationConfig(I)Landroid/os/Bundle;
 
     move-result-object v0
@@ -2576,24 +2328,20 @@
     .locals 5
 
     .prologue
-    .line 728
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 729
     .local v0, "uid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 730
     .local v1, "userId":I
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 731
     const-string v2, "EnterpriseIdentity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2626,7 +2374,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 732
     :cond_0
     return v1
 .end method
@@ -2636,16 +2383,13 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 665
     const/4 v6, 0x0
 
-    .line 666
     .local v6, "stream":Ljava/io/FileInputStream;
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getAuthConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 667
     .local v4, "filepath":Ljava/lang/String;
     sget-object v8, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
@@ -2655,19 +2399,16 @@
 
     if-nez v8, :cond_2
 
-    .line 669
     :try_start_0
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v1
 
-    .line 671
     .local v1, "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v0
 
-    .line 673
     .local v0, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isFileExist(Ljava/lang/String;)Z
 
@@ -2689,7 +2430,6 @@
 
     if-nez v8, :cond_3
 
-    .line 674
     :cond_0
     const-string v8, "EnterpriseIdentity"
 
@@ -2719,12 +2459,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 678
     invoke-virtual {v0}, Ljavax/xml/parsers/DocumentBuilder;->newDocument()Lorg/w3c/dom/Document;
 
     move-result-object v2
 
-    .line 679
     .local v2, "doc":Lorg/w3c/dom/Document;
     const-string v8, "configuration"
 
@@ -2732,32 +2470,27 @@
 
     move-result-object v5
 
-    .line 680
     .local v5, "root":Lorg/w3c/dom/Element;
     invoke-interface {v2, v5}, Lorg/w3c/dom/Document;->appendChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 681
     invoke-interface {v2}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
     move-result-object v8
 
     invoke-interface {v8}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 682
     new-instance v8, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     invoke-direct {v8, v2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;-><init>(Lorg/w3c/dom/Document;)V
 
     invoke-direct {p0, p1, v8}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->updateCacheAndFile(ILcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;)V
 
-    .line 691
     .end local v5    # "root":Lorg/w3c/dom/Element;
     :goto_0
     sget-boolean v8, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v8, :cond_1
 
-    .line 692
     const-string v8, "EnterpriseIdentity"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2789,17 +2522,14 @@
     .catch Lorg/xml/sax/SAXException; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 703
     :cond_1
     if-eqz v6, :cond_2
 
-    .line 704
     :try_start_1
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 711
     .end local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v1    # "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v2    # "doc":Lorg/w3c/dom/Document;
@@ -2807,7 +2537,6 @@
     :goto_1
     return-void
 
-    .line 685
     .restart local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .restart local v1    # "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     :cond_3
@@ -2821,7 +2550,6 @@
     .catch Lorg/xml/sax/SAXException; {:try_start_2 .. :try_end_2} :catch_5
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 686
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .local v7, "stream":Ljava/io/FileInputStream;
     :try_start_3
@@ -2829,7 +2557,6 @@
 
     move-result-object v2
 
-    .line 687
     .restart local v2    # "doc":Lorg/w3c/dom/Document;
     invoke-interface {v2}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -2837,7 +2564,6 @@
 
     invoke-interface {v8}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 688
     sget-object v8, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
     new-instance v9, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
@@ -2857,17 +2583,14 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_0
 
-    .line 706
     :catch_0
     move-exception v3
 
-    .line 707
     .local v3, "e":Ljava/io/IOException;
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 695
     .end local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v1    # "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     .end local v2    # "doc":Lorg/w3c/dom/Document;
@@ -2875,7 +2598,6 @@
     :catch_1
     move-exception v3
 
-    .line 696
     .restart local v3    # "e":Ljava/io/IOException;
     :goto_2
     :try_start_4
@@ -2887,10 +2609,8 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 703
     if-eqz v6, :cond_2
 
-    .line 704
     :try_start_5
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_5
@@ -2898,21 +2618,17 @@
 
     goto :goto_1
 
-    .line 706
     :catch_2
     move-exception v3
 
-    .line 707
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 697
     .end local v3    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v3
 
-    .line 698
     .local v3, "e":Ljavax/xml/parsers/ParserConfigurationException;
     :goto_3
     :try_start_6
@@ -2924,10 +2640,8 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 703
     if-eqz v6, :cond_2
 
-    .line 704
     :try_start_7
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_7
@@ -2935,22 +2649,18 @@
 
     goto :goto_1
 
-    .line 706
     :catch_4
     move-exception v3
 
-    .line 707
     .local v3, "e":Ljava/io/IOException;
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 699
     .end local v3    # "e":Ljava/io/IOException;
     :catch_5
     move-exception v3
 
-    .line 700
     .local v3, "e":Lorg/xml/sax/SAXException;
     :goto_4
     :try_start_8
@@ -2962,10 +2672,8 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 703
     if-eqz v6, :cond_2
 
-    .line 704
     :try_start_9
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_9
@@ -2973,47 +2681,38 @@
 
     goto :goto_1
 
-    .line 706
     :catch_6
     move-exception v3
 
-    .line 707
     .local v3, "e":Ljava/io/IOException;
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 702
     .end local v3    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v8
 
-    .line 703
     :goto_5
     if-eqz v6, :cond_4
 
-    .line 704
     :try_start_a
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_7
 
-    .line 708
     :cond_4
     :goto_6
     throw v8
 
-    .line 706
     :catch_7
     move-exception v3
 
-    .line 707
     .restart local v3    # "e":Ljava/io/IOException;
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_6
 
-    .line 702
     .end local v3    # "e":Ljava/io/IOException;
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
@@ -3028,7 +2727,6 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_5
 
-    .line 699
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v7    # "stream":Ljava/io/FileInputStream;
     :catch_8
@@ -3040,7 +2738,6 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 697
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v7    # "stream":Ljava/io/FileInputStream;
     :catch_9
@@ -3052,7 +2749,6 @@
     .restart local v6    # "stream":Ljava/io/FileInputStream;
     goto :goto_3
 
-    .line 695
     .end local v6    # "stream":Ljava/io/FileInputStream;
     .restart local v7    # "stream":Ljava/io/FileInputStream;
     :catch_a
@@ -3071,7 +2767,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 1095
     const-string v1, "application_policy"
 
     invoke-static {v1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3080,16 +2775,13 @@
 
     check-cast v0, Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 1097
     .local v0, "appService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     if-eqz v0, :cond_0
 
-    .line 1098
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1099
     .local v2, "token":J
     invoke-virtual {v0, p1, p2}, Lcom/android/server/enterprise/application/ApplicationPolicy;->isApplicationInstalled(Ljava/lang/String;I)Z
 
@@ -3097,18 +2789,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 1101
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1102
     const/4 v1, 0x1
 
-    .line 1106
     .end local v2    # "token":J
     :goto_0
     return v1
 
-    .line 1105
     :cond_0
     const-string v1, "EnterpriseIdentity"
 
@@ -3116,7 +2804,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1106
     const/4 v1, 0x0
 
     goto :goto_0
@@ -3130,10 +2817,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 397
     const/4 v1, 0x0
 
-    .line 398
     .local v1, "enterpriseSSOResponseData":Landroid/app/enterprise/EnterpriseResponseData;, "Landroid/app/enterprise/EnterpriseResponseData<*>;"
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getSSOPolicy()Lcom/android/server/enterprise/sso/EnterpriseUserSpaceSSOPolicy;
@@ -3152,24 +2837,20 @@
 
     move-result-object v1
 
-    .line 399
     if-eqz v1, :cond_0
 
-    .line 400
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseResponseData;->getFailureState()I
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 401
     const-string v3, "EnterpriseIdentity"
 
     const-string v4, "In isEnterpriseSSOEnrolled: Enterprise SSO is enrolled"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 402
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseResponseData;->getData()Ljava/lang/Object;
 
     move-result-object v3
@@ -3182,16 +2863,13 @@
 
     move-result v2
 
-    .line 411
     :cond_0
     :goto_0
     return v2
 
-    .line 408
     :catch_0
     move-exception v0
 
-    .line 409
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "EnterpriseIdentity"
 
@@ -3207,7 +2885,6 @@
     .param p1, "filename"    # Ljava/lang/String;
 
     .prologue
-    .line 802
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -3225,7 +2902,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 382
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getSSOService()Lcom/android/server/enterprise/sso/GenericSSOService;
 
@@ -3235,18 +2911,15 @@
 
     move-result-object v1
 
-    .line 383
     .local v1, "packageName":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 384
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 385
     const-string v2, "EnterpriseIdentity"
 
     const-string v3, "In isGenericSSOEnrolled: Generic SSO is enrolled"
@@ -3255,19 +2928,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 386
     const/4 v2, 0x1
 
-    .line 392
     .end local v1    # "packageName":Ljava/lang/String;
     :goto_0
     return v2
 
-    .line 389
     :catch_0
     move-exception v0
 
-    .line 390
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "EnterpriseIdentity"
 
@@ -3275,7 +2944,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 392
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v2, 0x0
@@ -3292,12 +2960,10 @@
 
     const/4 v1, 0x0
 
-    .line 1549
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1550
     .local v2, "token":J
     iget-object v4, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
@@ -3313,7 +2979,6 @@
 
     if-ne v4, v0, :cond_0
 
-    .line 1552
     .local v0, "ret":Z
     :goto_0
     const-string v1, "EnterpriseIdentity"
@@ -3338,17 +3003,14 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1553
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1554
     return v0
 
     .end local v0    # "ret":Z
     :cond_0
     move v0, v1
 
-    .line 1550
     goto :goto_0
 .end method
 
@@ -3357,7 +3019,6 @@
     .param p1, "target"    # Landroid/os/Bundle;
 
     .prologue
-    .line 590
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/os/Bundle;->isEmpty()Z
@@ -3366,11 +3027,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 591
     :cond_0
     const/4 v0, 0x1
 
-    .line 592
     :goto_0
     return v0
 
@@ -3385,7 +3044,6 @@
     .param p1, "target"    # Ljava/lang/String;
 
     .prologue
-    .line 584
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -3394,11 +3052,9 @@
 
     if-nez v0, :cond_1
 
-    .line 585
     :cond_0
     const/4 v0, 0x1
 
-    .line 586
     :goto_0
     return v0
 
@@ -3412,7 +3068,6 @@
     .locals 4
 
     .prologue
-    .line 247
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
@@ -3424,7 +3079,6 @@
 
     check-cast v1, Landroid/os/PersonaManager;
 
-    .line 249
     .local v1, "mPersona":Landroid/os/PersonaManager;
     new-instance v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity$1;
 
@@ -3434,16 +3088,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 378
     .end local v1    # "mPersona":Landroid/os/PersonaManager;
     :goto_0
     return-void
 
-    .line 374
     :catch_0
     move-exception v0
 
-    .line 375
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -3455,16 +3106,13 @@
     .param p1, "node"    # Lorg/w3c/dom/Node;
 
     .prologue
-    .line 1257
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v1
 
-    .line 1258
     .local v1, "list":Lorg/w3c/dom/NodeList;
     if-eqz v1, :cond_1
 
-    .line 1259
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -3475,7 +3123,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1261
     invoke-interface {v1, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v2
@@ -3492,20 +3139,17 @@
 
     if-nez v2, :cond_0
 
-    .line 1262
     invoke-interface {v1, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v2
 
     invoke-interface {p1, v2}, Lorg/w3c/dom/Node;->removeChild(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
 
-    .line 1259
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1264
     .end local v0    # "i":I
     :cond_1
     return-void
@@ -3516,41 +3160,34 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 415
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getAuthConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 416
     .local v1, "filepath":Ljava/lang/String;
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 417
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     move-result v2
 
-    .line 418
     .local v2, "result":Z
     if-nez v2, :cond_0
 
-    .line 419
     const-string v3, "EnterpriseIdentity"
 
     const-string v4, "In removeFileAndCacheEntry: file is not removed"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 421
     :cond_0
     sget-object v3, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v3, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 422
     sget-object v3, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3563,7 +3200,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 423
     sget-object v3, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3582,7 +3218,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 424
     iget-object v4, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
     sget-object v3, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
@@ -3599,7 +3234,6 @@
 
     invoke-virtual {v4, v3}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 426
     :cond_1
     sget-object v3, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
@@ -3609,7 +3243,6 @@
 
     invoke-interface {v3, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 428
     :cond_2
     const-string v3, "EnterpriseIdentity"
 
@@ -3633,7 +3266,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 429
     return-void
 .end method
 
@@ -3643,28 +3275,23 @@
     .param p2, "filepath"    # Ljava/lang/String;
 
     .prologue
-    .line 764
     const/4 v3, 0x0
 
-    .line 765
     .local v3, "stream":Ljava/io/FileOutputStream;
     sget-object v8, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mCacheLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 767
     :try_start_0
     invoke-static {}, Ljavax/xml/transform/TransformerFactory;->newInstance()Ljavax/xml/transform/TransformerFactory;
 
     move-result-object v6
 
-    .line 769
     .local v6, "transformerfactory":Ljavax/xml/transform/TransformerFactory;
     invoke-virtual {v6}, Ljavax/xml/transform/TransformerFactory;->newTransformer()Ljavax/xml/transform/Transformer;
 
     move-result-object v5
 
-    .line 771
     .local v5, "transformer":Ljavax/xml/transform/Transformer;
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -3679,41 +3306,34 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 772
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .local v4, "stream":Ljava/io/FileOutputStream;
     const/4 v2, 0x0
 
-    .line 773
     .local v2, "source":Ljavax/xml/transform/dom/DOMSource;
     if-nez p1, :cond_0
 
-    .line 774
     :try_start_1
     new-instance v2, Ljavax/xml/transform/dom/DOMSource;
 
     .end local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     invoke-direct {v2}, Ljavax/xml/transform/dom/DOMSource;-><init>()V
 
-    .line 778
     .restart local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     :goto_0
     new-instance v1, Ljavax/xml/transform/stream/StreamResult;
 
     invoke-direct {v1, v4}, Ljavax/xml/transform/stream/StreamResult;-><init>(Ljava/io/OutputStream;)V
 
-    .line 779
     .local v1, "result":Ljavax/xml/transform/stream/StreamResult;
     invoke-virtual {v5, v2, v1}, Ljavax/xml/transform/Transformer;->transform(Ljavax/xml/transform/Source;Ljavax/xml/transform/Result;)V
 
-    .line 780
     const-string v7, "EnterpriseIdentity"
 
     const-string v9, "In saveConfigToFile: config file is saved successfully"
 
     invoke-static {v7, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 781
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljavax/xml/transform/TransformerConfigurationException; {:try_start_1 .. :try_end_1} :catch_9
@@ -3725,7 +3345,6 @@
 
     move-object v3, v4
 
-    .line 793
     .end local v1    # "result":Ljavax/xml/transform/stream/StreamResult;
     .end local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     .end local v4    # "stream":Ljava/io/FileOutputStream;
@@ -3738,10 +3357,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 794
     return-void
 
-    .line 776
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
@@ -3764,7 +3381,6 @@
     .restart local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     goto :goto_0
 
-    .line 782
     .end local v2    # "source":Ljavax/xml/transform/dom/DOMSource;
     .end local v4    # "stream":Ljava/io/FileOutputStream;
     .end local v5    # "transformer":Ljavax/xml/transform/Transformer;
@@ -3773,7 +3389,6 @@
     :catch_0
     move-exception v0
 
-    .line 783
     .local v0, "e":Ljavax/xml/transform/TransformerConfigurationException;
     :goto_2
     :try_start_4
@@ -3785,7 +3400,6 @@
 
     goto :goto_1
 
-    .line 793
     .end local v0    # "e":Ljavax/xml/transform/TransformerConfigurationException;
     :catchall_0
     move-exception v7
@@ -3797,11 +3411,9 @@
 
     throw v7
 
-    .line 784
     :catch_1
     move-exception v0
 
-    .line 785
     .local v0, "e":Ljavax/xml/transform/TransformerException;
     :goto_4
     :try_start_5
@@ -3813,12 +3425,10 @@
 
     goto :goto_1
 
-    .line 786
     .end local v0    # "e":Ljavax/xml/transform/TransformerException;
     :catch_2
     move-exception v0
 
-    .line 787
     .local v0, "e":Ljava/io/FileNotFoundException;
     :goto_5
     const-string v7, "EnterpriseIdentity"
@@ -3829,12 +3439,10 @@
 
     goto :goto_1
 
-    .line 788
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_3
     move-exception v0
 
-    .line 789
     .local v0, "e":Ljava/lang/NullPointerException;
     :goto_6
     const-string v7, "EnterpriseIdentity"
@@ -3845,12 +3453,10 @@
 
     goto :goto_1
 
-    .line 790
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_4
     move-exception v0
 
-    .line 791
     .local v0, "e":Ljava/io/IOException;
     :goto_7
     const-string v7, "EnterpriseIdentity"
@@ -3863,7 +3469,6 @@
 
     goto :goto_1
 
-    .line 793
     .end local v0    # "e":Ljava/io/IOException;
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
@@ -3878,7 +3483,6 @@
     .restart local v3    # "stream":Ljava/io/FileOutputStream;
     goto :goto_3
 
-    .line 790
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_5
@@ -3890,7 +3494,6 @@
     .restart local v3    # "stream":Ljava/io/FileOutputStream;
     goto :goto_7
 
-    .line 788
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_6
@@ -3902,7 +3505,6 @@
     .restart local v3    # "stream":Ljava/io/FileOutputStream;
     goto :goto_6
 
-    .line 786
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_7
@@ -3914,7 +3516,6 @@
     .restart local v3    # "stream":Ljava/io/FileOutputStream;
     goto :goto_5
 
-    .line 784
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_8
@@ -3926,7 +3527,6 @@
     .restart local v3    # "stream":Ljava/io/FileOutputStream;
     goto :goto_4
 
-    .line 782
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_9
@@ -3947,12 +3547,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1524
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1525
     .local v2, "token":J
     iget-object v4, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
@@ -3969,14 +3567,11 @@
 
     move-result v0
 
-    .line 1527
     .local v0, "status":Z
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1528
     return v0
 
-    .line 1525
     .end local v0    # "status":Z
     :cond_0
     const/4 v1, 0x0
@@ -3990,28 +3585,23 @@
     .param p2, "configDoc"    # Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     .prologue
-    .line 738
     # invokes: Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->update()V
     invoke-static {p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->access$1600(Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;)V
 
-    .line 739
     sget-object v0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 740
     sget-boolean v0, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 741
     const-string v0, "EnterpriseIdentity"
 
     const-string v1, "In updateCache: updated authentication config doc is updated in authenticationConfigXMLDocs array"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 742
     :cond_0
     return-void
 .end method
@@ -4022,45 +3612,37 @@
     .param p2, "configDoc"    # Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     .prologue
-    .line 749
     # invokes: Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->update()V
     invoke-static {p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->access$1600(Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;)V
 
-    .line 750
     sget-object v1, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, p2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 751
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 752
     const-string v1, "EnterpriseIdentity"
 
     const-string v2, "In updateCacheAndFile: updated authentication config doc is updated in authenticationConfigXMLDocs array"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 755
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getAuthConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 756
     .local v0, "filepath":Ljava/lang/String;
     iget-object v1, p2, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->XMLDoc:Lorg/w3c/dom/Document;
 
     invoke-direct {p0, v1, v0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->saveConfigToFile(Lorg/w3c/dom/Document;Ljava/lang/String;)V
 
-    .line 757
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 758
     const-string v1, "EnterpriseIdentity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -4093,7 +3675,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 761
     :cond_1
     return-void
 .end method
@@ -4105,24 +3686,19 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1128
     const/4 v7, 0x0
 
-    .line 1129
     .local v7, "authenticatorConfig":Landroid/os/Bundle;
     const/4 v10, 0x0
 
-    .line 1131
     .local v10, "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getAuthConfigForUserId(I)Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     move-result-object v8
 
-    .line 1132
     .local v8, "configDoc":Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
     if-nez v8, :cond_0
 
-    .line 1133
     const-string v13, "EnterpriseIdentity"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -4147,20 +3723,17 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1136
     const/4 v1, 0x0
 
     move-object v13, v1
 
     move-object v1, v10
 
-    .line 1211
     .end local v10    # "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     .local v1, "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     :goto_0
     return-object v13
 
-    .line 1139
     .end local v1    # "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     .restart local v10    # "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     :cond_0
@@ -4170,14 +3743,12 @@
 
     move-result-object v12
 
-    .line 1141
     .local v12, "node":Lorg/w3c/dom/Node;
     # invokes: Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->getAuthIdpPackageName()Ljava/lang/String;
     invoke-static {v8}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->access$1700(Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1142
     .local v5, "authenticatorPkgName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -4187,10 +3758,8 @@
 
     if-eqz v13, :cond_1
 
-    .line 1143
     const/4 v5, 0x0
 
-    .line 1144
     :cond_1
     move-object v0, v12
 
@@ -4198,7 +3767,6 @@
 
     move-object v9, v0
 
-    .line 1146
     .local v9, "e":Lorg/w3c/dom/Element;
     const-string/jumbo v13, "servicepackagesignature"
 
@@ -4214,17 +3782,14 @@
 
     if-eqz v13, :cond_2
 
-    .line 1148
     const-string v13, "EnterpriseIdentity"
 
     const-string v14, "In getAuthenticationConfig: SSO_PROVIDER_PACKAGE_SIGNATURE=null in XML"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1149
     const/4 v6, 0x0
 
-    .line 1156
     .local v6, "authenticatorPkgSignature":Ljava/lang/String;
     :goto_1
     const-string v13, "enforceRemoteAuthAlways"
@@ -4241,17 +3806,14 @@
 
     if-eqz v13, :cond_3
 
-    .line 1158
     const-string v13, "EnterpriseIdentity"
 
     const-string v14, "In getAuthenticationConfig: Error to look up. ENFORCE_REMOTE_AUTH_ALWAYS=null in XML"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1159
     const/4 v2, 0x0
 
-    .line 1166
     .local v2, "enforceRemoteAuthAlways":Z
     :goto_2
     const-string/jumbo v13, "forceEnterpriseIDLock"
@@ -4268,17 +3830,14 @@
 
     if-eqz v13, :cond_5
 
-    .line 1168
     const-string v13, "EnterpriseIdentity"
 
     const-string v14, "In getAuthenticationConfig: Error to look up. FORCE_ENTERPRISE_IDENTITY_LOCK=null in XML"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1169
     const/4 v3, 0x0
 
-    .line 1176
     .local v3, "forceEnterpriseIdentityLock":Z
     :goto_3
     const-string/jumbo v13, "hideEnterpriseIDLock"
@@ -4295,17 +3854,14 @@
 
     if-eqz v13, :cond_7
 
-    .line 1178
     const-string v13, "EnterpriseIdentity"
 
     const-string v14, "In getAuthenticationConfig: Error to look up. HIDE_ENTERPRISE_ID_LOCK=null in XML"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1179
     const/4 v4, 0x0
 
-    .line 1186
     .local v4, "hideEnterpriseIdentityLock":Z
     :goto_4
     const-string/jumbo v13, "isConfiguredByMDM"
@@ -4322,31 +3878,26 @@
 
     if-eqz v13, :cond_9
 
-    .line 1188
     const-string v13, "EnterpriseIdentity"
 
     const-string v14, "In getAuthenticationConfig: Error to look up. isConfiguredByMDM=null in XML"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1189
     const/4 v11, 0x0
 
-    .line 1196
     .local v11, "isConfiguredByMDM":Z
     :goto_5
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getEnterpriseIdAuthenticationConfig(I)Landroid/os/Bundle;
 
     move-result-object v7
 
-    .line 1198
     new-instance v1, Lcom/sec/enterprise/identity/AuthenticationConfig;
 
     invoke-direct/range {v1 .. v7}, Lcom/sec/enterprise/identity/AuthenticationConfig;-><init>(ZZZLjava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1202
     .end local v10    # "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     .restart local v1    # "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     :try_start_1
@@ -4402,17 +3953,14 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1206
     invoke-virtual {v1, v11}, Lcom/sec/enterprise/identity/AuthenticationConfig;->setConfiguredByMDM(Z)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     move-object v13, v1
 
-    .line 1207
     goto/16 :goto_0
 
-    .line 1152
     .end local v1    # "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     .end local v2    # "enforceRemoteAuthAlways":Z
     .end local v3    # "forceEnterpriseIdentityLock":Z
@@ -4431,7 +3979,6 @@
     .restart local v6    # "authenticatorPkgSignature":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1161
     :cond_3
     const-string v13, "enforceRemoteAuthAlways"
 
@@ -4459,7 +4006,6 @@
 
     goto :goto_6
 
-    .line 1171
     .restart local v2    # "enforceRemoteAuthAlways":Z
     :cond_5
     const-string/jumbo v13, "forceEnterpriseIDLock"
@@ -4488,7 +4034,6 @@
 
     goto :goto_7
 
-    .line 1181
     .restart local v3    # "forceEnterpriseIdentityLock":Z
     :cond_7
     const-string/jumbo v13, "hideEnterpriseIDLock"
@@ -4517,7 +4062,6 @@
 
     goto :goto_8
 
-    .line 1191
     .restart local v4    # "hideEnterpriseIdentityLock":Z
     :cond_9
     const-string/jumbo v13, "isConfiguredByMDM"
@@ -4548,7 +4092,6 @@
 
     goto :goto_9
 
-    .line 1208
     .end local v2    # "enforceRemoteAuthAlways":Z
     .end local v3    # "forceEnterpriseIdentityLock":Z
     .end local v4    # "hideEnterpriseIdentityLock":Z
@@ -4561,7 +4104,6 @@
 
     move-object v1, v10
 
-    .line 1209
     .end local v10    # "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     .restart local v1    # "eIDLockConfigObj":Lcom/sec/enterprise/identity/AuthenticationConfig;
     .local v9, "e":Ljava/lang/Exception;
@@ -4572,12 +4114,10 @@
 
     invoke-static {v13, v14, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1211
     const/4 v13, 0x0
 
     goto/16 :goto_0
 
-    .line 1208
     .restart local v2    # "enforceRemoteAuthAlways":Z
     .restart local v3    # "forceEnterpriseIdentityLock":Z
     .restart local v4    # "hideEnterpriseIdentityLock":Z
@@ -4597,17 +4137,14 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1111
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1113
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 1115
     .local v0, "userId":I
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getAuthenticationConfig(I)Lcom/sec/enterprise/identity/AuthenticationConfig;
 
@@ -4621,22 +4158,18 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 922
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getAuthConfigForUserId(I)Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
 
     move-result-object v0
 
-    .line 923
     .local v0, "configDoc":Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;
     if-eqz v0, :cond_0
 
-    .line 924
     # invokes: Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->getAuthIdpPackageName()Ljava/lang/String;
     invoke-static {v0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;->access$1700(Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationConfigDocument;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 926
     :goto_0
     return-object v1
 
@@ -4655,12 +4188,10 @@
 
     const/4 v3, 0x0
 
-    .line 596
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 597
     .local v0, "token":J
     iget-object v4, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
@@ -4676,19 +4207,16 @@
 
     if-ne v4, v2, :cond_0
 
-    .line 598
     .local v2, "unEnrolled":Z
     :goto_0
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 599
     return v2
 
     .end local v2    # "unEnrolled":Z
     :cond_0
     move v2, v3
 
-    .line 597
     goto :goto_0
 .end method
 
@@ -4698,10 +4226,8 @@
     .param p2, "containerID"    # I
 
     .prologue
-    .line 433
     const/4 v1, 0x0
 
-    .line 435
     .local v1, "packageManagerAdapter":Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
@@ -4710,22 +4236,18 @@
 
     move-result-object v1
 
-    .line 436
     invoke-virtual {v1, p1, p2}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->installExistingPackageAsUserForMDM(Ljava/lang/String;I)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 443
     :goto_0
     return v2
 
-    .line 440
     :catch_0
     move-exception v0
 
-    .line 441
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "EnterpriseIdentity"
 
@@ -4733,7 +4255,6 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 443
     const/4 v2, -0x1
 
     goto :goto_0
@@ -4744,7 +4265,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 1532
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
@@ -4757,7 +4277,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 1533
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Process should have system uid"
@@ -4766,40 +4285,33 @@
 
     throw v2
 
-    .line 1535
     :cond_0
     const/4 v0, 0x0
 
-    .line 1536
     .local v0, "ret":Z
     if-nez p1, :cond_2
 
-    .line 1537
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_1
 
-    .line 1538
     const-string v2, "EnterpriseIdentity"
 
     const-string v3, "In isNetworkAuthenticationEnforced: cxtInfo is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1544
     .end local v0    # "ret":Z
     :cond_1
     :goto_0
     return v0
 
-    .line 1542
     .restart local v0    # "ret":Z
     :cond_2
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v1
 
-    .line 1544
     .local v1, "userId":I
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isNetworkAuthenticationEnforced(I)Z
 
@@ -4813,7 +4325,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1643
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_0
@@ -4840,13 +4351,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1644
     :cond_0
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
 
-    .line 1645
     .local v5, "userId":I
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
@@ -4874,7 +4383,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1646
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -4886,7 +4394,6 @@
 
     if-eq v6, v7, :cond_2
 
-    .line 1647
     new-instance v6, Ljava/lang/SecurityException;
 
     const-string v7, "Need to be system process"
@@ -4895,7 +4402,6 @@
 
     throw v6
 
-    .line 1649
     :cond_2
     new-instance v1, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -4903,7 +4409,6 @@
 
     invoke-direct {v1, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
-    .line 1651
     .local v1, "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     invoke-virtual {v1, v5}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getMUMContainerOwnerUid(I)I
 
@@ -4913,23 +4418,19 @@
 
     move-result v0
 
-    .line 1652
     .local v0, "adminUid":I
     if-ne p1, v0, :cond_6
 
-    .line 1653
     const-string v6, "EnterpriseIdentity"
 
     const-string v7, "In OnAdminRemoved: Correct admin = all config is removed"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1654
     sget-object v6, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationConfigXMLDocs:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v5}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 1655
     sget-object v6, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4942,7 +4443,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 1656
     sget-object v6, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4961,7 +4461,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 1657
     iget-object v7, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
     sget-object v6, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
@@ -4978,7 +4477,6 @@
 
     invoke-virtual {v7, v6}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1659
     :cond_3
     sget-object v6, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mEnterpriseIDServiceInterfaceMap:Ljava/util/Map;
 
@@ -4988,7 +4486,6 @@
 
     invoke-interface {v6, v7}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1662
     :cond_4
     invoke-virtual {p0, v5}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getUnEnrollSetting(I)Z
 
@@ -4996,7 +4493,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 1663
     iget-object v6, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -5009,22 +4505,18 @@
 
     invoke-static {v6, v7, v8, v5}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 1666
     :cond_5
     if-nez v5, :cond_6
 
-    .line 1667
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getAuthConfigFilePath(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1668
     .local v3, "filepath":Ljava/lang/String;
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1669
     .local v2, "file":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -5032,28 +4524,23 @@
 
     if-eqz v6, :cond_6
 
-    .line 1670
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     move-result v4
 
-    .line 1671
     .local v4, "result":Z
     if-nez v4, :cond_6
 
-    .line 1672
     sget-boolean v6, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v6, :cond_6
 
-    .line 1673
     const-string v6, "EnterpriseIdentity"
 
     const-string v7, "In onAdminRemoved : file is not removed"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1678
     .end local v2    # "file":Ljava/io/File;
     .end local v3    # "filepath":Ljava/lang/String;
     .end local v4    # "result":Z
@@ -5069,10 +4556,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 956
     const/4 v10, 0x0
 
-    .line 957
     .local v10, "retTokenInfo":Landroid/app/enterprise/sso/TokenInfo;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -5086,7 +4571,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 958
     new-instance v1, Ljava/lang/SecurityException;
 
     const-string v2, "Process should have system uid"
@@ -5095,17 +4579,14 @@
 
     throw v1
 
-    .line 960
     :cond_0
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v11
 
-    .line 963
     .local v11, "userId":I
     if-nez p2, :cond_1
 
-    .line 964
     const-string v1, "EnterpriseIdentity"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -5130,23 +4611,19 @@
 
     move-object v1, v10
 
-    .line 1023
     :goto_0
     return-object v1
 
-    .line 967
     :cond_1
     invoke-virtual {p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 968
     .local v9, "packageName":Ljava/lang/String;
     invoke-direct {p0, v11, v9}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getPackageCertForPkgname(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 970
     .local v8, "installedAppPkgSig":Ljava/lang/String;
     invoke-virtual {p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgSignature()Ljava/lang/String;
 
@@ -5158,7 +4635,6 @@
 
     if-nez v2, :cond_3
 
-    .line 971
     invoke-virtual {p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgSignature()Ljava/lang/String;
 
     move-result-object v2
@@ -5169,26 +4645,22 @@
 
     if-nez v2, :cond_3
 
-    .line 972
     sget-boolean v1, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v1, :cond_2
 
-    .line 973
     const-string v1, "EnterpriseIdentity"
 
     const-string v2, "In performUserAuthentication: Authenticator signature is not matched"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 975
     :cond_2
     new-instance v10, Landroid/app/enterprise/sso/TokenInfo;
 
     .end local v10    # "retTokenInfo":Landroid/app/enterprise/sso/TokenInfo;
     invoke-direct {v10}, Landroid/app/enterprise/sso/TokenInfo;-><init>()V
 
-    .line 976
     .restart local v10    # "retTokenInfo":Landroid/app/enterprise/sso/TokenInfo;
     sget-object v1, Landroid/app/enterprise/sso/GenericSSOConstants;->AUTHENTICATION_STATUS:Ljava/lang/String;
 
@@ -5198,39 +4670,31 @@
 
     move-object v1, v10
 
-    .line 980
     goto :goto_0
 
-    .line 983
     :cond_3
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_4
 
-    .line 984
     const-string v2, "EnterpriseIdentity"
 
     const-string v3, "In performUserAuthentication: calling _setAuthenticationConfig"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 985
     :cond_4
     invoke-direct {p0, v11, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->_setAuthenticationConfig(ILcom/sec/enterprise/identity/AuthenticationConfig;)I
 
-    .line 986
     invoke-direct {p0, v11, v9}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->bindToEnterpriseIdAuthenticator(ILjava/lang/String;)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v6
 
-    .line 988
     .local v6, "authenticator":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     const/4 v10, 0x0
 
-    .line 989
     if-nez v6, :cond_5
 
-    .line 990
     const-string v2, "EnterpriseIdentity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5255,7 +4719,6 @@
 
     goto :goto_0
 
-    .line 995
     :cond_5
     :try_start_0
     invoke-virtual {p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->isConfiguredByMDM()Z
@@ -5264,31 +4727,26 @@
 
     if-eqz v1, :cond_6
 
-    .line 996
     invoke-virtual {p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorConfig()Landroid/os/Bundle;
 
     move-result-object v1
 
     invoke-interface {v6, v1}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->pushAuthenticatorConfig(Landroid/os/Bundle;)I
 
-    .line 997
     const/16 v1, 0x64
 
     if-lt v11, v1, :cond_6
 
-    .line 998
     invoke-virtual {p0, v11}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getUnEnrollSetting(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_6
 
-    .line 999
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1, v11}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->setUnEnrollSetting(ZI)V
 
-    .line 1002
     :cond_6
     new-instance v0, Landroid/app/enterprise/sso/AuthenticationRequest;
 
@@ -5308,13 +4766,11 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/enterprise/sso/AuthenticationRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/enterprise/sso/TokenInfo;Landroid/os/Bundle;Landroid/app/enterprise/sso/WebServiceRequest;)V
 
-    .line 1005
     .local v0, "authRequest":Landroid/app/enterprise/sso/AuthenticationRequest;
     invoke-interface {v6, v0}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->acquireToken(Landroid/app/enterprise/sso/AuthenticationRequest;)Landroid/app/enterprise/sso/TokenInfo;
 
     move-result-object v10
 
-    .line 1007
     if-eqz v10, :cond_7
 
     invoke-virtual {v10}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
@@ -5337,14 +4793,11 @@
     :goto_1
     move-object v1, v10
 
-    .line 1023
     goto/16 :goto_0
 
-    .line 1018
     :catch_0
     move-exception v7
 
-    .line 1019
     .local v7, "e":Landroid/os/RemoteException;
     const-string v1, "EnterpriseIdentity"
 
@@ -5354,12 +4807,10 @@
 
     goto :goto_1
 
-    .line 1020
     .end local v7    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v7
 
-    .line 1021
     .local v7, "e":Ljava/lang/Exception;
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -5372,37 +4823,30 @@
     .param p2, "request"    # Lcom/sec/enterprise/identity/AuthenticationConfig;
 
     .prologue
-    .line 1216
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->enforceKnoxSSOPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 1217
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v3
 
-    .line 1223
     .local v3, "userId":I
     const/16 v4, 0x64
 
     if-ge v3, v4, :cond_0
 
-    .line 1224
     const-string v4, "EnterpriseIdentity"
 
     const-string v5, "Enterprise Identity not supported on device level "
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1225
     const/4 v4, -0x2
 
-    .line 1245
     :goto_0
     return v4
 
-    .line 1227
     :cond_0
     invoke-virtual {p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getEnforceEnterpriseIdentityLock()Z
 
@@ -5410,19 +4854,15 @@
 
     if-eqz v4, :cond_3
 
-    .line 1228
     invoke-virtual {p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1229
     .local v0, "packageName":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 1230
     const-string v0, "com.sec.android.service.singlesignon"
 
-    .line 1231
     :cond_1
     invoke-direct {p0, v0, v3}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isAuthenticatorApplicationInstalled(Ljava/lang/String;I)Z
 
@@ -5430,49 +4870,41 @@
 
     if-nez v4, :cond_2
 
-    .line 1232
     const/4 v4, -0x4
 
     goto :goto_0
 
-    .line 1235
     :cond_2
     invoke-direct {p0, v3, v0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getPackageCertForPkgname(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1236
     .local v1, "packageSignature":Ljava/lang/String;
     invoke-virtual {p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgSignature()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1237
     .local v2, "requestedSignature":Ljava/lang/String;
     if-eqz v1, :cond_3
 
     if-eqz v2, :cond_3
 
-    .line 1238
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    .line 1239
     const-string v4, "EnterpriseIdentity"
 
     const-string v5, "Enterprise Identity requested signature is different from IdP signature"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1240
     const/16 v4, -0xd
 
     goto :goto_0
 
-    .line 1245
     .end local v0    # "packageName":Ljava/lang/String;
     .end local v1    # "packageSignature":Ljava/lang/String;
     .end local v2    # "requestedSignature":Ljava/lang/String;
@@ -5490,7 +4922,6 @@
     .param p2, "containerId"    # I
 
     .prologue
-    .line 1250
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -5503,7 +4934,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1251
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Process should have system uid"
@@ -5512,7 +4942,6 @@
 
     throw v0
 
-    .line 1253
     :cond_0
     invoke-direct {p0, p2, p1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->_setAuthenticationConfig(ILcom/sec/enterprise/identity/AuthenticationConfig;)I
 
@@ -5529,12 +4958,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 603
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 604
     .local v0, "token":J
     iget-object v3, p0, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->mContext:Landroid/content/Context;
 
@@ -5549,13 +4976,10 @@
     :goto_0
     invoke-static {v3, v4, v2, p2}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 606
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 607
     return-void
 
-    .line 604
     :cond_0
     const/4 v2, 0x0
 
@@ -5568,7 +4992,6 @@
     .param p2, "authConfig"    # Lcom/sec/enterprise/identity/AuthenticationConfig;
 
     .prologue
-    .line 1028
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
@@ -5581,7 +5004,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 1029
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Process should have system uid"
@@ -5590,19 +5012,16 @@
 
     throw v2
 
-    .line 1031
     :cond_0
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 1033
     .local v7, "userId":I
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_1
 
-    .line 1034
     const-string v2, "EnterpriseIdentity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5625,25 +5044,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1036
     :cond_1
     if-nez p2, :cond_2
 
-    .line 1037
     const/4 v2, 0x0
 
-    .line 1089
     :goto_0
     return v2
 
-    .line 1039
     :cond_2
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorPkgName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 1040
     .local v11, "packageName":Ljava/lang/String;
     new-instance v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
@@ -5651,12 +5065,10 @@
 
     sput-object v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
-    .line 1042
     const/16 v2, 0x64
 
     if-lt v7, v2, :cond_9
 
-    .line 1044
     sget-object v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
     const/4 v3, 0x0
@@ -5664,23 +5076,19 @@
     # invokes: Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->setMigrationStatus(Z)V
     invoke-static {v2, v3}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->access$1800(Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;Z)V
 
-    .line 1045
     sget-object v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
     # invokes: Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->updateContainerID(I)V
     invoke-static {v2, v7}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->access$200(Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;I)V
 
-    .line 1048
     :goto_1
     invoke-virtual/range {p2 .. p2}, Lcom/sec/enterprise/identity/AuthenticationConfig;->getAuthenticatorConfig()Landroid/os/Bundle;
 
     move-result-object v12
 
-    .line 1049
     .local v12, "requestConfig":Landroid/os/Bundle;
     if-eqz v12, :cond_3
 
-    .line 1050
     invoke-virtual {v12}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v2
@@ -5693,12 +5101,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 1052
     sget-object v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
     if-eqz v2, :cond_3
 
-    .line 1053
     sget-object v3, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
     const-string v2, "FEDERATION_SERVER_URL"
@@ -5721,27 +5127,23 @@
     # invokes: Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->setSSOConfigurationEnabled(Z)V
     invoke-static {v3, v2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->access$1900(Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;Z)V
 
-    .line 1057
     :cond_3
     const/16 v2, 0x64
 
     if-lt v7, v2, :cond_7
 
-    .line 1059
     sget-object v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
     iget-boolean v2, v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;->isSSOConfigurationEnabled:Z
 
     if-eqz v2, :cond_6
 
-    .line 1060
     const-string v2, "EnterpriseIdentity"
 
     const-string v3, "In setUpdatedAuthenticationConfig: SSO is configured"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1061
     new-instance v10, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     move-object/from16 v0, p0
@@ -5750,19 +5152,16 @@
 
     invoke-direct {v10, v2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
-    .line 1063
     .local v10, "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     invoke-virtual {v10, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getMUMContainerOwnerUid(I)I
 
     move-result v8
 
-    .line 1065
     .local v8, "adminUid":I
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_4
 
-    .line 1066
     const-string v2, "EnterpriseIdentity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5785,13 +5184,11 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1069
     :cond_4
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 1070
     .local v14, "token":J
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getSSOService()Lcom/android/server/enterprise/sso/GenericSSOService;
 
@@ -5819,12 +5216,10 @@
 
     invoke-virtual/range {v2 .. v7}, Lcom/android/server/enterprise/sso/GenericSSOService;->enrollSSOVendorInternal(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;I)I
 
-    .line 1075
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_5
 
-    .line 1076
     const-string v2, "EnterpriseIdentity"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -5851,11 +5246,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1077
     :cond_5
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1079
     .end local v8    # "adminUid":I
     .end local v10    # "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     .end local v14    # "token":J
@@ -5864,7 +5257,6 @@
 
     sput-object v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
 
-    .line 1081
     :cond_7
     move-object/from16 v0, p0
 
@@ -5874,14 +5266,12 @@
 
     if-eqz v2, :cond_8
 
-    .line 1082
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v2, v7}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->setNetworkAuthenticationEnforced(ZI)Z
 
-    .line 1084
     :cond_8
     move-object/from16 v0, p0
 
@@ -5889,12 +5279,10 @@
 
     invoke-direct {v0, v7, v1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->_setAuthenticationConfig(ILcom/sec/enterprise/identity/AuthenticationConfig;)I
 
-    .line 1089
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 1047
     .end local v12    # "requestConfig":Landroid/os/Bundle;
     :cond_9
     sget-object v2, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->authenticationInfoManager:Lcom/android/server/enterprise/sso/EnterpriseIdentity$AuthenticationInfoManager;
@@ -5908,21 +5296,17 @@
 
     goto/16 :goto_1
 
-    .line 1085
     .end local v11    # "packageName":Ljava/lang/String;
     :catch_0
     move-exception v9
 
-    .line 1086
     .local v9, "e":Ljava/lang/Exception;
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1087
     const/4 v2, 0x0
 
     goto/16 :goto_0
 
-    .line 1053
     .end local v9    # "e":Ljava/lang/Exception;
     .restart local v11    # "packageName":Ljava/lang/String;
     .restart local v12    # "requestConfig":Landroid/os/Bundle;
@@ -5941,7 +5325,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1491
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
@@ -5954,7 +5337,6 @@
 
     if-eq v3, v5, :cond_0
 
-    .line 1492
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Process should have system uid"
@@ -5963,40 +5345,33 @@
 
     throw v2
 
-    .line 1494
     :cond_0
     if-nez p1, :cond_2
 
-    .line 1495
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_1
 
-    .line 1496
     const-string v2, "EnterpriseIdentity"
 
     const-string v3, "In validateUserAuthentication: cxtInfo is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1520
     :cond_1
     :goto_0
     return-void
 
-    .line 1499
     :cond_2
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v7
 
-    .line 1500
     .local v7, "userId":I
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_3
 
-    .line 1501
     const-string v3, "EnterpriseIdentity"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -6023,7 +5398,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1503
     :cond_3
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isNullOrEmpty(Ljava/lang/String;)Z
 
@@ -6037,7 +5411,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 1504
     :cond_4
     const-string v2, "EnterpriseIdentity"
 
@@ -6047,31 +5420,26 @@
 
     goto :goto_0
 
-    .line 1508
     :cond_5
     invoke-direct {p0, v7}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getEnterpriseIdAuthenticationConfig(I)Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 1509
     .local v4, "authData":Landroid/os/Bundle;
     sget-object v3, Landroid/app/enterprise/sso/GenericSSOConstants;->ENTERPRISEID_PASSWORD:Ljava/lang/String;
 
     invoke-virtual {v4, v3, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1510
     sget-object v3, Landroid/app/enterprise/sso/GenericSSOConstants;->OPERATION_MODE:Ljava/lang/String;
 
     const-string v5, "3"
 
     invoke-virtual {v4, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1512
     invoke-virtual {p0, v7}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getEnterpriseIdAuthenticator(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1514
     .local v1, "packageName":Ljava/lang/String;
     new-instance v0, Landroid/app/enterprise/sso/AuthenticationRequest;
 
@@ -6081,7 +5449,6 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/enterprise/sso/AuthenticationRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/enterprise/sso/TokenInfo;Landroid/os/Bundle;Landroid/app/enterprise/sso/WebServiceRequest;)V
 
-    .line 1516
     .local v0, "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getHandler()Landroid/os/Handler;
 
@@ -6093,14 +5460,11 @@
 
     move-result-object v6
 
-    .line 1517
     .local v6, "message":Landroid/os/Message;
     iput v7, v6, Landroid/os/Message;->arg1:I
 
-    .line 1518
     iput-object v0, v6, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1519
     invoke-direct {p0}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getHandler()Landroid/os/Handler;
 
     move-result-object v2
@@ -6119,7 +5483,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1429
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
@@ -6132,7 +5495,6 @@
 
     if-eq v3, v5, :cond_0
 
-    .line 1430
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Process should have system uid"
@@ -6141,32 +5503,26 @@
 
     throw v2
 
-    .line 1432
     :cond_0
     const/4 v8, 0x0
 
-    .line 1433
     .local v8, "retFromAuthenticator":Landroid/app/enterprise/sso/TokenInfo;
     if-nez p1, :cond_2
 
-    .line 1434
     sget-boolean v3, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v3, :cond_1
 
-    .line 1435
     const-string v3, "EnterpriseIdentity"
 
     const-string v5, "In verifyUserAuthentication: cxtInfo is null"
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1486
     :cond_1
     :goto_0
     return-object v2
 
-    .line 1438
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->isNullOrEmpty(Ljava/lang/String;)Z
 
@@ -6180,7 +5536,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 1439
     :cond_3
     const-string v3, "EnterpriseIdentity"
 
@@ -6190,38 +5545,32 @@
 
     goto :goto_0
 
-    .line 1443
     :cond_4
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v9
 
-    .line 1446
     .local v9, "userId":I
     invoke-virtual {p0, v9}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getEnterpriseIdAuthenticator(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1447
     .local v1, "packageName":Ljava/lang/String;
     invoke-direct {p0, v9}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getEnterpriseIdAuthenticationConfig(I)Landroid/os/Bundle;
 
     move-result-object v4
 
-    .line 1448
     .local v4, "authData":Landroid/os/Bundle;
     sget-object v3, Landroid/app/enterprise/sso/GenericSSOConstants;->ENTERPRISEID_PASSWORD:Ljava/lang/String;
 
     invoke-virtual {v4, v3, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1449
     sget-object v3, Landroid/app/enterprise/sso/GenericSSOConstants;->OPERATION_MODE:Ljava/lang/String;
 
     const-string v5, "3"
 
     invoke-virtual {v4, v3, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1451
     new-instance v0, Landroid/app/enterprise/sso/AuthenticationRequest;
 
     move-object v3, v2
@@ -6230,17 +5579,14 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/app/enterprise/sso/AuthenticationRequest;-><init>(Ljava/lang/String;Ljava/lang/String;Landroid/app/enterprise/sso/TokenInfo;Landroid/os/Bundle;Landroid/app/enterprise/sso/WebServiceRequest;)V
 
-    .line 1454
     .local v0, "request":Landroid/app/enterprise/sso/AuthenticationRequest;
     invoke-direct {p0, v9, v1}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->bindToEnterpriseIdAuthenticator(ILjava/lang/String;)Landroid/app/enterprise/sso/GenericSSOSupportSolution;
 
     move-result-object v6
 
-    .line 1456
     .local v6, "authenticator":Landroid/app/enterprise/sso/GenericSSOSupportSolution;
     if-nez v6, :cond_5
 
-    .line 1457
     const-string v3, "EnterpriseIdentity"
 
     const-string v5, "In verifyUserAuthentication: The authenticator value is null"
@@ -6249,7 +5595,6 @@
 
     goto :goto_0
 
-    .line 1461
     :cond_5
     :try_start_0
     invoke-virtual {p0, v9}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->getUnEnrollSetting(I)Z
@@ -6258,33 +5603,27 @@
 
     if-eqz v2, :cond_6
 
-    .line 1462
     invoke-virtual {v0}, Landroid/app/enterprise/sso/AuthenticationRequest;->getRequestConfig()Landroid/os/Bundle;
 
     move-result-object v2
 
     invoke-interface {v6, v2}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->pushAuthenticatorConfig(Landroid/os/Bundle;)I
 
-    .line 1463
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2, v9}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->setUnEnrollSetting(ZI)V
 
-    .line 1465
     :cond_6
     invoke-interface {v6, v0}, Landroid/app/enterprise/sso/GenericSSOSupportSolution;->acquireToken(Landroid/app/enterprise/sso/AuthenticationRequest;)Landroid/app/enterprise/sso/TokenInfo;
 
     move-result-object v8
 
-    .line 1466
     if-eqz v8, :cond_7
 
-    .line 1467
     invoke-virtual {v8}, Landroid/app/enterprise/sso/TokenInfo;->getResponseBundle()Landroid/os/Bundle;
 
     move-result-object v10
 
-    .line 1471
     .local v10, "userInformationBundle":Landroid/os/Bundle;
     sget-object v2, Landroid/app/enterprise/sso/GenericSSOConstants;->AUTHENTICATION_STATUS:Ljava/lang/String;
 
@@ -6294,7 +5633,6 @@
 
     if-nez v2, :cond_7
 
-    .line 1473
     const/4 v2, 0x0
 
     invoke-direct {p0, v2, v9}, Lcom/android/server/enterprise/sso/EnterpriseIdentity;->setNetworkAuthenticationEnforced(ZI)Z
@@ -6306,14 +5644,11 @@
     :goto_1
     move-object v2, v8
 
-    .line 1486
     goto :goto_0
 
-    .line 1483
     :catch_0
     move-exception v7
 
-    .line 1484
     .local v7, "e":Landroid/os/RemoteException;
     const-string v2, "EnterpriseIdentity"
 

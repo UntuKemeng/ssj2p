@@ -32,21 +32,16 @@
     .param p4, "deviceAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 607
     iput-object p1, p0, Lcom/android/server/audio/AudioService$DeviceListSpec;->this$0:Lcom/android/server/audio/AudioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 608
     iput p2, p0, Lcom/android/server/audio/AudioService$DeviceListSpec;->mDeviceType:I
 
-    .line 609
     iput-object p3, p0, Lcom/android/server/audio/AudioService$DeviceListSpec;->mDeviceName:Ljava/lang/String;
 
-    .line 610
     iput-object p4, p0, Lcom/android/server/audio/AudioService$DeviceListSpec;->mDeviceAddress:Ljava/lang/String;
 
-    .line 611
     return-void
 .end method
 
@@ -56,7 +51,6 @@
     .locals 2
 
     .prologue
-    .line 614
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

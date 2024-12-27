@@ -57,10 +57,8 @@
     .locals 6
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     :try_start_0
     const-string/jumbo v3, "persist.sys.omc_etcpath"
 
@@ -68,11 +66,9 @@
 
     move-result-object v1
 
-    .line 54
     .local v1, "omcEtcPath":Ljava/lang/String;
     const-string v2, "/system/csc/unique_text.xml"
 
-    .line 56
     .local v2, "pathName":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -80,7 +76,6 @@
 
     if-nez v3, :cond_0
 
-    .line 57
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -105,7 +100,6 @@
 
     move-result-object v2
 
-    .line 60
     :cond_0
     const-string v3, "CustomizedTextParser"
 
@@ -129,12 +123,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     invoke-direct {p0, v2}, Landroid/util/secutil/CustomizedTextParser;->update(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
     .end local v1    # "omcEtcPath":Ljava/lang/String;
     .end local v2    # "pathName":Ljava/lang/String;
     :goto_0
@@ -144,14 +136,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 68
     return-void
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -162,24 +151,20 @@
     .locals 1
 
     .prologue
-    .line 71
     sget-object v0, Landroid/util/secutil/CustomizedTextParser;->mInstance:Landroid/util/secutil/CustomizedTextParser;
 
     if-nez v0, :cond_0
 
-    .line 72
     new-instance v0, Landroid/util/secutil/CustomizedTextParser;
 
     invoke-direct {v0}, Landroid/util/secutil/CustomizedTextParser;-><init>()V
 
     sput-object v0, Landroid/util/secutil/CustomizedTextParser;->mInstance:Landroid/util/secutil/CustomizedTextParser;
 
-    .line 73
     sget-object v0, Landroid/util/secutil/CustomizedTextParser;->mInstance:Landroid/util/secutil/CustomizedTextParser;
 
     invoke-direct {v0}, Landroid/util/secutil/CustomizedTextParser;->initialize()V
 
-    .line 75
     :cond_0
     sget-object v0, Landroid/util/secutil/CustomizedTextParser;->mInstance:Landroid/util/secutil/CustomizedTextParser;
 
@@ -193,15 +178,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 143
     if-nez p1, :cond_1
 
-    .line 159
     :cond_0
     :goto_0
     return-object v3
 
-    .line 147
     :cond_1
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
@@ -215,12 +197,10 @@
 
     if-le v4, v5, :cond_3
 
-    .line 148
     new-instance v2, Ljava/lang/String;
 
     invoke-direct {v2}, Ljava/lang/String;-><init>()V
 
-    .line 151
     .local v2, "stringValue":Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -236,7 +216,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 152
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -265,7 +244,6 @@
 
     move-result-object v2
 
-    .line 151
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
@@ -273,10 +251,8 @@
     :cond_2
     move-object v3, v2
 
-    .line 154
     goto :goto_0
 
-    .line 158
     .end local v1    # "idx":I
     .end local v2    # "stringValue":Ljava/lang/String;
     :cond_3
@@ -284,7 +260,6 @@
 
     move-result-object v0
 
-    .line 159
     .local v0, "firstChild":Lorg/w3c/dom/Node;
     if-eqz v0, :cond_0
 
@@ -299,48 +274,39 @@
     .locals 9
 
     .prologue
-    .line 79
     const-string v6, "CustomizedTextParser"
 
     const-string v7, "Initialzed"
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 80
     new-instance v6, Ljava/util/HashMap;
 
     invoke-direct {v6}, Ljava/util/HashMap;-><init>()V
 
     iput-object v6, p0, Landroid/util/secutil/CustomizedTextParser;->mRuleMap:Ljava/util/HashMap;
 
-    .line 82
     const/4 v4, 0x0
 
-    .line 86
     .local v4, "stringSize":I
     invoke-direct {p0}, Landroid/util/secutil/CustomizedTextParser;->search()Lorg/w3c/dom/Node;
 
     move-result-object v1
 
-    .line 87
     .local v1, "node":Lorg/w3c/dom/Node;
     if-nez v1, :cond_0
 
-    .line 113
     :goto_0
     return-void
 
-    .line 90
     :cond_0
     invoke-direct {p0, v1}, Landroid/util/secutil/CustomizedTextParser;->searchList(Lorg/w3c/dom/Node;)Lorg/w3c/dom/NodeList;
 
     move-result-object v2
 
-    .line 91
     .local v2, "nodeList":Lorg/w3c/dom/NodeList;
     if-nez v2, :cond_1
 
-    .line 92
     const-string v6, "CustomizedTextParser"
 
     const-string v7, "createCscRuleMap:No Rule info"
@@ -349,20 +315,17 @@
 
     goto :goto_0
 
-    .line 97
     :cond_1
     invoke-interface {v2}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v4
 
-    .line 100
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_1
     if-ge v0, v4, :cond_3
 
-    .line 102
     invoke-interface {v2, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v6
@@ -373,7 +336,6 @@
 
     move-result-object v3
 
-    .line 104
     .local v3, "srcTemp":Lorg/w3c/dom/Node;
     invoke-interface {v2, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
@@ -385,13 +347,11 @@
 
     move-result-object v5
 
-    .line 106
     .local v5, "targetTemp":Lorg/w3c/dom/Node;
     if-eqz v3, :cond_2
 
     if-eqz v5, :cond_2
 
-    .line 107
     iget-object v6, p0, Landroid/util/secutil/CustomizedTextParser;->mRuleMap:Ljava/util/HashMap;
 
     invoke-direct {p0, v3}, Landroid/util/secutil/CustomizedTextParser;->getValue(Lorg/w3c/dom/Node;)Ljava/lang/String;
@@ -404,13 +364,11 @@
 
     invoke-virtual {v6, v7, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 109
     :cond_2
     const-string v6, "CustomizedTextParser"
 
@@ -446,7 +404,6 @@
 
     goto :goto_2
 
-    .line 112
     .end local v3    # "srcTemp":Lorg/w3c/dom/Node;
     .end local v5    # "targetTemp":Lorg/w3c/dom/Node;
     :cond_3
@@ -487,10 +444,8 @@
     .locals 5
 
     .prologue
-    .line 163
     iget-object v0, p0, Landroid/util/secutil/CustomizedTextParser;->mRoot:Lorg/w3c/dom/Node;
 
-    .line 164
     .local v0, "node":Lorg/w3c/dom/Node;
     new-instance v2, Ljava/util/StringTokenizer;
 
@@ -500,7 +455,6 @@
 
     invoke-direct {v2, v3, v4}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 166
     .local v2, "tokenizer":Ljava/util/StringTokenizer;
     :goto_0
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
@@ -509,25 +463,20 @@
 
     if-eqz v3, :cond_0
 
-    .line 167
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 169
     .local v1, "token":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 170
     const/4 v0, 0x0
 
-    .line 175
     .end local v0    # "node":Lorg/w3c/dom/Node;
     .end local v1    # "token":Ljava/lang/String;
     :cond_0
     return-object v0
 
-    .line 172
     .restart local v0    # "node":Lorg/w3c/dom/Node;
     .restart local v1    # "token":Ljava/lang/String;
     :cond_1
@@ -535,7 +484,6 @@
 
     move-result-object v0
 
-    .line 173
     goto :goto_0
 .end method
 
@@ -547,32 +495,26 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 179
     if-nez p1, :cond_1
 
     move-object v0, v4
 
-    .line 196
     :cond_0
     :goto_0
     return-object v0
 
-    .line 182
     :cond_1
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v1
 
-    .line 184
     .local v1, "children":Lorg/w3c/dom/NodeList;
     if-eqz v1, :cond_2
 
-    .line 185
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v3
 
-    .line 187
     .local v3, "n":I
     const/4 v2, 0x0
 
@@ -580,12 +522,10 @@
     :goto_1
     if-ge v2, v3, :cond_2
 
-    .line 188
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
-    .line 190
     .local v0, "child":Lorg/w3c/dom/Node;
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
@@ -597,7 +537,6 @@
 
     if-nez v5, :cond_0
 
-    .line 187
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
@@ -608,7 +547,6 @@
     :cond_2
     move-object v0, v4
 
-    .line 196
     goto :goto_0
 .end method
 
@@ -619,17 +557,14 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 200
     if-nez p1, :cond_1
 
     move-object v4, v6
 
-    .line 224
     :cond_0
     :goto_0
     return-object v4
 
-    .line 204
     :cond_1
     :try_start_0
     new-instance v4, Landroid/util/secutil/CustomizedTextParser$CscNodeList;
@@ -638,22 +573,18 @@
 
     invoke-direct {v4, v7}, Landroid/util/secutil/CustomizedTextParser$CscNodeList;-><init>(Landroid/util/secutil/CustomizedTextParser$1;)V
 
-    .line 205
     .local v4, "list":Landroid/util/secutil/CustomizedTextParser$CscNodeList;
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v1
 
-    .line 207
     .local v1, "children":Lorg/w3c/dom/NodeList;
     if-eqz v1, :cond_0
 
-    .line 208
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v5
 
-    .line 210
     .local v5, "n":I
     const/4 v3, 0x0
 
@@ -661,12 +592,10 @@
     :goto_1
     if-ge v3, v5, :cond_0
 
-    .line 211
     invoke-interface {v1, v3}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
-    .line 213
     .local v0, "child":Lorg/w3c/dom/Node;
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
@@ -682,24 +611,20 @@
 
     if-eqz v7, :cond_2
 
-    .line 215
     :try_start_1
     invoke-virtual {v4, v0}, Landroid/util/secutil/CustomizedTextParser$CscNodeList;->appendChild(Lorg/w3c/dom/Node;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 210
     :cond_2
     :goto_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 216
     :catch_0
     move-exception v2
 
-    .line 217
     .local v2, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
@@ -708,7 +633,6 @@
 
     goto :goto_2
 
-    .line 223
     .end local v0    # "child":Lorg/w3c/dom/Node;
     .end local v1    # "children":Lorg/w3c/dom/NodeList;
     .end local v2    # "e":Ljava/lang/Exception;
@@ -721,7 +645,6 @@
     .restart local v2    # "e":Ljava/lang/Exception;
     move-object v4, v6
 
-    .line 224
     goto :goto_0
 .end method
 
@@ -737,24 +660,20 @@
     .end annotation
 
     .prologue
-    .line 131
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v1
 
-    .line 132
     .local v1, "factory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v0
 
-    .line 133
     .local v0, "builder":Ljavax/xml/parsers/DocumentBuilder;
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 134
     .local v2, "fe":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -762,7 +681,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 135
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -773,7 +691,6 @@
 
     iput-object v3, p0, Landroid/util/secutil/CustomizedTextParser;->mDoc:Lorg/w3c/dom/Document;
 
-    .line 136
     iget-object v3, p0, Landroid/util/secutil/CustomizedTextParser;->mDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v3}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
@@ -782,11 +699,9 @@
 
     iput-object v3, p0, Landroid/util/secutil/CustomizedTextParser;->mRoot:Lorg/w3c/dom/Node;
 
-    .line 140
     :goto_0
     return-void
 
-    .line 138
     :cond_0
     const-string v3, "CustomizedTextParser"
 
@@ -804,7 +719,6 @@
     .param p1, "string"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     iget-object v1, p0, Landroid/util/secutil/CustomizedTextParser;->mRuleMap:Ljava/util/HashMap;
 
     if-eqz v1, :cond_0
@@ -817,7 +731,6 @@
 
     if-gtz v1, :cond_1
 
-    .line 117
     :cond_0
     const-string v1, "CustomizedTextParser"
 
@@ -843,12 +756,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 126
     .end local p1    # "string":Ljava/lang/String;
     :goto_0
     return-object p1
 
-    .line 121
     .restart local p1    # "string":Ljava/lang/String;
     :cond_1
     iget-object v1, p0, Landroid/util/secutil/CustomizedTextParser;->mRuleMap:Ljava/util/HashMap;
@@ -859,11 +770,9 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 122
     .local v0, "replaceText":Ljava/lang/String;
     if-nez v0, :cond_2
 
-    .line 123
     const-string v1, "CustomizedTextParser"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -891,6 +800,5 @@
     :cond_2
     move-object p1, v0
 
-    .line 126
     goto :goto_0
 .end method

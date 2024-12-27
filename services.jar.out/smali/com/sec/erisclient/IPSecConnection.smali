@@ -217,47 +217,38 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->mBypassCaList:Ljava/util/ArrayList;
 
-    .line 77
     const-string v0, "IPSecConnection"
 
     const-string v1, "IPSecConnection()"
 
     invoke-static {v0, v1}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 78
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/sec/erisclient/IPSecConnection;->bCaCertOk:Z
 
-    .line 79
     iput-boolean v2, p0, Lcom/sec/erisclient/IPSecConnection;->isConnected:Z
 
-    .line 80
     iput-boolean v2, p0, Lcom/sec/erisclient/IPSecConnection;->pfsVal:Z
 
-    .line 81
     sget-object v0, Lcom/sec/epdg/IWlanEnum$Imei;->NONE:Lcom/sec/epdg/IWlanEnum$Imei;
 
     iput-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->mImei:Lcom/sec/epdg/IWlanEnum$Imei;
 
-    .line 82
     const-string v0, "CN=epdg-ltelab.epc.att.net,OU=lte-lab-sha2Cert,O=AT&T Services\\, Inc.,L=Southfield,ST=Michigan,C=US"
 
     const-string v1, "210356fc173989c79980196eba33484b"
 
     invoke-virtual {p0, v0, v1}, Lcom/sec/erisclient/IPSecConnection;->AddBypassCa(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
     return-void
 .end method
 
@@ -271,22 +262,17 @@
     .end annotation
 
     .prologue
-    .line 269
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->caCert:Ljava/security/cert/X509Certificate;
 
-    .line 270
     if-nez p1, :cond_0
 
-    .line 271
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->caCertData:[B
 
-    .line 275
     :goto_0
     return-void
 
-    .line 274
     :cond_0
     invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getEncoded()[B
 
@@ -305,18 +291,15 @@
     .param p2, "cn"    # Ljava/lang/String;
 
     .prologue
-    .line 633
     new-instance v0, Lcom/sec/erisclient/IPSecConnection$BypassCa;
 
     invoke-direct {v0, p0, p1, p2}, Lcom/sec/erisclient/IPSecConnection$BypassCa;-><init>(Lcom/sec/erisclient/IPSecConnection;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 634
     .local v0, "bypassCa":Lcom/sec/erisclient/IPSecConnection$BypassCa;
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mBypassCaList:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 635
     return-void
 .end method
 
@@ -330,7 +313,6 @@
     .end annotation
 
     .prologue
-    .line 638
     iget-object v2, p0, Lcom/sec/erisclient/IPSecConnection;->mBypassCaList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -351,7 +333,6 @@
 
     check-cast v0, Lcom/sec/erisclient/IPSecConnection$BypassCa;
 
-    .line 639
     .local v0, "ca":Lcom/sec/erisclient/IPSecConnection$BypassCa;
     # getter for: Lcom/sec/erisclient/IPSecConnection$BypassCa;->DN:Ljava/lang/String;
     invoke-static {v0}, Lcom/sec/erisclient/IPSecConnection$BypassCa;->access$000(Lcom/sec/erisclient/IPSecConnection$BypassCa;)Ljava/lang/String;
@@ -393,10 +374,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 641
     const/4 v2, 0x1
 
-    .line 644
     .end local v0    # "ca":Lcom/sec/erisclient/IPSecConnection$BypassCa;
     :goto_0
     return v2
@@ -412,10 +391,8 @@
     .param p1, "val"    # Ljava/lang/String;
 
     .prologue
-    .line 491
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->mInterface:Ljava/lang/String;
 
-    .line 492
     return-void
 .end method
 
@@ -423,7 +400,6 @@
     .locals 1
 
     .prologue
-    .line 91
     monitor-enter p0
 
     :try_start_0
@@ -447,7 +423,6 @@
     .locals 1
 
     .prologue
-    .line 407
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeConnectionTimeOut:I
 
     return v0
@@ -457,7 +432,6 @@
     .locals 1
 
     .prologue
-    .line 415
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeDpdTimeOut:I
 
     return v0
@@ -467,7 +441,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->gateway:Ljava/lang/String;
 
     return-object v0
@@ -477,7 +450,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget-boolean v0, p0, Lcom/sec/erisclient/IPSecConnection;->globalDNSConfig:Z
 
     return v0
@@ -487,7 +459,6 @@
     .locals 1
 
     .prologue
-    .line 383
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeDhGroup:Lcom/sec/epdg/IWlanEnum$IkeDhGroup;
 
     return-object v0
@@ -497,7 +468,6 @@
     .locals 1
 
     .prologue
-    .line 196
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->authType:Lcom/sec/epdg/IWlanEnum$IPSecAuthType;
 
     return-object v0
@@ -507,7 +477,6 @@
     .locals 1
 
     .prologue
-    .line 252
     iget-boolean v0, p0, Lcom/sec/erisclient/IPSecConnection;->antiReplay:Z
 
     return v0
@@ -517,7 +486,6 @@
     .locals 1
 
     .prologue
-    .line 228
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecEncrType:Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;
 
     return-object v0
@@ -527,7 +495,6 @@
     .locals 1
 
     .prologue
-    .line 244
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecDhGroup:Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;
 
     return-object v0
@@ -537,7 +504,6 @@
     .locals 1
 
     .prologue
-    .line 236
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecIntegType:Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;
 
     return-object v0
@@ -547,7 +513,6 @@
     .locals 1
 
     .prologue
-    .line 265
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecLifeTimeVal:I
 
     return v0
@@ -557,7 +522,6 @@
     .locals 1
 
     .prologue
-    .line 261
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecLifeTimeType:Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;
 
     return-object v0
@@ -567,7 +531,6 @@
     .locals 1
 
     .prologue
-    .line 375
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeEncryptType:Lcom/sec/epdg/IWlanEnum$IkeEncryption;
 
     return-object v0
@@ -577,7 +540,6 @@
     .locals 1
 
     .prologue
-    .line 367
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeIntergrity:Lcom/sec/epdg/IWlanEnum$IkeIntegrity;
 
     return-object v0
@@ -587,7 +549,6 @@
     .locals 1
 
     .prologue
-    .line 391
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeLife:I
 
     return v0
@@ -597,7 +558,6 @@
     .locals 1
 
     .prologue
-    .line 359
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeversion:Lcom/sec/epdg/IWlanEnum$Ikeversion;
 
     return-object v0
@@ -607,7 +567,6 @@
     .locals 1
 
     .prologue
-    .line 399
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeWindowSize:I
 
     return v0
@@ -617,7 +576,6 @@
     .locals 1
 
     .prologue
-    .line 475
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->imeiVendorAttrType:I
 
     return v0
@@ -627,7 +585,6 @@
     .locals 1
 
     .prologue
-    .line 479
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->imeiVendorAttrVal:[B
 
     return-object v0
@@ -637,7 +594,6 @@
     .locals 1
 
     .prologue
-    .line 495
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->mInterface:Ljava/lang/String;
 
     return-object v0
@@ -647,7 +603,6 @@
     .locals 1
 
     .prologue
-    .line 503
     iget-boolean v0, p0, Lcom/sec/erisclient/IPSecConnection;->mobike:Z
 
     return v0
@@ -657,7 +612,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->name:Ljava/lang/String;
 
     return-object v0
@@ -669,7 +623,6 @@
     .end annotation
 
     .prologue
-    .line 425
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeNatValue:I
 
     return v0
@@ -679,7 +632,6 @@
     .locals 1
 
     .prologue
-    .line 157
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->ownIdentity:Ljava/lang/String;
 
     return-object v0
@@ -689,7 +641,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->ownIdentityType:Lcom/sec/epdg/IWlanEnum$IdentityType;
 
     return-object v0
@@ -699,7 +650,6 @@
     .locals 1
 
     .prologue
-    .line 457
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->pcscfv4VendorAttr:I
 
     return v0
@@ -709,7 +659,6 @@
     .locals 1
 
     .prologue
-    .line 465
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->pcscfv6VendorAttr:I
 
     return v0
@@ -719,7 +668,6 @@
     .locals 1
 
     .prologue
-    .line 188
     iget-boolean v0, p0, Lcom/sec/erisclient/IPSecConnection;->pfsVal:Z
 
     return v0
@@ -729,7 +677,6 @@
     .locals 1
 
     .prologue
-    .line 487
     iget v0, p0, Lcom/sec/erisclient/IPSecConnection;->periodicDpdTimer:I
 
     return v0
@@ -739,7 +686,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->presharedKey:Ljava/lang/String;
 
     return-object v0
@@ -749,7 +695,6 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->remoteIdentity:Ljava/lang/String;
 
     return-object v0
@@ -759,7 +704,6 @@
     .locals 1
 
     .prologue
-    .line 166
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->remoteIdentityType:Lcom/sec/epdg/IWlanEnum$IdentityType;
 
     return-object v0
@@ -769,7 +713,6 @@
     .locals 1
 
     .prologue
-    .line 441
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->ipv4HandoverAddr:Ljava/lang/String;
 
     return-object v0
@@ -779,7 +722,6 @@
     .locals 1
 
     .prologue
-    .line 449
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->ipv6HandoverAddr:Ljava/lang/String;
 
     return-object v0
@@ -789,7 +731,6 @@
     .locals 3
 
     .prologue
-    .line 618
     monitor-enter p0
 
     :try_start_0
@@ -817,7 +758,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 619
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->state:Lcom/sec/erisclient/IPSecConnectionState;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -826,7 +766,6 @@
 
     return-object v0
 
-    .line 618
     :catchall_0
     move-exception v0
 
@@ -839,7 +778,6 @@
     .locals 1
 
     .prologue
-    .line 144
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->subnetType:Lcom/sec/epdg/IWlanEnum$IPSecIpType;
 
     return-object v0
@@ -849,7 +787,6 @@
     .locals 1
 
     .prologue
-    .line 220
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->tunnelType:Lcom/sec/epdg/IWlanEnum$TunnelModeType;
 
     return-object v0
@@ -859,7 +796,6 @@
     .locals 1
 
     .prologue
-    .line 136
     iget-boolean v0, p0, Lcom/sec/erisclient/IPSecConnection;->userAuth:Z
 
     return v0
@@ -869,7 +805,6 @@
     .locals 1
 
     .prologue
-    .line 433
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->adapterConf:Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
     return-object v0
@@ -879,7 +814,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->virtualAdapterName:Ljava/lang/String;
 
     return-object v0
@@ -889,7 +823,6 @@
     .locals 1
 
     .prologue
-    .line 351
     monitor-enter p0
 
     :try_start_0
@@ -913,7 +846,6 @@
     .locals 1
 
     .prologue
-    .line 95
     monitor-enter p0
 
     :try_start_0
@@ -945,20 +877,16 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 278
     monitor-enter p0
 
     const/4 v2, 0x0
 
-    .line 279
     .local v2, "certMan":Lcom/sec/erisclient/TrustedCertificateManager;
     const/4 v5, 0x0
 
-    .line 280
     .local v5, "rootCaCert":Ljava/security/cert/X509Certificate;
     const/4 v1, 0x0
 
-    .line 281
     .local v1, "bCaCertVerified":Z
     :try_start_0
     const-string v7, "ro.csc.sales_code"
@@ -967,11 +895,9 @@
 
     move-result-object v3
 
-    .line 282
     .local v3, "csc":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 284
     .local v0, "alias":Ljava/lang/String;
     const-string v7, "ATT"
 
@@ -997,37 +923,29 @@
 
     if-eqz v7, :cond_2
 
-    .line 286
     :cond_0
     const-string v0, "system:facacbc6.0"
 
-    .line 303
     :cond_1
     :goto_0
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Lcom/sec/erisclient/IPSecConnection;->bCaCertOk:Z
 
-    .line 305
     invoke-static {}, Lcom/sec/erisclient/TrustedCertificateManager;->getInstance()Lcom/sec/erisclient/TrustedCertificateManager;
 
     move-result-object v2
 
-    .line 306
     invoke-virtual {v2}, Lcom/sec/erisclient/TrustedCertificateManager;->load()Lcom/sec/erisclient/TrustedCertificateManager;
 
-    .line 307
     if-eqz v0, :cond_9
 
-    .line 309
     invoke-virtual {v2, v0}, Lcom/sec/erisclient/TrustedCertificateManager;->getCACertificateFromAlias(Ljava/lang/String;)Ljava/security/cert/X509Certificate;
 
     move-result-object v5
 
-    .line 310
     if-nez v5, :cond_8
 
-    .line 311
     const-string v7, "IPSecConnection"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -1052,13 +970,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 347
     :goto_1
     monitor-exit p0
 
     return v6
 
-    .line 288
     :cond_2
     :try_start_1
     const-string v7, "TMB"
@@ -1085,13 +1001,11 @@
 
     if-eqz v7, :cond_4
 
-    .line 290
     :cond_3
     const-string v0, "system:3e7271e8.0"
 
     goto :goto_0
 
-    .line 292
     :cond_4
     const-string v7, "AUT"
 
@@ -1117,13 +1031,11 @@
 
     if-eqz v7, :cond_6
 
-    .line 294
     :cond_5
     const-string v0, "system:bc3f2570.0"
 
     goto :goto_0
 
-    .line 296
     :cond_6
     const-string v7, "VDF"
 
@@ -1133,12 +1045,10 @@
 
     if-eqz v7, :cond_7
 
-    .line 297
     const-string v0, "system:3ad48a91.0"
 
     goto :goto_0
 
-    .line 299
     :cond_7
     const-string v7, "NEE"
 
@@ -1148,18 +1058,15 @@
 
     if-eqz v7, :cond_1
 
-    .line 300
     const-string v0, "system:00673b5b.0"
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 314
     :cond_8
     if-eqz p1, :cond_c
 
-    .line 317
     :try_start_2
     const-string v6, "IPSecConnection"
 
@@ -1185,17 +1092,14 @@
 
     invoke-static {v6, v7}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 319
     invoke-virtual {v5}, Ljava/security/cert/X509Certificate;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object v6
 
     invoke-virtual {p1, v6}, Ljava/security/cert/X509Certificate;->verify(Ljava/security/PublicKey;)V
 
-    .line 320
     const/4 v1, 0x1
 
-    .line 321
     const-string v6, "IPSecConnection"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1233,7 +1137,6 @@
     .catch Ljava/security/cert/CertificateException; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 339
     :cond_9
     :goto_2
     if-eqz p1, :cond_a
@@ -1245,7 +1148,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 340
     const-string v6, "IPSecConnection"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1270,17 +1172,13 @@
 
     invoke-static {v6, v7}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 341
     const/4 v1, 0x1
 
-    .line 343
     :cond_a
     if-eqz v1, :cond_b
 
-    .line 344
     invoke-direct {p0, p1}, Lcom/sec/erisclient/IPSecConnection;->setCaCertificate(Ljava/security/cert/X509Certificate;)V
 
-    .line 345
     const/4 v6, 0x1
 
     iput-boolean v6, p0, Lcom/sec/erisclient/IPSecConnection;->bCaCertOk:Z
@@ -1288,14 +1186,11 @@
     :cond_b
     move v6, v1
 
-    .line 347
     goto/16 :goto_1
 
-    .line 323
     :catch_0
     move-exception v4
 
-    .line 324
     .local v4, "e":Ljava/security/InvalidKeyException;
     invoke-virtual {v4}, Ljava/security/InvalidKeyException;->printStackTrace()V
     :try_end_3
@@ -1303,7 +1198,6 @@
 
     goto :goto_2
 
-    .line 278
     .end local v0    # "alias":Ljava/lang/String;
     .end local v3    # "csc":Ljava/lang/String;
     .end local v4    # "e":Ljava/security/InvalidKeyException;
@@ -1314,53 +1208,44 @@
 
     throw v6
 
-    .line 325
     .restart local v0    # "alias":Ljava/lang/String;
     .restart local v3    # "csc":Ljava/lang/String;
     :catch_1
     move-exception v4
 
-    .line 326
     .local v4, "e":Ljava/security/NoSuchAlgorithmException;
     :try_start_4
     invoke-virtual {v4}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 327
     .end local v4    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_2
     move-exception v4
 
-    .line 328
     .local v4, "e":Ljava/security/NoSuchProviderException;
     invoke-virtual {v4}, Ljava/security/NoSuchProviderException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 329
     .end local v4    # "e":Ljava/security/NoSuchProviderException;
     :catch_3
     move-exception v4
 
-    .line 330
     .local v4, "e":Ljava/security/SignatureException;
     invoke-virtual {v4}, Ljava/security/SignatureException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 331
     .end local v4    # "e":Ljava/security/SignatureException;
     :catch_4
     move-exception v4
 
-    .line 332
     .local v4, "e":Ljava/security/cert/CertificateException;
     invoke-virtual {v4}, Ljava/security/cert/CertificateException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 335
     .end local v4    # "e":Ljava/security/cert/CertificateException;
     :cond_c
     const-string v6, "IPSecConnection"
@@ -1379,7 +1264,6 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 87
     monitor-enter p0
 
     :try_start_0
@@ -1387,12 +1271,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 88
     monitor-exit p0
 
     return-void
 
-    .line 87
     :catchall_0
     move-exception v0
 
@@ -1406,10 +1288,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 403
     iput p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeConnectionTimeOut:I
 
-    .line 404
     return-void
 .end method
 
@@ -1418,7 +1298,6 @@
     .param p1, "val"    # Z
 
     .prologue
-    .line 99
     monitor-enter p0
 
     :try_start_0
@@ -1426,12 +1305,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 100
     monitor-exit p0
 
     return-void
 
-    .line 99
     :catchall_0
     move-exception v0
 
@@ -1445,10 +1322,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 411
     iput p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeDpdTimeOut:I
 
-    .line 412
     return-void
 .end method
 
@@ -1457,10 +1332,8 @@
     .param p1, "eaptype"    # Lcom/sec/epdg/IWlanEnum$IkeEapType;
 
     .prologue
-    .line 180
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeEapType:Lcom/sec/epdg/IWlanEnum$IkeEapType;
 
-    .line 181
     return-void
 .end method
 
@@ -1469,10 +1342,8 @@
     .param p1, "gateway"    # Ljava/lang/String;
 
     .prologue
-    .line 124
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->gateway:Ljava/lang/String;
 
-    .line 125
     return-void
 .end method
 
@@ -1481,10 +1352,8 @@
     .param p1, "val"    # Z
 
     .prologue
-    .line 208
     iput-boolean p1, p0, Lcom/sec/erisclient/IPSecConnection;->globalDNSConfig:Z
 
-    .line 209
     return-void
 .end method
 
@@ -1493,10 +1362,8 @@
     .param p1, "mIkeDhGroup"    # Lcom/sec/epdg/IWlanEnum$IkeDhGroup;
 
     .prologue
-    .line 379
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeDhGroup:Lcom/sec/epdg/IWlanEnum$IkeDhGroup;
 
-    .line 380
     return-void
 .end method
 
@@ -1505,10 +1372,8 @@
     .param p1, "authType"    # Lcom/sec/epdg/IWlanEnum$IPSecAuthType;
 
     .prologue
-    .line 192
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->authType:Lcom/sec/epdg/IWlanEnum$IPSecAuthType;
 
-    .line 193
     return-void
 .end method
 
@@ -1517,10 +1382,8 @@
     .param p1, "val"    # Z
 
     .prologue
-    .line 248
     iput-boolean p1, p0, Lcom/sec/erisclient/IPSecConnection;->antiReplay:Z
 
-    .line 249
     return-void
 .end method
 
@@ -1529,10 +1392,8 @@
     .param p1, "encryptVal"    # Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;
 
     .prologue
-    .line 224
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecEncrType:Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;
 
-    .line 225
     return-void
 .end method
 
@@ -1541,10 +1402,8 @@
     .param p1, "group"    # Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;
 
     .prologue
-    .line 240
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecDhGroup:Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;
 
-    .line 241
     return-void
 .end method
 
@@ -1553,10 +1412,8 @@
     .param p1, "integrityval"    # Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;
 
     .prologue
-    .line 232
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecIntegType:Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;
 
-    .line 233
     return-void
 .end method
 
@@ -1566,13 +1423,10 @@
     .param p2, "ipsecLifeTimeVal"    # I
 
     .prologue
-    .line 256
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecLifeTimeType:Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;
 
-    .line 257
     iput p2, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecLifeTimeVal:I
 
-    .line 258
     return-void
 .end method
 
@@ -1581,10 +1435,8 @@
     .param p1, "mIkeEncryptType"    # Lcom/sec/epdg/IWlanEnum$IkeEncryption;
 
     .prologue
-    .line 371
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeEncryptType:Lcom/sec/epdg/IWlanEnum$IkeEncryption;
 
-    .line 372
     return-void
 .end method
 
@@ -1593,10 +1445,8 @@
     .param p1, "mIkeIntergrity"    # Lcom/sec/epdg/IWlanEnum$IkeIntegrity;
 
     .prologue
-    .line 363
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeIntergrity:Lcom/sec/epdg/IWlanEnum$IkeIntegrity;
 
-    .line 364
     return-void
 .end method
 
@@ -1605,10 +1455,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 387
     iput p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeLife:I
 
-    .line 388
     return-void
 .end method
 
@@ -1617,10 +1465,8 @@
     .param p1, "mIkeversion"    # Lcom/sec/epdg/IWlanEnum$Ikeversion;
 
     .prologue
-    .line 355
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeversion:Lcom/sec/epdg/IWlanEnum$Ikeversion;
 
-    .line 356
     return-void
 .end method
 
@@ -1629,10 +1475,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 395
     iput p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeWindowSize:I
 
-    .line 396
     return-void
 .end method
 
@@ -1642,18 +1486,14 @@
     .param p2, "val"    # [B
 
     .prologue
-    .line 469
     sget-object v0, Lcom/sec/epdg/IWlanEnum$Imei;->DEVICE_IMEI:Lcom/sec/epdg/IWlanEnum$Imei;
 
     iput-object v0, p0, Lcom/sec/erisclient/IPSecConnection;->mImei:Lcom/sec/epdg/IWlanEnum$Imei;
 
-    .line 470
     iput p1, p0, Lcom/sec/erisclient/IPSecConnection;->imeiVendorAttrType:I
 
-    .line 471
     iput-object p2, p0, Lcom/sec/erisclient/IPSecConnection;->imeiVendorAttrVal:[B
 
-    .line 472
     return-void
 .end method
 
@@ -1662,10 +1502,8 @@
     .param p1, "mobike"    # Z
 
     .prologue
-    .line 499
     iput-boolean p1, p0, Lcom/sec/erisclient/IPSecConnection;->mobike:Z
 
-    .line 500
     return-void
 .end method
 
@@ -1674,10 +1512,8 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->name:Ljava/lang/String;
 
-    .line 109
     return-void
 .end method
 
@@ -1688,10 +1524,8 @@
     .end annotation
 
     .prologue
-    .line 420
     iput p1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeNatValue:I
 
-    .line 421
     return-void
 .end method
 
@@ -1701,13 +1535,10 @@
     .param p2, "ownIdentity"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->ownIdentityType:Lcom/sec/epdg/IWlanEnum$IdentityType;
 
-    .line 149
     iput-object p2, p0, Lcom/sec/erisclient/IPSecConnection;->ownIdentity:Ljava/lang/String;
 
-    .line 150
     return-void
 .end method
 
@@ -1716,10 +1547,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 453
     iput p1, p0, Lcom/sec/erisclient/IPSecConnection;->pcscfv4VendorAttr:I
 
-    .line 454
     return-void
 .end method
 
@@ -1728,10 +1557,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 461
     iput p1, p0, Lcom/sec/erisclient/IPSecConnection;->pcscfv6VendorAttr:I
 
-    .line 462
     return-void
 .end method
 
@@ -1740,10 +1567,8 @@
     .param p1, "val"    # Z
 
     .prologue
-    .line 184
     iput-boolean p1, p0, Lcom/sec/erisclient/IPSecConnection;->pfsVal:Z
 
-    .line 185
     return-void
 .end method
 
@@ -1752,10 +1577,8 @@
     .param p1, "periodicDpdTimer"    # I
 
     .prologue
-    .line 483
     iput p1, p0, Lcom/sec/erisclient/IPSecConnection;->periodicDpdTimer:I
 
-    .line 484
     return-void
 .end method
 
@@ -1764,10 +1587,8 @@
     .param p1, "val"    # Ljava/lang/String;
 
     .prologue
-    .line 200
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->presharedKey:Ljava/lang/String;
 
-    .line 201
     return-void
 .end method
 
@@ -1777,13 +1598,10 @@
     .param p2, "remoteIdentity"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     iput-object p2, p0, Lcom/sec/erisclient/IPSecConnection;->remoteIdentity:Ljava/lang/String;
 
-    .line 162
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->remoteIdentityType:Lcom/sec/epdg/IWlanEnum$IdentityType;
 
-    .line 163
     return-void
 .end method
 
@@ -1792,10 +1610,8 @@
     .param p1, "val"    # Ljava/lang/String;
 
     .prologue
-    .line 437
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->ipv4HandoverAddr:Ljava/lang/String;
 
-    .line 438
     return-void
 .end method
 
@@ -1804,10 +1620,8 @@
     .param p1, "val"    # Ljava/lang/String;
 
     .prologue
-    .line 445
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->ipv6HandoverAddr:Ljava/lang/String;
 
-    .line 446
     return-void
 .end method
 
@@ -1816,7 +1630,6 @@
     .param p1, "state"    # Lcom/sec/erisclient/IPSecConnectionState;
 
     .prologue
-    .line 613
     monitor-enter p0
 
     :try_start_0
@@ -1842,17 +1655,14 @@
 
     invoke-static {v0, v1}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 614
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->state:Lcom/sec/erisclient/IPSecConnectionState;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 615
     monitor-exit p0
 
     return-void
 
-    .line 613
     :catchall_0
     move-exception v0
 
@@ -1866,10 +1676,8 @@
     .param p1, "subnetType"    # Lcom/sec/epdg/IWlanEnum$IPSecIpType;
 
     .prologue
-    .line 140
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->subnetType:Lcom/sec/epdg/IWlanEnum$IPSecIpType;
 
-    .line 141
     return-void
 .end method
 
@@ -1878,10 +1686,8 @@
     .param p1, "tunnelType"    # Lcom/sec/epdg/IWlanEnum$TunnelModeType;
 
     .prologue
-    .line 216
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->tunnelType:Lcom/sec/epdg/IWlanEnum$TunnelModeType;
 
-    .line 217
     return-void
 .end method
 
@@ -1890,10 +1696,8 @@
     .param p1, "userAuth"    # Z
 
     .prologue
-    .line 132
     iput-boolean p1, p0, Lcom/sec/erisclient/IPSecConnection;->userAuth:Z
 
-    .line 133
     return-void
 .end method
 
@@ -1902,10 +1706,8 @@
     .param p1, "val"    # Ljava/lang/String;
 
     .prologue
-    .line 175
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->username:Ljava/lang/String;
 
-    .line 176
     return-void
 .end method
 
@@ -1914,10 +1716,8 @@
     .param p1, "val"    # Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
     .prologue
-    .line 429
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->adapterConf:Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
-    .line 430
     return-void
 .end method
 
@@ -1926,10 +1726,8 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     iput-object p1, p0, Lcom/sec/erisclient/IPSecConnection;->virtualAdapterName:Ljava/lang/String;
 
-    .line 117
     return-void
 .end method
 
@@ -1948,12 +1746,10 @@
 
     const/4 v3, 0x0
 
-    .line 557
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
 
-    .line 559
     .local v0, "jsonObj":Lorg/json/JSONObject;
     const-string v1, "IPSecConnection"
 
@@ -1961,7 +1757,6 @@
 
     invoke-static {v1, v4}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 560
     const-string v1, "cid"
 
     invoke-virtual {p0}, Lcom/sec/erisclient/IPSecConnection;->getConnID()I
@@ -1970,21 +1765,18 @@
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 561
     const-string v1, "virtualAdapterName"
 
     iget-object v4, p0, Lcom/sec/erisclient/IPSecConnection;->virtualAdapterName:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 562
     const-string v1, "gateway"
 
     iget-object v4, p0, Lcom/sec/erisclient/IPSecConnection;->gateway:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 563
     const-string v4, "userAuth"
 
     iget-boolean v1, p0, Lcom/sec/erisclient/IPSecConnection;->userAuth:Z
@@ -1996,21 +1788,18 @@
     :goto_0
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 564
     const-string v1, "interface"
 
     iget-object v4, p0, Lcom/sec/erisclient/IPSecConnection;->mInterface:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 565
     const-string v1, "presharedKey"
 
     iget-object v4, p0, Lcom/sec/erisclient/IPSecConnection;->presharedKey:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 566
     const-string v4, "globalDNSConfig"
 
     iget-boolean v1, p0, Lcom/sec/erisclient/IPSecConnection;->globalDNSConfig:Z
@@ -2022,7 +1811,6 @@
     :goto_1
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 567
     const-string v4, "antiReplay"
 
     iget-boolean v1, p0, Lcom/sec/erisclient/IPSecConnection;->antiReplay:Z
@@ -2034,7 +1822,6 @@
     :goto_2
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 568
     const-string v4, "caCertData"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->caCertData:[B
@@ -2046,35 +1833,30 @@
     :goto_3
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 569
     const-string v1, "ipv4HandoverAddr"
 
     iget-object v4, p0, Lcom/sec/erisclient/IPSecConnection;->ipv4HandoverAddr:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 570
     const-string v1, "ipv6HandoverAddr"
 
     iget-object v4, p0, Lcom/sec/erisclient/IPSecConnection;->ipv6HandoverAddr:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 571
     const-string v1, "pcscfv4VendorAttr"
 
     iget v4, p0, Lcom/sec/erisclient/IPSecConnection;->pcscfv4VendorAttr:I
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 572
     const-string v1, "pcscfv6VendorAttr"
 
     iget v4, p0, Lcom/sec/erisclient/IPSecConnection;->pcscfv6VendorAttr:I
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 573
     const-string v4, "ApnSetting.mMobikeval"
 
     iget-boolean v1, p0, Lcom/sec/erisclient/IPSecConnection;->mobike:Z
@@ -2086,7 +1868,6 @@
     :goto_4
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 574
     const-string v4, "ApnSetting.mImei"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mImei:Lcom/sec/epdg/IWlanEnum$Imei;
@@ -2098,14 +1879,12 @@
     :goto_5
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 575
     const-string v1, "imeiVendorAttrType"
 
     iget v4, p0, Lcom/sec/erisclient/IPSecConnection;->imeiVendorAttrType:I
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 576
     const-string v4, "imeiVendorAttrVal"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->imeiVendorAttrVal:[B
@@ -2117,14 +1896,12 @@
     :goto_6
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 578
     const-string v1, "ApnSetting.IWlanSettingName"
 
     iget-object v4, p0, Lcom/sec/erisclient/IPSecConnection;->name:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 579
     const-string v4, "ApnSetting.mOwnUriType"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ownIdentityType:Lcom/sec/epdg/IWlanEnum$IdentityType;
@@ -2136,14 +1913,12 @@
     :goto_7
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 580
     const-string v1, "ApnSetting.mIpsecOwnUri"
 
     iget-object v4, p0, Lcom/sec/erisclient/IPSecConnection;->ownIdentity:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 581
     const-string v4, "ApnSetting.mRemoteUriType"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->remoteIdentityType:Lcom/sec/epdg/IWlanEnum$IdentityType;
@@ -2155,14 +1930,12 @@
     :goto_8
     invoke-virtual {v0, v4, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 582
     const-string v1, "ApnSetting.mIpsecRemoteUri"
 
     iget-object v4, p0, Lcom/sec/erisclient/IPSecConnection;->remoteIdentity:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v4}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 583
     const-string v1, "ApnSetting.mPfsval"
 
     iget-boolean v4, p0, Lcom/sec/erisclient/IPSecConnection;->pfsVal:Z
@@ -2172,7 +1945,6 @@
     :goto_9
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 584
     const-string v2, "ApnSetting.mIpSecauthType"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->authType:Lcom/sec/epdg/IWlanEnum$IPSecAuthType;
@@ -2184,7 +1956,6 @@
     :goto_a
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 585
     const-string v2, "ApnSetting.mIpSecIpType"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->subnetType:Lcom/sec/epdg/IWlanEnum$IPSecIpType;
@@ -2196,7 +1967,6 @@
     :goto_b
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 586
     const-string v2, "ApnSetting.mIkeVirtualAdapterConf"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->adapterConf:Lcom/sec/epdg/IWlanEnum$AdapterConf;
@@ -2208,14 +1978,12 @@
     :goto_c
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 587
     const-string v1, "ApnSetting.mPeriodicDpdTimer"
 
     iget v2, p0, Lcom/sec/erisclient/IPSecConnection;->periodicDpdTimer:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 590
     const-string v2, "ApnSetting.ipsecsetting.mTunnelMode"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->tunnelType:Lcom/sec/epdg/IWlanEnum$TunnelModeType;
@@ -2227,7 +1995,6 @@
     :goto_d
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 591
     const-string v2, "ApnSetting.ipsecsetting.mIpSecEncryptionType"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecEncrType:Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;
@@ -2239,7 +2006,6 @@
     :goto_e
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 592
     const-string v2, "ApnSetting.ipsecsetting.mIpSecIntegrityType"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecIntegType:Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;
@@ -2251,7 +2017,6 @@
     :goto_f
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 593
     const-string v2, "ApnSetting.ipsecsetting.mIpSecDHGroup"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecDhGroup:Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;
@@ -2263,7 +2028,6 @@
     :goto_10
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 594
     const-string v2, "ApnSetting.ipsecsetting.mIpSecLifeTimeType"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecLifeTimeType:Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;
@@ -2275,14 +2039,12 @@
     :goto_11
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 595
     const-string v1, "ApnSetting.ipsecsetting.mIpSecLifeval"
 
     iget v2, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecLifeTimeVal:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 597
     const-string v2, "ApnSetting.ikesetting.mIkeversion"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeversion:Lcom/sec/epdg/IWlanEnum$Ikeversion;
@@ -2294,7 +2056,6 @@
     :goto_12
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 598
     const-string v2, "ApnSetting.ikesetting.mIkeEncryptType"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeEncryptType:Lcom/sec/epdg/IWlanEnum$IkeEncryption;
@@ -2306,7 +2067,6 @@
     :goto_13
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 599
     const-string v2, "ApnSetting.ikesetting.mIkeIntegrity"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeIntergrity:Lcom/sec/epdg/IWlanEnum$IkeIntegrity;
@@ -2318,7 +2078,6 @@
     :goto_14
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 600
     const-string v2, "ApnSetting.ikesetting.mIkeDhGroup"
 
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeDhGroup:Lcom/sec/epdg/IWlanEnum$IkeDhGroup;
@@ -2330,7 +2089,6 @@
     :goto_15
     invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 601
     const-string v1, "ApnSetting.ikesetting.mIkeEapType"
 
     iget-object v2, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeEapType:Lcom/sec/epdg/IWlanEnum$IkeEapType;
@@ -2340,63 +2098,53 @@
     :goto_16
     invoke-virtual {v0, v1, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 602
     const-string v1, "ApnSetting.ikesetting.mIkeLife"
 
     iget v2, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeLife:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 603
     const-string v1, "ApnSetting.ikesetting.mIkeWindowSize"
 
     iget v2, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeWindowSize:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 604
     const-string v1, "ApnSetting.ikesetting.mIkeDpdTimeOut"
 
     iget v2, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeDpdTimeOut:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 605
     const-string v1, "ApnSetting.ikesetting.mIkeConnectionTimeOut"
 
     iget v2, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeConnectionTimeOut:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 606
     const-string v1, "ApnSetting.ikesetting.mIkeNatValue"
 
     iget v2, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeNatValue:I
 
     invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 608
     return-object v0
 
     :cond_0
     move v1, v3
 
-    .line 563
     goto/16 :goto_0
 
     :cond_1
     move v1, v3
 
-    .line 566
     goto/16 :goto_1
 
     :cond_2
     move v1, v3
 
-    .line 567
     goto/16 :goto_2
 
-    .line 568
     :cond_3
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->caCertData:[B
 
@@ -2409,10 +2157,8 @@
     :cond_4
     move v1, v3
 
-    .line 573
     goto/16 :goto_4
 
-    .line 574
     :cond_5
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mImei:Lcom/sec/epdg/IWlanEnum$Imei;
 
@@ -2422,7 +2168,6 @@
 
     goto/16 :goto_5
 
-    .line 576
     :cond_6
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->imeiVendorAttrVal:[B
 
@@ -2432,7 +2177,6 @@
 
     goto/16 :goto_6
 
-    .line 579
     :cond_7
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ownIdentityType:Lcom/sec/epdg/IWlanEnum$IdentityType;
 
@@ -2442,7 +2186,6 @@
 
     goto/16 :goto_7
 
-    .line 581
     :cond_8
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->remoteIdentityType:Lcom/sec/epdg/IWlanEnum$IdentityType;
 
@@ -2455,10 +2198,8 @@
     :cond_9
     move v2, v3
 
-    .line 583
     goto/16 :goto_9
 
-    .line 584
     :cond_a
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->authType:Lcom/sec/epdg/IWlanEnum$IPSecAuthType;
 
@@ -2468,7 +2209,6 @@
 
     goto/16 :goto_a
 
-    .line 585
     :cond_b
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->subnetType:Lcom/sec/epdg/IWlanEnum$IPSecIpType;
 
@@ -2478,7 +2218,6 @@
 
     goto/16 :goto_b
 
-    .line 586
     :cond_c
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->adapterConf:Lcom/sec/epdg/IWlanEnum$AdapterConf;
 
@@ -2488,7 +2227,6 @@
 
     goto/16 :goto_c
 
-    .line 590
     :cond_d
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->tunnelType:Lcom/sec/epdg/IWlanEnum$TunnelModeType;
 
@@ -2498,7 +2236,6 @@
 
     goto/16 :goto_d
 
-    .line 591
     :cond_e
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecEncrType:Lcom/sec/epdg/IWlanEnum$IpSecEncryptionType;
 
@@ -2508,7 +2245,6 @@
 
     goto/16 :goto_e
 
-    .line 592
     :cond_f
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecIntegType:Lcom/sec/epdg/IWlanEnum$IpSecIntegrityType;
 
@@ -2518,7 +2254,6 @@
 
     goto/16 :goto_f
 
-    .line 593
     :cond_10
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecDhGroup:Lcom/sec/epdg/IWlanEnum$IpSecDHGroup;
 
@@ -2528,7 +2263,6 @@
 
     goto/16 :goto_10
 
-    .line 594
     :cond_11
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->ipsecLifeTimeType:Lcom/sec/epdg/IWlanEnum$IpSecLifeTimeType;
 
@@ -2538,7 +2272,6 @@
 
     goto/16 :goto_11
 
-    .line 597
     :cond_12
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeversion:Lcom/sec/epdg/IWlanEnum$Ikeversion;
 
@@ -2548,7 +2281,6 @@
 
     goto/16 :goto_12
 
-    .line 598
     :cond_13
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeEncryptType:Lcom/sec/epdg/IWlanEnum$IkeEncryption;
 
@@ -2558,7 +2290,6 @@
 
     goto/16 :goto_13
 
-    .line 599
     :cond_14
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeIntergrity:Lcom/sec/epdg/IWlanEnum$IkeIntegrity;
 
@@ -2568,7 +2299,6 @@
 
     goto/16 :goto_14
 
-    .line 600
     :cond_15
     iget-object v1, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeDhGroup:Lcom/sec/epdg/IWlanEnum$IkeDhGroup;
 
@@ -2578,7 +2308,6 @@
 
     goto/16 :goto_15
 
-    .line 601
     :cond_16
     iget-object v2, p0, Lcom/sec/erisclient/IPSecConnection;->mIkeEapType:Lcom/sec/epdg/IWlanEnum$IkeEapType;
 
@@ -2593,7 +2322,6 @@
     .locals 2
 
     .prologue
-    .line 104
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

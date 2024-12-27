@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 533
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "serviceState"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 537
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v2
@@ -49,7 +47,6 @@
 
     move-result-object v0
 
-    .line 540
     .local v0, "configNetworkTypeCapability":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -70,12 +67,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 541
     invoke-virtual {p1}, Landroid/telephony/ServiceState;->isRRApplicable()Z
 
     move-result v1
 
-    .line 542
     .local v1, "curRoamingState":Z
     const-string v2, "NetworkPolicy"
 
@@ -99,7 +94,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 543
     # getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mRoamingState:Z
     invoke-static {}, Lcom/android/server/net/NetworkPolicyManagerService;->access$100()Z
 
@@ -107,11 +101,9 @@
 
     if-eq v2, v1, :cond_0
 
-    .line 544
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->mRoamingState:Z
     invoke-static {v1}, Lcom/android/server/net/NetworkPolicyManagerService;->access$102(Z)Z
 
-    .line 545
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$1;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v2, v2, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -124,7 +116,6 @@
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 548
     .end local v1    # "curRoamingState":Z
     :cond_0
     return-void

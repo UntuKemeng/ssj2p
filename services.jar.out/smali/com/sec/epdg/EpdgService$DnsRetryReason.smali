@@ -58,7 +58,6 @@
 
     const/4 v3, 0x0
 
-    .line 369
     new-instance v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     const-string v1, "WIFI_RECONNECT"
@@ -67,7 +66,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;->WIFI_RECONNECT:Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
-    .line 370
     new-instance v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     const-string v1, "TEPDG_TIMER_EXPIRED"
@@ -76,7 +74,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;->TEPDG_TIMER_EXPIRED:Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
-    .line 371
     new-instance v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     const-string v1, "SCREEN_ON_INTENT"
@@ -85,7 +82,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;->SCREEN_ON_INTENT:Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
-    .line 372
     new-instance v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     const-string v1, "DATA_RETRY_8MIN_ONWARD_TIMER_EXPIRED"
@@ -94,7 +90,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;->DATA_RETRY_8MIN_ONWARD_TIMER_EXPIRED:Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
-    .line 373
     new-instance v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     const-string v1, "MAPCON_CHANGE"
@@ -103,7 +98,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;->MAPCON_CHANGE:Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
-    .line 374
     new-instance v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     const-string v1, "WIFI_IPTYPE_CHANGE"
@@ -114,7 +108,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;->WIFI_IPTYPE_CHANGE:Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
-    .line 375
     new-instance v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     const-string v1, "DNS_TTL_CHECK"
@@ -125,7 +118,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;->DNS_TTL_CHECK:Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
-    .line 376
     new-instance v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     const-string v1, "DNS_RETRY_TIMER_EXPIRY"
@@ -136,7 +128,6 @@
 
     sput-object v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;->DNS_RETRY_TIMER_EXPIRY:Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
-    .line 368
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/sec/epdg/EpdgService$DnsRetryReason;
@@ -193,7 +184,6 @@
     .end annotation
 
     .prologue
-    .line 368
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -204,7 +194,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 368
     const-class v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -220,7 +209,6 @@
     .locals 1
 
     .prologue
-    .line 368
     sget-object v0, Lcom/sec/epdg/EpdgService$DnsRetryReason;->$VALUES:[Lcom/sec/epdg/EpdgService$DnsRetryReason;
 
     invoke-virtual {v0}, [Lcom/sec/epdg/EpdgService$DnsRetryReason;->clone()Ljava/lang/Object;

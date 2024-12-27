@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 40
     const/4 v0, 0x0
 
     sput-object v0, Landroid/os/STSHelper;->mInstance:Landroid/os/STSHelper;
@@ -44,10 +43,8 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .locals 2
 
     .prologue
-    .line 43
     const-class v1, Landroid/os/STSHelper;
 
     monitor-enter v1
@@ -65,14 +61,12 @@
 
     if-nez v0, :cond_0
 
-    .line 44
     new-instance v0, Landroid/os/STSHelper;
 
     invoke-direct {v0}, Landroid/os/STSHelper;-><init>()V
 
     sput-object v0, Landroid/os/STSHelper;->mInstance:Landroid/os/STSHelper;
 
-    .line 46
     :cond_0
     sget-object v0, Landroid/os/STSHelper;->mInstance:Landroid/os/STSHelper;
     :try_end_0
@@ -82,7 +76,6 @@
 
     return-object v0
 
-    .line 43
     :catchall_0
     move-exception v0
 
@@ -100,16 +93,13 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 55
     monitor-enter p0
 
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
-    .line 56
     .local v0, "dtsFactor":D
     const/4 v2, 0x0
 
-    .line 59
     .local v2, "odtcOption":I
     :try_start_0
     invoke-static {}, Landroid/os/DTSHelper;->getInstance()Landroid/os/DTSHelper;
@@ -118,7 +108,6 @@
 
     iput-object v3, p0, Landroid/os/STSHelper;->mDTSHelper:Landroid/os/DTSHelper;
 
-    .line 60
     iget-object v3, p0, Landroid/os/STSHelper;->mDTSHelper:Landroid/os/DTSHelper;
 
     invoke-virtual {v3, p1}, Landroid/os/DTSHelper;->isPackageExist(Ljava/lang/String;)Z
@@ -127,7 +116,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 61
     iget-object v3, p0, Landroid/os/STSHelper;->mDTSHelper:Landroid/os/DTSHelper;
 
     invoke-virtual {v3, p1}, Landroid/os/DTSHelper;->getScalingFactor(Ljava/lang/String;)D
@@ -136,14 +124,11 @@
 
     move-result-wide v0
 
-    .line 72
     :cond_0
     if-eqz v2, :cond_2
 
-    .line 73
     int-to-double v0, v2
 
-    .line 77
     .end local v0    # "dtsFactor":D
     :cond_1
     :goto_0
@@ -151,7 +136,6 @@
 
     return-wide v0
 
-    .line 74
     .restart local v0    # "dtsFactor":D
     :cond_2
     cmpl-double v3, v0, v4
@@ -167,10 +151,8 @@
     :cond_3
     move-wide v0, v4
 
-    .line 77
     goto :goto_0
 
-    .line 55
     :catchall_0
     move-exception v3
 

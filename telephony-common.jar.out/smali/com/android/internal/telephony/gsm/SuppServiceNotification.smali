@@ -66,7 +66,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -78,12 +77,10 @@
     .locals 3
 
     .prologue
-    .line 71
     sget-boolean v0, Lcom/android/internal/telephony/TelephonyFeatures;->SHIP_BUILD:Z
 
     if-eqz v0, :cond_1
 
-    .line 72
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -159,17 +156,14 @@
 
     move-result-object v0
 
-    .line 80
     :goto_1
     return-object v0
 
-    .line 72
     :cond_0
     const-string v0, " terminated "
 
     goto :goto_0
 
-    .line 80
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 

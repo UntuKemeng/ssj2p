@@ -26,13 +26,10 @@
     .param p2, "source"    # Ljava/lang/String;
 
     .prologue
-    .line 123
     iput-object p1, p0, Lorg/simpleframework/xml/stream/CamelCaseBuilder$Attribute;->this$0:Lorg/simpleframework/xml/stream/CamelCaseBuilder;
 
-    .line 124
     invoke-direct {p0, p2}, Lorg/simpleframework/xml/stream/Splitter;-><init>(Ljava/lang/String;)V
 
-    .line 125
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p3, "x2"    # Lorg/simpleframework/xml/stream/CamelCaseBuilder$1;
 
     .prologue
-    .line 109
     invoke-direct {p0, p1, p2}, Lorg/simpleframework/xml/stream/CamelCaseBuilder$Attribute;-><init>(Lorg/simpleframework/xml/stream/CamelCaseBuilder;Ljava/lang/String;)V
 
     return-void
@@ -58,12 +54,10 @@
     .param p3, "len"    # I
 
     .prologue
-    .line 155
     iget-object v0, p0, Lorg/simpleframework/xml/stream/CamelCaseBuilder$Attribute;->builder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/lang/StringBuilder;->append([CII)Ljava/lang/StringBuilder;
 
-    .line 156
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .param p3, "len"    # I
 
     .prologue
-    .line 138
     iget-object v0, p0, Lorg/simpleframework/xml/stream/CamelCaseBuilder$Attribute;->this$0:Lorg/simpleframework/xml/stream/CamelCaseBuilder;
 
     iget-boolean v0, v0, Lorg/simpleframework/xml/stream/CamelCaseBuilder;->attribute:Z
@@ -85,7 +78,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 139
     :cond_0
     aget-char v0, p1, p2
 
@@ -95,12 +87,10 @@
 
     aput-char v0, p1, p2
 
-    .line 141
     :cond_1
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/stream/CamelCaseBuilder$Attribute;->capital:Z
 
-    .line 142
     return-void
 .end method

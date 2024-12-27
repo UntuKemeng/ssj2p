@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 22
     const-class v0, Lcom/samsung/android/rlc/receiver/handler/PrepareHandler;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -28,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,19 +39,16 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 74
     sget-object v1, Lcom/samsung/android/rlc/receiver/handler/PrepareHandler;->TAG:Ljava/lang/String;
 
     const-string v2, "[getPrepareBody]"
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 75
     new-instance v0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
 
     invoke-direct {v0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;-><init>()V
 
-    .line 76
     .local v0, "reqVO":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     invoke-static {p2}, Lcom/samsung/android/rlc/util/RLCUtil;->getInstance(Landroid/content/Context;)Lcom/samsung/android/rlc/util/RLCUtil;
 
@@ -65,10 +60,8 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setRlcId(Ljava/lang/String;)V
 
-    .line 77
     invoke-virtual {v0, p1}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setOprtId(Ljava/lang/String;)V
 
-    .line 78
     sget-object v1, Lcom/samsung/android/rlc/receiver/handler/PrepareHandler;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -91,10 +84,8 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     invoke-virtual {v0, p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setMsgId(Ljava/lang/String;)V
 
-    .line 81
     return-object v0
 .end method
 
@@ -105,12 +96,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 67
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 68
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "body"
 
@@ -120,7 +109,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 69
     return-object v0
 .end method
 
@@ -130,20 +118,17 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 25
     sget-object v11, Lcom/samsung/android/rlc/receiver/handler/PrepareHandler;->TAG:Ljava/lang/String;
 
     const-string v12, "RLC_PrepareHandler run"
 
     invoke-static {v11, v12}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 28
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 29
     .local v1, "bundle":Landroid/os/Bundle;
     const-string v11, "MID"
 
@@ -151,7 +136,6 @@
 
     move-result-object v6
 
-    .line 30
     .local v6, "msgId":Ljava/lang/String;
     const-string v11, "OID"
 
@@ -159,13 +143,11 @@
 
     move-result-object v7
 
-    .line 31
     .local v7, "oprtId":Ljava/lang/String;
     invoke-static {v6, v7, p0}, Lcom/samsung/android/rlc/receiver/handler/PrepareHandler;->getPrepareBody(Ljava/lang/String;Ljava/lang/String;Landroid/content/Context;)Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
 
     move-result-object v0
 
-    .line 32
     .local v0, "body":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     const-string v11, "https://%s/dm/v1/dev/getCmd"
 
@@ -173,17 +155,14 @@
 
     move-result-object v10
 
-    .line 34
     .local v10, "uri":Ljava/lang/String;
     invoke-static {p0, v0, v10}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler;->httpRequest(Landroid/content/Context;Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;Ljava/lang/String;)Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
     move-result-object v9
 
-    .line 36
     .local v9, "response":Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
     if-eqz v9, :cond_1
 
-    .line 40
     invoke-virtual {v9}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;->getHttpStatusCode()I
 
     move-result v11
@@ -192,18 +171,15 @@
 
     if-ne v11, v12, :cond_0
 
-    .line 41
     invoke-virtual {v9}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;->getResponseBean()Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;
 
     move-result-object v8
 
-    .line 42
     .local v8, "resVO":Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;
     new-instance v4, Lorg/json/JSONObject;
 
     invoke-direct {v4}, Lorg/json/JSONObject;-><init>()V
 
-    .line 43
     .local v4, "completeBody":Lorg/json/JSONObject;
     const-string v11, "cmd"
 
@@ -213,7 +189,6 @@
 
     invoke-virtual {v4, v11, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 44
     const-string v11, "oprtId"
 
     invoke-virtual {v8}, Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;->getOprtId()Ljava/lang/String;
@@ -222,7 +197,6 @@
 
     invoke-virtual {v4, v11, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 45
     const-string v11, "cert"
 
     invoke-virtual {v8}, Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;->getCert()Ljava/lang/String;
@@ -231,7 +205,6 @@
 
     invoke-virtual {v4, v11, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 46
     const-string v11, "nonceSvr"
 
     invoke-virtual {v8}, Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;->getNonceSvr()Ljava/lang/String;
@@ -240,12 +213,10 @@
 
     invoke-virtual {v4, v11, v12}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 48
     invoke-static {v4, p0}, Lcom/samsung/android/rlc/receiver/handler/CompleteHandler;->makeCompleteBundle(Lorg/json/JSONObject;Landroid/content/Context;)Landroid/os/Bundle;
 
     move-result-object v3
 
-    .line 63
     .end local v0    # "body":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     .end local v1    # "bundle":Landroid/os/Bundle;
     .end local v4    # "completeBody":Lorg/json/JSONObject;
@@ -257,7 +228,6 @@
     :goto_0
     return-object v3
 
-    .line 51
     .restart local v0    # "body":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     .restart local v1    # "bundle":Landroid/os/Bundle;
     .restart local v6    # "msgId":Ljava/lang/String;
@@ -273,12 +243,10 @@
 
     if-ne v11, v12, :cond_1
 
-    .line 52
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 53
     .local v2, "clearBundle":Landroid/os/Bundle;
     const-string v11, "clearOp"
 
@@ -286,12 +254,10 @@
 
     invoke-virtual {v2, v11, v12}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 54
     const/16 v11, 0xc
 
     invoke-static {p0, v2, v11}, Lcom/samsung/android/rlc/service/RmmTask;->startTask(Landroid/content/Context;Landroid/os/Bundle;I)V
 
-    .line 55
     sget-object v11, Lcom/samsung/android/rlc/receiver/handler/PrepareHandler;->TAG:Ljava/lang/String;
 
     const-string v12, "RLC_PrepareHandler : not supported device "
@@ -300,7 +266,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 63
     .end local v0    # "body":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     .end local v1    # "bundle":Landroid/os/Bundle;
     .end local v2    # "clearBundle":Landroid/os/Bundle;
@@ -314,11 +279,9 @@
 
     goto :goto_0
 
-    .line 60
     :catch_0
     move-exception v5
 
-    .line 61
     .local v5, "e":Ljava/lang/Exception;
     sget-object v11, Lcom/samsung/android/rlc/receiver/handler/PrepareHandler;->TAG:Ljava/lang/String;
 

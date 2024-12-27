@@ -27,7 +27,6 @@
     .param p4, "x1"    # J
 
     .prologue
-    .line 634
     iput-object p1, p0, Lcom/sec/epdg/IPSecAdapter$1;->this$0:Lcom/sec/epdg/IPSecAdapter;
 
     iput-object p6, p0, Lcom/sec/epdg/IPSecAdapter$1;->val$toastIPsec:Landroid/widget/Toast;
@@ -43,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 636
     iget-object v0, p0, Lcom/sec/epdg/IPSecAdapter$1;->val$toastIPsec:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
@@ -56,7 +54,6 @@
     .param p1, "millisUntilFinished"    # J
 
     .prologue
-    .line 635
     iget-object v0, p0, Lcom/sec/epdg/IPSecAdapter$1;->val$toastIPsec:Landroid/widget/Toast;
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V

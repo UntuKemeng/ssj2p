@@ -32,12 +32,10 @@
     .end annotation
 
     .prologue
-    .line 59
     const-class v0, Ljava/util/Date;
 
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/transform/GregorianCalendarTransform;-><init>(Ljava/lang/Class;)V
 
-    .line 60
     return-void
 .end method
 
@@ -51,17 +49,14 @@
     .end annotation
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     new-instance v0, Lorg/simpleframework/xml/transform/DateTransform;
 
     invoke-direct {v0, p1}, Lorg/simpleframework/xml/transform/DateTransform;-><init>(Ljava/lang/Class;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/transform/GregorianCalendarTransform;->transform:Lorg/simpleframework/xml/transform/DateTransform;
 
-    .line 73
     return-void
 .end method
 
@@ -75,19 +70,15 @@
     .end annotation
 
     .prologue
-    .line 100
     new-instance v0, Ljava/util/GregorianCalendar;
 
     invoke-direct {v0}, Ljava/util/GregorianCalendar;-><init>()V
 
-    .line 102
     .local v0, "calendar":Ljava/util/GregorianCalendar;
     if-eqz p1, :cond_0
 
-    .line 103
     invoke-virtual {v0, p1}, Ljava/util/GregorianCalendar;->setTime(Ljava/util/Date;)V
 
-    .line 105
     :cond_0
     return-object v0
 .end method
@@ -104,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 45
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/GregorianCalendarTransform;->read(Ljava/lang/String;)Ljava/util/GregorianCalendar;
 
     move-result-object v0
@@ -122,7 +112,6 @@
     .end annotation
 
     .prologue
-    .line 86
     iget-object v0, p0, Lorg/simpleframework/xml/transform/GregorianCalendarTransform;->transform:Lorg/simpleframework/xml/transform/DateTransform;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/transform/DateTransform;->read(Ljava/lang/String;)Ljava/util/Date;
@@ -146,7 +135,6 @@
     .end annotation
 
     .prologue
-    .line 45
     check-cast p1, Ljava/util/GregorianCalendar;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -167,7 +155,6 @@
     .end annotation
 
     .prologue
-    .line 119
     iget-object v0, p0, Lorg/simpleframework/xml/transform/GregorianCalendarTransform;->transform:Lorg/simpleframework/xml/transform/DateTransform;
 
     invoke-virtual {p1}, Ljava/util/GregorianCalendar;->getTime()Ljava/util/Date;

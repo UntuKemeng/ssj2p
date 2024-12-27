@@ -50,26 +50,21 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 167
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$SegmentList;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.SegmentList;"
     iput-object p1, p0, Lorg/simpleframework/xml/util/WeakCache$SegmentList;->this$0:Lorg/simpleframework/xml/util/WeakCache;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 168
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/util/WeakCache$SegmentList;->list:Ljava/util/List;
 
-    .line 169
     iput p2, p0, Lorg/simpleframework/xml/util/WeakCache$SegmentList;->size:I
 
-    .line 170
     invoke-direct {p0, p2}, Lorg/simpleframework/xml/util/WeakCache$SegmentList;->create(I)V
 
-    .line 171
     return-void
 .end method
 
@@ -78,14 +73,12 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 204
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$SegmentList;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.SegmentList;"
     move v0, p1
 
     .local v0, "count":I
     move v1, v0
 
-    .line 206
     .end local v0    # "count":I
     .local v1, "count":I
     :goto_0
@@ -95,7 +88,6 @@
     .restart local v0    # "count":I
     if-lez v1, :cond_0
 
-    .line 207
     iget-object v2, p0, Lorg/simpleframework/xml/util/WeakCache$SegmentList;->list:Ljava/util/List;
 
     new-instance v3, Lorg/simpleframework/xml/util/WeakCache$Segment;
@@ -114,7 +106,6 @@
     .restart local v1    # "count":I
     goto :goto_0
 
-    .line 209
     .end local v1    # "count":I
     .restart local v0    # "count":I
     :cond_0
@@ -126,7 +117,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 221
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$SegmentList;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.SegmentList;"
     invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
@@ -159,19 +149,16 @@
     .end annotation
 
     .prologue
-    .line 188
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$SegmentList;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.SegmentList;"
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/util/WeakCache$SegmentList;->segment(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 190
     .local v0, "segment":I
     iget v1, p0, Lorg/simpleframework/xml/util/WeakCache$SegmentList;->size:I
 
     if-ge v0, v1, :cond_0
 
-    .line 191
     iget-object v1, p0, Lorg/simpleframework/xml/util/WeakCache$SegmentList;->list:Ljava/util/List;
 
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -180,7 +167,6 @@
 
     check-cast v1, Lorg/simpleframework/xml/util/WeakCache$Segment;
 
-    .line 193
     :goto_0
     return-object v1
 
@@ -203,7 +189,6 @@
     .end annotation
 
     .prologue
-    .line 174
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$SegmentList;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.SegmentList;"
     iget-object v0, p0, Lorg/simpleframework/xml/util/WeakCache$SegmentList;->list:Ljava/util/List;
 

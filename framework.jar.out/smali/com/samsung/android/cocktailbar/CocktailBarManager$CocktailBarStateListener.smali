@@ -19,10 +19,8 @@
     .locals 0
 
     .prologue
-    .line 1509
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1510
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .param p1, "bgType"    # I
 
     .prologue
-    .line 1536
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1544
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p1, "stateInfo"    # Lcom/samsung/android/cocktailbar/CocktailBarStateInfo;
 
     .prologue
-    .line 1520
     return-void
 .end method
 
@@ -60,7 +55,6 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 1528
     return-void
 .end method
 
@@ -69,6 +63,5 @@
     .param p1, "windowType"    # I
 
     .prologue
-    .line 1552
     return-void
 .end method

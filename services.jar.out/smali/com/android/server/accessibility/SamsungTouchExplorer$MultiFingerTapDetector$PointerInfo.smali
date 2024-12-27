@@ -38,21 +38,16 @@
     .param p4, "downTime"    # J
 
     .prologue
-    .line 2322
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2323
     iput p2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->downX:F
 
-    .line 2324
     iput p3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->downY:F
 
-    .line 2325
     iput-wide p4, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->downTime:J
 
-    .line 2326
     return-void
 .end method
 
@@ -66,7 +61,6 @@
 
     const/4 v1, 0x0
 
-    .line 2335
     iget-object v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->this$1:Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;
 
     # getter for: Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector;->mDetectionState:I
@@ -78,7 +72,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 2336
     iget-wide v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->upTime:J
 
     iget-wide v4, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->downTime:J
@@ -133,7 +126,6 @@
 
     if-gtz v2, :cond_1
 
-    .line 2340
     :cond_0
     :goto_0
     return v0
@@ -141,10 +133,8 @@
     :cond_1
     move v0, v1
 
-    .line 2336
     goto :goto_0
 
-    .line 2340
     :cond_2
     iget-wide v2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->upTime:J
 
@@ -181,15 +171,11 @@
     .param p3, "upTime"    # J
 
     .prologue
-    .line 2329
     iput p1, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->upX:F
 
-    .line 2330
     iput p2, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->upY:F
 
-    .line 2331
     iput-wide p3, p0, Lcom/android/server/accessibility/SamsungTouchExplorer$MultiFingerTapDetector$PointerInfo;->upTime:J
 
-    .line 2332
     return-void
 .end method

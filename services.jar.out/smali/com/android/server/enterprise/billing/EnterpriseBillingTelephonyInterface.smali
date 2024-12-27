@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,10 +51,8 @@
     .end annotation
 
     .prologue
-    .line 34
     const/4 v10, 0x0
 
-    .line 36
     .local v10, "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     const-string v2, "EnterpriseBillingTelephonyInterface"
 
@@ -63,10 +60,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 38
     const/4 v15, 0x0
 
-    .line 40
     .local v15, "telephonyManager":Landroid/telephony/TelephonyManager;
     :try_start_0
     const-string/jumbo v2, "phone"
@@ -85,18 +80,15 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
     :goto_0
     if-eqz v15, :cond_3
 
-    .line 45
     const-string v2, "EnterpriseBillingTelephonyInterface"
 
     const-string v3, " getCurrentActiveApns - telephony manager not null "
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 46
     invoke-virtual {v15}, Landroid/telephony/TelephonyManager;->getSimState()I
 
     move-result v2
@@ -111,14 +103,11 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 49
     const/4 v12, 0x0
 
-    .line 50
     .local v12, "mcc":Ljava/lang/String;
     const/4 v13, 0x0
 
-    .line 52
     .local v13, "mnc":Ljava/lang/String;
     const-string v2, "EnterpriseBillingTelephonyInterface"
 
@@ -126,7 +115,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
     const/4 v2, 0x0
 
     const-string/jumbo v3, "gsm.sim.operator.numeric"
@@ -137,7 +125,6 @@
 
     move-result-object v14
 
-    .line 57
     .local v14, "numeric":Ljava/lang/String;
     if-eqz v14, :cond_0
 
@@ -149,7 +136,6 @@
 
     if-le v2, v3, :cond_0
 
-    .line 58
     const/4 v2, 0x0
 
     const/4 v3, 0x3
@@ -158,14 +144,12 @@
 
     move-result-object v12
 
-    .line 59
     const/4 v2, 0x3
 
     invoke-virtual {v14, v2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v13
 
-    .line 62
     :cond_0
     const-string v2, "EnterpriseBillingTelephonyInterface"
 
@@ -173,21 +157,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 64
     if-eqz v12, :cond_3
 
     if-eqz v13, :cond_3
 
-    .line 65
     const/4 v9, 0x0
 
-    .line 68
     .local v9, "cursor":Landroid/database/Cursor;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 71
     .local v16, "token":J
     :try_start_1
     const-string v2, "EnterpriseBillingTelephonyInterface"
@@ -222,7 +202,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     invoke-virtual/range {p0 .. p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -259,7 +238,6 @@
 
     move-result-object v9
 
-    .line 78
     if-eqz v9, :cond_2
 
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
@@ -273,7 +251,6 @@
     :cond_1
     move-object v11, v10
 
-    .line 80
     .end local v10    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .local v11, "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     const/4 v2, 0x0
@@ -283,7 +260,6 @@
 
     move-result-object v8
 
-    .line 81
     .local v8, "apn":Ljava/lang/String;
     if-eqz v8, :cond_6
 
@@ -293,17 +269,14 @@
 
     if-eqz v2, :cond_6
 
-    .line 82
     if-nez v11, :cond_5
 
-    .line 83
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 85
     .end local v11    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .restart local v10    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     :goto_1
@@ -314,7 +287,6 @@
 
     invoke-interface {v10, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 87
     :goto_2
     invoke-interface {v9}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_3
@@ -324,18 +296,14 @@
 
     if-nez v2, :cond_1
 
-    .line 92
     .end local v8    # "apn":Ljava/lang/String;
     :cond_2
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 93
     if-eqz v9, :cond_3
 
-    .line 94
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 100
     .end local v9    # "cursor":Landroid/database/Cursor;
     .end local v12    # "mcc":Ljava/lang/String;
     .end local v13    # "mnc":Ljava/lang/String;
@@ -364,10 +332,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     return-object v10
 
-    .line 92
     .restart local v9    # "cursor":Landroid/database/Cursor;
     .restart local v12    # "mcc":Ljava/lang/String;
     .restart local v13    # "mnc":Ljava/lang/String;
@@ -379,16 +345,13 @@
     :goto_3
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 93
     if-eqz v9, :cond_4
 
-    .line 94
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
     :cond_4
     throw v2
 
-    .line 92
     .end local v10    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     .restart local v11    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     :catchall_1
@@ -400,7 +363,6 @@
     .restart local v10    # "list":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/billing/EnterpriseApn;>;"
     goto :goto_3
 
-    .line 41
     .end local v9    # "cursor":Landroid/database/Cursor;
     .end local v12    # "mcc":Ljava/lang/String;
     .end local v13    # "mnc":Ljava/lang/String;
@@ -445,7 +407,6 @@
     .end annotation
 
     .prologue
-    .line 137
     const-string v0, "EnterpriseBillingTelephonyInterface"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -468,23 +429,18 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 138
     const/4 v6, 0x0
 
-    .line 139
     .local v6, "apnDefaultType":Ljava/lang/String;
     if-eqz p1, :cond_1
 
-    .line 142
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 143
     .local v8, "token":J
     const/4 v7, 0x0
 
-    .line 145
     .local v7, "cursor":Landroid/database/Cursor;
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -533,7 +489,6 @@
 
     move-result-object v7
 
-    .line 151
     if-eqz v7, :cond_0
 
     invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
@@ -542,7 +497,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 152
     const/4 v0, 0x0
 
     invoke-interface {v7, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -551,23 +505,18 @@
 
     move-result-object v6
 
-    .line 156
     :cond_0
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 157
     if-eqz v7, :cond_1
 
-    .line 158
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
-    .line 162
     .end local v7    # "cursor":Landroid/database/Cursor;
     .end local v8    # "token":J
     :cond_1
     return-object v6
 
-    .line 156
     .restart local v7    # "cursor":Landroid/database/Cursor;
     .restart local v8    # "token":J
     :catchall_0
@@ -575,10 +524,8 @@
 
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 157
     if-eqz v7, :cond_2
 
-    .line 158
     invoke-interface {v7}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -597,7 +544,6 @@
     .end annotation
 
     .prologue
-    .line 109
     const-string v4, "EnterpriseBillingTelephonyInterface"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -630,30 +576,24 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     const/4 v0, -0x1
 
-    .line 111
     .local v0, "returnValue":I
     if-eqz p1, :cond_0
 
-    .line 112
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 113
     .local v1, "values":Landroid/content/ContentValues;
     const-string/jumbo v4, "type"
 
     invoke-virtual {v1, v4, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 116
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 118
     .local v2, "token":J
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -692,10 +632,8 @@
 
     move-result v0
 
-    .line 125
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 128
     .end local v1    # "values":Landroid/content/ContentValues;
     .end local v2    # "token":J
     :cond_0
@@ -721,10 +659,8 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 129
     return v0
 
-    .line 125
     .restart local v1    # "values":Landroid/content/ContentValues;
     .restart local v2    # "token":J
     :catchall_0

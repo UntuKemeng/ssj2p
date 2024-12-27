@@ -31,15 +31,12 @@
     .param p2, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 220
     iput-object p1, p0, Lorg/simpleframework/xml/core/InstanceFactory$ClassInstance;->this$0:Lorg/simpleframework/xml/core/InstanceFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 221
     iput-object p2, p0, Lorg/simpleframework/xml/core/InstanceFactory$ClassInstance;->type:Ljava/lang/Class;
 
-    .line 222
     return-void
 .end method
 
@@ -54,12 +51,10 @@
     .end annotation
 
     .prologue
-    .line 232
     iget-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ClassInstance;->value:Ljava/lang/Object;
 
     if-nez v0, :cond_0
 
-    .line 233
     iget-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ClassInstance;->this$0:Lorg/simpleframework/xml/core/InstanceFactory;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/InstanceFactory$ClassInstance;->type:Ljava/lang/Class;
@@ -70,7 +65,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ClassInstance;->value:Ljava/lang/Object;
 
-    .line 235
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ClassInstance;->value:Ljava/lang/Object;
 
@@ -81,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 260
     iget-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ClassInstance;->type:Ljava/lang/Class;
 
     return-object v0
@@ -91,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 272
     const/4 v0, 0x0
 
     return v0
@@ -107,7 +99,6 @@
     .end annotation
 
     .prologue
-    .line 249
     iput-object p1, p0, Lorg/simpleframework/xml/core/InstanceFactory$ClassInstance;->value:Ljava/lang/Object;
 
     return-object p1

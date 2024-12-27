@@ -37,24 +37,18 @@
     .param p5, "smsBroadcastReceiver"    # Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;
 
     .prologue
-    .line 1836
     iput-object p1, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     invoke-direct {p0}, Landroid/telephony/CarrierMessagingServiceManager;-><init>()V
 
-    .line 1837
     iput-object p2, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mPdus:[[B
 
-    .line 1838
     iput p3, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mDestPort:I
 
-    .line 1839
     iput-object p4, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mSmsFormat:Ljava/lang/String;
 
-    .line 1840
     iput-object p5, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mSmsBroadcastReceiver:Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;
 
-    .line 1841
     return-void
 .end method
 
@@ -63,7 +57,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;
 
     .prologue
-    .line 1827
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mPdus:[[B
 
     return-object v0
@@ -74,7 +67,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;
 
     .prologue
-    .line 1827
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mSmsFormat:Ljava/lang/String;
 
     return-object v0
@@ -85,7 +77,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;
 
     .prologue
-    .line 1827
     iget v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mDestPort:I
 
     return v0
@@ -96,7 +87,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;
 
     .prologue
-    .line 1827
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mSmsBroadcastReceiver:Lcom/android/internal/telephony/InboundSmsHandler$SmsBroadcastReceiver;
 
     return-object v0
@@ -110,10 +100,8 @@
     .param p2, "smsFilterCallback"    # Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilterCallback;
 
     .prologue
-    .line 1848
     iput-object p2, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mSmsFilterCallback:Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilterCallback;
 
-    .line 1849
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     iget-object v0, v0, Lcom/android/internal/telephony/InboundSmsHandler;->mContext:Landroid/content/Context;
@@ -124,23 +112,19 @@
 
     if-nez v0, :cond_0
 
-    .line 1850
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
     const-string v1, "bindService() for carrier messaging service failed"
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/InboundSmsHandler;->loge(Ljava/lang/String;)V
 
-    .line 1851
     const/4 v0, 0x1
 
     invoke-virtual {p2, v0}, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilterCallback;->onFilterComplete(Z)V
 
-    .line 1855
     :goto_0
     return-void
 
-    .line 1853
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
@@ -157,7 +141,6 @@
     .param p1, "carrierMessagingService"    # Landroid/service/carrier/ICarrierMessagingService;
 
     .prologue
-    .line 1864
     :try_start_0
     new-instance v1, Landroid/service/carrier/MessagePdu;
 
@@ -189,15 +172,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1871
     :goto_0
     return-void
 
-    .line 1867
     :catch_0
     move-exception v6
 
-    .line 1868
     .local v6, "e":Landroid/os/RemoteException;
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->this$0:Lcom/android/internal/telephony/InboundSmsHandler;
 
@@ -221,7 +201,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/telephony/InboundSmsHandler;->loge(Ljava/lang/String;)V
 
-    .line 1869
     iget-object v0, p0, Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilter;->mSmsFilterCallback:Lcom/android/internal/telephony/InboundSmsHandler$CarrierSmsFilterCallback;
 
     const/4 v1, 0x1

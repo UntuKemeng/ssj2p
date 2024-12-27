@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 8117
     iput-object p1, p0, Landroid/widget/AbsHorizontalListView$6;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "motionEvent"    # Lcom/samsung/android/motion/MREvent;
 
     .prologue
-    .line 8119
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$6;->this$0:Landroid/widget/AbsHorizontalListView;
 
     # getter for: Landroid/widget/AbsHorizontalListView;->mMotionEnable:Z
@@ -60,31 +58,26 @@
 
     if-nez v1, :cond_1
 
-    .line 8135
     :cond_0
     :goto_0
     return-void
 
-    .line 8123
     :cond_1
     invoke-virtual {p1}, Lcom/samsung/android/motion/MREvent;->getMotion()I
 
     move-result v0
 
-    .line 8124
     .local v0, "motion":I
     packed-switch v0, :pswitch_data_0
 
     goto :goto_0
 
-    .line 8126
     :pswitch_0
     const-string v1, "[Motion-DoubleTap]"
 
     # invokes: Landroid/widget/AbsHorizontalListView;->log(Ljava/lang/String;)V
     invoke-static {v1}, Landroid/widget/AbsHorizontalListView;->access$5600(Ljava/lang/String;)V
 
-    .line 8127
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$6;->this$0:Landroid/widget/AbsHorizontalListView;
 
     invoke-virtual {v1}, Landroid/widget/AbsHorizontalListView;->getLastVisiblePosition()I
@@ -101,7 +94,6 @@
 
     if-le v1, v2, :cond_2
 
-    .line 8128
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$6;->this$0:Landroid/widget/AbsHorizontalListView;
 
     iget-object v2, p0, Landroid/widget/AbsHorizontalListView$6;->this$0:Landroid/widget/AbsHorizontalListView;
@@ -114,7 +106,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/AbsHorizontalListView;->setSelection(I)V
 
-    .line 8130
     :cond_2
     iget-object v1, p0, Landroid/widget/AbsHorizontalListView$6;->this$0:Landroid/widget/AbsHorizontalListView;
 
@@ -124,7 +115,6 @@
 
     goto :goto_0
 
-    .line 8124
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

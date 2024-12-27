@@ -31,20 +31,16 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback$Stub;-><init>()V
 
-    .line 24
     iput-object p1, p0, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$NfcLedCoverTouchListener;
 
-    .line 26
     if-nez p2, :cond_0
 
     invoke-virtual {p3}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 29
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     new-instance v1, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;
@@ -55,10 +51,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;
 
-    .line 30
     return-void
 
-    .line 26
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_0
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -74,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$NfcLedCoverTouchListener;
 
     return-object v0
@@ -89,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;
 
     const/4 v1, 0x0
@@ -100,7 +92,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 39
     return-void
 .end method
 
@@ -113,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 43
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;
 
     const/4 v1, 0x1
@@ -124,7 +114,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 44
     return-void
 .end method
 
@@ -139,6 +128,5 @@
     .end annotation
 
     .prologue
-    .line 49
     return-void
 .end method

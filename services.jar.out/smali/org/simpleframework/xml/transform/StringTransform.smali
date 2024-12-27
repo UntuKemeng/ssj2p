@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 42
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/StringTransform;->read(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -54,7 +52,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     return-object p1
 .end method
 
@@ -68,7 +65,6 @@
     .end annotation
 
     .prologue
-    .line 42
     check-cast p1, Ljava/lang/String;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -84,6 +80,5 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     return-object p1
 .end method

@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,7 +24,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 25
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/rlc/util/MUMUtils;->isGuestUser(Landroid/content/Context;)Z
 
@@ -33,10 +31,8 @@
 
     if-eqz v6, :cond_0
 
-    .line 27
     const-string v0, "android.app.ActivityManagerNative"
 
-    .line 29
     .local v0, "className":Ljava/lang/String;
     const-string v6, "PCWCLIENTTRACE_MUMUtils"
 
@@ -44,12 +40,10 @@
 
     invoke-static {v6, v7}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 30
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 32
     .local v1, "clazz":Ljava/lang/Class;
     const-string v6, "getDefault"
 
@@ -61,7 +55,6 @@
 
     move-result-object v4
 
-    .line 33
     .local v4, "method":Ljava/lang/reflect/Method;
     const/4 v6, 0x0
 
@@ -75,7 +68,6 @@
 
     check-cast v3, Landroid/app/IActivityManager;
 
-    .line 34
     .local v3, "iactive":Landroid/app/IActivityManager;
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -97,7 +89,6 @@
 
     move-result-object v5
 
-    .line 35
     .local v5, "method2":Ljava/lang/reflect/Method;
     const/4 v6, 0x1
 
@@ -117,7 +108,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 41
     .end local v0    # "className":Ljava/lang/String;
     .end local v1    # "clazz":Ljava/lang/Class;
     .end local v3    # "iactive":Landroid/app/IActivityManager;
@@ -127,11 +117,9 @@
     :goto_0
     return-void
 
-    .line 37
     :catch_0
     move-exception v2
 
-    .line 38
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "PCWCLIENTTRACE_MUMUtils"
 
@@ -171,13 +159,11 @@
 
     const/4 v2, 0x1
 
-    .line 45
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
     move-result v1
 
-    .line 46
     .local v1, "userid":I
     const-string v4, "PCWCLIENTTRACE_MUMUtils"
 
@@ -201,7 +187,6 @@
 
     invoke-static {v4, v5}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 47
     const-string v5, "PCWCLIENTTRACE_MUMUtils"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -231,10 +216,8 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 48
     if-eqz v1, :cond_1
 
-    .line 61
     .end local v1    # "userid":I
     :goto_1
     return v2
@@ -243,21 +226,17 @@
     :cond_0
     move v4, v3
 
-    .line 47
     goto :goto_0
 
     :cond_1
     move v2, v3
 
-    .line 48
     goto :goto_1
 
-    .line 58
     .end local v1    # "userid":I
     :catch_0
     move-exception v0
 
-    .line 59
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "PCWCLIENTTRACE_MUMUtils"
 
@@ -297,7 +276,6 @@
 
     const/4 v2, 0x0
 
-    .line 17
     const-string v3, "PCWCLIENTTRACE_MUMUtils"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -329,7 +307,6 @@
 
     invoke-static {v3, v0}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 18
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -342,12 +319,10 @@
     :cond_0
     move v0, v2
 
-    .line 17
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 18
     goto :goto_1
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,48 +44,40 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 62
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 63
     .local v1, "deviceName":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 64
     .local v2, "deviceIpAddress":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 65
     .local v3, "deviceP2pMacAddress":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 66
     .local v4, "deviceMacAddressFromARP":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 67
     .local v5, "deviceNICType":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 68
     .local v6, "uid":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v7
 
-    .line 69
     .local v7, "dlnaType":I
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -96,24 +87,20 @@
 
     const/4 v8, 0x1
 
-    .line 70
     .local v8, "isSwitchingDevice":Z
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 71
     .local v9, "uri":Ljava/lang/String;
     new-instance v0, Landroid/hardware/display/DLNADevice;
 
     invoke-direct/range {v0 .. v9}, Landroid/hardware/display/DLNADevice;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZLjava/lang/String;)V
 
-    .line 72
     .local v0, "dlnaDevice":Landroid/hardware/display/DLNADevice;
     return-object v0
 
-    .line 69
     .end local v0    # "dlnaDevice":Landroid/hardware/display/DLNADevice;
     .end local v8    # "isSwitchingDevice":Z
     .end local v9    # "uri":Ljava/lang/String;
@@ -128,7 +115,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 60
     invoke-virtual {p0, p1}, Landroid/hardware/display/DLNADevice$1;->createFromParcel(Landroid/os/Parcel;)Landroid/hardware/display/DLNADevice;
 
     move-result-object v0
@@ -141,7 +127,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 76
     if-nez p1, :cond_0
 
     sget-object v0, Landroid/hardware/display/DLNADevice;->EMPTY_ARRAY:[Landroid/hardware/display/DLNADevice;
@@ -160,7 +145,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 60
     invoke-virtual {p0, p1}, Landroid/hardware/display/DLNADevice$1;->newArray(I)[Landroid/hardware/display/DLNADevice;
 
     move-result-object v0

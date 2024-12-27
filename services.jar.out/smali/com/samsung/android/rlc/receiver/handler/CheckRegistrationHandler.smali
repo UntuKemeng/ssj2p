@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 26
     const-class v0, Lcom/samsung/android/rlc/receiver/handler/CheckRegistrationHandler;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -28,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +37,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 100
     invoke-static {p0}, Lcom/samsung/android/rlc/util/RLCUtil;->getInstance(Landroid/content/Context;)Lcom/samsung/android/rlc/util/RLCUtil;
 
     move-result-object v6
@@ -48,15 +45,12 @@
 
     move-result-object v3
 
-    .line 101
     .local v3, "rlcID":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 102
     .local v4, "token":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 104
     .local v5, "useDvcID":Z
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -64,36 +58,29 @@
 
     if-eqz v6, :cond_0
 
-    .line 105
     const/4 v5, 0x1
 
-    .line 107
     :cond_0
     new-instance v2, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
 
     invoke-direct {v2}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;-><init>()V
 
-    .line 109
     .local v2, "reqVO":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     if-eqz v5, :cond_2
 
-    .line 110
     sget-object v6, Lcom/samsung/android/rlc/receiver/handler/CheckRegistrationHandler;->TAG:Ljava/lang/String;
 
     const-string v7, "Use device id instead of RLC"
 
     invoke-static {v6, v7}, Lcom/samsung/android/rlc/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 111
     invoke-static {p0}, Lcom/samsung/android/rlc/util/DeviceUtil;->getDualSIMDeviceID(Landroid/content/Context;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 113
     .local v0, "deviceId":[Ljava/lang/String;
     if-eqz v0, :cond_1
 
-    .line 114
     const/4 v6, 0x0
 
     :try_start_0
@@ -107,7 +94,6 @@
 
     move-result-object v4
 
-    .line 115
     const/4 v6, 0x0
 
     aget-object v6, v0, v6
@@ -118,7 +104,6 @@
     .catch Ljava/security/NoSuchAlgorithmException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/security/InvalidKeyException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 137
     .end local v0    # "deviceId":[Ljava/lang/String;
     :cond_1
     :goto_0
@@ -144,7 +129,6 @@
 
     invoke-static {v6, v7}, Lcom/samsung/android/rlc/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 138
     if-eqz v4, :cond_3
 
     const-string v6, "line.separator"
@@ -159,47 +143,38 @@
 
     move-result-object v4
 
-    .line 139
     :goto_1
     invoke-virtual {v2, v4}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setData(Ljava/lang/String;)V
 
-    .line 140
     return-object v2
 
-    .line 117
     .restart local v0    # "deviceId":[Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 118
     .local v1, "e":Ljava/security/SignatureException;
     invoke-virtual {v1}, Ljava/security/SignatureException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 119
     .end local v1    # "e":Ljava/security/SignatureException;
     :catch_1
     move-exception v1
 
-    .line 120
     .local v1, "e":Ljava/security/NoSuchAlgorithmException;
     invoke-virtual {v1}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 121
     .end local v1    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_2
     move-exception v1
 
-    .line 122
     .local v1, "e":Ljava/security/InvalidKeyException;
     invoke-virtual {v1}, Ljava/security/InvalidKeyException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 125
     .end local v0    # "deviceId":[Ljava/lang/String;
     .end local v1    # "e":Ljava/security/InvalidKeyException;
     :cond_2
@@ -209,7 +184,6 @@
 
     invoke-static {v6, v7}, Lcom/samsung/android/rlc/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     :try_start_1
     invoke-static {v3, v3}, Lcom/samsung/android/rlc/util/HMACUtil;->encryption(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_1
@@ -219,45 +193,37 @@
 
     move-result-object v4
 
-    .line 135
     :goto_2
     invoke-virtual {v2, v3}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setRlcId(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 128
     :catch_3
     move-exception v1
 
-    .line 129
     .local v1, "e":Ljava/security/SignatureException;
     invoke-virtual {v1}, Ljava/security/SignatureException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 130
     .end local v1    # "e":Ljava/security/SignatureException;
     :catch_4
     move-exception v1
 
-    .line 131
     .local v1, "e":Ljava/security/NoSuchAlgorithmException;
     invoke-virtual {v1}, Ljava/security/NoSuchAlgorithmException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 132
     .end local v1    # "e":Ljava/security/NoSuchAlgorithmException;
     :catch_5
     move-exception v1
 
-    .line 133
     .local v1, "e":Ljava/security/InvalidKeyException;
     invoke-virtual {v1}, Ljava/security/InvalidKeyException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 138
     .end local v1    # "e":Ljava/security/InvalidKeyException;
     :cond_3
     const-string v4, ""
@@ -270,12 +236,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 92
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 93
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "body"
 
@@ -285,7 +249,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putSerializable(Ljava/lang/String;Ljava/io/Serializable;)V
 
-    .line 94
     return-object v0
 .end method
 
@@ -295,20 +258,17 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 30
     sget-object v12, Lcom/samsung/android/rlc/receiver/handler/CheckRegistrationHandler;->TAG:Ljava/lang/String;
 
     const-string v13, "CheckDeviceStatusManager run"
 
     invoke-static {v12, v13}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 34
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v12, "body"
 
@@ -318,7 +278,6 @@
 
     check-cast v3, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
 
-    .line 36
     .local v3, "dvcVO":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     const-string v12, "https://%s/dm/v1/dev/check"
 
@@ -326,23 +285,19 @@
 
     move-result-object v11
 
-    .line 38
     .local v11, "uri":Ljava/lang/String;
     new-instance v1, Lcom/samsung/android/rlc/receiver/handler/CertHandler;
 
     invoke-direct {v1}, Lcom/samsung/android/rlc/receiver/handler/CertHandler;-><init>()V
 
-    .line 39
     .local v1, "cert":Lcom/samsung/android/rlc/receiver/handler/CertHandler;
     invoke-virtual {v1, p0, v3}, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->encryptData(Landroid/content/Context;Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;)Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
 
     move-result-object v6
 
-    .line 41
     .local v6, "requestBody":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     if-nez v6, :cond_2
 
-    .line 42
     invoke-virtual {v1}, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->getResponse()Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
     move-result-object v12
@@ -361,26 +316,22 @@
 
     if-ne v12, v13, :cond_1
 
-    .line 44
     const-string v12, "callcheckapi"
 
     const-string v13, "Y"
 
     invoke-static {p0, v12, v13}, Lcom/samsung/android/rlc/util/PreferencesUtil;->setString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 45
     sget-object v12, Lcom/samsung/android/rlc/receiver/handler/CheckRegistrationHandler;->TAG:Ljava/lang/String;
 
     const-string v13, "CheckDeviceStatusManager : not supported device "
 
     invoke-static {v12, v13}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 46
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 47
     .local v2, "clearBundle":Landroid/os/Bundle;
     const-string v12, "clearOp"
 
@@ -388,12 +339,10 @@
 
     invoke-virtual {v2, v12, v13}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 48
     const/16 v12, 0xc
 
     invoke-static {p0, v2, v12}, Lcom/samsung/android/rlc/service/RmmTask;->startTask(Landroid/content/Context;Landroid/os/Bundle;I)V
 
-    .line 89
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "cert":Lcom/samsung/android/rlc/receiver/handler/CertHandler;
     .end local v2    # "clearBundle":Landroid/os/Bundle;
@@ -404,7 +353,6 @@
     :goto_0
     return-void
 
-    .line 52
     .restart local v0    # "bundle":Landroid/os/Bundle;
     .restart local v1    # "cert":Lcom/samsung/android/rlc/receiver/handler/CertHandler;
     .restart local v3    # "dvcVO":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
@@ -423,7 +371,6 @@
 
     goto :goto_0
 
-    .line 86
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "cert":Lcom/samsung/android/rlc/receiver/handler/CertHandler;
     .end local v3    # "dvcVO":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
@@ -432,7 +379,6 @@
     :catch_0
     move-exception v4
 
-    .line 87
     .local v4, "e":Ljava/lang/Exception;
     sget-object v12, Lcom/samsung/android/rlc/receiver/handler/CheckRegistrationHandler;->TAG:Ljava/lang/String;
 
@@ -462,7 +408,6 @@
 
     goto :goto_0
 
-    .line 55
     .end local v4    # "e":Ljava/lang/Exception;
     .restart local v0    # "bundle":Landroid/os/Bundle;
     .restart local v1    # "cert":Lcom/samsung/android/rlc/receiver/handler/CertHandler;
@@ -477,27 +422,22 @@
 
     invoke-virtual {v6, v12}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setVer(Ljava/lang/String;)V
 
-    .line 57
     invoke-static {p0, v6, v11}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler;->httpRequest(Landroid/content/Context;Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;Ljava/lang/String;)Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
     move-result-object v8
 
-    .line 59
     .local v8, "response":Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
     if-eqz v8, :cond_4
 
-    .line 60
     invoke-virtual {v8}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;->getHttpStatusCode()I
 
     move-result v9
 
-    .line 61
     .local v9, "resultCode":I
     invoke-virtual {v8}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;->getResponseBean()Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;
 
     move-result-object v7
 
-    .line 62
     .local v7, "resVO":Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;
     sget-object v12, Lcom/samsung/android/rlc/receiver/handler/CheckRegistrationHandler;->TAG:Ljava/lang/String;
 
@@ -525,28 +465,23 @@
 
     invoke-static {v12, v13}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 63
     const-string v12, "callcheckapi"
 
     const-string v13, "Y"
 
     invoke-static {p0, v12, v13}, Lcom/samsung/android/rlc/util/PreferencesUtil;->setString(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 64
     const/16 v12, 0xc8
 
     if-ne v9, v12, :cond_3
 
-    .line 66
     invoke-virtual {v7}, Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;->getRlcId()Ljava/lang/String;
 
     move-result-object v10
 
-    .line 67
     .local v10, "rlcID":Ljava/lang/String;
     sget v5, Lcom/samsung/android/rlc/util/RLCUtil;->SUPPORTED:I
 
-    .line 68
     .local v5, "regiStatus":I
     invoke-static {p0}, Lcom/samsung/android/rlc/util/RLCUtil;->getInstance(Landroid/content/Context;)Lcom/samsung/android/rlc/util/RLCUtil;
 
@@ -554,14 +489,12 @@
 
     invoke-virtual {v12, v10}, Lcom/samsung/android/rlc/util/RLCUtil;->setRLCID(Ljava/lang/String;)V
 
-    .line 69
     invoke-static {p0}, Lcom/samsung/android/rlc/util/RLCUtil;->getInstance(Landroid/content/Context;)Lcom/samsung/android/rlc/util/RLCUtil;
 
     move-result-object v12
 
     invoke-virtual {v12, v5}, Lcom/samsung/android/rlc/util/RLCUtil;->setRegiStatus(I)V
 
-    .line 70
     const/4 v12, 0x0
 
     const/4 v13, 0x1
@@ -570,7 +503,6 @@
 
     goto :goto_0
 
-    .line 72
     .end local v5    # "regiStatus":I
     .end local v10    # "rlcID":Ljava/lang/String;
     :cond_3
@@ -578,19 +510,16 @@
 
     if-ne v9, v12, :cond_0
 
-    .line 74
     sget-object v12, Lcom/samsung/android/rlc/receiver/handler/CheckRegistrationHandler;->TAG:Ljava/lang/String;
 
     const-string v13, "CheckDeviceStatusManager : not supported device "
 
     invoke-static {v12, v13}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 75
     new-instance v2, Landroid/os/Bundle;
 
     invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 
-    .line 76
     .restart local v2    # "clearBundle":Landroid/os/Bundle;
     const-string v12, "clearOp"
 
@@ -598,14 +527,12 @@
 
     invoke-virtual {v2, v12, v13}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 77
     const/16 v12, 0xc
 
     invoke-static {p0, v2, v12}, Lcom/samsung/android/rlc/service/RmmTask;->startTask(Landroid/content/Context;Landroid/os/Bundle;I)V
 
     goto/16 :goto_0
 
-    .line 82
     .end local v2    # "clearBundle":Landroid/os/Bundle;
     .end local v7    # "resVO":Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;
     .end local v9    # "resultCode":I

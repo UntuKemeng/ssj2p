@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1573
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeBinder;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     invoke-direct {p0}, Landroid/content/IBridgeService$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/bridge/BridgeProxy$1;
 
     .prologue
-    .line 1573
     invoke-direct {p0, p1}, Lcom/android/server/bridge/BridgeProxy$IBridgeBinder;-><init>(Lcom/android/server/bridge/BridgeProxy;)V
 
     return-void
@@ -80,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 1597
     iget-object v0, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeBinder;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     const-string/jumbo v1, "queryAllProviders"
@@ -88,7 +85,6 @@
     # invokes: Lcom/android/server/bridge/BridgeProxy;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy;->access$1800(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)I
 
-    .line 1598
     iget-object v0, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeBinder;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mbridge:Landroid/os/RCPManager;
@@ -133,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 1588
     iget-object v0, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeBinder;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     const-string/jumbo v1, "queryProvider"
@@ -141,7 +136,6 @@
     # invokes: Lcom/android/server/bridge/BridgeProxy;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy;->access$1800(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)I
 
-    .line 1589
     iget-object v0, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeBinder;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mbridge:Landroid/os/RCPManager;
@@ -181,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 1578
     iget-object v0, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeBinder;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     const-string/jumbo v1, "registerProvider"
@@ -189,10 +182,8 @@
     # invokes: Lcom/android/server/bridge/BridgeProxy;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy;->access$1800(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)I
 
-    .line 1579
     if-eqz p2, :cond_0
 
-    .line 1580
     iget-object v0, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeBinder;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mBridgeProviderList:Ljava/util/HashMap;
@@ -202,7 +193,6 @@
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1581
     :cond_0
     return-void
 .end method

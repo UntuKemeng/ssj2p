@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1082
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     iput-object p2, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->val$ownerPackageName:Ljava/lang/String;
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 1085
     const-string v1, "WifiDisplayAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,7 +67,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1086
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
     invoke-virtual {v1}, Lcom/android/server/display/WifiDisplayAdapter;->getHandler()Landroid/os/Handler;
@@ -84,7 +81,6 @@
 
     move-result-object v0
 
-    .line 1087
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/display/WifiDisplayAdapter$13;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
@@ -94,6 +90,5 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1088
     return-void
 .end method

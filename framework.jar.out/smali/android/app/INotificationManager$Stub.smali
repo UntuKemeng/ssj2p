@@ -134,15 +134,12 @@
     .locals 1
 
     .prologue
-    .line 16
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 17
     const-string v0, "android.app.INotificationManager"
 
     invoke-virtual {p0, p0, v0}, Landroid/app/INotificationManager$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 18
     return-void
 .end method
 
@@ -151,17 +148,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 25
     if-nez p0, :cond_0
 
-    .line 26
     const/4 v0, 0x0
 
-    .line 32
     :goto_0
     return-object v0
 
-    .line 28
     :cond_0
     const-string v1, "android.app.INotificationManager"
 
@@ -169,7 +162,6 @@
 
     move-result-object v0
 
-    .line 29
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -177,12 +169,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 30
     check-cast v0, Landroid/app/INotificationManager;
 
     goto :goto_0
 
-    .line 32
     :cond_1
     new-instance v0, Landroid/app/INotificationManager$Stub$Proxy;
 
@@ -198,7 +188,6 @@
     .locals 0
 
     .prologue
-    .line 36
     return-object p0
 .end method
 
@@ -215,10 +204,8 @@
     .end annotation
 
     .prologue
-    .line 40
     sparse-switch p1, :sswitch_data_0
 
-    .line 732
     invoke-super/range {p0 .. p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v2
@@ -226,7 +213,6 @@
     :goto_0
     return v2
 
-    .line 44
     :sswitch_0
     const-string v2, "android.app.INotificationManager"
 
@@ -234,12 +220,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 45
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 49
     :sswitch_1
     const-string v2, "android.app.INotificationManager"
 
@@ -247,32 +231,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 51
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 53
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 54
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->cancelAllNotifications(Ljava/lang/String;I)V
 
-    .line 55
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 56
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 60
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     :sswitch_2
@@ -282,12 +260,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 62
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 64
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -297,27 +273,22 @@
 
     move-result-object v4
 
-    .line 66
     .local v4, "_arg1":Landroid/app/ITransientNotification;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 67
     .local v5, "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/app/INotificationManager$Stub;->enqueueToast(Ljava/lang/String;Landroid/app/ITransientNotification;I)V
 
-    .line 68
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 69
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 73
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Landroid/app/ITransientNotification;
     .end local v5    # "_arg2":I
@@ -328,12 +299,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 75
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 77
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -343,21 +312,17 @@
 
     move-result-object v4
 
-    .line 78
     .restart local v4    # "_arg1":Landroid/app/ITransientNotification;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->cancelToast(Ljava/lang/String;Landroid/app/ITransientNotification;)V
 
-    .line 79
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 80
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 84
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Landroid/app/ITransientNotification;
     :sswitch_4
@@ -367,30 +332,25 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 86
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 88
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 90
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 92
     .local v5, "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 94
     .local v6, "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -398,7 +358,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 95
     sget-object v2, Landroid/app/Notification;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -409,14 +368,12 @@
 
     check-cast v7, Landroid/app/Notification;
 
-    .line 101
     .local v7, "_arg4":Landroid/app/Notification;
     :goto_1
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createIntArray()[I
 
     move-result-object v8
 
-    .line 103
     .local v8, "_arg5":[I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -425,23 +382,18 @@
     .local v9, "_arg6":I
     move-object/from16 v2, p0
 
-    .line 104
     invoke-virtual/range {v2 .. v9}, Landroid/app/INotificationManager$Stub;->enqueueNotificationWithTag(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/app/Notification;[II)V
 
-    .line 105
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 106
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v8}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 107
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 98
     .end local v7    # "_arg4":Landroid/app/Notification;
     .end local v8    # "_arg5":[I
     .end local v9    # "_arg6":I
@@ -451,7 +403,6 @@
     .restart local v7    # "_arg4":Landroid/app/Notification;
     goto :goto_1
 
-    .line 111
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":Ljava/lang/String;
@@ -464,44 +415,36 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 113
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 115
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 117
     .restart local v4    # "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 119
     .local v5, "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 120
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/app/INotificationManager$Stub;->cancelNotificationWithTag(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 121
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 122
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 126
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -513,18 +456,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 128
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 130
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 132
     .local v4, "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -534,29 +474,24 @@
 
     const/4 v5, 0x1
 
-    .line 133
     .local v5, "_arg2":Z
     :goto_2
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/app/INotificationManager$Stub;->setNotificationsEnabledForPackage(Ljava/lang/String;IZ)V
 
-    .line 134
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 135
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 132
     .end local v5    # "_arg2":Z
     :cond_1
     const/4 v5, 0x0
 
     goto :goto_2
 
-    .line 139
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     :sswitch_7
@@ -566,18 +501,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 141
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 143
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 144
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
@@ -585,11 +517,9 @@
 
     move-result v19
 
-    .line 145
     .local v19, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 146
     if-eqz v19, :cond_2
 
     const/4 v2, 0x1
@@ -599,18 +529,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 147
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 146
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_3
 
-    .line 151
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v19    # "_result":Z
@@ -621,38 +548,31 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 153
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 155
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 157
     .restart local v4    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 158
     .local v5, "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/app/INotificationManager$Stub;->setPackagePriority(Ljava/lang/String;II)V
 
-    .line 159
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 160
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 164
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":I
@@ -663,18 +583,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 166
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 168
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 169
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
@@ -682,23 +599,19 @@
 
     move-result v19
 
-    .line 170
     .local v19, "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 171
     move-object/from16 v0, p3
 
     move/from16 v1, v19
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 172
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 176
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v19    # "_result":I
@@ -709,18 +622,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 178
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 180
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 182
     .restart local v4    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -730,29 +640,24 @@
 
     const/4 v5, 0x1
 
-    .line 183
     .local v5, "_arg2":Z
     :goto_4
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/app/INotificationManager$Stub;->setPackagePeekable(Ljava/lang/String;IZ)V
 
-    .line 184
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 185
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 182
     .end local v5    # "_arg2":Z
     :cond_3
     const/4 v5, 0x0
 
     goto :goto_4
 
-    .line 189
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     :sswitch_b
@@ -762,18 +667,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 191
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 193
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 194
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
@@ -781,11 +683,9 @@
 
     move-result v19
 
-    .line 195
     .local v19, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 196
     if-eqz v19, :cond_4
 
     const/4 v2, 0x1
@@ -795,18 +695,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 197
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 196
     :cond_4
     const/4 v2, 0x0
 
     goto :goto_5
 
-    .line 201
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v19    # "_result":Z
@@ -817,38 +714,31 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 203
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 205
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 207
     .restart local v4    # "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 208
     .local v5, "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/app/INotificationManager$Stub;->setPackageVisibilityOverride(Ljava/lang/String;II)V
 
-    .line 209
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 210
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 214
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":I
@@ -859,18 +749,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 216
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 218
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 219
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
@@ -878,23 +765,19 @@
 
     move-result v19
 
-    .line 220
     .local v19, "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 221
     move-object/from16 v0, p3
 
     move/from16 v1, v19
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 222
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 226
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v19    # "_result":I
@@ -905,12 +788,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 228
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 229
     .restart local v3    # "_arg0":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -918,11 +799,9 @@
 
     move-result-object v19
 
-    .line 230
     .local v19, "_result":[Landroid/service/notification/StatusBarNotification;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 231
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
@@ -931,12 +810,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 232
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 236
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v19    # "_result":[Landroid/service/notification/StatusBarNotification;
     :sswitch_f
@@ -946,18 +823,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 238
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 240
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 241
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
@@ -965,11 +839,9 @@
 
     move-result-object v19
 
-    .line 242
     .restart local v19    # "_result":[Landroid/service/notification/StatusBarNotification;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 243
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
@@ -978,12 +850,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 244
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 248
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v19    # "_result":[Landroid/service/notification/StatusBarNotification;
@@ -994,7 +864,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 250
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1003,7 +872,6 @@
 
     move-result-object v3
 
-    .line 252
     .local v3, "_arg0":Landroid/service/notification/INotificationListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1011,7 +879,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 253
     sget-object v2, Landroid/content/ComponentName;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1022,28 +889,23 @@
 
     check-cast v4, Landroid/content/ComponentName;
 
-    .line 259
     .local v4, "_arg1":Landroid/content/ComponentName;
     :goto_6
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 260
     .restart local v5    # "_arg2":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/app/INotificationManager$Stub;->registerListener(Landroid/service/notification/INotificationListener;Landroid/content/ComponentName;I)V
 
-    .line 261
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 262
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 256
     .end local v4    # "_arg1":Landroid/content/ComponentName;
     .end local v5    # "_arg2":I
     :cond_5
@@ -1052,7 +914,6 @@
     .restart local v4    # "_arg1":Landroid/content/ComponentName;
     goto :goto_6
 
-    .line 266
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v4    # "_arg1":Landroid/content/ComponentName;
     :sswitch_11
@@ -1062,7 +923,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 268
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1071,27 +931,22 @@
 
     move-result-object v3
 
-    .line 270
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 271
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->unregisterListener(Landroid/service/notification/INotificationListener;I)V
 
-    .line 272
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 273
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 277
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v4    # "_arg1":I
     :sswitch_12
@@ -1101,7 +956,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 279
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1110,39 +964,32 @@
 
     move-result-object v3
 
-    .line 281
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 283
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 285
     .local v5, "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 286
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/app/INotificationManager$Stub;->cancelNotificationFromListener(Landroid/service/notification/INotificationListener;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 287
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 288
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 292
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":Ljava/lang/String;
@@ -1154,7 +1001,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 294
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1163,27 +1009,22 @@
 
     move-result-object v3
 
-    .line 296
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 297
     .local v4, "_arg1":[Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->cancelNotificationsFromListener(Landroid/service/notification/INotificationListener;[Ljava/lang/String;)V
 
-    .line 298
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 299
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 303
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v4    # "_arg1":[Ljava/lang/String;
     :sswitch_14
@@ -1193,7 +1034,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 305
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1202,27 +1042,22 @@
 
     move-result-object v3
 
-    .line 307
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 308
     .restart local v4    # "_arg1":[Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->setNotificationsShownFromListener(Landroid/service/notification/INotificationListener;[Ljava/lang/String;)V
 
-    .line 309
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 310
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 314
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v4    # "_arg1":[Ljava/lang/String;
     :sswitch_15
@@ -1232,7 +1067,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 316
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1241,19 +1075,16 @@
 
     move-result-object v3
 
-    .line 318
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 320
     .restart local v4    # "_arg1":[Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 321
     .local v5, "_arg2":I
     move-object/from16 v0, p0
 
@@ -1261,21 +1092,17 @@
 
     move-result-object v19
 
-    .line 322
     .local v19, "_result":Landroid/content/pm/ParceledListSlice;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 323
     if-eqz v19, :cond_6
 
-    .line 324
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 325
     const/4 v2, 0x1
 
     move-object/from16 v0, v19
@@ -1284,13 +1111,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/pm/ParceledListSlice;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 330
     :goto_7
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 328
     :cond_6
     const/4 v2, 0x0
 
@@ -1300,7 +1125,6 @@
 
     goto :goto_7
 
-    .line 334
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v4    # "_arg1":[Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -1312,7 +1136,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 336
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1321,27 +1144,22 @@
 
     move-result-object v3
 
-    .line 338
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 339
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->requestHintsFromListener(Landroid/service/notification/INotificationListener;I)V
 
-    .line 340
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 341
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 345
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v4    # "_arg1":I
     :sswitch_17
@@ -1351,7 +1169,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 347
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1360,7 +1177,6 @@
 
     move-result-object v3
 
-    .line 348
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     move-object/from16 v0, p0
 
@@ -1368,23 +1184,19 @@
 
     move-result v19
 
-    .line 349
     .local v19, "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 350
     move-object/from16 v0, p3
 
     move/from16 v1, v19
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 351
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 355
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v19    # "_result":I
     :sswitch_18
@@ -1394,7 +1206,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 357
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1403,27 +1214,22 @@
 
     move-result-object v3
 
-    .line 359
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 360
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->requestInterruptionFilterFromListener(Landroid/service/notification/INotificationListener;I)V
 
-    .line 361
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 362
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 366
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v4    # "_arg1":I
     :sswitch_19
@@ -1433,7 +1239,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 368
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1442,7 +1247,6 @@
 
     move-result-object v3
 
-    .line 369
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     move-object/from16 v0, p0
 
@@ -1450,23 +1254,19 @@
 
     move-result v19
 
-    .line 370
     .restart local v19    # "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 371
     move-object/from16 v0, p3
 
     move/from16 v1, v19
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 372
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 376
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v19    # "_result":I
     :sswitch_1a
@@ -1476,7 +1276,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 378
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -1485,27 +1284,22 @@
 
     move-result-object v3
 
-    .line 380
     .restart local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 381
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->setOnNotificationPostedTrimFromListener(Landroid/service/notification/INotificationListener;I)V
 
-    .line 382
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 383
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 387
     .end local v3    # "_arg0":Landroid/service/notification/INotificationListener;
     .end local v4    # "_arg1":I
     :sswitch_1b
@@ -1515,32 +1309,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 389
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 391
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 392
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->setInterruptionFilter(Ljava/lang/String;I)V
 
-    .line 393
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 394
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 398
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     :sswitch_1c
@@ -1550,26 +1338,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 399
     invoke-virtual/range {p0 .. p0}, Landroid/app/INotificationManager$Stub;->getEffectsSuppressor()Landroid/content/ComponentName;
 
     move-result-object v19
 
-    .line 400
     .local v19, "_result":Landroid/content/ComponentName;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 401
     if-eqz v19, :cond_7
 
-    .line 402
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 403
     const/4 v2, 0x1
 
     move-object/from16 v0, v19
@@ -1578,13 +1361,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ComponentName;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 408
     :goto_8
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 406
     :cond_7
     const/4 v2, 0x0
 
@@ -1594,7 +1375,6 @@
 
     goto :goto_8
 
-    .line 412
     .end local v19    # "_result":Landroid/content/ComponentName;
     :sswitch_1d
     const-string v2, "android.app.INotificationManager"
@@ -1603,14 +1383,12 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 414
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    .line 415
     sget-object v2, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1621,7 +1399,6 @@
 
     check-cast v3, Landroid/os/Bundle;
 
-    .line 420
     .local v3, "_arg0":Landroid/os/Bundle;
     :goto_9
     move-object/from16 v0, p0
@@ -1630,11 +1407,9 @@
 
     move-result v19
 
-    .line 421
     .local v19, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 422
     if-eqz v19, :cond_9
 
     const/4 v2, 0x1
@@ -1644,12 +1419,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 423
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 418
     .end local v3    # "_arg0":Landroid/os/Bundle;
     .end local v19    # "_result":Z
     :cond_8
@@ -1658,14 +1431,12 @@
     .restart local v3    # "_arg0":Landroid/os/Bundle;
     goto :goto_9
 
-    .line 422
     .restart local v19    # "_result":Z
     :cond_9
     const/4 v2, 0x0
 
     goto :goto_a
 
-    .line 427
     .end local v3    # "_arg0":Landroid/os/Bundle;
     .end local v19    # "_result":Z
     :sswitch_1e
@@ -1675,14 +1446,12 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 429
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_a
 
-    .line 430
     sget-object v2, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1693,7 +1462,6 @@
 
     check-cast v3, Landroid/os/Bundle;
 
-    .line 435
     .restart local v3    # "_arg0":Landroid/os/Bundle;
     :goto_b
     move-object/from16 v0, p0
@@ -1702,11 +1470,9 @@
 
     move-result v19
 
-    .line 436
     .restart local v19    # "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 437
     if-eqz v19, :cond_b
 
     const/4 v2, 0x1
@@ -1716,12 +1482,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 438
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 433
     .end local v3    # "_arg0":Landroid/os/Bundle;
     .end local v19    # "_result":Z
     :cond_a
@@ -1730,14 +1494,12 @@
     .restart local v3    # "_arg0":Landroid/os/Bundle;
     goto :goto_b
 
-    .line 437
     .restart local v19    # "_result":Z
     :cond_b
     const/4 v2, 0x0
 
     goto :goto_c
 
-    .line 442
     .end local v3    # "_arg0":Landroid/os/Bundle;
     .end local v19    # "_result":Z
     :sswitch_1f
@@ -1747,12 +1509,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 444
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 445
     .local v3, "_arg0":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1760,11 +1520,9 @@
 
     move-result v19
 
-    .line 446
     .restart local v19    # "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 447
     if-eqz v19, :cond_c
 
     const/4 v2, 0x1
@@ -1774,18 +1532,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 448
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 447
     :cond_c
     const/4 v2, 0x0
 
     goto :goto_d
 
-    .line 452
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v19    # "_result":Z
     :sswitch_20
@@ -1795,28 +1550,23 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 453
     invoke-virtual/range {p0 .. p0}, Landroid/app/INotificationManager$Stub;->getZenMode()I
 
     move-result v19
 
-    .line 454
     .local v19, "_result":I
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 455
     move-object/from16 v0, p3
 
     move/from16 v1, v19
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 456
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 460
     .end local v19    # "_result":I
     :sswitch_21
     const-string v2, "android.app.INotificationManager"
@@ -1825,26 +1575,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 461
     invoke-virtual/range {p0 .. p0}, Landroid/app/INotificationManager$Stub;->getZenModeConfig()Landroid/service/notification/ZenModeConfig;
 
     move-result-object v19
 
-    .line 462
     .local v19, "_result":Landroid/service/notification/ZenModeConfig;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 463
     if-eqz v19, :cond_d
 
-    .line 464
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 465
     const/4 v2, 0x1
 
     move-object/from16 v0, v19
@@ -1853,13 +1598,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/service/notification/ZenModeConfig;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 470
     :goto_e
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 468
     :cond_d
     const/4 v2, 0x0
 
@@ -1869,7 +1612,6 @@
 
     goto :goto_e
 
-    .line 474
     .end local v19    # "_result":Landroid/service/notification/ZenModeConfig;
     :sswitch_22
     const-string v2, "android.app.INotificationManager"
@@ -1878,14 +1620,12 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 476
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     if-eqz v2, :cond_e
 
-    .line 477
     sget-object v2, Landroid/service/notification/ZenModeConfig;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1896,14 +1636,12 @@
 
     check-cast v3, Landroid/service/notification/ZenModeConfig;
 
-    .line 483
     .local v3, "_arg0":Landroid/service/notification/ZenModeConfig;
     :goto_f
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 484
     .local v4, "_arg1":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1911,11 +1649,9 @@
 
     move-result v19
 
-    .line 485
     .local v19, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 486
     if-eqz v19, :cond_f
 
     const/4 v2, 0x1
@@ -1925,12 +1661,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 487
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 480
     .end local v3    # "_arg0":Landroid/service/notification/ZenModeConfig;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v19    # "_result":Z
@@ -1940,7 +1674,6 @@
     .restart local v3    # "_arg0":Landroid/service/notification/ZenModeConfig;
     goto :goto_f
 
-    .line 486
     .restart local v4    # "_arg1":Ljava/lang/String;
     .restart local v19    # "_result":Z
     :cond_f
@@ -1948,7 +1681,6 @@
 
     goto :goto_10
 
-    .line 491
     .end local v3    # "_arg0":Landroid/service/notification/ZenModeConfig;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v19    # "_result":Z
@@ -1959,12 +1691,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 493
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 495
     .local v3, "_arg0":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -1972,7 +1702,6 @@
 
     if-eqz v2, :cond_10
 
-    .line 496
     sget-object v2, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -1983,25 +1712,21 @@
 
     check-cast v4, Landroid/net/Uri;
 
-    .line 502
     .local v4, "_arg1":Landroid/net/Uri;
     :goto_11
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 503
     .local v5, "_arg2":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/app/INotificationManager$Stub;->setZenMode(ILandroid/net/Uri;Ljava/lang/String;)V
 
-    .line 504
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 499
     .end local v4    # "_arg1":Landroid/net/Uri;
     .end local v5    # "_arg2":Ljava/lang/String;
     :cond_10
@@ -2010,7 +1735,6 @@
     .restart local v4    # "_arg1":Landroid/net/Uri;
     goto :goto_11
 
-    .line 508
     .end local v3    # "_arg0":I
     .end local v4    # "_arg1":Landroid/net/Uri;
     :sswitch_24
@@ -2020,12 +1744,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 510
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 512
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
@@ -2035,7 +1757,6 @@
 
     move-result-object v4
 
-    .line 514
     .local v4, "_arg1":Landroid/service/notification/IConditionProvider;
     sget-object v2, Landroid/service/notification/Condition;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -2047,18 +1768,15 @@
 
     check-cast v5, [Landroid/service/notification/Condition;
 
-    .line 515
     .local v5, "_arg2":[Landroid/service/notification/Condition;
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/app/INotificationManager$Stub;->notifyConditions(Ljava/lang/String;Landroid/service/notification/IConditionProvider;[Landroid/service/notification/Condition;)V
 
-    .line 516
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 520
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Landroid/service/notification/IConditionProvider;
     .end local v5    # "_arg2":[Landroid/service/notification/Condition;
@@ -2069,7 +1787,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 522
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readStrongBinder()Landroid/os/IBinder;
 
     move-result-object v2
@@ -2078,24 +1795,20 @@
 
     move-result-object v3
 
-    .line 524
     .local v3, "_arg0":Landroid/service/notification/IConditionListener;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 525
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->requestZenModeConditions(Landroid/service/notification/IConditionListener;I)V
 
-    .line 526
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 530
     .end local v3    # "_arg0":Landroid/service/notification/IConditionListener;
     .end local v4    # "_arg1":I
     :sswitch_26
@@ -2105,12 +1818,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 532
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 533
     .local v3, "_arg0":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2118,11 +1829,9 @@
 
     move-result v19
 
-    .line 534
     .restart local v19    # "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 535
     if-eqz v19, :cond_11
 
     const/4 v2, 0x1
@@ -2132,18 +1841,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 536
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 535
     :cond_11
     const/4 v2, 0x0
 
     goto :goto_12
 
-    .line 540
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v19    # "_result":Z
     :sswitch_27
@@ -2153,12 +1859,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 542
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 543
     .restart local v3    # "_arg0":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2166,21 +1870,17 @@
 
     move-result-object v19
 
-    .line 544
     .local v19, "_result":Landroid/app/NotificationManager$Policy;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 545
     if-eqz v19, :cond_12
 
-    .line 546
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 547
     const/4 v2, 0x1
 
     move-object/from16 v0, v19
@@ -2189,13 +1889,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/NotificationManager$Policy;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 552
     :goto_13
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 550
     :cond_12
     const/4 v2, 0x0
 
@@ -2205,7 +1903,6 @@
 
     goto :goto_13
 
-    .line 556
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v19    # "_result":Landroid/app/NotificationManager$Policy;
     :sswitch_28
@@ -2215,12 +1912,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 558
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 560
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2228,7 +1923,6 @@
 
     if-eqz v2, :cond_13
 
-    .line 561
     sget-object v2, Landroid/app/NotificationManager$Policy;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2239,22 +1933,18 @@
 
     check-cast v4, Landroid/app/NotificationManager$Policy;
 
-    .line 566
     .local v4, "_arg1":Landroid/app/NotificationManager$Policy;
     :goto_14
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->setNotificationPolicy(Ljava/lang/String;Landroid/app/NotificationManager$Policy;)V
 
-    .line 567
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 568
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 564
     .end local v4    # "_arg1":Landroid/app/NotificationManager$Policy;
     :cond_13
     const/4 v4, 0x0
@@ -2262,7 +1952,6 @@
     .restart local v4    # "_arg1":Landroid/app/NotificationManager$Policy;
     goto :goto_14
 
-    .line 572
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Landroid/app/NotificationManager$Policy;
     :sswitch_29
@@ -2272,28 +1961,23 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 573
     invoke-virtual/range {p0 .. p0}, Landroid/app/INotificationManager$Stub;->getPackagesRequestingNotificationPolicyAccess()[Ljava/lang/String;
 
     move-result-object v19
 
-    .line 574
     .local v19, "_result":[Ljava/lang/String;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 575
     move-object/from16 v0, p3
 
     move-object/from16 v1, v19
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 576
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 580
     .end local v19    # "_result":[Ljava/lang/String;
     :sswitch_2a
     const-string v2, "android.app.INotificationManager"
@@ -2302,12 +1986,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 582
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 583
     .restart local v3    # "_arg0":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2315,11 +1997,9 @@
 
     move-result v19
 
-    .line 584
     .local v19, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 585
     if-eqz v19, :cond_14
 
     const/4 v2, 0x1
@@ -2329,18 +2009,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 586
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 585
     :cond_14
     const/4 v2, 0x0
 
     goto :goto_15
 
-    .line 590
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v19    # "_result":Z
     :sswitch_2b
@@ -2350,12 +2027,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 592
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 594
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2365,29 +2040,24 @@
 
     const/4 v4, 0x1
 
-    .line 595
     .local v4, "_arg1":Z
     :goto_16
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->setNotificationPolicyAccessGranted(Ljava/lang/String;Z)V
 
-    .line 596
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 597
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 594
     .end local v4    # "_arg1":Z
     :cond_15
     const/4 v4, 0x0
 
     goto :goto_16
 
-    .line 601
     .end local v3    # "_arg0":Ljava/lang/String;
     :sswitch_2c
     const-string v2, "android.app.INotificationManager"
@@ -2396,12 +2066,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 603
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 604
     .local v3, "_arg0":I
     move-object/from16 v0, p0
 
@@ -2409,23 +2077,19 @@
 
     move-result-object v19
 
-    .line 605
     .local v19, "_result":[B
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 606
     move-object/from16 v0, p3
 
     move-object/from16 v1, v19
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 607
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 611
     .end local v3    # "_arg0":I
     .end local v19    # "_result":[B
     :sswitch_2d
@@ -2435,32 +2099,26 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 613
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v3
 
-    .line 615
     .local v3, "_arg0":[B
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 616
     .local v4, "_arg1":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4}, Landroid/app/INotificationManager$Stub;->applyRestore([BI)V
 
-    .line 617
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 618
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 622
     .end local v3    # "_arg0":[B
     .end local v4    # "_arg1":I
     :sswitch_2e
@@ -2470,18 +2128,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 624
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 626
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 627
     .restart local v4    # "_arg1":I
     move-object/from16 v0, p0
 
@@ -2489,21 +2144,17 @@
 
     move-result-object v19
 
-    .line 628
     .local v19, "_result":Landroid/content/pm/ParceledListSlice;
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 629
     if-eqz v19, :cond_16
 
-    .line 630
     const/4 v2, 0x1
 
     move-object/from16 v0, p3
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 631
     const/4 v2, 0x1
 
     move-object/from16 v0, v19
@@ -2512,13 +2163,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/pm/ParceledListSlice;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 636
     :goto_17
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 634
     :cond_16
     const/4 v2, 0x0
 
@@ -2528,7 +2177,6 @@
 
     goto :goto_17
 
-    .line 640
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":I
     .end local v19    # "_result":Landroid/content/pm/ParceledListSlice;
@@ -2539,30 +2187,25 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 642
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 644
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 646
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 648
     .local v5, "_arg2":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 650
     .restart local v6    # "_arg3":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2570,7 +2213,6 @@
 
     if-eqz v2, :cond_17
 
-    .line 651
     sget-object v2, Landroid/app/Notification;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2581,14 +2223,12 @@
 
     check-cast v7, Landroid/app/Notification;
 
-    .line 657
     .restart local v7    # "_arg4":Landroid/app/Notification;
     :goto_18
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v16
 
-    .line 659
     .local v16, "_arg5":J
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2609,16 +2249,13 @@
 
     move/from16 v18, v9
 
-    .line 660
     invoke-virtual/range {v10 .. v18}, Landroid/app/INotificationManager$Stub;->isNotificationInterruptable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILandroid/app/Notification;JI)Z
 
     move-result v19
 
-    .line 661
     .local v19, "_result":Z
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 662
     if-eqz v19, :cond_18
 
     const/4 v2, 0x1
@@ -2628,12 +2265,10 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 663
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 654
     .end local v7    # "_arg4":Landroid/app/Notification;
     .end local v9    # "_arg6":I
     .end local v16    # "_arg5":J
@@ -2644,7 +2279,6 @@
     .restart local v7    # "_arg4":Landroid/app/Notification;
     goto :goto_18
 
-    .line 662
     .restart local v9    # "_arg6":I
     .restart local v16    # "_arg5":J
     .restart local v19    # "_result":Z
@@ -2653,7 +2287,6 @@
 
     goto :goto_19
 
-    .line 667
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":Ljava/lang/String;
@@ -2669,44 +2302,36 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 669
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 671
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 673
     .restart local v4    # "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 675
     .local v5, "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 676
     .restart local v6    # "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/app/INotificationManager$Stub;->cancelSummaryNotificationWithTag(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 677
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 678
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 682
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -2718,26 +2343,21 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 684
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 685
     .local v3, "_arg0":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3}, Landroid/app/INotificationManager$Stub;->clearAllNotificationsAsUser(I)V
 
-    .line 686
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 687
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 691
     .end local v3    # "_arg0":I
     :sswitch_32
     const-string v2, "android.app.INotificationManager"
@@ -2746,24 +2366,20 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 693
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 695
     .local v3, "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 697
     .restart local v4    # "_arg1":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 699
     .restart local v5    # "_arg2":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2771,7 +2387,6 @@
 
     if-eqz v2, :cond_19
 
-    .line 700
     sget-object v2, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2782,7 +2397,6 @@
 
     check-cast v6, Landroid/os/Bundle;
 
-    .line 706
     .local v6, "_arg3":Landroid/os/Bundle;
     :goto_1a
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
@@ -2792,18 +2406,14 @@
     .local v7, "_arg4":I
     move-object/from16 v2, p0
 
-    .line 707
     invoke-virtual/range {v2 .. v7}, Landroid/app/INotificationManager$Stub;->enqueueEdgeNotification(Ljava/lang/String;Ljava/lang/String;ILandroid/os/Bundle;I)V
 
-    .line 708
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 709
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 703
     .end local v6    # "_arg3":Landroid/os/Bundle;
     .end local v7    # "_arg4":I
     :cond_19
@@ -2812,7 +2422,6 @@
     .restart local v6    # "_arg3":Landroid/os/Bundle;
     goto :goto_1a
 
-    .line 713
     .end local v3    # "_arg0":Ljava/lang/String;
     .end local v4    # "_arg1":Ljava/lang/String;
     .end local v5    # "_arg2":I
@@ -2824,18 +2433,15 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 715
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 717
     .restart local v3    # "_arg0":Ljava/lang/String;
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 719
     .local v4, "_arg1":I
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2843,7 +2449,6 @@
 
     if-eqz v2, :cond_1a
 
-    .line 720
     sget-object v2, Landroid/os/Bundle;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p2
@@ -2854,28 +2459,23 @@
 
     check-cast v5, Landroid/os/Bundle;
 
-    .line 726
     .local v5, "_arg2":Landroid/os/Bundle;
     :goto_1b
     invoke-virtual/range {p2 .. p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v6
 
-    .line 727
     .local v6, "_arg3":I
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v3, v4, v5, v6}, Landroid/app/INotificationManager$Stub;->removeEdgeNotification(Ljava/lang/String;ILandroid/os/Bundle;I)V
 
-    .line 728
     invoke-virtual/range {p3 .. p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 729
     const/4 v2, 0x1
 
     goto/16 :goto_0
 
-    .line 723
     .end local v5    # "_arg2":Landroid/os/Bundle;
     .end local v6    # "_arg3":I
     :cond_1a
@@ -2884,7 +2484,6 @@
     .restart local v5    # "_arg2":Landroid/os/Bundle;
     goto :goto_1b
 
-    .line 40
     nop
 
     :sswitch_data_0

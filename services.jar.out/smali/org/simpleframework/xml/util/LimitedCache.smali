@@ -31,13 +31,11 @@
     .locals 1
 
     .prologue
-    .line 46
     .local p0, "this":Lorg/simpleframework/xml/util/LimitedCache;, "Lorg/simpleframework/xml/util/LimitedCache<TT;>;"
     const v0, 0xc350
 
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/util/LimitedCache;-><init>(I)V
 
-    .line 47
     return-void
 .end method
 
@@ -46,14 +44,11 @@
     .param p1, "capacity"    # I
 
     .prologue
-    .line 57
     .local p0, "this":Lorg/simpleframework/xml/util/LimitedCache;, "Lorg/simpleframework/xml/util/LimitedCache<TT;>;"
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 58
     iput p1, p0, Lorg/simpleframework/xml/util/LimitedCache;->capacity:I
 
-    .line 59
     return-void
 .end method
 
@@ -71,12 +66,10 @@
     .end annotation
 
     .prologue
-    .line 71
     .local p0, "this":Lorg/simpleframework/xml/util/LimitedCache;, "Lorg/simpleframework/xml/util/LimitedCache<TT;>;"
     .local p2, "value":Ljava/lang/Object;, "TT;"
     invoke-virtual {p0, p1, p2}, Lorg/simpleframework/xml/util/LimitedCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     return-void
 .end method
 
@@ -85,7 +78,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 110
     .local p0, "this":Lorg/simpleframework/xml/util/LimitedCache;, "Lorg/simpleframework/xml/util/LimitedCache<TT;>;"
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/util/LimitedCache;->containsKey(Ljava/lang/Object;)Z
 
@@ -106,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 97
     .local p0, "this":Lorg/simpleframework/xml/util/LimitedCache;, "Lorg/simpleframework/xml/util/LimitedCache<TT;>;"
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/util/LimitedCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -128,7 +119,6 @@
     .end annotation
 
     .prologue
-    .line 123
     .local p0, "this":Lorg/simpleframework/xml/util/LimitedCache;, "Lorg/simpleframework/xml/util/LimitedCache<TT;>;"
     .local p1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Object;TT;>;"
     invoke-virtual {p0}, Lorg/simpleframework/xml/util/LimitedCache;->size()I
@@ -162,7 +152,6 @@
     .end annotation
 
     .prologue
-    .line 84
     .local p0, "this":Lorg/simpleframework/xml/util/LimitedCache;, "Lorg/simpleframework/xml/util/LimitedCache<TT;>;"
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/util/LimitedCache;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 

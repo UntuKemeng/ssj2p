@@ -31,10 +31,8 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 245
     invoke-direct {p0, p1, p2, p3}, Lorg/simpleframework/xml/core/ParameterContact;-><init>(Ljava/lang/annotation/Annotation;Ljava/lang/reflect/Constructor;I)V
 
-    .line 246
     return-void
 .end method
 
@@ -44,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 257
     iget-object v0, p0, Lorg/simpleframework/xml/core/AttributeParameter$Contact;->label:Ljava/lang/annotation/Annotation;
 
     check-cast v0, Lorg/simpleframework/xml/Attribute;

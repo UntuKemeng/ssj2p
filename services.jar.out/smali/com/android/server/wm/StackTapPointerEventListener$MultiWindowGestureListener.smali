@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 330
     iput-object p1, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/wm/StackTapPointerEventListener$1;
 
     .prologue
-    .line 330
     invoke-direct {p0, p1}, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;-><init>(Lcom/android/server/wm/StackTapPointerEventListener;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 334
     iget-object v7, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -68,7 +65,6 @@
 
     move-result-object v5
 
-    .line 335
     .local v5, "targetWin":Lcom/android/server/wm/WindowState;
     if-eqz v5, :cond_f
 
@@ -80,7 +76,6 @@
 
     if-eqz v7, :cond_f
 
-    .line 336
     invoke-virtual {v5}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v7
@@ -101,30 +96,24 @@
 
     if-ne v7, v8, :cond_1
 
-    .line 338
     :cond_0
     const/4 v7, 0x0
 
-    .line 404
     :goto_0
     return v7
 
-    .line 340
     :cond_1
     invoke-virtual {v5}, Lcom/android/server/wm/WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v4
 
-    .line 341
     .local v4, "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     if-eqz v4, :cond_f
 
-    .line 342
     invoke-virtual {v4}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getZone()I
 
     move-result v6
 
-    .line 343
     .local v6, "zone":I
     iget-object v7, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
@@ -148,23 +137,19 @@
 
     move-result-object v2
 
-    .line 345
     .local v2, "point":Landroid/graphics/Point;
     if-nez v2, :cond_2
 
-    .line 346
     const-string v7, "WindowManager"
 
     const-string v8, "Could not get point from MultiWindowFacade."
 
     invoke-static {v7, v8}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     const/4 v7, 0x0
 
     goto :goto_0
 
-    .line 350
     :cond_2
     iget-object v7, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
@@ -177,7 +162,6 @@
 
     move-result-object v0
 
-    .line 357
     .local v0, "displayInfo":Landroid/view/DisplayInfo;
     iget-object v7, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
@@ -190,18 +174,15 @@
 
     iget v1, v7, Landroid/content/res/Configuration;->orientation:I
 
-    .line 360
     .local v1, "orientation":I
     const/4 v7, 0x1
 
     if-ne v1, v7, :cond_9
 
-    .line 361
     const/4 v7, 0x3
 
     if-ne v6, v7, :cond_4
 
-    .line 362
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -210,7 +191,6 @@
 
     iput v7, v2, Landroid/graphics/Point;->y:I
 
-    .line 397
     :cond_3
     :goto_1
     iget-object v7, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
@@ -233,20 +213,17 @@
 
     invoke-virtual {v7, v8, v2}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setCenterBarPoint(ILandroid/graphics/Point;)V
 
-    .line 398
     new-instance v3, Landroid/content/Intent;
 
     const-string v7, "com.sec.android.action.ARRANGE_CONTROLL_BAR"
 
     invoke-direct {v3, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 399
     .local v3, "refreshCenterbarIntent":Landroid/content/Intent;
     const-string v7, "com.sec.android.extra.CONTROL_BAR_POS"
 
     invoke-virtual {v3, v7, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 400
     iget-object v7, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
     # getter for: Lcom/android/server/wm/StackTapPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -258,19 +235,16 @@
 
     invoke-virtual {v7, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 401
     const/4 v7, 0x1
 
     goto :goto_0
 
-    .line 363
     .end local v3    # "refreshCenterbarIntent":Landroid/content/Intent;
     :cond_4
     const/16 v7, 0xc
 
     if-ne v6, v7, :cond_5
 
-    .line 364
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -281,13 +255,11 @@
 
     goto :goto_1
 
-    .line 365
     :cond_5
     const/4 v7, 0x1
 
     if-ne v6, v7, :cond_6
 
-    .line 366
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -296,7 +268,6 @@
 
     iput v7, v2, Landroid/graphics/Point;->x:I
 
-    .line 367
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -307,13 +278,11 @@
 
     goto :goto_1
 
-    .line 368
     :cond_6
     const/4 v7, 0x2
 
     if-ne v6, v7, :cond_7
 
-    .line 369
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -322,7 +291,6 @@
 
     iput v7, v2, Landroid/graphics/Point;->x:I
 
-    .line 370
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -333,13 +301,11 @@
 
     goto :goto_1
 
-    .line 371
     :cond_7
     const/4 v7, 0x4
 
     if-ne v6, v7, :cond_8
 
-    .line 372
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -348,7 +314,6 @@
 
     iput v7, v2, Landroid/graphics/Point;->x:I
 
-    .line 373
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -359,13 +324,11 @@
 
     goto :goto_1
 
-    .line 374
     :cond_8
     const/16 v7, 0x8
 
     if-ne v6, v7, :cond_3
 
-    .line 375
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -374,7 +337,6 @@
 
     iput v7, v2, Landroid/graphics/Point;->x:I
 
-    .line 376
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -385,13 +347,11 @@
 
     goto/16 :goto_1
 
-    .line 379
     :cond_9
     const/4 v7, 0x3
 
     if-ne v6, v7, :cond_a
 
-    .line 380
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -402,13 +362,11 @@
 
     goto/16 :goto_1
 
-    .line 381
     :cond_a
     const/16 v7, 0xc
 
     if-ne v6, v7, :cond_b
 
-    .line 382
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -419,13 +377,11 @@
 
     goto/16 :goto_1
 
-    .line 383
     :cond_b
     const/4 v7, 0x1
 
     if-ne v6, v7, :cond_c
 
-    .line 384
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -434,7 +390,6 @@
 
     iput v7, v2, Landroid/graphics/Point;->x:I
 
-    .line 385
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -445,13 +400,11 @@
 
     goto/16 :goto_1
 
-    .line 386
     :cond_c
     const/4 v7, 0x2
 
     if-ne v6, v7, :cond_d
 
-    .line 387
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -460,7 +413,6 @@
 
     iput v7, v2, Landroid/graphics/Point;->x:I
 
-    .line 388
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -471,13 +423,11 @@
 
     goto/16 :goto_1
 
-    .line 389
     :cond_d
     const/4 v7, 0x4
 
     if-ne v6, v7, :cond_e
 
-    .line 390
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -486,7 +436,6 @@
 
     iput v7, v2, Landroid/graphics/Point;->x:I
 
-    .line 391
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x50
@@ -497,13 +446,11 @@
 
     goto/16 :goto_1
 
-    .line 392
     :cond_e
     const/16 v7, 0x8
 
     if-ne v6, v7, :cond_3
 
-    .line 393
     iget v7, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -512,7 +459,6 @@
 
     iput v7, v2, Landroid/graphics/Point;->x:I
 
-    .line 394
     iget v7, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     mul-int/lit8 v7, v7, 0x14
@@ -523,7 +469,6 @@
 
     goto/16 :goto_1
 
-    .line 404
     .end local v0    # "displayInfo":Landroid/view/DisplayInfo;
     .end local v1    # "orientation":I
     .end local v2    # "point":Landroid/graphics/Point;
@@ -542,7 +487,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 448
     iget-object v4, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -558,16 +502,13 @@
 
     move-result-object v2
 
-    .line 449
     .local v2, "targetWin":Lcom/android/server/wm/WindowState;
     if-nez v2, :cond_1
 
-    .line 466
     :cond_0
     :goto_0
     return v7
 
-    .line 453
     :cond_1
     iget-object v4, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
@@ -591,10 +532,8 @@
 
     if-eq v2, v4, :cond_0
 
-    .line 455
     const/4 v0, 0x0
 
-    .line 456
     .local v0, "hasChild":Z
     iget-object v4, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
@@ -626,7 +565,6 @@
 
     check-cast v3, Lcom/android/server/wm/WindowState;
 
-    .line 457
     .local v3, "ws":Lcom/android/server/wm/WindowState;
     invoke-virtual {v2, v3}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -634,12 +572,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 458
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 461
     .end local v3    # "ws":Lcom/android/server/wm/WindowState;
     :cond_3
     if-nez v0, :cond_0
@@ -667,7 +603,6 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 463
     iget-object v4, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
     # getter for: Lcom/android/server/wm/StackTapPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -691,7 +626,6 @@
 
     const/4 v5, 0x0
 
-    .line 409
     iget-object v7, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
@@ -707,16 +641,13 @@
 
     move-result-object v4
 
-    .line 410
     .local v4, "targetWin":Lcom/android/server/wm/WindowState;
     if-nez v4, :cond_1
 
-    .line 444
     :cond_0
     :goto_0
     return v5
 
-    .line 414
     :cond_1
     invoke-virtual {v4}, Lcom/android/server/wm/WindowState;->getStack()Lcom/android/server/wm/TaskStack;
 
@@ -742,7 +673,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 416
     :cond_2
     invoke-virtual {v4}, Lcom/android/server/wm/WindowState;->getAttrs()Landroid/view/WindowManager$LayoutParams;
 
@@ -754,16 +684,13 @@
 
     if-eq v7, v8, :cond_0
 
-    .line 420
     invoke-virtual {v4}, Lcom/android/server/wm/WindowState;->getMultiWindowStyleLw()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v3
 
-    .line 421
     .local v3, "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     if-eqz v3, :cond_0
 
-    .line 424
     const/16 v7, 0x1000
 
     invoke-virtual {v3, v7}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isEnabled(I)Z
@@ -772,19 +699,16 @@
 
     if-nez v7, :cond_0
 
-    .line 428
     invoke-virtual {v3}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->getZoneLevel()I
 
     move-result v7
 
     if-ne v7, v6, :cond_0
 
-    .line 429
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    .line 430
     .local v1, "point":Landroid/graphics/Point;
     iget-object v5, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
@@ -797,7 +721,6 @@
 
     move-result-object v0
 
-    .line 432
     .local v0, "displayInfo":Landroid/view/DisplayInfo;
     iget v5, v0, Landroid/view/DisplayInfo;->logicalWidth:I
 
@@ -805,14 +728,12 @@
 
     iput v5, v1, Landroid/graphics/Point;->x:I
 
-    .line 433
     iget v5, v0, Landroid/view/DisplayInfo;->logicalHeight:I
 
     div-int/lit8 v5, v5, 0x2
 
     iput v5, v1, Landroid/graphics/Point;->y:I
 
-    .line 435
     iget-object v5, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
     # getter for: Lcom/android/server/wm/StackTapPointerEventListener;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -833,20 +754,17 @@
 
     invoke-virtual {v5, v7, v1}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->setCenterBarPoint(ILandroid/graphics/Point;)V
 
-    .line 436
     new-instance v2, Landroid/content/Intent;
 
     const-string v5, "com.sec.android.action.ARRANGE_CONTROLL_BAR"
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 437
     .local v2, "refreshCenterbarIntent":Landroid/content/Intent;
     const-string v5, "com.sec.android.extra.CONTROL_BAR_POS"
 
     invoke-virtual {v2, v5, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 438
     iget-object v5, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
     # getter for: Lcom/android/server/wm/StackTapPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -858,7 +776,6 @@
 
     invoke-virtual {v5, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 440
     iget-object v5, p0, Lcom/android/server/wm/StackTapPointerEventListener$MultiWindowGestureListener;->this$0:Lcom/android/server/wm/StackTapPointerEventListener;
 
     # getter for: Lcom/android/server/wm/StackTapPointerEventListener;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -903,6 +820,5 @@
 
     move v5, v6
 
-    .line 441
     goto/16 :goto_0
 .end method

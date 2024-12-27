@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 216
     iput-object p1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLPolicyMigrationReceiver;->this$0:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 219
     # getter for: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$000()Z
 
@@ -58,7 +56,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLPolicyMigrationReceiver;->this$0:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
@@ -71,21 +68,17 @@
 
     move-result-object v0
 
-    .line 222
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v1, "migrationIMFlag"
 
     invoke-interface {v0, v1, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 223
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 224
     iget-object v1, p0, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy$EnterpriseISLPolicyMigrationReceiver;->this$0:Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;
 
     # invokes: Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->islMigration(Z)V
     invoke-static {v1, v3}, Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;->access$300(Lcom/android/server/enterprise/isl/EnterpriseISLPolicy;Z)V
 
-    .line 225
     return-void
 .end method

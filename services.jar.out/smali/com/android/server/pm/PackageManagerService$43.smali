@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 29385
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$43;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 29387
     const-string v0, "ASKS"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z

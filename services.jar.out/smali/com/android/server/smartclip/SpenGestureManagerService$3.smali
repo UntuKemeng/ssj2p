@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 418
     iput-object p1, p0, Lcom/android/server/smartclip/SpenGestureManagerService$3;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
@@ -42,21 +41,18 @@
 
     const/4 v2, 0x0
 
-    .line 421
     sget-object v0, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     const-string v3, "Pen DoubleTap"
 
     invoke-static {v0, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     const-string v0, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v1
 
-    .line 424
     .local v1, "uri":Landroid/net/Uri;
     # getter for: Lcom/android/server/smartclip/SpenGestureManagerService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/smartclip/SpenGestureManagerService;->access$1300()Landroid/content/Context;
@@ -77,15 +73,12 @@
 
     move-result-object v6
 
-    .line 426
     .local v6, "cr":Landroid/database/Cursor;
     if-eqz v6, :cond_1
 
-    .line 428
     :try_start_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 429
     const-string/jumbo v0, "getSealedState"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -104,30 +97,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 430
     sget-object v0, Lcom/android/server/smartclip/SpenGestureManagerService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "now KNOX state : can\'t excute Double Tap"
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 435
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 440
     :goto_0
     return v7
 
-    .line 435
     :cond_0
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 439
     :cond_1
     iget-object v0, p0, Lcom/android/server/smartclip/SpenGestureManagerService$3;->this$0:Lcom/android/server/smartclip/SpenGestureManagerService;
 
@@ -144,7 +131,6 @@
 
     goto :goto_0
 
-    .line 435
     :catchall_0
     move-exception v0
 

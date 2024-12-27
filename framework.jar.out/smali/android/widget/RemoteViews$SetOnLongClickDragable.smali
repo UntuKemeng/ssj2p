@@ -45,32 +45,24 @@
     .param p7, "isNeedToRemove"    # Z
 
     .prologue
-    .line 3846
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 3847
     iput p2, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->viewId:I
 
-    .line 3848
     iput-boolean p7, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->isNeedToRemove:Z
 
-    .line 3849
     iput-object p3, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->clipData:Landroid/content/ClipData;
 
-    .line 3850
     iput-object p4, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragStartIntent:Landroid/app/PendingIntent;
 
-    .line 3851
     iput-object p5, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragEnterNotiIntent:Landroid/app/PendingIntent;
 
-    .line 3852
     iput-object p6, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragExitNotiIntent:Landroid/app/PendingIntent;
 
-    .line 3853
     return-void
 .end method
 
@@ -79,14 +71,12 @@
     .param p2, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 3855
     iput-object p1, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 3856
     const-string v0, "RemoteViews"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -113,14 +103,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3857
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->viewId:I
 
-    .line 3858
     invoke-virtual {p2}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -132,7 +120,6 @@
     :goto_0
     iput-boolean v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->isNeedToRemove:Z
 
-    .line 3859
     const-class v0, Landroid/content/ClipData;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -147,21 +134,18 @@
 
     iput-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->clipData:Landroid/content/ClipData;
 
-    .line 3860
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3861
     invoke-static {p2}, Landroid/app/PendingIntent;->readPendingIntentOrNullFromParcel(Landroid/os/Parcel;)Landroid/app/PendingIntent;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragStartIntent:Landroid/app/PendingIntent;
 
-    .line 3863
     :cond_0
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -169,14 +153,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 3864
     invoke-static {p2}, Landroid/app/PendingIntent;->readPendingIntentOrNullFromParcel(Landroid/os/Parcel;)Landroid/app/PendingIntent;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragEnterNotiIntent:Landroid/app/PendingIntent;
 
-    .line 3866
     :cond_1
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -184,18 +166,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 3867
     invoke-static {p2}, Landroid/app/PendingIntent;->readPendingIntentOrNullFromParcel(Landroid/os/Parcel;)Landroid/app/PendingIntent;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragExitNotiIntent:Landroid/app/PendingIntent;
 
-    .line 3869
     :cond_2
     return-void
 
-    .line 3858
     :cond_3
     const/4 v0, 0x0
 
@@ -216,27 +195,22 @@
     .end annotation
 
     .prologue
-    .line 3901
     iget v3, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->viewId:I
 
     invoke-virtual {p1, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 3902
     .local v2, "target":Landroid/view/View;
     if-eqz v2, :cond_1
 
-    .line 3903
     new-instance v1, Landroid/widget/RemoteViews$SetOnLongClickDragable$1;
 
     invoke-direct {v1, p0}, Landroid/widget/RemoteViews$SetOnLongClickDragable$1;-><init>(Landroid/widget/RemoteViews$SetOnLongClickDragable;)V
 
-    .line 3929
     .local v1, "longClickListener":Landroid/view/View$OnLongClickListener;
     invoke-virtual {v2, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 3931
     iget-object v3, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragEnterNotiIntent:Landroid/app/PendingIntent;
 
     if-nez v3, :cond_0
@@ -245,17 +219,14 @@
 
     if-eqz v3, :cond_1
 
-    .line 3933
     :cond_0
     new-instance v0, Landroid/widget/RemoteViews$SetOnLongClickDragable$2;
 
     invoke-direct {v0, p0}, Landroid/widget/RemoteViews$SetOnLongClickDragable$2;-><init>(Landroid/widget/RemoteViews$SetOnLongClickDragable;)V
 
-    .line 3972
     .local v0, "dragLinstener":Landroid/view/View$OnDragListener;
     invoke-virtual {v2, v0}, Landroid/view/View;->setOnDragListener(Landroid/view/View$OnDragListener;)V
 
-    .line 3975
     .end local v0    # "dragLinstener":Landroid/view/View$OnDragListener;
     .end local v1    # "longClickListener":Landroid/view/View$OnLongClickListener;
     :cond_1
@@ -266,7 +237,6 @@
     .locals 1
 
     .prologue
-    .line 3979
     const-string v0, "SetOnLongClickDragable"
 
     return-object v0
@@ -282,7 +252,6 @@
 
     const/4 v2, 0x0
 
-    .line 3873
     const-string v0, "RemoteViews"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -309,17 +278,14 @@
 
     invoke-static {v0, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3874
     const/16 v0, 0x13
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3875
     iget v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->viewId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3876
     iget-boolean v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->isNeedToRemove:Z
 
     if-eqz v0, :cond_0
@@ -331,75 +297,60 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 3877
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->clipData:Landroid/content/ClipData;
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 3878
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragStartIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_1
 
-    .line 3879
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3880
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragStartIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, p1, v2}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 3884
     :goto_1
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragEnterNotiIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_2
 
-    .line 3885
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3886
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragEnterNotiIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, p1, v2}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 3890
     :goto_2
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragExitNotiIntent:Landroid/app/PendingIntent;
 
     if-eqz v0, :cond_3
 
-    .line 3891
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 3892
     iget-object v0, p0, Landroid/widget/RemoteViews$SetOnLongClickDragable;->dragExitNotiIntent:Landroid/app/PendingIntent;
 
     invoke-virtual {v0, p1, v2}, Landroid/app/PendingIntent;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 3896
     :goto_3
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 3876
     goto :goto_0
 
-    .line 3882
     :cond_1
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_1
 
-    .line 3888
     :cond_2
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_2
 
-    .line 3894
     :cond_3
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 

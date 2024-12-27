@@ -25,7 +25,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 2992
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$27;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/policy/GlobalActions$SinglePressAction;-><init>(II)V
@@ -39,7 +38,6 @@
     .locals 3
 
     .prologue
-    .line 2997
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -47,13 +45,11 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2998
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v2, 0x14000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2999
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$27;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -65,16 +61,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3003
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 3000
     :catch_0
     move-exception v0
 
-    .line 3001
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -85,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 3012
     const/4 v0, 0x1
 
     return v0
@@ -95,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 3017
     const/4 v0, 0x0
 
     return v0
@@ -105,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 3007
     const/4 v0, 0x1
 
     return v0

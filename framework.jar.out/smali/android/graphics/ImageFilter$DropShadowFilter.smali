@@ -49,7 +49,6 @@
     .locals 3
 
     .prologue
-    .line 1990
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -85,7 +84,6 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 2081
     const/4 v0, 0x2
 
     new-array v1, v4, [Ljava/lang/String;
@@ -98,36 +96,28 @@
 
     invoke-direct {p0, v0, v1, v2}, Landroid/graphics/ImageFilter$GenericImageFilter;-><init>(I[Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 2075
     iput v5, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mAngle:F
 
-    .line 2076
     const v0, 0x3b449ba6    # 0.003f
 
     iput v0, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mDistance:F
 
-    .line 2077
     const/high16 v0, 0x41100000    # 9.0f
 
     iput v0, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mQuality:F
 
-    .line 2083
     const/high16 v0, 0x41a00000    # 20.0f
 
     invoke-virtual {p0, v0}, Landroid/graphics/ImageFilter$DropShadowFilter;->setDistance(F)V
 
-    .line 2084
     invoke-virtual {p0, v5}, Landroid/graphics/ImageFilter$DropShadowFilter;->setAngle(F)V
 
-    .line 2086
     invoke-virtual {p0, v3, v6, v6, v3}, Landroid/graphics/ImageFilter$DropShadowFilter;->setShadowColor(FFFF)V
 
-    .line 2087
     const/high16 v0, 0x41700000    # 15.0f
 
     invoke-virtual {p0, v0}, Landroid/graphics/ImageFilter$DropShadowFilter;->setQuality(F)V
 
-    .line 2089
     invoke-virtual {p0, v7}, Landroid/graphics/ImageFilter$DropShadowFilter;->getFilterAt(I)Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -140,7 +130,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/ImageFilter$CustomFilter;->setValue(IF)V
 
-    .line 2091
     invoke-virtual {p0, v4}, Landroid/graphics/ImageFilter$DropShadowFilter;->getFilterAt(I)Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -151,7 +140,6 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/ImageFilter$CustomFilter;->setValue(IF)V
 
-    .line 2092
     invoke-virtual {p0, v4}, Landroid/graphics/ImageFilter$DropShadowFilter;->getFilterAt(I)Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -162,7 +150,6 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/graphics/ImageFilter$CustomFilter;->setValue(IF)V
 
-    .line 2093
     invoke-virtual {p0, v4}, Landroid/graphics/ImageFilter$DropShadowFilter;->getFilterAt(I)Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -175,10 +162,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/ImageFilter$CustomFilter;->setValue(IF)V
 
-    .line 2095
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$DropShadowFilter;->preSetupShader()V
 
-    .line 2096
     return-void
 .end method
 
@@ -188,7 +173,6 @@
     .locals 10
 
     .prologue
-    .line 2156
     iget v7, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mAngle:F
 
     const/high16 v8, 0x43340000    # 180.0f
@@ -199,7 +183,6 @@
 
     mul-float v4, v7, v8
 
-    .line 2159
     .local v4, "radian":F
     float-to-double v8, v4
 
@@ -209,7 +192,6 @@
 
     double-to-float v5, v8
 
-    .line 2160
     .local v5, "xdir":F
     float-to-double v8, v4
 
@@ -219,29 +201,23 @@
 
     double-to-float v6, v8
 
-    .line 2162
     .local v6, "ydir":F
     const/16 v3, 0x12c
 
-    .line 2163
     .local v3, "filterTextureWidth":I
     const/16 v2, 0x12c
 
-    .line 2166
     .local v2, "filterTextureHeight":I
     iget v7, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mDistance:F
 
     mul-float/2addr v5, v7
 
-    .line 2167
     iget v7, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mDistance:F
 
     mul-float/2addr v6, v7
 
-    .line 2168
     iget v0, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mQuality:F
 
-    .line 2169
     .local v0, "cyclesCount":F
     const/high16 v7, 0x3f800000    # 1.0f
 
@@ -251,41 +227,33 @@
 
     div-float v1, v7, v8
 
-    .line 2171
     .local v1, "distance":F
     const/4 v7, 0x0
 
     invoke-virtual {p0, v7, v1}, Landroid/graphics/ImageFilter$DropShadowFilter;->setParam(IF)V
 
-    .line 2172
     const/4 v7, 0x1
 
     invoke-virtual {p0, v7, v5}, Landroid/graphics/ImageFilter$DropShadowFilter;->setParam(IF)V
 
-    .line 2173
     const/4 v7, 0x2
 
     invoke-virtual {p0, v7, v6}, Landroid/graphics/ImageFilter$DropShadowFilter;->setParam(IF)V
 
-    .line 2174
     const/4 v7, 0x7
 
     invoke-virtual {p0, v7, v0}, Landroid/graphics/ImageFilter$DropShadowFilter;->setParam(IF)V
 
-    .line 2176
     const v7, 0x3e4ccccd    # 0.2f
 
     mul-float/2addr v1, v7
 
-    .line 2177
     const/16 v7, 0x8
 
     invoke-virtual {p0, v7, v1}, Landroid/graphics/ImageFilter$DropShadowFilter;->setParam(IF)V
 
-    .line 2179
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$DropShadowFilter;->notifyWorkerFilters()V
 
-    .line 2180
     return-void
 .end method
 
@@ -294,13 +262,10 @@
     .param p1, "angle"    # F
 
     .prologue
-    .line 2137
     iput p1, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mAngle:F
 
-    .line 2138
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$DropShadowFilter;->preSetupShader()V
 
-    .line 2139
     return-void
 .end method
 
@@ -309,13 +274,10 @@
     .param p1, "distance"    # F
 
     .prologue
-    .line 2125
     iput p1, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mDistance:F
 
-    .line 2126
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$DropShadowFilter;->preSetupShader()V
 
-    .line 2127
     return-void
 .end method
 
@@ -324,7 +286,6 @@
     .param p1, "quality"    # F
 
     .prologue
-    .line 2149
     const/high16 v1, 0x40a00000    # 5.0f
 
     const v2, 0x3e4ccccd    # 0.2f
@@ -345,14 +306,11 @@
 
     add-float v0, v1, v2
 
-    .line 2150
     .local v0, "scaleQuality":F
     iput v0, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mQuality:F
 
-    .line 2151
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$DropShadowFilter;->preSetupShader()V
 
-    .line 2152
     return-void
 .end method
 
@@ -368,7 +326,6 @@
 
     const/4 v3, 0x0
 
-    .line 2109
     iget-object v0, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mParams:[F
 
     const/4 v1, 0x3
@@ -383,7 +340,6 @@
 
     aput v2, v0, v1
 
-    .line 2110
     iget-object v0, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mParams:[F
 
     const/4 v1, 0x4
@@ -398,7 +354,6 @@
 
     aput v2, v0, v1
 
-    .line 2111
     iget-object v0, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mParams:[F
 
     const/4 v1, 0x5
@@ -413,7 +368,6 @@
 
     aput v2, v0, v1
 
-    .line 2112
     iget-object v0, p0, Landroid/graphics/ImageFilter$DropShadowFilter;->mParams:[F
 
     const/4 v1, 0x6
@@ -428,12 +382,9 @@
 
     aput v2, v0, v1
 
-    .line 2113
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$DropShadowFilter;->setFilterParamsChanged()V
 
-    .line 2114
     invoke-virtual {p0}, Landroid/graphics/ImageFilter$DropShadowFilter;->preSetupShader()V
 
-    .line 2115
     return-void
 .end method

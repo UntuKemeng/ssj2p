@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1551
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$7;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1555
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -52,12 +50,10 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 1561
     move-object v1, p1
 
     check-cast v1, Landroid/content/Intent;
 
-    .line 1562
     .local v1, "intent":Landroid/content/Intent;
     const-string v5, "[EPDGService]"
 
@@ -85,7 +81,6 @@
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1563
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1900()Landroid/os/Handler;
 
@@ -95,20 +90,17 @@
 
     move-result-object v3
 
-    .line 1564
     .local v3, "msg":Landroid/os/Message;
     const/16 v5, 0x21
 
     iput v5, v3, Landroid/os/Message;->what:I
 
-    .line 1565
     const-string v5, "ssid"
 
     invoke-virtual {v1, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1566
     .local v4, "ssid":Ljava/lang/String;
     const-string v5, "apn_name"
 
@@ -116,7 +108,6 @@
 
     move-result-object v0
 
-    .line 1567
     .local v0, "apnName":Ljava/lang/String;
     const-string v5, "[EPDGService]"
 
@@ -150,33 +141,27 @@
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1569
     if-eqz v4, :cond_0
 
     if-eqz v0, :cond_0
 
-    .line 1570
     new-instance v5, Landroid/util/Pair;
 
     invoke-direct {v5, v0, v4}, Landroid/util/Pair;-><init>(Ljava/lang/Object;Ljava/lang/Object;)V
 
     iput-object v5, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 1571
     const-string v5, "[EPDGService]"
 
     const-string v6, "processSlowPath() Event posted DATA_RETRY_TIMER_EXPIRED in epdg service queue"
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1573
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1580
     :goto_0
     return-void
 
-    .line 1575
     :cond_0
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -206,7 +191,6 @@
 
     move-result-object v2
 
-    .line 1577
     .local v2, "mesg":Ljava/lang/String;
     const-string v5, "[EPDGService]"
 

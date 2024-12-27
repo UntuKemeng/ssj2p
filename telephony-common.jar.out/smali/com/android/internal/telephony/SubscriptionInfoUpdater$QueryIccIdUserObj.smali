@@ -27,15 +27,11 @@
     .param p2, "slotId"    # I
 
     .prologue
-    .line 1094
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1095
     iput-object p1, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$QueryIccIdUserObj;->reason:Ljava/lang/String;
 
-    .line 1096
     iput p2, p0, Lcom/android/internal/telephony/SubscriptionInfoUpdater$QueryIccIdUserObj;->slotId:I
 
-    .line 1097
     return-void
 .end method

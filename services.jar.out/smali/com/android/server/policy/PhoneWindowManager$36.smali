@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 10559
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$36;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 10562
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$36;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mNavigationBar:Landroid/view/WindowManagerPolicy$WindowState;
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 10563
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$36;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$36;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -65,7 +62,6 @@
     # invokes: Lcom/android/server/policy/PhoneWindowManager;->requestTransientBars(Landroid/view/WindowManagerPolicy$WindowState;I)V
     invoke-static {v0, v1, v2}, Lcom/android/server/policy/PhoneWindowManager;->access$4400(Lcom/android/server/policy/PhoneWindowManager;Landroid/view/WindowManagerPolicy$WindowState;I)V
 
-    .line 10565
     :cond_0
     return-void
 .end method

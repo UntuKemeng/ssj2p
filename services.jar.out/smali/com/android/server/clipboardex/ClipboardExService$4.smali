@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1840
     iput-object p1, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,34 +39,28 @@
     .prologue
     const/16 v11, 0x20
 
-    .line 1843
     iget v8, p1, Landroid/os/Message;->what:I
 
     packed-switch v8, :pswitch_data_0
 
-    .line 1950
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v8, :cond_0
 
-    .line 1951
     const-string v8, "ClipboardExService"
 
     const-string/jumbo v9, "handler msg : default"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1953
     :cond_0
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 1955
     :cond_1
     :goto_0
     :pswitch_0
     return-void
 
-    .line 1887
     :pswitch_1
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -85,7 +78,6 @@
     # setter for: Lcom/android/server/clipboardex/ClipboardExService;->mClipboardUIManager:Landroid/sec/clipboard/ClipboardUIManager;
     invoke-static {v8, v9}, Lcom/android/server/clipboardex/ClipboardExService;->access$1802(Lcom/android/server/clipboardex/ClipboardExService;Landroid/sec/clipboard/ClipboardUIManager;)Landroid/sec/clipboard/ClipboardUIManager;
 
-    .line 1888
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     # getter for: Lcom/android/server/clipboardex/ClipboardExService;->mClipboardUIManager:Landroid/sec/clipboard/ClipboardUIManager;
@@ -111,7 +103,6 @@
 
     goto :goto_0
 
-    .line 1891
     :pswitch_2
     # getter for: Lcom/android/server/clipboardex/ClipboardExService;->SEC_FLOATING_FEATURE_VIEWSYSTEM_CLIPBOARD_UI_SERVICE:Z
     invoke-static {}, Lcom/android/server/clipboardex/ClipboardExService;->access$2100()Z
@@ -120,7 +111,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 1892
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     iget-object v9, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
@@ -137,7 +127,6 @@
     # setter for: Lcom/android/server/clipboardex/ClipboardExService;->mClipboardUIManager:Landroid/sec/clipboard/ClipboardUIManager;
     invoke-static {v8, v9}, Lcom/android/server/clipboardex/ClipboardExService;->access$1802(Lcom/android/server/clipboardex/ClipboardExService;Landroid/sec/clipboard/ClipboardUIManager;)Landroid/sec/clipboard/ClipboardUIManager;
 
-    .line 1893
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     # getter for: Lcom/android/server/clipboardex/ClipboardExService;->mClipboardUIManager:Landroid/sec/clipboard/ClipboardUIManager;
@@ -163,7 +152,6 @@
 
     goto :goto_0
 
-    .line 1898
     :pswitch_3
     # getter for: Lcom/android/server/clipboardex/ClipboardExService;->SEC_FLOATING_FEATURE_VIEWSYSTEM_CLIPBOARD_UI_SERVICE:Z
     invoke-static {}, Lcom/android/server/clipboardex/ClipboardExService;->access$2100()Z
@@ -172,7 +160,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 1899
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     iget-object v9, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
@@ -189,19 +176,16 @@
     # setter for: Lcom/android/server/clipboardex/ClipboardExService;->mClipboardUIManager:Landroid/sec/clipboard/ClipboardUIManager;
     invoke-static {v8, v9}, Lcom/android/server/clipboardex/ClipboardExService;->access$1802(Lcom/android/server/clipboardex/ClipboardExService;Landroid/sec/clipboard/ClipboardUIManager;)Landroid/sec/clipboard/ClipboardUIManager;
 
-    .line 1900
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
     if-eqz v8, :cond_2
 
-    .line 1901
     const-string v8, "ClipboardExService"
 
     const-string/jumbo v9, "mCBUIManager enter case. MSG_DISMISS_DIALOG"
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1903
     :cond_2
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -212,7 +196,6 @@
 
     invoke-virtual {v8}, Landroid/sec/clipboard/ClipboardUIManager;->dismiss()V
 
-    .line 1904
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
     const/4 v9, 0x0
@@ -222,24 +205,20 @@
 
     goto/16 :goto_0
 
-    .line 1909
     :pswitch_4
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 1910
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_1
 
-    .line 1911
     const-string v8, "deletePath"
 
     invoke-virtual {v0, v8}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1912
     .local v5, "filePath":Ljava/lang/String;
     const-string v8, "extraDataPath"
 
@@ -247,13 +226,11 @@
 
     move-result-object v4
 
-    .line 1914
     .local v4, "extraFilePath":Ljava/lang/String;
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardConstants;->INFO_DEBUG:Z
 
     if-eqz v8, :cond_3
 
-    .line 1915
     const-string v8, "ClipboardExService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -286,7 +263,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1917
     :cond_3
     new-instance v3, Landroid/content/Intent;
 
@@ -294,16 +270,13 @@
 
     invoke-direct {v3, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1918
     .local v3, "deleteIntent":Landroid/content/Intent;
     invoke-virtual {v3, v11}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1919
     const-string v8, "deletePath"
 
     invoke-virtual {v3, v8, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1920
     if-eqz v4, :cond_4
 
     invoke-virtual {v4}, Ljava/lang/String;->length()I
@@ -312,12 +285,10 @@
 
     if-lez v8, :cond_4
 
-    .line 1921
     const-string v8, "extraDataPath"
 
     invoke-virtual {v3, v8, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1924
     :cond_4
     new-instance v7, Landroid/os/UserHandle;
 
@@ -329,7 +300,6 @@
 
     invoke-direct {v7, v8}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 1925
     .local v7, "user":Landroid/os/UserHandle;
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -340,12 +310,10 @@
 
     invoke-virtual {v8, v3, v7}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1927
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardConstants;->INFO_DEBUG:Z
 
     if-eqz v8, :cond_1
 
-    .line 1928
     const-string v8, "ClipboardExService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -374,7 +342,6 @@
 
     goto/16 :goto_0
 
-    .line 1934
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v3    # "deleteIntent":Landroid/content/Intent;
     .end local v4    # "extraFilePath":Ljava/lang/String;
@@ -385,18 +352,15 @@
 
     move-result-object v1
 
-    .line 1935
     .local v1, "bundleUri":Landroid/os/Bundle;
     if-eqz v1, :cond_1
 
-    .line 1936
     const-string/jumbo v8, "uriPath"
 
     invoke-virtual {v1, v8}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 1937
     .local v6, "uriPath":Ljava/lang/String;
     new-instance v2, Landroid/content/Intent;
 
@@ -404,16 +368,13 @@
 
     invoke-direct {v2, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1938
     .local v2, "copyIntent":Landroid/content/Intent;
     invoke-virtual {v2, v11}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1939
     const-string/jumbo v8, "uriPath"
 
     invoke-virtual {v2, v8, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1941
     new-instance v7, Landroid/os/UserHandle;
 
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
@@ -424,7 +385,6 @@
 
     invoke-direct {v7, v8}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 1942
     .restart local v7    # "user":Landroid/os/UserHandle;
     iget-object v8, p0, Lcom/android/server/clipboardex/ClipboardExService$4;->this$0:Lcom/android/server/clipboardex/ClipboardExService;
 
@@ -435,12 +395,10 @@
 
     invoke-virtual {v8, v2, v7}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1944
     sget-boolean v8, Landroid/sec/clipboard/data/ClipboardConstants;->INFO_DEBUG:Z
 
     if-eqz v8, :cond_1
 
-    .line 1945
     const-string v8, "ClipboardExService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -469,7 +427,6 @@
 
     goto/16 :goto_0
 
-    .line 1843
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

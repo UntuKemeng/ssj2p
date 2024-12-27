@@ -10,7 +10,6 @@
     .param p2, "list"    # [Ljava/lang/Object;
 
     .prologue
-    .line 41
     invoke-static {p1, p2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -21,7 +20,6 @@
 
     invoke-direct {p0, v0, v1}, Lorg/simpleframework/xml/transform/TransformException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 42
     return-void
 .end method
 
@@ -32,7 +30,6 @@
     .param p3, "list"    # [Ljava/lang/Object;
 
     .prologue
-    .line 54
     invoke-static {p2, p3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
@@ -47,6 +44,5 @@
 
     invoke-direct {p0, v0, v1}, Lorg/simpleframework/xml/transform/TransformException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 55
     return-void
 .end method

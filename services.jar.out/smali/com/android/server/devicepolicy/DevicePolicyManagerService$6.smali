@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 5312
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->val$userHandle:I
@@ -44,7 +43,6 @@
     .locals 7
 
     .prologue
-    .line 5319
     :try_start_0
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -58,7 +56,6 @@
 
     check-cast v3, Landroid/os/PersonaManager;
 
-    .line 5320
     .local v3, "pm":Landroid/os/PersonaManager;
     if-eqz v3, :cond_1
 
@@ -70,7 +67,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 5321
     const-string v4, "DevicePolicyManagerService"
 
     const-string/jumbo v5, "wipeDeviceOrUserLocked removing knox "
@@ -79,7 +75,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 5323
     :try_start_1
     iget v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->val$userHandle:I
 
@@ -88,18 +83,15 @@
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 5343
     .end local v3    # "pm":Landroid/os/PersonaManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 5324
     .restart local v3    # "pm":Landroid/os/PersonaManager;
     :catch_0
     move-exception v1
 
-    .line 5325
     .local v1, "e":Ljava/lang/SecurityException;
     :try_start_2
     const-string v4, "DevicePolicyManagerService"
@@ -130,7 +122,6 @@
 
     goto :goto_0
 
-    .line 5340
     .end local v1    # "e":Ljava/lang/SecurityException;
     .end local v3    # "pm":Landroid/os/PersonaManager;
     :catch_1
@@ -138,14 +129,12 @@
 
     goto :goto_0
 
-    .line 5328
     .restart local v3    # "pm":Landroid/os/PersonaManager;
     :cond_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 5329
     .local v0, "am":Landroid/app/IActivityManager;
     invoke-interface {v0}, Landroid/app/IActivityManager;->getCurrentUser()Landroid/content/pm/UserInfo;
 
@@ -157,12 +146,10 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 5330
     const/4 v4, 0x0
 
     invoke-interface {v0, v4}, Landroid/app/IActivityManager;->switchUser(I)Z
 
-    .line 5333
     :cond_2
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -173,7 +160,6 @@
 
     move-result v2
 
-    .line 5334
     .local v2, "isManagedProfile":Z
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -187,7 +173,6 @@
 
     if-nez v4, :cond_3
 
-    .line 5335
     const-string v4, "DevicePolicyManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -214,11 +199,9 @@
 
     goto :goto_0
 
-    .line 5336
     :cond_3
     if-eqz v2, :cond_0
 
-    .line 5337
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$6;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     # invokes: Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendWipeProfileNotification()V

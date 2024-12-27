@@ -45,22 +45,18 @@
     .locals 1
 
     .prologue
-    .line 762
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 763
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->packageName:Ljava/lang/String;
 
-    .line 764
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/utils/ConstrainedState$ApplicationPackageInfo;->permissions:Ljava/util/List;
 
-    .line 765
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -76,7 +72,6 @@
     .locals 2
 
     .prologue
-    .line 768
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -16,13 +16,10 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput-object p1, p0, Lorg/simpleframework/xml/core/ClassType;->type:Ljava/lang/Class;
 
-    .line 49
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .end annotation
 
     .prologue
-    .line 72
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     const/4 v0, 0x0
 
@@ -52,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Lorg/simpleframework/xml/core/ClassType;->type:Ljava/lang/Class;
 
     return-object v0
@@ -62,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lorg/simpleframework/xml/core/ClassType;->type:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Class;->toString()Ljava/lang/String;

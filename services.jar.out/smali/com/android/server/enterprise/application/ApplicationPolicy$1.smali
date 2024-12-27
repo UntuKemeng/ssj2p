@@ -28,54 +28,43 @@
     .locals 1
 
     .prologue
-    .line 404
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 406
     const-string v0, "android.permission-group.CONTACTS"
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy$1;->add(Ljava/lang/Object;)Z
 
-    .line 407
     const-string v0, "android.permission-group.CALENDAR"
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy$1;->add(Ljava/lang/Object;)Z
 
-    .line 408
     const-string v0, "android.permission-group.SMS"
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy$1;->add(Ljava/lang/Object;)Z
 
-    .line 409
     const-string v0, "android.permission-group.STORAGE"
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy$1;->add(Ljava/lang/Object;)Z
 
-    .line 410
     const-string v0, "android.permission-group.LOCATION"
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy$1;->add(Ljava/lang/Object;)Z
 
-    .line 411
     const-string v0, "android.permission-group.PHONE"
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy$1;->add(Ljava/lang/Object;)Z
 
-    .line 412
     const-string v0, "android.permission-group.MICROPHONE"
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy$1;->add(Ljava/lang/Object;)Z
 
-    .line 413
     const-string v0, "android.permission-group.CAMERA"
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy$1;->add(Ljava/lang/Object;)Z
 
-    .line 414
     const-string v0, "android.permission-group.SENSORS"
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/application/ApplicationPolicy$1;->add(Ljava/lang/Object;)Z
 
-    .line 415
     return-void
 .end method

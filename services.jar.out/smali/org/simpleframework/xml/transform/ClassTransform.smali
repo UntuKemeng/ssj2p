@@ -43,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -53,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 178
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -69,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 190
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v0
@@ -91,7 +88,6 @@
     .end annotation
 
     .prologue
-    .line 125
     const-string v0, "byte"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -100,14 +96,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 126
     sget-object v0, Ljava/lang/Byte;->TYPE:Ljava/lang/Class;
 
-    .line 152
     :goto_0
     return-object v0
 
-    .line 128
     :cond_0
     const-string v0, "short"
 
@@ -117,12 +110,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 129
     sget-object v0, Ljava/lang/Short;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 131
     :cond_1
     const-string v0, "int"
 
@@ -132,12 +123,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 132
     sget-object v0, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 134
     :cond_2
     const-string v0, "long"
 
@@ -147,12 +136,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 135
     sget-object v0, Ljava/lang/Long;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 137
     :cond_3
     const-string v0, "char"
 
@@ -162,12 +149,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 138
     sget-object v0, Ljava/lang/Character;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 140
     :cond_4
     const-string v0, "float"
 
@@ -177,12 +162,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 141
     sget-object v0, Ljava/lang/Float;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 143
     :cond_5
     const-string v0, "double"
 
@@ -192,12 +175,10 @@
 
     if-eqz v0, :cond_6
 
-    .line 144
     sget-object v0, Ljava/lang/Double;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 146
     :cond_6
     const-string v0, "boolean"
 
@@ -207,12 +188,10 @@
 
     if-eqz v0, :cond_7
 
-    .line 147
     sget-object v0, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 149
     :cond_7
     const-string v0, "void"
 
@@ -222,12 +201,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 150
     sget-object v0, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     goto :goto_0
 
-    .line 152
     :cond_8
     const/4 v0, 0x0
 
@@ -246,36 +223,29 @@
     .end annotation
 
     .prologue
-    .line 101
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/transform/ClassTransform;->readPrimitive(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 103
     .local v1, "type":Ljava/lang/Class;
     if-nez v1, :cond_1
 
-    .line 104
     invoke-static {}, Lorg/simpleframework/xml/transform/ClassTransform;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 106
     .local v0, "loader":Ljava/lang/ClassLoader;
     if-nez v0, :cond_0
 
-    .line 107
     invoke-direct {p0}, Lorg/simpleframework/xml/transform/ClassTransform;->getCallerClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object v0
 
-    .line 109
     :cond_0
     invoke-virtual {v0, p1}, Ljava/lang/ClassLoader;->loadClass(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 111
     .end local v0    # "loader":Ljava/lang/ClassLoader;
     .end local v1    # "type":Ljava/lang/Class;
     :cond_1
@@ -292,7 +262,6 @@
     .end annotation
 
     .prologue
-    .line 43
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/ClassTransform;->read(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
@@ -310,7 +279,6 @@
     .end annotation
 
     .prologue
-    .line 166
     invoke-virtual {p1}, Ljava/lang/Class;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -328,7 +296,6 @@
     .end annotation
 
     .prologue
-    .line 43
     check-cast p1, Ljava/lang/Class;
 
     .end local p1    # "x0":Ljava/lang/Object;

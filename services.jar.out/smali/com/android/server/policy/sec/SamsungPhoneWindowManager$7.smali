@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 600
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$7;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 602
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 603
     .local v0, "action":Ljava/lang/String;
     const-string v3, "edm.intent.action.internal.kioskmode.REFRESH_HWKEY_CACHE"
 
@@ -54,7 +51,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 605
     :try_start_0
     const-string/jumbo v3, "kioskmode"
 
@@ -66,11 +62,9 @@
 
     move-result-object v2
 
-    .line 607
     .local v2, "kioskService":Landroid/app/enterprise/kioskmode/IKioskMode;
     if-eqz v2, :cond_0
 
-    .line 608
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$7;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-interface {v2}, Landroid/app/enterprise/kioskmode/IKioskMode;->getBlockedHwKeysCache()Ljava/util/Map;
@@ -80,7 +74,6 @@
     # setter for: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mBlockedHwKeys:Ljava/util/Map;
     invoke-static {v3, v4}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$202(Lcom/android/server/policy/sec/SamsungPhoneWindowManager;Ljava/util/Map;)Ljava/util/Map;
 
-    .line 609
     const-string v3, "SamsungWindowManager"
 
     const-string v4, "Blocked hw keys cache is being refreshed."
@@ -89,17 +82,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 615
     .end local v2    # "kioskService":Landroid/app/enterprise/kioskmode/IKioskMode;
     :cond_0
     :goto_0
     return-void
 
-    .line 611
     :catch_0
     move-exception v1
 
-    .line 612
     .local v1, "e":Landroid/os/RemoteException;
     const-string v3, "SamsungWindowManager"
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 417
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$5;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 420
     iget-object v0, p0, Lcom/android/server/fingerprint/FingerprintService$5;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
@@ -50,6 +48,5 @@
     # invokes: Lcom/android/server/fingerprint/FingerprintService;->checkIntegrity(I)V
     invoke-static {v0, v1}, Lcom/android/server/fingerprint/FingerprintService;->access$800(Lcom/android/server/fingerprint/FingerprintService;I)V
 
-    .line 421
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 372
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -47,12 +46,10 @@
 
     const/4 v8, 0x4
 
-    .line 375
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 377
     .local v0, "action":Ljava/lang/String;
     const-string v4, "android.intent.action.SCREEN_OFF"
 
@@ -81,7 +78,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 379
     :cond_1
     const-string v4, "android.intent.action.SCREEN_OFF"
 
@@ -91,14 +87,12 @@
 
     if-eqz v4, :cond_6
 
-    .line 380
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v4, v5}, Lcom/android/server/am/MARsPolicyManager;->setScreenOnState(Z)V
 
-    .line 383
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
@@ -119,28 +113,24 @@
 
     if-nez v4, :cond_2
 
-    .line 385
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v4}, Lcom/android/server/am/MARsPolicyManager;->clearStorageDiffWhileScreenOff()V
 
-    .line 386
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v4}, Lcom/android/server/am/MARsPolicyManager;->clearNotificationDiffWhileScreenOff()V
 
-    .line 387
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v4}, Lcom/android/server/am/MARsPolicyManager;->updateTrafficStat()V
 
-    .line 393
     :cond_2
     :goto_0
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -153,7 +143,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 394
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     const-string v5, "MARS_GCM_LOCKER_POLICY_ALARM"
@@ -168,7 +157,6 @@
     # invokes: Lcom/android/server/am/MARsTrigger;->setAlarm(Ljava/lang/String;J)V
     invoke-static {v4, v5, v6, v7}, Lcom/android/server/am/MARsTrigger;->access$100(Lcom/android/server/am/MARsTrigger;Ljava/lang/String;J)V
 
-    .line 397
     :cond_3
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -182,7 +170,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 398
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     const-string v5, "MARS_APP_LOCKER_POLICY_ALARM"
@@ -197,7 +184,6 @@
     # invokes: Lcom/android/server/am/MARsTrigger;->setAlarm(Ljava/lang/String;J)V
     invoke-static {v4, v5, v6, v7}, Lcom/android/server/am/MARsTrigger;->access$100(Lcom/android/server/am/MARsTrigger;Ljava/lang/String;J)V
 
-    .line 401
     :cond_4
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -219,7 +205,6 @@
 
     if-nez v4, :cond_5
 
-    .line 404
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mTriggerAutoRunPolicyImmediately:Z
@@ -229,14 +214,12 @@
 
     if-eqz v4, :cond_7
 
-    .line 405
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v4}, Lcom/android/server/am/MARsPolicyManager;->updateTrafficStat()V
 
-    .line 406
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     const-string v5, "MARS_AUTO_RUN_POLICY_ALARM"
@@ -248,12 +231,10 @@
     # invokes: Lcom/android/server/am/MARsTrigger;->setAlarm(Ljava/lang/String;J)V
     invoke-static {v4, v5, v6, v7}, Lcom/android/server/am/MARsTrigger;->access$100(Lcom/android/server/am/MARsTrigger;Ljava/lang/String;J)V
 
-    .line 467
     :cond_5
     :goto_1
     return-void
 
-    .line 389
     :cond_6
     sget-object v4, Landroid/app/UiModeManager;->ACTION_EXIT_CAR_MODE:Ljava/lang/String;
 
@@ -263,7 +244,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 390
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
@@ -272,7 +252,6 @@
 
     goto :goto_0
 
-    .line 408
     :cond_7
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -293,7 +272,6 @@
 
     goto :goto_1
 
-    .line 412
     :cond_8
     const-string v4, "android.intent.action.SCREEN_ON"
 
@@ -311,7 +289,6 @@
 
     if-eqz v4, :cond_13
 
-    .line 414
     :cond_9
     const-string v4, "android.intent.action.SCREEN_ON"
 
@@ -321,14 +298,12 @@
 
     if-eqz v4, :cond_12
 
-    .line 415
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v4, v6}, Lcom/android/server/am/MARsPolicyManager;->setScreenOnState(Z)V
 
-    .line 418
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
@@ -349,14 +324,12 @@
 
     if-nez v4, :cond_a
 
-    .line 420
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v4}, Lcom/android/server/am/MARsPolicyManager;->clearNotiUpdateWhileScreenOn()V
 
-    .line 426
     :cond_a
     :goto_2
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -368,7 +341,6 @@
 
     if-eqz v4, :cond_b
 
-    .line 427
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -385,7 +357,6 @@
 
     invoke-virtual {v4, v5}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 428
     :cond_b
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -396,7 +367,6 @@
 
     if-eqz v4, :cond_c
 
-    .line 429
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -413,7 +383,6 @@
 
     invoke-virtual {v4, v5}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 432
     :cond_c
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -423,7 +392,6 @@
 
     invoke-virtual {v4, v5, v7}, Lcom/android/server/am/MARsPolicyManager;->cancelPolicy(Ljava/lang/String;I)V
 
-    .line 434
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mMARsAppLockerPolicyAlarmIntent:Landroid/app/PendingIntent;
@@ -433,7 +401,6 @@
 
     if-eqz v4, :cond_d
 
-    .line 435
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -450,7 +417,6 @@
 
     invoke-virtual {v4, v5}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 437
     :cond_d
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -461,7 +427,6 @@
 
     if-eqz v4, :cond_e
 
-    .line 438
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -478,7 +443,6 @@
 
     invoke-virtual {v4, v5}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 440
     :cond_e
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -489,7 +453,6 @@
 
     if-eqz v4, :cond_f
 
-    .line 441
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -506,7 +469,6 @@
 
     invoke-virtual {v4, v5}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 443
     :cond_f
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -517,7 +479,6 @@
 
     if-eqz v4, :cond_10
 
-    .line 444
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -534,7 +495,6 @@
 
     invoke-virtual {v4, v5}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 446
     :cond_10
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -545,7 +505,6 @@
 
     if-eqz v4, :cond_11
 
-    .line 447
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -562,7 +521,6 @@
 
     invoke-virtual {v4, v5}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 449
     :cond_11
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -573,7 +531,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 450
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # getter for: Lcom/android/server/am/MARsTrigger;->mAlarm:Landroid/app/AlarmManager;
@@ -592,7 +549,6 @@
 
     goto/16 :goto_1
 
-    .line 422
     :cond_12
     sget-object v4, Landroid/app/UiModeManager;->ACTION_ENTER_CAR_MODE:Ljava/lang/String;
 
@@ -602,7 +558,6 @@
 
     if-eqz v4, :cond_a
 
-    .line 423
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
@@ -611,7 +566,6 @@
 
     goto/16 :goto_2
 
-    .line 452
     :cond_13
     const-string v4, "MARS_REQUEST_PKG_INFO"
 
@@ -621,20 +575,16 @@
 
     if-eqz v4, :cond_15
 
-    .line 454
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 455
     .local v1, "extras":Landroid/os/Bundle;
     const/4 v2, 0x0
 
-    .line 456
     .local v2, "onUpgrade":Z
     if-eqz v1, :cond_14
 
-    .line 457
     const-string v4, "MARS_EXTRA"
 
     const-string v5, ""
@@ -643,7 +593,6 @@
 
     move-result-object v3
 
-    .line 458
     .local v3, "tmp":Ljava/lang/String;
     const-string/jumbo v4, "update"
 
@@ -653,10 +602,8 @@
 
     if-eqz v4, :cond_14
 
-    .line 459
     const/4 v2, 0x1
 
-    .line 462
     .end local v3    # "tmp":Ljava/lang/String;
     :cond_14
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
@@ -669,7 +616,6 @@
 
     goto/16 :goto_1
 
-    .line 464
     .end local v1    # "extras":Landroid/os/Bundle;
     .end local v2    # "onUpgrade":Z
     :cond_15
@@ -681,7 +627,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 465
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$1;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;

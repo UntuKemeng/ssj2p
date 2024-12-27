@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 10493
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$32;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 10496
     const-string v0, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,12 +52,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 10502
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$32;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->updateSettings()V
 
-    .line 10503
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$32;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->mSPWM:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
@@ -69,7 +65,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->updateSettings()V
 
-    .line 10513
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$32;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mWindowManagerFuncs:Landroid/view/WindowManagerPolicy$WindowManagerFuncs;
@@ -80,7 +75,6 @@
 
     monitor-enter v1
 
-    .line 10514
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$32;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -88,18 +82,15 @@
 
     iput v2, v0, Lcom/android/server/policy/PhoneWindowManager;->mLastSystemUiFlags:I
 
-    .line 10515
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$32;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # invokes: Lcom/android/server/policy/PhoneWindowManager;->updateSystemUiVisibilityLw()I
     invoke-static {v0}, Lcom/android/server/policy/PhoneWindowManager;->access$4100(Lcom/android/server/policy/PhoneWindowManager;)I
 
-    .line 10516
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10518
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$32;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/PhoneWindowManager;->mSPWM:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
@@ -115,11 +106,9 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->setCurrentUser(I)V
 
-    .line 10521
     :cond_0
     return-void
 
-    .line 10516
     :catchall_0
     move-exception v0
 

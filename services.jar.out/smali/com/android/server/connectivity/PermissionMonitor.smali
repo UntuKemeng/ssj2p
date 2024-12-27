@@ -55,51 +55,42 @@
     .param p2, "netd"    # Landroid/os/INetworkManagementService;
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mUsers:Ljava/util/Set;
 
-    .line 72
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mApps:Ljava/util/Map;
 
-    .line 75
     iput-object p1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mContext:Landroid/content/Context;
 
-    .line 76
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mPackageManager:Landroid/content/pm/PackageManager;
 
-    .line 77
     invoke-static {p1}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mUserManager:Landroid/os/UserManager;
 
-    .line 78
     iput-object p2, p0, Lcom/android/server/connectivity/PermissionMonitor;->mNetd:Landroid/os/INetworkManagementService;
 
-    .line 79
     new-instance v0, Lcom/android/server/connectivity/PermissionMonitor$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/connectivity/PermissionMonitor$1;-><init>(Lcom/android/server/connectivity/PermissionMonitor;)V
 
     iput-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 99
     return-void
 .end method
 
@@ -109,7 +100,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/PermissionMonitor;->onUserAdded(I)V
 
     return-void
@@ -121,7 +111,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/PermissionMonitor;->onUserRemoved(I)V
 
     return-void
@@ -134,7 +123,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 56
     invoke-direct {p0, p1, p2}, Lcom/android/server/connectivity/PermissionMonitor;->onAppAdded(Ljava/lang/String;I)V
 
     return-void
@@ -146,7 +134,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/PermissionMonitor;->onAppRemoved(I)V
 
     return-void
@@ -157,7 +144,6 @@
     .param p1, "app"    # Landroid/content/pm/PackageInfo;
 
     .prologue
-    .line 165
     const-string v0, "android.permission.CHANGE_NETWORK_STATE"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/connectivity/PermissionMonitor;->hasPermission(Landroid/content/pm/PackageInfo;Ljava/lang/String;)Z
@@ -173,12 +159,10 @@
     .param p2, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 154
     iget-object v4, p1, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
     if-eqz v4, :cond_1
 
-    .line 155
     iget-object v0, p1, Landroid/content/pm/PackageInfo;->requestedPermissions:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -193,7 +177,6 @@
 
     aget-object v3, v0, v1
 
-    .line 156
     .local v3, "p":Ljava/lang/String;
     invoke-virtual {p2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -201,10 +184,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 157
     const/4 v4, 0x1
 
-    .line 161
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -212,7 +193,6 @@
     :goto_1
     return v4
 
-    .line 155
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
@@ -222,7 +202,6 @@
 
     goto :goto_0
 
-    .line 161
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -238,7 +217,6 @@
     .param p1, "app"    # Landroid/content/pm/PackageInfo;
 
     .prologue
-    .line 169
     iget-object v1, p1, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     if-eqz v1, :cond_1
@@ -247,7 +225,6 @@
 
     iget v0, v1, Landroid/content/pm/ApplicationInfo;->flags:I
 
-    .line 170
     .local v0, "flags":I
     :goto_0
     and-int/lit8 v1, v0, 0x1
@@ -258,22 +235,18 @@
 
     if-eqz v1, :cond_2
 
-    .line 171
     :cond_0
     const/4 v1, 0x1
 
-    .line 173
     :goto_1
     return v1
 
-    .line 169
     .end local v0    # "flags":I
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 173
     .restart local v0    # "flags":I
     :cond_2
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -290,12 +263,10 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 279
     const-string v0, "PermissionMonitor"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     return-void
 .end method
 
@@ -304,12 +275,10 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 284
     const-string v0, "PermissionMonitor"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     return-void
 .end method
 
@@ -319,7 +288,6 @@
     .param p2, "appUid"    # I
 
     .prologue
-    .line 239
     monitor-enter p0
 
     :try_start_0
@@ -331,7 +299,6 @@
 
     if-gez p2, :cond_2
 
-    .line 240
     :cond_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -365,14 +332,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 263
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 245
     :cond_2
     :try_start_1
     iget-object v6, p0, Lcom/android/server/connectivity/PermissionMonitor;->mPackageManager:Landroid/content/pm/PackageManager;
@@ -383,25 +348,21 @@
 
     move-result-object v0
 
-    .line 246
     .local v0, "app":Landroid/content/pm/PackageInfo;
     invoke-direct {p0, v0}, Lcom/android/server/connectivity/PermissionMonitor;->hasNetworkPermission(Landroid/content/pm/PackageInfo;)Z
 
     move-result v3
 
-    .line 247
     .local v3, "isNetwork":Z
     invoke-direct {p0, v0}, Lcom/android/server/connectivity/PermissionMonitor;->hasSystemPermission(Landroid/content/pm/PackageInfo;)Z
 
     move-result v4
 
-    .line 248
     .local v4, "isSystem":Z
     if-nez v3, :cond_3
 
     if-eqz v4, :cond_1
 
-    .line 249
     :cond_3
     iget-object v6, p0, Lcom/android/server/connectivity/PermissionMonitor;->mApps:Ljava/util/Map;
 
@@ -415,7 +376,6 @@
 
     check-cast v5, Ljava/lang/Boolean;
 
-    .line 252
     .local v5, "permission":Ljava/lang/Boolean;
     if-eqz v5, :cond_4
 
@@ -425,7 +385,6 @@
 
     if-nez v6, :cond_1
 
-    .line 253
     :cond_4
     iget-object v6, p0, Lcom/android/server/connectivity/PermissionMonitor;->mApps:Ljava/util/Map;
 
@@ -439,12 +398,10 @@
 
     invoke-interface {v6, v7, v8}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 255
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 256
     .local v1, "apps":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Boolean;>;"
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -456,7 +413,6 @@
 
     invoke-interface {v1, v6, v7}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 257
     iget-object v6, p0, Lcom/android/server/connectivity/PermissionMonitor;->mUsers:Ljava/util/Set;
 
     const/4 v7, 0x1
@@ -468,7 +424,6 @@
 
     goto :goto_0
 
-    .line 260
     .end local v0    # "app":Landroid/content/pm/PackageInfo;
     .end local v1    # "apps":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Boolean;>;"
     .end local v3    # "isNetwork":Z
@@ -477,7 +432,6 @@
     :catch_0
     move-exception v2
 
-    .line 261
     .local v2, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_2
     new-instance v6, Ljava/lang/StringBuilder;
@@ -504,7 +458,6 @@
 
     goto :goto_0
 
-    .line 239
     .end local v2    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :catchall_0
     move-exception v6
@@ -519,12 +472,10 @@
     .param p1, "appUid"    # I
 
     .prologue
-    .line 266
     monitor-enter p0
 
     if-gez p1, :cond_0
 
-    .line 267
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -548,13 +499,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 275
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 270
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mApps:Ljava/util/Map;
@@ -565,12 +514,10 @@
 
     invoke-interface {v1, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 272
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 273
     .local v0, "apps":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Boolean;>;"
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -584,7 +531,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 274
     iget-object v1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mUsers:Ljava/util/Set;
 
     const/4 v2, 0x0
@@ -595,7 +541,6 @@
 
     goto :goto_0
 
-    .line 266
     .end local v0    # "apps":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Boolean;>;"
     :catchall_0
     move-exception v1
@@ -610,12 +555,10 @@
     .param p1, "user"    # I
 
     .prologue
-    .line 215
     monitor-enter p0
 
     if-gez p1, :cond_0
 
-    .line 216
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -639,13 +582,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 224
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 219
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mUsers:Ljava/util/Set;
@@ -656,12 +597,10 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 221
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 222
     .local v0, "users":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -669,7 +608,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 223
     iget-object v1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mApps:Ljava/util/Map;
 
     const/4 v2, 0x1
@@ -680,7 +618,6 @@
 
     goto :goto_0
 
-    .line 215
     .end local v0    # "users":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     :catchall_0
     move-exception v1
@@ -695,12 +632,10 @@
     .param p1, "user"    # I
 
     .prologue
-    .line 227
     monitor-enter p0
 
     if-gez p1, :cond_0
 
-    .line 228
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -724,13 +659,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 236
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 231
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mUsers:Ljava/util/Set;
@@ -741,12 +674,10 @@
 
     invoke-interface {v1, v2}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 233
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 234
     .local v0, "users":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -754,7 +685,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 235
     iget-object v1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mApps:Ljava/util/Map;
 
     const/4 v2, 0x0
@@ -765,7 +695,6 @@
 
     goto :goto_0
 
-    .line 227
     .end local v0    # "users":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     :catchall_0
     move-exception v1
@@ -788,7 +717,6 @@
     .end annotation
 
     .prologue
-    .line 177
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -796,7 +724,6 @@
 
     new-array v0, v2, [I
 
-    .line 178
     .local v0, "array":[I
     const/4 v1, 0x0
 
@@ -808,7 +735,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 179
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -821,12 +747,10 @@
 
     aput v2, v0, v1
 
-    .line 178
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 181
     :cond_0
     return-object v0
 .end method
@@ -850,20 +774,17 @@
     .end annotation
 
     .prologue
-    .line 185
     .local p1, "users":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     .local p2, "apps":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/Integer;Ljava/lang/Boolean;>;"
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 186
     .local v5, "network":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 187
     .local v6, "system":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-interface {p2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -886,7 +807,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 188
     .local v0, "app":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/Boolean;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -902,7 +822,6 @@
 
     move-object v4, v6
 
-    .line 189
     .local v4, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :goto_0
     invoke-interface {p1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -927,7 +846,6 @@
 
     move-result v7
 
-    .line 190
     .local v7, "user":I
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -957,15 +875,12 @@
     :cond_1
     move-object v4, v5
 
-    .line 188
     goto :goto_0
 
-    .line 194
     .end local v0    # "app":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/Boolean;>;"
     :cond_2
     if-eqz p3, :cond_3
 
-    .line 195
     :try_start_0
     iget-object v8, p0, Lcom/android/server/connectivity/PermissionMonitor;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -977,7 +892,6 @@
 
     invoke-interface {v8, v9, v10}, Landroid/os/INetworkManagementService;->setPermission(Ljava/lang/String;[I)V
 
-    .line 196
     iget-object v8, p0, Lcom/android/server/connectivity/PermissionMonitor;->mNetd:Landroid/os/INetworkManagementService;
 
     const-string v9, "SYSTEM"
@@ -988,11 +902,9 @@
 
     invoke-interface {v8, v9, v10}, Landroid/os/INetworkManagementService;->setPermission(Ljava/lang/String;[I)V
 
-    .line 212
     :goto_2
     return-void
 
-    .line 198
     :cond_3
     const/16 v8, 0x3e8
 
@@ -1006,12 +918,10 @@
 
     if-eqz v8, :cond_4
 
-    .line 199
     const-string/jumbo v8, "remve system uid in list of network"
 
     invoke-static {v8}, Lcom/android/server/connectivity/PermissionMonitor;->loge(Ljava/lang/String;)V
 
-    .line 200
     const/16 v8, 0x3e8
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1020,7 +930,6 @@
 
     invoke-interface {v5, v8}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 202
     :cond_4
     const/16 v8, 0x3e8
 
@@ -1034,12 +943,10 @@
 
     if-eqz v8, :cond_5
 
-    .line 203
     const-string/jumbo v8, "remve system uid in list of system"
 
     invoke-static {v8}, Lcom/android/server/connectivity/PermissionMonitor;->loge(Ljava/lang/String;)V
 
-    .line 204
     const/16 v8, 0x3e8
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1048,7 +955,6 @@
 
     invoke-interface {v6, v8}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 206
     :cond_5
     iget-object v8, p0, Lcom/android/server/connectivity/PermissionMonitor;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -1058,7 +964,6 @@
 
     invoke-interface {v8, v9}, Landroid/os/INetworkManagementService;->clearPermission([I)V
 
-    .line 207
     iget-object v8, p0, Lcom/android/server/connectivity/PermissionMonitor;->mNetd:Landroid/os/INetworkManagementService;
 
     invoke-direct {p0, v6}, Lcom/android/server/connectivity/PermissionMonitor;->toIntArray(Ljava/util/List;)[I
@@ -1071,11 +976,9 @@
 
     goto :goto_2
 
-    .line 209
     :catch_0
     move-exception v1
 
-    .line 210
     .local v1, "e":Landroid/os/RemoteException;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1106,7 +1009,6 @@
     .locals 15
 
     .prologue
-    .line 104
     monitor-enter p0
 
     :try_start_0
@@ -1114,23 +1016,19 @@
 
     invoke-static {v0}, Lcom/android/server/connectivity/PermissionMonitor;->log(Ljava/lang/String;)V
 
-    .line 106
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 107
     .local v3, "intentFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.USER_ADDED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 108
     const-string v0, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 109
     iget-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mIntentReceiver:Landroid/content/BroadcastReceiver;
@@ -1143,29 +1041,24 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 111
     new-instance v3, Landroid/content/IntentFilter;
 
     .end local v3    # "intentFilter":Landroid/content/IntentFilter;
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 112
     .restart local v3    # "intentFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 113
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 114
     const-string/jumbo v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mIntentReceiver:Landroid/content/BroadcastReceiver;
@@ -1178,7 +1071,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mPackageManager:Landroid/content/pm/PackageManager;
 
     const/16 v1, 0x1000
@@ -1187,24 +1079,20 @@
 
     move-result-object v7
 
-    .line 118
     .local v7, "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     if-nez v7, :cond_0
 
-    .line 119
     const-string v0, "No apps"
 
     invoke-static {v0}, Lcom/android/server/connectivity/PermissionMonitor;->loge(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 151
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 123
     :cond_0
     :try_start_1
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1226,7 +1114,6 @@
 
     check-cast v6, Landroid/content/pm/PackageInfo;
 
-    .line 124
     .local v6, "app":Landroid/content/pm/PackageInfo;
     iget-object v0, v6, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -1236,29 +1123,24 @@
 
     iget v12, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    .line 125
     .local v12, "uid":I
     :goto_2
     if-ltz v12, :cond_1
 
-    .line 129
     invoke-direct {p0, v6}, Lcom/android/server/connectivity/PermissionMonitor;->hasNetworkPermission(Landroid/content/pm/PackageInfo;)Z
 
     move-result v9
 
-    .line 130
     .local v9, "isNetwork":Z
     invoke-direct {p0, v6}, Lcom/android/server/connectivity/PermissionMonitor;->hasSystemPermission(Landroid/content/pm/PackageInfo;)Z
 
     move-result v10
 
-    .line 132
     .local v10, "isSystem":Z
     if-nez v9, :cond_2
 
     if-eqz v10, :cond_1
 
-    .line 133
     :cond_2
     iget-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mApps:Ljava/util/Map;
 
@@ -1272,7 +1154,6 @@
 
     check-cast v11, Ljava/lang/Boolean;
 
-    .line 136
     .local v11, "permission":Ljava/lang/Boolean;
     if-eqz v11, :cond_3
 
@@ -1282,7 +1163,6 @@
 
     if-nez v0, :cond_1
 
-    .line 137
     :cond_3
     iget-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mApps:Ljava/util/Map;
 
@@ -1300,7 +1180,6 @@
 
     goto :goto_1
 
-    .line 104
     .end local v3    # "intentFilter":Landroid/content/IntentFilter;
     .end local v6    # "app":Landroid/content/pm/PackageInfo;
     .end local v7    # "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
@@ -1316,7 +1195,6 @@
 
     throw v0
 
-    .line 124
     .restart local v3    # "intentFilter":Landroid/content/IntentFilter;
     .restart local v6    # "app":Landroid/content/pm/PackageInfo;
     .restart local v7    # "apps":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
@@ -1326,7 +1204,6 @@
 
     goto :goto_2
 
-    .line 142
     .end local v6    # "app":Landroid/content/pm/PackageInfo;
     :cond_5
     :try_start_2
@@ -1338,11 +1215,9 @@
 
     move-result-object v14
 
-    .line 143
     .local v14, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-eqz v14, :cond_6
 
-    .line 144
     invoke-interface {v14}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
@@ -1360,7 +1235,6 @@
 
     check-cast v13, Landroid/content/pm/UserInfo;
 
-    .line 145
     .local v13, "user":Landroid/content/pm/UserInfo;
     iget-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mUsers:Ljava/util/Set;
 
@@ -1374,7 +1248,6 @@
 
     goto :goto_3
 
-    .line 149
     .end local v13    # "user":Landroid/content/pm/UserInfo;
     :cond_6
     new-instance v0, Ljava/lang/StringBuilder;
@@ -1419,7 +1292,6 @@
 
     invoke-static {v0}, Lcom/android/server/connectivity/PermissionMonitor;->log(Ljava/lang/String;)V
 
-    .line 150
     iget-object v0, p0, Lcom/android/server/connectivity/PermissionMonitor;->mUsers:Ljava/util/Set;
 
     iget-object v1, p0, Lcom/android/server/connectivity/PermissionMonitor;->mApps:Ljava/util/Map;

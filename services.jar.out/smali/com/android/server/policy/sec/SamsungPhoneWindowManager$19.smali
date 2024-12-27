@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3777
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$19;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iput p2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$19;->val$stopReason:I
@@ -44,20 +43,17 @@
     .locals 5
 
     .prologue
-    .line 3780
     :try_start_0
     iget v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$19;->val$stopReason:I
 
     if-nez v2, :cond_0
 
-    .line 3781
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.samsung.action.EASYONEHAND_SERVICE_SCREEN_OFF"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3782
     .local v1, "eohIntent":Landroid/content/Intent;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -69,7 +65,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 3783
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$19;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -78,17 +73,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3788
     .end local v1    # "eohIntent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 3785
     :catch_0
     move-exception v0
 
-    .line 3786
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

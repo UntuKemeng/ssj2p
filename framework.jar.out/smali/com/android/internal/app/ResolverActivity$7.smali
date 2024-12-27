@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3224
     iput-object p1, p0, Lcom/android/internal/app/ResolverActivity$7;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iput-object p2, p0, Lcom/android/internal/app/ResolverActivity$7;->val$cti:Lcom/android/internal/app/ResolverActivity$TargetInfo;
@@ -45,7 +44,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3236
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3230
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$7;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     const/4 v1, 0x0
@@ -62,19 +59,16 @@
     # setter for: Lcom/android/internal/app/ResolverActivity;->mExitAnimator:Landroid/animation/Animator;
     invoke-static {v0, v1}, Lcom/android/internal/app/ResolverActivity;->access$3902(Lcom/android/internal/app/ResolverActivity;Landroid/animation/Animator;)Landroid/animation/Animator;
 
-    .line 3231
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$7;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     iget-object v1, p0, Lcom/android/internal/app/ResolverActivity$7;->val$cti:Lcom/android/internal/app/ResolverActivity$TargetInfo;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/app/ResolverActivity;->safelyStartActivity(Lcom/android/internal/app/ResolverActivity$TargetInfo;)V
 
-    .line 3232
     iget-object v0, p0, Lcom/android/internal/app/ResolverActivity$7;->this$0:Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v0}, Lcom/android/internal/app/ResolverActivity;->finish()V
 
-    .line 3233
     return-void
 .end method
 
@@ -83,7 +77,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3239
     return-void
 .end method
 
@@ -92,6 +85,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3227
     return-void
 .end method

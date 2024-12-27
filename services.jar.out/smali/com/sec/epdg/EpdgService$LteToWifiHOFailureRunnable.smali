@@ -24,13 +24,10 @@
     .param p2, "networkType"    # I
 
     .prologue
-    .line 4250
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$LteToWifiHOFailureRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
-    .line 4251
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/EpdgService$HORunnable;-><init>(Lcom/sec/epdg/EpdgService;I)V
 
-    .line 4252
     return-void
 .end method
 
@@ -40,14 +37,12 @@
     .locals 3
 
     .prologue
-    .line 4256
     const-string v0, "[EPDGService]"
 
     const-string v1, "LteToWifiHOFailureRunnable()"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4257
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$LteToWifiHOFailureRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     const/4 v1, 0x0
@@ -63,6 +58,5 @@
     # invokes: Lcom/sec/epdg/EpdgService;->notifyL2WHandoverResult(ZLjava/lang/String;)V
     invoke-static {v0, v1, v2}, Lcom/sec/epdg/EpdgService;->access$6700(Lcom/sec/epdg/EpdgService;ZLjava/lang/String;)V
 
-    .line 4258
     return-void
 .end method

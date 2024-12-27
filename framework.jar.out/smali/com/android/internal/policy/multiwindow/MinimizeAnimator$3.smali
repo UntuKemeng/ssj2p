@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 243
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$3;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 259
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$3;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mWindow:Landroid/view/Window;
@@ -75,13 +73,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 260
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$3;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # setter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mReadyToShow:Z
     invoke-static {v0, v7}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$802(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;Z)Z
 
-    .line 261
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$3;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     new-instance v1, Landroid/graphics/Rect;
@@ -137,7 +133,6 @@
     # invokes: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->setTouchableRegion(Landroid/graphics/Rect;I)V
     invoke-static {v0, v1, v7}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$1300(Lcom/android/internal/policy/multiwindow/MinimizeAnimator;Landroid/graphics/Rect;I)V
 
-    .line 264
     :cond_0
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$400()Z
@@ -146,7 +141,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 265
     :cond_1
     return-void
 .end method
@@ -156,7 +150,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 254
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$400()Z
 
@@ -164,7 +157,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 255
     :cond_0
     return-void
 .end method
@@ -174,7 +166,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 246
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$400()Z
 
@@ -182,7 +173,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 247
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$3;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
@@ -193,7 +183,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 248
     iget-object v0, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$3;->this$0:Lcom/android/internal/policy/multiwindow/MinimizeAnimator;
 
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
@@ -210,7 +199,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFacade;->appMinimizingStarted(Landroid/os/IBinder;)V
 
-    .line 250
     :cond_1
     return-void
 .end method

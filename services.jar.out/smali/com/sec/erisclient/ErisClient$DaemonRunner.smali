@@ -28,20 +28,16 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 656
     iput-object p1, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 654
     const-wide/16 v0, -0x1
 
     iput-wide v0, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mTimer:J
 
-    .line 657
     iput-object p2, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mDaemonName:Ljava/lang/String;
 
-    .line 658
     return-void
 .end method
 
@@ -57,12 +53,10 @@
     .prologue
     const-wide/16 v2, 0x1
 
-    .line 675
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
 
-    .line 676
     .local v0, "now":J
     iget-wide v4, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mTimer:J
 
@@ -72,17 +66,13 @@
 
     if-nez v4, :cond_0
 
-    .line 677
     iput-wide v0, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mTimer:J
 
-    .line 678
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 685
     :goto_0
     return-void
 
-    .line 679
     :cond_0
     iget-wide v4, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mTimer:J
 
@@ -94,7 +84,6 @@
 
     if-gtz v4, :cond_2
 
-    .line 680
     if-eqz p1, :cond_1
 
     const-wide/16 v2, 0xc8
@@ -104,7 +93,6 @@
 
     goto :goto_0
 
-    .line 683
     :cond_2
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -121,17 +109,14 @@
     .locals 4
 
     .prologue
-    .line 661
     const-string v2, "ErisClient"
 
     const-string v3, "DaemonRunner:exit()"
 
     invoke-static {v2, v3}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 662
     invoke-virtual {p0}, Lcom/sec/erisclient/ErisClient$DaemonRunner;->interrupt()V
 
-    .line 663
     iget-object v2, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
 
     # getter for: Lcom/sec/erisclient/ErisClient;->mSocket:Landroid/net/LocalSocket;
@@ -141,7 +126,6 @@
 
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 664
     const/4 v1, 0x0
 
     .local v1, "j":I
@@ -158,30 +142,25 @@
 
     if-nez v2, :cond_0
 
-    .line 666
     :try_start_0
     iget-object v2, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mDaemonName:Ljava/lang/String;
 
     invoke-static {v2}, Landroid/os/SystemService;->stop(Ljava/lang/String;)V
 
-    .line 667
     const-wide/16 v2, 0x64
 
     invoke-static {v2, v3}, Ljava/lang/Thread;->sleep(J)V
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 664
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 668
     :catch_0
     move-exception v0
 
-    .line 669
     .local v0, "ignore":Ljava/lang/InterruptedException;
     const-string v2, "ErisClient"
 
@@ -191,7 +170,6 @@
 
     goto :goto_1
 
-    .line 672
     .end local v0    # "ignore":Ljava/lang/InterruptedException;
     :cond_0
     return-void
@@ -201,32 +179,27 @@
     .locals 9
 
     .prologue
-    .line 689
     const-string v6, "ErisClient"
 
     const-string v7, "DaemonRunner:run()"
 
     invoke-static {v6, v7}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 691
     const/4 v6, 0x0
 
     :try_start_0
     invoke-direct {p0, v6}, Lcom/sec/erisclient/ErisClient$DaemonRunner;->checkpoint(Z)V
 
-    .line 692
     const-string v6, "ErisClient"
 
     const-string v7, "DaemonRunner:run() stopping daemon..."
 
     invoke-static {v6, v7}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 693
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mDaemonName:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/os/SystemService;->stop(Ljava/lang/String;)V
 
-    .line 694
     :goto_0
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mDaemonName:Ljava/lang/String;
 
@@ -236,7 +209,6 @@
 
     if-nez v6, :cond_0
 
-    .line 695
     const/4 v6, 0x1
 
     invoke-direct {p0, v6}, Lcom/sec/erisclient/ErisClient$DaemonRunner;->checkpoint(Z)V
@@ -246,20 +218,16 @@
 
     goto :goto_0
 
-    .line 745
     :catch_0
     move-exception v2
 
-    .line 746
     .local v2, "e":Ljava/lang/InterruptedException;
     invoke-virtual {v2}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 751
     .end local v2    # "e":Ljava/lang/InterruptedException;
     :goto_1
     return-void
 
-    .line 697
     :cond_0
     :try_start_1
     const-string v6, "ErisClient"
@@ -268,12 +236,10 @@
 
     invoke-static {v6, v7}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 698
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mDaemonName:Ljava/lang/String;
 
     invoke-static {v6}, Landroid/os/SystemService;->start(Ljava/lang/String;)V
 
-    .line 699
     :goto_2
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mDaemonName:Ljava/lang/String;
 
@@ -283,7 +249,6 @@
 
     if-nez v6, :cond_1
 
-    .line 700
     const/4 v6, 0x1
 
     invoke-direct {p0, v6}, Lcom/sec/erisclient/ErisClient$DaemonRunner;->checkpoint(Z)V
@@ -293,15 +258,12 @@
 
     goto :goto_2
 
-    .line 747
     :catch_1
     move-exception v2
 
-    .line 748
     .local v2, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v2}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
-    .line 749
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
 
     sget-object v7, Lcom/sec/erisclient/ErisError;->ERIS_DAEMON_STOPPED:Lcom/sec/erisclient/ErisError;
@@ -311,7 +273,6 @@
 
     goto :goto_1
 
-    .line 702
     .end local v2    # "e":Ljava/lang/IllegalStateException;
     :cond_1
     :try_start_2
@@ -321,7 +282,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 703
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
 
     sget-object v7, Lcom/sec/erisclient/ErisError;->ERIS_OK:Lcom/sec/erisclient/ErisError;
@@ -329,7 +289,6 @@
     # invokes: Lcom/sec/erisclient/ErisClient;->updateServiceStatus(Lcom/sec/erisclient/ErisError;)V
     invoke-static {v6, v7}, Lcom/sec/erisclient/ErisClient;->access$200(Lcom/sec/erisclient/ErisClient;Lcom/sec/erisclient/ErisError;)V
 
-    .line 705
     new-instance v0, Landroid/net/LocalSocketAddress;
 
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->mDaemonName:Ljava/lang/String;
@@ -341,7 +300,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 709
     .local v0, "address":Landroid/net/LocalSocketAddress;
     :goto_3
     :try_start_3
@@ -359,7 +317,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_0
     .catch Ljava/lang/IllegalStateException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 716
     :try_start_4
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
 
@@ -372,7 +329,6 @@
 
     invoke-virtual {v6, v7}, Landroid/net/LocalSocket;->setSoTimeout(I)V
 
-    .line 717
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
 
     # getter for: Lcom/sec/erisclient/ErisClient;->mSocket:Landroid/net/LocalSocket;
@@ -384,7 +340,6 @@
 
     move-result-object v3
 
-    .line 718
     .local v3, "in":Ljava/io/InputStream;
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
 
@@ -402,19 +357,16 @@
     # invokes: Lcom/sec/erisclient/ErisClient;->setOutputStream(Ljava/io/OutputStream;)V
     invoke-static {v6, v7}, Lcom/sec/erisclient/ErisClient;->access$300(Lcom/sec/erisclient/ErisClient;Ljava/io/OutputStream;)V
 
-    .line 720
     :goto_4
     const/16 v6, 0x1000
 
     new-array v1, v6, [B
 
-    .line 721
     .local v1, "buffer":[B
     const/4 v6, 0x0
 
     invoke-static {v1, v6}, Ljava/util/Arrays;->fill([BB)V
 
-    .line 722
     invoke-virtual {v3, v1}, Ljava/io/InputStream;->read([B)I
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
@@ -423,13 +375,11 @@
 
     move-result v5
 
-    .line 723
     .local v5, "res":I
     const/4 v6, -0x1
 
     if-ne v5, v6, :cond_2
 
-    .line 740
     .end local v1    # "buffer":[B
     .end local v3    # "in":Ljava/io/InputStream;
     .end local v5    # "res":I
@@ -442,19 +392,16 @@
     # invokes: Lcom/sec/erisclient/ErisClient;->updateServiceStatus(Lcom/sec/erisclient/ErisError;)V
     invoke-static {v6, v7}, Lcom/sec/erisclient/ErisClient;->access$200(Lcom/sec/erisclient/ErisClient;Lcom/sec/erisclient/ErisError;)V
 
-    .line 742
     const-string v6, "ErisClient"
 
     const-string v7, "DaemonRunner:run() restart daemon"
 
     invoke-static {v6, v7}, Lcom/sec/erisclient/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 743
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
 
     invoke-virtual {v6}, Lcom/sec/erisclient/ErisClient;->stopService()V
 
-    .line 744
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
 
     invoke-virtual {v6}, Lcom/sec/erisclient/ErisClient;->startService()V
@@ -464,11 +411,9 @@
 
     goto/16 :goto_1
 
-    .line 711
     :catch_2
     move-exception v6
 
-    .line 714
     const/4 v6, 0x1
 
     :try_start_6
@@ -480,11 +425,9 @@
 
     goto :goto_3
 
-    .line 736
     :catch_3
     move-exception v2
 
-    .line 737
     .local v2, "e":Ljava/io/IOException;
     :try_start_7
     const-string v6, "ErisClient"
@@ -509,7 +452,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/erisclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 738
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
     :try_end_7
     .catch Ljava/lang/InterruptedException; {:try_start_7 .. :try_end_7} :catch_0
@@ -517,7 +459,6 @@
 
     goto :goto_5
 
-    .line 728
     .end local v2    # "e":Ljava/io/IOException;
     .restart local v1    # "buffer":[B
     .restart local v3    # "in":Ljava/io/InputStream;
@@ -536,7 +477,6 @@
 
     move-result-object v4
 
-    .line 730
     .local v4, "jsonStr":Ljava/lang/String;
     :try_start_9
     iget-object v6, p0, Lcom/sec/erisclient/ErisClient$DaemonRunner;->this$0:Lcom/sec/erisclient/ErisClient;
@@ -551,11 +491,9 @@
 
     goto :goto_4
 
-    .line 731
     :catch_4
     move-exception v2
 
-    .line 732
     .local v2, "e":Lorg/json/JSONException;
     :try_start_a
     const-string v6, "ErisClient"
@@ -580,7 +518,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/erisclient/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 733
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
     :try_end_a
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_3

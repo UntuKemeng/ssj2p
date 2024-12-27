@@ -17,10 +17,8 @@
     .param p2, "tagName"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     invoke-direct {p0, p1, p2}, Lmf/org/apache/wml/dom/WMLElementImpl;-><init>(Lmf/org/apache/wml/dom/WMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 32
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 47
     const-string v0, "class"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 63
     const-string v0, "id"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -58,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 71
     const-string v0, "label"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -72,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 87
     const-string v0, "name"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -86,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 39
     const-string v0, "optional"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -100,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const-string v0, "type"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -114,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 55
     const-string v0, "xml:lang"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -129,12 +120,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     const-string v0, "class"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -143,12 +132,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     const-string v0, "id"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 60
     return-void
 .end method
 
@@ -157,12 +144,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     const-string v0, "label"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method
 
@@ -171,12 +156,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 84
     return-void
 .end method
 
@@ -185,12 +168,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 35
     const-string v0, "optional"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 36
     return-void
 .end method
 
@@ -199,12 +180,10 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     const-string v0, "type"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 76
     return-void
 .end method
 
@@ -213,11 +192,9 @@
     .param p1, "newValue"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     const-string v0, "xml:lang"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/wml/dom/WMLDoElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 52
     return-void
 .end method

@@ -23,13 +23,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     iput-object p1, p0, Lcom/android/server/desktop/DarkScreen;->mContext:Landroid/content/Context;
 
-    .line 23
     iget-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "window"
@@ -42,7 +39,6 @@
 
     iput-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 24
     iget-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mWindowManager:Landroid/view/WindowManager;
 
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
@@ -51,7 +47,6 @@
 
     iput-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mDisplay:Landroid/view/Display;
 
-    .line 25
     new-instance v0, Lcom/android/server/desktop/MainPresentation;
 
     iget-object v1, p0, Lcom/android/server/desktop/DarkScreen;->mContext:Landroid/content/Context;
@@ -62,7 +57,6 @@
 
     iput-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mPresentation:Lcom/android/server/desktop/MainPresentation;
 
-    .line 26
     iget-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mPresentation:Lcom/android/server/desktop/MainPresentation;
 
     invoke-virtual {v0}, Lcom/android/server/desktop/MainPresentation;->getWindow()Landroid/view/Window;
@@ -71,15 +65,12 @@
 
     iput-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mWindow:Landroid/view/Window;
 
-    .line 27
     invoke-virtual {p0}, Lcom/android/server/desktop/DarkScreen;->setWindowFlags()V
 
-    .line 28
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/desktop/DarkScreen;->mIsEnable:Z
 
-    .line 29
     return-void
 .end method
 
@@ -87,14 +78,11 @@
     .locals 5
 
     .prologue
-    .line 65
     const/4 v0, -0x1
 
-    .line 66
     .local v0, "TYPE_SIDE_SYNC_OVERLAY":I
     const/4 v2, 0x0
 
-    .line 68
     .local v2, "field":Ljava/lang/reflect/Field;
     :try_start_0
     const-class v3, Landroid/view/WindowManager$LayoutParams;
@@ -107,11 +95,9 @@
 
     move-result-object v2
 
-    .line 72
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 74
     :try_start_1
     const-string v3, "TYPE_SIDE_SYNC_OVERLAY"
 
@@ -122,38 +108,31 @@
 
     move-result v0
 
-    .line 81
     :cond_0
     :goto_1
     return v0
 
-    .line 69
     :catch_0
     move-exception v1
 
-    .line 70
     .local v1, "e":Ljava/lang/NoSuchFieldException;
     invoke-virtual {v1}, Ljava/lang/NoSuchFieldException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 75
     .end local v1    # "e":Ljava/lang/NoSuchFieldException;
     :catch_1
     move-exception v1
 
-    .line 76
     .local v1, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v1}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 77
     .end local v1    # "e":Ljava/lang/IllegalArgumentException;
     :catch_2
     move-exception v1
 
-    .line 78
     .local v1, "e":Ljava/lang/IllegalAccessException;
     invoke-virtual {v1}, Ljava/lang/IllegalAccessException;->printStackTrace()V
 
@@ -166,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 60
     iget-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mPresentation:Lcom/android/server/desktop/MainPresentation;
 
     invoke-virtual {v0}, Lcom/android/server/desktop/MainPresentation;->isShowing()Z
@@ -179,12 +157,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 61
     iget-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mPresentation:Lcom/android/server/desktop/MainPresentation;
 
     invoke-virtual {v0}, Lcom/android/server/desktop/MainPresentation;->dismiss()V
 
-    .line 62
     :cond_0
     return-void
 .end method
@@ -193,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget-boolean v0, p0, Lcom/android/server/desktop/DarkScreen;->mIsEnable:Z
 
     return v0
@@ -203,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mPresentation:Lcom/android/server/desktop/MainPresentation;
 
     invoke-virtual {v0}, Lcom/android/server/desktop/MainPresentation;->isShowing()Z
@@ -218,10 +192,8 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 32
     iput-boolean p1, p0, Lcom/android/server/desktop/DarkScreen;->mIsEnable:Z
 
-    .line 33
     return-void
 .end method
 
@@ -229,14 +201,12 @@
     .locals 3
 
     .prologue
-    .line 40
     iget-object v1, p0, Lcom/android/server/desktop/DarkScreen;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v1}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
     move-result-object v0
 
-    .line 41
     .local v0, "layoutParam":Landroid/view/WindowManager$LayoutParams;
     invoke-direct {p0}, Lcom/android/server/desktop/DarkScreen;->checkSupportTypeSideSyncOverlay()I
 
@@ -244,14 +214,12 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 42
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     or-int/lit16 v1, v1, 0x498
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 43
     iget v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
     const v2, -0x10001
@@ -260,12 +228,10 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 45
     iget-object v1, p0, Lcom/android/server/desktop/DarkScreen;->mWindow:Landroid/view/Window;
 
     invoke-virtual {v1, v0}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 46
     return-void
 .end method
 
@@ -273,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mPresentation:Lcom/android/server/desktop/MainPresentation;
 
     invoke-virtual {v0}, Lcom/android/server/desktop/MainPresentation;->isShowing()Z
@@ -286,15 +251,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 54
     invoke-virtual {p0}, Lcom/android/server/desktop/DarkScreen;->setWindowFlags()V
 
-    .line 55
     iget-object v0, p0, Lcom/android/server/desktop/DarkScreen;->mPresentation:Lcom/android/server/desktop/MainPresentation;
 
     invoke-virtual {v0}, Lcom/android/server/desktop/MainPresentation;->show()V
 
-    .line 57
     :cond_0
     return-void
 .end method

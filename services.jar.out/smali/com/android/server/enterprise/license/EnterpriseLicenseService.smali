@@ -69,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 94
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v0
@@ -85,15 +84,12 @@
     .param p2, "pms"    # Landroid/content/pm/IPackageManager;
 
     .prologue
-    .line 100
     invoke-direct {p0}, Landroid/app/enterprise/license/IEnterpriseLicense$Stub;-><init>()V
 
-    .line 97
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mUcmeService:Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
-    .line 132
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -118,13 +114,10 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->allowedCaller:[Ljava/lang/String;
 
-    .line 101
     iput-object p1, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
 
-    .line 102
     sput-object p2, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mPMS:Landroid/content/pm/IPackageManager;
 
-    .line 103
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -133,28 +126,24 @@
 
     sput-object v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 104
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mELMKeyMap:Ljava/util/Map;
 
-    .line 105
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyMap:Ljava/util/Map;
 
-    .line 106
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyDeactivateMap:Ljava/util/Map;
 
-    .line 107
     return-void
 .end method
 
@@ -168,7 +157,6 @@
 
     const/4 v7, 0x0
 
-    .line 139
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->isEmpty()Z
@@ -177,7 +165,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 140
     :cond_0
     const-string v7, "EnterpriseLicenseService"
 
@@ -185,12 +172,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 170
     :cond_1
     :goto_0
     return v6
 
-    .line 142
     :cond_2
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -198,10 +183,8 @@
 
     if-nez v8, :cond_1
 
-    .line 145
     const/4 v2, 0x0
 
-    .line 146
     .local v2, "checkCallerPkgName":Z
     iget-object v0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->allowedCaller:[Ljava/lang/String;
 
@@ -217,7 +200,6 @@
 
     aget-object v1, v0, v4
 
-    .line 147
     .local v1, "caller":Ljava/lang/String;
     invoke-virtual {v1, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -225,7 +207,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 148
     const-string v8, "EnterpriseLicenseService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -248,15 +229,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 149
     const/4 v2, 0x1
 
-    .line 154
     .end local v1    # "caller":Ljava/lang/String;
     :cond_3
     if-nez v2, :cond_5
 
-    .line 155
     const-string v6, "EnterpriseLicenseService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -297,17 +275,14 @@
 
     move v6, v7
 
-    .line 156
     goto :goto_0
 
-    .line 146
     .restart local v1    # "caller":Ljava/lang/String;
     :cond_4
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 160
     .end local v1    # "caller":Ljava/lang/String;
     :cond_5
     :try_start_0
@@ -325,7 +300,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 163
     const-string v6, "EnterpriseLicenseService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -352,20 +326,16 @@
 
     move v6, v7
 
-    .line 164
     goto/16 :goto_0
 
-    .line 166
     :catch_0
     move-exception v3
 
-    .line 167
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     move v6, v7
 
-    .line 170
     goto/16 :goto_0
 .end method
 
@@ -378,20 +348,17 @@
 
     const/4 v3, 0x0
 
-    .line 1566
     new-array v0, v4, [Ljava/lang/String;
 
     const-string/jumbo v2, "pkgName"
 
     aput-object v2, v0, v3
 
-    .line 1569
     .local v0, "sColumns":[Ljava/lang/String;
     new-array v1, v4, [Ljava/lang/String;
 
     aput-object p1, v1, v3
 
-    .line 1572
     .local v1, "sValues":[Ljava/lang/String;
     sget-object v2, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -408,7 +375,6 @@
     .locals 3
 
     .prologue
-    .line 111
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
@@ -417,11 +383,9 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 116
     :goto_0
     return-void
 
-    .line 115
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
 
@@ -439,7 +403,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1552
     sget-object v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getPackageNameForUid(I)Ljava/lang/String;
@@ -465,12 +428,10 @@
     .end annotation
 
     .prologue
-    .line 1248
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 1249
     .local v2, "callingUid":I
     invoke-static {v2}, Landroid/os/UserHandle;->getAppId(I)I
 
@@ -480,7 +441,6 @@
 
     if-eq v6, v7, :cond_0
 
-    .line 1250
     new-instance v6, Ljava/lang/SecurityException;
 
     const-string v7, "Caller is not SYSTEM_SERVICE OR SYSTEM APP"
@@ -489,7 +449,6 @@
 
     throw v6
 
-    .line 1253
     :cond_0
     if-eqz p0, :cond_1
 
@@ -503,24 +462,19 @@
 
     if-eqz v6, :cond_3
 
-    .line 1254
     :cond_1
     const/4 v4, 0x0
 
-    .line 1273
     :cond_2
     :goto_0
     return-object v4
 
-    .line 1256
     :cond_3
     const/4 v5, 0x0
 
-    .line 1257
     .local v5, "ro":Landroid/app/enterprise/license/RightsObject;
     const/4 v4, 0x0
 
-    .line 1259
     .local v4, "perm":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     sget-object v6, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -535,11 +489,9 @@
 
     move-result-object v1
 
-    .line 1263
     .local v1, "blob":[B
     if-eqz v1, :cond_2
 
-    .line 1264
     invoke-static {v1}, Lcom/android/server/enterprise/utils/Utils;->deserializeObject([B)Ljava/lang/Object;
 
     move-result-object v6
@@ -550,10 +502,8 @@
 
     move-object v5, v0
 
-    .line 1265
     if-eqz v5, :cond_2
 
-    .line 1266
     invoke-virtual {v5}, Landroid/app/enterprise/license/RightsObject;->getPermissions()Ljava/util/List;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -562,12 +512,10 @@
 
     goto :goto_0
 
-    .line 1269
     .end local v1    # "blob":[B
     :catch_0
     move-exception v3
 
-    .line 1270
     .local v3, "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseLicenseService"
 
@@ -582,7 +530,6 @@
     .locals 1
 
     .prologue
-    .line 124
     monitor-enter p0
 
     :try_start_0
@@ -590,7 +537,6 @@
 
     if-nez v0, :cond_0
 
-    .line 125
     const-string v0, "com.samsung.ucs.ucsservice"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -603,7 +549,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mUcmeService:Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
-    .line 128
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mUcmeService:Lcom/sec/enterprise/knox/ucm/core/IUcmService;
     :try_end_0
@@ -613,7 +558,6 @@
 
     return-object v0
 
-    .line 124
     :catchall_0
     move-exception v0
 
@@ -627,33 +571,27 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1557
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1558
     .local v1, "cv":Landroid/content/ContentValues;
     const/4 v0, 0x0
 
-    .line 1559
     .local v0, "blob":[B
     const-string/jumbo v3, "rightsObject"
 
     invoke-virtual {v1, v3, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    .line 1560
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1561
     .local v2, "cvWhere":Landroid/content/ContentValues;
     const-string/jumbo v3, "pkgName"
 
     invoke-virtual {v2, v3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1562
     sget-object v3, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "LICENSE"
@@ -669,7 +607,6 @@
     .locals 9
 
     .prologue
-    .line 1502
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v6
@@ -678,7 +615,6 @@
 
     if-eq v6, v7, :cond_0
 
-    .line 1503
     new-instance v6, Ljava/lang/SecurityException;
 
     const-string v7, "Caller is not SYSTEM_PROCESS"
@@ -687,14 +623,12 @@
 
     throw v6
 
-    .line 1507
     :cond_0
     const/4 v6, 0x1
 
     :try_start_0
     new-array v0, v6, [Ljava/lang/String;
 
-    .line 1508
     .local v0, "columns":[Ljava/lang/String;
     const/4 v6, 0x0
 
@@ -702,7 +636,6 @@
 
     aput-object v7, v0, v6
 
-    .line 1510
     sget-object v6, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "LICENSE"
@@ -713,7 +646,6 @@
 
     move-result-object v5
 
-    .line 1513
     .local v5, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v5, :cond_2
 
@@ -723,20 +655,16 @@
 
     if-nez v6, :cond_2
 
-    .line 1514
     const/4 v1, 0x0
 
-    .line 1515
     .local v1, "cv":Landroid/content/ContentValues;
     const/4 v4, 0x0
 
-    .line 1516
     .local v4, "pkgName":Ljava/lang/String;
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 1518
     .local v3, "it":Ljava/util/Iterator;
     :cond_1
     :goto_0
@@ -746,7 +674,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 1519
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -754,7 +681,6 @@
     .end local v1    # "cv":Landroid/content/ContentValues;
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 1520
     .restart local v1    # "cv":Landroid/content/ContentValues;
     const-string/jumbo v6, "pkgName"
 
@@ -762,10 +688,8 @@
 
     move-result-object v4
 
-    .line 1522
     if-eqz v4, :cond_1
 
-    .line 1523
     const-string v6, "EnterpriseLicenseService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -788,7 +712,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1525
     sget-object v6, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mPMS:Landroid/content/pm/IPackageManager;
 
     invoke-interface {v6, v4}, Landroid/content/pm/IPackageManager;->setLicensePermissions(Ljava/lang/String;)I
@@ -797,7 +720,6 @@
 
     goto :goto_0
 
-    .line 1529
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v3    # "it":Ljava/util/Iterator;
     .end local v4    # "pkgName":Ljava/lang/String;
@@ -805,7 +727,6 @@
     :catch_0
     move-exception v2
 
-    .line 1530
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseLicenseService"
 
@@ -813,10 +734,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1531
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1533
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_2
     return-void
@@ -831,7 +750,6 @@
     .param p3, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 919
     monitor-enter p0
 
     :try_start_0
@@ -851,7 +769,6 @@
 
     if-eqz v21, :cond_0
 
-    .line 921
     new-instance v21, Ljava/lang/SecurityException;
 
     const-string v22, "Operation not supported on profile"
@@ -862,7 +779,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 919
     :catchall_0
     move-exception v21
 
@@ -870,20 +786,17 @@
 
     throw v21
 
-    .line 926
     :cond_0
     :try_start_1
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrUserUid(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v17
 
-    .line 927
     .local v17, "uid":I
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v20
 
-    .line 929
     .local v20, "userId":I
     move-object/from16 v0, p0
 
@@ -903,7 +816,6 @@
 
     move-result-object v6
 
-    .line 931
     .local v6, "callerPackage":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -911,7 +823,6 @@
 
     move-result-wide v18
 
-    .line 934
     .local v18, "token":J
     if-eqz p3, :cond_1
 
@@ -926,7 +837,6 @@
 
     if-eqz v21, :cond_5
 
-    .line 935
     :cond_1
     move-object/from16 v0, p0
 
@@ -936,10 +846,8 @@
 
     move-result-object p3
 
-    .line 936
     move-object/from16 v6, p3
 
-    .line 993
     :cond_2
     if-eqz p3, :cond_c
 
@@ -953,7 +861,6 @@
 
     if-nez v21, :cond_c
 
-    .line 999
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyMap:Ljava/util/Map;
@@ -970,7 +877,6 @@
 
     if-nez v21, :cond_3
 
-    .line 1000
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyMap:Ljava/util/Map;
@@ -985,7 +891,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1004
     :cond_3
     new-instance v11, Landroid/content/Intent;
 
@@ -995,7 +900,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1005
     .local v11, "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.data.pkgname"
 
@@ -1005,14 +909,12 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1006
     const-string v21, "edm.intent.extra.knox_license.data.request_pkgname"
 
     move-object/from16 v0, v21
 
     invoke-virtual {v11, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1010
     const-string/jumbo v21, "persona"
 
     invoke-static/range {v21 .. v21}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1023,7 +925,6 @@
 
     move-result-object v16
 
-    .line 1012
     .local v16, "pms":Landroid/os/IPersonaManager;
     if-eqz v16, :cond_b
 
@@ -1037,10 +938,8 @@
 
     if-eqz v21, :cond_b
 
-    .line 1013
     sget-object v7, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
-    .line 1020
     .local v7, "dest":Landroid/os/UserHandle;
     :goto_0
     move-object/from16 v0, p0
@@ -1060,13 +959,11 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1029
     :try_start_3
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1070
     .end local v7    # "dest":Landroid/os/UserHandle;
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v16    # "pms":Landroid/os/IPersonaManager;
@@ -1076,7 +973,6 @@
 
     return-void
 
-    .line 939
     :cond_5
     :try_start_4
     move-object/from16 v0, p0
@@ -1097,11 +993,9 @@
 
     move-result-object v14
 
-    .line 940
     .local v14, "pkgs":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 943
     .local v4, "approved":Z
     invoke-static {v14}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -1117,17 +1011,13 @@
 
     if-eqz v21, :cond_6
 
-    .line 944
     const/4 v4, 0x1
 
-    .line 945
     move-object/from16 v6, p3
 
-    .line 949
     :cond_6
     if-nez v4, :cond_7
 
-    .line 950
     move-object v5, v14
 
     .local v5, "arr$":[Ljava/lang/String;
@@ -1142,7 +1032,6 @@
 
     aget-object v13, v5, v9
 
-    .line 951
     .local v13, "pkg":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1163,10 +1052,8 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 952
     const/4 v4, 0x1
 
-    .line 958
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v12    # "len$":I
@@ -1174,7 +1061,6 @@
     :cond_7
     if-nez v4, :cond_2
 
-    .line 960
     :try_start_5
     const-string/jumbo v21, "package"
 
@@ -1186,7 +1072,6 @@
 
     move-result-object v15
 
-    .line 961
     .local v15, "pm":Landroid/content/pm/IPackageManager;
     const/16 v21, 0x0
 
@@ -1200,11 +1085,9 @@
 
     move-result-object v10
 
-    .line 963
     .local v10, "info":Landroid/content/pm/PackageInfo;
     if-eqz v10, :cond_9
 
-    .line 965
     new-instance v11, Landroid/content/Intent;
 
     const-string v21, "edm.intent.action.knox_license.status"
@@ -1213,7 +1096,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 966
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.status"
 
@@ -1225,7 +1107,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 967
     const-string v21, "edm.intent.extra.knox_license.errorcode"
 
     const/16 v22, 0xcc
@@ -1236,7 +1117,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 969
     const-string v21, "edm.intent.extra.knox_license.result_type"
 
     const/16 v22, 0x320
@@ -1247,12 +1127,10 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 971
     move-object/from16 v0, p3
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 972
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -1270,7 +1148,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1029
     :try_start_6
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_6
@@ -1278,7 +1155,6 @@
 
     goto/16 :goto_1
 
-    .line 950
     .end local v10    # "info":Landroid/content/pm/PackageInfo;
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v15    # "pm":Landroid/content/pm/IPackageManager;
@@ -1291,7 +1167,6 @@
 
     goto :goto_2
 
-    .line 975
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v12    # "len$":I
@@ -1299,12 +1174,10 @@
     :catch_0
     move-exception v8
 
-    .line 976
     .local v8, "e":Ljava/lang/Exception;
     :try_start_7
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 979
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_9
     move-object v5, v14
@@ -1321,7 +1194,6 @@
 
     aget-object v13, v5, v9
 
-    .line 980
     .restart local v13    # "pkg":Ljava/lang/String;
     new-instance v11, Landroid/content/Intent;
 
@@ -1331,7 +1203,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 981
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.status"
 
@@ -1343,7 +1214,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 982
     const-string v21, "edm.intent.extra.knox_license.errorcode"
 
     const/16 v22, 0xcc
@@ -1354,7 +1224,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 984
     const-string v21, "edm.intent.extra.knox_license.result_type"
 
     const/16 v22, 0x320
@@ -1365,10 +1234,8 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 986
     invoke-virtual {v11, v13}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 987
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -1386,12 +1253,10 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 979
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
-    .line 1029
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v13    # "pkg":Ljava/lang/String;
     :cond_a
@@ -1402,7 +1267,6 @@
 
     goto/16 :goto_1
 
-    .line 1015
     .end local v4    # "approved":Z
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
@@ -1421,7 +1285,6 @@
     .restart local v7    # "dest":Landroid/os/UserHandle;
     goto/16 :goto_0
 
-    .line 1023
     .end local v7    # "dest":Landroid/os/UserHandle;
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v16    # "pms":Landroid/os/IPersonaManager;
@@ -1435,15 +1298,12 @@
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 1029
     :try_start_a
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1033
     :goto_4
     if-nez p3, :cond_d
 
-    .line 1034
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -1462,7 +1322,6 @@
 
     move-result-object v14
 
-    .line 1035
     .restart local v14    # "pkgs":[Ljava/lang/String;
     if-eqz v14, :cond_4
 
@@ -1472,7 +1331,6 @@
 
     if-lez v21, :cond_4
 
-    .line 1036
     move-object v5, v14
 
     .restart local v5    # "arr$":[Ljava/lang/String;
@@ -1487,7 +1345,6 @@
 
     aget-object v13, v5, v9
 
-    .line 1037
     .restart local v13    # "pkg":Ljava/lang/String;
     new-instance v11, Landroid/content/Intent;
 
@@ -1497,7 +1354,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1038
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.status"
 
@@ -1509,7 +1365,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1039
     const-string v21, "edm.intent.extra.knox_license.errorcode"
 
     const/16 v22, 0x12d
@@ -1520,7 +1375,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1041
     const-string v21, "edm.intent.extra.knox_license.result_type"
 
     const/16 v22, 0x320
@@ -1531,15 +1385,12 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1043
     invoke-virtual {v11, v13}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1045
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 1046
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -1554,17 +1405,14 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1047
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 1036
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_5
 
-    .line 1025
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v11    # "intent":Landroid/content/Intent;
@@ -1574,7 +1422,6 @@
     :catch_1
     move-exception v8
 
-    .line 1026
     .restart local v8    # "e":Ljava/lang/Exception;
     :try_start_b
     const-string v21, "EnterpriseLicenseService"
@@ -1583,12 +1430,10 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1027
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 1029
     :try_start_c
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -1602,7 +1447,6 @@
 
     throw v21
 
-    .line 1051
     :cond_d
     new-instance v11, Landroid/content/Intent;
 
@@ -1612,7 +1456,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1052
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.status"
 
@@ -1624,7 +1467,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1053
     const-string v21, "edm.intent.extra.knox_license.errorcode"
 
     const/16 v22, 0x12d
@@ -1635,7 +1477,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1055
     const-string v21, "edm.intent.extra.knox_license.result_type"
 
     const/16 v22, 0x320
@@ -1646,7 +1487,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1058
     move-object/from16 v0, p3
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1655,15 +1495,12 @@
 
     if-nez v21, :cond_e
 
-    .line 1059
     invoke-virtual {v11, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1060
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 1061
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -1678,21 +1515,17 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1062
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1065
     :cond_e
     move-object/from16 v0, p3
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1066
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 1067
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -1707,7 +1540,6 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1068
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_0
@@ -1722,7 +1554,6 @@
     .param p3, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 1078
     monitor-enter p0
 
     :try_start_0
@@ -1730,12 +1561,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1079
     monitor-exit p0
 
     return-void
 
-    .line 1078
     :catchall_0
     move-exception v0
 
@@ -1752,7 +1581,6 @@
     .param p4, "pkgVer"    # Ljava/lang/String;
 
     .prologue
-    .line 739
     monitor-enter p0
 
     :try_start_0
@@ -1772,7 +1600,6 @@
 
     if-eqz v22, :cond_0
 
-    .line 741
     new-instance v22, Ljava/lang/SecurityException;
 
     const-string v23, "Operation not supported on profile"
@@ -1783,7 +1610,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 739
     :catchall_0
     move-exception v22
 
@@ -1791,20 +1617,17 @@
 
     throw v22
 
-    .line 745
     :cond_0
     :try_start_1
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrUserUid(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v20
 
-    .line 746
     .local v20, "uid":I
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v21
 
-    .line 748
     .local v21, "userId":I
     move-object/from16 v0, p0
 
@@ -1824,7 +1647,6 @@
 
     move-result-object v6
 
-    .line 750
     .local v6, "callerPackage":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -1832,7 +1654,6 @@
 
     move-result-wide v18
 
-    .line 752
     .local v18, "token":J
     if-eqz p3, :cond_1
 
@@ -1847,7 +1668,6 @@
 
     if-eqz v22, :cond_6
 
-    .line 753
     :cond_1
     move-object/from16 v0, p0
 
@@ -1857,10 +1677,8 @@
 
     move-result-object p3
 
-    .line 754
     move-object/from16 v6, p3
 
-    .line 811
     :cond_2
     if-eqz p3, :cond_e
 
@@ -1874,17 +1692,13 @@
 
     if-nez v22, :cond_e
 
-    .line 817
     const/4 v14, 0x0
 
-    .line 818
     .local v14, "pkgVersion":Ljava/lang/String;
     if-eqz p4, :cond_c
 
-    .line 819
     move-object/from16 v14, p4
 
-    .line 829
     :cond_3
     :goto_0
     move-object/from16 v0, p0
@@ -1903,7 +1717,6 @@
 
     if-nez v22, :cond_4
 
-    .line 830
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mELMKeyMap:Ljava/util/Map;
@@ -1918,7 +1731,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 834
     :cond_4
     new-instance v11, Landroid/content/Intent;
 
@@ -1928,7 +1740,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 835
     .local v11, "intent":Landroid/content/Intent;
     const-string v22, "edm.intent.extra.license.data.pkgname"
 
@@ -1938,21 +1749,18 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 836
     const-string v22, "edm.intent.extra.license.data.pkgversion"
 
     move-object/from16 v0, v22
 
     invoke-virtual {v11, v0, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 837
     const-string v22, "edm.intent.extra.license.data.request_pkgname"
 
     move-object/from16 v0, v22
 
     invoke-virtual {v11, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 841
     const-string/jumbo v22, "persona"
 
     invoke-static/range {v22 .. v22}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1963,7 +1771,6 @@
 
     move-result-object v17
 
-    .line 843
     .local v17, "pms":Landroid/os/IPersonaManager;
     if-eqz v17, :cond_d
 
@@ -1977,10 +1784,8 @@
 
     if-eqz v22, :cond_d
 
-    .line 844
     sget-object v7, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
-    .line 851
     .local v7, "dest":Landroid/os/UserHandle;
     :goto_1
     move-object/from16 v0, p0
@@ -2000,13 +1805,11 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 860
     :try_start_3
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 900
     .end local v7    # "dest":Landroid/os/UserHandle;
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v14    # "pkgVersion":Ljava/lang/String;
@@ -2017,7 +1820,6 @@
 
     return-void
 
-    .line 757
     :cond_6
     :try_start_4
     move-object/from16 v0, p0
@@ -2038,11 +1840,9 @@
 
     move-result-object v15
 
-    .line 758
     .local v15, "pkgs":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 761
     .local v4, "approved":Z
     invoke-static {v15}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -2058,17 +1858,13 @@
 
     if-eqz v22, :cond_7
 
-    .line 762
     const/4 v4, 0x1
 
-    .line 763
     move-object/from16 v6, p3
 
-    .line 767
     :cond_7
     if-nez v4, :cond_8
 
-    .line 768
     move-object v5, v15
 
     .local v5, "arr$":[Ljava/lang/String;
@@ -2083,7 +1879,6 @@
 
     aget-object v13, v5, v9
 
-    .line 769
     .local v13, "pkg":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2104,10 +1899,8 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 770
     const/4 v4, 0x1
 
-    .line 776
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v12    # "len$":I
@@ -2115,7 +1908,6 @@
     :cond_8
     if-nez v4, :cond_2
 
-    .line 778
     :try_start_5
     const-string/jumbo v22, "package"
 
@@ -2127,7 +1919,6 @@
 
     move-result-object v16
 
-    .line 779
     .local v16, "pm":Landroid/content/pm/IPackageManager;
     const/16 v22, 0x0
 
@@ -2143,11 +1934,9 @@
 
     move-result-object v10
 
-    .line 781
     .local v10, "info":Landroid/content/pm/PackageInfo;
     if-eqz v10, :cond_a
 
-    .line 783
     new-instance v11, Landroid/content/Intent;
 
     const-string v22, "edm.intent.action.license.status"
@@ -2156,7 +1945,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 784
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v22, "edm.intent.extra.license.status"
 
@@ -2168,7 +1956,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 785
     const-string v22, "edm.intent.extra.license.errorcode"
 
     const/16 v23, 0xcc
@@ -2179,7 +1966,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 787
     const-string v22, "edm.intent.extra.license.result_type"
 
     const/16 v23, 0x320
@@ -2190,12 +1976,10 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 789
     move-object/from16 v0, p3
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 790
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -2213,7 +1997,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 860
     :try_start_6
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_6
@@ -2221,7 +2004,6 @@
 
     goto/16 :goto_2
 
-    .line 768
     .end local v10    # "info":Landroid/content/pm/PackageInfo;
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v16    # "pm":Landroid/content/pm/IPackageManager;
@@ -2234,7 +2016,6 @@
 
     goto :goto_3
 
-    .line 793
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v12    # "len$":I
@@ -2242,12 +2023,10 @@
     :catch_0
     move-exception v8
 
-    .line 794
     .local v8, "e":Ljava/lang/Exception;
     :try_start_7
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 797
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_a
     move-object v5, v15
@@ -2264,7 +2043,6 @@
 
     aget-object v13, v5, v9
 
-    .line 798
     .restart local v13    # "pkg":Ljava/lang/String;
     new-instance v11, Landroid/content/Intent;
 
@@ -2274,7 +2052,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 799
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v22, "edm.intent.extra.license.status"
 
@@ -2286,7 +2063,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 800
     const-string v22, "edm.intent.extra.license.errorcode"
 
     const/16 v23, 0xcc
@@ -2297,7 +2073,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 802
     const-string v22, "edm.intent.extra.license.result_type"
 
     const/16 v23, 0x320
@@ -2308,10 +2083,8 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 804
     invoke-virtual {v11, v13}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 805
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -2329,12 +2102,10 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 797
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_4
 
-    .line 860
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v13    # "pkg":Ljava/lang/String;
     :cond_b
@@ -2345,7 +2116,6 @@
 
     goto/16 :goto_2
 
-    .line 822
     .end local v4    # "approved":Z
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
@@ -2364,7 +2134,6 @@
 
     move-result-object v16
 
-    .line 823
     .restart local v16    # "pm":Landroid/content/pm/IPackageManager;
     const/16 v22, 0x0
 
@@ -2380,16 +2149,13 @@
 
     move-result-object v10
 
-    .line 824
     .restart local v10    # "info":Landroid/content/pm/PackageInfo;
     if-eqz v10, :cond_3
 
-    .line 825
     iget-object v14, v10, Landroid/content/pm/PackageInfo;->versionName:Ljava/lang/String;
 
     goto/16 :goto_0
 
-    .line 846
     .end local v10    # "info":Landroid/content/pm/PackageInfo;
     .end local v16    # "pm":Landroid/content/pm/IPackageManager;
     .restart local v11    # "intent":Landroid/content/Intent;
@@ -2404,7 +2170,6 @@
     .restart local v7    # "dest":Landroid/os/UserHandle;
     goto/16 :goto_1
 
-    .line 854
     .end local v7    # "dest":Landroid/os/UserHandle;
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v14    # "pkgVersion":Ljava/lang/String;
@@ -2419,15 +2184,12 @@
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 860
     :try_start_a
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 864
     :goto_5
     if-nez p3, :cond_f
 
-    .line 865
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -2446,7 +2208,6 @@
 
     move-result-object v15
 
-    .line 866
     .restart local v15    # "pkgs":[Ljava/lang/String;
     if-eqz v15, :cond_5
 
@@ -2456,7 +2217,6 @@
 
     if-lez v22, :cond_5
 
-    .line 867
     move-object v5, v15
 
     .restart local v5    # "arr$":[Ljava/lang/String;
@@ -2471,7 +2231,6 @@
 
     aget-object v13, v5, v9
 
-    .line 868
     .restart local v13    # "pkg":Ljava/lang/String;
     new-instance v11, Landroid/content/Intent;
 
@@ -2481,7 +2240,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 869
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v22, "edm.intent.extra.license.status"
 
@@ -2493,7 +2251,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 870
     const-string v22, "edm.intent.extra.license.errorcode"
 
     const/16 v23, 0x12d
@@ -2504,7 +2261,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 872
     const-string v22, "edm.intent.extra.license.result_type"
 
     const/16 v23, 0x320
@@ -2515,15 +2271,12 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 874
     invoke-virtual {v11, v13}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 875
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 876
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -2538,17 +2291,14 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 877
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 867
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_6
 
-    .line 856
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v11    # "intent":Landroid/content/Intent;
@@ -2558,7 +2308,6 @@
     :catch_1
     move-exception v8
 
-    .line 857
     .restart local v8    # "e":Ljava/lang/Exception;
     :try_start_b
     const-string v22, "EnterpriseLicenseService"
@@ -2567,12 +2316,10 @@
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 858
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 860
     :try_start_c
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -2586,7 +2333,6 @@
 
     throw v22
 
-    .line 881
     :cond_f
     new-instance v11, Landroid/content/Intent;
 
@@ -2596,7 +2342,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 882
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v22, "edm.intent.extra.license.status"
 
@@ -2608,7 +2353,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 883
     const-string v22, "edm.intent.extra.license.errorcode"
 
     const/16 v23, 0x12d
@@ -2619,7 +2363,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 885
     const-string v22, "edm.intent.extra.license.result_type"
 
     const/16 v23, 0x320
@@ -2630,7 +2373,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 888
     move-object/from16 v0, p3
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2639,15 +2381,12 @@
 
     if-nez v22, :cond_10
 
-    .line 889
     invoke-virtual {v11, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 890
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 891
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -2662,21 +2401,17 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 892
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 895
     :cond_10
     move-object/from16 v0, p3
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 896
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 897
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -2691,7 +2426,6 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 898
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_0
@@ -2707,7 +2441,6 @@
     .param p4, "pkgVersion"    # Ljava/lang/String;
 
     .prologue
-    .line 908
     monitor-enter p0
 
     :try_start_0
@@ -2715,12 +2448,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 909
     monitor-exit p0
 
     return-void
 
-    .line 908
     :catchall_0
     move-exception v0
 
@@ -2736,7 +2467,6 @@
     .param p3, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 1089
     monitor-enter p0
 
     :try_start_0
@@ -2756,7 +2486,6 @@
 
     if-eqz v21, :cond_0
 
-    .line 1091
     new-instance v21, Ljava/lang/SecurityException;
 
     const-string v22, "Operation not supported on profile"
@@ -2767,7 +2496,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1089
     :catchall_0
     move-exception v21
 
@@ -2775,7 +2503,6 @@
 
     throw v21
 
-    .line 1096
     :cond_0
     :try_start_1
     move-object/from16 v0, p0
@@ -2790,18 +2517,15 @@
 
     invoke-virtual/range {v21 .. v23}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1098
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrUserUid(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v17
 
-    .line 1099
     .local v17, "uid":I
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrCurrentUserId(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v20
 
-    .line 1101
     .local v20, "userId":I
     move-object/from16 v0, p0
 
@@ -2821,7 +2545,6 @@
 
     move-result-object v6
 
-    .line 1103
     .local v6, "callerPackage":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -2829,7 +2552,6 @@
 
     move-result-wide v18
 
-    .line 1106
     .local v18, "token":J
     if-eqz p3, :cond_1
 
@@ -2844,7 +2566,6 @@
 
     if-eqz v21, :cond_5
 
-    .line 1107
     :cond_1
     move-object/from16 v0, p0
 
@@ -2854,10 +2575,8 @@
 
     move-result-object p3
 
-    .line 1108
     move-object/from16 v6, p3
 
-    .line 1163
     :cond_2
     if-eqz p3, :cond_c
 
@@ -2871,7 +2590,6 @@
 
     if-nez v21, :cond_c
 
-    .line 1169
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyDeactivateMap:Ljava/util/Map;
@@ -2888,7 +2606,6 @@
 
     if-nez v21, :cond_3
 
-    .line 1170
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyDeactivateMap:Ljava/util/Map;
@@ -2903,7 +2620,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1174
     :cond_3
     new-instance v11, Landroid/content/Intent;
 
@@ -2913,7 +2629,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1175
     .local v11, "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.data.pkgname"
 
@@ -2923,14 +2638,12 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1176
     const-string v21, "edm.intent.extra.knox_license.data.request_pkgname"
 
     move-object/from16 v0, v21
 
     invoke-virtual {v11, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1180
     const-string/jumbo v21, "persona"
 
     invoke-static/range {v21 .. v21}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -2941,7 +2654,6 @@
 
     move-result-object v16
 
-    .line 1182
     .local v16, "pms":Landroid/os/IPersonaManager;
     if-eqz v16, :cond_b
 
@@ -2955,10 +2667,8 @@
 
     if-eqz v21, :cond_b
 
-    .line 1183
     sget-object v7, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
 
-    .line 1190
     .local v7, "dest":Landroid/os/UserHandle;
     :goto_0
     move-object/from16 v0, p0
@@ -2978,13 +2688,11 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1199
     :try_start_3
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1240
     .end local v7    # "dest":Landroid/os/UserHandle;
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v16    # "pms":Landroid/os/IPersonaManager;
@@ -2994,7 +2702,6 @@
 
     return-void
 
-    .line 1110
     :cond_5
     :try_start_4
     move-object/from16 v0, p0
@@ -3015,11 +2722,9 @@
 
     move-result-object v14
 
-    .line 1111
     .local v14, "pkgs":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 1114
     .local v4, "approved":Z
     invoke-static {v14}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
@@ -3035,17 +2740,13 @@
 
     if-eqz v21, :cond_6
 
-    .line 1115
     const/4 v4, 0x1
 
-    .line 1116
     move-object/from16 v6, p3
 
-    .line 1120
     :cond_6
     if-nez v4, :cond_7
 
-    .line 1121
     move-object v5, v14
 
     .local v5, "arr$":[Ljava/lang/String;
@@ -3060,7 +2761,6 @@
 
     aget-object v13, v5, v9
 
-    .line 1122
     .local v13, "pkg":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3081,10 +2781,8 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 1123
     const/4 v4, 0x1
 
-    .line 1129
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v12    # "len$":I
@@ -3092,7 +2790,6 @@
     :cond_7
     if-nez v4, :cond_2
 
-    .line 1131
     :try_start_5
     const-string/jumbo v21, "package"
 
@@ -3104,7 +2801,6 @@
 
     move-result-object v15
 
-    .line 1132
     .local v15, "pm":Landroid/content/pm/IPackageManager;
     const/16 v21, 0x0
 
@@ -3118,11 +2814,9 @@
 
     move-result-object v10
 
-    .line 1133
     .local v10, "info":Landroid/content/pm/PackageInfo;
     if-eqz v10, :cond_9
 
-    .line 1135
     new-instance v11, Landroid/content/Intent;
 
     const-string v21, "edm.intent.action.knox_license.status"
@@ -3131,7 +2825,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1136
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.status"
 
@@ -3143,7 +2836,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1137
     const-string v21, "edm.intent.extra.knox_license.errorcode"
 
     const/16 v22, 0xcc
@@ -3154,7 +2846,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1139
     const-string v21, "edm.intent.extra.knox_license.result_type"
 
     const/16 v22, 0x322
@@ -3165,12 +2856,10 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1141
     move-object/from16 v0, p3
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1142
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -3188,7 +2877,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1199
     :try_start_6
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_6
@@ -3196,7 +2884,6 @@
 
     goto/16 :goto_1
 
-    .line 1121
     .end local v10    # "info":Landroid/content/pm/PackageInfo;
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v15    # "pm":Landroid/content/pm/IPackageManager;
@@ -3209,7 +2896,6 @@
 
     goto :goto_2
 
-    .line 1145
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v12    # "len$":I
@@ -3217,12 +2903,10 @@
     :catch_0
     move-exception v8
 
-    .line 1146
     .local v8, "e":Ljava/lang/Exception;
     :try_start_7
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1149
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_9
     move-object v5, v14
@@ -3239,7 +2923,6 @@
 
     aget-object v13, v5, v9
 
-    .line 1150
     .restart local v13    # "pkg":Ljava/lang/String;
     new-instance v11, Landroid/content/Intent;
 
@@ -3249,7 +2932,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1151
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.status"
 
@@ -3261,7 +2943,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1152
     const-string v21, "edm.intent.extra.knox_license.errorcode"
 
     const/16 v22, 0xcc
@@ -3272,7 +2953,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1154
     const-string v21, "edm.intent.extra.knox_license.result_type"
 
     const/16 v22, 0x322
@@ -3283,10 +2963,8 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1156
     invoke-virtual {v11, v13}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1157
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -3304,12 +2982,10 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 1149
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
-    .line 1199
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v13    # "pkg":Ljava/lang/String;
     :cond_a
@@ -3320,7 +2996,6 @@
 
     goto/16 :goto_1
 
-    .line 1185
     .end local v4    # "approved":Z
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
@@ -3339,7 +3014,6 @@
     .restart local v7    # "dest":Landroid/os/UserHandle;
     goto/16 :goto_0
 
-    .line 1193
     .end local v7    # "dest":Landroid/os/UserHandle;
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v16    # "pms":Landroid/os/IPersonaManager;
@@ -3353,15 +3027,12 @@
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 1199
     :try_start_a
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1203
     :goto_4
     if-nez p3, :cond_d
 
-    .line 1204
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -3380,7 +3051,6 @@
 
     move-result-object v14
 
-    .line 1205
     .restart local v14    # "pkgs":[Ljava/lang/String;
     if-eqz v14, :cond_4
 
@@ -3390,7 +3060,6 @@
 
     if-lez v21, :cond_4
 
-    .line 1206
     move-object v5, v14
 
     .restart local v5    # "arr$":[Ljava/lang/String;
@@ -3405,7 +3074,6 @@
 
     aget-object v13, v5, v9
 
-    .line 1207
     .restart local v13    # "pkg":Ljava/lang/String;
     new-instance v11, Landroid/content/Intent;
 
@@ -3415,7 +3083,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1208
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.status"
 
@@ -3427,7 +3094,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1209
     const-string v21, "edm.intent.extra.knox_license.errorcode"
 
     const/16 v22, 0x12d
@@ -3438,7 +3104,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1211
     const-string v21, "edm.intent.extra.knox_license.result_type"
 
     const/16 v22, 0x322
@@ -3449,15 +3114,12 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1213
     invoke-virtual {v11, v13}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1215
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 1216
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -3472,17 +3134,14 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1217
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_0
 
-    .line 1206
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_5
 
-    .line 1195
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v9    # "i$":I
     .end local v11    # "intent":Landroid/content/Intent;
@@ -3492,7 +3151,6 @@
     :catch_1
     move-exception v8
 
-    .line 1196
     .restart local v8    # "e":Ljava/lang/Exception;
     :try_start_b
     const-string v21, "EnterpriseLicenseService"
@@ -3501,12 +3159,10 @@
 
     invoke-static/range {v21 .. v22}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1197
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 1199
     :try_start_c
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -3520,7 +3176,6 @@
 
     throw v21
 
-    .line 1221
     :cond_d
     new-instance v11, Landroid/content/Intent;
 
@@ -3530,7 +3185,6 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1222
     .restart local v11    # "intent":Landroid/content/Intent;
     const-string v21, "edm.intent.extra.knox_license.status"
 
@@ -3542,7 +3196,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1223
     const-string v21, "edm.intent.extra.knox_license.errorcode"
 
     const/16 v22, 0x12d
@@ -3553,7 +3206,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1225
     const-string v21, "edm.intent.extra.knox_license.result_type"
 
     const/16 v22, 0x322
@@ -3564,7 +3216,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1228
     move-object/from16 v0, p3
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3573,15 +3224,12 @@
 
     if-nez v21, :cond_e
 
-    .line 1229
     invoke-virtual {v11, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1230
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 1231
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -3596,21 +3244,17 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1232
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1235
     :cond_e
     move-object/from16 v0, p3
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1236
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 1237
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -3625,7 +3269,6 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 1238
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_c
     .catchall {:try_start_c .. :try_end_c} :catchall_0
@@ -3642,10 +3285,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 571
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 573
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -3658,32 +3299,26 @@
 
     if-eqz v6, :cond_1
 
-    .line 606
     :cond_0
     :goto_0
     return v5
 
-    .line 578
     :cond_1
     const/4 v3, 0x0
 
-    .line 580
     .local v3, "pkgName":Ljava/lang/String;
     :try_start_0
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 581
     .local v1, "cvWhere":Landroid/content/ContentValues;
     const-string/jumbo v6, "instanceId"
 
     invoke-virtual {v1, v6, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 582
     const-string/jumbo v0, "pkgName"
 
-    .line 584
     .local v0, "column":Ljava/lang/String;
     sget-object v6, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3693,11 +3328,9 @@
 
     move-result-object v4
 
-    .line 587
     .local v4, "result":Landroid/content/ContentValues;
     if-nez v4, :cond_2
 
-    .line 588
     const-string v6, "EnterpriseLicenseService"
 
     const-string v7, "deleteApiCallData(): result is null"
@@ -3708,14 +3341,12 @@
 
     goto :goto_0
 
-    .line 601
     .end local v0    # "column":Ljava/lang/String;
     .end local v1    # "cvWhere":Landroid/content/ContentValues;
     .end local v4    # "result":Landroid/content/ContentValues;
     :catch_0
     move-exception v2
 
-    .line 602
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseLicenseService"
 
@@ -3723,12 +3354,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 603
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 592
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "column":Ljava/lang/String;
     .restart local v1    # "cvWhere":Landroid/content/ContentValues;
@@ -3741,10 +3370,8 @@
 
     move-result-object v3
 
-    .line 594
     if-nez v3, :cond_3
 
-    .line 595
     const-string v6, "EnterpriseLicenseService"
 
     const-string v7, "deleteApiCallData(): Record does not exist"
@@ -3753,7 +3380,6 @@
 
     goto :goto_0
 
-    .line 600
     :cond_3
     invoke-static {v3}, Lcom/android/server/enterprise/license/LicenseLog;->deleteLog(Ljava/lang/String;)Z
     :try_end_1
@@ -3771,19 +3397,15 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 1368
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 1369
     const/4 v5, 0x0
 
-    .line 1370
     .local v5, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1372
     .local v6, "token":J
     if-eqz p1, :cond_0
 
@@ -3801,35 +3423,28 @@
 
     if-eqz v9, :cond_1
 
-    .line 1404
     :cond_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1406
     :goto_0
     return v8
 
-    .line 1375
     :cond_1
     const/4 v3, 0x0
 
-    .line 1377
     .local v3, "pkgName":Ljava/lang/String;
     :try_start_1
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1378
     .local v1, "cvWhere":Landroid/content/ContentValues;
     const-string/jumbo v9, "instanceId"
 
     invoke-virtual {v1, v9, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1379
     const-string/jumbo v0, "pkgName"
 
-    .line 1381
     .local v0, "column":Ljava/lang/String;
     sget-object v9, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3839,11 +3454,9 @@
 
     move-result-object v4
 
-    .line 1383
     .local v4, "result":Landroid/content/ContentValues;
     if-nez v4, :cond_2
 
-    .line 1384
     const-string v9, "EnterpriseLicenseService"
 
     const-string v10, "deleteLicense(): result is null"
@@ -3853,12 +3466,10 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1404
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 1388
     :cond_2
     :try_start_2
     const-string/jumbo v9, "pkgName"
@@ -3867,10 +3478,8 @@
 
     move-result-object v3
 
-    .line 1390
     if-nez v3, :cond_3
 
-    .line 1391
     const-string v9, "EnterpriseLicenseService"
 
     const-string v10, "deleteLicense(): pkgName is null, Record does not exist"
@@ -3880,22 +3489,18 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1404
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 1395
     :cond_3
     :try_start_3
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->deleteELMInfo(Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 1396
     if-eqz v5, :cond_4
 
-    .line 1398
     sget-object v8, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mPMS:Landroid/content/pm/IPackageManager;
 
     invoke-interface {v8, v3}, Landroid/content/pm/IPackageManager;->setLicensePermissions(Ljava/lang/String;)I
@@ -3903,7 +3508,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1404
     :cond_4
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -3914,14 +3518,11 @@
     :goto_1
     move v8, v5
 
-    .line 1406
     goto :goto_0
 
-    .line 1400
     :catch_0
     move-exception v2
 
-    .line 1401
     .local v2, "e":Ljava/lang/Exception;
     :try_start_4
     const-string v8, "EnterpriseLicenseService"
@@ -3930,12 +3531,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1402
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1404
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -3954,19 +3553,15 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1415
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 1416
     const/4 v1, 0x0
 
-    .line 1417
     .local v1, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1419
     .local v2, "token":J
     if-eqz p1, :cond_0
 
@@ -3984,28 +3579,22 @@
 
     if-eqz v4, :cond_1
 
-    .line 1420
     :cond_0
     const/4 v4, 0x0
 
-    .line 1430
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1432
     :goto_0
     return v4
 
-    .line 1422
     :cond_1
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->deleteELMInfo(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 1423
     if-eqz v1, :cond_2
 
-    .line 1425
     sget-object v4, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mPMS:Landroid/content/pm/IPackageManager;
 
     invoke-interface {v4, p1}, Landroid/content/pm/IPackageManager;->setLicensePermissions(Ljava/lang/String;)I
@@ -4013,21 +3602,17 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1430
     :cond_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :goto_1
     move v4, v1
 
-    .line 1432
     goto :goto_0
 
-    .line 1427
     :catch_0
     move-exception v0
 
-    .line 1428
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v4, "EnterpriseLicenseService"
@@ -4038,7 +3623,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1430
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -4056,24 +3640,19 @@
     .locals 15
 
     .prologue
-    .line 693
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 694
     const/4 v7, 0x0
 
-    .line 695
     .local v7, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/enterprise/license/LicenseInfo;>;"
     const/4 v5, 0x0
 
-    .line 698
     .local v5, "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     const/4 v12, 0x3
 
     :try_start_0
     new-array v0, v12, [Ljava/lang/String;
 
-    .line 699
     .local v0, "columns":[Ljava/lang/String;
     const/4 v12, 0x0
 
@@ -4081,21 +3660,18 @@
 
     aput-object v13, v0, v12
 
-    .line 700
     const/4 v12, 0x1
 
     const-string/jumbo v13, "instanceId"
 
     aput-object v13, v0, v12
 
-    .line 701
     const/4 v12, 0x2
 
     const-string/jumbo v13, "pkgVersion"
 
     aput-object v13, v0, v12
 
-    .line 703
     sget-object v12, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v13, "LICENSE"
@@ -4106,7 +3682,6 @@
 
     move-result-object v11
 
-    .line 706
     .local v11, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v11, :cond_1
 
@@ -4116,22 +3691,17 @@
 
     if-nez v12, :cond_1
 
-    .line 707
     const/4 v1, 0x0
 
-    .line 708
     .local v1, "cv":Landroid/content/ContentValues;
     const/4 v9, 0x0
 
-    .line 709
     .local v9, "packageName":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 710
     .local v3, "instanceId":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 711
     .local v10, "packageVersion":Ljava/lang/String;
     new-instance v8, Ljava/util/ArrayList;
 
@@ -4139,7 +3709,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 712
     .end local v7    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/enterprise/license/LicenseInfo;>;"
     .local v8, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/enterprise/license/LicenseInfo;>;"
     :try_start_1
@@ -4152,7 +3721,6 @@
     .local v4, "it":Ljava/util/Iterator;
     move-object v6, v5
 
-    .line 714
     .end local v5    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     .local v6, "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     :goto_0
@@ -4163,7 +3731,6 @@
 
     if-eqz v12, :cond_0
 
-    .line 715
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -4171,7 +3738,6 @@
     .end local v1    # "cv":Landroid/content/ContentValues;
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 716
     .restart local v1    # "cv":Landroid/content/ContentValues;
     const-string/jumbo v12, "pkgName"
 
@@ -4179,28 +3745,24 @@
 
     move-result-object v9
 
-    .line 717
     const-string/jumbo v12, "instanceId"
 
     invoke-virtual {v1, v12}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 718
     const-string/jumbo v12, "pkgVersion"
 
     invoke-virtual {v1, v12}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 719
     new-instance v5, Landroid/app/enterprise/license/LicenseInfo;
 
     invoke-direct {v5, v9, v3, v10}, Landroid/app/enterprise/license/LicenseInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 720
     .end local v6    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     .restart local v5    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     :try_start_3
@@ -4214,7 +3776,6 @@
     .restart local v6    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     goto :goto_0
 
-    .line 722
     :cond_0
     if-eqz v8, :cond_2
 
@@ -4225,7 +3786,6 @@
 
     if-lez v12, :cond_2
 
-    .line 723
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
 
     move-result v12
@@ -4248,7 +3808,6 @@
     .restart local v5    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     move-object v7, v8
 
-    .line 729
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v3    # "instanceId":Ljava/lang/String;
@@ -4261,11 +3820,9 @@
     :goto_1
     return-object v12
 
-    .line 725
     :catch_0
     move-exception v2
 
-    .line 726
     .local v2, "e":Ljava/lang/Exception;
     :goto_2
     const-string v12, "EnterpriseLicenseService"
@@ -4274,7 +3831,6 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 729
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_3
@@ -4282,7 +3838,6 @@
 
     goto :goto_1
 
-    .line 725
     .end local v7    # "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/enterprise/license/LicenseInfo;>;"
     .restart local v0    # "columns":[Ljava/lang/String;
     .restart local v1    # "cv":Landroid/content/ContentValues;
@@ -4343,10 +3898,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 523
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 525
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -4359,32 +3912,26 @@
 
     if-eqz v6, :cond_1
 
-    .line 556
     :cond_0
     :goto_0
     return-object v5
 
-    .line 530
     :cond_1
     const/4 v3, 0x0
 
-    .line 531
     .local v3, "pkgName":Ljava/lang/String;
     :try_start_0
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 532
     .local v1, "cvWhere":Landroid/content/ContentValues;
     const-string/jumbo v6, "instanceId"
 
     invoke-virtual {v1, v6, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 533
     const-string/jumbo v0, "pkgName"
 
-    .line 535
     .local v0, "column":Ljava/lang/String;
     sget-object v6, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -4394,11 +3941,9 @@
 
     move-result-object v4
 
-    .line 537
     .local v4, "result":Landroid/content/ContentValues;
     if-nez v4, :cond_2
 
-    .line 538
     const-string v6, "EnterpriseLicenseService"
 
     const-string/jumbo v7, "getApiCallData(): result is null, Record does not exist"
@@ -4409,14 +3954,12 @@
 
     goto :goto_0
 
-    .line 551
     .end local v0    # "column":Ljava/lang/String;
     .end local v1    # "cvWhere":Landroid/content/ContentValues;
     .end local v4    # "result":Landroid/content/ContentValues;
     :catch_0
     move-exception v2
 
-    .line 552
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "EnterpriseLicenseService"
 
@@ -4424,12 +3967,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 553
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 542
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "column":Ljava/lang/String;
     .restart local v1    # "cvWhere":Landroid/content/ContentValues;
@@ -4442,10 +3983,8 @@
 
     move-result-object v3
 
-    .line 544
     if-nez v3, :cond_3
 
-    .line 545
     const-string v6, "EnterpriseLicenseService"
 
     const-string/jumbo v7, "getApiCallData(): pkgName is null, Record does not exist"
@@ -4454,7 +3993,6 @@
 
     goto :goto_0
 
-    .line 550
     :cond_3
     invoke-static {v3}, Lcom/android/server/enterprise/license/LicenseLog;->getLog(Ljava/lang/String;)Landroid/os/Bundle;
     :try_end_1
@@ -4473,7 +4011,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 619
     iget-object v2, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
 
     invoke-static {v2, p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->isManagedProfileUser(Landroid/content/Context;Landroid/app/enterprise/ContextInfo;)Z
@@ -4482,7 +4019,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 621
     new-instance v1, Ljava/lang/SecurityException;
 
     const-string v2, "Operation not supported on profile"
@@ -4491,7 +4027,6 @@
 
     throw v1
 
-    .line 624
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
 
@@ -4499,7 +4034,6 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 626
     if-eqz p2, :cond_1
 
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -4512,12 +4046,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 636
     :cond_1
     :goto_0
     return-object v1
 
-    .line 631
     :cond_2
     :try_start_0
     invoke-static {p2}, Lcom/android/server/enterprise/license/LicenseLog;->getLog(Ljava/lang/String;)Landroid/os/Bundle;
@@ -4528,11 +4060,9 @@
 
     goto :goto_0
 
-    .line 632
     :catch_0
     move-exception v0
 
-    .line 633
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "EnterpriseLicenseService"
 
@@ -4548,10 +4078,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1441
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 1443
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -4564,19 +4092,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 1444
     :cond_0
     const/4 v2, 0x0
 
-    .line 1454
     :goto_0
     return-object v2
 
-    .line 1446
     :cond_1
     const/4 v2, 0x0
 
-    .line 1448
     .local v2, "elmKey":Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mELMKeyMap:Ljava/util/Map;
@@ -4591,7 +4115,6 @@
 
     move-object v2, v0
 
-    .line 1449
     iget-object v3, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mELMKeyMap:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4600,11 +4123,9 @@
 
     goto :goto_0
 
-    .line 1450
     :catch_0
     move-exception v1
 
-    .line 1451
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "EnterpriseLicenseService"
 
@@ -4631,7 +4152,6 @@
     .end annotation
 
     .prologue
-    .line 1278
     :try_start_0
     invoke-static {p1}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getPermissions(Ljava/lang/String;)Ljava/util/List;
     :try_end_0
@@ -4639,15 +4159,12 @@
 
     move-result-object v1
 
-    .line 1281
     :goto_0
     return-object v1
 
-    .line 1279
     :catch_0
     move-exception v0
 
-    .line 1280
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v1, "EnterpriseLicenseService"
 
@@ -4655,7 +4172,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1281
     const/4 v1, 0x0
 
     goto :goto_0
@@ -4666,10 +4182,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1463
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 1465
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -4682,19 +4196,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 1466
     :cond_0
     const/4 v2, 0x0
 
-    .line 1476
     :goto_0
     return-object v2
 
-    .line 1468
     :cond_1
     const/4 v2, 0x0
 
-    .line 1470
     .local v2, "klmKey":Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyMap:Ljava/util/Map;
@@ -4709,7 +4219,6 @@
 
     move-object v2, v0
 
-    .line 1471
     iget-object v3, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyMap:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4718,11 +4227,9 @@
 
     goto :goto_0
 
-    .line 1472
     :catch_0
     move-exception v1
 
-    .line 1473
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "EnterpriseLicenseService"
 
@@ -4738,10 +4245,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1485
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 1487
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -4754,19 +4259,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 1488
     :cond_0
     const/4 v2, 0x0
 
-    .line 1498
     :goto_0
     return-object v2
 
-    .line 1490
     :cond_1
     const/4 v2, 0x0
 
-    .line 1492
     .local v2, "klmKey":Ljava/lang/String;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyDeactivateMap:Ljava/util/Map;
@@ -4781,7 +4282,6 @@
 
     move-object v2, v0
 
-    .line 1493
     iget-object v3, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mKLMKeyDeactivateMap:Ljava/util/Map;
 
     invoke-interface {v3, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4790,11 +4290,9 @@
 
     goto :goto_0
 
-    .line 1494
     :catch_0
     move-exception v1
 
-    .line 1495
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "EnterpriseLicenseService"
 
@@ -4810,13 +4308,10 @@
     .param p1, "instanceId"    # Ljava/lang/String;
 
     .prologue
-    .line 646
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 647
     const/4 v5, 0x0
 
-    .line 649
     .local v5, "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     if-eqz p1, :cond_0
 
@@ -4833,13 +4328,11 @@
     :cond_0
     move-object v6, v5
 
-    .line 684
     .end local v5    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     .local v6, "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     :goto_0
     return-object v6
 
-    .line 653
     .end local v6    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     .restart local v5    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     :cond_1
@@ -4848,7 +4341,6 @@
     :try_start_0
     new-array v0, v10, [Ljava/lang/String;
 
-    .line 654
     .local v0, "columns":[Ljava/lang/String;
     const/4 v10, 0x0
 
@@ -4856,21 +4348,18 @@
 
     aput-object v11, v0, v10
 
-    .line 655
     const/4 v10, 0x1
 
     const-string/jumbo v11, "instanceId"
 
     aput-object v11, v0, v10
 
-    .line 656
     const/4 v10, 0x2
 
     const-string/jumbo v11, "pkgVersion"
 
     aput-object v11, v0, v10
 
-    .line 658
     sget-object v10, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v11, "LICENSE"
@@ -4881,7 +4370,6 @@
 
     move-result-object v9
 
-    .line 661
     .local v9, "results":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v9, :cond_3
 
@@ -4891,28 +4379,22 @@
 
     if-nez v10, :cond_3
 
-    .line 662
     const/4 v1, 0x0
 
-    .line 663
     .local v1, "cv":Landroid/content/ContentValues;
     const/4 v3, 0x0
 
-    .line 664
     .local v3, "instId":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 665
     .local v7, "packageName":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 666
     .local v8, "packageVersion":Ljava/lang/String;
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
 
-    .line 668
     .local v4, "it":Ljava/util/Iterator;
     :cond_2
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -4921,7 +4403,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 669
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -4929,7 +4410,6 @@
     .end local v1    # "cv":Landroid/content/ContentValues;
     check-cast v1, Landroid/content/ContentValues;
 
-    .line 670
     .restart local v1    # "cv":Landroid/content/ContentValues;
     const-string/jumbo v10, "instanceId"
 
@@ -4937,7 +4417,6 @@
 
     move-result-object v3
 
-    .line 672
     if-eqz v3, :cond_2
 
     invoke-virtual {v3, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4946,21 +4425,18 @@
 
     if-eqz v10, :cond_2
 
-    .line 673
     const-string/jumbo v10, "pkgName"
 
     invoke-virtual {v1, v10}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 674
     const-string/jumbo v10, "pkgVersion"
 
     invoke-virtual {v1, v10}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 675
     new-instance v6, Landroid/app/enterprise/license/LicenseInfo;
 
     invoke-direct {v6, v7, v3, v8}, Landroid/app/enterprise/license/LicenseInfo;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -4984,18 +4460,15 @@
     :goto_1
     move-object v6, v5
 
-    .line 684
     .end local v5    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     .restart local v6    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     goto :goto_0
 
-    .line 680
     .end local v6    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     .restart local v5    # "lInfo":Landroid/app/enterprise/license/LicenseInfo;
     :catch_0
     move-exception v2
 
-    .line 681
     .local v2, "e":Ljava/lang/Exception;
     const-string v10, "EnterpriseLicenseService"
 
@@ -5011,13 +4484,10 @@
     .param p1, "instanceId"    # Ljava/lang/String;
 
     .prologue
-    .line 388
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 390
     const/4 v3, 0x0
 
-    .line 391
     .local v3, "ro":Landroid/app/enterprise/license/RightsObject;
     if-eqz p1, :cond_0
 
@@ -5034,13 +4504,11 @@
     :cond_0
     move-object v4, v3
 
-    .line 405
     .end local v3    # "ro":Landroid/app/enterprise/license/RightsObject;
     .local v4, "ro":Landroid/app/enterprise/license/RightsObject;
     :goto_0
     return-object v4
 
-    .line 395
     .end local v4    # "ro":Landroid/app/enterprise/license/RightsObject;
     .restart local v3    # "ro":Landroid/app/enterprise/license/RightsObject;
     :cond_1
@@ -5057,11 +4525,9 @@
 
     move-result-object v1
 
-    .line 399
     .local v1, "blob":[B
     if-eqz v1, :cond_2
 
-    .line 400
     invoke-static {v1}, Lcom/android/server/enterprise/utils/Utils;->deserializeObject([B)Ljava/lang/Object;
 
     move-result-object v5
@@ -5079,18 +4545,15 @@
     :goto_1
     move-object v4, v3
 
-    .line 405
     .end local v3    # "ro":Landroid/app/enterprise/license/RightsObject;
     .restart local v4    # "ro":Landroid/app/enterprise/license/RightsObject;
     goto :goto_0
 
-    .line 401
     .end local v4    # "ro":Landroid/app/enterprise/license/RightsObject;
     .restart local v3    # "ro":Landroid/app/enterprise/license/RightsObject;
     :catch_0
     move-exception v2
 
-    .line 402
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "EnterpriseLicenseService"
 
@@ -5107,10 +4570,8 @@
     .param p2, "apiName"    # Ljava/lang/String;
 
     .prologue
-    .line 1286
     invoke-static {p1, p2}, Lcom/android/server/enterprise/license/LicenseLog;->log(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)V
 
-    .line 1287
     return-void
 .end method
 
@@ -5119,7 +4580,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1541
     return-void
 .end method
 
@@ -5128,7 +4588,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1545
     return-void
 .end method
 
@@ -5137,7 +4596,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1549
     return-void
 .end method
 
@@ -5155,25 +4613,20 @@
 
     const/4 v3, 0x0
 
-    .line 334
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 336
     invoke-direct {p0, p1, p6}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->checkPackage(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v7
 
     if-nez v7, :cond_0
 
-    .line 377
     :goto_0
     return v3
 
-    .line 339
     :cond_0
     const/4 v0, 0x0
 
-    .line 340
     .local v0, "differentCaller":Z
     if-eqz p6, :cond_1
 
@@ -5183,17 +4636,14 @@
 
     if-eqz v7, :cond_4
 
-    .line 341
     :cond_1
     const/4 v0, 0x0
 
-    .line 347
     :goto_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 350
     .local v4, "token":J
     :try_start_0
     new-instance v2, Landroid/content/Intent;
@@ -5202,13 +4652,11 @@
 
     invoke-direct {v2, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 351
     .local v2, "intent":Landroid/content/Intent;
     const-string v7, "edm.intent.extra.knox_license.status"
 
     invoke-virtual {v2, v7, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 352
     const-string v7, "edm.intent.extra.knox_license.errorcode"
 
     invoke-virtual {p3}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -5217,48 +4665,39 @@
 
     invoke-virtual {v2, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 353
     const-string v7, "edm.intent.extra.knox_license.activaton_initiator"
 
     invoke-virtual {v2, v7, p4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 354
     const-string v7, "edm.intent.extra.knox_license.result_type"
 
     invoke-virtual {v2, v7, p5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 356
     if-ne v0, v6, :cond_2
 
-    .line 357
     invoke-virtual {v2, p6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 358
     iget-object v7, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
 
     sget-object v8, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {v7, v2, v8}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 361
     :cond_2
     invoke-virtual {v2, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 362
     iget-object v7, p0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
 
     sget-object v8, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {v7, v2, v8}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 365
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v7
 
     if-eqz v7, :cond_3
 
-    .line 366
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v7
@@ -5272,16 +4711,13 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 374
     :cond_3
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v3, v6
 
-    .line 377
     goto :goto_0
 
-    .line 342
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v4    # "token":J
     :cond_4
@@ -5291,23 +4727,19 @@
 
     if-eqz v7, :cond_5
 
-    .line 343
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 345
     :cond_5
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 370
     .restart local v4    # "token":J
     :catch_0
     move-exception v1
 
-    .line 371
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v6, "EnterpriseLicenseService"
@@ -5318,7 +4750,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 374
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -5345,13 +4776,11 @@
     .param p9, "attestation_status"    # I
 
     .prologue
-    .line 192
     monitor-enter p0
 
     :try_start_0
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 194
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -5366,20 +4795,16 @@
 
     if-nez v15, :cond_0
 
-    .line 195
     const/4 v14, 0x0
 
-    .line 315
     :goto_0
     monitor-exit p0
 
     return v14
 
-    .line 197
     :cond_0
     const/4 v9, 0x0
 
-    .line 198
     .local v9, "differentCaller":Z
     if-eqz p8, :cond_1
 
@@ -5390,71 +4815,57 @@
 
     if-eqz v15, :cond_5
 
-    .line 199
     :cond_1
     const/4 v9, 0x0
 
-    .line 205
     :goto_1
     const/4 v14, 0x0
 
-    .line 206
     .local v14, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 209
     .local v16, "token":J
     if-nez p5, :cond_8
 
-    .line 210
     const/4 v14, 0x1
 
-    .line 265
     new-instance v12, Landroid/content/Intent;
 
     const-string v15, "edm.intent.action.license.status"
 
     invoke-direct {v12, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 266
     .local v12, "intent":Landroid/content/Intent;
     if-eqz v14, :cond_7
 
-    .line 267
     const/4 v15, 0x1
 
     if-ne v9, v15, :cond_3
 
-    .line 269
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v13
 
     check-cast v13, Ljava/util/ArrayList;
 
-    .line 271
     .local v13, "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v13, :cond_2
 
-    .line 272
     new-instance v11, Landroid/os/Bundle;
 
     invoke-direct {v11}, Landroid/os/Bundle;-><init>()V
 
-    .line 273
     .local v11, "extra":Landroid/os/Bundle;
     const-string v15, "Permissions"
 
     invoke-virtual {v11, v15, v13}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 274
     const-string v15, "edm.intent.extra.license.data.license_permissions"
 
     invoke-virtual {v12, v15, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 277
     .end local v11    # "extra":Landroid/os/Bundle;
     :cond_2
     const-string v15, "edm.intent.extra.license.data.pkgname"
@@ -5463,14 +4874,12 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 278
     const-string v15, "edm.intent.extra.license.data.pkgversion"
 
     move-object/from16 v0, p2
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 280
     .end local v13    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_3
     const-string v15, "edm.intent.extra.license.status"
@@ -5479,7 +4888,6 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 281
     const-string v15, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p6 .. p6}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -5490,21 +4898,18 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 282
     const-string v15, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, p7
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 283
     const-string v15, "com.sec.enterprise.intent.extra.LICENSE_ATTESTATION_STATUS"
 
     move/from16 v0, p9
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 289
     :goto_2
     const-string v15, "edm.intent.extra.license.result_type"
 
@@ -5514,17 +4919,14 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 291
     const/4 v15, 0x1
 
     if-ne v9, v15, :cond_4
 
-    .line 292
     move-object/from16 v0, p8
 
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 293
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -5535,13 +4937,11 @@
 
     invoke-virtual {v15, v12, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 296
     :cond_4
     move-object/from16 v0, p1
 
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 297
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -5552,14 +4952,12 @@
 
     invoke-virtual {v15, v12, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 299
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto/16 :goto_0
 
-    .line 192
     .end local v9    # "differentCaller":Z
     .end local v12    # "intent":Landroid/content/Intent;
     .end local v14    # "ret":Z
@@ -5571,7 +4969,6 @@
 
     throw v15
 
-    .line 200
     .restart local v9    # "differentCaller":Z
     :cond_5
     :try_start_2
@@ -5585,18 +4982,15 @@
 
     if-eqz v15, :cond_6
 
-    .line 201
     const/4 v9, 0x0
 
     goto/16 :goto_1
 
-    .line 203
     :cond_6
     const/4 v9, 0x1
 
     goto/16 :goto_1
 
-    .line 285
     .restart local v12    # "intent":Landroid/content/Intent;
     .restart local v14    # "ret":Z
     .restart local v16    # "token":J
@@ -5609,7 +5003,6 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 286
     const-string v15, "edm.intent.extra.license.errorcode"
 
     const/16 v18, 0x12d
@@ -5622,7 +5015,6 @@
 
     goto :goto_2
 
-    .line 215
     .end local v12    # "intent":Landroid/content/Intent;
     :cond_8
     :try_start_3
@@ -5630,7 +5022,6 @@
 
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
-    .line 216
     .local v8, "cvWhere":Landroid/content/ContentValues;
     const-string/jumbo v15, "pkgName"
 
@@ -5638,38 +5029,32 @@
 
     invoke-virtual {v8, v15, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 218
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
-    .line 219
     .local v7, "cv":Landroid/content/ContentValues;
     invoke-static/range {p5 .. p5}, Lcom/android/server/enterprise/utils/Utils;->serializeObject(Ljava/lang/Object;)[B
 
     move-result-object v5
 
-    .line 220
     .local v5, "blob":[B
     const-string/jumbo v15, "rightsObject"
 
     invoke-virtual {v7, v15, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    .line 221
     const-string/jumbo v15, "instanceId"
 
     move-object/from16 v0, p4
 
     invoke-virtual {v7, v15, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 222
     const-string/jumbo v15, "pkgVersion"
 
     move-object/from16 v0, p2
 
     invoke-virtual {v7, v15, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 224
     sget-object v15, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v18, "LICENSE"
@@ -5680,11 +5065,9 @@
 
     move-result v6
 
-    .line 225
     .local v6, "cnt":I
     if-lez v6, :cond_10
 
-    .line 227
     sget-object v15, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v18, "LICENSE"
@@ -5695,7 +5078,6 @@
 
     move-result v14
 
-    .line 239
     :cond_9
     :goto_3
     const-string v15, "EnterpriseLicenseService"
@@ -5724,24 +5106,20 @@
 
     invoke-static {v15, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     if-eqz v14, :cond_a
 
-    .line 243
     sget-object v15, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mPMS:Landroid/content/pm/IPackageManager;
 
     move-object/from16 v0, p1
 
     invoke-interface {v15, v0}, Landroid/content/pm/IPackageManager;->setLicensePermissions(Ljava/lang/String;)I
 
-    .line 246
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     move-result-object v15
 
     invoke-virtual {v15}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->checkServices()V
 
-    .line 251
     :cond_a
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
@@ -5749,10 +5127,8 @@
 
     if-eqz v15, :cond_b
 
-    .line 252
     if-eqz v14, :cond_11
 
-    .line 253
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v15
@@ -5772,7 +5148,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 265
     :cond_b
     :goto_4
     :try_start_4
@@ -5782,43 +5157,35 @@
 
     invoke-direct {v12, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 266
     .restart local v12    # "intent":Landroid/content/Intent;
     if-eqz v14, :cond_15
 
-    .line 267
     const/4 v15, 0x1
 
     if-ne v9, v15, :cond_d
 
-    .line 269
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v13
 
     check-cast v13, Ljava/util/ArrayList;
 
-    .line 271
     .restart local v13    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v13, :cond_c
 
-    .line 272
     new-instance v11, Landroid/os/Bundle;
 
     invoke-direct {v11}, Landroid/os/Bundle;-><init>()V
 
-    .line 273
     .restart local v11    # "extra":Landroid/os/Bundle;
     const-string v15, "Permissions"
 
     invoke-virtual {v11, v15, v13}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 274
     const-string v15, "edm.intent.extra.license.data.license_permissions"
 
     invoke-virtual {v12, v15, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 277
     .end local v11    # "extra":Landroid/os/Bundle;
     :cond_c
     const-string v15, "edm.intent.extra.license.data.pkgname"
@@ -5827,14 +5194,12 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 278
     const-string v15, "edm.intent.extra.license.data.pkgversion"
 
     move-object/from16 v0, p2
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 280
     .end local v13    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_d
     const-string v15, "edm.intent.extra.license.status"
@@ -5843,7 +5208,6 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 281
     const-string v15, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p6 .. p6}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -5854,21 +5218,18 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 282
     const-string v15, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, p7
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 283
     const-string v15, "com.sec.enterprise.intent.extra.LICENSE_ATTESTATION_STATUS"
 
     move/from16 v0, p9
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 289
     :goto_5
     const-string v15, "edm.intent.extra.license.result_type"
 
@@ -5878,17 +5239,14 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 291
     const/4 v15, 0x1
 
     if-ne v9, v15, :cond_e
 
-    .line 292
     move-object/from16 v0, p8
 
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 293
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -5899,13 +5257,11 @@
 
     invoke-virtual {v15, v12, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 296
     :cond_e
     move-object/from16 v0, p1
 
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 297
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -5916,10 +5272,8 @@
 
     invoke-virtual {v15, v12, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 299
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 302
     .end local v5    # "blob":[B
     .end local v6    # "cnt":I
     .end local v7    # "cv":Landroid/content/ContentValues;
@@ -5931,7 +5285,6 @@
 
     move-result-wide v16
 
-    .line 304
     :try_start_5
     const-string v15, "application_policy"
 
@@ -5941,17 +5294,14 @@
 
     check-cast v4, Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 306
     .local v4, "appService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     if-eqz v4, :cond_f
 
-    .line 307
     invoke-virtual {v4}, Lcom/android/server/enterprise/application/ApplicationPolicy;->grantRuntimePermissionsForEnterpriseAdmin()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 312
     :cond_f
     :try_start_6
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -5960,7 +5310,6 @@
 
     goto/16 :goto_0
 
-    .line 230
     .end local v4    # "appService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     .end local v12    # "intent":Landroid/content/Intent;
     .restart local v5    # "blob":[B
@@ -5975,7 +5324,6 @@
 
     invoke-virtual {v7, v15, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 231
     sget-object v15, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v18, "LICENSE"
@@ -5986,10 +5334,8 @@
 
     move-result v14
 
-    .line 232
     if-nez v14, :cond_9
 
-    .line 234
     const-string v15, "EnterpriseLicenseService"
 
     const-string v18, "check key field"
@@ -5998,7 +5344,6 @@
 
     invoke-static {v15, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 235
     const-string/jumbo v15, "licenseKey"
 
     const-string/jumbo v18, "na"
@@ -6007,7 +5352,6 @@
 
     invoke-virtual {v7, v15, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
     sget-object v15, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v18, "LICENSE"
@@ -6020,7 +5364,6 @@
 
     goto/16 :goto_3
 
-    .line 255
     :cond_11
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
@@ -6043,7 +5386,6 @@
 
     goto/16 :goto_4
 
-    .line 260
     .end local v5    # "blob":[B
     .end local v6    # "cnt":I
     .end local v7    # "cv":Landroid/content/ContentValues;
@@ -6051,7 +5393,6 @@
     :catch_0
     move-exception v10
 
-    .line 261
     .local v10, "e":Ljava/lang/Exception;
     :try_start_8
     const-string v15, "EnterpriseLicenseService"
@@ -6062,12 +5403,10 @@
 
     invoke-static {v15, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_1
 
-    .line 265
     :try_start_9
     new-instance v12, Landroid/content/Intent;
 
@@ -6075,43 +5414,35 @@
 
     invoke-direct {v12, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 266
     .restart local v12    # "intent":Landroid/content/Intent;
     if-eqz v14, :cond_16
 
-    .line 267
     const/4 v15, 0x1
 
     if-ne v9, v15, :cond_13
 
-    .line 269
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v13
 
     check-cast v13, Ljava/util/ArrayList;
 
-    .line 271
     .restart local v13    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v13, :cond_12
 
-    .line 272
     new-instance v11, Landroid/os/Bundle;
 
     invoke-direct {v11}, Landroid/os/Bundle;-><init>()V
 
-    .line 273
     .restart local v11    # "extra":Landroid/os/Bundle;
     const-string v15, "Permissions"
 
     invoke-virtual {v11, v15, v13}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 274
     const-string v15, "edm.intent.extra.license.data.license_permissions"
 
     invoke-virtual {v12, v15, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 277
     .end local v11    # "extra":Landroid/os/Bundle;
     :cond_12
     const-string v15, "edm.intent.extra.license.data.pkgname"
@@ -6120,14 +5451,12 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 278
     const-string v15, "edm.intent.extra.license.data.pkgversion"
 
     move-object/from16 v0, p2
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 280
     .end local v13    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_13
     const-string v15, "edm.intent.extra.license.status"
@@ -6136,7 +5465,6 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 281
     const-string v15, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p6 .. p6}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -6147,21 +5475,18 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 282
     const-string v15, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, p7
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 283
     const-string v15, "com.sec.enterprise.intent.extra.LICENSE_ATTESTATION_STATUS"
 
     move/from16 v0, p9
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 289
     :goto_7
     const-string v15, "edm.intent.extra.license.result_type"
 
@@ -6171,17 +5496,14 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 291
     const/4 v15, 0x1
 
     if-ne v9, v15, :cond_14
 
-    .line 292
     move-object/from16 v0, p8
 
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 293
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -6192,13 +5514,11 @@
 
     invoke-virtual {v15, v12, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 296
     :cond_14
     move-object/from16 v0, p1
 
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 297
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -6209,12 +5529,10 @@
 
     invoke-virtual {v15, v12, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 299
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_6
 
-    .line 285
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v5    # "blob":[B
     .restart local v6    # "cnt":I
@@ -6229,7 +5547,6 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 286
     const-string v15, "edm.intent.extra.license.errorcode"
 
     const/16 v18, 0x12d
@@ -6240,7 +5557,6 @@
 
     goto/16 :goto_5
 
-    .line 285
     .end local v5    # "blob":[B
     .end local v6    # "cnt":I
     .end local v7    # "cv":Landroid/content/ContentValues;
@@ -6255,7 +5571,6 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 286
     const-string v15, "edm.intent.extra.license.errorcode"
 
     const/16 v18, 0x12d
@@ -6266,7 +5581,6 @@
 
     goto :goto_7
 
-    .line 265
     .end local v10    # "e":Ljava/lang/Exception;
     .end local v12    # "intent":Landroid/content/Intent;
     :catchall_1
@@ -6280,34 +5594,28 @@
 
     invoke-direct {v12, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 266
     .restart local v12    # "intent":Landroid/content/Intent;
     if-eqz v14, :cond_1a
 
-    .line 267
     const/16 v18, 0x1
 
     move/from16 v0, v18
 
     if-ne v9, v0, :cond_18
 
-    .line 269
     invoke-static/range {p1 .. p1}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v13
 
     check-cast v13, Ljava/util/ArrayList;
 
-    .line 271
     .restart local v13    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v13, :cond_17
 
-    .line 272
     new-instance v11, Landroid/os/Bundle;
 
     invoke-direct {v11}, Landroid/os/Bundle;-><init>()V
 
-    .line 273
     .restart local v11    # "extra":Landroid/os/Bundle;
     const-string v18, "Permissions"
 
@@ -6315,14 +5623,12 @@
 
     invoke-virtual {v11, v0, v13}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 274
     const-string v18, "edm.intent.extra.license.data.license_permissions"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v12, v0, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 277
     .end local v11    # "extra":Landroid/os/Bundle;
     :cond_17
     const-string v18, "edm.intent.extra.license.data.pkgname"
@@ -6333,7 +5639,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 278
     const-string v18, "edm.intent.extra.license.data.pkgversion"
 
     move-object/from16 v0, v18
@@ -6342,7 +5647,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 280
     .end local v13    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_18
     const-string v18, "edm.intent.extra.license.status"
@@ -6353,7 +5657,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 281
     const-string v18, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p6 .. p6}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -6366,7 +5669,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 282
     const-string v18, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, v18
@@ -6375,7 +5677,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 283
     const-string v18, "com.sec.enterprise.intent.extra.LICENSE_ATTESTATION_STATUS"
 
     move-object/from16 v0, v18
@@ -6384,7 +5685,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 289
     :goto_8
     const-string v18, "edm.intent.extra.license.result_type"
 
@@ -6396,19 +5696,16 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 291
     const/16 v18, 0x1
 
     move/from16 v0, v18
 
     if-ne v9, v0, :cond_19
 
-    .line 292
     move-object/from16 v0, p8
 
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 293
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -6423,13 +5720,11 @@
 
     invoke-virtual {v0, v12, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 296
     :cond_19
     move-object/from16 v0, p1
 
     invoke-virtual {v12, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 297
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -6444,13 +5739,10 @@
 
     invoke-virtual {v0, v12, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 299
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 300
     throw v15
 
-    .line 285
     :cond_1a
     const-string v18, "edm.intent.extra.license.status"
 
@@ -6462,7 +5754,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 286
     const-string v18, "edm.intent.extra.license.errorcode"
 
     const/16 v19, 0x12d
@@ -6477,11 +5768,9 @@
 
     goto :goto_8
 
-    .line 309
     :catch_1
     move-exception v10
 
-    .line 310
     .restart local v10    # "e":Ljava/lang/Exception;
     :try_start_a
     const-string v15, "EnterpriseLicenseService"
@@ -6496,7 +5785,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 312
     :try_start_b
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -6524,44 +5812,35 @@
     .param p7, "pkgVer"    # Ljava/lang/String;
 
     .prologue
-    .line 422
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 424
     const/4 v13, 0x0
 
-    .line 425
     .local v13, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 428
     .local v16, "token":J
     if-nez p3, :cond_4
 
-    .line 429
     const/4 v13, 0x1
 
-    .line 470
     new-instance v11, Landroid/content/Intent;
 
     const-string v15, "edm.intent.action.license.status"
 
     invoke-direct {v11, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 471
     .local v11, "intent":Landroid/content/Intent;
     if-eqz v13, :cond_2
 
-    .line 472
     const-string v15, "edm.intent.extra.license.status"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 473
     const-string v15, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p4 .. p4}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -6572,14 +5851,12 @@
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 474
     const-string v15, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, p5
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 480
     :goto_0
     const-string v15, "edm.intent.extra.license.result_type"
 
@@ -6589,12 +5866,10 @@
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 481
     move-object/from16 v0, p6
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 482
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -6605,7 +5880,6 @@
 
     invoke-virtual {v15, v11, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 485
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     move-result-object v15
@@ -6618,25 +5892,21 @@
 
     if-eqz v15, :cond_1
 
-    .line 486
     new-instance v4, Landroid/content/Intent;
 
     const-string v15, "edm.intent.action.license.status"
 
     invoke-direct {v4, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 487
     .local v4, "UMCintent":Landroid/content/Intent;
     if-eqz v13, :cond_3
 
-    .line 488
     const-string v15, "edm.intent.extra.license.status"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 489
     const-string v15, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p4 .. p4}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -6647,14 +5917,12 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 490
     const-string v15, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, p5
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 496
     :goto_1
     const-string v15, "edm.intent.extra.license.data.pkgname"
 
@@ -6662,34 +5930,28 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 497
     invoke-static/range {p6 .. p6}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v12
 
     check-cast v12, Ljava/util/ArrayList;
 
-    .line 498
     .local v12, "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v12, :cond_0
 
-    .line 499
     new-instance v10, Landroid/os/Bundle;
 
     invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
 
-    .line 500
     .local v10, "extra":Landroid/os/Bundle;
     const-string v15, "Permissions"
 
     invoke-virtual {v10, v15, v12}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 501
     const-string v15, "edm.intent.extra.license.data.license_permissions"
 
     invoke-virtual {v4, v15, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 503
     .end local v10    # "extra":Landroid/os/Bundle;
     :cond_0
     const-string v15, "edm.intent.extra.license.result_type"
@@ -6700,12 +5962,10 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 504
     const-string v15, "com.sec.enterprise.knox.cloudmdm.smdms"
 
     invoke-virtual {v4, v15}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 505
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -6716,7 +5976,6 @@
 
     invoke-virtual {v15, v4, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 508
     .end local v4    # "UMCintent":Landroid/content/Intent;
     .end local v12    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_1
@@ -6724,13 +5983,11 @@
 
     move v14, v13
 
-    .line 511
     .end local v13    # "ret":Z
     .local v14, "ret":I
     :goto_2
     return v14
 
-    .line 476
     .end local v14    # "ret":I
     .restart local v13    # "ret":Z
     :cond_2
@@ -6742,7 +5999,6 @@
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 477
     const-string v15, "edm.intent.extra.license.errorcode"
 
     const/16 v18, 0x12d
@@ -6753,7 +6009,6 @@
 
     goto/16 :goto_0
 
-    .line 492
     .restart local v4    # "UMCintent":Landroid/content/Intent;
     :cond_3
     const-string v15, "edm.intent.extra.license.status"
@@ -6764,7 +6019,6 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 493
     const-string v15, "edm.intent.extra.license.errorcode"
 
     const/16 v18, 0x12d
@@ -6775,7 +6029,6 @@
 
     goto :goto_1
 
-    .line 434
     .end local v4    # "UMCintent":Landroid/content/Intent;
     .end local v11    # "intent":Landroid/content/Intent;
     :cond_4
@@ -6784,7 +6037,6 @@
 
     invoke-direct {v8}, Landroid/content/ContentValues;-><init>()V
 
-    .line 435
     .local v8, "cvWhere":Landroid/content/ContentValues;
     const-string/jumbo v15, "pkgName"
 
@@ -6792,31 +6044,26 @@
 
     invoke-virtual {v8, v15, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 438
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
-    .line 439
     .local v7, "cv":Landroid/content/ContentValues;
     invoke-static/range {p3 .. p3}, Lcom/android/server/enterprise/utils/Utils;->serializeObject(Ljava/lang/Object;)[B
 
     move-result-object v5
 
-    .line 440
     .local v5, "blob":[B
     const-string/jumbo v15, "rightsObject"
 
     invoke-virtual {v7, v15, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    .line 441
     const-string/jumbo v15, "pkgVersion"
 
     move-object/from16 v0, p7
 
     invoke-virtual {v7, v15, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 443
     sget-object v15, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v18, "LICENSE"
@@ -6827,11 +6074,9 @@
 
     move-result v6
 
-    .line 444
     .local v6, "cnt":I
     if-lez v6, :cond_5
 
-    .line 446
     sget-object v15, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v18, "LICENSE"
@@ -6842,7 +6087,6 @@
 
     move-result v13
 
-    .line 449
     :cond_5
     const-string v15, "EnterpriseLicenseService"
 
@@ -6870,17 +6114,14 @@
 
     invoke-static {v15, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     if-eqz v13, :cond_6
 
-    .line 452
     sget-object v15, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mPMS:Landroid/content/pm/IPackageManager;
 
     move-object/from16 v0, p6
 
     invoke-interface {v15, v0}, Landroid/content/pm/IPackageManager;->setLicensePermissions(Ljava/lang/String;)I
 
-    .line 456
     :cond_6
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
@@ -6888,10 +6129,8 @@
 
     if-eqz v15, :cond_7
 
-    .line 457
     if-eqz v13, :cond_a
 
-    .line 458
     invoke-direct/range {p0 .. p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getUcmService()Lcom/sec/enterprise/knox/ucm/core/IUcmService;
 
     move-result-object v15
@@ -6911,7 +6150,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 470
     :cond_7
     :goto_3
     new-instance v11, Landroid/content/Intent;
@@ -6920,18 +6158,15 @@
 
     invoke-direct {v11, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 471
     .restart local v11    # "intent":Landroid/content/Intent;
     if-eqz v13, :cond_d
 
-    .line 472
     const-string v15, "edm.intent.extra.license.status"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 473
     const-string v15, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p4 .. p4}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -6942,14 +6177,12 @@
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 474
     const-string v15, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, p5
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 480
     :goto_4
     const-string v15, "edm.intent.extra.license.result_type"
 
@@ -6959,12 +6192,10 @@
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 481
     move-object/from16 v0, p6
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 482
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -6975,7 +6206,6 @@
 
     invoke-virtual {v15, v11, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 485
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     move-result-object v15
@@ -6988,25 +6218,21 @@
 
     if-eqz v15, :cond_9
 
-    .line 486
     new-instance v4, Landroid/content/Intent;
 
     const-string v15, "edm.intent.action.license.status"
 
     invoke-direct {v4, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 487
     .restart local v4    # "UMCintent":Landroid/content/Intent;
     if-eqz v13, :cond_e
 
-    .line 488
     const-string v15, "edm.intent.extra.license.status"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 489
     const-string v15, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p4 .. p4}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -7017,14 +6243,12 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 490
     const-string v15, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, p5
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 496
     :goto_5
     const-string v15, "edm.intent.extra.license.data.pkgname"
 
@@ -7032,34 +6256,28 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 497
     invoke-static/range {p6 .. p6}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v12
 
     check-cast v12, Ljava/util/ArrayList;
 
-    .line 498
     .restart local v12    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v12, :cond_8
 
-    .line 499
     new-instance v10, Landroid/os/Bundle;
 
     invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
 
-    .line 500
     .restart local v10    # "extra":Landroid/os/Bundle;
     const-string v15, "Permissions"
 
     invoke-virtual {v10, v15, v12}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 501
     const-string v15, "edm.intent.extra.license.data.license_permissions"
 
     invoke-virtual {v4, v15, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 503
     .end local v10    # "extra":Landroid/os/Bundle;
     :cond_8
     const-string v15, "edm.intent.extra.license.result_type"
@@ -7070,12 +6288,10 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 504
     const-string v15, "com.sec.enterprise.knox.cloudmdm.smdms"
 
     invoke-virtual {v4, v15}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 505
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -7086,7 +6302,6 @@
 
     invoke-virtual {v15, v4, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 508
     .end local v4    # "UMCintent":Landroid/content/Intent;
     .end local v12    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_9
@@ -7099,11 +6314,9 @@
     :goto_6
     move v14, v13
 
-    .line 511
     .restart local v14    # "ret":I
     goto/16 :goto_2
 
-    .line 460
     .end local v11    # "intent":Landroid/content/Intent;
     .end local v14    # "ret":I
     .restart local v5    # "blob":[B
@@ -7133,7 +6346,6 @@
 
     goto/16 :goto_3
 
-    .line 465
     .end local v5    # "blob":[B
     .end local v6    # "cnt":I
     .end local v7    # "cv":Landroid/content/ContentValues;
@@ -7141,7 +6353,6 @@
     :catch_0
     move-exception v9
 
-    .line 466
     .local v9, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v15, "EnterpriseLicenseService"
@@ -7152,30 +6363,25 @@
 
     invoke-static {v15, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 467
     invoke-virtual {v9}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 470
     new-instance v11, Landroid/content/Intent;
 
     const-string v15, "edm.intent.action.license.status"
 
     invoke-direct {v11, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 471
     .restart local v11    # "intent":Landroid/content/Intent;
     if-eqz v13, :cond_f
 
-    .line 472
     const-string v15, "edm.intent.extra.license.status"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 473
     const-string v15, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p4 .. p4}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -7186,14 +6392,12 @@
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 474
     const-string v15, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, p5
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 480
     :goto_7
     const-string v15, "edm.intent.extra.license.result_type"
 
@@ -7203,12 +6407,10 @@
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 481
     move-object/from16 v0, p6
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 482
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -7219,7 +6421,6 @@
 
     invoke-virtual {v15, v11, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 485
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     move-result-object v15
@@ -7232,25 +6433,21 @@
 
     if-eqz v15, :cond_c
 
-    .line 486
     new-instance v4, Landroid/content/Intent;
 
     const-string v15, "edm.intent.action.license.status"
 
     invoke-direct {v4, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 487
     .restart local v4    # "UMCintent":Landroid/content/Intent;
     if-eqz v13, :cond_10
 
-    .line 488
     const-string v15, "edm.intent.extra.license.status"
 
     move-object/from16 v0, p1
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 489
     const-string v15, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p4 .. p4}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -7261,14 +6458,12 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 490
     const-string v15, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, p5
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 496
     :goto_8
     const-string v15, "edm.intent.extra.license.data.pkgname"
 
@@ -7276,34 +6471,28 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 497
     invoke-static/range {p6 .. p6}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v12
 
     check-cast v12, Ljava/util/ArrayList;
 
-    .line 498
     .restart local v12    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v12, :cond_b
 
-    .line 499
     new-instance v10, Landroid/os/Bundle;
 
     invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
 
-    .line 500
     .restart local v10    # "extra":Landroid/os/Bundle;
     const-string v15, "Permissions"
 
     invoke-virtual {v10, v15, v12}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 501
     const-string v15, "edm.intent.extra.license.data.license_permissions"
 
     invoke-virtual {v4, v15, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 503
     .end local v10    # "extra":Landroid/os/Bundle;
     :cond_b
     const-string v15, "edm.intent.extra.license.result_type"
@@ -7314,12 +6503,10 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 504
     const-string v15, "com.sec.enterprise.knox.cloudmdm.smdms"
 
     invoke-virtual {v4, v15}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 505
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -7330,7 +6517,6 @@
 
     invoke-virtual {v15, v4, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 508
     .end local v4    # "UMCintent":Landroid/content/Intent;
     .end local v12    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_c
@@ -7338,7 +6524,6 @@
 
     goto/16 :goto_6
 
-    .line 476
     .end local v9    # "e":Ljava/lang/Exception;
     .restart local v5    # "blob":[B
     .restart local v6    # "cnt":I
@@ -7353,7 +6538,6 @@
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 477
     const-string v15, "edm.intent.extra.license.errorcode"
 
     const/16 v18, 0x12d
@@ -7364,7 +6548,6 @@
 
     goto/16 :goto_4
 
-    .line 492
     .restart local v4    # "UMCintent":Landroid/content/Intent;
     :cond_e
     const-string v15, "edm.intent.extra.license.status"
@@ -7375,7 +6558,6 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 493
     const-string v15, "edm.intent.extra.license.errorcode"
 
     const/16 v18, 0x12d
@@ -7386,7 +6568,6 @@
 
     goto/16 :goto_5
 
-    .line 476
     .end local v4    # "UMCintent":Landroid/content/Intent;
     .end local v5    # "blob":[B
     .end local v6    # "cnt":I
@@ -7402,7 +6583,6 @@
 
     invoke-virtual {v11, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 477
     const-string v15, "edm.intent.extra.license.errorcode"
 
     const/16 v18, 0x12d
@@ -7413,7 +6593,6 @@
 
     goto/16 :goto_7
 
-    .line 492
     .restart local v4    # "UMCintent":Landroid/content/Intent;
     :cond_10
     const-string v15, "edm.intent.extra.license.status"
@@ -7424,7 +6603,6 @@
 
     invoke-virtual {v4, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 493
     const-string v15, "edm.intent.extra.license.errorcode"
 
     const/16 v18, 0x12d
@@ -7435,7 +6613,6 @@
 
     goto/16 :goto_8
 
-    .line 470
     .end local v4    # "UMCintent":Landroid/content/Intent;
     .end local v9    # "e":Ljava/lang/Exception;
     .end local v11    # "intent":Landroid/content/Intent;
@@ -7450,11 +6627,9 @@
 
     invoke-direct {v11, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 471
     .restart local v11    # "intent":Landroid/content/Intent;
     if-eqz v13, :cond_13
 
-    .line 472
     const-string v18, "edm.intent.extra.license.status"
 
     move-object/from16 v0, v18
@@ -7463,7 +6638,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 473
     const-string v18, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p4 .. p4}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -7476,7 +6650,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 474
     const-string v18, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, v18
@@ -7485,7 +6658,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 480
     :goto_9
     const-string v18, "edm.intent.extra.license.result_type"
 
@@ -7497,12 +6669,10 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 481
     move-object/from16 v0, p6
 
     invoke-virtual {v11, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 482
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -7517,7 +6687,6 @@
 
     invoke-virtual {v0, v11, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 485
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     move-result-object v18
@@ -7532,7 +6701,6 @@
 
     if-eqz v18, :cond_12
 
-    .line 486
     new-instance v4, Landroid/content/Intent;
 
     const-string v18, "edm.intent.action.license.status"
@@ -7541,11 +6709,9 @@
 
     invoke-direct {v4, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 487
     .restart local v4    # "UMCintent":Landroid/content/Intent;
     if-eqz v13, :cond_14
 
-    .line 488
     const-string v18, "edm.intent.extra.license.status"
 
     move-object/from16 v0, v18
@@ -7554,7 +6720,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 489
     const-string v18, "edm.intent.extra.license.errorcode"
 
     invoke-virtual/range {p4 .. p4}, Landroid/app/enterprise/license/Error;->getErrorCode()I
@@ -7567,7 +6732,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 490
     const-string v18, "edm.intent.extra.license.perm_group"
 
     move-object/from16 v0, v18
@@ -7576,7 +6740,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 496
     :goto_a
     const-string v18, "edm.intent.extra.license.data.pkgname"
 
@@ -7586,23 +6749,19 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 497
     invoke-static/range {p6 .. p6}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->getPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v12
 
     check-cast v12, Ljava/util/ArrayList;
 
-    .line 498
     .restart local v12    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v12, :cond_11
 
-    .line 499
     new-instance v10, Landroid/os/Bundle;
 
     invoke-direct {v10}, Landroid/os/Bundle;-><init>()V
 
-    .line 500
     .restart local v10    # "extra":Landroid/os/Bundle;
     const-string v18, "Permissions"
 
@@ -7610,14 +6769,12 @@
 
     invoke-virtual {v10, v0, v12}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 501
     const-string v18, "edm.intent.extra.license.data.license_permissions"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v4, v0, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 503
     .end local v10    # "extra":Landroid/os/Bundle;
     :cond_11
     const-string v18, "edm.intent.extra.license.result_type"
@@ -7630,14 +6787,12 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 504
     const-string v18, "com.sec.enterprise.knox.cloudmdm.smdms"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v4, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 505
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mContext:Landroid/content/Context;
@@ -7652,16 +6807,13 @@
 
     invoke-virtual {v0, v4, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 508
     .end local v4    # "UMCintent":Landroid/content/Intent;
     .end local v12    # "licensedPermissions":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_12
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 509
     throw v15
 
-    .line 476
     :cond_13
     const-string v18, "edm.intent.extra.license.status"
 
@@ -7673,7 +6825,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 477
     const-string v18, "edm.intent.extra.license.errorcode"
 
     const/16 v19, 0x12d
@@ -7686,7 +6837,6 @@
 
     goto/16 :goto_9
 
-    .line 492
     .restart local v4    # "UMCintent":Landroid/content/Intent;
     :cond_14
     const-string v18, "edm.intent.extra.license.status"
@@ -7699,7 +6849,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 493
     const-string v18, "edm.intent.extra.license.errorcode"
 
     const/16 v19, 0x12d
@@ -7720,19 +6869,15 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 1295
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 1296
     const/4 v5, 0x0
 
-    .line 1297
     .local v5, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1299
     .local v6, "token":J
     if-eqz p1, :cond_0
 
@@ -7750,35 +6895,28 @@
 
     if-eqz v9, :cond_1
 
-    .line 1331
     :cond_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1333
     :goto_0
     return v8
 
-    .line 1302
     :cond_1
     const/4 v3, 0x0
 
-    .line 1304
     .local v3, "pkgName":Ljava/lang/String;
     :try_start_1
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1305
     .local v1, "cvWhere":Landroid/content/ContentValues;
     const-string/jumbo v9, "instanceId"
 
     invoke-virtual {v1, v9, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1306
     const-string/jumbo v0, "pkgName"
 
-    .line 1308
     .local v0, "column":Ljava/lang/String;
     sget-object v9, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -7788,11 +6926,9 @@
 
     move-result-object v4
 
-    .line 1310
     .local v4, "result":Landroid/content/ContentValues;
     if-nez v4, :cond_2
 
-    .line 1311
     const-string v9, "EnterpriseLicenseService"
 
     const-string/jumbo v10, "resetLicense(): result is null"
@@ -7802,12 +6938,10 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1331
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 1315
     :cond_2
     :try_start_2
     const-string/jumbo v9, "pkgName"
@@ -7816,10 +6950,8 @@
 
     move-result-object v3
 
-    .line 1317
     if-nez v3, :cond_3
 
-    .line 1318
     const-string v9, "EnterpriseLicenseService"
 
     const-string/jumbo v10, "resetLicense(): pkgName is null, Record does not exist"
@@ -7829,22 +6961,18 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1331
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 1322
     :cond_3
     :try_start_3
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->resetELMInfo(Ljava/lang/String;)Z
 
     move-result v5
 
-    .line 1323
     if-eqz v5, :cond_4
 
-    .line 1325
     sget-object v8, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mPMS:Landroid/content/pm/IPackageManager;
 
     invoke-interface {v8, v3}, Landroid/content/pm/IPackageManager;->setLicensePermissions(Ljava/lang/String;)I
@@ -7852,7 +6980,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1331
     :cond_4
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -7863,14 +6990,11 @@
     :goto_1
     move v8, v5
 
-    .line 1333
     goto :goto_0
 
-    .line 1327
     :catch_0
     move-exception v2
 
-    .line 1328
     .local v2, "e":Ljava/lang/Exception;
     :try_start_4
     const-string v8, "EnterpriseLicenseService"
@@ -7879,12 +7003,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1329
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1331
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -7903,19 +7025,15 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1342
     invoke-direct {p0}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->enforcePermission()V
 
-    .line 1343
     const/4 v1, 0x0
 
-    .line 1344
     .local v1, "ret":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1346
     .local v2, "token":J
     if-eqz p1, :cond_0
 
@@ -7933,28 +7051,22 @@
 
     if-eqz v4, :cond_1
 
-    .line 1347
     :cond_0
     const/4 v4, 0x0
 
-    .line 1357
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1359
     :goto_0
     return v4
 
-    .line 1349
     :cond_1
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->resetELMInfo(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 1350
     if-eqz v1, :cond_2
 
-    .line 1352
     sget-object v4, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->mPMS:Landroid/content/pm/IPackageManager;
 
     invoke-interface {v4, p1}, Landroid/content/pm/IPackageManager;->setLicensePermissions(Ljava/lang/String;)I
@@ -7962,21 +7074,17 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1357
     :cond_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :goto_1
     move v4, v1
 
-    .line 1359
     goto :goto_0
 
-    .line 1354
     :catch_0
     move-exception v0
 
-    .line 1355
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v4, "EnterpriseLicenseService"
@@ -7987,7 +7095,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1357
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -8005,9 +7112,7 @@
     .locals 0
 
     .prologue
-    .line 1536
     invoke-static {}, Lcom/android/server/enterprise/license/EnterpriseLicenseService;->updateAdminPermissions()V
 
-    .line 1537
     return-void
 .end method

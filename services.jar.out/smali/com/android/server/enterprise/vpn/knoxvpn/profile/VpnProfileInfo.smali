@@ -121,65 +121,46 @@
 
     const/4 v0, 0x0
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 83
     iput-boolean v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mIsRetry:Z
 
-    .line 85
     iput v2, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mVendorUid:I
 
-    .line 87
     iput v2, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mNetId:I
 
-    .line 89
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyServer:Ljava/lang/String;
 
-    .line 91
     iput v2, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyPort:I
 
-    .line 93
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyInfo:Landroid/net/ProxyInfo;
 
-    .line 95
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyusername:Ljava/lang/String;
 
-    .line 97
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyPassword:Ljava/lang/String;
 
-    .line 99
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPacurl:Ljava/lang/String;
 
-    .line 101
     iput v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mEnableIPv6:I
 
-    .line 103
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mInterfaceAddress:Ljava/lang/String;
 
-    .line 105
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mDefaultInterface:Ljava/lang/String;
 
-    .line 107
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mInterfaceV6Address:Ljava/lang/String;
 
-    .line 110
     iput-boolean v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->credentialsPredefined:Z
 
-    .line 113
     iput v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->proxyAuthRequried:I
 
-    .line 116
     iput v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mVpnClientType:I
 
-    .line 119
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 122
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
@@ -198,18 +179,15 @@
     .param p3, "cid"    # I
 
     .prologue
-    .line 316
     new-instance v0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
 
     invoke-direct {v0, p1, p2, p3}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;-><init>(Ljava/lang/String;II)V
 
-    .line 317
     .local v0, "pkgInfo":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v1, p1, v0}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 318
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageUidSet:Ljava/util/HashSet;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -218,7 +196,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 319
     return-void
 .end method
 
@@ -226,7 +203,6 @@
     .locals 1
 
     .prologue
-    .line 205
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->activateState:I
 
     return v0
@@ -236,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->admin_id:I
 
     return v0
@@ -246,7 +221,6 @@
     .locals 1
 
     .prologue
-    .line 217
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->chainingEnabled:I
 
     return v0
@@ -256,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 406
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mDefaultInterface:Ljava/lang/String;
 
     return-object v0
@@ -275,7 +248,6 @@
     .end annotation
 
     .prologue
-    .line 262
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mDnsList:Ljava/util/List;
 
     return-object v0
@@ -285,7 +257,6 @@
     .locals 1
 
     .prologue
-    .line 390
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mEnableIPv6:I
 
     return v0
@@ -295,7 +266,6 @@
     .locals 1
 
     .prologue
-    .line 398
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mInterfaceAddress:Ljava/lang/String;
 
     return-object v0
@@ -305,7 +275,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mInterfaceName:Ljava/lang/String;
 
     return-object v0
@@ -315,7 +284,6 @@
     .locals 1
 
     .prologue
-    .line 125
     iget-boolean v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mIsRetry:Z
 
     return v0
@@ -325,7 +293,6 @@
     .locals 1
 
     .prologue
-    .line 213
     iget-boolean v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->markProfileForDeletion:Z
 
     return v0
@@ -335,7 +302,6 @@
     .locals 1
 
     .prologue
-    .line 157
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mNetId:I
 
     return v0
@@ -346,7 +312,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 291
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -355,10 +320,8 @@
 
     if-nez v0, :cond_0
 
-    .line 292
     const/4 v0, 0x0
 
-    .line 294
     :goto_0
     return-object v0
 
@@ -378,7 +341,6 @@
     .locals 1
 
     .prologue
-    .line 308
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->size()I
@@ -393,7 +355,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 298
     iget-object v3, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v3}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -418,13 +379,11 @@
 
     check-cast v1, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
 
-    .line 299
     .local v1, "p":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
     invoke-virtual {v1}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 300
     .local v2, "packageName":Ljava/lang/String;
     invoke-virtual {v1}, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;->getUid()I
 
@@ -432,7 +391,6 @@
 
     if-ne v3, p1, :cond_0
 
-    .line 304
     .end local v1    # "p":Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnPackageInfo;
     .end local v2    # "packageName":Ljava/lang/String;
     :goto_0
@@ -457,7 +415,6 @@
     .end annotation
 
     .prologue
-    .line 278
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->values()Ljava/util/Collection;
@@ -481,7 +438,6 @@
     .end annotation
 
     .prologue
-    .line 274
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object v0
@@ -491,7 +447,6 @@
     .locals 1
 
     .prologue
-    .line 375
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPacurl:Ljava/lang/String;
 
     return-object v0
@@ -501,7 +456,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->personaId:I
 
     return v0
@@ -511,7 +465,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProfileName:Ljava/lang/String;
 
     return-object v0
@@ -521,7 +474,6 @@
     .locals 1
 
     .prologue
-    .line 197
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->protocolType:Ljava/lang/String;
 
     return-object v0
@@ -531,7 +483,6 @@
     .locals 1
 
     .prologue
-    .line 355
     monitor-enter p0
 
     :try_start_0
@@ -555,7 +506,6 @@
     .locals 1
 
     .prologue
-    .line 367
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyPassword:Ljava/lang/String;
 
     return-object v0
@@ -565,7 +515,6 @@
     .locals 1
 
     .prologue
-    .line 347
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyPort:I
 
     return v0
@@ -575,7 +524,6 @@
     .locals 1
 
     .prologue
-    .line 339
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyServer:Ljava/lang/String;
 
     return-object v0
@@ -585,7 +533,6 @@
     .locals 1
 
     .prologue
-    .line 359
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyusername:Ljava/lang/String;
 
     return-object v0
@@ -595,7 +542,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->routeType:I
 
     return v0
@@ -614,7 +560,6 @@
     .end annotation
 
     .prologue
-    .line 270
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mSearchDomainList:Ljava/util/List;
 
     return-object v0
@@ -624,7 +569,6 @@
     .locals 1
 
     .prologue
-    .line 227
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->uidPidSearchEnabled:I
 
     return v0
@@ -634,7 +578,6 @@
     .locals 1
 
     .prologue
-    .line 414
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mInterfaceV6Address:Ljava/lang/String;
 
     return-object v0
@@ -644,7 +587,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mVendorPkgName:Ljava/lang/String;
 
     return-object v0
@@ -654,7 +596,6 @@
     .locals 1
 
     .prologue
-    .line 245
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mVendorUid:I
 
     return v0
@@ -664,7 +605,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->vpnConnectionType:I
 
     return v0
@@ -674,7 +614,6 @@
     .locals 1
 
     .prologue
-    .line 286
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->vpnType:I
 
     return v0
@@ -684,7 +623,6 @@
     .locals 1
 
     .prologue
-    .line 439
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mVpnClientType:I
 
     return v0
@@ -695,7 +633,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 322
     iget-object v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageUidSet:Ljava/util/HashSet;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -713,7 +650,6 @@
     .locals 1
 
     .prologue
-    .line 430
     iget v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->proxyAuthRequried:I
 
     return v0
@@ -723,7 +659,6 @@
     .locals 1
 
     .prologue
-    .line 422
     iget-boolean v0, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->credentialsPredefined:Z
 
     return v0
@@ -734,10 +669,8 @@
     .param p1, "predefined"    # Z
 
     .prologue
-    .line 418
     iput-boolean p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->credentialsPredefined:Z
 
-    .line 419
     return-void
 .end method
 
@@ -746,7 +679,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 326
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->containsKey(Ljava/lang/Object;)Z
@@ -755,11 +687,9 @@
 
     if-nez v1, :cond_0
 
-    .line 332
     :goto_0
     return-void
 
-    .line 329
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -773,7 +703,6 @@
 
     move-result v0
 
-    .line 330
     .local v0, "uidToRemove":I
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageUidSet:Ljava/util/HashSet;
 
@@ -783,7 +712,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 331
     iget-object v1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPackageMap:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -796,10 +724,8 @@
     .param p1, "activateState"    # I
 
     .prologue
-    .line 209
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->activateState:I
 
-    .line 210
     return-void
 .end method
 
@@ -808,10 +734,8 @@
     .param p1, "adminid"    # I
 
     .prologue
-    .line 177
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->admin_id:I
 
-    .line 178
     return-void
 .end method
 
@@ -820,10 +744,8 @@
     .param p1, "chainingEnabled"    # I
 
     .prologue
-    .line 221
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->chainingEnabled:I
 
-    .line 222
     return-void
 .end method
 
@@ -832,10 +754,8 @@
     .param p1, "defaultInterface"    # Ljava/lang/String;
 
     .prologue
-    .line 402
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mDefaultInterface:Ljava/lang/String;
 
-    .line 403
     return-void
 .end method
 
@@ -852,11 +772,9 @@
     .end annotation
 
     .prologue
-    .line 258
     .local p1, "dnsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mDnsList:Ljava/util/List;
 
-    .line 259
     return-void
 .end method
 
@@ -865,10 +783,8 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 386
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mEnableIPv6:I
 
-    .line 387
     return-void
 .end method
 
@@ -877,10 +793,8 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 394
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mInterfaceAddress:Ljava/lang/String;
 
-    .line 395
     return-void
 .end method
 
@@ -889,10 +803,8 @@
     .param p1, "interfaceName"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mInterfaceName:Ljava/lang/String;
 
-    .line 146
     return-void
 .end method
 
@@ -901,10 +813,8 @@
     .param p1, "set"    # Z
 
     .prologue
-    .line 129
     iput-boolean p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mIsRetry:Z
 
-    .line 130
     return-void
 .end method
 
@@ -913,10 +823,8 @@
     .param p1, "markProfileForDeletion"    # Z
 
     .prologue
-    .line 254
     iput-boolean p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->markProfileForDeletion:Z
 
-    .line 255
     return-void
 .end method
 
@@ -925,10 +833,8 @@
     .param p1, "netId"    # I
 
     .prologue
-    .line 161
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mNetId:I
 
-    .line 162
     return-void
 .end method
 
@@ -937,10 +843,8 @@
     .param p1, "authRequired"    # I
 
     .prologue
-    .line 426
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->proxyAuthRequried:I
 
-    .line 427
     return-void
 .end method
 
@@ -949,10 +853,8 @@
     .param p1, "pacUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 379
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mPacurl:Ljava/lang/String;
 
-    .line 380
     return-void
 .end method
 
@@ -961,10 +863,8 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 185
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->personaId:I
 
-    .line 186
     return-void
 .end method
 
@@ -973,10 +873,8 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 137
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProfileName:Ljava/lang/String;
 
-    .line 138
     return-void
 .end method
 
@@ -985,10 +883,8 @@
     .param p1, "protocolType"    # Ljava/lang/String;
 
     .prologue
-    .line 201
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->protocolType:Ljava/lang/String;
 
-    .line 202
     return-void
 .end method
 
@@ -997,7 +893,6 @@
     .param p1, "proxyinfo"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 351
     monitor-enter p0
 
     :try_start_0
@@ -1005,12 +900,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 352
     monitor-exit p0
 
     return-void
 
-    .line 351
     :catchall_0
     move-exception v0
 
@@ -1024,10 +917,8 @@
     .param p1, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 371
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyPassword:Ljava/lang/String;
 
-    .line 372
     return-void
 .end method
 
@@ -1036,10 +927,8 @@
     .param p1, "proxyPort"    # I
 
     .prologue
-    .line 343
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyPort:I
 
-    .line 344
     return-void
 .end method
 
@@ -1048,10 +937,8 @@
     .param p1, "proxyServer"    # Ljava/lang/String;
 
     .prologue
-    .line 335
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyServer:Ljava/lang/String;
 
-    .line 336
     return-void
 .end method
 
@@ -1060,10 +947,8 @@
     .param p1, "username"    # Ljava/lang/String;
 
     .prologue
-    .line 363
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mProxyusername:Ljava/lang/String;
 
-    .line 364
     return-void
 .end method
 
@@ -1072,10 +957,8 @@
     .param p1, "routeType"    # I
 
     .prologue
-    .line 193
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->routeType:I
 
-    .line 194
     return-void
 .end method
 
@@ -1092,11 +975,9 @@
     .end annotation
 
     .prologue
-    .line 266
     .local p1, "searchDomainList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mSearchDomainList:Ljava/util/List;
 
-    .line 267
     return-void
 .end method
 
@@ -1105,10 +986,8 @@
     .param p1, "uidPidSearchEnabled"    # I
 
     .prologue
-    .line 232
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->uidPidSearchEnabled:I
 
-    .line 233
     return-void
 .end method
 
@@ -1117,10 +996,8 @@
     .param p1, "address"    # Ljava/lang/String;
 
     .prologue
-    .line 410
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mInterfaceV6Address:Ljava/lang/String;
 
-    .line 411
     return-void
 .end method
 
@@ -1129,10 +1006,8 @@
     .param p1, "vendorPkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 153
     iput-object p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mVendorPkgName:Ljava/lang/String;
 
-    .line 154
     return-void
 .end method
 
@@ -1141,10 +1016,8 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 241
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mVendorUid:I
 
-    .line 242
     return-void
 .end method
 
@@ -1153,10 +1026,8 @@
     .param p1, "vpnConnectionType"    # I
 
     .prologue
-    .line 250
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->vpnConnectionType:I
 
-    .line 251
     return-void
 .end method
 
@@ -1165,10 +1036,8 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 282
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->vpnType:I
 
-    .line 283
     return-void
 .end method
 
@@ -1177,9 +1046,7 @@
     .param p1, "clientType"    # I
 
     .prologue
-    .line 435
     iput p1, p0, Lcom/android/server/enterprise/vpn/knoxvpn/profile/VpnProfileInfo;->mVpnClientType:I
 
-    .line 436
     return-void
 .end method

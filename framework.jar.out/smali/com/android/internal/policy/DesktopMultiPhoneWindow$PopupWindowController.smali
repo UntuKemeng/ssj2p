@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1305
     iput-object p1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-direct {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;-><init>(Lcom/android/internal/policy/MultiPhoneWindow;)V
@@ -38,14 +37,12 @@
     .prologue
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 1328
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     if-nez v0, :cond_1
 
-    .line 1329
     sget-boolean v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -76,25 +73,21 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1354
     :cond_0
     :goto_0
     return-void
 
-    .line 1333
     :cond_1
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->updateIsFullScreen()V
 
-    .line 1334
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-boolean v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mIsFullScreen:Z
 
     if-nez v0, :cond_2
 
-    .line 1335
     sget-boolean v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -127,11 +120,9 @@
 
     goto :goto_0
 
-    .line 1339
     :cond_2
     if-eqz p1, :cond_5
 
-    .line 1340
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -144,14 +135,12 @@
 
     if-gez v0, :cond_3
 
-    .line 1341
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->setWindowHeaderAlpha(F)V
 
-    .line 1344
     :cond_3
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -163,7 +152,6 @@
 
     if-nez v0, :cond_4
 
-    .line 1345
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -176,7 +164,6 @@
 
     goto :goto_0
 
-    .line 1347
     :cond_4
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -190,7 +177,6 @@
 
     goto :goto_0
 
-    .line 1350
     :cond_5
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -198,7 +184,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1351
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -221,7 +206,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1308
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->isDesktopMode()Z
@@ -230,7 +214,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1309
     const-string v0, "DesktopMultiPhoneWindow"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -253,21 +236,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1310
     invoke-super {p0, v3}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->performUpdateVisibility(Z)V
 
-    .line 1311
     invoke-direct {p0, p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->performUpdateDesktopHeaderVisibility(Z)V
 
-    .line 1316
     :goto_0
     return-void
 
-    .line 1313
     :cond_0
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->performUpdateVisibility(Z)V
 
-    .line 1314
     invoke-direct {p0, v3}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->performUpdateDesktopHeaderVisibility(Z)V
 
     goto :goto_0
@@ -277,7 +255,6 @@
     .locals 1
 
     .prologue
-    .line 1320
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$PopupWindowController;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->isDesktopMode()Z
@@ -286,11 +263,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1325
     :goto_0
     return-void
 
-    .line 1323
     :cond_0
     invoke-super {p0}, Lcom/android/internal/policy/MultiPhoneWindow$HeaderWindowController;->updatePosition()V
 

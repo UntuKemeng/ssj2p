@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 781
     iput-object p1, p0, Lcom/android/server/enterprise/security/SecurityPolicy$2;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     iput-object p2, p0, Lcom/android/server/enterprise/security/SecurityPolicy$2;->val$lock:Ljava/lang/Object;
@@ -43,12 +42,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 783
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 784
     .local v0, "action":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
@@ -58,7 +55,6 @@
 
     move-result-object v2
 
-    .line 786
     .local v2, "path":Ljava/lang/String;
     const-string v3, "android.intent.action.MEDIA_MOUNTED"
 
@@ -68,12 +64,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 787
     iget-object v4, p0, Lcom/android/server/enterprise/security/SecurityPolicy$2;->val$lock:Ljava/lang/Object;
 
     monitor-enter v4
 
-    .line 789
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/security/SecurityPolicy$2;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
@@ -82,7 +76,6 @@
     # setter for: Lcom/android/server/enterprise/security/SecurityPolicy;->mMediaFormatRet:Z
     invoke-static {v3, v5}, Lcom/android/server/enterprise/security/SecurityPolicy;->access$1102(Lcom/android/server/enterprise/security/SecurityPolicy;Z)Z
 
-    .line 790
     iget-object v3, p0, Lcom/android/server/enterprise/security/SecurityPolicy$2;->val$lock:Ljava/lang/Object;
 
     invoke-virtual {v3}, Ljava/lang/Object;->notify()V
@@ -90,20 +83,16 @@
     .catch Ljava/lang/IllegalMonitorStateException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 794
     :goto_0
     :try_start_1
     monitor-exit v4
 
-    .line 796
     :cond_0
     return-void
 
-    .line 791
     :catch_0
     move-exception v1
 
-    .line 792
     .local v1, "e":Ljava/lang/IllegalMonitorStateException;
     const-string v3, "SecurityPolicy"
 
@@ -113,7 +102,6 @@
 
     goto :goto_0
 
-    .line 794
     .end local v1    # "e":Ljava/lang/IllegalMonitorStateException;
     :catchall_0
     move-exception v3

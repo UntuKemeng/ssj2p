@@ -41,11 +41,9 @@
     .end annotation
 
     .prologue
-    .line 148
     .local p1, "dispatchTarget":Landroid/hardware/camera2/dispatch/Dispatchable;, "Landroid/hardware/camera2/dispatch/Dispatchable<Landroid/hardware/camera2/CameraCaptureSession$StateCallback;>;"
     invoke-direct {p0}, Landroid/hardware/camera2/CameraCaptureSession$StateCallback;-><init>()V
 
-    .line 149
     const-string v0, "dispatchTarget must not be null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -55,7 +53,6 @@
     .end local p1    # "dispatchTarget":Landroid/hardware/camera2/dispatch/Dispatchable;, "Landroid/hardware/camera2/dispatch/Dispatchable<Landroid/hardware/camera2/CameraCaptureSession$StateCallback;>;"
     check-cast p1, Landroid/hardware/camera2/dispatch/Dispatchable;
 
-    .line 150
     .restart local p1    # "dispatchTarget":Landroid/hardware/camera2/dispatch/Dispatchable;, "Landroid/hardware/camera2/dispatch/Dispatchable<Landroid/hardware/camera2/CameraCaptureSession$StateCallback;>;"
     new-instance v0, Landroid/hardware/camera2/dispatch/MethodNameInvoker;
 
@@ -65,7 +62,6 @@
 
     iput-object v0, p0, Landroid/hardware/camera2/impl/CallbackProxies$SessionStateCallbackProxy;->mProxy:Landroid/hardware/camera2/dispatch/MethodNameInvoker;
 
-    .line 152
     return-void
 .end method
 
@@ -76,7 +72,6 @@
     .param p1, "session"    # Landroid/hardware/camera2/CameraCaptureSession;
 
     .prologue
-    .line 172
     iget-object v0, p0, Landroid/hardware/camera2/impl/CallbackProxies$SessionStateCallbackProxy;->mProxy:Landroid/hardware/camera2/dispatch/MethodNameInvoker;
 
     const-string/jumbo v1, "onActive"
@@ -91,7 +86,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->invoke(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 173
     return-void
 .end method
 
@@ -100,7 +94,6 @@
     .param p1, "session"    # Landroid/hardware/camera2/CameraCaptureSession;
 
     .prologue
-    .line 177
     iget-object v0, p0, Landroid/hardware/camera2/impl/CallbackProxies$SessionStateCallbackProxy;->mProxy:Landroid/hardware/camera2/dispatch/MethodNameInvoker;
 
     const-string/jumbo v1, "onClosed"
@@ -115,7 +108,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->invoke(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
     return-void
 .end method
 
@@ -124,7 +116,6 @@
     .param p1, "session"    # Landroid/hardware/camera2/CameraCaptureSession;
 
     .prologue
-    .line 162
     iget-object v0, p0, Landroid/hardware/camera2/impl/CallbackProxies$SessionStateCallbackProxy;->mProxy:Landroid/hardware/camera2/dispatch/MethodNameInvoker;
 
     const-string/jumbo v1, "onConfigureFailed"
@@ -139,7 +130,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->invoke(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 163
     return-void
 .end method
 
@@ -148,7 +138,6 @@
     .param p1, "session"    # Landroid/hardware/camera2/CameraCaptureSession;
 
     .prologue
-    .line 156
     iget-object v0, p0, Landroid/hardware/camera2/impl/CallbackProxies$SessionStateCallbackProxy;->mProxy:Landroid/hardware/camera2/dispatch/MethodNameInvoker;
 
     const-string/jumbo v1, "onConfigured"
@@ -163,7 +152,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->invoke(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 157
     return-void
 .end method
 
@@ -172,7 +160,6 @@
     .param p1, "session"    # Landroid/hardware/camera2/CameraCaptureSession;
 
     .prologue
-    .line 167
     iget-object v0, p0, Landroid/hardware/camera2/impl/CallbackProxies$SessionStateCallbackProxy;->mProxy:Landroid/hardware/camera2/dispatch/MethodNameInvoker;
 
     const-string/jumbo v1, "onReady"
@@ -187,7 +174,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->invoke(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 168
     return-void
 .end method
 
@@ -197,7 +183,6 @@
     .param p2, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 182
     iget-object v0, p0, Landroid/hardware/camera2/impl/CallbackProxies$SessionStateCallbackProxy;->mProxy:Landroid/hardware/camera2/dispatch/MethodNameInvoker;
 
     const-string/jumbo v1, "onSurfacePrepared"
@@ -216,6 +201,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/hardware/camera2/dispatch/MethodNameInvoker;->invoke(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 183
     return-void
 .end method

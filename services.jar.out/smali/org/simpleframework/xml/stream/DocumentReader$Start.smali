@@ -24,16 +24,13 @@
     .param p1, "element"    # Lorg/w3c/dom/Node;
 
     .prologue
-    .line 393
     invoke-direct {p0}, Lorg/simpleframework/xml/stream/EventElement;-><init>()V
 
-    .line 394
     check-cast p1, Lorg/w3c/dom/Element;
 
     .end local p1    # "element":Lorg/w3c/dom/Node;
     iput-object p1, p0, Lorg/simpleframework/xml/stream/DocumentReader$Start;->element:Lorg/w3c/dom/Element;
 
-    .line 395
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 440
     iget-object v0, p0, Lorg/simpleframework/xml/stream/DocumentReader$Start;->element:Lorg/w3c/dom/Element;
 
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
@@ -57,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 405
     iget-object v0, p0, Lorg/simpleframework/xml/stream/DocumentReader$Start;->element:Lorg/w3c/dom/Element;
 
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getLocalName()Ljava/lang/String;
@@ -71,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 417
     iget-object v0, p0, Lorg/simpleframework/xml/stream/DocumentReader$Start;->element:Lorg/w3c/dom/Element;
 
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getPrefix()Ljava/lang/String;
@@ -85,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 429
     iget-object v0, p0, Lorg/simpleframework/xml/stream/DocumentReader$Start;->element:Lorg/w3c/dom/Element;
 
     invoke-interface {v0}, Lorg/w3c/dom/Element;->getNamespaceURI()Ljava/lang/String;
@@ -99,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 451
     iget-object v0, p0, Lorg/simpleframework/xml/stream/DocumentReader$Start;->element:Lorg/w3c/dom/Element;
 
     return-object v0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 971
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerController$1;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 987
     const-string v0, "DisplayPowerController"
 
     const-string v1, "ColorFade: onAnimationCancel"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 988
     return-void
 .end method
 
@@ -57,20 +54,17 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 978
     const-string v0, "DisplayPowerController"
 
     const-string v1, "ColorFade: onAnimationEnd"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 979
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerController$1;->this$0:Lcom/android/server/display/DisplayPowerController;
 
     # invokes: Lcom/android/server/display/DisplayPowerController;->sendUpdatePowerState()V
     invoke-static {v0}, Lcom/android/server/display/DisplayPowerController;->access$000(Lcom/android/server/display/DisplayPowerController;)V
 
-    .line 980
     return-void
 .end method
 
@@ -79,14 +73,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 983
     const-string v0, "DisplayPowerController"
 
     const-string v1, "ColorFade: onAnimationRepeat"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 984
     return-void
 .end method
 
@@ -95,13 +87,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 974
     const-string v0, "DisplayPowerController"
 
     const-string v1, "ColorFade: onAnimationStart"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 975
     return-void
 .end method

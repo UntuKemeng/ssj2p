@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 738
     iput-object p1, p0, Lcom/android/server/FMRadioService$7;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .param p1, "focusChange"    # I
 
     .prologue
-    .line 750
     const-string v1, "-------------------------------------------------------------------------"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 753
     iget-object v1, p0, Lcom/android/server/FMRadioService$7;->this$0:Lcom/android/server/FMRadioService;
 
     # getter for: Lcom/android/server/FMRadioService;->volumeLock:Z
@@ -64,13 +61,11 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 754
     :cond_0
     const-string v1, "OnAudioFocusChangeListener : mute FM before turn off"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 755
     iget-object v1, p0, Lcom/android/server/FMRadioService$7;->this$0:Lcom/android/server/FMRadioService;
 
     # getter for: Lcom/android/server/FMRadioService;->mAudioManager:Landroid/media/AudioManager;
@@ -82,35 +77,29 @@
 
     invoke-virtual {v1, v2}, Landroid/media/AudioManager;->setParameters(Ljava/lang/String;)V
 
-    .line 758
     :cond_1
     iget-object v1, p0, Lcom/android/server/FMRadioService$7;->this$0:Lcom/android/server/FMRadioService;
 
     # invokes: Lcom/android/server/FMRadioService;->clearMessageQueue()V
     invoke-static {v1}, Lcom/android/server/FMRadioService;->access$2300(Lcom/android/server/FMRadioService;)V
 
-    .line 759
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 760
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->what:I
 
-    .line 761
     iget-object v1, p0, Lcom/android/server/FMRadioService$7;->this$0:Lcom/android/server/FMRadioService;
 
     iget-object v1, v1, Lcom/android/server/FMRadioService;->mAudioFocusHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessageAtFrontOfQueue(Landroid/os/Message;)Z
 
-    .line 763
     const-string v1, "----------------------------^_^|||^_^^_^^_^^_^^_^^_^^_^^_^^_^^_^^_^^_^^_^^_^^_^^_^"
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 764
     # getter for: Lcom/android/server/FMRadioService;->DEBUGGABLE:Z
     invoke-static {}, Lcom/android/server/FMRadioService;->access$500()Z
 
@@ -118,7 +107,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 765
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -156,7 +144,6 @@
 
     invoke-static {v1}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 767
     :cond_2
     return-void
 .end method

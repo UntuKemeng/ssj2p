@@ -45,13 +45,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiResponseVO;->errorCode:Ljava/lang/String;
 
-    .line 22
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiResponseVO;->rlcStsCode:Ljava/lang/String;
 
     return-void
@@ -63,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 27
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiResponseVO;->errorCode:Ljava/lang/String;
 
     return-object v0
@@ -73,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 35
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiResponseVO;->rlcStsCode:Ljava/lang/String;
 
     return-object v0
@@ -84,10 +79,8 @@
     .param p1, "errorCode"    # Ljava/lang/String;
 
     .prologue
-    .line 31
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiResponseVO;->errorCode:Ljava/lang/String;
 
-    .line 32
     return-void
 .end method
 
@@ -96,10 +89,8 @@
     .param p1, "rlcStsCode"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiResponseVO;->rlcStsCode:Ljava/lang/String;
 
-    .line 40
     return-void
 .end method
 
@@ -107,18 +98,15 @@
     .locals 3
 
     .prologue
-    .line 43
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 44
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v1, "<DeliveryReportVO>"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 45
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeliveryReportApiResponseVO;->getErrorCode()Ljava/lang/String;
 
     move-result-object v1
@@ -147,7 +135,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 46
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeliveryReportApiResponseVO;->getRlcStsCode()Ljava/lang/String;
 
@@ -177,13 +164,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 47
     :cond_1
     const-string v1, "</DeliveryReportVO>"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 48
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

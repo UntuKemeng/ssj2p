@@ -190,2805 +190,2404 @@
     .locals 3
 
     .prologue
-    .line 37
     const-string v0, "PersonaPolicyManager"
 
     sput-object v0, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
-    .line 126
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
-    .line 127
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
-    .line 129
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Landroid/os/PersonaPolicyManager;->EXCLUDE_IN_COM:Ljava/util/HashSet;
 
-    .line 131
     new-instance v0, Landroid/util/ArraySet;
 
     invoke-direct {v0}, Landroid/util/ArraySet;-><init>()V
 
     sput-object v0, Landroid/os/PersonaPolicyManager;->CLONE_TO_KNOX_PROFILE:Ljava/util/Set;
 
-    .line 133
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "enable_smart_capture"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 134
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "mobile_keyboard"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 135
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "fingerprint_used_samsungaccount"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 136
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "fingerprint_samsungaccount_confirmed"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 137
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "fingerprint_webpass"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 138
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "iris_webpass"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 139
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "iris_used_samsungaccount"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 140
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "sound_alive_effect"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 141
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "k2hd_effect"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 142
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tube_amp_effect"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 143
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "intelligent_screen_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 144
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "intelligent_sleep_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 145
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "intelligent_rotation_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 146
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "all_sound_off"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 147
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "callsettings_answer_memo"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 148
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "mono_audio_db"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 149
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_chaton_call_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 150
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "settings_gridui"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 151
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_music_speaker"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 152
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_ring_speaker"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 153
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_notification_speaker"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 154
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_system_speaker"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 155
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "screen_mode_automatic_setting"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 156
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "screen_mode_setting"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 157
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "flip_font_style"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 158
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "led_indicator_low_battery"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 159
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_bonding"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 160
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "hdmi_audio_output"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 161
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dock_sounds_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 162
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "cradle_enable"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 163
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "automatic_unlock"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 164
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "power_sharing_cable"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 165
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "screen_off_timeout_rollback"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 166
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "interactionarea_switch"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 168
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "notification_sound_2"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 170
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "enabled_accessibility_s_talkback"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 171
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_large_cursor"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 172
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_cursor_color"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 173
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "show_button_background"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 174
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_switch_onoff"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 175
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_disable_incoming_calls"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 176
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_disable_notifications"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 177
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_disable_alarm_and_timer"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 178
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_disable_led_indicator"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 179
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_always"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 180
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_start_hour"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 181
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_start_min"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 182
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_end_hour"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 183
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_end_min"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 184
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "dormant_allow_list"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 185
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "screen_off_timeout"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 186
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "screen_brightness"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 187
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "screen_brightness_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 188
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "screen_auto_brightness_adj"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 189
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "auto_brightness_detail"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 190
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_ring"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 191
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_system"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 192
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_voice"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 193
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_music"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 194
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_alarm"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 195
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 196
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_bluetooth_sco"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 197
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_system_enforced"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 198
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_DTMF"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 199
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_tts"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 200
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_enforced"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 201
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_master"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 202
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_master_mute"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 203
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "volume_waiting_tone"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 204
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "vibrate_in_silent"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 205
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "auto_replace"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 206
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "auto_caps"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 207
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "auto_punctuate"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 208
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "high_contrast"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 209
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "font_size"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 210
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "power_key_hold"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 211
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "talkback_power_key_hold"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 212
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "flash_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 213
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_interaction"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 214
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "notification_reminder"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 215
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "time_key"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 216
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "direct_access"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 217
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "direct_accessibility"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 218
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "direct_talkback"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 219
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "direct_negative"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 220
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "direct_access_control"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 221
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_auto_haptic"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 222
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_magnifier"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 223
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "hover_zoom_value"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 224
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "hover_zoom_magnifier_size"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 225
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "color_blind"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 226
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "color_blind_test"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 227
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "lcd_curtain"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 228
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "ultrasonic_cane"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 229
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "rapid_key_input"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 230
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "rapid_key_input_menu_checked"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 231
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "auto_rotation_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 232
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "direct_access"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 233
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "time_12_24"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 234
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "date_format"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 235
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accelerometer_rotation"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 236
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "user_rotation"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 237
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "hide_rotation_lock_toggle_for_accessibility"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 238
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "sound_effects_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 239
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "haptic_feedback_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 246
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "haptic_feedback_extra"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 248
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "VIB_FEEDBACK_MAGNITUDE"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 249
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "VIB_RECVCALL_MAGNITUDE"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 250
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "VIB_NOTIFICATION_MAGNITUDE"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 251
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "power_saving_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 263
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "blackgrey_powersaving_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 264
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "data_powersaving_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 265
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "auto_adjust_touch"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 266
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "button_key_light"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 267
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "notification_light_pulse"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 268
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pointer_location"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 269
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "show_touches"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 270
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "display_battery_level"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 271
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pointer_speed"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 272
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_engine"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 273
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "master_motion"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 274
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_shake"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 275
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_zooming"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 276
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_zooming_sensitivity"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 277
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_tilt_to_list_scrolling"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 278
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_tilt_to_scroll_list_sensitivity"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 280
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_panning"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 281
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_panning_sensitivity"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 282
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_pan_to_browse_image"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 283
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_pan_to_browse_image_sensitivity"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 284
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_double_tap"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 285
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_overturn"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 286
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_pick_up"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 287
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_pick_up_to_call_out"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 288
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_peek_view_albums_list"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 289
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_peek_chapter_preview"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 290
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_shake_scan_guide_show_again"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 291
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_shake_refresh_guide_show_again"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 292
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_zooming_guide_show_again"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 293
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "surface_motion_engine"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 294
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "surface_palm_swipe"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 295
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "surface_palm_touch"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 296
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "surface_tap_and_twist"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 297
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_unlock_camera_short_cut"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 298
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "motion_merged_mute_pause"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 299
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_engine"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 300
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_glance_view"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 301
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_web_navigate"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 302
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_note_swap"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 303
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_scroll"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 304
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_item_move"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 305
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_clip"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 306
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_call_accept"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 307
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_turn"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 308
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_wake_up"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 309
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "master_side_motion"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 310
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "side_motion_one_hand_operation"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 311
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "side_motion_peek"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 312
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "master_arc_motion"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 313
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "arc_motion_browse"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 314
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "arc_motion_ripple_effect"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 315
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "arc_motion_quick_glance"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 316
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "arc_motion_call_accept"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 317
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "arc_motion_search"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 318
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "arc_motion_always"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 319
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "arc_motion_music_playback"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 320
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "arc_motion_messaging"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 321
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "camera_quick_access"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 322
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_scroll_all_list"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 323
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_scroll_web_page"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 324
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_scroll_contact_list"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 325
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_scroll_email_list"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 326
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_scroll_album_and_photo"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 327
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_scroll_email_body"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 328
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_turn_single_photo_view"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 329
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_turn_internet_window"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 330
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_turn_now_playing_on_music"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 331
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_turn_bgm_on_lock_screen"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 332
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_turn_note_page_view"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 333
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_motion_call_accept_auto_start_speaker"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 334
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_view_master_onoff"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 335
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_view_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 336
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "air_button_onoff"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 337
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 338
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view_highlight"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 339
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view_magnifier"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 340
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view_show_up_indicator"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 341
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view_information_preview"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 342
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view_full_text"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 343
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view_pointer"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 344
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view_pregress_bar_preview"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 345
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view_speed_dial_tip"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 346
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "finger_air_view_sound_and_haptic_feedback"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 347
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "notification_panel_brightness_adjustment"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 349
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "led_indicator_charing"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 350
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "led_indicator_missed_event"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 351
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "led_indicator_voice_recording"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 352
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "led_indicator_incoming_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 353
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "any_screen_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 354
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "any_screen_running"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 355
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "hand_adaptable_operation"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 356
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "onehand_dialer_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 357
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "onehand_samsungkeypad_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 358
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "onehand_calculator_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 359
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "onehand_pattern_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 361
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "longlife_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 362
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_pause"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 363
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 364
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "grip_rotation_lock"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 365
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_type"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 366
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_sensitivity"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 367
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_unit"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 368
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_acceleration"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 369
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_visual_feedback_icon"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 370
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_adv_web"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 371
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_adv_email_list"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 372
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_adv_email_body"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 373
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_adv_readers_hub"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 374
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_adv_chrome"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 375
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_scroll_adv_gmail_body"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 376
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "face_smart_scroll"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 377
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "smart_motion"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 378
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "display_battery_percentage"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 379
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "edit_after_screen_capture"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 380
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "open_camera"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 381
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accelerometer_rotation_second"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 382
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "key_night_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 383
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "key_backlight_timeout"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 384
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 385
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_pointer"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 386
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_information_preview"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 387
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_progress_preview"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 388
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_speed_dial_preview"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 389
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_webpage_magnifier"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 390
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_icon_label"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 391
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_list_scroll"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 392
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_sound"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 393
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_ripple_effect"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 394
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_ink_effect"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 395
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_hovering_air_menu"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 396
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_detachment_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 397
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_detachment_alert"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 398
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_detach_application"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 399
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_detachment_state"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 400
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_detect_mode_disabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 401
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_gesture_guide"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 402
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_applications"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 403
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_writing_buddy"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 404
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_writing_buddy_text_suggestion"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 406
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "lockscreen_sounds_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 407
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_incoming_call_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 408
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_message_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 409
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_air_call_accept"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 410
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_email_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 411
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_voice_mail_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 412
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_alarm_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 413
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_schedule_notification"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 414
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_unlock_screen_contents"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 415
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "driving_mode_message_contents"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 416
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "direct_samsung_screen_reader"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 417
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "enabled_accessibility_samsung_screen_reader"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 418
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "enabled_accessibility_services"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 419
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "touch_exploration_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 420
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "touch_exploration_granted_accessibility_services"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 421
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "speak_password"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 422
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_script_injection"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 423
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_script_injection_url"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 424
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_web_content_key_bindings"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 425
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_display_magnification_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 426
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_display_magnification_scale"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 427
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_display_magnification_auto_update"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 428
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 429
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_locale"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 430
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_preset"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 431
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_background_color"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 432
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_foreground_color"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 433
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_edge_type"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 434
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_edge_color"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 435
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_typeface"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 436
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_font_scale"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 437
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "accessibility_sec_captioning_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 438
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "color_blind_cvdtype"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 439
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "long_press_timeout"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 440
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "color_blind_cvdseverity"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 441
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "color_blind_user_parameter"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 442
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_default_rate"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 443
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_default_pitch"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 444
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_default_synth"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 445
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_default_locale"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 446
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_enabled_plugins"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 448
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "selected_spell_checker"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 449
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "selected_spell_checker_subtype"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 450
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "incall_power_button_behavior"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 451
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "ui_night_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 452
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "wifi_hotspot20_enable"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 453
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "lock_screen_allow_private_notifications"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 454
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "lock_screen_show_notifications"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 455
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "select_icon_1"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 456
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "select_icon_2"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 457
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "select_name_1"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 458
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "select_name_2"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 459
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "hearing_aid"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 460
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "torch_light"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 461
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "spen_feedback_sound"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 462
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "spen_feedback_sound_air_command"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 463
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_writing_sound"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 464
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "spen_feedback_sound_air_view"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 465
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "spen_feedback_haptic"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 466
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "spen_feedback_haptic_air_command"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 467
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "spen_feedback_haptic_air_view"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 468
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_writing_haptic_feedback"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 469
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "spen_feedback_haptic_pen_gesture"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 470
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "voicecall_type"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 471
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "show_password"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 472
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "location_providers_allowed"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 473
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "allowed_geolocation_origins"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 474
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "location_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 475
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "short_press_app"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 476
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "long_press_app"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 477
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "double_press_app"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 478
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "bluetooth_a2dp_uhqa_support"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 479
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "bluetooth_a2dp_uhqa_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 480
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string/jumbo v1, "install_non_market_apps"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 481
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "caller_id_to_show_KNOX"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 482
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "caller_id_to_show_KNOX II"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 483
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "caller_id_to_show_Secure Folder"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 484
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_myfiles"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 485
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_camera"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 486
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_select_all"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 487
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_switch"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 488
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_splanner"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 489
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_voicerecorder"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 490
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_contacts"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 491
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_messages"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 492
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_gallery"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 493
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_internet"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 494
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_magnifier"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 495
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_clock"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 496
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_email"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 497
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_music"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 498
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_phone"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 499
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_video"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 500
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_call"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 501
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "easy_mode_home"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 502
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     const-string v1, "csc_pref_camera_forced_shuttersound_key"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 504
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "enabled_accessibility_services"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 505
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "touch_exploration_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 506
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "touch_exploration_granted_accessibility_services"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 507
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "speak_password"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 508
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_script_injection"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 509
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_script_injection_url"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 510
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_web_content_key_bindings"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 511
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_display_magnification_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 512
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_display_magnification_scale"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 513
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_display_magnification_auto_update"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 514
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 515
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_locale"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 516
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_preset"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 517
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_background_color"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 518
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_foreground_color"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 519
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_edge_type"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 520
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_edge_color"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 521
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_typeface"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 522
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_captioning_font_scale"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 523
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_sec_captioning_enabled"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 524
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "color_blind_cvdtype"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 525
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "long_press_timeout"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 526
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "color_blind_cvdseverity"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 527
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "color_blind_user_parameter"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 528
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_default_rate"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 529
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_default_pitch"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 530
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_default_synth"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 531
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_default_locale"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 532
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "tts_enabled_plugins"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 534
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "selected_spell_checker"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 535
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "selected_spell_checker_subtype"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 536
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "incall_power_button_behavior"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 537
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "ui_night_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 538
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "wifi_hotspot20_enable"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 539
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "lock_screen_allow_private_notifications"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 540
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "lock_screen_show_notifications"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 541
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "location_providers_allowed"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 542
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "allowed_geolocation_origins"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 543
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "location_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 544
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "enabled_accessibility_samsung_screen_reader"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 545
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "bluetooth_a2dp_uhqa_support"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 546
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "bluetooth_a2dp_uhqa_mode"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 547
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "enabled_accessibility_s_talkback"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 548
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_large_cursor"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 549
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string v1, "accessibility_cursor_color"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 550
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     const-string/jumbo v1, "install_non_market_apps"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 552
     sget-object v0, Landroid/os/PersonaPolicyManager;->EXCLUDE_IN_COM:Ljava/util/HashSet;
 
     const-string v1, "air_button_onoff"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 553
     sget-object v0, Landroid/os/PersonaPolicyManager;->EXCLUDE_IN_COM:Ljava/util/HashSet;
 
     const-string/jumbo v1, "pen_detach_application"
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 555
     sget-object v0, Landroid/os/PersonaPolicyManager;->CLONE_TO_KNOX_PROFILE:Ljava/util/Set;
 
     const-string/jumbo v1, "notification_sound_CONSTANT_PATH"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 556
     sget-object v0, Landroid/os/PersonaPolicyManager;->CLONE_TO_KNOX_PROFILE:Ljava/util/Set;
 
     const-string/jumbo v1, "notification_sound"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 559
     const/16 v0, 0x129
 
     new-array v0, v0, [Ljava/lang/String;
@@ -4786,16 +4385,12 @@
     .param p2, "service"    # Landroid/content/pm/IPersonaPolicyManager;
 
     .prologue
-    .line 895
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 896
     iput-object p2, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
-    .line 897
     iput-object p1, p0, Landroid/os/PersonaPolicyManager;->mContext:Landroid/content/Context;
 
-    .line 898
     return-void
 .end method
 
@@ -4812,13 +4407,11 @@
     .end annotation
 
     .prologue
-    .line 886
     .local p0, "outKeySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     sget-object v0, Landroid/os/PersonaPolicyManager;->CLONE_TO_KNOX_PROFILE:Ljava/util/Set;
 
     invoke-interface {p0, v0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 887
     return-void
 .end method
 
@@ -4826,7 +4419,6 @@
     .locals 1
 
     .prologue
-    .line 872
     sget-object v0, Landroid/os/PersonaPolicyManager;->SETTINGS_FOR_COM:[Ljava/lang/String;
 
     return-object v0
@@ -4845,13 +4437,11 @@
     .end annotation
 
     .prologue
-    .line 877
     .local p0, "outKeySet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX:Ljava/util/HashSet;
 
     invoke-virtual {p0, v0}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 879
     const/4 v0, 0x0
 
     invoke-static {v0}, Landroid/os/PersonaManager;->isKioskModeEnabled(Landroid/content/Context;)Z
@@ -4860,12 +4450,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 880
     sget-object v0, Landroid/os/PersonaPolicyManager;->EXCLUDE_IN_COM:Ljava/util/HashSet;
 
     invoke-virtual {p0, v0}, Ljava/util/HashSet;->removeAll(Ljava/util/Collection;)Z
 
-    .line 882
     :cond_0
     return-void
 .end method
@@ -4883,13 +4471,11 @@
     .end annotation
 
     .prologue
-    .line 891
     .local p0, "outKeySet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     sget-object v0, Landroid/os/PersonaPolicyManager;->SHARE_WITH_KNOX_TO_SECURE:Ljava/util/HashSet;
 
     invoke-virtual {p0, v0}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 892
     return-void
 .end method
 
@@ -4900,24 +4486,20 @@
     .param p1, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 1344
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1345
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     invoke-interface {v1, p1}, Landroid/content/pm/IPersonaPolicyManager;->addLockOnImage(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
-    .line 1352
     :goto_0
     return-object v1
 
-    .line 1347
     :cond_0
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -4927,17 +4509,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1352
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1349
     :catch_0
     move-exception v0
 
-    .line 1350
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -4953,7 +4532,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1216
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -4963,15 +4541,12 @@
 
     move-result v1
 
-    .line 1220
     :goto_0
     return v1
 
-    .line 1217
     :catch_0
     move-exception v0
 
-    .line 1218
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -4995,7 +4570,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1220
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5006,7 +4580,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1159
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5016,15 +4589,12 @@
 
     move-result v1
 
-    .line 1163
     :goto_0
     return v1
 
-    .line 1160
     :catch_0
     move-exception v0
 
-    .line 1161
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5048,7 +4618,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1163
     const/4 v1, 0x0
 
     goto :goto_0
@@ -5059,7 +4628,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1064
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5069,15 +4637,12 @@
 
     move-result v1
 
-    .line 1068
     :goto_0
     return v1
 
-    .line 1065
     :catch_0
     move-exception v0
 
-    .line 1066
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5101,7 +4666,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1068
     const/4 v1, 0x0
 
     goto :goto_0
@@ -5112,7 +4676,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 988
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5122,15 +4685,12 @@
 
     move-result v1
 
-    .line 992
     :goto_0
     return v1
 
-    .line 989
     :catch_0
     move-exception v0
 
-    .line 990
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5154,7 +4714,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 992
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5165,7 +4724,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1045
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5175,15 +4733,12 @@
 
     move-result v1
 
-    .line 1049
     :goto_0
     return v1
 
-    .line 1046
     :catch_0
     move-exception v0
 
-    .line 1047
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5207,7 +4762,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1049
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5218,7 +4772,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1026
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5228,15 +4781,12 @@
 
     move-result v1
 
-    .line 1030
     :goto_0
     return v1
 
-    .line 1027
     :catch_0
     move-exception v0
 
-    .line 1028
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5260,7 +4810,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1030
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5271,7 +4820,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1102
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5281,15 +4829,12 @@
 
     move-result v1
 
-    .line 1106
     :goto_0
     return v1
 
-    .line 1103
     :catch_0
     move-exception v0
 
-    .line 1104
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5313,7 +4858,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1106
     const/4 v1, 0x0
 
     goto :goto_0
@@ -5324,7 +4868,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1292
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5334,15 +4877,12 @@
 
     move-result v1
 
-    .line 1296
     :goto_0
     return v1
 
-    .line 1293
     :catch_0
     move-exception v0
 
-    .line 1294
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5366,7 +4906,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1296
     const/4 v1, 0x0
 
     goto :goto_0
@@ -5377,7 +4916,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1273
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5387,15 +4925,12 @@
 
     move-result v1
 
-    .line 1277
     :goto_0
     return v1
 
-    .line 1274
     :catch_0
     move-exception v0
 
-    .line 1275
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5419,7 +4954,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1277
     const/4 v1, 0x0
 
     goto :goto_0
@@ -5430,7 +4964,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1254
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5440,15 +4973,12 @@
 
     move-result v1
 
-    .line 1258
     :goto_0
     return v1
 
-    .line 1255
     :catch_0
     move-exception v0
 
-    .line 1256
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5472,7 +5002,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1258
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5483,7 +5012,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1121
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5493,15 +5021,12 @@
 
     move-result v1
 
-    .line 1125
     :goto_0
     return v1
 
-    .line 1122
     :catch_0
     move-exception v0
 
-    .line 1123
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5525,7 +5050,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1125
     const/4 v1, 0x0
 
     goto :goto_0
@@ -5536,7 +5060,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1083
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5546,15 +5069,12 @@
 
     move-result v1
 
-    .line 1087
     :goto_0
     return v1
 
-    .line 1084
     :catch_0
     move-exception v0
 
-    .line 1085
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5578,7 +5098,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1087
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5589,7 +5108,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1235
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5599,15 +5117,12 @@
 
     move-result v1
 
-    .line 1239
     :goto_0
     return v1
 
-    .line 1236
     :catch_0
     move-exception v0
 
-    .line 1237
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5631,7 +5146,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1239
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5642,7 +5156,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 969
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5652,15 +5165,12 @@
 
     move-result v1
 
-    .line 973
     :goto_0
     return v1
 
-    .line 970
     :catch_0
     move-exception v0
 
-    .line 971
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5684,7 +5194,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 973
     const/4 v1, 0x0
 
     goto :goto_0
@@ -5695,7 +5204,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1007
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5705,15 +5213,12 @@
 
     move-result v1
 
-    .line 1011
     :goto_0
     return v1
 
-    .line 1008
     :catch_0
     move-exception v0
 
-    .line 1009
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5737,7 +5242,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1011
     const/4 v1, 0x0
 
     goto :goto_0
@@ -5748,7 +5252,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 931
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5758,15 +5261,12 @@
 
     move-result v1
 
-    .line 935
     :goto_0
     return v1
 
-    .line 932
     :catch_0
     move-exception v0
 
-    .line 933
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5790,7 +5290,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 935
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5801,7 +5300,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1178
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5811,15 +5309,12 @@
 
     move-result v1
 
-    .line 1182
     :goto_0
     return v1
 
-    .line 1179
     :catch_0
     move-exception v0
 
-    .line 1180
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5843,7 +5338,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1182
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5854,7 +5348,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1140
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5864,15 +5357,12 @@
 
     move-result v1
 
-    .line 1144
     :goto_0
     return v1
 
-    .line 1141
     :catch_0
     move-exception v0
 
-    .line 1142
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5896,7 +5386,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1144
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5907,7 +5396,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 912
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5917,15 +5405,12 @@
 
     move-result v1
 
-    .line 916
     :goto_0
     return v1
 
-    .line 913
     :catch_0
     move-exception v0
 
-    .line 914
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -5949,7 +5434,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 916
     const/4 v1, 0x1
 
     goto :goto_0
@@ -5960,7 +5444,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1197
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -5970,15 +5453,12 @@
 
     move-result v1
 
-    .line 1201
     :goto_0
     return v1
 
-    .line 1198
     :catch_0
     move-exception v0
 
-    .line 1199
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6002,7 +5482,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1201
     const/4 v1, 0x1
 
     goto :goto_0
@@ -6014,24 +5493,20 @@
     .param p2, "policyProperty"    # Ljava/lang/String;
 
     .prologue
-    .line 1358
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1359
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     invoke-interface {v1, p1, p2}, Landroid/content/pm/IPersonaPolicyManager;->getRCPDataPolicy(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1366
     :goto_0
     return-object v1
 
-    .line 1361
     :cond_0
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6041,17 +5516,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1366
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1363
     :catch_0
     move-exception v0
 
-    .line 1364
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6069,24 +5541,20 @@
     .param p3, "policyProperty"    # Ljava/lang/String;
 
     .prologue
-    .line 1382
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1383
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     invoke-interface {v1, p1, p2, p3}, Landroid/content/pm/IPersonaPolicyManager;->getRCPDataPolicyForUser(ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1390
     :goto_0
     return-object v1
 
-    .line 1385
     :cond_0
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6096,17 +5564,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1390
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1387
     :catch_0
     move-exception v0
 
-    .line 1388
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6123,24 +5588,20 @@
     .param p2, "policyProperty"    # Ljava/lang/String;
 
     .prologue
-    .line 1397
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1398
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     invoke-interface {v1, p1, p2}, Landroid/content/pm/IPersonaPolicyManager;->getRCPNotificationPolicy(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1405
     :goto_0
     return-object v1
 
-    .line 1400
     :cond_0
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6150,17 +5611,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1405
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1402
     :catch_0
     move-exception v0
 
-    .line 1403
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6176,7 +5634,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 950
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6186,15 +5643,12 @@
 
     move-result v1
 
-    .line 954
     :goto_0
     return v1
 
-    .line 951
     :catch_0
     move-exception v0
 
-    .line 952
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6218,7 +5672,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 954
     const/4 v1, 0x1
 
     goto :goto_0
@@ -6229,7 +5682,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1459
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6239,15 +5691,12 @@
 
     move-result v1
 
-    .line 1463
     :goto_0
     return v1
 
-    .line 1460
     :catch_0
     move-exception v0
 
-    .line 1461
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6271,7 +5720,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1463
     const/4 v1, 0x1
 
     goto :goto_0
@@ -6282,7 +5730,6 @@
     .param p1, "appName"    # Ljava/lang/String;
 
     .prologue
-    .line 1444
     const-string v0, "all_contacts"
 
     return-object v0
@@ -6292,24 +5739,20 @@
     .locals 3
 
     .prologue
-    .line 1302
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1303
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     invoke-interface {v1}, Landroid/content/pm/IPersonaPolicyManager;->isBadgeRequired()Z
 
     move-result v1
 
-    .line 1310
     :goto_0
     return v1
 
-    .line 1305
     :cond_0
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6319,17 +5762,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1310
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1307
     :catch_0
     move-exception v0
 
-    .line 1308
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6345,24 +5785,20 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1316
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1317
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     invoke-interface {v1, p1}, Landroid/content/pm/IPersonaPolicyManager;->isBadgeRequiredFromOwner(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 1324
     :goto_0
     return v1
 
-    .line 1319
     :cond_0
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6372,17 +5808,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1324
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1321
     :catch_0
     move-exception v0
 
-    .line 1322
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6398,12 +5831,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1480
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1482
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6413,15 +5844,12 @@
 
     move-result v1
 
-    .line 1487
     :goto_0
     return v1
 
-    .line 1483
     :catch_0
     move-exception v0
 
-    .line 1484
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6429,7 +5857,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1487
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -6442,12 +5869,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1492
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1494
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6457,15 +5882,12 @@
 
     move-result v1
 
-    .line 1499
     :goto_0
     return v1
 
-    .line 1495
     :catch_0
     move-exception v0
 
-    .line 1496
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6473,7 +5895,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1499
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -6486,12 +5907,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1504
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1506
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6501,15 +5920,12 @@
 
     move-result v1
 
-    .line 1511
     :goto_0
     return v1
 
-    .line 1507
     :catch_0
     move-exception v0
 
-    .line 1508
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6517,7 +5933,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1511
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -6530,12 +5945,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1468
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1470
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6545,15 +5958,12 @@
 
     move-result v1
 
-    .line 1475
     :goto_0
     return v1
 
-    .line 1471
     :catch_0
     move-exception v0
 
-    .line 1472
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6561,7 +5971,6 @@
 
     invoke-static {v1, v2, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1475
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v1, 0x0
@@ -6573,22 +5982,18 @@
     .locals 3
 
     .prologue
-    .line 1330
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1331
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     invoke-interface {v1}, Landroid/content/pm/IPersonaPolicyManager;->registerReceivers()V
 
-    .line 1339
     :goto_0
     return-void
 
-    .line 1333
     :cond_0
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6600,11 +6005,9 @@
 
     goto :goto_0
 
-    .line 1335
     :catch_0
     move-exception v0
 
-    .line 1336
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6621,7 +6024,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1207
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6629,15 +6031,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1211
     :goto_0
     return-void
 
-    .line 1208
     :catch_0
     move-exception v0
 
-    .line 1209
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6670,7 +6069,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1150
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6678,15 +6076,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1154
     :goto_0
     return-void
 
-    .line 1151
     :catch_0
     move-exception v0
 
-    .line 1152
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6719,7 +6114,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1055
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6727,15 +6121,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1059
     :goto_0
     return-void
 
-    .line 1056
     :catch_0
     move-exception v0
 
-    .line 1057
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6768,7 +6159,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 979
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6776,15 +6166,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 983
     :goto_0
     return-void
 
-    .line 980
     :catch_0
     move-exception v0
 
-    .line 981
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6817,7 +6204,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1036
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6825,15 +6211,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1040
     :goto_0
     return-void
 
-    .line 1037
     :catch_0
     move-exception v0
 
-    .line 1038
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6866,7 +6249,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1017
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6874,15 +6256,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1021
     :goto_0
     return-void
 
-    .line 1018
     :catch_0
     move-exception v0
 
-    .line 1019
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6915,7 +6294,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1093
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6923,15 +6301,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1097
     :goto_0
     return-void
 
-    .line 1094
     :catch_0
     move-exception v0
 
-    .line 1095
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -6964,7 +6339,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1283
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -6972,15 +6346,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1287
     :goto_0
     return-void
 
-    .line 1284
     :catch_0
     move-exception v0
 
-    .line 1285
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7013,7 +6384,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1264
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7021,15 +6391,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1268
     :goto_0
     return-void
 
-    .line 1265
     :catch_0
     move-exception v0
 
-    .line 1266
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7062,7 +6429,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1245
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7070,15 +6436,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1249
     :goto_0
     return-void
 
-    .line 1246
     :catch_0
     move-exception v0
 
-    .line 1247
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7111,7 +6474,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1112
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7119,15 +6481,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1116
     :goto_0
     return-void
 
-    .line 1113
     :catch_0
     move-exception v0
 
-    .line 1114
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7160,7 +6519,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1074
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7168,15 +6526,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1078
     :goto_0
     return-void
 
-    .line 1075
     :catch_0
     move-exception v0
 
-    .line 1076
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7209,7 +6564,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1226
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7217,15 +6571,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1230
     :goto_0
     return-void
 
-    .line 1227
     :catch_0
     move-exception v0
 
-    .line 1228
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7258,7 +6609,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 960
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7266,15 +6616,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 964
     :goto_0
     return-void
 
-    .line 961
     :catch_0
     move-exception v0
 
-    .line 962
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7307,7 +6654,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 998
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7315,15 +6661,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1002
     :goto_0
     return-void
 
-    .line 999
     :catch_0
     move-exception v0
 
-    .line 1000
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7356,7 +6699,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 922
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7364,15 +6706,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 926
     :goto_0
     return-void
 
-    .line 923
     :catch_0
     move-exception v0
 
-    .line 924
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7405,7 +6744,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1169
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7413,15 +6751,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1173
     :goto_0
     return-void
 
-    .line 1170
     :catch_0
     move-exception v0
 
-    .line 1171
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7454,7 +6789,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1131
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7462,15 +6796,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1135
     :goto_0
     return-void
 
-    .line 1132
     :catch_0
     move-exception v0
 
-    .line 1133
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7503,7 +6834,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 903
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7511,15 +6841,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 907
     :goto_0
     return-void
 
-    .line 904
     :catch_0
     move-exception v0
 
-    .line 905
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7552,7 +6879,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1188
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7560,15 +6886,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1192
     :goto_0
     return-void
 
-    .line 1189
     :catch_0
     move-exception v0
 
-    .line 1190
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7602,24 +6925,20 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1411
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1412
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     invoke-interface {v1, p1, p2, p3}, Landroid/content/pm/IPersonaPolicyManager;->setRCPDataPolicy(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 1419
     :goto_0
     return v1
 
-    .line 1414
     :cond_0
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7629,17 +6948,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1419
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1416
     :catch_0
     move-exception v0
 
-    .line 1417
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7657,24 +6973,20 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1425
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     if-eqz v1, :cond_0
 
-    .line 1426
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
     invoke-interface {v1, p1, p2, p3}, Landroid/content/pm/IPersonaPolicyManager;->setRCPNotificationPolicy(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 1433
     :goto_0
     return v1
 
-    .line 1428
     :cond_0
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7684,17 +6996,14 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1433
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 1430
     :catch_0
     move-exception v0
 
-    .line 1431
     .local v0, "re":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7711,7 +7020,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 941
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7719,15 +7027,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 945
     :goto_0
     return-void
 
-    .line 942
     :catch_0
     move-exception v0
 
-    .line 943
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7760,7 +7065,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1450
     :try_start_0
     iget-object v1, p0, Landroid/os/PersonaPolicyManager;->mService:Landroid/content/pm/IPersonaPolicyManager;
 
@@ -7768,15 +7072,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1454
     :goto_0
     return-void
 
-    .line 1451
     :catch_0
     move-exception v0
 
-    .line 1452
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v1, Landroid/os/PersonaPolicyManager;->TAG:Ljava/lang/String;
 
@@ -7809,6 +7110,5 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1439
     return-void
 .end method

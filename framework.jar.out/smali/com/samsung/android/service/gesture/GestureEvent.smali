@@ -54,19 +54,16 @@
     .locals 1
 
     .prologue
-    .line 89
     new-instance v0, Lcom/samsung/android/service/gesture/GestureEvent;
 
     invoke-direct {v0}, Lcom/samsung/android/service/gesture/GestureEvent;-><init>()V
 
     sput-object v0, Lcom/samsung/android/service/gesture/GestureEvent;->mPoolSync:Lcom/samsung/android/service/gesture/GestureEvent;
 
-    .line 99
     const/4 v0, 0x0
 
     sput v0, Lcom/samsung/android/service/gesture/GestureEvent;->mPoolSize:I
 
-    .line 195
     new-instance v0, Lcom/samsung/android/service/gesture/GestureEvent$1;
 
     invoke-direct {v0}, Lcom/samsung/android/service/gesture/GestureEvent$1;-><init>()V
@@ -80,15 +77,12 @@
     .locals 1
 
     .prologue
-    .line 109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 110
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mEvent:I
 
-    .line 111
     return-void
 .end method
 
@@ -97,13 +91,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 120
     invoke-direct {p0, p1}, Lcom/samsung/android/service/gesture/GestureEvent;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 121
     return-void
 .end method
 
@@ -111,60 +102,49 @@
     .locals 3
 
     .prologue
-    .line 213
     sget-object v2, Lcom/samsung/android/service/gesture/GestureEvent;->mPoolSync:Lcom/samsung/android/service/gesture/GestureEvent;
 
     monitor-enter v2
 
-    .line 214
     :try_start_0
     sget-object v1, Lcom/samsung/android/service/gesture/GestureEvent;->mPool:Lcom/samsung/android/service/gesture/GestureEvent;
 
     if-eqz v1, :cond_0
 
-    .line 215
     sget-object v0, Lcom/samsung/android/service/gesture/GestureEvent;->mPool:Lcom/samsung/android/service/gesture/GestureEvent;
 
-    .line 216
     .local v0, "e":Lcom/samsung/android/service/gesture/GestureEvent;
     iget-object v1, v0, Lcom/samsung/android/service/gesture/GestureEvent;->mNextLink:Lcom/samsung/android/service/gesture/GestureEvent;
 
     sput-object v1, Lcom/samsung/android/service/gesture/GestureEvent;->mPool:Lcom/samsung/android/service/gesture/GestureEvent;
 
-    .line 217
     const/4 v1, 0x0
 
     iput-object v1, v0, Lcom/samsung/android/service/gesture/GestureEvent;->mNextLink:Lcom/samsung/android/service/gesture/GestureEvent;
 
-    .line 218
     sget v1, Lcom/samsung/android/service/gesture/GestureEvent;->mPoolSize:I
 
     add-int/lit8 v1, v1, -0x1
 
     sput v1, Lcom/samsung/android/service/gesture/GestureEvent;->mPoolSize:I
 
-    .line 219
     monitor-exit v2
 
-    .line 222
     .end local v0    # "e":Lcom/samsung/android/service/gesture/GestureEvent;
     :goto_0
     return-object v0
 
-    .line 221
     :cond_0
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 222
     new-instance v0, Lcom/samsung/android/service/gesture/GestureEvent;
 
     invoke-direct {v0}, Lcom/samsung/android/service/gesture/GestureEvent;-><init>()V
 
     goto :goto_0
 
-    .line 221
     .restart local v0    # "e":Lcom/samsung/android/service/gesture/GestureEvent;
     :catchall_0
     move-exception v1
@@ -182,28 +162,23 @@
     .param p0, "orig"    # Lcom/samsung/android/service/gesture/GestureEvent;
 
     .prologue
-    .line 230
     invoke-static {}, Lcom/samsung/android/service/gesture/GestureEvent;->obtain()Lcom/samsung/android/service/gesture/GestureEvent;
 
     move-result-object v0
 
-    .line 231
     .local v0, "e":Lcom/samsung/android/service/gesture/GestureEvent;
     iget v1, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mEvent:I
 
     iput v1, v0, Lcom/samsung/android/service/gesture/GestureEvent;->mEvent:I
 
-    .line 232
     iget-object v1, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mProvider:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/samsung/android/service/gesture/GestureEvent;->mProvider:Ljava/lang/String;
 
-    .line 233
     iget-object v1, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mNextLink:Lcom/samsung/android/service/gesture/GestureEvent;
 
     iput-object v1, v0, Lcom/samsung/android/service/gesture/GestureEvent;->mNextLink:Lcom/samsung/android/service/gesture/GestureEvent;
 
-    .line 235
     return-object v0
 .end method
 
@@ -212,21 +187,18 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 190
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mEvent:I
 
-    .line 191
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mProvider:Ljava/lang/String;
 
-    .line 192
     return-void
 .end method
 
@@ -238,18 +210,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 258
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mEvent:I
 
-    .line 259
     iput-object v1, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mProvider:Ljava/lang/String;
 
-    .line 260
     iput-object v1, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mNextLink:Lcom/samsung/android/service/gesture/GestureEvent;
 
-    .line 261
     return-void
 .end method
 
@@ -257,7 +225,6 @@
     .locals 1
 
     .prologue
-    .line 171
     const/4 v0, 0x0
 
     return v0
@@ -267,7 +234,6 @@
     .locals 1
 
     .prologue
-    .line 131
     iget v0, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mEvent:I
 
     return v0
@@ -277,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mProvider:Ljava/lang/String;
 
     return-object v0
@@ -287,15 +252,12 @@
     .locals 3
 
     .prologue
-    .line 244
     invoke-virtual {p0}, Lcom/samsung/android/service/gesture/GestureEvent;->clearForRecycle()V
 
-    .line 245
     sget-object v1, Lcom/samsung/android/service/gesture/GestureEvent;->mPoolSync:Lcom/samsung/android/service/gesture/GestureEvent;
 
     monitor-enter v1
 
-    .line 246
     :try_start_0
     sget v0, Lcom/samsung/android/service/gesture/GestureEvent;->mPoolSize:I
 
@@ -303,29 +265,23 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 247
     sget-object v0, Lcom/samsung/android/service/gesture/GestureEvent;->mPool:Lcom/samsung/android/service/gesture/GestureEvent;
 
     iput-object v0, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mNextLink:Lcom/samsung/android/service/gesture/GestureEvent;
 
-    .line 248
     sput-object p0, Lcom/samsung/android/service/gesture/GestureEvent;->mPool:Lcom/samsung/android/service/gesture/GestureEvent;
 
-    .line 249
     sget v0, Lcom/samsung/android/service/gesture/GestureEvent;->mPoolSize:I
 
     add-int/lit8 v0, v0, 0x1
 
     sput v0, Lcom/samsung/android/service/gesture/GestureEvent;->mPoolSize:I
 
-    .line 251
     :cond_0
     monitor-exit v1
 
-    .line 252
     return-void
 
-    .line 251
     :catchall_0
     move-exception v0
 
@@ -341,10 +297,8 @@
     .param p1, "event"    # I
 
     .prologue
-    .line 142
     iput p1, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mEvent:I
 
-    .line 143
     return-void
 .end method
 
@@ -353,10 +307,8 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 163
     iput-object p1, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mProvider:Ljava/lang/String;
 
-    .line 164
     return-void
 .end method
 
@@ -366,16 +318,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 179
     iget v0, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mEvent:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 180
     iget-object v0, p0, Lcom/samsung/android/service/gesture/GestureEvent;->mProvider:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 181
     return-void
 .end method

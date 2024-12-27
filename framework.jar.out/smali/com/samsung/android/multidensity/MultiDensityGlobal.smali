@@ -53,7 +53,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 25
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -65,7 +64,6 @@
     :cond_0
     sput-boolean v0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->SAFE_DEBUG:Z
 
-    .line 44
     new-instance v0, Lcom/samsung/android/multidensity/MultiDensityGlobal;
 
     invoke-direct {v0}, Lcom/samsung/android/multidensity/MultiDensityGlobal;-><init>()V
@@ -79,29 +77,24 @@
     .locals 2
 
     .prologue
-    .line 40
     invoke-direct {p0}, Landroid/util/Singleton;-><init>()V
 
-    .line 36
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->mDensityAppList:Ljava/util/Map;
 
-    .line 37
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->mLock:Ljava/lang/Object;
 
-    .line 38
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->mEnabled:Z
 
-    .line 41
     sget-boolean v0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->SAFE_DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -112,7 +105,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
     :cond_0
     return-void
 .end method
@@ -124,25 +116,20 @@
     .param p2, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 155
     if-nez p0, :cond_0
 
-    .line 156
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0}, Landroid/content/res/Configuration;-><init>()V
 
-    .line 177
     :goto_0
     return-object v0
 
-    .line 159
     :cond_0
     new-instance v0, Landroid/content/res/Configuration;
 
     invoke-direct {v0, p0}, Landroid/content/res/Configuration;-><init>(Landroid/content/res/Configuration;)V
 
-    .line 177
     .local v0, "densityConfig":Landroid/content/res/Configuration;
     goto :goto_0
 .end method
@@ -151,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 48
     sget-object v0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->sInstance:Lcom/samsung/android/multidensity/MultiDensityGlobal;
 
     invoke-virtual {v0}, Lcom/samsung/android/multidensity/MultiDensityGlobal;->get()Ljava/lang/Object;
@@ -169,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-object v0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->sInstance:Lcom/samsung/android/multidensity/MultiDensityGlobal;
 
     return-object v0
@@ -179,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 19
     invoke-virtual {p0}, Lcom/samsung/android/multidensity/MultiDensityGlobal;->create()Lcom/samsung/android/multidensity/MultiDensityGlobal;
 
     move-result-object v0
@@ -193,7 +177,6 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 194
     return-void
 .end method
 
@@ -204,20 +187,16 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 139
     if-nez p1, :cond_0
 
-    .line 149
     :goto_0
     return v0
 
-    .line 143
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 144
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->mDensityAppList:Ljava/util/Map;
 
@@ -227,7 +206,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 145
     iget-object v1, p0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->mDensityAppList:Ljava/util/Map;
 
     invoke-interface {v1, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -240,13 +218,11 @@
 
     move-result v0
 
-    .line 146
     .local v0, "currentDensity":I
     monitor-exit v2
 
     goto :goto_0
 
-    .line 148
     .end local v0    # "currentDensity":I
     :catchall_0
     move-exception v1
@@ -271,10 +247,8 @@
     .param p1, "processName"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     if-eqz p1, :cond_0
 
-    .line 126
     :cond_0
     const/4 v0, 0x0
 
@@ -285,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-boolean v0, p0, Lcom/samsung/android/multidensity/MultiDensityGlobal;->mEnabled:Z
 
     return v0
@@ -296,10 +269,8 @@
     .param p1, "processName"    # Ljava/lang/String;
 
     .prologue
-    .line 105
     if-eqz p1, :cond_0
 
-    .line 106
     :cond_0
     const/4 v0, 0x0
 
@@ -312,12 +283,10 @@
     .param p2, "customDensity"    # I
 
     .prologue
-    .line 61
     if-eqz p1, :cond_0
 
     if-lez p2, :cond_0
 
-    .line 62
     :cond_0
     const/4 v0, 0x0
 
@@ -330,7 +299,6 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 97
     const/4 v0, 0x1
 
     return v0

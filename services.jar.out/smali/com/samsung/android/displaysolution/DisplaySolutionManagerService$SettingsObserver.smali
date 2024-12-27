@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 151
     iput-object p1, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManagerService$SettingsObserver;->this$0:Lcom/samsung/android/displaysolution/DisplaySolutionManagerService;
 
-    .line 152
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 153
     return-void
 .end method
 
@@ -42,12 +39,10 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 156
     iget-object v0, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManagerService$SettingsObserver;->this$0:Lcom/samsung/android/displaysolution/DisplaySolutionManagerService;
 
     # invokes: Lcom/samsung/android/displaysolution/DisplaySolutionManagerService;->setting_is_changed()V
     invoke-static {v0}, Lcom/samsung/android/displaysolution/DisplaySolutionManagerService;->access$000(Lcom/samsung/android/displaysolution/DisplaySolutionManagerService;)V
 
-    .line 157
     return-void
 .end method

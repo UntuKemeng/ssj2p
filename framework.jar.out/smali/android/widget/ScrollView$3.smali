@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3219
     iput-object p1, p0, Landroid/widget/ScrollView$3;->this$0:Landroid/widget/ScrollView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 3221
     iget-object v0, p0, Landroid/widget/ScrollView$3;->this$0:Landroid/widget/ScrollView;
 
     # invokes: Landroid/widget/ScrollView;->semPlayGotoToFadeIn()V
     invoke-static {v0}, Landroid/widget/ScrollView;->access$200(Landroid/widget/ScrollView;)V
 
-    .line 3222
     return-void
 .end method

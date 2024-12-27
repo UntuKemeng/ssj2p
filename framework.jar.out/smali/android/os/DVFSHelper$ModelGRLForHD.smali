@@ -25,22 +25,17 @@
     .prologue
     const v0, 0x541b4
 
-    .line 2450
     iput-object p1, p0, Landroid/os/DVFSHelper$ModelGRLForHD;->this$0:Landroid/os/DVFSHelper;
 
     invoke-direct {p0, p1}, Landroid/os/DVFSHelper$ModelGRL;-><init>(Landroid/os/DVFSHelper;)V
 
-    .line 2451
     iput v0, p0, Landroid/os/DVFSHelper$ModelGRLForHD;->LAUNCHER_TOUCH_ARM_FREQ:I
 
-    .line 2452
     iput v0, p0, Landroid/os/DVFSHelper$ModelGRLForHD;->LIST_SCROLL_ARM_FREQ:I
 
-    .line 2453
     const v0, 0x17cdc0
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelGRLForHD;->AMS_RESUME_ARM_FREQ:I
 
-    .line 2454
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 88
     iput-object p1, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -43,7 +42,6 @@
 
     const/4 v3, 0x1
 
-    .line 91
     iget-object v5, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
     # getter for: Landroid/telecom/InCallService;->mPhone:Landroid/telecom/Phone;
@@ -57,11 +55,9 @@
 
     if-eq v5, v3, :cond_0
 
-    .line 138
     :goto_0
     return-void
 
-    .line 96
     :cond_0
     const-string v5, "InCallService"
 
@@ -87,14 +83,12 @@
 
     invoke-static {v5, v6}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     iget v5, p1, Landroid/os/Message;->what:I
 
     packed-switch v5, :pswitch_data_0
 
     goto :goto_0
 
-    .line 100
     :pswitch_0
     iget-object v4, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -113,7 +107,6 @@
     # setter for: Landroid/telecom/InCallService;->mPhone:Landroid/telecom/Phone;
     invoke-static {v4, v5}, Landroid/telecom/InCallService;->access$002(Landroid/telecom/InCallService;Landroid/telecom/Phone;)Landroid/telecom/Phone;
 
-    .line 101
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
     # getter for: Landroid/telecom/InCallService;->mPhone:Landroid/telecom/Phone;
@@ -130,7 +123,6 @@
 
     invoke-virtual {v3, v4}, Landroid/telecom/Phone;->addListener(Landroid/telecom/Phone$Listener;)V
 
-    .line 102
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
     iget-object v4, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
@@ -144,7 +136,6 @@
 
     goto :goto_0
 
-    .line 105
     :pswitch_1
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -161,7 +152,6 @@
 
     goto :goto_0
 
-    .line 108
     :pswitch_2
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -178,26 +168,22 @@
 
     goto :goto_0
 
-    .line 111
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 113
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     :try_start_0
     iget-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
     check-cast v1, Ljava/lang/String;
 
-    .line 114
     .local v1, "callId":Ljava/lang/String;
     iget-object v2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
     check-cast v2, Ljava/lang/String;
 
-    .line 115
     .local v2, "remaining":Ljava/lang/String;
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -210,7 +196,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 117
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
     goto/16 :goto_0
@@ -224,7 +209,6 @@
 
     throw v3
 
-    .line 122
     .end local v0    # "args":Lcom/android/internal/os/SomeArgs;
     :pswitch_4
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
@@ -242,7 +226,6 @@
 
     goto/16 :goto_0
 
-    .line 125
     :pswitch_5
     iget-object v5, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -265,7 +248,6 @@
 
     goto :goto_1
 
-    .line 128
     :pswitch_6
     iget-object v5, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -288,7 +270,6 @@
 
     goto :goto_2
 
-    .line 132
     :pswitch_7
     iget-object v3, p0, Landroid/telecom/InCallService$1;->this$0:Landroid/telecom/InCallService;
 
@@ -309,7 +290,6 @@
 
     goto/16 :goto_0
 
-    .line 98
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1604
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$IRCPGlobalContactsDirectoryService;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     invoke-direct {p0}, Landroid/content/IRCPGlobalContactsDir$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/bridge/BridgeProxy$1;
 
     .prologue
-    .line 1604
     invoke-direct {p0, p1}, Lcom/android/server/bridge/BridgeProxy$IRCPGlobalContactsDirectoryService;-><init>(Lcom/android/server/bridge/BridgeProxy;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "contactRefUriAsString"    # Ljava/lang/String;
 
     .prologue
-    .line 1608
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IRCPGlobalContactsDirectoryService;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     const-string/jumbo v2, "getCallerInfo"
@@ -58,7 +55,6 @@
     # invokes: Lcom/android/server/bridge/BridgeProxy;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v1, v2}, Lcom/android/server/bridge/BridgeProxy;->access$1800(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)I
 
-    .line 1609
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -84,7 +80,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1612
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -97,15 +92,12 @@
 
     if-nez v1, :cond_1
 
-    .line 1613
     :cond_0
     const/4 v0, 0x0
 
-    .line 1620
     :goto_0
     return-object v0
 
-    .line 1616
     :cond_1
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -116,7 +108,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1617
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IRCPGlobalContactsDirectoryService;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mbridge:Landroid/os/RCPManager;
@@ -128,7 +119,6 @@
 
     move-result-object v0
 
-    .line 1618
     .local v0, "result":Landroid/content/CustomCursor;
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;

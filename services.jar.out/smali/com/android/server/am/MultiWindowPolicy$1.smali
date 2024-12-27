@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 359
     iput-object p1, p0, Lcom/android/server/am/MultiWindowPolicy$1;->this$0:Lcom/android/server/am/MultiWindowPolicy;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 361
     if-ne p1, v6, :cond_1
 
     iget-object v3, p0, Lcom/android/server/am/MultiWindowPolicy$1;->this$0:Lcom/android/server/am/MultiWindowPolicy;
@@ -52,10 +50,8 @@
 
     if-nez v3, :cond_1
 
-    .line 362
     const/4 v2, 0x0
 
-    .line 363
     .local v2, "hasInCallUiPackage":Z
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
@@ -69,11 +65,9 @@
 
     move-result-object v0
 
-    .line 364
     .local v0, "INCALLUI_PACKAGE":Ljava/lang/String;
     const-string v1, "com.android.phone"
 
-    .line 366
     .local v1, "PHONE_PACKAGE":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -92,10 +86,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 367
     const/4 v2, 0x1
 
-    .line 380
     :cond_0
     :goto_0
     iget-object v3, p0, Lcom/android/server/am/MultiWindowPolicy$1;->this$0:Lcom/android/server/am/MultiWindowPolicy;
@@ -116,13 +108,11 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/am/MultiWindowPolicy$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 383
     .end local v1    # "PHONE_PACKAGE":Ljava/lang/String;
     .end local v2    # "hasInCallUiPackage":Z
     :cond_1
     return-void
 
-    .line 380
     .restart local v0    # "INCALLUI_PACKAGE":Ljava/lang/String;
     .restart local v1    # "PHONE_PACKAGE":Ljava/lang/String;
     .restart local v2    # "hasInCallUiPackage":Z
@@ -131,7 +121,6 @@
 
     goto :goto_1
 
-    .line 369
     :catch_0
     move-exception v3
 

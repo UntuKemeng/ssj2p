@@ -64,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const-class v0, Lcom/samsung/android/rlc/util/PreferencesUtil;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -73,7 +72,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/PreferencesUtil;->TAG:Ljava/lang/String;
 
-    .line 63
     const/4 v0, 0x0
 
     sput-object v0, Lcom/samsung/android/rlc/util/PreferencesUtil;->handler:Lcom/samsung/android/rlc/db/MGRegDBHandler;
@@ -85,7 +83,6 @@
     .locals 0
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -96,24 +93,20 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 338
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 339
     .local v1, "sp":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 340
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "check_backoff"
 
     invoke-interface {v0, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 341
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     move-result v2
@@ -126,18 +119,15 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 260
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 262
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 263
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "dm_urlkey"
 
@@ -145,10 +135,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 264
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 265
     return-void
 .end method
 
@@ -157,18 +145,15 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 351
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 352
     .local v1, "sp":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 353
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "delivery_backoff"
 
@@ -176,10 +161,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 354
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 355
     return-void
 .end method
 
@@ -188,18 +171,15 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 275
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 277
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 278
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "gcm_backoff"
 
@@ -207,10 +187,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 279
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 280
     return-void
 .end method
 
@@ -219,24 +197,20 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 307
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 308
     .local v1, "sp":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 309
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "gcm_mg_registration_backoff"
 
     invoke-interface {v0, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 310
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     move-result v2
@@ -249,18 +223,15 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 209
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 211
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 212
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "delivery_urlkey"
 
@@ -268,10 +239,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 213
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 214
     return-void
 .end method
 
@@ -280,18 +249,15 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 115
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 117
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 118
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "rlc_client_version"
 
@@ -299,10 +265,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 119
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 120
     return-void
 .end method
 
@@ -312,18 +276,15 @@
     .param p1, "pushType"    # Ljava/lang/String;
 
     .prologue
-    .line 101
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 103
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 104
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -347,10 +308,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 105
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 106
     return-void
 .end method
 
@@ -359,24 +318,20 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 291
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 293
     .local v1, "sp":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 294
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "spp_backoff"
 
     invoke-interface {v0, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 295
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     move-result v2
@@ -389,24 +344,20 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 323
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 324
     .local v1, "sp":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 325
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "spp_mg_registration_backoff"
 
     invoke-interface {v0, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 326
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     move-result v2
@@ -421,10 +372,8 @@
     .param p2, "defaultValue"    # Ljava/lang/String;
 
     .prologue
-    .line 449
     move-object v2, p2
 
-    .line 450
     .local v2, "ret":Ljava/lang/String;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -432,13 +381,11 @@
 
     if-nez v3, :cond_0
 
-    .line 453
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/rlc/util/AESCrypto;->generateContentKey(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 454
     .local v0, "contentKey":Ljava/lang/String;
     invoke-static {v0, p1}, Lcom/samsung/android/rlc/util/AESCrypto;->decryptAES(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
@@ -446,22 +393,18 @@
 
     move-result-object v2
 
-    .line 463
     .end local v0    # "contentKey":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 456
     :catch_0
     move-exception v1
 
-    .line 458
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 461
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_0
     sget-object v3, Lcom/samsung/android/rlc/util/PreferencesUtil;->TAG:Ljava/lang/String;
@@ -480,17 +423,14 @@
     .param p2, "defaultValue"    # Ljava/lang/String;
 
     .prologue
-    .line 435
     move-object v2, p2
 
-    .line 438
     .local v2, "ret":Ljava/lang/String;
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/rlc/util/AESCrypto;->generateContentKey(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 439
     .local v0, "contentKey":Ljava/lang/String;
     invoke-static {v0, p1}, Lcom/samsung/android/rlc/util/AESCrypto;->encryptAES(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     :try_end_0
@@ -498,16 +438,13 @@
 
     move-result-object v2
 
-    .line 445
     .end local v0    # "contentKey":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 441
     :catch_0
     move-exception v1
 
-    .line 443
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -519,16 +456,13 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 226
     monitor-enter p0
 
-    .line 227
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 228
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string v2, "dm_urlkey"
 
@@ -538,7 +472,6 @@
 
     move-result-object v0
 
-    .line 229
     .local v0, "delivery":Ljava/lang/String;
     const-string v2, ""
 
@@ -550,7 +483,6 @@
 
     return-object v2
 
-    .line 230
     .end local v0    # "delivery":Ljava/lang/String;
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     :catchall_0
@@ -569,12 +501,10 @@
     .param p1, "pushType"    # Ljava/lang/String;
 
     .prologue
-    .line 403
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 404
     .local v0, "sp":Landroid/content/SharedPreferences;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -608,19 +538,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 144
     sget-object v1, Lcom/samsung/android/rlc/util/PreferencesUtil;->handler:Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
     if-nez v1, :cond_0
 
-    .line 145
     new-instance v1, Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/rlc/db/MGRegDBHandler;-><init>(Landroid/content/Context;)V
 
     sput-object v1, Lcom/samsung/android/rlc/util/PreferencesUtil;->handler:Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
-    .line 148
     :cond_0
     sget-object v1, Lcom/samsung/android/rlc/util/PreferencesUtil;->handler:Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
@@ -630,7 +557,6 @@
 
     move-result-object v0
 
-    .line 149
     .local v0, "result":Ljava/lang/String;
     return-object v0
 .end method
@@ -640,16 +566,13 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 130
     monitor-enter p0
 
-    .line 131
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 132
     .local v0, "preferences":Landroid/content/SharedPreferences;
     const-string v1, "rlc_client_version"
 
@@ -663,7 +586,6 @@
 
     return-object v1
 
-    .line 133
     .end local v0    # "preferences":Landroid/content/SharedPreferences;
     :catchall_0
     move-exception v1
@@ -681,12 +603,10 @@
     .param p1, "pushType"    # Ljava/lang/String;
 
     .prologue
-    .line 73
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 75
     .local v0, "preferences":Landroid/content/SharedPreferences;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -721,12 +641,10 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 362
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 363
     .local v0, "sp":Landroid/content/SharedPreferences;
     const/16 v1, 0x3e8
 
@@ -742,7 +660,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 379
     invoke-static {p0}, Landroid/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
@@ -756,12 +673,10 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 476
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 477
     .local v0, "sp":Landroid/content/SharedPreferences;
     sget-object v1, Lcom/samsung/android/rlc/util/PreferencesUtil;->TAG:Ljava/lang/String;
 
@@ -801,7 +716,6 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 478
     const-string v1, ""
 
     invoke-interface {v0, p1, v1}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -819,7 +733,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 418
     const-class v2, Lcom/samsung/android/rlc/util/PreferencesUtil;
 
     monitor-enter v2
@@ -829,14 +742,12 @@
 
     if-nez v3, :cond_0
 
-    .line 419
     new-instance v3, Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
     invoke-direct {v3, p0}, Lcom/samsung/android/rlc/db/MGRegDBHandler;-><init>(Landroid/content/Context;)V
 
     sput-object v3, Lcom/samsung/android/rlc/util/PreferencesUtil;->handler:Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
-    .line 422
     :cond_0
     sget-object v3, Lcom/samsung/android/rlc/util/PreferencesUtil;->handler:Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
@@ -844,7 +755,6 @@
 
     move-result-object v0
 
-    .line 423
     .local v0, "result":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
     :try_end_0
@@ -854,14 +764,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 429
     :cond_1
     :goto_0
     monitor-exit v2
 
     return v1
 
-    .line 426
     :cond_2
     :try_start_1
     const-string v3, "Y"
@@ -874,12 +782,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 427
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 418
     .end local v0    # "result":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -894,12 +800,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 197
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 198
     .local v0, "sp":Landroid/content/SharedPreferences;
     const-string v1, "clear_rlc"
 
@@ -923,7 +827,6 @@
     .param p2, "mgAddr"    # Ljava/lang/String;
 
     .prologue
-    .line 409
     const-class v0, Lcom/samsung/android/rlc/util/PreferencesUtil;
 
     monitor-enter v0
@@ -935,12 +838,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 410
     monitor-exit v0
 
     return-void
 
-    .line 409
     :catchall_0
     move-exception v1
 
@@ -957,19 +858,16 @@
     .param p3, "dlvurl"    # Ljava/lang/String;
 
     .prologue
-    .line 395
     sget-object v0, Lcom/samsung/android/rlc/util/PreferencesUtil;->handler:Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
     if-nez v0, :cond_0
 
-    .line 396
     new-instance v0, Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/rlc/db/MGRegDBHandler;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/samsung/android/rlc/util/PreferencesUtil;->handler:Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
-    .line 398
     :cond_0
     sget-object v1, Lcom/samsung/android/rlc/util/PreferencesUtil;->handler:Lcom/samsung/android/rlc/db/MGRegDBHandler;
 
@@ -982,10 +880,8 @@
     :goto_0
     invoke-virtual {v1, v0, p2, p3}, Lcom/samsung/android/rlc/db/MGRegDBHandler;->updateRegStatus(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 399
     return-void
 
-    .line 398
     :cond_1
     const-string v0, "N"
 
@@ -998,16 +894,13 @@
     .param p1, "dm_url"    # Ljava/lang/String;
 
     .prologue
-    .line 242
     monitor-enter p1
 
-    .line 243
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v2
 
-    .line 245
     .local v2, "preferences":Landroid/content/SharedPreferences;
     const-string v3, ""
 
@@ -1015,28 +908,22 @@
 
     move-result-object v0
 
-    .line 246
     .local v0, "delivery":Ljava/lang/String;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 247
     .local v1, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v3, "dm_urlkey"
 
     invoke-interface {v1, v3, v0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 248
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 249
     monitor-exit p1
 
-    .line 250
     return-void
 
-    .line 249
     .end local v0    # "delivery":Ljava/lang/String;
     .end local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v2    # "preferences":Landroid/content/SharedPreferences;
@@ -1056,37 +943,29 @@
     .param p1, "delivery_url"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     monitor-enter p1
 
-    .line 162
     :try_start_0
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 163
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 164
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "delivery_urlkey"
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 165
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 166
     monitor-exit p1
 
-    .line 167
     return-void
 
-    .line 166
     .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     :catchall_0
@@ -1106,18 +985,15 @@
     .param p2, "pushType"    # Ljava/lang/String;
 
     .prologue
-    .line 87
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 89
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 90
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1139,10 +1015,8 @@
 
     invoke-interface {v0, v2, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 91
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 92
     return-void
 .end method
 
@@ -1153,25 +1027,20 @@
     .param p2, "backoff"    # I
 
     .prologue
-    .line 366
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 367
     .local v1, "sp":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 368
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 369
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 370
     return-void
 .end method
 
@@ -1181,7 +1050,6 @@
     .param p1, "status"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 179
     sget-object v2, Lcom/samsung/android/rlc/util/PreferencesUtil;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1204,18 +1072,15 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 180
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 182
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 183
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string v2, "clear_rlc"
 
@@ -1225,10 +1090,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 184
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 185
     return-void
 .end method
 
@@ -1239,22 +1102,18 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 492
     invoke-static {p0}, Lcom/samsung/android/rlc/util/PreferencesUtil;->getSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 494
     .local v1, "sp":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 495
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     invoke-interface {v0, p1, p2}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 496
     sget-object v2, Lcom/samsung/android/rlc/util/PreferencesUtil;->TAG:Ljava/lang/String;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1287,7 +1146,6 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 497
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     move-result v2
@@ -1301,7 +1159,6 @@
     .param p1, "pushType"    # Ljava/lang/String;
 
     .prologue
-    .line 413
     const-class v1, Lcom/samsung/android/rlc/util/PreferencesUtil;
 
     monitor-enter v1
@@ -1315,12 +1172,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 414
     monitor-exit v1
 
     return-void
 
-    .line 413
     :catchall_0
     move-exception v0
 

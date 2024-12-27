@@ -20,7 +20,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 62
     const-string v0, "certDB.db"
 
     const/4 v1, 0x0
@@ -29,7 +28,6 @@
 
     invoke-direct {p0, p1, v0, v1, v2}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 63
     return-void
 .end method
 
@@ -40,19 +38,16 @@
     .param p1, "_db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 66
     const-string v0, "CPPCertDbAdapter"
 
     const-string v1, "DbAdapter.CertDbHelper.onCreate()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 67
     const-string v0, "CREATE TABLE Cert_Table (_cert_id integer primary key autoincrement,cert_ca BLOB,cert_url BLOB);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .param p3, "newVersion"    # I
 
     .prologue
-    .line 71
     const-string v0, "CPPCertDbAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -102,14 +96,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     const-string v0, "DROP TABLE IF EXISTS data Cert_Table"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 73
     invoke-virtual {p0, p1}, Lcom/samsung/cpp/CPPCertDbAdapter$CertDbHelper;->onCreate(Landroid/database/sqlite/SQLiteDatabase;)V
 
-    .line 74
     return-void
 .end method

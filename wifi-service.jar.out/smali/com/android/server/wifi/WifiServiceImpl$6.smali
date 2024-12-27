@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 856
     iput-object p1, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,16 +38,13 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 859
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 860
     .local v0, "action":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 861
     .local v1, "wifiPolicyChanged":Z
     const-string v2, "WifiService"
 
@@ -72,7 +68,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 862
     const-string v2, "isWifiChanged"
 
     const/4 v3, 0x0
@@ -81,7 +76,6 @@
 
     move-result v1
 
-    .line 863
     const-string v2, "android.app.action.DEVICE_POLICY_MANAGER_STATE_CHANGED"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -98,7 +92,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 865
     :cond_0
     const-string v2, "WifiService"
 
@@ -106,23 +99,19 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 866
     if-eqz v1, :cond_1
 
-    .line 867
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # invokes: Lcom/android/server/wifi/WifiServiceImpl;->handleSecurityPolicy()V
     invoke-static {v2}, Lcom/android/server/wifi/WifiServiceImpl;->access$1800(Lcom/android/server/wifi/WifiServiceImpl;)V
 
-    .line 868
     :cond_1
     iget-object v2, p0, Lcom/android/server/wifi/WifiServiceImpl$6;->this$0:Lcom/android/server/wifi/WifiServiceImpl;
 
     # invokes: Lcom/android/server/wifi/WifiServiceImpl;->handleSecurityPolicyMHS()V
     invoke-static {v2}, Lcom/android/server/wifi/WifiServiceImpl;->access$1900(Lcom/android/server/wifi/WifiServiceImpl;)V
 
-    .line 870
     :cond_2
     return-void
 .end method

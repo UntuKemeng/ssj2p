@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 3779
     iput-object p1, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,20 +38,16 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 3782
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 3783
     const-string v0, "bike mode onChange"
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 3784
     iget-object v0, p0, Lcom/android/server/FMRadioService$17;->this$0:Lcom/android/server/FMRadioService;
 
     # invokes: Lcom/android/server/FMRadioService;->handleBikeMode()V
     invoke-static {v0}, Lcom/android/server/FMRadioService;->access$4700(Lcom/android/server/FMRadioService;)V
 
-    .line 3785
     return-void
 .end method

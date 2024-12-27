@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 5097
     iput-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$7;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     iput-object p2, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$7;->val$packageName:Ljava/lang/String;
@@ -45,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 5102
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$7;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->mActivityManager:Landroid/app/ActivityManager;
@@ -63,7 +61,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/ActivityManager;->forceStopPackageAsUser(Ljava/lang/String;I)V
 
-    .line 5105
     const-wide/16 v0, 0x1f4
 
     :try_start_0
@@ -71,7 +68,6 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5108
     :goto_0
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->access$000()Landroid/content/Context;
@@ -94,10 +90,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;->deletePackageAsUser(Ljava/lang/String;II)Z
 
-    .line 5111
     return-void
 
-    .line 5106
     :catch_0
     move-exception v0
 

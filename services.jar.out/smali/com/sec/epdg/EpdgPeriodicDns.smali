@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 16
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/epdg/EpdgPeriodicDns;->INSTANCE:Lcom/sec/epdg/EpdgPeriodicDns;
@@ -34,24 +33,20 @@
     .locals 2
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     const-string v0, "[EpdgPeriodicDns]"
 
     const-string v1, "EpdgPeriodicDns instance created"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 25
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgServiceContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mContext:Landroid/content/Context;
 
-    .line 26
     iget-object v0, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mContext:Landroid/content/Context;
 
     const-string v1, "alarm"
@@ -64,14 +59,12 @@
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mAlarmManager:Landroid/app/AlarmManager;
 
-    .line 27
     new-instance v0, Lcom/android/internal/telephony/RetryManager;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/RetryManager;-><init>()V
 
     iput-object v0, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mRetryManager:Lcom/android/internal/telephony/RetryManager;
 
-    .line 28
     iget-object v0, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mRetryManager:Lcom/android/internal/telephony/RetryManager;
 
     const-string v1, "max_retries=infinite,30000,60000,120000,300000,900000"
@@ -82,14 +75,12 @@
 
     if-nez v0, :cond_0
 
-    .line 29
     const-string v0, "[EpdgPeriodicDns]"
 
     const-string v1, "Error in DNS retry timer config: max_retries=infinite,30000,60000,120000,300000,900000"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 31
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string v1, "Error in DNS retry timer config"
@@ -98,7 +89,6 @@
 
     throw v0
 
-    .line 33
     :cond_0
     return-void
 .end method
@@ -107,7 +97,6 @@
     .locals 3
 
     .prologue
-    .line 38
     const-class v1, Lcom/sec/epdg/EpdgPeriodicDns;
 
     monitor-enter v1
@@ -117,21 +106,18 @@
 
     if-nez v0, :cond_0
 
-    .line 39
     const-string v0, "[EpdgPeriodicDns]"
 
     const-string v2, "Creating EpdgPeriodicDns instance"
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 40
     new-instance v0, Lcom/sec/epdg/EpdgPeriodicDns;
 
     invoke-direct {v0}, Lcom/sec/epdg/EpdgPeriodicDns;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/EpdgPeriodicDns;->INSTANCE:Lcom/sec/epdg/EpdgPeriodicDns;
 
-    .line 42
     :cond_0
     sget-object v0, Lcom/sec/epdg/EpdgPeriodicDns;->INSTANCE:Lcom/sec/epdg/EpdgPeriodicDns;
     :try_end_0
@@ -141,7 +127,6 @@
 
     return-object v0
 
-    .line 38
     :catchall_0
     move-exception v0
 
@@ -154,18 +139,15 @@
     .locals 4
 
     .prologue
-    .line 63
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 64
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.sec.epdg.PERIODIC_DNS_TIMER_EXPIRED"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 65
     iget-object v1, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -185,7 +167,6 @@
     .locals 3
 
     .prologue
-    .line 70
     monitor-enter p0
 
     :try_start_0
@@ -193,16 +174,13 @@
 
     move-result-object v0
 
-    .line 71
     .local v0, "pIntent":Landroid/app/PendingIntent;
     iget-object v1, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {v1, v0}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 72
     invoke-virtual {p0}, Lcom/sec/epdg/EpdgPeriodicDns;->resetTimerForPeriodicDns()V
 
-    .line 73
     const-string v1, "[EpdgPeriodicDns]"
 
     const-string v2, "Periodic DNS intent is cancelled"
@@ -211,12 +189,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 74
     monitor-exit p0
 
     return-void
 
-    .line 70
     .end local v0    # "pIntent":Landroid/app/PendingIntent;
     :catchall_0
     move-exception v1
@@ -230,7 +206,6 @@
     .locals 2
 
     .prologue
-    .line 77
     monitor-enter p0
 
     :try_start_0
@@ -238,7 +213,6 @@
 
     invoke-virtual {v0}, Lcom/android/internal/telephony/RetryManager;->resetRetryCount()V
 
-    .line 78
     const-string v0, "[EpdgPeriodicDns]"
 
     const-string v1, "resetTimerForPeriodicDns: Reset DNS retry counter"
@@ -247,12 +221,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 79
     monitor-exit p0
 
     return-void
 
-    .line 77
     :catchall_0
     move-exception v0
 
@@ -265,7 +237,6 @@
     .locals 8
 
     .prologue
-    .line 46
     monitor-enter p0
 
     :try_start_0
@@ -277,7 +248,6 @@
 
     int-to-long v2, v5
 
-    .line 47
     .local v2, "dnsRetryInterval":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -285,13 +255,11 @@
 
     add-long v0, v6, v2
 
-    .line 48
     .local v0, "alarmExpTime":J
     iget-object v5, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mRetryManager:Lcom/android/internal/telephony/RetryManager;
 
     invoke-virtual {v5}, Lcom/android/internal/telephony/RetryManager;->increaseRetryCount()V
 
-    .line 49
     const-string v5, "[EpdgPeriodicDns]"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -324,21 +292,17 @@
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
     invoke-direct {p0}, Lcom/sec/epdg/EpdgPeriodicDns;->getPeriodicDnsPendingIntent()Landroid/app/PendingIntent;
 
     move-result-object v4
 
-    .line 55
     .local v4, "pIntent":Landroid/app/PendingIntent;
     if-eqz v4, :cond_0
 
-    .line 56
     iget-object v5, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mAlarmManager:Landroid/app/AlarmManager;
 
     invoke-virtual {v5, v4}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 58
     :cond_0
     iget-object v5, p0, Lcom/sec/epdg/EpdgPeriodicDns;->mAlarmManager:Landroid/app/AlarmManager;
 
@@ -348,12 +312,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 60
     monitor-exit p0
 
     return-void
 
-    .line 46
     .end local v0    # "alarmExpTime":J
     .end local v2    # "dnsRetryInterval":J
     .end local v4    # "pIntent":Landroid/app/PendingIntent;

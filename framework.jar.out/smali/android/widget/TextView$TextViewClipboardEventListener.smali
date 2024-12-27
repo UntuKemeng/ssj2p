@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 492
     iput-object p1, p0, Landroid/widget/TextView$TextViewClipboardEventListener;->this$0:Landroid/widget/TextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +40,8 @@
     .param p1, "data"    # Landroid/sec/clipboard/data/ClipboardData;
 
     .prologue
-    .line 495
     move-object v0, p1
 
-    .line 496
     .local v0, "dataInner":Landroid/sec/clipboard/data/ClipboardData;
     iget-object v1, p0, Landroid/widget/TextView$TextViewClipboardEventListener;->this$0:Landroid/widget/TextView;
 
@@ -54,6 +51,5 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->post(Ljava/lang/Runnable;)Z
 
-    .line 501
     return-void
 .end method

@@ -43,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 21
     const-string v0, "eng"
 
     const-string v1, "ro.build.type"
@@ -65,10 +64,8 @@
     .locals 2
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;
 
     const/4 v1, 0x0
@@ -77,19 +74,16 @@
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->_config:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;
 
-    .line 19
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/CertUtil;
 
     invoke-direct {v0}, Lcom/samsung/ucm/ucmservice/scp/CertUtil;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->certUtil:Lcom/samsung/ucm/ucmservice/scp/CertUtil;
 
-    .line 20
     const-string v0, "N/A"
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->mTimaVersion:Ljava/lang/String;
 
-    .line 78
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->_config:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;
 
     iget-object v0, v0, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;->protocol:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;
@@ -98,7 +92,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;->add(I)V
 
-    .line 79
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->_config:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;
 
     iget-object v0, v0, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;->protocol:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;
@@ -107,7 +100,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;->add(I)V
 
-    .line 80
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->_config:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;
 
     iget-object v0, v0, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;->protocol:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;
@@ -116,7 +108,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;->add(I)V
 
-    .line 81
     return-void
 .end method
 
@@ -125,24 +116,19 @@
     .param p1, "timaStatus"    # I
 
     .prologue
-    .line 90
     const/4 v0, 0x0
 
-    .line 91
     .local v0, "status":Z
     packed-switch p1, :pswitch_data_0
 
-    .line 99
     :goto_0
     return v0
 
-    .line 96
     :pswitch_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 91
     nop
 
     :pswitch_data_0
@@ -172,7 +158,6 @@
     .param p2, "apdu"    # [B
 
     .prologue
-    .line 383
     invoke-static {p1, p2}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->forwardApduResponse(I[B)[B
 
     move-result-object v0
@@ -189,7 +174,6 @@
     .param p2, "tzError"    # I
 
     .prologue
-    .line 69
     new-instance v0, Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
 
     invoke-direct {p0, p2}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getSDKErrorCode(I)I
@@ -210,7 +194,6 @@
     .param p1, "internalCode"    # I
 
     .prologue
-    .line 163
     const-string v4, "UCM.SCP.TADriver"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -233,14 +216,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     const/4 v1, 0x0
 
-    .line 165
     .local v1, "errorCode":I
     sparse-switch p1, :sswitch_data_0
 
-    .line 230
     :cond_0
     :goto_0
     const-string v4, "UCM.SCP.TADriver"
@@ -265,112 +245,82 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
     return v1
 
-    .line 171
     :sswitch_0
     const/16 v1, 0x32
 
-    .line 172
     goto :goto_0
 
-    .line 174
     :sswitch_1
     const/16 v1, 0x33
 
-    .line 175
     goto :goto_0
 
-    .line 178
     :sswitch_2
     const/16 v1, 0x34
 
-    .line 179
     goto :goto_0
 
-    .line 182
     :sswitch_3
     const/16 v1, 0x35
 
-    .line 183
     goto :goto_0
 
-    .line 185
     :sswitch_4
     const/16 v1, 0x36
 
-    .line 186
     goto :goto_0
 
-    .line 188
     :sswitch_5
     const/16 v1, 0x37
 
-    .line 189
     goto :goto_0
 
-    .line 191
     :sswitch_6
     const/16 v1, 0x38
 
-    .line 192
     goto :goto_0
 
-    .line 201
     :sswitch_7
     const/16 v1, 0x39
 
-    .line 202
     goto :goto_0
 
-    .line 204
     :sswitch_8
     const/16 v1, 0x3a
 
-    .line 205
     goto :goto_0
 
-    .line 207
     :sswitch_9
     const/16 v1, 0x3b
 
-    .line 208
     goto :goto_0
 
-    .line 210
     :sswitch_a
     const/16 v1, 0x3c
 
-    .line 211
     goto :goto_0
 
-    .line 213
     :sswitch_b
     const/16 v1, 0x3d
 
-    .line 214
     goto :goto_0
 
-    .line 216
     :sswitch_c
     const/16 v1, 0x42
 
-    .line 217
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->updateTimaVersion()V
 
-    .line 218
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getTimaStatus()I
 
     move-result v3
 
-    .line 219
     .local v3, "timaStatus":I
     if-nez v3, :cond_1
 
     const/4 v2, 0x1
 
-    .line 220
     .local v2, "result":Z
     :goto_1
     const-string v4, "UCM.SCP.TADriver"
@@ -405,15 +355,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     if-nez v2, :cond_0
 
-    .line 222
     invoke-direct {p0, v3}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->checkTimaError(I)Z
 
     move-result v0
 
-    .line 223
     .local v0, "deviceCompromised":Z
     const-string v4, "UCM.SCP.TADriver"
 
@@ -437,15 +384,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 224
     if-eqz v0, :cond_0
 
-    .line 225
     const/16 v1, 0x3e
 
     goto/16 :goto_0
 
-    .line 219
     .end local v0    # "deviceCompromised":Z
     .end local v2    # "result":Z
     :cond_1
@@ -453,7 +397,6 @@
 
     goto :goto_1
 
-    .line 165
     nop
 
     :sswitch_data_0
@@ -492,10 +435,8 @@
     .param p1, "apdu"    # [B
 
     .prologue
-    .line 387
     array-length v0, p1
 
-    .line 389
     .local v0, "length":I
     const/4 v1, 0x2
 
@@ -503,7 +444,6 @@
 
     const/16 v1, 0x6700
 
-    .line 390
     :goto_0
     return v1
 
@@ -532,7 +472,6 @@
     .locals 2
 
     .prologue
-    .line 84
     const-string v1, "tima"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -543,7 +482,6 @@
 
     move-result-object v0
 
-    .line 86
     .local v0, "timaService":Landroid/service/tima/ITimaService;
     return-object v0
 .end method
@@ -554,10 +492,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 103
     const/4 v1, -0x1
 
-    .line 104
     .local v1, "timaStatus":I
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->mTimaVersion:Ljava/lang/String;
 
@@ -569,10 +505,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 105
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->updateTimaVersion()V
 
-    .line 107
     :cond_0
     :try_start_0
     iget-object v4, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->mTimaVersion:Ljava/lang/String;
@@ -589,12 +523,10 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 120
     sget-boolean v2, Lcom/samsung/ucm/ucmservice/scp/TADriver;->DEBUG:Z
 
     if-eqz v2, :cond_2
 
-    .line 121
     const-string v2, "UCM.SCP.TADriver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -622,14 +554,12 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 131
     :cond_2
     :goto_1
     sget-boolean v2, Lcom/samsung/ucm/ucmservice/scp/TADriver;->DEBUG:Z
 
     if-eqz v2, :cond_3
 
-    .line 132
     const-string v2, "UCM.SCP.TADriver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -652,11 +582,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 134
     :cond_3
     return v1
 
-    .line 107
     :sswitch_0
     :try_start_1
     const-string v3, "2.0"
@@ -697,7 +625,6 @@
 
     goto :goto_0
 
-    .line 110
     :pswitch_0
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getTimaService()Landroid/service/tima/ITimaService;
 
@@ -707,7 +634,6 @@
 
     move-result v1
 
-    .line 111
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getTimaService()Landroid/service/tima/ITimaService;
 
     move-result-object v2
@@ -719,11 +645,9 @@
 
     goto :goto_1
 
-    .line 125
     :catch_0
     move-exception v0
 
-    .line 126
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "UCM.SCP.TADriver"
 
@@ -733,7 +657,6 @@
 
     goto :goto_1
 
-    .line 114
     .end local v0    # "e":Landroid/os/RemoteException;
     :pswitch_1
     :try_start_2
@@ -745,10 +668,8 @@
 
     move-result v1
 
-    .line 115
     goto :goto_1
 
-    .line 117
     :pswitch_2
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getTimaService()Landroid/service/tima/ITimaService;
 
@@ -763,14 +684,11 @@
 
     move-result v1
 
-    .line 118
     goto :goto_1
 
-    .line 127
     :catch_1
     move-exception v0
 
-    .line 128
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "UCM.SCP.TADriver"
 
@@ -780,7 +698,6 @@
 
     goto :goto_1
 
-    .line 107
     :sswitch_data_0
     .sparse-switch
         -0x7ec2e91 -> :sswitch_2
@@ -803,19 +720,16 @@
     .locals 5
 
     .prologue
-    .line 138
     const-string v2, "N/A"
 
     iput-object v2, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->mTimaVersion:Ljava/lang/String;
 
-    .line 139
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getTimaService()Landroid/service/tima/ITimaService;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 141
     :try_start_0
     const-string v2, "2.0"
 
@@ -831,25 +745,21 @@
 
     move-result v1
 
-    .line 143
     .local v1, "timaVersion20":Z
     if-eqz v1, :cond_1
 
-    .line 144
     const-string v2, "2.0"
 
     iput-object v2, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->mTimaVersion:Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 155
     .end local v1    # "timaVersion20":Z
     :goto_0
     sget-boolean v2, Lcom/samsung/ucm/ucmservice/scp/TADriver;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 156
     const-string v2, "UCM.SCP.TADriver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -874,11 +784,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     :cond_0
     return-void
 
-    .line 146
     .restart local v1    # "timaVersion20":Z
     :cond_1
     :try_start_1
@@ -888,7 +796,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 147
     const-string v2, "FIPS3.0"
 
     iput-object v2, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->mTimaVersion:Ljava/lang/String;
@@ -897,12 +804,10 @@
 
     goto :goto_0
 
-    .line 152
     .end local v1    # "timaVersion20":Z
     :catch_0
     move-exception v0
 
-    .line 153
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "UCM.SCP.TADriver"
 
@@ -912,7 +817,6 @@
 
     goto :goto_0
 
-    .line 149
     .end local v0    # "re":Landroid/os/RemoteException;
     .restart local v1    # "timaVersion20":Z
     :cond_2
@@ -939,7 +843,6 @@
 
     const/4 v7, 0x1
 
-    .line 261
     iget-object v3, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->_config:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;
 
     iget-object v3, v3, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;->protocol:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;
@@ -950,29 +853,24 @@
 
     if-nez v3, :cond_0
 
-    .line 262
     const-string v3, "UCM.SCP.TADriver"
 
     const-string v4, "Not supported protocol"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     const/16 v3, 0x8
 
     invoke-direct {p0, v7, v3}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getErrMsg(II)Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
 
     move-result-object v3
 
-    .line 291
     :goto_0
     return-object v3
 
-    .line 267
     :cond_0
     const/4 v1, 0x0
 
-    .line 270
     .local v1, "resp":[B
     :try_start_0
     invoke-virtual {p3}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->toTLV()[B
@@ -983,14 +881,12 @@
 
     move-result-object v1
 
-    .line 271
     if-eqz v1, :cond_1
 
     array-length v3, v1
 
     if-gtz v3, :cond_2
 
-    .line 272
     :cond_1
     const-string v3, "UCM.SCP.TADriver"
 
@@ -998,7 +894,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     const/4 v3, 0x1
 
     const/16 v4, 0xb
@@ -1011,15 +906,12 @@
 
     goto :goto_0
 
-    .line 275
     :catch_0
     move-exception v0
 
-    .line 276
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 277
     const/4 v3, 0x2
 
     invoke-direct {p0, v7, v3}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getErrMsg(II)Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
@@ -1028,16 +920,13 @@
 
     goto :goto_0
 
-    .line 280
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     aget-byte v2, v1, v8
 
-    .line 281
     .local v2, "tzRet":I
     packed-switch v2, :pswitch_data_0
 
-    .line 287
     const-string v3, "UCM.SCP.TADriver"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1060,14 +949,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     invoke-direct {p0, v7, v2}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getErrMsg(II)Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
 
     move-result-object v3
 
     goto :goto_0
 
-    .line 283
     :pswitch_0
     new-instance v3, Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
 
@@ -1087,7 +974,6 @@
 
     goto :goto_0
 
-    .line 281
     :pswitch_data_0
     .packed-switch 0x5
         :pswitch_0
@@ -1100,19 +986,15 @@
     .param p2, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 253
     invoke-static {p1, p2}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->deleteCACert(ILjava/lang/String;)I
 
     move-result v0
 
-    .line 254
     .local v0, "ret":I
     if-nez v0, :cond_0
 
-    .line 255
     const/4 v1, 0x1
 
-    .line 257
     :goto_0
     return v1
 
@@ -1127,7 +1009,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 295
     invoke-static {p1}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->destorySecureChannel(I)I
 
     move-result v0
@@ -1144,10 +1025,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 239
     const/4 v1, 0x0
 
-    .line 241
     .local v1, "modified_cert":[B
     :try_start_0
     iget-object v4, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver;->certUtil:Lcom/samsung/ucm/ucmservice/scp/CertUtil;
@@ -1158,29 +1037,23 @@
 
     move-result-object v1
 
-    .line 245
     invoke-static {p3, p1, v1}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->installCACert(ILjava/lang/String;[B)I
 
     move-result v2
 
-    .line 246
     .local v2, "ret":I
     if-nez v2, :cond_0
 
-    .line 247
     const/4 v3, 0x1
 
-    .line 249
     .end local v2    # "ret":I
     :cond_0
     :goto_0
     return v3
 
-    .line 242
     :catch_0
     move-exception v0
 
-    .line 243
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -1192,10 +1065,8 @@
     .param p3, "msg"    # [B
 
     .prologue
-    .line 299
     packed-switch p2, :pswitch_data_0
 
-    .line 379
     const/4 v5, 0x1
 
     const/4 v6, 0x2
@@ -1207,7 +1078,6 @@
     :goto_0
     return-object v5
 
-    .line 302
     :pswitch_0
     const/4 v5, 0x1
 
@@ -1215,18 +1085,15 @@
 
     move-result-object v0
 
-    .line 303
     .local v0, "encrypted_apdu":[B
     if-nez v0, :cond_0
 
-    .line 304
     const-string v5, "UCM.SCP.TADriver"
 
     const-string v6, "Failed to encode APDU"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 305
     const/16 v5, 0x12d
 
     const/16 v6, 0xb
@@ -1237,17 +1104,14 @@
 
     goto :goto_0
 
-    .line 309
     :cond_0
     const/4 v5, 0x0
 
     aget-byte v4, v0, v5
 
-    .line 310
     .local v4, "tzRet":I
     if-eqz v4, :cond_1
 
-    .line 311
     const-string v5, "UCM.SCP.TADriver"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1274,7 +1138,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 312
     const/16 v5, 0x12d
 
     invoke-direct {p0, v5, v4}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getErrMsg(II)Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
@@ -1283,7 +1146,6 @@
 
     goto :goto_0
 
-    .line 315
     :cond_1
     new-instance v5, Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
 
@@ -1309,7 +1171,6 @@
 
     goto :goto_0
 
-    .line 322
     .end local v0    # "encrypted_apdu":[B
     .end local v4    # "tzRet":I
     :pswitch_1
@@ -1317,7 +1178,6 @@
 
     move-result v3
 
-    .line 323
     .local v3, "sw":S
     const-string v5, "UCM.SCP.TADriver"
 
@@ -1345,12 +1205,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     const/16 v5, -0x7000
 
     if-eq v3, v5, :cond_2
 
-    .line 326
     const-string v5, "UCM.SCP.TADriver"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1377,7 +1235,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     const/4 v5, 0x1
 
     const/4 v6, 0x4
@@ -1388,7 +1245,6 @@
 
     goto/16 :goto_0
 
-    .line 331
     :cond_2
     const/4 v5, 0x0
 
@@ -1396,18 +1252,15 @@
 
     move-result-object v1
 
-    .line 332
     .local v1, "plain_apdu":[B
     if-nez v1, :cond_3
 
-    .line 333
     const-string v5, "UCM.SCP.TADriver"
 
     const-string v6, "Failed to decode APDU"
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 334
     const/16 v5, 0x12d
 
     const/16 v6, 0xb
@@ -1418,17 +1271,14 @@
 
     goto/16 :goto_0
 
-    .line 337
     :cond_3
     const/4 v5, 0x0
 
     aget-byte v4, v1, v5
 
-    .line 338
     .restart local v4    # "tzRet":I
     if-eqz v4, :cond_4
 
-    .line 339
     const-string v5, "UCM.SCP.TADriver"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1455,7 +1305,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
     const/16 v5, 0x12d
 
     invoke-direct {p0, v5, v4}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getErrMsg(II)Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
@@ -1464,7 +1313,6 @@
 
     goto/16 :goto_0
 
-    .line 343
     :cond_4
     new-instance v5, Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
 
@@ -1490,7 +1338,6 @@
 
     goto/16 :goto_0
 
-    .line 350
     .end local v1    # "plain_apdu":[B
     .end local v3    # "sw":S
     .end local v4    # "tzRet":I
@@ -1499,7 +1346,6 @@
 
     move-result-object v2
 
-    .line 352
     .local v2, "resp":[B
     if-eqz v2, :cond_5
 
@@ -1507,7 +1353,6 @@
 
     if-gtz v5, :cond_6
 
-    .line 353
     :cond_5
     const-string v5, "UCM.SCP.TADriver"
 
@@ -1515,7 +1360,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     const/4 v5, 0x1
 
     const/16 v6, 0xb
@@ -1526,17 +1370,14 @@
 
     goto/16 :goto_0
 
-    .line 358
     :cond_6
     const/4 v5, 0x0
 
     aget-byte v4, v2, v5
 
-    .line 359
     .restart local v4    # "tzRet":I
     packed-switch v4, :pswitch_data_1
 
-    .line 371
     const-string v5, "UCM.SCP.TADriver"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1559,7 +1400,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 372
     const/4 v5, 0x1
 
     invoke-direct {p0, v5, v4}, Lcom/samsung/ucm/ucmservice/scp/TADriver;->getErrMsg(II)Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
@@ -1568,7 +1408,6 @@
 
     goto/16 :goto_0
 
-    .line 361
     :pswitch_3
     new-instance v5, Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
 
@@ -1588,7 +1427,6 @@
 
     goto/16 :goto_0
 
-    .line 367
     :pswitch_4
     new-instance v5, Lcom/sec/enterprise/knox/ucm/core/ApduMessage;
 
@@ -1614,7 +1452,6 @@
 
     goto/16 :goto_0
 
-    .line 299
     nop
 
     :pswitch_data_0
@@ -1624,7 +1461,6 @@
         :pswitch_2
     .end packed-switch
 
-    .line 359
     :pswitch_data_1
     .packed-switch 0x5
         :pswitch_4

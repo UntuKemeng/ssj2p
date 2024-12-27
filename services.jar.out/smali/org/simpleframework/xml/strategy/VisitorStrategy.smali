@@ -18,14 +18,12 @@
     .param p1, "visitor"    # Lorg/simpleframework/xml/strategy/Visitor;
 
     .prologue
-    .line 68
     new-instance v0, Lorg/simpleframework/xml/strategy/TreeStrategy;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/strategy/TreeStrategy;-><init>()V
 
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/strategy/VisitorStrategy;-><init>(Lorg/simpleframework/xml/strategy/Visitor;Lorg/simpleframework/xml/strategy/Strategy;)V
 
-    .line 69
     return-void
 .end method
 
@@ -35,16 +33,12 @@
     .param p2, "strategy"    # Lorg/simpleframework/xml/strategy/Strategy;
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     iput-object p2, p0, Lorg/simpleframework/xml/strategy/VisitorStrategy;->strategy:Lorg/simpleframework/xml/strategy/Strategy;
 
-    .line 81
     iput-object p1, p0, Lorg/simpleframework/xml/strategy/VisitorStrategy;->visitor:Lorg/simpleframework/xml/strategy/Visitor;
 
-    .line 82
     return-void
 .end method
 
@@ -75,18 +69,15 @@
     .end annotation
 
     .prologue
-    .line 98
     .local p2, "node":Lorg/simpleframework/xml/stream/NodeMap;, "Lorg/simpleframework/xml/stream/NodeMap<Lorg/simpleframework/xml/stream/InputNode;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/strategy/VisitorStrategy;->visitor:Lorg/simpleframework/xml/strategy/Visitor;
 
     if-eqz v0, :cond_0
 
-    .line 99
     iget-object v0, p0, Lorg/simpleframework/xml/strategy/VisitorStrategy;->visitor:Lorg/simpleframework/xml/strategy/Visitor;
 
     invoke-interface {v0, p1, p2}, Lorg/simpleframework/xml/strategy/Visitor;->read(Lorg/simpleframework/xml/strategy/Type;Lorg/simpleframework/xml/stream/NodeMap;)V
 
-    .line 101
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/strategy/VisitorStrategy;->strategy:Lorg/simpleframework/xml/strategy/Strategy;
 
@@ -123,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 118
     .local p3, "node":Lorg/simpleframework/xml/stream/NodeMap;, "Lorg/simpleframework/xml/stream/NodeMap<Lorg/simpleframework/xml/stream/OutputNode;>;"
     iget-object v1, p0, Lorg/simpleframework/xml/strategy/VisitorStrategy;->strategy:Lorg/simpleframework/xml/strategy/Strategy;
 
@@ -131,18 +121,15 @@
 
     move-result v0
 
-    .line 120
     .local v0, "result":Z
     iget-object v1, p0, Lorg/simpleframework/xml/strategy/VisitorStrategy;->visitor:Lorg/simpleframework/xml/strategy/Visitor;
 
     if-eqz v1, :cond_0
 
-    .line 121
     iget-object v1, p0, Lorg/simpleframework/xml/strategy/VisitorStrategy;->visitor:Lorg/simpleframework/xml/strategy/Visitor;
 
     invoke-interface {v1, p1, p3}, Lorg/simpleframework/xml/strategy/Visitor;->write(Lorg/simpleframework/xml/strategy/Type;Lorg/simpleframework/xml/stream/NodeMap;)V
 
-    .line 123
     :cond_0
     return v0
 .end method

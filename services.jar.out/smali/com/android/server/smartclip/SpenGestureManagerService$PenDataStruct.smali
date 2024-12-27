@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 1145
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p1, "x0"    # Lcom/android/server/smartclip/SpenGestureManagerService$1;
 
     .prologue
-    .line 1145
     invoke-direct {p0}, Lcom/android/server/smartclip/SpenGestureManagerService$PenDataStruct;-><init>()V
 
     return-void

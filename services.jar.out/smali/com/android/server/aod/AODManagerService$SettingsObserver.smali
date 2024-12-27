@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 277
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
-    .line 278
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 279
     return-void
 .end method
 
@@ -44,7 +41,6 @@
 
     const/4 v2, -0x1
 
-    .line 283
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # getter for: Lcom/android/server/aod/AODManagerService;->mContext:Landroid/content/Context;
@@ -56,7 +52,6 @@
 
     move-result-object v0
 
-    .line 286
     .local v0, "resolver":Landroid/content/ContentResolver;
     const-string v1, "aod_mode"
 
@@ -66,7 +61,6 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 287
     const-string v1, "aod_night_mode"
 
     invoke-static {v1}, Landroid/provider/Settings$System;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -75,12 +69,10 @@
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 290
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/aod/AODManagerService;->updateSettings()V
 
-    .line 291
     return-void
 .end method
 
@@ -89,11 +81,9 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 295
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$SettingsObserver;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/aod/AODManagerService;->updateSettings()V
 
-    .line 296
     return-void
 .end method

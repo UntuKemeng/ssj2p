@@ -31,7 +31,6 @@
     .param p9, "x7"    # Landroid/net/NetworkMisc;
 
     .prologue
-    .line 553
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$3;->this$0:Lcom/android/server/connectivity/Vpn;
 
     move-object v0, p0
@@ -63,6 +62,5 @@
     .locals 0
 
     .prologue
-    .line 557
     return-void
 .end method

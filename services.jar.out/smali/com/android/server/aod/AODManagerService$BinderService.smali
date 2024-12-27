@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 474
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-direct {p0}, Lcom/samsung/android/aod/IAODManager$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/aod/AODManagerService$1;
 
     .prologue
-    .line 474
     invoke-direct {p0, p1}, Lcom/android/server/aod/AODManagerService$BinderService;-><init>(Lcom/android/server/aod/AODManagerService;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 532
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # getter for: Lcom/android/server/aod/AODManagerService;->mContext:Landroid/content/Context;
@@ -68,7 +65,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 534
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -119,17 +115,14 @@
 
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 545
     :goto_0
     return-void
 
-    .line 539
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 541
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
@@ -139,7 +132,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 543
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -161,12 +153,10 @@
     .end annotation
 
     .prologue
-    .line 478
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 480
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
@@ -177,7 +167,6 @@
 
     move-result v2
 
-    .line 482
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -199,18 +188,15 @@
     .end annotation
 
     .prologue
-    .line 510
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # invokes: Lcom/android/server/aod/AODManagerService;->checkCallerIsSystemOrSystemUI()V
     invoke-static {v2}, Lcom/android/server/aod/AODManagerService;->access$900(Lcom/android/server/aod/AODManagerService;)V
 
-    .line 511
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 513
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
@@ -220,13 +206,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 515
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 517
     return-void
 
-    .line 515
     :catchall_0
     move-exception v2
 
@@ -248,18 +231,15 @@
     .end annotation
 
     .prologue
-    .line 499
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # invokes: Lcom/android/server/aod/AODManagerService;->checkCallerIsSystemOrSystemUI()V
     invoke-static {v2}, Lcom/android/server/aod/AODManagerService;->access$900(Lcom/android/server/aod/AODManagerService;)V
 
-    .line 500
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 502
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
@@ -269,13 +249,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 504
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 506
     return-void
 
-    .line 504
     :catchall_0
     move-exception v2
 
@@ -304,19 +281,16 @@
     .end annotation
 
     .prologue
-    .line 521
     .local p2, "keys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # invokes: Lcom/android/server/aod/AODManagerService;->checkCallerIsSystemOrSystemUI()V
     invoke-static {v2}, Lcom/android/server/aod/AODManagerService;->access$900(Lcom/android/server/aod/AODManagerService;)V
 
-    .line 522
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 524
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
@@ -326,13 +300,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 526
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 528
     return-void
 
-    .line 526
     :catchall_0
     move-exception v2
 
@@ -355,18 +326,15 @@
     .end annotation
 
     .prologue
-    .line 488
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # invokes: Lcom/android/server/aod/AODManagerService;->checkCallerIsSystemOrSystemUI()V
     invoke-static {v0}, Lcom/android/server/aod/AODManagerService;->access$900(Lcom/android/server/aod/AODManagerService;)V
 
-    .line 489
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 491
     .local v6, "ident":J
     :try_start_0
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$BinderService;->this$0:Lcom/android/server/aod/AODManagerService;
@@ -386,13 +354,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 493
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 495
     return-void
 
-    .line 493
     :catchall_0
     move-exception v0
 

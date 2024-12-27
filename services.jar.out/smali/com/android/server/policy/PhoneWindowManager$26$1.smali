@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 10342
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$26$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$26;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 10345
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$26$1;->this$1:Lcom/android/server/policy/PhoneWindowManager$26;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager$26;->this$0:Lcom/android/server/policy/PhoneWindowManager;
@@ -55,6 +53,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/android/server/power/ShutdownThread;->reboot(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 10346
     return-void
 .end method

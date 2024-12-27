@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 477
     iput-object p1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$3;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 480
     # getter for: Lcom/android/server/AlarmManagerServiceExt;->APP_SYNC_LOG:Z
     invoke-static {}, Lcom/android/server/AlarmManagerServiceExt;->access$100()Z
 
@@ -53,7 +51,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
     :cond_0
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$3;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
@@ -64,7 +61,6 @@
 
     monitor-enter v5
 
-    .line 485
     :try_start_0
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$3;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
@@ -84,14 +80,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 486
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$3;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     iget-object v4, v4, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;->pm:Landroid/content/pm/PackageManager;
 
     if-eqz v4, :cond_4
 
-    .line 487
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$3;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     # getter for: Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;->mLockUserApps:Ljava/lang/Object;
@@ -103,7 +97,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 489
     :try_start_1
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$3;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
@@ -115,7 +108,6 @@
 
     move-result-object v3
 
-    .line 490
     .local v3, "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     const/4 v1, 0x0
 
@@ -127,14 +119,12 @@
 
     if-ge v1, v4, :cond_3
 
-    .line 491
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/content/pm/PackageInfo;
 
-    .line 492
     .local v2, "packageInfo":Landroid/content/pm/PackageInfo;
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -146,14 +136,12 @@
 
     if-nez v4, :cond_2
 
-    .line 490
     :cond_1
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 493
     :cond_2
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -163,7 +151,6 @@
 
     if-nez v4, :cond_1
 
-    .line 494
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$3;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     # getter for: Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;->mBlacklistPackages:Lcom/android/server/AlarmManagerServiceExt$PackageList;
@@ -202,7 +189,6 @@
 
     if-nez v4, :cond_1
 
-    .line 496
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$3;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     iget-object v4, v4, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;->mUserAppList:Ljava/util/Set;
@@ -219,7 +205,6 @@
 
     goto :goto_1
 
-    .line 500
     .end local v1    # "i":I
     .end local v2    # "packageInfo":Landroid/content/pm/PackageInfo;
     .end local v3    # "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
@@ -233,7 +218,6 @@
     :try_start_2
     throw v4
 
-    .line 503
     :catchall_1
     move-exception v4
 
@@ -243,7 +227,6 @@
 
     throw v4
 
-    .line 500
     .restart local v1    # "i":I
     .restart local v3    # "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     :cond_3
@@ -252,7 +235,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 503
     .end local v1    # "i":I
     .end local v3    # "packages":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PackageInfo;>;"
     :cond_4
@@ -261,7 +243,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 508
     const-string v4, "account"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -270,7 +251,6 @@
 
     check-cast v0, Landroid/accounts/AccountManager;
 
-    .line 509
     .local v0, "am":Landroid/accounts/AccountManager;
     if-eqz v0, :cond_5
 
@@ -286,7 +266,6 @@
 
     invoke-virtual {v0, v4, v5, v6}, Landroid/accounts/AccountManager;->addOnAccountsUpdatedListener(Landroid/accounts/OnAccountsUpdateListener;Landroid/os/Handler;Z)V
 
-    .line 510
     :cond_5
     return-void
 .end method

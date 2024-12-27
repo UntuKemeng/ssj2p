@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 102
     iput-object p1, p0, Lcom/android/internal/policy/PhoneFallbackEventHandler$1;->this$0:Lcom/android/internal/policy/PhoneFallbackEventHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/android/internal/policy/PhoneFallbackEventHandler$1;->this$0:Lcom/android/internal/policy/PhoneFallbackEventHandler;
 
     # getter for: Lcom/android/internal/policy/PhoneFallbackEventHandler;->mUserDoubleTapPending:Z
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 106
     iget-object v0, p0, Lcom/android/internal/policy/PhoneFallbackEventHandler$1;->this$0:Lcom/android/internal/policy/PhoneFallbackEventHandler;
 
     const/4 v1, 0x0
@@ -58,13 +55,11 @@
     # setter for: Lcom/android/internal/policy/PhoneFallbackEventHandler;->mUserDoubleTapPending:Z
     invoke-static {v0, v1}, Lcom/android/internal/policy/PhoneFallbackEventHandler;->access$002(Lcom/android/internal/policy/PhoneFallbackEventHandler;Z)Z
 
-    .line 107
     iget-object v0, p0, Lcom/android/internal/policy/PhoneFallbackEventHandler$1;->this$0:Lcom/android/internal/policy/PhoneFallbackEventHandler;
 
     # invokes: Lcom/android/internal/policy/PhoneFallbackEventHandler;->handleDoubleTapUserKey()V
     invoke-static {v0}, Lcom/android/internal/policy/PhoneFallbackEventHandler;->access$100(Lcom/android/internal/policy/PhoneFallbackEventHandler;)V
 
-    .line 109
     :cond_0
     return-void
 .end method

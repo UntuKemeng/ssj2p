@@ -34,36 +34,28 @@
     .param p2, "validationParameters"    # Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     const-string v0, "OSU"
 
     iput-object v0, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->OSU_SERVER:Ljava/lang/String;
 
-    .line 58
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->OTHER_NAME_TAG:I
 
-    .line 60
     const-string v0, "1.3.6.1.4.1.40808.1.1.1"
 
     iput-object v0, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->HOTSPOT_2_0_FREINDLY_NAME_OID:Ljava/lang/String;
 
-    .line 66
     iput-object p1, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->mServerCertificate:[Ljava/security/cert/X509Certificate;
 
-    .line 67
     iget-object v0, p2, Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;->serverUri:Ljava/lang/String;
 
     iput-object v0, p2, Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;->fqdnName:Ljava/lang/String;
 
-    .line 68
     iput-object p2, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->mvalidationParameters:Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;
 
-    .line 69
     return-void
 .end method
 
@@ -72,7 +64,6 @@
     .param p1, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 501
     const-string v0, "/"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->lastIndexOf(Ljava/lang/String;)I
@@ -93,7 +84,6 @@
     .param p1, "enu"    # Ljava/util/Enumeration;
 
     .prologue
-    .line 421
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v4
@@ -106,7 +96,6 @@
 
     check-cast v1, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
-    .line 423
     .local v1, "HashAlgAndValue":Lcom/android/org/bouncycastle/asn1/DERSequence;
     const-string v4, "HotspotDMCertificateValidation"
 
@@ -134,12 +123,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
     invoke-virtual {v1}, Lcom/android/org/bouncycastle/asn1/DERSequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object p1
 
-    .line 425
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v4
@@ -152,7 +139,6 @@
 
     check-cast v2, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
-    .line 427
     .local v2, "hashAlg":Lcom/android/org/bouncycastle/asn1/DERSequence;
     const-string v4, "HotspotDMCertificateValidation"
 
@@ -180,7 +166,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v4
@@ -193,7 +178,6 @@
 
     check-cast v3, Lcom/android/org/bouncycastle/asn1/DEROctetString;
 
-    .line 430
     .local v3, "hashValue":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     const-string v4, "HotspotDMCertificateValidation"
 
@@ -221,12 +205,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 431
     invoke-virtual {v2}, Lcom/android/org/bouncycastle/asn1/DERSequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object p1
 
-    .line 432
     invoke-interface {p1}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v4
@@ -239,7 +221,6 @@
 
     check-cast v0, Lcom/android/org/bouncycastle/asn1/DERObjectIdentifier;
 
-    .line 434
     .local v0, "AlgorithmIdentifier":Lcom/android/org/bouncycastle/asn1/DERObjectIdentifier;
     const-string v4, "HotspotDMCertificateValidation"
 
@@ -267,7 +248,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 437
     return-object v3
 .end method
 
@@ -276,7 +256,6 @@
     .param p1, "imageDetails"    # Lcom/android/org/bouncycastle/asn1/DERSequence;
 
     .prologue
-    .line 447
     const-string v5, "HotspotDMCertificateValidation"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -303,12 +282,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 448
     invoke-virtual {p1}, Lcom/android/org/bouncycastle/asn1/DERSequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object v0
 
-    .line 450
     .local v0, "enu":Ljava/util/Enumeration;
     invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -322,7 +299,6 @@
 
     check-cast v4, Lcom/android/org/bouncycastle/asn1/DERIA5String;
 
-    .line 451
     .local v4, "mediaType":Lcom/android/org/bouncycastle/asn1/DERIA5String;
     const-string v5, "HotspotDMCertificateValidation"
 
@@ -350,7 +326,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 452
     invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v5
@@ -363,7 +338,6 @@
 
     check-cast v1, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
-    .line 454
     .local v1, "logotypeHash":Lcom/android/org/bouncycastle/asn1/DERSequence;
     const-string v5, "HotspotDMCertificateValidation"
 
@@ -391,7 +365,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 455
     invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v5
@@ -404,7 +377,6 @@
 
     check-cast v2, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
-    .line 456
     .local v2, "logotypeURI":Lcom/android/org/bouncycastle/asn1/DERSequence;
     const-string v5, "HotspotDMCertificateValidation"
 
@@ -432,12 +404,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 458
     invoke-virtual {v2}, Lcom/android/org/bouncycastle/asn1/DERSequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object v0
 
-    .line 459
     invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v5
@@ -450,7 +420,6 @@
 
     check-cast v3, Lcom/android/org/bouncycastle/asn1/DERIA5String;
 
-    .line 461
     .local v3, "logotypeURIStr":Lcom/android/org/bouncycastle/asn1/DERIA5String;
     const-string v5, "HotspotDMCertificateValidation"
 
@@ -478,7 +447,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
     const-string v5, "HotspotDMCertificateValidation"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -515,7 +483,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 463
     return-object v1
 .end method
 
@@ -524,14 +491,12 @@
     .param p0, "bytes"    # [B
 
     .prologue
-    .line 301
     const/16 v3, 0x10
 
     new-array v1, v3, [C
 
     fill-array-data v1, :array_0
 
-    .line 304
     .local v1, "hexDigits":[C
     new-instance v0, Ljava/lang/StringBuffer;
 
@@ -541,7 +506,6 @@
 
     invoke-direct {v0, v3}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    .line 305
     .local v0, "buf":Ljava/lang/StringBuffer;
     const/4 v2, 0x0
 
@@ -551,7 +515,6 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 306
     aget-byte v3, p0, v2
 
     and-int/lit16 v3, v3, 0xf0
@@ -562,7 +525,6 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 307
     aget-byte v3, p0, v2
 
     and-int/lit8 v3, v3, 0xf
@@ -571,12 +533,10 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 305
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 309
     :cond_0
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -584,7 +544,6 @@
 
     return-object v3
 
-    .line 301
     nop
 
     :array_0
@@ -613,10 +572,8 @@
     .param p1, "x509Cert"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 505
     const/16 v18, 0x0
 
-    .line 506
     .local v18, "result":Z
     move-object/from16 v0, p0
 
@@ -632,66 +589,51 @@
 
     if-nez v22, :cond_0
 
-    .line 507
     const/16 v22, 0x0
 
-    .line 583
     :goto_0
     return v22
 
-    .line 510
     :cond_0
     :try_start_0
     invoke-virtual/range {p1 .. p1}, Ljava/security/cert/X509Certificate;->getSubjectAlternativeNames()Ljava/util/Collection;
 
     move-result-object v6
 
-    .line 511
     .local v6, "c":Ljava/util/Collection;
     if-eqz v6, :cond_4
 
-    .line 512
     invoke-interface {v6}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v15
 
-    .line 513
     .local v15, "it":Ljava/util/Iterator;
     const/4 v4, 0x0
 
-    .line 514
     .local v4, "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     const/4 v3, 0x0
 
-    .line 515
     .local v3, "asn1Obj":Ljava/lang/Object;
     const/4 v9, 0x0
 
-    .line 516
     .local v9, "derTagObj":Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
     const/4 v8, 0x0
 
-    .line 517
     .local v8, "derSeq":Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
     const/4 v12, 0x0
 
-    .line 518
     .local v12, "enu":Ljava/util/Enumeration;
     const/16 v16, 0x0
 
-    .line 519
     .local v16, "oid":Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
     const/4 v5, 0x0
 
-    .line 520
     .local v5, "bais":Ljava/io/ByteArrayInputStream;
     const/4 v10, 0x0
 
-    .line 521
     .local v10, "dertagObj":Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
     const/4 v7, 0x0
 
-    .line 522
     .end local v3    # "asn1Obj":Ljava/lang/Object;
     .local v7, "derObj":Lcom/android/org/bouncycastle/asn1/ASN1Object;
     :cond_1
@@ -702,14 +644,12 @@
 
     if-eqz v22, :cond_6
 
-    .line 523
     invoke-interface {v15}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Ljava/util/List;
 
-    .line 524
     .local v14, "gn":Ljava/util/List;
     move-object/from16 v0, p0
 
@@ -725,7 +665,6 @@
 
     check-cast v21, Ljava/lang/Integer;
 
-    .line 525
     .local v21, "tag":Ljava/lang/Integer;
     invoke-virtual/range {v21 .. v21}, Ljava/lang/Integer;->intValue()I
 
@@ -733,7 +672,6 @@
 
     if-nez v22, :cond_1
 
-    .line 526
     const-string v22, "HotspotDMCertificateValidation"
 
     new-instance v23, Ljava/lang/StringBuilder;
@@ -768,7 +706,6 @@
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 527
     new-instance v5, Ljava/io/ByteArrayInputStream;
 
     .end local v5    # "bais":Ljava/io/ByteArrayInputStream;
@@ -788,20 +725,17 @@
 
     invoke-direct {v5, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 528
     .restart local v5    # "bais":Ljava/io/ByteArrayInputStream;
     new-instance v4, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
 
     .end local v4    # "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     invoke-direct {v4, v5}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 529
     .restart local v4    # "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     invoke-virtual {v4}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
     move-result-object v3
 
-    .line 530
     .local v3, "asn1Obj":Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
     const-string v22, "HotspotDMCertificateValidation"
 
@@ -815,14 +749,12 @@
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 531
     move-object v0, v3
 
     check-cast v0, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
 
     move-object v9, v0
 
-    .line 532
     invoke-virtual {v9}, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;->getObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
     move-result-object v8
@@ -830,13 +762,11 @@
     .end local v8    # "derSeq":Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
     check-cast v8, Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
 
-    .line 533
     .restart local v8    # "derSeq":Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
     invoke-virtual {v8}, Lcom/android/org/bouncycastle/asn1/ASN1Sequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object v12
 
-    .line 534
     invoke-interface {v12}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v22
@@ -850,7 +780,6 @@
     .end local v16    # "oid":Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
     check-cast v16, Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
 
-    .line 536
     .restart local v16    # "oid":Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
     const-string v22, "HotspotDMCertificateValidation"
 
@@ -878,7 +807,6 @@
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 537
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->HOTSPOT_2_0_FREINDLY_NAME_OID:Ljava/lang/String;
@@ -895,7 +823,6 @@
 
     if-eqz v22, :cond_1
 
-    .line 538
     invoke-interface {v12}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v22
@@ -909,20 +836,17 @@
     .end local v10    # "dertagObj":Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
     check-cast v10, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
 
-    .line 540
     .restart local v10    # "dertagObj":Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
     invoke-virtual {v10}, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;->getObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
     move-result-object v7
 
-    .line 542
     instance-of v0, v7, Lcom/android/org/bouncycastle/asn1/DERUTF8String;
 
     move/from16 v22, v0
 
     if-eqz v22, :cond_2
 
-    .line 543
     invoke-virtual {v10}, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;->getObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
     move-result-object v22
@@ -935,13 +859,11 @@
 
     move-object/from16 v20, v0
 
-    .line 545
     .local v20, "spLangFriendlyNameDERString":Lcom/android/org/bouncycastle/asn1/DERUTF8String;
     invoke-virtual/range {v20 .. v20}, Lcom/android/org/bouncycastle/asn1/DERUTF8String;->toString()Ljava/lang/String;
 
     move-result-object v19
 
-    .line 551
     .end local v20    # "spLangFriendlyNameDERString":Lcom/android/org/bouncycastle/asn1/DERUTF8String;
     .local v19, "spLangFriendlyName":Ljava/lang/String;
     :goto_2
@@ -971,7 +893,6 @@
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 555
     const/16 v22, 0x0
 
     const/16 v23, 0x3
@@ -986,7 +907,6 @@
 
     move-result-object v17
 
-    .line 556
     .local v17, "osuLanguage":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1010,18 +930,15 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 558
     .local v13, "friendlyName":Ljava/lang/String;
     if-eqz v13, :cond_5
 
-    .line 559
     const-string v22, "HotspotDMCertificateValidation"
 
     const-string v23, "Language code match"
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 561
     const-string v22, "HotspotDMCertificateValidation"
 
     new-instance v23, Ljava/lang/StringBuilder;
@@ -1046,7 +963,6 @@
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 562
     const/16 v22, 0x3
 
     move-object/from16 v0, v19
@@ -1065,25 +981,20 @@
 
     if-eqz v22, :cond_3
 
-    .line 563
     const-string v22, "HotspotDMCertificateValidation"
 
     const-string v23, "OSU friendly name match"
 
     invoke-static/range {v22 .. v23}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 564
     const/16 v18, 0x1
 
-    .line 565
     invoke-virtual {v4}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->close()V
 
     move/from16 v22, v18
 
-    .line 566
     goto/16 :goto_0
 
-    .line 547
     .end local v13    # "friendlyName":Ljava/lang/String;
     .end local v17    # "osuLanguage":Ljava/lang/String;
     .end local v19    # "spLangFriendlyName":Ljava/lang/String;
@@ -1100,7 +1011,6 @@
 
     move-object/from16 v20, v0
 
-    .line 549
     .local v20, "spLangFriendlyNameDERString":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     invoke-virtual/range {v20 .. v20}, Lcom/android/org/bouncycastle/asn1/DEROctetString;->toString()Ljava/lang/String;
 
@@ -1109,7 +1019,6 @@
     .restart local v19    # "spLangFriendlyName":Ljava/lang/String;
     goto/16 :goto_2
 
-    .line 568
     .end local v20    # "spLangFriendlyNameDERString":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     .restart local v13    # "friendlyName":Ljava/lang/String;
     .restart local v17    # "osuLanguage":Ljava/lang/String;
@@ -1125,7 +1034,6 @@
 
     goto/16 :goto_1
 
-    .line 578
     .end local v3    # "asn1Obj":Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
     .end local v4    # "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     .end local v5    # "bais":Ljava/io/ByteArrayInputStream;
@@ -1145,7 +1053,6 @@
     :catch_0
     move-exception v11
 
-    .line 579
     .local v11, "e":Ljava/security/cert/CertificateParsingException;
     invoke-virtual {v11}, Ljava/security/cert/CertificateParsingException;->printStackTrace()V
 
@@ -1154,10 +1061,8 @@
     :goto_3
     move/from16 v22, v18
 
-    .line 583
     goto/16 :goto_0
 
-    .line 571
     .restart local v3    # "asn1Obj":Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
     .restart local v4    # "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     .restart local v5    # "bais":Ljava/io/ByteArrayInputStream;
@@ -1187,7 +1092,6 @@
 
     goto/16 :goto_1
 
-    .line 580
     .end local v3    # "asn1Obj":Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
     .end local v4    # "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     .end local v5    # "bais":Ljava/io/ByteArrayInputStream;
@@ -1207,13 +1111,11 @@
     :catch_1
     move-exception v11
 
-    .line 581
     .local v11, "e":Ljava/lang/Exception;
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
 
-    .line 576
     .end local v11    # "e":Ljava/lang/Exception;
     .restart local v4    # "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     .restart local v5    # "bais":Ljava/io/ByteArrayInputStream;
@@ -1269,7 +1171,6 @@
     .end annotation
 
     .prologue
-    .line 313
     const-string v25, "SHA256"
 
     move-object/from16 v0, p0
@@ -1286,7 +1187,6 @@
 
     iput-object v0, v1, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->iconHash:Ljava/lang/String;
 
-    .line 314
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->iconHash:Ljava/lang/String;
@@ -1295,18 +1195,14 @@
 
     if-nez v25, :cond_0
 
-    .line 316
     const/16 v24, 0x1
 
-    .line 417
     :goto_0
     return v24
 
-    .line 318
     :cond_0
     const/16 v24, 0x1
 
-    .line 321
     .local v24, "result":Z
     :try_start_0
     const-string v25, "1.3.6.1.5.5.7.1.12"
@@ -1319,24 +1215,20 @@
 
     move-result-object v21
 
-    .line 322
     .local v21, "logoType":[B
     if-eqz v21, :cond_6
 
-    .line 323
     new-instance v12, Ljava/io/ByteArrayInputStream;
 
     move-object/from16 v0, v21
 
     invoke-direct {v12, v0}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 324
     .local v12, "bais":Ljava/io/ByteArrayInputStream;
     new-instance v11, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
 
     invoke-direct {v11, v12}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 325
     .local v11, "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     invoke-virtual {v11}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -1344,7 +1236,6 @@
 
     check-cast v14, Lcom/android/org/bouncycastle/asn1/DEROctetString;
 
-    .line 326
     .local v14, "derObj":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     invoke-virtual {v14}, Lcom/android/org/bouncycastle/asn1/DEROctetString;->getOctetStream()Ljava/io/InputStream;
 
@@ -1353,14 +1244,12 @@
     .end local v12    # "bais":Ljava/io/ByteArrayInputStream;
     check-cast v12, Ljava/io/ByteArrayInputStream;
 
-    .line 327
     .restart local v12    # "bais":Ljava/io/ByteArrayInputStream;
     new-instance v11, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
 
     .end local v11    # "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     invoke-direct {v11, v12}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 328
     .restart local v11    # "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     invoke-virtual {v11}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->readObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
@@ -1368,11 +1257,9 @@
 
     check-cast v22, Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
 
-    .line 329
     .local v22, "logoTypeExt":Lcom/android/org/bouncycastle/asn1/ASN1Sequence;
     invoke-virtual {v11}, Lcom/android/org/bouncycastle/asn1/ASN1InputStream;->close()V
 
-    .line 330
     const-string v25, "HotspotDMCertificateValidation"
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -1399,12 +1286,10 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     invoke-virtual/range {v22 .. v22}, Lcom/android/org/bouncycastle/asn1/ASN1Sequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object v7
 
-    .line 332
     .local v7, "LogotypeExtnSequence":Ljava/util/Enumeration;
     :cond_1
     invoke-interface {v7}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -1413,7 +1298,6 @@
 
     if-eqz v25, :cond_5
 
-    .line 333
     invoke-interface {v7}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v25
@@ -1426,7 +1310,6 @@
 
     check-cast v8, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
 
-    .line 335
     .local v8, "LogotypeExtnTaggedObj":Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
     const-string v25, "HotspotDMCertificateValidation"
 
@@ -1454,7 +1337,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 336
     const-string v25, "HotspotDMCertificateValidation"
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -1481,28 +1363,24 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     invoke-virtual {v8}, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;->getTagNo()I
 
     move-result v25
 
     if-nez v25, :cond_1
 
-    .line 345
     const-string v25, "HotspotDMCertificateValidation"
 
     const-string v26, ""
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 346
     invoke-virtual {v8}, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;->getObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
-    .line 347
     .local v2, "CommunityLogos":Lcom/android/org/bouncycastle/asn1/DERSequence;
     const-string v25, "HotspotDMCertificateValidation"
 
@@ -1530,12 +1408,10 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 349
     invoke-virtual {v2}, Lcom/android/org/bouncycastle/asn1/DERSequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object v3
 
-    .line 350
     .local v3, "CommunityLogosEnu":Ljava/util/Enumeration;
     :cond_2
     invoke-interface {v3}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -1544,10 +1420,8 @@
 
     if-eqz v25, :cond_1
 
-    .line 351
     const/16 v24, 0x1
 
-    .line 352
     invoke-interface {v3}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v25
@@ -1560,7 +1434,6 @@
 
     check-cast v4, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
 
-    .line 354
     .local v4, "CommunityLogosTaggedObj":Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
     const-string v25, "HotspotDMCertificateValidation"
 
@@ -1588,21 +1461,18 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 360
     invoke-virtual {v4}, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;->getTagNo()I
 
     move-result v25
 
     if-nez v25, :cond_2
 
-    .line 366
     invoke-virtual {v4}, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;->getObject()Lcom/android/org/bouncycastle/asn1/ASN1Primitive;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
-    .line 369
     .local v5, "LogotypeData":Lcom/android/org/bouncycastle/asn1/DERSequence;
     const-string v25, "HotspotDMCertificateValidation"
 
@@ -1630,12 +1500,10 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     invoke-virtual {v5}, Lcom/android/org/bouncycastle/asn1/DERSequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object v6
 
-    .line 371
     .local v6, "LogotypeDataEnu":Ljava/util/Enumeration;
     :cond_3
     invoke-interface {v6}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -1644,7 +1512,6 @@
 
     if-eqz v25, :cond_2
 
-    .line 377
     invoke-interface {v6}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v25
@@ -1657,7 +1524,6 @@
 
     check-cast v9, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
-    .line 379
     .local v9, "LogotypeImage":Lcom/android/org/bouncycastle/asn1/DERSequence;
     const-string v25, "HotspotDMCertificateValidation"
 
@@ -1685,12 +1551,10 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 380
     invoke-virtual {v9}, Lcom/android/org/bouncycastle/asn1/DERSequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object v10
 
-    .line 381
     .local v10, "LogotypeImageEnu":Ljava/util/Enumeration;
     :goto_1
     invoke-interface {v10}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -1699,7 +1563,6 @@
 
     if-eqz v25, :cond_3
 
-    .line 382
     invoke-interface {v10}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v25
@@ -1712,7 +1575,6 @@
 
     check-cast v19, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
-    .line 384
     .local v19, "imageDetails":Lcom/android/org/bouncycastle/asn1/DERSequence;
     invoke-interface {v10}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
@@ -1726,7 +1588,6 @@
 
     check-cast v20, Lcom/android/org/bouncycastle/asn1/DERSequence;
 
-    .line 386
     .local v20, "imageInfo":Lcom/android/org/bouncycastle/asn1/DERSequence;
     move-object/from16 v0, p0
 
@@ -1734,7 +1595,6 @@
 
     invoke-direct {v0, v1}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->printImageInfo(Lcom/android/org/bouncycastle/asn1/DERSequence;)V
 
-    .line 387
     move-object/from16 v0, p0
 
     move-object/from16 v1, v19
@@ -1743,13 +1603,11 @@
 
     move-result-object v23
 
-    .line 389
     .local v23, "logotypeHash":Lcom/android/org/bouncycastle/asn1/DERSequence;
     invoke-virtual/range {v23 .. v23}, Lcom/android/org/bouncycastle/asn1/DERSequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object v16
 
-    .line 390
     .local v16, "enu":Ljava/util/Enumeration;
     move-object/from16 v0, p0
 
@@ -1759,13 +1617,11 @@
 
     move-result-object v17
 
-    .line 392
     .local v17, "hashValue":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     invoke-virtual/range {v17 .. v17}, Lcom/android/org/bouncycastle/asn1/DEROctetString;->getOctets()[B
 
     move-result-object v18
 
-    .line 393
     .local v18, "hashValueOctetString":[B
     invoke-virtual/range {v17 .. v17}, Lcom/android/org/bouncycastle/asn1/DEROctetString;->toString()Ljava/lang/String;
 
@@ -1777,7 +1633,6 @@
 
     move-result-object v13
 
-    .line 394
     .local v13, "certIconHash":Ljava/lang/String;
     const-string v25, "HotspotDMCertificateValidation"
 
@@ -1803,7 +1658,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 395
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->iconHash:Ljava/lang/String;
@@ -1818,19 +1672,16 @@
 
     if-eqz v25, :cond_4
 
-    .line 396
     const-string v25, "HotspotDMCertificateValidation"
 
     const-string v26, "Icon hash match"
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 397
     const/16 v24, 0x1
 
     goto/16 :goto_0
 
-    .line 399
     :cond_4
     const-string v25, "HotspotDMCertificateValidation"
 
@@ -1838,13 +1689,10 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
     const/16 v24, 0x0
 
-    .line 401
     goto/16 :goto_1
 
-    .line 409
     .end local v2    # "CommunityLogos":Lcom/android/org/bouncycastle/asn1/DERSequence;
     .end local v3    # "CommunityLogosEnu":Ljava/util/Enumeration;
     .end local v4    # "CommunityLogosTaggedObj":Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
@@ -1872,7 +1720,6 @@
 
     goto/16 :goto_0
 
-    .line 412
     .end local v7    # "LogotypeExtnSequence":Ljava/util/Enumeration;
     .end local v11    # "asn1_is":Lcom/android/org/bouncycastle/asn1/ASN1InputStream;
     .end local v12    # "bais":Ljava/io/ByteArrayInputStream;
@@ -1882,11 +1729,9 @@
     :catch_0
     move-exception v15
 
-    .line 413
     .local v15, "e":Ljava/lang/SecurityException;
     invoke-virtual {v15}, Ljava/lang/SecurityException;->printStackTrace()V
 
-    .line 417
     .end local v15    # "e":Ljava/lang/SecurityException;
     :cond_6
     :goto_2
@@ -1894,11 +1739,9 @@
 
     goto/16 :goto_0
 
-    .line 414
     :catch_1
     move-exception v15
 
-    .line 415
     .local v15, "e":Ljava/io/IOException;
     invoke-virtual {v15}, Ljava/io/IOException;->printStackTrace()V
 
@@ -1914,7 +1757,6 @@
     .end annotation
 
     .prologue
-    .line 72
     const-string v1, "HotspotDMCertificateValidation"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1941,7 +1783,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1952,7 +1793,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 74
     const-string v1, "HotspotDMCertificateValidation"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1987,12 +1827,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 77
     :cond_0
     return-void
 .end method
@@ -2002,7 +1840,6 @@
     .param p1, "imageInfo"    # Lcom/android/org/bouncycastle/asn1/DERSequence;
 
     .prologue
-    .line 475
     const-string v2, "HotspotDMCertificateValidation"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2029,12 +1866,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 476
     invoke-virtual {p1}, Lcom/android/org/bouncycastle/asn1/DERSequence;->getObjects()Ljava/util/Enumeration;
 
     move-result-object v0
 
-    .line 477
     .local v0, "enu":Ljava/util/Enumeration;
     :goto_0
     invoke-interface {v0}, Ljava/util/Enumeration;->hasMoreElements()Z
@@ -2043,7 +1878,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 478
     invoke-interface {v0}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v2
@@ -2054,7 +1888,6 @@
 
     move-result-object v1
 
-    .line 479
     .local v1, "info":Lcom/android/org/bouncycastle/asn1/ASN1Object;
     const-string v2, "HotspotDMCertificateValidation"
 
@@ -2082,12 +1915,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     invoke-direct {p0, v1}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->printLanGuageCode(Lcom/android/org/bouncycastle/asn1/ASN1Object;)V
 
     goto :goto_0
 
-    .line 482
     .end local v1    # "info":Lcom/android/org/bouncycastle/asn1/ASN1Object;
     :cond_0
     return-void
@@ -2098,14 +1929,12 @@
     .param p1, "info"    # Lcom/android/org/bouncycastle/asn1/ASN1Object;
 
     .prologue
-    .line 485
     instance-of v3, p1, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
 
     if-eqz v3, :cond_0
 
     move-object v3, p1
 
-    .line 486
     check-cast v3, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
 
     invoke-virtual {v3}, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;->getTagNo()I
@@ -2116,7 +1945,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 487
     check-cast p1, Lcom/android/org/bouncycastle/asn1/DERTaggedObject;
 
     .end local p1    # "info":Lcom/android/org/bouncycastle/asn1/ASN1Object;
@@ -2126,11 +1954,9 @@
 
     check-cast v1, Lcom/android/org/bouncycastle/asn1/DEROctetString;
 
-    .line 488
     .local v1, "language":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     const/4 v2, 0x0
 
-    .line 490
     .local v2, "languageCode":Ljava/lang/String;
     :try_start_0
     new-instance v3, Ljava/lang/String;
@@ -2149,7 +1975,6 @@
 
     move-result-object v2
 
-    .line 494
     :goto_0
     const-string v3, "HotspotDMCertificateValidation"
 
@@ -2173,19 +1998,16 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
     .end local v1    # "language":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     .end local v2    # "languageCode":Ljava/lang/String;
     :cond_0
     return-void
 
-    .line 491
     .restart local v1    # "language":Lcom/android/org/bouncycastle/asn1/DEROctetString;
     .restart local v2    # "languageCode":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 492
     .local v0, "e":Ljava/io/IOException;
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
@@ -2205,22 +2027,18 @@
     .end annotation
 
     .prologue
-    .line 167
     const/4 v3, 0x0
 
     aget-object v0, p1, v3
 
-    .line 168
     .local v0, "ServerRootCertificate":Ljava/security/cert/X509Certificate;
     const/4 v1, 0x0
 
-    .line 169
     .local v1, "attributeValidationFlag":Z
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getExtendedKeyUsage()Ljava/util/List;
 
     move-result-object v2
 
-    .line 170
     .local v2, "extendedKeys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v3, "HotspotDMCertificateValidation"
 
@@ -2244,10 +2062,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     if-eqz v2, :cond_0
 
-    .line 172
     const-string v3, "1.3.6.1.5.5.7.3.2"
 
     invoke-interface {v2, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -2256,19 +2072,16 @@
 
     if-eqz v3, :cond_1
 
-    .line 173
     const-string v3, "HotspotDMCertificateValidation"
 
     const-string v4, "attributeValidation:It contains Clientauth attribute ABORT_OSU"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     :cond_0
     :goto_0
     return v1
 
-    .line 175
     :cond_1
     const/4 v1, 0x1
 
@@ -2285,53 +2098,42 @@
     .end annotation
 
     .prologue
-    .line 108
     const/4 v4, 0x1
 
-    .line 110
     .local v4, "extendedValidationFlag":Z
     const/4 v7, 0x0
 
     :try_start_0
     aget-object v0, p1, v7
 
-    .line 111
     .local v0, "ServerRootCertificate":Ljava/security/cert/X509Certificate;
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getExtendedKeyUsage()Ljava/util/List;
 
-    .line 112
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getIssuerAlternativeNames()Ljava/util/Collection;
 
-    .line 113
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getIssuerDN()Ljava/security/Principal;
 
-    .line 114
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getKeyUsage()[Z
 
     move-result-object v5
 
-    .line 115
     .local v5, "keyUsage":[Z
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getNonCriticalExtensionOIDs()Ljava/util/Set;
 
     move-result-object v6
 
-    .line 117
     .local v6, "noncritical_Extensions":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .line 118
     .local v2, "SubjDnsType":Z
     invoke-virtual {p0, v5}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->keyUsageCheck([Z)Z
 
-    .line 119
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSubjectAlternativeNames()Ljava/util/Collection;
 
     move-result-object v7
 
     if-eqz v7, :cond_0
 
-    .line 120
     const-string v7, "HotspotDMCertificateValidation"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2362,18 +2164,15 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 122
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getSubjectAlternativeNames()Ljava/util/Collection;
 
     move-result-object v1
 
-    .line 124
     .local v1, "SubaltList":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/util/List<*>;>;"
     invoke-virtual {p0, v1}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->subAltNameMatch(Ljava/util/Collection;)Z
 
     move-result v4
 
-    .line 125
     iget-object v7, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->mvalidationParameters:Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;
 
     iget-boolean v7, v7, Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;->sim:Z
@@ -2394,12 +2193,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 128
     invoke-direct {p0, v0}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->isLanguageAndNamesMatched(Ljava/security/cert/X509Certificate;)Z
 
     move-result v4
 
-    .line 130
     .end local v1    # "SubaltList":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/util/List<*>;>;"
     :cond_0
     const-string v7, "HotspotDMCertificateValidation"
@@ -2448,12 +2245,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 133
     if-eqz v6, :cond_1
 
     if-eqz v4, :cond_1
 
-    .line 134
     const-string v7, "HotspotDMCertificateValidation"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2476,7 +2271,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     iget-object v7, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->mvalidationParameters:Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;
 
     iget-boolean v7, v7, Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;->sim:Z
@@ -2495,7 +2289,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 137
     const-string v7, "1.3.6.1.5.5.7.1.12"
 
     invoke-interface {v6, v7}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -2506,12 +2299,10 @@
 
     if-eqz v4, :cond_3
 
-    .line 138
     invoke-direct {p0, v0}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->isLogoTypeExtensionMatched(Ljava/security/cert/X509Certificate;)Z
 
     move-result v4
 
-    .line 139
     const-string v7, "HotspotDMCertificateValidation"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2534,7 +2325,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     :cond_1
     :goto_0
     const-string v7, "HotspotDMCertificateValidation"
@@ -2563,7 +2353,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 147
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getVersion()I
 
     move-result v7
@@ -2574,10 +2363,8 @@
 
     if-eqz v4, :cond_2
 
-    .line 148
     const/4 v4, 0x0
 
-    .line 149
     const-string v7, "HotspotDMCertificateValidation"
 
     const-string/jumbo v8, "rfc5280Validation:ServerRootCertificate version incorrect"
@@ -2586,7 +2373,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 155
     .end local v0    # "ServerRootCertificate":Ljava/security/cert/X509Certificate;
     .end local v2    # "SubjDnsType":Z
     .end local v5    # "keyUsage":[Z
@@ -2615,10 +2401,8 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     return v4
 
-    .line 141
     .restart local v0    # "ServerRootCertificate":Ljava/security/cert/X509Certificate;
     .restart local v2    # "SubjDnsType":Z
     .restart local v5    # "keyUsage":[Z
@@ -2626,7 +2410,6 @@
     :cond_3
     const/4 v4, 0x0
 
-    .line 142
     :try_start_1
     const-string v7, "HotspotDMCertificateValidation"
 
@@ -2638,7 +2421,6 @@
 
     goto :goto_0
 
-    .line 151
     .end local v0    # "ServerRootCertificate":Ljava/security/cert/X509Certificate;
     .end local v2    # "SubjDnsType":Z
     .end local v5    # "keyUsage":[Z
@@ -2646,7 +2428,6 @@
     :catch_0
     move-exception v3
 
-    .line 152
     .local v3, "e":Ljava/lang/Exception;
     const-string v7, "HotspotDMCertificateValidation"
 
@@ -2654,7 +2435,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
@@ -2670,28 +2450,22 @@
     .end annotation
 
     .prologue
-    .line 262
     const/16 v11, 0x400
 
     new-array v1, v11, [B
 
-    .line 263
     .local v1, "IconBytes":[B
     const/4 v3, 0x0
 
-    .line 264
     .local v3, "bytesRead":I
     const/4 v7, 0x0
 
-    .line 265
     .local v7, "icon_file":Ljava/io/File;
     const/4 v5, 0x0
 
-    .line 266
     .local v5, "hexString":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 268
     .local v9, "icon_stream":Ljava/io/FileInputStream;
     :try_start_0
     iget-object v11, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->mvalidationParameters:Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;
@@ -2700,7 +2474,6 @@
 
     if-eqz v11, :cond_4
 
-    .line 269
     new-instance v8, Ljava/io/File;
 
     const-string v11, "/data/hs20/icons/"
@@ -2714,7 +2487,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 271
     .end local v7    # "icon_file":Ljava/io/File;
     .local v8, "icon_file":Ljava/io/File;
     :try_start_1
@@ -2727,13 +2499,10 @@
 
     if-nez v11, :cond_1
 
-    .line 272
     const/4 v11, 0x0
 
-    .line 290
     if-eqz v9, :cond_0
 
-    .line 291
     :try_start_2
     invoke-virtual {v9}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -2743,25 +2512,21 @@
     :goto_0
     move-object v7, v8
 
-    .line 297
     .end local v8    # "icon_file":Ljava/io/File;
     .restart local v7    # "icon_file":Ljava/io/File;
     :goto_1
     return-object v11
 
-    .line 293
     .end local v7    # "icon_file":Ljava/io/File;
     .restart local v8    # "icon_file":Ljava/io/File;
     :catch_0
     move-exception v4
 
-    .line 294
     .local v4, "e":Ljava/io/IOException;
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 273
     .end local v4    # "e":Ljava/io/IOException;
     :cond_1
     :try_start_3
@@ -2769,13 +2534,11 @@
 
     move-result-object v6
 
-    .line 274
     .local v6, "iconDigest":Ljava/security/MessageDigest;
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 275
     .local v0, "IconByteOutStream":Ljava/io/ByteArrayOutputStream;
     new-instance v10, Ljava/io/FileInputStream;
 
@@ -2784,7 +2547,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_6
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 276
     .end local v9    # "icon_stream":Ljava/io/FileInputStream;
     .local v10, "icon_stream":Ljava/io/FileInputStream;
     :goto_2
@@ -2797,7 +2559,6 @@
 
     if-eq v3, v11, :cond_3
 
-    .line 277
     const/4 v11, 0x0
 
     invoke-virtual {v0, v1, v11, v3}, Ljava/io/ByteArrayOutputStream;->write([BII)V
@@ -2807,7 +2568,6 @@
 
     goto :goto_2
 
-    .line 285
     :catch_1
     move-exception v4
 
@@ -2817,7 +2577,6 @@
     .restart local v9    # "icon_stream":Ljava/io/FileInputStream;
     move-object v7, v8
 
-    .line 286
     .end local v0    # "IconByteOutStream":Ljava/io/ByteArrayOutputStream;
     .end local v6    # "iconDigest":Ljava/security/MessageDigest;
     .end local v8    # "icon_file":Ljava/io/File;
@@ -2847,15 +2606,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 290
     if-eqz v9, :cond_2
 
-    .line 291
     :try_start_6
     invoke-virtual {v9}, Ljava/io/FileInputStream;->close()V
     :try_end_6
@@ -2866,10 +2622,8 @@
     :goto_4
     move-object v11, v5
 
-    .line 297
     goto :goto_1
 
-    .line 279
     .end local v7    # "icon_file":Ljava/io/File;
     .end local v9    # "icon_stream":Ljava/io/FileInputStream;
     .restart local v0    # "IconByteOutStream":Ljava/io/ByteArrayOutputStream;
@@ -2880,22 +2634,18 @@
     :try_start_7
     invoke-virtual {v10}, Ljava/io/FileInputStream;->close()V
 
-    .line 280
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v11
 
     invoke-virtual {v6, v11}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 281
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 282
     invoke-virtual {v6}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v2
 
-    .line 283
     .local v2, "bytes":[B
     invoke-static {v2}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->hexify([B)Ljava/lang/String;
     :try_end_7
@@ -2910,7 +2660,6 @@
     .restart local v9    # "icon_stream":Ljava/io/FileInputStream;
     move-object v7, v8
 
-    .line 290
     .end local v0    # "IconByteOutStream":Ljava/io/ByteArrayOutputStream;
     .end local v2    # "bytes":[B
     .end local v6    # "iconDigest":Ljava/security/MessageDigest;
@@ -2919,7 +2668,6 @@
     :cond_4
     if-eqz v9, :cond_2
 
-    .line 291
     :try_start_8
     invoke-virtual {v9}, Ljava/io/FileInputStream;->close()V
     :try_end_8
@@ -2927,58 +2675,47 @@
 
     goto :goto_4
 
-    .line 293
     :catch_2
     move-exception v4
 
-    .line 294
     .local v4, "e":Ljava/io/IOException;
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 293
     .local v4, "e":Ljava/lang/Exception;
     :catch_3
     move-exception v4
 
-    .line 294
     .local v4, "e":Ljava/io/IOException;
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_4
 
-    .line 289
     .end local v4    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v11
 
-    .line 290
     :goto_5
     if-eqz v9, :cond_5
 
-    .line 291
     :try_start_9
     invoke-virtual {v9}, Ljava/io/FileInputStream;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_4
 
-    .line 295
     :cond_5
     :goto_6
     throw v11
 
-    .line 293
     :catch_4
     move-exception v4
 
-    .line 294
     .restart local v4    # "e":Ljava/io/IOException;
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_6
 
-    .line 289
     .end local v4    # "e":Ljava/io/IOException;
     .end local v7    # "icon_file":Ljava/io/File;
     .restart local v8    # "icon_file":Ljava/io/File;
@@ -3010,7 +2747,6 @@
     .restart local v7    # "icon_file":Ljava/io/File;
     goto :goto_5
 
-    .line 285
     .end local v0    # "IconByteOutStream":Ljava/io/ByteArrayOutputStream;
     .end local v6    # "iconDigest":Ljava/security/MessageDigest;
     :catch_5
@@ -3035,10 +2771,8 @@
     .param p1, "keyUsage"    # [Z
 
     .prologue
-    .line 221
     const/4 v0, 0x1
 
-    .line 222
     .local v0, "keyUsageValidationFlag":Z
     if-eqz p1, :cond_0
 
@@ -3054,22 +2788,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 223
     const-string v1, "HotspotDMCertificateValidation"
 
     const-string/jumbo v2, "keyUsageCheck;have both encipherment and signing"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     :goto_0
     return v0
 
-    .line 225
     :cond_0
     const/4 v0, 0x0
 
-    .line 226
     const-string v1, "HotspotDMCertificateValidation"
 
     const-string/jumbo v2, "keyUsageCheck:either of encipherment and signing is missing"
@@ -3098,7 +2828,6 @@
     .end annotation
 
     .prologue
-    .line 181
     .local p1, "SubaltList":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/util/List<*>;>;"
     const-string v7, "HotspotDMCertificateValidation"
 
@@ -3106,14 +2835,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 182
     const/4 v6, 0x1
 
-    .line 183
     .local v6, "subAltMatchFlag":Z
     const/4 v5, 0x0
 
-    .line 184
     .local v5, "mserverUri":Ljava/net/URI;
     iget-object v7, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->mvalidationParameters:Landroid/net/wifi/hs20/cert/HotspotDMValidationParameters;
 
@@ -3121,7 +2847,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 185
     new-instance v5, Ljava/net/URI;
 
     .end local v5    # "mserverUri":Ljava/net/URI;
@@ -3131,21 +2856,17 @@
 
     invoke-direct {v5, v7}, Ljava/net/URI;-><init>(Ljava/lang/String;)V
 
-    .line 190
     .restart local v5    # "mserverUri":Ljava/net/URI;
     const/4 v3, 0x0
 
-    .line 191
     .local v3, "genNames":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 192
     .local v4, "match":Z
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 193
     .local v1, "SubaltGenNamesIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/List<*>;>;"
     :cond_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -3154,7 +2875,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 194
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v7
@@ -3165,7 +2885,6 @@
 
     move-result-object v0
 
-    .line 195
     .local v0, "OidIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     :cond_1
     :goto_0
@@ -3175,7 +2894,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 196
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v7
@@ -3184,7 +2902,6 @@
 
     move-result-object v3
 
-    .line 197
     const-string v7, "HotspotDMCertificateValidation"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3207,7 +2924,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     const-string v7, "2"
 
     invoke-virtual {v7, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3218,7 +2934,6 @@
 
     if-nez v4, :cond_1
 
-    .line 199
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v7
@@ -3227,7 +2942,6 @@
 
     move-result-object v2
 
-    .line 200
     .local v2, "dnsName":Ljava/lang/String;
     const-string v7, "HotspotDMCertificateValidation"
 
@@ -3251,7 +2965,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 201
     invoke-virtual {v5}, Ljava/net/URI;->getHost()Ljava/lang/String;
 
     move-result-object v7
@@ -3262,13 +2975,10 @@
 
     if-eqz v7, :cond_3
 
-    .line 202
     const/4 v4, 0x1
 
-    .line 203
     const/4 v6, 0x1
 
-    .line 204
     const-string v7, "HotspotDMCertificateValidation"
 
     const-string/jumbo v8, "subAltNameMatch:Domain Name or UrlWnmframe is suffix match for subject at name"
@@ -3277,7 +2987,6 @@
 
     goto :goto_0
 
-    .line 187
     .end local v0    # "OidIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     .end local v1    # "SubaltGenNamesIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/List<*>;>;"
     .end local v2    # "dnsName":Ljava/lang/String;
@@ -3290,14 +2999,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 188
     const/4 v7, 0x0
 
-    .line 217
     :goto_1
     return v7
 
-    .line 207
     .restart local v0    # "OidIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     .restart local v1    # "SubaltGenNamesIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/util/List<*>;>;"
     .restart local v2    # "dnsName":Ljava/lang/String;
@@ -3306,7 +3012,6 @@
     :cond_3
     const/4 v6, 0x0
 
-    .line 208
     const-string v7, "HotspotDMCertificateValidation"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3329,7 +3034,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 209
     const-string v7, "HotspotDMCertificateValidation"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3356,7 +3060,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     const-string v7, "HotspotDMCertificateValidation"
 
     const-string/jumbo v8, "subAltNameMatch:Domain Name or UrlWnmframe is not suffix match for subject at name"
@@ -3365,7 +3068,6 @@
 
     goto/16 :goto_0
 
-    .line 216
     .end local v0    # "OidIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<*>;"
     .end local v2    # "dnsName":Ljava/lang/String;
     :cond_4
@@ -3393,7 +3095,6 @@
 
     move v7, v6
 
-    .line 217
     goto :goto_1
 .end method
 
@@ -3402,10 +3103,8 @@
     .param p1, "ServerRootCertificate"    # Ljava/security/cert/X509Certificate;
 
     .prologue
-    .line 232
     const/4 v3, 0x1
 
-    .line 233
     .local v3, "rfc5280ValidationFlag":Z
     invoke-virtual {p1}, Ljava/security/cert/X509Certificate;->getSubjectDN()Ljava/security/Principal;
 
@@ -3413,19 +3112,15 @@
 
     check-cast v2, Ljavax/security/auth/x500/X500Principal;
 
-    .line 234
     .local v2, "principal":Ljavax/security/auth/x500/X500Principal;
     const/4 v5, 0x0
 
-    .line 235
     .local v5, "x500name":Lcom/android/org/bouncycastle/asn1/x500/X500Name;
     const/4 v0, 0x0
 
-    .line 236
     .local v0, "CN":Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 237
     new-instance v5, Lcom/android/org/bouncycastle/asn1/x500/X500Name;
 
     .end local v5    # "x500name":Lcom/android/org/bouncycastle/asn1/x500/X500Name;
@@ -3435,7 +3130,6 @@
 
     invoke-direct {v5, v6}, Lcom/android/org/bouncycastle/asn1/x500/X500Name;-><init>(Ljava/lang/String;)V
 
-    .line 238
     .restart local v5    # "x500name":Lcom/android/org/bouncycastle/asn1/x500/X500Name;
     sget-object v6, Lcom/android/org/bouncycastle/asn1/x500/style/BCStyle;->CN:Lcom/android/org/bouncycastle/asn1/ASN1ObjectIdentifier;
 
@@ -3447,20 +3141,16 @@
 
     aget-object v1, v6, v7
 
-    .line 239
     .local v1, "cn":Lcom/android/org/bouncycastle/asn1/x500/RDN;
     if-eqz v1, :cond_0
 
-    .line 240
     invoke-virtual {v1}, Lcom/android/org/bouncycastle/asn1/x500/RDN;->getFirst()Lcom/android/org/bouncycastle/asn1/x500/AttributeTypeAndValue;
 
     move-result-object v4
 
-    .line 241
     .local v4, "typeValue":Lcom/android/org/bouncycastle/asn1/x500/AttributeTypeAndValue;
     if-eqz v4, :cond_0
 
-    .line 242
     invoke-virtual {v4}, Lcom/android/org/bouncycastle/asn1/x500/AttributeTypeAndValue;->getValue()Lcom/android/org/bouncycastle/asn1/ASN1Encodable;
 
     move-result-object v6
@@ -3469,7 +3159,6 @@
 
     move-result-object v0
 
-    .line 245
     .end local v4    # "typeValue":Lcom/android/org/bouncycastle/asn1/x500/AttributeTypeAndValue;
     :cond_0
     if-eqz v0, :cond_2
@@ -3490,25 +3179,21 @@
 
     if-eqz v6, :cond_2
 
-    .line 248
     const-string v6, "HotspotDMCertificateValidation"
 
     const-string/jumbo v7, "subCnMatch:fqdnName is suffix match for  CN portion subject names"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     .end local v1    # "cn":Lcom/android/org/bouncycastle/asn1/x500/RDN;
     :cond_1
     :goto_0
     return v3
 
-    .line 250
     .restart local v1    # "cn":Lcom/android/org/bouncycastle/asn1/x500/RDN;
     :cond_2
     const/4 v3, 0x0
 
-    .line 251
     const-string v6, "HotspotDMCertificateValidation"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -3531,7 +3216,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 252
     const-string v6, "HotspotDMCertificateValidation"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -3558,7 +3242,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     const-string v6, "HotspotDMCertificateValidation"
 
     const-string/jumbo v7, "subCnMatch:mvalidationParameters.fqdnName is Not suffix  match for subject names"
@@ -3572,10 +3255,8 @@
     .locals 4
 
     .prologue
-    .line 80
     const/4 v1, 0x0
 
-    .line 81
     .local v1, "validationFlag":Z
     const-string v2, "HotspotDMCertificateValidation"
 
@@ -3583,11 +3264,9 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     :try_start_0
     invoke-direct {p0}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->printCertProp()V
 
-    .line 84
     iget-object v2, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->mServerCertificate:[Ljava/security/cert/X509Certificate;
 
     invoke-virtual {p0, v2}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->extendedValidation([Ljava/security/cert/X509Certificate;)Z
@@ -3596,7 +3275,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 85
     iget-object v2, p0, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->mServerCertificate:[Ljava/security/cert/X509Certificate;
 
     invoke-virtual {p0, v2}, Landroid/net/wifi/hs20/cert/HotspotDMCertificateValidation;->attributeValidation([Ljava/security/cert/X509Certificate;)Z
@@ -3605,17 +3283,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 86
     const/4 v1, 0x1
 
     :goto_0
     move v2, v1
 
-    .line 96
     :goto_1
     return v2
 
-    .line 88
     :cond_0
     const-string v2, "HotspotDMCertificateValidation"
 
@@ -3627,20 +3302,16 @@
 
     goto :goto_0
 
-    .line 92
     :catch_0
     move-exception v0
 
-    .line 93
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 94
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 90
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     :try_start_1

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 118
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$1;->this$0:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v6, 0x0
 
-    .line 121
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v4
@@ -58,7 +56,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 123
     iget-object v5, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$1;->this$0:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     const-string v4, "networkInfo"
@@ -72,13 +69,11 @@
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mNetworkInfo:Landroid/net/NetworkInfo;
     invoke-static {v5, v4}, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->access$102(Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
-    .line 126
     sget-object v4, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;->FullMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
 
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
     invoke-static {v4}, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->access$202(Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;)Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
 
-    .line 127
     iget-object v4, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$1;->this$0:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -94,7 +89,6 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 128
     iget-object v4, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$1;->this$0:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mTrafficHandler:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$TrafficHandler;
@@ -106,18 +100,15 @@
 
     move-result-object v1
 
-    .line 144
     .local v1, "msg":Landroid/os/Message;
     :goto_0
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 172
     .end local v1    # "msg":Landroid/os/Message;
     :cond_0
     :goto_1
     return-void
 
-    .line 131
     :cond_1
     iget-object v4, p0, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$1;->this$0:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;
 
@@ -133,7 +124,6 @@
     .restart local v1    # "msg":Landroid/os/Message;
     goto :goto_0
 
-    .line 145
     .end local v1    # "msg":Landroid/os/Message;
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -148,27 +138,23 @@
 
     if-eqz v4, :cond_4
 
-    .line 147
     const-string v4, "android.bluetooth.adapter.extra.STATE"
 
     invoke-virtual {p2, v4, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 150
     .local v0, "btPowerState":I
     const/16 v4, 0xc
 
     if-ne v0, v4, :cond_3
 
-    .line 151
     sget v4, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mBoosterFLAG:I
 
     or-int/lit8 v4, v4, 0x2
 
     sput v4, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mBoosterFLAG:I
 
-    .line 152
     sget-object v4, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;->BTCoexMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
 
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
@@ -176,18 +162,15 @@
 
     goto :goto_1
 
-    .line 153
     :cond_3
     if-ne v0, v8, :cond_0
 
-    .line 154
     sget v4, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mBoosterFLAG:I
 
     and-int/lit8 v4, v4, -0x3
 
     sput v4, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mBoosterFLAG:I
 
-    .line 155
     sget-object v4, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;->BTCoexMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
 
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->mCurrentMode:Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller$BoosterMode;
@@ -195,7 +178,6 @@
 
     goto :goto_1
 
-    .line 157
     .end local v0    # "btPowerState":I
     :cond_4
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -210,14 +192,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 159
     const-string v4, "SSRM_STATUS_NAME"
 
     invoke-virtual {p2, v4}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 160
     .local v2, "statusName":Ljava/lang/String;
     const-string v4, "SSRM_STATUS_VALUE"
 
@@ -225,7 +205,6 @@
 
     move-result v3
 
-    .line 162
     .local v3, "statusValue":Z
     if-eqz v2, :cond_0
 
@@ -237,14 +216,11 @@
 
     if-eqz v4, :cond_0
 
-    .line 163
     if-eqz v3, :cond_5
 
-    .line 164
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->fileShareTransfer:Z
     invoke-static {v7}, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->access$402(Z)Z
 
-    .line 165
     const-string v4, "WifiP2pTrafficPoller"
 
     const-string v5, "FileShare_Enable : true"
@@ -253,12 +229,10 @@
 
     goto :goto_1
 
-    .line 167
     :cond_5
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->fileShareTransfer:Z
     invoke-static {v6}, Lcom/android/server/wifi/p2p/WifiP2pTrafficPoller;->access$402(Z)Z
 
-    .line 168
     const-string v4, "WifiP2pTrafficPoller"
 
     const-string v5, "FileShare_Enable : false"

@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1036
     iput-object p1, p0, Lcom/android/server/am/DualScreenPolicy$DualScreenPolicyHandler;->this$0:Lcom/android/server/am/DualScreenPolicy;
 
-    .line 1037
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 1038
     return-void
 .end method
 
@@ -41,16 +38,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1042
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1049
     :goto_0
     return-void
 
-    .line 1044
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/am/DualScreenPolicy$DualScreenPolicyHandler;->this$0:Lcom/android/server/am/DualScreenPolicy;
 
@@ -61,7 +55,6 @@
 
     monitor-enter v1
 
-    .line 1045
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/DualScreenPolicy$DualScreenPolicyHandler;->this$0:Lcom/android/server/am/DualScreenPolicy;
 
@@ -71,7 +64,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/am/DualScreenPolicy;->handleMultipleScreenStateChangedLocked(II)V
 
-    .line 1046
     monitor-exit v1
 
     goto :goto_0
@@ -85,7 +77,6 @@
 
     throw v0
 
-    .line 1042
     nop
 
     :pswitch_data_0

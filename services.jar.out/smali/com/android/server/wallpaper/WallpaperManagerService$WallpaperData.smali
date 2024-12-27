@@ -65,41 +65,32 @@
 
     const/4 v1, 0x0
 
-    .line 400
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 371
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->name:Ljava/lang/String;
 
-    .line 391
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->callbacks:Landroid/os/RemoteCallbackList;
 
-    .line 394
     iput v2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->width:I
 
-    .line 395
     iput v2, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->height:I
 
-    .line 396
     iput v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->displayId:I
 
-    .line 398
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0, v1, v1, v1, v1}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->padding:Landroid/graphics/Rect;
 
-    .line 401
     iput p1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->userId:I
 
-    .line 402
     new-instance v0, Ljava/io/File;
 
     # invokes: Lcom/android/server/wallpaper/WallpaperManagerService;->getWallpaperDir(I)Ljava/io/File;
@@ -113,7 +104,6 @@
 
     iput-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->wallpaperFile:Ljava/io/File;
 
-    .line 403
     return-void
 .end method
 
@@ -122,7 +112,6 @@
     .param p0, "x0"    # Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;
 
     .prologue
-    .line 357
     iget-object v0, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->callbacks:Landroid/os/RemoteCallbackList;
 
     return-object v0
@@ -137,7 +126,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 405
     iget v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->width:I
 
     iget v2, p1, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->width:I
@@ -160,12 +148,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 406
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
     if-nez v1, :cond_1
 
-    .line 407
     sget-object v1, Lcom/android/server/wallpaper/WallpaperManagerService;->IMAGE_WALLPAPER:Landroid/content/ComponentName;
 
     iget-object v2, p1, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
@@ -180,7 +166,6 @@
 
     if-nez v1, :cond_2
 
-    .line 408
     :cond_0
     const-string v1, "WallpaperManagerService"
 
@@ -188,11 +173,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     :goto_0
     return v0
 
-    .line 412
     :cond_1
     iget-object v1, p0, Lcom/android/server/wallpaper/WallpaperManagerService$WallpaperData;->wallpaperComponent:Landroid/content/ComponentName;
 
@@ -204,7 +187,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 413
     const-string v1, "WallpaperManagerService"
 
     const-string v2, "Same Live wallpaper!"
@@ -213,7 +195,6 @@
 
     goto :goto_0
 
-    .line 418
     :cond_2
     const-string v0, "WallpaperManagerService"
 
@@ -221,7 +202,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 419
     const/4 v0, 0x0
 
     goto :goto_0

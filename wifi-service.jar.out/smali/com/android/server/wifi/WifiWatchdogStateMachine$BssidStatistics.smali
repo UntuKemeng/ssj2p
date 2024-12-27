@@ -68,35 +68,28 @@
 
     const/4 v3, 0x0
 
-    .line 7454
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7551
     iput v3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEnhancedTargetRssi:I
 
-    .line 7455
     iput-object p2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssid:Ljava/lang/String;
 
-    .line 7456
     const/16 v1, -0x69
 
     iput v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mRssiBase:I
 
-    .line 7457
     const/16 v1, 0x3d
 
     iput v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEntriesSize:I
 
-    .line 7458
     iget v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEntriesSize:I
 
     new-array v1, v1, [Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
 
     iput-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEntries:[Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
 
-    .line 7459
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -105,7 +98,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 7460
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEntries:[Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
 
     new-instance v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
@@ -116,65 +108,51 @@
 
     aput-object v2, v1, v0
 
-    .line 7459
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 7461
     :cond_0
     new-array v1, v6, [J
 
     iput-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxThroughput:[J
 
-    .line 7462
     new-array v1, v6, [J
 
     iput-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxStreamTP:[J
 
-    .line 7463
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v6, :cond_1
 
-    .line 7464
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxThroughput:[J
 
     aput-wide v8, v1, v0
 
-    .line 7465
     iget-object v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxStreamTP:[J
 
     aput-wide v8, v1, v0
 
-    .line 7463
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 7467
     :cond_1
     iput v7, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
-    .line 7468
     iput-wide v8, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
-    .line 7469
     iput v3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastGoodRxRssi:I
 
-    .line 7470
     iput v7, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastPoorRssi:I
 
-    .line 7471
     const/4 v1, 0x2
 
     iput v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastPoorReason:I
 
-    .line 7472
     iput-boolean v3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mDnsAvailable:Z
 
-    .line 7473
     return-void
 .end method
 
@@ -183,7 +161,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
 
     .prologue
-    .line 7416
     iget-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastTimeSample:J
 
     return-wide v0
@@ -195,7 +172,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 7416
     iput-wide p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastTimeSample:J
 
     return-wide p1
@@ -206,7 +182,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
 
     .prologue
-    .line 7416
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastGoodRxRssi:I
 
     return v0
@@ -217,7 +192,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
 
     .prologue
-    .line 7416
     iget-boolean v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mDnsAvailable:Z
 
     return v0
@@ -229,7 +203,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 7416
     iput-boolean p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mDnsAvailable:Z
 
     return p1
@@ -240,7 +213,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
 
     .prologue
-    .line 7416
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastPoorRssi:I
 
     return v0
@@ -252,7 +224,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 7416
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastPoorRssi:I
 
     return p1
@@ -264,7 +235,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 7416
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastPoorRssi:I
 
     sub-int/2addr v0, p1
@@ -279,7 +249,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
 
     .prologue
-    .line 7416
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxThroughput:[J
 
     return-object v0
@@ -290,7 +259,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
 
     .prologue
-    .line 7416
     iget-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
     return-wide v0
@@ -302,7 +270,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 7416
     iput-wide p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
     return-wide p1
@@ -314,7 +281,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 7416
     iget-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
     add-long/2addr v0, p1
@@ -329,7 +295,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
 
     .prologue
-    .line 7416
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
     return v0
@@ -341,7 +306,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 7416
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
     sub-int/2addr v0, p1
@@ -356,7 +320,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
 
     .prologue
-    .line 7416
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetCount:I
 
     return v0
@@ -368,7 +331,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 7416
     iput-wide p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastTimeGood:J
 
     return-wide p1
@@ -380,7 +342,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 7416
     iput-wide p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastTimePoor:J
 
     return-wide p1
@@ -391,7 +352,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;
 
     .prologue
-    .line 7416
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssid:Ljava/lang/String;
 
     return-object v0
@@ -406,7 +366,6 @@
     .prologue
     const/16 v10, -0x2d
 
-    .line 7743
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -414,19 +373,16 @@
 
     if-eqz v5, :cond_1
 
-    .line 7744
     move v2, p1
 
     .local v2, "i":I
     :goto_0
     if-gt v2, p2, :cond_1
 
-    .line 7745
     const/16 v5, -0x64
 
     if-le v2, v5, :cond_0
 
-    .line 7746
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -466,7 +422,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logi(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$33500(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7747
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -506,30 +461,25 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logi(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$33600(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7744
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 7751
     .end local v2    # "i":I
     :cond_1
     if-lt p1, v10, :cond_2
 
     move v3, p1
 
-    .line 7780
     :goto_1
     return v3
 
-    .line 7752
     :cond_2
     if-le p2, v10, :cond_3
 
     const/16 p2, -0x2d
 
-    .line 7753
     :cond_3
     const/16 v5, -0x63
 
@@ -537,31 +487,25 @@
 
     const/16 p1, -0x63
 
-    .line 7755
     :cond_4
     move v3, p2
 
-    .line 7756
     .local v3, "rssi":I
     mul-int/lit8 v4, p3, 0xa
 
-    .line 7757
     .local v4, "streamThreshold":I
     iget v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mRssiBase:I
 
     sub-int/2addr p1, v5
 
-    .line 7758
     iget v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mRssiBase:I
 
     sub-int/2addr p2, v5
 
-    .line 7759
     if-ge p1, p2, :cond_7
 
     const/4 v0, 0x1
 
-    .line 7761
     .local v0, "d":I
     :goto_2
     move v2, p1
@@ -570,12 +514,10 @@
     :goto_3
     if-eq v2, p2, :cond_6
 
-    .line 7762
     iget v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mRssiBase:I
 
     add-int v3, v5, v2
 
-    .line 7763
     int-to-long v6, p3
 
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxThroughput:[J
@@ -600,7 +542,6 @@
 
     if-gtz v5, :cond_8
 
-    .line 7765
     :cond_5
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -632,7 +573,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logi(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$33700(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7770
     :cond_6
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -641,14 +581,12 @@
 
     if-eqz v5, :cond_9
 
-    .line 7771
     new-instance v1, Ljava/text/DecimalFormat;
 
     const-string v5, "#.##"
 
     invoke-direct {v1, v5}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    .line 7772
     .local v1, "df":Ljava/text/DecimalFormat;
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -785,7 +723,6 @@
 
     goto/16 :goto_1
 
-    .line 7759
     .end local v0    # "d":I
     .end local v1    # "df":Ljava/text/DecimalFormat;
     .end local v2    # "i":I
@@ -794,7 +731,6 @@
 
     goto/16 :goto_2
 
-    .line 7761
     .restart local v0    # "d":I
     .restart local v2    # "i":I
     :cond_8
@@ -802,7 +738,6 @@
 
     goto/16 :goto_3
 
-    .line 7778
     :cond_9
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -839,7 +774,6 @@
     .param p3, "threshold"    # D
 
     .prologue
-    .line 7695
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
@@ -848,7 +782,6 @@
 
     if-ne v11, v12, :cond_1
 
-    .line 7696
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -858,15 +791,12 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v11, v12}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$33200(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7697
     const/16 v10, -0x5a
 
-    .line 7739
     :cond_0
     :goto_0
     return v10
 
-    .line 7700
     :cond_1
     move-object/from16 v0, p0
 
@@ -892,7 +822,6 @@
 
     if-eqz v11, :cond_2
 
-    .line 7701
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -916,7 +845,6 @@
 
     goto :goto_0
 
-    .line 7704
     :cond_2
     move-object/from16 v0, p0
 
@@ -924,17 +852,14 @@
 
     sub-int p1, p1, v11
 
-    .line 7705
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mRssiBase:I
 
     sub-int p2, p2, v11
 
-    .line 7706
     const/4 v6, 0x0
 
-    .line 7707
     .local v6, "emptyCount":I
     move/from16 v0, p1
 
@@ -944,7 +869,6 @@
 
     const/4 v4, 0x1
 
-    .line 7708
     .local v4, "d":I
     :goto_1
     move/from16 v7, p1
@@ -955,7 +879,6 @@
 
     if-eq v7, v0, :cond_6
 
-    .line 7710
     if-ltz v7, :cond_4
 
     move-object/from16 v0, p0
@@ -981,10 +904,8 @@
 
     if-lez v11, :cond_4
 
-    .line 7711
     const/4 v6, 0x0
 
-    .line 7712
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEntries:[Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
@@ -1000,14 +921,12 @@
 
     if-gez v11, :cond_5
 
-    .line 7714
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mRssiBase:I
 
     add-int v10, v11, v7
 
-    .line 7715
     .local v10, "rssi":I
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -1016,14 +935,12 @@
 
     if-eqz v11, :cond_0
 
-    .line 7716
     new-instance v5, Ljava/text/DecimalFormat;
 
     const-string v11, "#.##"
 
     invoke-direct {v5, v11}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    .line 7717
     .local v5, "df":Ljava/text/DecimalFormat;
     move-object/from16 v0, p0
 
@@ -1124,7 +1041,6 @@
 
     goto/16 :goto_0
 
-    .line 7707
     .end local v4    # "d":I
     .end local v5    # "df":Ljava/text/DecimalFormat;
     .end local v7    # "i":I
@@ -1134,7 +1050,6 @@
 
     goto/16 :goto_1
 
-    .line 7724
     .restart local v4    # "d":I
     .restart local v7    # "i":I
     :cond_4
@@ -1144,14 +1059,12 @@
 
     if-lt v6, v11, :cond_5
 
-    .line 7726
     move-object/from16 v0, p0
 
     iget v11, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mRssiBase:I
 
     add-int v10, v11, v7
 
-    .line 7727
     .restart local v10    # "rssi":I
     move-object/from16 v0, p0
 
@@ -1159,13 +1072,11 @@
 
     move-result-wide v8
 
-    .line 7728
     .local v8, "lossPreset":D
     cmpg-double v11, v8, p3
 
     if-gez v11, :cond_5
 
-    .line 7729
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -1173,14 +1084,12 @@
 
     if-eqz v11, :cond_0
 
-    .line 7730
     new-instance v5, Ljava/text/DecimalFormat;
 
     const-string v11, "#.##"
 
     invoke-direct {v5, v11}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    .line 7731
     .restart local v5    # "df":Ljava/text/DecimalFormat;
     move-object/from16 v0, p0
 
@@ -1251,7 +1160,6 @@
 
     goto/16 :goto_0
 
-    .line 7708
     .end local v5    # "df":Ljava/text/DecimalFormat;
     .end local v8    # "lossPreset":D
     .end local v10    # "rssi":I
@@ -1260,7 +1168,6 @@
 
     goto/16 :goto_2
 
-    .line 7739
     :cond_6
     move-object/from16 v0, p0
 
@@ -1279,12 +1186,10 @@
 
     const/4 v8, 0x0
 
-    .line 7656
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 7657
     .local v2, "now":J
     iget-object v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -1293,7 +1198,6 @@
 
     move-result-object v1
 
-    .line 7659
     .local v1, "info":Landroid/net/wifi/WifiInfo;
     iget-wide v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
@@ -1301,7 +1205,6 @@
 
     if-lez v5, :cond_3
 
-    .line 7660
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -1346,7 +1249,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v5, v6}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$33000(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7662
     :cond_0
     iget-wide v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
@@ -1356,7 +1258,6 @@
 
     if-gez v5, :cond_1
 
-    .line 7663
     if-eqz v1, :cond_2
 
     invoke-virtual {v1}, Landroid/net/wifi/WifiInfo;->getRssi()I
@@ -1371,12 +1272,10 @@
 
     iput-wide v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
-    .line 7684
     :cond_1
     :goto_0
     return-void
 
-    .line 7664
     :cond_2
     const-wide/32 v6, 0x1d4c0
 
@@ -1386,18 +1285,14 @@
 
     goto :goto_0
 
-    .line 7669
     :cond_3
     iput-boolean v8, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mDnsAvailable:Z
 
-    .line 7672
     const/16 v0, -0x69
 
-    .line 7673
     .local v0, "from":I
     const/16 v4, -0x2d
 
-    .line 7674
     .local v4, "to":I
     iget v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
@@ -1405,12 +1300,10 @@
 
     if-le v5, v6, :cond_4
 
-    .line 7675
     const/4 v5, 0x5
 
     iput v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetCount:I
 
-    .line 7681
     :goto_1
     const-wide/32 v6, 0x927c0
 
@@ -1418,7 +1311,6 @@
 
     iput-wide v6, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
-    .line 7682
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -1465,7 +1357,6 @@
 
     goto :goto_0
 
-    .line 7677
     :cond_4
     const-wide v6, 0x3fb999999999999aL    # 0.1
 
@@ -1475,7 +1366,6 @@
 
     iput v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
-    .line 7678
     iput v8, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetCount:I
 
     goto :goto_1
@@ -1488,7 +1378,6 @@
     .prologue
     const/4 v11, 0x5
 
-    .line 7598
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -1519,25 +1408,21 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v10, v12}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$32800(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7600
     :cond_0
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
 
-    .line 7601
     .local v8, "now":J
     iget-wide v12, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastTimeGood:J
 
     sub-long v4, v8, v12
 
-    .line 7602
     .local v4, "lastGood":J
     iget-wide v12, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastTimePoor:J
 
     sub-long v6, v8, v12
 
-    .line 7603
     .local v6, "lastPoor":J
     iget-object v10, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -1553,7 +1438,6 @@
     :goto_0
     add-int v2, p1, v10
 
-    .line 7604
     .local v2, "from":I
     iget-object v10, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -1569,11 +1453,9 @@
     :goto_1
     add-int v3, p1, v10
 
-    .line 7605
     .local v3, "to":I
     const-wide/16 v0, 0x0
 
-    .line 7607
     .local v0, "avoidMax":J
     iget-object v10, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -1584,7 +1466,6 @@
 
     iput-wide v8, v10, Lcom/android/server/wifi/WifiWatchdogStateMachine$ParameterManager;->mLastPoorDetectedTime:J
 
-    .line 7610
     const-wide v12, 0x3fb999999999999aL    # 0.1
 
     invoke-virtual {p0, v2, v3, v12, v13}, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->findRssiTarget(IID)I
@@ -1593,18 +1474,14 @@
 
     iput v10, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
-    .line 7611
     iput v11, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetCount:I
 
-    .line 7630
     const-wide/16 v0, 0x7530
 
-    .line 7643
     add-long v10, v8, v0
 
     iput-wide v10, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
-    .line 7645
     iget-object v10, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1672,7 +1549,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v10, v11}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$32900(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7648
     const/4 v10, 0x1
 
     return v10
@@ -1683,10 +1559,8 @@
     :cond_1
     move v10, v11
 
-    .line 7603
     goto :goto_0
 
-    .line 7604
     .restart local v2    # "from":I
     :cond_2
     const/16 v10, 0x14
@@ -1706,15 +1580,12 @@
 
     const/16 v8, -0x52
 
-    .line 7554
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastPoorRssi:I
 
-    .line 7556
     const/4 v4, 0x3
 
     if-ne p2, v4, :cond_1
 
-    .line 7557
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -1729,16 +1600,13 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logi(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$32400(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7588
     :cond_0
     :goto_0
     return v10
 
-    .line 7561
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->poorLinkDetected(I)Z
 
-    .line 7563
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -1750,7 +1618,6 @@
 
     if-gt p1, v4, :cond_2
 
-    .line 7564
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1829,28 +1696,23 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$32500(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7568
     :cond_2
     const/4 v4, 0x2
 
     if-ne p2, v4, :cond_6
 
-    .line 7570
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 7571
     .local v2, "now":J
     const-wide/32 v0, 0x36ee80
 
-    .line 7572
     .local v0, "avoidMax":J
     add-long v4, v2, v0
 
     iput-wide v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mBssidAvoidTimeMax:J
 
-    .line 7573
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -1883,16 +1745,13 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$32600(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7574
     :cond_3
     iget v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
     if-ge v4, v8, :cond_4
 
-    .line 7575
     iput v8, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
-    .line 7577
     :cond_4
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -1918,7 +1777,6 @@
 
     if-ge v4, v5, :cond_5
 
-    .line 7579
     iget-object v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mParam:Lcom/android/server/wifi/WifiWatchdogStateMachine$ParameterManager;
@@ -1932,7 +1790,6 @@
 
     iput v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEnhancedTargetRssi:I
 
-    .line 7580
     iget v4, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
     iget v5, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEnhancedTargetRssi:I
@@ -1943,13 +1800,11 @@
 
     goto/16 :goto_0
 
-    .line 7582
     :cond_5
     iput v9, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEnhancedTargetRssi:I
 
     goto/16 :goto_0
 
-    .line 7585
     .end local v0    # "avoidMax":J
     .end local v2    # "now":J
     :cond_6
@@ -1967,16 +1822,13 @@
 
     const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
 
-    .line 7539
     const/16 v4, -0x5a
 
     if-gt p1, v4, :cond_0
 
-    .line 7548
     :goto_0
     return-wide v2
 
-    .line 7540
     :cond_0
     if-lez p1, :cond_1
 
@@ -1984,7 +1836,6 @@
 
     goto :goto_0
 
-    .line 7542
     :cond_1
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->sPresetLoss:[D
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$32300()[D
@@ -1993,17 +1844,14 @@
 
     if-nez v4, :cond_2
 
-    .line 7544
     const/16 v1, 0x5a
 
-    .line 7545
     .local v1, "size":I
     new-array v4, v10, [D
 
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->sPresetLoss:[D
     invoke-static {v4}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$32302([D)[D
 
-    .line 7546
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2033,7 +1881,6 @@
 
     goto :goto_1
 
-    .line 7548
     .end local v0    # "i":I
     .end local v1    # "size":I
     :cond_2
@@ -2054,27 +1901,22 @@
     .param p1, "rssi"    # I
 
     .prologue
-    .line 7501
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastGoodRxRssi:I
 
     if-ge p1, v0, :cond_3
 
-    .line 7502
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastGoodRxRssi:I
 
-    .line 7503
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
     iget v1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastGoodRxRssi:I
 
     if-le v0, v1, :cond_0
 
-    .line 7504
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastGoodRxRssi:I
 
     iput v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mGoodLinkTargetRssi:I
 
-    .line 7505
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -2107,7 +1949,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logi(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$31800(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7507
     :cond_0
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastPoorRssi:I
 
@@ -2115,14 +1956,12 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 7508
     iget v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastPoorRssi:I
 
     add-int/lit8 v0, v0, -0x3
 
     iput v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastPoorRssi:I
 
-    .line 7509
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -2155,7 +1994,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logi(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$31900(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7511
     :cond_1
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -2187,7 +2025,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logi(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$32000(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7512
     :cond_2
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -2229,7 +2066,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 7514
     :cond_3
     return-void
 .end method
@@ -2241,21 +2077,17 @@
     .param p4, "volume"    # I
 
     .prologue
-    .line 7483
     if-gtz p4, :cond_1
 
-    .line 7496
     :cond_0
     :goto_0
     return-void
 
-    .line 7484
     :cond_1
     iget v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mRssiBase:I
 
     sub-int v1, p1, v2
 
-    .line 7485
     .local v1, "index":I
     if-ltz v1, :cond_0
 
@@ -2263,14 +2095,12 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 7486
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mEntries:[Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;
 
     aget-object v2, v2, v1
 
     invoke-virtual {v2, p2, p3, p4}, Lcom/android/server/wifi/WifiWatchdogStateMachine$VolumeWeightedEMA;->update(DI)V
 
-    .line 7487
     iget v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastGoodRxRssi:I
 
     if-lt p1, v2, :cond_2
@@ -2296,12 +2126,10 @@
 
     if-ltz v2, :cond_2
 
-    .line 7488
     const/4 v2, 0x0
 
     iput v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mLastGoodRxRssi:I
 
-    .line 7489
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2335,7 +2163,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$31600(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7491
     :cond_2
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -2344,14 +2171,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 7492
     new-instance v0, Ljava/text/DecimalFormat;
 
     const-string v2, "#.##"
 
     invoke-direct {v0, v2}, Ljava/text/DecimalFormat;-><init>(Ljava/lang/String;)V
 
-    .line 7493
     .local v0, "df":Ljava/text/DecimalFormat;
     iget-object v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
@@ -2436,17 +2261,14 @@
     .param p4, "isStreaming"    # Z
 
     .prologue
-    .line 7517
     const/16 v0, -0x64
 
     if-ge v0, p1, :cond_0
 
     if-gez p1, :cond_0
 
-    .line 7518
     if-eqz p4, :cond_1
 
-    .line 7519
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxStreamTP:[J
 
     neg-int v1, p1
@@ -2457,14 +2279,12 @@
 
     if-gez v0, :cond_0
 
-    .line 7520
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxStreamTP:[J
 
     neg-int v1, p1
 
     aput-wide p2, v0, v1
 
-    .line 7521
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -2505,12 +2325,10 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logi(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$32100(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 7530
     :cond_0
     :goto_0
     return-void
 
-    .line 7524
     :cond_1
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxThroughput:[J
 
@@ -2522,14 +2340,12 @@
 
     if-gez v0, :cond_0
 
-    .line 7525
     iget-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$BssidStatistics;->mMaxThroughput:[J
 
     neg-int v1, p1
 
     aput-wide p2, v0, v1
 
-    .line 7526
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 

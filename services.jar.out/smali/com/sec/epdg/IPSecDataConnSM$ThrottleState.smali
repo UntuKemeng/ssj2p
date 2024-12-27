@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1386
     iput-object p1, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/IPSecDataConnSM$1;
 
     .prologue
-    .line 1386
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;-><init>(Lcom/sec/epdg/IPSecDataConnSM;)V
 
     return-void
@@ -49,14 +47,12 @@
     .locals 3
 
     .prologue
-    .line 1390
     const-string v1, "[IPSECDATACONNSM]"
 
     const-string v2, "SM entered in Throttle state"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1391
     iget-object v1, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mIWlanApnContext:Lcom/sec/epdg/IWlanApnContext;
@@ -68,7 +64,6 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/epdg/IWlanApnContext;->setState(I)V
 
-    .line 1392
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isSupportChangeRatWhenThrottle()Z
 
     move-result v1
@@ -87,14 +82,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 1394
     const-string v1, "[IPSECDATACONNSM]"
 
     const-string v2, "IMS APN entered in Throttle state"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1395
     invoke-static {}, Lcom/sec/epdg/EpdgRilSharedData;->getInstance()Lcom/sec/epdg/EpdgRilSharedData;
 
     move-result-object v1
@@ -103,7 +96,6 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/epdg/EpdgRilSharedData;->setImsApnThrottled(Z)V
 
-    .line 1396
     iget-object v1, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mePdgHandler:Landroid/os/Handler;
@@ -115,16 +107,13 @@
 
     move-result-object v0
 
-    .line 1397
     .local v0, "msgNetRegi":Landroid/os/Message;
     const/16 v1, 0x50
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 1398
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1400
     .end local v0    # "msgNetRegi":Landroid/os/Message;
     :cond_0
     return-void
@@ -134,14 +123,12 @@
     .locals 2
 
     .prologue
-    .line 1404
     const-string v0, "[IPSECDATACONNSM]"
 
     const-string v1, "SM exited from Throttle state"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1405
     return-void
 .end method
 
@@ -156,10 +143,8 @@
 
     const/4 v3, 0x0
 
-    .line 1409
     const/4 v2, 0x0
 
-    .line 1410
     .local v2, "status":Z
     const-string v4, "[IPSECDATACONNSM]"
 
@@ -206,12 +191,10 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1412
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 1474
     :pswitch_0
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -241,12 +224,10 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1479
     :cond_0
     :goto_0
     return v2
 
-    .line 1414
     :pswitch_1
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -276,7 +257,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1415
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v4, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -290,7 +270,6 @@
 
     goto :goto_0
 
-    .line 1424
     :pswitch_2
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -329,7 +308,6 @@
 
     goto :goto_0
 
-    .line 1428
     :pswitch_3
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -339,7 +317,6 @@
 
     goto :goto_0
 
-    .line 1432
     :pswitch_4
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -347,7 +324,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1434
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-virtual {v3}, Lcom/sec/epdg/IPSecDataConnSM;->getApnType()Ljava/lang/String;
@@ -358,7 +334,6 @@
 
     goto :goto_0
 
-    .line 1437
     :pswitch_5
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -366,7 +341,6 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1439
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v4, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -380,13 +354,11 @@
 
     goto :goto_0
 
-    .line 1442
     :pswitch_6
     iget v4, p1, Landroid/os/Message;->arg1:I
 
     if-ne v4, v0, :cond_2
 
-    .line 1443
     .local v0, "isWifiConnected":Z
     :goto_1
     iget-object v4, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -394,10 +366,8 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->handleWifiStateChange(Landroid/os/Message;)V
     invoke-static {v4, p1}, Lcom/sec/epdg/IPSecDataConnSM;->access$1800(Lcom/sec/epdg/IPSecDataConnSM;Landroid/os/Message;)V
 
-    .line 1444
     if-eqz v0, :cond_0
 
-    .line 1445
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isSupportChangeRatWhenThrottle()Z
 
     move-result v4
@@ -426,21 +396,18 @@
 
     if-eqz v4, :cond_1
 
-    .line 1448
     const-string v4, "[IPSECDATACONNSM]"
 
     const-string v5, "IMS APN exited from Throttle state"
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1449
     invoke-static {}, Lcom/sec/epdg/EpdgRilSharedData;->getInstance()Lcom/sec/epdg/EpdgRilSharedData;
 
     move-result-object v4
 
     invoke-virtual {v4, v3}, Lcom/sec/epdg/EpdgRilSharedData;->setImsApnThrottled(Z)V
 
-    .line 1450
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mePdgHandler:Landroid/os/Handler;
@@ -452,14 +419,11 @@
 
     move-result-object v1
 
-    .line 1451
     .local v1, "msgNetRegi":Landroid/os/Message;
     iput v7, v1, Landroid/os/Message;->what:I
 
-    .line 1452
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1454
     .end local v1    # "msgNetRegi":Landroid/os/Message;
     :cond_1
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -479,10 +443,8 @@
     :cond_2
     move v0, v3
 
-    .line 1442
     goto :goto_1
 
-    .line 1458
     :pswitch_7
     const-string v3, "[IPSECDATACONNSM]"
 
@@ -492,7 +454,6 @@
 
     goto/16 :goto_0
 
-    .line 1462
     :pswitch_8
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isSupportChangeRatWhenThrottle()Z
 
@@ -522,21 +483,18 @@
 
     if-eqz v4, :cond_3
 
-    .line 1465
     const-string v4, "[IPSECDATACONNSM]"
 
     const-string v5, "IMS APN exited from Throttle state"
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1466
     invoke-static {}, Lcom/sec/epdg/EpdgRilSharedData;->getInstance()Lcom/sec/epdg/EpdgRilSharedData;
 
     move-result-object v4
 
     invoke-virtual {v4, v3}, Lcom/sec/epdg/EpdgRilSharedData;->setImsApnThrottled(Z)V
 
-    .line 1467
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mePdgHandler:Landroid/os/Handler;
@@ -548,14 +506,11 @@
 
     move-result-object v1
 
-    .line 1468
     .restart local v1    # "msgNetRegi":Landroid/os/Message;
     iput v7, v1, Landroid/os/Message;->what:I
 
-    .line 1469
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1471
     .end local v1    # "msgNetRegi":Landroid/os/Message;
     :cond_3
     iget-object v3, p0, Lcom/sec/epdg/IPSecDataConnSM$ThrottleState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -571,7 +526,6 @@
 
     goto/16 :goto_0
 
-    .line 1412
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_3

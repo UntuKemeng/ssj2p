@@ -40,23 +40,18 @@
     .param p3, "ssid"    # Ljava/lang/String;
 
     .prologue
-    .line 6651
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$WfcProfileTask;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 6652
     iput-object p2, p0, Lcom/sec/epdg/EpdgService$WfcProfileTask;->mHandler:Landroid/os/Handler;
 
-    .line 6653
     iput-object p3, p0, Lcom/sec/epdg/EpdgService$WfcProfileTask;->mSsid:Ljava/lang/String;
 
-    .line 6654
     sget-object v0, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     invoke-static {v0}, Lcom/sec/epdg/EpdgService$WfcProfileTask;->setDefaultExecutor(Ljava/util/concurrent/Executor;)V
 
-    .line 6655
     return-void
 .end method
 
@@ -64,15 +59,12 @@
     .locals 6
 
     .prologue
-    .line 6658
     const-class v3, Lcom/sec/epdg/EpdgService$WfcProfileTask;
 
     monitor-enter v3
 
-    .line 6659
     const/4 v1, 0x0
 
-    .line 6661
     .local v1, "status":Z
     :try_start_0
     invoke-static {}, Lcom/sec/epdg/EpdgWfcProfileReader;->getInstance()Lcom/sec/epdg/EpdgWfcProfileReader;
@@ -94,7 +86,6 @@
 
     move-result v1
 
-    .line 6670
     :goto_0
     :try_start_1
     const-string v2, "[EPDGService]"
@@ -119,7 +110,6 @@
 
     invoke-static {v2, v4}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6671
     new-instance v2, Ljava/lang/Boolean;
 
     invoke-direct {v2, v1}, Ljava/lang/Boolean;-><init>(Z)V
@@ -128,11 +118,9 @@
 
     return-object v2
 
-    .line 6662
     :catch_0
     move-exception v0
 
-    .line 6663
     .local v0, "e":Landroid/database/CursorIndexOutOfBoundsException;
     const-string v2, "[EPDGService]"
 
@@ -140,12 +128,10 @@
 
     invoke-static {v2, v4}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6665
     invoke-virtual {v0}, Landroid/database/CursorIndexOutOfBoundsException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 6672
     .end local v0    # "e":Landroid/database/CursorIndexOutOfBoundsException;
     :catchall_0
     move-exception v2
@@ -156,16 +142,13 @@
 
     throw v2
 
-    .line 6666
     :catch_1
     move-exception v0
 
-    .line 6667
     .local v0, "e":Ljava/lang/IllegalStateException;
     :try_start_2
     invoke-virtual {v0}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
-    .line 6668
     const-string v2, "[EPDGService]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -200,14 +183,12 @@
     .param p1, "voids"    # [Ljava/lang/Void;
 
     .prologue
-    .line 6677
     const-string v0, "[EPDGService]"
 
     const-string v1, "WfcProfileTask:doInBackground - started"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6678
     invoke-direct {p0}, Lcom/sec/epdg/EpdgService$WfcProfileTask;->doExec()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -220,7 +201,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 6648
     check-cast p1, [Ljava/lang/Void;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -236,7 +216,6 @@
     .param p1, "result"    # Ljava/lang/Boolean;
 
     .prologue
-    .line 6683
     const-string v1, "[EPDGService]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -259,21 +238,18 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6687
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 6688
     const-string v1, "[EPDGService]"
 
     const-string v2, "AP WFC enable"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6692
     :goto_0
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1900()Landroid/os/Handler;
@@ -284,13 +260,11 @@
 
     move-result-object v0
 
-    .line 6693
     .local v0, "msg":Landroid/os/Message;
     const/16 v1, 0x4b
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 6694
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v1
@@ -302,13 +276,10 @@
     :goto_1
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 6695
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 6696
     return-void
 
-    .line 6690
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     const-string v1, "[EPDGService]"
@@ -319,7 +290,6 @@
 
     goto :goto_0
 
-    .line 6694
     .restart local v0    # "msg":Landroid/os/Message;
     :cond_1
     const/4 v1, 0x0
@@ -332,7 +302,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 6648
     check-cast p1, Ljava/lang/Boolean;
 
     .end local p1    # "x0":Ljava/lang/Object;

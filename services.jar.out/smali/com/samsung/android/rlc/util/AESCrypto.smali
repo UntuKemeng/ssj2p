@@ -18,7 +18,6 @@
     .locals 1
 
     .prologue
-    .line 23
     const/16 v0, 0x10
 
     new-array v0, v0, [B
@@ -54,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -71,10 +69,8 @@
     .end annotation
 
     .prologue
-    .line 38
     const/4 v6, 0x0
 
-    .line 41
     .local v6, "result":Ljava/lang/String;
     :try_start_0
     const-string v8, "AESCrypto"
@@ -83,7 +79,6 @@
 
     invoke-static {v8, v9}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     const-string v8, "UTF-8"
 
     invoke-virtual {p1, v8}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -96,18 +91,15 @@
 
     move-result-object v2
 
-    .line 45
     .local v2, "inp":[B
     if-nez v2, :cond_0
 
     move-object v7, v6
 
-    .line 64
     .end local v6    # "result":Ljava/lang/String;
     :goto_0
     return-object v7
 
-    .line 48
     .restart local v6    # "result":Ljava/lang/String;
     :cond_0
     new-instance v4, Ljavax/crypto/spec/SecretKeySpec;
@@ -122,7 +114,6 @@
 
     invoke-direct {v4, v8, v9}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 50
     .local v4, "keySpec":Ljavax/crypto/spec/SecretKeySpec;
     new-instance v3, Ljavax/crypto/spec/IvParameterSpec;
 
@@ -130,7 +121,6 @@
 
     invoke-direct {v3, v8}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    .line 52
     .local v3, "ivParam":Ljavax/crypto/spec/IvParameterSpec;
     const-string v8, "AES/CBC/PKCS5Padding"
 
@@ -138,18 +128,15 @@
 
     move-result-object v0
 
-    .line 53
     .local v0, "cipher":Ljavax/crypto/Cipher;
     const/4 v8, 0x2
 
     invoke-virtual {v0, v8, v4, v3}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 54
     invoke-virtual {v0, v2}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object v5
 
-    .line 56
     .local v5, "output":[B
     new-instance v7, Ljava/lang/String;
 
@@ -159,7 +146,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 58
     .end local v6    # "result":Ljava/lang/String;
     .local v7, "result":Ljava/lang/String;
     :try_start_1
@@ -173,12 +159,10 @@
 
     move-object v6, v7
 
-    .line 64
     .end local v7    # "result":Ljava/lang/String;
     .restart local v6    # "result":Ljava/lang/String;
     goto :goto_0
 
-    .line 59
     .end local v0    # "cipher":Ljavax/crypto/Cipher;
     .end local v2    # "inp":[B
     .end local v3    # "ivParam":Ljavax/crypto/spec/IvParameterSpec;
@@ -187,15 +171,12 @@
     :catch_0
     move-exception v1
 
-    .line 60
     .local v1, "e":Ljava/lang/Exception;
     :goto_1
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 61
     throw v1
 
-    .line 59
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v6    # "result":Ljava/lang/String;
     .restart local v0    # "cipher":Ljavax/crypto/Cipher;
@@ -225,10 +206,8 @@
     .end annotation
 
     .prologue
-    .line 78
     const/4 v5, 0x0
 
-    .line 81
     .local v5, "result":Ljava/lang/String;
     :try_start_0
     const-string v7, "AESCrypto"
@@ -237,7 +216,6 @@
 
     invoke-static {v7, v8}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
     new-instance v3, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string v7, "UTF-8"
@@ -250,7 +228,6 @@
 
     invoke-direct {v3, v7, v8}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 84
     .local v3, "keySpec":Ljavax/crypto/spec/SecretKeySpec;
     new-instance v2, Ljavax/crypto/spec/IvParameterSpec;
 
@@ -258,7 +235,6 @@
 
     invoke-direct {v2, v7}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
 
-    .line 86
     .local v2, "ivParam":Ljavax/crypto/spec/IvParameterSpec;
     const-string v7, "AES/CBC/PKCS5Padding"
 
@@ -266,13 +242,11 @@
 
     move-result-object v0
 
-    .line 87
     .local v0, "cipher":Ljavax/crypto/Cipher;
     const/4 v7, 0x1
 
     invoke-virtual {v0, v7, v3, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 88
     const-string v7, "UTF-8"
 
     invoke-virtual {p1, v7}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -283,7 +257,6 @@
 
     move-result-object v4
 
-    .line 90
     .local v4, "output":[B
     new-instance v6, Ljava/lang/String;
 
@@ -299,7 +272,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 91
     .end local v5    # "result":Ljava/lang/String;
     .local v6, "result":Ljava/lang/String;
     :try_start_1
@@ -311,10 +283,8 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 98
     return-object v6
 
-    .line 93
     .end local v0    # "cipher":Ljavax/crypto/Cipher;
     .end local v2    # "ivParam":Ljavax/crypto/spec/IvParameterSpec;
     .end local v3    # "keySpec":Ljavax/crypto/spec/SecretKeySpec;
@@ -324,15 +294,12 @@
     :catch_0
     move-exception v1
 
-    .line 94
     .local v1, "e":Ljava/lang/Exception;
     :goto_0
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 95
     throw v1
 
-    .line 93
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v5    # "result":Ljava/lang/String;
     .restart local v0    # "cipher":Ljavax/crypto/Cipher;
@@ -360,10 +327,8 @@
     .end annotation
 
     .prologue
-    .line 110
     const/4 v3, 0x0
 
-    .line 113
     .local v3, "result":Ljava/lang/String;
     :try_start_0
     sget-object v6, Lcom/samsung/android/rlc/util/SecureStringData;->CONTENT_ENCRYPT_KEY_SEED_TEXT:[B
@@ -372,13 +337,11 @@
 
     move-result-object v4
 
-    .line 114
     .local v4, "seedText":Ljava/lang/String;
     invoke-static {p0}, Lcom/samsung/android/rlc/util/DeviceUtil;->getDeviceID(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 115
     .local v5, "uniqueKey":Ljava/lang/String;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -396,7 +359,6 @@
 
     move-result-object v2
 
-    .line 116
     .local v2, "key":Ljava/lang/String;
     sget-object v6, Lcom/samsung/android/rlc/util/SecureStringData;->MD5:[B
 
@@ -408,7 +370,6 @@
 
     move-result-object v0
 
-    .line 117
     .local v0, "MD5":Ljava/security/MessageDigest;
     const-string v6, "UTF-8"
 
@@ -418,7 +379,6 @@
 
     invoke-virtual {v0, v6}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 118
     new-instance v3, Ljava/lang/String;
 
     .end local v3    # "result":Ljava/lang/String;
@@ -438,11 +398,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 124
     .restart local v3    # "result":Ljava/lang/String;
     return-object v3
 
-    .line 119
     .end local v0    # "MD5":Ljava/security/MessageDigest;
     .end local v2    # "key":Ljava/lang/String;
     .end local v3    # "result":Ljava/lang/String;
@@ -451,10 +409,8 @@
     :catch_0
     move-exception v1
 
-    .line 120
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 121
     throw v1
 .end method

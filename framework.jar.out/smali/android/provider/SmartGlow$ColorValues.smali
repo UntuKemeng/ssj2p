@@ -39,14 +39,12 @@
 
     const/4 v2, 0x0
 
-    .line 308
     invoke-static {v2, v2, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     sput v0, Landroid/provider/SmartGlow$ColorValues;->COLOR_BLACK:I
 
-    .line 313
     const/16 v0, 0xd2
 
     const/16 v1, 0xf1
@@ -57,21 +55,18 @@
 
     sput v0, Landroid/provider/SmartGlow$ColorValues;->COLOR_SKY_BLUE:I
 
-    .line 318
     invoke-static {v2, v3, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     sput v0, Landroid/provider/SmartGlow$ColorValues;->COLOR_GREEN:I
 
-    .line 323
     invoke-static {v3, v2, v2}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     sput v0, Landroid/provider/SmartGlow$ColorValues;->COLOR_RED:I
 
-    .line 328
     const/16 v0, 0x70
 
     const/16 v1, 0xae
@@ -84,7 +79,6 @@
 
     sput v0, Landroid/provider/SmartGlow$ColorValues;->COLOR_YELLOW_GREEN:I
 
-    .line 333
     const/16 v0, 0x26
 
     const/16 v1, 0x4d
@@ -97,7 +91,6 @@
 
     sput v0, Landroid/provider/SmartGlow$ColorValues;->COLOR_LIGHT_BLUE:I
 
-    .line 338
     const/16 v0, 0xde
 
     const/16 v1, 0x37
@@ -117,7 +110,6 @@
     .locals 0
 
     .prologue
-    .line 303
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

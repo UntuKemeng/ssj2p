@@ -43,17 +43,14 @@
     .end annotation
 
     .prologue
-    .line 89
     invoke-direct {p0}, Lorg/simpleframework/xml/core/TemplateParameter;-><init>()V
 
-    .line 90
     new-instance v0, Lorg/simpleframework/xml/core/TextParameter$Contact;
 
     invoke-direct {v0, p2, p1, p4}, Lorg/simpleframework/xml/core/TextParameter$Contact;-><init>(Lorg/simpleframework/xml/Text;Ljava/lang/reflect/Constructor;I)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->contact:Lorg/simpleframework/xml/core/TextParameter$Contact;
 
-    .line 91
     new-instance v0, Lorg/simpleframework/xml/core/TextLabel;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/TextParameter;->contact:Lorg/simpleframework/xml/core/TextParameter$Contact;
@@ -62,7 +59,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->label:Lorg/simpleframework/xml/core/Label;
 
-    .line 92
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getExpression()Lorg/simpleframework/xml/core/Expression;
@@ -71,7 +67,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->expression:Lorg/simpleframework/xml/core/Expression;
 
-    .line 93
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getPath()Ljava/lang/String;
@@ -80,7 +75,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->path:Ljava/lang/String;
 
-    .line 94
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getType()Ljava/lang/Class;
@@ -89,7 +83,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->type:Ljava/lang/Class;
 
-    .line 95
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getName()Ljava/lang/String;
@@ -98,7 +91,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->name:Ljava/lang/String;
 
-    .line 96
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getKey()Ljava/lang/Object;
@@ -107,10 +99,8 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->key:Ljava/lang/Object;
 
-    .line 97
     iput p4, p0, Lorg/simpleframework/xml/core/TextParameter;->index:I
 
-    .line 98
     return-void
 .end method
 
@@ -120,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 193
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->contact:Lorg/simpleframework/xml/core/TextParameter$Contact;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/TextParameter$Contact;->getAnnotation()Ljava/lang/annotation/Annotation;
@@ -134,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->expression:Lorg/simpleframework/xml/core/Expression;
 
     return-object v0
@@ -144,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget v0, p0, Lorg/simpleframework/xml/core/TextParameter;->index:I
 
     return v0
@@ -154,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->key:Ljava/lang/Object;
 
     return-object v0
@@ -164,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 131
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->name:Ljava/lang/String;
 
     return-object v0
@@ -175,7 +160,6 @@
     .param p1, "context"    # Lorg/simpleframework/xml/core/Context;
 
     .prologue
-    .line 170
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/TextParameter;->getName()Ljava/lang/String;
 
     move-result-object v0
@@ -187,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->path:Ljava/lang/String;
 
     return-object v0
@@ -198,7 +181,6 @@
     .param p1, "context"    # Lorg/simpleframework/xml/core/Context;
 
     .prologue
-    .line 157
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/TextParameter;->getPath()Ljava/lang/String;
 
     move-result-object v0
@@ -210,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->type:Ljava/lang/Class;
 
     return-object v0
@@ -220,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 228
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->type:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Class;->isPrimitive()Z
@@ -234,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 216
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->isRequired()Z
@@ -248,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 240
     const/4 v0, 0x1
 
     return v0
@@ -258,7 +236,6 @@
     .locals 1
 
     .prologue
-    .line 251
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextParameter;->contact:Lorg/simpleframework/xml/core/TextParameter$Contact;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/TextParameter$Contact;->toString()Ljava/lang/String;

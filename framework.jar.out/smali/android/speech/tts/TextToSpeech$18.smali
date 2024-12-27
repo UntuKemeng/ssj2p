@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 1793
     iput-object p1, p0, Landroid/speech/tts/TextToSpeech$18;->this$0:Landroid/speech/tts/TextToSpeech;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -62,12 +61,10 @@
 
     const/4 v9, 0x0
 
-    .line 1797
     invoke-interface {p1}, Landroid/speech/tts/ITextToSpeechService;->getClientDefaultLanguage()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1799
     .local v1, "defaultLanguage":[Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -75,7 +72,6 @@
 
     if-nez v10, :cond_1
 
-    .line 1800
     :cond_0
     const-string v10, "TextToSpeech"
 
@@ -85,17 +81,14 @@
 
     move-object v6, v9
 
-    .line 1830
     :goto_0
     return-object v6
 
-    .line 1803
     :cond_1
     const/4 v10, 0x0
 
     aget-object v3, v1, v10
 
-    .line 1804
     .local v3, "language":Ljava/lang/String;
     array-length v10, v1
 
@@ -103,7 +96,6 @@
 
     aget-object v0, v1, v11
 
-    .line 1805
     .local v0, "country":Ljava/lang/String;
     :goto_1
     array-length v10, v1
@@ -112,23 +104,19 @@
 
     aget-object v5, v1, v12
 
-    .line 1808
     .local v5, "variant":Ljava/lang/String;
     :goto_2
     invoke-interface {p1, v3, v0, v5}, Landroid/speech/tts/ITextToSpeechService;->isLanguageAvailable(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v4
 
-    .line 1809
     .local v4, "result":I
     if-gez v4, :cond_4
 
     move-object v6, v9
 
-    .line 1811
     goto :goto_0
 
-    .line 1804
     .end local v0    # "country":Ljava/lang/String;
     .end local v4    # "result":I
     .end local v5    # "variant":Ljava/lang/String;
@@ -137,14 +125,12 @@
 
     goto :goto_1
 
-    .line 1805
     .restart local v0    # "country":Ljava/lang/String;
     :cond_3
     const-string v5, ""
 
     goto :goto_2
 
-    .line 1815
     .restart local v4    # "result":I
     .restart local v5    # "variant":Ljava/lang/String;
     :cond_4
@@ -152,7 +138,6 @@
 
     move-result-object v7
 
-    .line 1816
     .local v7, "voiceName":Ljava/lang/String;
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -162,25 +147,20 @@
 
     move-object v6, v9
 
-    .line 1817
     goto :goto_0
 
-    .line 1821
     :cond_5
     invoke-interface {p1}, Landroid/speech/tts/ITextToSpeechService;->getVoices()Ljava/util/List;
 
     move-result-object v8
 
-    .line 1822
     .local v8, "voices":Ljava/util/List;, "Ljava/util/List<Landroid/speech/tts/Voice;>;"
     if-nez v8, :cond_6
 
     move-object v6, v9
 
-    .line 1823
     goto :goto_0
 
-    .line 1825
     :cond_6
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -200,7 +180,6 @@
 
     check-cast v6, Landroid/speech/tts/Voice;
 
-    .line 1826
     .local v6, "voice":Landroid/speech/tts/Voice;
     invoke-virtual {v6}, Landroid/speech/tts/Voice;->getName()Ljava/lang/String;
 
@@ -218,7 +197,6 @@
     :cond_8
     move-object v6, v9
 
-    .line 1830
     goto :goto_0
 .end method
 
@@ -232,7 +210,6 @@
     .end annotation
 
     .prologue
-    .line 1793
     invoke-virtual {p0, p1}, Landroid/speech/tts/TextToSpeech$18;->run(Landroid/speech/tts/ITextToSpeechService;)Landroid/speech/tts/Voice;
 
     move-result-object v0

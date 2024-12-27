@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 2760
     iput-object p1, p0, Lcom/android/server/enterprise/security/PasswordPolicy$2;->this$0:Lcom/android/server/enterprise/security/PasswordPolicy;
 
     iput p2, p0, Lcom/android/server/enterprise/security/PasswordPolicy$2;->val$userId:I
@@ -44,7 +43,6 @@
     .locals 5
 
     .prologue
-    .line 2764
     :try_start_0
     iget v2, p0, Lcom/android/server/enterprise/security/PasswordPolicy$2;->val$userId:I
 
@@ -54,12 +52,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 2782
     :cond_0
     :goto_0
     return-void
 
-    .line 2767
     :cond_1
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/SdpUtil;->getInstance()Lcom/sec/enterprise/knox/sdp/SdpUtil;
 
@@ -71,7 +67,6 @@
 
     move-result-object v1
 
-    .line 2768
     .local v1, "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     const-string v2, "PasswordPolicy"
 
@@ -107,10 +102,8 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2770
     if-eqz v1, :cond_0
 
-    .line 2771
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;->getState()I
 
     move-result v2
@@ -119,7 +112,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 2772
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->getInstance()Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;
 
     move-result-object v2
@@ -128,7 +120,6 @@
 
     invoke-virtual {v2, v3}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->lock(Ljava/lang/String;)V
 
-    .line 2773
     const-string v2, "PasswordPolicy"
 
     const-string v3, "SDP_USER_0 inside setPwdChangeRequested lock succesful."
@@ -139,12 +130,10 @@
 
     goto :goto_0
 
-    .line 2778
     .end local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     :catch_0
     move-exception v0
 
-    .line 2779
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "PasswordPolicy"
 
@@ -170,12 +159,10 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2780
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 2775
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     :cond_2

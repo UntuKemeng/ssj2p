@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 315
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$2;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 318
     const-string v2, "UsbDeviceManager"
 
     const-string/jumbo v3, "received ACTION_USB_PORT_CHANGED"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 319
     const-string/jumbo v2, "port"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -55,7 +52,6 @@
 
     check-cast v0, Landroid/hardware/usb/UsbPort;
 
-    .line 320
     .local v0, "port":Landroid/hardware/usb/UsbPort;
     const-string/jumbo v2, "portStatus"
 
@@ -65,7 +61,6 @@
 
     check-cast v1, Landroid/hardware/usb/UsbPortStatus;
 
-    .line 321
     .local v1, "status":Landroid/hardware/usb/UsbPortStatus;
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$2;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
@@ -76,6 +71,5 @@
 
     invoke-virtual {v2, v0, v1}, Lcom/android/server/usb/UsbDeviceManager$UsbHandler;->updateHostState(Landroid/hardware/usb/UsbPort;Landroid/hardware/usb/UsbPortStatus;)V
 
-    .line 322
     return-void
 .end method

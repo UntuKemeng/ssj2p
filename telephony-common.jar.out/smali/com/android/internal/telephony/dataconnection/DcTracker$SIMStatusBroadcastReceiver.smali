@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 672
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/dataconnection/DcTracker$1;
 
     .prologue
-    .line 672
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;-><init>(Lcom/android/internal/telephony/dataconnection/DcTracker;)V
 
     return-void
@@ -51,14 +49,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 675
     const-string v2, "ss"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 677
     .local v0, "iccState":Ljava/lang/String;
     const-string v2, "IMSI"
 
@@ -68,14 +64,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 678
     const-string v2, "DCT"
 
     const-string v3, "!@Boot_SVC : IMSI Ready"
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 681
     :cond_0
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
@@ -87,7 +81,6 @@
 
     check-cast v1, Lcom/android/internal/telephony/uicc/IccRecords;
 
-    .line 682
     .local v1, "r":Lcom/android/internal/telephony/uicc/IccRecords;
     const-string v2, "IMSI"
 
@@ -105,7 +98,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 684
     :cond_1
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
@@ -129,7 +121,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
 
-    .line 685
     if-eqz v1, :cond_3
 
     invoke-virtual {v1}, Lcom/android/internal/telephony/uicc/IccRecords;->getOperatorNumeric()Ljava/lang/String;
@@ -145,25 +136,21 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 686
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     const-string v3, "SIMStatusBroadcastReceiver: SIMRecords / getOperatorNumeric returned null, Do not anything."
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
 
-    .line 692
     :cond_2
     :goto_1
     return-void
 
-    .line 685
     :cond_3
     const-string v2, ""
 
     goto :goto_0
 
-    .line 688
     :cond_4
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
@@ -191,7 +178,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/telephony/dataconnection/DcTracker;->log(Ljava/lang/String;)V
 
-    .line 689
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$SIMStatusBroadcastReceiver;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DcTracker;->onInitialAttachApn()V

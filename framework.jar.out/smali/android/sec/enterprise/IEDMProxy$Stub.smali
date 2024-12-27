@@ -310,15 +310,12 @@
     .locals 1
 
     .prologue
-    .line 16
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 17
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p0, p0, v0}, Landroid/sec/enterprise/IEDMProxy$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 18
     return-void
 .end method
 
@@ -327,17 +324,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 25
     if-nez p0, :cond_0
 
-    .line 26
     const/4 v0, 0x0
 
-    .line 32
     :goto_0
     return-object v0
 
-    .line 28
     :cond_0
     const-string v1, "android.sec.enterprise.IEDMProxy"
 
@@ -345,7 +338,6 @@
 
     move-result-object v0
 
-    .line 29
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -353,12 +345,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 30
     check-cast v0, Landroid/sec/enterprise/IEDMProxy;
 
     goto :goto_0
 
-    .line 32
     :cond_1
     new-instance v0, Landroid/sec/enterprise/IEDMProxy$Stub$Proxy;
 
@@ -374,7 +364,6 @@
     .locals 0
 
     .prologue
-    .line 36
     return-object p0
 .end method
 
@@ -391,10 +380,8 @@
     .end annotation
 
     .prologue
-    .line 40
     sparse-switch p1, :sswitch_data_0
 
-    .line 1431
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -402,57 +389,46 @@
     :goto_0
     return v0
 
-    .line 44
     :sswitch_0
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 45
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 49
     :sswitch_1
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 51
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 52
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->addCallsCount(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 54
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 58
     .end local v1    # "_arg0":Ljava/lang/String;
     :sswitch_2
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 59
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isCallingCaptureEnabled()Z
 
     move-result v8
 
-    .line 60
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 61
     if-eqz v8, :cond_0
 
     const/4 v0, 0x1
@@ -460,48 +436,40 @@
     :goto_1
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 62
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 61
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 66
     .end local v8    # "_result":Z
     :sswitch_3
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 70
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 72
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 74
     .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 76
     .local v4, "_arg3":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -515,25 +483,20 @@
     :goto_2
     move-object v0, p0
 
-    .line 77
     invoke-virtual/range {v0 .. v5}, Landroid/sec/enterprise/IEDMProxy$Stub;->storeCalling(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 78
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 79
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 76
     .end local v5    # "_arg4":Z
     :cond_1
     const/4 v5, 0x0
 
     goto :goto_2
 
-    .line 83
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -543,16 +506,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isSMSCaptureEnabled()Z
 
     move-result v8
 
-    .line 85
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 86
     if-eqz v8, :cond_2
 
     const/4 v0, 0x1
@@ -560,42 +520,35 @@
     :goto_3
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 87
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 86
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_3
 
-    .line 91
     .end local v8    # "_result":Z
     :sswitch_5
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 93
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 95
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 97
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 99
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -605,27 +558,22 @@
 
     const/4 v4, 0x1
 
-    .line 100
     .local v4, "_arg3":Z
     :goto_4
     invoke-virtual {p0, v1, v2, v3, v4}, Landroid/sec/enterprise/IEDMProxy$Stub;->storeSMS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 101
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 102
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 99
     .end local v4    # "_arg3":Z
     :cond_3
     const/4 v4, 0x0
 
     goto :goto_4
 
-    .line 106
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -634,22 +582,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 108
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 109
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isLocationProviderBlocked(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 110
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 111
     if-eqz v8, :cond_4
 
     const/4 v0, 0x1
@@ -657,18 +601,15 @@
     :goto_5
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 112
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 111
     :cond_4
     const/4 v0, 0x0
 
     goto :goto_5
 
-    .line 116
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_7
@@ -676,36 +617,29 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 118
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 120
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 121
     .local v2, "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->getApplicationIconFromDb(Ljava/lang/String;I)[B
 
     move-result-object v8
 
-    .line 122
     .local v8, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 123
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 124
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 128
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v8    # "_result":[B
@@ -714,14 +648,12 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 130
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_5
 
-    .line 131
     sget-object v0, Landroid/content/Intent;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -730,18 +662,15 @@
 
     check-cast v1, Landroid/content/Intent;
 
-    .line 136
     .local v1, "_arg0":Landroid/content/Intent;
     :goto_6
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isIntentDisabled(Landroid/content/Intent;)Z
 
     move-result v8
 
-    .line 137
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 138
     if-eqz v8, :cond_6
 
     const/4 v0, 0x1
@@ -749,12 +678,10 @@
     :goto_7
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 139
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 134
     .end local v1    # "_arg0":Landroid/content/Intent;
     .end local v8    # "_result":Z
     :cond_5
@@ -763,14 +690,12 @@
     .restart local v1    # "_arg0":Landroid/content/Intent;
     goto :goto_6
 
-    .line 138
     .restart local v8    # "_result":Z
     :cond_6
     const/4 v0, 0x0
 
     goto :goto_7
 
-    .line 143
     .end local v1    # "_arg0":Landroid/content/Intent;
     .end local v8    # "_result":Z
     :sswitch_9
@@ -778,7 +703,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 145
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -787,18 +711,15 @@
 
     const/4 v1, 0x1
 
-    .line 146
     .local v1, "_arg0":Z
     :goto_8
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->getAllowBluetoothDataTransfer(Z)Z
 
     move-result v8
 
-    .line 147
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 148
     if-eqz v8, :cond_8
 
     const/4 v0, 0x1
@@ -806,12 +727,10 @@
     :goto_9
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 149
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 145
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_7
@@ -819,7 +738,6 @@
 
     goto :goto_8
 
-    .line 148
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_8
@@ -827,7 +745,6 @@
 
     goto :goto_9
 
-    .line 153
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_a
@@ -835,16 +752,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 154
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isOutgoingCallsAllowed()Z
 
     move-result v8
 
-    .line 155
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 156
     if-eqz v8, :cond_9
 
     const/4 v0, 0x1
@@ -852,40 +766,33 @@
     :goto_a
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 157
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 156
     :cond_9
     const/4 v0, 0x0
 
     goto :goto_a
 
-    .line 161
     .end local v8    # "_result":Z
     :sswitch_b
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 163
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 164
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isBluetoothUUIDAllowed(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 165
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 166
     if-eqz v8, :cond_a
 
     const/4 v0, 0x1
@@ -893,18 +800,15 @@
     :goto_b
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 167
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 166
     :cond_a
     const/4 v0, 0x0
 
     goto :goto_b
 
-    .line 171
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_c
@@ -912,22 +816,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 173
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 174
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isProfileEnabled(I)Z
 
     move-result v8
 
-    .line 175
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 176
     if-eqz v8, :cond_b
 
     const/4 v0, 0x1
@@ -935,18 +835,15 @@
     :goto_c
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 177
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 176
     :cond_b
     const/4 v0, 0x0
 
     goto :goto_c
 
-    .line 181
     .end local v1    # "_arg0":I
     .end local v8    # "_result":Z
     :sswitch_d
@@ -954,22 +851,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 183
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 184
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isBluetoothDeviceAllowed(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 185
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 186
     if-eqz v8, :cond_c
 
     const/4 v0, 0x1
@@ -977,18 +870,15 @@
     :goto_d
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 187
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 186
     :cond_c
     const/4 v0, 0x0
 
     goto :goto_d
 
-    .line 191
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_e
@@ -996,16 +886,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 192
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isPairingEnabled()Z
 
     move-result v8
 
-    .line 193
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 194
     if-eqz v8, :cond_d
 
     const/4 v0, 0x1
@@ -1013,34 +900,28 @@
     :goto_e
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 195
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 194
     :cond_d
     const/4 v0, 0x0
 
     goto :goto_e
 
-    .line 199
     .end local v8    # "_result":Z
     :sswitch_f
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 200
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isDiscoverableEnabled()Z
 
     move-result v8
 
-    .line 201
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 202
     if-eqz v8, :cond_e
 
     const/4 v0, 0x1
@@ -1048,34 +929,28 @@
     :goto_f
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 203
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 202
     :cond_e
     const/4 v0, 0x0
 
     goto :goto_f
 
-    .line 207
     .end local v8    # "_result":Z
     :sswitch_10
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 208
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isLimitedDiscoverableEnabled()Z
 
     move-result v8
 
-    .line 209
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 210
     if-eqz v8, :cond_f
 
     const/4 v0, 0x1
@@ -1083,34 +958,28 @@
     :goto_10
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 211
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 210
     :cond_f
     const/4 v0, 0x0
 
     goto :goto_10
 
-    .line 215
     .end local v8    # "_result":Z
     :sswitch_11
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 216
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isBluetoothEnabled()Z
 
     move-result v8
 
-    .line 217
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 218
     if-eqz v8, :cond_10
 
     const/4 v0, 0x1
@@ -1118,40 +987,33 @@
     :goto_11
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 219
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 218
     :cond_10
     const/4 v0, 0x0
 
     goto :goto_11
 
-    .line 223
     .end local v8    # "_result":Z
     :sswitch_12
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 225
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 226
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->getBrowserSettingStatus(I)Z
 
     move-result v8
 
-    .line 227
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 228
     if-eqz v8, :cond_11
 
     const/4 v0, 0x1
@@ -1159,18 +1021,15 @@
     :goto_12
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 229
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 228
     :cond_11
     const/4 v0, 0x0
 
     goto :goto_12
 
-    .line 233
     .end local v1    # "_arg0":I
     .end local v8    # "_result":Z
     :sswitch_13
@@ -1178,40 +1037,32 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 234
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isChangeRequested()I
 
     move-result v8
 
-    .line 235
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 236
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 237
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 241
     .end local v8    # "_result":I
     :sswitch_14
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 242
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isRoamingPushEnabled()Z
 
     move-result v8
 
-    .line 243
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 244
     if-eqz v8, :cond_12
 
     const/4 v0, 0x1
@@ -1219,34 +1070,28 @@
     :goto_13
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 245
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 244
     :cond_12
     const/4 v0, 0x0
 
     goto :goto_13
 
-    .line 249
     .end local v8    # "_result":Z
     :sswitch_15
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 250
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isRoamingSyncEnabled()Z
 
     move-result v8
 
-    .line 251
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 252
     if-eqz v8, :cond_13
 
     const/4 v0, 0x1
@@ -1254,25 +1099,21 @@
     :goto_14
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 253
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 252
     :cond_13
     const/4 v0, 0x0
 
     goto :goto_14
 
-    .line 257
     .end local v8    # "_result":Z
     :sswitch_16
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 259
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -1281,18 +1122,15 @@
 
     const/4 v1, 0x1
 
-    .line 260
     .local v1, "_arg0":Z
     :goto_15
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isSettingsChangesAllowed(Z)Z
 
     move-result v8
 
-    .line 261
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 262
     if-eqz v8, :cond_15
 
     const/4 v0, 0x1
@@ -1300,12 +1138,10 @@
     :goto_16
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 263
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 259
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_14
@@ -1313,7 +1149,6 @@
 
     goto :goto_15
 
-    .line 262
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_15
@@ -1321,7 +1156,6 @@
 
     goto :goto_16
 
-    .line 267
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_17
@@ -1329,16 +1163,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 268
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isNonMarketAppAllowed()Z
 
     move-result v8
 
-    .line 269
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 270
     if-eqz v8, :cond_16
 
     const/4 v0, 0x1
@@ -1346,25 +1177,21 @@
     :goto_17
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 271
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 270
     :cond_16
     const/4 v0, 0x0
 
     goto :goto_17
 
-    .line 275
     .end local v8    # "_result":Z
     :sswitch_18
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 277
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -1373,18 +1200,15 @@
 
     const/4 v1, 0x1
 
-    .line 278
     .restart local v1    # "_arg0":Z
     :goto_18
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isCameraEnabled(Z)Z
 
     move-result v8
 
-    .line 279
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 280
     if-eqz v8, :cond_18
 
     const/4 v0, 0x1
@@ -1392,12 +1216,10 @@
     :goto_19
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 281
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 277
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_17
@@ -1405,7 +1227,6 @@
 
     goto :goto_18
 
-    .line 280
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_18
@@ -1413,7 +1234,6 @@
 
     goto :goto_19
 
-    .line 285
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_19
@@ -1421,16 +1241,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 286
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isNFCEnabled()Z
 
     move-result v8
 
-    .line 287
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 288
     if-eqz v8, :cond_19
 
     const/4 v0, 0x1
@@ -1438,25 +1255,21 @@
     :goto_1a
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 289
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 288
     :cond_19
     const/4 v0, 0x0
 
     goto :goto_1a
 
-    .line 293
     .end local v8    # "_result":Z
     :sswitch_1a
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 295
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -1465,18 +1278,15 @@
 
     const/4 v1, 0x1
 
-    .line 296
     .restart local v1    # "_arg0":Z
     :goto_1b
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isNFCEnabledWithMsg(Z)Z
 
     move-result v8
 
-    .line 297
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 298
     if-eqz v8, :cond_1b
 
     const/4 v0, 0x1
@@ -1484,12 +1294,10 @@
     :goto_1c
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 299
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 295
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_1a
@@ -1497,7 +1305,6 @@
 
     goto :goto_1b
 
-    .line 298
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_1b
@@ -1505,7 +1312,6 @@
 
     goto :goto_1c
 
-    .line 303
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_1b
@@ -1513,7 +1319,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 305
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -1522,18 +1327,15 @@
 
     const/4 v1, 0x1
 
-    .line 306
     .restart local v1    # "_arg0":Z
     :goto_1d
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isClipboardAllowed(Z)Z
 
     move-result v8
 
-    .line 307
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 308
     if-eqz v8, :cond_1d
 
     const/4 v0, 0x1
@@ -1541,12 +1343,10 @@
     :goto_1e
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 309
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 305
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_1c
@@ -1554,7 +1354,6 @@
 
     goto :goto_1d
 
-    .line 308
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_1d
@@ -1562,7 +1361,6 @@
 
     goto :goto_1e
 
-    .line 313
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_1c
@@ -1570,7 +1368,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 315
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -1579,18 +1376,15 @@
 
     const/4 v1, 0x1
 
-    .line 316
     .restart local v1    # "_arg0":Z
     :goto_1f
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isMicrophoneEnabled(Z)Z
 
     move-result v8
 
-    .line 317
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 318
     if-eqz v8, :cond_1f
 
     const/4 v0, 0x1
@@ -1598,12 +1392,10 @@
     :goto_20
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 319
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 315
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_1e
@@ -1611,7 +1403,6 @@
 
     goto :goto_1f
 
-    .line 318
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_1f
@@ -1619,7 +1410,6 @@
 
     goto :goto_20
 
-    .line 323
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_1d
@@ -1627,22 +1417,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 325
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 326
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->canIncomingCall(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 327
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 328
     if-eqz v8, :cond_20
 
     const/4 v0, 0x1
@@ -1650,18 +1436,15 @@
     :goto_21
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 329
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 328
     :cond_20
     const/4 v0, 0x0
 
     goto :goto_21
 
-    .line 333
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_1e
@@ -1669,22 +1452,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 335
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 336
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->canOutgoingCall(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 337
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 338
     if-eqz v8, :cond_21
 
     const/4 v0, 0x1
@@ -1692,18 +1471,15 @@
     :goto_22
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 339
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 338
     :cond_21
     const/4 v0, 0x0
 
     goto :goto_22
 
-    .line 343
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_1f
@@ -1711,7 +1487,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 345
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -1720,18 +1495,15 @@
 
     const/4 v1, 0x1
 
-    .line 346
     .local v1, "_arg0":Z
     :goto_23
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->getEmergencyCallOnly(Z)Z
 
     move-result v8
 
-    .line 347
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 348
     if-eqz v8, :cond_23
 
     const/4 v0, 0x1
@@ -1739,12 +1511,10 @@
     :goto_24
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 349
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 345
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_22
@@ -1752,7 +1522,6 @@
 
     goto :goto_23
 
-    .line 348
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_23
@@ -1760,7 +1529,6 @@
 
     goto :goto_24
 
-    .line 353
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_20
@@ -1768,16 +1536,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 354
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->addNumberOfIncomingCalls()Z
 
     move-result v8
 
-    .line 355
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 356
     if-eqz v8, :cond_24
 
     const/4 v0, 0x1
@@ -1785,34 +1550,28 @@
     :goto_25
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 357
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 356
     :cond_24
     const/4 v0, 0x0
 
     goto :goto_25
 
-    .line 361
     .end local v8    # "_result":Z
     :sswitch_21
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 362
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->addNumberOfOutgoingCalls()Z
 
     move-result v8
 
-    .line 363
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 364
     if-eqz v8, :cond_25
 
     const/4 v0, 0x1
@@ -1820,34 +1579,28 @@
     :goto_26
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 365
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 364
     :cond_25
     const/4 v0, 0x0
 
     goto :goto_26
 
-    .line 369
     .end local v8    # "_result":Z
     :sswitch_22
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 370
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isLimitNumberOfSmsEnabled()Z
 
     move-result v8
 
-    .line 371
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 372
     if-eqz v8, :cond_26
 
     const/4 v0, 0x1
@@ -1855,34 +1608,28 @@
     :goto_27
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 373
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 372
     :cond_26
     const/4 v0, 0x0
 
     goto :goto_27
 
-    .line 377
     .end local v8    # "_result":Z
     :sswitch_23
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 378
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->addNumberOfIncomingSms()Z
 
     move-result v8
 
-    .line 379
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 380
     if-eqz v8, :cond_27
 
     const/4 v0, 0x1
@@ -1890,34 +1637,28 @@
     :goto_28
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 381
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 380
     :cond_27
     const/4 v0, 0x0
 
     goto :goto_28
 
-    .line 385
     .end local v8    # "_result":Z
     :sswitch_24
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 386
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->addNumberOfOutgoingSms()Z
 
     move-result v8
 
-    .line 387
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 388
     if-eqz v8, :cond_28
 
     const/4 v0, 0x1
@@ -1925,34 +1666,28 @@
     :goto_29
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 389
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 388
     :cond_28
     const/4 v0, 0x0
 
     goto :goto_29
 
-    .line 393
     .end local v8    # "_result":Z
     :sswitch_25
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 394
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->decreaseNumberOfOutgoingSms()Z
 
     move-result v8
 
-    .line 395
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 396
     if-eqz v8, :cond_29
 
     const/4 v0, 0x1
@@ -1960,40 +1695,33 @@
     :goto_2a
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 397
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 396
     :cond_29
     const/4 v0, 0x0
 
     goto :goto_2a
 
-    .line 401
     .end local v8    # "_result":Z
     :sswitch_26
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 403
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 404
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->canOutgoingSms(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 405
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 406
     if-eqz v8, :cond_2a
 
     const/4 v0, 0x1
@@ -2001,18 +1729,15 @@
     :goto_2b
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 407
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 406
     :cond_2a
     const/4 v0, 0x0
 
     goto :goto_2b
 
-    .line 411
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_27
@@ -2020,22 +1745,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 413
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 414
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->canIncomingSms(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 415
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 416
     if-eqz v8, :cond_2b
 
     const/4 v0, 0x1
@@ -2043,18 +1764,15 @@
     :goto_2c
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 417
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 416
     :cond_2b
     const/4 v0, 0x0
 
     goto :goto_2c
 
-    .line 421
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_28
@@ -2062,64 +1780,51 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 422
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getNetworkSSIDList()Ljava/util/List;
 
     move-result-object v10
 
-    .line 423
     .local v10, "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 424
     invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 425
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 429
     .end local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_29
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 430
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getBlockedNetworks()Ljava/util/List;
 
     move-result-object v10
 
-    .line 431
     .restart local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 432
     invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 433
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 437
     .end local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_2a
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 438
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getAllowUserPolicyChanges()Z
 
     move-result v8
 
-    .line 439
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 440
     if-eqz v8, :cond_2c
 
     const/4 v0, 0x1
@@ -2127,25 +1832,21 @@
     :goto_2d
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 441
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 440
     :cond_2c
     const/4 v0, 0x0
 
     goto :goto_2d
 
-    .line 445
     .end local v8    # "_result":Z
     :sswitch_2b
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 447
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -2154,24 +1855,20 @@
 
     const/4 v1, 0x1
 
-    .line 449
     .local v1, "_arg0":Z
     :goto_2e
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 450
     .restart local v2    # "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->getAllowUserProfiles(ZI)Z
 
     move-result v8
 
-    .line 451
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 452
     if-eqz v8, :cond_2e
 
     const/4 v0, 0x1
@@ -2179,12 +1876,10 @@
     :goto_2f
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 453
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 447
     .end local v1    # "_arg0":Z
     .end local v2    # "_arg1":I
     .end local v8    # "_result":Z
@@ -2193,7 +1888,6 @@
 
     goto :goto_2e
 
-    .line 452
     .restart local v1    # "_arg0":Z
     .restart local v2    # "_arg1":I
     .restart local v8    # "_result":Z
@@ -2202,7 +1896,6 @@
 
     goto :goto_2f
 
-    .line 457
     .end local v1    # "_arg0":Z
     .end local v2    # "_arg1":I
     .end local v8    # "_result":Z
@@ -2211,16 +1904,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 458
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getPromptCredentialsEnabled()Z
 
     move-result v8
 
-    .line 459
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 460
     if-eqz v8, :cond_2f
 
     const/4 v0, 0x1
@@ -2228,56 +1918,46 @@
     :goto_30
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 461
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 460
     :cond_2f
     const/4 v0, 0x0
 
     goto :goto_30
 
-    .line 465
     .end local v8    # "_result":Z
     :sswitch_2d
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 466
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getMinimumRequiredSecurity()I
 
     move-result v8
 
-    .line 467
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 468
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 469
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 473
     .end local v8    # "_result":I
     :sswitch_2e
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 475
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_30
 
-    .line 476
     sget-object v0, Landroid/net/wifi/WifiConfiguration;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v0, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -2286,26 +1966,21 @@
 
     check-cast v1, Landroid/net/wifi/WifiConfiguration;
 
-    .line 482
     .local v1, "_arg0":Landroid/net/wifi/WifiConfiguration;
     :goto_31
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 483
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->edmAddOrUpdate(Landroid/net/wifi/WifiConfiguration;Ljava/lang/String;)V
 
-    .line 484
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 485
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 479
     .end local v1    # "_arg0":Landroid/net/wifi/WifiConfiguration;
     .end local v2    # "_arg1":Ljava/lang/String;
     :cond_30
@@ -2314,29 +1989,24 @@
     .restart local v1    # "_arg0":Landroid/net/wifi/WifiConfiguration;
     goto :goto_31
 
-    .line 489
     .end local v1    # "_arg0":Landroid/net/wifi/WifiConfiguration;
     :sswitch_2f
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 491
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 492
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->removeNetworkConfiguration(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 493
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 494
     if-eqz v8, :cond_31
 
     const/4 v0, 0x1
@@ -2344,18 +2014,15 @@
     :goto_32
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 495
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 494
     :cond_31
     const/4 v0, 0x0
 
     goto :goto_32
 
-    .line 499
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_30
@@ -2363,16 +2030,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 500
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isDateTimeChangeEnabled()Z
 
     move-result v8
 
-    .line 501
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 502
     if-eqz v8, :cond_32
 
     const/4 v0, 0x1
@@ -2380,34 +2044,28 @@
     :goto_33
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 503
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 502
     :cond_32
     const/4 v0, 0x0
 
     goto :goto_33
 
-    .line 507
     .end local v8    # "_result":Z
     :sswitch_31
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 508
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isScreenLockPatternVisibilityEnabled()Z
 
     move-result v8
 
-    .line 509
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 510
     if-eqz v8, :cond_33
 
     const/4 v0, 0x1
@@ -2415,34 +2073,28 @@
     :goto_34
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 511
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 510
     :cond_33
     const/4 v0, 0x0
 
     goto :goto_34
 
-    .line 515
     .end local v8    # "_result":Z
     :sswitch_32
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 516
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isGoogleCrashReportAllowed()Z
 
     move-result v8
 
-    .line 517
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 518
     if-eqz v8, :cond_34
 
     const/4 v0, 0x1
@@ -2450,34 +2102,28 @@
     :goto_35
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 519
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 518
     :cond_34
     const/4 v0, 0x0
 
     goto :goto_35
 
-    .line 523
     .end local v8    # "_result":Z
     :sswitch_33
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 524
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isWifiStateChangeAllowed()Z
 
     move-result v8
 
-    .line 525
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 526
     if-eqz v8, :cond_35
 
     const/4 v0, 0x1
@@ -2485,25 +2131,21 @@
     :goto_36
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 527
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 526
     :cond_35
     const/4 v0, 0x0
 
     goto :goto_36
 
-    .line 531
     .end local v8    # "_result":Z
     :sswitch_34
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 533
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -2512,18 +2154,15 @@
 
     const/4 v1, 0x1
 
-    .line 534
     .local v1, "_arg0":Z
     :goto_37
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isScreenCaptureEnabled(Z)Z
 
     move-result v8
 
-    .line 535
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 536
     if-eqz v8, :cond_37
 
     const/4 v0, 0x1
@@ -2531,12 +2170,10 @@
     :goto_38
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 537
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 533
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_36
@@ -2544,7 +2181,6 @@
 
     goto :goto_37
 
-    .line 536
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_37
@@ -2552,7 +2188,6 @@
 
     goto :goto_38
 
-    .line 541
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_35
@@ -2560,12 +2195,10 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 543
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 545
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2575,18 +2208,15 @@
 
     const/4 v2, 0x1
 
-    .line 546
     .local v2, "_arg1":Z
     :goto_39
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->isHardwareKeyAllowed(IZ)Z
 
     move-result v8
 
-    .line 547
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 548
     if-eqz v8, :cond_39
 
     const/4 v0, 0x1
@@ -2594,12 +2224,10 @@
     :goto_3a
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 549
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 545
     .end local v2    # "_arg1":Z
     .end local v8    # "_result":Z
     :cond_38
@@ -2607,7 +2235,6 @@
 
     goto :goto_39
 
-    .line 548
     .restart local v2    # "_arg1":Z
     .restart local v8    # "_result":Z
     :cond_39
@@ -2615,7 +2242,6 @@
 
     goto :goto_3a
 
-    .line 553
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":Z
     .end local v8    # "_result":Z
@@ -2624,7 +2250,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 555
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -2633,18 +2258,15 @@
 
     const/4 v1, 0x1
 
-    .line 556
     .local v1, "_arg0":Z
     :goto_3b
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isTaskManagerAllowed(Z)Z
 
     move-result v8
 
-    .line 557
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 558
     if-eqz v8, :cond_3b
 
     const/4 v0, 0x1
@@ -2652,12 +2274,10 @@
     :goto_3c
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 559
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 555
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_3a
@@ -2665,7 +2285,6 @@
 
     goto :goto_3b
 
-    .line 558
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_3b
@@ -2673,7 +2292,6 @@
 
     goto :goto_3c
 
-    .line 563
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_37
@@ -2681,7 +2299,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 565
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -2690,18 +2307,15 @@
 
     const/4 v1, 0x1
 
-    .line 566
     .restart local v1    # "_arg0":Z
     :goto_3d
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isPowerOffAllowed(Z)Z
 
     move-result v8
 
-    .line 567
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 568
     if-eqz v8, :cond_3d
 
     const/4 v0, 0x1
@@ -2709,12 +2323,10 @@
     :goto_3e
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 569
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 565
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_3c
@@ -2722,7 +2334,6 @@
 
     goto :goto_3d
 
-    .line 568
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_3d
@@ -2730,7 +2341,6 @@
 
     goto :goto_3e
 
-    .line 573
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_38
@@ -2738,16 +2348,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 574
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isIncomingSmsAllowed()Z
 
     move-result v8
 
-    .line 575
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 576
     if-eqz v8, :cond_3e
 
     const/4 v0, 0x1
@@ -2755,34 +2362,28 @@
     :goto_3f
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 577
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 576
     :cond_3e
     const/4 v0, 0x0
 
     goto :goto_3f
 
-    .line 581
     .end local v8    # "_result":Z
     :sswitch_39
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 582
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isOutgoingSmsAllowed()Z
 
     move-result v8
 
-    .line 583
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 584
     if-eqz v8, :cond_3f
 
     const/4 v0, 0x1
@@ -2790,40 +2391,33 @@
     :goto_40
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 585
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 584
     :cond_3f
     const/4 v0, 0x0
 
     goto :goto_40
 
-    .line 589
     .end local v8    # "_result":Z
     :sswitch_3a
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 591
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 592
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isUrlBlocked(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 593
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 594
     if-eqz v8, :cond_40
 
     const/4 v0, 0x1
@@ -2831,18 +2425,15 @@
     :goto_41
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 595
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 594
     :cond_40
     const/4 v0, 0x0
 
     goto :goto_41
 
-    .line 599
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_3b
@@ -2850,16 +2441,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 600
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isBluetoothLogEnabled()Z
 
     move-result v8
 
-    .line 601
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 602
     if-eqz v8, :cond_41
 
     const/4 v0, 0x1
@@ -2867,48 +2455,39 @@
     :goto_42
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 603
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 602
     :cond_41
     const/4 v0, 0x0
 
     goto :goto_42
 
-    .line 607
     .end local v8    # "_result":Z
     :sswitch_3c
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 609
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 611
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 612
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->bluetoothLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 613
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 614
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 618
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     :sswitch_3d
@@ -2916,36 +2495,30 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 620
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 622
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 624
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 626
     .restart local v3    # "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 628
     .local v4, "_arg3":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 630
     .local v5, "_arg4":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -2959,16 +2532,13 @@
     :goto_43
     move-object v0, p0
 
-    .line 631
     invoke-virtual/range {v0 .. v6}, Landroid/sec/enterprise/IEDMProxy$Stub;->isApplicationForceStopDisabled(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v8
 
-    .line 632
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 633
     if-eqz v8, :cond_43
 
     const/4 v0, 0x1
@@ -2976,12 +2546,10 @@
     :goto_44
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 634
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 630
     .end local v6    # "_arg5":Z
     .end local v8    # "_result":Z
     :cond_42
@@ -2989,7 +2557,6 @@
 
     goto :goto_43
 
-    .line 633
     .restart local v6    # "_arg5":Z
     .restart local v8    # "_result":Z
     :cond_43
@@ -2997,7 +2564,6 @@
 
     goto :goto_44
 
-    .line 638
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -3010,16 +2576,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 639
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isIncomingMmsAllowed()Z
 
     move-result v8
 
-    .line 640
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 641
     if-eqz v8, :cond_44
 
     const/4 v0, 0x1
@@ -3027,25 +2590,21 @@
     :goto_45
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 642
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 641
     :cond_44
     const/4 v0, 0x0
 
     goto :goto_45
 
-    .line 646
     .end local v8    # "_result":Z
     :sswitch_3f
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 648
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -3054,18 +2613,15 @@
 
     const/4 v1, 0x1
 
-    .line 649
     .local v1, "_arg0":Z
     :goto_46
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isBackupAllowed(Z)Z
 
     move-result v8
 
-    .line 650
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 651
     if-eqz v8, :cond_46
 
     const/4 v0, 0x1
@@ -3073,12 +2629,10 @@
     :goto_47
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 652
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 648
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_45
@@ -3086,7 +2640,6 @@
 
     goto :goto_46
 
-    .line 651
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_46
@@ -3094,7 +2647,6 @@
 
     goto :goto_47
 
-    .line 656
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_40
@@ -3102,16 +2654,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 657
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isDesktopConnectivityEnabled()Z
 
     move-result v8
 
-    .line 658
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 659
     if-eqz v8, :cond_47
 
     const/4 v0, 0x1
@@ -3119,30 +2668,25 @@
     :goto_48
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 660
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 659
     :cond_47
     const/4 v0, 0x0
 
     goto :goto_48
 
-    .line 664
     .end local v8    # "_result":Z
     :sswitch_41
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 666
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 668
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3152,18 +2696,15 @@
 
     const/4 v2, 0x1
 
-    .line 669
     .local v2, "_arg1":Z
     :goto_49
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->getApplicationStateEnabled(Ljava/lang/String;Z)Z
 
     move-result v8
 
-    .line 670
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 671
     if-eqz v8, :cond_49
 
     const/4 v0, 0x1
@@ -3171,12 +2712,10 @@
     :goto_4a
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 672
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 668
     .end local v2    # "_arg1":Z
     .end local v8    # "_result":Z
     :cond_48
@@ -3184,7 +2723,6 @@
 
     goto :goto_49
 
-    .line 671
     .restart local v2    # "_arg1":Z
     .restart local v8    # "_result":Z
     :cond_49
@@ -3192,7 +2730,6 @@
 
     goto :goto_4a
 
-    .line 676
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Z
     .end local v8    # "_result":Z
@@ -3201,12 +2738,10 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 678
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 680
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3216,24 +2751,20 @@
 
     const/4 v2, 0x1
 
-    .line 682
     .restart local v2    # "_arg1":Z
     :goto_4b
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
-    .line 683
     .local v3, "_arg2":I
     invoke-virtual {p0, v1, v2, v3}, Landroid/sec/enterprise/IEDMProxy$Stub;->getApplicationStateEnabledAsUser(Ljava/lang/String;ZI)Z
 
     move-result v8
 
-    .line 684
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 685
     if-eqz v8, :cond_4b
 
     const/4 v0, 0x1
@@ -3241,12 +2772,10 @@
     :goto_4c
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 686
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 680
     .end local v2    # "_arg1":Z
     .end local v3    # "_arg2":I
     .end local v8    # "_result":Z
@@ -3255,7 +2784,6 @@
 
     goto :goto_4b
 
-    .line 685
     .restart local v2    # "_arg1":Z
     .restart local v3    # "_arg2":I
     .restart local v8    # "_result":Z
@@ -3264,7 +2792,6 @@
 
     goto :goto_4c
 
-    .line 690
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Z
     .end local v3    # "_arg2":I
@@ -3274,18 +2801,15 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 692
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 694
     .local v1, "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 696
     .local v2, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3295,20 +2819,17 @@
 
     const/4 v3, 0x1
 
-    .line 698
     .local v3, "_arg2":Z
     :goto_4d
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 700
     .local v4, "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 702
     .restart local v5    # "_arg4":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -3317,18 +2838,14 @@
     .local v6, "_arg5":Ljava/lang/String;
     move-object v0, p0
 
-    .line 703
     invoke-virtual/range {v0 .. v6}, Landroid/sec/enterprise/IEDMProxy$Stub;->AuditLogger(IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 704
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 705
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 696
     .end local v3    # "_arg2":Z
     .end local v4    # "_arg3":I
     .end local v5    # "_arg4":Ljava/lang/String;
@@ -3338,7 +2855,6 @@
 
     goto :goto_4d
 
-    .line 709
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     :sswitch_44
@@ -3346,18 +2862,15 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 711
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 713
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 715
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3367,26 +2880,22 @@
 
     const/4 v3, 0x1
 
-    .line 717
     .restart local v3    # "_arg2":Z
     :goto_4e
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 719
     .restart local v4    # "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 721
     .restart local v5    # "_arg4":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 723
     .restart local v6    # "_arg5":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3395,18 +2904,14 @@
     .local v7, "_arg6":I
     move-object v0, p0
 
-    .line 724
     invoke-virtual/range {v0 .. v7}, Landroid/sec/enterprise/IEDMProxy$Stub;->AuditLoggerAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 725
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 726
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 715
     .end local v3    # "_arg2":Z
     .end local v4    # "_arg3":I
     .end local v5    # "_arg4":Ljava/lang/String;
@@ -3417,7 +2922,6 @@
 
     goto :goto_4e
 
-    .line 730
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     :sswitch_45
@@ -3425,18 +2929,15 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 732
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 734
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 736
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3446,20 +2947,17 @@
 
     const/4 v3, 0x1
 
-    .line 738
     .restart local v3    # "_arg2":Z
     :goto_4f
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 740
     .restart local v4    # "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 742
     .restart local v5    # "_arg4":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -3468,18 +2966,14 @@
     .restart local v6    # "_arg5":Ljava/lang/String;
     move-object v0, p0
 
-    .line 743
     invoke-virtual/range {v0 .. v6}, Landroid/sec/enterprise/IEDMProxy$Stub;->AuditLoggerPrivileged(IIZILjava/lang/String;Ljava/lang/String;)V
 
-    .line 744
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 745
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 736
     .end local v3    # "_arg2":Z
     .end local v4    # "_arg3":I
     .end local v5    # "_arg4":Ljava/lang/String;
@@ -3489,7 +2983,6 @@
 
     goto :goto_4f
 
-    .line 749
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     :sswitch_46
@@ -3497,18 +2990,15 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 751
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 753
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 755
     .restart local v2    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3518,26 +3008,22 @@
 
     const/4 v3, 0x1
 
-    .line 757
     .restart local v3    # "_arg2":Z
     :goto_50
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 759
     .restart local v4    # "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 761
     .restart local v5    # "_arg4":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 763
     .restart local v6    # "_arg5":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3546,18 +3032,14 @@
     .restart local v7    # "_arg6":I
     move-object v0, p0
 
-    .line 764
     invoke-virtual/range {v0 .. v7}, Landroid/sec/enterprise/IEDMProxy$Stub;->AuditLoggerPrivilegedAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 765
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 766
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 755
     .end local v3    # "_arg2":Z
     .end local v4    # "_arg3":I
     .end local v5    # "_arg4":Ljava/lang/String;
@@ -3568,7 +3050,6 @@
 
     goto :goto_50
 
-    .line 770
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     :sswitch_47
@@ -3576,22 +3057,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 772
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 773
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isAuditLogEnabledAsUser(I)Z
 
     move-result v8
 
-    .line 774
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 775
     if-eqz v8, :cond_50
 
     const/4 v0, 0x1
@@ -3599,18 +3076,15 @@
     :goto_51
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 776
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 775
     :cond_50
     const/4 v0, 0x0
 
     goto :goto_51
 
-    .line 780
     .end local v1    # "_arg0":I
     .end local v8    # "_result":Z
     :sswitch_48
@@ -3618,18 +3092,15 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 782
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 784
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 786
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3639,27 +3110,22 @@
 
     const/4 v3, 0x1
 
-    .line 787
     .restart local v3    # "_arg2":Z
     :goto_52
     invoke-virtual {p0, v1, v2, v3}, Landroid/sec/enterprise/IEDMProxy$Stub;->notifyCertificateFailure(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 788
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 789
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 786
     .end local v3    # "_arg2":Z
     :cond_51
     const/4 v3, 0x0
 
     goto :goto_52
 
-    .line 793
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     :sswitch_49
@@ -3667,18 +3133,15 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 795
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 797
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 799
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3688,26 +3151,21 @@
 
     const/4 v3, 0x1
 
-    .line 801
     .restart local v3    # "_arg2":Z
     :goto_53
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 802
     .restart local v4    # "_arg3":I
     invoke-virtual {p0, v1, v2, v3, v4}, Landroid/sec/enterprise/IEDMProxy$Stub;->notifyCertificateFailureAsUser(Ljava/lang/String;Ljava/lang/String;ZI)V
 
-    .line 803
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 804
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 799
     .end local v3    # "_arg2":Z
     .end local v4    # "_arg3":I
     :cond_52
@@ -3715,7 +3173,6 @@
 
     goto :goto_53
 
-    .line 808
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     :sswitch_4a
@@ -3723,16 +3180,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 809
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isRevocationCheckEnabled()Z
 
     move-result v8
 
-    .line 810
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 811
     if-eqz v8, :cond_53
 
     const/4 v0, 0x1
@@ -3740,34 +3194,28 @@
     :goto_54
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 812
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 811
     :cond_53
     const/4 v0, 0x0
 
     goto :goto_54
 
-    .line 816
     .end local v8    # "_result":Z
     :sswitch_4b
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 817
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isOcspCheckEnabled()Z
 
     move-result v8
 
-    .line 818
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 819
     if-eqz v8, :cond_54
 
     const/4 v0, 0x1
@@ -3775,30 +3223,25 @@
     :goto_55
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 820
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 819
     :cond_54
     const/4 v0, 0x0
 
     goto :goto_55
 
-    .line 824
     .end local v8    # "_result":Z
     :sswitch_4c
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 826
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v1
 
-    .line 828
     .local v1, "_arg0":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -3808,7 +3251,6 @@
 
     const/4 v2, 0x1
 
-    .line 830
     .local v2, "_arg1":Z
     :goto_56
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
@@ -3819,24 +3261,20 @@
 
     const/4 v3, 0x1
 
-    .line 832
     .restart local v3    # "_arg2":Z
     :goto_57
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 833
     .restart local v4    # "_arg3":I
     invoke-virtual {p0, v1, v2, v3, v4}, Landroid/sec/enterprise/IEDMProxy$Stub;->isCaCertificateTrustedAsUser([BZZI)Z
 
     move-result v8
 
-    .line 834
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 835
     if-eqz v8, :cond_57
 
     const/4 v0, 0x1
@@ -3844,12 +3282,10 @@
     :goto_58
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 836
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 828
     .end local v2    # "_arg1":Z
     .end local v3    # "_arg2":Z
     .end local v4    # "_arg3":I
@@ -3859,14 +3295,12 @@
 
     goto :goto_56
 
-    .line 830
     .restart local v2    # "_arg1":Z
     :cond_56
     const/4 v3, 0x0
 
     goto :goto_57
 
-    .line 835
     .restart local v3    # "_arg2":Z
     .restart local v4    # "_arg3":I
     .restart local v8    # "_result":Z
@@ -3875,7 +3309,6 @@
 
     goto :goto_58
 
-    .line 840
     .end local v1    # "_arg0":[B
     .end local v2    # "_arg1":Z
     .end local v3    # "_arg2":Z
@@ -3886,7 +3319,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 842
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -3895,18 +3327,15 @@
 
     const/4 v1, 0x1
 
-    .line 843
     .local v1, "_arg0":Z
     :goto_59
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isAudioRecordAllowed(Z)Z
 
     move-result v8
 
-    .line 844
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 845
     if-eqz v8, :cond_59
 
     const/4 v0, 0x1
@@ -3914,12 +3343,10 @@
     :goto_5a
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 846
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 842
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_58
@@ -3927,7 +3354,6 @@
 
     goto :goto_59
 
-    .line 845
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_59
@@ -3935,7 +3361,6 @@
 
     goto :goto_5a
 
-    .line 850
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_4e
@@ -3943,7 +3368,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 852
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -3952,18 +3376,15 @@
 
     const/4 v1, 0x1
 
-    .line 853
     .restart local v1    # "_arg0":Z
     :goto_5b
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isVideoRecordAllowed(Z)Z
 
     move-result v8
 
-    .line 854
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 855
     if-eqz v8, :cond_5b
 
     const/4 v0, 0x1
@@ -3971,12 +3392,10 @@
     :goto_5c
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 856
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 852
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_5a
@@ -3984,7 +3403,6 @@
 
     goto :goto_5b
 
-    .line 855
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_5b
@@ -3992,7 +3410,6 @@
 
     goto :goto_5c
 
-    .line 860
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_4f
@@ -4000,16 +3417,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 861
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getAutomaticConnectionToWifi()Z
 
     move-result v8
 
-    .line 862
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 863
     if-eqz v8, :cond_5c
 
     const/4 v0, 0x1
@@ -4017,48 +3431,39 @@
     :goto_5d
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 864
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 863
     :cond_5c
     const/4 v0, 0x0
 
     goto :goto_5d
 
-    .line 868
     .end local v8    # "_result":Z
     :sswitch_50
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 870
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 872
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 873
     .local v2, "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->notifyCertificateRemovedAsUser(Ljava/lang/String;I)V
 
-    .line 874
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 875
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 879
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     :sswitch_51
@@ -4066,36 +3471,29 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 881
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v1
 
-    .line 883
     .local v1, "_arg0":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 884
     .restart local v2    # "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->validateCertificateAtInstallAsUser([BI)I
 
     move-result v8
 
-    .line 885
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 886
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 887
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 891
     .end local v1    # "_arg0":[B
     .end local v2    # "_arg1":I
     .end local v8    # "_result":I
@@ -4104,7 +3502,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 893
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -4113,18 +3510,15 @@
 
     const/4 v1, 0x1
 
-    .line 894
     .local v1, "_arg0":Z
     :goto_5e
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isWifiDirectAllowed(Z)Z
 
     move-result v8
 
-    .line 895
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 896
     if-eqz v8, :cond_5e
 
     const/4 v0, 0x1
@@ -4132,12 +3526,10 @@
     :goto_5f
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 897
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 893
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_5d
@@ -4145,7 +3537,6 @@
 
     goto :goto_5e
 
-    .line 896
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_5e
@@ -4153,7 +3544,6 @@
 
     goto :goto_5f
 
-    .line 901
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_53
@@ -4161,16 +3551,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 902
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isBackgroundProcessLimitAllowed()Z
 
     move-result v8
 
-    .line 903
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 904
     if-eqz v8, :cond_5f
 
     const/4 v0, 0x1
@@ -4178,34 +3565,28 @@
     :goto_60
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 905
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 904
     :cond_5f
     const/4 v0, 0x0
 
     goto :goto_60
 
-    .line 909
     .end local v8    # "_result":Z
     :sswitch_54
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 910
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isKillingActivitiesOnLeaveAllowed()Z
 
     move-result v8
 
-    .line 911
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 912
     if-eqz v8, :cond_60
 
     const/4 v0, 0x1
@@ -4213,34 +3594,28 @@
     :goto_61
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 913
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 912
     :cond_60
     const/4 v0, 0x0
 
     goto :goto_61
 
-    .line 917
     .end local v8    # "_result":Z
     :sswitch_55
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 918
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isClipboardShareAllowed()Z
 
     move-result v8
 
-    .line 919
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 920
     if-eqz v8, :cond_61
 
     const/4 v0, 0x1
@@ -4248,34 +3623,28 @@
     :goto_62
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 921
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 920
     :cond_61
     const/4 v0, 0x0
 
     goto :goto_62
 
-    .line 925
     .end local v8    # "_result":Z
     :sswitch_56
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 926
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isBlockSmsWithStorageEnabled()Z
 
     move-result v8
 
-    .line 927
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 928
     if-eqz v8, :cond_62
 
     const/4 v0, 0x1
@@ -4283,34 +3652,28 @@
     :goto_63
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 929
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 928
     :cond_62
     const/4 v0, 0x0
 
     goto :goto_63
 
-    .line 933
     .end local v8    # "_result":Z
     :sswitch_57
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 934
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isBlockMmsWithStorageEnabled()Z
 
     move-result v8
 
-    .line 935
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 936
     if-eqz v8, :cond_63
 
     const/4 v0, 0x1
@@ -4318,25 +3681,21 @@
     :goto_64
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 937
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 936
     :cond_63
     const/4 v0, 0x0
 
     goto :goto_64
 
-    .line 941
     .end local v8    # "_result":Z
     :sswitch_58
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 943
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -4345,26 +3704,22 @@
 
     const/4 v1, 0x1
 
-    .line 945
     .restart local v1    # "_arg0":Z
     :goto_65
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v2
 
-    .line 947
     .local v2, "_arg1":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 949
     .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 951
     .restart local v4    # "_arg3":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
@@ -4373,18 +3728,14 @@
     .restart local v5    # "_arg4":Ljava/lang/String;
     move-object v0, p0
 
-    .line 952
     invoke-virtual/range {v0 .. v5}, Landroid/sec/enterprise/IEDMProxy$Stub;->storeBlockedSmsMms(Z[BLjava/lang/String;ILjava/lang/String;)V
 
-    .line 953
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 954
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 943
     .end local v1    # "_arg0":Z
     .end local v2    # "_arg1":[B
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -4395,13 +3746,11 @@
 
     goto :goto_65
 
-    .line 958
     :sswitch_59
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 960
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -4410,18 +3759,15 @@
 
     const/4 v1, 0x1
 
-    .line 961
     .restart local v1    # "_arg0":Z
     :goto_66
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isSVoiceAllowed(Z)Z
 
     move-result v8
 
-    .line 962
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 963
     if-eqz v8, :cond_66
 
     const/4 v0, 0x1
@@ -4429,12 +3775,10 @@
     :goto_67
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 964
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 960
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_65
@@ -4442,7 +3786,6 @@
 
     goto :goto_66
 
-    .line 963
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_66
@@ -4450,7 +3793,6 @@
 
     goto :goto_67
 
-    .line 968
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_5a
@@ -4458,16 +3800,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 969
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isWapPushAllowed()Z
 
     move-result v8
 
-    .line 970
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 971
     if-eqz v8, :cond_67
 
     const/4 v0, 0x1
@@ -4475,25 +3814,21 @@
     :goto_68
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 972
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 971
     :cond_67
     const/4 v0, 0x0
 
     goto :goto_68
 
-    .line 976
     .end local v8    # "_result":Z
     :sswitch_5b
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 978
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -4502,18 +3837,15 @@
 
     const/4 v1, 0x1
 
-    .line 979
     .restart local v1    # "_arg0":Z
     :goto_69
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isSBeamAllowed(Z)Z
 
     move-result v8
 
-    .line 980
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 981
     if-eqz v8, :cond_69
 
     const/4 v0, 0x1
@@ -4521,12 +3853,10 @@
     :goto_6a
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 982
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 978
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_68
@@ -4534,7 +3864,6 @@
 
     goto :goto_69
 
-    .line 981
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_69
@@ -4542,7 +3871,6 @@
 
     goto :goto_6a
 
-    .line 986
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_5c
@@ -4550,7 +3878,6 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 988
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
@@ -4559,18 +3886,15 @@
 
     const/4 v1, 0x1
 
-    .line 989
     .restart local v1    # "_arg0":Z
     :goto_6b
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isAndroidBeamAllowed(Z)Z
 
     move-result v8
 
-    .line 990
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 991
     if-eqz v8, :cond_6b
 
     const/4 v0, 0x1
@@ -4578,12 +3902,10 @@
     :goto_6c
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 992
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 988
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :cond_6a
@@ -4591,7 +3913,6 @@
 
     goto :goto_6b
 
-    .line 991
     .restart local v1    # "_arg0":Z
     .restart local v8    # "_result":Z
     :cond_6b
@@ -4599,7 +3920,6 @@
 
     goto :goto_6c
 
-    .line 996
     .end local v1    # "_arg0":Z
     .end local v8    # "_result":Z
     :sswitch_5d
@@ -4607,18 +3927,15 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 998
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1000
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1002
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -4628,18 +3945,15 @@
 
     const/4 v3, 0x1
 
-    .line 1003
     .local v3, "_arg2":Z
     :goto_6d
     invoke-virtual {p0, v1, v2, v3}, Landroid/sec/enterprise/IEDMProxy$Stub;->isAccountRemovalAllowed(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v8
 
-    .line 1004
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1005
     if-eqz v8, :cond_6d
 
     const/4 v0, 0x1
@@ -4647,12 +3961,10 @@
     :goto_6e
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1006
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1002
     .end local v3    # "_arg2":Z
     .end local v8    # "_result":Z
     :cond_6c
@@ -4660,7 +3972,6 @@
 
     goto :goto_6d
 
-    .line 1005
     .restart local v3    # "_arg2":Z
     .restart local v8    # "_result":Z
     :cond_6d
@@ -4668,7 +3979,6 @@
 
     goto :goto_6e
 
-    .line 1010
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Z
@@ -4678,18 +3988,15 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1012
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1014
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1016
     .restart local v2    # "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -4699,18 +4006,15 @@
 
     const/4 v3, 0x1
 
-    .line 1017
     .restart local v3    # "_arg2":Z
     :goto_6f
     invoke-virtual {p0, v1, v2, v3}, Landroid/sec/enterprise/IEDMProxy$Stub;->isAccountAdditionAllowed(Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v8
 
-    .line 1018
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1019
     if-eqz v8, :cond_6f
 
     const/4 v0, 0x1
@@ -4718,12 +4022,10 @@
     :goto_70
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1020
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1016
     .end local v3    # "_arg2":Z
     .end local v8    # "_result":Z
     :cond_6e
@@ -4731,7 +4033,6 @@
 
     goto :goto_6f
 
-    .line 1019
     .restart local v3    # "_arg2":Z
     .restart local v8    # "_result":Z
     :cond_6f
@@ -4739,7 +4040,6 @@
 
     goto :goto_70
 
-    .line 1024
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Z
@@ -4749,22 +4049,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1026
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1027
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isSimLockedByAdmin(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 1028
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1029
     if-eqz v8, :cond_70
 
     const/4 v0, 0x1
@@ -4772,18 +4068,15 @@
     :goto_71
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1030
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1029
     :cond_70
     const/4 v0, 0x0
 
     goto :goto_71
 
-    .line 1034
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_60
@@ -4791,30 +4084,24 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1036
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 1037
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->getWifiSsidRestrictionList(I)Ljava/util/List;
 
     move-result-object v10
 
-    .line 1038
     .restart local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1039
     invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 1040
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1044
     .end local v1    # "_arg0":I
     .end local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_61
@@ -4822,36 +4109,29 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1046
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1048
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 1049
     .local v2, "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->getApplicationNameFromDb(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1050
     .local v8, "_result":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1051
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 1052
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1056
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":I
     .end local v8    # "_result":Ljava/lang/String;
@@ -4860,22 +4140,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1058
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 1059
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isCopyContactToSimAllowed(I)Z
 
     move-result v8
 
-    .line 1060
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1061
     if-eqz v8, :cond_71
 
     const/4 v0, 0x1
@@ -4883,18 +4159,15 @@
     :goto_72
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1062
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1061
     :cond_71
     const/4 v0, 0x0
 
     goto :goto_72
 
-    .line 1066
     .end local v1    # "_arg0":I
     .end local v8    # "_result":Z
     :sswitch_63
@@ -4902,16 +4175,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1067
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isNFCStateChangeAllowed()Z
 
     move-result v8
 
-    .line 1068
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1069
     if-eqz v8, :cond_72
 
     const/4 v0, 0x1
@@ -4919,40 +4189,33 @@
     :goto_73
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1070
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1069
     :cond_72
     const/4 v0, 0x0
 
     goto :goto_73
 
-    .line 1074
     .end local v8    # "_result":Z
     :sswitch_64
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1076
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 1077
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isUserRemoveCertificatesAllowedAsUser(I)Z
 
     move-result v8
 
-    .line 1078
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1079
     if-eqz v8, :cond_73
 
     const/4 v0, 0x1
@@ -4960,18 +4223,15 @@
     :goto_74
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1080
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1079
     :cond_73
     const/4 v0, 0x0
 
     goto :goto_74
 
-    .line 1084
     .end local v1    # "_arg0":I
     .end local v8    # "_result":Z
     :sswitch_65
@@ -4979,16 +4239,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1085
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isMMSCaptureEnabled()Z
 
     move-result v8
 
-    .line 1086
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1087
     if-eqz v8, :cond_74
 
     const/4 v0, 0x1
@@ -4996,42 +4253,35 @@
     :goto_75
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1088
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1087
     :cond_74
     const/4 v0, 0x0
 
     goto :goto_75
 
-    .line 1092
     .end local v8    # "_result":Z
     :sswitch_66
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1094
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1096
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1098
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1100
     .local v3, "_arg2":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -5041,27 +4291,22 @@
 
     const/4 v4, 0x1
 
-    .line 1101
     .local v4, "_arg3":Z
     :goto_76
     invoke-virtual {p0, v1, v2, v3, v4}, Landroid/sec/enterprise/IEDMProxy$Stub;->storeMMS(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1102
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1103
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1100
     .end local v4    # "_arg3":Z
     :cond_75
     const/4 v4, 0x0
 
     goto :goto_76
 
-    .line 1107
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v3    # "_arg2":Ljava/lang/String;
@@ -5070,40 +4315,32 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1109
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 1110
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->notifyUserKeystoreUnlocked(I)V
 
-    .line 1111
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1112
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1116
     .end local v1    # "_arg0":I
     :sswitch_68
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1117
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getProKioskState()Z
 
     move-result v8
 
-    .line 1118
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1119
     if-eqz v8, :cond_76
 
     const/4 v0, 0x1
@@ -5111,34 +4348,28 @@
     :goto_77
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1120
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1119
     :cond_76
     const/4 v0, 0x0
 
     goto :goto_77
 
-    .line 1124
     .end local v8    # "_result":Z
     :sswitch_69
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1125
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getProKioskNotificationMessagesState()Z
 
     move-result v8
 
-    .line 1126
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1127
     if-eqz v8, :cond_77
 
     const/4 v0, 0x1
@@ -5146,82 +4377,66 @@
     :goto_78
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1128
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1127
     :cond_77
     const/4 v0, 0x0
 
     goto :goto_78
 
-    .line 1132
     .end local v8    # "_result":Z
     :sswitch_6a
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1133
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getProKioskHideNotificationMessages()I
 
     move-result v8
 
-    .line 1134
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1135
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1136
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1140
     .end local v8    # "_result":I
     :sswitch_6b
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1141
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getVolumeControlStream()I
 
     move-result v8
 
-    .line 1142
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1143
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1144
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1148
     .end local v8    # "_result":I
     :sswitch_6c
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1149
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getToastEnabledState()Z
 
     move-result v8
 
-    .line 1150
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1151
     if-eqz v8, :cond_78
 
     const/4 v0, 0x1
@@ -5229,34 +4444,28 @@
     :goto_79
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1152
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1151
     :cond_78
     const/4 v0, 0x0
 
     goto :goto_79
 
-    .line 1156
     .end local v8    # "_result":Z
     :sswitch_6d
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1157
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getToastShowPackageNameState()Z
 
     move-result v8
 
-    .line 1158
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1159
     if-eqz v8, :cond_79
 
     const/4 v0, 0x1
@@ -5264,58 +4473,47 @@
     :goto_7a
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1160
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1159
     :cond_79
     const/4 v0, 0x0
 
     goto :goto_7a
 
-    .line 1164
     .end local v8    # "_result":Z
     :sswitch_6e
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1165
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getSensorDisabled()I
 
     move-result v8
 
-    .line 1166
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1167
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1168
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1172
     .end local v8    # "_result":I
     :sswitch_6f
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1173
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getVolumePanelEnabledState()Z
 
     move-result v8
 
-    .line 1174
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1175
     if-eqz v8, :cond_7a
 
     const/4 v0, 0x1
@@ -5323,34 +4521,28 @@
     :goto_7b
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1176
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1175
     :cond_7a
     const/4 v0, 0x0
 
     goto :goto_7b
 
-    .line 1180
     .end local v8    # "_result":Z
     :sswitch_70
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1181
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getVolumeButtonRotationState()Z
 
     move-result v8
 
-    .line 1182
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1183
     if-eqz v8, :cond_7b
 
     const/4 v0, 0x1
@@ -5358,34 +4550,28 @@
     :goto_7c
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1184
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1183
     :cond_7b
     const/4 v0, 0x0
 
     goto :goto_7c
 
-    .line 1188
     .end local v8    # "_result":Z
     :sswitch_71
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1189
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getWifiAutoSwitchState()Z
 
     move-result v8
 
-    .line 1190
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1191
     if-eqz v8, :cond_7c
 
     const/4 v0, 0x1
@@ -5393,82 +4579,66 @@
     :goto_7d
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1192
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1191
     :cond_7c
     const/4 v0, 0x0
 
     goto :goto_7d
 
-    .line 1196
     .end local v8    # "_result":Z
     :sswitch_72
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1197
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getWifiAutoSwitchThreshold()I
 
     move-result v8
 
-    .line 1198
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1199
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1200
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1204
     .end local v8    # "_result":I
     :sswitch_73
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1205
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getWifiAutoSwitchDelay()I
 
     move-result v8
 
-    .line 1206
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1207
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1208
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1212
     .end local v8    # "_result":I
     :sswitch_74
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1213
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getToastGravityEnabledState()Z
 
     move-result v8
 
-    .line 1214
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1215
     if-eqz v8, :cond_7d
 
     const/4 v0, 0x1
@@ -5476,130 +4646,104 @@
     :goto_7e
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1216
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1215
     :cond_7d
     const/4 v0, 0x0
 
     goto :goto_7e
 
-    .line 1220
     .end local v8    # "_result":Z
     :sswitch_75
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1221
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getToastGravity()I
 
     move-result v8
 
-    .line 1222
     .local v8, "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1223
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1224
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1228
     .end local v8    # "_result":I
     :sswitch_76
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1229
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getToastGravityXOffset()I
 
     move-result v8
 
-    .line 1230
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1231
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1232
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1236
     .end local v8    # "_result":I
     :sswitch_77
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1237
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getToastGravityYOffset()I
 
     move-result v8
 
-    .line 1238
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1239
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1240
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1244
     .end local v8    # "_result":I
     :sswitch_78
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1245
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getKeyboardMode()I
 
     move-result v8
 
-    .line 1246
     .restart local v8    # "_result":I
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1247
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1248
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1252
     .end local v8    # "_result":I
     :sswitch_79
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1253
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getWifiState()Z
 
     move-result v8
 
-    .line 1254
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1255
     if-eqz v8, :cond_7e
 
     const/4 v0, 0x1
@@ -5607,40 +4751,33 @@
     :goto_7f
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1256
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1255
     :cond_7e
     const/4 v0, 0x0
 
     goto :goto_7f
 
-    .line 1260
     .end local v8    # "_result":Z
     :sswitch_7a
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1262
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 1263
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isBTSecureAccessAllowedAsUser(I)Z
 
     move-result v8
 
-    .line 1264
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1265
     if-eqz v8, :cond_7f
 
     const/4 v0, 0x1
@@ -5648,18 +4785,15 @@
     :goto_80
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1266
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1265
     :cond_7f
     const/4 v0, 0x0
 
     goto :goto_80
 
-    .line 1270
     .end local v1    # "_arg0":I
     .end local v8    # "_result":Z
     :sswitch_7b
@@ -5667,22 +4801,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1272
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1273
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isPackageWhitelistedFromBTSecureAccess(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 1274
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1275
     if-eqz v8, :cond_80
 
     const/4 v0, 0x1
@@ -5690,18 +4820,15 @@
     :goto_81
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1276
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1275
     :cond_80
     const/4 v0, 0x0
 
     goto :goto_81
 
-    .line 1280
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_7c
@@ -5709,22 +4836,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1282
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 1283
     .local v1, "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isPackageWhitelistedFromBTSecureAccessUid(I)Z
 
     move-result v8
 
-    .line 1284
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1285
     if-eqz v8, :cond_81
 
     const/4 v0, 0x1
@@ -5732,18 +4855,15 @@
     :goto_82
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1286
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1285
     :cond_81
     const/4 v0, 0x0
 
     goto :goto_82
 
-    .line 1290
     .end local v1    # "_arg0":I
     .end local v8    # "_result":Z
     :sswitch_7d
@@ -5751,22 +4871,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1292
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 1293
     .restart local v1    # "_arg0":I
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isKnoxBluetoothEnabled(I)Z
 
     move-result v8
 
-    .line 1294
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1295
     if-eqz v8, :cond_82
 
     const/4 v0, 0x1
@@ -5774,18 +4890,15 @@
     :goto_83
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1296
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1295
     :cond_82
     const/4 v0, 0x0
 
     goto :goto_83
 
-    .line 1300
     .end local v1    # "_arg0":I
     .end local v8    # "_result":Z
     :sswitch_7e
@@ -5793,28 +4906,23 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1302
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
-    .line 1304
     .restart local v1    # "_arg0":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 1305
     .local v2, "_arg1":I
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->isPackageAllowedToAccessExternalSdcard(II)Z
 
     move-result v8
 
-    .line 1306
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1307
     if-eqz v8, :cond_83
 
     const/4 v0, 0x1
@@ -5822,18 +4930,15 @@
     :goto_84
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1308
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1307
     :cond_83
     const/4 v0, 0x0
 
     goto :goto_84
 
-    .line 1312
     .end local v1    # "_arg0":I
     .end local v2    # "_arg1":I
     .end local v8    # "_result":Z
@@ -5842,30 +4947,24 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1314
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1315
     .local v1, "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->getCertificateChain(Ljava/lang/String;)[B
 
     move-result-object v8
 
-    .line 1316
     .local v8, "_result":[B
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1317
     invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 1318
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1322
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":[B
     :sswitch_80
@@ -5873,30 +4972,24 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1324
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1325
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->getELMPermissions(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v10
 
-    .line 1326
     .restart local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1327
     invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 1328
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1332
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_81
@@ -5904,16 +4997,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1333
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isCCMPolicyEnabledForCaller()Z
 
     move-result v8
 
-    .line 1334
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1335
     if-eqz v8, :cond_84
 
     const/4 v0, 0x1
@@ -5921,48 +5011,39 @@
     :goto_85
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1336
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1335
     :cond_84
     const/4 v0, 0x0
 
     goto :goto_85
 
-    .line 1340
     .end local v8    # "_result":Z
     :sswitch_82
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1342
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1343
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->getSlotIdForCaller(Ljava/lang/String;)J
 
     move-result-wide v8
 
-    .line 1344
     .local v8, "_result":J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1345
     invoke-virtual {p3, v8, v9}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1346
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1350
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":J
     :sswitch_83
@@ -5970,36 +5051,29 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1352
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1354
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1355
     .local v2, "_arg1":Ljava/lang/String;
     invoke-virtual {p0, v1, v2}, Landroid/sec/enterprise/IEDMProxy$Stub;->getSlotIdForPackage(Ljava/lang/String;Ljava/lang/String;)J
 
     move-result-wide v8
 
-    .line 1356
     .restart local v8    # "_result":J
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1357
     invoke-virtual {p3, v8, v9}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 1358
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1362
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v2    # "_arg1":Ljava/lang/String;
     .end local v8    # "_result":J
@@ -6008,22 +5082,18 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1364
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1365
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isCCMPolicyEnabledForPackage(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 1366
     .local v8, "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1367
     if-eqz v8, :cond_85
 
     const/4 v0, 0x1
@@ -6031,18 +5101,15 @@
     :goto_86
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1368
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1367
     :cond_85
     const/4 v0, 0x0
 
     goto :goto_86
 
-    .line 1372
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v8    # "_result":Z
     :sswitch_85
@@ -6050,30 +5117,24 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1374
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1375
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->getAliasesForPackage(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v10
 
-    .line 1376
     .restart local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1377
     invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 1378
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1382
     .end local v1    # "_arg0":Ljava/lang/String;
     .end local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_86
@@ -6081,16 +5142,13 @@
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1383
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isAccessControlMethodPassword()Z
 
     move-result v8
 
-    .line 1384
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1385
     if-eqz v8, :cond_86
 
     const/4 v0, 0x1
@@ -6098,82 +5156,66 @@
     :goto_87
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1386
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1385
     :cond_86
     const/4 v0, 0x0
 
     goto :goto_87
 
-    .line 1390
     .end local v8    # "_result":Z
     :sswitch_87
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1391
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getAliasesForWiFi()Ljava/util/List;
 
     move-result-object v10
 
-    .line 1392
     .restart local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1393
     invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 1394
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1398
     .end local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_88
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1399
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getCertificateAliasesHavingPrivateKey()Ljava/util/List;
 
     move-result-object v10
 
-    .line 1400
     .restart local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1401
     invoke-virtual {p3, v10}, Landroid/os/Parcel;->writeStringList(Ljava/util/List;)V
 
-    .line 1402
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1406
     .end local v10    # "_result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :sswitch_89
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1407
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->getAddHomeShorcutRequested()Z
 
     move-result v8
 
-    .line 1408
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1409
     if-eqz v8, :cond_87
 
     const/4 v0, 0x1
@@ -6181,34 +5223,28 @@
     :goto_88
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1410
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1409
     :cond_87
     const/4 v0, 0x0
 
     goto :goto_88
 
-    .line 1414
     .end local v8    # "_result":Z
     :sswitch_8a
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1415
     invoke-virtual {p0}, Landroid/sec/enterprise/IEDMProxy$Stub;->isTimaKeystoreEnabled()Z
 
     move-result v8
 
-    .line 1416
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1417
     if-eqz v8, :cond_88
 
     const/4 v0, 0x1
@@ -6216,40 +5252,33 @@
     :goto_89
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1418
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1417
     :cond_88
     const/4 v0, 0x0
 
     goto :goto_89
 
-    .line 1422
     .end local v8    # "_result":Z
     :sswitch_8b
     const-string v0, "android.sec.enterprise.IEDMProxy"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 1424
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1425
     .restart local v1    # "_arg0":Ljava/lang/String;
     invoke-virtual {p0, v1}, Landroid/sec/enterprise/IEDMProxy$Stub;->isTimaKeystoreEnabledForPackage(Ljava/lang/String;)Z
 
     move-result v8
 
-    .line 1426
     .restart local v8    # "_result":Z
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 1427
     if-eqz v8, :cond_89
 
     const/4 v0, 0x1
@@ -6257,18 +5286,15 @@
     :goto_8a
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1428
     const/4 v0, 0x1
 
     goto/16 :goto_0
 
-    .line 1427
     :cond_89
     const/4 v0, 0x0
 
     goto :goto_8a
 
-    .line 40
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

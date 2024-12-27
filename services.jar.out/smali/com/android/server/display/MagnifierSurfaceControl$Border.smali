@@ -147,85 +147,64 @@
 
     const/4 v1, 0x0
 
-    .line 631
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 579
     iput-boolean v3, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->DEBUG:Z
 
-    .line 580
     iput-boolean v8, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mShowing:Z
 
-    .line 584
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPadding:Landroid/graphics/Rect;
 
-    .line 585
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderLock:Ljava/lang/Object;
 
-    .line 600
     iput v8, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->fingerMagnifierState:I
 
-    .line 611
     iput-object v2, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mTouchGestureDetector:Landroid/view/GestureDetector;
 
-    .line 614
     iput v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->initialTouchX:F
 
-    .line 615
     iput v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->initialTouchY:F
 
-    .line 616
     iput v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mTouchDownX:F
 
-    .line 617
     iput v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mTouchDownY:F
 
-    .line 618
     iput v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mTouchUpX:F
 
-    .line 619
     iput v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mTouchUpY:F
 
-    .line 620
     iput v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->xPosition:F
 
-    .line 621
     iput v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->yPosition:F
 
-    .line 625
     sget-object v0, Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;->MAIN:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mCurrentScreen:Lcom/samsung/android/sdk/dualscreen/SDualScreenActivity$DualScreen;
 
-    .line 626
     iput-object v2, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 632
     new-instance v0, Landroid/view/Surface;
 
     invoke-direct {v0}, Landroid/view/Surface;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurface:Landroid/view/Surface;
 
-    .line 633
     new-instance v0, Landroid/view/SurfaceSession;
 
     invoke-direct {v0}, Landroid/view/SurfaceSession;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderFxSession:Landroid/view/SurfaceSession;
 
-    .line 634
     invoke-static {}, Landroid/view/SurfaceControl;->openTransaction()V
 
-    .line 636
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -238,7 +217,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableCloseMarginTop:I
 
-    .line 637
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -251,7 +229,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableCloseMarginRight:I
 
-    .line 638
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -264,7 +241,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableCloseSize:I
 
-    .line 641
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -277,7 +253,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableHandlerSize_h:I
 
-    .line 642
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -290,7 +265,6 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableHandlerSize_w:I
 
-    .line 644
     const-string v0, "com.sec.feature.overlaymagnifier"
 
     invoke-static {p1, v0}, Landroid/util/GeneralUtil;->hasSystemFeature(Landroid/content/Context;Ljava/lang/String;)Z
@@ -299,7 +273,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 646
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -312,13 +285,11 @@
 
     iput v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->fingerMagnifierState:I
 
-    .line 649
     :cond_0
     if-lt p3, v3, :cond_1
 
     if-ge p4, v3, :cond_3
 
-    .line 650
     :cond_1
     :try_start_0
     const-string v0, "Magnifier.Border"
@@ -357,18 +328,15 @@
 
     invoke-static {v0, v1, v2}, Landroid/util/secutil/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 651
     if-ge p3, v3, :cond_2
 
     const/4 p3, 0x1
 
-    .line 652
     :cond_2
     if-ge p4, v3, :cond_3
 
     const/4 p4, 0x1
 
-    .line 654
     :cond_3
     new-instance v0, Landroid/view/SurfaceControl;
 
@@ -396,26 +364,22 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
-    .line 657
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0, p2}, Landroid/view/SurfaceControl;->setLayerStack(I)V
 
-    .line 658
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/view/SurfaceControl;->setAlpha(F)V
 
-    .line 659
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurface:Landroid/view/Surface;
 
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0, v1}, Landroid/view/Surface;->copyFrom(Landroid/view/SurfaceControl;)V
 
-    .line 660
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
     const v1, 0x1e847f
@@ -425,10 +389,8 @@
     .catch Landroid/view/Surface$OutOfResourcesException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 664
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
-    .line 668
     :goto_1
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->isOldMagnifier:Z
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl;->access$1700()Z
@@ -437,7 +399,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 669
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -450,7 +411,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 670
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -463,7 +423,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableClose:Landroid/graphics/drawable/Drawable;
 
-    .line 676
     :goto_2
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -471,12 +430,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 677
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v8, v8, p3, p4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 679
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -489,14 +446,12 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableHandler:Landroid/graphics/drawable/Drawable;
 
-    .line 680
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableHandler:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPadding:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 681
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableHandler:Landroid/graphics/drawable/Drawable;
 
     div-int/lit8 v1, p3, 0x2
@@ -531,17 +486,14 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 683
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableClose:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPadding:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 684
     iput-object p1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
 
-    .line 685
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->isRTL(Landroid/content/Context;)Z
@@ -550,7 +502,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 686
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableClose:Landroid/graphics/drawable/Drawable;
 
     iget v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableCloseMarginRight:I
@@ -571,16 +522,13 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 696
     :goto_3
     iput-object p5, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mMagnifierDisplayPolicy:Lcom/android/server/display/MagnifierDisplayPolicy;
 
-    .line 697
     iget v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->fingerMagnifierState:I
 
     if-lez v0, :cond_4
 
-    .line 698
     new-instance v0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;
 
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableClose:Landroid/graphics/drawable/Drawable;
@@ -623,11 +571,9 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->initMagnifierWindow(Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;)V
 
-    .line 700
     :cond_4
     return-void
 
-    .line 654
     :cond_5
     :try_start_1
     iget v3, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableHandlerSize_h:I
@@ -641,18 +587,15 @@
 
     goto/16 :goto_0
 
-    .line 661
     :catch_0
     move-exception v7
 
-    .line 662
     .local v7, "e":Landroid/view/Surface$OutOfResourcesException;
     :try_start_2
     invoke-virtual {v7}, Landroid/view/Surface$OutOfResourcesException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 664
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
     goto/16 :goto_1
@@ -665,7 +608,6 @@
 
     throw v0
 
-    .line 673
     :cond_6
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -679,7 +621,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 674
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -694,7 +635,6 @@
 
     goto/16 :goto_2
 
-    .line 688
     :cond_7
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableClose:Landroid/graphics/drawable/Drawable;
 
@@ -727,7 +667,6 @@
     .locals 1
 
     .prologue
-    .line 577
     sget-boolean v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->isPadVisible:Z
 
     return v0
@@ -738,7 +677,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     .prologue
-    .line 577
     invoke-direct {p0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->addMagnifierView()V
 
     return-void
@@ -749,7 +687,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     .prologue
-    .line 577
     invoke-direct {p0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->setEventListener()V
 
     return-void
@@ -760,7 +697,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     .prologue
-    .line 577
     invoke-direct {p0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->updateViewLayout()V
 
     return-void
@@ -771,7 +707,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     .prologue
-    .line 577
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
 
     return-object v0
@@ -781,7 +716,6 @@
     .locals 1
 
     .prologue
-    .line 577
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewMagnifierPad:Landroid/widget/ImageView;
 
     return-object v0
@@ -791,7 +725,6 @@
     .locals 1
 
     .prologue
-    .line 577
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsMagnifierPad:Landroid/view/WindowManager$LayoutParams;
 
     return-object v0
@@ -801,7 +734,6 @@
     .locals 1
 
     .prologue
-    .line 577
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewClose:Landroid/widget/ImageView;
 
     return-object v0
@@ -811,7 +743,6 @@
     .locals 1
 
     .prologue
-    .line 577
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsClose:Landroid/view/WindowManager$LayoutParams;
 
     return-object v0
@@ -821,7 +752,6 @@
     .locals 1
 
     .prologue
-    .line 577
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewHandle:Landroid/widget/ImageView;
 
     return-object v0
@@ -831,7 +761,6 @@
     .locals 1
 
     .prologue
-    .line 577
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsHandle:Landroid/view/WindowManager$LayoutParams;
 
     return-object v0
@@ -841,7 +770,6 @@
     .locals 1
 
     .prologue
-    .line 577
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewScreenChange:Landroid/widget/ImageView;
 
     return-object v0
@@ -852,7 +780,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     .prologue
-    .line 577
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mTouchGestureDetector:Landroid/view/GestureDetector;
 
     return-object v0
@@ -864,7 +791,6 @@
     .param p1, "x1"    # Landroid/view/GestureDetector;
 
     .prologue
-    .line 577
     iput-object p1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mTouchGestureDetector:Landroid/view/GestureDetector;
 
     return-object p1
@@ -875,7 +801,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     .prologue
-    .line 577
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -886,7 +811,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     .prologue
-    .line 577
     invoke-direct {p0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->handleTimeout()V
 
     return-void
@@ -897,7 +821,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     .prologue
-    .line 577
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mMagnifierDisplayPolicy:Lcom/android/server/display/MagnifierDisplayPolicy;
 
     return-object v0
@@ -908,7 +831,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     .prologue
-    .line 577
     invoke-direct {p0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->saveInSharedPreference()V
 
     return-void
@@ -921,7 +843,6 @@
     .param p2, "x2"    # Z
 
     .prologue
-    .line 577
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->injectAccessibilityMotionEvent(IZ)V
 
     return-void
@@ -931,29 +852,24 @@
     .locals 2
 
     .prologue
-    .line 1061
     const-string v0, "Magnifier.Border"
 
     const-string v1, "addMagnifierView"
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1062
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 1066
     :goto_0
     return-void
 
-    .line 1064
     :cond_0
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->isPadVisible:Z
 
-    .line 1065
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
@@ -967,10 +883,8 @@
     .locals 1
 
     .prologue
-    .line 1110
     monitor-enter p0
 
-    .line 1111
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -984,19 +898,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 1112
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1113
     :cond_0
     monitor-exit p0
 
-    .line 1114
     return-void
 
-    .line 1113
     :catchall_0
     move-exception v0
 
@@ -1011,7 +921,6 @@
     .locals 2
 
     .prologue
-    .line 901
     new-instance v0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -1022,21 +931,18 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
-    .line 953
     new-instance v0, Lcom/android/server/display/MagnifierSurfaceControl$Border$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/MagnifierSurfaceControl$Border$2;-><init>(Lcom/android/server/display/MagnifierSurfaceControl$Border;)V
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->onTouch:Landroid/view/View$OnTouchListener;
 
-    .line 1031
     new-instance v0, Lcom/android/server/display/MagnifierSurfaceControl$Border$3;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/MagnifierSurfaceControl$Border$3;-><init>(Lcom/android/server/display/MagnifierSurfaceControl$Border;)V
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->onClick:Landroid/view/View$OnClickListener;
 
-    .line 1059
     return-void
 .end method
 
@@ -1053,12 +959,10 @@
 
     const/4 v5, -0x3
 
-    .line 837
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsMagnifierPad:Landroid/view/WindowManager$LayoutParams;
 
     if-nez v0, :cond_0
 
-    .line 838
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mPadWidth:I
@@ -1075,18 +979,15 @@
 
     sput-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsMagnifierPad:Landroid/view/WindowManager$LayoutParams;
 
-    .line 845
     :goto_0
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsMagnifierPad:Landroid/view/WindowManager$LayoutParams;
 
     iput v6, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 847
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsClose:Landroid/view/WindowManager$LayoutParams;
 
     if-nez v0, :cond_1
 
-    .line 848
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mCloseWidth:I
@@ -1103,18 +1004,15 @@
 
     sput-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsClose:Landroid/view/WindowManager$LayoutParams;
 
-    .line 855
     :goto_1
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsClose:Landroid/view/WindowManager$LayoutParams;
 
     iput v6, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 857
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsHandle:Landroid/view/WindowManager$LayoutParams;
 
     if-nez v0, :cond_2
 
-    .line 858
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mHandleWidth:I
@@ -1131,16 +1029,13 @@
 
     sput-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsHandle:Landroid/view/WindowManager$LayoutParams;
 
-    .line 865
     :goto_2
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsHandle:Landroid/view/WindowManager$LayoutParams;
 
     iput v6, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 878
     return-void
 
-    .line 842
     :cond_0
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsMagnifierPad:Landroid/view/WindowManager$LayoutParams;
 
@@ -1151,7 +1046,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 843
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsMagnifierPad:Landroid/view/WindowManager$LayoutParams;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mPadHeight:I
@@ -1163,7 +1057,6 @@
 
     goto :goto_0
 
-    .line 852
     :cond_1
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsClose:Landroid/view/WindowManager$LayoutParams;
 
@@ -1174,7 +1067,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 853
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsClose:Landroid/view/WindowManager$LayoutParams;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mCloseHeight:I
@@ -1186,7 +1078,6 @@
 
     goto :goto_1
 
-    .line 862
     :cond_2
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsHandle:Landroid/view/WindowManager$LayoutParams;
 
@@ -1197,7 +1088,6 @@
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 863
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsHandle:Landroid/view/WindowManager$LayoutParams;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mHandleHeight:I
@@ -1215,7 +1105,6 @@
     .param p1, "mWindow"    # Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;
 
     .prologue
-    .line 810
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "window"
@@ -1228,12 +1117,10 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 811
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewMagnifierPad:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
-    .line 812
     new-instance v0, Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
@@ -1242,13 +1129,11 @@
 
     sput-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewMagnifierPad:Landroid/widget/ImageView;
 
-    .line 813
     :cond_0
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewClose:Landroid/widget/ImageView;
 
     if-nez v0, :cond_1
 
-    .line 814
     new-instance v0, Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
@@ -1257,13 +1142,11 @@
 
     sput-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewClose:Landroid/widget/ImageView;
 
-    .line 815
     :cond_1
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewHandle:Landroid/widget/ImageView;
 
     if-nez v0, :cond_2
 
-    .line 816
     new-instance v0, Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
@@ -1272,13 +1155,11 @@
 
     sput-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewHandle:Landroid/widget/ImageView;
 
-    .line 817
     :cond_2
     sget-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewScreenChange:Landroid/widget/ImageView;
 
     if-nez v0, :cond_3
 
-    .line 818
     new-instance v0, Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
@@ -1287,24 +1168,19 @@
 
     sput-object v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewScreenChange:Landroid/widget/ImageView;
 
-    .line 828
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->initMagnifierUIParams(Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;)V
 
-    .line 829
     invoke-virtual {p0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->updateMagnifierLayoutParams()V
 
-    .line 830
     invoke-direct {p0}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->initEvent()V
 
-    .line 831
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendEmptyMessage(I)Z
 
-    .line 832
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "power"
@@ -1317,7 +1193,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPM:Landroid/os/PowerManager;
 
-    .line 833
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPM:Landroid/os/PowerManager;
 
     const v1, 0x1000001a
@@ -1330,7 +1205,6 @@
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 835
     return-void
 .end method
 
@@ -1340,7 +1214,6 @@
     .param p2, "isDouble"    # Z
 
     .prologue
-    .line 1152
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/display/MagnifierSurfaceControl$Border$4;
@@ -1351,7 +1224,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 1210
     return-void
 .end method
 
@@ -1360,7 +1232,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 806
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -1373,7 +1244,6 @@
 
     and-int/lit16 v0, v1, 0xc0
 
-    .line 807
     .local v0, "layout_dir":I
     const/16 v1, 0x80
 
@@ -1394,7 +1264,6 @@
     .locals 3
 
     .prologue
-    .line 713
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mSharedPref:Landroid/content/SharedPreferences;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl;->access$1800()Landroid/content/SharedPreferences;
 
@@ -1414,7 +1283,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 714
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->mSharedPref:Landroid/content/SharedPreferences;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl;->access$1800()Landroid/content/SharedPreferences;
 
@@ -1434,7 +1302,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 722
     return-void
 .end method
 
@@ -1442,23 +1309,19 @@
     .locals 2
 
     .prologue
-    .line 1081
     const-string v0, "Magnifier.Border"
 
     const-string/jumbo v1, "setEventListener"
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1082
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 1085
     :goto_0
     return-void
 
-    .line 1084
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
@@ -1473,23 +1336,19 @@
     .locals 2
 
     .prologue
-    .line 1075
     const-string v0, "Magnifier.Border"
 
     const-string/jumbo v1, "updateViewLayout"
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1076
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 1079
     :goto_0
     return-void
 
-    .line 1078
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
@@ -1506,69 +1365,57 @@
     .locals 2
 
     .prologue
-    .line 781
     const-string v0, "Magnifier.Border"
 
     const-string v1, "dismiss"
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 783
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 784
     :try_start_0
     invoke-static {}, Landroid/view/SurfaceControl;->openTransaction()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 786
     :try_start_1
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurface:Landroid/view/Surface;
 
     if-eqz v0, :cond_0
 
-    .line 787
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurface:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->destroy()V
 
-    .line 788
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurface:Landroid/view/Surface;
 
-    .line 790
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
     if-eqz v0, :cond_1
 
-    .line 791
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->destroy()V
 
-    .line 792
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 795
     :cond_1
     :try_start_2
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
-    .line 797
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_3
 
-    .line 798
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1577,30 +1424,24 @@
 
     if-eqz v0, :cond_2
 
-    .line 799
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 800
     :cond_2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 802
     :cond_3
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPM:Landroid/os/PowerManager;
 
-    .line 803
     monitor-exit v1
 
-    .line 804
     return-void
 
-    .line 795
     :catchall_0
     move-exception v0
 
@@ -1608,7 +1449,6 @@
 
     throw v0
 
-    .line 803
     :catchall_1
     move-exception v0
 
@@ -1623,7 +1463,6 @@
     .locals 1
 
     .prologue
-    .line 703
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPadding:Landroid/graphics/Rect;
 
     return-object v0
@@ -1633,30 +1472,25 @@
     .locals 3
 
     .prologue
-    .line 759
     const-string v0, "Magnifier.Border"
 
     const-string/jumbo v1, "hide"
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 761
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 762
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mShowing:Z
 
-    .line 763
     invoke-static {}, Landroid/view/SurfaceControl;->openTransaction()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 765
     :try_start_1
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
@@ -1664,23 +1498,19 @@
 
     invoke-virtual {v0, v2}, Landroid/view/SurfaceControl;->setAlpha(F)V
 
-    .line 766
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v0}, Landroid/view/SurfaceControl;->hide()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 768
     :try_start_2
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
-    .line 770
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_1
 
-    .line 771
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1689,30 +1519,24 @@
 
     if-eqz v0, :cond_0
 
-    .line 772
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 773
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 775
     :cond_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPM:Landroid/os/PowerManager;
 
-    .line 776
     monitor-exit v1
 
-    .line 777
     return-void
 
-    .line 768
     :catchall_0
     move-exception v0
 
@@ -1720,7 +1544,6 @@
 
     throw v0
 
-    .line 776
     :catchall_1
     move-exception v0
 
@@ -1735,16 +1558,13 @@
     .locals 2
 
     .prologue
-    .line 1094
     monitor-enter p0
 
-    .line 1095
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     if-eqz v0, :cond_1
 
-    .line 1096
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->isHeld()Z
@@ -1753,12 +1573,10 @@
 
     if-nez v0, :cond_0
 
-    .line 1097
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 1099
     :cond_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
@@ -1766,14 +1584,11 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 1101
     :cond_1
     monitor-exit p0
 
-    .line 1102
     return-void
 
-    .line 1101
     :catchall_0
     move-exception v0
 
@@ -1788,29 +1603,24 @@
     .locals 2
 
     .prologue
-    .line 1068
     const-string v0, "Magnifier.Border"
 
     const-string/jumbo v1, "removeMagnifierView"
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1069
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
     if-nez v0, :cond_0
 
-    .line 1073
     :goto_0
     return-void
 
-    .line 1071
     :cond_0
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->isPadVisible:Z
 
-    .line 1072
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x1
@@ -1825,12 +1635,10 @@
     .param p1, "pt"    # Landroid/graphics/Point;
 
     .prologue
-    .line 707
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 708
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
@@ -1844,13 +1652,10 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/view/SurfaceControl;->setPosition(FF)V
 
-    .line 709
     monitor-exit v1
 
-    .line 710
     return-void
 
-    .line 709
     :catchall_0
     move-exception v0
 
@@ -1867,25 +1672,21 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 726
     const-string v1, "Magnifier.Border"
 
     const-string/jumbo v2, "show"
 
     invoke-static {v1, v2}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 728
     iget-object v2, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 729
     const/4 v1, 0x1
 
     :try_start_0
     iput-boolean v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mShowing:Z
 
-    .line 730
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurface:Landroid/view/Surface;
 
     const/4 v3, 0x0
@@ -1894,23 +1695,19 @@
 
     move-result-object v0
 
-    .line 731
     .local v0, "c":Landroid/graphics/Canvas;
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 732
     iget v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->fingerMagnifierState:I
 
     if-ne v1, v4, :cond_0
 
-    .line 733
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableClose:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 734
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl;->isOldMagnifier:Z
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl;->access$1700()Z
 
@@ -1918,23 +1715,19 @@
 
     if-nez v1, :cond_0
 
-    .line 735
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mDrawableHandler:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 741
     :cond_0
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurface:Landroid/view/Surface;
 
     invoke-virtual {v1, v0}, Landroid/view/Surface;->unlockCanvasAndPost(Landroid/graphics/Canvas;)V
 
-    .line 742
     invoke-static {}, Landroid/view/SurfaceControl;->openTransaction()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 744
     :try_start_1
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
@@ -1942,23 +1735,19 @@
 
     invoke-virtual {v1, v3}, Landroid/view/SurfaceControl;->setAlpha(F)V
 
-    .line 745
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mBorderSurfaceControl:Landroid/view/SurfaceControl;
 
     invoke-virtual {v1}, Landroid/view/SurfaceControl;->show()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 747
     :try_start_2
     invoke-static {}, Landroid/view/SurfaceControl;->closeTransaction()V
 
-    .line 749
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPM:Landroid/os/PowerManager;
 
     if-nez v1, :cond_1
 
-    .line 750
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
 
     const-string/jumbo v3, "power"
@@ -1971,7 +1760,6 @@
 
     iput-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPM:Landroid/os/PowerManager;
 
-    .line 751
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mPM:Landroid/os/PowerManager;
 
     const v3, 0x1000001a
@@ -1984,14 +1772,11 @@
 
     iput-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 754
     :cond_1
     monitor-exit v2
 
-    .line 755
     return-void
 
-    .line 747
     :catchall_0
     move-exception v1
 
@@ -1999,7 +1784,6 @@
 
     throw v1
 
-    .line 754
     .end local v0    # "c":Landroid/graphics/Canvas;
     :catchall_1
     move-exception v1
@@ -2015,7 +1799,6 @@
     .locals 6
 
     .prologue
-    .line 880
     iget-object v3, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mMagnifierDisplayPolicy:Lcom/android/server/display/MagnifierDisplayPolicy;
 
     invoke-virtual {v3}, Lcom/android/server/display/MagnifierDisplayPolicy;->getmLastDisplayInfo()Lcom/android/server/display/MagnifierDisplayPolicy$DisplayInfo;
@@ -2028,7 +1811,6 @@
 
     iget v0, v3, Landroid/graphics/Point;->x:I
 
-    .line 881
     .local v0, "left":I
     sget-object v3, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsMagnifierPad:Landroid/view/WindowManager$LayoutParams;
 
@@ -2036,7 +1818,6 @@
 
     add-int v1, v0, v3
 
-    .line 882
     .local v1, "right":I
     iget-object v3, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mMagnifierDisplayPolicy:Lcom/android/server/display/MagnifierDisplayPolicy;
 
@@ -2050,18 +1831,15 @@
 
     iget v2, v3, Landroid/graphics/Point;->y:I
 
-    .line 884
     .local v2, "top":I
     sget-object v3, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsMagnifierPad:Landroid/view/WindowManager$LayoutParams;
 
     iput v0, v3, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 885
     sget-object v3, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsMagnifierPad:Landroid/view/WindowManager$LayoutParams;
 
     iput v2, v3, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 886
     iget-object v3, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->isRTL(Landroid/content/Context;)Z
@@ -2070,12 +1848,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 887
     sget-object v3, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsClose:Landroid/view/WindowManager$LayoutParams;
 
     iput v0, v3, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 890
     :goto_0
     sget-object v3, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsClose:Landroid/view/WindowManager$LayoutParams;
 
@@ -2085,10 +1861,8 @@
 
     iput v4, v3, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 898
     return-void
 
-    .line 889
     :cond_0
     sget-object v3, Lcom/android/server/display/MagnifierSurfaceControl$Border;->layoutParamsClose:Landroid/view/WindowManager$LayoutParams;
 

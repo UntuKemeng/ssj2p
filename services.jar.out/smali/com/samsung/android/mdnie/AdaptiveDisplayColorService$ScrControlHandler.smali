@@ -24,15 +24,12 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 995
     iput-object p1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
-    .line 996
     const/4 v0, 0x0
 
     invoke-direct {p0, p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
-    .line 997
     return-void
 .end method
 
@@ -43,17 +40,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1001
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1039
     :cond_0
     :goto_0
     return-void
 
-    .line 1003
     :pswitch_0
     iget-object v2, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -70,7 +64,6 @@
 
     goto :goto_0
 
-    .line 1007
     :pswitch_1
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
@@ -89,11 +82,9 @@
 
     goto :goto_0
 
-    .line 1008
     :catch_0
     move-exception v0
 
-    .line 1009
     .local v0, "e":Landroid/os/RemoteException;
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -104,7 +95,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1010
     const-string v1, "AdaptiveDisplayColorService"
 
     const-string v2, "failed to onForegroundActivitiesChanged"
@@ -113,7 +103,6 @@
 
     goto :goto_0
 
-    .line 1015
     .end local v0    # "e":Landroid/os/RemoteException;
     :pswitch_2
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
@@ -123,7 +112,6 @@
 
     goto :goto_0
 
-    .line 1018
     :pswitch_3
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -132,7 +120,6 @@
 
     goto :goto_0
 
-    .line 1021
     :pswitch_4
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -141,7 +128,6 @@
 
     goto :goto_0
 
-    .line 1024
     :pswitch_5
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -150,7 +136,6 @@
 
     goto :goto_0
 
-    .line 1027
     :pswitch_6
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -159,7 +144,6 @@
 
     goto :goto_0
 
-    .line 1030
     :pswitch_7
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -168,7 +152,6 @@
 
     goto :goto_0
 
-    .line 1033
     :pswitch_8
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
@@ -179,7 +162,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1034
     iget-object v1, p0, Lcom/samsung/android/mdnie/AdaptiveDisplayColorService$ScrControlHandler;->this$0:Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;
 
     # getter for: Lcom/samsung/android/mdnie/AdaptiveDisplayColorService;->mSensorManager:Landroid/hardware/SensorManager;
@@ -214,7 +196,6 @@
 
     goto :goto_0
 
-    .line 1001
     nop
 
     :pswitch_data_0

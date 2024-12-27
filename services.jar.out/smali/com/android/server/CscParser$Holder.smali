@@ -25,7 +25,6 @@
     .locals 2
 
     .prologue
-    .line 35
     new-instance v0, Lcom/android/server/CscParser;
 
     const/4 v1, 0x0
@@ -34,14 +33,12 @@
 
     sput-object v0, Lcom/android/server/CscParser$Holder;->sInstance:Lcom/android/server/CscParser;
 
-    .line 36
     sget-object v0, Lcom/android/server/CscParser$Holder;->sInstance:Lcom/android/server/CscParser;
 
     const-string v1, "/system/csc/customer.xml"
 
     invoke-virtual {v0, v1}, Lcom/android/server/CscParser;->load(Ljava/lang/String;)Z
 
-    .line 37
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 232
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 235
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v1, "networkInfo"
@@ -52,7 +50,6 @@
 
     iput-object v1, v2, Lcom/samsung/android/server/wifi/SoftApStateMachine;->mNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 237
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->isMobileApOn()Z
@@ -62,7 +59,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 238
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     iget-object v1, v1, Lcom/samsung/android/server/wifi/SoftApStateMachine;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -75,7 +71,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 239
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v2, "Wifi Connected, Check for Mobile Ap and Wifi Channel and Ip Subnet"
@@ -83,7 +78,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$300(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 240
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->checkMobileApWifiIp()Z
@@ -93,7 +87,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 241
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v2, "IP Subnet of MobileAp needs to be modified. So Reset Mobile Ap"
@@ -101,14 +94,12 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$500(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 242
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.intent.action.WIFIAP_RESET"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 243
     .local v0, "resetIntent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$4;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -119,7 +110,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 247
     .end local v0    # "resetIntent":Landroid/content/Intent;
     :cond_0
     return-void

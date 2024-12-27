@@ -26,17 +26,14 @@
     .param p3, "session"    # Lorg/simpleframework/xml/core/Session;
 
     .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
     new-instance v0, Lorg/simpleframework/xml/core/TemplateFilter;
 
     invoke-direct {v0, p0, p2}, Lorg/simpleframework/xml/core/TemplateFilter;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/filter/Filter;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/Source;->filter:Lorg/simpleframework/xml/filter/Filter;
 
-    .line 92
     new-instance v0, Lorg/simpleframework/xml/core/TemplateEngine;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/Source;->filter:Lorg/simpleframework/xml/filter/Filter;
@@ -45,16 +42,12 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/Source;->engine:Lorg/simpleframework/xml/core/TemplateEngine;
 
-    .line 93
     iput-object p1, p0, Lorg/simpleframework/xml/core/Source;->strategy:Lorg/simpleframework/xml/strategy/Strategy;
 
-    .line 94
     iput-object p2, p0, Lorg/simpleframework/xml/core/Source;->support:Lorg/simpleframework/xml/core/Support;
 
-    .line 95
     iput-object p3, p0, Lorg/simpleframework/xml/core/Source;->session:Lorg/simpleframework/xml/core/Session;
 
-    .line 96
     return-void
 .end method
 
@@ -68,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 271
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/Support;->getScanner(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Scanner;
@@ -85,7 +77,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 335
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->session:Lorg/simpleframework/xml/core/Session;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/Session;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -105,7 +96,6 @@
     .end annotation
 
     .prologue
-    .line 300
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/core/Source;->getScanner(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Scanner;
 
     move-result-object v0
@@ -127,7 +117,6 @@
     .end annotation
 
     .prologue
-    .line 286
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/core/Source;->getScanner(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Scanner;
 
     move-result-object v0
@@ -144,7 +133,6 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 212
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/Support;->getInstance(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Instance;
@@ -159,7 +147,6 @@
     .param p1, "value"    # Lorg/simpleframework/xml/strategy/Value;
 
     .prologue
-    .line 225
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/Support;->getInstance(Lorg/simpleframework/xml/strategy/Value;)Lorg/simpleframework/xml/core/Instance;
@@ -179,7 +166,6 @@
     .end annotation
 
     .prologue
-    .line 240
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/Support;->getName(Ljava/lang/Class;)Ljava/lang/String;
@@ -200,16 +186,13 @@
     .end annotation
 
     .prologue
-    .line 355
     invoke-interface {p2}, Lorg/simpleframework/xml/stream/InputNode;->getAttributes()Lorg/simpleframework/xml/stream/NodeMap;
 
     move-result-object v0
 
-    .line 357
     .local v0, "map":Lorg/simpleframework/xml/stream/NodeMap;, "Lorg/simpleframework/xml/stream/NodeMap<Lorg/simpleframework/xml/stream/InputNode;>;"
     if-nez v0, :cond_0
 
-    .line 358
     new-instance v1, Lorg/simpleframework/xml/core/PersistenceException;
 
     const-string v2, "No attributes for %s"
@@ -226,7 +209,6 @@
 
     throw v1
 
-    .line 360
     :cond_0
     iget-object v1, p0, Lorg/simpleframework/xml/core/Source;->strategy:Lorg/simpleframework/xml/strategy/Strategy;
 
@@ -244,7 +226,6 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 417
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->engine:Lorg/simpleframework/xml/core/TemplateEngine;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/TemplateEngine;->process(Ljava/lang/String;)Ljava/lang/String;
@@ -264,16 +245,13 @@
     .end annotation
 
     .prologue
-    .line 317
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/core/Source;->getScanner(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Scanner;
 
     move-result-object v0
 
-    .line 319
     .local v0, "schema":Lorg/simpleframework/xml/core/Scanner;
     if-nez v0, :cond_0
 
-    .line 320
     new-instance v1, Lorg/simpleframework/xml/core/PersistenceException;
 
     const-string v2, "Invalid schema class %s"
@@ -290,7 +268,6 @@
 
     throw v1
 
-    .line 322
     :cond_0
     new-instance v1, Lorg/simpleframework/xml/core/ClassSchema;
 
@@ -303,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 120
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->session:Lorg/simpleframework/xml/core/Session;
 
     return-object v0
@@ -313,7 +289,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/Support;->getStyle()Lorg/simpleframework/xml/stream/Style;
@@ -327,7 +302,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->support:Lorg/simpleframework/xml/core/Support;
 
     return-object v0
@@ -339,15 +313,12 @@
     .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 399
     if-eqz p2, :cond_0
 
-    .line 400
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 402
     :goto_0
     return-object v0
 
@@ -369,7 +340,6 @@
     .end annotation
 
     .prologue
-    .line 254
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/core/Source;->getScanner(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Scanner;
 
     move-result-object v0
@@ -391,7 +361,6 @@
     .end annotation
 
     .prologue
-    .line 158
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-static {p1}, Lorg/simpleframework/xml/core/Support;->isFloat(Ljava/lang/Class;)Z
@@ -411,7 +380,6 @@
     .end annotation
 
     .prologue
-    .line 171
     invoke-interface {p1}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
@@ -433,7 +401,6 @@
     .end annotation
 
     .prologue
-    .line 185
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/Support;->isPrimitive(Ljava/lang/Class;)Z
@@ -453,7 +420,6 @@
     .end annotation
 
     .prologue
-    .line 199
     invoke-interface {p1}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
@@ -469,7 +435,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Lorg/simpleframework/xml/core/Source;->session:Lorg/simpleframework/xml/core/Session;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/Session;->isStrict()Z
@@ -491,16 +456,13 @@
     .end annotation
 
     .prologue
-    .line 379
     invoke-interface {p3}, Lorg/simpleframework/xml/stream/OutputNode;->getAttributes()Lorg/simpleframework/xml/stream/NodeMap;
 
     move-result-object v0
 
-    .line 381
     .local v0, "map":Lorg/simpleframework/xml/stream/NodeMap;, "Lorg/simpleframework/xml/stream/NodeMap<Lorg/simpleframework/xml/stream/OutputNode;>;"
     if-nez v0, :cond_0
 
-    .line 382
     new-instance v1, Lorg/simpleframework/xml/core/PersistenceException;
 
     const-string v2, "No attributes for %s"
@@ -517,7 +479,6 @@
 
     throw v1
 
-    .line 384
     :cond_0
     iget-object v1, p0, Lorg/simpleframework/xml/core/Source;->strategy:Lorg/simpleframework/xml/strategy/Strategy;
 

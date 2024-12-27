@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 826
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$RadioPowerTimer;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,6 +43,5 @@
     .locals 0
 
     .prologue
-    .line 837
     return-void
 .end method

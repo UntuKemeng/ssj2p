@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4187
     iput-object p1, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/os/storage/IDirEncryptServiceListener$Stub;-><init>()V
@@ -42,7 +41,6 @@
     .param p5, "storage"    # I
 
     .prologue
-    .line 4193
     const-string v2, "MountService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -85,7 +83,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4194
     iget-object v2, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     # invokes: Lcom/android/server/MountService;->findVolumeByIdOrThrow(Ljava/lang/String;)Landroid/os/storage/VolumeInfo;
@@ -93,7 +90,6 @@
 
     move-result-object v1
 
-    .line 4195
     .local v1, "vol":Landroid/os/storage/VolumeInfo;
     invoke-virtual {v1}, Landroid/os/storage/VolumeInfo;->getType()I
 
@@ -117,7 +113,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4197
     :try_start_0
     iget-object v2, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
@@ -174,7 +169,6 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4203
     :cond_0
     :goto_0
     invoke-virtual {v1}, Landroid/os/storage/VolumeInfo;->getType()I
@@ -199,22 +193,18 @@
 
     if-eqz v2, :cond_1
 
-    .line 4204
     iget-object v2, p0, Lcom/android/server/MountService$DirEncryptListner;->this$0:Lcom/android/server/MountService;
 
     iget-object v3, v1, Landroid/os/storage/VolumeInfo;->id:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Lcom/android/server/MountService;->dirCryptoMntFinished(Ljava/lang/String;)V
 
-    .line 4206
     :cond_1
     return-void
 
-    .line 4198
     :catch_0
     move-exception v0
 
-    .line 4199
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     const-string v2, "MountService"
 

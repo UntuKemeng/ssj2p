@@ -34,37 +34,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 41
     const/4 v0, 0x2
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;-><init>(I)V
 
-    .line 35
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
-    .line 36
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->serverChallengeNonce:[B
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->contextData:[B
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->targetData:[B
 
-    .line 37
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->flagsObtained:I
 
-    .line 42
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->processMessageString(Ljava/lang/String;)V
 
-    .line 43
     invoke-virtual {p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->getFlagsObtained()I
 
     move-result v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->setFlags(I)V
 
-    .line 44
     return-void
 .end method
 
@@ -74,10 +67,8 @@
     .param p2, "end"    # I
 
     .prologue
-    .line 47
     const/4 v1, 0x0
 
-    .line 48
     .local v1, "returnValue":Z
     move v0, p1
 
@@ -85,21 +76,17 @@
     :goto_0
     if-ge v0, p2, :cond_0
 
-    .line 49
     iget-object v2, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     aget-byte v2, v2, v0
 
     if-eqz v2, :cond_1
 
-    .line 50
     const/4 v1, 0x1
 
-    .line 53
     :cond_0
     return v1
 
-    .line 48
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
@@ -115,10 +102,8 @@
     .end annotation
 
     .prologue
-    .line 57
     const/4 v0, 0x0
 
-    .line 58
     .local v0, "i":I
     const/4 v0, 0x0
 
@@ -127,7 +112,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 59
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     aget-byte v1, v1, v0
@@ -138,7 +122,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 60
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Type2 Format Exception: Misplaced Header"
@@ -147,13 +130,11 @@
 
     throw v1
 
-    .line 58
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 63
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
@@ -163,7 +144,6 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 64
     new-instance v1, Ljava/io/IOException;
 
     const-string v2, "Type2 Format Exception: Message Type Incorrect"
@@ -172,7 +152,6 @@
 
     throw v1
 
-    .line 66
     :cond_2
     return-void
 .end method
@@ -183,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 153
     const/4 v0, 0x0
 
     return-object v0
@@ -197,25 +175,20 @@
 
     const/16 v3, 0x8
 
-    .line 85
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v1, :cond_0
 
-    .line 86
     const/4 v1, 0x0
 
-    .line 93
     :goto_0
     return-object v1
 
-    .line 87
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->contextData:[B
 
     if-nez v1, :cond_1
 
-    .line 88
     const/16 v1, 0x28
 
     invoke-direct {p0, v4, v1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->checkForValidData(II)Z
@@ -224,10 +197,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 89
     new-array v0, v3, [B
 
-    .line 90
     .local v0, "context":[B
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
@@ -235,10 +206,8 @@
 
     invoke-static {v1, v4, v0, v2, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 91
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->setContextData([B)V
 
-    .line 93
     .end local v0    # "context":[B
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->contextData:[B
@@ -250,25 +219,20 @@
     .locals 3
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v0, :cond_0
 
-    .line 118
     const/4 v0, 0x0
 
-    .line 122
     :goto_0
     return v0
 
-    .line 119
     :cond_0
     iget v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->flagsObtained:I
 
     if-gez v0, :cond_1
 
-    .line 120
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     const/16 v1, 0x14
@@ -281,7 +245,6 @@
 
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->setFlagsObtained(I)V
 
-    .line 122
     :cond_1
     iget v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->flagsObtained:I
 
@@ -296,25 +259,20 @@
 
     const/16 v3, 0x8
 
-    .line 69
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v1, :cond_0
 
-    .line 70
     const/4 v1, 0x0
 
-    .line 77
     :goto_0
     return-object v1
 
-    .line 71
     :cond_0
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->serverChallengeNonce:[B
 
     if-nez v1, :cond_1
 
-    .line 72
     const/16 v1, 0x20
 
     invoke-direct {p0, v4, v1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->checkForValidData(II)Z
@@ -323,10 +281,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 73
     new-array v0, v3, [B
 
-    .line 74
     .local v0, "challenge":[B
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
@@ -334,10 +290,8 @@
 
     invoke-static {v1, v4, v0, v2, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 75
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->setServerChallengeNonce([B)V
 
-    .line 77
     .end local v0    # "challenge":[B
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->serverChallengeNonce:[B
@@ -349,29 +303,23 @@
     .locals 3
 
     .prologue
-    .line 101
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v1, :cond_0
 
-    .line 102
     const/4 v1, 0x0
 
-    .line 109
     :goto_0
     return-object v1
 
-    .line 103
     :cond_0
     const/4 v0, 0x0
 
-    .line 104
     .local v0, "temp":[B
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->targetData:[B
 
     if-nez v1, :cond_1
 
-    .line 105
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     const/16 v2, 0x28
@@ -380,15 +328,12 @@
 
     move-result-object v0
 
-    .line 106
     array-length v1, v0
 
     if-lez v1, :cond_1
 
-    .line 107
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->setTargetData([B)V
 
-    .line 109
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->targetData:[B
 
@@ -399,25 +344,20 @@
     .locals 5
 
     .prologue
-    .line 130
     iget-object v3, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     if-nez v3, :cond_0
 
-    .line 131
     const/4 v3, 0x0
 
-    .line 144
     :goto_0
     return-object v3
 
-    .line 132
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->targetName:Ljava/lang/String;
 
     if-nez v3, :cond_1
 
-    .line 133
     iget-object v3, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
     const/16 v4, 0xc
@@ -426,19 +366,16 @@
 
     move-result-object v2
 
-    .line 135
     .local v2, "temp":[B
     :try_start_0
     array-length v3, v2
 
     if-lez v3, :cond_1
 
-    .line 136
     invoke-virtual {p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->getFlagsObtained()I
 
     move-result v1
 
-    .line 137
     .local v1, "flags":I
     new-instance v4, Ljava/lang/String;
 
@@ -455,7 +392,6 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 144
     .end local v1    # "flags":I
     .end local v2    # "temp":[B
     :cond_1
@@ -464,7 +400,6 @@
 
     goto :goto_0
 
-    .line 137
     .restart local v1    # "flags":I
     .restart local v2    # "temp":[B
     :cond_2
@@ -475,12 +410,10 @@
 
     goto :goto_1
 
-    .line 140
     .end local v1    # "flags":I
     :catch_0
     move-exception v0
 
-    .line 141
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
@@ -497,7 +430,6 @@
     .end annotation
 
     .prologue
-    .line 158
     const/4 v0, 0x2
 
     invoke-static {p1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
@@ -506,10 +438,8 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->type2MessageBytes:[B
 
-    .line 159
     invoke-direct {p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->isValidNTLMType2String()V
 
-    .line 160
     return-void
 .end method
 
@@ -518,10 +448,8 @@
     .param p1, "contextData"    # [B
 
     .prologue
-    .line 97
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->contextData:[B
 
-    .line 98
     return-void
 .end method
 
@@ -530,10 +458,8 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 126
     iput p1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->flagsObtained:I
 
-    .line 127
     return-void
 .end method
 
@@ -542,10 +468,8 @@
     .param p1, "serverChallengeNonce"    # [B
 
     .prologue
-    .line 81
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->serverChallengeNonce:[B
 
-    .line 82
     return-void
 .end method
 
@@ -554,10 +478,8 @@
     .param p1, "targetData"    # [B
 
     .prologue
-    .line 113
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->targetData:[B
 
-    .line 114
     return-void
 .end method
 
@@ -566,9 +488,7 @@
     .param p1, "targetName"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->targetName:Ljava/lang/String;
 
-    .line 149
     return-void
 .end method

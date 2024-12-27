@@ -25,7 +25,6 @@
     .param p3, "x1"    # I
 
     .prologue
-    .line 18208
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$21;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0, p2, p3}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;I)V
@@ -41,7 +40,6 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 18210
     monitor-enter p0
 
     :try_start_0

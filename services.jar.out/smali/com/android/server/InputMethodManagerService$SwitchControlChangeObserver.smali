@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 6188
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
-    .line 6189
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 6190
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .locals 6
 
     .prologue
-    .line 6237
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     # getter for: Lcom/android/server/InputMethodManagerService;->mPrevInputMethodForUniversalSwitch:Ljava/lang/String;
@@ -51,19 +47,16 @@
 
     if-nez v2, :cond_1
 
-    .line 6238
     const-string v2, "InputMethodManagerService"
 
     const-string v3, "Failed to return the previous IME becuase the stored info is null"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6249
     :cond_0
     :goto_0
     return-void
 
-    .line 6241
     :cond_1
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -82,7 +75,6 @@
 
     check-cast v1, Landroid/view/inputmethod/InputMethodInfo;
 
-    .line 6242
     .local v1, "info":Landroid/view/inputmethod/InputMethodInfo;
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -99,7 +91,6 @@
 
     move-result-object v0
 
-    .line 6243
     .local v0, "currentIME":Ljava/lang/String;
     const-string v2, "InputMethodManagerService"
 
@@ -150,7 +141,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6244
     if-eqz v1, :cond_0
 
     if-eqz v0, :cond_0
@@ -168,7 +158,6 @@
 
     if-nez v2, :cond_0
 
-    .line 6246
     iget-object v2, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -202,7 +191,6 @@
     .locals 4
 
     .prologue
-    .line 6210
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     # invokes: Lcom/android/server/InputMethodManagerService;->isChineseRegion()Z
@@ -212,7 +200,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 6211
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const-string v1, "com.samsung.inputmethod/.SamsungIME"
@@ -224,7 +211,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 6213
     const-string v0, "com.samsung.inputmethod/.SamsungIME"
 
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -237,7 +223,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6214
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const-string v1, "com.samsung.inputmethod/.SamsungIME"
@@ -254,12 +239,10 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/InputMethodManagerService;->setInputMethodLocked(Ljava/lang/String;I)V
 
-    .line 6233
     :cond_0
     :goto_0
     return-void
 
-    .line 6219
     :cond_1
     const-string v0, "com.sec.android.inputmethod/.SamsungKeypad"
 
@@ -273,7 +256,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6220
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const-string v1, "com.sec.android.inputmethod/.SamsungKeypad"
@@ -292,7 +274,6 @@
 
     goto :goto_0
 
-    .line 6224
     :cond_2
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
@@ -302,7 +283,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 6226
     const-string v0, "com.sec.android.inputmethod.iwnnime.japan/.standardcommon.IWnnLanguageSwitcher"
 
     iget-object v1, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -315,7 +295,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6227
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const-string v1, "com.sec.android.inputmethod.iwnnime.japan/.standardcommon.IWnnLanguageSwitcher"
@@ -334,7 +313,6 @@
 
     goto :goto_0
 
-    .line 6229
     :cond_3
     const-string v0, "com.sec.android.inputmethod/.SamsungKeypad"
 
@@ -348,7 +326,6 @@
 
     if-nez v0, :cond_0
 
-    .line 6230
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     const-string v1, "com.sec.android.inputmethod/.SamsungKeypad"
@@ -379,7 +356,6 @@
 
     const/4 v2, 0x1
 
-    .line 6193
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v3, v3, Lcom/android/server/InputMethodManagerService;->mContext:Landroid/content/Context;
@@ -394,7 +370,6 @@
 
     move-result v1
 
-    .line 6195
     .local v1, "universalSwitchState":I
     const-string v3, "InputMethodManagerService"
 
@@ -418,17 +393,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6196
     if-ne v1, v2, :cond_0
 
     move v0, v2
 
-    .line 6197
     .local v0, "isUniversalSwitchEnabled":Z
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 6198
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -449,21 +421,17 @@
     # setter for: Lcom/android/server/InputMethodManagerService;->mPrevInputMethodForUniversalSwitch:Ljava/lang/String;
     invoke-static {v3, v4}, Lcom/android/server/InputMethodManagerService;->access$3102(Lcom/android/server/InputMethodManagerService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 6200
     invoke-direct {p0}, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->setDefaultUniversalSwitchInputMethod()V
 
-    .line 6201
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v3, v3, Lcom/android/server/InputMethodManagerService;->mSettings:Lcom/android/internal/inputmethod/InputMethodUtils$InputMethodSettings;
 
     invoke-virtual {v3, v2}, Lcom/android/internal/inputmethod/InputMethodUtils$InputMethodSettings;->setShowImeWithHardKeyboard(Z)V
 
-    .line 6207
     :goto_0
     return-void
 
-    .line 6204
     :cond_1
     invoke-direct {p0}, Lcom/android/server/InputMethodManagerService$SwitchControlChangeObserver;->restorePreviousUsedInputMethod()V
 

@@ -45,34 +45,24 @@
     .param p10, "frequency"    # I
 
     .prologue
-    .line 348
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 349
     iput-wide p1, p0, Lcom/android/server/VibratorService$VibrationInfo;->timeout:J
 
-    .line 350
     iput-wide p3, p0, Lcom/android/server/VibratorService$VibrationInfo;->startTime:J
 
-    .line 351
     iput-object p5, p0, Lcom/android/server/VibratorService$VibrationInfo;->pattern:[J
 
-    .line 352
     iput p6, p0, Lcom/android/server/VibratorService$VibrationInfo;->repeat:I
 
-    .line 353
     iput p7, p0, Lcom/android/server/VibratorService$VibrationInfo;->usageHint:I
 
-    .line 354
     iput p8, p0, Lcom/android/server/VibratorService$VibrationInfo;->uid:I
 
-    .line 355
     iput-object p9, p0, Lcom/android/server/VibratorService$VibrationInfo;->opPkg:Ljava/lang/String;
 
-    .line 356
     iput p10, p0, Lcom/android/server/VibratorService$VibrationInfo;->frequency:I
 
-    .line 357
     return-void
 .end method
 
@@ -82,7 +72,6 @@
     .locals 4
 
     .prologue
-    .line 361
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

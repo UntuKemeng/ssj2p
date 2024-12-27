@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3208
     iput-object p1, p0, Lcom/android/server/LockSettingsService$SdpHandler$4;->this$1:Lcom/android/server/LockSettingsService$SdpHandler;
 
     iput p2, p0, Lcom/android/server/LockSettingsService$SdpHandler$4;->val$userId:I
@@ -44,7 +43,6 @@
     .locals 6
 
     .prologue
-    .line 3211
     const-string v3, "LockSettingsService.SdpHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -69,7 +67,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3212
     iget v3, p0, Lcom/android/server/LockSettingsService$SdpHandler$4;->val$userId:I
 
     invoke-static {v3}, Lcom/sec/enterprise/knox/sdp/SdpUtil;->isKnoxWorkspace(I)Z
@@ -78,16 +75,13 @@
 
     if-eqz v3, :cond_1
 
-    .line 3229
     :cond_0
     :goto_0
     return-void
 
-    .line 3215
     :cond_1
     const/4 v0, 0x0
 
-    .line 3217
     .local v0, "alias":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/SdpUtil;->getInstance()Lcom/sec/enterprise/knox/sdp/SdpUtil;
@@ -98,11 +92,9 @@
 
     move-result-object v2
 
-    .line 3218
     .local v2, "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     if-eqz v2, :cond_0
 
-    .line 3219
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->getInstance()Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;
 
     move-result-object v3
@@ -111,7 +103,6 @@
 
     invoke-virtual {v3, v4}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->lock(Ljava/lang/String;)V
 
-    .line 3220
     const-string v3, "LockSettingsService.SdpHandler"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -141,12 +132,10 @@
 
     goto :goto_0
 
-    .line 3222
     .end local v2    # "info":Lcom/sec/enterprise/knox/sdp/engine/SdpEngineInfo;
     :catch_0
     move-exception v1
 
-    .line 3223
     .local v1, "e":Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
     const-string v3, "LockSettingsService.SdpHandler"
 
@@ -172,17 +161,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3224
     invoke-virtual {v1}, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 3225
     .end local v1    # "e":Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
     :catch_1
     move-exception v1
 
-    .line 3226
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "LockSettingsService.SdpHandler"
 
@@ -208,7 +194,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3227
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0

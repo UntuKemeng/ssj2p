@@ -62,7 +62,6 @@
     .locals 2
 
     .prologue
-    .line 23
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isSupportSelective1Orientation(Landroid/content/Context;)Z
@@ -71,12 +70,10 @@
 
     sput-boolean v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->SELECTIVE1ORIENTATION_ENABLED:Z
 
-    .line 26
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sQueriedTypeMultiWindow:Z
 
-    .line 27
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
@@ -88,7 +85,6 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -99,7 +95,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 62
     return-void
 .end method
 
@@ -108,10 +103,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 56
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 57
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     return-wide v0
@@ -122,7 +115,6 @@
     .param p0, "feature"    # J
 
     .prologue
-    .line 52
     sget-wide v0, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->sEnabledFeaturesFlags:J
 
     and-long/2addr v0, p0
@@ -149,10 +141,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 360
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 361
     const-wide/32 v0, 0x10000
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -167,10 +157,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 391
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 392
     const-wide/32 v0, 0x80000
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -185,10 +173,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 312
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 313
     const-wide/16 v0, 0x400
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -203,10 +189,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 272
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 273
     const-wide/16 v0, 0x8
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -221,10 +205,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 234
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 235
     const-wide/16 v0, 0x2
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -239,10 +221,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 280
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 281
     const-wide/16 v0, 0x10
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -257,10 +237,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 288
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 289
     const-wide/16 v0, 0x20
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -275,10 +253,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 399
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 400
     const-wide/32 v0, 0x100000
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -293,10 +269,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 336
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 337
     const-wide/16 v0, 0x2000
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -311,10 +285,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 244
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 245
     const-wide/16 v0, 0x200
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -329,10 +301,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 224
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 225
     const-wide/16 v0, 0x1
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -347,10 +317,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 296
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 297
     const-wide/16 v0, 0x80
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -365,7 +333,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 368
     const/4 v0, 0x0
 
     return v0
@@ -376,10 +343,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 254
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 255
     const-wide/16 v0, 0x4
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -394,10 +359,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 328
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 329
     const-wide/16 v0, 0x1000
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -412,10 +375,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 264
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 265
     const-wide/16 v0, 0x40
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -430,10 +391,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 375
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 376
     const-wide/32 v0, 0x20000
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -448,10 +407,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 352
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 353
     const-wide/32 v0, 0x8000
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -466,10 +423,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 304
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 305
     const-wide/16 v0, 0x100
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -484,10 +439,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 320
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 321
     const-wide/16 v0, 0x800
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -502,10 +455,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 383
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 384
     const-wide/32 v0, 0x40000
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z
@@ -520,10 +471,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 344
     invoke-static {p0}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->checkMultiWindowFeature(Landroid/content/Context;)V
 
-    .line 345
     const-wide/16 v0, 0x4000
 
     invoke-static {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowFeatures;->isEnabled(J)Z

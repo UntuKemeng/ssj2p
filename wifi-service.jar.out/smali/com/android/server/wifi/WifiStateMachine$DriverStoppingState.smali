@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 12679
     iput-object p1, p0, Lcom/android/server/wifi/WifiStateMachine$DriverStoppingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -38,25 +37,20 @@
     .param p1, "message"    # Landroid/os/Message;
 
     .prologue
-    .line 12682
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$DriverStoppingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->logStateAndMessage(Landroid/os/Message;Lcom/android/internal/util/State;)V
     invoke-static {v1, p1, p0}, Lcom/android/server/wifi/WifiStateMachine;->access$6000(Lcom/android/server/wifi/WifiStateMachine;Landroid/os/Message;Lcom/android/internal/util/State;)V
 
-    .line 12684
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 12706
     const/4 v1, 0x0
 
-    .line 12708
     :goto_0
     return v1
 
-    .line 12686
     :sswitch_0
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$DriverStoppingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -65,13 +59,11 @@
 
     move-result-object v0
 
-    .line 12687
     .local v0, "state":Landroid/net/wifi/SupplicantState;
     sget-object v1, Landroid/net/wifi/SupplicantState;->INTERFACE_DISABLED:Landroid/net/wifi/SupplicantState;
 
     if-ne v0, v1, :cond_0
 
-    .line 12688
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$DriverStoppingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     iget-object v2, p0, Lcom/android/server/wifi/WifiStateMachine$DriverStoppingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
@@ -84,7 +76,6 @@
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$26300(Lcom/android/server/wifi/WifiStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 12708
     .end local v0    # "state":Landroid/net/wifi/SupplicantState;
     :cond_0
     :goto_1
@@ -92,7 +83,6 @@
 
     goto :goto_0
 
-    .line 12702
     :sswitch_1
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$DriverStoppingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
@@ -104,7 +94,6 @@
     # setter for: Lcom/android/server/wifi/WifiStateMachine;->messageHandlingStatus:I
     invoke-static {v1, v2}, Lcom/android/server/wifi/WifiStateMachine;->access$8702(Lcom/android/server/wifi/WifiStateMachine;I)I
 
-    .line 12703
     iget-object v1, p0, Lcom/android/server/wifi/WifiStateMachine$DriverStoppingState;->this$0:Lcom/android/server/wifi/WifiStateMachine;
 
     # invokes: Lcom/android/server/wifi/WifiStateMachine;->deferMessage(Landroid/os/Message;)V
@@ -112,7 +101,6 @@
 
     goto :goto_1
 
-    .line 12684
     :sswitch_data_0
     .sparse-switch
         0x2000d -> :sswitch_1

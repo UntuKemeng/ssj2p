@@ -69,44 +69,33 @@
 
     const/4 v1, 0x0
 
-    .line 440
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 442
     iput v0, p0, Landroid/net/wifi/RttManager$RttParams;->deviceType:I
 
-    .line 443
     iput v0, p0, Landroid/net/wifi/RttManager$RttParams;->requestType:I
 
-    .line 444
     iput v1, p0, Landroid/net/wifi/RttManager$RttParams;->numberBurst:I
 
-    .line 445
     const/16 v0, 0x8
 
     iput v0, p0, Landroid/net/wifi/RttManager$RttParams;->numSamplesPerBurst:I
 
-    .line 446
     iput v1, p0, Landroid/net/wifi/RttManager$RttParams;->numRetriesPerMeasurementFrame:I
 
-    .line 447
     iput v1, p0, Landroid/net/wifi/RttManager$RttParams;->numRetriesPerFTMR:I
 
-    .line 448
     const/16 v0, 0xf
 
     iput v0, p0, Landroid/net/wifi/RttManager$RttParams;->burstTimeout:I
 
-    .line 449
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/net/wifi/RttManager$RttParams;->preamble:I
 
-    .line 450
     const/4 v0, 0x4
 
     iput v0, p0, Landroid/net/wifi/RttManager$RttParams;->bandwidth:I
 
-    .line 451
     return-void
 .end method

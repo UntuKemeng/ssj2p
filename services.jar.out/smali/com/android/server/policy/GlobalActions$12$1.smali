@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1858
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$12$1;->this$1:Lcom/android/server/policy/GlobalActions$12;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 1861
     # getter for: Lcom/android/server/policy/GlobalActions;->sIsConfirmingGuard:Ljava/lang/Object;
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$100()Ljava/lang/Object;
 
@@ -50,20 +48,16 @@
 
     monitor-enter v1
 
-    .line 1862
     const/4 v0, 0x0
 
     :try_start_0
     # setter for: Lcom/android/server/policy/GlobalActions;->sIsConfirming:Z
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->access$202(Z)Z
 
-    .line 1863
     monitor-exit v1
 
-    .line 1864
     return-void
 
-    .line 1863
     :catchall_0
     move-exception v0
 

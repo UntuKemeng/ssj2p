@@ -27,10 +27,8 @@
     .locals 2
 
     .prologue
-    .line 2653
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2654
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -39,12 +37,10 @@
 
     iput-wide v0, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mStartTime:J
 
-    .line 2655
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mIsPrinted:Z
 
-    .line 2656
     return-void
 .end method
 
@@ -56,7 +52,6 @@
     .param p2, "limitTime"    # J
 
     .prologue
-    .line 2671
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -65,7 +60,6 @@
 
     sub-long v0, v2, v4
 
-    .line 2672
     .local v0, "executionTime":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -73,12 +67,10 @@
 
     iput-wide v2, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mLapTime:J
 
-    .line 2674
     cmp-long v2, v0, p2
 
     if-ltz v2, :cond_0
 
-    .line 2675
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$1000()Ljava/lang/String;
 
@@ -120,7 +112,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2677
     :cond_0
     return-void
 .end method
@@ -131,12 +122,10 @@
     .param p2, "limitTime"    # J
 
     .prologue
-    .line 2659
     iget-boolean v2, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mIsPrinted:Z
 
     if-nez v2, :cond_1
 
-    .line 2660
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -145,13 +134,11 @@
 
     sub-long v0, v2, v4
 
-    .line 2662
     .local v0, "executionTime":J
     cmp-long v2, v0, p2
 
     if-ltz v2, :cond_0
 
-    .line 2663
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$1000()Ljava/lang/String;
 
@@ -193,13 +180,11 @@
 
     invoke-static {v2, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2666
     :cond_0
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mIsPrinted:Z
 
-    .line 2668
     .end local v0    # "executionTime":J
     :cond_1
     return-void
@@ -209,7 +194,6 @@
     .locals 2
 
     .prologue
-    .line 2681
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -218,11 +202,9 @@
 
     iput-wide v0, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mStartTime:J
 
-    .line 2682
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/BatteryService$TimeMeasurement;->mIsPrinted:Z
 
-    .line 2683
     return-void
 .end method

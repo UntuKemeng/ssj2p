@@ -111,27 +111,22 @@
 
     const/4 v4, 0x0
 
-    .line 56
     const-string v0, "Typeface"
 
     sput-object v0, Landroid/graphics/Typeface;->TAG:Ljava/lang/String;
 
-    .line 78
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0, v5}, Landroid/util/LongSparseArray;-><init>(I)V
 
     sput-object v0, Landroid/graphics/Typeface;->sTypefaceCache:Landroid/util/LongSparseArray;
 
-    .line 106
     const-string v0, ""
 
     sput-object v0, Landroid/graphics/Typeface;->FlipFontPath:Ljava/lang/String;
 
-    .line 124
     sput-boolean v4, Landroid/graphics/Typeface;->isFlipFontUsed:Z
 
-    .line 132
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/String;
@@ -190,12 +185,10 @@
 
     sput-object v0, Landroid/graphics/Typeface;->FontsLikeDefault:[Ljava/lang/String;
 
-    .line 438
     invoke-static {}, Landroid/graphics/Typeface;->init()V
 
     move-object v0, v1
 
-    .line 441
     nop
 
     nop
@@ -208,7 +201,6 @@
 
     move-object v0, v1
 
-    .line 442
     nop
 
     nop
@@ -219,7 +211,6 @@
 
     sput-object v0, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
-    .line 443
     const-string/jumbo v0, "sans-serif"
 
     invoke-static {v0, v4}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
@@ -228,7 +219,6 @@
 
     sput-object v0, Landroid/graphics/Typeface;->SANS_SERIF:Landroid/graphics/Typeface;
 
-    .line 444
     const-string/jumbo v0, "serif"
 
     invoke-static {v0, v4}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
@@ -237,7 +227,6 @@
 
     sput-object v0, Landroid/graphics/Typeface;->SERIF:Landroid/graphics/Typeface;
 
-    .line 445
     const-string/jumbo v0, "monospace"
 
     invoke-static {v0, v4}, Landroid/graphics/Typeface;->create(Ljava/lang/String;I)Landroid/graphics/Typeface;
@@ -246,7 +235,6 @@
 
     sput-object v0, Landroid/graphics/Typeface;->MONOSPACE:Landroid/graphics/Typeface;
 
-    .line 447
     const/4 v0, 0x4
 
     new-array v2, v0, [Landroid/graphics/Typeface;
@@ -283,7 +271,6 @@
 
     sput-object v2, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
-    .line 454
     return-void
 .end method
 
@@ -294,23 +281,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 337
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 98
     iput v0, p0, Landroid/graphics/Typeface;->mStyle:I
 
-    .line 130
     iput-boolean v0, p0, Landroid/graphics/Typeface;->isLikeDefault:Z
 
-    .line 338
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 339
     new-instance v0, Ljava/lang/RuntimeException;
 
     const-string/jumbo v1, "native typeface cannot be made"
@@ -319,18 +301,15 @@
 
     throw v0
 
-    .line 342
     :cond_0
     iput-wide p1, p0, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 343
     invoke-static {p1, p2}, Landroid/graphics/Typeface;->nativeGetStyle(J)I
 
     move-result v0
 
     iput v0, p0, Landroid/graphics/Typeface;->mStyle:I
 
-    .line 344
     return-void
 .end method
 
@@ -340,10 +319,8 @@
     .param p1, "sAppName"    # Ljava/lang/String;
 
     .prologue
-    .line 924
     invoke-static {p0}, Landroid/graphics/Typeface;->SetFlipFonts(Landroid/content/Context;)V
 
-    .line 928
     return-void
 .end method
 
@@ -352,10 +329,8 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 794
     const-string v4, ""
 
-    .line 797
     .local v4, "strFontPathBold":Ljava/lang/String;
     const/4 v5, 0x1
 
@@ -363,7 +338,6 @@
 
     move-result-object v1
 
-    .line 800
     .local v1, "strFontPath":Ljava/lang/String;
     const-string v5, "default"
 
@@ -373,12 +347,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 804
     const/4 v5, 0x0
 
     sput-boolean v5, Landroid/graphics/Typeface;->isFlipFontUsed:Z
 
-    .line 818
     :goto_0
     sget-object v5, Landroid/graphics/Typeface;->FlipFontPath:Ljava/lang/String;
 
@@ -388,18 +360,15 @@
 
     if-eqz v5, :cond_2
 
-    .line 911
     :cond_0
     :goto_1
     return-void
 
-    .line 808
     :cond_1
     const/4 v5, 0x1
 
     sput-boolean v5, Landroid/graphics/Typeface;->isFlipFontUsed:Z
 
-    .line 810
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -424,7 +393,6 @@
 
     move-result-object v4
 
-    .line 811
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -451,16 +419,13 @@
 
     goto :goto_0
 
-    .line 823
     :cond_2
     sput-object v1, Landroid/graphics/Typeface;->FlipFontPath:Ljava/lang/String;
 
-    .line 840
     sget-object v5, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
     iget-wide v2, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 841
     .local v2, "iNative":J
     sget-boolean v5, Landroid/graphics/Typeface;->isFlipFontUsed:Z
 
@@ -472,7 +437,6 @@
 
     if-eqz v5, :cond_7
 
-    .line 842
     :cond_3
     sget-object v5, Landroid/graphics/Typeface;->sDefaultTypeface:Landroid/graphics/Typeface;
 
@@ -480,7 +444,6 @@
 
     invoke-static {v6, v7}, Landroid/graphics/Typeface;->nativeSetDefault(J)V
 
-    .line 843
     sget-object v5, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
     const-wide/16 v6, 0x0
@@ -493,7 +456,6 @@
 
     iput-wide v6, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 856
     :cond_4
     :goto_2
     sget-object v5, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
@@ -508,12 +470,10 @@
 
     iput v6, v5, Landroid/graphics/Typeface;->mStyle:I
 
-    .line 861
     sget-object v5, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
     iget-wide v2, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 862
     sget-boolean v5, Landroid/graphics/Typeface;->isFlipFontUsed:Z
 
     if-eqz v5, :cond_5
@@ -524,7 +484,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 863
     :cond_5
     sget-object v5, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
@@ -538,7 +497,6 @@
 
     iput-wide v6, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 875
     :cond_6
     :goto_3
     sget-object v5, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
@@ -553,7 +511,6 @@
 
     iput v6, v5, Landroid/graphics/Typeface;->mStyle:I
 
-    .line 880
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x0
@@ -562,7 +519,6 @@
 
     iget-wide v2, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 881
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x0
@@ -581,7 +537,6 @@
 
     iput-wide v6, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 882
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x0
@@ -602,7 +557,6 @@
 
     iput v6, v5, Landroid/graphics/Typeface;->mStyle:I
 
-    .line 886
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x1
@@ -611,7 +565,6 @@
 
     iget-wide v2, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 887
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x1
@@ -630,7 +583,6 @@
 
     iput-wide v6, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 888
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x1
@@ -651,7 +603,6 @@
 
     iput v6, v5, Landroid/graphics/Typeface;->mStyle:I
 
-    .line 892
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x2
@@ -660,7 +611,6 @@
 
     iget-wide v2, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 893
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x2
@@ -679,7 +629,6 @@
 
     iput-wide v6, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 894
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x2
@@ -700,7 +649,6 @@
 
     iput v6, v5, Landroid/graphics/Typeface;->mStyle:I
 
-    .line 898
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x3
@@ -709,7 +657,6 @@
 
     iget-wide v2, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 899
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x3
@@ -728,7 +675,6 @@
 
     iput-wide v6, v5, Landroid/graphics/Typeface;->native_instance:J
 
-    .line 900
     sget-object v5, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
     const/4 v6, 0x3
@@ -749,12 +695,10 @@
 
     iput v6, v5, Landroid/graphics/Typeface;->mStyle:I
 
-    .line 903
     sget-boolean v5, Landroid/graphics/Typeface;->isFlipFontUsed:Z
 
     if-eqz v5, :cond_0
 
-    .line 904
     sget-object v5, Landroid/graphics/Typeface;->sDefaultTypeface:Landroid/graphics/Typeface;
 
     iget-wide v6, v5, Landroid/graphics/Typeface;->native_instance:J
@@ -763,7 +707,6 @@
 
     goto/16 :goto_1
 
-    .line 848
     :cond_7
     :try_start_0
     sget-object v5, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
@@ -778,7 +721,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 853
     :goto_4
     sget-object v5, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
@@ -790,7 +732,6 @@
 
     if-nez v5, :cond_4
 
-    .line 854
     sget-object v6, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
     const/4 v5, 0x0
@@ -809,11 +750,9 @@
 
     goto/16 :goto_2
 
-    .line 849
     :catch_0
     move-exception v0
 
-    .line 850
     .local v0, "e":Ljava/lang/RuntimeException;
     sget-object v6, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
@@ -833,7 +772,6 @@
 
     goto :goto_4
 
-    .line 867
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :cond_8
     :try_start_1
@@ -849,7 +787,6 @@
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 872
     :goto_5
     sget-object v5, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
@@ -861,7 +798,6 @@
 
     if-nez v5, :cond_6
 
-    .line 873
     sget-object v6, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
     const/4 v5, 0x0
@@ -880,11 +816,9 @@
 
     goto/16 :goto_3
 
-    .line 868
     :catch_1
     move-exception v0
 
-    .line 869
     .restart local v0    # "e":Ljava/lang/RuntimeException;
     sget-object v6, Landroid/graphics/Typeface;->DEFAULT_BOLD:Landroid/graphics/Typeface;
 
@@ -911,10 +845,8 @@
     .param p1, "style"    # I
 
     .prologue
-    .line 196
     const-wide/16 v0, 0x0
 
-    .line 200
     .local v0, "ni":J
     if-ltz p1, :cond_0
 
@@ -922,27 +854,22 @@
 
     if-le p1, v4, :cond_1
 
-    .line 201
     :cond_0
     const/4 p1, 0x0
 
-    .line 204
     :cond_1
     if-eqz p0, :cond_4
 
-    .line 206
     iget v4, p0, Landroid/graphics/Typeface;->mStyle:I
 
     if-ne v4, p1, :cond_3
 
     move-object v3, p0
 
-    .line 243
     :cond_2
     :goto_0
     return-object v3
 
-    .line 210
     :cond_3
     sget-boolean v4, Landroid/graphics/Typeface;->isFlipFontUsed:Z
 
@@ -952,10 +879,8 @@
 
     if-eqz v4, :cond_8
 
-    .line 211
     const-wide/16 v0, 0x0
 
-    .line 218
     :cond_4
     :goto_1
     sget-object v4, Landroid/graphics/Typeface;->sTypefaceCache:Landroid/util/LongSparseArray;
@@ -966,22 +891,18 @@
 
     check-cast v2, Landroid/util/SparseArray;
 
-    .line 220
     .local v2, "styles":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/graphics/Typeface;>;"
     if-eqz v2, :cond_5
 
-    .line 221
     invoke-virtual {v2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/graphics/Typeface;
 
-    .line 223
     .local v3, "typeface":Landroid/graphics/Typeface;
     if-nez v3, :cond_2
 
-    .line 228
     .end local v3    # "typeface":Landroid/graphics/Typeface;
     :cond_5
     new-instance v3, Landroid/graphics/Typeface;
@@ -992,22 +913,18 @@
 
     invoke-direct {v3, v4, v5}, Landroid/graphics/Typeface;-><init>(J)V
 
-    .line 232
     .restart local v3    # "typeface":Landroid/graphics/Typeface;
     if-eqz v3, :cond_6
 
     if-eqz p0, :cond_6
 
-    .line 234
     iget-boolean v4, p0, Landroid/graphics/Typeface;->isLikeDefault:Z
 
     iput-boolean v4, v3, Landroid/graphics/Typeface;->isLikeDefault:Z
 
-    .line 237
     :cond_6
     if-nez v2, :cond_7
 
-    .line 238
     new-instance v2, Landroid/util/SparseArray;
 
     .end local v2    # "styles":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/graphics/Typeface;>;"
@@ -1015,19 +932,16 @@
 
     invoke-direct {v2, v4}, Landroid/util/SparseArray;-><init>(I)V
 
-    .line 239
     .restart local v2    # "styles":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/graphics/Typeface;>;"
     sget-object v4, Landroid/graphics/Typeface;->sTypefaceCache:Landroid/util/LongSparseArray;
 
     invoke-virtual {v4, v0, v1, v2}, Landroid/util/LongSparseArray;->put(JLjava/lang/Object;)V
 
-    .line 241
     :cond_7
     invoke-virtual {v2, p1, v3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
     goto :goto_0
 
-    .line 213
     .end local v2    # "styles":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/graphics/Typeface;>;"
     .end local v3    # "typeface":Landroid/graphics/Typeface;
     :cond_8
@@ -1042,12 +956,10 @@
     .param p1, "style"    # I
 
     .prologue
-    .line 178
     sget-object v0, Landroid/graphics/Typeface;->sSystemFontMap:Ljava/util/Map;
 
     if-eqz v0, :cond_0
 
-    .line 179
     sget-object v0, Landroid/graphics/Typeface;->sSystemFontMap:Ljava/util/Map;
 
     invoke-interface {v0, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1060,7 +972,6 @@
 
     move-result-object v0
 
-    .line 181
     :goto_0
     return-object v0
 
@@ -1076,17 +987,14 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 267
     sget-object v2, Landroid/graphics/Typeface;->sFallbackFonts:[Landroid/graphics/FontFamily;
 
     if-eqz v2, :cond_0
 
-    .line 268
     new-instance v1, Landroid/graphics/FontFamily;
 
     invoke-direct {v1}, Landroid/graphics/FontFamily;-><init>()V
 
-    .line 269
     .local v1, "fontFamily":Landroid/graphics/FontFamily;
     invoke-virtual {v1, p0, p1}, Landroid/graphics/FontFamily;->addFontFromAsset(Landroid/content/res/AssetManager;Ljava/lang/String;)Z
 
@@ -1094,7 +1002,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 270
     const/4 v2, 0x1
 
     new-array v0, v2, [Landroid/graphics/FontFamily;
@@ -1103,7 +1010,6 @@
 
     aput-object v1, v0, v2
 
-    .line 271
     .local v0, "families":[Landroid/graphics/FontFamily;
     invoke-static {v0}, Landroid/graphics/Typeface;->createFromFamiliesWithDefault([Landroid/graphics/FontFamily;)Landroid/graphics/Typeface;
 
@@ -1111,7 +1017,6 @@
 
     return-object v2
 
-    .line 274
     .end local v0    # "families":[Landroid/graphics/FontFamily;
     .end local v1    # "fontFamily":Landroid/graphics/FontFamily;
     :cond_0
@@ -1145,12 +1050,10 @@
     .param p0, "families"    # [Landroid/graphics/FontFamily;
 
     .prologue
-    .line 311
     array-length v2, p0
 
     new-array v1, v2, [J
 
-    .line 312
     .local v1, "ptrArray":[J
     const/4 v0, 0x0
 
@@ -1160,19 +1063,16 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 313
     aget-object v2, p0, v0
 
     iget-wide v2, v2, Landroid/graphics/FontFamily;->mNativePtr:J
 
     aput-wide v2, v1, v0
 
-    .line 312
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 315
     :cond_0
     new-instance v2, Landroid/graphics/Typeface;
 
@@ -1190,7 +1090,6 @@
     .param p0, "families"    # [Landroid/graphics/FontFamily;
 
     .prologue
-    .line 326
     array-length v2, p0
 
     sget-object v3, Landroid/graphics/Typeface;->sFallbackFonts:[Landroid/graphics/FontFamily;
@@ -1201,7 +1100,6 @@
 
     new-array v1, v2, [J
 
-    .line 327
     .local v1, "ptrArray":[J
     const/4 v0, 0x0
 
@@ -1211,19 +1109,16 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 328
     aget-object v2, p0, v0
 
     iget-wide v2, v2, Landroid/graphics/FontFamily;->mNativePtr:J
 
     aput-wide v2, v1, v0
 
-    .line 327
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 330
     :cond_0
     const/4 v0, 0x0
 
@@ -1234,7 +1129,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 331
     array-length v2, p0
 
     add-int/2addr v2, v0
@@ -1247,12 +1141,10 @@
 
     aput-wide v4, v1, v2
 
-    .line 330
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 333
     :cond_1
     new-instance v2, Landroid/graphics/Typeface;
 
@@ -1270,7 +1162,6 @@
     .param p0, "path"    # Ljava/io/File;
 
     .prologue
-    .line 284
     invoke-virtual {p0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
@@ -1287,17 +1178,14 @@
     .param p0, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 294
     sget-object v2, Landroid/graphics/Typeface;->sFallbackFonts:[Landroid/graphics/FontFamily;
 
     if-eqz v2, :cond_0
 
-    .line 295
     new-instance v1, Landroid/graphics/FontFamily;
 
     invoke-direct {v1}, Landroid/graphics/FontFamily;-><init>()V
 
-    .line 296
     .local v1, "fontFamily":Landroid/graphics/FontFamily;
     invoke-virtual {v1, p0}, Landroid/graphics/FontFamily;->addFont(Ljava/lang/String;)Z
 
@@ -1305,7 +1193,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 297
     const/4 v2, 0x1
 
     new-array v0, v2, [Landroid/graphics/FontFamily;
@@ -1314,7 +1201,6 @@
 
     aput-object v1, v0, v2
 
-    .line 298
     .local v0, "families":[Landroid/graphics/FontFamily;
     invoke-static {v0}, Landroid/graphics/Typeface;->createFromFamiliesWithDefault([Landroid/graphics/FontFamily;)Landroid/graphics/Typeface;
 
@@ -1322,7 +1208,6 @@
 
     return-object v2
 
-    .line 301
     .end local v0    # "families":[Landroid/graphics/FontFamily;
     .end local v1    # "fontFamily":Landroid/graphics/FontFamily;
     :cond_0
@@ -1356,18 +1241,15 @@
     .param p0, "style"    # I
 
     .prologue
-    .line 254
     if-ltz p0, :cond_0
 
     const/4 v0, 0x3
 
     if-le p0, v0, :cond_1
 
-    .line 255
     :cond_0
     const/4 p0, 0x0
 
-    .line 257
     :cond_1
     sget-object v0, Landroid/graphics/Typeface;->sDefaults:[Landroid/graphics/Typeface;
 
@@ -1383,7 +1265,6 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 558
     const-string/jumbo v5, "user"
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1392,7 +1273,6 @@
 
     check-cast v1, Landroid/os/UserManager;
 
-    .line 560
     .local v1, "mUserManager":Landroid/os/UserManager;
     if-eqz v1, :cond_0
 
@@ -1402,12 +1282,10 @@
 
     if-nez v5, :cond_1
 
-    .line 571
     :cond_0
     :goto_0
     return v4
 
-    .line 563
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getUserId()I
 
@@ -1417,7 +1295,6 @@
 
     move-result-object v2
 
-    .line 564
     .local v2, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1437,7 +1314,6 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 566
     .local v3, "userInfo":Landroid/content/pm/UserInfo;
     invoke-virtual {v3}, Landroid/content/pm/UserInfo;->isDualProfile()Z
 
@@ -1445,7 +1321,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 568
     iget v4, v3, Landroid/content/pm/UserInfo;->id:I
 
     goto :goto_0
@@ -1457,12 +1332,10 @@
     .param p1, "typefaceIndex"    # I
 
     .prologue
-    .line 508
     invoke-static {p0, p1}, Landroid/graphics/Typeface;->getFullFlipFont(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 511
     .local v1, "sx":Ljava/lang/String;
     const-string v2, "#"
 
@@ -1470,7 +1343,6 @@
 
     move-result-object v0
 
-    .line 514
     .local v0, "parts":[Ljava/lang/String;
     array-length v2, v0
 
@@ -1478,7 +1350,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 516
     const/4 v2, 0x0
 
     aget-object v2, v0, v2
@@ -1491,20 +1362,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 517
     const-string v2, "default"
 
-    .line 521
     :goto_0
     return-object v2
 
-    .line 519
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 521
     :cond_1
     const/4 v2, 0x1
 
@@ -1519,12 +1386,10 @@
     .param p1, "typefaceIndex"    # I
 
     .prologue
-    .line 532
     invoke-static {p0, p1}, Landroid/graphics/Typeface;->getFullFlipFont(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 535
     .local v1, "sx":Ljava/lang/String;
     const-string v2, "#"
 
@@ -1532,7 +1397,6 @@
 
     move-result-object v0
 
-    .line 536
     .local v0, "parts":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -1547,39 +1411,31 @@
     .param p1, "typefaceIndex"    # I
 
     .prologue
-    .line 582
     const-string v10, "default"
 
-    .line 584
     .local v10, "systemFont":Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 785
     :cond_0
     :goto_0
     :pswitch_0
     if-nez v10, :cond_1
 
-    .line 786
     const-string v10, "default"
 
-    .line 788
     .end local v10    # "systemFont":Ljava/lang/String;
     :cond_1
     return-object v10
 
-    .line 587
     .restart local v10    # "systemFont":Ljava/lang/String;
     :pswitch_1
     const-string v8, ""
 
-    .line 588
     .local v8, "sans_path":Ljava/lang/String;
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v3
 
-    .line 591
     .local v3, "currentUser":I
     if-eqz p0, :cond_2
 
@@ -1591,7 +1447,6 @@
 
     if-nez v3, :cond_2
 
-    .line 594
     :try_start_0
     const-string v11, "activity"
 
@@ -1601,7 +1456,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 595
     .local v0, "am":Landroid/app/ActivityManager;
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
     :try_end_0
@@ -1609,16 +1463,13 @@
 
     move-result v3
 
-    .line 602
     .end local v0    # "am":Landroid/app/ActivityManager;
     :cond_2
     :goto_1
     if-nez v3, :cond_6
 
-    .line 603
     const-string v8, "/data/data/com.android.settings/app_fonts/sans.loc"
 
-    .line 606
     const-string/jumbo v11, "persist.sys.flipfontpath"
 
     const-string v12, "empty"
@@ -1627,7 +1478,6 @@
 
     move-result-object v10
 
-    .line 610
     const-string v11, "empty"
 
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1636,24 +1486,19 @@
 
     if-eqz v11, :cond_0
 
-    .line 612
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 614
     .local v5, "file":Ljava/io/File;
     const/4 v6, 0x0
 
-    .line 615
     .local v6, "fis":Ljava/io/FileInputStream;
     const/4 v9, 0x0
 
-    .line 616
     .local v9, "string":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 619
     .local v1, "br":Ljava/io/BufferedReader;
     :try_start_1
     new-instance v7, Ljava/io/FileInputStream;
@@ -1664,7 +1509,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 620
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .local v7, "fis":Ljava/io/FileInputStream;
     :try_start_2
@@ -1680,7 +1524,6 @@
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_24
     .catchall {:try_start_2 .. :try_end_2} :catchall_a
 
-    .line 621
     .end local v1    # "br":Ljava/io/BufferedReader;
     .local v2, "br":Ljava/io/BufferedReader;
     :try_start_3
@@ -1688,20 +1531,16 @@
 
     move-result-object v9
 
-    .line 624
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
 
-    .line 625
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_27
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_25
     .catchall {:try_start_3 .. :try_end_3} :catchall_b
 
-    .line 634
     if-eqz v7, :cond_3
 
-    .line 635
     :try_start_4
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
     :try_end_4
@@ -1714,17 +1553,14 @@
     .restart local v1    # "br":Ljava/io/BufferedReader;
     move-object v6, v7
 
-    .line 641
     .end local v7    # "fis":Ljava/io/FileInputStream;
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     :cond_4
     :goto_2
     move-object v10, v9
 
-    .line 643
     goto :goto_0
 
-    .line 637
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v2    # "br":Ljava/io/BufferedReader;
@@ -1738,16 +1574,13 @@
     .restart local v1    # "br":Ljava/io/BufferedReader;
     move-object v6, v7
 
-    .line 640
     .end local v7    # "fis":Ljava/io/FileInputStream;
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 627
     :catch_1
     move-exception v4
 
-    .line 628
     .local v4, "e":Ljava/io/FileNotFoundException;
     :goto_3
     :try_start_5
@@ -1755,10 +1588,8 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 634
     if-eqz v6, :cond_4
 
-    .line 635
     :try_start_6
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_6
@@ -1766,32 +1597,26 @@
 
     goto :goto_2
 
-    .line 637
     :catch_2
     move-exception v11
 
     goto :goto_2
 
-    .line 629
     .end local v4    # "e":Ljava/io/FileNotFoundException;
     :catch_3
     move-exception v4
 
-    .line 630
     .local v4, "e":Ljava/io/IOException;
     :goto_4
     :try_start_7
     const-string v9, "default"
 
-    .line 631
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 634
     if-eqz v6, :cond_4
 
-    .line 635
     :try_start_8
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_8
@@ -1799,33 +1624,27 @@
 
     goto :goto_2
 
-    .line 637
     :catch_4
     move-exception v11
 
     goto :goto_2
 
-    .line 633
     .end local v4    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v11
 
-    .line 634
     :goto_5
     if-eqz v6, :cond_5
 
-    .line 635
     :try_start_9
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_9
     .catch Ljava/io/IOException; {:try_start_9 .. :try_end_9} :catch_14
 
-    .line 639
     :cond_5
     :goto_6
     throw v11
 
-    .line 644
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v5    # "file":Ljava/io/File;
     .end local v6    # "fis":Ljava/io/FileInputStream;
@@ -1835,10 +1654,8 @@
 
     if-lt v3, v11, :cond_a
 
-    .line 647
     const-string v8, "/data/data/com.android.settings/app_fonts/sans.loc"
 
-    .line 650
     const-string/jumbo v11, "persist.sys.flipfontpath"
 
     const-string v12, "empty"
@@ -1847,7 +1664,6 @@
 
     move-result-object v10
 
-    .line 654
     const-string v11, "empty"
 
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1856,24 +1672,19 @@
 
     if-eqz v11, :cond_0
 
-    .line 656
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 658
     .restart local v5    # "file":Ljava/io/File;
     const/4 v6, 0x0
 
-    .line 659
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     const/4 v9, 0x0
 
-    .line 660
     .restart local v9    # "string":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 663
     .restart local v1    # "br":Ljava/io/BufferedReader;
     :try_start_a
     new-instance v7, Ljava/io/FileInputStream;
@@ -1884,7 +1695,6 @@
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_8
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 664
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :try_start_b
@@ -1900,7 +1710,6 @@
     .catch Ljava/io/IOException; {:try_start_b .. :try_end_b} :catch_20
     .catchall {:try_start_b .. :try_end_b} :catchall_8
 
-    .line 665
     .end local v1    # "br":Ljava/io/BufferedReader;
     .restart local v2    # "br":Ljava/io/BufferedReader;
     :try_start_c
@@ -1908,20 +1717,16 @@
 
     move-result-object v9
 
-    .line 668
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
 
-    .line 669
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_c
     .catch Ljava/io/FileNotFoundException; {:try_start_c .. :try_end_c} :catch_23
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_21
     .catchall {:try_start_c .. :try_end_c} :catchall_9
 
-    .line 678
     if-eqz v7, :cond_7
 
-    .line 679
     :try_start_d
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
     :try_end_d
@@ -1934,17 +1739,14 @@
     .restart local v1    # "br":Ljava/io/BufferedReader;
     move-object v6, v7
 
-    .line 685
     .end local v7    # "fis":Ljava/io/FileInputStream;
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     :cond_8
     :goto_7
     move-object v10, v9
 
-    .line 686
     goto/16 :goto_0
 
-    .line 681
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v2    # "br":Ljava/io/BufferedReader;
@@ -1958,16 +1760,13 @@
     .restart local v1    # "br":Ljava/io/BufferedReader;
     move-object v6, v7
 
-    .line 684
     .end local v7    # "fis":Ljava/io/FileInputStream;
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto :goto_7
 
-    .line 671
     :catch_6
     move-exception v4
 
-    .line 672
     .local v4, "e":Ljava/io/FileNotFoundException;
     :goto_8
     :try_start_e
@@ -1975,10 +1774,8 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_1
 
-    .line 678
     if-eqz v6, :cond_8
 
-    .line 679
     :try_start_f
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_f
@@ -1986,32 +1783,26 @@
 
     goto :goto_7
 
-    .line 681
     :catch_7
     move-exception v11
 
     goto :goto_7
 
-    .line 673
     .end local v4    # "e":Ljava/io/FileNotFoundException;
     :catch_8
     move-exception v4
 
-    .line 674
     .local v4, "e":Ljava/io/IOException;
     :goto_9
     :try_start_10
     const-string v9, "default"
 
-    .line 675
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
     :try_end_10
     .catchall {:try_start_10 .. :try_end_10} :catchall_1
 
-    .line 678
     if-eqz v6, :cond_8
 
-    .line 679
     :try_start_11
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_11
@@ -2019,33 +1810,27 @@
 
     goto :goto_7
 
-    .line 681
     :catch_9
     move-exception v11
 
     goto :goto_7
 
-    .line 677
     .end local v4    # "e":Ljava/io/IOException;
     :catchall_1
     move-exception v11
 
-    .line 678
     :goto_a
     if-eqz v6, :cond_9
 
-    .line 679
     :try_start_12
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_12
     .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_15
 
-    .line 683
     :cond_9
     :goto_b
     throw v11
 
-    .line 687
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v5    # "file":Ljava/io/File;
     .end local v6    # "fis":Ljava/io/FileInputStream;
@@ -2065,10 +1850,8 @@
 
     if-ne v11, v3, :cond_e
 
-    .line 690
     const-string v8, "/data/data/com.android.settings/app_fonts/sans.loc"
 
-    .line 693
     const-string/jumbo v11, "persist.sys.flipfontpath"
 
     const-string v12, "empty"
@@ -2077,7 +1860,6 @@
 
     move-result-object v10
 
-    .line 697
     const-string v11, "empty"
 
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2086,24 +1868,19 @@
 
     if-eqz v11, :cond_0
 
-    .line 699
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 701
     .restart local v5    # "file":Ljava/io/File;
     const/4 v6, 0x0
 
-    .line 702
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     const/4 v9, 0x0
 
-    .line 703
     .restart local v9    # "string":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 706
     .restart local v1    # "br":Ljava/io/BufferedReader;
     :try_start_13
     new-instance v7, Ljava/io/FileInputStream;
@@ -2114,7 +1891,6 @@
     .catch Ljava/io/IOException; {:try_start_13 .. :try_end_13} :catch_d
     .catchall {:try_start_13 .. :try_end_13} :catchall_2
 
-    .line 707
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :try_start_14
@@ -2130,7 +1906,6 @@
     .catch Ljava/io/IOException; {:try_start_14 .. :try_end_14} :catch_1c
     .catchall {:try_start_14 .. :try_end_14} :catchall_6
 
-    .line 708
     .end local v1    # "br":Ljava/io/BufferedReader;
     .restart local v2    # "br":Ljava/io/BufferedReader;
     :try_start_15
@@ -2138,20 +1913,16 @@
 
     move-result-object v9
 
-    .line 711
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
 
-    .line 712
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_15
     .catch Ljava/io/FileNotFoundException; {:try_start_15 .. :try_end_15} :catch_1f
     .catch Ljava/io/IOException; {:try_start_15 .. :try_end_15} :catch_1d
     .catchall {:try_start_15 .. :try_end_15} :catchall_7
 
-    .line 721
     if-eqz v7, :cond_b
 
-    .line 722
     :try_start_16
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
     :try_end_16
@@ -2164,17 +1935,14 @@
     .restart local v1    # "br":Ljava/io/BufferedReader;
     move-object v6, v7
 
-    .line 728
     .end local v7    # "fis":Ljava/io/FileInputStream;
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     :cond_c
     :goto_c
     move-object v10, v9
 
-    .line 729
     goto/16 :goto_0
 
-    .line 724
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v2    # "br":Ljava/io/BufferedReader;
@@ -2188,16 +1956,13 @@
     .restart local v1    # "br":Ljava/io/BufferedReader;
     move-object v6, v7
 
-    .line 727
     .end local v7    # "fis":Ljava/io/FileInputStream;
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto :goto_c
 
-    .line 714
     :catch_b
     move-exception v4
 
-    .line 715
     .local v4, "e":Ljava/io/FileNotFoundException;
     :goto_d
     :try_start_17
@@ -2205,10 +1970,8 @@
     :try_end_17
     .catchall {:try_start_17 .. :try_end_17} :catchall_2
 
-    .line 721
     if-eqz v6, :cond_c
 
-    .line 722
     :try_start_18
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_18
@@ -2216,32 +1979,26 @@
 
     goto :goto_c
 
-    .line 724
     :catch_c
     move-exception v11
 
     goto :goto_c
 
-    .line 716
     .end local v4    # "e":Ljava/io/FileNotFoundException;
     :catch_d
     move-exception v4
 
-    .line 717
     .local v4, "e":Ljava/io/IOException;
     :goto_e
     :try_start_19
     const-string v9, "default"
 
-    .line 718
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
     :try_end_19
     .catchall {:try_start_19 .. :try_end_19} :catchall_2
 
-    .line 721
     if-eqz v6, :cond_c
 
-    .line 722
     :try_start_1a
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_1a
@@ -2249,33 +2006,27 @@
 
     goto :goto_c
 
-    .line 724
     :catch_e
     move-exception v11
 
     goto :goto_c
 
-    .line 720
     .end local v4    # "e":Ljava/io/IOException;
     :catchall_2
     move-exception v11
 
-    .line 721
     :goto_f
     if-eqz v6, :cond_d
 
-    .line 722
     :try_start_1b
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_1b
     .catch Ljava/io/IOException; {:try_start_1b .. :try_end_1b} :catch_16
 
-    .line 726
     :cond_d
     :goto_10
     throw v11
 
-    .line 731
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v5    # "file":Ljava/io/File;
     .end local v6    # "fis":Ljava/io/FileInputStream;
@@ -2305,10 +2056,8 @@
 
     move-result-object v8
 
-    .line 735
     const-string v10, "empty"
 
-    .line 738
     const-string v11, "empty"
 
     invoke-virtual {v10, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2317,24 +2066,19 @@
 
     if-eqz v11, :cond_0
 
-    .line 740
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 742
     .restart local v5    # "file":Ljava/io/File;
     const/4 v6, 0x0
 
-    .line 743
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     const/4 v9, 0x0
 
-    .line 744
     .restart local v9    # "string":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 747
     .restart local v1    # "br":Ljava/io/BufferedReader;
     :try_start_1c
     new-instance v7, Ljava/io/FileInputStream;
@@ -2345,7 +2089,6 @@
     .catch Ljava/io/IOException; {:try_start_1c .. :try_end_1c} :catch_12
     .catchall {:try_start_1c .. :try_end_1c} :catchall_3
 
-    .line 748
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :try_start_1d
@@ -2361,7 +2104,6 @@
     .catch Ljava/io/IOException; {:try_start_1d .. :try_end_1d} :catch_18
     .catchall {:try_start_1d .. :try_end_1d} :catchall_4
 
-    .line 749
     .end local v1    # "br":Ljava/io/BufferedReader;
     .restart local v2    # "br":Ljava/io/BufferedReader;
     :try_start_1e
@@ -2369,20 +2111,16 @@
 
     move-result-object v9
 
-    .line 752
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
 
-    .line 753
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_1e
     .catch Ljava/io/FileNotFoundException; {:try_start_1e .. :try_end_1e} :catch_1b
     .catch Ljava/io/IOException; {:try_start_1e .. :try_end_1e} :catch_19
     .catchall {:try_start_1e .. :try_end_1e} :catchall_5
 
-    .line 762
     if-eqz v7, :cond_f
 
-    .line 763
     :try_start_1f
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
     :try_end_1f
@@ -2395,7 +2133,6 @@
     .restart local v1    # "br":Ljava/io/BufferedReader;
     move-object v6, v7
 
-    .line 769
     .end local v7    # "fis":Ljava/io/FileInputStream;
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     :cond_10
@@ -2404,7 +2141,6 @@
 
     goto/16 :goto_0
 
-    .line 765
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v2    # "br":Ljava/io/BufferedReader;
@@ -2418,16 +2154,13 @@
     .restart local v1    # "br":Ljava/io/BufferedReader;
     move-object v6, v7
 
-    .line 768
     .end local v7    # "fis":Ljava/io/FileInputStream;
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto :goto_11
 
-    .line 755
     :catch_10
     move-exception v4
 
-    .line 756
     .local v4, "e":Ljava/io/FileNotFoundException;
     :goto_12
     :try_start_20
@@ -2435,10 +2168,8 @@
     :try_end_20
     .catchall {:try_start_20 .. :try_end_20} :catchall_3
 
-    .line 762
     if-eqz v6, :cond_10
 
-    .line 763
     :try_start_21
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_21
@@ -2446,32 +2177,26 @@
 
     goto :goto_11
 
-    .line 765
     :catch_11
     move-exception v11
 
     goto :goto_11
 
-    .line 757
     .end local v4    # "e":Ljava/io/FileNotFoundException;
     :catch_12
     move-exception v4
 
-    .line 758
     .local v4, "e":Ljava/io/IOException;
     :goto_13
     :try_start_22
     const-string v9, "default"
 
-    .line 759
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
     :try_end_22
     .catchall {:try_start_22 .. :try_end_22} :catchall_3
 
-    .line 762
     if-eqz v6, :cond_10
 
-    .line 763
     :try_start_23
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_23
@@ -2479,57 +2204,47 @@
 
     goto :goto_11
 
-    .line 765
     :catch_13
     move-exception v11
 
     goto :goto_11
 
-    .line 761
     .end local v4    # "e":Ljava/io/IOException;
     :catchall_3
     move-exception v11
 
-    .line 762
     :goto_14
     if-eqz v6, :cond_11
 
-    .line 763
     :try_start_24
     invoke-virtual {v6}, Ljava/io/FileInputStream;->close()V
     :try_end_24
     .catch Ljava/io/IOException; {:try_start_24 .. :try_end_24} :catch_17
 
-    .line 767
     :cond_11
     :goto_15
     throw v11
 
-    .line 637
     :catch_14
     move-exception v12
 
     goto/16 :goto_6
 
-    .line 681
     :catch_15
     move-exception v12
 
     goto/16 :goto_b
 
-    .line 724
     :catch_16
     move-exception v12
 
     goto :goto_10
 
-    .line 765
     :catch_17
     move-exception v12
 
     goto :goto_15
 
-    .line 761
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catchall_4
@@ -2558,7 +2273,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto :goto_14
 
-    .line 757
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catch_18
@@ -2587,7 +2301,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto :goto_13
 
-    .line 755
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catch_1a
@@ -2616,7 +2329,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto :goto_12
 
-    .line 720
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catchall_6
@@ -2645,7 +2357,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_f
 
-    .line 716
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catch_1c
@@ -2674,7 +2385,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_e
 
-    .line 714
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catch_1e
@@ -2703,7 +2413,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_d
 
-    .line 677
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catchall_8
@@ -2732,7 +2441,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_a
 
-    .line 673
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catch_20
@@ -2761,7 +2469,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_9
 
-    .line 671
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catch_22
@@ -2790,7 +2497,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_8
 
-    .line 633
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catchall_a
@@ -2819,7 +2525,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_5
 
-    .line 629
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catch_24
@@ -2848,7 +2553,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_4
 
-    .line 627
     .end local v6    # "fis":Ljava/io/FileInputStream;
     .restart local v7    # "fis":Ljava/io/FileInputStream;
     :catch_26
@@ -2877,7 +2581,6 @@
     .restart local v6    # "fis":Ljava/io/FileInputStream;
     goto/16 :goto_3
 
-    .line 597
     .end local v1    # "br":Ljava/io/BufferedReader;
     .end local v5    # "file":Ljava/io/File;
     .end local v6    # "fis":Ljava/io/FileInputStream;
@@ -2887,7 +2590,6 @@
 
     goto/16 :goto_1
 
-    .line 584
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -2900,7 +2602,6 @@
     .locals 2
 
     .prologue
-    .line 457
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/system/etc/"
@@ -2914,12 +2615,10 @@
     .locals 25
 
     .prologue
-    .line 361
     invoke-static {}, Landroid/graphics/Typeface;->getSystemFontConfigLocation()Ljava/io/File;
 
     move-result-object v18
 
-    .line 362
     .local v18, "systemFontConfigLocation":Ljava/io/File;
     new-instance v6, Ljava/io/File;
 
@@ -2931,26 +2630,22 @@
 
     invoke-direct {v6, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 364
     .local v6, "configFilename":Ljava/io/File;
     :try_start_0
     new-instance v13, Ljava/io/FileInputStream;
 
     invoke-direct {v13, v6}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 365
     .local v13, "fontsIn":Ljava/io/FileInputStream;
     invoke-static {v13}, Landroid/graphics/FontListParser;->parse(Ljava/io/InputStream;)Landroid/graphics/FontListParser$Config;
 
     move-result-object v11
 
-    .line 367
     .local v11, "fontConfig":Landroid/graphics/FontListParser$Config;
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 370
     .local v10, "familyList":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontFamily;>;"
     const/4 v14, 0x0
 
@@ -2968,7 +2663,6 @@
 
     if-ge v14, v0, :cond_2
 
-    .line 371
     iget-object v0, v11, Landroid/graphics/FontListParser$Config;->families:Ljava/util/List;
 
     move-object/from16 v22, v0
@@ -2981,7 +2675,6 @@
 
     check-cast v8, Landroid/graphics/FontListParser$Family;
 
-    .line 372
     .local v8, "f":Landroid/graphics/FontListParser$Family;
     if-eqz v14, :cond_0
 
@@ -2991,7 +2684,6 @@
 
     if-nez v22, :cond_1
 
-    .line 373
     :cond_0
     invoke-static {v8}, Landroid/graphics/Typeface;->makeFamilyFromParsed(Landroid/graphics/FontListParser$Family;)Landroid/graphics/FontFamily;
 
@@ -3001,13 +2693,11 @@
 
     invoke-interface {v10, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 370
     :cond_1
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_0
 
-    .line 376
     .end local v8    # "f":Landroid/graphics/FontListParser$Family;
     :cond_2
     invoke-interface {v10}, Ljava/util/List;->size()I
@@ -3030,7 +2720,6 @@
 
     sput-object v22, Landroid/graphics/Typeface;->sFallbackFonts:[Landroid/graphics/FontFamily;
 
-    .line 377
     sget-object v22, Landroid/graphics/Typeface;->sFallbackFonts:[Landroid/graphics/FontFamily;
 
     invoke-static/range {v22 .. v22}, Landroid/graphics/Typeface;->createFromFamilies([Landroid/graphics/FontFamily;)Landroid/graphics/Typeface;
@@ -3039,12 +2728,10 @@
 
     invoke-static/range {v22 .. v22}, Landroid/graphics/Typeface;->setDefault(Landroid/graphics/Typeface;)V
 
-    .line 379
     new-instance v19, Ljava/util/HashMap;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/HashMap;-><init>()V
 
-    .line 380
     .local v19, "systemFonts":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Landroid/graphics/Typeface;>;"
     const/4 v14, 0x0
 
@@ -3061,7 +2748,6 @@
 
     if-ge v14, v0, :cond_7
 
-    .line 382
     iget-object v0, v11, Landroid/graphics/FontListParser$Config;->families:Ljava/util/List;
 
     move-object/from16 v22, v0
@@ -3074,7 +2760,6 @@
 
     check-cast v8, Landroid/graphics/FontListParser$Family;
 
-    .line 383
     .restart local v8    # "f":Landroid/graphics/FontListParser$Family;
     iget-object v0, v8, Landroid/graphics/FontListParser$Family;->name:Ljava/lang/String;
 
@@ -3082,13 +2767,10 @@
 
     if-eqz v22, :cond_4
 
-    .line 384
     if-nez v14, :cond_5
 
-    .line 387
     sget-object v20, Landroid/graphics/Typeface;->sDefaultTypeface:Landroid/graphics/Typeface;
 
-    .line 395
     .local v20, "typeface":Landroid/graphics/Typeface;
     :goto_2
     const/16 v16, 0x0
@@ -3109,7 +2791,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 396
     iget-object v0, v8, Landroid/graphics/FontListParser$Family;->name:Ljava/lang/String;
 
     move-object/from16 v22, v0
@@ -3124,7 +2805,6 @@
 
     if-eqz v22, :cond_6
 
-    .line 397
     const/16 v22, 0x1
 
     move/from16 v0, v22
@@ -3133,7 +2813,6 @@
 
     iput-boolean v0, v1, Landroid/graphics/Typeface;->isLikeDefault:Z
 
-    .line 402
     :cond_3
     iget-object v0, v8, Landroid/graphics/FontListParser$Family;->name:Ljava/lang/String;
 
@@ -3147,7 +2826,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 380
     .end local v16    # "ix":I
     .end local v20    # "typeface":Landroid/graphics/Typeface;
     :cond_4
@@ -3155,13 +2833,11 @@
 
     goto :goto_1
 
-    .line 389
     :cond_5
     invoke-static {v8}, Landroid/graphics/Typeface;->makeFamilyFromParsed(Landroid/graphics/FontListParser$Family;)Landroid/graphics/FontFamily;
 
     move-result-object v12
 
-    .line 390
     .local v12, "fontFamily":Landroid/graphics/FontFamily;
     const/16 v22, 0x1
 
@@ -3173,7 +2849,6 @@
 
     aput-object v12, v9, v22
 
-    .line 391
     .local v9, "families":[Landroid/graphics/FontFamily;
     invoke-static {v9}, Landroid/graphics/Typeface;->createFromFamiliesWithDefault([Landroid/graphics/FontFamily;)Landroid/graphics/Typeface;
 
@@ -3182,7 +2857,6 @@
     .restart local v20    # "typeface":Landroid/graphics/Typeface;
     goto :goto_2
 
-    .line 395
     .end local v9    # "families":[Landroid/graphics/FontFamily;
     .end local v12    # "fontFamily":Landroid/graphics/FontFamily;
     .restart local v16    # "ix":I
@@ -3191,7 +2865,6 @@
 
     goto :goto_3
 
-    .line 405
     .end local v8    # "f":Landroid/graphics/FontListParser$Family;
     .end local v16    # "ix":I
     .end local v20    # "typeface":Landroid/graphics/Typeface;
@@ -3218,7 +2891,6 @@
 
     check-cast v4, Landroid/graphics/FontListParser$Alias;
 
-    .line 406
     .local v4, "alias":Landroid/graphics/FontListParser$Alias;
     iget-object v0, v4, Landroid/graphics/FontListParser$Alias;->toName:Ljava/lang/String;
 
@@ -3234,17 +2906,14 @@
 
     check-cast v5, Landroid/graphics/Typeface;
 
-    .line 407
     .local v5, "base":Landroid/graphics/Typeface;
     move-object/from16 v17, v5
 
-    .line 408
     .local v17, "newFace":Landroid/graphics/Typeface;
     iget v0, v4, Landroid/graphics/FontListParser$Alias;->weight:I
 
     move/from16 v21, v0
 
-    .line 409
     .local v21, "weight":I
     const/16 v22, 0x190
 
@@ -3254,7 +2923,6 @@
 
     if-eq v0, v1, :cond_8
 
-    .line 410
     new-instance v17, Landroid/graphics/Typeface;
 
     .end local v17    # "newFace":Landroid/graphics/Typeface;
@@ -3276,7 +2944,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/graphics/Typeface;-><init>(J)V
 
-    .line 413
     .restart local v17    # "newFace":Landroid/graphics/Typeface;
     const/16 v16, 0x0
 
@@ -3296,7 +2963,6 @@
 
     if-ge v0, v1, :cond_8
 
-    .line 414
     iget-object v0, v4, Landroid/graphics/FontListParser$Alias;->name:Ljava/lang/String;
 
     move-object/from16 v22, v0
@@ -3311,7 +2977,6 @@
 
     if-eqz v22, :cond_9
 
-    .line 415
     const/16 v22, 0x1
 
     move/from16 v0, v22
@@ -3320,7 +2985,6 @@
 
     iput-boolean v0, v1, Landroid/graphics/Typeface;->isLikeDefault:Z
 
-    .line 421
     .end local v16    # "ix":I
     :cond_8
     iget-object v0, v4, Landroid/graphics/FontListParser$Alias;->name:Ljava/lang/String;
@@ -3342,7 +3006,6 @@
 
     goto :goto_4
 
-    .line 425
     .end local v4    # "alias":Landroid/graphics/FontListParser$Alias;
     .end local v5    # "base":Landroid/graphics/Typeface;
     .end local v10    # "familyList":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontFamily;>;"
@@ -3356,7 +3019,6 @@
     :catch_0
     move-exception v7
 
-    .line 426
     .local v7, "e":Ljava/lang/RuntimeException;
     sget-object v22, Landroid/graphics/Typeface;->TAG:Ljava/lang/String;
 
@@ -3368,12 +3030,10 @@
 
     invoke-static {v0, v1, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 435
     .end local v7    # "e":Ljava/lang/RuntimeException;
     :goto_6
     return-void
 
-    .line 413
     .restart local v4    # "alias":Landroid/graphics/FontListParser$Alias;
     .restart local v5    # "base":Landroid/graphics/Typeface;
     .restart local v10    # "familyList":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontFamily;>;"
@@ -3390,7 +3050,6 @@
 
     goto :goto_5
 
-    .line 423
     .end local v4    # "alias":Landroid/graphics/FontListParser$Alias;
     .end local v5    # "base":Landroid/graphics/Typeface;
     .end local v16    # "ix":I
@@ -3407,7 +3066,6 @@
 
     goto :goto_6
 
-    .line 428
     .end local v10    # "familyList":Ljava/util/List;, "Ljava/util/List<Landroid/graphics/FontFamily;>;"
     .end local v11    # "fontConfig":Landroid/graphics/FontListParser$Config;
     .end local v13    # "fontsIn":Ljava/io/FileInputStream;
@@ -3417,7 +3075,6 @@
     :catch_1
     move-exception v7
 
-    .line 429
     .local v7, "e":Ljava/io/FileNotFoundException;
     sget-object v22, Landroid/graphics/Typeface;->TAG:Ljava/lang/String;
 
@@ -3445,12 +3102,10 @@
 
     goto :goto_6
 
-    .line 430
     .end local v7    # "e":Ljava/io/FileNotFoundException;
     :catch_2
     move-exception v7
 
-    .line 431
     .local v7, "e":Ljava/io/IOException;
     sget-object v22, Landroid/graphics/Typeface;->TAG:Ljava/lang/String;
 
@@ -3478,12 +3133,10 @@
 
     goto :goto_6
 
-    .line 432
     .end local v7    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v7
 
-    .line 433
     .local v7, "e":Lorg/xmlpull/v1/XmlPullParserException;
     sget-object v22, Landroid/graphics/Typeface;->TAG:Ljava/lang/String;
 
@@ -3519,7 +3172,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 541
     const-string/jumbo v5, "user"
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3528,7 +3180,6 @@
 
     check-cast v1, Landroid/os/UserManager;
 
-    .line 543
     .local v1, "mUserManager":Landroid/os/UserManager;
     if-eqz v1, :cond_0
 
@@ -3538,12 +3189,10 @@
 
     if-nez v5, :cond_1
 
-    .line 552
     :cond_0
     :goto_0
     return v4
 
-    .line 546
     :cond_1
     invoke-virtual {p0}, Landroid/content/Context;->getUserId()I
 
@@ -3553,7 +3202,6 @@
 
     move-result-object v2
 
-    .line 547
     .local v2, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3573,7 +3221,6 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 549
     .local v3, "userInfo":Landroid/content/pm/UserInfo;
     invoke-virtual {v3}, Landroid/content/pm/UserInfo;->isDualProfile()Z
 
@@ -3581,7 +3228,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 550
     const/4 v4, 0x1
 
     goto :goto_0
@@ -3592,7 +3238,6 @@
     .param p0, "family"    # Landroid/graphics/FontListParser$Family;
 
     .prologue
-    .line 347
     new-instance v1, Landroid/graphics/FontFamily;
 
     iget-object v3, p0, Landroid/graphics/FontListParser$Family;->lang:Ljava/lang/String;
@@ -3601,7 +3246,6 @@
 
     invoke-direct {v1, v3, v4}, Landroid/graphics/FontFamily;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 348
     .local v1, "fontFamily":Landroid/graphics/FontFamily;
     iget-object v3, p0, Landroid/graphics/FontListParser$Family;->fonts:Ljava/util/List;
 
@@ -3623,7 +3267,6 @@
 
     check-cast v0, Landroid/graphics/FontListParser$Font;
 
-    .line 349
     .local v0, "font":Landroid/graphics/FontListParser$Font;
     iget-object v3, v0, Landroid/graphics/FontListParser$Font;->fontName:Ljava/lang/String;
 
@@ -3635,7 +3278,6 @@
 
     goto :goto_0
 
-    .line 351
     .end local v0    # "font":Landroid/graphics/FontListParser$Font;
     :cond_0
     return-object v1
@@ -3664,15 +3306,12 @@
     .param p0, "t"    # Landroid/graphics/Typeface;
 
     .prologue
-    .line 147
     sput-object p0, Landroid/graphics/Typeface;->sDefaultTypeface:Landroid/graphics/Typeface;
 
-    .line 148
     iget-wide v0, p0, Landroid/graphics/Typeface;->native_instance:J
 
     invoke-static {v0, v1}, Landroid/graphics/Typeface;->nativeSetDefault(J)V
 
-    .line 149
     return-void
 .end method
 
@@ -3687,15 +3326,12 @@
 
     const/4 v2, 0x0
 
-    .line 471
     if-ne p0, p1, :cond_1
 
-    .line 476
     :cond_0
     :goto_0
     return v1
 
-    .line 472
     :cond_1
     if-eqz p1, :cond_2
 
@@ -3717,10 +3353,8 @@
     :cond_3
     move-object v0, p1
 
-    .line 474
     check-cast v0, Landroid/graphics/Typeface;
 
-    .line 476
     .local v0, "typeface":Landroid/graphics/Typeface;
     iget v3, p0, Landroid/graphics/Typeface;->mStyle:I
 
@@ -3751,7 +3385,6 @@
     .end annotation
 
     .prologue
-    .line 463
     :try_start_0
     iget-wide v0, p0, Landroid/graphics/Typeface;->native_instance:J
 
@@ -3759,13 +3392,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 465
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 467
     return-void
 
-    .line 465
     :catchall_0
     move-exception v0
 
@@ -3778,7 +3408,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget v0, p0, Landroid/graphics/Typeface;->mStyle:I
 
     return v0
@@ -3788,10 +3417,8 @@
     .locals 6
 
     .prologue
-    .line 485
     const/16 v0, 0x11
 
-    .line 486
     .local v0, "result":I
     iget-wide v2, p0, Landroid/graphics/Typeface;->native_instance:J
 
@@ -3807,14 +3434,12 @@
 
     add-int/lit16 v0, v1, 0x20f
 
-    .line 487
     mul-int/lit8 v1, v0, 0x1f
 
     iget v2, p0, Landroid/graphics/Typeface;->mStyle:I
 
     add-int v0, v1, v2
 
-    .line 488
     return v0
 .end method
 
@@ -3822,7 +3447,6 @@
     .locals 1
 
     .prologue
-    .line 158
     iget v0, p0, Landroid/graphics/Typeface;->mStyle:I
 
     and-int/lit8 v0, v0, 0x1
@@ -3844,7 +3468,6 @@
     .locals 1
 
     .prologue
-    .line 163
     iget v0, p0, Landroid/graphics/Typeface;->mStyle:I
 
     and-int/lit8 v0, v0, 0x2

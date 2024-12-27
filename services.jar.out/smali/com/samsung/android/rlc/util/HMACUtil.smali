@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .end annotation
 
     .prologue
-    .line 36
     new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
 
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
@@ -42,7 +40,6 @@
 
     invoke-direct {v2, v3, v4}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 37
     .local v2, "signingKey":Ljavax/crypto/spec/SecretKeySpec;
     const-string v3, "HmacSHA256"
 
@@ -50,11 +47,9 @@
 
     move-result-object v1
 
-    .line 38
     .local v1, "mac":Ljavax/crypto/Mac;
     invoke-virtual {v1, v2}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    .line 41
     :try_start_0
     new-instance v3, Ljava/lang/String;
 
@@ -78,19 +73,15 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 45
     :goto_0
     return-object v3
 
-    .line 42
     :catch_0
     move-exception v0
 
-    .line 43
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
-    .line 45
     const/4 v3, 0x0
 
     goto :goto_0
@@ -103,12 +94,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 20
     new-instance v1, Ljava/util/Formatter;
 
     invoke-direct {v1}, Ljava/util/Formatter;-><init>()V
 
-    .line 22
     .local v1, "formatter":Ljava/util/Formatter;
     array-length v4, p0
 
@@ -119,7 +108,6 @@
 
     aget-byte v0, p0, v2
 
-    .line 23
     .local v0, "b":B
     const-string v5, "%02x"
 
@@ -135,12 +123,10 @@
 
     invoke-virtual {v1, v5, v6}, Ljava/util/Formatter;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/util/Formatter;
 
-    .line 22
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 26
     .end local v0    # "b":B
     :cond_0
     invoke-virtual {v1}, Ljava/util/Formatter;->toString()Ljava/lang/String;

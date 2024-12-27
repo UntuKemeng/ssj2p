@@ -37,22 +37,18 @@
     .locals 1
 
     .prologue
-    .line 584
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 580
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->mConnectedUser:I
 
-    .line 585
     sget-object v0, Lcom/android/server/aod/AODManagerService$AODConnectionCause;->AODCONNECTION_STARTAOD:Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     iput-object v0, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->mConnectionCause:Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
-    .line 586
     # getter for: Lcom/android/server/aod/AODManagerService;->mCurrentUser:I
     invoke-static {p1}, Lcom/android/server/aod/AODManagerService;->access$500(Lcom/android/server/aod/AODManagerService;)I
 
@@ -60,7 +56,6 @@
 
     iput v0, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->mConnectedUser:I
 
-    .line 587
     return-void
 .end method
 
@@ -69,20 +64,16 @@
     .param p2, "connectionCause"    # Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     .prologue
-    .line 588
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 580
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->mConnectedUser:I
 
-    .line 589
     iput-object p2, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->mConnectionCause:Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
-    .line 590
     # getter for: Lcom/android/server/aod/AODManagerService;->mCurrentUser:I
     invoke-static {p1}, Lcom/android/server/aod/AODManagerService;->access$500(Lcom/android/server/aod/AODManagerService;)I
 
@@ -90,7 +81,6 @@
 
     iput v0, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->mConnectedUser:I
 
-    .line 591
     return-void
 .end method
 
@@ -100,7 +90,6 @@
     .locals 2
 
     .prologue
-    .line 640
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # getter for: Lcom/android/server/aod/AODManagerService;->mAODHandler:Lcom/android/server/aod/AODManagerService$AODHandler;
@@ -114,7 +103,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/aod/AODManagerService$AODHandler;->post(Ljava/lang/Runnable;)Z
 
-    .line 647
     return-void
 .end method
 
@@ -124,7 +112,6 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 595
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # getter for: Lcom/android/server/aod/AODManagerService;->mAODHandler:Lcom/android/server/aod/AODManagerService$AODHandler;
@@ -138,7 +125,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/aod/AODManagerService$AODHandler;->post(Ljava/lang/Runnable;)Z
 
-    .line 625
     return-void
 .end method
 
@@ -147,7 +133,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 629
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$AODConnection;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # getter for: Lcom/android/server/aod/AODManagerService;->mAODHandler:Lcom/android/server/aod/AODManagerService$AODHandler;
@@ -161,6 +146,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/aod/AODManagerService$AODHandler;->post(Ljava/lang/Runnable;)Z
 
-    .line 636
     return-void
 .end method

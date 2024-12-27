@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 290
     iput-object p1, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,14 +40,12 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 293
     const-string v6, "UsbHostRestrictor"
 
     const-string/jumbo v7, "mUsbHostRestrictionReceiver Receiver onReceive"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     # getter for: Lcom/android/server/usb/UsbHostRestrictor;->isSIMBlock:Z
     invoke-static {}, Lcom/android/server/usb/UsbHostRestrictor;->access$100()Z
 
@@ -63,7 +60,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 296
     :cond_0
     const-string v6, "UsbHostRestrictor"
 
@@ -107,19 +103,16 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     :cond_1
     :goto_0
     return-void
 
-    .line 300
     :cond_2
     :try_start_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 301
     .local v0, "action":Ljava/lang/String;
     const-string v6, "com.sec.enterprise.intent.action.UPDATE_ALLOW_USB_HOST_STORAGE_STATE_INTERNAL"
 
@@ -129,7 +122,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 302
     const-string/jumbo v6, "reason"
 
     const/4 v7, 0x0
@@ -138,7 +130,6 @@
 
     move-result v4
 
-    .line 303
     .local v4, "reason":I
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
@@ -149,7 +140,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 304
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->readDisableSysNodefromFile()Ljava/lang/String;
@@ -157,24 +147,20 @@
 
     move-result-object v3
 
-    .line 305
     .local v3, "nodeValue":Ljava/lang/String;
     if-nez v4, :cond_3
 
-    .line 306
     const-string v6, "UsbHostRestrictor"
 
     const-string/jumbo v7, "mUsbHostRestrictionReceiver : reason - ALLOW "
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     const/4 v6, 0x0
 
     # setter for: Lcom/android/server/usb/UsbHostRestrictor;->isMDMBlock:Z
     invoke-static {v6}, Lcom/android/server/usb/UsbHostRestrictor;->access$502(Z)Z
 
-    .line 308
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     const-string v7, "OFF"
@@ -186,14 +172,12 @@
 
     goto :goto_0
 
-    .line 339
     .end local v0    # "action":Ljava/lang/String;
     .end local v3    # "nodeValue":Ljava/lang/String;
     .end local v4    # "reason":I
     :catch_0
     move-exception v1
 
-    .line 340
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "UsbHostRestrictor"
 
@@ -203,7 +187,6 @@
 
     goto :goto_0
 
-    .line 309
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "action":Ljava/lang/String;
     .restart local v3    # "nodeValue":Ljava/lang/String;
@@ -211,7 +194,6 @@
     :cond_3
     if-ne v4, v8, :cond_4
 
-    .line 310
     :try_start_1
     const-string v6, "UsbHostRestrictor"
 
@@ -219,13 +201,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 311
     const/4 v6, 0x1
 
     # setter for: Lcom/android/server/usb/UsbHostRestrictor;->isMDMBlock:Z
     invoke-static {v6}, Lcom/android/server/usb/UsbHostRestrictor;->access$502(Z)Z
 
-    .line 312
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     const-string v7, "ON_HOST_MDM"
@@ -235,20 +215,17 @@
 
     goto :goto_0
 
-    .line 313
     :cond_4
     const/4 v6, 0x2
 
     if-ne v4, v6, :cond_6
 
-    .line 316
     const-string v6, "UsbHostRestrictor"
 
     const-string/jumbo v7, "mUsbHostRestrictionReceiver : reason - INIT "
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 317
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # getter for: Lcom/android/server/usb/UsbHostRestrictor;->mContext:Landroid/content/Context;
@@ -264,20 +241,16 @@
 
     check-cast v2, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 320
     .local v2, "mEDM":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v2, :cond_1
 
-    .line 321
     invoke-virtual {v2}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRestrictionPolicy()Landroid/app/enterprise/RestrictionPolicy;
 
     move-result-object v5
 
-    .line 322
     .local v5, "rp":Landroid/app/enterprise/RestrictionPolicy;
     if-eqz v5, :cond_1
 
-    .line 323
     const/4 v6, 0x0
 
     invoke-virtual {v5, v6}, Landroid/app/enterprise/RestrictionPolicy;->isUsbHostStorageAllowed(Z)Z
@@ -293,20 +266,17 @@
 
     if-eqz v6, :cond_5
 
-    .line 324
     const-string v6, "UsbHostRestrictor"
 
     const-string/jumbo v7, "mUsbHostRestrictionReceiver : reason - INIT - Set sysnode as OFF"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 325
     const/4 v6, 0x0
 
     # setter for: Lcom/android/server/usb/UsbHostRestrictor;->isMDMBlock:Z
     invoke-static {v6}, Lcom/android/server/usb/UsbHostRestrictor;->access$502(Z)Z
 
-    .line 326
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$2;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     const-string v7, "OFF"
@@ -316,7 +286,6 @@
 
     goto/16 :goto_0
 
-    .line 328
     :cond_5
     const-string v6, "UsbHostRestrictor"
 
@@ -326,7 +295,6 @@
 
     goto/16 :goto_0
 
-    .line 333
     .end local v2    # "mEDM":Landroid/app/enterprise/EnterpriseDeviceManager;
     .end local v5    # "rp":Landroid/app/enterprise/RestrictionPolicy;
     :cond_6
@@ -338,7 +306,6 @@
 
     goto/16 :goto_0
 
-    .line 336
     .end local v3    # "nodeValue":Ljava/lang/String;
     :cond_7
     const-string v6, "UsbHostRestrictor"

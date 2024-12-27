@@ -32,21 +32,17 @@
     .end annotation
 
     .prologue
-    .line 62
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Lorg/simpleframework/xml/core/Label;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 63
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
 
     iput v0, p0, Lorg/simpleframework/xml/core/LabelGroup;->size:I
 
-    .line 64
     iput-object p1, p0, Lorg/simpleframework/xml/core/LabelGroup;->list:Ljava/util/List;
 
-    .line 65
     return-void
 .end method
 
@@ -55,7 +51,6 @@
     .param p1, "label"    # Lorg/simpleframework/xml/core/Label;
 
     .prologue
-    .line 52
     const/4 v0, 0x1
 
     new-array v0, v0, [Lorg/simpleframework/xml/core/Label;
@@ -70,7 +65,6 @@
 
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/core/LabelGroup;-><init>(Ljava/util/List;)V
 
-    .line 53
     return-void
 .end method
 
@@ -89,7 +83,6 @@
     .end annotation
 
     .prologue
-    .line 75
     iget-object v0, p0, Lorg/simpleframework/xml/core/LabelGroup;->list:Ljava/util/List;
 
     return-object v0
@@ -99,12 +92,10 @@
     .locals 2
 
     .prologue
-    .line 86
     iget v0, p0, Lorg/simpleframework/xml/core/LabelGroup;->size:I
 
     if-lez v0, :cond_0
 
-    .line 87
     iget-object v0, p0, Lorg/simpleframework/xml/core/LabelGroup;->list:Ljava/util/List;
 
     const/4 v1, 0x0
@@ -115,7 +106,6 @@
 
     check-cast v0, Lorg/simpleframework/xml/core/Label;
 
-    .line 89
     :goto_0
     return-object v0
 

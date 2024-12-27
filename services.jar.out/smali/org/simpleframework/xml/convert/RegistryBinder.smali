@@ -23,24 +23,20 @@
     .locals 1
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     new-instance v0, Lorg/simpleframework/xml/util/ConcurrentCache;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/util/ConcurrentCache;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/convert/RegistryBinder;->cache:Lorg/simpleframework/xml/util/Cache;
 
-    .line 55
     new-instance v0, Lorg/simpleframework/xml/convert/ConverterFactory;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/convert/ConverterFactory;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/convert/RegistryBinder;->factory:Lorg/simpleframework/xml/convert/ConverterFactory;
 
-    .line 56
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .end annotation
 
     .prologue
-    .line 88
     iget-object v0, p0, Lorg/simpleframework/xml/convert/RegistryBinder;->factory:Lorg/simpleframework/xml/convert/ConverterFactory;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/convert/ConverterFactory;->getInstance(Ljava/lang/Class;)Lorg/simpleframework/xml/convert/Converter;
@@ -77,12 +72,10 @@
     .end annotation
 
     .prologue
-    .line 101
     iget-object v0, p0, Lorg/simpleframework/xml/convert/RegistryBinder;->cache:Lorg/simpleframework/xml/util/Cache;
 
     invoke-interface {v0, p1, p2}, Lorg/simpleframework/xml/util/Cache;->cache(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 102
     return-void
 .end method
 
@@ -96,7 +89,6 @@
     .end annotation
 
     .prologue
-    .line 69
     iget-object v1, p0, Lorg/simpleframework/xml/convert/RegistryBinder;->cache:Lorg/simpleframework/xml/util/Cache;
 
     invoke-interface {v1, p1}, Lorg/simpleframework/xml/util/Cache;->fetch(Ljava/lang/Object;)Ljava/lang/Object;
@@ -105,16 +97,13 @@
 
     check-cast v0, Ljava/lang/Class;
 
-    .line 71
     .local v0, "result":Ljava/lang/Class;
     if-eqz v0, :cond_0
 
-    .line 72
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/convert/RegistryBinder;->create(Ljava/lang/Class;)Lorg/simpleframework/xml/convert/Converter;
 
     move-result-object v1
 
-    .line 74
     :goto_0
     return-object v1
 

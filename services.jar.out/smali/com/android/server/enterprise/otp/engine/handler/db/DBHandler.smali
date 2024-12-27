@@ -18,7 +18,6 @@
     .locals 1
 
     .prologue
-    .line 42
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->sInstance:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -33,27 +32,21 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 47
     const-string v3, "OtpDatabase.db"
 
     const/4 v4, 0x3
 
     invoke-direct {p0, p1, v3, v5, v4}, Landroid/database/sqlite/SQLiteOpenHelper;-><init>(Landroid/content/Context;Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)V
 
-    .line 43
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 44
     iput-object v5, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
-    .line 48
     const-string v1, ""
 
-    .line 49
     .local v1, "before":Ljava/lang/String;
     const-string v0, ""
 
-    .line 50
     .local v0, "after":Ljava/lang/String;
     invoke-direct {p0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->dbFileExists()Z
 
@@ -61,14 +54,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 51
     const-string v3, "/data/system/OtpDatabase.db"
 
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getStringFromFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 52
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
 
@@ -76,21 +67,18 @@
 
     iput-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 53
     invoke-direct {p0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->dbFileExists()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 54
     const-string v3, "/data/system/OtpDatabase.db"
 
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getStringFromFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 56
     :cond_1
     if-eqz v1, :cond_2
 
@@ -100,15 +88,12 @@
 
     if-nez v3, :cond_2
 
-    .line 58
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
-    .line 60
     const-string v3, "DBHandler::hmac mismatch, overwriting hmac"
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 61
     const-string v3, "/data/system/OtpDatabase.db"
 
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getStringFromFile(Ljava/lang/String;)Ljava/lang/String;
@@ -127,7 +112,6 @@
 
     move-result-object v2
 
-    .line 63
     .local v2, "hmac":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -149,19 +133,16 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 64
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
     move-result-object v3
 
     invoke-virtual {v3, v2}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->setOtpDbHmac(Ljava/lang/String;)I
 
-    .line 66
     .end local v2    # "hmac":Ljava/lang/String;
     :cond_2
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
-    .line 67
     return-void
 .end method
 
@@ -183,16 +164,13 @@
     .end annotation
 
     .prologue
-    .line 992
     monitor-enter p0
 
     const/4 v2, 0x0
 
-    .line 993
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 995
     .local v0, "c":Landroid/database/Cursor;
     :try_start_0
     new-instance v4, Ljava/lang/StringBuilder;
@@ -225,10 +203,8 @@
 
     move-result-object v0
 
-    .line 996
     if-eqz v0, :cond_0
 
-    .line 997
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-interface {v0}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
@@ -248,30 +224,25 @@
     .local v3, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move-object v2, v3
 
-    .line 1002
     .end local v3    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v2    # "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 1003
     :try_start_1
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1005
     :cond_1
     :goto_0
     monitor-exit p0
 
     return-object v2
 
-    .line 999
     :catch_0
     move-exception v1
 
-    .line 1000
     .local v1, "e":Ljava/lang/NullPointerException;
     :try_start_2
     new-instance v4, Ljava/lang/StringBuilder;
@@ -302,10 +273,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1002
     if-eqz v0, :cond_1
 
-    .line 1003
     :try_start_3
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_3
@@ -313,7 +282,6 @@
 
     goto :goto_0
 
-    .line 992
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :catchall_0
     move-exception v4
@@ -322,13 +290,11 @@
 
     throw v4
 
-    .line 1002
     :catchall_1
     move-exception v4
 
     if-eqz v0, :cond_2
 
-    .line 1003
     :try_start_4
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -349,7 +315,6 @@
     .end annotation
 
     .prologue
-    .line 899
     .local p0, "array":[Ljava/lang/Object;, "[TT;"
     .local p1, "v":Ljava/lang/Object;, "TT;"
     const-class v5, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -371,7 +336,6 @@
 
     aget-object v1, v0, v2
 
-    .line 900
     .local v1, "e":Ljava/lang/Object;, "TT;"
     if-eq v1, p1, :cond_0
 
@@ -385,32 +349,27 @@
 
     if-eqz v4, :cond_1
 
-    .line 901
     :cond_0
     const/4 v4, 0x1
 
-    .line 903
     .end local v1    # "e":Ljava/lang/Object;, "TT;"
     :goto_1
     monitor-exit v5
 
     return v4
 
-    .line 899
     .restart local v1    # "e":Ljava/lang/Object;, "TT;"
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 903
     .end local v1    # "e":Ljava/lang/Object;, "TT;"
     :cond_2
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 899
     .end local v2    # "i$":I
     .end local v3    # "len$":I
     :catchall_0
@@ -425,14 +384,12 @@
     .locals 2
 
     .prologue
-    .line 1073
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/system/OtpDatabase.db"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1074
     .local v0, "f":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -447,7 +404,6 @@
     .param p2, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 1052
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
@@ -460,24 +416,19 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 1053
     :cond_0
     const-string v4, "DBIntegrity::getHmacSHA1 - input string is null"
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 1054
     const/4 v4, 0x0
 
-    .line 1069
     :goto_0
     return-object v4
 
-    .line 1056
     :cond_1
     const/4 v1, 0x0
 
-    .line 1059
     .local v1, "mac":Ljavax/crypto/Mac;
     :try_start_0
     const-string v4, "HmacSHA1"
@@ -486,7 +437,6 @@
 
     move-result-object v1
 
-    .line 1060
     new-instance v3, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string v4, "UTF-8"
@@ -501,11 +451,9 @@
 
     invoke-direct {v3, v4, v5}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 1061
     .local v3, "sk":Ljavax/crypto/spec/SecretKeySpec;
     invoke-virtual {v1, v3}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    .line 1062
     const-string v4, "UTF-8"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -521,7 +469,6 @@
 
     move-result-object v2
 
-    .line 1069
     .local v2, "result":[B
     const/16 v4, 0x8
 
@@ -535,13 +482,11 @@
 
     goto :goto_0
 
-    .line 1063
     .end local v2    # "result":[B
     .end local v3    # "sk":Ljavax/crypto/spec/SecretKeySpec;
     :catch_0
     move-exception v0
 
-    .line 1065
     .local v0, "e":Ljava/lang/Exception;
     :goto_1
     new-instance v4, Ljava/lang/StringBuilder;
@@ -568,12 +513,10 @@
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 1066
     const-string v4, ""
 
     goto :goto_0
 
-    .line 1063
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
@@ -596,7 +539,6 @@
     .param p0, "c"    # Landroid/content/Context;
 
     .prologue
-    .line 70
     const-class v1, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
     monitor-enter v1
@@ -606,19 +548,16 @@
 
     if-nez v0, :cond_0
 
-    .line 71
     const-string v0, "OtpDbHelper::getInstance New instance created"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 72
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->sInstance:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
-    .line 74
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->sInstance:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
     :try_end_0
@@ -628,7 +567,6 @@
 
     return-object v0
 
-    .line 70
     :catchall_0
     move-exception v0
 
@@ -642,24 +580,19 @@
     .param p1, "filePath"    # Ljava/lang/String;
 
     .prologue
-    .line 1023
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1024
     .local v1, "file":Ljava/io/File;
     const/4 v2, 0x0
 
-    .line 1025
     .local v2, "fin":Ljava/io/FileInputStream;
     const/4 v5, 0x0
 
-    .line 1026
     .local v5, "reader":Ljava/io/BufferedReader;
     const/4 v7, 0x0
 
-    .line 1030
     .local v7, "ret":Ljava/lang/String;
     :try_start_0
     new-instance v3, Ljava/io/FileInputStream;
@@ -668,7 +601,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1031
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .local v3, "fin":Ljava/io/FileInputStream;
     :try_start_1
@@ -684,7 +616,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 1032
     .end local v5    # "reader":Ljava/io/BufferedReader;
     .local v6, "reader":Ljava/io/BufferedReader;
     :try_start_2
@@ -692,11 +623,9 @@
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1033
     .local v8, "sb":Ljava/lang/StringBuilder;
     const/4 v4, 0x0
 
-    .line 1034
     .local v4, "line":Ljava/lang/String;
     :goto_0
     invoke-virtual {v6}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -705,7 +634,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 1035
     invoke-virtual {v8, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v9
@@ -718,7 +646,6 @@
 
     goto :goto_0
 
-    .line 1039
     .end local v4    # "line":Ljava/lang/String;
     .end local v8    # "sb":Ljava/lang/StringBuilder;
     :catchall_0
@@ -735,15 +662,12 @@
     :goto_1
     if-eqz v5, :cond_0
 
-    .line 1040
     :try_start_3
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
 
-    .line 1041
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 1042
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
     :cond_1
@@ -751,11 +675,9 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 1044
     :catch_0
     move-exception v0
 
-    .line 1045
     .local v0, "e":Ljava/io/IOException;
     :goto_2
     new-instance v9, Ljava/lang/StringBuilder;
@@ -782,12 +704,10 @@
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 1047
     .end local v0    # "e":Ljava/io/IOException;
     :goto_3
     return-object v7
 
-    .line 1037
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v5    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "fin":Ljava/io/FileInputStream;
@@ -802,18 +722,14 @@
 
     move-result-object v7
 
-    .line 1039
     if-eqz v6, :cond_3
 
-    .line 1040
     :try_start_5
     invoke-virtual {v6}, Ljava/io/BufferedReader;->close()V
 
-    .line 1041
     :cond_3
     if-eqz v3, :cond_4
 
-    .line 1042
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
@@ -825,12 +741,10 @@
     .restart local v5    # "reader":Ljava/io/BufferedReader;
     move-object v2, v3
 
-    .line 1046
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_3
 
-    .line 1044
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v5    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "fin":Ljava/io/FileInputStream;
@@ -848,7 +762,6 @@
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_2
 
-    .line 1039
     .end local v4    # "line":Ljava/lang/String;
     .end local v8    # "sb":Ljava/lang/StringBuilder;
     :catchall_1
@@ -885,7 +798,6 @@
     .end annotation
 
     .prologue
-    .line 1009
     .local p0, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-class v4, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
@@ -896,13 +808,11 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1010
     .local v0, "buf":Ljava/lang/StringBuilder;
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 1011
     .local v2, "num":I
     const/4 v1, 0x0
 
@@ -910,13 +820,10 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    .line 1012
     if-eqz v1, :cond_0
 
-    .line 1013
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1014
     :cond_0
     invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -926,12 +833,10 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1011
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1016
     :cond_1
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_0
@@ -943,7 +848,6 @@
 
     return-object v3
 
-    .line 1009
     .end local v0    # "buf":Ljava/lang/StringBuilder;
     .end local v1    # "i":I
     .end local v2    # "num":I
@@ -961,20 +865,17 @@
     .param p2, "tableName"    # Ljava/lang/String;
 
     .prologue
-    .line 908
     monitor-enter p0
 
     if-eqz p2, :cond_2
 
     if-eqz p1, :cond_2
 
-    .line 910
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->GetColumns(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 912
     .local v1, "columns":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1006,7 +907,6 @@
 
     invoke-virtual {p1, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 914
     const-string v3, "TokenTable"
 
     invoke-virtual {p2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -1015,31 +915,26 @@
 
     if-eqz v3, :cond_3
 
-    .line 915
     const-string v3, "create table TokenTable(token_id varchar primary key, display_name varchar, algo_type integer, algo_params varchar);"
 
     invoke-virtual {p1, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 921
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 922
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->GetColumns(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v3
 
     invoke-interface {v1, v3}, Ljava/util/List;->retainAll(Ljava/util/Collection;)Z
 
-    .line 924
     const-string v3, ","
 
     invoke-static {v1, v3}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->join(Ljava/util/List;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 925
     .local v0, "cols":Ljava/lang/String;
     const-string v3, "INSERT INTO %s (%s) SELECT %s from temp_%s"
 
@@ -1069,7 +964,6 @@
 
     invoke-virtual {p1, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 930
     .end local v0    # "cols":Ljava/lang/String;
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1092,7 +986,6 @@
 
     invoke-virtual {p1, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 931
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1122,7 +1015,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 938
     .end local v1    # "columns":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_2
     :goto_1
@@ -1130,7 +1022,6 @@
 
     return-void
 
-    .line 916
     .restart local v1    # "columns":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_3
     :try_start_1
@@ -1142,7 +1033,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 917
     const-string v3, "create table PolicyTable(token_id varchar primary key, pin_usage_mode varchar, max_failed_attempts integer,min_length integer default 0, max_length integer, encoding varchar, start_date varchar, expiry_date varchar, number_of_transactions integer, current_number_of_transactions integer default 0);"
 
     invoke-virtual {p1, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
@@ -1152,12 +1042,10 @@
 
     goto :goto_0
 
-    .line 933
     .end local v1    # "columns":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :catch_0
     move-exception v2
 
-    .line 934
     .local v2, "e":Ljava/lang/Exception;
     :try_start_2
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1188,7 +1076,6 @@
 
     goto :goto_1
 
-    .line 908
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v3
@@ -1197,7 +1084,6 @@
 
     throw v3
 
-    .line 918
     .restart local v1    # "columns":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_4
     :try_start_3
@@ -1209,7 +1095,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 919
     const-string v3, "create table ProvisionTable(token_id varchar primary key, vendor_token_id varchar, token_state integer default 1, container_id integer default 0, whitelist_pkg varchar, signer_info varchar );"
 
     invoke-virtual {p1, v3}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
@@ -1226,17 +1111,14 @@
     .param p2, "tableName"    # Ljava/lang/String;
 
     .prologue
-    .line 942
     monitor-enter p0
 
     if-eqz p2, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 943
     const/4 v0, 0x0
 
-    .line 945
     .local v0, "cursor":Landroid/database/Cursor;
     :try_start_0
     const-string v4, "SELECT * FROM ProvisionTable"
@@ -1247,7 +1129,6 @@
 
     move-result-object v0
 
-    .line 946
     if-eqz v0, :cond_1
 
     const/4 v4, -0x1
@@ -1260,12 +1141,10 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 947
     const-string v4, "DBHandler::onUpgradeTableWithAddColumn: Table already contains VendorTokenId column."
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 948
     const-string v4, "ProvisionTable"
 
     invoke-direct {p0, p1, v4}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->onUpgradeTable(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V
@@ -1273,17 +1152,14 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 985
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 986
     :try_start_1
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 989
     .end local v0    # "cursor":Landroid/database/Cursor;
     :cond_0
     :goto_1
@@ -1291,7 +1167,6 @@
 
     return-void
 
-    .line 951
     .restart local v0    # "cursor":Landroid/database/Cursor;
     :cond_1
     :try_start_2
@@ -1299,14 +1174,11 @@
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 952
     const-string/jumbo v2, "token_id, vendor_token_id, token_state, container_id, whitelist_pkg, signer_info"
 
-    .line 959
     .local v2, "postColumnList":Ljava/lang/String;
     const-string/jumbo v3, "token_id, token_id, token_state, container_id, whitelist_pkg, signer_info"
 
-    .line 967
     .local v3, "preColumnList":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1338,12 +1210,10 @@
 
     invoke-virtual {p1, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 969
     const-string v4, "create table ProvisionTable(token_id varchar primary key, vendor_token_id varchar, token_state integer default 1, container_id integer default 0, whitelist_pkg varchar, signer_info varchar );"
 
     invoke-virtual {p1, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 971
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1394,7 +1264,6 @@
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 973
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1445,7 +1314,6 @@
 
     invoke-virtual {p1, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 976
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1466,7 +1334,6 @@
 
     invoke-virtual {p1, v4}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 978
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -1498,13 +1365,11 @@
 
     goto/16 :goto_0
 
-    .line 982
     .end local v2    # "postColumnList":Ljava/lang/String;
     .end local v3    # "preColumnList":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 983
     .local v1, "e":Ljava/lang/Exception;
     :try_start_3
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1533,10 +1398,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 985
     if-eqz v0, :cond_0
 
-    .line 986
     :try_start_4
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_4
@@ -1544,7 +1407,6 @@
 
     goto/16 :goto_1
 
-    .line 942
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v4
@@ -1553,13 +1415,11 @@
 
     throw v4
 
-    .line 985
     :catchall_1
     move-exception v4
 
     if-eqz v0, :cond_2
 
-    .line 986
     :try_start_5
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
@@ -1578,7 +1438,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 429
     monitor-enter p0
 
     :try_start_0
@@ -1594,22 +1453,17 @@
 
     check-cast v5, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
-    .line 430
     .local v5, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     if-eqz v5, :cond_1
 
-    .line 431
     iget-object v3, v5, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mExpiryDate:Ljava/lang/String;
 
-    .line 432
     .local v3, "expiryDate":Ljava/lang/String;
     iget v4, v5, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mNumberOfTransactions:I
 
-    .line 433
     .local v4, "noOfTrans":I
     iget v1, v5, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mCurrentNoOfTransactions:I
 
-    .line 435
     .local v1, "currentTrans":I
     if-eqz v4, :cond_0
 
@@ -1617,19 +1471,16 @@
 
     if-lt v4, v7, :cond_3
 
-    .line 436
     :cond_0
     invoke-virtual {p0, v3}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->stringToDateConverter(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v2
 
-    .line 437
     .local v2, "eDate":Ljava/util/Date;
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
-    .line 439
     .local v0, "currentDate":Ljava/util/Date;
     if-eqz v2, :cond_1
 
@@ -1641,7 +1492,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 451
     .end local v0    # "currentDate":Ljava/util/Date;
     .end local v1    # "currentTrans":I
     .end local v2    # "eDate":Ljava/util/Date;
@@ -1653,7 +1503,6 @@
 
     return v6
 
-    .line 442
     .restart local v0    # "currentDate":Ljava/util/Date;
     .restart local v1    # "currentTrans":I
     .restart local v2    # "eDate":Ljava/util/Date;
@@ -1665,7 +1514,6 @@
     :try_start_1
     invoke-virtual {p0, p1, v6}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->setTokenState(Ljava/lang/String;I)I
 
-    .line 451
     .end local v0    # "currentDate":Ljava/util/Date;
     .end local v2    # "eDate":Ljava/util/Date;
     :goto_1
@@ -1673,7 +1521,6 @@
 
     goto :goto_0
 
-    .line 445
     :cond_3
     const/16 v6, 0x302
 
@@ -1683,7 +1530,6 @@
 
     goto :goto_1
 
-    .line 429
     .end local v1    # "currentTrans":I
     .end local v3    # "expiryDate":Ljava/lang/String;
     .end local v4    # "noOfTrans":I
@@ -1703,7 +1549,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 819
     monitor-enter p0
 
     :try_start_0
@@ -1721,13 +1566,11 @@
 
     if-nez v1, :cond_0
 
-    .line 824
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 822
     :cond_0
     :try_start_1
     new-instance v1, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
@@ -1744,7 +1587,6 @@
 
     const/4 v0, 0x1
 
-    .line 823
     .local v0, "ret":Z
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
@@ -1759,7 +1601,6 @@
 
     goto :goto_0
 
-    .line 819
     .end local v0    # "ret":Z
     :catchall_0
     move-exception v1
@@ -1778,7 +1619,6 @@
     .end annotation
 
     .prologue
-    .line 831
     monitor-enter p0
 
     :try_start_0
@@ -1786,17 +1626,14 @@
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 832
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 833
     monitor-exit p0
 
     return-void
 
-    .line 831
     :catchall_0
     move-exception v0
 
@@ -1810,7 +1647,6 @@
     .param p1, "vendorTokenId"    # Ljava/lang/String;
 
     .prologue
-    .line 272
     monitor-enter p0
 
     :try_start_0
@@ -1828,7 +1664,6 @@
 
     move-result-object v0
 
-    .line 273
     .local v0, "callerPackage":Ljava/lang/String;
     new-instance v2, Landroid/app/enterprise/ContextInfo;
 
@@ -1840,7 +1675,6 @@
 
     iget v1, v2, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 275
     .local v1, "containerId":I
     new-instance v2, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
@@ -1858,7 +1692,6 @@
 
     return-object v2
 
-    .line 272
     .end local v0    # "callerPackage":Ljava/lang/String;
     .end local v1    # "containerId":I
     :catchall_0
@@ -1874,7 +1707,6 @@
     .param p1, "tokenId"    # Ljava/lang/String;
 
     .prologue
-    .line 334
     monitor-enter p0
 
     :try_start_0
@@ -1882,7 +1714,6 @@
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 336
     .local v0, "bundle":Landroid/os/Bundle;
     new-instance v4, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
@@ -1896,18 +1727,15 @@
 
     check-cast v1, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
-    .line 337
     .local v1, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     if-eqz v1, :cond_2
 
-    .line 338
     const-string v4, "TOKEN_STATE"
 
     iget v5, v1, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mTokenState:I
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 342
     new-instance v4, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
 
     invoke-direct {v4}, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;-><init>()V
@@ -1920,46 +1748,39 @@
 
     check-cast v3, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
 
-    .line 343
     .local v3, "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
     if-eqz v3, :cond_0
 
-    .line 344
     const-string v4, "OTP_TOKEN_ID"
 
     iget-object v5, v1, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mVendorTokenId:Ljava/lang/String;
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 345
     const-string v4, "DISPLAY_NAME"
 
     iget-object v5, v3, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mDisplayName:Ljava/lang/String;
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 346
     const-string v4, "OTP_OATH_PROTOCOL"
 
     iget v5, v3, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoType:I
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 347
     iget v4, v3, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoType:I
 
     const/16 v5, 0x102
 
     if-ne v4, v5, :cond_3
 
-    .line 348
     const-string v4, "CHALLENGE_NEEDED"
 
     const/4 v5, 0x1
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 349
     new-instance v4, Lcom/android/server/enterprise/otp/OCRACheck;
 
     iget-object v5, v3, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoParams:Ljava/lang/String;
@@ -1972,14 +1793,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 350
     const-string v4, "PIN_NEEDED"
 
     const/4 v5, 0x1
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 357
     :cond_0
     :goto_0
     new-instance v4, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
@@ -1994,11 +1813,9 @@
 
     check-cast v2, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
-    .line 358
     .local v2, "pod":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     if-eqz v2, :cond_1
 
-    .line 359
     const-string v4, "CODE_PREFIX"
 
     iget-object v5, v2, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mPinUsageMode:Ljava/lang/String;
@@ -2009,14 +1826,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 360
     const-string v4, "PIN_NEEDED"
 
     const/4 v5, 0x1
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 363
     :cond_1
     new-instance v4, Lcom/sec/enterprise/knox/otp/common/OTPToken;
 
@@ -2031,13 +1846,11 @@
 
     return-object v4
 
-    .line 340
     :cond_2
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 352
     .restart local v3    # "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
     :cond_3
     :try_start_1
@@ -2047,7 +1860,6 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 353
     const-string v4, "TIME_STEP"
 
     iget-object v5, v3, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoParams:Ljava/lang/String;
@@ -2062,7 +1874,6 @@
 
     goto :goto_0
 
-    .line 334
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     .end local v3    # "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
@@ -2078,7 +1889,6 @@
     .locals 4
 
     .prologue
-    .line 325
     monitor-enter p0
 
     :try_start_0
@@ -2086,10 +1896,8 @@
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 326
     const/4 v1, 0x0
 
-    .line 327
     .local v1, "count":I
     new-instance v2, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
@@ -2101,24 +1909,20 @@
 
     move-result-object v0
 
-    .line 328
     .local v0, "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     if-eqz v0, :cond_0
 
-    .line 329
     invoke-interface {v0}, Ljava/util/List;->size()I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v1
 
-    .line 330
     :cond_0
     monitor-exit p0
 
     return v1
 
-    .line 325
     .end local v0    # "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     .end local v1    # "count":I
     :catchall_0
@@ -2148,7 +1952,6 @@
     .end annotation
 
     .prologue
-    .line 287
     monitor-enter p0
 
     :try_start_0
@@ -2156,7 +1959,6 @@
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 288
     .local v8, "tokenList":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/otp/common/OTPToken;>;"
     new-instance v9, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
@@ -2168,11 +1970,9 @@
 
     move-result-object v1
 
-    .line 290
     .local v1, "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     if-eqz v1, :cond_2
 
-    .line 291
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -2194,11 +1994,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 292
     .local v3, "data":Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;
     if-eqz v3, :cond_0
 
-    .line 294
     :try_start_1
     move-object v0, v3
 
@@ -2208,7 +2006,6 @@
 
     iget v2, v9, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mContainerId:I
 
-    .line 295
     .local v2, "allowedContainer":I
     new-instance v6, Ljava/util/ArrayList;
 
@@ -2232,7 +2029,6 @@
 
     invoke-direct {v6, v9}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 297
     .local v6, "pkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v7, Ljava/util/ArrayList;
 
@@ -2256,7 +2052,6 @@
 
     invoke-direct {v7, v9}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 300
     .local v7, "signList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v6, :cond_0
 
@@ -2264,7 +2059,6 @@
 
     if-ne p3, v2, :cond_0
 
-    .line 302
     invoke-interface {v6, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v9
@@ -2305,7 +2099,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 305
     :cond_1
     check-cast v3, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
@@ -2323,14 +2116,12 @@
 
     goto :goto_0
 
-    .line 309
     .end local v2    # "allowedContainer":I
     .end local v6    # "pkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v7    # "signList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :catch_0
     move-exception v4
 
-    .line 310
     .local v4, "e":Ljava/lang/Exception;
     :try_start_2
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2361,7 +2152,6 @@
 
     goto/16 :goto_0
 
-    .line 287
     .end local v1    # "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     .end local v4    # "e":Ljava/lang/Exception;
     .end local v5    # "i$":Ljava/util/Iterator;
@@ -2373,7 +2163,6 @@
 
     throw v9
 
-    .line 316
     .restart local v1    # "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     .restart local v8    # "tokenList":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/otp/common/OTPToken;>;"
     :cond_2
@@ -2396,7 +2185,6 @@
     .end annotation
 
     .prologue
-    .line 374
     monitor-enter p0
 
     :try_start_0
@@ -2404,7 +2192,6 @@
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 375
     .local v5, "tokenList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v6, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
@@ -2416,11 +2203,9 @@
 
     move-result-object v1
 
-    .line 377
     .local v1, "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     if-eqz v1, :cond_1
 
-    .line 378
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -2440,11 +2225,9 @@
 
     check-cast v3, Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;
 
-    .line 379
     .local v3, "data":Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;
     if-eqz v3, :cond_0
 
-    .line 380
     move-object v0, v3
 
     check-cast v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
@@ -2453,11 +2236,9 @@
 
     iget v2, v6, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mContainerId:I
 
-    .line 381
     .local v2, "allowedContainer":I
     if-ne p1, v2, :cond_0
 
-    .line 382
     check-cast v3, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
     .end local v3    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;
@@ -2469,7 +2250,6 @@
 
     goto :goto_0
 
-    .line 374
     .end local v1    # "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     .end local v2    # "allowedContainer":I
     .end local v4    # "i$":Ljava/util/Iterator;
@@ -2481,7 +2261,6 @@
 
     throw v6
 
-    .line 388
     .restart local v1    # "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     .restart local v5    # "tokenList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
@@ -2494,7 +2273,6 @@
     .locals 1
 
     .prologue
-    .line 78
     monitor-enter p0
 
     :try_start_0
@@ -2531,7 +2309,6 @@
     .end annotation
 
     .prologue
-    .line 398
     monitor-enter p0
 
     :try_start_0
@@ -2539,7 +2316,6 @@
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 399
     .local v7, "tokenList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v8, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
@@ -2551,11 +2327,9 @@
 
     move-result-object v1
 
-    .line 401
     .local v1, "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     if-eqz v1, :cond_1
 
-    .line 402
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
@@ -2577,11 +2351,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 403
     .local v3, "data":Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;
     if-eqz v3, :cond_0
 
-    .line 405
     :try_start_1
     move-object v0, v3
 
@@ -2591,7 +2363,6 @@
 
     iget v2, v8, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mContainerId:I
 
-    .line 406
     .local v2, "allowedContainer":I
     move-object v0, v3
 
@@ -2611,20 +2382,17 @@
 
     aget-object v6, v8, v9
 
-    .line 408
     .local v6, "pkg":Ljava/lang/String;
     if-eqz v6, :cond_0
 
     if-ne p2, v2, :cond_0
 
-    .line 409
     invoke-virtual {v6, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v8
 
     if-eqz v8, :cond_0
 
-    .line 410
     check-cast v3, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
     .end local v3    # "data":Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;
@@ -2637,13 +2405,11 @@
 
     goto :goto_0
 
-    .line 412
     .end local v2    # "allowedContainer":I
     .end local v6    # "pkg":Ljava/lang/String;
     :catch_0
     move-exception v4
 
-    .line 413
     .local v4, "e":Ljava/lang/Exception;
     :try_start_2
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2674,7 +2440,6 @@
 
     goto :goto_0
 
-    .line 398
     .end local v1    # "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     .end local v4    # "e":Ljava/lang/Exception;
     .end local v5    # "i$":Ljava/util/Iterator;
@@ -2686,7 +2451,6 @@
 
     throw v8
 
-    .line 419
     .restart local v1    # "allData":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/otp/engine/handler/db/ITableData;>;"
     .restart local v7    # "tokenList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
@@ -2700,7 +2464,6 @@
     .param p1, "tokenId"    # Ljava/lang/String;
 
     .prologue
-    .line 257
     monitor-enter p0
 
     :try_start_0
@@ -2718,14 +2481,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 258
     .local v0, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     if-nez v0, :cond_0
 
-    .line 259
     const/4 v1, 0x0
 
-    .line 261
     :goto_0
     monitor-exit p0
 
@@ -2739,7 +2499,6 @@
 
     goto :goto_0
 
-    .line 257
     .end local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     :catchall_0
     move-exception v1
@@ -2754,7 +2513,6 @@
     .param p1, "tokenId"    # Ljava/lang/String;
 
     .prologue
-    .line 461
     monitor-enter p0
 
     :try_start_0
@@ -2772,20 +2530,16 @@
 
     if-nez v2, :cond_0
 
-    .line 462
     const/16 v1, 0x40d
 
-    .line 473
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 464
     :cond_0
     const/4 v1, 0x0
 
-    .line 465
     .local v1, "ret":I
     :try_start_1
     new-instance v2, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
@@ -2800,25 +2554,21 @@
 
     check-cast v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
-    .line 466
     .local v0, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     if-eqz v0, :cond_1
 
-    .line 467
     iget v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mCurrentNoOfTransactions:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mCurrentNoOfTransactions:I
 
-    .line 468
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0, v2}, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->updateEntry(Landroid/database/sqlite/SQLiteDatabase;)I
 
     move-result v1
 
-    .line 472
     :goto_1
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
@@ -2832,7 +2582,6 @@
 
     goto :goto_0
 
-    .line 461
     .end local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     .end local v1    # "ret":I
     :catchall_0
@@ -2842,7 +2591,6 @@
 
     throw v2
 
-    .line 470
     .restart local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     .restart local v1    # "ret":I
     :cond_1
@@ -2859,7 +2607,6 @@
     .param p4, "signerInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 489
     monitor-enter p0
 
     :try_start_0
@@ -2875,27 +2622,22 @@
 
     check-cast v5, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
-    .line 491
     .local v5, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     if-eqz v5, :cond_3
 
-    .line 492
     iget v9, v5, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mContainerId:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eq p2, v9, :cond_0
 
-    .line 493
     const/16 v9, 0x40a
 
-    .line 517
     :goto_0
     monitor-exit p0
 
     return v9
 
-    .line 496
     :cond_0
     :try_start_1
     iget-object v9, v5, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mWhiteListPkg:Ljava/lang/String;
@@ -2906,7 +2648,6 @@
 
     move-result-object v7
 
-    .line 499
     .local v7, "pkgList":[Ljava/lang/String;
     if-eqz v7, :cond_3
 
@@ -2916,7 +2657,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 501
     iget-object v9, v5, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mSingnerInfo:Ljava/lang/String;
 
     const-string v10, ":"
@@ -2925,11 +2665,9 @@
 
     move-result-object v8
 
-    .line 502
     .local v8, "signList":[Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 503
     .local v2, "i":I
     move-object v0, v7
 
@@ -2945,7 +2683,6 @@
 
     aget-object v6, v0, v3
 
-    .line 504
     .local v6, "pkg":Ljava/lang/String;
     invoke-virtual {v6, p3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -2974,22 +2711,18 @@
 
     if-eqz v9, :cond_2
 
-    .line 507
     :cond_1
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 508
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
-    .line 503
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 511
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "i":I
     .end local v3    # "i$":I
@@ -3000,7 +2733,6 @@
     :catch_0
     move-exception v1
 
-    .line 512
     .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     new-instance v9, Ljava/lang/StringBuilder;
@@ -3029,14 +2761,12 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 517
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     const/16 v9, 0x402
 
     goto :goto_0
 
-    .line 489
     .end local v5    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     :catchall_0
     move-exception v9
@@ -3056,7 +2786,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 533
     monitor-enter p0
 
     :try_start_0
@@ -3072,28 +2801,23 @@
 
     check-cast v1, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
-    .line 535
     .local v1, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     if-eqz v1, :cond_2
 
-    .line 536
     iget v5, v1, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mContainerId:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eq p2, v5, :cond_1
 
-    .line 537
     const/16 v4, 0x40a
 
-    .line 554
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v4
 
-    .line 540
     :cond_1
     :try_start_1
     iget-object v5, v1, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mWhiteListPkg:Ljava/lang/String;
@@ -3104,7 +2828,6 @@
 
     move-result-object v2
 
-    .line 541
     .local v2, "pkgList":[Ljava/lang/String;
     iget-object v5, v1, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mSingnerInfo:Ljava/lang/String;
 
@@ -3114,7 +2837,6 @@
 
     move-result-object v3
 
-    .line 544
     .local v3, "signList":[Ljava/lang/String;
     if-eqz v2, :cond_2
 
@@ -3143,7 +2865,6 @@
 
     if-nez v5, :cond_0
 
-    .line 554
     .end local v2    # "pkgList":[Ljava/lang/String;
     .end local v3    # "signList":[Ljava/lang/String;
     :cond_2
@@ -3152,11 +2873,9 @@
 
     goto :goto_0
 
-    .line 548
     :catch_0
     move-exception v0
 
-    .line 549
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3187,7 +2906,6 @@
 
     goto :goto_1
 
-    .line 533
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     :catchall_0
@@ -3204,7 +2922,6 @@
     .param p2, "generateData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 589
     monitor-enter p0
 
     :try_start_0
@@ -3212,10 +2929,8 @@
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 590
     const/4 v5, 0x0
 
-    .line 591
     .local v5, "ret":I
     const-string v9, "OCRA_PIN"
 
@@ -3223,7 +2938,6 @@
 
     move-result-object v4
 
-    .line 592
     .local v4, "pin":Ljava/lang/String;
     const-string v9, "OCRA_CHALLENGE"
 
@@ -3231,7 +2945,6 @@
 
     move-result-object v0
 
-    .line 593
     .local v0, "challenge":Ljava/lang/String;
     const-string v9, "OCRA_SESSION"
 
@@ -3239,7 +2952,6 @@
 
     move-result-object v7
 
-    .line 594
     .local v7, "session":Ljava/lang/String;
     const-string v9, "SDK_VERSION_DEFINED"
 
@@ -3247,7 +2959,6 @@
 
     move-result-object v6
 
-    .line 596
     .local v6, "sdkVersion":Ljava/lang/String;
     new-instance v9, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
@@ -3261,7 +2972,6 @@
 
     check-cast v3, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
-    .line 597
     .local v3, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     new-instance v9, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
 
@@ -3275,7 +2985,6 @@
 
     check-cast v8, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
 
-    .line 599
     .local v8, "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
     if-eqz v3, :cond_1
 
@@ -3297,11 +3006,9 @@
 
     if-nez v9, :cond_1
 
-    .line 601
     :cond_0
     const/16 v5, 0x406
 
-    .line 603
     :cond_1
     if-nez v5, :cond_3
 
@@ -3313,7 +3020,6 @@
 
     if-ne v9, v10, :cond_3
 
-    .line 604
     if-eqz v0, :cond_2
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -3324,32 +3030,27 @@
 
     if-nez v9, :cond_4
 
-    .line 605
     :cond_2
     const/16 v5, 0x405
 
-    .line 656
     :cond_3
     :goto_0
     monitor-exit p0
 
     return v5
 
-    .line 606
     :cond_4
     :try_start_1
     iget-object v9, v8, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoParams:Ljava/lang/String;
 
     if-eqz v9, :cond_e
 
-    .line 607
     new-instance v2, Lcom/android/server/enterprise/otp/OCRACheck;
 
     iget-object v9, v8, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoParams:Ljava/lang/String;
 
     invoke-direct {v2, v9}, Lcom/android/server/enterprise/otp/OCRACheck;-><init>(Ljava/lang/String;)V
 
-    .line 608
     .local v2, "ocraCheck":Lcom/android/server/enterprise/otp/OCRACheck;
     invoke-virtual {v2}, Lcom/android/server/enterprise/otp/OCRACheck;->isPinRequired()Z
 
@@ -3365,20 +3066,16 @@
 
     if-nez v9, :cond_6
 
-    .line 609
     :cond_5
     const-string v9, "DBHandler:isGenerateOtpInputValid Pin is required type"
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 610
     const/16 v5, 0x406
 
-    .line 613
     :cond_6
     if-nez v5, :cond_8
 
-    .line 614
     const-string v9, "1.0.0"
 
     invoke-virtual {v9, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3389,7 +3086,6 @@
 
     if-eqz v9, :cond_d
 
-    .line 616
     :try_start_2
     invoke-virtual {v2}, Lcom/android/server/enterprise/otp/OCRACheck;->getChallengeType()I
 
@@ -3399,7 +3095,6 @@
 
     if-ne v9, v10, :cond_a
 
-    .line 617
     const-string v9, "[a-zA-Z0-9]*"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
@@ -3408,15 +3103,12 @@
 
     if-nez v9, :cond_9
 
-    .line 618
     const-string v9, "DBHandler:isGenerateOtpInputValid Challenge should be alpha-numeric in format"
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 619
     const/16 v5, 0x405
 
-    .line 637
     :cond_7
     :goto_1
     const-string v9, "OCRA_CHALLENGE"
@@ -3426,7 +3118,6 @@
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 648
     :cond_8
     :goto_2
     if-nez v5, :cond_3
@@ -3440,12 +3131,10 @@
 
     if-eqz v9, :cond_3
 
-    .line 649
     const/16 v5, 0x404
 
     goto :goto_0
 
-    .line 622
     :cond_9
     :try_start_4
     const-string v9, "UTF-8"
@@ -3460,7 +3149,6 @@
 
     goto :goto_1
 
-    .line 624
     :cond_a
     invoke-virtual {v2}, Lcom/android/server/enterprise/otp/OCRACheck;->getChallengeType()I
 
@@ -3470,7 +3158,6 @@
 
     if-ne v9, v10, :cond_c
 
-    .line 625
     const-string v9, "[0-9]*"
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->matches(Ljava/lang/String;)Z
@@ -3479,17 +3166,14 @@
 
     if-nez v9, :cond_b
 
-    .line 626
     const-string v9, "DBHandler:isGenerateOtpInputValid Challenge should be numeric in format"
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 627
     const/16 v5, 0x405
 
     goto :goto_1
 
-    .line 630
     :cond_b
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -3501,7 +3185,6 @@
 
     goto :goto_1
 
-    .line 632
     :cond_c
     invoke-virtual {v2}, Lcom/android/server/enterprise/otp/OCRACheck;->getChallengeType()I
 
@@ -3519,7 +3202,6 @@
 
     if-nez v9, :cond_7
 
-    .line 634
     const-string v9, "DBHandler:isGenerateOtpInputValid Challenge should be HEX in format"
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
@@ -3527,29 +3209,23 @@
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 635
     const/16 v5, 0x405
 
     goto :goto_1
 
-    .line 638
     :catch_0
     move-exception v1
 
-    .line 639
     .local v1, "e":Ljava/io/UnsupportedEncodingException;
     :try_start_5
     const-string v9, "DBHandler:isGenerateOtpInputValid - challenge encoding wrong type."
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 640
     const/16 v5, 0x405
 
-    .line 641
     goto :goto_2
 
-    .line 642
     .end local v1    # "e":Ljava/io/UnsupportedEncodingException;
     :cond_d
     const-string v9, "[a-fA-F0-9]*"
@@ -3560,17 +3236,14 @@
 
     if-nez v9, :cond_8
 
-    .line 643
     const-string v9, "DBHandler:isGenerateOtpInputValid Challenge should be HEX in format"
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 644
     const/16 v5, 0x405
 
     goto :goto_2
 
-    .line 652
     .end local v2    # "ocraCheck":Lcom/android/server/enterprise/otp/OCRACheck;
     :cond_e
     const-string v9, "DBHandler:isGenerateOtpInputValid OcraSuite not found in DB"
@@ -3579,12 +3252,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 653
     const/16 v5, 0x401
 
     goto/16 :goto_0
 
-    .line 589
     .end local v0    # "challenge":Ljava/lang/String;
     .end local v3    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     .end local v4    # "pin":Ljava/lang/String;
@@ -3605,7 +3276,6 @@
     .param p1, "tokenId"    # Ljava/lang/String;
 
     .prologue
-    .line 569
     monitor-enter p0
 
     :try_start_0
@@ -3615,14 +3285,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 573
     const/16 v0, 0x4ff
 
     monitor-exit p0
 
     return v0
 
-    .line 569
     :catchall_0
     move-exception v0
 
@@ -3636,7 +3304,6 @@
     .param p1, "db"    # Landroid/database/sqlite/SQLiteDatabase;
 
     .prologue
-    .line 837
     monitor-enter p0
 
     :try_start_0
@@ -3644,54 +3311,44 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 838
     const-string v0, "create table ProvisionTable(token_id varchar primary key, vendor_token_id varchar, token_state integer default 1, container_id integer default 0, whitelist_pkg varchar, signer_info varchar );"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 839
     const-string v0, "OtpDbHelper::onCreate provision data table created"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 840
     const-string v0, "create table TokenTable(token_id varchar primary key, display_name varchar, algo_type integer, algo_params varchar);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 841
     const-string v0, "OtpDbHelper::onCreate token data table created"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 842
     const-string v0, "create table PolicyTable(token_id varchar primary key, pin_usage_mode varchar, max_failed_attempts integer,min_length integer default 0, max_length integer, encoding varchar, start_date varchar, expiry_date varchar, number_of_transactions integer, current_number_of_transactions integer default 0);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 843
     const-string v0, "OtpDbHelper::onCreate policy data table created"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 844
     const-string v0, "create table SessionTable(session_id varchar, package_name varchar primary key, current_step integer, next_step integer, timestamp integer);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 845
     const-string v0, "OtpDbHelper::onCreate session data table created"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 846
     monitor-exit p0
 
     return-void
 
-    .line 837
     :catchall_0
     move-exception v0
 
@@ -3704,52 +3361,42 @@
     .locals 2
 
     .prologue
-    .line 871
     monitor-enter p0
 
     :try_start_0
     const-string v0, "DROP table ProvisionTable"
 
-    .line 872
     .local v0, "query":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 873
     const-string v0, "DROP table TokenTable"
 
-    .line 874
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 875
     const-string v0, "DROP table PolicyTable"
 
-    .line 876
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 877
     const-string v0, "DROP table SessionTable"
 
-    .line 878
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 879
     const/4 v1, 0x0
 
     monitor-exit p0
 
     return v1
 
-    .line 871
     .end local v0    # "query":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -3768,7 +3415,6 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 850
     monitor-enter p0
 
     :try_start_0
@@ -3776,7 +3422,6 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 851
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;
@@ -3785,37 +3430,30 @@
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;->startDbUpgrade()V
 
-    .line 852
     const/4 v0, 0x3
 
     if-ne p3, v0, :cond_1
 
-    .line 853
     if-ge p2, v1, :cond_0
 
-    .line 854
     const-string v0, "ProvisionTable"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->onUpgradeTableWithAddColumn(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V
 
-    .line 857
     :cond_0
     const-string v0, "create table SessionTable(session_id varchar, package_name varchar primary key, current_step integer, next_step integer, timestamp integer);"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteDatabase;->execSQL(Ljava/lang/String;)V
 
-    .line 865
     :goto_0
     const-string v0, "TokenTable"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->onUpgradeTable(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V
 
-    .line 866
     const-string v0, "PolicyTable"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->onUpgradeTable(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)V
 
-    .line 867
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;
@@ -3826,16 +3464,13 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 868
     monitor-exit p0
 
     return-void
 
-    .line 859
     :cond_1
     if-ne p3, v1, :cond_2
 
-    .line 860
     :try_start_1
     const-string v0, "ProvisionTable"
 
@@ -3845,7 +3480,6 @@
 
     goto :goto_0
 
-    .line 850
     :catchall_0
     move-exception v0
 
@@ -3853,7 +3487,6 @@
 
     throw v0
 
-    .line 863
     :cond_2
     :try_start_2
     const-string v0, "ProvisionTable"
@@ -3870,7 +3503,6 @@
     .param p1, "tokenId"    # Ljava/lang/String;
 
     .prologue
-    .line 237
     monitor-enter p0
 
     :try_start_0
@@ -3886,7 +3518,6 @@
 
     if-nez v0, :cond_0
 
-    .line 241
     :cond_0
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
@@ -3896,7 +3527,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->deleteEntry(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)I
 
-    .line 242
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;-><init>()V
@@ -3905,7 +3535,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->deleteEntry(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)I
 
-    .line 243
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;-><init>()V
@@ -3914,7 +3543,6 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->deleteEntry(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)I
 
-    .line 246
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;
@@ -3925,14 +3553,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 247
     const/4 v0, 0x0
 
     monitor-exit p0
 
     return v0
 
-    .line 237
     :catchall_0
     move-exception v0
 
@@ -3946,7 +3572,6 @@
     .param p1, "data"    # Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
 
     .prologue
-    .line 792
     monitor-enter p0
 
     :try_start_0
@@ -3964,16 +3589,13 @@
 
     if-nez v1, :cond_0
 
-    .line 793
     const/4 v0, 0x0
 
-    .line 802
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 795
     :cond_0
     :try_start_1
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
@@ -3986,18 +3608,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 796
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
     iget-object v2, p1, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mPkgName:Ljava/lang/String;
 
     invoke-virtual {p1, v1, v2}, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->deleteEntry(Landroid/database/sqlite/SQLiteDatabase;Ljava/lang/String;)I
 
-    .line 798
     :cond_1
     const/4 v0, 0x0
 
-    .line 799
     .local v0, "ret":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -4007,10 +3626,8 @@
 
     if-nez v1, :cond_2
 
-    .line 800
     iget-object v0, p1, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mSessionId:Ljava/lang/String;
 
-    .line 801
     :cond_2
     iget-object v1, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
@@ -4024,7 +3641,6 @@
 
     goto :goto_0
 
-    .line 792
     .end local v0    # "ret":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -4039,7 +3655,6 @@
     .param p1, "tokenPolicy"    # Landroid/os/Bundle;
 
     .prologue
-    .line 143
     monitor-enter p0
 
     :try_start_0
@@ -4057,23 +3672,19 @@
 
     if-nez v2, :cond_0
 
-    .line 144
     const/16 v1, 0x40d
 
-    .line 161
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 147
     :cond_0
     :try_start_1
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;-><init>()V
 
-    .line 148
     .local v0, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     const-string v2, "OTP_INTERNAL_TOKEN_ID"
 
@@ -4083,7 +3694,6 @@
 
     iput-object v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mTokenId:Ljava/lang/String;
 
-    .line 149
     const-string v2, "NUM_TRANSACTIONS"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -4092,7 +3702,6 @@
 
     iput v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mNumberOfTransactions:I
 
-    .line 150
     const-string v2, "TOKEN_EXPIRY"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4101,7 +3710,6 @@
 
     iput-object v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mExpiryDate:Ljava/lang/String;
 
-    .line 151
     const-string v2, "PIN_USAGE"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4110,10 +3718,8 @@
 
     iput-object v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mPinUsageMode:Ljava/lang/String;
 
-    .line 153
     const/4 v1, 0x0
 
-    .line 154
     .local v1, "ret":I
     iget v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mNumberOfTransactions:I
 
@@ -4127,10 +3733,8 @@
 
     if-nez v2, :cond_1
 
-    .line 155
     const/4 v1, 0x0
 
-    .line 160
     :goto_1
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
@@ -4144,7 +3748,6 @@
 
     goto :goto_0
 
-    .line 143
     .end local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     .end local v1    # "ret":I
     :catchall_0
@@ -4154,7 +3757,6 @@
 
     throw v2
 
-    .line 157
     .restart local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     .restart local v1    # "ret":I
     :cond_1
@@ -4176,7 +3778,6 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 667
     monitor-enter p0
 
     :try_start_0
@@ -4194,26 +3795,21 @@
 
     if-nez v2, :cond_0
 
-    .line 668
     const/16 v1, 0x40d
 
-    .line 683
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 670
     :cond_0
     :try_start_1
     const-string v2, "DBHandler::setTokenState Enter"
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 671
     const/4 v1, 0x0
 
-    .line 672
     .local v1, "ret":I
     new-instance v2, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
@@ -4227,28 +3823,23 @@
 
     check-cast v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
-    .line 673
     .local v0, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     if-eqz v0, :cond_2
 
-    .line 674
     const/16 v2, 0x303
 
     iget v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mTokenState:I
 
     if-eq v2, v3, :cond_1
 
-    .line 675
     iput p2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mTokenState:I
 
-    .line 676
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0, v2}, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->updateEntry(Landroid/database/sqlite/SQLiteDatabase;)I
 
     move-result v1
 
-    .line 682
     :goto_1
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
@@ -4262,7 +3853,6 @@
 
     goto :goto_0
 
-    .line 667
     .end local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     .end local v1    # "ret":I
     :catchall_0
@@ -4272,7 +3862,6 @@
 
     throw v2
 
-    .line 678
     .restart local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     .restart local v1    # "ret":I
     :cond_1
@@ -4285,7 +3874,6 @@
 
     goto :goto_1
 
-    .line 680
     :cond_2
     const/16 v1, 0x4ff
 
@@ -4297,7 +3885,6 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 115
     monitor-enter p0
 
     :try_start_0
@@ -4315,23 +3902,19 @@
 
     if-nez v2, :cond_0
 
-    .line 116
     const/16 v0, 0x40d
 
-    .line 131
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 119
     :cond_0
     :try_start_1
     new-instance v1, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
 
     invoke-direct {v1}, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;-><init>()V
 
-    .line 120
     .local v1, "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
     const-string v2, "OTP_INTERNAL_TOKEN_ID"
 
@@ -4341,7 +3924,6 @@
 
     iput-object v2, v1, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mTokenId:Ljava/lang/String;
 
-    .line 121
     const-string v2, "DISPLAY_NAME"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4350,7 +3932,6 @@
 
     iput-object v2, v1, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mDisplayName:Ljava/lang/String;
 
-    .line 122
     const-string v2, "OTP_OATH_PROTOCOL"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -4359,14 +3940,12 @@
 
     iput v2, v1, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoType:I
 
-    .line 123
     iget v2, v1, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoType:I
 
     const/16 v3, 0x101
 
     if-ne v2, v3, :cond_2
 
-    .line 124
     const-string v2, "OTP_PARAM"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
@@ -4379,7 +3958,6 @@
 
     iput-object v2, v1, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoParams:Ljava/lang/String;
 
-    .line 129
     :cond_1
     :goto_1
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
@@ -4388,7 +3966,6 @@
 
     move-result v0
 
-    .line 130
     .local v0, "ret":I
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
@@ -4402,7 +3979,6 @@
 
     goto :goto_0
 
-    .line 115
     .end local v0    # "ret":I
     .end local v1    # "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
     :catchall_0
@@ -4412,7 +3988,6 @@
 
     throw v2
 
-    .line 125
     .restart local v1    # "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
     :cond_2
     :try_start_2
@@ -4422,7 +3997,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 126
     const-string v2, "OCRA_SUITE"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4441,7 +4015,6 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 89
     monitor-enter p0
 
     :try_start_0
@@ -4459,23 +4032,19 @@
 
     if-nez v2, :cond_0
 
-    .line 90
     const/16 v1, 0x40d
 
-    .line 104
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 93
     :cond_0
     :try_start_1
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;-><init>()V
 
-    .line 94
     .local v0, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     const-string v2, "OTP_INTERNAL_TOKEN_ID"
 
@@ -4485,7 +4054,6 @@
 
     iput-object v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mTokenId:Ljava/lang/String;
 
-    .line 95
     const-string v2, "OTP_TOKEN_ID"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4494,7 +4062,6 @@
 
     iput-object v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mVendorTokenId:Ljava/lang/String;
 
-    .line 96
     const-string v2, "TOKEN_STATE"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -4503,7 +4070,6 @@
 
     iput v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mTokenState:I
 
-    .line 97
     const-string v2, "CONTAINER_ID"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -4512,7 +4078,6 @@
 
     iput v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mContainerId:I
 
-    .line 98
     const-string v2, "WHITELISTED_PACKAGES"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4521,7 +4086,6 @@
 
     iput-object v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mWhiteListPkg:Ljava/lang/String;
 
-    .line 99
     const-string v2, "WHITELISTED_PKG_SIGNER_INFO"
 
     invoke-virtual {p1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4530,14 +4094,12 @@
 
     iput-object v2, v0, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mSingnerInfo:Ljava/lang/String;
 
-    .line 102
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0, v2}, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->addEntry(Landroid/database/sqlite/SQLiteDatabase;)I
 
     move-result v1
 
-    .line 103
     .local v1, "ret":I
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
@@ -4551,7 +4113,6 @@
 
     goto :goto_0
 
-    .line 89
     .end local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     .end local v1    # "ret":I
     :catchall_0
@@ -4569,12 +4130,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 883
     monitor-enter p0
 
     if-eqz p1, :cond_0
 
-    .line 887
     :try_start_0
     new-instance v1, Ljava/text/SimpleDateFormat;
 
@@ -4582,7 +4141,6 @@
 
     invoke-direct {v1, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 888
     .local v1, "formatter":Ljava/text/SimpleDateFormat;
     const-string v3, "UTC"
 
@@ -4592,7 +4150,6 @@
 
     invoke-virtual {v1, v3}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 889
     invoke-virtual {v1, p1}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
     :try_end_0
     .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
@@ -4600,7 +4157,6 @@
 
     move-result-object v2
 
-    .line 895
     .end local v1    # "formatter":Ljava/text/SimpleDateFormat;
     :cond_0
     :goto_0
@@ -4608,11 +4164,9 @@
 
     return-object v2
 
-    .line 890
     :catch_0
     move-exception v0
 
-    .line 891
     .local v0, "e":Ljava/text/ParseException;
     :try_start_1
     const-string v3, "DBHandler::stringToDateConveter parsing error"
@@ -4623,7 +4177,6 @@
 
     goto :goto_0
 
-    .line 883
     .end local v0    # "e":Ljava/text/ParseException;
     :catchall_0
     move-exception v2
@@ -4643,7 +4196,6 @@
 
     const/4 v6, -0x1
 
-    .line 165
     monitor-enter p0
 
     :try_start_0
@@ -4661,26 +4213,21 @@
 
     if-nez v3, :cond_0
 
-    .line 166
     const/16 v1, 0x40d
 
-    .line 227
     :goto_0
     monitor-exit p0
 
     return v1
 
-    .line 169
     :cond_0
     :try_start_1
     const-string/jumbo v3, "updateResyncTokenData :: updating TokenData table : db"
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 170
     const/4 v1, 0x0
 
-    .line 172
     .local v1, "ret":I
     new-instance v3, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
 
@@ -4694,11 +4241,9 @@
 
     check-cast v2, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
 
-    .line 173
     .local v2, "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
     if-eqz v2, :cond_9
 
-    .line 174
     const-string v3, "DISPLAY_NAME"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4707,7 +4252,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 175
     const-string v3, "DISPLAY_NAME"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4716,7 +4260,6 @@
 
     iput-object v3, v2, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mDisplayName:Ljava/lang/String;
 
-    .line 176
     :cond_1
     const-string v3, "OTP_OATH_PROTOCOL"
 
@@ -4726,7 +4269,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 177
     const-string v3, "OTP_OATH_PROTOCOL"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -4735,7 +4277,6 @@
 
     iput v3, v2, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoType:I
 
-    .line 178
     :cond_2
     const-string v3, "OTP_PARAM"
 
@@ -4749,14 +4290,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 179
     iget v3, v2, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoType:I
 
     const/16 v4, 0x101
 
     if-ne v3, v4, :cond_3
 
-    .line 180
     const-string v3, "OTP_PARAM"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getLong(Ljava/lang/String;)J
@@ -4769,7 +4308,6 @@
 
     iput-object v3, v2, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoParams:Ljava/lang/String;
 
-    .line 182
     :cond_3
     const-string v3, "OCRA_SUITE"
 
@@ -4781,14 +4319,12 @@
 
     if-eqz v3, :cond_4
 
-    .line 183
     iget v3, v2, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoType:I
 
     const/16 v4, 0x102
 
     if-ne v3, v4, :cond_4
 
-    .line 184
     const-string v3, "OCRA_SUITE"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4797,7 +4333,6 @@
 
     iput-object v3, v2, Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;->mAlgoParams:Ljava/lang/String;
 
-    .line 187
     :cond_4
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -4805,7 +4340,6 @@
 
     move-result v1
 
-    .line 188
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4832,16 +4366,13 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 193
     :goto_1
     if-nez v1, :cond_8
 
-    .line 194
     const-string/jumbo v3, "updateResyncTokenData :: updating PolicyData table"
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 195
     new-instance v3, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
     invoke-direct {v3}, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;-><init>()V
@@ -4854,11 +4385,9 @@
 
     check-cast v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
-    .line 196
     .local v0, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     if-eqz v0, :cond_a
 
-    .line 197
     const-string v3, "NUM_TRANSACTIONS"
 
     const/4 v4, -0x1
@@ -4869,7 +4398,6 @@
 
     if-eq v3, v6, :cond_5
 
-    .line 198
     const-string v3, "NUM_TRANSACTIONS"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -4878,12 +4406,10 @@
 
     iput v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mNumberOfTransactions:I
 
-    .line 199
     const/4 v3, 0x0
 
     iput v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mCurrentNoOfTransactions:I
 
-    .line 201
     :cond_5
     const-string v3, "TOKEN_EXPIRY"
 
@@ -4893,7 +4419,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 202
     const-string v3, "TOKEN_EXPIRY"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4902,7 +4427,6 @@
 
     iput-object v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mExpiryDate:Ljava/lang/String;
 
-    .line 203
     :cond_6
     const-string v3, "PIN_USAGE"
 
@@ -4912,7 +4436,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 204
     const-string v3, "PIN_USAGE"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -4921,7 +4444,6 @@
 
     iput-object v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mPinUsageMode:Ljava/lang/String;
 
-    .line 206
     :cond_7
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -4929,7 +4451,6 @@
 
     move-result v1
 
-    .line 207
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -4956,7 +4477,6 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 226
     .end local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     :cond_8
     :goto_2
@@ -4972,7 +4492,6 @@
 
     goto/16 :goto_0
 
-    .line 165
     .end local v1    # "ret":I
     .end local v2    # "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
     :catchall_0
@@ -4982,7 +4501,6 @@
 
     throw v3
 
-    .line 190
     .restart local v1    # "ret":I
     .restart local v2    # "td":Lcom/android/server/enterprise/otp/engine/handler/db/TokenData;
     :cond_9
@@ -4993,20 +4511,17 @@
 
     goto/16 :goto_1
 
-    .line 209
     .restart local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     :cond_a
     const-string/jumbo v3, "updateResyncTokenData :: No row in PolicyData table. Adding new row : db"
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 210
     new-instance v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
 
     .end local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     invoke-direct {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;-><init>()V
 
-    .line 211
     .restart local v0    # "pd":Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;
     const-string v3, "OTP_TOKEN_ID"
 
@@ -5016,7 +4531,6 @@
 
     iput-object v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mTokenId:Ljava/lang/String;
 
-    .line 212
     const-string v3, "NUM_TRANSACTIONS"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -5025,7 +4539,6 @@
 
     iput v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mNumberOfTransactions:I
 
-    .line 213
     const-string v3, "TOKEN_EXPIRY"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -5034,7 +4547,6 @@
 
     iput-object v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mExpiryDate:Ljava/lang/String;
 
-    .line 214
     const-string v3, "PIN_USAGE"
 
     invoke-virtual {p2, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -5043,7 +4555,6 @@
 
     iput-object v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mPinUsageMode:Ljava/lang/String;
 
-    .line 215
     iget v3, v0, Lcom/android/server/enterprise/otp/engine/handler/db/PolicyData;->mNumberOfTransactions:I
 
     if-nez v3, :cond_b
@@ -5056,12 +4567,10 @@
 
     if-nez v3, :cond_b
 
-    .line 217
     const/4 v1, 0x0
 
     goto :goto_2
 
-    .line 219
     :cond_b
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -5069,7 +4578,6 @@
 
     move-result v1
 
-    .line 220
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -5107,7 +4615,6 @@
     .param p2, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 694
     monitor-enter p0
 
     :try_start_0
@@ -5127,20 +4634,16 @@
 
     if-nez v14, :cond_0
 
-    .line 695
     const/16 v11, 0x40d
 
-    .line 778
     :goto_0
     monitor-exit p0
 
     return v11
 
-    .line 697
     :cond_0
     const/4 v11, 0x0
 
-    .line 698
     .local v11, "ret":I
     :try_start_1
     new-instance v14, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
@@ -5159,11 +4662,9 @@
 
     check-cast v9, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
 
-    .line 699
     .local v9, "pd":Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;
     if-eqz v9, :cond_a
 
-    .line 700
     const-string v14, "WHITELIST_ADD"
 
     move-object/from16 v0, p2
@@ -5172,7 +4673,6 @@
 
     move-result-object v1
 
-    .line 701
     .local v1, "addList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v14, "WHITELIST_REMOVE"
 
@@ -5182,7 +4682,6 @@
 
     move-result-object v10
 
-    .line 702
     .local v10, "removeList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v4, Ljava/util/ArrayList;
 
@@ -5200,7 +4699,6 @@
 
     invoke-direct {v4, v14}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 704
     .local v4, "dbPkgList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v5, Ljava/util/ArrayList;
 
@@ -5218,7 +4716,6 @@
 
     invoke-direct {v5, v14}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 706
     .local v5, "dbSignList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v14, v9, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mWhiteListPkg:Ljava/lang/String;
 
@@ -5232,7 +4729,6 @@
 
     aget-object v2, v14, v15
 
-    .line 707
     .local v2, "adminPkg":Ljava/lang/String;
     iget-object v14, v9, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mSingnerInfo:Ljava/lang/String;
 
@@ -5246,7 +4742,6 @@
 
     aget-object v3, v14, v15
 
-    .line 710
     .local v3, "adminSign":Ljava/lang/String;
     const-string v14, "WHITELISTED_PKG_SIGNER_INFO"
 
@@ -5256,20 +4751,16 @@
 
     move-result-object v13
 
-    .line 713
     .local v13, "signList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v1, :cond_4
 
-    .line 715
     if-nez v13, :cond_1
 
-    .line 716
     new-instance v13, Ljava/util/ArrayList;
 
     .end local v13    # "signList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    .line 717
     .restart local v13    # "signList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v6, 0x0
 
@@ -5281,24 +4772,20 @@
 
     if-ge v6, v14, :cond_1
 
-    .line 718
     const-string v14, "0"
 
     invoke-interface {v13, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 717
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 721
     .end local v6    # "i":I
     :cond_1
     const-string v14, "OtpDbHelper::updateTokenWhitelist - Contains WHITELIST_ADD packages"
 
     invoke-static {v14}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 722
     invoke-interface {v1}, Ljava/util/List;->size()I
 
     move-result v14
@@ -5309,20 +4796,16 @@
 
     if-eq v14, v15, :cond_2
 
-    .line 723
     const-string v14, "OtpDbHelper::updateTokenWhitelist - Lists size Mismatch"
 
     invoke-static {v14}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 724
     const/16 p2, 0x0
 
-    .line 725
     const/16 v11, 0x401
 
     goto/16 :goto_0
 
-    .line 728
     :cond_2
     const/4 v6, 0x0
 
@@ -5334,7 +4817,6 @@
 
     if-ge v6, v14, :cond_4
 
-    .line 729
     invoke-interface {v1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
@@ -5345,7 +4827,6 @@
 
     if-nez v14, :cond_3
 
-    .line 730
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -5372,32 +4853,27 @@
 
     invoke-static {v14}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 732
     invoke-interface {v1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
     invoke-interface {v4, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 733
     invoke-interface {v13, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v14
 
     invoke-interface {v5, v14}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 728
     :cond_3
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 738
     .end local v6    # "i":I
     :cond_4
     if-eqz v10, :cond_7
 
-    .line 739
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -5417,7 +4893,6 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 740
     .local v12, "s":Ljava/lang/String;
     invoke-virtual {v12, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -5425,7 +4900,6 @@
 
     if-eqz v14, :cond_6
 
-    .line 741
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -5450,7 +4924,6 @@
 
     goto :goto_3
 
-    .line 694
     .end local v1    # "addList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "adminPkg":Ljava/lang/String;
     .end local v3    # "adminSign":Ljava/lang/String;
@@ -5469,7 +4942,6 @@
 
     throw v14
 
-    .line 745
     .restart local v1    # "addList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v2    # "adminPkg":Ljava/lang/String;
     .restart local v3    # "adminSign":Ljava/lang/String;
@@ -5487,7 +4959,6 @@
 
     move-result v8
 
-    .line 746
     .local v8, "index":I
     const/4 v14, -0x1
 
@@ -5499,7 +4970,6 @@
 
     if-le v14, v8, :cond_5
 
-    .line 747
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -5520,22 +4990,18 @@
 
     invoke-static {v14}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 749
     invoke-interface {v5, v8}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 750
     invoke-interface {v4, v12}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 755
     .end local v7    # "i$":Ljava/util/Iterator;
     .end local v8    # "index":I
     .end local v12    # "s":Ljava/lang/String;
     :cond_7
     invoke-interface {v4, v2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 756
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -5556,7 +5022,6 @@
 
     iput-object v14, v9, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mWhiteListPkg:Ljava/lang/String;
 
-    .line 757
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -5575,7 +5040,6 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 758
     .restart local v12    # "s":Ljava/lang/String;
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -5605,7 +5069,6 @@
 
     goto :goto_4
 
-    .line 761
     .end local v12    # "s":Ljava/lang/String;
     :cond_8
     new-instance v14, Ljava/lang/StringBuilder;
@@ -5630,10 +5093,8 @@
 
     invoke-static {v14}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 764
     invoke-interface {v5, v3}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 765
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -5654,7 +5115,6 @@
 
     iput-object v14, v9, Lcom/android/server/enterprise/otp/engine/handler/db/ProvisionData;->mSingnerInfo:Ljava/lang/String;
 
-    .line 766
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -5672,7 +5132,6 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 767
     .restart local v12    # "s":Ljava/lang/String;
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -5702,7 +5161,6 @@
 
     goto :goto_5
 
-    .line 770
     .end local v12    # "s":Ljava/lang/String;
     :cond_9
     move-object/from16 v0, p0
@@ -5713,7 +5171,6 @@
 
     move-result v11
 
-    .line 777
     .end local v1    # "addList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "adminPkg":Ljava/lang/String;
     .end local v3    # "adminSign":Ljava/lang/String;
@@ -5735,7 +5192,6 @@
 
     goto/16 :goto_0
 
-    .line 773
     :cond_a
     const-string v14, "OtpDbHelper::updateTokenWhitelist - Provision Data not found "
 
@@ -5743,7 +5199,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 774
     const/16 v11, 0x4ff
 
     goto :goto_6
@@ -5756,7 +5211,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 806
     monitor-enter p0
 
     :try_start_0
@@ -5774,17 +5228,14 @@
 
     if-nez v3, :cond_0
 
-    .line 815
     :goto_0
     monitor-exit p0
 
     return v2
 
-    .line 810
     :cond_0
     const/4 v0, 0x0
 
-    .line 811
     .local v0, "ret":Z
     :try_start_1
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mSqlDb:Landroid/database/sqlite/SQLiteDatabase;
@@ -5797,11 +5248,9 @@
 
     check-cast v1, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
 
-    .line 812
     .local v1, "temp":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     if-eqz v1, :cond_1
 
-    .line 813
     iget v3, v1, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mNextStep:I
 
     iget v4, p1, Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;->mNextStep:I
@@ -5810,7 +5259,6 @@
 
     const/4 v0, 0x1
 
-    .line 814
     :cond_1
     :goto_1
     iget-object v2, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
@@ -5825,16 +5273,13 @@
 
     move v2, v0
 
-    .line 815
     goto :goto_0
 
     :cond_2
     move v0, v2
 
-    .line 813
     goto :goto_1
 
-    .line 806
     .end local v0    # "ret":Z
     .end local v1    # "temp":Lcom/android/server/enterprise/otp/engine/handler/db/SessionData;
     :catchall_0
@@ -5849,7 +5294,6 @@
     .locals 7
 
     .prologue
-    .line 783
     monitor-enter p0
 
     :try_start_0
@@ -5865,7 +5309,6 @@
 
     aget-object v2, v3, v4
 
-    .line 784
     .local v2, "ste":Ljava/lang/StackTraceElement;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5905,11 +5348,9 @@
 
     move-result-object v0
 
-    .line 785
     .local v0, "caller":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 786
     .local v1, "ret":Z
     iget-object v3, p0, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->mContext:Landroid/content/Context;
 
@@ -5923,12 +5364,10 @@
 
     move-result v1
 
-    .line 787
     monitor-exit p0
 
     return v1
 
-    .line 783
     .end local v0    # "caller":Ljava/lang/String;
     .end local v1    # "ret":Z
     .end local v2    # "ste":Ljava/lang/StackTraceElement;

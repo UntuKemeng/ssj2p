@@ -40,17 +40,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 303
     iput-object p1, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 301
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mIsFullScreen:Z
 
-    .line 304
     # invokes: Lcom/android/internal/policy/DesktopPhoneWindow;->getProperContextDT()Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$400(Lcom/android/internal/policy/DesktopPhoneWindow;)Landroid/content/Context;
 
@@ -69,7 +66,6 @@
     # setter for: Lcom/android/internal/policy/DesktopPhoneWindow;->mWindowHeaderFocusedColor:I
     invoke-static {p1, v0}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$002(Lcom/android/internal/policy/DesktopPhoneWindow;I)I
 
-    .line 305
     # invokes: Lcom/android/internal/policy/DesktopPhoneWindow;->getProperContextDT()Landroid/content/Context;
     invoke-static {p1}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$400(Lcom/android/internal/policy/DesktopPhoneWindow;)Landroid/content/Context;
 
@@ -88,7 +84,6 @@
     # setter for: Lcom/android/internal/policy/DesktopPhoneWindow;->mWindowHeaderUnFocusedColor:I
     invoke-static {p1, v0}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$102(Lcom/android/internal/policy/DesktopPhoneWindow;I)I
 
-    .line 306
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$500()Z
 
@@ -123,7 +118,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 307
     :cond_0
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$500()Z
@@ -160,7 +154,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     :cond_1
     return-void
 .end method
@@ -170,17 +163,13 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 408
     if-nez p1, :cond_0
 
-    .line 409
     const-string v0, ""
 
-    .line 415
     :goto_0
     return-object v0
 
-    .line 411
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getId()I
 
@@ -188,31 +177,26 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 415
     :pswitch_0
     const-string v0, "Unknown"
 
     goto :goto_0
 
-    .line 412
     :pswitch_1
     const-string v0, "mBtnMinimize"
 
     goto :goto_0
 
-    .line 413
     :pswitch_2
     const-string v0, "mBtnPoup"
 
     goto :goto_0
 
-    .line 414
     :pswitch_3
     const-string v0, "mBtnExit"
 
     goto :goto_0
 
-    .line 411
     :pswitch_data_0
     .packed-switch 0x102039f
         :pswitch_1
@@ -232,7 +216,6 @@
 
     const/4 v5, 0x0
 
-    .line 311
     new-instance v1, Landroid/view/ContextThemeWrapper;
 
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
@@ -246,13 +229,11 @@
 
     invoke-direct {v1, v3, v4}, Landroid/view/ContextThemeWrapper;-><init>(Landroid/content/Context;I)V
 
-    .line 312
     .local v1, "context":Landroid/content/Context;
     invoke-static {v1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v2
 
-    .line 314
     .local v2, "inflater":Landroid/view/LayoutInflater;
     const v3, 0x1090051
 
@@ -264,7 +245,6 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
-    .line 315
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
@@ -276,12 +256,10 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 316
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
     invoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 317
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
     const v4, 0x102039e
@@ -292,7 +270,6 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mMenuContainer:Landroid/view/View;
 
-    .line 319
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mMenuContainer:Landroid/view/View;
 
     const v4, 0x102039f
@@ -303,7 +280,6 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnMinimize:Landroid/view/View;
 
-    .line 320
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mMenuContainer:Landroid/view/View;
 
     const v4, 0x10203a1
@@ -314,7 +290,6 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnPopup:Landroid/view/View;
 
-    .line 321
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mMenuContainer:Landroid/view/View;
 
     const v4, 0x10203a2
@@ -325,37 +300,30 @@
 
     iput-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnExit:Landroid/view/View;
 
-    .line 323
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnMinimize:Landroid/view/View;
 
     invoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 324
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnPopup:Landroid/view/View;
 
     invoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 325
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnExit:Landroid/view/View;
 
     invoke-virtual {v3, p0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 327
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnMinimize:Landroid/view/View;
 
     invoke-virtual {v3, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 328
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnPopup:Landroid/view/View;
 
     invoke-virtual {v3, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 329
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnExit:Landroid/view/View;
 
     invoke-virtual {v3, v5}, Landroid/view/View;->setVisibility(I)V
 
-    .line 331
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mMenuContainer:Landroid/view/View;
 
     const v4, 0x10203a0
@@ -364,11 +332,9 @@
 
     move-result-object v0
 
-    .line 332
     .local v0, "btnMaximize":Landroid/view/View;
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 334
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->mIsMultiWindowBlocked:Z
@@ -378,17 +344,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 335
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnMinimize:Landroid/view/View;
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 336
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnPopup:Landroid/view/View;
 
     invoke-virtual {v3, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 339
     :cond_0
     iget-object v3, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
@@ -399,7 +362,6 @@
     .locals 1
 
     .prologue
-    .line 343
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
     return-object v0
@@ -412,7 +374,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 369
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$500()Z
 
@@ -463,7 +424,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 371
     :cond_0
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
@@ -473,12 +433,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 405
     :cond_1
     :goto_0
     return-void
 
-    .line 373
     :cond_2
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnMinimize:Landroid/view/View;
 
@@ -488,7 +446,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 374
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->mActivity:Landroid/app/Activity;
@@ -498,7 +455,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 375
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->mActivity:Landroid/app/Activity;
@@ -510,7 +466,6 @@
 
     goto :goto_0
 
-    .line 377
     :cond_3
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnPopup:Landroid/view/View;
 
@@ -520,7 +475,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 378
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/DesktopPhoneWindow;->requestMultiWindowState(I)V
@@ -528,7 +482,6 @@
 
     goto :goto_0
 
-    .line 379
     :cond_4
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnExit:Landroid/view/View;
 
@@ -538,10 +491,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 380
     const/4 v0, 0x0
 
-    .line 381
     .local v0, "a":Landroid/app/Activity;
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
@@ -552,7 +503,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 382
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->mActivity:Landroid/app/Activity;
@@ -560,17 +510,14 @@
 
     move-result-object v0
 
-    .line 390
     :cond_5
     :goto_1
     if-eqz v0, :cond_1
 
-    .line 391
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v3
 
-    .line 392
     .local v3, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v3, :cond_6
 
@@ -580,13 +527,11 @@
 
     if-eqz v4, :cond_6
 
-    .line 393
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     # invokes: Lcom/android/internal/policy/DesktopPhoneWindow;->hideInputMethod()Z
     invoke-static {v4}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$1000(Lcom/android/internal/policy/DesktopPhoneWindow;)Z
 
-    .line 395
     :cond_6
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnExit:Landroid/view/View;
 
@@ -596,7 +541,6 @@
 
     if-eqz v4, :cond_7
 
-    .line 396
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mBtnExit:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getHoverPopupWindow()Landroid/widget/HoverPopupWindow;
@@ -605,7 +549,6 @@
 
     invoke-virtual {v4}, Landroid/widget/HoverPopupWindow;->dismiss()V
 
-    .line 399
     :cond_7
     :try_start_0
     invoke-virtual {v0}, Landroid/app/Activity;->finishAffinity()V
@@ -614,17 +557,14 @@
 
     goto :goto_0
 
-    .line 400
     :catch_0
     move-exception v2
 
-    .line 401
     .local v2, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v0}, Landroid/app/Activity;->finish()V
 
     goto :goto_0
 
-    .line 383
     .end local v2    # "e":Ljava/lang/IllegalStateException;
     .end local v3    # "imm":Landroid/view/inputmethod/InputMethodManager;
     :cond_8
@@ -637,16 +577,13 @@
 
     if-eqz v4, :cond_5
 
-    .line 384
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
 
     move-result-object v1
 
-    .line 385
     .local v1, "am":Landroid/app/ActivityThread;
     if-eqz v1, :cond_5
 
-    .line 386
     iget-object v4, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->mToken:Landroid/os/IBinder;
@@ -670,7 +607,6 @@
 
     const/4 v1, -0x1
 
-    .line 348
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/DesktopPhoneWindow;->getDecorView()Landroid/view/View;
@@ -691,7 +627,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 349
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->this$0:Lcom/android/internal/policy/DesktopPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/DesktopPhoneWindow;->getDecorView()Landroid/view/View;
@@ -737,12 +672,10 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mIsFullScreen:Z
 
-    .line 352
     iget-boolean v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mIsFullScreen:Z
 
     if-nez v0, :cond_3
 
-    .line 353
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getVisibility()I
@@ -751,7 +684,6 @@
 
     if-eq v0, v3, :cond_1
 
-    .line 354
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$500()Z
 
@@ -788,24 +720,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 365
     :cond_1
     :goto_1
     return-void
 
-    .line 349
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 361
     :cond_3
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 
@@ -815,7 +743,6 @@
 
     if-eq v0, p1, :cond_1
 
-    .line 362
     # getter for: Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
     invoke-static {}, Lcom/android/internal/policy/DesktopPhoneWindow;->access$500()Z
 
@@ -878,7 +805,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
     :cond_4
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->mWindowHeaderView:Landroid/view/View;
 

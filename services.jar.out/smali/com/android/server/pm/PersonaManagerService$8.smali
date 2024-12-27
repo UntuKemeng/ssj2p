@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 7866
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$8;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iput-boolean p2, p0, Lcom/android/server/pm/PersonaManagerService$8;->val$onReboot:Z
@@ -46,13 +45,11 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 7876
     const-string/jumbo v0, "userStopAborted"
 
     # invokes: Lcom/android/server/pm/PersonaManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v0}, Lcom/android/server/pm/PersonaManagerService;->access$1300(Ljava/lang/String;)I
 
-    .line 7877
     return-void
 .end method
 
@@ -61,13 +58,11 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 7869
     const-string/jumbo v0, "userStopped"
 
     # invokes: Lcom/android/server/pm/PersonaManagerService;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v0}, Lcom/android/server/pm/PersonaManagerService;->access$1300(Ljava/lang/String;)I
 
-    .line 7870
     const-string v0, "PersonaManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -92,7 +87,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7871
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$8;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iget v1, p0, Lcom/android/server/pm/PersonaManagerService$8;->val$personaId:I
@@ -100,6 +94,5 @@
     # invokes: Lcom/android/server/pm/PersonaManagerService;->triggerAppUninstallationonReset(I)V
     invoke-static {v0, v1}, Lcom/android/server/pm/PersonaManagerService;->access$9200(Lcom/android/server/pm/PersonaManagerService;I)V
 
-    .line 7872
     return-void
 .end method

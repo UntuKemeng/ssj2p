@@ -23,12 +23,10 @@
     .locals 0
 
     .prologue
-    .line 812
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 813
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 817
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v7
@@ -53,7 +50,6 @@
 
     move-result-object v1
 
-    .line 818
     .local v1, "configNetworkTypeCapability":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -90,14 +86,12 @@
 
     if-eqz v7, :cond_2
 
-    .line 820
     const-string/jumbo v7, "ringing_state"
 
     invoke-virtual {p2, v7, v10}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v5
 
-    .line 821
     .local v5, "ringingCallState":I
     const-string/jumbo v7, "foreground_state"
 
@@ -105,7 +99,6 @@
 
     move-result v2
 
-    .line 822
     .local v2, "foregroundCallState":I
     const-string v7, "background_state"
 
@@ -113,7 +106,6 @@
 
     move-result v0
 
-    .line 823
     .local v0, "backgroundCallState":I
     const-string/jumbo v7, "phone"
 
@@ -123,7 +115,6 @@
 
     check-cast v6, Landroid/telephony/TelephonyManager;
 
-    .line 824
     .local v6, "telephonyManager":Landroid/telephony/TelephonyManager;
     const-string/jumbo v7, "video"
 
@@ -131,7 +122,6 @@
 
     move-result v4
 
-    .line 825
     .local v4, "hasVideoCall":Z
     const-string v7, "activevideo"
 
@@ -139,7 +129,6 @@
 
     move-result v3
 
-    .line 826
     .local v3, "hasActiveVideoCall":Z
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
@@ -152,7 +141,6 @@
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->mHasEpdgCall:Z
     invoke-static {v7, v8}, Lcom/android/server/net/NetworkPolicyManagerService;->access$402(Lcom/android/server/net/NetworkPolicyManagerService;Z)Z
 
-    .line 828
     const-string v7, "NetworkPolicy"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -232,7 +220,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 831
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mIsVideoCall:Z
@@ -242,39 +229,32 @@
 
     if-eq v7, v4, :cond_2
 
-    .line 832
     if-eqz v3, :cond_3
 
-    .line 833
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->mIsVideoCall:Z
     invoke-static {v7, v3}, Lcom/android/server/net/NetworkPolicyManagerService;->access$502(Lcom/android/server/net/NetworkPolicyManagerService;Z)Z
 
-    .line 835
     const-string v7, "NetworkPolicy"
 
     const-string v8, "Video call start."
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 836
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v8, v7, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 837
     :try_start_0
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v7}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkEnabledLocked()V
 
-    .line 838
     monitor-exit v8
 
-    .line 854
     .end local v0    # "backgroundCallState":I
     .end local v2    # "foregroundCallState":I
     .end local v3    # "hasActiveVideoCall":Z
@@ -285,7 +265,6 @@
     :goto_0
     return-void
 
-    .line 838
     .restart local v0    # "backgroundCallState":I
     .restart local v2    # "foregroundCallState":I
     .restart local v3    # "hasActiveVideoCall":Z
@@ -301,64 +280,53 @@
 
     throw v7
 
-    .line 839
     :cond_3
     if-nez v4, :cond_2
 
-    .line 840
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->mIsVideoCall:Z
     invoke-static {v7, v4}, Lcom/android/server/net/NetworkPolicyManagerService;->access$502(Lcom/android/server/net/NetworkPolicyManagerService;Z)Z
 
-    .line 841
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->mVideoCallLimitAlreadySent:Z
     invoke-static {v7, v10}, Lcom/android/server/net/NetworkPolicyManagerService;->access$602(Lcom/android/server/net/NetworkPolicyManagerService;Z)Z
 
-    .line 842
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->mVideoCallWarningAlreadySent:Z
     invoke-static {v7, v10}, Lcom/android/server/net/NetworkPolicyManagerService;->access$702(Lcom/android/server/net/NetworkPolicyManagerService;Z)Z
 
-    .line 844
     const-string v7, "NetworkPolicy"
 
     const-string v8, "Video call end."
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 845
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v8, v7, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 846
     :try_start_1
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v7}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkEnabledLocked()V
 
-    .line 847
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v7}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkRulesLocked()V
 
-    .line 848
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v7}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNotificationsLocked()V
 
-    .line 849
     iget-object v7, p0, Lcom/android/server/net/NetworkPolicyManagerService$VideoCallBroadcastReceiver;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v7}, Lcom/android/server/net/NetworkPolicyManagerService;->writePolicyLocked()V
 
-    .line 850
     monitor-exit v8
 
     goto :goto_0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 161
     iput-object p1, p0, Lcom/movial/ipphone/IPSMSDispatcher$1;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 163
     iget-object v1, p0, Lcom/movial/ipphone/IPSMSDispatcher$1;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
     const-string v2, "IMS_REG_STATUS"
@@ -53,7 +51,6 @@
     # setter for: Lcom/movial/ipphone/IPSMSDispatcher;->useIPPhone:Z
     invoke-static {v1, v2}, Lcom/movial/ipphone/IPSMSDispatcher;->access$002(Lcom/movial/ipphone/IPSMSDispatcher;Z)Z
 
-    .line 164
     const-string v1, "IPSMSDispatcher"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -83,7 +80,6 @@
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 165
     iget-object v1, p0, Lcom/movial/ipphone/IPSMSDispatcher$1;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
     # getter for: Lcom/movial/ipphone/IPSMSDispatcher;->useIPPhone:Z
@@ -93,7 +89,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 166
     iget-object v1, p0, Lcom/movial/ipphone/IPSMSDispatcher$1;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
     iget-object v2, p0, Lcom/movial/ipphone/IPSMSDispatcher$1;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
@@ -110,7 +105,6 @@
     # setter for: Lcom/movial/ipphone/IPSMSDispatcher;->mIPService:Lcom/movial/ipphone/IIPService;
     invoke-static {v1, v2}, Lcom/movial/ipphone/IPSMSDispatcher;->access$102(Lcom/movial/ipphone/IPSMSDispatcher;Lcom/movial/ipphone/IIPService;)Lcom/movial/ipphone/IIPService;
 
-    .line 167
     iget-object v1, p0, Lcom/movial/ipphone/IPSMSDispatcher$1;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
     # getter for: Lcom/movial/ipphone/IPSMSDispatcher;->mIPInboundSmsHandler:Lcom/movial/ipphone/IPInboundSmsHandler;
@@ -127,7 +121,6 @@
 
     invoke-virtual {v1, v2}, Lcom/movial/ipphone/IPInboundSmsHandler;->setIPService(Lcom/movial/ipphone/IIPService;)V
 
-    .line 169
     :try_start_0
     iget-object v1, p0, Lcom/movial/ipphone/IPSMSDispatcher$1;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
@@ -138,7 +131,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 170
     iget-object v1, p0, Lcom/movial/ipphone/IPSMSDispatcher$1;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;
 
     # getter for: Lcom/movial/ipphone/IPSMSDispatcher;->mIPService:Lcom/movial/ipphone/IIPService;
@@ -159,11 +151,9 @@
 
     invoke-interface {v1, v2}, Lcom/movial/ipphone/IIPService;->registerForIncomingSMS(Landroid/os/Messenger;)V
 
-    .line 180
     :goto_0
     return-void
 
-    .line 172
     :cond_0
     const-string v1, "IPSMSDispatcher"
 
@@ -175,11 +165,9 @@
 
     goto :goto_0
 
-    .line 174
     :catch_0
     move-exception v0
 
-    .line 175
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "IPSMSDispatcher"
 
@@ -205,7 +193,6 @@
 
     goto :goto_0
 
-    .line 178
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     iget-object v1, p0, Lcom/movial/ipphone/IPSMSDispatcher$1;->this$0:Lcom/movial/ipphone/IPSMSDispatcher;

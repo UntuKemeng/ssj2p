@@ -20,10 +20,8 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 483
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 484
     return-void
 .end method
 
@@ -35,20 +33,16 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 488
     if-nez p2, :cond_0
 
-    .line 495
     :goto_0
     return-void
 
-    .line 491
     :cond_0
     invoke-virtual {p2}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 492
     .local v0, "key":Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->getInstance()Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;
 
@@ -59,7 +53,6 @@
 
     move-result-object v1
 
-    .line 493
     .local v1, "value":Ljava/lang/String;
     const-string v2, "[EpdgImsListener]"
 
@@ -83,7 +76,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 494
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 

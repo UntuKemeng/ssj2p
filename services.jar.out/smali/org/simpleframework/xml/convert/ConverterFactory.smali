@@ -21,17 +21,14 @@
     .locals 1
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     new-instance v0, Lorg/simpleframework/xml/util/ConcurrentCache;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/util/ConcurrentCache;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/convert/ConverterFactory;->cache:Lorg/simpleframework/xml/util/Cache;
 
-    .line 53
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .end annotation
 
     .prologue
-    .line 139
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Class;
@@ -54,7 +50,6 @@
 
     move-result-object v0
 
-    .line 141
     .local v0, "factory":Ljava/lang/reflect/Constructor;
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->isAccessible()Z
 
@@ -62,12 +57,10 @@
 
     if-nez v1, :cond_0
 
-    .line 142
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 144
     :cond_0
     return-object v0
 .end method
@@ -82,16 +75,13 @@
     .end annotation
 
     .prologue
-    .line 102
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/convert/ConverterFactory;->getConstructor(Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
-    .line 104
     .local v0, "factory":Ljava/lang/reflect/Constructor;
     if-nez v0, :cond_0
 
-    .line 105
     new-instance v1, Lorg/simpleframework/xml/convert/ConvertException;
 
     const-string v2, "No default constructor for %s"
@@ -108,7 +98,6 @@
 
     throw v1
 
-    .line 107
     :cond_0
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/convert/ConverterFactory;->getConverter(Ljava/lang/Class;Ljava/lang/reflect/Constructor;)Lorg/simpleframework/xml/convert/Converter;
 
@@ -128,7 +117,6 @@
     .end annotation
 
     .prologue
-    .line 121
     const/4 v1, 0x0
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -139,16 +127,13 @@
 
     check-cast v0, Lorg/simpleframework/xml/convert/Converter;
 
-    .line 123
     .local v0, "converter":Lorg/simpleframework/xml/convert/Converter;
     if-eqz v0, :cond_0
 
-    .line 124
     iget-object v1, p0, Lorg/simpleframework/xml/convert/ConverterFactory;->cache:Lorg/simpleframework/xml/util/Cache;
 
     invoke-interface {v1, p1, v0}, Lorg/simpleframework/xml/util/Cache;->cache(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 126
     :cond_0
     return-object v0
 .end method
@@ -165,7 +150,6 @@
     .end annotation
 
     .prologue
-    .line 65
     iget-object v1, p0, Lorg/simpleframework/xml/convert/ConverterFactory;->cache:Lorg/simpleframework/xml/util/Cache;
 
     invoke-interface {v1, p1}, Lorg/simpleframework/xml/util/Cache;->fetch(Ljava/lang/Object;)Ljava/lang/Object;
@@ -174,16 +158,13 @@
 
     check-cast v0, Lorg/simpleframework/xml/convert/Converter;
 
-    .line 67
     .local v0, "converter":Lorg/simpleframework/xml/convert/Converter;
     if-nez v0, :cond_0
 
-    .line 68
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/convert/ConverterFactory;->getConverter(Ljava/lang/Class;)Lorg/simpleframework/xml/convert/Converter;
 
     move-result-object v0
 
-    .line 70
     .end local v0    # "converter":Lorg/simpleframework/xml/convert/Converter;
     :cond_0
     return-object v0
@@ -199,12 +180,10 @@
     .end annotation
 
     .prologue
-    .line 84
     invoke-interface {p1}, Lorg/simpleframework/xml/convert/Convert;->value()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 86
     .local v0, "type":Ljava/lang/Class;
     invoke-virtual {v0}, Ljava/lang/Class;->isInterface()Z
 
@@ -212,7 +191,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 87
     new-instance v1, Lorg/simpleframework/xml/convert/ConvertException;
 
     const-string v2, "Can not instantiate %s"
@@ -229,7 +207,6 @@
 
     throw v1
 
-    .line 89
     :cond_0
     invoke-virtual {p0, v0}, Lorg/simpleframework/xml/convert/ConverterFactory;->getInstance(Ljava/lang/Class;)Lorg/simpleframework/xml/convert/Converter;
 

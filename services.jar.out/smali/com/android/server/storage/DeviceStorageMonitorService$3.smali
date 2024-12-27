@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 476
     iput-object p1, p0, Lcom/android/server/storage/DeviceStorageMonitorService$3;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,19 +38,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 479
     const-string v2, "DeviceStorageMonitorService"
 
     const-string/jumbo v3, "mUPSMReceiver onReceive"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 481
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 483
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
@@ -61,7 +57,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 484
     const-string/jumbo v2, "reason"
 
     const/4 v3, 0x0
@@ -70,40 +65,34 @@
 
     move-result v1
 
-    .line 488
     .local v1, "reason":I
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_1
 
-    .line 489
     const-string v2, "DeviceStorageMonitorService"
 
     const-string/jumbo v3, "mUPSMReceiver Ultra Power Saving Mode is ON"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
     .end local v1    # "reason":I
     :cond_0
     :goto_0
     return-void
 
-    .line 494
     .restart local v1    # "reason":I
     :cond_1
     const/4 v2, 0x5
 
     if-ne v1, v2, :cond_2
 
-    .line 495
     const-string v2, "DeviceStorageMonitorService"
 
     const-string/jumbo v3, "mUPSMReceiver Ultra Power Saving Mode is OFF."
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 497
     iget-object v2, p0, Lcom/android/server/storage/DeviceStorageMonitorService$3;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     iget-boolean v2, v2, Lcom/android/server/storage/DeviceStorageMonitorService;->mLowMemFlag:Z
@@ -112,14 +101,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 498
     const-string v2, "DeviceStorageMonitorService"
 
     const-string v3, "LowMemFlag is TRUE, so show the LOW MEMORY NOTIFICATION"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
     iget-object v2, p0, Lcom/android/server/storage/DeviceStorageMonitorService$3;->this$0:Lcom/android/server/storage/DeviceStorageMonitorService;
 
     # invokes: Lcom/android/server/storage/DeviceStorageMonitorService;->sendNotification()V
@@ -127,7 +114,6 @@
 
     goto :goto_0
 
-    .line 502
     :cond_2
     const-string v2, "DeviceStorageMonitorService"
 

@@ -19,19 +19,14 @@
     .param p3, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-object p1, p0, Lorg/simpleframework/xml/core/MethodName;->method:Ljava/lang/reflect/Method;
 
-    .line 59
     iput-object p2, p0, Lorg/simpleframework/xml/core/MethodName;->type:Lorg/simpleframework/xml/core/MethodType;
 
-    .line 60
     iput-object p3, p0, Lorg/simpleframework/xml/core/MethodName;->name:Ljava/lang/String;
 
-    .line 61
     return-void
 .end method
 
@@ -41,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Lorg/simpleframework/xml/core/MethodName;->method:Ljava/lang/reflect/Method;
 
     return-object v0
@@ -51,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Lorg/simpleframework/xml/core/MethodName;->name:Ljava/lang/String;
 
     return-object v0
@@ -61,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lorg/simpleframework/xml/core/MethodName;->type:Lorg/simpleframework/xml/core/MethodType;
 
     return-object v0

@@ -59,14 +59,12 @@
 
     const/4 v3, 0x0
 
-    .line 380
     invoke-static {v3, v3, v3}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     sput v0, Landroid/provider/SmartGlow$COLOR;->CODE_BLACK:I
 
-    .line 381
     const/16 v0, 0xd2
 
     const/16 v1, 0xf1
@@ -77,7 +75,6 @@
 
     sput v0, Landroid/provider/SmartGlow$COLOR;->CODE_SKY_BLUE:I
 
-    .line 382
     const/16 v0, 0x70
 
     const/16 v1, 0xae
@@ -90,7 +87,6 @@
 
     sput v0, Landroid/provider/SmartGlow$COLOR;->CODE_YELLOW_GREEN:I
 
-    .line 383
     const/16 v0, 0x26
 
     const/16 v1, 0x4d
@@ -103,7 +99,6 @@
 
     sput v0, Landroid/provider/SmartGlow$COLOR;->CODE_LIGHT_BLUE:I
 
-    .line 384
     const/16 v0, 0xde
 
     const/16 v1, 0x37
@@ -116,14 +111,12 @@
 
     sput v0, Landroid/provider/SmartGlow$COLOR;->CODE_MAGENTA:I
 
-    .line 385
     invoke-static {v4, v3, v3}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
 
     sput v0, Landroid/provider/SmartGlow$COLOR;->CODE_RED:I
 
-    .line 386
     invoke-static {v3, v4, v3}, Landroid/graphics/Color;->rgb(III)I
 
     move-result v0
@@ -137,7 +130,6 @@
     .locals 0
 
     .prologue
-    .line 378
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -147,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 378
     sget v0, Landroid/provider/SmartGlow$COLOR;->CODE_RED:I
 
     return v0
@@ -157,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 378
     sget v0, Landroid/provider/SmartGlow$COLOR;->CODE_BLACK:I
 
     return v0
@@ -167,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 378
     sget v0, Landroid/provider/SmartGlow$COLOR;->CODE_GREEN:I
 
     return v0

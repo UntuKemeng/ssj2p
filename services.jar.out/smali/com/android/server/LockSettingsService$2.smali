@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 998
     iput-object p1, p0, Lcom/android/server/LockSettingsService$2;->this$0:Lcom/android/server/LockSettingsService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1001
     const-string v5, "android.intent.action.USER_ADDED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,20 +52,17 @@
 
     if-eqz v5, :cond_2
 
-    .line 1003
     const-string v5, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v5, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 1004
     .local v4, "userHandle":I
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v0
 
-    .line 1005
     .local v0, "ks":Landroid/security/KeyStore;
     iget-object v5, p0, Lcom/android/server/LockSettingsService$2;->this$0:Lcom/android/server/LockSettingsService;
 
@@ -84,24 +79,20 @@
 
     check-cast v3, Landroid/os/UserManager;
 
-    .line 1006
     .local v3, "um":Landroid/os/UserManager;
     invoke-virtual {v3, v4}, Landroid/os/UserManager;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v2
 
-    .line 1007
     .local v2, "parentInfo":Landroid/content/pm/UserInfo;
     if-eqz v2, :cond_1
 
     iget v1, v2, Landroid/content/pm/UserInfo;->id:I
 
-    .line 1008
     .local v1, "parentHandle":I
     :goto_0
     invoke-virtual {v0, v4, v1}, Landroid/security/KeyStore;->onUserAdded(II)V
 
-    .line 1011
     iget-object v5, p0, Lcom/android/server/LockSettingsService$2;->this$0:Lcom/android/server/LockSettingsService;
 
     const-wide/16 v6, 0x1
@@ -109,7 +100,6 @@
     # invokes: Lcom/android/server/LockSettingsService;->setKnoxRecoveryVersion(JI)V
     invoke-static {v5, v6, v7, v4}, Lcom/android/server/LockSettingsService;->access$1000(Lcom/android/server/LockSettingsService;JI)V
 
-    .line 1024
     .end local v0    # "ks":Landroid/security/KeyStore;
     .end local v1    # "parentHandle":I
     .end local v2    # "parentInfo":Landroid/content/pm/UserInfo;
@@ -119,7 +109,6 @@
     :goto_1
     return-void
 
-    .line 1007
     .restart local v0    # "ks":Landroid/security/KeyStore;
     .restart local v2    # "parentInfo":Landroid/content/pm/UserInfo;
     .restart local v3    # "um":Landroid/os/UserManager;
@@ -129,7 +118,6 @@
 
     goto :goto_0
 
-    .line 1013
     .end local v0    # "ks":Landroid/security/KeyStore;
     .end local v2    # "parentInfo":Landroid/content/pm/UserInfo;
     .end local v3    # "um":Landroid/os/UserManager;
@@ -147,14 +135,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 1014
     const-string v5, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v5, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 1015
     .restart local v4    # "userHandle":I
     iget-object v5, p0, Lcom/android/server/LockSettingsService$2;->this$0:Lcom/android/server/LockSettingsService;
 
@@ -167,7 +153,6 @@
 
     goto :goto_1
 
-    .line 1016
     .end local v4    # "userHandle":I
     :cond_3
     const-string v5, "android.intent.action.USER_PRESENT"
@@ -182,7 +167,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 1017
     iget-object v5, p0, Lcom/android/server/LockSettingsService$2;->this$0:Lcom/android/server/LockSettingsService;
 
     # getter for: Lcom/android/server/LockSettingsService;->mStrongAuth:Lcom/android/server/LockSettingsStrongAuth;
@@ -198,7 +182,6 @@
 
     goto :goto_1
 
-    .line 1018
     :cond_4
     const-string v5, "android.intent.action.USER_REMOVED"
 
@@ -212,18 +195,15 @@
 
     if-eqz v5, :cond_0
 
-    .line 1019
     const-string v5, "android.intent.extra.user_handle"
 
     invoke-virtual {p2, v5, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 1020
     .restart local v4    # "userHandle":I
     if-lez v4, :cond_0
 
-    .line 1021
     iget-object v5, p0, Lcom/android/server/LockSettingsService$2;->this$0:Lcom/android/server/LockSettingsService;
 
     # invokes: Lcom/android/server/LockSettingsService;->removeUser(I)V

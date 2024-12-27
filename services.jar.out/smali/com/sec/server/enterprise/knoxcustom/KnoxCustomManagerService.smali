@@ -201,34 +201,24 @@
 
     const/4 v0, 0x0
 
-    .line 225
     sput-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mKnoxCustomReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 228
     sput-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 231
     sput-boolean v2, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiConfigure:Z
 
-    .line 232
     sput-boolean v2, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiEap:Z
 
-    .line 233
     sput-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiSSID:Ljava/lang/String;
 
-    .line 234
     sput-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiUsername:Ljava/lang/String;
 
-    .line 235
     sput-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiPassword:Ljava/lang/String;
 
-    .line 245
     sput v2, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mLockScreenOverrideMode:I
 
-    .line 247
     sput-boolean v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mForceLcdBacklightOffEnabled:Z
 
-    .line 702
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -255,7 +245,6 @@
 
     sput-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->edgePackages:[Ljava/lang/String;
 
-    .line 838
     const-string v0, "0123456789abcdef"
 
     invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
@@ -264,7 +253,6 @@
 
     sput-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->HEX_CHARS:[C
 
-    .line 9260
     const-string v0, "content://com.sec.android.app.launcher.settings/favorites?Notify=true"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -273,7 +261,6 @@
 
     sput-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 9262
     const-string v0, "content://com.sec.android.app.launcher.settings/favorites?Notify=true"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -297,42 +284,32 @@
 
     const/4 v4, 0x0
 
-    .line 268
     invoke-direct {p0}, Landroid/app/enterprise/knoxcustom/IKnoxCustomManager$Stub;-><init>()V
 
-    .line 194
     iput-boolean v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->DEBUG:Z
 
-    .line 210
     iput v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->KNOX_UPDATE_HOME_SCREEN_MESSAGE:I
 
-    .line 211
     const/4 v2, 0x2
 
     iput v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->KNOX_UPDATE_FLIGHT_MODE:I
 
-    .line 218
     iput-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 219
     iput-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 238
     const-string v2, "/data/b2b"
 
     iput-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->customBootDirectory:Ljava/lang/String;
 
-    .line 239
     const-string v2, "/efs/knoxcustom"
 
     iput-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->efsPropertyPath:Ljava/lang/String;
 
-    .line 240
     const v2, 0x7fffffff
 
     iput v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->maxDelay:I
 
-    .line 241
     const-string v2, "ro.csc.sales_code"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -341,7 +318,6 @@
 
     iput-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->salesCode:Ljava/lang/String;
 
-    .line 242
     const-string v2, "ATT/VZW/TMB/TMK/USC/SPR"
 
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->salesCode:Ljava/lang/String;
@@ -357,28 +333,20 @@
     :goto_0
     iput-boolean v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->isNotSupported:Z
 
-    .line 252
     iput-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 253
     iput-boolean v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mIsTablet:Z
 
-    .line 256
     iput-boolean v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
-    .line 257
     iput-boolean v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mGraceUI:Z
 
-    .line 260
     iput-boolean v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mKnoxCustomCurtainModeIsRunning:Z
 
-    .line 269
     iput-object p1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
-    .line 270
     iput-object p2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAppPolicy:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 271
     new-instance v2, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -387,7 +355,6 @@
 
     iput-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 273
     new-instance v2, Landroid/os/HandlerThread;
 
     const-string v5, "KnoxCustomManagerService"
@@ -396,12 +363,10 @@
 
     iput-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 274
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
-    .line 275
     new-instance v2, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;
 
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mHandlerThread:Landroid/os/HandlerThread;
@@ -414,14 +379,12 @@
 
     iput-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mHandler:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;
 
-    .line 277
     const-string v2, "ro.build.characteristics"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 278
     .local v0, "deviceType":Ljava/lang/String;
     if-eqz v0, :cond_3
 
@@ -438,14 +401,12 @@
     :goto_1
     iput-boolean v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mIsTablet:Z
 
-    .line 280
     const-string v2, "ro.build.scafe"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 281
     .local v1, "scafe":Ljava/lang/String;
     const-string v2, "americano"
 
@@ -463,11 +424,9 @@
 
     if-eqz v2, :cond_1
 
-    .line 282
     :cond_0
     iput-boolean v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
-    .line 285
     :cond_1
     iget-boolean v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
@@ -490,10 +449,8 @@
     :goto_2
     iput-boolean v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mGraceUI:Z
 
-    .line 288
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->registerBootReceiver()V
 
-    .line 289
     return-void
 
     .end local v0    # "deviceType":Ljava/lang/String;
@@ -501,21 +458,18 @@
     :cond_2
     move v2, v4
 
-    .line 242
     goto :goto_0
 
     .restart local v0    # "deviceType":Ljava/lang/String;
     :cond_3
     move v2, v4
 
-    .line 278
     goto :goto_1
 
     .restart local v1    # "scafe":Ljava/lang/String;
     :cond_4
     move v3, v4
 
-    .line 285
     goto :goto_2
 .end method
 
@@ -524,16 +478,13 @@
     .param p1, "command"    # Ljava/lang/String;
 
     .prologue
-    .line 6192
     const/4 v3, 0x0
 
-    .line 6193
     .local v3, "result":Z
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 6196
     .local v1, "output":Ljava/lang/StringBuffer;
     :try_start_0
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -544,25 +495,20 @@
 
     move-result-object v2
 
-    .line 6197
     .local v2, "p":Ljava/lang/Process;
     invoke-virtual {v2}, Ljava/lang/Process;->waitFor()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6198
     const/4 v3, 0x1
 
-    .line 6211
     .end local v2    # "p":Ljava/lang/Process;
     :goto_0
     return v3
 
-    .line 6207
     :catch_0
     move-exception v0
 
-    .line 6208
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -586,7 +532,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6209
     const/4 v3, 0x0
 
     goto :goto_0
@@ -597,7 +542,6 @@
     .param p0, "x0"    # Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     .prologue
-    .line 189
     iget-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     return-object v0
@@ -608,7 +552,6 @@
     .param p0, "x0"    # Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     .prologue
-    .line 189
     iget-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -618,7 +561,6 @@
     .locals 1
 
     .prologue
-    .line 189
     sget-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiUsername:Ljava/lang/String;
 
     return-object v0
@@ -633,7 +575,6 @@
     .param p4, "x4"    # Ljava/lang/String;
 
     .prologue
-    .line 189
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->configureWifi(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -645,7 +586,6 @@
     .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
-    .line 189
     invoke-direct {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->startStopUsbNet(Landroid/content/Context;)V
 
     return-void
@@ -656,7 +596,6 @@
     .param p0, "x0"    # Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     .prologue
-    .line 189
     iget-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mTempContext:Landroid/content/Context;
 
     return-object v0
@@ -667,7 +606,6 @@
     .param p0, "x0"    # Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     .prologue
-    .line 189
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->closeLauncherApp()V
 
     return-void
@@ -678,7 +616,6 @@
     .param p0, "x0"    # Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     .prologue
-    .line 189
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->startProKioskMode()V
 
     return-void
@@ -689,7 +626,6 @@
     .param p0, "x0"    # Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     .prologue
-    .line 189
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->refreshStatusbar()V
 
     return-void
@@ -700,7 +636,6 @@
     .param p0, "x0"    # Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     .prologue
-    .line 189
     iget-boolean v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mGraceUI:Z
 
     return v0
@@ -710,7 +645,6 @@
     .locals 1
 
     .prologue
-    .line 189
     sget-boolean v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiConfigure:Z
 
     return v0
@@ -721,7 +655,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 189
     sput-boolean p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiConfigure:Z
 
     return p0
@@ -731,7 +664,6 @@
     .locals 1
 
     .prologue
-    .line 189
     sget-boolean v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiEap:Z
 
     return v0
@@ -741,7 +673,6 @@
     .locals 1
 
     .prologue
-    .line 189
     sget-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiSSID:Ljava/lang/String;
 
     return-object v0
@@ -751,7 +682,6 @@
     .locals 1
 
     .prologue
-    .line 189
     sget-object v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiPassword:Ljava/lang/String;
 
     return-object v0
@@ -765,7 +695,6 @@
     .param p3, "x3"    # Ljava/lang/String;
 
     .prologue
-    .line 189
     invoke-direct {p0, p1, p2, p3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->configureWifi(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -776,14 +705,12 @@
     .param p1, "buf"    # [B
 
     .prologue
-    .line 840
     array-length v2, p1
 
     mul-int/lit8 v2, v2, 0x2
 
     new-array v0, v2, [C
 
-    .line 841
     .local v0, "chars":[C
     const/4 v1, 0x0
 
@@ -793,7 +720,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 842
     mul-int/lit8 v2, v1, 0x2
 
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->HEX_CHARS:[C
@@ -808,7 +734,6 @@
 
     aput-char v3, v0, v2
 
-    .line 843
     mul-int/lit8 v2, v1, 0x2
 
     add-int/lit8 v2, v2, 0x1
@@ -823,12 +748,10 @@
 
     aput-char v3, v0, v2
 
-    .line 841
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 845
     :cond_0
     new-instance v2, Ljava/lang/String;
 
@@ -844,15 +767,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 893
     if-nez p1, :cond_1
 
-    .line 905
     :cond_0
     :goto_0
     return v0
 
-    .line 896
     :cond_1
     const-string v1, "."
 
@@ -862,7 +782,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 899
     const-string v1, " "
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -871,7 +790,6 @@
 
     if-nez v1, :cond_0
 
-    .line 902
     const-string v1, "."
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -888,7 +806,6 @@
 
     if-nez v1, :cond_0
 
-    .line 905
     const/4 v0, 0x1
 
     goto :goto_0
@@ -905,25 +822,20 @@
 
     const/16 v8, -0x28
 
-    .line 8446
     const/4 v5, 0x0
 
-    .line 8447
     .local v5, "result":I
     iget-boolean v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->isNotSupported:Z
 
     if-eqz v9, :cond_1
 
-    .line 8449
     const/4 v5, -0x6
 
-    .line 8492
     .end local v5    # "result":I
     :cond_0
     :goto_0
     return v5
 
-    .line 8452
     .restart local v5    # "result":I
     :cond_1
     if-eqz p1, :cond_2
@@ -935,10 +847,8 @@
     :cond_2
     move v5, v8
 
-    .line 8454
     goto :goto_0
 
-    .line 8457
     :cond_3
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -976,31 +886,26 @@
 
     if-gtz v9, :cond_5
 
-    .line 8459
     :cond_4
     const/16 v5, -0x33
 
     goto :goto_0
 
-    .line 8462
     :cond_5
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8463
     .local v1, "animFile":Ljava/io/File;
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8464
     .local v4, "loopFile":Ljava/io/File;
     new-instance v7, Ljava/io/File;
 
     invoke-direct {v7, p3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8466
     .local v7, "soundFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -1023,10 +928,8 @@
     :cond_6
     move v5, v8
 
-    .line 8468
     goto :goto_0
 
-    .line 8472
     :cond_7
     :try_start_0
     const-string v9, "."
@@ -1043,7 +946,6 @@
 
     move-result-object v0
 
-    .line 8473
     .local v0, "animExt":Ljava/lang/String;
     const-string v9, "."
 
@@ -1059,7 +961,6 @@
 
     move-result-object v3
 
-    .line 8474
     .local v3, "loopExt":Ljava/lang/String;
     const-string v9, "."
 
@@ -1075,7 +976,6 @@
 
     move-result-object v6
 
-    .line 8476
     .local v6, "soundExt":Ljava/lang/String;
     const-string v9, ".qmg"
 
@@ -1093,7 +993,6 @@
 
     if-nez v9, :cond_8
 
-    .line 8477
     const-string v9, "KnoxCustomManagerService"
 
     const-string v10, "Custom startup and shutdown animation: file must be a QMG or MP4"
@@ -1102,10 +1001,8 @@
 
     move v5, v8
 
-    .line 8478
     goto/16 :goto_0
 
-    .line 8480
     :cond_8
     const-string v9, ".qmg"
 
@@ -1123,7 +1020,6 @@
 
     if-nez v9, :cond_9
 
-    .line 8481
     const-string v9, "KnoxCustomManagerService"
 
     const-string v10, "Custom startup and shutdown animation: file must be a QMG or MP4"
@@ -1132,10 +1028,8 @@
 
     move v5, v8
 
-    .line 8482
     goto/16 :goto_0
 
-    .line 8484
     :cond_9
     const-string v9, ".ogg"
 
@@ -1145,7 +1039,6 @@
 
     if-nez v9, :cond_0
 
-    .line 8485
     const-string v9, "KnoxCustomManagerService"
 
     const-string v10, "Custom startup and shutdown sound: file must be a OGG"
@@ -1156,17 +1049,14 @@
 
     move v5, v8
 
-    .line 8486
     goto/16 :goto_0
 
-    .line 8488
     .end local v0    # "animExt":Ljava/lang/String;
     .end local v3    # "loopExt":Ljava/lang/String;
     .end local v6    # "soundExt":Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 8489
     .local v2, "e":Ljava/lang/IndexOutOfBoundsException;
     const-string v9, "KnoxCustomManagerService"
 
@@ -1176,7 +1066,6 @@
 
     move v5, v8
 
-    .line 8490
     goto/16 :goto_0
 .end method
 
@@ -1187,15 +1076,12 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 913
     if-nez p1, :cond_1
 
-    .line 936
     :cond_0
     :goto_0
     return v7
 
-    .line 916
     :cond_1
     const-string v8, "\\."
 
@@ -1203,7 +1089,6 @@
 
     move-result-object v6
 
-    .line 917
     .local v6, "tokens":[Ljava/lang/String;
     array-length v8, v6
 
@@ -1211,7 +1096,6 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 920
     const-string v8, "."
 
     invoke-virtual {p1, v8}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -1220,7 +1104,6 @@
 
     if-nez v8, :cond_0
 
-    .line 923
     move-object v0, v6
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -1235,7 +1118,6 @@
 
     aget-object v5, v0, v3
 
-    .line 925
     .local v5, "str":Ljava/lang/String;
     :try_start_0
     invoke-virtual {v5}, Ljava/lang/String;->length()I
@@ -1246,14 +1128,12 @@
 
     if-gt v8, v9, :cond_0
 
-    .line 927
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 928
     .local v2, "i":I
     if-ltz v2, :cond_0
 
@@ -1261,21 +1141,17 @@
 
     if-gt v2, v8, :cond_0
 
-    .line 923
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 931
     .end local v2    # "i":I
     :catch_0
     move-exception v1
 
-    .line 933
     .local v1, "e":Ljava/lang/Exception;
     goto :goto_0
 
-    .line 936
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v5    # "str":Ljava/lang/String;
     :cond_2
@@ -1288,12 +1164,10 @@
     .locals 5
 
     .prologue
-    .line 670
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 671
     .local v2, "token":J
     iget-object v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -1305,16 +1179,13 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 672
     .local v0, "am":Landroid/app/ActivityManager;
     const-string v1, "com.sec.android.app.launcher"
 
     invoke-virtual {v0, v1}, Landroid/app/ActivityManager;->forceStopPackage(Ljava/lang/String;)V
 
-    .line 673
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 674
     return-void
 .end method
 
@@ -1322,12 +1193,10 @@
     .locals 7
 
     .prologue
-    .line 658
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 659
     .local v2, "token":J
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -1339,20 +1208,17 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 660
     .local v0, "am":Landroid/app/ActivityManager;
     const-string v4, "com.android.settings"
 
     invoke-virtual {v0, v4}, Landroid/app/ActivityManager;->forceStopPackage(Ljava/lang/String;)V
 
-    .line 661
     new-instance v1, Landroid/content/Intent;
 
     const-string v4, "com.sec.android.quicksetting.REFRESH"
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 662
     .local v1, "i":Landroid/content/Intent;
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -1364,10 +1230,8 @@
 
     invoke-virtual {v4, v1, v5}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 663
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 664
     return-void
 .end method
 
@@ -1379,17 +1243,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 10356
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 10358
     :cond_0
     :goto_0
     return v0
 
-    .line 10357
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
 
@@ -1403,7 +1264,6 @@
 
     if-nez v1, :cond_0
 
-    .line 10358
     invoke-static {p1}, Landroid/telephony/PhoneNumberUtils;->normalizeNumber(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1428,7 +1288,6 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 513
     const-string v8, "wifi"
 
     invoke-virtual {p1, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1437,25 +1296,20 @@
 
     check-cast v7, Landroid/net/wifi/WifiManager;
 
-    .line 514
     .local v7, "wifiManager":Landroid/net/wifi/WifiManager;
     const/4 v5, 0x0
 
-    .line 515
     .local v5, "lastPriority":I
     const/4 v0, 0x1
 
-    .line 516
     .local v0, "NeedNewConfig":Z
     invoke-virtual {v7}, Landroid/net/wifi/WifiManager;->getConfiguredNetworks()Ljava/util/List;
 
     move-result-object v3
 
-    .line 518
     .local v3, "configs":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;"
     if-eqz v3, :cond_2
 
-    .line 519
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -1475,16 +1329,13 @@
 
     check-cast v2, Landroid/net/wifi/WifiConfiguration;
 
-    .line 520
     .local v2, "config":Landroid/net/wifi/WifiConfiguration;
     iget v8, v2, Landroid/net/wifi/WifiConfiguration;->priority:I
 
     if-ge v5, v8, :cond_1
 
-    .line 521
     iget v5, v2, Landroid/net/wifi/WifiConfiguration;->priority:I
 
-    .line 523
     :cond_1
     iget-object v8, v2, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
@@ -1518,23 +1369,19 @@
 
     if-eqz v8, :cond_0
 
-    .line 524
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 529
     .end local v2    # "config":Landroid/net/wifi/WifiConfiguration;
     .end local v4    # "i$":Ljava/util/Iterator;
     :cond_2
     if-eqz v0, :cond_5
 
-    .line 530
     new-instance v2, Landroid/net/wifi/WifiConfiguration;
 
     invoke-direct {v2}, Landroid/net/wifi/WifiConfiguration;-><init>()V
 
-    .line 531
     .restart local v2    # "config":Landroid/net/wifi/WifiConfiguration;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -1562,7 +1409,6 @@
 
     iput-object v8, v2, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
-    .line 532
     if-eqz p3, :cond_4
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
@@ -1571,7 +1417,6 @@
 
     if-lez v8, :cond_4
 
-    .line 533
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1598,42 +1443,33 @@
 
     iput-object v8, v2, Landroid/net/wifi/WifiConfiguration;->preSharedKey:Ljava/lang/String;
 
-    .line 534
     iget-object v8, v2, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
     invoke-virtual {v8, v11}, Ljava/util/BitSet;->set(I)V
 
-    .line 538
     :goto_1
     add-int/lit8 v8, v5, 0x1
 
     iput v8, v2, Landroid/net/wifi/WifiConfiguration;->priority:I
 
-    .line 540
     invoke-virtual {v7, v2}, Landroid/net/wifi/WifiManager;->addNetwork(Landroid/net/wifi/WifiConfiguration;)I
 
     move-result v6
 
-    .line 541
     .local v6, "networkId":I
     invoke-virtual {v7}, Landroid/net/wifi/WifiManager;->saveConfiguration()Z
 
-    .line 543
     invoke-virtual {v7}, Landroid/net/wifi/WifiManager;->disconnect()Z
 
-    .line 544
     invoke-virtual {v7, v6, v11}, Landroid/net/wifi/WifiManager;->enableNetwork(IZ)Z
 
-    .line 545
     invoke-virtual {v7}, Landroid/net/wifi/WifiManager;->reconnect()Z
 
-    .line 562
     .end local v2    # "config":Landroid/net/wifi/WifiConfiguration;
     .end local v6    # "networkId":I
     :cond_3
     return-void
 
-    .line 536
     .restart local v2    # "config":Landroid/net/wifi/WifiConfiguration;
     :cond_4
     iget-object v8, v2, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
@@ -1644,7 +1480,6 @@
 
     goto :goto_1
 
-    .line 548
     .end local v2    # "config":Landroid/net/wifi/WifiConfiguration;
     :cond_5
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -1666,7 +1501,6 @@
 
     check-cast v1, Landroid/net/wifi/WifiConfiguration;
 
-    .line 549
     .local v1, "c":Landroid/net/wifi/WifiConfiguration;
     iget-object v8, v1, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
@@ -1700,12 +1534,10 @@
 
     if-eqz v8, :cond_6
 
-    .line 550
     add-int/lit8 v8, v5, 0x1
 
     iput v8, v1, Landroid/net/wifi/WifiConfiguration;->priority:I
 
-    .line 552
     if-eqz p3, :cond_7
 
     invoke-virtual {p3}, Ljava/lang/String;->length()I
@@ -1714,7 +1546,6 @@
 
     if-lez v8, :cond_7
 
-    .line 553
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -1741,19 +1572,15 @@
 
     iput-object v8, v1, Landroid/net/wifi/WifiConfiguration;->preSharedKey:Ljava/lang/String;
 
-    .line 555
     :cond_7
     invoke-virtual {v7, v1}, Landroid/net/wifi/WifiManager;->updateNetwork(Landroid/net/wifi/WifiConfiguration;)I
 
-    .line 556
     invoke-virtual {v7}, Landroid/net/wifi/WifiManager;->disconnect()Z
 
-    .line 557
     iget v8, v1, Landroid/net/wifi/WifiConfiguration;->networkId:I
 
     invoke-virtual {v7, v8, v11}, Landroid/net/wifi/WifiManager;->enableNetwork(IZ)Z
 
-    .line 558
     invoke-virtual {v7}, Landroid/net/wifi/WifiManager;->reconnect()Z
 
     goto :goto_2
@@ -1767,7 +1594,6 @@
     .param p4, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 568
     const-string v10, "wifi"
 
     invoke-virtual {p1, v10}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1776,25 +1602,20 @@
 
     check-cast v9, Landroid/net/wifi/WifiManager;
 
-    .line 569
     .local v9, "wifiManager":Landroid/net/wifi/WifiManager;
     const/4 v7, 0x0
 
-    .line 570
     .local v7, "lastPriority":I
     const/4 v1, 0x1
 
-    .line 571
     .local v1, "NeedNewEntConfig":Z
     invoke-virtual {v9}, Landroid/net/wifi/WifiManager;->getConfiguredNetworks()Ljava/util/List;
 
     move-result-object v4
 
-    .line 573
     .local v4, "configs":Ljava/util/List;, "Ljava/util/List<Landroid/net/wifi/WifiConfiguration;>;"
     if-eqz v4, :cond_2
 
-    .line 574
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
@@ -1814,16 +1635,13 @@
 
     check-cast v3, Landroid/net/wifi/WifiConfiguration;
 
-    .line 575
     .local v3, "config":Landroid/net/wifi/WifiConfiguration;
     iget v10, v3, Landroid/net/wifi/WifiConfiguration;->priority:I
 
     if-ge v7, v10, :cond_1
 
-    .line 576
     iget v7, v3, Landroid/net/wifi/WifiConfiguration;->priority:I
 
-    .line 578
     :cond_1
     iget-object v10, v3, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
@@ -1857,97 +1675,78 @@
 
     if-eqz v10, :cond_0
 
-    .line 579
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 585
     .end local v3    # "config":Landroid/net/wifi/WifiConfiguration;
     .end local v6    # "i$":Ljava/util/Iterator;
     :cond_2
     if-eqz v1, :cond_4
 
-    .line 586
     new-instance v5, Landroid/net/wifi/WifiEnterpriseConfig;
 
     invoke-direct {v5}, Landroid/net/wifi/WifiEnterpriseConfig;-><init>()V
 
-    .line 587
     .local v5, "enterpriseConfig":Landroid/net/wifi/WifiEnterpriseConfig;
     move-object/from16 v0, p3
 
     invoke-virtual {v5, v0}, Landroid/net/wifi/WifiEnterpriseConfig;->setIdentity(Ljava/lang/String;)V
 
-    .line 588
     move-object/from16 v0, p4
 
     invoke-virtual {v5, v0}, Landroid/net/wifi/WifiEnterpriseConfig;->setPassword(Ljava/lang/String;)V
 
-    .line 589
     const/4 v10, 0x0
 
     invoke-virtual {v5, v10}, Landroid/net/wifi/WifiEnterpriseConfig;->setEapMethod(I)V
 
-    .line 591
     new-instance v3, Landroid/net/wifi/WifiConfiguration;
 
     invoke-direct {v3}, Landroid/net/wifi/WifiConfiguration;-><init>()V
 
-    .line 592
     .restart local v3    # "config":Landroid/net/wifi/WifiConfiguration;
     iput-object p2, v3, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
-    .line 593
     iget-object v10, v3, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
     const/4 v11, 0x2
 
     invoke-virtual {v10, v11}, Ljava/util/BitSet;->set(I)V
 
-    .line 594
     iget-object v10, v3, Landroid/net/wifi/WifiConfiguration;->allowedKeyManagement:Ljava/util/BitSet;
 
     const/4 v11, 0x3
 
     invoke-virtual {v10, v11}, Ljava/util/BitSet;->set(I)V
 
-    .line 595
     iput-object v5, v3, Landroid/net/wifi/WifiConfiguration;->enterpriseConfig:Landroid/net/wifi/WifiEnterpriseConfig;
 
-    .line 596
     add-int/lit8 v10, v7, 0x1
 
     iput v10, v3, Landroid/net/wifi/WifiConfiguration;->priority:I
 
-    .line 598
     invoke-virtual {v9, v3}, Landroid/net/wifi/WifiManager;->addNetwork(Landroid/net/wifi/WifiConfiguration;)I
 
     move-result v8
 
-    .line 599
     .local v8, "networkId":I
     invoke-virtual {v9}, Landroid/net/wifi/WifiManager;->saveConfiguration()Z
 
-    .line 601
     invoke-virtual {v9}, Landroid/net/wifi/WifiManager;->disconnect()Z
 
-    .line 602
     const/4 v10, 0x1
 
     invoke-virtual {v9, v8, v10}, Landroid/net/wifi/WifiManager;->enableNetwork(IZ)Z
 
-    .line 603
     invoke-virtual {v9}, Landroid/net/wifi/WifiManager;->reconnect()Z
 
-    .line 620
     .end local v3    # "config":Landroid/net/wifi/WifiConfiguration;
     .end local v5    # "enterpriseConfig":Landroid/net/wifi/WifiEnterpriseConfig;
     .end local v8    # "networkId":I
     :cond_3
     return-void
 
-    .line 606
     :cond_4
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1968,7 +1767,6 @@
 
     check-cast v2, Landroid/net/wifi/WifiConfiguration;
 
-    .line 607
     .local v2, "c":Landroid/net/wifi/WifiConfiguration;
     iget-object v10, v2, Landroid/net/wifi/WifiConfiguration;->SSID:Ljava/lang/String;
 
@@ -2002,12 +1800,10 @@
 
     if-eqz v10, :cond_5
 
-    .line 608
     add-int/lit8 v10, v7, 0x1
 
     iput v10, v2, Landroid/net/wifi/WifiConfiguration;->priority:I
 
-    .line 610
     if-eqz p4, :cond_6
 
     invoke-virtual/range {p4 .. p4}, Ljava/lang/String;->length()I
@@ -2016,7 +1812,6 @@
 
     if-lez v10, :cond_6
 
-    .line 611
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -2045,21 +1840,17 @@
 
     iput-object v10, v2, Landroid/net/wifi/WifiConfiguration;->preSharedKey:Ljava/lang/String;
 
-    .line 613
     :cond_6
     invoke-virtual {v9, v2}, Landroid/net/wifi/WifiManager;->updateNetwork(Landroid/net/wifi/WifiConfiguration;)I
 
-    .line 614
     invoke-virtual {v9}, Landroid/net/wifi/WifiManager;->disconnect()Z
 
-    .line 615
     iget v10, v2, Landroid/net/wifi/WifiConfiguration;->networkId:I
 
     const/4 v11, 0x1
 
     invoke-virtual {v9, v10, v11}, Landroid/net/wifi/WifiManager;->enableNetwork(IZ)Z
 
-    .line 616
     invoke-virtual {v9}, Landroid/net/wifi/WifiManager;->reconnect()Z
 
     goto :goto_1
@@ -2070,10 +1861,8 @@
     .param p1, "InfoFilePath"    # Ljava/io/File;
 
     .prologue
-    .line 8256
     const/4 v2, 0x0
 
-    .line 8258
     .local v2, "in":Ljava/io/BufferedReader;
     :try_start_0
     new-instance v3, Ljava/io/BufferedReader;
@@ -2088,7 +1877,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8260
     .end local v2    # "in":Ljava/io/BufferedReader;
     .local v3, "in":Ljava/io/BufferedReader;
     :cond_0
@@ -2102,14 +1890,11 @@
 
     move-result-object v4
 
-    .line 8261
     .local v4, "line":Ljava/lang/String;
     if-nez v4, :cond_3
 
-    .line 8276
     if-eqz v3, :cond_5
 
-    .line 8278
     :try_start_2
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -2117,7 +1902,6 @@
 
     move-object v2, v3
 
-    .line 8284
     .end local v3    # "in":Ljava/io/BufferedReader;
     .end local v4    # "line":Ljava/lang/String;
     .restart local v2    # "in":Ljava/io/BufferedReader;
@@ -2125,14 +1909,11 @@
     :goto_1
     if-eqz p1, :cond_2
 
-    .line 8285
     invoke-virtual {p1}, Ljava/io/File;->delete()Z
 
-    .line 8287
     :cond_2
     return-void
 
-    .line 8265
     .end local v2    # "in":Ljava/io/BufferedReader;
     .restart local v3    # "in":Ljava/io/BufferedReader;
     .restart local v4    # "line":Ljava/lang/String;
@@ -2142,7 +1923,6 @@
 
     invoke-direct {v1, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8266
     .local v1, "file":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -2150,7 +1930,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 8267
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
     :try_end_3
     .catch Ljava/io/FileNotFoundException; {:try_start_3 .. :try_end_3} :catch_0
@@ -2159,7 +1938,6 @@
 
     goto :goto_0
 
-    .line 8271
     .end local v1    # "file":Ljava/io/File;
     .end local v4    # "line":Ljava/lang/String;
     :catch_0
@@ -2167,7 +1945,6 @@
 
     move-object v2, v3
 
-    .line 8272
     .end local v3    # "in":Ljava/io/BufferedReader;
     .local v0, "e":Ljava/io/FileNotFoundException;
     .restart local v2    # "in":Ljava/io/BufferedReader;
@@ -2177,10 +1954,8 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 8276
     if-eqz v2, :cond_1
 
-    .line 8278
     :try_start_5
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_5
@@ -2188,17 +1963,14 @@
 
     goto :goto_1
 
-    .line 8279
     :catch_1
     move-exception v0
 
-    .line 8280
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 8279
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v2    # "in":Ljava/io/BufferedReader;
     .restart local v3    # "in":Ljava/io/BufferedReader;
@@ -2206,24 +1978,20 @@
     :catch_2
     move-exception v0
 
-    .line 8280
     .restart local v0    # "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v2, v3
 
-    .line 8281
     .end local v3    # "in":Ljava/io/BufferedReader;
     .restart local v2    # "in":Ljava/io/BufferedReader;
     goto :goto_1
 
-    .line 8273
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v4    # "line":Ljava/lang/String;
     :catch_3
     move-exception v0
 
-    .line 8274
     .local v0, "e":Ljava/io/IOException;
     :goto_3
     :try_start_6
@@ -2231,10 +1999,8 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 8276
     if-eqz v2, :cond_1
 
-    .line 8278
     :try_start_7
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_7
@@ -2242,17 +2008,14 @@
 
     goto :goto_1
 
-    .line 8279
     :catch_4
     move-exception v0
 
-    .line 8280
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 8276
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v5
@@ -2260,28 +2023,23 @@
     :goto_4
     if-eqz v2, :cond_4
 
-    .line 8278
     :try_start_8
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 8281
     :cond_4
     :goto_5
     throw v5
 
-    .line 8279
     :catch_5
     move-exception v0
 
-    .line 8280
     .restart local v0    # "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_5
 
-    .line 8276
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v2    # "in":Ljava/io/BufferedReader;
     .restart local v3    # "in":Ljava/io/BufferedReader;
@@ -2294,7 +2052,6 @@
     .restart local v2    # "in":Ljava/io/BufferedReader;
     goto :goto_4
 
-    .line 8273
     .end local v2    # "in":Ljava/io/BufferedReader;
     .restart local v3    # "in":Ljava/io/BufferedReader;
     :catch_6
@@ -2306,7 +2063,6 @@
     .restart local v2    # "in":Ljava/io/BufferedReader;
     goto :goto_3
 
-    .line 8271
     :catch_7
     move-exception v0
 
@@ -2330,7 +2086,6 @@
     .param p4, "shouldUseNewTableFormat"    # Z
 
     .prologue
-    .line 9367
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -2353,40 +2108,32 @@
 
     move-result-object v10
 
-    .line 9369
     .local v10, "cursor":Landroid/database/Cursor;
     const/16 v16, -0x1
 
-    .line 9370
     .local v16, "indexId":I
     const/4 v13, 0x0
 
-    .line 9372
     .local v13, "foundItem":Z
     if-eqz v10, :cond_5
 
-    .line 9373
     const-string v2, "_id"
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v16
 
-    .line 9374
     const/4 v9, 0x0
 
-    .line 9375
     .local v9, "containerIndex":I
     if-eqz p4, :cond_1
 
-    .line 9376
     const-string v2, "containerId"
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v9
 
-    .line 9380
     :cond_0
     :goto_0
     invoke-interface {v10}, Landroid/database/Cursor;->moveToNext()Z
@@ -2395,20 +2142,17 @@
 
     if-eqz v2, :cond_3
 
-    .line 9381
     move/from16 v0, v16
 
     invoke-interface {v10, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v14
 
-    .line 9382
     .local v14, "id":J
     invoke-interface {v10, v9}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v8
 
-    .line 9383
     .local v8, "containerId":I
     int-to-long v2, v8
 
@@ -2416,12 +2160,10 @@
 
     if-nez v2, :cond_0
 
-    .line 9384
     if-eqz p4, :cond_2
 
     const-string v17, "content://com.sec.android.app.launcher.settings/favorites"
 
-    .line 9385
     .local v17, "provider":Ljava/lang/String;
     :goto_1
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2466,13 +2208,11 @@
 
     move-result-object v11
 
-    .line 9386
     .local v11, "deleteString":Ljava/lang/String;
     invoke-static {v11}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v12
 
-    .line 9388
     .local v12, "deleteUri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -2490,7 +2230,6 @@
 
     goto :goto_0
 
-    .line 9378
     .end local v8    # "containerId":I
     .end local v11    # "deleteString":Ljava/lang/String;
     .end local v12    # "deleteUri":Landroid/net/Uri;
@@ -2505,7 +2244,6 @@
 
     goto :goto_0
 
-    .line 9384
     .restart local v8    # "containerId":I
     .restart local v14    # "id":J
     :cond_2
@@ -2513,13 +2251,11 @@
 
     goto :goto_1
 
-    .line 9391
     .end local v8    # "containerId":I
     .end local v14    # "id":J
     :cond_3
     if-eqz v13, :cond_4
 
-    .line 9392
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -2534,11 +2270,9 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 9395
     :cond_4
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 9397
     .end local v9    # "containerIndex":I
     :cond_5
     return-void
@@ -2549,16 +2283,13 @@
     .param p1, "b"    # [B
 
     .prologue
-    .line 5320
     const/4 v3, 0x0
 
-    .line 5321
     .local v3, "ret":Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 5323
     .local v2, "p":Landroid/os/Parcel;
     const/4 v5, 0x0
 
@@ -2567,12 +2298,10 @@
 
     invoke-virtual {v2, p1, v5, v6}, Landroid/os/Parcel;->unmarshall([BII)V
 
-    .line 5324
     const/4 v5, 0x0
 
     invoke-virtual {v2, v5}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 5325
     const-class v5, Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;
 
     invoke-virtual {v5}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -2592,7 +2321,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5331
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
     move-object v4, v3
@@ -2602,13 +2330,11 @@
     :goto_0
     return-object v4
 
-    .line 5327
     .end local v4    # "ret":Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;
     .restart local v3    # "ret":Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;
     :catch_0
     move-exception v1
 
-    .line 5328
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v5, "deserializeKnoxCustomStatusbarIconItem"
@@ -2621,7 +2347,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5331
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
     move-object v4, v3
@@ -2655,18 +2380,15 @@
     .end annotation
 
     .prologue
-    .line 2668
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2669
     .local v4, "ret":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;>;"
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v3
 
-    .line 2671
     .local v3, "p":Landroid/os/Parcel;
     const/4 v6, 0x0
 
@@ -2675,12 +2397,10 @@
 
     invoke-virtual {v3, p1, v6, v7}, Landroid/os/Parcel;->unmarshall([BII)V
 
-    .line 2672
     const/4 v6, 0x0
 
     invoke-virtual {v3, v6}, Landroid/os/Parcel;->setDataPosition(I)V
 
-    .line 2673
     sget-object v6, Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {v3, v6}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -2689,7 +2409,6 @@
 
     check-cast v5, [Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;
 
-    .line 2674
     .local v5, "temp":[Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;
     const/4 v1, 0x0
 
@@ -2699,22 +2418,18 @@
 
     if-ge v1, v6, :cond_0
 
-    .line 2675
     aget-object v2, v5, v1
 
-    .line 2676
     .local v2, "item":Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2674
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2683
     .end local v2    # "item":Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;
     :cond_0
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
@@ -2724,11 +2439,9 @@
     :goto_1
     return-object v4
 
-    .line 2679
     :catch_0
     move-exception v0
 
-    .line 2680
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v6, "deserializeObject"
@@ -2741,7 +2454,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2683
     invoke-virtual {v3}, Landroid/os/Parcel;->recycle()V
 
     goto :goto_1
@@ -2762,17 +2474,14 @@
     .prologue
     const/high16 v8, 0x1030000
 
-    .line 6725
     const/4 v2, -0x6
 
-    .line 6727
     .local v2, "result":I
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 6728
     .local v4, "token":J
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -2784,43 +2493,35 @@
 
     check-cast v3, Landroid/app/StatusBarManager;
 
-    .line 6729
     .local v3, "statusBarManager":Landroid/app/StatusBarManager;
     invoke-virtual {v3}, Landroid/app/StatusBarManager;->getDisableFlags()I
 
     move-result v1
 
-    .line 6730
     .local v1, "flags":I
     if-eqz p1, :cond_0
 
-    .line 6731
     or-int v6, v1, v8
 
     invoke-virtual {v3, v6}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 6732
     const v6, -0x1030001
 
     and-int/2addr v6, v1
 
     invoke-virtual {v3, v6}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 6736
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6737
     const/4 v2, 0x0
 
-    .line 6742
     .end local v1    # "flags":I
     .end local v3    # "statusBarManager":Landroid/app/StatusBarManager;
     .end local v4    # "token":J
     :goto_1
     return v2
 
-    .line 6734
     .restart local v1    # "flags":I
     .restart local v3    # "statusBarManager":Landroid/app/StatusBarManager;
     .restart local v4    # "token":J
@@ -2833,14 +2534,12 @@
 
     goto :goto_0
 
-    .line 6738
     .end local v1    # "flags":I
     .end local v3    # "statusBarManager":Landroid/app/StatusBarManager;
     .end local v4    # "token":J
     :catch_0
     move-exception v0
 
-    .line 6739
     .local v0, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -2864,7 +2563,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6740
     const/4 v2, -0x1
 
     goto :goto_1
@@ -2879,7 +2577,6 @@
     .end annotation
 
     .prologue
-    .line 338
     :try_start_0
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -2891,17 +2588,14 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 342
     :goto_0
     const/16 v1, 0x3e8
 
     return v1
 
-    .line 339
     :catch_0
     move-exception v0
 
-    .line 340
     .local v0, "e":Ljava/lang/SecurityException;
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -2923,7 +2617,6 @@
     .end annotation
 
     .prologue
-    .line 325
     :try_start_0
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -2935,17 +2628,14 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 329
     :goto_0
     const/16 v1, 0x3e8
 
     return v1
 
-    .line 326
     :catch_0
     move-exception v0
 
-    .line 327
     .local v0, "e":Ljava/lang/SecurityException;
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -2967,7 +2657,6 @@
     .end annotation
 
     .prologue
-    .line 368
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -2976,7 +2665,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermission(Ljava/lang/String;)V
 
-    .line 369
     const/16 v0, 0x3e8
 
     return v0
@@ -2991,7 +2679,6 @@
     .end annotation
 
     .prologue
-    .line 350
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -3000,7 +2687,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermission(Ljava/lang/String;)V
 
-    .line 351
     const/16 v0, 0x3e8
 
     return v0
@@ -3015,7 +2701,6 @@
     .end annotation
 
     .prologue
-    .line 359
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -3024,7 +2709,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermission(Ljava/lang/String;)V
 
-    .line 360
     const/16 v0, 0x3e8
 
     return v0
@@ -3038,35 +2722,28 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 8341
     const/4 v8, 0x0
 
-    .line 8343
     .local v8, "result":Z
     const/4 v2, 0x0
 
-    .line 8344
     .local v2, "fin":Ljava/io/FileInputStream;
     const/4 v4, 0x0
 
-    .line 8345
     .local v4, "fout":Ljava/io/FileOutputStream;
     const/4 v6, 0x0
 
-    .line 8348
     .local v6, "originFD":Ljava/io/FileDescriptor;
     :try_start_0
     new-instance v9, Ljava/io/File;
 
     invoke-direct {v9, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8349
     .local v9, "targetFile":Ljava/io/File;
     invoke-virtual {p1}, Landroid/os/ParcelFileDescriptor;->getFileDescriptor()Ljava/io/FileDescriptor;
 
     move-result-object v6
 
-    .line 8350
     new-instance v3, Ljava/io/FileInputStream;
 
     invoke-direct {v3, v6}, Ljava/io/FileInputStream;-><init>(Ljava/io/FileDescriptor;)V
@@ -3074,7 +2751,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 8351
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .local v3, "fin":Ljava/io/FileInputStream;
     :try_start_1
@@ -3085,12 +2761,10 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_6
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 8353
     .end local v4    # "fout":Ljava/io/FileOutputStream;
     .local v5, "fout":Ljava/io/FileOutputStream;
     if-nez v6, :cond_0
 
-    .line 8354
     :try_start_2
     const-string v11, "KnoxCustomManagerService"
 
@@ -3101,11 +2775,9 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 8374
     :try_start_3
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
 
-    .line 8375
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
@@ -3117,14 +2789,12 @@
     .restart local v4    # "fout":Ljava/io/FileOutputStream;
     move-object v2, v3
 
-    .line 8380
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .end local v9    # "targetFile":Ljava/io/File;
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     :goto_1
     return v10
 
-    .line 8376
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v4    # "fout":Ljava/io/FileOutputStream;
     .restart local v3    # "fin":Ljava/io/FileInputStream;
@@ -3133,7 +2803,6 @@
     :catch_0
     move-exception v1
 
-    .line 8377
     .local v1, "e":Ljava/lang/Exception;
     const-string v11, "KnoxCustomManagerService"
 
@@ -3145,22 +2814,18 @@
 
     goto :goto_0
 
-    .line 8358
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_0
     if-eqz v3, :cond_2
 
-    .line 8359
     const/4 v7, 0x0
 
-    .line 8360
     .local v7, "read":I
     const/16 v10, 0x400
 
     :try_start_4
     new-array v0, v10, [B
 
-    .line 8361
     .local v0, "buf":[B
     :goto_2
     const/4 v10, 0x0
@@ -3175,7 +2840,6 @@
 
     if-eq v7, v10, :cond_1
 
-    .line 8362
     const/4 v10, 0x0
 
     invoke-virtual {v5, v0, v10, v7}, Ljava/io/FileOutputStream;->write([BII)V
@@ -3185,7 +2849,6 @@
 
     goto :goto_2
 
-    .line 8370
     .end local v0    # "buf":[B
     .end local v7    # "read":I
     :catch_1
@@ -3197,7 +2860,6 @@
     .restart local v4    # "fout":Ljava/io/FileOutputStream;
     move-object v2, v3
 
-    .line 8371
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .end local v9    # "targetFile":Ljava/io/File;
     .restart local v1    # "e":Ljava/lang/Exception;
@@ -3214,11 +2876,9 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 8374
     :try_start_6
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
-    .line 8375
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
@@ -3227,10 +2887,8 @@
     :goto_4
     move v10, v8
 
-    .line 8380
     goto :goto_1
 
-    .line 8364
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v4    # "fout":Ljava/io/FileOutputStream;
     .restart local v0    # "buf":[B
@@ -3241,21 +2899,18 @@
     :cond_1
     const/4 v8, 0x1
 
-    .line 8365
     :try_start_7
     invoke-direct {p0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 8374
     .end local v0    # "buf":[B
     .end local v7    # "read":I
     :goto_5
     :try_start_8
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
 
-    .line 8375
     invoke-virtual {v5}, Ljava/io/FileOutputStream;->close()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_2
@@ -3266,12 +2921,10 @@
     .restart local v4    # "fout":Ljava/io/FileOutputStream;
     move-object v2, v3
 
-    .line 8378
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 8367
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v4    # "fout":Ljava/io/FileOutputStream;
     .restart local v3    # "fin":Ljava/io/FileInputStream;
@@ -3289,7 +2942,6 @@
 
     goto :goto_5
 
-    .line 8373
     :catchall_0
     move-exception v10
 
@@ -3299,7 +2951,6 @@
     .restart local v4    # "fout":Ljava/io/FileOutputStream;
     move-object v2, v3
 
-    .line 8374
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .end local v9    # "targetFile":Ljava/io/File;
     .restart local v2    # "fin":Ljava/io/FileInputStream;
@@ -3307,16 +2958,13 @@
     :try_start_a
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
 
-    .line 8375
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_4
 
-    .line 8378
     :goto_7
     throw v10
 
-    .line 8376
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v4    # "fout":Ljava/io/FileOutputStream;
     .restart local v3    # "fin":Ljava/io/FileInputStream;
@@ -3325,7 +2973,6 @@
     :catch_2
     move-exception v1
 
-    .line 8377
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v10, "KnoxCustomManagerService"
 
@@ -3341,17 +2988,14 @@
     .restart local v4    # "fout":Ljava/io/FileOutputStream;
     move-object v2, v3
 
-    .line 8379
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 8376
     .end local v9    # "targetFile":Ljava/io/File;
     :catch_3
     move-exception v1
 
-    .line 8377
     const-string v10, "KnoxCustomManagerService"
 
     invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
@@ -3362,12 +3006,10 @@
 
     goto :goto_4
 
-    .line 8376
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_4
     move-exception v1
 
-    .line 8377
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v11, "KnoxCustomManagerService"
 
@@ -3379,7 +3021,6 @@
 
     goto :goto_7
 
-    .line 8373
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_1
     move-exception v10
@@ -3398,7 +3039,6 @@
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_6
 
-    .line 8370
     .end local v9    # "targetFile":Ljava/io/File;
     :catch_5
     move-exception v1
@@ -3426,34 +3066,27 @@
     .prologue
     const/16 v10, 0x400
 
-    .line 8290
     const/4 v7, 0x0
 
-    .line 8291
     .local v7, "result":Z
     new-instance v8, Ljava/io/File;
 
     invoke-direct {v8, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8292
     .local v8, "sourceFile":Ljava/io/File;
     new-instance v9, Ljava/io/File;
 
     invoke-direct {v9, p2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8294
     .local v9, "targetFile":Ljava/io/File;
     new-array v0, v10, [B
 
-    .line 8295
     .local v0, "buf":[B
     const/4 v2, 0x0
 
-    .line 8296
     .local v2, "fin":Ljava/io/FileInputStream;
     const/4 v4, 0x0
 
-    .line 8300
     .local v4, "fout":Ljava/io/FileOutputStream;
     :try_start_0
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
@@ -3462,12 +3095,10 @@
 
     if-eqz v10, :cond_3
 
-    .line 8302
     const/16 v10, 0x400
 
     new-array v0, v10, [B
 
-    .line 8303
     new-instance v3, Ljava/io/FileInputStream;
 
     invoke-direct {v3, v8}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
@@ -3476,7 +3107,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8304
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .local v3, "fin":Ljava/io/FileInputStream;
     :try_start_1
@@ -3488,12 +3118,10 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_a
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 8306
     .end local v4    # "fout":Ljava/io/FileOutputStream;
     .local v5, "fout":Ljava/io/FileOutputStream;
     const/4 v6, 0x0
 
-    .line 8307
     .local v6, "read":I
     :goto_0
     const/4 v10, 0x0
@@ -3509,7 +3137,6 @@
 
     if-eq v6, v10, :cond_2
 
-    .line 8308
     const/4 v10, 0x0
 
     invoke-virtual {v5, v0, v10, v6}, Ljava/io/FileOutputStream;->write([BII)V
@@ -3520,7 +3147,6 @@
 
     goto :goto_0
 
-    .line 8317
     :catch_0
     move-exception v1
 
@@ -3530,7 +3156,6 @@
     .restart local v4    # "fout":Ljava/io/FileOutputStream;
     move-object v2, v3
 
-    .line 8318
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .end local v6    # "read":I
     .local v1, "e":Ljava/lang/NullPointerException;
@@ -3541,33 +3166,27 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 8322
     if-eqz v2, :cond_0
 
-    .line 8324
     :try_start_4
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 8329
     .end local v1    # "e":Ljava/lang/NullPointerException;
     :cond_0
     :goto_2
     if-eqz v4, :cond_1
 
-    .line 8331
     :try_start_5
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_4
 
-    .line 8337
     :cond_1
     :goto_3
     return v7
 
-    .line 8311
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v4    # "fout":Ljava/io/FileOutputStream;
     .restart local v3    # "fin":Ljava/io/FileInputStream;
@@ -3581,7 +3200,6 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_b
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 8312
     const/4 v7, 0x1
 
     move-object v4, v5
@@ -3590,25 +3208,21 @@
     .restart local v4    # "fout":Ljava/io/FileOutputStream;
     move-object v2, v3
 
-    .line 8322
     .end local v3    # "fin":Ljava/io/FileInputStream;
     .end local v6    # "read":I
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     :cond_3
     if-eqz v2, :cond_4
 
-    .line 8324
     :try_start_7
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_2
 
-    .line 8329
     :cond_4
     :goto_4
     if-eqz v4, :cond_1
 
-    .line 8331
     :try_start_8
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_8
@@ -3616,55 +3230,45 @@
 
     goto :goto_3
 
-    .line 8332
     :catch_1
     move-exception v1
 
-    .line 8333
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
 
-    .line 8325
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v1
 
-    .line 8326
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_4
 
-    .line 8325
     .local v1, "e":Ljava/lang/NullPointerException;
     :catch_3
     move-exception v1
 
-    .line 8326
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 8332
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_4
     move-exception v1
 
-    .line 8333
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
 
-    .line 8319
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_5
     move-exception v1
 
-    .line 8320
     .restart local v1    # "e":Ljava/lang/Exception;
     :goto_5
     :try_start_9
@@ -3672,21 +3276,17 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 8322
     if-eqz v2, :cond_5
 
-    .line 8324
     :try_start_a
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_7
 
-    .line 8329
     :cond_5
     :goto_6
     if-eqz v4, :cond_1
 
-    .line 8331
     :try_start_b
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_b
@@ -3694,25 +3294,20 @@
 
     goto :goto_3
 
-    .line 8332
     :catch_6
     move-exception v1
 
-    .line 8333
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
 
-    .line 8325
     :catch_7
     move-exception v1
 
-    .line 8326
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_6
 
-    .line 8322
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v10
@@ -3720,50 +3315,41 @@
     :goto_7
     if-eqz v2, :cond_6
 
-    .line 8324
     :try_start_c
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_8
 
-    .line 8329
     :cond_6
     :goto_8
     if-eqz v4, :cond_7
 
-    .line 8331
     :try_start_d
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
     :try_end_d
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_9
 
-    .line 8334
     :cond_7
     :goto_9
     throw v10
 
-    .line 8325
     :catch_8
     move-exception v1
 
-    .line 8326
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_8
 
-    .line 8332
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_9
     move-exception v1
 
-    .line 8333
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_9
 
-    .line 8322
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .restart local v3    # "fin":Ljava/io/FileInputStream;
@@ -3794,7 +3380,6 @@
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_7
 
-    .line 8319
     .end local v2    # "fin":Ljava/io/FileInputStream;
     .end local v6    # "read":I
     .restart local v3    # "fin":Ljava/io/FileInputStream;
@@ -3825,7 +3410,6 @@
     .restart local v2    # "fin":Ljava/io/FileInputStream;
     goto :goto_5
 
-    .line 8317
     .end local v6    # "read":I
     :catch_c
     move-exception v1
@@ -3849,10 +3433,8 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 8384
     const-string v3, ""
 
-    .line 8385
     .local v3, "result":Ljava/lang/String;
     const-string v5, "\\/"
 
@@ -3872,27 +3454,22 @@
 
     aget-object v4, v0, v1
 
-    .line 8386
     .local v4, "splited":Ljava/lang/String;
     move-object v3, v4
 
-    .line 8387
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    .line 8388
     invoke-virtual {v3}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 8385
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 8392
     .end local v4    # "splited":Ljava/lang/String;
     :cond_1
     return-object v3
@@ -3903,7 +3480,6 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 10334
     :try_start_0
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3917,7 +3493,6 @@
 
     move-result-object v4
 
-    .line 10336
     .local v4, "numberListSeparated":Ljava/lang/String;
     if-eqz v4, :cond_1
 
@@ -3927,14 +3502,12 @@
 
     if-nez v7, :cond_1
 
-    .line 10337
     const-string v7, ":"
 
     invoke-virtual {v4, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v3
 
-    .line 10338
     .local v3, "nlsTokens":[Ljava/lang/String;
     move-object v0, v3
 
@@ -3950,7 +3523,6 @@
 
     aget-object v5, v0, v1
 
-    .line 10339
     .local v5, "numberRecord":Ljava/lang/String;
     const-string v7, ","
 
@@ -3958,7 +3530,6 @@
 
     move-result-object v6
 
-    .line 10340
     .local v6, "numberRecordSeparated":[Ljava/lang/String;
     const/4 v7, 0x0
 
@@ -3972,7 +3543,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 10348
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -3983,7 +3553,6 @@
     :goto_1
     return-object v5
 
-    .line 10338
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
@@ -3996,7 +3565,6 @@
 
     goto :goto_0
 
-    .line 10345
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -4007,7 +3575,6 @@
     :catch_0
     move-exception v7
 
-    .line 10348
     :cond_1
     const/4 v5, 0x0
 
@@ -4019,14 +3586,12 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 7005
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
-    .line 7006
     .local v2, "pm":Landroid/content/pm/PackageManager;
     new-instance v1, Landroid/content/Intent;
 
@@ -4034,19 +3599,15 @@
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 7007
     .local v1, "intent":Landroid/content/Intent;
     const-string v3, "android.intent.category.LAUNCHER"
 
     invoke-virtual {v1, v3}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 7008
     invoke-virtual {v1, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 7009
     const-string v0, ""
 
-    .line 7011
     .local v0, "defaultActivity":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -4069,11 +3630,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7015
     :goto_0
     return-object v0
 
-    .line 7012
     :catch_0
     move-exception v3
 
@@ -4084,12 +3643,10 @@
     .locals 2
 
     .prologue
-    .line 293
     iget-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 294
     iget-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -4102,7 +3659,6 @@
 
     iput-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 296
     :cond_0
     iget-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -4116,7 +3672,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 9265
     iget-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4135,26 +3690,21 @@
 
     move-result-object v6
 
-    .line 9267
     .local v6, "cursor":Landroid/database/Cursor;
     const-wide/16 v10, -0x1
 
-    .line 9268
     .local v10, "maxId":J
     const/4 v7, -0x1
 
-    .line 9270
     .local v7, "indexId":I
     if-eqz v6, :cond_2
 
-    .line 9271
     const-string v0, "_id"
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v7
 
-    .line 9272
     :cond_0
     :goto_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
@@ -4163,28 +3713,23 @@
 
     if-eqz v0, :cond_1
 
-    .line 9273
     invoke-interface {v6, v7}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v8
 
-    .line 9274
     .local v8, "id":J
     cmp-long v0, v8, v10
 
     if-lez v0, :cond_0
 
-    .line 9275
     move-wide v10, v8
 
     goto :goto_0
 
-    .line 9278
     .end local v8    # "id":J
     :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 9281
     :cond_2
     return-wide v10
 .end method
@@ -4196,7 +3741,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 9285
     iget-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4215,26 +3759,21 @@
 
     move-result-object v8
 
-    .line 9287
     .local v8, "cursor":Landroid/database/Cursor;
     const/4 v9, -0x1
 
-    .line 9288
     .local v9, "maxWidgetId":I
     const/4 v7, -0x1
 
-    .line 9290
     .local v7, "appWidgetIdIndex":I
     if-eqz v8, :cond_2
 
-    .line 9291
     const-string v0, "appWidgetId"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v7
 
-    .line 9292
     :cond_0
     :goto_0
     invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
@@ -4243,26 +3782,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 9293
     invoke-interface {v8, v7}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v6
 
-    .line 9294
     .local v6, "appWidgetId":I
     if-le v6, v9, :cond_0
 
-    .line 9295
     move v9, v6
 
     goto :goto_0
 
-    .line 9298
     .end local v6    # "appWidgetId":I
     :cond_1
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 9301
     :cond_2
     return v9
 .end method
@@ -4272,10 +3806,8 @@
     .param p1, "screenString"    # Ljava/lang/String;
 
     .prologue
-    .line 10060
     const/4 v0, -0x1
 
-    .line 10061
     .local v0, "result":I
     const-string v2, "CDM_SCREEN_NUMBER"
 
@@ -4285,18 +3817,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 10062
     const-string v2, ":"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 10063
     .local v1, "tokens":[Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 10064
     const/4 v2, 0x1
 
     aget-object v2, v1, v2
@@ -4305,7 +3834,6 @@
 
     move-result v0
 
-    .line 10067
     .end local v1    # "tokens":[Ljava/lang/String;
     :cond_0
     return v0
@@ -4316,10 +3844,8 @@
     .param p1, "item"    # Ljava/lang/String;
 
     .prologue
-    .line 8847
     const/4 v0, 0x0
 
-    .line 8848
     .local v0, "itemId":I
     const-string v1, "Wifi"
 
@@ -4329,15 +3855,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 8849
     const/4 v0, 0x1
 
-    .line 8887
     :cond_0
     :goto_0
     return v0
 
-    .line 8850
     :cond_1
     const-string v1, "Location"
 
@@ -4347,12 +3870,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 8851
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 8852
     :cond_2
     const-string v1, "SilentMode"
 
@@ -4362,12 +3883,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 8853
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 8854
     :cond_3
     const-string v1, "RotationLock"
 
@@ -4385,13 +3904,11 @@
 
     if-eqz v1, :cond_5
 
-    .line 8855
     :cond_4
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 8856
     :cond_5
     const-string v1, "Bluetooth"
 
@@ -4401,12 +3918,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 8857
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 8858
     :cond_6
     const-string v1, "MobileData"
 
@@ -4416,12 +3931,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 8859
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 8860
     :cond_7
     const-string v1, "PowerSaving"
 
@@ -4431,12 +3944,10 @@
 
     if-eqz v1, :cond_8
 
-    .line 8861
     const/4 v0, 0x7
 
     goto :goto_0
 
-    .line 8862
     :cond_8
     const-string v1, "AirplaneMode"
 
@@ -4446,12 +3957,10 @@
 
     if-eqz v1, :cond_9
 
-    .line 8863
     const/16 v0, 0x8
 
     goto :goto_0
 
-    .line 8864
     :cond_9
     const-string v1, "DormantMode"
 
@@ -4461,12 +3970,10 @@
 
     if-eqz v1, :cond_a
 
-    .line 8865
     const/16 v0, 0x9
 
     goto :goto_0
 
-    .line 8866
     :cond_a
     const-string v1, "Flashlight"
 
@@ -4484,13 +3991,11 @@
 
     if-eqz v1, :cond_c
 
-    .line 8867
     :cond_b
     const/16 v0, 0xa
 
     goto :goto_0
 
-    .line 8868
     :cond_c
     const-string v1, "UltraPowerSaving"
 
@@ -4500,12 +4005,10 @@
 
     if-eqz v1, :cond_d
 
-    .line 8869
     const/16 v0, 0xb
 
     goto :goto_0
 
-    .line 8870
     :cond_d
     const-string v1, "WiFiHotspot"
 
@@ -4523,13 +4026,11 @@
 
     if-eqz v1, :cond_f
 
-    .line 8871
     :cond_e
     const/16 v0, 0xc
 
     goto/16 :goto_0
 
-    .line 8872
     :cond_f
     const-string v1, "SmartStay"
 
@@ -4539,12 +4040,10 @@
 
     if-eqz v1, :cond_10
 
-    .line 8873
     const/16 v0, 0xd
 
     goto/16 :goto_0
 
-    .line 8874
     :cond_10
     const-string v1, "PersonalMode"
 
@@ -4554,12 +4053,10 @@
 
     if-eqz v1, :cond_11
 
-    .line 8875
     const/16 v0, 0xe
 
     goto/16 :goto_0
 
-    .line 8876
     :cond_11
     const-string v1, "AllShareCast"
 
@@ -4569,12 +4066,10 @@
 
     if-eqz v1, :cond_12
 
-    .line 8877
     const/16 v0, 0xf
 
     goto/16 :goto_0
 
-    .line 8878
     :cond_12
     const-string v1, "Nfc"
 
@@ -4584,12 +4079,10 @@
 
     if-eqz v1, :cond_13
 
-    .line 8879
     const/16 v0, 0x10
 
     goto/16 :goto_0
 
-    .line 8880
     :cond_13
     const-string v1, "Sync"
 
@@ -4599,12 +4092,10 @@
 
     if-eqz v1, :cond_14
 
-    .line 8881
     const/16 v0, 0x11
 
     goto/16 :goto_0
 
-    .line 8882
     :cond_14
     const-string v1, "MultiWindow"
 
@@ -4614,12 +4105,10 @@
 
     if-eqz v1, :cond_15
 
-    .line 8883
     const/16 v0, 0x12
 
     goto/16 :goto_0
 
-    .line 8884
     :cond_15
     const-string v1, "SFinder"
 
@@ -4629,7 +4118,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 8885
     const/16 v0, 0x13
 
     goto/16 :goto_0
@@ -4640,183 +4128,136 @@
     .param p1, "item"    # I
 
     .prologue
-    .line 8771
     const-string v0, ""
 
-    .line 8772
     .local v0, "itemString":Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 8843
     :goto_0
     return-object v0
 
-    .line 8774
     :pswitch_0
     const-string v0, "Wifi"
 
-    .line 8775
     goto :goto_0
 
-    .line 8777
     :pswitch_1
     const-string v0, "Location"
 
-    .line 8778
     goto :goto_0
 
-    .line 8780
     :pswitch_2
     const-string v0, "SilentMode"
 
-    .line 8781
     goto :goto_0
 
-    .line 8783
     :pswitch_3
     iget-boolean v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v1, :cond_0
 
-    .line 8784
     const-string v0, "AutoRotate"
 
     goto :goto_0
 
-    .line 8786
     :cond_0
     const-string v0, "RotationLock"
 
-    .line 8788
     goto :goto_0
 
-    .line 8790
     :pswitch_4
     const-string v0, "Bluetooth"
 
-    .line 8791
     goto :goto_0
 
-    .line 8793
     :pswitch_5
     const-string v0, "MobileData"
 
-    .line 8794
     goto :goto_0
 
-    .line 8796
     :pswitch_6
     const-string v0, "PowerSaving"
 
-    .line 8797
     goto :goto_0
 
-    .line 8799
     :pswitch_7
     const-string v0, "AirplaneMode"
 
-    .line 8800
     goto :goto_0
 
-    .line 8802
     :pswitch_8
     const-string v0, "DormantMode"
 
-    .line 8803
     goto :goto_0
 
-    .line 8805
     :pswitch_9
     iget-boolean v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v1, :cond_1
 
-    .line 8806
     const-string v0, "TorchLight"
 
     goto :goto_0
 
-    .line 8808
     :cond_1
     const-string v0, "Flashlight"
 
-    .line 8810
     goto :goto_0
 
-    .line 8812
     :pswitch_a
     const-string v0, "UltraPowerSaving"
 
-    .line 8813
     goto :goto_0
 
-    .line 8815
     :pswitch_b
     iget-boolean v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v1, :cond_2
 
-    .line 8816
     const-string v0, "WiFiHotspot"
 
     goto :goto_0
 
-    .line 8818
     :cond_2
     const-string v0, "WifiHotspot"
 
-    .line 8820
     goto :goto_0
 
-    .line 8822
     :pswitch_c
     const-string v0, "SmartStay"
 
-    .line 8823
     goto :goto_0
 
-    .line 8825
     :pswitch_d
     const-string v0, "PersonalMode"
 
-    .line 8826
     goto :goto_0
 
-    .line 8828
     :pswitch_e
     const-string v0, "AllShareCast"
 
-    .line 8829
     goto :goto_0
 
-    .line 8831
     :pswitch_f
     const-string v0, "Nfc"
 
-    .line 8832
     goto :goto_0
 
-    .line 8834
     :pswitch_10
     const-string v0, "Sync"
 
-    .line 8835
     goto :goto_0
 
-    .line 8837
     :pswitch_11
     const-string v0, "MultiWindow"
 
-    .line 8838
     goto :goto_0
 
-    .line 8840
     :pswitch_12
     const-string v0, "SFinder"
 
     goto :goto_0
 
-    .line 8772
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4845,12 +4286,10 @@
     .locals 6
 
     .prologue
-    .line 4185
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 4186
     .local v2, "token":J
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -4862,13 +4301,11 @@
 
     check-cast v1, Landroid/app/StatusBarManager;
 
-    .line 4187
     .local v1, "statusBarManager":Landroid/app/StatusBarManager;
     invoke-virtual {v1}, Landroid/app/StatusBarManager;->getDisableFlags()I
 
     move-result v0
 
-    .line 4188
     .local v0, "flags":I
     const/high16 v4, 0x2000000
 
@@ -4876,20 +4313,16 @@
 
     invoke-virtual {v1, v4}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 4189
     const v4, -0x2000001
 
     and-int/2addr v4, v0
 
     invoke-virtual {v1, v4}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 4190
     invoke-virtual {v1, v0}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 4191
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4192
     return-void
 .end method
 
@@ -4897,20 +4330,17 @@
     .locals 5
 
     .prologue
-    .line 378
     :try_start_0
     sget-object v1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v1, :cond_0
 
-    .line 379
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.BOOT_COMPLETED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 381
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     new-instance v1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$1;
 
@@ -4918,7 +4348,6 @@
 
     sput-object v1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mBootReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 458
     iget-object v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     sget-object v2, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mBootReceiver:Landroid/content/BroadcastReceiver;
@@ -4931,13 +4360,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 464
     .end local v0    # "intentFilter":Landroid/content/IntentFilter;
     :cond_0
     :goto_0
     return-void
 
-    .line 461
     :catch_0
     move-exception v1
 
@@ -4948,33 +4375,28 @@
     .locals 5
 
     .prologue
-    .line 472
     :try_start_0
     sget-object v1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mKnoxCustomReceiver:Landroid/content/BroadcastReceiver;
 
     if-nez v1, :cond_0
 
-    .line 473
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.net.wifi.WIFI_STATE_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 474
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.hardware.usb.action.USB_STATE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 475
     new-instance v1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$2;
 
     invoke-direct {v1, p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$2;-><init>(Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;)V
 
     sput-object v1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mKnoxCustomReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 500
     iget-object v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     sget-object v2, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mKnoxCustomReceiver:Landroid/content/BroadcastReceiver;
@@ -4987,13 +4409,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 507
     .end local v0    # "intentFilter":Landroid/content/IntentFilter;
     :cond_0
     :goto_0
     return-void
 
-    .line 504
     :catch_0
     move-exception v1
 
@@ -5005,17 +4425,14 @@
     .param p1, "input"    # Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;
 
     .prologue
-    .line 5298
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 5300
     .local v2, "p":Landroid/os/Parcel;
     :try_start_0
     invoke-virtual {v2, p1}, Landroid/os/Parcel;->writeValue(Ljava/lang/Object;)V
 
-    .line 5301
     invoke-virtual {v2}, Landroid/os/Parcel;->marshall()[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -5023,7 +4440,6 @@
 
     move-result-object v0
 
-    .line 5307
     .local v0, "b":[B
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
@@ -5031,11 +4447,9 @@
     :goto_0
     return-object v0
 
-    .line 5303
     :catch_0
     move-exception v1
 
-    .line 5304
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v3, "serializeKnoxCustomStatusbarIconItem"
@@ -5048,10 +4462,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5305
     const/4 v0, 0x0
 
-    .line 5307
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
     goto :goto_0
@@ -5078,18 +4490,15 @@
     .end annotation
 
     .prologue
-    .line 2647
     .local p1, "inputList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;>;"
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v2
 
-    .line 2649
     .local v2, "p":Landroid/os/Parcel;
     :try_start_0
     invoke-virtual {v2, p1}, Landroid/os/Parcel;->writeTypedList(Ljava/util/List;)V
 
-    .line 2650
     invoke-virtual {v2}, Landroid/os/Parcel;->marshall()[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -5097,7 +4506,6 @@
 
     move-result-object v0
 
-    .line 2656
     .local v0, "b":[B
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
@@ -5105,11 +4513,9 @@
     :goto_0
     return-object v0
 
-    .line 2652
     :catch_0
     move-exception v1
 
-    .line 2653
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v3, "serializeObject"
@@ -5122,10 +4528,8 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2654
     const/4 v0, 0x0
 
-    .line 2656
     invoke-virtual {v2}, Landroid/os/Parcel;->recycle()V
 
     goto :goto_0
@@ -5147,10 +4551,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 863
     const/4 v2, 0x0
 
-    .line 864
     .local v2, "fileOutputStream":Ljava/io/FileOutputStream;
     const-string v5, "KnoxCustomManagerService"
 
@@ -5184,7 +4586,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 868
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
 
@@ -5197,7 +4598,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 874
     .end local v2    # "fileOutputStream":Ljava/io/FileOutputStream;
     .local v3, "fileOutputStream":Ljava/io/FileOutputStream;
     :try_start_1
@@ -5213,12 +4613,10 @@
 
     invoke-virtual {v3, v5}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 875
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 885
     const/4 v4, 0x1
 
     move-object v2, v3
@@ -5228,11 +4626,9 @@
     :goto_0
     return v4
 
-    .line 869
     :catch_0
     move-exception v0
 
-    .line 870
     .local v0, "e":Ljava/io/FileNotFoundException;
     :try_start_2
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
@@ -5241,17 +4637,14 @@
 
     goto :goto_0
 
-    .line 876
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 877
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 879
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -5259,17 +4652,14 @@
 
     goto :goto_0
 
-    .line 880
     :catch_2
     move-exception v1
 
-    .line 881
     .local v1, "err":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 876
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "err":Ljava/lang/Exception;
     .end local v2    # "fileOutputStream":Ljava/io/FileOutputStream;
@@ -5293,22 +4683,18 @@
 
     const/4 v6, 0x0
 
-    .line 5188
     const-string v7, "content://com.sec.android.daemonapp.ap.accuweather.provider/settings"
 
     invoke-static {v7}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v3
 
-    .line 5189
     .local v3, "uri":Landroid/net/Uri;
     const-string v1, "LOCKSCREEN_AND_S_VIEW_COVER"
 
-    .line 5190
     .local v1, "optionName":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 5192
     .local v2, "result":I
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -5316,17 +4702,14 @@
 
     move-result-object v0
 
-    .line 5193
     .local v0, "cp":Landroid/content/ContentResolver;
     if-eqz v0, :cond_0
 
-    .line 5195
     :try_start_0
     new-instance v4, Landroid/content/ContentValues;
 
     invoke-direct {v4}, Landroid/content/ContentValues;-><init>()V
 
-    .line 5196
     .local v4, "values":Landroid/content/ContentValues;
     const-string v8, "LOCKSCREEN_AND_S_VIEW_COVER"
 
@@ -5341,7 +4724,6 @@
 
     invoke-virtual {v4, v8, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 5197
     const/4 v7, 0x0
 
     const/4 v8, 0x0
@@ -5352,7 +4734,6 @@
 
     move-result v2
 
-    .line 5203
     .end local v4    # "values":Landroid/content/ContentValues;
     :cond_0
     :goto_1
@@ -5365,17 +4746,14 @@
     :cond_1
     move v7, v5
 
-    .line 5196
     goto :goto_0
 
     .end local v4    # "values":Landroid/content/ContentValues;
     :cond_2
     move v5, v6
 
-    .line 5203
     goto :goto_2
 
-    .line 5198
     :catch_0
     move-exception v7
 
@@ -5391,25 +4769,18 @@
 
     const/4 v0, 0x0
 
-    .line 8396
     invoke-virtual {p1, v0, v0}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 8397
     invoke-virtual {p1, v0, v0}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 8398
     invoke-virtual {p1, v0, v0}, Ljava/io/File;->setExecutable(ZZ)Z
 
-    .line 8400
     invoke-virtual {p1, v1, v1}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 8401
     invoke-virtual {p1, v1, v1}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 8402
     invoke-virtual {p1, v1, v1}, Ljava/io/File;->setExecutable(ZZ)Z
 
-    .line 8403
     return-void
 .end method
 
@@ -5422,22 +4793,16 @@
 
     const/4 v0, 0x0
 
-    .line 8406
     invoke-virtual {p1, v0, v0}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 8407
     invoke-virtual {p1, v0, v0}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 8408
     invoke-virtual {p1, v0, v0}, Ljava/io/File;->setExecutable(ZZ)Z
 
-    .line 8410
     invoke-virtual {p1, v1, v1}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 8411
     invoke-virtual {p1, v1, v0}, Ljava/io/File;->setExecutable(ZZ)Z
 
-    .line 8412
     return-void
 .end method
 
@@ -5450,22 +4815,16 @@
 
     const/4 v0, 0x0
 
-    .line 8415
     invoke-virtual {p1, v0, v0}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 8416
     invoke-virtual {p1, v0, v0}, Ljava/io/File;->setWritable(ZZ)Z
 
-    .line 8417
     invoke-virtual {p1, v0, v0}, Ljava/io/File;->setExecutable(ZZ)Z
 
-    .line 8419
     invoke-virtual {p1, v1, v0}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 8420
     invoke-virtual {p1, v1, v1}, Ljava/io/File;->setExecutable(ZZ)Z
 
-    .line 8421
     return-void
 .end method
 
@@ -5486,10 +4845,8 @@
     .local p1, "items":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;>;"
     const/4 v2, -0x1
 
-    .line 6434
     const/4 v0, 0x0
 
-    .line 6436
     .local v0, "dbBytes":[B
     if-eqz p1, :cond_0
 
@@ -5500,7 +4857,6 @@
 
     if-nez v3, :cond_1
 
-    .line 6437
     :cond_0
     new-instance v3, Ljava/util/ArrayList;
 
@@ -5510,7 +4866,6 @@
 
     move-result-object v0
 
-    .line 6444
     :goto_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -5526,11 +4881,9 @@
 
     if-nez v3, :cond_3
 
-    .line 6454
     :goto_1
     return v2
 
-    .line 6439
     :cond_1
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -5540,12 +4893,10 @@
 
     if-le v3, v4, :cond_2
 
-    .line 6440
     const/16 v2, -0x33
 
     goto :goto_1
 
-    .line 6442
     :cond_2
     new-instance v3, Ljava/util/ArrayList;
 
@@ -5559,11 +4910,9 @@
 
     goto :goto_0
 
-    .line 6450
     :catch_0
     move-exception v1
 
-    .line 6451
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -5575,7 +4924,6 @@
 
     goto :goto_1
 
-    .line 6454
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     const/4 v2, 0x0
@@ -5593,7 +4941,6 @@
 
     const/4 v1, -0x1
 
-    .line 6384
     :try_start_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -5616,21 +4963,17 @@
 
     if-nez v3, :cond_1
 
-    .line 6394
     :goto_1
     return v1
 
     :cond_0
     move v3, v2
 
-    .line 6384
     goto :goto_0
 
-    .line 6390
     :catch_0
     move-exception v0
 
-    .line 6391
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -5660,7 +5003,6 @@
     :cond_1
     move v1, v2
 
-    .line 6394
     goto :goto_1
 .end method
 
@@ -5668,7 +5010,6 @@
     .locals 4
 
     .prologue
-    .line 6041
     iget-boolean v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mKnoxCustomCurtainModeIsRunning:Z
 
     if-eqz v2, :cond_0
@@ -5678,7 +5019,6 @@
     :goto_0
     iput-boolean v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mKnoxCustomCurtainModeIsRunning:Z
 
-    .line 6042
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "mDNIe"
@@ -5689,7 +5029,6 @@
 
     check-cast v0, Lcom/samsung/android/mdnie/MdnieManager;
 
-    .line 6104
     .local v0, "mMdnie":Lcom/samsung/android/mdnie/MdnieManager;
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -5701,14 +5040,11 @@
 
     check-cast v1, Landroid/os/PowerManager;
 
-    .line 6105
     .local v1, "powerManager":Landroid/os/PowerManager;
     invoke-virtual {v1}, Landroid/os/PowerManager;->switchForceLcdBacklightOffState()V
 
-    .line 6107
     return-void
 
-    .line 6041
     .end local v0    # "mMdnie":Lcom/samsung/android/mdnie/MdnieManager;
     .end local v1    # "powerManager":Landroid/os/PowerManager;
     :cond_0
@@ -5725,10 +5061,8 @@
     .prologue
     const/high16 v10, 0x800000
 
-    .line 6585
     const/4 v2, -0x6
 
-    .line 6587
     .local v2, "result":I
     :try_start_0
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -5739,12 +5073,10 @@
 
     invoke-virtual {v5, p2, v8, v9, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 6588
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 6589
     .local v6, "token":J
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -5756,17 +5088,14 @@
 
     check-cast v4, Landroid/app/StatusBarManager;
 
-    .line 6590
     .local v4, "statusBarManager":Landroid/app/StatusBarManager;
     invoke-virtual {v4}, Landroid/app/StatusBarManager;->getDisableFlags()I
 
     move-result v1
 
-    .line 6591
     .local v1, "flags":I
     const/4 v3, 0x1
 
-    .line 6592
     .local v3, "status":Z
     const/4 v5, 0x3
 
@@ -5782,34 +5111,27 @@
 
     if-eqz v5, :cond_1
 
-    .line 6593
     :cond_0
     const/4 v3, 0x0
 
-    .line 6595
     :cond_1
     if-eqz v3, :cond_2
 
-    .line 6596
     or-int v5, v1, v10
 
     invoke-virtual {v4, v5}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 6597
     const v5, -0x800001
 
     and-int/2addr v5, v1
 
     invoke-virtual {v4, v5}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 6601
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6602
     const/4 v2, 0x0
 
-    .line 6608
     .end local v1    # "flags":I
     .end local v3    # "status":Z
     .end local v4    # "statusBarManager":Landroid/app/StatusBarManager;
@@ -5817,7 +5139,6 @@
     :goto_1
     return v2
 
-    .line 6599
     .restart local v1    # "flags":I
     .restart local v3    # "status":Z
     .restart local v4    # "statusBarManager":Landroid/app/StatusBarManager;
@@ -5831,7 +5152,6 @@
 
     goto :goto_0
 
-    .line 6603
     .end local v1    # "flags":I
     .end local v3    # "status":Z
     .end local v4    # "statusBarManager":Landroid/app/StatusBarManager;
@@ -5839,7 +5159,6 @@
     :catch_0
     move-exception v0
 
-    .line 6604
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -5863,7 +5182,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6605
     const/4 v2, -0x1
 
     goto :goto_1
@@ -5879,10 +5197,8 @@
 
     const v10, -0x100001
 
-    .line 6652
     const/4 v2, -0x6
 
-    .line 6654
     .local v2, "result":I
     :try_start_0
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -5893,12 +5209,10 @@
 
     invoke-virtual {v5, p2, v8, v9, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 6655
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 6656
     .local v6, "token":J
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -5910,17 +5224,14 @@
 
     check-cast v4, Landroid/app/StatusBarManager;
 
-    .line 6657
     .local v4, "statusBarManager":Landroid/app/StatusBarManager;
     invoke-virtual {v4}, Landroid/app/StatusBarManager;->getDisableFlags()I
 
     move-result v1
 
-    .line 6658
     .local v1, "flags":I
     const/4 v3, 0x1
 
-    .line 6659
     .local v3, "status":Z
     const/4 v5, 0x3
 
@@ -5936,37 +5247,29 @@
 
     if-eqz v5, :cond_1
 
-    .line 6660
     :cond_0
     const/4 v3, 0x0
 
-    .line 6662
     :cond_1
     if-eqz v3, :cond_2
 
-    .line 6663
     and-int v5, v1, v10
 
     invoke-virtual {v4, v5}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 6664
     or-int v5, v1, v11
 
     invoke-virtual {v4, v5}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 6665
     and-int v5, v1, v10
 
     invoke-virtual {v4, v5}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 6669
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6670
     const/4 v2, 0x0
 
-    .line 6676
     .end local v1    # "flags":I
     .end local v3    # "status":Z
     .end local v4    # "statusBarManager":Landroid/app/StatusBarManager;
@@ -5974,7 +5277,6 @@
     :goto_1
     return v2
 
-    .line 6667
     .restart local v1    # "flags":I
     .restart local v3    # "status":Z
     .restart local v4    # "statusBarManager":Landroid/app/StatusBarManager;
@@ -5988,7 +5290,6 @@
 
     goto :goto_0
 
-    .line 6671
     .end local v1    # "flags":I
     .end local v3    # "status":Z
     .end local v4    # "statusBarManager":Landroid/app/StatusBarManager;
@@ -5996,7 +5297,6 @@
     :catch_0
     move-exception v0
 
-    .line 6672
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -6020,7 +5320,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6673
     const/4 v2, -0x1
 
     goto :goto_1
@@ -6032,12 +5331,10 @@
     .param p2, "callingUid"    # I
 
     .prologue
-    .line 6499
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 6500
     .local v4, "token":J
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -6045,38 +5342,30 @@
 
     move-result-object v2
 
-    .line 6501
     .local v2, "kioskMode":Landroid/app/enterprise/kioskmode/KioskMode;
     invoke-virtual {v2}, Landroid/app/enterprise/kioskmode/KioskMode;->isStatusBarHidden()Z
 
     move-result v1
 
-    .line 6502
     .local v1, "isRestricted":Z
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6503
     if-eqz v1, :cond_0
 
-    .line 6504
     const-string v6, "KnoxCustomManagerService"
 
     const-string v7, "setStatusBarMode() - eSDK status bar already hidden"
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6505
     const/4 v3, -0x7
 
-    .line 6524
     :goto_0
     return v3
 
-    .line 6508
     :cond_0
     const/4 v3, -0x6
 
-    .line 6511
     .local v3, "result":I
     const/4 v6, 0x2
 
@@ -6090,7 +5379,6 @@
 
     if-ne p1, v6, :cond_2
 
-    .line 6512
     :cond_1
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -6101,35 +5389,28 @@
 
     invoke-virtual {v6, p2, v7, v8, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 6513
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 6514
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->updateStatusBarLocal()V
 
-    .line 6515
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6516
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 6518
     :cond_2
     const/16 v3, -0x2b
 
     goto :goto_0
 
-    .line 6520
     :catch_0
     move-exception v0
 
-    .line 6521
     .local v0, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -6153,7 +5434,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6522
     const/4 v3, -0x1
 
     goto :goto_0
@@ -6167,12 +5447,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 7035
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 7036
     .local v4, "token":J
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -6182,7 +5460,6 @@
 
     move-result-object v2
 
-    .line 7037
     .local v2, "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     invoke-virtual {v2, v1}, Landroid/app/enterprise/RestrictionPolicy;->isUsbMediaPlayerAvailable(Z)Z
 
@@ -6192,33 +5469,26 @@
 
     const/4 v1, 0x1
 
-    .line 7038
     .local v1, "isRestricted":Z
     :cond_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7039
     if-eqz v1, :cond_1
 
-    .line 7040
     const-string v6, "KnoxCustomManagerService"
 
     const-string v7, "setUsbMassStorageState() - eSDK USB media player disabled"
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7041
     const/4 v3, -0x7
 
-    .line 7053
     :goto_0
     return v3
 
-    .line 7044
     :cond_1
     const/4 v3, -0x6
 
-    .line 7047
     .local v3, "result":I
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -6231,16 +5501,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7048
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 7049
     :catch_0
     move-exception v0
 
-    .line 7050
     .local v0, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -6264,7 +5531,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7051
     const/4 v3, -0x1
 
     goto :goto_0
@@ -6277,10 +5543,8 @@
     .param p3, "callingUid"    # I
 
     .prologue
-    .line 7166
     const/4 v1, -0x6
 
-    .line 7168
     .local v1, "result":I
     invoke-direct {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->checkIpAddressString(Ljava/lang/String;)Z
 
@@ -6294,15 +5558,12 @@
 
     if-nez v2, :cond_1
 
-    .line 7169
     :cond_0
     const/16 v2, -0x24
 
-    .line 7179
     :goto_0
     return v2
 
-    .line 7172
     :cond_1
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -6313,7 +5574,6 @@
 
     invoke-virtual {v2, p3, v3, v4, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 7173
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "KNOX_CUSTOM"
@@ -6324,20 +5584,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7174
     const/4 v1, 0x0
 
     :goto_1
     move v2, v1
 
-    .line 7179
     goto :goto_0
 
-    .line 7175
     :catch_0
     move-exception v0
 
-    .line 7176
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -6361,7 +5617,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7177
     const/4 v1, -0x1
 
     goto :goto_1
@@ -6375,16 +5630,13 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 7100
     const/4 v1, -0x6
 
-    .line 7101
     .local v1, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 7103
     .local v2, "token":J
     const/16 v4, 0x14b
 
@@ -6406,7 +5658,6 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 7106
     const-string v4, "KnoxCustomManagerService"
 
     const-string v5, "setUsbNetState() failed - invalid IP addresses "
@@ -6415,17 +5666,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7107
     const/16 v1, -0x24
 
-    .line 7122
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7123
     return v1
 
-    .line 7109
     :cond_1
     :try_start_1
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -6446,19 +5693,16 @@
 
     if-eqz p1, :cond_2
 
-    .line 7110
     const-string v4, "KnoxCustomManagerService"
 
     const-string v5, "setUsbNetState() failed - USB debugging mode"
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7111
     const/16 v1, -0x2b
 
     goto :goto_0
 
-    .line 7113
     :cond_2
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -6468,23 +5712,19 @@
 
     invoke-virtual {v4, p2, v5, v6, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 7114
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v4}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->startStopUsbNet(Landroid/content/Context;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 7115
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 7118
     :catch_0
     move-exception v0
 
-    .line 7119
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -6508,7 +5748,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7120
     const/4 v1, -0x1
 
     goto :goto_0
@@ -6518,12 +5757,10 @@
     .locals 18
 
     .prologue
-    .line 708
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 709
     .local v12, "token":J
     move-object/from16 v0, p0
 
@@ -6537,7 +5774,6 @@
 
     check-cast v11, Landroid/app/StatusBarManager;
 
-    .line 713
     .local v11, "statusBarManager":Landroid/app/StatusBarManager;
     :try_start_0
     move-object/from16 v0, p0
@@ -6558,12 +5794,10 @@
 
     if-ne v14, v15, :cond_0
 
-    .line 715
     invoke-virtual {v11}, Landroid/app/StatusBarManager;->getDisableFlags()I
 
     move-result v4
 
-    .line 716
     .local v4, "disableFlags":I
     const v14, -0x100001
 
@@ -6571,14 +5805,12 @@
 
     invoke-virtual {v11, v14}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 717
     const/high16 v14, 0x100000
 
     or-int/2addr v14, v4
 
     invoke-virtual {v11, v14}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 719
     .end local v4    # "disableFlags":I
     :cond_0
     move-object/from16 v0, p0
@@ -6599,12 +5831,10 @@
 
     if-ne v14, v15, :cond_1
 
-    .line 721
     invoke-virtual {v11}, Landroid/app/StatusBarManager;->getDisableFlags()I
 
     move-result v4
 
-    .line 722
     .restart local v4    # "disableFlags":I
     const v14, -0x800001
 
@@ -6612,7 +5842,6 @@
 
     invoke-virtual {v11, v14}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 723
     const/high16 v14, 0x800000
 
     or-int/2addr v14, v4
@@ -6621,7 +5850,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 729
     .end local v4    # "disableFlags":I
     :cond_1
     :goto_0
@@ -6631,17 +5859,14 @@
 
     invoke-direct {v0, v14}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enableStatusBarNotificationsLocal(Z)I
 
-    .line 730
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->updateStatusBarLocal()V
 
-    .line 731
     new-instance v9, Landroid/content/Intent;
 
     const-string v14, "com.sec.android.multiwindow.SEALED_MODE"
 
     invoke-direct {v9, v14}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 732
     .local v9, "multiwindowIntent":Landroid/content/Intent;
     const-string v14, "closeTray"
 
@@ -6649,7 +5874,6 @@
 
     invoke-virtual {v9, v14, v15}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 733
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -6662,7 +5886,6 @@
 
     invoke-virtual {v14, v9, v15}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 736
     sget-object v2, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->edgePackages:[Ljava/lang/String;
 
     .local v2, "arr$":[Ljava/lang/String;
@@ -6677,7 +5900,6 @@
 
     aget-object v3, v2, v7
 
-    .line 737
     .local v3, "cb":Ljava/lang/String;
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -6693,7 +5915,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 739
     :try_start_1
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -6707,14 +5928,12 @@
     :try_end_1
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 736
     :cond_2
     :goto_2
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 725
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v3    # "cb":Ljava/lang/String;
     .end local v7    # "i$":I
@@ -6723,7 +5942,6 @@
     :catch_0
     move-exception v5
 
-    .line 726
     .local v5, "e":Ljava/lang/Exception;
     const-string v14, "KnoxCustomManagerService"
 
@@ -6749,7 +5967,6 @@
 
     goto :goto_0
 
-    .line 741
     .end local v5    # "e":Ljava/lang/Exception;
     .restart local v2    # "arr$":[Ljava/lang/String;
     .restart local v3    # "cb":Ljava/lang/String;
@@ -6759,7 +5976,6 @@
     :catch_1
     move-exception v5
 
-    .line 742
     .local v5, "e":Ljava/lang/SecurityException;
     const-string v14, "KnoxCustomManagerService"
 
@@ -6785,7 +6001,6 @@
 
     goto :goto_2
 
-    .line 748
     .end local v3    # "cb":Ljava/lang/String;
     .end local v5    # "e":Ljava/lang/SecurityException;
     :cond_3
@@ -6803,7 +6018,6 @@
 
     invoke-static/range {v14 .. v16}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 749
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -6818,7 +6032,6 @@
 
     invoke-static/range {v14 .. v16}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 751
     const/16 v14, 0x1b9
 
     move-object/from16 v0, p0
@@ -6827,16 +6040,13 @@
 
     move-result v6
 
-    .line 752
     .local v6, "fixed":I
     const/4 v14, 0x1
 
     if-ne v6, v14, :cond_4
 
-    .line 753
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->updateMultiWindowCenterBar()V
 
-    .line 755
     :cond_4
     const/4 v14, 0x0
 
@@ -6844,7 +6054,6 @@
 
     invoke-virtual {v0, v14}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbMassStorageState(Z)I
 
-    .line 757
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v14
@@ -6853,16 +6062,13 @@
 
     move-result-object v10
 
-    .line 758
     .local v10, "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     const/4 v14, 0x0
 
     invoke-virtual {v10, v14}, Landroid/app/enterprise/RestrictionPolicy;->allowSafeMode(Z)Z
 
-    .line 759
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 760
     return-void
 .end method
 
@@ -6871,10 +6077,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 626
     iput-object p1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mTempContext:Landroid/content/Context;
 
-    .line 627
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$3;
@@ -6885,7 +6089,6 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 644
     return-void
 .end method
 
@@ -6893,12 +6096,10 @@
     .locals 21
 
     .prologue
-    .line 766
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 767
     .local v16, "token":J
     move-object/from16 v0, p0
 
@@ -6914,7 +6115,6 @@
 
     check-cast v14, Landroid/app/StatusBarManager;
 
-    .line 771
     .local v14, "statusBarManager":Landroid/app/StatusBarManager;
     :try_start_0
     move-object/from16 v0, p0
@@ -6943,12 +6143,10 @@
 
     if-ne v15, v0, :cond_2
 
-    .line 773
     invoke-virtual {v14}, Landroid/app/StatusBarManager;->getDisableFlags()I
 
     move-result v6
 
-    .line 774
     .local v6, "disableFlags":I
     const v15, -0x100001
 
@@ -6956,21 +6154,18 @@
 
     invoke-virtual {v14, v15}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 775
     const/high16 v15, 0x100000
 
     or-int/2addr v15, v6
 
     invoke-virtual {v14, v15}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 776
     const v15, -0x100001
 
     and-int/2addr v15, v6
 
     invoke-virtual {v14, v15}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 784
     :goto_0
     move-object/from16 v0, p0
 
@@ -6998,19 +6193,16 @@
 
     if-ne v15, v0, :cond_0
 
-    .line 786
     invoke-virtual {v14}, Landroid/app/StatusBarManager;->getDisableFlags()I
 
     move-result v6
 
-    .line 787
     const/high16 v15, 0x800000
 
     or-int/2addr v15, v6
 
     invoke-virtual {v14, v15}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 788
     const v15, -0x800001
 
     and-int/2addr v15, v6
@@ -7019,7 +6211,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 794
     .end local v6    # "disableFlags":I
     :cond_0
     :goto_1
@@ -7031,17 +6222,14 @@
 
     invoke-direct {v0, v15}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enableStatusBarNotificationsLocal(Z)I
 
-    .line 795
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->updateStatusBarLocal()V
 
-    .line 796
     new-instance v12, Landroid/content/Intent;
 
     const-string v15, "com.sec.android.multiwindow.SEALED_MODE"
 
     invoke-direct {v12, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 797
     .local v12, "multiwindowIntent":Landroid/content/Intent;
     const-string v15, "closeTray"
 
@@ -7051,7 +6239,6 @@
 
     invoke-virtual {v12, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 798
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -7066,7 +6253,6 @@
 
     invoke-virtual {v15, v12, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 801
     sget-object v4, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->edgePackages:[Ljava/lang/String;
 
     .local v4, "arr$":[Ljava/lang/String;
@@ -7081,7 +6267,6 @@
 
     aget-object v5, v4, v9
 
-    .line 802
     .local v5, "cb":Ljava/lang/String;
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -7097,7 +6282,6 @@
 
     if-nez v15, :cond_1
 
-    .line 804
     :try_start_1
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -7111,14 +6295,12 @@
     :try_end_1
     .catch Ljava/lang/SecurityException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 801
     :cond_1
     :goto_3
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 779
     .end local v4    # "arr$":[Ljava/lang/String;
     .end local v5    # "cb":Ljava/lang/String;
     .end local v9    # "i$":I
@@ -7130,7 +6312,6 @@
 
     move-result v6
 
-    .line 780
     .restart local v6    # "disableFlags":I
     const v15, -0x100001
 
@@ -7138,26 +6319,22 @@
 
     invoke-virtual {v14, v15}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 781
     const/high16 v15, 0x100000
 
     or-int/2addr v15, v6
 
     invoke-virtual {v14, v15}, Landroid/app/StatusBarManager;->disable(I)V
 
-    .line 782
     invoke-virtual {v14, v6}, Landroid/app/StatusBarManager;->disable(I)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     goto/16 :goto_0
 
-    .line 790
     .end local v6    # "disableFlags":I
     :catch_0
     move-exception v7
 
-    .line 791
     .local v7, "e":Ljava/lang/Exception;
     const-string v15, "KnoxCustomManagerService"
 
@@ -7187,7 +6364,6 @@
 
     goto/16 :goto_1
 
-    .line 806
     .end local v7    # "e":Ljava/lang/Exception;
     .restart local v4    # "arr$":[Ljava/lang/String;
     .restart local v5    # "cb":Ljava/lang/String;
@@ -7197,7 +6373,6 @@
     :catch_1
     move-exception v7
 
-    .line 807
     .local v7, "e":Ljava/lang/SecurityException;
     const-string v15, "KnoxCustomManagerService"
 
@@ -7227,7 +6402,6 @@
 
     goto :goto_3
 
-    .line 813
     .end local v5    # "cb":Ljava/lang/String;
     .end local v7    # "e":Ljava/lang/SecurityException;
     :cond_3
@@ -7238,7 +6412,6 @@
 
     invoke-direct {v10, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 814
     .local v10, "intent":Landroid/content/Intent;
     const-string v15, "com.samsung.android.app.cocktailbarservice"
 
@@ -7248,7 +6421,6 @@
 
     invoke-virtual {v10, v15, v0}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 815
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -7257,7 +6429,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 821
     .end local v10    # "intent":Landroid/content/Intent;
     :goto_4
     move-object/from16 v0, p0
@@ -7278,7 +6449,6 @@
 
     invoke-static {v15, v0, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 822
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -7297,7 +6467,6 @@
 
     invoke-static {v15, v0, v1}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 824
     const/16 v15, 0x1b9
 
     move-object/from16 v0, p0
@@ -7306,16 +6475,13 @@
 
     move-result v8
 
-    .line 825
     .local v8, "fixed":I
     const/4 v15, 0x1
 
     if-ne v8, v15, :cond_4
 
-    .line 826
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->updateMultiWindowCenterBar()V
 
-    .line 828
     :cond_4
     const/4 v15, 0x1
 
@@ -7323,7 +6489,6 @@
 
     invoke-virtual {v0, v15}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbMassStorageState(Z)I
 
-    .line 830
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v15
@@ -7332,25 +6497,20 @@
 
     move-result-object v13
 
-    .line 831
     .local v13, "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     const/4 v15, 0x1
 
     invoke-virtual {v13, v15}, Landroid/app/enterprise/RestrictionPolicy;->allowSafeMode(Z)Z
 
-    .line 832
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 833
     return-void
 
-    .line 817
     .end local v8    # "fixed":I
     .end local v13    # "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     :catch_2
     move-exception v7
 
-    .line 818
     .local v7, "e":Ljava/lang/Exception;
     const-string v15, "KnoxCustomManagerService"
 
@@ -7370,35 +6530,28 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 9305
     iget-object v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mHandler:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;
 
     invoke-virtual {v1, v2}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;->removeMessages(I)V
 
-    .line 9306
     new-instance v0, Landroid/os/Message;
 
     invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    .line 9307
     .local v0, "updateHomeScreenMessage":Landroid/os/Message;
     iput v2, v0, Landroid/os/Message;->what:I
 
-    .line 9308
     if-nez p1, :cond_0
 
-    .line 9309
     iget-object v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mHandler:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;
 
     const-wide/16 v2, 0x190
 
     invoke-virtual {v1, v0, v2, v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 9314
     :goto_0
     return-void
 
-    .line 9311
     :cond_0
     iget-object v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mHandler:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;
 
@@ -7413,14 +6566,12 @@
     .locals 4
 
     .prologue
-    .line 649
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.sec.android.multiwindow.SEALED_MODE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 650
     .local v0, "multiwindowUpdateIntent":Landroid/content/Intent;
     const-string v1, "updateCenterBar"
 
@@ -7428,7 +6579,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 651
     iget-object v1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -7439,7 +6589,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 652
     return-void
 .end method
 
@@ -7448,16 +6597,13 @@
     .param p1, "items"    # Ljava/lang/String;
 
     .prologue
-    .line 8607
     const/4 v11, 0x0
 
-    .line 8608
     .local v11, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 8610
     .local v14, "token":J
     :try_start_0
     new-instance v7, Ljava/util/LinkedList;
@@ -7480,7 +6626,6 @@
 
     invoke-direct {v7, v0}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    .line 8613
     .local v7, "newItemList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     move-object/from16 v0, p0
 
@@ -7490,7 +6635,6 @@
 
     if-eqz v17, :cond_4
 
-    .line 8614
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -7507,11 +6651,9 @@
 
     move-result-object v10
 
-    .line 8615
     .local v10, "qsList":Ljava/lang/String;
     if-eqz v10, :cond_3
 
-    .line 8616
     new-instance v9, Ljava/util/LinkedList;
 
     const-string v17, ";"
@@ -7530,11 +6672,9 @@
 
     invoke-direct {v9, v0}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    .line 8617
     .local v9, "originalItemsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .line 8618
     .local v2, "activeItems":I
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -7542,7 +6682,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 8620
     .local v8, "newList":Ljava/lang/StringBuilder;
     :try_start_1
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -7564,7 +6703,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 8621
     .local v6, "itemString":Ljava/lang/String;
     invoke-interface {v9, v6}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -7572,7 +6710,6 @@
 
     if-eqz v17, :cond_0
 
-    .line 8623
     invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v17
@@ -7583,22 +6720,18 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 8624
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 8627
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v6    # "itemString":Ljava/lang/String;
     :catch_0
     move-exception v4
 
-    .line 8629
     .local v4, "e1":Ljava/lang/Exception;
     const/16 v17, -0x32
 
-    .line 8684
     .end local v2    # "activeItems":I
     .end local v4    # "e1":Ljava/lang/Exception;
     .end local v7    # "newItemList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -7608,7 +6741,6 @@
     :goto_1
     return v17
 
-    .line 8632
     .restart local v2    # "activeItems":I
     .restart local v5    # "i$":Ljava/util/Iterator;
     .restart local v7    # "newItemList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -7621,7 +6753,6 @@
 
     move-result-object v16
 
-    .line 8633
     .local v16, "unsupportingitems":Ljava/lang/String;
     new-instance v13, Ljava/util/LinkedList;
 
@@ -7639,7 +6770,6 @@
 
     invoke-direct {v13, v0}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    .line 8634
     .local v13, "unsupportingList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -7658,7 +6788,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 8635
     .restart local v6    # "itemString":Ljava/lang/String;
     invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7668,13 +6797,10 @@
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8636
     add-int/lit8 v2, v2, 0x1
 
-    .line 8637
     goto :goto_2
 
-    .line 8639
     .end local v6    # "itemString":Ljava/lang/String;
     :cond_2
     move-object/from16 v0, p0
@@ -7695,7 +6821,6 @@
 
     invoke-static/range {v17 .. v19}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 8640
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -7714,7 +6839,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8677
     .end local v2    # "activeItems":I
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v8    # "newList":Ljava/lang/StringBuilder;
@@ -7727,10 +6851,8 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 8678
     const/4 v11, 0x0
 
-    .line 8683
     .end local v7    # "newItemList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v10    # "qsList":Ljava/lang/String;
     :goto_4
@@ -7738,10 +6860,8 @@
 
     move/from16 v17, v11
 
-    .line 8684
     goto :goto_1
 
-    .line 8643
     .restart local v7    # "newItemList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_4
     :try_start_3
@@ -7761,14 +6881,11 @@
 
     move-result-object v10
 
-    .line 8644
     .restart local v10    # "qsList":Ljava/lang/String;
     if-eqz v10, :cond_3
 
-    .line 8645
     const/4 v2, 0x0
 
-    .line 8646
     .restart local v2    # "activeItems":I
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -7776,7 +6893,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 8648
     .restart local v8    # "newList":Ljava/lang/StringBuilder;
     :try_start_4
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -7797,7 +6913,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 8650
     .restart local v6    # "itemString":Ljava/lang/String;
     invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7809,25 +6924,20 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
 
-    .line 8651
     add-int/lit8 v2, v2, 0x1
 
-    .line 8652
     goto :goto_5
 
-    .line 8653
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v6    # "itemString":Ljava/lang/String;
     :catch_1
     move-exception v4
 
-    .line 8654
     .restart local v4    # "e1":Ljava/lang/Exception;
     const/16 v17, -0x32
 
     goto/16 :goto_1
 
-    .line 8657
     .end local v4    # "e1":Ljava/lang/Exception;
     .restart local v5    # "i$":Ljava/util/Iterator;
     :cond_5
@@ -7836,7 +6946,6 @@
 
     move-result-object v16
 
-    .line 8658
     .restart local v16    # "unsupportingitems":Ljava/lang/String;
     new-instance v13, Ljava/util/LinkedList;
 
@@ -7854,7 +6963,6 @@
 
     invoke-direct {v13, v0}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    .line 8659
     .restart local v13    # "unsupportingList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -7873,7 +6981,6 @@
 
     check-cast v6, Ljava/lang/String;
 
-    .line 8660
     .restart local v6    # "itemString":Ljava/lang/String;
     invoke-virtual {v8, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -7883,13 +6990,10 @@
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8661
     add-int/lit8 v2, v2, 0x1
 
-    .line 8662
     goto :goto_6
 
-    .line 8664
     .end local v6    # "itemString":Ljava/lang/String;
     :cond_6
     const-string v17, "2016B"
@@ -7906,7 +7010,6 @@
 
     if-eqz v17, :cond_7
 
-    .line 8665
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -7925,7 +7028,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8670
     :goto_7
     move-object/from16 v0, p0
 
@@ -7945,7 +7047,6 @@
 
     invoke-static/range {v17 .. v19}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 8671
     new-instance v12, Landroid/content/Intent;
 
     const-string v17, "samsung.intent.action.knoxcustom.SET_QUICK_PANEL_ITEMS"
@@ -7954,7 +7055,6 @@
 
     invoke-direct {v12, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 8672
     .local v12, "systemIntent":Landroid/content/Intent;
     const-string v17, "items"
 
@@ -7968,14 +7068,12 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 8673
     const-string v17, "active"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v12, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 8674
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -7998,7 +7096,6 @@
 
     goto/16 :goto_3
 
-    .line 8679
     .end local v2    # "activeItems":I
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v7    # "newItemList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -8010,7 +7107,6 @@
     :catch_2
     move-exception v3
 
-    .line 8680
     .local v3, "e":Ljava/lang/Exception;
     const-string v17, "KnoxCustomManagerService"
 
@@ -8036,12 +7132,10 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8681
     const/4 v11, -0x1
 
     goto/16 :goto_4
 
-    .line 8667
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v2    # "activeItems":I
     .restart local v5    # "i$":Ljava/util/Iterator;
@@ -8079,25 +7173,20 @@
     .locals 5
 
     .prologue
-    .line 6529
     const/4 v1, 0x0
 
-    .line 6530
     .local v1, "policyVal":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getStatusBarMode()I
 
     move-result v0
 
-    .line 6531
     .local v0, "mode":I
     const/4 v2, 0x3
 
     if-ne v0, v2, :cond_0
 
-    .line 6532
     const-string v1, "immersive.full=apps,*"
 
-    .line 6534
     :cond_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -8111,12 +7200,10 @@
 
     invoke-static {v2, v3, v1, v4}, Landroid/provider/Settings$Global;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 6538
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/android/server/policy/PolicyControl;->reloadFromSetting(Landroid/content/Context;)V
 
-    .line 6539
     return-void
 .end method
 
@@ -8133,10 +7220,8 @@
     .param p10, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 9319
     const/4 v15, -0x1
 
-    .line 9321
     .local v15, "result":I
     move-object/from16 v0, p0
 
@@ -8160,11 +7245,9 @@
 
     move-result-object v9
 
-    .line 9322
     .local v9, "c":Landroid/database/Cursor;
     if-eqz v9, :cond_3
 
-    .line 9324
     :try_start_0
     const-string v2, "appWidgetId"
 
@@ -8172,7 +7255,6 @@
 
     move-result v8
 
-    .line 9325
     .local v8, "appWidgetIdIndex":I
     const-string v2, "_id"
 
@@ -8180,11 +7262,9 @@
 
     move-result v14
 
-    .line 9326
     .local v14, "idIndex":I
     const/4 v11, 0x0
 
-    .line 9327
     .local v11, "finished":Z
     :cond_0
     :goto_0
@@ -8199,19 +7279,16 @@
 
     if-eqz v2, :cond_4
 
-    .line 9329
     :try_start_1
     invoke-interface {v9, v14}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v12
 
-    .line 9330
     .local v12, "idFromDb":J
     invoke-interface {v9, v8}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v17
 
-    .line 9332
     .local v17, "widgetIdFromDb":I
     move/from16 v0, v17
 
@@ -8219,12 +7296,10 @@
 
     if-le v0, v1, :cond_0
 
-    .line 9334
     new-instance v16, Landroid/content/ContentValues;
 
     invoke-direct/range {v16 .. v16}, Landroid/content/ContentValues;-><init>()V
 
-    .line 9335
     .local v16, "updateValues":Landroid/content/ContentValues;
     const-wide/16 v2, 0xc8
 
@@ -8232,17 +7307,14 @@
 
     if-gez v2, :cond_2
 
-    .line 9336
     const-wide/16 v2, 0xc8
 
     cmp-long v2, p2, v2
 
     if-gez v2, :cond_1
 
-    .line 9337
     const-wide/16 p2, 0xc8
 
-    .line 9340
     :cond_1
     const-string v2, "_id"
 
@@ -8258,7 +7330,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 9342
     :cond_2
     const-string v2, "cellX"
 
@@ -8270,7 +7341,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9343
     const-string v2, "cellY"
 
     invoke-static/range {p5 .. p5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -8281,7 +7351,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9344
     const-string v2, "screen"
 
     invoke-static/range {p6 .. p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -8292,7 +7361,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9345
     const-string v2, "spanX"
 
     invoke-static/range {p7 .. p7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -8303,7 +7371,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9346
     const-string v2, "spanY"
 
     invoke-static/range {p8 .. p8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -8314,10 +7381,8 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9347
     const/4 v11, 0x1
 
-    .line 9348
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -8352,7 +7417,6 @@
 
     invoke-virtual {v2, v0, v1, v3, v4}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 9349
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -8367,7 +7431,6 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 9350
     move-object/from16 v0, p0
 
     move/from16 v1, p9
@@ -8377,19 +7440,16 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 9351
     const/4 v15, 0x0
 
     goto/16 :goto_0
 
-    .line 9353
     .end local v12    # "idFromDb":J
     .end local v16    # "updateValues":Landroid/content/ContentValues;
     .end local v17    # "widgetIdFromDb":I
     :catch_0
     move-exception v10
 
-    .line 9354
     .local v10, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v2, "KnoxCustomManagerService"
@@ -8403,7 +7463,6 @@
 
     goto/16 :goto_0
 
-    .line 9357
     .end local v8    # "appWidgetIdIndex":I
     .end local v10    # "e":Ljava/lang/Exception;
     .end local v11    # "finished":Z
@@ -8411,7 +7470,6 @@
     :catch_1
     move-exception v10
 
-    .line 9358
     .restart local v10    # "e":Ljava/lang/Exception;
     :try_start_3
     const-string v2, "KnoxCustomManagerService"
@@ -8438,16 +7496,13 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 9360
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 9363
     .end local v10    # "e":Ljava/lang/Exception;
     :cond_3
     :goto_1
     return v15
 
-    .line 9360
     .restart local v8    # "appWidgetIdIndex":I
     .restart local v11    # "finished":Z
     .restart local v14    # "idIndex":I
@@ -8473,14 +7528,11 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 8424
     const/4 v4, 0x0
 
-    .line 8425
     .local v4, "result":Z
     const/4 v0, 0x0
 
-    .line 8427
     .local v0, "bwShutdown":Ljava/io/BufferedWriter;
     :try_start_0
     new-instance v3, Ljava/io/FileWriter;
@@ -8493,7 +7545,6 @@
 
     invoke-direct {v3, v5, v6}, Ljava/io/FileWriter;-><init>(Ljava/io/File;Z)V
 
-    .line 8428
     .local v3, "fwShutdown":Ljava/io/FileWriter;
     new-instance v1, Ljava/io/BufferedWriter;
 
@@ -8502,7 +7553,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8429
     .end local v0    # "bwShutdown":Ljava/io/BufferedWriter;
     .local v1, "bwShutdown":Ljava/io/BufferedWriter;
     :try_start_1
@@ -8535,13 +7585,10 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 8430
     const/4 v4, 0x1
 
-    .line 8434
     if-eqz v1, :cond_2
 
-    .line 8436
     :try_start_2
     invoke-virtual {v1}, Ljava/io/BufferedWriter;->close()V
     :try_end_2
@@ -8549,7 +7596,6 @@
 
     move-object v0, v1
 
-    .line 8442
     .end local v1    # "bwShutdown":Ljava/io/BufferedWriter;
     .end local v3    # "fwShutdown":Ljava/io/FileWriter;
     .restart local v0    # "bwShutdown":Ljava/io/BufferedWriter;
@@ -8557,31 +7603,26 @@
     :goto_0
     return v4
 
-    .line 8437
     .end local v0    # "bwShutdown":Ljava/io/BufferedWriter;
     .restart local v1    # "bwShutdown":Ljava/io/BufferedWriter;
     .restart local v3    # "fwShutdown":Ljava/io/FileWriter;
     :catch_0
     move-exception v2
 
-    .line 8438
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v0, v1
 
-    .line 8439
     .end local v1    # "bwShutdown":Ljava/io/BufferedWriter;
     .restart local v0    # "bwShutdown":Ljava/io/BufferedWriter;
     goto :goto_0
 
-    .line 8431
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v3    # "fwShutdown":Ljava/io/FileWriter;
     :catch_1
     move-exception v2
 
-    .line 8432
     .local v2, "e":Ljava/io/IOException;
     :goto_1
     :try_start_3
@@ -8593,10 +7634,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 8434
     if-eqz v0, :cond_0
 
-    .line 8436
     :try_start_4
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
     :try_end_4
@@ -8604,17 +7643,14 @@
 
     goto :goto_0
 
-    .line 8437
     :catch_2
     move-exception v2
 
-    .line 8438
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 8434
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v5
@@ -8622,28 +7658,23 @@
     :goto_2
     if-eqz v0, :cond_1
 
-    .line 8436
     :try_start_5
     invoke-virtual {v0}, Ljava/io/BufferedWriter;->close()V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 8439
     :cond_1
     :goto_3
     throw v5
 
-    .line 8437
     :catch_3
     move-exception v2
 
-    .line 8438
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_3
 
-    .line 8434
     .end local v0    # "bwShutdown":Ljava/io/BufferedWriter;
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v1    # "bwShutdown":Ljava/io/BufferedWriter;
@@ -8657,7 +7688,6 @@
     .restart local v0    # "bwShutdown":Ljava/io/BufferedWriter;
     goto :goto_2
 
-    .line 8431
     .end local v0    # "bwShutdown":Ljava/io/BufferedWriter;
     .restart local v1    # "bwShutdown":Ljava/io/BufferedWriter;
     :catch_4
@@ -8688,7 +7718,6 @@
     .param p3, "answerMode"    # I
 
     .prologue
-    .line 10141
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -8707,7 +7736,6 @@
 
     if-nez v17, :cond_0
 
-    .line 10142
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -8722,7 +7750,6 @@
 
     check-cast v5, Landroid/net/ConnectivityManager;
 
-    .line 10143
     .local v5, "cm":Landroid/net/ConnectivityManager;
     const/16 v17, 0x0
 
@@ -8734,15 +7761,12 @@
 
     if-nez v17, :cond_0
 
-    .line 10144
     const/16 v16, -0x6
 
-    .line 10198
     .end local v5    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v16
 
-    .line 10148
     :cond_0
     if-eqz p1, :cond_1
 
@@ -8752,7 +7776,6 @@
 
     if-eqz v17, :cond_2
 
-    .line 10149
     :cond_1
     const-string v17, "KnoxCustomManagerService"
 
@@ -8760,12 +7783,10 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10150
     const/16 v16, -0x32
 
     goto :goto_0
 
-    .line 10152
     :cond_2
     sget-object v17, Landroid/util/Patterns;->PHONE:Ljava/util/regex/Pattern;
 
@@ -8783,7 +7804,6 @@
 
     if-nez v17, :cond_3
 
-    .line 10153
     const-string v17, "KnoxCustomManagerService"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -8810,12 +7830,10 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10154
     const/16 v16, -0x32
 
     goto :goto_0
 
-    .line 10156
     :cond_3
     if-ltz p2, :cond_4
 
@@ -8827,7 +7845,6 @@
 
     if-le v0, v1, :cond_5
 
-    .line 10157
     :cond_4
     const-string v17, "KnoxCustomManagerService"
 
@@ -8855,12 +7872,10 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10158
     const/16 v16, -0x32
 
     goto :goto_0
 
-    .line 10160
     :cond_5
     if-eqz p3, :cond_6
 
@@ -8872,7 +7887,6 @@
 
     if-eq v0, v1, :cond_6
 
-    .line 10162
     const-string v17, "KnoxCustomManagerService"
 
     new-instance v18, Ljava/lang/StringBuilder;
@@ -8899,22 +7913,18 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10163
     const/16 v16, -0x32
 
     goto/16 :goto_0
 
-    .line 10166
     :cond_6
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v4
 
-    .line 10167
     .local v4, "callingUid":I
     const/16 v16, -0x6
 
-    .line 10169
     .local v16, "result":I
     :try_start_0
     new-instance v17, Ljava/lang/StringBuilder;
@@ -8961,7 +7971,6 @@
 
     move-result-object v11
 
-    .line 10170
     .local v11, "newNumberRecord":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -8979,15 +7988,12 @@
 
     move-result-object v13
 
-    .line 10172
     .local v13, "numberListSeparated":Ljava/lang/String;
     const-string v10, ""
 
-    .line 10173
     .local v10, "newNumberListSeparated":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 10174
     .local v7, "found":Z
     if-eqz v13, :cond_8
 
@@ -8997,7 +8003,6 @@
 
     if-nez v17, :cond_8
 
-    .line 10175
     const-string v17, ":"
 
     move-object/from16 v0, v17
@@ -9006,7 +8011,6 @@
 
     move-result-object v12
 
-    .line 10176
     .local v12, "nlsTokens":[Ljava/lang/String;
     move-object v3, v12
 
@@ -9022,7 +8026,6 @@
 
     aget-object v14, v3, v8
 
-    .line 10177
     .local v14, "numberRecord":Ljava/lang/String;
     const-string v17, ","
 
@@ -9032,7 +8035,6 @@
 
     move-result-object v15
 
-    .line 10178
     .local v15, "numberRecordSeparated":[Ljava/lang/String;
     const/16 v17, 0x0
 
@@ -9050,10 +8052,8 @@
 
     if-eqz v17, :cond_7
 
-    .line 10179
     const/4 v7, 0x1
 
-    .line 10180
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -9080,13 +8080,11 @@
 
     move-result-object v10
 
-    .line 10176
     :goto_2
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_1
 
-    .line 10182
     :cond_7
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -9116,7 +8114,6 @@
 
     goto :goto_2
 
-    .line 10186
     .end local v3    # "arr$":[Ljava/lang/String;
     .end local v8    # "i$":I
     .end local v9    # "len$":I
@@ -9126,7 +8123,6 @@
     :cond_8
     if-nez v7, :cond_9
 
-    .line 10187
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -9153,7 +8149,6 @@
 
     move-result-object v10
 
-    .line 10189
     :cond_9
     const/16 v17, 0x0
 
@@ -9171,7 +8166,6 @@
 
     move-result-object v10
 
-    .line 10191
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -9192,12 +8186,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10193
     const/16 v16, 0x0
 
     goto/16 :goto_0
 
-    .line 10194
     .end local v7    # "found":Z
     .end local v10    # "newNumberListSeparated":Ljava/lang/String;
     .end local v11    # "newNumberRecord":Ljava/lang/String;
@@ -9205,7 +8197,6 @@
     :catch_0
     move-exception v6
 
-    .line 10195
     .local v6, "e":Ljava/lang/Exception;
     const-string v17, "KnoxCustomManagerService"
 
@@ -9231,7 +8222,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10196
     const/16 v16, -0x1
 
     goto/16 :goto_0
@@ -9250,17 +8240,14 @@
     .end annotation
 
     .prologue
-    .line 6842
     .local p1, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v7
 
-    .line 6843
     .local v7, "callingUid":I
     const/4 v14, -0x1
 
-    .line 6847
     .local v14, "result":I
     :try_start_0
     const-string v1, "com.sec.android.emergencymode.EmergencyManager"
@@ -9269,7 +8256,6 @@
 
     move-result-object v11
 
-    .line 6848
     .local v11, "em":Ljava/lang/Class;
     const-string v3, "supportUltraPowerSavingMode"
 
@@ -9281,7 +8267,6 @@
 
     move-result-object v15
 
-    .line 6849
     .local v15, "supported":Ljava/lang/reflect/Method;
     const/4 v1, 0x0
 
@@ -9303,26 +8288,21 @@
 
     if-nez v1, :cond_0
 
-    .line 6850
     const/4 v1, -0x6
 
-    .line 6897
     .end local v11    # "em":Ljava/lang/Class;
     .end local v15    # "supported":Ljava/lang/reflect/Method;
     :goto_0
     return v1
 
-    .line 6852
     :catch_0
     move-exception v10
 
-    .line 6853
     .local v10, "e":Ljava/lang/Exception;
     const/4 v1, -0x6
 
     goto :goto_0
 
-    .line 6856
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v11    # "em":Ljava/lang/Class;
     .restart local v15    # "supported":Ljava/lang/reflect/Method;
@@ -9335,13 +8315,11 @@
 
     if-eqz v1, :cond_2
 
-    .line 6858
     :cond_1
     const/16 v1, -0x28
 
     goto :goto_0
 
-    .line 6862
     :cond_2
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -9355,14 +8333,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 6863
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v13
 
     check-cast v13, Ljava/lang/String;
 
-    .line 6864
     .local v13, "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -9372,12 +8348,10 @@
 
     if-nez v1, :cond_3
 
-    .line 6865
     const/16 v1, -0x32
 
     goto :goto_0
 
-    .line 6871
     .end local v13    # "packageName":Ljava/lang/String;
     :cond_4
     :try_start_1
@@ -9387,7 +8361,6 @@
 
     move-result-object v2
 
-    .line 6872
     .local v2, "emergencyUri":Landroid/net/Uri;
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -9401,14 +8374,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 6873
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v13
 
     check-cast v13, Ljava/lang/String;
 
-    .line 6874
     .restart local v13    # "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -9416,7 +8387,6 @@
 
     move-result-object v8
 
-    .line 6875
     .local v8, "className":Ljava/lang/String;
     if-eqz v8, :cond_5
 
@@ -9426,7 +8396,6 @@
 
     if-lez v1, :cond_5
 
-    .line 6876
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -9465,14 +8434,11 @@
 
     move-result-object v9
 
-    .line 6877
     .local v9, "cursor":Landroid/database/Cursor;
     if-eqz v9, :cond_5
 
-    .line 6878
     invoke-interface {v9}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6879
     const/4 v1, 0x0
 
     invoke-interface {v9, v1}, Landroid/database/Cursor;->getInt(I)I
@@ -9481,12 +8447,10 @@
 
     if-nez v1, :cond_6
 
-    .line 6880
     new-instance v16, Landroid/content/ContentValues;
 
     invoke-direct/range {v16 .. v16}, Landroid/content/ContentValues;-><init>()V
 
-    .line 6881
     .local v16, "values":Landroid/content/ContentValues;
     const-string v1, "package"
 
@@ -9494,14 +8458,12 @@
 
     invoke-virtual {v0, v1, v13}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6882
     const-string v1, "class"
 
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v1, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6883
     const-string v1, "permission"
 
     const-string v3, "0000"
@@ -9510,7 +8472,6 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6884
     const-string v1, "mode"
 
     const/4 v3, 0x1
@@ -9523,7 +8484,6 @@
 
     invoke-virtual {v0, v1, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 6885
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -9536,7 +8496,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 6887
     .end local v16    # "values":Landroid/content/ContentValues;
     :cond_6
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
@@ -9545,7 +8504,6 @@
 
     goto :goto_1
 
-    .line 6893
     .end local v2    # "emergencyUri":Landroid/net/Uri;
     .end local v8    # "className":Ljava/lang/String;
     .end local v9    # "cursor":Landroid/database/Cursor;
@@ -9553,7 +8511,6 @@
     :catch_1
     move-exception v10
 
-    .line 6894
     .restart local v10    # "e":Ljava/lang/Exception;
     const-string v1, "KnoxCustomManagerService"
 
@@ -9577,17 +8534,14 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6895
     const/4 v14, -0x1
 
     .end local v10    # "e":Ljava/lang/Exception;
     :goto_2
     move v1, v14
 
-    .line 6897
     goto/16 :goto_0
 
-    .line 6891
     .restart local v2    # "emergencyUri":Landroid/net/Uri;
     :cond_7
     :try_start_2
@@ -9605,7 +8559,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 6892
     const/4 v14, 0x0
 
     goto :goto_2
@@ -9616,91 +8569,74 @@
     .param p1, "shortcutItem"    # Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;
 
     .prologue
-    .line 9417
     const/16 v44, 0x0
 
-    .line 9418
     .local v44, "result":I
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v9
 
-    .line 9420
     .local v9, "callingUid":I
     if-nez p1, :cond_0
 
-    .line 9421
     const/4 v2, -0x1
 
-    .line 9696
     :goto_0
     return v2
 
-    .line 9423
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getShortcutType()I
 
     move-result v47
 
-    .line 9424
     .local v47, "shortcutType":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getName()Ljava/lang/String;
 
     move-result-object v41
 
-    .line 9425
     .local v41, "name":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getIntent()Landroid/content/Intent;
 
     move-result-object v42
 
-    .line 9426
     .local v42, "originalIntent":Landroid/content/Intent;
     const/16 v33, 0x0
 
-    .line 9427
     .local v33, "intent":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getParent()Ljava/lang/String;
 
     move-result-object v43
 
-    .line 9428
     .local v43, "parent":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getCellX()I
 
     move-result v55
 
-    .line 9429
     .local v55, "x":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getCellY()I
 
     move-result v56
 
-    .line 9430
     .local v56, "y":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getColour()I
 
     move-result v12
 
-    .line 9431
     .local v12, "colour":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getMoreItems()I
 
     move-result v40
 
-    .line 9432
     .local v40, "moreItems":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getIcon()Landroid/graphics/drawable/BitmapDrawable;
 
     move-result-object v27
 
-    .line 9433
     .local v27, "icon":Landroid/graphics/drawable/BitmapDrawable;
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getFolderPosition()I
 
     move-result v26
 
-    .line 9437
     .local v26, "folderPos":I
     const/4 v2, 0x1
 
@@ -9720,12 +8656,10 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 9439
     const/16 v2, -0x2b
 
     goto :goto_0
 
-    .line 9441
     :cond_1
     if-eqz v41, :cond_2
 
@@ -9743,13 +8677,11 @@
 
     if-le v2, v4, :cond_3
 
-    .line 9443
     :cond_2
     const/16 v2, -0x28
 
     goto :goto_0
 
-    .line 9445
     :cond_3
     if-eqz v43, :cond_4
 
@@ -9767,13 +8699,11 @@
 
     if-le v2, v4, :cond_5
 
-    .line 9447
     :cond_4
     const/16 v2, -0x29
 
     goto :goto_0
 
-    .line 9449
     :cond_5
     const/4 v2, 0x1
 
@@ -9783,12 +8713,10 @@
 
     if-eqz v40, :cond_6
 
-    .line 9451
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 9453
     :cond_6
     const/4 v2, 0x3
 
@@ -9796,10 +8724,8 @@
 
     if-ne v0, v2, :cond_8
 
-    .line 9454
     if-eqz v12, :cond_a
 
-    .line 9455
     const/4 v2, 0x1
 
     if-lt v12, v2, :cond_7
@@ -9808,22 +8734,18 @@
 
     if-le v12, v2, :cond_a
 
-    .line 9457
     :cond_7
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 9461
     :cond_8
     if-nez v42, :cond_9
 
-    .line 9463
     const/16 v2, -0x21
 
     goto/16 :goto_0
 
-    .line 9465
     :cond_9
     const/4 v2, 0x0
 
@@ -9833,7 +8755,6 @@
 
     move-result-object v33
 
-    .line 9468
     :cond_a
     move-object/from16 v0, p0
 
@@ -9843,11 +8764,9 @@
 
     move-result v45
 
-    .line 9469
     .local v45, "screen":I
     if-lez v45, :cond_e
 
-    .line 9470
     if-ltz v55, :cond_b
 
     const/4 v2, 0x5
@@ -9856,13 +8775,11 @@
 
     if-le v0, v2, :cond_c
 
-    .line 9472
     :cond_b
     const/16 v2, -0x32
 
     goto/16 :goto_0
 
-    .line 9474
     :cond_c
     if-ltz v56, :cond_d
 
@@ -9872,13 +8789,11 @@
 
     if-le v0, v2, :cond_10
 
-    .line 9476
     :cond_d
     const/16 v2, -0x32
 
     goto/16 :goto_0
 
-    .line 9479
     :cond_e
     if-ltz v26, :cond_f
 
@@ -9888,13 +8803,11 @@
 
     if-le v0, v2, :cond_10
 
-    .line 9481
     :cond_f
     const/16 v2, -0x32
 
     goto/16 :goto_0
 
-    .line 9484
     :cond_10
     const/4 v2, 0x2
 
@@ -9902,31 +8815,24 @@
 
     if-ne v0, v2, :cond_11
 
-    .line 9485
     if-nez v27, :cond_11
 
-    .line 9487
     const/16 v2, -0x39
 
     goto/16 :goto_0
 
-    .line 9491
     :cond_11
     move/from16 v36, v47
 
-    .line 9492
     .local v36, "mappedShortcutType":I
     const/16 v13, -0x64
 
-    .line 9495
     .local v13, "containerDesktop":I
     const/16 v48, 0x0
 
-    .line 9496
     .local v48, "shouldUseNewTableFormat":Z
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 9497
     .local v3, "uri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -9948,17 +8854,13 @@
 
     move-result-object v8
 
-    .line 9498
     .local v8, "c":Landroid/database/Cursor;
     if-nez v8, :cond_12
 
-    .line 9499
     const/16 v48, 0x1
 
-    .line 9500
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI_ZERO:Landroid/net/Uri;
 
-    .line 9501
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -9979,29 +8881,23 @@
 
     move-result-object v8
 
-    .line 9502
     if-nez v8, :cond_12
 
-    .line 9504
     const/16 v2, -0x36
 
     goto/16 :goto_0
 
-    .line 9508
     :cond_12
     if-eqz v48, :cond_16
 
-    .line 9509
     const/4 v2, 0x1
 
     move/from16 v0, v47
 
     if-ne v0, v2, :cond_14
 
-    .line 9510
     const/16 v36, 0x1
 
-    .line 9528
     :goto_1
     :try_start_0
     const-string v2, "_id"
@@ -10010,7 +8906,6 @@
 
     move-result v32
 
-    .line 9529
     .local v32, "idIndex":I
     const-string v2, "title"
 
@@ -10018,7 +8913,6 @@
 
     move-result v50
 
-    .line 9530
     .local v50, "titleIndex":I
     const-string v2, "screen"
 
@@ -10026,7 +8920,6 @@
 
     move-result v46
 
-    .line 9531
     .local v46, "screenIndex":I
     const-string v2, "itemType"
 
@@ -10034,7 +8927,6 @@
 
     move-result v35
 
-    .line 9532
     .local v35, "itemTypeIndex":I
     const-string v2, "cellX"
 
@@ -10042,7 +8934,6 @@
 
     move-result v10
 
-    .line 9533
     .local v10, "cellXIndex":I
     const-string v2, "cellY"
 
@@ -10050,15 +8941,12 @@
 
     move-result v11
 
-    .line 9535
     .local v11, "cellYIndex":I
     const-wide/16 v30, -0x1
 
-    .line 9536
     .local v30, "id":J
     const/16 v23, 0x0
 
-    .line 9537
     .local v23, "finished":Z
     move-object/from16 v0, p0
 
@@ -10066,7 +8954,6 @@
 
     move-result-wide v38
 
-    .line 9538
     .local v38, "maxId":J
     const-wide/16 v4, 0xc8
 
@@ -10074,31 +8961,24 @@
 
     if-gez v2, :cond_13
 
-    .line 9539
     const-wide/16 v38, 0xc8
 
-    .line 9541
     :cond_13
     const-wide/16 v4, 0x1
 
     add-long v38, v38, v4
 
-    .line 9542
     const/16 v37, -0x1
 
-    .line 9543
     .local v37, "maxFolderPos":I
     const-wide/16 v28, -0x1
 
-    .line 9544
     .local v28, "folderPosId":J
     const/4 v15, 0x0
 
-    .line 9545
     .local v15, "containerIndex":I
     if-eqz v48, :cond_19
 
-    .line 9546
     const-string v2, "containerId"
 
     invoke-interface {v8, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -10108,26 +8988,21 @@
 
     move-result v15
 
-    .line 9550
     :goto_2
     if-gtz v45, :cond_20
 
-    .line 9551
     const/4 v2, 0x3
 
     move/from16 v0, v47
 
     if-ne v0, v2, :cond_1a
 
-    .line 9553
     const/16 v2, -0x29
 
-    .line 9694
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_0
 
-    .line 9511
     .end local v10    # "cellXIndex":I
     .end local v11    # "cellYIndex":I
     .end local v15    # "containerIndex":I
@@ -10147,18 +9022,15 @@
 
     if-ne v0, v2, :cond_15
 
-    .line 9512
     const/16 v36, 0x3
 
     goto :goto_1
 
-    .line 9514
     :cond_15
     const/16 v36, 0x2
 
     goto :goto_1
 
-    .line 9518
     :cond_16
     const/4 v2, 0x1
 
@@ -10166,12 +9038,10 @@
 
     if-ne v0, v2, :cond_17
 
-    .line 9519
     const/16 v36, 0x0
 
     goto :goto_1
 
-    .line 9520
     :cond_17
     const/4 v2, 0x3
 
@@ -10179,18 +9049,15 @@
 
     if-ne v0, v2, :cond_18
 
-    .line 9521
     const/16 v36, 0x2
 
     goto :goto_1
 
-    .line 9523
     :cond_18
     const/16 v36, 0x1
 
     goto :goto_1
 
-    .line 9548
     .restart local v10    # "cellXIndex":I
     .restart local v11    # "cellYIndex":I
     .restart local v15    # "containerIndex":I
@@ -10213,7 +9080,6 @@
 
     goto :goto_2
 
-    .line 9555
     :cond_1a
     :goto_3
     invoke-interface {v8}, Landroid/database/Cursor;->moveToNext()Z
@@ -10225,7 +9091,6 @@
 
     if-eqz v2, :cond_21
 
-    .line 9557
     :try_start_2
     move/from16 v0, v50
 
@@ -10233,7 +9098,6 @@
 
     move-result-object v49
 
-    .line 9558
     .local v49, "title":Ljava/lang/String;
     move/from16 v0, v35
 
@@ -10241,7 +9105,6 @@
 
     move-result v34
 
-    .line 9559
     .local v34, "itemType":I
     if-nez v23, :cond_1c
 
@@ -10255,29 +9118,24 @@
 
     if-eqz v2, :cond_1c
 
-    .line 9560
     if-eqz v48, :cond_1b
 
-    .line 9561
     const/4 v2, 0x3
 
     move/from16 v0, v34
 
     if-ne v0, v2, :cond_1a
 
-    .line 9562
     move/from16 v0, v32
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v30
 
-    .line 9563
     const/16 v23, 0x1
 
     goto :goto_3
 
-    .line 9566
     :cond_1b
     const/4 v2, 0x2
 
@@ -10285,28 +9143,23 @@
 
     if-ne v0, v2, :cond_1a
 
-    .line 9567
     move/from16 v0, v32
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v30
 
-    .line 9568
     const/16 v23, 0x1
 
     goto :goto_3
 
-    .line 9572
     :cond_1c
     if-nez v48, :cond_1e
 
-    .line 9573
     invoke-interface {v8, v15}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v14
 
-    .line 9574
     .local v14, "containerId":I
     int-to-long v4, v14
 
@@ -10314,14 +9167,12 @@
 
     if-nez v2, :cond_1a
 
-    .line 9575
     move/from16 v0, v32
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v20
 
-    .line 9576
     .local v20, "currentId":J
     move/from16 v0, v46
 
@@ -10329,7 +9180,6 @@
 
     move-result v19
 
-    .line 9577
     .local v19, "currentScreen":I
     move/from16 v0, v19
 
@@ -10337,10 +9187,8 @@
 
     if-le v0, v1, :cond_1d
 
-    .line 9578
     move/from16 v37, v19
 
-    .line 9580
     :cond_1d
     if-eqz v26, :cond_1a
 
@@ -10350,12 +9198,10 @@
 
     if-ne v0, v2, :cond_1a
 
-    .line 9581
     move-wide/from16 v28, v20
 
     goto :goto_3
 
-    .line 9585
     .end local v14    # "containerId":I
     .end local v19    # "currentScreen":I
     .end local v20    # "currentId":J
@@ -10364,7 +9210,6 @@
 
     move-result v14
 
-    .line 9586
     .restart local v14    # "containerId":I
     int-to-long v4, v14
 
@@ -10372,20 +9217,17 @@
 
     if-nez v2, :cond_1a
 
-    .line 9587
     move/from16 v0, v32
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v20
 
-    .line 9588
     .restart local v20    # "currentId":J
     invoke-interface {v8, v10}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v16
 
-    .line 9589
     .local v16, "currentCellX":I
     invoke-interface {v8, v11}, Landroid/database/Cursor;->getInt(I)I
     :try_end_2
@@ -10394,13 +9236,11 @@
 
     move-result v17
 
-    .line 9591
     .local v17, "currentCellY":I
     mul-int/lit8 v2, v17, 0x3
 
     add-int v18, v2, v16
 
-    .line 9592
     .local v18, "currentFolderPos":I
     move/from16 v0, v18
 
@@ -10408,10 +9248,8 @@
 
     if-le v0, v1, :cond_1f
 
-    .line 9593
     move/from16 v37, v18
 
-    .line 9595
     :cond_1f
     if-eqz v26, :cond_1a
 
@@ -10421,12 +9259,10 @@
 
     if-ne v0, v2, :cond_1a
 
-    .line 9596
     move-wide/from16 v28, v20
 
     goto/16 :goto_3
 
-    .line 9601
     .end local v14    # "containerId":I
     .end local v16    # "currentCellX":I
     .end local v17    # "currentCellY":I
@@ -10437,7 +9273,6 @@
     :catch_0
     move-exception v22
 
-    .line 9602
     .local v22, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v2, "KnoxCustomManagerService"
@@ -10453,7 +9288,6 @@
 
     goto/16 :goto_3
 
-    .line 9691
     .end local v10    # "cellXIndex":I
     .end local v11    # "cellYIndex":I
     .end local v15    # "containerIndex":I
@@ -10470,7 +9304,6 @@
     :catch_1
     move-exception v22
 
-    .line 9692
     .restart local v22    # "e":Ljava/lang/Exception;
     :try_start_4
     const-string v2, "KnoxCustomManagerService"
@@ -10499,17 +9332,14 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 9694
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     .end local v22    # "e":Ljava/lang/Exception;
     :goto_4
     move/from16 v2, v44
 
-    .line 9696
     goto/16 :goto_0
 
-    .line 9606
     .restart local v10    # "cellXIndex":I
     .restart local v11    # "cellYIndex":I
     .restart local v15    # "containerIndex":I
@@ -10529,15 +9359,12 @@
 
     if-le v0, v2, :cond_21
 
-    .line 9608
     const/16 v2, -0x29
 
-    .line 9694
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_0
 
-    .line 9611
     :cond_21
     const-wide/16 v4, 0x0
 
@@ -10547,14 +9374,12 @@
 
     if-lez v45, :cond_31
 
-    .line 9612
     :cond_22
     :try_start_5
     new-instance v54, Landroid/content/ContentValues;
 
     invoke-direct/range {v54 .. v54}, Landroid/content/ContentValues;-><init>()V
 
-    .line 9613
     .local v54, "values":Landroid/content/ContentValues;
     const-string v2, "_id"
 
@@ -10566,7 +9391,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 9614
     const-string v2, "title"
 
     move-object/from16 v0, v54
@@ -10575,10 +9399,8 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9616
     if-lez v45, :cond_23
 
-    .line 9617
     const-string v2, "cellX"
 
     invoke-static/range {v55 .. v55}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10589,7 +9411,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9618
     const-string v2, "cellY"
 
     invoke-static/range {v56 .. v56}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10600,7 +9421,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9620
     :cond_23
     const-string v2, "spanX"
 
@@ -10614,7 +9434,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9621
     const-string v2, "spanY"
 
     const/4 v4, 0x1
@@ -10627,7 +9446,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9622
     const-string v2, "appWidgetId"
 
     const/4 v4, -0x1
@@ -10640,7 +9458,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9623
     const-string v2, "itemType"
 
     invoke-static/range {v36 .. v36}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10651,17 +9468,14 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9624
     const/4 v2, 0x3
 
     move/from16 v0, v47
 
     if-ne v0, v2, :cond_27
 
-    .line 9625
     if-eqz v12, :cond_24
 
-    .line 9626
     const-string v2, "color"
 
     add-int/lit8 v4, v12, -0x1
@@ -10674,11 +9488,9 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9628
     :cond_24
     if-eqz v48, :cond_25
 
-    .line 9629
     const-string v2, "container"
 
     const/4 v4, 0x0
@@ -10691,12 +9503,10 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9641
     :cond_25
     :goto_5
     if-eqz v48, :cond_2c
 
-    .line 9642
     const-string v2, "show"
 
     const/4 v4, 0x1
@@ -10709,10 +9519,8 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9643
     if-lez v45, :cond_29
 
-    .line 9644
     const-string v2, "containerId"
 
     invoke-static/range {v45 .. v45}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10723,7 +9531,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9671
     :goto_6
     move-object/from16 v0, p0
 
@@ -10737,28 +9544,23 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 9672
     const-wide/16 v4, -0x1
 
     cmp-long v2, v28, v4
 
     if-eqz v2, :cond_26
 
-    .line 9673
     new-instance v53, Landroid/content/ContentValues;
 
     invoke-direct/range {v53 .. v53}, Landroid/content/ContentValues;-><init>()V
 
-    .line 9674
     .local v53, "updateValues":Landroid/content/ContentValues;
     if-eqz v48, :cond_30
 
-    .line 9675
     add-int/lit8 v2, v37, 0x1
 
     div-int/lit8 v52, v2, 0x3
 
-    .line 9676
     .local v52, "updateFolderCellY":I
     add-int/lit8 v2, v37, 0x1
 
@@ -10766,7 +9568,6 @@
 
     sub-int v51, v2, v4
 
-    .line 9677
     .local v51, "updateFolderCellX":I
     const-string v2, "cellX"
 
@@ -10778,7 +9579,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9678
     const-string v2, "cellY"
 
     invoke-static/range {v52 .. v52}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -10789,7 +9589,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9682
     .end local v51    # "updateFolderCellX":I
     .end local v52    # "updateFolderCellY":I
     :goto_7
@@ -10827,7 +9626,6 @@
 
     invoke-virtual {v2, v3, v0, v4, v5}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 9684
     .end local v53    # "updateValues":Landroid/content/ContentValues;
     :cond_26
     move-object/from16 v0, p0
@@ -10842,7 +9640,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 9685
     move-object/from16 v0, p0
 
     move/from16 v1, v40
@@ -10852,17 +9649,14 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 9686
     const/16 v44, 0x0
 
-    .line 9694
     .end local v54    # "values":Landroid/content/ContentValues;
     :goto_8
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     goto/16 :goto_4
 
-    .line 9632
     .restart local v54    # "values":Landroid/content/ContentValues;
     :cond_27
     :try_start_6
@@ -10874,10 +9668,8 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9633
     if-eqz v48, :cond_28
 
-    .line 9634
     const-string v2, "container"
 
     const/4 v4, 0x3
@@ -10890,7 +9682,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9636
     :cond_28
     const/4 v2, 0x2
 
@@ -10898,7 +9689,6 @@
 
     if-ne v0, v2, :cond_25
 
-    .line 9637
     const-string v2, "iconType"
 
     const/4 v4, 0x1
@@ -10911,7 +9701,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9638
     const-string v2, "icon"
 
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomShortcutItem;->getIconArray()[B
@@ -10927,7 +9716,6 @@
 
     goto/16 :goto_5
 
-    .line 9694
     .end local v10    # "cellXIndex":I
     .end local v11    # "cellYIndex":I
     .end local v15    # "containerIndex":I
@@ -10948,7 +9736,6 @@
 
     throw v2
 
-    .line 9646
     .restart local v10    # "cellXIndex":I
     .restart local v11    # "cellYIndex":I
     .restart local v15    # "containerIndex":I
@@ -10974,7 +9761,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 9647
     if-eqz v26, :cond_2a
 
     add-int/lit8 v2, v37, 0x1
@@ -10983,21 +9769,17 @@
 
     if-le v0, v2, :cond_2b
 
-    .line 9648
     :cond_2a
     add-int/lit8 v26, v37, 0x1
 
-    .line 9652
     :goto_9
     div-int/lit8 v25, v26, 0x3
 
-    .line 9653
     .local v25, "folderCellY":I
     mul-int/lit8 v2, v25, 0x3
 
     sub-int v24, v26, v2
 
-    .line 9654
     .local v24, "folderCellX":I
     const-string v2, "cellX"
 
@@ -11009,7 +9791,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9655
     const-string v2, "cellY"
 
     invoke-static/range {v25 .. v25}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -11022,7 +9803,6 @@
 
     goto/16 :goto_6
 
-    .line 9650
     .end local v24    # "folderCellX":I
     .end local v25    # "folderCellY":I
     :cond_2b
@@ -11030,11 +9810,9 @@
 
     goto :goto_9
 
-    .line 9658
     :cond_2c
     if-lez v45, :cond_2d
 
-    .line 9659
     const-string v2, "screen"
 
     invoke-static/range {v45 .. v45}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -11045,7 +9823,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 9660
     const-string v2, "container"
 
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -11058,7 +9835,6 @@
 
     goto/16 :goto_6
 
-    .line 9662
     :cond_2d
     const-string v2, "container"
 
@@ -11070,7 +9846,6 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 9663
     if-eqz v26, :cond_2e
 
     add-int/lit8 v2, v37, 0x1
@@ -11079,11 +9854,9 @@
 
     if-le v0, v2, :cond_2f
 
-    .line 9664
     :cond_2e
     add-int/lit8 v26, v37, 0x1
 
-    .line 9668
     :goto_a
     const-string v2, "screen"
 
@@ -11097,13 +9870,11 @@
 
     goto/16 :goto_6
 
-    .line 9666
     :cond_2f
     add-int/lit8 v26, v26, -0x1
 
     goto :goto_a
 
-    .line 9680
     .restart local v53    # "updateValues":Landroid/content/ContentValues;
     :cond_30
     const-string v2, "screen"
@@ -11123,7 +9894,6 @@
 
     goto/16 :goto_7
 
-    .line 9689
     .end local v53    # "updateValues":Landroid/content/ContentValues;
     .end local v54    # "values":Landroid/content/ContentValues;
     :cond_31
@@ -11137,103 +9907,83 @@
     .param p1, "widgetItem"    # Landroid/app/enterprise/knoxcustom/KnoxCustomWidgetItem;
 
     .prologue
-    .line 9821
     const/16 v21, 0x0
 
-    .line 9822
     .local v21, "result":I
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v17
 
-    .line 9824
     .local v17, "callingUid":I
     if-nez p1, :cond_0
 
-    .line 9825
     const/4 v2, -0x1
 
-    .line 9915
     :goto_0
     return v2
 
-    .line 9827
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomWidgetItem;->getWidgetType()I
 
     move-result v26
 
-    .line 9828
     .local v26, "widgetType":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomWidgetItem;->getIntent()Landroid/content/Intent;
 
     move-result-object v19
 
-    .line 9829
     .local v19, "originalIntent":Landroid/content/Intent;
     const/16 v18, 0x0
 
-    .line 9830
     .local v18, "intent":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomWidgetItem;->getParent()Ljava/lang/String;
 
     move-result-object v20
 
-    .line 9831
     .local v20, "parent":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomWidgetItem;->getCellX()I
 
     move-result v8
 
-    .line 9832
     .local v8, "x":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomWidgetItem;->getCellY()I
 
     move-result v9
 
-    .line 9833
     .local v9, "y":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomWidgetItem;->getSizeX()I
 
     move-result v11
 
-    .line 9834
     .local v11, "sizeX":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomWidgetItem;->getSizeY()I
 
     move-result v12
 
-    .line 9835
     .local v12, "sizeY":I
     invoke-virtual/range {p1 .. p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomWidgetItem;->getMoreItems()I
 
     move-result v13
 
-    .line 9837
     .local v13, "moreItems":I
     if-nez v19, :cond_1
 
-    .line 9839
     const/16 v2, -0x21
 
     goto :goto_0
 
-    .line 9841
     :cond_1
     invoke-virtual/range {v19 .. v19}, Landroid/content/Intent;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v24
 
-    .line 9842
     .local v24, "widgetProvider":Landroid/content/ComponentName;
     if-nez v24, :cond_2
 
-    .line 9844
     const/16 v2, -0x21
 
     goto :goto_0
 
-    .line 9846
     :cond_2
     const/4 v2, 0x0
 
@@ -11243,7 +9993,6 @@
 
     move-result-object v18
 
-    .line 9850
     const/4 v2, 0x5
 
     move/from16 v0, v26
@@ -11256,12 +10005,10 @@
 
     if-eq v0, v2, :cond_3
 
-    .line 9852
     const/16 v2, -0x2b
 
     goto :goto_0
 
-    .line 9854
     :cond_3
     const/4 v2, 0x1
 
@@ -11269,12 +10016,10 @@
 
     if-eqz v13, :cond_4
 
-    .line 9856
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 9858
     :cond_4
     if-eqz v18, :cond_5
 
@@ -11286,19 +10031,16 @@
 
     if-nez v19, :cond_6
 
-    .line 9860
     :cond_5
     const/16 v2, -0x21
 
     goto :goto_0
 
-    .line 9862
     :cond_6
     invoke-virtual/range {v24 .. v24}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v25
 
-    .line 9864
     .local v25, "widgetProviderString":Ljava/lang/String;
     if-eqz v20, :cond_7
 
@@ -11316,13 +10058,11 @@
 
     if-le v2, v4, :cond_8
 
-    .line 9866
     :cond_7
     const/16 v2, -0x29
 
     goto :goto_0
 
-    .line 9868
     :cond_8
     if-ltz v8, :cond_9
 
@@ -11330,13 +10070,11 @@
 
     if-le v8, v2, :cond_a
 
-    .line 9870
     :cond_9
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 9872
     :cond_a
     if-ltz v9, :cond_b
 
@@ -11344,13 +10082,11 @@
 
     if-le v9, v2, :cond_c
 
-    .line 9874
     :cond_b
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 9877
     :cond_c
     const/4 v2, 0x1
 
@@ -11360,13 +10096,11 @@
 
     if-le v11, v2, :cond_e
 
-    .line 9879
     :cond_d
     const/16 v2, -0x32
 
     goto/16 :goto_0
 
-    .line 9881
     :cond_e
     const/4 v2, 0x1
 
@@ -11376,13 +10110,11 @@
 
     if-le v12, v2, :cond_10
 
-    .line 9883
     :cond_f
     const/16 v2, -0x32
 
     goto/16 :goto_0
 
-    .line 9886
     :cond_10
     move-object/from16 v0, p0
 
@@ -11392,7 +10124,6 @@
 
     move-result v10
 
-    .line 9887
     .local v10, "screen":I
     if-lez v10, :cond_11
 
@@ -11400,17 +10131,14 @@
 
     if-le v10, v2, :cond_12
 
-    .line 9889
     :cond_11
     const/16 v2, -0x29
 
     goto/16 :goto_0
 
-    .line 9891
     :cond_12
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 9892
     .local v3, "uri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -11432,14 +10160,11 @@
 
     move-result-object v16
 
-    .line 9893
     .local v16, "c":Landroid/database/Cursor;
     if-nez v16, :cond_13
 
-    .line 9894
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI_ZERO:Landroid/net/Uri;
 
-    .line 9898
     :goto_1
     move-object/from16 v0, p0
 
@@ -11447,13 +10172,11 @@
 
     move-result v5
 
-    .line 9899
     .local v5, "maxWidgetId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v22
 
-    .line 9901
     .local v22, "token":J
     move-object/from16 v0, p0
 
@@ -11461,14 +10184,12 @@
 
     if-eqz v2, :cond_14
 
-    .line 9902
     new-instance v15, Landroid/content/Intent;
 
     const-string v2, "com.android.launcher.action.BIND_WIDGET"
 
     invoke-direct {v15, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 9906
     .local v15, "addIntent":Landroid/content/Intent;
     :goto_2
     const-string v2, "componentName"
@@ -11477,17 +10198,14 @@
 
     invoke-virtual {v15, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 9907
     const-string v2, "spanX"
 
     invoke-virtual {v15, v2, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 9908
     const-string v2, "spanY"
 
     invoke-virtual {v15, v2, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 9909
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -11500,19 +10218,16 @@
 
     invoke-virtual {v2, v15, v4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 9910
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v2}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->updateHomeScreen(I)V
 
-    .line 9911
     const-wide/16 v28, 0x12c
 
     invoke-static/range {v28 .. v29}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 9912
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getMaxId(Landroid/net/Uri;)J
@@ -11524,20 +10239,16 @@
 
     move-object v14, v3
 
-    .line 9913
     invoke-direct/range {v4 .. v14}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->updateWidget(IJIIIIIILandroid/net/Uri;)I
 
     move-result v21
 
-    .line 9914
     invoke-static/range {v22 .. v23}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move/from16 v2, v21
 
-    .line 9915
     goto/16 :goto_0
 
-    .line 9896
     .end local v5    # "maxWidgetId":I
     .end local v6    # "maxId":J
     .end local v15    # "addIntent":Landroid/content/Intent;
@@ -11547,7 +10258,6 @@
 
     goto :goto_1
 
-    .line 9904
     .restart local v5    # "maxWidgetId":I
     .restart local v22    # "token":J
     :cond_14
@@ -11566,7 +10276,6 @@
     .param p1, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 1579
     :try_start_0
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -11576,17 +10285,14 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1583
     const/4 v1, 0x1
 
     :goto_0
     return v1
 
-    .line 1580
     :catch_0
     move-exception v0
 
-    .line 1581
     .local v0, "e":Ljava/lang/SecurityException;
     const/4 v1, 0x0
 
@@ -11600,22 +10306,18 @@
     .prologue
     const/4 v9, -0x1
 
-    .line 7951
     const/4 v7, -0x1
 
-    .line 7952
     .local v7, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 7953
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 7954
     .local v10, "token":J
     new-instance v2, Ljava/io/File;
 
@@ -11623,7 +10325,6 @@
 
     invoke-direct {v2, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7955
     .local v2, "dir":Ljava/io/File;
     new-instance v3, Ljava/io/File;
 
@@ -11631,7 +10332,6 @@
 
     invoke-direct {v3, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7956
     .local v3, "dirEFS":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -11639,22 +10339,17 @@
 
     if-nez v12, :cond_1
 
-    .line 7957
     const/4 v9, 0x0
 
-    .line 8007
     :cond_0
     :goto_0
     return v9
 
-    .line 7960
     :cond_1
     invoke-direct {p0, v2}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7962
     if-nez p1, :cond_6
 
-    .line 7964
     :try_start_0
     new-instance v6, Ljava/io/File;
 
@@ -11662,7 +10357,6 @@
 
     invoke-direct {v6, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7965
     .local v6, "fileInfo":Ljava/io/File;
     new-instance v8, Ljava/io/File;
 
@@ -11670,7 +10364,6 @@
 
     invoke-direct {v8, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7966
     .local v8, "soundInfo":Ljava/io/File;
     new-instance v1, Ljava/io/File;
 
@@ -11678,7 +10371,6 @@
 
     invoke-direct {v1, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7967
     .local v1, "delayInfo":Ljava/io/File;
     new-instance v5, Ljava/io/File;
 
@@ -11686,7 +10378,6 @@
 
     invoke-direct {v5, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7969
     .local v5, "efsFileInfo":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
@@ -11694,10 +10385,8 @@
 
     if-eqz v12, :cond_2
 
-    .line 7970
     invoke-direct {p0, v6}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7972
     :cond_2
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
 
@@ -11705,10 +10394,8 @@
 
     if-eqz v12, :cond_3
 
-    .line 7973
     invoke-direct {p0, v8}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7975
     :cond_3
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -11716,10 +10403,8 @@
 
     if-eqz v12, :cond_4
 
-    .line 7976
     invoke-direct {p0, v1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7978
     :cond_4
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -11727,20 +10412,16 @@
 
     if-eqz v12, :cond_5
 
-    .line 7979
     invoke-direct {p0, v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7980
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
     move-result v12
 
     if-eqz v12, :cond_5
 
-    .line 7981
     invoke-direct {p0, v5}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7982
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -11749,11 +10430,9 @@
 
     if-eqz v12, :cond_0
 
-    .line 7987
     :cond_5
     const/4 v7, 0x0
 
-    .line 8006
     .end local v1    # "delayInfo":Ljava/io/File;
     .end local v5    # "efsFileInfo":Ljava/io/File;
     .end local v6    # "fileInfo":Ljava/io/File;
@@ -11763,25 +10442,20 @@
 
     move v9, v7
 
-    .line 8007
     goto :goto_0
 
-    .line 7988
     :catch_0
     move-exception v4
 
-    .line 7989
     .local v4, "e":Ljava/lang/Exception;
     goto :goto_0
 
-    .line 7991
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_6
     const/4 v12, 0x1
 
     if-ne p1, v12, :cond_8
 
-    .line 7993
     :try_start_1
     new-instance v6, Ljava/io/File;
 
@@ -11789,7 +10463,6 @@
 
     invoke-direct {v6, v12}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7995
     .restart local v6    # "fileInfo":Ljava/io/File;
     invoke-virtual {v6}, Ljava/io/File;->exists()Z
 
@@ -11797,30 +10470,24 @@
 
     if-eqz v12, :cond_7
 
-    .line 7996
     invoke-direct {p0, v6}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7998
     :cond_7
     invoke-direct {p0, v2}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldExecutable(Ljava/io/File;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 7999
     const/4 v7, 0x0
 
     goto :goto_1
 
-    .line 8000
     .end local v6    # "fileInfo":Ljava/io/File;
     :catch_1
     move-exception v4
 
-    .line 8001
     .restart local v4    # "e":Ljava/lang/Exception;
     goto :goto_0
 
-    .line 8004
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_8
     const/16 v7, -0x32
@@ -11833,52 +10500,41 @@
     .param p1, "logType"    # I
 
     .prologue
-    .line 4977
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4978
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 4979
     .local v8, "token":J
     const/4 v7, -0x6
 
-    .line 4981
     .local v7, "result":I
     packed-switch p1, :pswitch_data_0
 
-    .line 5026
     const-string v10, "KnoxCustomManagerService"
 
     const-string v11, "copyAdbLog() failed - invalid logType "
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5027
     const/16 v7, -0x32
 
-    .line 5030
     :goto_0
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5031
     return v7
 
-    .line 4984
     :pswitch_0
     :try_start_0
     const-string v2, "/data/log/customLogcat.log"
 
-    .line 4985
     .local v2, "customLog":Ljava/lang/String;
     const-string v1, "logcat -d -v time -f /data/log/customLogcat.log"
 
-    .line 4986
     .local v1, "command":Ljava/lang/String;
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
@@ -11890,11 +10546,9 @@
 
     move-result-object v6
 
-    .line 4987
     .local v6, "proc":Ljava/lang/Process;
     invoke-virtual {v6}, Ljava/lang/Process;->waitFor()I
 
-    .line 4989
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v10
@@ -11905,25 +10559,21 @@
 
     move-result-object v6
 
-    .line 4990
     invoke-virtual {v6}, Ljava/lang/Process;->waitFor()I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 4991
     const/4 v7, 0x0
 
     goto :goto_0
 
-    .line 4992
     .end local v1    # "command":Ljava/lang/String;
     .end local v2    # "customLog":Ljava/lang/String;
     .end local v6    # "proc":Ljava/lang/Process;
     :catch_0
     move-exception v3
 
-    .line 4993
     .local v3, "e":Ljava/io/IOException;
     const-string v10, "KnoxCustomManagerService"
 
@@ -11947,18 +10597,14 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4994
     const/4 v7, -0x1
 
-    .line 4998
     goto :goto_0
 
-    .line 4995
     .end local v3    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v3
 
-    .line 4996
     .local v3, "e":Ljava/lang/InterruptedException;
     const-string v10, "KnoxCustomManagerService"
 
@@ -11982,29 +10628,23 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4997
     const/4 v7, -0x1
 
-    .line 4999
     goto :goto_0
 
-    .line 5002
     .end local v3    # "e":Ljava/lang/InterruptedException;
     :pswitch_1
     :try_start_1
     const-string v2, "/data/log/customKernel.log"
 
-    .line 5003
     .restart local v2    # "customLog":Ljava/lang/String;
     const-string v5, "/proc/last_kmsg"
 
-    .line 5004
     .local v5, "kernelLog":Ljava/lang/String;
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 5005
     .local v4, "file":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -12012,7 +10652,6 @@
 
     if-eqz v10, :cond_0
 
-    .line 5006
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v10
@@ -12051,11 +10690,9 @@
 
     move-result-object v6
 
-    .line 5007
     .restart local v6    # "proc":Ljava/lang/Process;
     invoke-virtual {v6}, Ljava/lang/Process;->waitFor()I
 
-    .line 5008
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v10
@@ -12066,33 +10703,27 @@
 
     move-result-object v6
 
-    .line 5009
     invoke-virtual {v6}, Ljava/lang/Process;->waitFor()I
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_3
 
-    .line 5010
     const/4 v7, 0x0
 
-    .line 5011
     goto/16 :goto_0
 
-    .line 5013
     .end local v6    # "proc":Ljava/lang/Process;
     :cond_0
     const/4 v7, -0x1
 
     goto/16 :goto_0
 
-    .line 5016
     .end local v2    # "customLog":Ljava/lang/String;
     .end local v4    # "file":Ljava/io/File;
     .end local v5    # "kernelLog":Ljava/lang/String;
     :catch_2
     move-exception v3
 
-    .line 5017
     .local v3, "e":Ljava/io/IOException;
     const-string v10, "KnoxCustomManagerService"
 
@@ -12116,18 +10747,14 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5018
     const/4 v7, -0x1
 
-    .line 5023
     goto/16 :goto_0
 
-    .line 5020
     .end local v3    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v3
 
-    .line 5021
     .local v3, "e":Ljava/lang/InterruptedException;
     const-string v10, "KnoxCustomManagerService"
 
@@ -12151,13 +10778,10 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5022
     const/4 v7, -0x1
 
-    .line 5024
     goto/16 :goto_0
 
-    .line 4981
     nop
 
     :pswitch_data_0
@@ -12180,17 +10804,14 @@
     .end annotation
 
     .prologue
-    .line 3687
     .local p1, "IdList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 3689
     .local v0, "callingUid":I
     const/4 v4, -0x1
 
-    .line 3692
     .local v4, "result":I
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -12206,7 +10827,6 @@
 
     if-nez v6, :cond_0
 
-    .line 3693
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v7, "connectivity"
@@ -12217,7 +10837,6 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 3694
     .local v1, "cm":Landroid/net/ConnectivityManager;
     const/4 v6, 0x0
 
@@ -12227,15 +10846,12 @@
 
     if-nez v6, :cond_0
 
-    .line 3695
     const/4 v6, -0x6
 
-    .line 3716
     .end local v1    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v6
 
-    .line 3699
     :cond_0
     if-eqz p1, :cond_1
 
@@ -12245,17 +10861,14 @@
 
     if-eqz v6, :cond_2
 
-    .line 3700
     :cond_1
     const/16 v6, -0x32
 
     goto :goto_0
 
-    .line 3703
     :cond_2
     const-string v5, ""
 
-    .line 3704
     .local v5, "toDB":Ljava/lang/String;
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -12269,7 +10882,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 3705
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -12300,7 +10912,6 @@
 
     goto :goto_1
 
-    .line 3709
     :cond_3
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -12315,20 +10926,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3710
     const/4 v4, 0x0
 
     :goto_2
     move v6, v4
 
-    .line 3716
     goto :goto_0
 
-    .line 3711
     :catch_0
     move-exception v2
 
-    .line 3713
     .local v2, "e":Ljava/lang/Exception;
     const/4 v4, -0x1
 
@@ -12342,12 +10949,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3639
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v7
 
-    .line 3642
     .local v7, "callingUid":I
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -12363,7 +10968,6 @@
 
     if-nez v2, :cond_1
 
-    .line 3643
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "connectivity"
@@ -12374,7 +10978,6 @@
 
     check-cast v8, Landroid/net/ConnectivityManager;
 
-    .line 3644
     .local v8, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v8, v4}, Landroid/net/ConnectivityManager;->isNetworkSupported(I)Z
 
@@ -12382,20 +10985,16 @@
 
     if-nez v2, :cond_1
 
-    .line 3645
     const/4 v2, -0x6
 
-    .line 3675
     .end local v8    # "cm":Landroid/net/ConnectivityManager;
     :cond_0
     :goto_0
     return v2
 
-    .line 3649
     :cond_1
     const-string v11, "[0-9+]+"
 
-    .line 3650
     .local v11, "regex":Ljava/lang/String;
     if-eqz p1, :cond_2
 
@@ -12405,17 +11004,14 @@
 
     if-nez v2, :cond_3
 
-    .line 3651
     :cond_2
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 3653
     :cond_3
     const/4 v6, 0x0
 
-    .line 3655
     .local v6, "c":Landroid/database/Cursor;
     :try_start_0
     const-string v2, "content://sms/inbox"
@@ -12424,7 +11020,6 @@
 
     move-result-object v1
 
-    .line 3656
     .local v1, "inboxURI":Landroid/net/Uri;
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -12432,13 +11027,11 @@
 
     move-result-object v0
 
-    .line 3657
     .local v0, "cr":Landroid/content/ContentResolver;
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3658
     .local v10, "idRowToDelete":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v2, 0x2
 
@@ -12472,17 +11065,14 @@
 
     move-result-object v6
 
-    .line 3660
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
 
     move-result v2
 
     if-lez v2, :cond_5
 
-    .line 3661
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 3663
     :cond_4
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -12510,14 +11100,12 @@
 
     invoke-interface {v10, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3664
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 3666
     :cond_5
     invoke-virtual {p0, v10}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteMessagesByIds(Ljava/util/List;)I
     :try_end_0
@@ -12526,22 +11114,18 @@
 
     move-result v2
 
-    .line 3671
     if-eqz v6, :cond_0
 
-    .line 3672
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_0
 
-    .line 3667
     .end local v0    # "cr":Landroid/content/ContentResolver;
     .end local v1    # "inboxURI":Landroid/net/Uri;
     .end local v10    # "idRowToDelete":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :catch_0
     move-exception v9
 
-    .line 3668
     .local v9, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v2, "KnoxCustomManagerService"
@@ -12552,26 +11136,21 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3671
     if-eqz v6, :cond_6
 
-    .line 3672
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 3675
     :cond_6
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 3671
     .end local v9    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
     if-eqz v6, :cond_7
 
-    .line 3672
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_7
@@ -12583,22 +11162,18 @@
     .param p1, "phoneNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 2806
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 2807
     .local v0, "callingUid":I
     const/4 v3, -0x6
 
-    .line 2808
     .local v3, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 2811
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -12615,14 +11190,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 2812
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getProKioskState()Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
-    .line 2813
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -12633,19 +11206,15 @@
 
     if-nez v6, :cond_2
 
-    .line 2814
     :cond_0
     const/16 v3, -0x28
 
-    .line 2833
     :cond_1
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2834
     return v3
 
-    .line 2816
     :cond_2
     :try_start_1
     invoke-static {p1}, Landroid/telephony/PhoneNumberUtils;->isEmergencyNumber(Ljava/lang/String;)Z
@@ -12654,7 +11223,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 2817
     new-instance v2, Landroid/content/Intent;
 
     const-string v6, "android.intent.action.CALL_EMERGENCY"
@@ -12683,43 +11251,35 @@
 
     invoke-direct {v2, v6, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 2818
     .local v2, "intent":Landroid/content/Intent;
     const/high16 v6, 0x10000000
 
     invoke-virtual {v2, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2819
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 2820
     const/4 v3, 0x0
 
-    .line 2821
     goto :goto_0
 
-    .line 2822
     .end local v2    # "intent":Landroid/content/Intent;
     :cond_3
     const/16 v3, -0x31
 
     goto :goto_0
 
-    .line 2826
     :cond_4
     const/4 v3, -0x2
 
     goto :goto_0
 
-    .line 2829
     :catch_0
     move-exception v1
 
-    .line 2830
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -12743,7 +11303,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2831
     const/4 v3, -0x1
 
     goto :goto_0
@@ -12753,10 +11312,8 @@
     .locals 5
 
     .prologue
-    .line 9095
     const/4 v1, 0x0
 
-    .line 9098
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -12775,10 +11332,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 9099
     or-int/lit8 v1, v1, 0x1
 
-    .line 9101
     :cond_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -12796,10 +11351,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 9102
     or-int/lit8 v1, v1, 0x2
 
-    .line 9104
     :cond_1
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -12819,10 +11372,8 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 9106
     or-int/lit8 v1, v1, 0x4
 
-    .line 9108
     :cond_2
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -12840,16 +11391,13 @@
 
     if-eqz v2, :cond_3
 
-    .line 9109
     or-int/lit8 v1, v1, 0x10
 
-    .line 9111
     :cond_3
     iget-boolean v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v2, :cond_5
 
-    .line 9112
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -12866,15 +11414,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 9113
     or-int/lit8 v1, v1, 0x8
 
-    .line 9124
     :cond_4
     :goto_0
     return v1
 
-    .line 9116
     :cond_5
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -12894,16 +11439,13 @@
 
     if-eqz v2, :cond_4
 
-    .line 9117
     or-int/lit8 v1, v1, 0x8
 
     goto :goto_0
 
-    .line 9120
     :catch_0
     move-exception v0
 
-    .line 9121
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -12939,18 +11481,14 @@
 
     const/4 v3, 0x0
 
-    .line 7411
     const/4 v1, 0x1
 
-    .line 7412
     .local v1, "result":Z
     packed-switch p1, :pswitch_data_0
 
-    .line 7432
     :goto_0
     return v1
 
-    .line 7415
     :pswitch_0
     :try_start_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -12981,11 +11519,9 @@
 
     goto :goto_1
 
-    .line 7416
     :catch_0
     move-exception v0
 
-    .line 7417
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -13011,7 +11547,6 @@
 
     goto :goto_0
 
-    .line 7422
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -13043,11 +11578,9 @@
 
     goto :goto_2
 
-    .line 7423
     :catch_1
     move-exception v0
 
-    .line 7424
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -13073,7 +11606,6 @@
 
     goto :goto_0
 
-    .line 7412
     nop
 
     :pswitch_data_0
@@ -13096,16 +11628,13 @@
     .end annotation
 
     .prologue
-    .line 5625
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5627
     .local v6, "ret":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
-    .line 5629
     .local v1, "blockNamespaces":Ljava/lang/String;
     :try_start_0
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -13120,7 +11649,6 @@
 
     move-result-object v1
 
-    .line 5630
     if-eqz v1, :cond_0
 
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
@@ -13129,14 +11657,12 @@
 
     if-nez v8, :cond_0
 
-    .line 5631
     const-string v8, ","
 
     invoke-virtual {v1, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v5
 
-    .line 5632
     .local v5, "nsTokens":[Ljava/lang/String;
     move-object v0, v5
 
@@ -13152,18 +11678,15 @@
 
     aget-object v7, v0, v3
 
-    .line 5633
     .local v7, "str":Ljava/lang/String;
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5632
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 5636
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
@@ -13172,7 +11695,6 @@
     :catch_0
     move-exception v2
 
-    .line 5637
     .local v2, "e":Ljava/lang/Exception;
     const-string v8, "KnoxCustomManagerService"
 
@@ -13196,7 +11718,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5640
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_0
     return-object v6
@@ -13206,10 +11727,8 @@
     .locals 6
 
     .prologue
-    .line 5565
     const/4 v0, 0x0
 
-    .line 5567
     .local v0, "downloadStateResult":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -13226,15 +11745,12 @@
 
     move-result v0
 
-    .line 5572
     :goto_0
     return v0
 
-    .line 5568
     :catch_0
     move-exception v1
 
-    .line 5569
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -13266,7 +11782,6 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 10317
     sget-object v2, Landroid/util/Patterns;->PHONE:Ljava/util/regex/Pattern;
 
     invoke-virtual {v2, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -13279,29 +11794,23 @@
 
     if-nez v2, :cond_0
 
-    .line 10318
     const/16 v2, -0x32
 
-    .line 10325
     :goto_0
     return v2
 
-    .line 10320
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getAutoCallNumberRecord(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 10321
     .local v0, "numberRecord":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 10322
     const/16 v2, -0x36
 
     goto :goto_0
 
-    .line 10324
     :cond_1
     const-string v2, ","
 
@@ -13309,7 +11818,6 @@
 
     move-result-object v1
 
-    .line 10325
     .local v1, "numberRecordSeparated":[Ljava/lang/String;
     const/4 v2, 0x2
 
@@ -13327,7 +11835,6 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 10299
     sget-object v2, Landroid/util/Patterns;->PHONE:Ljava/util/regex/Pattern;
 
     invoke-virtual {v2, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -13340,29 +11847,23 @@
 
     if-nez v2, :cond_0
 
-    .line 10300
     const/16 v2, -0x32
 
-    .line 10307
     :goto_0
     return v2
 
-    .line 10302
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getAutoCallNumberRecord(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 10303
     .local v0, "numberRecord":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 10304
     const/16 v2, -0x36
 
     goto :goto_0
 
-    .line 10306
     :cond_1
     const-string v2, ","
 
@@ -13370,7 +11871,6 @@
 
     move-result-object v1
 
-    .line 10307
     .local v1, "numberRecordSeparated":[Ljava/lang/String;
     const/4 v2, 0x1
 
@@ -13396,16 +11896,13 @@
     .end annotation
 
     .prologue
-    .line 10272
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 10274
     .local v8, "ret":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v5, 0x0
 
-    .line 10276
     .local v5, "numberListSeparated":Ljava/lang/String;
     :try_start_0
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -13420,7 +11917,6 @@
 
     move-result-object v5
 
-    .line 10278
     if-eqz v5, :cond_0
 
     invoke-virtual {v5}, Ljava/lang/String;->isEmpty()Z
@@ -13429,14 +11925,12 @@
 
     if-nez v9, :cond_0
 
-    .line 10279
     const-string v9, ":"
 
     invoke-virtual {v5, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 10280
     .local v4, "nlsTokens":[Ljava/lang/String;
     move-object v0, v4
 
@@ -13452,7 +11946,6 @@
 
     aget-object v6, v0, v2
 
-    .line 10281
     .local v6, "numberRecord":Ljava/lang/String;
     const-string v9, ","
 
@@ -13460,7 +11953,6 @@
 
     move-result-object v7
 
-    .line 10282
     .local v7, "numberRecordSeparated":[Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -13470,12 +11962,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10280
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 10285
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -13485,7 +11975,6 @@
     :catch_0
     move-exception v1
 
-    .line 10286
     .local v1, "e":Ljava/lang/Exception;
     const-string v9, "KnoxCustomManagerService"
 
@@ -13509,7 +11998,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10289
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_0
     return-object v8
@@ -13519,10 +12007,8 @@
     .locals 6
 
     .prologue
-    .line 10115
     const/4 v1, 0x0
 
-    .line 10117
     .local v1, "state":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -13539,15 +12025,12 @@
 
     move-result v1
 
-    .line 10122
     :goto_0
     return v1
 
-    .line 10118
     :catch_0
     move-exception v0
 
-    .line 10119
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -13578,10 +12061,8 @@
     .locals 7
 
     .prologue
-    .line 5397
     const/4 v2, 0x0
 
-    .line 5400
     .local v2, "result":Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -13596,28 +12077,23 @@
 
     move-result-object v0
 
-    .line 5403
     .local v0, "blob":[B
     if-eqz v0, :cond_0
 
-    .line 5404
     invoke-direct {p0, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deserializeKnoxCustomStatusbarIconItem([B)Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
-    .line 5409
     .end local v0    # "blob":[B
     :cond_0
     :goto_0
     return-object v2
 
-    .line 5406
     :catch_0
     move-exception v1
 
-    .line 5407
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -13632,10 +12108,8 @@
     .locals 6
 
     .prologue
-    .line 3533
     const/4 v1, 0x0
 
-    .line 3535
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -13652,15 +12126,12 @@
 
     move-result v1
 
-    .line 3540
     :goto_0
     return v1
 
-    .line 3536
     :catch_0
     move-exception v0
 
-    .line 3537
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -13691,10 +12162,8 @@
     .locals 6
 
     .prologue
-    .line 3299
     const/4 v1, 0x1
 
-    .line 3301
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -13711,15 +12180,12 @@
 
     move-result v1
 
-    .line 3306
     :goto_0
     return v1
 
-    .line 3302
     :catch_0
     move-exception v0
 
-    .line 3303
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -13750,10 +12216,8 @@
     .locals 6
 
     .prologue
-    .line 4050
     const/4 v1, 0x0
 
-    .line 4052
     .local v1, "result":Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -13770,15 +12234,12 @@
 
     move-result-object v1
 
-    .line 4057
     :goto_0
     return-object v1
 
-    .line 4053
     :catch_0
     move-exception v0
 
-    .line 4054
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -13809,10 +12270,8 @@
     .locals 6
 
     .prologue
-    .line 5885
     const/4 v2, 0x0
 
-    .line 5887
     .local v2, "result":Z
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -13825,7 +12284,6 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 5888
     .local v0, "am":Landroid/media/AudioManager;
     invoke-virtual {v0}, Landroid/media/AudioManager;->isForceSpeakerOn()Z
     :try_end_0
@@ -13833,16 +12291,13 @@
 
     move-result v2
 
-    .line 5893
     .end local v0    # "am":Landroid/media/AudioManager;
     :goto_0
     return v2
 
-    .line 5889
     :catch_0
     move-exception v1
 
-    .line 5890
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -13875,10 +12330,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 7342
     const/4 v4, 0x0
 
-    .line 7346
     .local v4, "state":Z
     :try_start_0
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -13891,7 +12344,6 @@
 
     check-cast v0, Landroid/hardware/display/DisplayManager;
 
-    .line 7347
     .local v0, "dm":Landroid/hardware/display/DisplayManager;
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -13905,7 +12357,6 @@
 
     move-result-object v1
 
-    .line 7348
     .local v1, "dmClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string v7, "getWifiDisplayStatus"
 
@@ -13917,7 +12368,6 @@
 
     move-result-object v3
 
-    .line 7349
     .local v3, "method":Ljava/lang/reflect/Method;
     const/4 v7, 0x0
 
@@ -13927,7 +12377,6 @@
 
     move-result-object v5
 
-    .line 7350
     .local v5, "status":Ljava/lang/Object;
     check-cast v5, Landroid/hardware/display/WifiDisplayStatus;
 
@@ -13944,7 +12393,6 @@
 
     const/4 v4, 0x1
 
-    .line 7355
     .end local v0    # "dm":Landroid/hardware/display/DisplayManager;
     .end local v1    # "dmClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "method":Ljava/lang/reflect/Method;
@@ -13957,17 +12405,14 @@
     :cond_0
     move v4, v6
 
-    .line 7350
     goto :goto_0
 
-    .line 7351
     .end local v0    # "dm":Landroid/hardware/display/DisplayManager;
     .end local v1    # "dmClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v3    # "method":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v2
 
-    .line 7352
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -13998,10 +12443,8 @@
     .locals 6
 
     .prologue
-    .line 5840
     const/4 v1, 0x0
 
-    .line 5842
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14018,15 +12461,12 @@
 
     move-result v1
 
-    .line 5847
     :goto_0
     return v1
 
-    .line 5843
     :catch_0
     move-exception v0
 
-    .line 5844
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -14057,10 +12497,8 @@
     .locals 12
 
     .prologue
-    .line 5715
     const/4 v7, 0x0
 
-    .line 5717
     .local v7, "result":Z
     :try_start_0
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14075,7 +12513,6 @@
 
     move-result v7
 
-    .line 5718
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v9, "ethernet"
@@ -14084,11 +12521,9 @@
 
     move-result-object v1
 
-    .line 5719
     .local v1, "ethernetManagerObject":Ljava/lang/Object;
     if-eqz v1, :cond_0
 
-    .line 5720
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v8
@@ -14103,11 +12538,9 @@
 
     move-result-object v4
 
-    .line 5721
     .local v4, "m":Ljava/lang/reflect/Method;
     if-eqz v4, :cond_0
 
-    .line 5722
     const/4 v8, 0x0
 
     new-array v8, v8, [Ljava/lang/Object;
@@ -14118,7 +12551,6 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 5723
     .local v2, "ethernetState":Ljava/lang/Integer;
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
@@ -14128,10 +12560,8 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 5724
     const/4 v7, 0x1
 
-    .line 5740
     .end local v1    # "ethernetManagerObject":Ljava/lang/Object;
     .end local v2    # "ethernetState":Ljava/lang/Integer;
     .end local v4    # "m":Ljava/lang/reflect/Method;
@@ -14139,7 +12569,6 @@
     :goto_0
     return v7
 
-    .line 5725
     .restart local v1    # "ethernetManagerObject":Ljava/lang/Object;
     .restart local v2    # "ethernetState":Ljava/lang/Integer;
     .restart local v4    # "m":Ljava/lang/reflect/Method;
@@ -14157,55 +12586,43 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 5726
     const/4 v7, 0x0
 
     goto :goto_0
 
-    .line 5730
     .end local v1    # "ethernetManagerObject":Ljava/lang/Object;
     .end local v2    # "ethernetState":Ljava/lang/Integer;
     .end local v4    # "m":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v5
 
-    .line 5731
     .local v5, "nsme":Ljava/lang/NoSuchMethodException;
     const/4 v7, 0x0
 
-    .line 5738
     goto :goto_0
 
-    .line 5732
     .end local v5    # "nsme":Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v3
 
-    .line 5733
     .local v3, "ite":Ljava/lang/reflect/InvocationTargetException;
     const/4 v7, 0x0
 
-    .line 5738
     goto :goto_0
 
-    .line 5734
     .end local v3    # "ite":Ljava/lang/reflect/InvocationTargetException;
     :catch_2
     move-exception v6
 
-    .line 5735
     .local v6, "re":Ljava/lang/RuntimeException;
     const/4 v7, 0x0
 
-    .line 5738
     goto :goto_0
 
-    .line 5736
     .end local v6    # "re":Ljava/lang/RuntimeException;
     :catch_3
     move-exception v0
 
-    .line 5737
     .local v0, "e":Ljava/lang/Exception;
     const-string v8, "KnoxCustomManagerService"
 
@@ -14245,12 +12662,10 @@
     .end annotation
 
     .prologue
-    .line 3797
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3800
     .local v5, "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14265,18 +12680,15 @@
 
     move-result-object v2
 
-    .line 3801
     .local v2, "fromDB":Ljava/lang/String;
     if-nez v2, :cond_1
 
-    .line 3815
     .end local v2    # "fromDB":Ljava/lang/String;
     .end local v5    # "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     :goto_0
     return-object v5
 
-    .line 3804
     .restart local v2    # "fromDB":Ljava/lang/String;
     .restart local v5    # "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
@@ -14298,7 +12710,6 @@
 
     aget-object v6, v0, v3
 
-    .line 3805
     .local v6, "token":Ljava/lang/String;
     if-eqz v6, :cond_2
 
@@ -14308,18 +12719,15 @@
 
     if-lez v7, :cond_2
 
-    .line 3807
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3804
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 3810
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "fromDB":Ljava/lang/String;
     .end local v3    # "i$":I
@@ -14328,7 +12736,6 @@
     :catch_0
     move-exception v1
 
-    .line 3811
     .local v1, "e":Ljava/lang/Exception;
     const-string v7, "KnoxCustomManagerService"
 
@@ -14352,7 +12759,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3812
     const/4 v5, 0x0
 
     goto :goto_0
@@ -14363,25 +12769,20 @@
     .param p1, "stringType"    # I
 
     .prologue
-    .line 1135
     const/4 v1, 0x0
 
-    .line 1136
     .local v1, "result":Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 1152
     const-string v2, "KnoxCustomManagerService"
 
     const-string v3, "getExitUI() called with invalid stringType"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1156
     :goto_0
     return-object v1
 
-    .line 1139
     :pswitch_0
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14400,11 +12801,9 @@
 
     goto :goto_0
 
-    .line 1140
     :catch_0
     move-exception v0
 
-    .line 1141
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -14430,7 +12829,6 @@
 
     goto :goto_0
 
-    .line 1146
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -14450,11 +12848,9 @@
 
     goto :goto_0
 
-    .line 1147
     :catch_1
     move-exception v0
 
-    .line 1148
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -14480,7 +12876,6 @@
 
     goto :goto_0
 
-    .line 1136
     :pswitch_data_0
     .packed-switch 0xdd
         :pswitch_0
@@ -14492,10 +12887,8 @@
     .locals 6
 
     .prologue
-    .line 2786
     const/4 v1, 0x0
 
-    .line 2788
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14512,15 +12905,12 @@
 
     move-result v1
 
-    .line 2793
     :goto_0
     return v1
 
-    .line 2789
     :catch_0
     move-exception v0
 
-    .line 2790
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -14551,10 +12941,8 @@
     .locals 6
 
     .prologue
-    .line 9196
     const/4 v2, 0x0
 
-    .line 9198
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -14563,7 +12951,6 @@
 
     move-result-object v1
 
-    .line 9199
     .local v1, "privateKnoxCustom":Lcom/sec/server/enterprise/knoxcustom/PrivateKnoxCustom;
     invoke-virtual {v1}, Lcom/sec/server/enterprise/knoxcustom/PrivateKnoxCustom;->isKnoxCustomAutoStartUpEnabled()Z
     :try_end_0
@@ -14573,20 +12960,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 9200
     const/4 v2, 0x1
 
-    .line 9206
     .end local v1    # "privateKnoxCustom":Lcom/sec/server/enterprise/knoxcustom/PrivateKnoxCustom;
     :cond_0
     :goto_0
     return v2
 
-    .line 9202
     :catch_0
     move-exception v0
 
-    .line 9203
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -14617,16 +13000,13 @@
     .locals 8
 
     .prologue
-    .line 9175
     const/4 v1, 0x0
 
-    .line 9176
     .local v1, "result":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 9178
     .local v2, "token":J
     :try_start_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14643,18 +13023,14 @@
 
     move-result v1
 
-    .line 9182
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 9183
     return v1
 
-    .line 9179
     :catch_0
     move-exception v0
 
-    .line 9180
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -14685,10 +13061,8 @@
     .locals 6
 
     .prologue
-    .line 4578
     const/4 v1, 0x1
 
-    .line 4580
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14705,15 +13079,12 @@
 
     move-result v1
 
-    .line 4585
     :goto_0
     return v1
 
-    .line 4581
     :catch_0
     move-exception v0
 
-    .line 4582
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -14744,10 +13115,8 @@
     .locals 6
 
     .prologue
-    .line 3453
     const/4 v1, 0x0
 
-    .line 3455
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14764,15 +13133,12 @@
 
     move-result v1
 
-    .line 3460
     :goto_0
     return v1
 
-    .line 3456
     :catch_0
     move-exception v0
 
-    .line 3457
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -14803,10 +13169,8 @@
     .locals 6
 
     .prologue
-    .line 3259
     const/4 v1, 0x0
 
-    .line 3261
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14823,15 +13187,12 @@
 
     move-result v1
 
-    .line 3266
     :goto_0
     return v1
 
-    .line 3262
     :catch_0
     move-exception v0
 
-    .line 3263
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -14862,10 +13223,8 @@
     .locals 6
 
     .prologue
-    .line 1340
     const/4 v1, 0x0
 
-    .line 1342
     .local v1, "result":Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -14882,15 +13241,12 @@
 
     move-result-object v1
 
-    .line 1347
     :goto_0
     return-object v1
 
-    .line 1343
     :catch_0
     move-exception v0
 
-    .line 1344
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -14921,16 +13277,13 @@
     .locals 9
 
     .prologue
-    .line 3933
     const/4 v2, 0x1
 
-    .line 3934
     .local v2, "result":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 3936
     .local v4, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -14943,7 +13296,6 @@
 
     check-cast v0, Landroid/hardware/ConsumerIrManager;
 
-    .line 3937
     .local v0, "cim":Landroid/hardware/ConsumerIrManager;
     if-eqz v0, :cond_0
 
@@ -14955,19 +13307,15 @@
 
     if-nez v3, :cond_1
 
-    .line 3938
     :cond_0
     const/4 v2, 0x0
 
-    .line 3946
     .end local v0    # "cim":Landroid/hardware/ConsumerIrManager;
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3947
     return v2
 
-    .line 3940
     .restart local v0    # "cim":Landroid/hardware/ConsumerIrManager;
     :cond_1
     :try_start_1
@@ -14987,12 +13335,10 @@
 
     goto :goto_0
 
-    .line 3942
     .end local v0    # "cim":Landroid/hardware/ConsumerIrManager;
     :catch_0
     move-exception v1
 
-    .line 3943
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -15023,10 +13369,8 @@
     .locals 6
 
     .prologue
-    .line 2186
     const/4 v1, 0x0
 
-    .line 2188
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -15043,15 +13387,12 @@
 
     move-result v1
 
-    .line 2193
     :goto_0
     return v1
 
-    .line 2189
     :catch_0
     move-exception v0
 
-    .line 2190
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -15082,10 +13423,8 @@
     .locals 6
 
     .prologue
-    .line 6002
     const/4 v1, 0x0
 
-    .line 6004
     .local v1, "mode":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -15102,15 +13441,12 @@
 
     move-result v1
 
-    .line 6009
     :goto_0
     return v1
 
-    .line 6005
     :catch_0
     move-exception v0
 
-    .line 6006
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -15141,10 +13477,8 @@
     .locals 6
 
     .prologue
-    .line 4753
     const/4 v1, 0x0
 
-    .line 4755
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -15161,15 +13495,12 @@
 
     move-result v1
 
-    .line 4760
     :goto_0
     return v1
 
-    .line 4756
     :catch_0
     move-exception v0
 
-    .line 4757
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -15200,10 +13531,8 @@
     .locals 1
 
     .prologue
-    .line 6116
     sget-boolean v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mForceLcdBacklightOffEnabled:Z
 
-    .line 6118
     .local v0, "result":Z
     return v0
 .end method
@@ -15216,16 +13545,13 @@
 
     const/4 v8, 0x0
 
-    .line 5228
     const/4 v4, 0x0
 
-    .line 5229
     .local v4, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 5232
     .local v6, "token":J
     :try_start_0
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -15240,12 +13566,10 @@
 
     move-result v4
 
-    .line 5237
     iget-boolean v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v9, :cond_1
 
-    .line 5239
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -15262,10 +13586,8 @@
 
     if-nez v9, :cond_0
 
-    .line 5240
     or-int/lit8 v4, v4, 0x1
 
-    .line 5242
     :cond_0
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -15283,10 +13605,8 @@
 
     if-nez v9, :cond_1
 
-    .line 5243
     or-int/lit8 v4, v4, 0x10
 
-    .line 5247
     :cond_1
     new-instance v3, Lcom/android/internal/widget/LockPatternUtils;
 
@@ -15294,13 +13614,11 @@
 
     invoke-direct {v3, v9}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 5248
     .local v3, "lpu":Lcom/android/internal/widget/LockPatternUtils;
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 5249
     .local v0, "UserID":I
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getLockScreenHideOwnerInfo()I
 
@@ -15308,10 +13626,8 @@
 
     if-ne v9, v13, :cond_2
 
-    .line 5250
     or-int/lit8 v4, v4, 0x20
 
-    .line 5252
     :cond_2
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -15325,16 +13641,13 @@
 
     move-result-object v1
 
-    .line 5253
     .local v1, "appShortcut_Info":Ljava/lang/String;
     iget-boolean v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v9, :cond_7
 
-    .line 5254
     if-nez v1, :cond_3
 
-    .line 5256
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -15351,10 +13664,8 @@
 
     if-nez v9, :cond_3
 
-    .line 5257
     or-int/lit8 v4, v4, 0x40
 
-    .line 5271
     :cond_3
     :goto_0
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -15373,10 +13684,8 @@
 
     if-nez v9, :cond_4
 
-    .line 5272
     or-int/lit16 v4, v4, 0x80
 
-    .line 5274
     :cond_4
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -15394,10 +13703,8 @@
 
     if-nez v9, :cond_5
 
-    .line 5275
     or-int/lit16 v4, v4, 0x100
 
-    .line 5277
     :cond_5
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -15417,23 +13724,19 @@
 
     if-nez v8, :cond_6
 
-    .line 5278
     or-int/lit16 v4, v4, 0x200
 
-    .line 5286
     :cond_6
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v8, v4
 
-    .line 5287
     .end local v0    # "UserID":I
     .end local v1    # "appShortcut_Info":Ljava/lang/String;
     .end local v3    # "lpu":Lcom/android/internal/widget/LockPatternUtils;
     :goto_1
     return v8
 
-    .line 5262
     .restart local v0    # "UserID":I
     .restart local v1    # "appShortcut_Info":Ljava/lang/String;
     .restart local v3    # "lpu":Lcom/android/internal/widget/LockPatternUtils;
@@ -15445,7 +13748,6 @@
 
     move-result-object v5
 
-    .line 5263
     .local v5, "shortcutInfo":[Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -15473,17 +13775,14 @@
 
     if-eqz v9, :cond_3
 
-    .line 5264
     or-int/lit8 v4, v4, 0x40
 
     goto :goto_0
 
-    .line 5266
     .end local v5    # "shortcutInfo":[Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 5267
     .local v2, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v9, "KnoxCustomManagerService"
@@ -15512,7 +13811,6 @@
 
     goto :goto_1
 
-    .line 5281
     .end local v0    # "UserID":I
     .end local v1    # "appShortcut_Info":Ljava/lang/String;
     .end local v2    # "e":Ljava/lang/Exception;
@@ -15520,7 +13818,6 @@
     :catch_1
     move-exception v2
 
-    .line 5282
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string v9, "KnoxCustomManagerService"
 
@@ -15551,16 +13848,13 @@
     .locals 8
 
     .prologue
-    .line 5210
     const/4 v1, 0x0
 
-    .line 5211
     .local v1, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 5214
     .local v2, "token":J
     :try_start_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -15577,20 +13871,16 @@
 
     move-result v1
 
-    .line 5219
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v4, v1
 
-    .line 5220
     :goto_0
     return v4
 
-    .line 5215
     :catch_0
     move-exception v0
 
-    .line 5216
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -15614,7 +13904,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5217
     const/4 v4, 0x0
 
     goto :goto_0
@@ -15624,7 +13913,6 @@
     .locals 1
 
     .prologue
-    .line 6188
     sget v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mLockScreenOverrideMode:I
 
     return v0
@@ -15637,10 +13925,8 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 10473
     const/4 v4, 0x0
 
-    .line 10475
     .local v4, "result":Ljava/lang/String;
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -15655,24 +13941,20 @@
 
     move-result-object v0
 
-    .line 10476
     .local v0, "appShortcutInfo":Ljava/lang/String;
     iget-boolean v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v6, :cond_1
 
-    .line 10498
     .end local v0    # "appShortcutInfo":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v4
 
-    .line 10479
     .restart local v0    # "appShortcutInfo":Ljava/lang/String;
     :cond_1
     const/4 v1, 0x0
 
-    .line 10480
     .local v1, "applicationName":Ljava/lang/String;
     const-string v6, ";"
 
@@ -15680,21 +13962,17 @@
 
     move-result-object v5
 
-    .line 10481
     .local v5, "shortcutInfo":[Ljava/lang/String;
     if-nez p1, :cond_3
 
-    .line 10482
     const/4 v6, 0x1
 
     aget-object v1, v5, v6
 
-    .line 10488
     :cond_2
     :goto_1
     if-eqz v1, :cond_0
 
-    .line 10489
     const-string v6, "KnoxCustomManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -15717,7 +13995,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10490
     const/16 v6, 0x2f
 
     const/4 v7, 0x0
@@ -15726,7 +14003,6 @@
 
     move-result v3
 
-    .line 10491
     .local v3, "idx":I
     const/4 v6, 0x0
 
@@ -15736,12 +14012,10 @@
 
     goto :goto_0
 
-    .line 10483
     .end local v3    # "idx":I
     :cond_3
     if-ne p1, v8, :cond_2
 
-    .line 10484
     const/4 v6, 0x3
 
     aget-object v1, v5, v6
@@ -15750,14 +14024,12 @@
 
     goto :goto_1
 
-    .line 10494
     .end local v0    # "appShortcutInfo":Ljava/lang/String;
     .end local v1    # "applicationName":Ljava/lang/String;
     .end local v5    # "shortcutInfo":[Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 10495
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -15788,22 +14060,18 @@
     .locals 9
 
     .prologue
-    .line 10369
     const-string v2, "02:00:00:00:00:00"
 
-    .line 10370
     .local v2, "result":Ljava/lang/String;
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 10371
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 10374
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -15816,7 +14084,6 @@
 
     check-cast v3, Landroid/net/wifi/WifiManager;
 
-    .line 10375
     .local v3, "wm":Landroid/net/wifi/WifiManager;
     invoke-virtual {v3}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
@@ -15828,19 +14095,15 @@
 
     move-result-object v2
 
-    .line 10379
     .end local v3    # "wm":Landroid/net/wifi/WifiManager;
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 10380
     return-object v2
 
-    .line 10376
     :catch_0
     move-exception v1
 
-    .line 10377
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -15880,12 +14143,10 @@
     .end annotation
 
     .prologue
-    .line 3827
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3830
     .local v5, "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -15900,11 +14161,9 @@
 
     move-result-object v2
 
-    .line 3831
     .local v2, "fromDB":Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 3832
     const-string v7, ":"
 
     invoke-virtual {v2, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -15923,7 +14182,6 @@
 
     aget-object v6, v0, v3
 
-    .line 3833
     .local v6, "token":Ljava/lang/String;
     if-eqz v6, :cond_0
 
@@ -15933,18 +14191,15 @@
 
     if-lez v7, :cond_0
 
-    .line 3835
     invoke-interface {v5, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3832
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 3839
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "fromDB":Ljava/lang/String;
     .end local v3    # "i$":I
@@ -15953,7 +14208,6 @@
     :catch_0
     move-exception v1
 
-    .line 3840
     .local v1, "e":Ljava/lang/Exception;
     const-string v7, "KnoxCustomManagerService"
 
@@ -15977,7 +14231,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3843
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     return-object v5
@@ -15987,7 +14240,6 @@
     .locals 7
 
     .prologue
-    .line 8240
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -16002,7 +14254,6 @@
 
     if-nez v3, :cond_0
 
-    .line 8241
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v6, "connectivity"
@@ -16013,7 +14264,6 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 8242
     .local v0, "cm":Landroid/net/ConnectivityManager;
     const/4 v3, 0x0
 
@@ -16023,21 +14273,17 @@
 
     if-nez v3, :cond_0
 
-    .line 8243
     const/4 v1, -0x6
 
-    .line 8252
     .end local v0    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v1
 
-    .line 8247
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 8248
     .local v4, "token":J
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -16049,7 +14295,6 @@
 
     check-cast v2, Landroid/telephony/TelephonyManager;
 
-    .line 8249
     .local v2, "tm":Landroid/telephony/TelephonyManager;
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSubId()I
 
@@ -16059,7 +14304,6 @@
 
     move-result v1
 
-    .line 8251
     .local v1, "ret":I
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -16071,25 +14315,20 @@
     .param p1, "paramType"    # I
 
     .prologue
-    .line 2076
     const/4 v1, -0x1
 
-    .line 2077
     .local v1, "result":I
     packed-switch p1, :pswitch_data_0
 
-    .line 2093
     const-string v2, "KnoxCustomManagerService"
 
     const-string v3, "getMultiWindowFixedState() failed - invalid parameter type "
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2097
     :goto_0
     return v1
 
-    .line 2080
     :pswitch_0
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -16108,11 +14347,9 @@
 
     goto :goto_0
 
-    .line 2081
     :catch_0
     move-exception v0
 
-    .line 2082
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -16138,7 +14375,6 @@
 
     goto :goto_0
 
-    .line 2087
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -16158,11 +14394,9 @@
 
     goto :goto_0
 
-    .line 2088
     :catch_1
     move-exception v0
 
-    .line 2089
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -16188,7 +14422,6 @@
 
     goto :goto_0
 
-    .line 2077
     :pswitch_data_0
     .packed-switch 0x1b9
         :pswitch_0
@@ -16209,12 +14442,10 @@
     .end annotation
 
     .prologue
-    .line 6465
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6467
     .local v2, "retList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;>;"
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -16229,28 +14460,23 @@
 
     move-result-object v0
 
-    .line 6470
     .local v0, "blob":[B
     if-eqz v0, :cond_0
 
-    .line 6471
     invoke-direct {p0, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deserializeObject([B)Ljava/util/ArrayList;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
-    .line 6476
     .end local v0    # "blob":[B
     :cond_0
     :goto_0
     return-object v2
 
-    .line 6473
     :catch_0
     move-exception v1
 
-    .line 6474
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -16269,7 +14495,6 @@
 
     const/4 v2, 0x0
 
-    .line 6407
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -16287,21 +14512,17 @@
 
     if-ne v1, v3, :cond_0
 
-    .line 6412
     :goto_0
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 6407
     goto :goto_0
 
-    .line 6410
     :catch_0
     move-exception v0
 
-    .line 6411
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "KnoxCustomManagerService"
 
@@ -16327,7 +14548,6 @@
 
     move v1, v2
 
-    .line 6412
     goto :goto_0
 .end method
 
@@ -16335,10 +14555,8 @@
     .locals 6
 
     .prologue
-    .line 2570
     const/4 v1, -0x1
 
-    .line 2573
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -16355,15 +14573,12 @@
 
     move-result v1
 
-    .line 2579
     :goto_0
     return v1
 
-    .line 2574
     :catch_0
     move-exception v0
 
-    .line 2575
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -16394,10 +14609,8 @@
     .locals 6
 
     .prologue
-    .line 1197
     const/4 v1, 0x2
 
-    .line 1200
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -16414,15 +14627,12 @@
 
     move-result v1
 
-    .line 1206
     :goto_0
     return v1
 
-    .line 1201
     :catch_0
     move-exception v0
 
-    .line 1202
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -16453,10 +14663,8 @@
     .locals 6
 
     .prologue
-    .line 4383
     const/4 v1, 0x1
 
-    .line 4385
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -16473,15 +14681,12 @@
 
     move-result v1
 
-    .line 4390
     :goto_0
     return v1
 
-    .line 4386
     :catch_0
     move-exception v0
 
-    .line 4387
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -16512,10 +14717,8 @@
     .locals 6
 
     .prologue
-    .line 1960
     const/4 v2, 0x1
 
-    .line 1962
     .local v2, "result":Z
     :try_start_0
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getHideNotificationMessages()I
@@ -16524,26 +14727,21 @@
 
     move-result v1
 
-    .line 1963
     .local v1, "mask":I
     const/16 v3, 0x1f
 
     if-ne v1, v3, :cond_0
 
-    .line 1964
     const/4 v2, 0x0
 
-    .line 1970
     .end local v1    # "mask":I
     :cond_0
     :goto_0
     return v2
 
-    .line 1966
     :catch_0
     move-exception v0
 
-    .line 1967
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -16583,7 +14781,6 @@
     .end annotation
 
     .prologue
-    .line 2712
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getPowerDialogCustomItems()Ljava/util/List;
 
     move-result-object v0
@@ -16595,7 +14792,6 @@
     .locals 1
 
     .prologue
-    .line 2636
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getPowerDialogCustomItemsState()Z
 
     move-result v0
@@ -16607,10 +14803,8 @@
     .locals 6
 
     .prologue
-    .line 1038
     const/4 v1, 0x0
 
-    .line 1040
     .local v1, "state":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -16627,15 +14821,12 @@
 
     move-result v1
 
-    .line 1045
     :goto_0
     return v1
 
-    .line 1041
     :catch_0
     move-exception v0
 
-    .line 1042
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -16666,7 +14857,6 @@
     .locals 1
 
     .prologue
-    .line 1408
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getStatusBarClockState()Z
 
     move-result v0
@@ -16678,7 +14868,6 @@
     .locals 1
 
     .prologue
-    .line 1438
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getStatusBarIconsState()Z
 
     move-result v0
@@ -16690,7 +14879,6 @@
     .locals 1
 
     .prologue
-    .line 1379
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getStatusBarMode()I
 
     move-result v0
@@ -16703,25 +14891,20 @@
     .param p1, "stringType"    # I
 
     .prologue
-    .line 1269
     const/4 v1, 0x0
 
-    .line 1271
     .local v1, "result":Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 1298
     const-string v2, "KnoxCustomManagerService"
 
     const-string v3, "getProKioskString() failed - unrecognized type"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1302
     :goto_0
     return-object v1
 
-    .line 1274
     :pswitch_0
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -16740,11 +14923,9 @@
 
     goto :goto_0
 
-    .line 1275
     :catch_0
     move-exception v0
 
-    .line 1276
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -16768,13 +14949,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1277
     const/4 v1, 0x0
 
-    .line 1279
     goto :goto_0
 
-    .line 1282
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -16794,11 +14972,9 @@
 
     goto :goto_0
 
-    .line 1283
     :catch_1
     move-exception v0
 
-    .line 1284
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -16822,13 +14998,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1285
     const/4 v1, 0x0
 
-    .line 1287
     goto :goto_0
 
-    .line 1290
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_2
     :try_start_2
@@ -16848,11 +15021,9 @@
 
     goto :goto_0
 
-    .line 1292
     :catch_2
     move-exception v0
 
-    .line 1293
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -16876,13 +15047,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1294
     const/4 v1, 0x0
 
-    .line 1296
     goto :goto_0
 
-    .line 1271
     :pswitch_data_0
     .packed-switch 0x6f
         :pswitch_2
@@ -16895,7 +15063,6 @@
     .locals 1
 
     .prologue
-    .line 1463
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getUsbMassStorageState()Z
 
     move-result v0
@@ -16908,7 +15075,6 @@
     .param p1, "addressType"    # I
 
     .prologue
-    .line 1518
     invoke-virtual {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getUsbNetAddress(I)Ljava/lang/String;
 
     move-result-object v0
@@ -16920,7 +15086,6 @@
     .locals 1
 
     .prologue
-    .line 1491
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getUsbNetState()Z
 
     move-result v0
@@ -16936,10 +15101,8 @@
 
     const/4 v7, 0x1
 
-    .line 8922
     const/4 v0, 0x0
 
-    .line 8924
     .local v0, "buttons":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -16956,10 +15119,8 @@
 
     if-ne v3, v7, :cond_0
 
-    .line 8925
     or-int/lit8 v0, v0, 0x2
 
-    .line 8927
     :cond_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -16975,10 +15136,8 @@
 
     if-ne v3, v7, :cond_1
 
-    .line 8928
     or-int/lit8 v0, v0, 0x1
 
-    .line 8930
     :cond_1
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -16996,21 +15155,17 @@
 
     if-ne v2, v7, :cond_2
 
-    .line 8931
     or-int/lit8 v0, v0, 0x4
 
     :cond_2
     move v2, v0
 
-    .line 8938
     :goto_0
     return v2
 
-    .line 8933
     :catch_0
     move-exception v1
 
-    .line 8934
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -17034,7 +15189,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8935
     const-string v3, "KnoxCustomManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -17074,10 +15228,8 @@
     .locals 6
 
     .prologue
-    .line 8574
     const/4 v1, 0x1
 
-    .line 8576
     .local v1, "mode":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -17094,15 +15246,12 @@
 
     move-result v1
 
-    .line 8581
     :goto_0
     return v1
 
-    .line 8577
     :catch_0
     move-exception v0
 
-    .line 8578
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -17133,19 +15282,16 @@
     .locals 13
 
     .prologue
-    .line 8732
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 8734
     .local v5, "items":Ljava/lang/StringBuilder;
     :try_start_0
     iget-boolean v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v10, :cond_2
 
-    .line 8735
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -17158,7 +15304,6 @@
 
     move-result-object v9
 
-    .line 8736
     .local v9, "qsList":Ljava/lang/String;
     const-string v10, ";"
 
@@ -17166,11 +15311,9 @@
 
     move-result-object v8
 
-    .line 8737
     .local v8, "qsItems":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 8738
     .local v4, "item":I
     move-object v0, v8
 
@@ -17186,29 +15329,24 @@
 
     aget-object v7, v0, v2
 
-    .line 8739
     .local v7, "qsItem":Ljava/lang/String;
     invoke-direct {p0, v7}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getQuickPanelItemId(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 8740
     .local v3, "id":I
     if-eqz v3, :cond_1
 
-    .line 8741
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
     move-result v10
 
     if-lez v10, :cond_0
 
-    .line 8742
     const-string v10, ","
 
     invoke-virtual {v5, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8744
     :cond_0
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -17230,13 +15368,11 @@
 
     invoke-virtual {v5, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8738
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 8748
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v3    # "id":I
@@ -17258,22 +15394,18 @@
 
     move-result-object v9
 
-    .line 8749
     .restart local v9    # "qsList":Ljava/lang/String;
     if-eqz v9, :cond_5
 
-    .line 8750
     const-string v10, ","
 
     invoke-virtual {v9, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v8
 
-    .line 8751
     .restart local v8    # "qsItems":[Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 8752
     .restart local v4    # "item":I
     move-object v0, v8
 
@@ -17289,29 +15421,24 @@
 
     aget-object v7, v0, v2
 
-    .line 8753
     .restart local v7    # "qsItem":Ljava/lang/String;
     invoke-direct {p0, v7}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getQuickPanelItemId(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 8754
     .restart local v3    # "id":I
     if-eqz v3, :cond_4
 
-    .line 8755
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
     move-result v10
 
     if-lez v10, :cond_3
 
-    .line 8756
     const-string v10, ","
 
     invoke-virtual {v5, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 8758
     :cond_3
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -17335,13 +15462,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8752
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 8763
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v3    # "id":I
@@ -17353,7 +15478,6 @@
     :catch_0
     move-exception v1
 
-    .line 8764
     .local v1, "e":Ljava/lang/Exception;
     const-string v10, "KnoxCustomManagerService"
 
@@ -17377,7 +15501,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8767
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_5
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -17391,15 +15514,12 @@
     .locals 11
 
     .prologue
-    .line 8691
     iget-boolean v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v8, :cond_1
 
-    .line 8692
     const-string v5, "Wifi;Location;SilentMode;AutoRotate;Bluetooth;MobileData;PowerSaving;AirplaneMode;DormantMode;TorchLight;UltraPowerSaving;WiFiHotspot;SmartStay;PersonalMode;AllShareCast;Nfc;Sync;MultiWindow;SFinder;"
 
-    .line 8693
     .local v5, "supportingItems":Ljava/lang/String;
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -17413,14 +15533,12 @@
 
     move-result-object v4
 
-    .line 8699
     .local v4, "qsList":Ljava/lang/String;
     :goto_0
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 8701
     .local v7, "unsupportingList":Ljava/lang/StringBuilder;
     :try_start_0
     const-string v8, "KnoxCustomManagerService"
@@ -17445,15 +15563,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8702
     if-eqz v4, :cond_4
 
-    .line 8705
     iget-boolean v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v8, :cond_2
 
-    .line 8706
     new-instance v3, Ljava/util/LinkedList;
 
     const-string v8, ";"
@@ -17468,7 +15583,6 @@
 
     invoke-direct {v3, v8}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    .line 8707
     .local v3, "originalItemsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v6, Ljava/util/LinkedList;
 
@@ -17484,7 +15598,6 @@
 
     invoke-direct {v6, v8}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    .line 8713
     .local v6, "supportingList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_1
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -17506,7 +15619,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 8714
     .local v2, "itemString":Ljava/lang/String;
     invoke-interface {v6, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -17514,12 +15626,10 @@
 
     if-nez v8, :cond_0
 
-    .line 8715
     iget-boolean v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v8, :cond_3
 
-    .line 8716
     invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v8
@@ -17532,7 +15642,6 @@
 
     goto :goto_2
 
-    .line 8723
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "itemString":Ljava/lang/String;
     .end local v3    # "originalItemsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -17540,7 +15649,6 @@
     :catch_0
     move-exception v0
 
-    .line 8724
     .local v0, "e":Ljava/lang/Exception;
     const-string v8, "KnoxCustomManagerService"
 
@@ -17564,24 +15672,20 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8725
     invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 8728
     .end local v0    # "e":Ljava/lang/Exception;
     :goto_3
     return-object v8
 
-    .line 8695
     .end local v4    # "qsList":Ljava/lang/String;
     .end local v5    # "supportingItems":Ljava/lang/String;
     .end local v7    # "unsupportingList":Ljava/lang/StringBuilder;
     :cond_1
     const-string v5, "Wifi,Location,SilentMode,RotationLock,Bluetooth,MobileData,PowerSaving,AirplaneMode,DormantMode,Flashlight,UltraPowerSaving,WifiHotspot,SmartStay,PersonalMode,AllShareCast,Nfc,Sync,MultiWindow,SFinder,"
 
-    .line 8696
     .restart local v5    # "supportingItems":Ljava/lang/String;
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -17598,7 +15702,6 @@
     .restart local v4    # "qsList":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 8709
     .restart local v7    # "unsupportingList":Ljava/lang/StringBuilder;
     :cond_2
     :try_start_1
@@ -17616,7 +15719,6 @@
 
     invoke-direct {v3, v8}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    .line 8710
     .restart local v3    # "originalItemsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     new-instance v6, Ljava/util/LinkedList;
 
@@ -17635,7 +15737,6 @@
     .restart local v6    # "supportingList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_1
 
-    .line 8718
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v2    # "itemString":Ljava/lang/String;
     :cond_3
@@ -17651,7 +15752,6 @@
 
     goto :goto_2
 
-    .line 8728
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "itemString":Ljava/lang/String;
     .end local v3    # "originalItemsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -17668,10 +15768,8 @@
     .locals 6
 
     .prologue
-    .line 3351
     const/4 v1, 0x0
 
-    .line 3353
     .local v1, "result":Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -17688,15 +15786,12 @@
 
     move-result-object v1
 
-    .line 3358
     :goto_0
     return-object v1
 
-    .line 3354
     :catch_0
     move-exception v0
 
-    .line 3355
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -17727,10 +15822,8 @@
     .locals 6
 
     .prologue
-    .line 3404
     const/4 v1, -0x1
 
-    .line 3406
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -17747,15 +15840,12 @@
 
     move-result v1
 
-    .line 3411
     :goto_0
     return v1
 
-    .line 3407
     :catch_0
     move-exception v0
 
-    .line 3408
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -17786,10 +15876,8 @@
     .locals 6
 
     .prologue
-    .line 4791
     const/4 v1, 0x0
 
-    .line 4793
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -17806,15 +15894,12 @@
 
     move-result v1
 
-    .line 4798
     :goto_0
     return v1
 
-    .line 4794
     :catch_0
     move-exception v0
 
-    .line 4795
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -17845,10 +15930,8 @@
     .locals 6
 
     .prologue
-    .line 4829
     const/4 v1, 0x0
 
-    .line 4831
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -17865,15 +15948,12 @@
 
     move-result v1
 
-    .line 4836
     :goto_0
     return v1
 
-    .line 4832
     :catch_0
     move-exception v0
 
-    .line 4833
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -17904,10 +15984,8 @@
     .locals 6
 
     .prologue
-    .line 4618
     const/4 v1, 0x1
 
-    .line 4620
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -17924,15 +16002,12 @@
 
     move-result v1
 
-    .line 4624
     :goto_0
     return v1
 
-    .line 4621
     :catch_0
     move-exception v0
 
-    .line 4622
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -17963,10 +16038,8 @@
     .locals 6
 
     .prologue
-    .line 4004
     const/4 v1, 0x0
 
-    .line 4006
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -17983,15 +16056,12 @@
 
     move-result v1
 
-    .line 4011
     :goto_0
     return v1
 
-    .line 4007
     :catch_0
     move-exception v0
 
-    .line 4008
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18022,10 +16092,8 @@
     .locals 6
 
     .prologue
-    .line 6265
     const/4 v1, 0x0
 
-    .line 6267
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18042,15 +16110,12 @@
 
     move-result v1
 
-    .line 6272
     :goto_0
     return v1
 
-    .line 6268
     :catch_0
     move-exception v0
 
-    .line 6269
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18081,10 +16146,8 @@
     .locals 6
 
     .prologue
-    .line 2891
     const/4 v1, 0x0
 
-    .line 2893
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18101,15 +16164,12 @@
 
     move-result v1
 
-    .line 2898
     :goto_0
     return v1
 
-    .line 2894
     :catch_0
     move-exception v0
 
-    .line 2895
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18140,10 +16200,8 @@
     .locals 7
 
     .prologue
-    .line 6620
     const/4 v2, 0x1
 
-    .line 6622
     .local v2, "result":Z
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18158,7 +16216,6 @@
 
     move-result v1
 
-    .line 6623
     .local v1, "mode":I
     const/4 v3, 0x3
 
@@ -18176,21 +16233,17 @@
 
     if-eqz v3, :cond_1
 
-    .line 6624
     :cond_0
     const/4 v2, 0x0
 
-    .line 6630
     .end local v1    # "mode":I
     :cond_1
     :goto_0
     return v2
 
-    .line 6626
     :catch_0
     move-exception v0
 
-    .line 6627
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -18221,10 +16274,8 @@
     .locals 7
 
     .prologue
-    .line 6689
     const/4 v2, 0x1
 
-    .line 6691
     .local v2, "result":Z
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18239,7 +16290,6 @@
 
     move-result v1
 
-    .line 6692
     .local v1, "mode":I
     const/4 v3, 0x3
 
@@ -18257,21 +16307,17 @@
 
     if-eqz v3, :cond_1
 
-    .line 6693
     :cond_0
     const/4 v2, 0x0
 
-    .line 6699
     .end local v1    # "mode":I
     :cond_1
     :goto_0
     return v2
 
-    .line 6695
     :catch_0
     move-exception v0
 
-    .line 6696
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -18302,10 +16348,8 @@
     .locals 6
 
     .prologue
-    .line 6549
     const/4 v1, 0x2
 
-    .line 6551
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18320,12 +16364,10 @@
 
     move-result v1
 
-    .line 6552
     const/4 v2, 0x4
 
     if-ne v1, v2, :cond_0
 
-    .line 6553
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getProKioskState()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -18334,25 +16376,20 @@
 
     if-eqz v2, :cond_1
 
-    .line 6554
     const/4 v1, 0x3
 
-    .line 6563
     :cond_0
     :goto_0
     return v1
 
-    .line 6556
     :cond_1
     const/4 v1, 0x2
 
     goto :goto_0
 
-    .line 6559
     :catch_0
     move-exception v0
 
-    .line 6560
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18383,10 +16420,8 @@
     .locals 6
 
     .prologue
-    .line 6754
     const/4 v1, 0x1
 
-    .line 6756
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18403,15 +16438,12 @@
 
     move-result v1
 
-    .line 6761
     :goto_0
     return v1
 
-    .line 6757
     :catch_0
     move-exception v0
 
-    .line 6758
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18442,10 +16474,8 @@
     .locals 6
 
     .prologue
-    .line 4238
     const/4 v1, 0x0
 
-    .line 4240
     .local v1, "result":Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18462,15 +16492,12 @@
 
     move-result-object v1
 
-    .line 4245
     :goto_0
     return-object v1
 
-    .line 4241
     :catch_0
     move-exception v0
 
-    .line 4242
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18501,10 +16528,8 @@
     .locals 6
 
     .prologue
-    .line 6816
     const/4 v1, 0x0
 
-    .line 6818
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18521,15 +16546,12 @@
 
     move-result v1
 
-    .line 6823
     :goto_0
     return v1
 
-    .line 6819
     :catch_0
     move-exception v0
 
-    .line 6820
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18560,10 +16582,8 @@
     .locals 6
 
     .prologue
-    .line 4274
     const/4 v1, 0x0
 
-    .line 4276
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18580,22 +16600,17 @@
 
     move-result v1
 
-    .line 4277
     if-nez v1, :cond_0
 
-    .line 4278
     const/16 v1, 0xc
 
-    .line 4284
     :cond_0
     :goto_0
     return v1
 
-    .line 4280
     :catch_0
     move-exception v0
 
-    .line 4281
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18626,10 +16641,8 @@
     .locals 6
 
     .prologue
-    .line 4258
     const/4 v1, 0x0
 
-    .line 4260
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18646,15 +16659,12 @@
 
     move-result v1
 
-    .line 4265
     :goto_0
     return v1
 
-    .line 4261
     :catch_0
     move-exception v0
 
-    .line 4262
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18685,10 +16695,8 @@
     .locals 6
 
     .prologue
-    .line 9000
     const/4 v2, 0x0
 
-    .line 9002
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -18705,10 +16713,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 9003
     or-int/lit8 v2, v2, 0x1
 
-    .line 9005
     :cond_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -18724,10 +16730,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 9006
     or-int/lit8 v2, v2, 0x2
 
-    .line 9008
     :cond_1
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -18743,10 +16747,8 @@
 
     if-eqz v3, :cond_2
 
-    .line 9009
     or-int/lit8 v2, v2, 0x4
 
-    .line 9011
     :cond_2
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -18762,10 +16764,8 @@
 
     if-eqz v3, :cond_3
 
-    .line 9012
     or-int/lit8 v2, v2, 0x8
 
-    .line 9014
     :cond_3
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -18781,10 +16781,8 @@
 
     if-eqz v3, :cond_4
 
-    .line 9015
     or-int/lit8 v2, v2, 0x10
 
-    .line 9017
     :cond_4
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -18798,7 +16796,6 @@
 
     move-result-object v1
 
-    .line 9018
     .local v1, "penStatus":Ljava/lang/String;
     if-eqz v1, :cond_5
 
@@ -18810,20 +16807,16 @@
 
     if-nez v3, :cond_5
 
-    .line 9019
     or-int/lit8 v2, v2, 0x20
 
-    .line 9025
     .end local v1    # "penStatus":Ljava/lang/String;
     :cond_5
     :goto_0
     return v2
 
-    .line 9021
     :catch_0
     move-exception v0
 
-    .line 9022
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -18854,10 +16847,8 @@
     .locals 6
 
     .prologue
-    .line 4657
     const/4 v1, 0x1
 
-    .line 4659
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18874,15 +16865,12 @@
 
     move-result v1
 
-    .line 4664
     :goto_0
     return v1
 
-    .line 4660
     :catch_0
     move-exception v0
 
-    .line 4661
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18913,10 +16901,8 @@
     .locals 6
 
     .prologue
-    .line 5495
     const/4 v1, 0x0
 
-    .line 5497
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18933,15 +16919,12 @@
 
     move-result v1
 
-    .line 5502
     :goto_0
     return v1
 
-    .line 5498
     :catch_0
     move-exception v0
 
-    .line 5499
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -18972,10 +16955,8 @@
     .locals 6
 
     .prologue
-    .line 5441
     const/4 v1, 0x0
 
-    .line 5443
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -18992,15 +16973,12 @@
 
     move-result v1
 
-    .line 5448
     :goto_0
     return v1
 
-    .line 5444
     :catch_0
     move-exception v0
 
-    .line 5445
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19031,10 +17009,8 @@
     .locals 6
 
     .prologue
-    .line 5511
     const/4 v1, 0x0
 
-    .line 5513
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -19051,15 +17027,12 @@
 
     move-result v1
 
-    .line 5518
     :goto_0
     return v1
 
-    .line 5514
     :catch_0
     move-exception v0
 
-    .line 5515
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19090,10 +17063,8 @@
     .locals 6
 
     .prologue
-    .line 5527
     const/4 v1, 0x0
 
-    .line 5529
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -19110,15 +17081,12 @@
 
     move-result v1
 
-    .line 5534
     :goto_0
     return v1
 
-    .line 5530
     :catch_0
     move-exception v0
 
-    .line 5531
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19149,10 +17117,8 @@
     .locals 6
 
     .prologue
-    .line 4697
     const/4 v1, 0x0
 
-    .line 4699
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -19169,15 +17135,12 @@
 
     move-result v1
 
-    .line 4704
     :goto_0
     return v1
 
-    .line 4700
     :catch_0
     move-exception v0
 
-    .line 4701
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19219,12 +17182,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 6969
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6973
     .local v9, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     const-string v0, "com.sec.android.emergencymode.EmergencyManager"
@@ -19233,7 +17194,6 @@
 
     move-result-object v8
 
-    .line 6974
     .local v8, "em":Ljava/lang/Class;
     const-string v3, "supportUltraPowerSavingMode"
 
@@ -19245,7 +17205,6 @@
 
     move-result-object v10
 
-    .line 6975
     .local v10, "supported":Ljava/lang/reflect/Method;
     const/4 v0, 0x0
 
@@ -19269,30 +17228,25 @@
 
     move-object v0, v2
 
-    .line 7001
     .end local v8    # "em":Ljava/lang/Class;
     .end local v10    # "supported":Ljava/lang/reflect/Method;
     :goto_0
     return-object v0
 
-    .line 6978
     :catch_0
     move-exception v7
 
     .local v7, "e":Ljava/lang/Exception;
     move-object v0, v2
 
-    .line 6979
     goto :goto_0
 
-    .line 6983
     .end local v7    # "e":Ljava/lang/Exception;
     .restart local v8    # "em":Ljava/lang/Class;
     .restart local v10    # "supported":Ljava/lang/reflect/Method;
     :cond_0
     const/4 v6, 0x0
 
-    .line 6985
     .local v6, "cursor":Landroid/database/Cursor;
     :try_start_1
     const-string v0, "content://com.sec.android.emergencymode/launcheradd"
@@ -19301,7 +17255,6 @@
 
     move-result-object v1
 
-    .line 6986
     .local v1, "emergencyUri":Landroid/net/Uri;
     iget-object v0, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -19329,7 +17282,6 @@
 
     move-result-object v6
 
-    .line 6987
     if-eqz v6, :cond_2
 
     invoke-interface {v6}, Landroid/database/Cursor;->getCount()I
@@ -19338,10 +17290,8 @@
 
     if-lez v0, :cond_2
 
-    .line 6988
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 6990
     :cond_1
     const/4 v0, 0x0
 
@@ -19351,7 +17301,6 @@
 
     invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6991
     invoke-interface {v6}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -19361,11 +17310,9 @@
 
     if-nez v0, :cond_1
 
-    .line 6997
     :cond_2
     if-eqz v6, :cond_3
 
-    .line 6998
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     .end local v1    # "emergencyUri":Landroid/net/Uri;
@@ -19373,14 +17320,11 @@
     :goto_1
     move-object v0, v9
 
-    .line 7001
     goto :goto_0
 
-    .line 6993
     :catch_1
     move-exception v7
 
-    .line 6994
     .restart local v7    # "e":Ljava/lang/Exception;
     :try_start_2
     const-string v0, "KnoxCustomManagerService"
@@ -19407,25 +17351,20 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 6995
     const/4 v9, 0x0
 
-    .line 6997
     if-eqz v6, :cond_3
 
-    .line 6998
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
-    .line 6997
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v0
 
     if-eqz v6, :cond_4
 
-    .line 6998
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_4
@@ -19436,10 +17375,8 @@
     .locals 6
 
     .prologue
-    .line 6309
     const/4 v1, 0x0
 
-    .line 6311
     .local v1, "state":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -19456,15 +17393,12 @@
 
     move-result v1
 
-    .line 6316
     :goto_0
     return v1
 
-    .line 6312
     :catch_0
     move-exception v0
 
-    .line 6313
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19495,10 +17429,8 @@
     .locals 6
 
     .prologue
-    .line 6358
     const/4 v1, 0x0
 
-    .line 6361
     .local v1, "pin":Ljava/lang/String;
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -19515,15 +17447,12 @@
 
     move-result-object v1
 
-    .line 6366
     :goto_0
     return-object v1
 
-    .line 6362
     :catch_0
     move-exception v0
 
-    .line 6363
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19554,10 +17483,8 @@
     .locals 6
 
     .prologue
-    .line 10607
     const/4 v1, 0x0
 
-    .line 10609
     .local v1, "type":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -19574,15 +17501,12 @@
 
     move-result v1
 
-    .line 10614
     :goto_0
     return v1
 
-    .line 10610
     :catch_0
     move-exception v0
 
-    .line 10611
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19613,10 +17537,8 @@
     .locals 6
 
     .prologue
-    .line 7064
     const/4 v1, 0x1
 
-    .line 7066
     .local v1, "result":Z
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getUsbNetState()Z
 
@@ -19624,14 +17546,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 7067
     const/4 v2, 0x0
 
-    .line 7075
     :goto_0
     return v2
 
-    .line 7070
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -19651,14 +17570,11 @@
     :goto_1
     move v2, v1
 
-    .line 7075
     goto :goto_0
 
-    .line 7071
     :catch_0
     move-exception v0
 
-    .line 7072
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19690,28 +17606,22 @@
     .param p1, "addressType"    # I
 
     .prologue
-    .line 7191
     const/4 v1, 0x0
 
-    .line 7193
     .local v1, "result":Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 7209
     const-string v2, "KnoxCustomManagerService"
 
     const-string v3, "getUsbNetAddress() failed - invalid address type "
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7210
     const/4 v1, 0x0
 
-    .line 7214
     :goto_0
     return-object v1
 
-    .line 7196
     :pswitch_0
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -19730,11 +17640,9 @@
 
     goto :goto_0
 
-    .line 7197
     :catch_0
     move-exception v0
 
-    .line 7198
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19760,7 +17668,6 @@
 
     goto :goto_0
 
-    .line 7203
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -19780,11 +17687,9 @@
 
     goto :goto_0
 
-    .line 7204
     :catch_1
     move-exception v0
 
-    .line 7205
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19810,7 +17715,6 @@
 
     goto :goto_0
 
-    .line 7193
     nop
 
     :pswitch_data_0
@@ -19826,10 +17730,8 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 7134
     const/4 v1, 0x0
 
-    .line 7137
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -19844,10 +17746,8 @@
 
     move-result v1
 
-    .line 7138
     if-eqz v1, :cond_0
 
-    .line 7139
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -19866,19 +17766,15 @@
 
     if-ne v2, v6, :cond_0
 
-    .line 7140
     const/4 v1, 0x0
 
-    .line 7147
     :cond_0
     :goto_0
     return v1
 
-    .line 7143
     :catch_0
     move-exception v0
 
-    .line 7144
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19909,10 +17805,8 @@
     .locals 5
 
     .prologue
-    .line 2365
     const/4 v1, -0x6
 
-    .line 2368
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -19929,24 +17823,19 @@
 
     move-result v1
 
-    .line 2370
     if-lez v1, :cond_0
 
-    .line 2371
     div-int/lit16 v1, v1, 0x3e8
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2378
     :cond_0
     :goto_0
     return v1
 
-    .line 2373
     :catch_0
     move-exception v0
 
-    .line 2374
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -19970,7 +17859,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2375
     const/4 v1, 0x0
 
     goto :goto_0
@@ -19981,18 +17869,14 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 7486
     const/4 v1, 0x0
 
-    .line 7487
     .local v1, "result":I
     packed-switch p1, :pswitch_data_0
 
-    .line 7517
     :goto_0
     return v1
 
-    .line 7490
     :pswitch_0
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -20013,11 +17897,9 @@
 
     goto :goto_0
 
-    .line 7492
     :catch_0
     move-exception v0
 
-    .line 7493
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20043,7 +17925,6 @@
 
     goto :goto_0
 
-    .line 7498
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -20065,11 +17946,9 @@
 
     goto :goto_0
 
-    .line 7500
     :catch_1
     move-exception v0
 
-    .line 7501
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20095,7 +17974,6 @@
 
     goto :goto_0
 
-    .line 7506
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_2
     :try_start_2
@@ -20117,11 +17995,9 @@
 
     goto :goto_0
 
-    .line 7508
     :catch_2
     move-exception v0
 
-    .line 7509
     .restart local v0    # "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20147,7 +18023,6 @@
 
     goto :goto_0
 
-    .line 7487
     nop
 
     :pswitch_data_0
@@ -20162,10 +18037,8 @@
     .locals 6
 
     .prologue
-    .line 4426
     const/4 v1, 0x0
 
-    .line 4428
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -20182,15 +18055,12 @@
 
     move-result v1
 
-    .line 4433
     :goto_0
     return v1
 
-    .line 4429
     :catch_0
     move-exception v0
 
-    .line 4430
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20221,10 +18091,8 @@
     .locals 6
 
     .prologue
-    .line 4174
     const/4 v1, 0x0
 
-    .line 4176
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -20241,15 +18109,12 @@
 
     move-result v1
 
-    .line 4181
     :goto_0
     return v1
 
-    .line 4177
     :catch_0
     move-exception v0
 
-    .line 4178
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20280,10 +18145,8 @@
     .locals 6
 
     .prologue
-    .line 4467
     const/4 v1, 0x0
 
-    .line 4469
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -20300,15 +18163,12 @@
 
     move-result v1
 
-    .line 4474
     :goto_0
     return v1
 
-    .line 4470
     :catch_0
     move-exception v0
 
-    .line 4471
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20348,10 +18208,8 @@
     .end annotation
 
     .prologue
-    .line 4531
     const/4 v3, 0x0
 
-    .line 4533
     .local v3, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :try_start_0
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -20366,18 +18224,15 @@
 
     move-result-object v2
 
-    .line 4535
     .local v2, "listStr":Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 4536
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 4537
     .end local v3    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local v4, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :try_start_1
@@ -20387,11 +18242,9 @@
 
     invoke-direct {v6, v7}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 4538
     .local v6, "splitter":Landroid/text/TextUtils$StringSplitter;
     invoke-interface {v6, v2}, Landroid/text/TextUtils$StringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 4539
     invoke-interface {v6}, Landroid/text/TextUtils$StringSplitter;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -20410,7 +18263,6 @@
 
     check-cast v5, Ljava/lang/String;
 
-    .line 4540
     .local v5, "s":Ljava/lang/String;
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
@@ -20418,7 +18270,6 @@
 
     goto :goto_0
 
-    .line 4544
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v5    # "s":Ljava/lang/String;
     .end local v6    # "splitter":Landroid/text/TextUtils$StringSplitter;
@@ -20427,7 +18278,6 @@
 
     move-object v3, v4
 
-    .line 4545
     .end local v2    # "listStr":Ljava/lang/String;
     .end local v4    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local v0, "e":Ljava/lang/Exception;
@@ -20455,13 +18305,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4547
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     :goto_2
     return-object v3
 
-    .line 4544
     :catch_1
     move-exception v0
 
@@ -20484,10 +18332,8 @@
     .locals 6
 
     .prologue
-    .line 4120
     const/4 v1, 0x1
 
-    .line 4122
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -20504,15 +18350,12 @@
 
     move-result v1
 
-    .line 4127
     :goto_0
     return v1
 
-    .line 4123
     :catch_0
     move-exception v0
 
-    .line 4124
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20543,10 +18386,8 @@
     .locals 6
 
     .prologue
-    .line 4958
     const/4 v1, -0x1
 
-    .line 4960
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -20563,15 +18404,12 @@
 
     move-result v1
 
-    .line 4965
     :goto_0
     return v1
 
-    .line 4961
     :catch_0
     move-exception v0
 
-    .line 4962
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20602,10 +18440,8 @@
     .locals 6
 
     .prologue
-    .line 4872
     const/4 v1, 0x0
 
-    .line 4874
     .local v1, "state":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -20622,15 +18458,12 @@
 
     move-result v1
 
-    .line 4879
     :goto_0
     return v1
 
-    .line 4875
     :catch_0
     move-exception v0
 
-    .line 4876
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20661,10 +18494,8 @@
     .locals 6
 
     .prologue
-    .line 4915
     const/4 v1, -0x1
 
-    .line 4917
     .local v1, "result":I
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -20681,15 +18512,12 @@
 
     move-result v1
 
-    .line 4922
     :goto_0
     return v1
 
-    .line 4918
     :catch_0
     move-exception v0
 
-    .line 4919
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20720,10 +18548,8 @@
     .locals 6
 
     .prologue
-    .line 4317
     const/4 v1, 0x1
 
-    .line 4319
     .local v1, "result":Z
     :try_start_0
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -20740,15 +18566,12 @@
 
     move-result v1
 
-    .line 4324
     :goto_0
     return v1
 
-    .line 4320
     :catch_0
     move-exception v0
 
-    .line 4321
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "KnoxCustomManagerService"
 
@@ -20779,16 +18602,13 @@
     .locals 9
 
     .prologue
-    .line 7271
     const/4 v2, 0x0
 
-    .line 7272
     .local v2, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 7275
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -20801,7 +18621,6 @@
 
     check-cast v3, Landroid/net/wifi/WifiManager;
 
-    .line 7276
     .local v3, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v3}, Landroid/net/wifi/WifiManager;->getFrequencyBand()I
     :try_end_0
@@ -20809,24 +18628,19 @@
 
     move-result v0
 
-    .line 7277
     .local v0, "band":I
     if-nez v0, :cond_1
 
-    .line 7278
     const/4 v2, 0x0
 
-    .line 7288
     .end local v0    # "band":I
     .end local v3    # "wifiManager":Landroid/net/wifi/WifiManager;
     :cond_0
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7290
     return v2
 
-    .line 7279
     .restart local v0    # "band":I
     .restart local v3    # "wifiManager":Landroid/net/wifi/WifiManager;
     :cond_1
@@ -20834,29 +18648,24 @@
 
     if-ne v0, v6, :cond_2
 
-    .line 7280
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 7281
     :cond_2
     const/4 v6, 0x2
 
     if-ne v0, v6, :cond_0
 
-    .line 7282
     const/4 v2, 0x2
 
     goto :goto_0
 
-    .line 7284
     .end local v0    # "band":I
     .end local v3    # "wifiManager":Landroid/net/wifi/WifiManager;
     :catch_0
     move-exception v1
 
-    .line 7285
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -20887,16 +18696,13 @@
     .locals 9
 
     .prologue
-    .line 8135
     const/4 v1, 0x0
 
-    .line 8136
     .local v1, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 8138
     .local v2, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -20909,7 +18715,6 @@
 
     check-cast v5, Landroid/net/wifi/WifiManager;
 
-    .line 8139
     .local v5, "wm":Landroid/net/wifi/WifiManager;
     invoke-virtual {v5}, Landroid/net/wifi/WifiManager;->getWifiApState()I
     :try_end_0
@@ -20917,7 +18722,6 @@
 
     move-result v4
 
-    .line 8140
     .local v4, "wifiApState":I
     const/16 v6, 0xc
 
@@ -20927,25 +18731,20 @@
 
     if-ne v4, v6, :cond_1
 
-    .line 8142
     :cond_0
     const/4 v1, 0x1
 
-    .line 8147
     .end local v4    # "wifiApState":I
     .end local v5    # "wm":Landroid/net/wifi/WifiManager;
     :cond_1
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8148
     return v1
 
-    .line 8144
     :catch_0
     move-exception v0
 
-    .line 8145
     .local v0, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -20976,16 +18775,13 @@
     .locals 8
 
     .prologue
-    .line 9213
     const/4 v1, 0x0
 
-    .line 9214
     .local v1, "result":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 9216
     .local v2, "token":J
     :try_start_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -21002,18 +18798,14 @@
 
     move-result v1
 
-    .line 9220
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 9221
     return v1
 
-    .line 9217
     :catch_0
     move-exception v0
 
-    .line 9218
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -21045,7 +18837,6 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 850
     :try_start_0
     const-string v2, "SHA-256"
 
@@ -21053,7 +18844,6 @@
 
     move-result-object v1
 
-    .line 851
     .local v1, "md":Ljava/security/MessageDigest;
     const-string v2, "UTF-8"
 
@@ -21069,7 +18859,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 852
     invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v2
@@ -21080,18 +18869,15 @@
 
     move-result-object p1
 
-    .line 855
     .end local v1    # "md":Ljava/security/MessageDigest;
     .end local p1    # "text":Ljava/lang/String;
     :goto_0
     return-object p1
 
-    .line 853
     .restart local p1    # "text":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 855
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 .end method
@@ -21101,7 +18887,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 309
     return-void
 .end method
 
@@ -21110,7 +18895,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 317
     return-void
 .end method
 
@@ -21119,7 +18903,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 313
     return-void
 .end method
 
@@ -21127,16 +18910,13 @@
     .locals 6
 
     .prologue
-    .line 10510
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 10511
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 10514
     .local v2, "result":I
     :try_start_0
     new-instance v3, Ljava/lang/Thread;
@@ -21151,18 +18931,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10524
     const/4 v2, 0x0
 
-    .line 10529
     :goto_0
     return v2
 
-    .line 10525
     :catch_0
     move-exception v1
 
-    .line 10526
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -21186,7 +18962,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10527
     const/4 v2, -0x1
 
     goto :goto_0
@@ -21197,7 +18972,6 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 10215
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -21214,7 +18988,6 @@
 
     if-nez v15, :cond_0
 
-    .line 10216
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -21227,7 +19000,6 @@
 
     check-cast v4, Landroid/net/ConnectivityManager;
 
-    .line 10217
     .local v4, "cm":Landroid/net/ConnectivityManager;
     const/4 v15, 0x0
 
@@ -21237,15 +19009,12 @@
 
     if-nez v15, :cond_0
 
-    .line 10218
     const/4 v14, -0x6
 
-    .line 10262
     .end local v4    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v14
 
-    .line 10222
     :cond_0
     if-eqz p1, :cond_1
 
@@ -21255,7 +19024,6 @@
 
     if-eqz v15, :cond_2
 
-    .line 10223
     :cond_1
     const-string v15, "KnoxCustomManagerService"
 
@@ -21263,12 +19031,10 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10224
     const/16 v14, -0x32
 
     goto :goto_0
 
-    .line 10226
     :cond_2
     sget-object v15, Landroid/util/Patterns;->PHONE:Ljava/util/regex/Pattern;
 
@@ -21284,7 +19050,6 @@
 
     if-nez v15, :cond_3
 
-    .line 10227
     const-string v15, "KnoxCustomManagerService"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -21311,22 +19076,18 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10228
     const/16 v14, -0x32
 
     goto :goto_0
 
-    .line 10231
     :cond_3
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v3
 
-    .line 10232
     .local v3, "callingUid":I
     const/4 v14, -0x6
 
-    .line 10234
     .local v14, "result":I
     :try_start_0
     move-object/from16 v0, p0
@@ -21343,15 +19104,12 @@
 
     move-result-object v11
 
-    .line 10236
     .local v11, "numberListSeparated":Ljava/lang/String;
     const-string v9, ""
 
-    .line 10237
     .local v9, "newNumberListSeparated":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 10238
     .local v6, "found":Z
     if-eqz v11, :cond_5
 
@@ -21361,14 +19119,12 @@
 
     if-nez v15, :cond_5
 
-    .line 10239
     const-string v15, ":"
 
     invoke-virtual {v11, v15}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v10
 
-    .line 10240
     .local v10, "nlsTokens":[Ljava/lang/String;
     move-object v2, v10
 
@@ -21384,7 +19140,6 @@
 
     aget-object v12, v2, v7
 
-    .line 10241
     .local v12, "numberRecord":Ljava/lang/String;
     const-string v15, ","
 
@@ -21392,7 +19147,6 @@
 
     move-result-object v13
 
-    .line 10242
     .local v13, "numberRecordSeparated":[Ljava/lang/String;
     const/4 v15, 0x0
 
@@ -21408,16 +19162,13 @@
 
     if-eqz v15, :cond_4
 
-    .line 10243
     const/4 v6, 0x1
 
-    .line 10240
     :goto_2
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 10245
     :cond_4
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -21443,7 +19194,6 @@
 
     goto :goto_2
 
-    .line 10249
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v7    # "i$":I
     .end local v8    # "len$":I
@@ -21453,12 +19203,10 @@
     :cond_5
     if-nez v6, :cond_6
 
-    .line 10250
     const/16 v14, -0x36
 
     goto/16 :goto_0
 
-    .line 10252
     :cond_6
     invoke-virtual {v9}, Ljava/lang/String;->length()I
 
@@ -21466,7 +19214,6 @@
 
     if-eqz v15, :cond_7
 
-    .line 10253
     const/4 v15, 0x0
 
     invoke-virtual {v9}, Ljava/lang/String;->length()I
@@ -21481,7 +19228,6 @@
 
     move-result-object v9
 
-    .line 10255
     :cond_7
     move-object/from16 v0, p0
 
@@ -21499,19 +19245,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10257
     const/4 v14, 0x0
 
     goto/16 :goto_0
 
-    .line 10258
     .end local v6    # "found":Z
     .end local v9    # "newNumberListSeparated":Ljava/lang/String;
     .end local v11    # "numberListSeparated":Ljava/lang/String;
     :catch_0
     move-exception v5
 
-    .line 10259
     .local v5, "e":Ljava/lang/Exception;
     const-string v15, "KnoxCustomManagerService"
 
@@ -21537,7 +19280,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10260
     const/4 v14, -0x1
 
     goto/16 :goto_0
@@ -21547,24 +19289,19 @@
     .locals 22
 
     .prologue
-    .line 10002
     const/16 v20, -0x36
 
-    .line 10003
     .local v20, "result":I
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v9
 
-    .line 10005
     .local v9, "callingUid":I
     const/16 v21, 0x0
 
-    .line 10006
     .local v21, "shouldUseNewTableFormat":Z
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 10007
     .local v3, "uri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -21586,17 +19323,13 @@
 
     move-result-object v8
 
-    .line 10008
     .local v8, "c":Landroid/database/Cursor;
     if-nez v8, :cond_0
 
-    .line 10009
     const/16 v21, 0x1
 
-    .line 10010
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI_ZERO:Landroid/net/Uri;
 
-    .line 10011
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -21617,17 +19350,13 @@
 
     move-result-object v8
 
-    .line 10012
     if-nez v8, :cond_0
 
-    .line 10014
     const/4 v2, -0x1
 
-    .line 10053
     :goto_0
     return v2
 
-    .line 10018
     :cond_0
     move-object/from16 v0, p0
 
@@ -21635,7 +19364,6 @@
 
     move-result-wide v18
 
-    .line 10019
     .local v18, "maxId":J
     const-wide/16 v4, 0xc8
 
@@ -21645,10 +19373,8 @@
 
     move/from16 v2, v20
 
-    .line 10021
     goto :goto_0
 
-    .line 10024
     :cond_1
     :try_start_0
     const-string v2, "_id"
@@ -21657,11 +19383,9 @@
 
     move-result v16
 
-    .line 10026
     .local v16, "idIndex":I
     const/4 v12, 0x0
 
-    .line 10027
     .local v12, "deletedShortcut":Z
     :cond_2
     :goto_1
@@ -21674,7 +19398,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 10029
     :try_start_1
     move/from16 v0, v16
 
@@ -21682,7 +19405,6 @@
 
     move-result-wide v14
 
-    .line 10030
     .local v14, "id":J
     const-wide/16 v4, 0xc8
 
@@ -21690,12 +19412,10 @@
 
     if-ltz v2, :cond_2
 
-    .line 10031
     if-eqz v21, :cond_3
 
     const-string v17, "content://com.sec.android.app.launcher.settings/favorites"
 
-    .line 10032
     .local v17, "provider":Ljava/lang/String;
     :goto_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -21740,13 +19460,11 @@
 
     move-result-object v10
 
-    .line 10033
     .local v10, "deleteString":Ljava/lang/String;
     invoke-static {v10}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v11
 
-    .line 10035
     .local v11, "deleteUri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -21762,15 +19480,12 @@
 
     invoke-virtual {v2, v11, v4, v5}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 10036
     const/4 v12, 0x1
 
-    .line 10037
     const/16 v20, 0x0
 
     goto :goto_1
 
-    .line 10031
     .end local v10    # "deleteString":Ljava/lang/String;
     .end local v11    # "deleteUri":Landroid/net/Uri;
     .end local v17    # "provider":Ljava/lang/String;
@@ -21782,12 +19497,10 @@
 
     goto :goto_2
 
-    .line 10039
     .end local v14    # "id":J
     :catch_0
     move-exception v13
 
-    .line 10040
     .local v13, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v2, "KnoxCustomManagerService"
@@ -21796,18 +19509,14 @@
 
     invoke-static {v2, v4, v13}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 10041
     const/16 v20, -0x1
 
-    .line 10042
     goto :goto_1
 
-    .line 10044
     .end local v13    # "e":Ljava/lang/Exception;
     :cond_4
     if-eqz v12, :cond_5
 
-    .line 10045
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -21820,7 +19529,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 10046
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -21830,7 +19538,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 10051
     :cond_5
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
@@ -21839,14 +19546,11 @@
     :goto_3
     move/from16 v2, v20
 
-    .line 10053
     goto/16 :goto_0
 
-    .line 10048
     :catch_1
     move-exception v13
 
-    .line 10049
     .restart local v13    # "e":Ljava/lang/Exception;
     :try_start_3
     const-string v2, "KnoxCustomManagerService"
@@ -21873,7 +19577,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 10051
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     goto :goto_3
@@ -21891,18 +19594,15 @@
     .locals 12
 
     .prologue
-    .line 2396
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v1
 
-    .line 2399
     .local v1, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2401
     .local v6, "token":J
     :try_start_0
     new-instance v3, Lcom/android/internal/widget/LockPatternUtils;
@@ -21911,22 +19611,18 @@
 
     invoke-direct {v3, v5}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 2402
     .local v3, "lpu":Lcom/android/internal/widget/LockPatternUtils;
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 2403
     .local v0, "UserID":I
     invoke-virtual {v3, v0}, Lcom/android/internal/widget/LockPatternUtils;->clearLock(I)V
 
-    .line 2404
     const/4 v5, 0x1
 
     invoke-virtual {v3, v5, v0}, Lcom/android/internal/widget/LockPatternUtils;->setLockScreenDisabled(ZI)V
 
-    .line 2406
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -21939,7 +19635,6 @@
 
     invoke-static {v5, v8, v10, v11}, Landroid/provider/Settings$Secure;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
-    .line 2407
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -21952,7 +19647,6 @@
 
     invoke-static {v5, v8, v10, v11}, Landroid/provider/Settings$Secure;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
-    .line 2408
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -21965,7 +19659,6 @@
 
     invoke-static {v5, v8, v10, v11}, Landroid/provider/Settings$Secure;->putLong(Landroid/content/ContentResolver;Ljava/lang/String;J)Z
 
-    .line 2409
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -21980,25 +19673,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2410
     const/4 v4, 0x0
 
-    .line 2414
     .end local v0    # "UserID":I
     .end local v3    # "lpu":Lcom/android/internal/widget/LockPatternUtils;
     .local v4, "result":I
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2416
     return v4
 
-    .line 2411
     .end local v4    # "result":I
     :catch_0
     move-exception v2
 
-    .line 2412
     .local v2, "e":Ljava/lang/Exception;
     const/4 v4, -0x1
 
@@ -22019,17 +19707,14 @@
     .end annotation
 
     .prologue
-    .line 6912
     .local p1, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 6913
     .local v0, "callingUid":I
     const/4 v8, -0x1
 
-    .line 6917
     .local v8, "result":I
     :try_start_0
     const-string v10, "com.sec.android.emergencymode.EmergencyManager"
@@ -22038,7 +19723,6 @@
 
     move-result-object v3
 
-    .line 6918
     .local v3, "em":Ljava/lang/Class;
     const-string v11, "supportUltraPowerSavingMode"
 
@@ -22050,7 +19734,6 @@
 
     move-result-object v9
 
-    .line 6919
     .local v9, "supported":Ljava/lang/reflect/Method;
     const/4 v10, 0x0
 
@@ -22072,26 +19755,21 @@
 
     if-nez v10, :cond_0
 
-    .line 6920
     const/4 v10, -0x6
 
-    .line 6958
     .end local v3    # "em":Ljava/lang/Class;
     .end local v9    # "supported":Ljava/lang/reflect/Method;
     :goto_0
     return v10
 
-    .line 6922
     :catch_0
     move-exception v2
 
-    .line 6923
     .local v2, "e":Ljava/lang/Exception;
     const/4 v10, -0x6
 
     goto :goto_0
 
-    .line 6926
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v3    # "em":Ljava/lang/Class;
     .restart local v9    # "supported":Ljava/lang/reflect/Method;
@@ -22104,13 +19782,11 @@
 
     if-eqz v10, :cond_2
 
-    .line 6928
     :cond_1
     const/16 v10, -0x28
 
     goto :goto_0
 
-    .line 6933
     :cond_2
     :try_start_1
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -22125,14 +19801,12 @@
 
     if-eqz v10, :cond_4
 
-    .line 6934
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/lang/String;
 
-    .line 6935
     .local v6, "packageName":Ljava/lang/String;
     invoke-direct {p0, v6}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->checkDotString(Ljava/lang/String;)Z
 
@@ -22140,12 +19814,10 @@
 
     if-nez v10, :cond_3
 
-    .line 6936
     const/16 v10, -0x32
 
     goto :goto_0
 
-    .line 6941
     .end local v6    # "packageName":Ljava/lang/String;
     :cond_4
     const-string v10, "content://com.sec.android.emergencymode/launcheradd"
@@ -22154,7 +19826,6 @@
 
     move-result-object v4
 
-    .line 6942
     .local v4, "emergencyUri":Landroid/net/Uri;
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -22167,20 +19838,17 @@
 
     if-eqz v10, :cond_6
 
-    .line 6943
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
 
     check-cast v6, Ljava/lang/String;
 
-    .line 6944
     .restart local v6    # "packageName":Ljava/lang/String;
     invoke-direct {p0, v6}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getDefaultActivity(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6945
     .local v1, "className":Ljava/lang/String;
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -22206,16 +19874,13 @@
 
     move-result v7
 
-    .line 6948
     .local v7, "resolverResult":I
     if-gtz v7, :cond_5
 
-    .line 6949
     const/16 v10, -0x32
 
     goto :goto_0
 
-    .line 6952
     .end local v1    # "className":Ljava/lang/String;
     .end local v6    # "packageName":Ljava/lang/String;
     .end local v7    # "resolverResult":I
@@ -22232,7 +19897,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 6953
     const/4 v8, 0x0
 
     .end local v4    # "emergencyUri":Landroid/net/Uri;
@@ -22240,14 +19904,11 @@
     :goto_1
     move v10, v8
 
-    .line 6958
     goto :goto_0
 
-    .line 6954
     :catch_1
     move-exception v2
 
-    .line 6955
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string v10, "KnoxCustomManagerService"
 
@@ -22271,7 +19932,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6956
     const/4 v8, -0x1
 
     goto :goto_1
@@ -22284,16 +19944,13 @@
     .param p3, "moreItems"    # I
 
     .prologue
-    .line 9715
     const/16 v23, -0x36
 
-    .line 9716
     .local v23, "result":I
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v9
 
-    .line 9718
     .local v9, "callingUid":I
     const/4 v2, 0x1
 
@@ -22313,14 +19970,11 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 9720
     const/16 v2, -0x2b
 
-    .line 9799
     :goto_0
     return v2
 
-    .line 9722
     :cond_0
     if-eqz p2, :cond_1
 
@@ -22338,13 +19992,11 @@
 
     if-le v2, v4, :cond_2
 
-    .line 9724
     :cond_1
     const/16 v2, -0x28
 
     goto :goto_0
 
-    .line 9726
     :cond_2
     const/4 v2, 0x1
 
@@ -22354,20 +20006,16 @@
 
     if-eqz p3, :cond_3
 
-    .line 9728
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 9730
     :cond_3
     const/16 v24, 0x0
 
-    .line 9731
     .local v24, "shouldUseNewTableFormat":Z
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 9732
     .local v3, "uri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -22389,17 +20037,13 @@
 
     move-result-object v8
 
-    .line 9733
     .local v8, "c":Landroid/database/Cursor;
     if-nez v8, :cond_4
 
-    .line 9734
     const/16 v24, 0x1
 
-    .line 9735
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI_ZERO:Landroid/net/Uri;
 
-    .line 9736
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -22420,33 +20064,26 @@
 
     move-result-object v8
 
-    .line 9737
     if-nez v8, :cond_4
 
-    .line 9739
     const/16 v2, -0x36
 
     goto :goto_0
 
-    .line 9743
     :cond_4
     const/16 v20, 0x2
 
-    .line 9744
     .local v20, "mappedFolderShortcutType":I
     if-eqz v24, :cond_8
 
-    .line 9745
     const/4 v2, 0x1
 
     move/from16 v0, p1
 
     if-ne v0, v2, :cond_6
 
-    .line 9746
     const/16 v21, 0x1
 
-    .line 9763
     .local v21, "mappedShortcutType":I
     :goto_1
     :try_start_0
@@ -22456,7 +20093,6 @@
 
     move-result v13
 
-    .line 9764
     .local v13, "idIndex":I
     const-string v2, "title"
 
@@ -22464,7 +20100,6 @@
 
     move-result v26
 
-    .line 9765
     .local v26, "titleIndex":I
     const-string v2, "itemType"
 
@@ -22472,15 +20107,12 @@
 
     move-result v19
 
-    .line 9767
     .local v19, "itemTypeIndex":I
     const-wide/16 v16, -0x1
 
-    .line 9769
     .local v16, "id":J
     const-wide/16 v14, -0x1
 
-    .line 9770
     .local v14, "foundId":J
     :cond_5
     :goto_2
@@ -22490,19 +20122,16 @@
 
     if-eqz v2, :cond_b
 
-    .line 9771
     invoke-interface {v8, v13}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v16
 
-    .line 9772
     move/from16 v0, v19
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v18
 
-    .line 9773
     .local v18, "itemType":I
     move/from16 v0, v26
 
@@ -22510,7 +20139,6 @@
 
     move-result-object v25
 
-    .line 9774
     .local v25, "title":Ljava/lang/String;
     move-object/from16 v0, p2
 
@@ -22528,17 +20156,14 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 9775
     cmp-long v2, v16, v14
 
     if-lez v2, :cond_5
 
-    .line 9776
     move-wide/from16 v14, v16
 
     goto :goto_2
 
-    .line 9747
     .end local v13    # "idIndex":I
     .end local v14    # "foundId":J
     .end local v16    # "id":J
@@ -22554,24 +20179,20 @@
 
     if-ne v0, v2, :cond_7
 
-    .line 9748
     const/16 v21, 0x2
 
     .restart local v21    # "mappedShortcutType":I
     goto :goto_1
 
-    .line 9750
     .end local v21    # "mappedShortcutType":I
     :cond_7
     const/16 v21, 0x3
 
-    .line 9751
     .restart local v21    # "mappedShortcutType":I
     const/16 v20, 0x3
 
     goto :goto_1
 
-    .line 9754
     .end local v21    # "mappedShortcutType":I
     :cond_8
     const/4 v2, 0x1
@@ -22580,13 +20201,11 @@
 
     if-ne v0, v2, :cond_9
 
-    .line 9755
     const/16 v21, 0x0
 
     .restart local v21    # "mappedShortcutType":I
     goto :goto_1
 
-    .line 9756
     .end local v21    # "mappedShortcutType":I
     :cond_9
     const/4 v2, 0x2
@@ -22595,13 +20214,11 @@
 
     if-ne v0, v2, :cond_a
 
-    .line 9757
     const/16 v21, 0x1
 
     .restart local v21    # "mappedShortcutType":I
     goto :goto_1
 
-    .line 9759
     .end local v21    # "mappedShortcutType":I
     :cond_a
     const/16 v21, 0x2
@@ -22609,7 +20226,6 @@
     .restart local v21    # "mappedShortcutType":I
     goto :goto_1
 
-    .line 9780
     .restart local v13    # "idIndex":I
     .restart local v14    # "foundId":J
     .restart local v16    # "id":J
@@ -22622,12 +20238,10 @@
 
     if-eqz v2, :cond_d
 
-    .line 9781
     if-eqz v24, :cond_e
 
     const-string v22, "content://com.sec.android.app.launcher.settings/favorites"
 
-    .line 9782
     .local v22, "provider":Ljava/lang/String;
     :goto_3
     new-instance v2, Ljava/lang/StringBuilder;
@@ -22672,13 +20286,11 @@
 
     move-result-object v10
 
-    .line 9783
     .local v10, "deleteString":Ljava/lang/String;
     invoke-static {v10}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v11
 
-    .line 9785
     .local v11, "deleteUri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -22694,21 +20306,18 @@
 
     invoke-virtual {v2, v11, v4, v5}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 9786
     move/from16 v0, v21
 
     move/from16 v1, v20
 
     if-ne v0, v1, :cond_c
 
-    .line 9788
     move-object/from16 v0, p0
 
     move/from16 v1, v24
 
     invoke-direct {v0, v3, v14, v15, v1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteFolderItems(Landroid/net/Uri;JZ)V
 
-    .line 9790
     :cond_c
     move-object/from16 v0, p0
 
@@ -22722,7 +20331,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;)V
 
-    .line 9791
     move-object/from16 v0, p0
 
     move/from16 v1, p3
@@ -22732,10 +20340,8 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9792
     const/16 v23, 0x0
 
-    .line 9797
     .end local v10    # "deleteString":Ljava/lang/String;
     .end local v11    # "deleteUri":Landroid/net/Uri;
     .end local v22    # "provider":Ljava/lang/String;
@@ -22750,10 +20356,8 @@
     :goto_4
     move/from16 v2, v23
 
-    .line 9799
     goto/16 :goto_0
 
-    .line 9781
     .restart local v13    # "idIndex":I
     .restart local v14    # "foundId":J
     .restart local v16    # "id":J
@@ -22768,7 +20372,6 @@
 
     goto :goto_3
 
-    .line 9794
     .end local v13    # "idIndex":I
     .end local v14    # "foundId":J
     .end local v16    # "id":J
@@ -22777,7 +20380,6 @@
     :catch_0
     move-exception v12
 
-    .line 9795
     .local v12, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v2, "KnoxCustomManagerService"
@@ -22804,7 +20406,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 9797
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     goto :goto_4
@@ -22826,24 +20427,19 @@
     .param p4, "originalIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 9930
     const/16 v24, -0x36
 
-    .line 9931
     .local v24, "result":I
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v11
 
-    .line 9933
     .local v11, "callingUid":I
     const/16 v25, 0x0
 
-    .line 9934
     .local v25, "shouldUseNewTableFormat":Z
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 9935
     .local v3, "uri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -22865,17 +20461,13 @@
 
     move-result-object v10
 
-    .line 9936
     .local v10, "c":Landroid/database/Cursor;
     if-nez v10, :cond_0
 
-    .line 9937
     const/16 v25, 0x1
 
-    .line 9938
     sget-object v3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->CONTENT_URI_ZERO:Landroid/net/Uri;
 
-    .line 9939
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -22896,17 +20488,13 @@
 
     move-result-object v10
 
-    .line 9940
     if-nez v10, :cond_0
 
-    .line 9942
     const/16 v2, -0x36
 
-    .line 9990
     :goto_0
     return v2
 
-    .line 9945
     :cond_0
     const/4 v2, 0x1
 
@@ -22916,12 +20504,10 @@
 
     if-eqz p3, :cond_1
 
-    .line 9947
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 9952
     :cond_1
     :try_start_0
     const-string v2, "_id"
@@ -22930,7 +20516,6 @@
 
     move-result v20
 
-    .line 9953
     .local v20, "idIndex":I
     const-string v2, "intent"
 
@@ -22938,7 +20523,6 @@
 
     move-result v22
 
-    .line 9954
     .local v22, "intentIndex":I
     const-string v2, "appWidgetId"
 
@@ -22946,19 +20530,15 @@
 
     move-result v9
 
-    .line 9955
     .local v9, "appWidgetIdIndex":I
     const-wide/16 v18, -0x1
 
-    .line 9958
     .local v18, "id":J
     const-wide/16 v16, -0x1
 
-    .line 9959
     .local v16, "foundId":J
     const/4 v15, 0x0
 
-    .line 9960
     .local v15, "finished":Z
     :cond_2
     :goto_1
@@ -22970,39 +20550,32 @@
 
     if-eqz v2, :cond_4
 
-    .line 9961
     move/from16 v0, v20
 
     invoke-interface {v10, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v18
 
-    .line 9962
     move/from16 v0, v22
 
     invoke-interface {v10, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v21
 
-    .line 9963
     .local v21, "intentFromDb":Ljava/lang/String;
     invoke-interface {v10, v9}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v8
 
-    .line 9965
     .local v8, "appWidgetId":I
     move/from16 v0, p2
 
     if-ne v8, v0, :cond_3
 
-    .line 9966
     move-wide/from16 v16, v18
 
-    .line 9967
     const/4 v15, 0x1
 
-    .line 9969
     :cond_3
     if-eqz p1, :cond_2
 
@@ -23016,17 +20589,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 9970
     cmp-long v2, v18, v16
 
     if-lez v2, :cond_2
 
-    .line 9971
     move-wide/from16 v16, v18
 
     goto :goto_1
 
-    .line 9975
     .end local v8    # "appWidgetId":I
     .end local v21    # "intentFromDb":Ljava/lang/String;
     :cond_4
@@ -23036,12 +20606,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 9976
     if-eqz v25, :cond_6
 
     const-string v23, "content://com.sec.android.app.launcher.settings/favorites"
 
-    .line 9977
     .local v23, "provider":Ljava/lang/String;
     :goto_2
     new-instance v2, Ljava/lang/StringBuilder;
@@ -23088,13 +20656,11 @@
 
     move-result-object v12
 
-    .line 9978
     .local v12, "deleteString":Ljava/lang/String;
     invoke-static {v12}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v13
 
-    .line 9980
     .local v13, "deleteUri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -23110,7 +20676,6 @@
 
     invoke-virtual {v2, v13, v4, v5}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 9981
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -23126,17 +20691,14 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9982
     const/16 v24, 0x0
 
-    .line 9987
     .end local v12    # "deleteString":Ljava/lang/String;
     .end local v13    # "deleteUri":Landroid/net/Uri;
     .end local v23    # "provider":Ljava/lang/String;
     :cond_5
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 9989
     .end local v9    # "appWidgetIdIndex":I
     .end local v15    # "finished":Z
     .end local v16    # "foundId":J
@@ -23152,10 +20714,8 @@
 
     move/from16 v2, v24
 
-    .line 9990
     goto/16 :goto_0
 
-    .line 9976
     .restart local v9    # "appWidgetIdIndex":I
     .restart local v15    # "finished":Z
     .restart local v16    # "foundId":J
@@ -23171,7 +20731,6 @@
 
     goto :goto_2
 
-    .line 9984
     .end local v9    # "appWidgetIdIndex":I
     .end local v15    # "finished":Z
     .end local v16    # "foundId":J
@@ -23181,7 +20740,6 @@
     :catch_0
     move-exception v14
 
-    .line 9985
     .local v14, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v2, "KnoxCustomManagerService"
@@ -23208,7 +20766,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 9987
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
     goto :goto_3
@@ -23230,16 +20787,13 @@
     .prologue
     const/16 v6, -0x32
 
-    .line 8020
     const/4 v2, -0x6
 
-    .line 8021
     .local v2, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 8023
     .local v0, "callingUid":I
     const/16 v7, 0x30
 
@@ -23258,12 +20812,10 @@
 
     if-eq p1, v7, :cond_2
 
-    .line 8042
     :cond_1
     :goto_0
     return v6
 
-    .line 8026
     :cond_2
     const/16 v7, 0x64
 
@@ -23273,13 +20825,11 @@
 
     if-gt p2, v7, :cond_1
 
-    .line 8031
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 8032
     .local v4, "token":J
     new-instance v3, Landroid/content/Intent;
 
@@ -23287,18 +20837,15 @@
 
     invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 8033
     .local v3, "systemIntent":Landroid/content/Intent;
     const-string v6, "tone"
 
     invoke-virtual {v3, v6, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;C)Landroid/content/Intent;
 
-    .line 8034
     const-string v6, "duration"
 
     invoke-virtual {v3, v6, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 8035
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     new-instance v7, Landroid/os/UserHandle;
@@ -23309,12 +20856,10 @@
 
     invoke-virtual {v6, v3, v7}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 8036
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8037
     const/4 v2, 0x0
 
     .end local v3    # "systemIntent":Landroid/content/Intent;
@@ -23322,14 +20867,11 @@
     :goto_1
     move v6, v2
 
-    .line 8042
     goto :goto_0
 
-    .line 8038
     :catch_0
     move-exception v1
 
-    .line 8039
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -23353,7 +20895,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8040
     const/4 v2, -0x1
 
     goto :goto_1
@@ -23371,25 +20912,20 @@
 
     const/4 v3, 0x1
 
-    .line 9040
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 9041
     .local v0, "callingUid":I
     if-eq p1, v3, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 9042
     const/16 v2, -0x2b
 
-    .line 9085
     :goto_0
     return v2
 
-    .line 9045
     :cond_0
     if-ltz p2, :cond_1
 
@@ -23397,7 +20933,6 @@
 
     if-le p2, v8, :cond_2
 
-    .line 9046
     :cond_1
     const-string v3, "KnoxCustomManagerService"
 
@@ -23421,28 +20956,23 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9047
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 9049
     :cond_2
     const/4 v2, -0x6
 
-    .line 9050
     .local v2, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 9053
     .local v4, "token":J
     and-int/lit8 v8, p2, 0x1
 
     if-ne v8, v3, :cond_3
 
-    .line 9055
     :try_start_0
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -23459,13 +20989,11 @@
     :goto_1
     invoke-static {v9, v10, v8}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 9057
     :cond_3
     and-int/lit8 v8, p2, 0x2
 
     if-ne v8, v7, :cond_4
 
-    .line 9059
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -23481,7 +21009,6 @@
     :goto_2
     invoke-static {v9, v10, v8}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 9061
     :cond_4
     and-int/lit8 v8, p2, 0x4
 
@@ -23489,7 +21016,6 @@
 
     if-ne v8, v9, :cond_5
 
-    .line 9062
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -23503,7 +21029,6 @@
     :goto_3
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 9065
     :cond_5
     and-int/lit8 v7, p2, 0x8
 
@@ -23511,12 +21036,10 @@
 
     if-ne v7, v8, :cond_6
 
-    .line 9066
     iget-boolean v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
 
     if-eqz v7, :cond_c
 
-    .line 9067
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -23532,7 +21055,6 @@
     :goto_4
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 9072
     :cond_6
     :goto_5
     and-int/lit8 v7, p2, 0x10
@@ -23541,7 +21063,6 @@
 
     if-ne v7, v8, :cond_7
 
-    .line 9073
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -23555,16 +21076,13 @@
     :goto_6
     invoke-static {v7, v8, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 9077
     :cond_7
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->closeSettingsApp()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9079
     const/4 v2, 0x0
 
-    .line 9084
     :goto_7
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -23573,28 +21091,23 @@
     :cond_8
     move v8, v6
 
-    .line 9055
     goto :goto_1
 
     :cond_9
     move v8, v6
 
-    .line 9059
     goto :goto_2
 
     :cond_a
     move v7, v3
 
-    .line 9062
     goto :goto_3
 
     :cond_b
     move v7, v6
 
-    .line 9067
     goto :goto_4
 
-    .line 9069
     :cond_c
     :try_start_1
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -23616,11 +21129,9 @@
 
     goto :goto_5
 
-    .line 9080
     :catch_0
     move-exception v1
 
-    .line 9081
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -23644,7 +21155,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9082
     const/4 v2, -0x1
 
     goto :goto_7
@@ -23653,13 +21163,11 @@
     :cond_d
     move v7, v6
 
-    .line 9069
     goto :goto_8
 
     :cond_e
     move v3, v6
 
-    .line 9073
     goto :goto_6
 .end method
 
@@ -23672,18 +21180,15 @@
 
     const/4 v6, 0x0
 
-    .line 1596
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 1599
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1600
     .local v4, "token":J
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -23693,7 +21198,6 @@
 
     move-result-object v2
 
-    .line 1601
     .local v2, "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     invoke-virtual {v2}, Landroid/app/enterprise/RestrictionPolicy;->isUsbDebuggingEnabled()Z
 
@@ -23703,25 +21207,20 @@
 
     move v1, v3
 
-    .line 1602
     .local v1, "isRestricted":Z
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1603
     if-eqz v1, :cond_1
 
-    .line 1604
     const-string v3, "KnoxCustomManagerService"
 
     const-string v6, "setAdbState() - eSDK USB debugging disabled"
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1605
     const/4 v6, -0x7
 
-    .line 1615
     :goto_1
     return v6
 
@@ -23729,17 +21228,14 @@
     :cond_0
     move v1, v6
 
-    .line 1601
     goto :goto_0
 
-    .line 1608
     .restart local v1    # "isRestricted":Z
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1609
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -23753,10 +21249,8 @@
     :goto_2
     invoke-static {v7, v8, v3}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1610
     if-eqz p1, :cond_2
 
-    .line 1611
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -23769,7 +21263,6 @@
 
     invoke-static {v3, v7, v8}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1613
     :cond_2
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -23778,7 +21271,6 @@
     :cond_3
     move v3, v6
 
-    .line 1609
     goto :goto_2
 .end method
 
@@ -23792,22 +21284,18 @@
 
     const/4 v6, 0x1
 
-    .line 7371
     const/4 v3, -0x6
 
-    .line 7372
     .local v3, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 7375
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 7376
     .local v4, "token":J
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -23815,7 +21303,6 @@
 
     move-result-object v2
 
-    .line 7377
     .local v2, "kioskMode":Landroid/app/enterprise/kioskmode/KioskMode;
     invoke-virtual {v2}, Landroid/app/enterprise/kioskmode/KioskMode;->isAirCommandModeAllowed()Z
 
@@ -23825,25 +21312,20 @@
 
     move v1, v6
 
-    .line 7378
     .local v1, "isRestricted":Z
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7379
     if-eqz v1, :cond_1
 
-    .line 7380
     const-string v6, "KnoxCustomManagerService"
 
     const-string v7, "setAirGestureOptionState() - eSDK Air Command not allowed"
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7381
     const/4 v6, -0x7
 
-    .line 7400
     :goto_1
     return v6
 
@@ -23851,23 +21333,19 @@
     :cond_0
     move v1, v7
 
-    .line 7377
     goto :goto_0
 
-    .line 7383
     .restart local v1    # "isRestricted":Z
     :cond_1
     if-ltz p1, :cond_2
 
     if-le p1, v6, :cond_3
 
-    .line 7384
     :cond_2
     const/16 v6, -0x32
 
     goto :goto_1
 
-    .line 7387
     :cond_3
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
@@ -23881,28 +21359,22 @@
 
     if-eqz v8, :cond_4
 
-    .line 7388
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 7389
     packed-switch p1, :pswitch_data_0
 
-    .line 7397
     :goto_2
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7398
     const/4 v3, 0x0
 
     :cond_4
     move v6, v3
 
-    .line 7400
     goto :goto_1
 
-    .line 7391
     :pswitch_0
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -23924,7 +21396,6 @@
 
     goto :goto_3
 
-    .line 7394
     :pswitch_1
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -23946,7 +21417,6 @@
 
     goto :goto_4
 
-    .line 7389
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -23970,19 +21440,15 @@
     .local p1, "namespaces":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/16 v4, -0x32
 
-    .line 5584
     if-nez p1, :cond_1
 
-    .line 5615
     :cond_0
     :goto_0
     return v4
 
-    .line 5588
     :cond_1
     const-string v3, ""
 
-    .line 5590
     .local v3, "namespacesSeparated":Ljava/lang/String;
     const-string v6, "*"
 
@@ -23992,20 +21458,16 @@
 
     if-eqz v6, :cond_3
 
-    .line 5591
     const-string v3, "*"
 
-    .line 5606
     :cond_2
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 5607
     .local v0, "callingUid":I
     const/4 v4, -0x6
 
-    .line 5609
     .local v4, "result":I
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -24018,12 +21480,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5610
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 5593
     .end local v0    # "callingUid":I
     .end local v4    # "result":I
     :cond_3
@@ -24037,14 +21497,12 @@
 
     if-ge v2, v6, :cond_2
 
-    .line 5594
     invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 5596
     .local v5, "tmp":Ljava/lang/String;
     invoke-direct {p0, v5}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->checkDotString(Ljava/lang/String;)Z
 
@@ -24052,7 +21510,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 5599
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -24069,7 +21526,6 @@
 
     move-result-object v3
 
-    .line 5600
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v6
@@ -24078,7 +21534,6 @@
 
     if-ge v2, v6, :cond_4
 
-    .line 5601
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -24097,13 +21552,11 @@
 
     move-result-object v3
 
-    .line 5593
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 5611
     .end local v2    # "k":I
     .end local v5    # "tmp":Ljava/lang/String;
     .restart local v0    # "callingUid":I
@@ -24111,7 +21564,6 @@
     :catch_0
     move-exception v1
 
-    .line 5612
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -24135,7 +21587,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5613
     const/4 v4, -0x1
 
     goto :goto_0
@@ -24146,16 +21597,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 5546
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 5547
     .local v0, "callingUid":I
     const/4 v1, -0x6
 
-    .line 5549
     .local v1, "downloadStateResult":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -24168,18 +21616,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5550
     const/4 v1, 0x0
 
-    .line 5555
     :goto_0
     return v1
 
-    .line 5551
     :catch_0
     move-exception v2
 
-    .line 5552
     .local v2, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -24203,7 +21647,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5553
     const/4 v1, -0x1
 
     goto :goto_0
@@ -24215,25 +21658,20 @@
     .param p2, "volume"    # I
 
     .prologue
-    .line 2432
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v2
 
-    .line 2433
     .local v2, "callingUid":I
     const/4 v5, -0x6
 
-    .line 2435
     .local v5, "result":I
     if-ltz p1, :cond_4
 
-    .line 2436
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2437
     .local v6, "token":J
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -24245,40 +21683,31 @@
 
     check-cast v1, Landroid/media/AudioManager;
 
-    .line 2438
     .local v1, "am":Landroid/media/AudioManager;
     if-eqz v1, :cond_2
 
-    .line 2440
     const/4 v8, 0x5
 
     if-gt p1, v8, :cond_3
 
-    .line 2441
     :try_start_0
     invoke-virtual {v1, p1}, Landroid/media/AudioManager;->getStreamMaxVolume(I)I
 
     move-result v4
 
-    .line 2442
     .local v4, "maxVolume":I
     move v0, p2
 
-    .line 2443
     .local v0, "actualVolume":I
     if-le v0, v4, :cond_0
 
-    .line 2444
     move v0, v4
 
-    .line 2446
     :cond_0
     if-gez v0, :cond_1
 
-    .line 2447
     const/4 v0, 0x0
 
-    .line 2449
     :cond_1
     const/4 v8, 0x0
 
@@ -24286,23 +21715,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2450
     const/4 v5, 0x0
 
-    .line 2458
     .end local v0    # "actualVolume":I
     .end local v4    # "maxVolume":I
     :cond_2
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2463
     .end local v1    # "am":Landroid/media/AudioManager;
     .end local v6    # "token":J
     :goto_1
     return v5
 
-    .line 2452
     .restart local v1    # "am":Landroid/media/AudioManager;
     .restart local v6    # "token":J
     :cond_3
@@ -24310,17 +21735,14 @@
 
     goto :goto_0
 
-    .line 2454
     :catch_0
     move-exception v3
 
-    .line 2455
     .local v3, "e":Ljava/lang/Exception;
     const/16 v5, -0x26
 
     goto :goto_0
 
-    .line 2460
     .end local v1    # "am":Landroid/media/AudioManager;
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v6    # "token":J
@@ -24335,16 +21757,13 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 10080
     const/4 v3, -0x6
 
-    .line 10081
     .local v3, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 10084
     .local v0, "callingUid":I
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -24360,7 +21779,6 @@
 
     if-nez v6, :cond_0
 
-    .line 10085
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v7, "connectivity"
@@ -24371,7 +21789,6 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 10086
     .local v1, "cm":Landroid/net/ConnectivityManager;
     const/4 v6, 0x0
 
@@ -24381,15 +21798,12 @@
 
     if-nez v6, :cond_0
 
-    .line 10087
     const/4 v6, -0x6
 
-    .line 10105
     .end local v1    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v6
 
-    .line 10091
     :cond_0
     const/4 v6, 0x1
 
@@ -24397,18 +21811,15 @@
 
     if-eqz p1, :cond_1
 
-    .line 10092
     const/16 v6, -0x2b
 
     goto :goto_0
 
-    .line 10095
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 10097
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -24421,23 +21832,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10098
     const/4 v3, 0x0
 
-    .line 10104
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v6, v3
 
-    .line 10105
     goto :goto_0
 
-    .line 10100
     :catch_0
     move-exception v2
 
-    .line 10101
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -24461,7 +21867,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10102
     const/4 v3, -0x1
 
     goto :goto_1
@@ -24473,22 +21878,18 @@
     .param p2, "rotation"    # I
 
     .prologue
-    .line 1897
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 1898
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 1899
     .local v2, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1902
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -24503,27 +21904,21 @@
 
     move-result-object v3
 
-    .line 1903
     .local v3, "wm":Landroid/view/IWindowManager;
     if-eqz p1, :cond_0
 
-    .line 1904
     invoke-interface {v3}, Landroid/view/IWindowManager;->thawRotation()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1905
     const/4 v2, 0x0
 
-    .line 1919
     .end local v3    # "wm":Landroid/view/IWindowManager;
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1920
     return v2
 
-    .line 1907
     .restart local v3    # "wm":Landroid/view/IWindowManager;
     :cond_0
     const/4 v6, 0x3
@@ -24534,7 +21929,6 @@
 
     if-ge p2, v6, :cond_2
 
-    .line 1908
     :cond_1
     :try_start_1
     const-string v6, "KnoxCustomManagerService"
@@ -24543,28 +21937,23 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1909
     const/16 v2, -0x27
 
     goto :goto_0
 
-    .line 1911
     :cond_2
     invoke-interface {v3, p2}, Landroid/view/IWindowManager;->freezeRotation(I)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1912
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1915
     .end local v3    # "wm":Landroid/view/IWindowManager;
     :catch_0
     move-exception v1
 
-    .line 1916
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -24588,7 +21977,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1917
     const/4 v2, -0x1
 
     goto :goto_0
@@ -24604,18 +21992,15 @@
 
     const/4 v9, 0x0
 
-    .line 3087
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v1
 
-    .line 3089
     .local v1, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 3090
     .local v6, "token":J
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -24625,7 +22010,6 @@
 
     move-result-object v4
 
-    .line 3091
     .local v4, "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     invoke-virtual {v4, v9}, Landroid/app/enterprise/RestrictionPolicy;->isBackupAllowed(Z)Z
 
@@ -24635,25 +22019,20 @@
 
     move v3, v8
 
-    .line 3092
     .local v3, "isRestricted":Z
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3093
     if-eqz v3, :cond_2
 
-    .line 3094
     const-string v8, "KnoxCustomManagerService"
 
     const-string v9, "setBackupRestoreState() - eSDK backup is disabled"
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3095
     const/4 v5, -0x7
 
-    .line 3126
     :cond_0
     :goto_1
     return v5
@@ -24662,10 +22041,8 @@
     :cond_1
     move v3, v9
 
-    .line 3091
     goto :goto_0
 
-    .line 3097
     .restart local v3    # "isRestricted":Z
     :cond_2
     if-lt p1, v8, :cond_3
@@ -24674,28 +22051,23 @@
 
     if-le p1, v10, :cond_4
 
-    .line 3098
     :cond_3
     const/16 v5, -0x32
 
     goto :goto_1
 
-    .line 3100
     :cond_4
     const/4 v5, 0x0
 
-    .line 3101
     .local v5, "ret":I
     and-int/lit8 v10, p1, 0x1
 
     if-eqz v10, :cond_5
 
-    .line 3102
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 3103
     const-string v10, "backup"
 
     invoke-static {v10}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -24706,40 +22078,32 @@
 
     move-result-object v0
 
-    .line 3104
     .local v0, "backupManager":Landroid/app/backup/IBackupManager;
     if-nez v0, :cond_7
 
-    .line 3105
     const-string v10, "KnoxCustomManagerService"
 
     const-string v11, "Failed to get BackupManager"
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3106
     const/4 v5, -0x1
 
-    .line 3115
     :goto_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3116
     if-nez v5, :cond_0
 
-    .line 3120
     .end local v0    # "backupManager":Landroid/app/backup/IBackupManager;
     :cond_5
     and-int/lit8 v10, p1, 0x2
 
     if-eqz v10, :cond_6
 
-    .line 3121
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 3122
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -24753,16 +22117,13 @@
     :goto_3
     invoke-static {v10, v11, v8}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3124
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :cond_6
     move v5, v9
 
-    .line 3126
     goto :goto_1
 
-    .line 3109
     .restart local v0    # "backupManager":Landroid/app/backup/IBackupManager;
     :cond_7
     :try_start_0
@@ -24772,11 +22133,9 @@
 
     goto :goto_2
 
-    .line 3110
     :catch_0
     move-exception v2
 
-    .line 3111
     .local v2, "e":Ljava/lang/Exception;
     const-string v10, "KnoxCustomManagerService"
 
@@ -24800,7 +22159,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3112
     const/4 v5, -0x1
 
     goto :goto_2
@@ -24810,7 +22168,6 @@
     :cond_8
     move v8, v9
 
-    .line 3122
     goto :goto_3
 .end method
 
@@ -24819,24 +22176,19 @@
     .param p1, "batteryIconItem"    # Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;
 
     .prologue
-    .line 5350
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v2
 
-    .line 5351
     .local v2, "callingUid":I
     const/4 v9, -0x6
 
-    .line 5352
     .local v9, "result":I
     const/4 v3, 0x0
 
-    .line 5354
     .local v3, "dbBytes":[B
     if-eqz p1, :cond_6
 
-    .line 5355
     :try_start_0
     invoke-virtual {p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;->getIcon()I
 
@@ -24846,20 +22198,16 @@
 
     if-eq v10, v11, :cond_0
 
-    .line 5356
     const/16 v10, -0x32
 
-    .line 5388
     :goto_0
     return v10
 
-    .line 5358
     :cond_0
     invoke-virtual {p1}, Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;->getAttributeColourArray()[Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem$AttributeColour;
 
     move-result-object v1
 
-    .line 5359
     .local v1, "batteryColoursArray":[Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem$AttributeColour;
     if-eqz v1, :cond_6
 
@@ -24867,23 +22215,19 @@
 
     if-lez v10, :cond_6
 
-    .line 5360
     array-length v10, v1
 
     const/4 v11, 0x5
 
     if-le v10, v11, :cond_1
 
-    .line 5361
     const/16 v10, -0x33
 
     goto :goto_0
 
-    .line 5363
     :cond_1
     const/4 v8, -0x1
 
-    .line 5364
     .local v8, "previousBatteryLevel":I
     move-object v0, v1
 
@@ -24899,16 +22243,13 @@
 
     aget-object v6, v0, v5
 
-    .line 5365
     .local v6, "item":Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem$AttributeColour;
     if-nez v6, :cond_2
 
-    .line 5366
     const/4 v10, -0x1
 
     goto :goto_0
 
-    .line 5368
     :cond_2
     invoke-virtual {v6}, Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem$AttributeColour;->getAttribute()I
 
@@ -24930,31 +22271,26 @@
 
     if-gt v10, v8, :cond_4
 
-    .line 5370
     :cond_3
     const/16 v10, -0x32
 
     goto :goto_0
 
-    .line 5372
     :cond_4
     invoke-virtual {v6}, Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem$AttributeColour;->getAttribute()I
 
     move-result v8
 
-    .line 5364
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 5374
     .end local v6    # "item":Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem$AttributeColour;
     :cond_5
     invoke-direct {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->serializeKnoxCustomStatusbarIconItem(Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem;)[B
 
     move-result-object v3
 
-    .line 5377
     .end local v0    # "arr$":[Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem$AttributeColour;
     .end local v1    # "batteryColoursArray":[Landroid/app/enterprise/knoxcustom/KnoxCustomStatusbarIconItem$AttributeColour;
     .end local v5    # "i$":I
@@ -24977,26 +22313,21 @@
 
     if-nez v10, :cond_7
 
-    .line 5381
     const/4 v10, -0x1
 
     goto :goto_0
 
-    .line 5383
     :cond_7
     const/4 v9, 0x0
 
     :goto_2
     move v10, v9
 
-    .line 5388
     goto :goto_0
 
-    .line 5384
     :catch_0
     move-exception v4
 
-    .line 5385
     .local v4, "e":Ljava/lang/Exception;
     const-string v10, "KnoxCustomManagerService"
 
@@ -25006,7 +22337,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5386
     const/4 v9, -0x1
 
     goto :goto_2
@@ -25019,18 +22349,15 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1658
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v1
 
-    .line 1661
     .local v1, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1662
     .local v6, "token":J
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -25040,7 +22367,6 @@
 
     move-result-object v3
 
-    .line 1663
     .local v3, "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     invoke-virtual {v3, v2}, Landroid/app/enterprise/RestrictionPolicy;->isBluetoothEnabled(Z)Z
 
@@ -25050,39 +22376,31 @@
 
     const/4 v2, 0x1
 
-    .line 1664
     .local v2, "isRestricted":Z
     :cond_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1665
     if-eqz v2, :cond_1
 
-    .line 1666
     const-string v5, "KnoxCustomManagerService"
 
     const-string v8, "setBluetoothState() - eSDK bluetooth disabled"
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1667
     const/4 v4, -0x7
 
-    .line 1684
     :goto_0
     return v4
 
-    .line 1672
     :cond_1
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->getDefaultAdapter()Landroid/bluetooth/BluetoothAdapter;
 
     move-result-object v0
 
-    .line 1673
     .local v0, "adapter":Landroid/bluetooth/BluetoothAdapter;
     if-eqz v0, :cond_4
 
-    .line 1674
     if-eqz p1, :cond_3
 
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->isEnabled()Z
@@ -25091,10 +22409,8 @@
 
     if-nez v5, :cond_3
 
-    .line 1675
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->enable()Z
 
-    .line 1679
     :cond_2
     :goto_1
     const/4 v4, 0x0
@@ -25102,7 +22418,6 @@
     .local v4, "result":I
     goto :goto_0
 
-    .line 1676
     .end local v4    # "result":I
     :cond_3
     if-nez p1, :cond_2
@@ -25113,12 +22428,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 1677
     invoke-virtual {v0}, Landroid/bluetooth/BluetoothAdapter;->disable()Z
 
     goto :goto_1
 
-    .line 1681
     :cond_4
     const/4 v4, -0x1
 
@@ -25133,36 +22446,29 @@
     .prologue
     const/16 v6, -0x2d
 
-    .line 2911
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 2912
     .local v0, "callingUid":I
     const/4 v2, -0x1
 
-    .line 2913
     .local v2, "result":I
     const v7, 0x20c49b
 
     if-lt p1, v7, :cond_1
 
-    .line 2930
     :cond_0
     :goto_0
     return v6
 
-    .line 2916
     :cond_1
     if-ltz p1, :cond_0
 
-    .line 2919
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 2921
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -25175,14 +22481,12 @@
 
     invoke-static {v6, v7, p1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2922
     new-instance v3, Landroid/content/Intent;
 
     const-string v6, "android.bluetooth.adapter.action.SCAN_MODE_CHANGED"
 
     invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2923
     .local v3, "systemIntent":Landroid/content/Intent;
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -25196,24 +22500,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2924
     const/4 v2, 0x0
 
-    .line 2929
     .end local v3    # "systemIntent":Landroid/content/Intent;
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v6, v2
 
-    .line 2930
     goto :goto_0
 
-    .line 2925
     :catch_0
     move-exception v1
 
-    .line 2926
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -25237,7 +22536,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2927
     const/4 v2, -0x1
 
     goto :goto_1
@@ -25251,22 +22549,18 @@
     .param p4, "delay"    # I
 
     .prologue
-    .line 7533
     const/4 v14, 0x0
 
-    .line 7534
     .local v14, "result":I
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v6
 
-    .line 7535
     .local v6, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 7538
     .local v18, "token":J
     if-eqz p1, :cond_0
 
@@ -25297,33 +22591,27 @@
     :cond_2
     const/4 v12, 0x1
 
-    .line 7544
     .local v12, "isDelete":Z
     :goto_0
     if-nez v12, :cond_6
 
-    .line 7545
     invoke-direct/range {p0 .. p3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->checkFileConditionForBootAnim(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v14
 
-    .line 7546
     if-eqz v14, :cond_4
 
     move/from16 v17, v14
 
-    .line 7642
     :goto_1
     return v17
 
-    .line 7538
     .end local v12    # "isDelete":Z
     :cond_3
     const/4 v12, 0x0
 
     goto :goto_0
 
-    .line 7551
     .restart local v12    # "isDelete":Z
     :cond_4
     const v17, 0x7fffffff
@@ -25336,13 +22624,11 @@
 
     if-gez p4, :cond_6
 
-    .line 7552
     :cond_5
     const/16 v17, -0x32
 
     goto :goto_1
 
-    .line 7556
     :cond_6
     new-instance v9, Ljava/io/File;
 
@@ -25352,11 +22638,9 @@
 
     invoke-direct {v9, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7557
     .local v9, "dir":Ljava/io/File;
     const/4 v7, 0x0
 
-    .line 7558
     .local v7, "created":Z
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
@@ -25364,17 +22648,14 @@
 
     if-nez v17, :cond_7
 
-    .line 7559
     invoke-virtual {v9}, Ljava/io/File;->mkdirs()Z
 
     move-result v7
 
-    .line 7560
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7563
     :cond_7
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
@@ -25384,13 +22665,11 @@
 
     if-eqz v7, :cond_14
 
-    .line 7564
     :cond_8
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7566
     new-instance v11, Ljava/io/File;
 
     const-string v17, "/data/b2b/BootFileInfo.txt"
@@ -25399,7 +22678,6 @@
 
     invoke-direct {v11, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7567
     .local v11, "fileInfo":Ljava/io/File;
     new-instance v16, Ljava/io/File;
 
@@ -25407,7 +22685,6 @@
 
     invoke-direct/range {v16 .. v17}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7568
     .local v16, "soundInfo":Ljava/io/File;
     new-instance v8, Ljava/io/File;
 
@@ -25417,7 +22694,6 @@
 
     invoke-direct {v8, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7571
     .local v8, "delayInfo":Ljava/io/File;
     :try_start_0
     invoke-virtual {v11}, Ljava/io/File;->exists()Z
@@ -25426,12 +22702,10 @@
 
     if-eqz v17, :cond_9
 
-    .line 7572
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7574
     :cond_9
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->exists()Z
 
@@ -25439,14 +22713,12 @@
 
     if-eqz v17, :cond_a
 
-    .line 7575
     move-object/from16 v0, p0
 
     move-object/from16 v1, v16
 
     invoke-direct {v0, v1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7577
     :cond_a
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
 
@@ -25454,59 +22726,47 @@
 
     if-eqz v17, :cond_b
 
-    .line 7578
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7581
     :cond_b
     if-eqz v12, :cond_c
 
-    .line 7583
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7584
     const/16 v17, 0x0
 
     goto :goto_1
 
-    .line 7587
     :cond_c
     invoke-virtual {v11}, Ljava/io/File;->createNewFile()Z
 
-    .line 7588
     invoke-virtual/range {v16 .. v16}, Ljava/io/File;->createNewFile()Z
 
-    .line 7589
     invoke-virtual {v8}, Ljava/io/File;->createNewFile()Z
 
-    .line 7591
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7592
     move-object/from16 v0, p0
 
     move-object/from16 v1, v16
 
     invoke-direct {v0, v1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7593
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7601
     :goto_2
     invoke-direct/range {p0 .. p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->filePathSplit(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 7602
     .local v2, "animationFileName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -25516,7 +22776,6 @@
 
     move-result-object v13
 
-    .line 7603
     .local v13, "loopFileName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -25526,7 +22785,6 @@
 
     move-result-object v15
 
-    .line 7604
     .local v15, "soundFileName":Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -25552,7 +22810,6 @@
 
     move-result-object v3
 
-    .line 7605
     .local v3, "bootAnimTargetPath":Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -25578,7 +22835,6 @@
 
     move-result-object v4
 
-    .line 7606
     .local v4, "bootLoopTargetpath":Ljava/lang/String;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -25604,7 +22860,6 @@
 
     move-result-object v5
 
-    .line 7608
     .local v5, "bootSoundTargetPath":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -25614,12 +22869,10 @@
 
     if-nez v17, :cond_d
 
-    .line 7609
     const/16 v17, -0x1
 
     goto/16 :goto_1
 
-    .line 7596
     .end local v2    # "animationFileName":Ljava/lang/String;
     .end local v3    # "bootAnimTargetPath":Ljava/lang/String;
     .end local v4    # "bootLoopTargetpath":Ljava/lang/String;
@@ -25629,13 +22882,11 @@
     :catch_0
     move-exception v10
 
-    .line 7598
     .local v10, "e":Ljava/io/IOException;
     const/16 v14, -0x32
 
     goto :goto_2
 
-    .line 7611
     .end local v10    # "e":Ljava/io/IOException;
     .restart local v2    # "animationFileName":Ljava/lang/String;
     .restart local v3    # "bootAnimTargetPath":Ljava/lang/String;
@@ -25652,12 +22903,10 @@
 
     if-nez v17, :cond_e
 
-    .line 7612
     const/16 v17, -0x1
 
     goto/16 :goto_1
 
-    .line 7614
     :cond_e
     move-object/from16 v0, p0
 
@@ -25669,12 +22918,10 @@
 
     if-nez v17, :cond_f
 
-    .line 7615
     const/16 v17, -0x1
 
     goto/16 :goto_1
 
-    .line 7617
     :cond_f
     invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -25690,12 +22937,10 @@
 
     if-nez v17, :cond_10
 
-    .line 7618
     const/16 v17, -0x1
 
     goto/16 :goto_1
 
-    .line 7620
     :cond_10
     move-object/from16 v0, p0
 
@@ -25707,12 +22952,10 @@
 
     if-nez v17, :cond_11
 
-    .line 7621
     const/16 v17, -0x1
 
     goto/16 :goto_1
 
-    .line 7623
     :cond_11
     move-object/from16 v0, p0
 
@@ -25724,12 +22967,10 @@
 
     if-nez v17, :cond_12
 
-    .line 7624
     const/16 v17, -0x1
 
     goto/16 :goto_1
 
-    .line 7626
     :cond_12
     move-object/from16 v0, p0
 
@@ -25741,50 +22982,41 @@
 
     if-nez v17, :cond_13
 
-    .line 7627
     const/16 v17, -0x1
 
     goto/16 :goto_1
 
-    .line 7630
     :cond_13
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldExecutable(Ljava/io/File;)V
 
-    .line 7631
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
 
-    .line 7632
     move-object/from16 v0, p0
 
     move-object/from16 v1, v16
 
     invoke-direct {v0, v1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
 
-    .line 7633
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
 
-    .line 7635
     invoke-virtual {v9}, Ljava/io/File;->canWrite()Z
 
     move-result v17
 
     if-eqz v17, :cond_14
 
-    .line 7637
     const/4 v14, -0x1
 
     move/from16 v17, v14
 
-    .line 7638
     goto/16 :goto_1
 
-    .line 7641
     .end local v2    # "animationFileName":Ljava/lang/String;
     .end local v3    # "bootAnimTargetPath":Ljava/lang/String;
     .end local v4    # "bootLoopTargetpath":Ljava/lang/String;
@@ -25799,7 +23031,6 @@
 
     move/from16 v17, v14
 
-    .line 7642
     goto/16 :goto_1
 .end method
 
@@ -25811,22 +23042,18 @@
     .param p4, "delay"    # I
 
     .prologue
-    .line 7646
     const/4 v14, 0x0
 
-    .line 7647
     .local v14, "result":I
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v6
 
-    .line 7648
     .local v6, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 7650
     .local v16, "token":J
     move-object/from16 v0, p0
 
@@ -25836,14 +23063,11 @@
 
     if-eqz v18, :cond_0
 
-    .line 7652
     const/16 v18, -0x6
 
-    .line 7783
     :goto_0
     return v18
 
-    .line 7655
     :cond_0
     if-eqz p1, :cond_1
 
@@ -25861,7 +23085,6 @@
 
     if-gez p4, :cond_2
 
-    .line 7656
     :cond_1
     const-string v18, "KnoxCustomManagerService"
 
@@ -25869,12 +23092,10 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7657
     const/16 v18, -0x32
 
     goto :goto_0
 
-    .line 7661
     :cond_2
     new-instance v9, Ljava/io/File;
 
@@ -25884,11 +23105,9 @@
 
     invoke-direct {v9, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7662
     .local v9, "dir":Ljava/io/File;
     const/4 v7, 0x0
 
-    .line 7663
     .local v7, "created":Z
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
@@ -25896,33 +23115,27 @@
 
     if-nez v18, :cond_4
 
-    .line 7664
     invoke-virtual {v9}, Ljava/io/File;->mkdirs()Z
 
     move-result v7
 
-    .line 7667
     if-nez v7, :cond_3
 
-    .line 7668
     const-string v18, "KnoxCustomManagerService"
 
     const-string v19, "/data/b2b directory creating fail"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7669
     const/16 v18, -0x1
 
     goto :goto_0
 
-    .line 7672
     :cond_3
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7675
     :cond_4
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
 
@@ -25932,13 +23145,11 @@
 
     if-eqz v7, :cond_10
 
-    .line 7676
     :cond_5
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7678
     new-instance v13, Ljava/io/File;
 
     const-string v18, "/data/b2b/BootFileInfo.txt"
@@ -25947,7 +23158,6 @@
 
     invoke-direct {v13, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7679
     .local v13, "fileInfo":Ljava/io/File;
     new-instance v15, Ljava/io/File;
 
@@ -25957,7 +23167,6 @@
 
     invoke-direct {v15, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7680
     .local v15, "soundInfo":Ljava/io/File;
     new-instance v8, Ljava/io/File;
 
@@ -25967,7 +23176,6 @@
 
     invoke-direct {v8, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7684
     .local v8, "delayInfo":Ljava/io/File;
     :try_start_0
     invoke-virtual {v13}, Ljava/io/File;->exists()Z
@@ -25976,12 +23184,10 @@
 
     if-eqz v18, :cond_6
 
-    .line 7685
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7687
     :cond_6
     invoke-virtual {v15}, Ljava/io/File;->exists()Z
 
@@ -25989,12 +23195,10 @@
 
     if-eqz v18, :cond_7
 
-    .line 7688
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7690
     :cond_7
     invoke-virtual {v8}, Ljava/io/File;->exists()Z
 
@@ -26002,51 +23206,40 @@
 
     if-eqz v18, :cond_8
 
-    .line 7691
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7694
     :cond_8
     invoke-virtual {v13}, Ljava/io/File;->createNewFile()Z
 
-    .line 7695
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7697
     invoke-virtual {v15}, Ljava/io/File;->createNewFile()Z
 
-    .line 7698
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7700
     invoke-virtual {v8}, Ljava/io/File;->createNewFile()Z
 
-    .line 7701
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7709
     :goto_1
     const-string v2, "/data/b2b/bootanimation.qmg"
 
-    .line 7710
     .local v2, "AnimTargetPath":Ljava/lang/String;
     const-string v3, "/data/b2b/bootloop.qmg"
 
-    .line 7711
     .local v3, "LoopTargetpath":Ljava/lang/String;
     const-string v4, "/data/b2b/bootsound.ogg"
 
-    .line 7713
     .local v4, "SoundTargetPath":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -26056,19 +23249,16 @@
 
     if-nez v18, :cond_9
 
-    .line 7714
     const/16 v18, -0x1
 
     goto/16 :goto_0
 
-    .line 7704
     .end local v2    # "AnimTargetPath":Ljava/lang/String;
     .end local v3    # "LoopTargetpath":Ljava/lang/String;
     .end local v4    # "SoundTargetPath":Ljava/lang/String;
     :catch_0
     move-exception v11
 
-    .line 7705
     .local v11, "e":Ljava/io/IOException;
     const-string v18, "KnoxCustomManagerService"
 
@@ -26078,12 +23268,10 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7706
     const/4 v14, -0x1
 
     goto :goto_1
 
-    .line 7716
     .end local v11    # "e":Ljava/io/IOException;
     .restart local v2    # "AnimTargetPath":Ljava/lang/String;
     .restart local v3    # "LoopTargetpath":Ljava/lang/String;
@@ -26097,12 +23285,10 @@
 
     if-nez v18, :cond_a
 
-    .line 7717
     const/16 v18, -0x1
 
     goto/16 :goto_0
 
-    .line 7719
     :cond_a
     move-object/from16 v0, p0
 
@@ -26112,12 +23298,10 @@
 
     if-nez v18, :cond_b
 
-    .line 7720
     const/16 v18, -0x1
 
     goto/16 :goto_0
 
-    .line 7722
     :cond_b
     invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -26133,12 +23317,10 @@
 
     if-nez v18, :cond_c
 
-    .line 7723
     const/16 v18, -0x1
 
     goto/16 :goto_0
 
-    .line 7726
     :cond_c
     move-object/from16 v0, p0
 
@@ -26150,7 +23332,6 @@
 
     if-nez v18, :cond_d
 
-    .line 7727
     const-string v18, "KnoxCustomManagerService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -26175,12 +23356,10 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7728
     const/16 v18, -0x1
 
     goto/16 :goto_0
 
-    .line 7730
     :cond_d
     move-object/from16 v0, p0
 
@@ -26192,7 +23371,6 @@
 
     if-nez v18, :cond_e
 
-    .line 7731
     const-string v18, "KnoxCustomManagerService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -26217,12 +23395,10 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7732
     const/16 v18, -0x1
 
     goto/16 :goto_0
 
-    .line 7734
     :cond_e
     move-object/from16 v0, p0
 
@@ -26234,7 +23410,6 @@
 
     if-nez v18, :cond_f
 
-    .line 7735
     const-string v18, "KnoxCustomManagerService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -26259,33 +23434,27 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7736
     const/16 v18, -0x1
 
     goto/16 :goto_0
 
-    .line 7739
     :cond_f
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldExecutable(Ljava/io/File;)V
 
-    .line 7740
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
 
-    .line 7741
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
 
-    .line 7742
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
 
-    .line 7745
     .end local v2    # "AnimTargetPath":Ljava/lang/String;
     .end local v3    # "LoopTargetpath":Ljava/lang/String;
     .end local v4    # "SoundTargetPath":Ljava/lang/String;
@@ -26295,7 +23464,6 @@
     :cond_10
     if-nez v14, :cond_14
 
-    .line 7746
     new-instance v5, Ljava/io/File;
 
     const-string v18, "/data/b2b/bootanimation.qmg"
@@ -26304,7 +23472,6 @@
 
     invoke-direct {v5, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7747
     .local v5, "animationFile":Ljava/io/File;
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
@@ -26312,7 +23479,6 @@
 
     if-eqz v18, :cond_14
 
-    .line 7749
     new-instance v10, Ljava/io/File;
 
     const-string v18, "/efs/knoxcustom"
@@ -26321,7 +23487,6 @@
 
     invoke-direct {v10, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7750
     .local v10, "dirEFS":Ljava/io/File;
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
@@ -26329,10 +23494,8 @@
 
     if-nez v18, :cond_11
 
-    .line 7751
     invoke-virtual {v10}, Ljava/io/File;->mkdirs()Z
 
-    .line 7754
     :cond_11
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
@@ -26340,12 +23503,10 @@
 
     if-eqz v18, :cond_14
 
-    .line 7755
     move-object/from16 v0, p0
 
     invoke-direct {v0, v10}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7756
     new-instance v12, Ljava/io/File;
 
     const-string v18, "/efs/knoxcustom/KnoxCustomBootEnable.txt"
@@ -26354,7 +23515,6 @@
 
     invoke-direct {v12, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7759
     .local v12, "efsFileInfo":Ljava/io/File;
     :try_start_1
     invoke-virtual {v12}, Ljava/io/File;->exists()Z
@@ -26363,21 +23523,17 @@
 
     if-eqz v18, :cond_12
 
-    .line 7760
     invoke-virtual {v12}, Ljava/io/File;->delete()Z
 
-    .line 7763
     :cond_12
     invoke-virtual {v12}, Ljava/io/File;->createNewFile()Z
 
-    .line 7764
     move-object/from16 v0, p0
 
     invoke-direct {v0, v12}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 7771
     :goto_2
     const-string v18, "true"
 
@@ -26391,16 +23547,13 @@
 
     if-nez v18, :cond_13
 
-    .line 7772
     const/16 v18, -0x1
 
     goto/16 :goto_0
 
-    .line 7766
     :catch_1
     move-exception v11
 
-    .line 7767
     .local v11, "e":Ljava/lang/Exception;
     const-string v18, "KnoxCustomManagerService"
 
@@ -26410,24 +23563,20 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7768
     const/4 v14, -0x1
 
     goto :goto_2
 
-    .line 7775
     .end local v11    # "e":Ljava/lang/Exception;
     :cond_13
     move-object/from16 v0, p0
 
     invoke-direct {v0, v10}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldExecutable(Ljava/io/File;)V
 
-    .line 7776
     move-object/from16 v0, p0
 
     invoke-direct {v0, v12}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
 
-    .line 7782
     .end local v5    # "animationFile":Ljava/io/File;
     .end local v10    # "dirEFS":Ljava/io/File;
     .end local v12    # "efsFileInfo":Ljava/io/File;
@@ -26436,7 +23585,6 @@
 
     move/from16 v18, v14
 
-    .line 7783
     goto/16 :goto_0
 .end method
 
@@ -26445,12 +23593,10 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 5905
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 5911
     .local v0, "callingUid":I
     if-eqz p1, :cond_0
 
@@ -26460,7 +23606,6 @@
 
     if-nez v6, :cond_1
 
-    .line 5912
     :cond_0
     const-string v6, "KnoxCustomManagerService"
 
@@ -26468,14 +23613,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5913
     const/16 v2, -0x28
 
-    .line 5932
     :goto_0
     return v2
 
-    .line 5915
     :cond_1
     sget-object v6, Landroid/util/Patterns;->WEB_URL:Ljava/util/regex/Pattern;
 
@@ -26489,30 +23631,25 @@
 
     if-nez v6, :cond_2
 
-    .line 5916
     const-string v6, "KnoxCustomManagerService"
 
     const-string v7, "setBrowserHomepage() failed - invalid URL"
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5917
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 5920
     :cond_2
     const/4 v2, -0x6
 
-    .line 5922
     .local v2, "result":I
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 5923
     .local v4, "token":J
     new-instance v3, Landroid/content/Intent;
 
@@ -26520,13 +23657,11 @@
 
     invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5924
     .local v3, "systemIntent":Landroid/content/Intent;
     const-string v6, "homepage"
 
     invoke-virtual {v3, v6, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5925
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     new-instance v7, Landroid/os/UserHandle;
@@ -26537,23 +23672,19 @@
 
     invoke-virtual {v6, v3, v7}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 5926
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5927
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 5928
     .end local v3    # "systemIntent":Landroid/content/Intent;
     .end local v4    # "token":J
     :catch_0
     move-exception v1
 
-    .line 5929
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -26577,7 +23708,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5930
     const/4 v2, -0x1
 
     goto :goto_0
@@ -26589,12 +23719,10 @@
     .param p2, "elements"    # I
 
     .prologue
-    .line 3485
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 3488
     .local v0, "callingUid":I
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -26610,7 +23738,6 @@
 
     if-nez v8, :cond_0
 
-    .line 3489
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v9, "connectivity"
@@ -26621,7 +23748,6 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 3490
     .local v1, "cm":Landroid/net/ConnectivityManager;
     const/4 v8, 0x0
 
@@ -26631,15 +23757,12 @@
 
     if-nez v8, :cond_0
 
-    .line 3491
     const/4 v5, -0x6
 
-    .line 3523
     .end local v1    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v5
 
-    .line 3496
     :cond_0
     if-ltz p2, :cond_1
 
@@ -26647,7 +23770,6 @@
 
     if-le p2, v8, :cond_2
 
-    .line 3497
     :cond_1
     const-string v8, "KnoxCustomManagerService"
 
@@ -26671,22 +23793,18 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3498
     const/16 v5, -0x32
 
     goto :goto_0
 
-    .line 3501
     :cond_2
     const/4 v5, -0x6
 
-    .line 3502
     .local v5, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 3506
     .local v6, "token":J
     :try_start_0
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -26699,19 +23817,15 @@
 
     move-result v2
 
-    .line 3507
     .local v2, "currentElements":I
     if-eqz p1, :cond_4
 
-    .line 3509
     or-int v4, v2, p2
 
-    .line 3514
     .local v4, "newElements":I
     :goto_1
     if-eq v4, v2, :cond_3
 
-    .line 3515
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v9, "KNOX_CUSTOM"
@@ -26722,11 +23836,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3517
     :cond_3
     const/4 v5, 0x0
 
-    .line 3522
     .end local v2    # "currentElements":I
     .end local v4    # "newElements":I
     :goto_2
@@ -26734,7 +23846,6 @@
 
     goto :goto_0
 
-    .line 3512
     .restart local v2    # "currentElements":I
     :cond_4
     xor-int/lit8 v8, p2, -0x1
@@ -26744,13 +23855,11 @@
     .restart local v4    # "newElements":I
     goto :goto_1
 
-    .line 3518
     .end local v2    # "currentElements":I
     .end local v4    # "newElements":I
     :catch_0
     move-exception v3
 
-    .line 3519
     .local v3, "e":Ljava/lang/Exception;
     const-string v8, "KnoxCustomManagerService"
 
@@ -26774,7 +23883,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3520
     const/4 v5, -0x1
 
     goto :goto_2
@@ -26785,18 +23893,15 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 5945
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 5947
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 5949
     .local v4, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -26816,29 +23921,23 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5952
     const/4 v2, 0x0
 
-    .line 5957
     .local v2, "result":I
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5958
     return v2
 
-    .line 5949
     .end local v2    # "result":I
     :cond_0
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 5953
     :catch_0
     move-exception v1
 
-    .line 5954
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -26862,7 +23961,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5955
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -26874,26 +23972,21 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 4070
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 4071
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4073
     .local v2, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 4075
     .local v4, "token":J
     if-eqz p1, :cond_0
 
-    .line 4076
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -26909,18 +24002,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4080
     :goto_0
     const/4 v2, 0x0
 
-    .line 4085
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4086
     return v2
 
-    .line 4078
     :cond_0
     :try_start_1
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -26939,11 +24028,9 @@
 
     goto :goto_0
 
-    .line 4081
     :catch_0
     move-exception v1
 
-    .line 4082
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -26967,7 +24054,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4083
     const/4 v2, -0x1
 
     goto :goto_1
@@ -26978,16 +24064,13 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 3279
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 3280
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 3282
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -27000,18 +24083,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3283
     const/4 v2, 0x0
 
-    .line 3288
     :goto_0
     return v2
 
-    .line 3284
     :catch_0
     move-exception v1
 
-    .line 3285
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -27035,7 +24114,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3286
     const/4 v2, -0x1
 
     goto :goto_0
@@ -27050,18 +24128,15 @@
 
     const/4 v6, 0x0
 
-    .line 2250
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 2253
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2254
     .local v2, "token":J
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -27078,10 +24153,8 @@
     :goto_0
     invoke-static {v7, v8, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2257
     if-eqz p1, :cond_2
 
-    .line 2261
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -27092,21 +24165,17 @@
 
     invoke-static {v4, v7, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2273
     :cond_0
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2275
     return v6
 
     :cond_1
     move v4, v6
 
-    .line 2254
     goto :goto_0
 
-    .line 2264
     :cond_2
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -27120,11 +24189,9 @@
 
     move-result v1
 
-    .line 2265
     .local v1, "screenSetting":I
     if-nez v1, :cond_0
 
-    .line 2269
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -27143,16 +24210,13 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 4025
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4026
     .local v0, "callingUid":I
     const/4 v3, -0x6
 
-    .line 4027
     .local v3, "result":I
     if-eqz p1, :cond_1
 
@@ -27170,21 +24234,17 @@
 
     if-le v6, v7, :cond_1
 
-    .line 4028
     :cond_0
     const/16 v6, -0x32
 
-    .line 4041
     :goto_0
     return v6
 
-    .line 4030
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 4032
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -27195,14 +24255,12 @@
 
     invoke-virtual {v6, v0, v7, v8, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4033
     new-instance v2, Landroid/content/Intent;
 
     const-string v6, "com.sec.action.knoxcustom.OPERATOR_NAME"
 
     invoke-direct {v2, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4034
     .local v2, "i":Landroid/content/Intent;
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -27216,24 +24274,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4035
     const/4 v3, 0x0
 
-    .line 4040
     .end local v2    # "i":Landroid/content/Intent;
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v6, v3
 
-    .line 4041
     goto :goto_0
 
-    .line 4036
     :catch_0
     move-exception v1
 
-    .line 4037
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -27257,7 +24310,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4038
     const/4 v3, -0x1
 
     goto :goto_1
@@ -27267,18 +24319,15 @@
     .locals 10
 
     .prologue
-    .line 2724
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v1
 
-    .line 2726
     .local v1, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2730
     .local v6, "token":J
     :try_start_0
     new-instance v3, Ljava/io/File;
@@ -27287,7 +24336,6 @@
 
     invoke-direct {v3, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2731
     .local v3, "f":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -27301,7 +24349,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 2733
     :cond_0
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -27313,7 +24360,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 2734
     .local v0, "am":Landroid/app/ActivityManager;
     const-string v5, "com.android.settings"
 
@@ -27321,20 +24367,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2735
     const/4 v4, 0x0
 
-    .line 2746
     .end local v0    # "am":Landroid/app/ActivityManager;
     .end local v3    # "f":Ljava/io/File;
     .local v4, "result":I
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2747
     return v4
 
-    .line 2739
     .end local v4    # "result":I
     .restart local v3    # "f":Ljava/io/File;
     :cond_1
@@ -27343,13 +24385,11 @@
     .restart local v4    # "result":I
     goto :goto_0
 
-    .line 2742
     .end local v3    # "f":Ljava/io/File;
     .end local v4    # "result":I
     :catch_0
     move-exception v2
 
-    .line 2743
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -27373,7 +24413,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2744
     const/4 v4, -0x1
 
     .restart local v4    # "result":I
@@ -27385,22 +24424,18 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 5859
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v1
 
-    .line 5860
     .local v1, "callingUid":I
     const/4 v3, -0x1
 
-    .line 5861
     .local v3, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 5863
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -27413,16 +24448,13 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 5864
     .local v0, "am":Landroid/media/AudioManager;
     if-eqz p1, :cond_0
 
-    .line 5865
     const/4 v6, 0x1
 
     invoke-virtual {v0, v6}, Landroid/media/AudioManager;->setForceSpeakerOn(Z)V
 
-    .line 5869
     :goto_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -27436,18 +24468,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5870
     const/4 v3, 0x0
 
-    .line 5874
     .end local v0    # "am":Landroid/media/AudioManager;
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5875
     return v3
 
-    .line 5867
     .restart local v0    # "am":Landroid/media/AudioManager;
     :cond_0
     const/4 v6, 0x0
@@ -27459,12 +24487,10 @@
 
     goto :goto_0
 
-    .line 5871
     .end local v0    # "am":Landroid/media/AudioManager;
     :catch_0
     move-exception v2
 
-    .line 5872
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -27496,16 +24522,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 7302
     const/4 v6, -0x6
 
-    .line 7303
     .local v6, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 7308
     .local v0, "callingUid":I
     :try_start_0
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -27518,7 +24541,6 @@
 
     check-cast v1, Landroid/hardware/display/DisplayManager;
 
-    .line 7309
     .local v1, "dm":Landroid/hardware/display/DisplayManager;
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -27532,11 +24554,9 @@
 
     move-result-object v2
 
-    .line 7310
     .local v2, "dmClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-eqz p1, :cond_1
 
-    .line 7311
     const-string v7, "scanWifiDisplays"
 
     const/4 v8, 0x0
@@ -27547,7 +24567,6 @@
 
     move-result-object v5
 
-    .line 7312
     .local v5, "method":Ljava/lang/reflect/Method;
     const/4 v7, 0x0
 
@@ -27555,55 +24574,46 @@
 
     invoke-virtual {v5, v1, v7}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7313
     new-instance v4, Landroid/content/Intent;
 
     const-string v7, "com.samsung.wfd.LAUNCH_WFD_PICKER_DLG"
 
     invoke-direct {v4, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 7314
     .local v4, "intent":Landroid/content/Intent;
     if-eqz v4, :cond_0
 
-    .line 7315
     const-string v7, "show_dialog_once"
 
     const/4 v8, 0x1
 
     invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 7316
     const-string v7, "tag_write_if_success"
 
     const/4 v8, 0x0
 
     invoke-virtual {v4, v7, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 7317
     const/high16 v7, 0x14800000
 
     invoke-virtual {v4, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 7319
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7, v4}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 7327
     .end local v4    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
     const/4 v6, 0x0
 
-    .line 7332
     .end local v1    # "dm":Landroid/hardware/display/DisplayManager;
     .end local v2    # "dmClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v5    # "method":Ljava/lang/reflect/Method;
     :goto_1
     return v6
 
-    .line 7322
     .restart local v1    # "dm":Landroid/hardware/display/DisplayManager;
     .restart local v2    # "dmClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_1
@@ -27617,7 +24627,6 @@
 
     move-result-object v5
 
-    .line 7323
     .restart local v5    # "method":Ljava/lang/reflect/Method;
     const/4 v7, 0x0
 
@@ -27625,7 +24634,6 @@
 
     invoke-virtual {v5, v1, v7}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 7324
     const-string v7, "disableWifiDisplay"
 
     const/4 v8, 0x0
@@ -27636,7 +24644,6 @@
 
     move-result-object v5
 
-    .line 7325
     const/4 v7, 0x0
 
     new-array v7, v7, [Ljava/lang/Object;
@@ -27647,14 +24654,12 @@
 
     goto :goto_0
 
-    .line 7328
     .end local v1    # "dm":Landroid/hardware/display/DisplayManager;
     .end local v2    # "dmClass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     .end local v5    # "method":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v3
 
-    .line 7329
     .local v3, "e":Ljava/lang/Exception;
     const-string v7, "KnoxCustomManagerService"
 
@@ -27678,7 +24683,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7330
     const/4 v6, -0x1
 
     goto :goto_1
@@ -27693,16 +24697,13 @@
     .param p5, "staticDefaultRouter"    # Ljava/lang/String;
 
     .prologue
-    .line 5759
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v5
 
-    .line 5760
     .local v5, "callingUid":I
     const/16 v21, -0x1
 
-    .line 5762
     .local v21, "result":I
     :try_start_0
     move-object/from16 v0, p0
@@ -27717,18 +24718,15 @@
 
     move-result-object v13
 
-    .line 5763
     .local v13, "ethernetManagerObject":Ljava/lang/Object;
     if-eqz v13, :cond_4
 
-    .line 5764
     const-string v24, "android.net.ethernet.EthernetDevInfo"
 
     invoke-static/range {v24 .. v24}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v4
 
-    .line 5765
     .local v4, "c":Ljava/lang/Class;
     const/16 v24, 0x0
 
@@ -27744,7 +24742,6 @@
 
     move-result-object v8
 
-    .line 5766
     .local v8, "constructor":Ljava/lang/reflect/Constructor;
     const/16 v24, 0x0
 
@@ -27760,38 +24757,29 @@
 
     move-result-object v12
 
-    .line 5767
     .local v12, "ethernetDevInfoObject":Ljava/lang/Object;
     const-string v14, "eth0"
 
-    .line 5768
     .local v14, "interfaceName":Ljava/lang/String;
     const-string v7, "dhcp"
 
-    .line 5769
     .local v7, "connType":Ljava/lang/String;
     const/4 v15, 0x0
 
-    .line 5770
     .local v15, "ipAddr":Ljava/lang/String;
     const/16 v18, 0x0
 
-    .line 5771
     .local v18, "netMask":Ljava/lang/String;
     const/4 v10, 0x0
 
-    .line 5772
     .local v10, "dnsAddr":Ljava/lang/String;
     const/4 v9, 0x0
 
-    .line 5774
     .local v9, "dfltRouter":Ljava/lang/String;
     if-nez p1, :cond_0
 
-    .line 5775
     const/16 v21, 0x0
 
-    .line 5790
     :goto_0
     move-object/from16 v0, p0
 
@@ -27813,7 +24801,6 @@
 
     invoke-virtual {v0, v5, v1, v2, v3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 5791
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -27832,7 +24819,6 @@
 
     invoke-virtual {v0, v5, v1, v2, v14}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 5792
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -27851,7 +24837,6 @@
 
     invoke-virtual {v0, v5, v1, v2, v15}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 5793
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -27872,7 +24857,6 @@
 
     invoke-virtual {v0, v5, v1, v2, v3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 5794
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -27891,7 +24875,6 @@
 
     invoke-virtual {v0, v5, v1, v2, v10}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 5795
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -27910,12 +24893,10 @@
 
     invoke-virtual {v0, v5, v1, v2, v9}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 5796
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v22
 
-    .line 5797
     .local v22, "token":J
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -27941,7 +24922,6 @@
 
     move-result-object v17
 
-    .line 5798
     .local v17, "m":Ljava/lang/reflect/Method;
     const/16 v24, 0x1
 
@@ -27961,7 +24941,6 @@
 
     invoke-virtual {v0, v12, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5799
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v24
@@ -27986,7 +24965,6 @@
 
     move-result-object v17
 
-    .line 5800
     const/16 v24, 0x1
 
     move/from16 v0, v24
@@ -28005,7 +24983,6 @@
 
     invoke-virtual {v0, v12, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5801
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v24
@@ -28030,7 +25007,6 @@
 
     move-result-object v17
 
-    .line 5802
     const/16 v24, 0x1
 
     move/from16 v0, v24
@@ -28049,7 +25025,6 @@
 
     invoke-virtual {v0, v12, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5803
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v24
@@ -28074,7 +25049,6 @@
 
     move-result-object v17
 
-    .line 5804
     const/16 v24, 0x1
 
     move/from16 v0, v24
@@ -28093,7 +25067,6 @@
 
     invoke-virtual {v0, v12, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5805
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v24
@@ -28118,7 +25091,6 @@
 
     move-result-object v17
 
-    .line 5806
     const/16 v24, 0x1
 
     move/from16 v0, v24
@@ -28137,7 +25109,6 @@
 
     invoke-virtual {v0, v12, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5807
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v24
@@ -28162,7 +25133,6 @@
 
     move-result-object v17
 
-    .line 5808
     const/16 v24, 0x1
 
     move/from16 v0, v24
@@ -28181,7 +25151,6 @@
 
     invoke-virtual {v0, v12, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5809
     invoke-virtual {v13}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v24
@@ -28204,7 +25173,6 @@
 
     move-result-object v17
 
-    .line 5810
     const/16 v24, 0x1
 
     move/from16 v0, v24
@@ -28227,7 +25195,6 @@
 
     invoke-virtual {v0, v13, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5811
     invoke-static/range {v22 .. v23}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     .end local v4    # "c":Ljava/lang/Class;
@@ -28245,11 +25212,9 @@
     :goto_1
     move/from16 v24, v21
 
-    .line 5831
     :goto_2
     return v24
 
-    .line 5776
     .restart local v4    # "c":Ljava/lang/Class;
     .restart local v7    # "connType":Ljava/lang/String;
     .restart local v8    # "constructor":Ljava/lang/reflect/Constructor;
@@ -28269,7 +25234,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 5777
     if-eqz p2, :cond_1
 
     move-object/from16 v0, p0
@@ -28298,13 +25262,11 @@
 
     if-nez p5, :cond_2
 
-    .line 5779
     :cond_1
     const/16 v24, -0x32
 
     goto :goto_2
 
-    .line 5781
     :cond_2
     const-string v7, "manual"
     :try_end_0
@@ -28314,30 +25276,23 @@
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_3
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_4
 
-    .line 5782
     move-object/from16 v15, p2
 
-    .line 5783
     move-object/from16 v18, p3
 
-    .line 5784
     move-object/from16 v10, p4
 
-    .line 5785
     move-object/from16 v9, p5
 
-    .line 5786
     const/16 v21, 0x0
 
     goto/16 :goto_0
 
-    .line 5788
     :cond_3
     const/16 v24, -0x2b
 
     goto :goto_2
 
-    .line 5813
     .end local v4    # "c":Ljava/lang/Class;
     .end local v7    # "connType":Ljava/lang/String;
     .end local v8    # "constructor":Ljava/lang/reflect/Constructor;
@@ -28352,12 +25307,10 @@
 
     goto :goto_1
 
-    .line 5815
     .end local v13    # "ethernetManagerObject":Ljava/lang/Object;
     :catch_0
     move-exception v6
 
-    .line 5816
     .local v6, "cnfe":Ljava/lang/ClassNotFoundException;
     const-string v24, "KnoxCustomManagerService"
 
@@ -28383,18 +25336,14 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5817
     const/16 v21, -0x6
 
-    .line 5830
     goto :goto_1
 
-    .line 5818
     .end local v6    # "cnfe":Ljava/lang/ClassNotFoundException;
     :catch_1
     move-exception v19
 
-    .line 5819
     .local v19, "nsme":Ljava/lang/NoSuchMethodException;
     const-string v24, "KnoxCustomManagerService"
 
@@ -28422,18 +25371,14 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5820
     const/16 v21, -0x6
 
-    .line 5830
     goto :goto_1
 
-    .line 5821
     .end local v19    # "nsme":Ljava/lang/NoSuchMethodException;
     :catch_2
     move-exception v16
 
-    .line 5822
     .local v16, "ite":Ljava/lang/reflect/InvocationTargetException;
     const-string v24, "KnoxCustomManagerService"
 
@@ -28461,18 +25406,14 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5823
     const/16 v21, -0x6
 
-    .line 5830
     goto/16 :goto_1
 
-    .line 5824
     .end local v16    # "ite":Ljava/lang/reflect/InvocationTargetException;
     :catch_3
     move-exception v20
 
-    .line 5825
     .local v20, "re":Ljava/lang/RuntimeException;
     const-string v24, "KnoxCustomManagerService"
 
@@ -28500,18 +25441,14 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5826
     const/16 v21, -0x6
 
-    .line 5830
     goto/16 :goto_1
 
-    .line 5827
     .end local v20    # "re":Ljava/lang/RuntimeException;
     :catch_4
     move-exception v11
 
-    .line 5828
     .local v11, "e":Ljava/lang/Exception;
     const-string v24, "KnoxCustomManagerService"
 
@@ -28537,7 +25474,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5829
     const/16 v21, -0x1
 
     goto/16 :goto_1
@@ -28548,16 +25484,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 5657
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v2
 
-    .line 5658
     .local v2, "callingUid":I
     const/4 v11, -0x1
 
-    .line 5661
     .local v11, "result":I
     move-object/from16 v0, p0
 
@@ -28571,31 +25504,25 @@
 
     check-cast v8, Landroid/net/EthernetManager;
 
-    .line 5662
     .local v8, "mEthernetManager":Landroid/net/EthernetManager;
     if-eqz v8, :cond_0
 
-    .line 5663
     invoke-virtual {v8}, Landroid/net/EthernetManager;->isAvailable()Z
 
     move-result v14
 
     if-nez v14, :cond_1
 
-    .line 5664
     const/4 v14, -0x6
 
-    .line 5705
     :goto_0
     return v14
 
-    .line 5667
     :cond_0
     const/4 v14, -0x6
 
     goto :goto_0
 
-    .line 5671
     :cond_1
     :try_start_0
     move-object/from16 v0, p0
@@ -28608,11 +25535,9 @@
 
     move-result-object v4
 
-    .line 5672
     .local v4, "ethernetManagerObject":Ljava/lang/Object;
     if-eqz v4, :cond_4
 
-    .line 5673
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v14
@@ -28631,7 +25556,6 @@
 
     move-result-object v7
 
-    .line 5674
     .local v7, "m":Ljava/lang/reflect/Method;
     const/4 v14, 0x0
 
@@ -28643,7 +25567,6 @@
 
     check-cast v5, Ljava/lang/Integer;
 
-    .line 5675
     .local v5, "ethernetState":Ljava/lang/Integer;
     move-object/from16 v0, p0
 
@@ -28659,16 +25582,13 @@
 
     invoke-virtual {v14, v2, v15, v0, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 5676
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 5677
     .local v12, "token":J
     if-eqz p1, :cond_3
 
-    .line 5678
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
     move-result v14
@@ -28677,14 +25597,11 @@
 
     if-ne v14, v15, :cond_2
 
-    .line 5679
     const/4 v11, 0x0
 
-    .line 5688
     :goto_1
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5689
     const/4 v11, 0x0
 
     .end local v4    # "ethernetManagerObject":Ljava/lang/Object;
@@ -28694,10 +25611,8 @@
     :goto_2
     move v14, v11
 
-    .line 5705
     goto :goto_0
 
-    .line 5681
     .restart local v4    # "ethernetManagerObject":Ljava/lang/Object;
     .restart local v5    # "ethernetState":Ljava/lang/Integer;
     .restart local v7    # "m":Ljava/lang/reflect/Method;
@@ -28727,7 +25642,6 @@
 
     move-result-object v7
 
-    .line 5682
     const/4 v14, 0x1
 
     new-array v14, v14, [Ljava/lang/Object;
@@ -28751,7 +25665,6 @@
 
     goto :goto_1
 
-    .line 5693
     .end local v4    # "ethernetManagerObject":Ljava/lang/Object;
     .end local v5    # "ethernetState":Ljava/lang/Integer;
     .end local v7    # "m":Ljava/lang/reflect/Method;
@@ -28759,7 +25672,6 @@
     :catch_0
     move-exception v9
 
-    .line 5694
     .local v9, "nsme":Ljava/lang/NoSuchMethodException;
     const-string v14, "KnoxCustomManagerService"
 
@@ -28783,13 +25695,10 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5695
     const/4 v11, -0x6
 
-    .line 5704
     goto :goto_2
 
-    .line 5685
     .end local v9    # "nsme":Ljava/lang/NoSuchMethodException;
     .restart local v4    # "ethernetManagerObject":Ljava/lang/Object;
     .restart local v5    # "ethernetState":Ljava/lang/Integer;
@@ -28801,7 +25710,6 @@
     :try_start_1
     invoke-virtual {v8, v14}, Landroid/net/EthernetManager;->setUserDisabled(Z)V
 
-    .line 5686
     const/4 v14, 0x0
 
     invoke-virtual {v8, v14}, Landroid/net/EthernetManager;->setEthEnabled(Z)V
@@ -28813,7 +25721,6 @@
 
     goto :goto_1
 
-    .line 5696
     .end local v4    # "ethernetManagerObject":Ljava/lang/Object;
     .end local v5    # "ethernetState":Ljava/lang/Integer;
     .end local v7    # "m":Ljava/lang/reflect/Method;
@@ -28821,7 +25728,6 @@
     :catch_1
     move-exception v6
 
-    .line 5697
     .local v6, "ite":Ljava/lang/reflect/InvocationTargetException;
     const-string v14, "KnoxCustomManagerService"
 
@@ -28845,13 +25751,10 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5698
     const/4 v11, -0x6
 
-    .line 5704
     goto :goto_2
 
-    .line 5691
     .end local v6    # "ite":Ljava/lang/reflect/InvocationTargetException;
     .restart local v4    # "ethernetManagerObject":Ljava/lang/Object;
     :cond_4
@@ -28859,12 +25762,10 @@
 
     goto :goto_2
 
-    .line 5699
     .end local v4    # "ethernetManagerObject":Ljava/lang/Object;
     :catch_2
     move-exception v10
 
-    .line 5700
     .local v10, "re":Ljava/lang/RuntimeException;
     const-string v14, "KnoxCustomManagerService"
 
@@ -28888,18 +25789,14 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5701
     const/4 v11, -0x6
 
-    .line 5704
     goto/16 :goto_2
 
-    .line 5702
     .end local v10    # "re":Ljava/lang/RuntimeException;
     :catch_3
     move-exception v3
 
-    .line 5703
     .local v3, "e":Ljava/lang/Exception;
     const-string v14, "KnoxCustomManagerService"
 
@@ -28940,17 +25837,14 @@
     .end annotation
 
     .prologue
-    .line 3729
     .local p2, "phoneNumbers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 3730
     .local v0, "callingUid":I
     const/4 v6, -0x1
 
-    .line 3733
     .local v6, "result":I
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -28966,7 +25860,6 @@
 
     if-nez v10, :cond_0
 
-    .line 3735
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v11, "connectivity"
@@ -28977,7 +25870,6 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 3736
     .local v1, "cm":Landroid/net/ConnectivityManager;
     const/4 v10, 0x0
 
@@ -28987,15 +25879,12 @@
 
     if-nez v10, :cond_0
 
-    .line 3737
     const/4 v10, -0x6
 
-    .line 3785
     .end local v1    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v10
 
-    .line 3741
     :cond_0
     if-eqz p2, :cond_1
 
@@ -29005,13 +25894,11 @@
 
     if-eqz v10, :cond_2
 
-    .line 3743
     :cond_1
     const/16 v10, -0x32
 
     goto :goto_0
 
-    .line 3746
     :cond_2
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getExcludedMessagesNotifications()Ljava/util/List;
 
@@ -29019,17 +25906,14 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 3747
     .local v2, "currentExcluded":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez v2, :cond_3
 
-    .line 3748
     new-instance v2, Ljava/util/ArrayList;
 
     .end local v2    # "currentExcluded":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3751
     .restart local v2    # "currentExcluded":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_3
     invoke-interface/range {p2 .. p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -29045,18 +25929,15 @@
 
     if-eqz v10, :cond_8
 
-    .line 3752
     invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Ljava/lang/String;
 
-    .line 3754
     .local v8, "toExclude":Ljava/lang/String;
     const-string v5, "[0-9+]+"
 
-    .line 3755
     .local v5, "regex":Ljava/lang/String;
     if-eqz v8, :cond_5
 
@@ -29066,13 +25947,11 @@
 
     if-nez v10, :cond_6
 
-    .line 3756
     :cond_5
     const/16 v10, -0x32
 
     goto :goto_0
 
-    .line 3758
     :cond_6
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -29082,10 +25961,8 @@
 
     if-eqz p1, :cond_7
 
-    .line 3759
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3762
     :cond_7
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
@@ -29095,12 +25972,10 @@
 
     if-nez p1, :cond_4
 
-    .line 3763
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 3768
     .end local v5    # "regex":Ljava/lang/String;
     .end local v8    # "toExclude":Ljava/lang/String;
     :cond_8
@@ -29112,16 +25987,13 @@
 
     if-le v10, v11, :cond_9
 
-    .line 3770
     const/16 v10, -0x32
 
     goto :goto_0
 
-    .line 3773
     :cond_9
     const-string v7, ""
 
-    .line 3774
     .local v7, "toDB":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -29135,7 +26007,6 @@
 
     if-eqz v10, :cond_a
 
-    .line 3775
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -29166,7 +26037,6 @@
 
     goto :goto_2
 
-    .line 3779
     :cond_a
     :try_start_0
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -29181,20 +26051,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3780
     const/4 v6, 0x0
 
     :goto_3
     move v10, v6
 
-    .line 3785
     goto/16 :goto_0
 
-    .line 3781
     :catch_0
     move-exception v3
 
-    .line 3782
     .local v3, "e":Ljava/lang/Exception;
     const-string v10, "KnoxCustomManagerService"
 
@@ -29218,7 +26084,6 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3783
     const/4 v6, -0x1
 
     goto :goto_3
@@ -29230,22 +26095,18 @@
     .param p2, "exitUIClass"    # Ljava/lang/String;
 
     .prologue
-    .line 1107
     const/4 v2, -0x6
 
-    .line 1108
     .local v2, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1110
     .local v0, "callingUid":I
     if-nez p1, :cond_0
 
     if-eqz p2, :cond_2
 
-    .line 1111
     :cond_0
     invoke-direct {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->checkDotString(Ljava/lang/String;)Z
 
@@ -29259,15 +26120,12 @@
 
     if-nez v3, :cond_2
 
-    .line 1112
     :cond_1
     const/16 v3, -0x21
 
-    .line 1123
     :goto_0
     return v3
 
-    .line 1116
     :cond_2
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -29278,7 +26136,6 @@
 
     invoke-virtual {v3, v0, v4, v5, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1117
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "KNOX_CUSTOM"
@@ -29289,20 +26146,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1118
     const/4 v2, 0x0
 
     :goto_1
     move v3, v2
 
-    .line 1123
     goto :goto_0
 
-    .line 1119
     :catch_0
     move-exception v1
 
-    .line 1120
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -29326,7 +26179,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1121
     const/4 v2, -0x1
 
     goto :goto_1
@@ -29337,7 +26189,6 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 2760
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -29352,7 +26203,6 @@
 
     if-nez v4, :cond_0
 
-    .line 2761
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v5, "connectivity"
@@ -29363,7 +26213,6 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 2762
     .local v1, "cm":Landroid/net/ConnectivityManager;
     const/4 v4, 0x0
 
@@ -29373,25 +26222,20 @@
 
     if-nez v4, :cond_0
 
-    .line 2763
     const/4 v3, -0x6
 
-    .line 2775
     .end local v1    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v3
 
-    .line 2766
     :cond_0
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 2767
     .local v0, "callingUid":I
     const/4 v3, -0x6
 
-    .line 2769
     .local v3, "result":I
     :try_start_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -29404,16 +26248,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2770
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 2771
     :catch_0
     move-exception v2
 
-    .line 2772
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -29437,7 +26278,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2773
     const/4 v3, -0x1
 
     goto :goto_0
@@ -29452,22 +26292,18 @@
 
     const/4 v9, 0x1
 
-    .line 8504
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 8505
     .local v0, "callingUid":I
     const/4 v5, 0x0
 
-    .line 8506
     .local v5, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 8507
     .local v6, "token":J
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -29477,7 +26313,6 @@
 
     move-result-object v4
 
-    .line 8508
     .local v4, "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     invoke-virtual {v4}, Landroid/app/enterprise/RestrictionPolicy;->isAirplaneModeAllowed()Z
 
@@ -29487,25 +26322,20 @@
 
     move v3, v9
 
-    .line 8509
     .local v3, "isRestricted":Z
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8510
     if-eqz v3, :cond_1
 
-    .line 8511
     const-string v9, "KnoxCustomManagerService"
 
     const-string v10, "setFlightModeState() - eSDK flight mode disabled"
 
     invoke-static {v9, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8512
     const/4 v9, -0x7
 
-    .line 8540
     :goto_1
     return v9
 
@@ -29513,28 +26343,23 @@
     :cond_0
     move v3, v10
 
-    .line 8508
     goto :goto_0
 
-    .line 8514
     .restart local v3    # "isRestricted":Z
     :cond_1
     if-eq p1, v9, :cond_2
 
     if-eqz p1, :cond_2
 
-    .line 8515
     const/16 v9, -0x2b
 
     goto :goto_1
 
-    .line 8518
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 8520
     :try_start_0
     iget-object v11, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -29551,7 +26376,6 @@
     :goto_2
     invoke-static {v12, v13, v11}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8523
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v11
@@ -29566,7 +26390,6 @@
 
     if-ne p1, v9, :cond_4
 
-    .line 8524
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     new-instance v10, Landroid/content/Intent;
@@ -29583,18 +26406,15 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 8525
     new-instance v8, Landroid/os/Message;
 
     invoke-direct {v8}, Landroid/os/Message;-><init>()V
 
-    .line 8526
     .local v8, "updateFlightModeMessage":Landroid/os/Message;
     const/4 v9, 0x2
 
     iput v9, v8, Landroid/os/Message;->what:I
 
-    .line 8527
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mHandler:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;
 
     const-wide/16 v10, 0x3e8
@@ -29603,27 +26423,22 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8534
     .end local v8    # "updateFlightModeMessage":Landroid/os/Message;
     :goto_3
     const/4 v5, 0x0
 
-    .line 8539
     :goto_4
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v9, v5
 
-    .line 8540
     goto :goto_1
 
     :cond_3
     move v11, v10
 
-    .line 8520
     goto :goto_2
 
-    .line 8529
     :cond_4
     :try_start_1
     new-instance v2, Landroid/content/Intent;
@@ -29632,13 +26447,11 @@
 
     invoke-direct {v2, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 8530
     .local v2, "intent":Landroid/content/Intent;
     const/high16 v11, 0x20000000
 
     invoke-virtual {v2, v11}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 8531
     const-string v11, "state"
 
     if-ne p1, v9, :cond_5
@@ -29646,7 +26459,6 @@
     :goto_5
     invoke-virtual {v2, v11, v9}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 8532
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     new-instance v10, Landroid/os/UserHandle;
@@ -29661,12 +26473,10 @@
 
     goto :goto_3
 
-    .line 8535
     .end local v2    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v1
 
-    .line 8536
     .local v1, "e":Ljava/lang/Exception;
     const-string v9, "KnoxCustomManagerService"
 
@@ -29690,7 +26500,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8537
     const/4 v5, -0x1
 
     goto :goto_4
@@ -29700,7 +26509,6 @@
     :cond_5
     move v9, v10
 
-    .line 8531
     goto :goto_5
 .end method
 
@@ -29711,40 +26519,31 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 9142
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 9143
     .local v0, "callingUid":I
     const/4 v3, -0x6
 
-    .line 9145
     .local v3, "result":I
     if-eq p1, v5, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 9146
     const/16 v5, -0x2b
 
-    .line 9163
     :goto_0
     return v5
 
-    .line 9150
     :cond_0
     const/4 v4, 0x0
 
-    .line 9151
     .local v4, "status":Z
     if-ne p1, v5, :cond_1
 
-    .line 9152
     const/4 v4, 0x1
 
-    .line 9154
     :cond_1
     :try_start_0
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -29753,7 +26552,6 @@
 
     move-result-object v2
 
-    .line 9155
     .local v2, "privateKnoxCustom":Lcom/sec/server/enterprise/knoxcustom/PrivateKnoxCustom;
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -29763,26 +26561,21 @@
 
     invoke-virtual {v5, v0, v6, v7, v4}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 9156
     invoke-virtual {v2, v4}, Lcom/sec/server/enterprise/knoxcustom/PrivateKnoxCustom;->setKnoxCustomAutoStartUp(Z)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9157
     const/4 v3, 0x0
 
     .end local v2    # "privateKnoxCustom":Lcom/sec/server/enterprise/knoxcustom/PrivateKnoxCustom;
     :goto_1
     move v5, v3
 
-    .line 9163
     goto :goto_0
 
-    .line 9159
     :catch_0
     move-exception v1
 
-    .line 9160
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -29806,7 +26599,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 9161
     const/4 v3, -0x1
 
     goto :goto_1
@@ -29817,16 +26609,13 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 4559
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4560
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4562
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -29839,18 +26628,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4563
     const/4 v2, 0x0
 
-    .line 4568
     :goto_0
     return v2
 
-    .line 4564
     :catch_0
     move-exception v1
 
-    .line 4565
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -29874,7 +26659,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4566
     const/4 v2, -0x1
 
     goto :goto_0
@@ -29887,18 +26671,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1838
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 1841
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1842
     .local v4, "token":J
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -29908,7 +26689,6 @@
 
     move-result-object v2
 
-    .line 1843
     .local v2, "locationPolicy":Landroid/app/enterprise/LocationPolicy;
     invoke-virtual {v2}, Landroid/app/enterprise/LocationPolicy;->isGPSStateChangeAllowed()Z
 
@@ -29918,25 +26698,20 @@
 
     const/4 v1, 0x1
 
-    .line 1844
     .local v1, "isRestricted":Z
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1845
     if-eqz v1, :cond_1
 
-    .line 1846
     const-string v3, "KnoxCustomManagerService"
 
     const-string v6, "setGpsState() - eSDK GPS state change not allowed"
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1847
     const/4 v3, -0x7
 
-    .line 1854
     :goto_1
     return v3
 
@@ -29944,17 +26719,14 @@
     :cond_0
     move v1, v3
 
-    .line 1843
     goto :goto_0
 
-    .line 1850
     .restart local v1    # "isRestricted":Z
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1851
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -29965,7 +26737,6 @@
 
     invoke-static {v6, v7, p1}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 1852
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -29976,16 +26747,13 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 3433
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 3434
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 3437
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -29998,18 +26766,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3438
     const/4 v2, 0x0
 
-    .line 3443
     :goto_0
     return v2
 
-    .line 3439
     :catch_0
     move-exception v1
 
-    .line 3440
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -30033,7 +26797,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3441
     const/4 v2, -0x1
 
     goto :goto_0
@@ -30044,12 +26807,10 @@
     .param p1, "mask"    # I
 
     .prologue
-    .line 3228
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 3230
     .local v0, "callingUid":I
     const/16 v4, 0x1f
 
@@ -30057,7 +26818,6 @@
 
     if-gez p1, :cond_1
 
-    .line 3231
     :cond_0
     const-string v4, "KnoxCustomManagerService"
 
@@ -30081,32 +26841,25 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3232
     const/16 v3, -0x32
 
-    .line 3248
     :goto_0
     return v3
 
-    .line 3234
     :cond_1
     const/4 v3, -0x6
 
-    .line 3236
     .local v3, "result":I
     :try_start_0
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getHideNotificationMessages()I
 
     move-result v1
 
-    .line 3238
     .local v1, "currentMask":I
     and-int/lit8 v1, v1, -0x5
 
-    .line 3240
     if-eq p1, v1, :cond_2
 
-    .line 3241
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KNOX_CUSTOM"
@@ -30117,18 +26870,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3243
     :cond_2
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 3244
     .end local v1    # "currentMask":I
     :catch_0
     move-exception v2
 
-    .line 3245
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -30152,7 +26902,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3246
     const/4 v3, -0x1
 
     goto :goto_0
@@ -30163,16 +26912,13 @@
     .param p1, "homePackage"    # Ljava/lang/String;
 
     .prologue
-    .line 1317
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1318
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 1320
     .local v2, "result":I
     if-eqz p1, :cond_0
 
@@ -30182,14 +26928,11 @@
 
     if-nez v3, :cond_0
 
-    .line 1321
     const/16 v3, -0x21
 
-    .line 1330
     :goto_0
     return v3
 
-    .line 1324
     :cond_0
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -30202,20 +26945,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1325
     const/4 v2, 0x0
 
     :goto_1
     move v3, v2
 
-    .line 1330
     goto :goto_0
 
-    .line 1326
     :catch_0
     move-exception v1
 
-    .line 1327
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -30239,7 +26978,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1328
     const/4 v2, -0x1
 
     goto :goto_1
@@ -30250,22 +26988,18 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 3907
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 3908
     .local v0, "callingUid":I
     const/4 v3, -0x6
 
-    .line 3909
     .local v3, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 3911
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -30278,7 +27012,6 @@
 
     check-cast v1, Landroid/hardware/ConsumerIrManager;
 
-    .line 3912
     .local v1, "cim":Landroid/hardware/ConsumerIrManager;
     if-eqz v1, :cond_0
 
@@ -30290,19 +27023,15 @@
 
     if-nez v6, :cond_1
 
-    .line 3913
     :cond_0
     const/4 v3, -0x6
 
-    .line 3922
     .end local v1    # "cim":Landroid/hardware/ConsumerIrManager;
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3923
     return v3
 
-    .line 3915
     .restart local v1    # "cim":Landroid/hardware/ConsumerIrManager;
     :cond_1
     :try_start_1
@@ -30316,17 +27045,14 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 3916
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 3918
     .end local v1    # "cim":Landroid/hardware/ConsumerIrManager;
     :catch_0
     move-exception v2
 
-    .line 3919
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -30350,7 +27076,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3920
     const/4 v3, -0x1
 
     goto :goto_0
@@ -30362,12 +27087,10 @@
     .param p2, "force"    # Z
 
     .prologue
-    .line 2112
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 2115
     .local v0, "callingUid":I
     invoke-direct {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->checkDotString(Ljava/lang/String;)Z
 
@@ -30375,20 +27098,16 @@
 
     if-nez v5, :cond_0
 
-    .line 2116
     const/16 v4, -0x30
 
-    .line 2147
     :goto_0
     return v4
 
-    .line 2119
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2121
     .local v6, "token":J
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
@@ -30397,7 +27116,6 @@
 
     if-nez v5, :cond_3
 
-    .line 2122
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -30410,7 +27128,6 @@
 
     move-result-object v3
 
-    .line 2123
     .local v3, "methodList":Ljava/lang/String;
     invoke-virtual {v3, p1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -30418,7 +27135,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 2124
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -30431,7 +27147,6 @@
 
     move-result-object v1
 
-    .line 2125
     .local v1, "defaultInput":Ljava/lang/String;
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -30443,7 +27158,6 @@
 
     invoke-static {v5, v8, p1}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2126
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -30458,10 +27172,8 @@
 
     move-result-object v1
 
-    .line 2127
     const/4 v4, 0x0
 
-    .line 2145
     .end local v1    # "defaultInput":Ljava/lang/String;
     .end local v3    # "methodList":Ljava/lang/String;
     .local v4, "result":I
@@ -30470,13 +27182,11 @@
 
     goto :goto_0
 
-    .line 2129
     .end local v4    # "result":I
     .restart local v3    # "methodList":Ljava/lang/String;
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 2130
     :try_start_1
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -30510,7 +27220,6 @@
 
     invoke-static {v5, v8, v9}, Landroid/provider/Settings$Secure;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 2132
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -30523,13 +27232,11 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 2133
     const/4 v4, 0x0
 
     .restart local v4    # "result":I
     goto :goto_1
 
-    .line 2135
     .end local v4    # "result":I
     :cond_2
     const/16 v4, -0x30
@@ -30537,7 +27244,6 @@
     .restart local v4    # "result":I
     goto :goto_1
 
-    .line 2139
     .end local v3    # "methodList":Ljava/lang/String;
     .end local v4    # "result":I
     :cond_3
@@ -30546,12 +27252,10 @@
     .restart local v4    # "result":I
     goto :goto_1
 
-    .line 2141
     .end local v4    # "result":I
     :catch_0
     move-exception v2
 
-    .line 2142
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -30575,7 +27279,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2143
     const/4 v4, -0x1
 
     .restart local v4    # "result":I
@@ -30587,12 +27290,10 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 2160
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 2167
     .local v0, "callingUid":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -30605,20 +27306,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2168
     const/4 v2, 0x0
 
-    .line 2174
     .local v2, "result":I
     :goto_0
     return v2
 
-    .line 2169
     .end local v2    # "result":I
     :catch_0
     move-exception v1
 
-    .line 2170
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -30642,7 +27339,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2171
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -30654,22 +27350,18 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 5974
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 5975
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 5976
     .local v4, "token":J
     const/4 v3, -0x1
 
-    .line 5978
     .local v3, "result":I
     if-ltz p1, :cond_0
 
@@ -30677,15 +27369,12 @@
 
     if-le p1, v6, :cond_1
 
-    .line 5980
     :cond_0
     const/16 v6, -0x2b
 
-    .line 5992
     :goto_0
     return v6
 
-    .line 5983
     :cond_1
     :try_start_0
     new-instance v2, Landroid/content/Intent;
@@ -30694,13 +27383,11 @@
 
     invoke-direct {v2, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5984
     .local v2, "intent":Landroid/content/Intent;
     const-string v6, "mode"
 
     invoke-virtual {v2, v6, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 5985
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     new-instance v7, Landroid/os/UserHandle;
@@ -30713,7 +27400,6 @@
 
     invoke-virtual {v6, v2, v7, v8}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 5986
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "KNOX_CUSTOM"
@@ -30724,21 +27410,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5987
     const/4 v3, 0x0
 
     .end local v2    # "intent":Landroid/content/Intent;
     :goto_1
     move v6, v3
 
-    .line 5992
     goto :goto_0
 
-    .line 5988
     :catch_0
     move-exception v1
 
-    .line 5989
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -30762,7 +27444,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5990
     const/4 v3, -0x1
 
     goto :goto_1
@@ -30773,16 +27454,13 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 4718
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 4719
     .local v0, "callingUid":I
     const/4 v3, -0x6
 
-    .line 4721
     .local v3, "result":I
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -30798,7 +27476,6 @@
 
     if-nez v4, :cond_0
 
-    .line 4722
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v5, "connectivity"
@@ -30809,7 +27486,6 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 4723
     .local v1, "cm":Landroid/net/ConnectivityManager;
     const/4 v4, 0x0
 
@@ -30819,15 +27495,12 @@
 
     if-nez v4, :cond_0
 
-    .line 4724
     const/4 v4, -0x6
 
-    .line 4742
     .end local v1    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v4
 
-    .line 4730
     :cond_0
     :try_start_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -30840,20 +27513,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4736
     const/4 v3, 0x0
 
     :goto_1
     move v4, v3
 
-    .line 4742
     goto :goto_0
 
-    .line 4737
     :catch_0
     move-exception v2
 
-    .line 4738
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -30877,7 +27546,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4739
     const/4 v3, -0x1
 
     goto :goto_1
@@ -30888,59 +27556,46 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 6021
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 6022
     .local v0, "callingUid":I
     const/4 v3, -0x1
 
-    .line 6024
     .local v3, "result":I
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 6025
     .local v4, "token":J
     sget-boolean v1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mForceLcdBacklightOffEnabled:Z
 
-    .line 6026
     .local v1, "currentState":Z
     if-eq p1, v1, :cond_0
 
-    .line 6027
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setScreenCurtainDirect()V
 
-    .line 6028
     const/4 v3, 0x0
 
-    .line 6029
     sput-boolean p1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mForceLcdBacklightOffEnabled:Z
 
-    .line 6032
     :cond_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6033
     const/4 v3, 0x0
 
-    .line 6037
     .end local v1    # "currentState":Z
     .end local v4    # "token":J
     :goto_0
     return v3
 
-    .line 6034
     :catch_0
     move-exception v2
 
-    .line 6035
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -30973,12 +27628,10 @@
     .param p2, "elements"    # I
 
     .prologue
-    .line 5059
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v8
 
-    .line 5062
     .local v8, "callingUid":I
     if-ltz p2, :cond_0
 
@@ -30990,25 +27643,20 @@
 
     if-le v0, v1, :cond_1
 
-    .line 5064
     :cond_0
     const/16 v18, -0x32
 
-    .line 5183
     :goto_0
     return v18
 
-    .line 5067
     :cond_1
     const/16 v18, -0x6
 
-    .line 5068
     .local v18, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v22
 
-    .line 5072
     .local v22, "token":J
     :try_start_0
     move-object/from16 v0, p0
@@ -31031,11 +27679,9 @@
 
     move-result v9
 
-    .line 5073
     .local v9, "currentElements":I
     and-int/lit8 v10, p2, 0xe
 
-    .line 5076
     .local v10, "customElements":I
     move/from16 v0, p2
 
@@ -31043,7 +27689,6 @@
 
     move/from16 v19, v0
 
-    .line 5082
     .local v19, "settingsElements":I
     move-object/from16 v0, p0
 
@@ -31053,26 +27698,21 @@
 
     if-nez v24, :cond_d
 
-    .line 5084
     and-int/lit8 v24, p2, 0x11
 
     or-int v10, v10, v24
 
-    .line 5092
     :goto_1
     if-eqz p1, :cond_e
 
-    .line 5094
     or-int v17, v9, v10
 
-    .line 5099
     .local v17, "newElements":I
     :goto_2
     move/from16 v0, v17
 
     if-eq v0, v9, :cond_2
 
-    .line 5100
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -31093,7 +27733,6 @@
 
     invoke-virtual {v0, v8, v1, v2, v3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 5105
     :cond_2
     move-object/from16 v0, p0
 
@@ -31103,7 +27742,6 @@
 
     if-eqz v24, :cond_4
 
-    .line 5107
     and-int/lit8 v24, p2, 0x1
 
     const/16 v25, 0x1
@@ -31114,7 +27752,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 5108
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31140,7 +27777,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 5110
     :cond_3
     and-int/lit8 v24, p2, 0x10
 
@@ -31152,7 +27788,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 5111
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31178,7 +27813,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 5115
     :cond_4
     and-int/lit8 v24, p2, 0x20
 
@@ -31190,7 +27824,6 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 5116
     new-instance v16, Lcom/android/internal/widget/LockPatternUtils;
 
     move-object/from16 v0, p0
@@ -31205,16 +27838,13 @@
 
     invoke-direct {v0, v1}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 5118
     .local v16, "lpu":Lcom/android/internal/widget/LockPatternUtils;
     if-eqz v16, :cond_6
 
-    .line 5119
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 5120
     .local v4, "UserID":I
     if-nez p1, :cond_11
 
@@ -31227,17 +27857,13 @@
 
     invoke-virtual {v0, v1, v4}, Lcom/android/internal/widget/LockPatternUtils;->setOwnerInfoEnabled(ZI)V
 
-    .line 5121
     const/16 v21, 0x0
 
-    .line 5122
     .local v21, "temp":I
     if-eqz p1, :cond_5
 
-    .line 5123
     const/16 v21, 0x1
 
-    .line 5125
     :cond_5
     move-object/from16 v0, p0
 
@@ -31259,7 +27885,6 @@
 
     invoke-virtual {v0, v8, v1, v2, v3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 5128
     .end local v4    # "UserID":I
     .end local v16    # "lpu":Lcom/android/internal/widget/LockPatternUtils;
     .end local v21    # "temp":I
@@ -31274,7 +27899,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 5129
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31291,7 +27915,6 @@
 
     move-result-object v6
 
-    .line 5131
     .local v6, "appShortcut_Info":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -31301,10 +27924,8 @@
 
     if-eqz v24, :cond_13
 
-    .line 5132
     if-nez v6, :cond_7
 
-    .line 5134
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31330,7 +27951,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 5152
     .end local v6    # "appShortcut_Info":Ljava/lang/String;
     :cond_7
     :goto_7
@@ -31348,7 +27968,6 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 5153
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31374,7 +27993,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 5154
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mAmericanoUI:Z
@@ -31383,7 +28001,6 @@
 
     if-eqz v24, :cond_8
 
-    .line 5155
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31409,10 +28026,8 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 5156
     invoke-direct/range {p0 .. p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setLockscreenWeatherHiddenForLegacy(Z)Z
 
-    .line 5157
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31438,7 +28053,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 5160
     :cond_8
     move/from16 v0, p2
 
@@ -31454,7 +28068,6 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 5161
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31480,7 +28093,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 5163
     :cond_9
     move/from16 v0, p2
 
@@ -31496,7 +28108,6 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 5164
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31522,11 +28133,9 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 5167
     :cond_a
     if-eqz v19, :cond_b
 
-    .line 5168
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -31541,7 +28150,6 @@
 
     check-cast v5, Landroid/app/ActivityManager;
 
-    .line 5169
     .local v5, "am":Landroid/app/ActivityManager;
     const-string v24, "com.android.settings"
 
@@ -31549,12 +28157,10 @@
 
     invoke-virtual {v5, v0}, Landroid/app/ActivityManager;->forceStopPackage(Ljava/lang/String;)V
 
-    .line 5172
     .end local v5    # "am":Landroid/app/ActivityManager;
     :cond_b
     if-eqz v10, :cond_c
 
-    .line 5173
     new-instance v12, Landroid/content/Intent;
 
     const-string v24, "com.sec.android.keyguard.REFRESH"
@@ -31563,7 +28169,6 @@
 
     invoke-direct {v12, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5174
     .local v12, "i":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -31585,17 +28190,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 5177
     .end local v12    # "i":Landroid/content/Intent;
     :cond_c
     const/16 v18, 0x0
 
-    .line 5182
     invoke-static/range {v22 .. v23}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 5088
     .end local v17    # "newElements":I
     :cond_d
     and-int/lit8 v24, p2, 0x11
@@ -31604,7 +28206,6 @@
 
     goto/16 :goto_1
 
-    .line 5097
     :cond_e
     xor-int/lit8 v24, v10, -0x1
 
@@ -31613,19 +28214,16 @@
     .restart local v17    # "newElements":I
     goto/16 :goto_2
 
-    .line 5108
     :cond_f
     const/16 v24, 0x1
 
     goto/16 :goto_3
 
-    .line 5111
     :cond_10
     const/16 v24, 0x1
 
     goto/16 :goto_4
 
-    .line 5120
     .restart local v4    # "UserID":I
     .restart local v16    # "lpu":Lcom/android/internal/widget/LockPatternUtils;
     :cond_11
@@ -31633,7 +28231,6 @@
 
     goto/16 :goto_5
 
-    .line 5134
     .end local v4    # "UserID":I
     .end local v16    # "lpu":Lcom/android/internal/widget/LockPatternUtils;
     .restart local v6    # "appShortcut_Info":Ljava/lang/String;
@@ -31642,7 +28239,6 @@
 
     goto/16 :goto_6
 
-    .line 5139
     :cond_13
     :try_start_1
     const-string v24, ";"
@@ -31653,7 +28249,6 @@
 
     move-result-object v20
 
-    .line 5140
     .local v20, "shortcutInfo":[Ljava/lang/String;
     const/16 v25, 0x0
 
@@ -31664,7 +28259,6 @@
     :goto_d
     aput-object v24, v20, v25
 
-    .line 5141
     const/16 v25, 0x2
 
     if-eqz p1, :cond_15
@@ -31674,10 +28268,8 @@
     :goto_e
     aput-object v24, v20, v25
 
-    .line 5142
     const-string v6, ""
 
-    .line 5143
     move-object/from16 v7, v20
 
     .local v7, "arr$":[Ljava/lang/String;
@@ -31723,7 +28315,6 @@
 
     goto :goto_f
 
-    .line 5140
     .end local v7    # "arr$":[Ljava/lang/String;
     .end local v13    # "i$":I
     .end local v14    # "info":Ljava/lang/String;
@@ -31733,13 +28324,11 @@
 
     goto :goto_d
 
-    .line 5141
     :cond_15
     const-string v24, "1"
 
     goto :goto_e
 
-    .line 5144
     .restart local v7    # "arr$":[Ljava/lang/String;
     .restart local v13    # "i$":I
     .restart local v15    # "len$":I
@@ -31766,7 +28355,6 @@
 
     goto/16 :goto_7
 
-    .line 5145
     .end local v7    # "arr$":[Ljava/lang/String;
     .end local v13    # "i$":I
     .end local v15    # "len$":I
@@ -31774,7 +28362,6 @@
     :catch_0
     move-exception v11
 
-    .line 5146
     .local v11, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v24, "KnoxCustomManagerService"
@@ -31803,12 +28390,10 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 5147
     const/16 v18, -0x1
 
     goto/16 :goto_0
 
-    .line 5153
     .end local v6    # "appShortcut_Info":Ljava/lang/String;
     .end local v11    # "e":Ljava/lang/Exception;
     :cond_17
@@ -31816,31 +28401,26 @@
 
     goto/16 :goto_8
 
-    .line 5155
     :cond_18
     const/16 v24, 0x1
 
     goto/16 :goto_9
 
-    .line 5157
     :cond_19
     const/16 v24, 0x1
 
     goto/16 :goto_a
 
-    .line 5161
     :cond_1a
     const/16 v24, 0x1
 
     goto/16 :goto_b
 
-    .line 5164
     :cond_1b
     const/16 v24, 0x1
 
     goto/16 :goto_c
 
-    .line 5178
     .end local v9    # "currentElements":I
     .end local v10    # "customElements":I
     .end local v17    # "newElements":I
@@ -31848,7 +28428,6 @@
     :catch_1
     move-exception v11
 
-    .line 5179
     .restart local v11    # "e":Ljava/lang/Exception;
     const-string v24, "KnoxCustomManagerService"
 
@@ -31874,7 +28453,6 @@
 
     invoke-static/range {v24 .. v25}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5180
     const/16 v18, -0x1
 
     goto/16 :goto_0
@@ -31887,16 +28465,13 @@
     .prologue
     const/4 v8, 0x2
 
-    .line 6134
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 6135
     .local v0, "callingUid":I
     const/4 v4, -0x1
 
-    .line 6137
     .local v4, "result":I
     if-eqz p1, :cond_0
 
@@ -31906,35 +28481,28 @@
 
     if-eq p1, v8, :cond_0
 
-    .line 6140
     const/16 v5, -0x2b
 
-    .line 6176
     :goto_0
     return v5
 
-    .line 6143
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 6145
     .local v6, "token":J
     :try_start_0
     sput p1, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mLockScreenOverrideMode:I
 
-    .line 6146
     if-eq p1, v8, :cond_1
 
-    .line 6148
     new-instance v3, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {v3, v5}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 6149
     .local v3, "lpu":Lcom/android/internal/widget/LockPatternUtils;
     const/4 v5, -0x1
 
@@ -31942,7 +28510,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 6151
     :try_start_1
     invoke-static {}, Landroid/view/WindowManagerGlobal;->getWindowManagerService()Landroid/view/IWindowManager;
 
@@ -31954,13 +28521,11 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 6157
     .end local v3    # "lpu":Lcom/android/internal/widget/LockPatternUtils;
     :cond_1
     :goto_1
     if-eqz p1, :cond_2
 
-    .line 6159
     :try_start_2
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -31972,7 +28537,6 @@
 
     check-cast v2, Landroid/app/KeyguardManager;
 
-    .line 6160
     .local v2, "km":Landroid/app/KeyguardManager;
     if-eqz v2, :cond_2
 
@@ -31982,7 +28546,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 6161
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     new-instance v8, Landroid/content/Intent;
@@ -31999,7 +28562,6 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 6162
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mHandler:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$KioskHandler;
 
     new-instance v8, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$4;
@@ -32012,26 +28574,21 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 6170
     .end local v2    # "km":Landroid/app/KeyguardManager;
     :cond_2
     const/4 v4, 0x0
 
-    .line 6175
     :goto_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v5, v4
 
-    .line 6176
     goto :goto_0
 
-    .line 6152
     .restart local v3    # "lpu":Lcom/android/internal/widget/LockPatternUtils;
     :catch_0
     move-exception v1
 
-    .line 6153
     .local v1, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v5, "KnoxCustomManagerService"
@@ -32044,13 +28601,11 @@
 
     goto :goto_1
 
-    .line 6171
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v3    # "lpu":Lcom/android/internal/widget/LockPatternUtils;
     :catch_1
     move-exception v1
 
-    .line 6172
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -32074,7 +28629,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6173
     const/4 v4, -0x1
 
     goto :goto_2
@@ -32086,12 +28640,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 10395
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v6
 
-    .line 10397
     .local v6, "callingUid":I
     move-object/from16 v0, p0
 
@@ -32101,14 +28653,11 @@
 
     if-eqz v19, :cond_0
 
-    .line 10399
     const/16 v17, -0x6
 
-    .line 10463
     :goto_0
     return v17
 
-    .line 10401
     :cond_0
     if-ltz p1, :cond_1
 
@@ -32120,13 +28669,11 @@
 
     if-le v0, v1, :cond_2
 
-    .line 10403
     :cond_1
     const/16 v17, -0x32
 
     goto :goto_0
 
-    .line 10407
     :cond_2
     move-object/from16 v0, p0
 
@@ -32138,12 +28685,10 @@
 
     if-nez v19, :cond_3
 
-    .line 10409
     const/16 v17, -0x21
 
     goto :goto_0
 
-    .line 10413
     :cond_3
     move-object/from16 v0, p0
 
@@ -32155,7 +28700,6 @@
 
     move-result-object v16
 
-    .line 10415
     .local v16, "pm":Landroid/content/pm/PackageManager;
     :try_start_0
     move-object/from16 v0, v16
@@ -32168,7 +28712,6 @@
 
     move-result v13
 
-    .line 10416
     .local v13, "isEnabled":I
     const/16 v19, 0x2
 
@@ -32182,24 +28725,20 @@
 
     if-ne v13, v0, :cond_5
 
-    .line 10419
     :cond_4
     const/16 v17, -0x21
 
     goto :goto_0
 
-    .line 10421
     .end local v13    # "isEnabled":I
     :catch_0
     move-exception v8
 
-    .line 10423
     .local v8, "ex":Ljava/lang/IllegalArgumentException;
     const/16 v17, -0x21
 
     goto :goto_0
 
-    .line 10427
     .end local v8    # "ex":Ljava/lang/IllegalArgumentException;
     .restart local v13    # "isEnabled":I
     :cond_5
@@ -32211,16 +28750,13 @@
 
     move-result-object v12
 
-    .line 10428
     .local v12, "intent":Landroid/content/Intent;
     if-nez v12, :cond_6
 
-    .line 10430
     const/16 v17, -0x21
 
     goto :goto_0
 
-    .line 10432
     :cond_6
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -32264,7 +28800,6 @@
 
     move-result-object v4
 
-    .line 10433
     .local v4, "applicationName":Ljava/lang/String;
     const-string v19, "KnoxCustomManagerService"
 
@@ -32294,16 +28829,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10436
     const/16 v17, -0x6
 
-    .line 10437
     .local v17, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v20
 
-    .line 10439
     .local v20, "token":J
     :try_start_1
     move-object/from16 v0, p0
@@ -32326,7 +28858,6 @@
 
     move-result-object v3
 
-    .line 10440
     .local v3, "appShortcutInfo":Ljava/lang/String;
     const-string v19, ";"
 
@@ -32336,21 +28867,17 @@
 
     move-result-object v18
 
-    .line 10441
     .local v18, "shortcutInfo":[Ljava/lang/String;
     if-nez p1, :cond_8
 
-    .line 10442
     const/16 v19, 0x1
 
     aput-object v4, v18, v19
 
-    .line 10446
     :cond_7
     :goto_1
     const-string v15, ""
 
-    .line 10447
     .local v15, "newAppShortcutInfo":Ljava/lang/String;
     move-object/from16 v5, v18
 
@@ -32401,7 +28928,6 @@
 
     goto :goto_2
 
-    .line 10443
     .end local v5    # "arr$":[Ljava/lang/String;
     .end local v10    # "i$":I
     .end local v11    # "info":Ljava/lang/String;
@@ -32416,7 +28942,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 10444
     const/16 v19, 0x3
 
     aput-object v4, v18, v19
@@ -32425,13 +28950,11 @@
 
     goto :goto_1
 
-    .line 10458
     .end local v3    # "appShortcutInfo":Ljava/lang/String;
     .end local v18    # "shortcutInfo":[Ljava/lang/String;
     :catch_1
     move-exception v7
 
-    .line 10459
     .local v7, "e":Ljava/lang/Exception;
     const-string v19, "KnoxCustomManagerService"
 
@@ -32461,17 +28984,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10460
     const/16 v17, -0x1
 
-    .line 10462
     .end local v7    # "e":Ljava/lang/Exception;
     :goto_3
     invoke-static/range {v20 .. v21}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 10448
     .restart local v3    # "appShortcutInfo":Ljava/lang/String;
     .restart local v5    # "arr$":[Ljava/lang/String;
     .restart local v10    # "i$":I
@@ -32498,7 +29018,6 @@
 
     invoke-static {v0, v1, v15}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 10451
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -32517,7 +29036,6 @@
 
     check-cast v2, Landroid/app/ActivityManager;
 
-    .line 10452
     .local v2, "am":Landroid/app/ActivityManager;
     const-string v19, "com.android.settings"
 
@@ -32525,7 +29043,6 @@
 
     invoke-virtual {v2, v0}, Landroid/app/ActivityManager;->forceStopPackage(Ljava/lang/String;)V
 
-    .line 10454
     new-instance v9, Landroid/content/Intent;
 
     const-string v19, "com.sec.android.keyguard.REFRESH"
@@ -32534,7 +29051,6 @@
 
     invoke-direct {v9, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 10455
     .local v9, "i":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -32556,7 +29072,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 10457
     const/16 v17, 0x0
 
     goto :goto_3
@@ -32570,16 +29085,13 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 3859
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 3860
     .local v0, "callingUid":I
     const/4 v4, -0x6
 
-    .line 3862
     .local v4, "result":I
     if-eq p2, v9, :cond_0
 
@@ -32587,25 +29099,20 @@
 
     if-eq p2, v5, :cond_0
 
-    .line 3863
     const-string v5, "KnoxCustomManagerService"
 
     const-string v8, "setLockscreenWallpaper: invalid SIM value"
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3864
     const/16 v5, -0x32
 
-    .line 3894
     :goto_0
     return v5
 
-    .line 3866
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 3868
     :try_start_0
     const-string v5, "."
 
@@ -32621,7 +29128,6 @@
 
     move-result-object v3
 
-    .line 3869
     .local v3, "extension":Ljava/lang/String;
     const-string v5, ".png"
 
@@ -32631,7 +29137,6 @@
 
     if-nez v5, :cond_1
 
-    .line 3870
     const-string v5, "KnoxCustomManagerService"
 
     const-string v8, "setLockscreenWallpaper: file must be a PNG"
@@ -32640,41 +29145,34 @@
     :try_end_0
     .catch Ljava/lang/StringIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3871
     const/16 v5, -0x28
 
     goto :goto_0
 
-    .line 3873
     .end local v3    # "extension":Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 3874
     .local v2, "e":Ljava/lang/StringIndexOutOfBoundsException;
     const/4 v5, -0x1
 
     goto :goto_0
 
-    .line 3878
     .end local v2    # "e":Ljava/lang/StringIndexOutOfBoundsException;
     :cond_1
     if-ne p2, v9, :cond_2
 
     const-string v1, "lockscreen_wallpaper_path"
 
-    .line 3879
     .local v1, "destSettings":Ljava/lang/String;
     :goto_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 3881
     .local v6, "token":J
     if-nez p1, :cond_3
 
-    .line 3882
     :try_start_1
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -32688,20 +29186,16 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 3888
     :goto_2
     const/4 v4, 0x0
 
-    .line 3893
     :goto_3
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v5, v4
 
-    .line 3894
     goto :goto_0
 
-    .line 3878
     .end local v1    # "destSettings":Ljava/lang/String;
     .end local v6    # "token":J
     :cond_2
@@ -32709,7 +29203,6 @@
 
     goto :goto_1
 
-    .line 3885
     .restart local v1    # "destSettings":Ljava/lang/String;
     .restart local v6    # "token":J
     :cond_3
@@ -32726,11 +29219,9 @@
 
     goto :goto_2
 
-    .line 3889
     :catch_1
     move-exception v2
 
-    .line 3890
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -32754,7 +29245,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3891
     const/4 v4, -0x1
 
     goto :goto_3
@@ -32769,12 +29259,10 @@
 
     const/4 v8, 0x0
 
-    .line 2943
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 2945
     .local v0, "callingUid":I
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -32790,7 +29278,6 @@
 
     if-nez v9, :cond_0
 
-    .line 2947
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v10, "connectivity"
@@ -32801,7 +29288,6 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 2948
     .local v1, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v1, v8}, Landroid/net/ConnectivityManager;->isNetworkSupported(I)Z
 
@@ -32809,15 +29295,12 @@
 
     if-nez v9, :cond_0
 
-    .line 2949
     const/4 v3, -0x6
 
-    .line 2970
     .end local v1    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v3
 
-    .line 2953
     :cond_0
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -32829,7 +29312,6 @@
 
     check-cast v4, Landroid/telephony/TelephonyManager;
 
-    .line 2954
     .local v4, "telMgr":Landroid/telephony/TelephonyManager;
     invoke-virtual {v4}, Landroid/telephony/TelephonyManager;->getPhoneType()I
 
@@ -32837,7 +29319,6 @@
 
     if-ne v9, v5, :cond_1
 
-    .line 2955
     invoke-virtual {v4}, Landroid/telephony/TelephonyManager;->getSimState()I
 
     move-result v9
@@ -32846,18 +29327,15 @@
 
     if-eq v9, v10, :cond_1
 
-    .line 2956
     const/16 v3, -0x38
 
     goto :goto_0
 
-    .line 2960
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2962
     .local v6, "token":J
     :try_start_0
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -32875,10 +29353,8 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2963
     const/4 v3, 0x0
 
-    .line 2968
     .local v3, "result":I
     :goto_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -32889,14 +29365,11 @@
     :cond_2
     move v5, v8
 
-    .line 2962
     goto :goto_1
 
-    .line 2964
     :catch_0
     move-exception v2
 
-    .line 2965
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -32920,7 +29393,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2966
     const/4 v3, -0x1
 
     .restart local v3    # "result":I
@@ -32934,7 +29406,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1868
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -32949,7 +29420,6 @@
 
     if-nez v6, :cond_0
 
-    .line 1869
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v7, "connectivity"
@@ -32960,7 +29430,6 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 1870
     .local v1, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v1, v3}, Landroid/net/ConnectivityManager;->isNetworkSupported(I)Z
 
@@ -32968,27 +29437,22 @@
 
     if-nez v6, :cond_0
 
-    .line 1871
     const/4 v3, -0x6
 
-    .line 1882
     .end local v1    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v3
 
-    .line 1875
     :cond_0
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 1877
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1878
     .local v4, "token":J
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -33000,11 +29464,9 @@
 
     check-cast v2, Landroid/telephony/TelephonyManager;
 
-    .line 1879
     .local v2, "tm":Landroid/telephony/TelephonyManager;
     invoke-virtual {v2, p1}, Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V
 
-    .line 1880
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -33019,12 +29481,10 @@
 
     const/4 v8, 0x0
 
-    .line 8165
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 8168
     .local v0, "callingUid":I
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -33040,7 +29500,6 @@
 
     if-nez v10, :cond_1
 
-    .line 8169
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v11, "connectivity"
@@ -33051,7 +29510,6 @@
 
     check-cast v2, Landroid/net/ConnectivityManager;
 
-    .line 8170
     .local v2, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v2, v8}, Landroid/net/ConnectivityManager;->isNetworkSupported(I)Z
 
@@ -33059,39 +29517,31 @@
 
     if-nez v10, :cond_1
 
-    .line 8171
     const/4 v8, -0x6
 
-    .line 8222
     .end local v2    # "cm":Landroid/net/ConnectivityManager;
     :cond_0
     :goto_0
     return v8
 
-    .line 8176
     :cond_1
     const/4 v3, -0x1
 
-    .line 8177
     .local v3, "phoneType":I
     sparse-switch p1, :sswitch_data_0
 
     move v8, v9
 
-    .line 8206
     goto :goto_0
 
-    .line 8179
     :sswitch_0
     const/4 v3, 0x0
 
-    .line 8209
     :goto_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 8210
     .local v6, "token":J
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -33103,7 +29553,6 @@
 
     check-cast v5, Landroid/telephony/TelephonyManager;
 
-    .line 8211
     .local v5, "tm":Landroid/telephony/TelephonyManager;
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultSubId()I
 
@@ -33113,61 +29562,47 @@
 
     move-result v4
 
-    .line 8213
     .local v4, "ret":Z
     if-eqz v4, :cond_2
 
-    .line 8215
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->closeSettingsApp()V
 
-    .line 8217
     invoke-virtual {v5, v8}, Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V
 
-    .line 8218
     const/4 v9, 0x1
 
     invoke-virtual {v5, v9}, Landroid/telephony/TelephonyManager;->setDataEnabled(Z)V
 
-    .line 8221
     :cond_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8222
     if-nez v4, :cond_0
 
     const/4 v8, -0x1
 
     goto :goto_0
 
-    .line 8182
     .end local v4    # "ret":Z
     .end local v5    # "tm":Landroid/telephony/TelephonyManager;
     .end local v6    # "token":J
     :sswitch_1
     const/4 v3, 0x1
 
-    .line 8183
     goto :goto_1
 
-    .line 8185
     :sswitch_2
     const/4 v3, 0x2
 
-    .line 8186
     goto :goto_1
 
-    .line 8188
     :sswitch_3
     const/16 v3, 0x9
 
-    .line 8189
     goto :goto_1
 
-    .line 8192
     :sswitch_4
     const/4 v1, 0x0
 
-    .line 8193
     .local v1, "canUseLteOnly":Z
     invoke-virtual {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getLTESettingState()Z
 
@@ -33175,19 +29610,15 @@
 
     if-eqz v10, :cond_3
 
-    .line 8194
     const/4 v1, 0x1
 
-    .line 8199
     :goto_2
     if-eqz v1, :cond_4
 
-    .line 8200
     const/16 v3, 0xb
 
     goto :goto_1
 
-    .line 8196
     :cond_3
     const-string v10, "LTEONLY"
 
@@ -33210,10 +29641,8 @@
     :cond_4
     move v8, v9
 
-    .line 8202
     goto :goto_0
 
-    .line 8177
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -33234,12 +29663,10 @@
 
     const/4 v3, 0x1
 
-    .line 3140
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 3141
     .local v0, "callingUid":I
     if-lt p1, v3, :cond_0
 
@@ -33247,27 +29674,22 @@
 
     if-le p1, v7, :cond_1
 
-    .line 3142
     :cond_0
     const/16 v2, -0x32
 
-    .line 3181
     :goto_0
     return v2
 
-    .line 3145
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 3149
     .local v4, "token":J
     and-int/lit8 v7, p1, 0x1
 
     if-eqz v7, :cond_2
 
-    .line 3150
     :try_start_0
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -33284,7 +29706,6 @@
     :goto_1
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3152
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33300,7 +29721,6 @@
     :goto_2
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3154
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33316,7 +29736,6 @@
     :goto_3
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3156
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33332,7 +29751,6 @@
     :goto_4
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3159
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33348,7 +29766,6 @@
     :goto_5
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3162
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33364,13 +29781,11 @@
     :goto_6
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3165
     :cond_2
     and-int/lit8 v7, p1, 0x2
 
     if-eqz v7, :cond_3
 
-    .line 3166
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33386,7 +29801,6 @@
     :goto_7
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3168
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33402,7 +29816,6 @@
     :goto_8
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3170
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33418,7 +29831,6 @@
     :goto_9
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3172
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33434,11 +29846,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3175
     :cond_3
     const/4 v2, 0x0
 
-    .line 3180
     .local v2, "result":I
     :goto_b
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -33449,68 +29859,56 @@
     :cond_4
     move v7, v6
 
-    .line 3150
     goto/16 :goto_1
 
     :cond_5
     move v7, v6
 
-    .line 3152
     goto :goto_2
 
     :cond_6
     move v7, v6
 
-    .line 3154
     goto :goto_3
 
     :cond_7
     move v7, v6
 
-    .line 3156
     goto :goto_4
 
     :cond_8
     move v7, v6
 
-    .line 3159
     goto :goto_5
 
     :cond_9
     move v7, v6
 
-    .line 3162
     goto :goto_6
 
     :cond_a
     move v7, v6
 
-    .line 3166
     goto :goto_7
 
     :cond_b
     move v7, v6
 
-    .line 3168
     goto :goto_8
 
     :cond_c
     move v7, v6
 
-    .line 3170
     goto :goto_9
 
     :cond_d
     move v3, v6
 
-    .line 3172
     goto :goto_a
 
-    .line 3176
     :catch_0
     move-exception v1
 
-    .line 3177
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -33534,7 +29932,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3178
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -33549,18 +29946,15 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 2021
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 2023
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2024
     .local v6, "token":J
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -33568,7 +29962,6 @@
 
     move-result-object v3
 
-    .line 2025
     .local v3, "kioskMode":Landroid/app/enterprise/kioskmode/KioskMode;
     invoke-virtual {v3}, Landroid/app/enterprise/kioskmode/KioskMode;->isMultiWindowModeAllowed()Z
 
@@ -33578,53 +29971,43 @@
 
     move v2, v8
 
-    .line 2026
     .local v2, "isRestricted":Z
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2027
     if-eqz v2, :cond_2
 
-    .line 2028
     const-string v8, "KnoxCustomManagerService"
 
     const-string v9, "setMultiWindowFixedState() - eSDK multi window mode not allowed"
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2029
     const/4 v4, -0x7
 
-    .line 2063
     :cond_0
     :goto_1
     return v4
 
-    .line 2025
     .end local v2    # "isRestricted":Z
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 2031
     .restart local v2    # "isRestricted":Z
     :cond_2
     const/4 v4, -0x6
 
-    .line 2033
     .local v4, "result":I
     if-eq p1, v8, :cond_3
 
     if-eqz p1, :cond_3
 
-    .line 2034
     const/16 v4, -0x2b
 
     goto :goto_1
 
-    .line 2036
     :cond_3
     const/16 v9, 0xa
 
@@ -33634,22 +30017,18 @@
 
     if-le p2, v9, :cond_5
 
-    .line 2037
     :cond_4
     const/16 v4, -0x2a
 
     goto :goto_1
 
-    .line 2039
     :cond_5
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2041
     if-ne p1, v8, :cond_6
 
-    .line 2042
     :try_start_0
     iget-object v9, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -33667,17 +30046,14 @@
 
     if-eq v9, v8, :cond_6
 
-    .line 2043
     const/4 v8, 0x1
 
     invoke-virtual {p0, v8}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setMultiWindowState(Z)I
 
     move-result v4
 
-    .line 2044
     if-nez v4, :cond_0
 
-    .line 2049
     :cond_6
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -33687,7 +30063,6 @@
 
     invoke-virtual {v8, v0, v9, v10, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 2050
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v9, "KNOX_CUSTOM"
@@ -33696,14 +30071,12 @@
 
     invoke-virtual {v8, v0, v9, v10, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 2053
     const-string v8, "content://com.sec.knox.provider2/KnoxCustomManagerService2"
 
     invoke-static {v8}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v5
 
-    .line 2054
     .local v5, "uri":Landroid/net/Uri;
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -33717,26 +30090,21 @@
 
     invoke-virtual {v8, v5, v9}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 2056
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->updateMultiWindowCenterBar()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2057
     const/4 v4, 0x0
 
-    .line 2062
     .end local v5    # "uri":Landroid/net/Uri;
     :goto_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
 
-    .line 2058
     :catch_0
     move-exception v1
 
-    .line 2059
     .local v1, "e":Ljava/lang/Exception;
     const-string v8, "KnoxCustomManagerService"
 
@@ -33760,7 +30128,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2060
     const/4 v4, -0x1
 
     goto :goto_2
@@ -33775,18 +30142,15 @@
 
     const/4 v7, 0x0
 
-    .line 1985
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 1987
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1988
     .local v4, "token":J
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -33794,7 +30158,6 @@
 
     move-result-object v2
 
-    .line 1989
     .local v2, "kioskMode":Landroid/app/enterprise/kioskmode/KioskMode;
     invoke-virtual {v2}, Landroid/app/enterprise/kioskmode/KioskMode;->isMultiWindowModeAllowed()Z
 
@@ -33804,25 +30167,20 @@
 
     move v1, v6
 
-    .line 1990
     .local v1, "isRestricted":Z
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1991
     if-eqz v1, :cond_1
 
-    .line 1992
     const-string v6, "KnoxCustomManagerService"
 
     const-string v7, "setMultiWindowState() - eSDK multi window mode not allowed"
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1993
     const/4 v3, -0x7
 
-    .line 2004
     :goto_1
     return v3
 
@@ -33830,24 +30188,19 @@
     :cond_0
     move v1, v7
 
-    .line 1989
     goto :goto_0
 
-    .line 1995
     .restart local v1    # "isRestricted":Z
     :cond_1
     const/4 v3, -0x6
 
-    .line 1996
     .local v3, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 1997
     if-eqz p1, :cond_2
 
-    .line 1998
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -33858,17 +30211,13 @@
 
     invoke-static {v7, v8, v6}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2002
     :goto_2
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2003
     const/4 v3, 0x0
 
-    .line 2004
     goto :goto_1
 
-    .line 2000
     :cond_2
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -33888,18 +30237,15 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 3061
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 3063
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 3065
     .local v4, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -33919,29 +30265,23 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3067
     const/4 v2, 0x0
 
-    .line 3072
     .local v2, "result":I
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3073
     return v2
 
-    .line 3065
     .end local v2    # "result":I
     :cond_0
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 3068
     :catch_0
     move-exception v1
 
-    .line 3069
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -33965,7 +30305,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3070
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -33982,16 +30321,13 @@
 
     const/4 v7, 0x0
 
-    .line 1060
     const/4 v4, -0x6
 
-    .line 1061
     .local v4, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1063
     .local v0, "callingUid":I
     :try_start_0
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -34004,11 +30340,9 @@
 
     move-result v1
 
-    .line 1064
     .local v1, "currentStatus":Z
     if-eqz v1, :cond_4
 
-    .line 1065
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v9, "KNOX_CUSTOM"
@@ -34019,7 +30353,6 @@
 
     move-result-object v5
 
-    .line 1066
     .local v5, "storedPassCode":Ljava/lang/String;
     if-eqz v5, :cond_1
 
@@ -34035,12 +30368,10 @@
 
     move v3, v6
 
-    .line 1067
     .local v3, "passCodeOk":Z
     :goto_0
     if-nez v3, :cond_0
 
-    .line 1068
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v9, "KNOX_CUSTOM"
@@ -34051,7 +30382,6 @@
 
     move-result-object v5
 
-    .line 1069
     if-eqz v5, :cond_2
 
     invoke-virtual {v5, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -34062,12 +30392,10 @@
 
     move v3, v6
 
-    .line 1071
     :cond_0
     :goto_1
     if-eqz v3, :cond_3
 
-    .line 1073
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "KNOX_CUSTOM"
@@ -34080,7 +30408,6 @@
 
     invoke-virtual {v6, v0, v7, v8, v9}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1074
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "KNOX_CUSTOM"
@@ -34091,10 +30418,8 @@
 
     invoke-virtual {v6, v0, v7, v8, v9}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 1075
     const/4 v4, 0x0
 
-    .line 1088
     .end local v1    # "currentStatus":Z
     .end local v3    # "passCodeOk":Z
     .end local v5    # "storedPassCode":Ljava/lang/String;
@@ -34106,17 +30431,14 @@
     :cond_1
     move v3, v7
 
-    .line 1066
     goto :goto_0
 
     .restart local v3    # "passCodeOk":Z
     :cond_2
     move v3, v7
 
-    .line 1069
     goto :goto_1
 
-    .line 1077
     :cond_3
     const-string v6, "KnoxCustomManagerService"
 
@@ -34124,12 +30446,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1078
     const/16 v4, -0x20
 
     goto :goto_2
 
-    .line 1081
     .end local v3    # "passCodeOk":Z
     .end local v5    # "storedPassCode":Ljava/lang/String;
     :cond_4
@@ -34141,17 +30461,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1082
     const/4 v4, -0x2
 
     goto :goto_2
 
-    .line 1084
     .end local v1    # "currentStatus":Z
     :catch_0
     move-exception v2
 
-    .line 1085
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -34175,7 +30492,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1086
     const/4 v4, -0x1
 
     goto :goto_2
@@ -34194,13 +30510,11 @@
     .end annotation
 
     .prologue
-    .line 6429
     .local p1, "items":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;>;"
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskOrSystemPermission()I
 
     move-result v0
 
-    .line 6430
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPowerDialogCustomItemsLocal(Ljava/util/List;I)I
 
@@ -34214,12 +30528,10 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 6378
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskOrSystemPermission()I
 
     move-result v0
 
-    .line 6379
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPowerDialogCustomItemsStateLocal(ZI)I
 
@@ -34233,16 +30545,13 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 2593
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 2594
     .local v0, "callingUid":I
     const/4 v2, -0x1
 
-    .line 2596
     .local v2, "result":I
     if-ltz p1, :cond_0
 
@@ -34250,15 +30559,12 @@
 
     if-le p1, v3, :cond_1
 
-    .line 2597
     :cond_0
     const/16 v2, -0x32
 
-    .line 2611
     :goto_0
     return v2
 
-    .line 2599
     :cond_1
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -34277,22 +30583,18 @@
 
     if-eqz v3, :cond_2
 
-    .line 2602
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 2604
     :cond_2
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 2607
     :catch_0
     move-exception v1
 
-    .line 2608
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -34316,7 +30618,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2609
     const/4 v2, -0x1
 
     goto :goto_0
@@ -34327,16 +30628,13 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 1172
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1173
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 1176
     .local v2, "result":I
     const/4 v3, 0x2
 
@@ -34348,7 +30646,6 @@
 
     if-nez p1, :cond_1
 
-    .line 1177
     :cond_0
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -34361,24 +30658,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1178
     const/4 v2, 0x0
 
-    .line 1186
     :goto_0
     return v2
 
-    .line 1180
     :cond_1
     const/16 v2, -0x2b
 
     goto :goto_0
 
-    .line 1182
     :catch_0
     move-exception v1
 
-    .line 1183
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -34402,7 +30694,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1184
     const/4 v2, -0x1
 
     goto :goto_0
@@ -34413,16 +30704,13 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 4363
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4364
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4367
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -34435,18 +30723,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4368
     const/4 v2, 0x0
 
-    .line 4373
     :goto_0
     return v2
 
-    .line 4369
     :catch_0
     move-exception v1
 
-    .line 4370
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -34470,7 +30754,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4371
     const/4 v2, -0x1
 
     goto :goto_0
@@ -34485,26 +30768,21 @@
 
     const/4 v5, 0x1
 
-    .line 3559
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 3560
     .local v0, "callingUid":I
     const/4 v6, -0x6
 
-    .line 3562
     .local v6, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 3565
     .local v8, "token":J
     if-nez p1, :cond_1
 
-    .line 3569
     :try_start_0
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -34518,7 +30796,6 @@
 
     invoke-static {v10, v11, v12}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3571
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -34533,22 +30810,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 3572
     const/4 v6, 0x0
 
-    .line 3625
     :cond_0
     :goto_0
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3626
     return v6
 
-    .line 3573
     :cond_1
     if-ne p1, v5, :cond_2
 
-    .line 3577
     :try_start_1
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -34562,7 +30834,6 @@
 
     invoke-static {v10, v11, v12}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3579
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v10}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -34577,18 +30848,15 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 3580
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 3581
     :cond_2
     const/4 v11, 0x2
 
     if-ne p1, v11, :cond_3
 
-    .line 3583
     :try_start_2
     const-string v10, "com.sec.android.emergencymode.EmergencyManager"
 
@@ -34596,7 +30864,6 @@
 
     move-result-object v3
 
-    .line 3584
     .local v3, "em":Ljava/lang/Class;
     const-string v10, "supportUltraPowerSavingMode"
 
@@ -34606,7 +30873,6 @@
 
     move-result-object v7
 
-    .line 3585
     .local v7, "supported":Ljava/lang/reflect/Method;
     const/4 v10, 0x0
 
@@ -34626,14 +30892,12 @@
 
     if-eqz v10, :cond_0
 
-    .line 3586
     new-instance v4, Landroid/content/Intent;
 
     const-string v10, "com.samsung.intent.action.EMERGENCY_START_SERVICE_BY_ORDER"
 
     invoke-direct {v4, v10}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3587
     .local v4, "intent":Landroid/content/Intent;
     const-string v10, "enabled"
 
@@ -34641,21 +30905,18 @@
 
     invoke-virtual {v4, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3588
     const-string v10, "flag"
 
     const/16 v11, 0x200
 
     invoke-virtual {v4, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 3589
     const-string v10, "skipdialog"
 
     const/4 v11, 0x1
 
     invoke-virtual {v4, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3590
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     sget-object v11, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
@@ -34664,19 +30925,16 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 3591
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 3595
     .end local v3    # "em":Ljava/lang/Class;
     .end local v4    # "intent":Landroid/content/Intent;
     .end local v7    # "supported":Ljava/lang/reflect/Method;
     :catch_0
     move-exception v2
 
-    .line 3596
     .local v2, "e1":Ljava/lang/Exception;
     :try_start_3
     const-string v10, "KnoxCustomManagerService"
@@ -34689,12 +30947,10 @@
 
     goto :goto_0
 
-    .line 3620
     .end local v2    # "e1":Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
-    .line 3621
     .local v1, "e":Ljava/lang/Exception;
     const-string v10, "KnoxCustomManagerService"
 
@@ -34718,19 +30974,16 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3622
     const/4 v6, -0x1
 
     goto/16 :goto_0
 
-    .line 3598
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     const/4 v11, 0x3
 
     if-ne p1, v11, :cond_6
 
-    .line 3600
     :try_start_4
     iget-object v11, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -34748,19 +31001,16 @@
 
     if-eqz v11, :cond_4
 
-    .line 3603
     .local v5, "isUltraPowerSavingEnabled":Z
     :goto_1
     if-eqz v5, :cond_5
 
-    .line 3604
     new-instance v4, Landroid/content/Intent;
 
     const-string v10, "com.samsung.intent.action.EMERGENCY_START_SERVICE_BY_ORDER"
 
     invoke-direct {v4, v10}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 3605
     .restart local v4    # "intent":Landroid/content/Intent;
     const-string v10, "enabled"
 
@@ -34768,21 +31018,18 @@
 
     invoke-virtual {v4, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3606
     const-string v10, "flag"
 
     const/16 v11, 0x200
 
     invoke-virtual {v4, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 3607
     const-string v10, "skipdialog"
 
     const/4 v11, 0x1
 
     invoke-virtual {v4, v10, v11}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 3608
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     sget-object v11, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
@@ -34791,10 +31038,8 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 3609
     const/4 v6, 0x0
 
-    .line 3610
     goto/16 :goto_0
 
     .end local v4    # "intent":Landroid/content/Intent;
@@ -34802,24 +31047,20 @@
     :cond_4
     move v5, v10
 
-    .line 3600
     goto :goto_1
 
-    .line 3612
     .restart local v5    # "isUltraPowerSavingEnabled":Z
     :cond_5
     const/4 v6, 0x0
 
     goto/16 :goto_0
 
-    .line 3618
     .end local v5    # "isUltraPowerSavingEnabled":Z
     :cond_6
     const/16 v6, -0x32
 
     goto/16 :goto_0
 
-    .line 3614
     :catch_2
     move-exception v10
 
@@ -34831,20 +31072,16 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 1935
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1936
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 1939
     .local v2, "result":I
     if-eqz p1, :cond_0
 
-    .line 1940
     const/4 v3, 0x0
 
     :try_start_0
@@ -34852,11 +31089,9 @@
 
     move-result v2
 
-    .line 1948
     :goto_0
     return v2
 
-    .line 1942
     :cond_0
     const/16 v3, 0x1f
 
@@ -34868,11 +31103,9 @@
 
     goto :goto_0
 
-    .line 1944
     :catch_0
     move-exception v1
 
-    .line 1945
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -34896,7 +31129,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1946
     const/4 v2, -0x1
 
     goto :goto_0
@@ -34915,13 +31147,11 @@
     .end annotation
 
     .prologue
-    .line 2700
     .local p1, "items":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/knoxcustom/KnoxCustomPowerItem;>;"
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 2701
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPowerDialogCustomItemsLocal(Ljava/util/List;I)I
 
@@ -34935,12 +31165,10 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 2624
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 2625
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPowerDialogCustomItemsStateLocal(ZI)I
 
@@ -34955,18 +31183,15 @@
     .param p2, "passCode"    # Ljava/lang/String;
 
     .prologue
-    .line 958
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v2
 
-    .line 961
     .local v2, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 962
     .local v10, "token":J
     move-object/from16 v0, p0
 
@@ -34976,38 +31201,30 @@
 
     move-result-object v6
 
-    .line 963
     .local v6, "kioskMode":Landroid/app/enterprise/kioskmode/KioskMode;
     invoke-virtual {v6}, Landroid/app/enterprise/kioskmode/KioskMode;->isKioskModeEnabled()Z
 
     move-result v5
 
-    .line 965
     .local v5, "isRestricted":Z
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 966
     if-eqz v5, :cond_0
 
-    .line 967
     const-string v13, "KnoxCustomManagerService"
 
     const-string v14, "setProKioskState() - eSDK kiosk mode already enabled"
 
     invoke-static {v13, v14}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 968
     const/4 v8, -0x7
 
-    .line 1028
     :goto_0
     return v8
 
-    .line 971
     :cond_0
     const/4 v8, -0x1
 
-    .line 974
     .local v8, "result":I
     :try_start_0
     move-object/from16 v0, p0
@@ -35022,26 +31239,21 @@
 
     move-result v3
 
-    .line 975
     .local v3, "currentStatus":Z
     if-eqz p1, :cond_3
 
-    .line 976
     if-eqz v3, :cond_1
 
-    .line 977
     const-string v13, "KnoxCustomManagerService"
 
     const-string v14, "setProKioskState() - Already in ProKiosk mode - Passcode not changed"
 
     invoke-static {v13, v14}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 979
     const/4 v8, -0x3
 
     goto :goto_0
 
-    .line 981
     :cond_1
     if-eqz p2, :cond_2
 
@@ -35051,7 +31263,6 @@
 
     if-eqz v13, :cond_2
 
-    .line 982
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -35064,7 +31275,6 @@
 
     invoke-virtual {v13, v2, v14, v15, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 983
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -35085,7 +31295,6 @@
 
     invoke-virtual {v13, v2, v14, v15, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 984
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -35100,23 +31309,18 @@
 
     invoke-virtual {v13, v2, v14, v15, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 985
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->startProKioskMode()V
 
-    .line 986
     const/4 v8, 0x0
 
-    .line 989
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->closeSettingsApp()V
 
-    .line 992
     const-string v13, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
     invoke-static {v13}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v12
 
-    .line 993
     .local v12, "uri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -35136,13 +31340,11 @@
 
     goto :goto_0
 
-    .line 1024
     .end local v3    # "currentStatus":Z
     .end local v12    # "uri":Landroid/net/Uri;
     :catch_0
     move-exception v4
 
-    .line 1025
     .local v4, "e":Ljava/lang/Exception;
     const-string v13, "KnoxCustomManagerService"
 
@@ -35166,12 +31368,10 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1026
     const/4 v8, -0x1
 
     goto/16 :goto_0
 
-    .line 995
     .end local v4    # "e":Ljava/lang/Exception;
     .restart local v3    # "currentStatus":Z
     :cond_2
@@ -35182,16 +31382,13 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 996
     const/16 v8, -0x20
 
     goto/16 :goto_0
 
-    .line 1000
     :cond_3
     if-eqz v3, :cond_8
 
-    .line 1001
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -35204,7 +31401,6 @@
 
     move-result-object v9
 
-    .line 1002
     .local v9, "storedPassCode":Ljava/lang/String;
     if-eqz v9, :cond_5
 
@@ -35224,12 +31420,10 @@
 
     const/4 v7, 0x1
 
-    .line 1003
     .local v7, "passCodeOk":Z
     :goto_1
     if-nez v7, :cond_4
 
-    .line 1004
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -35242,7 +31436,6 @@
 
     move-result-object v9
 
-    .line 1005
     if-eqz v9, :cond_6
 
     move-object/from16 v0, p2
@@ -35255,12 +31448,10 @@
 
     const/4 v7, 0x1
 
-    .line 1007
     :cond_4
     :goto_2
     if-eqz v7, :cond_7
 
-    .line 1008
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -35273,20 +31464,16 @@
 
     invoke-virtual {v13, v2, v14, v15, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 1009
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->stopProKioskMode()V
 
-    .line 1010
     const/4 v8, 0x0
 
-    .line 1013
     const-string v13, "content://com.sec.knox.provider2/KnoxCustomManagerService1"
 
     invoke-static {v13}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v12
 
-    .line 1014
     .restart local v12    # "uri":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -35304,7 +31491,6 @@
 
     goto/16 :goto_0
 
-    .line 1002
     .end local v7    # "passCodeOk":Z
     .end local v12    # "uri":Landroid/net/Uri;
     :cond_5
@@ -35312,14 +31498,12 @@
 
     goto :goto_1
 
-    .line 1005
     .restart local v7    # "passCodeOk":Z
     :cond_6
     const/4 v7, 0x0
 
     goto :goto_2
 
-    .line 1016
     :cond_7
     const-string v13, "KnoxCustomManagerService"
 
@@ -35327,12 +31511,10 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1017
     const/16 v8, -0x20
 
     goto/16 :goto_0
 
-    .line 1020
     .end local v7    # "passCodeOk":Z
     .end local v9    # "storedPassCode":Ljava/lang/String;
     :cond_8
@@ -35344,7 +31526,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1021
     const/4 v8, -0x2
 
     goto/16 :goto_0
@@ -35355,23 +31536,18 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 1392
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1393
     .local v0, "callingUid":I
     const/4 v1, 0x4
 
-    .line 1394
     .local v1, "mode":I
     if-eqz p1, :cond_0
 
-    .line 1395
     const/4 v1, 0x2
 
-    .line 1397
     :cond_0
     invoke-direct {p0, v1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setStatusBarClockModeLocal(II)I
 
@@ -35385,23 +31561,18 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 1421
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1422
     .local v0, "callingUid":I
     const/4 v1, 0x4
 
-    .line 1423
     .local v1, "mode":I
     if-eqz p1, :cond_0
 
-    .line 1424
     const/4 v1, 0x2
 
-    .line 1426
     :cond_0
     invoke-direct {p0, v1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setStatusBarIconsModeLocal(II)I
 
@@ -35415,25 +31586,20 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 1363
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1364
     .local v0, "callingUid":I
     move v1, p1
 
-    .line 1365
     .local v1, "sealedMode":I
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_0
 
-    .line 1366
     const/4 v1, 0x4
 
-    .line 1368
     :cond_0
     invoke-direct {p0, v1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setStatusBarModeLocal(II)I
 
@@ -35448,34 +31614,27 @@
     .param p2, "stringValue"    # Ljava/lang/String;
 
     .prologue
-    .line 1222
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1223
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 1225
     .local v2, "result":I
     packed-switch p1, :pswitch_data_0
 
-    .line 1254
     const-string v3, "KnoxCustomManagerService"
 
     const-string v4, "setProKioskString() failed - unrecognized type"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1255
     const/16 v2, -0x29
 
-    .line 1258
     :goto_0
     return v2
 
-    .line 1228
     :pswitch_0
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -35488,16 +31647,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1229
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1230
     :catch_0
     move-exception v1
 
-    .line 1231
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -35521,13 +31677,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1232
     const/4 v2, -0x1
 
-    .line 1234
     goto :goto_0
 
-    .line 1237
     .end local v1    # "e":Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -35541,16 +31694,13 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1238
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1239
     :catch_1
     move-exception v1
 
-    .line 1240
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -35574,13 +31724,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1241
     const/4 v2, -0x1
 
-    .line 1243
     goto :goto_0
 
-    .line 1246
     .end local v1    # "e":Ljava/lang/Exception;
     :pswitch_2
     :try_start_2
@@ -35594,16 +31741,13 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 1247
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1248
     :catch_2
     move-exception v1
 
-    .line 1249
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -35627,13 +31771,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1250
     const/4 v2, -0x1
 
-    .line 1252
     goto :goto_0
 
-    .line 1225
     :pswitch_data_0
     .packed-switch 0x6f
         :pswitch_2
@@ -35647,12 +31788,10 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 1451
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1452
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbMassStorageStateLocal(ZI)I
 
@@ -35667,12 +31806,10 @@
     .param p2, "destinationAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 1505
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1506
     .local v0, "callingUid":I
     invoke-direct {p0, p1, p2, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbNetAddressesLocal(Ljava/lang/String;Ljava/lang/String;I)I
 
@@ -35686,12 +31823,10 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 1479
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 1480
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbNetStateLocal(ZI)I
 
@@ -35709,16 +31844,13 @@
 
     const/4 v6, 0x0
 
-    .line 8899
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 8900
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 8901
     .local v2, "result":I
     if-ltz p1, :cond_0
 
@@ -35726,22 +31858,18 @@
 
     if-le p1, v7, :cond_1
 
-    .line 8902
     :cond_0
     const/16 v3, -0x32
 
-    .line 8918
     :goto_0
     return v3
 
-    .line 8905
     :cond_1
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 8906
     .local v4, "token":J
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -35758,7 +31886,6 @@
     :goto_1
     invoke-virtual {v8, v0, v9, v10, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 8908
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v9, "KNOX_CUSTOM"
@@ -35774,7 +31901,6 @@
     :goto_2
     invoke-virtual {v8, v0, v9, v10, v7}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 8910
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v8, "KNOX_CUSTOM"
@@ -35788,46 +31914,38 @@
     :goto_3
     invoke-virtual {v7, v0, v8, v9, v3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 8912
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8913
     const/4 v2, 0x0
 
     .end local v4    # "token":J
     :goto_4
     move v3, v2
 
-    .line 8918
     goto :goto_0
 
     .restart local v4    # "token":J
     :cond_2
     move v7, v6
 
-    .line 8906
     goto :goto_1
 
     :cond_3
     move v7, v6
 
-    .line 8908
     goto :goto_2
 
     :cond_4
     move v3, v6
 
-    .line 8910
     goto :goto_3
 
-    .line 8914
     .end local v4    # "token":J
     :catch_0
     move-exception v1
 
-    .line 8915
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -35851,7 +31969,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8916
     const/4 v2, -0x1
 
     goto :goto_4
@@ -35862,16 +31979,13 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 8552
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 8553
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 8554
     .local v2, "result":I
     const/4 v3, 0x1
 
@@ -35879,14 +31993,11 @@
 
     if-eqz p1, :cond_0
 
-    .line 8555
     const/16 v3, -0x2b
 
-    .line 8564
     :goto_0
     return v3
 
-    .line 8558
     :cond_0
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -35899,20 +32010,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8559
     const/4 v2, 0x0
 
     :goto_1
     move v3, v2
 
-    .line 8564
     goto :goto_0
 
-    .line 8560
     :catch_0
     move-exception v1
 
-    .line 8561
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -35936,7 +32043,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8562
     const/4 v2, -0x1
 
     goto :goto_1
@@ -35947,22 +32053,18 @@
     .param p1, "items"    # Ljava/lang/String;
 
     .prologue
-    .line 8586
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 8587
     .local v0, "callingUid":I
     const/4 v7, -0x6
 
-    .line 8588
     .local v7, "result":I
     new-instance v3, Ljava/util/LinkedList;
 
     invoke-direct {v3}, Ljava/util/LinkedList;-><init>()V
 
-    .line 8589
     .local v3, "itemList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -35970,7 +32072,6 @@
 
     if-lez v8, :cond_0
 
-    .line 8590
     new-instance v3, Ljava/util/LinkedList;
 
     .end local v3    # "itemList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -35986,14 +32087,12 @@
 
     invoke-direct {v3, v8}, Ljava/util/LinkedList;-><init>(Ljava/util/Collection;)V
 
-    .line 8593
     .restart local v3    # "itemList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     new-instance v5, Ljava/lang/String;
 
     invoke-direct {v5}, Ljava/lang/String;-><init>()V
 
-    .line 8594
     .local v5, "newItems":Ljava/lang/String;
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -36013,19 +32112,16 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 8595
     .local v2, "item":Ljava/lang/String;
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 8596
     .local v6, "qpItem":I
     invoke-direct {p0, v6}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getQuickPanelItemString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 8597
     .local v4, "itemString":Ljava/lang/String;
     invoke-virtual {v4}, Ljava/lang/String;->isEmpty()Z
 
@@ -36033,17 +32129,14 @@
 
     if-eqz v8, :cond_1
 
-    .line 8598
     const/16 v8, -0x32
 
-    .line 8602
     .end local v2    # "item":Ljava/lang/String;
     .end local v4    # "itemString":Ljava/lang/String;
     .end local v6    # "qpItem":I
     :goto_1
     return v8
 
-    .line 8600
     .restart local v2    # "item":Ljava/lang/String;
     .restart local v4    # "itemString":Ljava/lang/String;
     .restart local v6    # "qpItem":I
@@ -36070,10 +32163,8 @@
 
     move-result-object v5
 
-    .line 8601
     goto :goto_0
 
-    .line 8602
     .end local v2    # "item":Ljava/lang/String;
     .end local v4    # "itemString":Ljava/lang/String;
     .end local v6    # "qpItem":I
@@ -36090,14 +32181,11 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3321
     const/4 v2, -0x6
 
-    .line 3322
     .local v2, "result":I
     const/4 v0, 0x0
 
-    .line 3324
     .local v0, "callingUid":I
     :try_start_0
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceRubensFeaturesPermission()I
@@ -36106,29 +32194,23 @@
 
     move-result v0
 
-    .line 3329
     :goto_0
     if-eqz p1, :cond_0
 
-    .line 3330
     invoke-direct {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->checkDotString(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 3331
     const/16 v3, -0x21
 
-    .line 3342
     :goto_1
     return v3
 
-    .line 3325
     :catch_0
     move-exception v1
 
-    .line 3326
     .local v1, "e":Ljava/lang/SecurityException;
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
@@ -36136,7 +32218,6 @@
 
     goto :goto_0
 
-    .line 3336
     .end local v1    # "e":Ljava/lang/SecurityException;
     :cond_0
     :try_start_1
@@ -36150,20 +32231,16 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 3337
     const/4 v2, 0x0
 
     :goto_2
     move v3, v2
 
-    .line 3342
     goto :goto_1
 
-    .line 3338
     :catch_1
     move-exception v1
 
-    .line 3339
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -36187,7 +32264,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3340
     const/4 v2, -0x1
 
     goto :goto_2
@@ -36198,14 +32274,11 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 3373
     const/4 v2, -0x6
 
-    .line 3374
     .local v2, "result":I
     const/4 v0, 0x0
 
-    .line 3376
     .local v0, "callingUid":I
     :try_start_0
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceRubensFeaturesPermission()I
@@ -36214,7 +32287,6 @@
 
     move-result v0
 
-    .line 3381
     :goto_0
     if-ltz p1, :cond_0
 
@@ -36222,7 +32294,6 @@
 
     if-le p1, v3, :cond_1
 
-    .line 3382
     :cond_0
     const-string v3, "KnoxCustomManagerService"
 
@@ -36246,18 +32317,14 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3383
     const/16 v3, -0x2b
 
-    .line 3392
     :goto_1
     return v3
 
-    .line 3377
     :catch_0
     move-exception v1
 
-    .line 3378
     .local v1, "e":Ljava/lang/SecurityException;
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
@@ -36265,7 +32332,6 @@
 
     goto :goto_0
 
-    .line 3386
     .end local v1    # "e":Ljava/lang/SecurityException;
     :cond_1
     :try_start_1
@@ -36279,20 +32345,16 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 3387
     const/4 v2, 0x0
 
     :goto_2
     move v3, v2
 
-    .line 3392
     goto :goto_1
 
-    .line 3388
     :catch_1
     move-exception v1
 
-    .line 3389
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -36316,7 +32378,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3390
     const/4 v2, -0x1
 
     goto :goto_2
@@ -36327,16 +32388,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 4772
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4773
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4775
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -36349,18 +32407,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4776
     const/4 v2, 0x0
 
-    .line 4781
     :goto_0
     return v2
 
-    .line 4777
     :catch_0
     move-exception v1
 
-    .line 4778
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -36384,7 +32438,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4779
     const/4 v2, -0x1
 
     goto :goto_0
@@ -36395,16 +32448,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 4810
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4811
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4813
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -36417,18 +32467,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4814
     const/4 v2, 0x0
 
-    .line 4819
     :goto_0
     return v2
 
-    .line 4815
     :catch_0
     move-exception v1
 
-    .line 4816
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -36452,7 +32498,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4817
     const/4 v2, -0x1
 
     goto :goto_0
@@ -36467,18 +32512,15 @@
 
     const/4 v6, 0x0
 
-    .line 2209
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 2212
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2213
     .local v2, "token":J
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -36495,10 +32537,8 @@
     :goto_0
     invoke-static {v7, v8, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2216
     if-eqz p1, :cond_2
 
-    .line 2220
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -36509,21 +32549,17 @@
 
     invoke-static {v4, v7, v5}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2232
     :cond_0
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2234
     return v6
 
     :cond_1
     move v4, v6
 
-    .line 2213
     goto :goto_0
 
-    .line 2223
     :cond_2
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -36537,11 +32573,9 @@
 
     move-result v1
 
-    .line 2224
     .local v1, "screenSetting":I
     if-nez v1, :cond_0
 
-    .line 2228
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -36562,39 +32596,32 @@
     .prologue
     const/16 v2, -0x2d
 
-    .line 2288
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 2290
     .local v0, "callingUid":I
     const v5, 0x20c49b
 
     if-lt p1, v5, :cond_1
 
-    .line 2308
     :cond_0
     :goto_0
     return v2
 
-    .line 2293
     :cond_1
     const/4 v5, 0x5
 
     if-lt p1, v5, :cond_0
 
-    .line 2297
     mul-int/lit16 v4, p1, 0x3e8
 
-    .line 2298
     .local v4, "timeout_val":I
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2299
     .local v6, "token":J
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -36606,14 +32633,12 @@
 
     invoke-static {v5, v8, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2300
     new-instance v3, Landroid/content/Intent;
 
     const-string v5, "android.settings.SCREENTIMEOUT_CHANGED"
 
     invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2301
     .local v3, "systemIntent":Landroid/content/Intent;
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -36625,25 +32650,21 @@
 
     invoke-virtual {v5, v3, v8}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 2302
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2303
     const/4 v2, 0x0
 
     .local v2, "result":I
     goto :goto_0
 
-    .line 2304
     .end local v2    # "result":I
     .end local v3    # "systemIntent":Landroid/content/Intent;
     .end local v6    # "token":J
     :catch_0
     move-exception v1
 
-    .line 2305
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -36667,7 +32688,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2306
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -36679,16 +32699,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 4598
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4599
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4602
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -36701,18 +32718,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4603
     const/4 v2, 0x0
 
-    .line 4608
     :goto_0
     return v2
 
-    .line 4604
     :catch_0
     move-exception v1
 
-    .line 4605
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -36736,7 +32749,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4606
     const/4 v2, -0x1
 
     goto :goto_0
@@ -36748,12 +32760,10 @@
     .param p2, "elements"    # I
 
     .prologue
-    .line 3970
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 3972
     .local v0, "callingUid":I
     if-ltz p2, :cond_0
 
@@ -36761,19 +32771,15 @@
 
     if-le p2, v5, :cond_1
 
-    .line 3974
     :cond_0
     const/16 v4, -0x32
 
-    .line 3995
     :goto_0
     return v4
 
-    .line 3976
     :cond_1
     const/4 v4, -0x6
 
-    .line 3979
     .local v4, "result":I
     :try_start_0
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -36786,19 +32792,15 @@
 
     move-result v1
 
-    .line 3980
     .local v1, "currentElements":I
     if-eqz p1, :cond_3
 
-    .line 3982
     or-int v3, v1, p2
 
-    .line 3987
     .local v3, "newElements":I
     :goto_1
     if-eq v3, v1, :cond_2
 
-    .line 3988
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v6, "KNOX_CUSTOM"
@@ -36809,13 +32811,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3990
     :cond_2
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 3985
     .end local v3    # "newElements":I
     :cond_3
     xor-int/lit8 v5, p2, -0x1
@@ -36825,13 +32825,11 @@
     .restart local v3    # "newElements":I
     goto :goto_1
 
-    .line 3991
     .end local v1    # "currentElements":I
     .end local v3    # "newElements":I
     :catch_0
     move-exception v2
 
-    .line 3992
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -36855,7 +32853,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3993
     const/4 v4, -0x1
 
     goto :goto_0
@@ -36867,12 +32864,10 @@
     .param p2, "elements"    # I
 
     .prologue
-    .line 6225
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 6227
     .local v0, "callingUid":I
     if-ltz p2, :cond_0
 
@@ -36880,7 +32875,6 @@
 
     if-le p2, v5, :cond_1
 
-    .line 6228
     :cond_0
     const-string v5, "KnoxCustomManagerService"
 
@@ -36904,24 +32898,19 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6229
     const/16 v4, -0x32
 
-    .line 6255
     :goto_0
     return v4
 
-    .line 6231
     :cond_1
     const/4 v4, -0x6
 
-    .line 6232
     .local v4, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 6235
     .local v6, "token":J
     :try_start_0
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -36934,19 +32923,15 @@
 
     move-result v1
 
-    .line 6236
     .local v1, "currentElements":I
     if-eqz p1, :cond_3
 
-    .line 6238
     or-int v3, v1, p2
 
-    .line 6243
     .local v3, "newElements":I
     :goto_1
     if-eq v3, v1, :cond_2
 
-    .line 6244
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v8, "KNOX_CUSTOM"
@@ -36955,16 +32940,13 @@
 
     invoke-virtual {v5, v0, v8, v9, v3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 6247
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->closeSettingsApp()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6249
     :cond_2
     const/4 v4, 0x0
 
-    .line 6254
     .end local v1    # "currentElements":I
     .end local v3    # "newElements":I
     :goto_2
@@ -36972,7 +32954,6 @@
 
     goto :goto_0
 
-    .line 6241
     .restart local v1    # "currentElements":I
     :cond_3
     xor-int/lit8 v5, p2, -0x1
@@ -36982,13 +32963,11 @@
     .restart local v3    # "newElements":I
     goto :goto_1
 
-    .line 6250
     .end local v1    # "currentElements":I
     .end local v3    # "newElements":I
     :catch_0
     move-exception v2
 
-    .line 6251
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -37012,7 +32991,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6252
     const/4 v4, -0x1
 
     goto :goto_2
@@ -37024,12 +33002,10 @@
     .param p2, "elements"    # I
 
     .prologue
-    .line 2847
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 2849
     .local v0, "callingUid":I
     if-ltz p2, :cond_0
 
@@ -37037,7 +33013,6 @@
 
     if-le p2, v5, :cond_1
 
-    .line 2850
     :cond_0
     const-string v5, "KnoxCustomManagerService"
 
@@ -37061,24 +33036,19 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2851
     const/16 v4, -0x32
 
-    .line 2881
     :goto_0
     return v4
 
-    .line 2853
     :cond_1
     const/4 v4, -0x6
 
-    .line 2854
     .local v4, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2857
     .local v6, "token":J
     :try_start_0
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -37091,28 +33061,22 @@
 
     move-result v1
 
-    .line 2858
     .local v1, "currentElements":I
     if-eqz p1, :cond_4
 
-    .line 2860
     or-int v3, v1, p2
 
-    .line 2862
     .local v3, "newElements":I
     iget-boolean v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mGraceUI:Z
 
     if-eqz v5, :cond_2
 
-    .line 2863
     and-int/lit8 v3, v3, -0x41
 
-    .line 2869
     :cond_2
     :goto_1
     if-eq v3, v1, :cond_3
 
-    .line 2870
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v8, "KNOX_CUSTOM"
@@ -37121,16 +33085,13 @@
 
     invoke-virtual {v5, v0, v8, v9, v3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 2873
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->closeSettingsApp()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2875
     :cond_3
     const/4 v4, 0x0
 
-    .line 2880
     .end local v1    # "currentElements":I
     .end local v3    # "newElements":I
     :goto_2
@@ -37138,7 +33099,6 @@
 
     goto :goto_0
 
-    .line 2867
     .restart local v1    # "currentElements":I
     :cond_4
     xor-int/lit8 v5, p2, -0x1
@@ -37148,13 +33108,11 @@
     .restart local v3    # "newElements":I
     goto :goto_1
 
-    .line 2876
     .end local v1    # "currentElements":I
     .end local v3    # "newElements":I
     :catch_0
     move-exception v2
 
-    .line 2877
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -37178,7 +33136,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2878
     const/4 v4, -0x1
 
     goto :goto_2
@@ -37190,22 +33147,18 @@
     .param p2, "shutdownSoundFilePath"    # Ljava/lang/String;
 
     .prologue
-    .line 7797
     const/4 v11, 0x0
 
-    .line 7798
     .local v11, "result":I
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v5
 
-    .line 7799
     .local v5, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 7802
     .local v16, "token":J
     if-eqz p1, :cond_0
 
@@ -37227,12 +33180,10 @@
     :cond_1
     const/4 v10, 0x1
 
-    .line 7807
     .local v10, "isDelete":Z
     :goto_0
     if-nez v10, :cond_3
 
-    .line 7808
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -37245,23 +33196,19 @@
 
     move-result v11
 
-    .line 7809
     if-eqz v11, :cond_3
 
     move v15, v11
 
-    .line 7873
     :goto_1
     return v15
 
-    .line 7802
     .end local v10    # "isDelete":Z
     :cond_2
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 7815
     .restart local v10    # "isDelete":Z
     :cond_3
     new-instance v7, Ljava/io/File;
@@ -37270,11 +33217,9 @@
 
     invoke-direct {v7, v15}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7816
     .local v7, "dir":Ljava/io/File;
     const/4 v6, 0x0
 
-    .line 7817
     .local v6, "created":Z
     invoke-virtual {v7}, Ljava/io/File;->exists()Z
 
@@ -37282,17 +33227,14 @@
 
     if-nez v15, :cond_4
 
-    .line 7818
     invoke-virtual {v7}, Ljava/io/File;->mkdirs()Z
 
     move-result v6
 
-    .line 7819
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7822
     :cond_4
     invoke-virtual {v7}, Ljava/io/File;->exists()Z
 
@@ -37302,20 +33244,17 @@
 
     if-eqz v6, :cond_c
 
-    .line 7823
     :cond_5
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7824
     new-instance v9, Ljava/io/File;
 
     const-string v15, "/data/b2b/ShutdownFileInfo.txt"
 
     invoke-direct {v9, v15}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7827
     .local v9, "fileInfo":Ljava/io/File;
     :try_start_0
     invoke-virtual {v9}, Ljava/io/File;->exists()Z
@@ -37324,40 +33263,32 @@
 
     if-eqz v15, :cond_6
 
-    .line 7828
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7831
     :cond_6
     if-eqz v10, :cond_7
 
-    .line 7833
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7834
     const/4 v15, 0x0
 
     goto :goto_1
 
-    .line 7837
     :cond_7
     invoke-virtual {v9}, Ljava/io/File;->createNewFile()Z
 
-    .line 7838
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7845
     invoke-direct/range {p0 .. p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->filePathSplit(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 7846
     .local v4, "animationFileName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -37367,7 +33298,6 @@
 
     move-result-object v14
 
-    .line 7847
     .local v14, "soundFileName":Ljava/lang/String;
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -37389,7 +33319,6 @@
 
     move-result-object v13
 
-    .line 7848
     .local v13, "shutdownSoundTargetPath":Ljava/lang/String;
     new-instance v15, Ljava/lang/StringBuilder;
 
@@ -37411,7 +33340,6 @@
 
     move-result-object v12
 
-    .line 7850
     .local v12, "shutdownAnimTargetPath":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -37421,12 +33349,10 @@
 
     if-nez v15, :cond_8
 
-    .line 7851
     const/4 v15, -0x1
 
     goto/16 :goto_1
 
-    .line 7840
     .end local v4    # "animationFileName":Ljava/lang/String;
     .end local v12    # "shutdownAnimTargetPath":Ljava/lang/String;
     .end local v13    # "shutdownSoundTargetPath":Ljava/lang/String;
@@ -37434,13 +33360,11 @@
     :catch_0
     move-exception v8
 
-    .line 7842
     .local v8, "e":Ljava/io/IOException;
     const/16 v15, -0x32
 
     goto/16 :goto_1
 
-    .line 7853
     .end local v8    # "e":Ljava/io/IOException;
     .restart local v4    # "animationFileName":Ljava/lang/String;
     .restart local v12    # "shutdownAnimTargetPath":Ljava/lang/String;
@@ -37455,12 +33379,10 @@
 
     if-nez v15, :cond_9
 
-    .line 7854
     const/4 v15, -0x1
 
     goto/16 :goto_1
 
-    .line 7856
     :cond_9
     move-object/from16 v0, p0
 
@@ -37472,12 +33394,10 @@
 
     if-nez v15, :cond_a
 
-    .line 7857
     const/4 v15, -0x1
 
     goto/16 :goto_1
 
-    .line 7859
     :cond_a
     move-object/from16 v0, p0
 
@@ -37489,38 +33409,31 @@
 
     if-nez v15, :cond_b
 
-    .line 7860
     const/4 v15, -0x1
 
     goto/16 :goto_1
 
-    .line 7863
     :cond_b
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldExecutable(Ljava/io/File;)V
 
-    .line 7864
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
 
-    .line 7866
     invoke-virtual {v7}, Ljava/io/File;->canWrite()Z
 
     move-result v15
 
     if-eqz v15, :cond_c
 
-    .line 7868
     const/4 v11, -0x1
 
     move v15, v11
 
-    .line 7869
     goto/16 :goto_1
 
-    .line 7872
     .end local v4    # "animationFileName":Ljava/lang/String;
     .end local v9    # "fileInfo":Ljava/io/File;
     .end local v12    # "shutdownAnimTargetPath":Ljava/lang/String;
@@ -37531,7 +33444,6 @@
 
     move v15, v11
 
-    .line 7873
     goto/16 :goto_1
 .end method
 
@@ -37543,49 +33455,40 @@
     .prologue
     const/4 v10, -0x1
 
-    .line 7877
     const/4 v5, 0x0
 
-    .line 7878
     .local v5, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 7879
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 7881
     .local v8, "token":J
     iget-boolean v11, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->isNotSupported:Z
 
     if-eqz v11, :cond_0
 
-    .line 7883
     const/4 v5, -0x6
 
-    .line 7940
     .end local v5    # "result":I
     :goto_0
     return v5
 
-    .line 7886
     .restart local v5    # "result":I
     :cond_0
     if-eqz p1, :cond_1
 
     if-nez p2, :cond_2
 
-    .line 7887
     :cond_1
     const/16 v5, -0x32
 
     goto :goto_0
 
-    .line 7890
     :cond_2
     new-instance v2, Ljava/io/File;
 
@@ -37593,11 +33496,9 @@
 
     invoke-direct {v2, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7891
     .local v2, "dir":Ljava/io/File;
     const/4 v1, 0x0
 
-    .line 7892
     .local v1, "created":Z
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -37605,15 +33506,12 @@
 
     if-nez v11, :cond_4
 
-    .line 7893
     invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
 
     move-result v1
 
-    .line 7895
     if-nez v1, :cond_3
 
-    .line 7896
     const-string v11, "KnoxCustomManagerService"
 
     const-string v12, "/data/b2b directory creating fail"
@@ -37622,14 +33520,11 @@
 
     move v5, v10
 
-    .line 7897
     goto :goto_0
 
-    .line 7900
     :cond_3
     invoke-direct {p0, v2}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7903
     :cond_4
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -37639,18 +33534,15 @@
 
     if-eqz v1, :cond_b
 
-    .line 7904
     :cond_5
     invoke-direct {p0, v2}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
 
-    .line 7905
     new-instance v4, Ljava/io/File;
 
     const-string v11, "/data/b2b/ShutdownFileInfo.txt"
 
     invoke-direct {v4, v11}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 7908
     .local v4, "fileInfo":Ljava/io/File;
     :try_start_0
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
@@ -37659,26 +33551,20 @@
 
     if-eqz v11, :cond_6
 
-    .line 7909
     invoke-direct {p0, v4}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->deleteExistingFile(Ljava/io/File;)V
 
-    .line 7912
     :cond_6
     invoke-virtual {v4}, Ljava/io/File;->createNewFile()Z
 
-    .line 7913
     invoke-direct {p0, v4}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermission(Ljava/io/File;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7920
     const-string v6, "/data/b2b/shutdownanimation.qmg"
 
-    .line 7921
     .local v6, "shutdownAnimTargetPath":Ljava/lang/String;
     const-string v7, "/data/b2b/shutdownsound.ogg"
 
-    .line 7923
     .local v7, "shutdownSoundTargetPath":Ljava/lang/String;
     invoke-direct {p0, v4, v6}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->writePathToFile(Ljava/io/File;Ljava/lang/String;)Z
 
@@ -37688,16 +33574,13 @@
 
     move v5, v10
 
-    .line 7924
     goto :goto_0
 
-    .line 7915
     .end local v6    # "shutdownAnimTargetPath":Ljava/lang/String;
     .end local v7    # "shutdownSoundTargetPath":Ljava/lang/String;
     :catch_0
     move-exception v3
 
-    .line 7916
     .local v3, "e":Ljava/io/IOException;
     const-string v11, "KnoxCustomManagerService"
 
@@ -37709,10 +33592,8 @@
 
     move v5, v10
 
-    .line 7917
     goto :goto_0
 
-    .line 7926
     .end local v3    # "e":Ljava/io/IOException;
     .restart local v6    # "shutdownAnimTargetPath":Ljava/lang/String;
     .restart local v7    # "shutdownSoundTargetPath":Ljava/lang/String;
@@ -37725,10 +33606,8 @@
 
     move v5, v10
 
-    .line 7927
     goto :goto_0
 
-    .line 7929
     :cond_8
     invoke-direct {p0, p1, v6}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->fileCopy(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;)Z
 
@@ -37738,10 +33617,8 @@
 
     move v5, v10
 
-    .line 7930
     goto :goto_0
 
-    .line 7932
     :cond_9
     invoke-direct {p0, p2, v7}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->fileCopy(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;)Z
 
@@ -37751,17 +33628,13 @@
 
     move v5, v10
 
-    .line 7933
     goto :goto_0
 
-    .line 7936
     :cond_a
     invoke-direct {p0, v2}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldExecutable(Ljava/io/File;)V
 
-    .line 7937
     invoke-direct {p0, v4}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setPermissionWorldReadable(Ljava/io/File;)V
 
-    .line 7939
     .end local v4    # "fileInfo":Ljava/io/File;
     .end local v6    # "shutdownAnimTargetPath":Ljava/lang/String;
     .end local v7    # "shutdownSoundTargetPath":Ljava/lang/String;
@@ -37776,23 +33649,18 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 6576
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskOrSystemPermission()I
 
     move-result v0
 
-    .line 6577
     .local v0, "callingUid":I
     const/4 v1, 0x3
 
-    .line 6578
     .local v1, "mode":I
     if-eqz p1, :cond_0
 
-    .line 6579
     const/4 v1, 0x2
 
-    .line 6581
     :cond_0
     invoke-direct {p0, v1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setStatusBarClockModeLocal(II)I
 
@@ -37806,23 +33674,18 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 6643
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskOrSystemPermission()I
 
     move-result v0
 
-    .line 6644
     .local v0, "callingUid":I
     const/4 v1, 0x3
 
-    .line 6645
     .local v1, "mode":I
     if-eqz p1, :cond_0
 
-    .line 6646
     const/4 v1, 0x2
 
-    .line 6648
     :cond_0
     invoke-direct {p0, v1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setStatusBarIconsModeLocal(II)I
 
@@ -37836,12 +33699,10 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 6492
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskOrSystemPermission()I
 
     move-result v0
 
-    .line 6493
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setStatusBarModeLocal(II)I
 
@@ -37855,16 +33716,13 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 6712
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskOrSystemPermission()I
 
     move-result v0
 
-    .line 6713
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 6715
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -37875,22 +33733,18 @@
 
     invoke-virtual {v3, v0, v4, v5, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putBoolean(ILjava/lang/String;Ljava/lang/String;Z)Z
 
-    .line 6716
     invoke-direct {p0, p1}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enableStatusBarNotificationsLocal(Z)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v2
 
-    .line 6721
     :goto_0
     return v2
 
-    .line 6717
     :catch_0
     move-exception v1
 
-    .line 6718
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -37914,7 +33768,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6719
     const/4 v2, -0x1
 
     goto :goto_0
@@ -37927,16 +33780,13 @@
     .param p3, "size"    # I
 
     .prologue
-    .line 4211
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4212
     .local v0, "callingUid":I
     const/4 v2, -0x1
 
-    .line 4214
     .local v2, "result":I
     if-eqz p2, :cond_0
 
@@ -37952,14 +33802,11 @@
 
     if-eq p2, v3, :cond_0
 
-    .line 4216
     const/16 v3, -0x29
 
-    .line 4229
     :goto_0
     return v3
 
-    .line 4218
     :cond_0
     if-eqz p3, :cond_2
 
@@ -37971,13 +33818,11 @@
 
     if-le p3, v3, :cond_2
 
-    .line 4219
     :cond_1
     const/16 v3, -0x32
 
     goto :goto_0
 
-    .line 4221
     :cond_2
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -37988,7 +33833,6 @@
 
     invoke-virtual {v3, v0, v4, v5, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4222
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "KNOX_CUSTOM"
@@ -37997,7 +33841,6 @@
 
     invoke-virtual {v3, v0, v4, v5, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 4223
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "KNOX_CUSTOM"
@@ -38006,25 +33849,20 @@
 
     invoke-virtual {v3, v0, v4, v5, p3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 4224
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->refreshStatusbar()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4225
     const/4 v2, 0x0
 
     :goto_1
     move v3, v2
 
-    .line 4229
     goto :goto_0
 
-    .line 4226
     :catch_0
     move-exception v1
 
-    .line 4227
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -38059,16 +33897,13 @@
     .param p4, "scrollwidth"    # I
 
     .prologue
-    .line 6785
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 6786
     .local v0, "callingUid":I
     const/4 v2, -0x1
 
-    .line 6788
     .local v2, "result":I
     if-eqz p2, :cond_0
 
@@ -38084,14 +33919,11 @@
 
     if-eq p2, v3, :cond_0
 
-    .line 6790
     const/16 v3, -0x29
 
-    .line 6807
     :goto_0
     return v3
 
-    .line 6792
     :cond_0
     if-eqz p3, :cond_2
 
@@ -38103,13 +33935,11 @@
 
     if-le p3, v3, :cond_2
 
-    .line 6793
     :cond_1
     const/16 v3, -0x32
 
     goto :goto_0
 
-    .line 6795
     :cond_2
     if-eqz p4, :cond_4
 
@@ -38121,13 +33951,11 @@
 
     if-le p4, v3, :cond_4
 
-    .line 6796
     :cond_3
     const/16 v3, -0x33
 
     goto :goto_0
 
-    .line 6798
     :cond_4
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -38138,7 +33966,6 @@
 
     invoke-virtual {v3, v0, v4, v5, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putString(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 6799
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "KNOX_CUSTOM"
@@ -38147,7 +33974,6 @@
 
     invoke-virtual {v3, v0, v4, v5, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 6800
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "KNOX_CUSTOM"
@@ -38156,7 +33982,6 @@
 
     invoke-virtual {v3, v0, v4, v5, p3}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 6801
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "KNOX_CUSTOM"
@@ -38165,25 +33990,20 @@
 
     invoke-virtual {v3, v0, v4, v5, p4}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 6802
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->refreshStatusbar()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6803
     const/4 v2, 0x0
 
     :goto_1
     move v3, v2
 
-    .line 6807
     goto :goto_0
 
-    .line 6804
     :catch_0
     move-exception v1
 
-    .line 6805
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -38215,18 +34035,15 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 3193
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 3195
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 3197
     .local v4, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -38246,29 +34063,23 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3200
     const/4 v2, 0x0
 
-    .line 3205
     .local v2, "result":I
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3206
     return v2
 
-    .line 3197
     .end local v2    # "result":I
     :cond_0
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 3201
     :catch_0
     move-exception v1
 
-    .line 3202
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -38292,7 +34103,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3203
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -38307,16 +34117,13 @@
     .prologue
     const/16 v7, -0x2c
 
-    .line 2477
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v1
 
-    .line 2480
     .local v1, "callingUid":I
     const/4 v5, 0x0
 
-    .line 2481
     .local v5, "locale":Ljava/util/Locale;
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -38324,33 +34131,27 @@
 
     if-nez v11, :cond_5
 
-    .line 2482
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 2483
     .local v8, "token":J
     if-nez p2, :cond_1
 
-    .line 2484
     new-instance v5, Ljava/util/Locale;
 
     .end local v5    # "locale":Ljava/util/Locale;
     invoke-direct {v5, p1}, Ljava/util/Locale;-><init>(Ljava/lang/String;)V
 
-    .line 2488
     .restart local v5    # "locale":Ljava/util/Locale;
     :goto_0
     if-nez v5, :cond_2
 
-    .line 2507
     .end local v8    # "token":J
     :cond_0
     :goto_1
     return v7
 
-    .line 2486
     .restart local v8    # "token":J
     :cond_1
     new-instance v5, Ljava/util/Locale;
@@ -38361,17 +34162,14 @@
     .restart local v5    # "locale":Ljava/util/Locale;
     goto :goto_0
 
-    .line 2491
     :cond_2
     const/4 v10, 0x0
 
-    .line 2492
     .local v10, "valid":Z
     invoke-static {}, Ljava/util/Locale;->getAvailableLocales()[Ljava/util/Locale;
 
     move-result-object v6
 
-    .line 2493
     .local v6, "locales":[Ljava/util/Locale;
     move-object v0, v6
 
@@ -38387,7 +34185,6 @@
 
     aget-object v3, v0, v2
 
-    .line 2494
     .local v3, "l":Ljava/util/Locale;
     invoke-virtual {v3}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
@@ -38403,34 +34200,26 @@
 
     if-eqz v11, :cond_3
 
-    .line 2495
     const/4 v10, 0x1
 
-    .line 2493
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 2498
     .end local v3    # "l":Ljava/util/Locale;
     :cond_4
     if-eqz v10, :cond_0
 
-    .line 2501
     invoke-static {v5}, Lcom/android/internal/app/LocalePicker;->updateLocale(Ljava/util/Locale;)V
 
-    .line 2502
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2503
     const/4 v7, 0x0
 
-    .line 2504
     .local v7, "result":I
     goto :goto_1
 
-    .line 2505
     .end local v0    # "arr$":[Ljava/util/Locale;
     .end local v2    # "i$":I
     .end local v4    # "len$":I
@@ -38451,18 +34240,15 @@
     .param p2, "ringtoneName"    # Ljava/lang/String;
 
     .prologue
-    .line 2523
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 2526
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 2527
     .local v8, "token":J
     new-instance v6, Landroid/media/RingtoneManager;
 
@@ -38470,7 +34256,6 @@
 
     invoke-direct {v6, v10}, Landroid/media/RingtoneManager;-><init>(Landroid/content/Context;)V
 
-    .line 2528
     .local v6, "rm":Landroid/media/RingtoneManager;
     const/4 v10, 0x1
 
@@ -38484,33 +34269,26 @@
 
     if-eq p1, v10, :cond_0
 
-    .line 2531
     const/16 v2, -0x22
 
-    .line 2558
     .local v2, "result":I
     :goto_0
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2560
     .end local v2    # "result":I
     :goto_1
     return v2
 
-    .line 2533
     :cond_0
     if-nez p2, :cond_1
 
-    .line 2534
     const/16 v2, -0x23
 
     goto :goto_1
 
-    .line 2536
     :cond_1
     const/4 v1, 0x0
 
-    .line 2537
     .local v1, "found":Z
     invoke-virtual {p2}, Ljava/lang/String;->length()I
 
@@ -38518,32 +34296,26 @@
 
     if-nez v10, :cond_3
 
-    .line 2538
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const/4 v11, 0x0
 
     invoke-static {v10, p1, v11}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
-    .line 2539
     const/4 v1, 0x1
 
-    .line 2552
     :cond_2
     if-eqz v1, :cond_5
 
-    .line 2553
     const/4 v2, 0x0
 
     .restart local v2    # "result":I
     goto :goto_0
 
-    .line 2541
     .end local v2    # "result":I
     :cond_3
     invoke-virtual {v6, p1}, Landroid/media/RingtoneManager;->setType(I)V
 
-    .line 2542
     invoke-virtual {v6}, Landroid/media/RingtoneManager;->getCursor()Landroid/database/Cursor;
 
     move-result-object v10
@@ -38552,7 +34324,6 @@
 
     move-result v5
 
-    .line 2543
     .local v5, "ringtones":I
     const/4 v7, 0x0
 
@@ -38562,12 +34333,10 @@
 
     if-nez v1, :cond_2
 
-    .line 2544
     invoke-virtual {v6, v7}, Landroid/media/RingtoneManager;->getRingtone(I)Landroid/media/Ringtone;
 
     move-result-object v3
 
-    .line 2545
     .local v3, "ringtone":Landroid/media/Ringtone;
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -38581,28 +34350,23 @@
 
     if-eqz v10, :cond_4
 
-    .line 2546
     invoke-virtual {v6, v7}, Landroid/media/RingtoneManager;->getRingtoneUri(I)Landroid/net/Uri;
 
     move-result-object v4
 
-    .line 2547
     .local v4, "ringtoneUri":Landroid/net/Uri;
     iget-object v10, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v10, p1, v4}, Landroid/media/RingtoneManager;->setActualDefaultRingtoneUri(Landroid/content/Context;ILandroid/net/Uri;)V
 
-    .line 2548
     const/4 v1, 0x1
 
-    .line 2543
     .end local v4    # "ringtoneUri":Landroid/net/Uri;
     :cond_4
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 2555
     .end local v3    # "ringtone":Landroid/media/Ringtone;
     .end local v5    # "ringtones":I
     .end local v7    # "tone":I
@@ -38623,25 +34387,20 @@
 
     const/4 v6, 0x1
 
-    .line 8952
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 8953
     .local v0, "callingUid":I
     if-eq p1, v6, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 8954
     const/16 v2, -0x2b
 
-    .line 8990
     :goto_0
     return v2
 
-    .line 8957
     :cond_0
     if-ltz p2, :cond_1
 
@@ -38649,7 +34408,6 @@
 
     if-le p2, v7, :cond_2
 
-    .line 8958
     :cond_1
     const-string v3, "KnoxCustomManagerService"
 
@@ -38673,28 +34431,23 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8959
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 8961
     :cond_2
     const/4 v2, -0x6
 
-    .line 8962
     .local v2, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 8964
     .local v4, "token":J
     and-int/lit8 v7, p2, 0x1
 
     if-ne v7, v6, :cond_3
 
-    .line 8965
     :try_start_0
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -38711,7 +34464,6 @@
     :goto_1
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8967
     :cond_3
     and-int/lit8 v7, p2, 0x2
 
@@ -38719,7 +34471,6 @@
 
     if-ne v7, v8, :cond_4
 
-    .line 8968
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -38735,7 +34486,6 @@
     :goto_2
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8970
     :cond_4
     and-int/lit8 v7, p2, 0x4
 
@@ -38743,7 +34493,6 @@
 
     if-ne v7, v8, :cond_5
 
-    .line 8971
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -38759,7 +34508,6 @@
     :goto_3
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8973
     :cond_5
     and-int/lit8 v7, p2, 0x8
 
@@ -38767,7 +34515,6 @@
 
     if-ne v7, v8, :cond_6
 
-    .line 8974
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -38783,7 +34530,6 @@
     :goto_4
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8976
     :cond_6
     and-int/lit8 v7, p2, 0x10
 
@@ -38791,7 +34537,6 @@
 
     if-ne v7, v8, :cond_7
 
-    .line 8977
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -38807,7 +34552,6 @@
     :goto_5
     invoke-static {v8, v9, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8979
     :cond_7
     and-int/lit8 v7, p2, 0x20
 
@@ -38815,7 +34559,6 @@
 
     if-ne v7, v8, :cond_9
 
-    .line 8980
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -38831,7 +34574,6 @@
     :cond_8
     invoke-static {v7, v8, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8981
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -38849,11 +34591,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8984
     :cond_9
     const/4 v2, 0x0
 
-    .line 8989
     :goto_7
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -38862,44 +34602,36 @@
     :cond_a
     move v7, v3
 
-    .line 8965
     goto :goto_1
 
     :cond_b
     move v7, v3
 
-    .line 8968
     goto :goto_2
 
     :cond_c
     move v7, v3
 
-    .line 8971
     goto :goto_3
 
     :cond_d
     move v7, v3
 
-    .line 8974
     goto :goto_4
 
     :cond_e
     move v7, v3
 
-    .line 8977
     goto :goto_5
 
-    .line 8981
     :cond_f
     const/4 v3, 0x0
 
     goto :goto_6
 
-    .line 8985
     :catch_0
     move-exception v1
 
-    .line 8986
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -38923,7 +34655,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8987
     const/4 v2, -0x1
 
     goto :goto_7
@@ -38933,18 +34664,15 @@
     .locals 8
 
     .prologue
-    .line 3032
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 3034
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 3036
     .local v4, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -38959,7 +34687,6 @@
 
     invoke-static {v3, v6, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3037
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -38972,7 +34699,6 @@
 
     invoke-static {v3, v6, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3038
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -38985,7 +34711,6 @@
 
     invoke-static {v3, v6, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3039
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -38998,7 +34723,6 @@
 
     invoke-static {v3, v6, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3040
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -39011,7 +34735,6 @@
 
     invoke-static {v3, v6, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 3041
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -39026,23 +34749,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3042
     const/4 v2, 0x0
 
-    .line 3047
     .local v2, "result":I
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3048
     return v2
 
-    .line 3043
     .end local v2    # "result":I
     :catch_0
     move-exception v1
 
-    .line 3044
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -39066,7 +34784,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3045
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -39078,16 +34795,13 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 4637
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4638
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4641
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -39100,18 +34814,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4642
     const/4 v2, 0x0
 
-    .line 4647
     :goto_0
     return v2
 
-    .line 4643
     :catch_0
     move-exception v1
 
-    .line 4644
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -39135,7 +34845,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4645
     const/4 v2, -0x1
 
     goto :goto_0
@@ -39148,16 +34857,13 @@
     .param p3, "y"    # I
 
     .prologue
-    .line 5463
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 5467
     .local v0, "callingUid":I
     const v3, 0x118000ff
 
-    .line 5471
     .local v3, "validGravity":I
     const v4, -0x11800100
 
@@ -39165,18 +34871,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 5473
     const/16 v2, -0x32
 
-    .line 5486
     :goto_0
     return v2
 
-    .line 5476
     :cond_0
     const/4 v2, -0x6
 
-    .line 5478
     .local v2, "result":I
     :try_start_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -39187,7 +34889,6 @@
 
     invoke-virtual {v4, v0, v5, v6, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 5479
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KNOX_CUSTOM"
@@ -39196,7 +34897,6 @@
 
     invoke-virtual {v4, v0, v5, v6, p2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 5480
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v5, "KNOX_CUSTOM"
@@ -39207,16 +34907,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5481
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 5482
     :catch_0
     move-exception v1
 
-    .line 5483
     .local v1, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -39240,7 +34937,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5484
     const/4 v2, -0x1
 
     goto :goto_0
@@ -39251,16 +34947,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 5422
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 5423
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 5425
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -39273,18 +34966,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5426
     const/4 v2, 0x0
 
-    .line 5431
     :goto_0
     return v2
 
-    .line 5427
     :catch_0
     move-exception v1
 
-    .line 5428
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -39308,7 +34997,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5429
     const/4 v2, -0x1
 
     goto :goto_0
@@ -39319,16 +35007,13 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 4677
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4678
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4681
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -39341,18 +35026,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4682
     const/4 v2, 0x0
 
-    .line 4687
     :goto_0
     return v2
 
-    .line 4683
     :catch_0
     move-exception v1
 
-    .line 4684
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -39376,7 +35057,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4685
     const/4 v2, -0x1
 
     goto :goto_0
@@ -39387,18 +35067,15 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 4338
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4340
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 4342
     .local v4, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -39418,29 +35095,23 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4344
     const/4 v2, 0x0
 
-    .line 4349
     .local v2, "result":I
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4350
     return v2
 
-    .line 4342
     .end local v2    # "result":I
     :cond_0
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 4345
     :catch_0
     move-exception v1
 
-    .line 4346
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -39464,7 +35135,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4347
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -39480,18 +35150,15 @@
 
     const/4 v5, 0x0
 
-    .line 1630
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 1633
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1634
     .local v2, "token":J
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -39509,25 +35176,20 @@
 
     move v1, v4
 
-    .line 1635
     .local v1, "isRestricted":Z
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1636
     if-eqz v1, :cond_1
 
-    .line 1637
     const-string v4, "KnoxCustomManagerService"
 
     const-string v5, "setUnknownSourcesState() - eSDK non market app not allowed"
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1638
     const/4 v5, -0x7
 
-    .line 1645
     :goto_1
     return v5
 
@@ -39535,17 +35197,14 @@
     :cond_0
     move v1, v5
 
-    .line 1634
     goto :goto_0
 
-    .line 1641
     .restart local v1    # "isRestricted":Z
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1642
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -39559,7 +35218,6 @@
     :goto_2
     invoke-static {v6, v7, v4}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1643
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -39567,7 +35225,6 @@
     :cond_2
     move v4, v5
 
-    .line 1642
     goto :goto_2
 .end method
 
@@ -39576,16 +35233,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 6287
     const/4 v2, -0x6
 
-    .line 6288
     .local v2, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 6290
     .local v0, "callingUid":I
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -39601,7 +35255,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 6292
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -39613,19 +35266,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6293
     const/4 v2, 0x0
 
-    .line 6299
     :cond_0
     :goto_0
     return v2
 
-    .line 6294
     :catch_0
     move-exception v1
 
-    .line 6295
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -39649,7 +35298,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6296
     const/4 v2, -0x1
 
     goto :goto_0
@@ -39660,16 +35308,13 @@
     .param p1, "pin"    # Ljava/lang/String;
 
     .prologue
-    .line 6330
     const/4 v2, -0x6
 
-    .line 6331
     .local v2, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 6333
     .local v0, "callingUid":I
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -39685,7 +35330,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 6335
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -39695,18 +35339,15 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 6336
     const/16 v2, -0x32
 
     :cond_0
     :goto_0
     move v3, v2
 
-    .line 6348
     :goto_1
     return v3
 
-    .line 6337
     :cond_1
     const-string v3, "[0-9]+"
 
@@ -39716,12 +35357,10 @@
 
     if-nez v3, :cond_2
 
-    .line 6338
     const/16 v3, -0x32
 
     goto :goto_1
 
-    .line 6340
     :cond_2
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -39733,16 +35372,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6341
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 6343
     :catch_0
     move-exception v1
 
-    .line 6344
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -39766,7 +35402,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6345
     const/4 v2, -0x1
 
     goto :goto_0
@@ -39777,22 +35412,18 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 10547
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 10548
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 10549
     .local v4, "token":J
     const/4 v3, -0x6
 
-    .line 10550
     .local v3, "result":I
     if-ltz p1, :cond_0
 
@@ -39800,15 +35431,12 @@
 
     if-le p1, v6, :cond_1
 
-    .line 10552
     :cond_0
     const/16 v6, -0x2b
 
-    .line 10591
     :goto_0
     return v6
 
-    .line 10555
     :cond_1
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -39819,7 +35447,6 @@
 
     invoke-virtual {v6, v0, v7, v8, p1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 10557
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -39832,14 +35459,11 @@
 
     check-cast v2, Landroid/hardware/usb/UsbManager;
 
-    .line 10558
     .local v2, "mUsbManager":Landroid/hardware/usb/UsbManager;
     if-eqz v2, :cond_2
 
-    .line 10559
     packed-switch p1, :pswitch_data_0
 
-    .line 10577
     const-string v6, "VZW"
 
     iget-object v7, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->salesCode:Ljava/lang/String;
@@ -39850,29 +35474,24 @@
 
     if-eqz v6, :cond_4
 
-    .line 10578
     const-string v6, "vzw_charging"
 
     invoke-virtual {v2, v6}, Landroid/hardware/usb/UsbManager;->setCurrentFunction(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10585
     :cond_2
     :goto_1
     const/4 v3, 0x0
 
-    .line 10590
     .end local v2    # "mUsbManager":Landroid/hardware/usb/UsbManager;
     :goto_2
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v6, v3
 
-    .line 10591
     goto :goto_0
 
-    .line 10561
     .restart local v2    # "mUsbManager":Landroid/hardware/usb/UsbManager;
     :pswitch_0
     :try_start_1
@@ -39884,12 +35503,10 @@
 
     goto :goto_1
 
-    .line 10586
     .end local v2    # "mUsbManager":Landroid/hardware/usb/UsbManager;
     :catch_0
     move-exception v1
 
-    .line 10587
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -39913,12 +35530,10 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10588
     const/4 v3, -0x1
 
     goto :goto_2
 
-    .line 10564
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v2    # "mUsbManager":Landroid/hardware/usb/UsbManager;
     :pswitch_1
@@ -39929,7 +35544,6 @@
 
     goto :goto_1
 
-    .line 10567
     :pswitch_2
     const-string v6, "midi"
 
@@ -39937,7 +35551,6 @@
 
     goto :goto_1
 
-    .line 10570
     :pswitch_3
     const-string v6, "VZW"
 
@@ -39949,14 +35562,12 @@
 
     if-eqz v6, :cond_3
 
-    .line 10571
     const-string v6, "vzw_charging"
 
     invoke-virtual {v2, v6}, Landroid/hardware/usb/UsbManager;->setCurrentFunction(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 10573
     :cond_3
     const-string v6, "sec_charging"
 
@@ -39964,7 +35575,6 @@
 
     goto :goto_1
 
-    .line 10580
     :cond_4
     const-string v6, "mtp"
 
@@ -39974,7 +35584,6 @@
 
     goto :goto_1
 
-    .line 10559
     nop
 
     :pswitch_data_0
@@ -39993,16 +35602,13 @@
     .param p3, "applicationUid"    # I
 
     .prologue
-    .line 1536
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v1
 
-    .line 1537
     .local v1, "callingUid":I
     const/4 v3, -0x6
 
-    .line 1539
     .local v3, "result":I
     if-eqz p2, :cond_0
 
@@ -40012,27 +35618,21 @@
 
     if-nez v5, :cond_0
 
-    .line 1540
     const/16 v5, -0x21
 
-    .line 1565
     :goto_0
     return v5
 
-    .line 1542
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1544
     .local v6, "token":J
     if-eqz p1, :cond_2
 
-    .line 1545
     if-lez p3, :cond_1
 
-    .line 1547
     :try_start_0
     const-string v5, "usb"
 
@@ -40040,13 +35640,11 @@
 
     move-result-object v0
 
-    .line 1548
     .local v0, "binder":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/hardware/usb/IUsbManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/hardware/usb/IUsbManager;
 
     move-result-object v4
 
-    .line 1549
     .local v4, "service":Landroid/hardware/usb/IUsbManager;
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -40054,15 +35652,12 @@
 
     invoke-interface {v4, p1, p2, v5}, Landroid/hardware/usb/IUsbManager;->setDevicePackage(Landroid/hardware/usb/UsbDevice;Ljava/lang/String;I)V
 
-    .line 1550
     invoke-interface {v4, p1, p3}, Landroid/hardware/usb/IUsbManager;->grantDevicePermission(Landroid/hardware/usb/UsbDevice;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1551
     const/4 v3, 0x0
 
-    .line 1564
     .end local v0    # "binder":Landroid/os/IBinder;
     .end local v4    # "service":Landroid/hardware/usb/IUsbManager;
     :goto_1
@@ -40070,10 +35665,8 @@
 
     move v5, v3
 
-    .line 1565
     goto :goto_0
 
-    .line 1553
     :cond_1
     :try_start_1
     const-string v5, "KnoxCustomManagerService"
@@ -40082,12 +35675,10 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1554
     const/16 v3, -0x2e
 
     goto :goto_1
 
-    .line 1557
     :cond_2
     const-string v5, "KnoxCustomManagerService"
 
@@ -40097,16 +35688,13 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1558
     const/16 v3, -0x2f
 
     goto :goto_1
 
-    .line 1560
     :catch_0
     move-exception v2
 
-    .line 1561
     .local v2, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -40130,7 +35718,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1562
     const/4 v3, -0x1
 
     goto :goto_1
@@ -40141,12 +35728,10 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 7029
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 7030
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbMassStorageStateLocal(ZI)I
 
@@ -40161,12 +35746,10 @@
     .param p2, "destinationAddress"    # Ljava/lang/String;
 
     .prologue
-    .line 7161
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 7162
     .local v0, "callingUid":I
     invoke-direct {p0, p1, p2, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbNetAddressesLocal(Ljava/lang/String;Ljava/lang/String;I)I
 
@@ -40180,12 +35763,10 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 7095
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 7096
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->setUsbNetStateLocal(ZI)I
 
@@ -40201,41 +35782,33 @@
     .prologue
     const/16 v5, -0x2d
 
-    .line 2329
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 2330
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 2331
     .local v2, "result":I
     const v8, 0x20c49b
 
     if-lt p1, v8, :cond_1
 
-    .line 2352
     :cond_0
     :goto_0
     return v5
 
-    .line 2334
     :cond_1
     if-ltz p1, :cond_0
 
-    .line 2338
     mul-int/lit16 v4, p1, 0x3e8
 
-    .line 2339
     .local v4, "timeout_val":I
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2340
     .local v6, "token":J
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -40247,14 +35820,12 @@
 
     invoke-static {v5, v8, v4}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 2343
     new-instance v3, Landroid/content/Intent;
 
     const-string v5, "android.settings.SCREENTIMEOUT_CHANGED"
 
     invoke-direct {v3, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2344
     .local v3, "systemIntent":Landroid/content/Intent;
     iget-object v5, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -40262,12 +35833,10 @@
 
     invoke-virtual {v5, v3, v8}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 2345
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2346
     const/4 v2, 0x0
 
     .end local v3    # "systemIntent":Landroid/content/Intent;
@@ -40275,14 +35844,11 @@
     :goto_1
     move v5, v2
 
-    .line 2352
     goto :goto_0
 
-    .line 2347
     :catch_0
     move-exception v1
 
-    .line 2348
     .local v1, "e":Ljava/lang/Exception;
     const-string v5, "KnoxCustomManagerService"
 
@@ -40306,7 +35872,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2349
     const/4 v2, -0x1
 
     goto :goto_1
@@ -40318,16 +35883,13 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 7448
     const/4 v1, -0x6
 
-    .line 7449
     .local v1, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 7451
     .local v0, "callingUid":I
     if-ltz p2, :cond_0
 
@@ -40335,37 +35897,29 @@
 
     if-le p2, v4, :cond_1
 
-    .line 7452
     :cond_0
     const/16 v4, -0x32
 
-    .line 7473
     :goto_0
     return v4
 
-    .line 7454
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 7455
     .local v2, "token":J
     packed-switch p1, :pswitch_data_0
 
-    .line 7469
     const/16 v1, -0x2b
 
-    .line 7472
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v4, v1
 
-    .line 7473
     goto :goto_0
 
-    .line 7457
     :pswitch_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -40377,13 +35931,10 @@
 
     invoke-static {v4, v5, p2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 7458
     const/4 v1, 0x0
 
-    .line 7459
     goto :goto_1
 
-    .line 7461
     :pswitch_1
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -40395,13 +35946,10 @@
 
     invoke-static {v4, v5, p2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 7462
     const/4 v1, 0x0
 
-    .line 7463
     goto :goto_1
 
-    .line 7465
     :pswitch_2
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -40413,13 +35961,10 @@
 
     invoke-static {v4, v5, p2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 7466
     const/4 v1, 0x0
 
-    .line 7467
     goto :goto_1
 
-    .line 7455
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -40433,16 +35978,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 4405
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4406
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4409
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -40455,18 +35997,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4410
     const/4 v2, 0x0
 
-    .line 4416
     :goto_0
     return v2
 
-    .line 4411
     :catch_0
     move-exception v1
 
-    .line 4412
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -40490,7 +36028,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4413
     const/4 v2, -0x1
 
     goto :goto_0
@@ -40501,16 +36038,13 @@
     .param p1, "streamType"    # I
 
     .prologue
-    .line 4148
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v1
 
-    .line 4149
     .local v1, "callingUid":I
     const/4 v3, -0x6
 
-    .line 4150
     .local v3, "result":I
     if-ltz p1, :cond_1
 
@@ -40518,7 +36052,6 @@
 
     if-gt p1, v4, :cond_1
 
-    .line 4152
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     const-string v5, "audio"
@@ -40529,11 +36062,9 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 4153
     .local v0, "am":Landroid/media/AudioManager;
     if-eqz v0, :cond_0
 
-    .line 4155
     :try_start_0
     iget-object v4, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -40545,21 +36076,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4156
     const/4 v3, 0x0
 
-    .line 4165
     .end local v0    # "am":Landroid/media/AudioManager;
     :cond_0
     :goto_0
     return v3
 
-    .line 4157
     .restart local v0    # "am":Landroid/media/AudioManager;
     :catch_0
     move-exception v2
 
-    .line 4158
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "KnoxCustomManagerService"
 
@@ -40583,12 +36110,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4159
     const/4 v3, -0x1
 
     goto :goto_0
 
-    .line 4163
     .end local v0    # "am":Landroid/media/AudioManager;
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
@@ -40602,16 +36127,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 4448
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v0
 
-    .line 4449
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4451
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -40624,18 +36146,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4452
     const/4 v2, 0x0
 
-    .line 4457
     :goto_0
     return v2
 
-    .line 4453
     :catch_0
     move-exception v1
 
-    .line 4454
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -40659,7 +36177,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4455
     const/4 v2, -0x1
 
     goto :goto_0
@@ -40681,20 +36198,16 @@
     .local p1, "appList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/16 v7, -0x32
 
-    .line 4492
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceProKioskPermission()I
 
     move-result v2
 
-    .line 4493
     .local v2, "callingUid":I
     const/4 v6, -0x6
 
-    .line 4495
     .local v6, "result":I
     const/4 v1, 0x0
 
-    .line 4496
     .local v1, "appsStr":Ljava/lang/String;
     if-eqz p1, :cond_3
 
@@ -40704,7 +36217,6 @@
 
     if-lez v8, :cond_3
 
-    .line 4497
     const/4 v8, 0x0
 
     invoke-interface {p1, v8}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
@@ -40713,20 +36225,16 @@
 
     if-eqz v8, :cond_1
 
-    .line 4521
     :cond_0
     :goto_0
     return v7
 
-    .line 4501
     :cond_1
     const-string v5, "(?i)^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+[a-z0-9_]$"
 
-    .line 4502
     .local v5, "regex":Ljava/lang/String;
     const-string v1, ""
 
-    .line 4503
     const/4 v4, 0x0
 
     .local v4, "i":I
@@ -40737,10 +36245,8 @@
 
     if-ge v4, v8, :cond_3
 
-    .line 4504
     if-lez v4, :cond_2
 
-    .line 4505
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -40759,7 +36265,6 @@
 
     move-result-object v1
 
-    .line 4506
     :cond_2
     invoke-interface {p1, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -40767,7 +36272,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 4507
     .local v0, "appName":Ljava/lang/String;
     const-string v8, "(?i)^[a-z][a-z0-9_]*(\\.[a-z0-9_]+)+[a-z0-9_]$"
 
@@ -40777,7 +36281,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 4511
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -40794,12 +36297,10 @@
 
     move-result-object v1
 
-    .line 4503
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 4515
     .end local v0    # "appName":Ljava/lang/String;
     .end local v4    # "i":I
     .end local v5    # "regex":Ljava/lang/String;
@@ -40815,20 +36316,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4516
     const/4 v6, 0x0
 
     :goto_2
     move v7, v6
 
-    .line 4521
     goto :goto_0
 
-    .line 4517
     :catch_0
     move-exception v3
 
-    .line 4518
     .local v3, "e":Ljava/lang/Exception;
     const-string v7, "KnoxCustomManagerService"
 
@@ -40852,7 +36349,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4519
     const/4 v6, -0x1
 
     goto :goto_2
@@ -40863,16 +36359,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 4099
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4100
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4103
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -40885,18 +36378,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4104
     const/4 v2, 0x0
 
-    .line 4110
     :goto_0
     return v2
 
-    .line 4105
     :catch_0
     move-exception v1
 
-    .line 4106
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -40920,7 +36409,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4107
     const/4 v2, -0x1
 
     goto :goto_0
@@ -40931,16 +36419,13 @@
     .param p1, "delay"    # I
 
     .prologue
-    .line 4935
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4936
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4938
     .local v2, "result":I
     if-lez p1, :cond_0
 
@@ -40948,7 +36433,6 @@
 
     if-gt p1, v3, :cond_0
 
-    .line 4939
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -40960,24 +36444,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4940
     const/4 v2, 0x0
 
-    .line 4948
     :goto_0
     return v2
 
-    .line 4942
     :cond_0
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 4944
     :catch_0
     move-exception v1
 
-    .line 4945
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -41001,7 +36480,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4946
     const/4 v2, -0x1
 
     goto :goto_0
@@ -41012,16 +36490,13 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 4852
     const/4 v2, -0x6
 
-    .line 4853
     .local v2, "result":I
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4856
     .local v0, "callingUid":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -41034,18 +36509,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4857
     const/4 v2, 0x0
 
-    .line 4862
     :goto_0
     return v2
 
-    .line 4858
     :catch_0
     move-exception v1
 
-    .line 4859
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -41069,7 +36540,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4860
     const/4 v2, -0x1
 
     goto :goto_0
@@ -41080,16 +36550,13 @@
     .param p1, "threshold"    # I
 
     .prologue
-    .line 4892
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4893
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4895
     .local v2, "result":I
     if-gez p1, :cond_0
 
@@ -41097,7 +36564,6 @@
 
     if-lt p1, v3, :cond_0
 
-    .line 4896
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -41109,24 +36575,19 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4897
     const/4 v2, 0x0
 
-    .line 4905
     :goto_0
     return v2
 
-    .line 4899
     :cond_0
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 4901
     :catch_0
     move-exception v1
 
-    .line 4902
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -41150,7 +36611,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4903
     const/4 v2, -0x1
 
     goto :goto_0
@@ -41161,16 +36621,13 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 4297
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v0
 
-    .line 4298
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 4301
     .local v2, "result":I
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -41183,18 +36640,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4302
     const/4 v2, 0x0
 
-    .line 4307
     :goto_0
     return v2
 
-    .line 4303
     :catch_0
     move-exception v1
 
-    .line 4304
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -41218,7 +36671,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4305
     const/4 v2, -0x1
 
     goto :goto_0
@@ -41229,18 +36681,15 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 2983
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 2985
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 2987
     .local v4, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -41260,29 +36709,23 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2989
     const/4 v2, 0x0
 
-    .line 2994
     .local v2, "result":I
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2995
     return v2
 
-    .line 2987
     .end local v2    # "result":I
     :cond_0
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 2990
     :catch_0
     move-exception v1
 
-    .line 2991
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -41306,7 +36749,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2992
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -41322,22 +36764,18 @@
 
     const/4 v8, 0x1
 
-    .line 7230
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 7231
     .local v0, "callingUid":I
     const/4 v2, -0x6
 
-    .line 7233
     .local v2, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 7236
     .local v4, "token":J
     :try_start_0
     iget-object v6, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -41350,11 +36788,9 @@
 
     check-cast v3, Landroid/net/wifi/WifiManager;
 
-    .line 7237
     .local v3, "wifiManager":Landroid/net/wifi/WifiManager;
     if-nez p1, :cond_0
 
-    .line 7238
     const/4 v6, 0x0
 
     const/4 v7, 0x1
@@ -41363,23 +36799,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7239
     const/4 v2, 0x0
 
-    .line 7258
     .end local v3    # "wifiManager":Landroid/net/wifi/WifiManager;
     :goto_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7259
     return v2
 
-    .line 7240
     .restart local v3    # "wifiManager":Landroid/net/wifi/WifiManager;
     :cond_0
     if-ne p1, v8, :cond_1
 
-    .line 7242
     const/4 v6, 0x1
 
     const/4 v7, 0x1
@@ -41387,16 +36818,13 @@
     :try_start_1
     invoke-virtual {v3, v6, v7}, Landroid/net/wifi/WifiManager;->setFrequencyBand(IZ)V
 
-    .line 7243
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 7247
     :cond_1
     if-ne p1, v9, :cond_2
 
-    .line 7248
     const/4 v6, 0x2
 
     const/4 v7, 0x1
@@ -41405,23 +36833,19 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 7249
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 7251
     :cond_2
     const/16 v2, -0x32
 
     goto :goto_0
 
-    .line 7253
     .end local v3    # "wifiManager":Landroid/net/wifi/WifiManager;
     :catch_0
     move-exception v1
 
-    .line 7254
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "KnoxCustomManagerService"
 
@@ -41445,7 +36869,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7255
     const/4 v2, -0x1
 
     goto :goto_0
@@ -41456,16 +36879,13 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 8055
     const/4 v6, -0x6
 
-    .line 8056
     .local v6, "result":I
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSystemPermission()I
 
     move-result v2
 
-    .line 8059
     .local v2, "callingUid":I
     move-object/from16 v0, p0
 
@@ -41483,7 +36903,6 @@
 
     if-nez v15, :cond_0
 
-    .line 8060
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -41496,7 +36915,6 @@
 
     check-cast v3, Landroid/net/ConnectivityManager;
 
-    .line 8061
     .local v3, "cm":Landroid/net/ConnectivityManager;
     const/4 v15, 0x0
 
@@ -41506,15 +36924,12 @@
 
     if-nez v15, :cond_0
 
-    .line 8062
     const/4 v15, -0x6
 
-    .line 8123
     .end local v3    # "cm":Landroid/net/ConnectivityManager;
     :goto_0
     return v15
 
-    .line 8067
     :cond_0
     move-object/from16 v0, p0
 
@@ -41528,7 +36943,6 @@
 
     check-cast v7, Landroid/telephony/TelephonyManager;
 
-    .line 8068
     .local v7, "telMgr":Landroid/telephony/TelephonyManager;
     invoke-virtual {v7}, Landroid/telephony/TelephonyManager;->getPhoneType()I
 
@@ -41540,7 +36954,6 @@
 
     if-ne v15, v0, :cond_1
 
-    .line 8069
     invoke-virtual {v7}, Landroid/telephony/TelephonyManager;->getSimState()I
 
     move-result v15
@@ -41551,12 +36964,10 @@
 
     if-eq v15, v0, :cond_1
 
-    .line 8070
     const/16 v15, -0x38
 
     goto :goto_0
 
-    .line 8074
     :cond_1
     const/4 v15, 0x1
 
@@ -41566,18 +36977,15 @@
 
     if-eqz p1, :cond_2
 
-    .line 8075
     const/16 v15, -0x2b
 
     goto :goto_0
 
-    .line 8077
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 8079
     .local v8, "token":J
     :try_start_0
     move-object/from16 v0, p0
@@ -41592,19 +37000,16 @@
 
     check-cast v14, Landroid/net/wifi/WifiManager;
 
-    .line 8080
     .local v14, "wm":Landroid/net/wifi/WifiManager;
     invoke-virtual {v14}, Landroid/net/wifi/WifiManager;->getWifiApConfiguration()Landroid/net/wifi/WifiConfiguration;
 
     move-result-object v11
 
-    .line 8081
     .local v11, "wifiConfig":Landroid/net/wifi/WifiConfiguration;
     invoke-virtual {v14}, Landroid/net/wifi/WifiManager;->getWifiApState()I
 
     move-result v10
 
-    .line 8082
     .local v10, "wifiApState":I
     const/4 v15, 0x1
 
@@ -41612,7 +37017,6 @@
 
     if-ne v0, v15, :cond_7
 
-    .line 8083
     const/16 v15, 0xc
 
     if-eq v10, v15, :cond_3
@@ -41621,33 +37025,27 @@
 
     if-ne v10, v15, :cond_5
 
-    .line 8086
     :cond_3
     new-instance v5, Landroid/os/Message;
 
     invoke-direct {v5}, Landroid/os/Message;-><init>()V
 
-    .line 8087
     .local v5, "msg":Landroid/os/Message;
     const/16 v15, 0xc5
 
     iput v15, v5, Landroid/os/Message;->what:I
 
-    .line 8088
     iput-object v11, v5, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 8089
     invoke-virtual {v14, v5}, Landroid/net/wifi/WifiManager;->callSECApi(Landroid/os/Message;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8117
     .end local v5    # "msg":Landroid/os/Message;
     :cond_4
     :goto_1
     const/4 v6, 0x0
 
-    .line 8122
     .end local v10    # "wifiApState":I
     .end local v11    # "wifiConfig":Landroid/net/wifi/WifiConfiguration;
     .end local v14    # "wm":Landroid/net/wifi/WifiManager;
@@ -41656,10 +37054,8 @@
 
     move v15, v6
 
-    .line 8123
     goto :goto_0
 
-    .line 8091
     .restart local v10    # "wifiApState":I
     .restart local v11    # "wifiConfig":Landroid/net/wifi/WifiConfiguration;
     .restart local v14    # "wm":Landroid/net/wifi/WifiManager;
@@ -41669,12 +37065,10 @@
     :try_start_1
     invoke-virtual {v14, v11, v15}, Landroid/net/wifi/WifiManager;->setWifiApEnabled(Landroid/net/wifi/WifiConfiguration;Z)Z
 
-    .line 8093
     invoke-virtual {v14}, Landroid/net/wifi/WifiManager;->getWifiState()I
 
     move-result v13
 
-    .line 8094
     .local v13, "wifiState":I
     const/4 v15, 0x2
 
@@ -41684,13 +37078,11 @@
 
     if-ne v13, v15, :cond_4
 
-    .line 8096
     :cond_6
     const/4 v15, 0x0
 
     invoke-virtual {v14, v15}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
-    .line 8097
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -41709,7 +37101,6 @@
 
     goto :goto_1
 
-    .line 8118
     .end local v10    # "wifiApState":I
     .end local v11    # "wifiConfig":Landroid/net/wifi/WifiConfiguration;
     .end local v13    # "wifiState":I
@@ -41717,7 +37108,6 @@
     :catch_0
     move-exception v4
 
-    .line 8119
     .local v4, "e":Ljava/lang/Exception;
     const-string v15, "KnoxCustomManagerService"
 
@@ -41743,12 +37133,10 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8120
     const/4 v6, -0x1
 
     goto :goto_2
 
-    .line 8101
     .end local v4    # "e":Ljava/lang/Exception;
     .restart local v10    # "wifiApState":I
     .restart local v11    # "wifiConfig":Landroid/net/wifi/WifiConfiguration;
@@ -41762,7 +37150,6 @@
 
     if-ne v10, v15, :cond_4
 
-    .line 8103
     :cond_8
     const/4 v15, 0x0
 
@@ -41773,10 +37160,8 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 8105
     const/4 v12, 0x0
 
-    .line 8107
     .local v12, "wifiSavedState":I
     :try_start_3
     move-object/from16 v0, p0
@@ -41796,19 +37181,16 @@
 
     move-result v12
 
-    .line 8111
     :goto_3
     const/4 v15, 0x1
 
     if-ne v12, v15, :cond_4
 
-    .line 8112
     const/4 v15, 0x1
 
     :try_start_4
     invoke-virtual {v14, v15}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
-    .line 8113
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -41827,7 +37209,6 @@
 
     goto :goto_1
 
-    .line 8108
     :catch_1
     move-exception v15
 
@@ -41839,18 +37220,15 @@
     .param p1, "status"    # Z
 
     .prologue
-    .line 3008
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 3010
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 3012
     .local v4, "token":J
     :try_start_0
     iget-object v3, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -41870,29 +37248,23 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3014
     const/4 v2, 0x0
 
-    .line 3019
     .local v2, "result":I
     :goto_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3020
     return v2
 
-    .line 3012
     .end local v2    # "result":I
     :cond_0
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 3015
     :catch_0
     move-exception v1
 
-    .line 3016
     .local v1, "e":Ljava/lang/Exception;
     const-string v3, "KnoxCustomManagerService"
 
@@ -41916,7 +37288,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3017
     const/4 v2, -0x1
 
     .restart local v2    # "result":I
@@ -41934,18 +37305,15 @@
 
     const/4 v8, 0x0
 
-    .line 1697
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v0
 
-    .line 1700
     .local v0, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1701
     .local v6, "token":J
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -41955,7 +37323,6 @@
 
     move-result-object v3
 
-    .line 1702
     .local v3, "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     invoke-virtual {v3, v8}, Landroid/app/enterprise/RestrictionPolicy;->isWiFiEnabled(Z)Z
 
@@ -41963,25 +37330,20 @@
 
     if-nez v9, :cond_0
 
-    .line 1703
     .local v2, "isRestricted":Z
     :goto_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1704
     if-eqz v2, :cond_1
 
-    .line 1705
     const-string v8, "KnoxCustomManagerService"
 
     const-string v9, "setWifiState() - eSDK wifi disabled"
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1706
     const/4 v4, -0x7
 
-    .line 1752
     :goto_1
     return v4
 
@@ -41989,21 +37351,17 @@
     :cond_0
     move v2, v8
 
-    .line 1702
     goto :goto_0
 
-    .line 1709
     .restart local v2    # "isRestricted":Z
     :cond_1
     const/4 v4, -0x6
 
-    .line 1711
     .local v4, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 1713
     :try_start_0
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
@@ -42015,34 +37373,27 @@
 
     check-cast v5, Landroid/net/wifi/WifiManager;
 
-    .line 1714
     .local v5, "wifiManager":Landroid/net/wifi/WifiManager;
     const/4 v8, 0x0
 
     sput-boolean v8, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiConfigure:Z
 
-    .line 1715
     if-eqz v5, :cond_6
 
-    .line 1716
     if-eqz p1, :cond_5
 
-    .line 1718
     if-nez p2, :cond_2
 
     if-eqz p3, :cond_2
 
-    .line 1719
     const-string v8, "KnoxCustomManagerService"
 
     const-string v9, "setWifiState() - ssid == null && password != null"
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1720
     const/16 v4, -0x28
 
-    .line 1743
     :goto_2
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -42054,19 +37405,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1751
     .end local v5    # "wifiManager":Landroid/net/wifi/WifiManager;
     :goto_3
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
 
-    .line 1722
     .restart local v5    # "wifiManager":Landroid/net/wifi/WifiManager;
     :cond_2
     if-eqz p2, :cond_3
 
-    .line 1723
     :try_start_1
     invoke-virtual {v5}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
@@ -42074,55 +37422,45 @@
 
     if-eqz v8, :cond_4
 
-    .line 1724
     iget-object v8, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v8, p2, p3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->configureWifi(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1734
     :cond_3
     :goto_4
     const/4 v8, 0x1
 
     invoke-virtual {v5, v8}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
 
-    .line 1735
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 1726
     :cond_4
     const/4 v8, 0x1
 
     sput-boolean v8, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiConfigure:Z
 
-    .line 1727
     const/4 v8, 0x0
 
     sput-boolean v8, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiEap:Z
 
-    .line 1728
     sput-object p2, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiSSID:Ljava/lang/String;
 
-    .line 1729
     const/4 v8, 0x0
 
     sput-object v8, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiUsername:Ljava/lang/String;
 
-    .line 1730
     sput-object p3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiPassword:Ljava/lang/String;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_4
 
-    .line 1747
     .end local v5    # "wifiManager":Landroid/net/wifi/WifiManager;
     :catch_0
     move-exception v1
 
-    .line 1748
     .local v1, "e":Ljava/lang/Exception;
     const-string v8, "KnoxCustomManagerService"
 
@@ -42146,12 +37484,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1749
     const/4 v4, -0x1
 
     goto :goto_3
 
-    .line 1739
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v5    # "wifiManager":Landroid/net/wifi/WifiManager;
     :cond_5
@@ -42162,12 +37498,10 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1740
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 1745
     :cond_6
     const/4 v4, -0x1
 
@@ -42182,18 +37516,15 @@
     .param p4, "password"    # Ljava/lang/String;
 
     .prologue
-    .line 1765
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->enforceSettingPermission()I
 
     move-result v4
 
-    .line 1768
     .local v4, "callingUid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1769
     .local v10, "token":J
     invoke-direct/range {p0 .. p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -42203,7 +37534,6 @@
 
     move-result-object v8
 
-    .line 1770
     .local v8, "restrictionPolicy":Landroid/app/enterprise/RestrictionPolicy;
     const/4 v13, 0x0
 
@@ -42215,47 +37545,38 @@
 
     const/4 v6, 0x1
 
-    .line 1771
     .local v6, "isRestricted":Z
     :goto_0
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1772
     if-eqz v6, :cond_1
 
-    .line 1773
     const-string v13, "KnoxCustomManagerService"
 
     const-string v14, "setWifiState() - eSDK wifi disabled"
 
     invoke-static {v13, v14}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1774
     const/4 v9, -0x7
 
-    .line 1825
     :goto_1
     return v9
 
-    .line 1770
     .end local v6    # "isRestricted":Z
     :cond_0
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 1777
     .restart local v6    # "isRestricted":Z
     :cond_1
     const/4 v9, -0x6
 
-    .line 1779
     .local v9, "result":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 1781
     :try_start_0
     move-object/from16 v0, p0
 
@@ -42269,7 +37590,6 @@
 
     check-cast v12, Landroid/net/wifi/WifiManager;
 
-    .line 1782
     .local v12, "wifiManager":Landroid/net/wifi/WifiManager;
     const/4 v13, 0x0
 
@@ -42277,16 +37597,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1783
     if-eqz v12, :cond_8
 
-    .line 1784
     if-eqz p1, :cond_7
 
-    .line 1787
     const/4 v7, 0x0
 
-    .line 1788
     .local v7, "ok":Z
     if-eqz p2, :cond_3
 
@@ -42294,18 +37610,14 @@
 
     if-eqz p4, :cond_3
 
-    .line 1789
     const/4 v7, 0x1
 
-    .line 1793
     :cond_2
     :goto_2
     if-nez v7, :cond_4
 
-    .line 1794
     const/16 v9, -0x28
 
-    .line 1823
     .end local v7    # "ok":Z
     .end local v12    # "wifiManager":Landroid/net/wifi/WifiManager;
     :goto_3
@@ -42313,7 +37625,6 @@
 
     goto :goto_1
 
-    .line 1790
     .restart local v7    # "ok":Z
     .restart local v12    # "wifiManager":Landroid/net/wifi/WifiManager;
     :cond_3
@@ -42323,12 +37634,10 @@
 
     if-nez p4, :cond_2
 
-    .line 1791
     const/4 v7, 0x1
 
     goto :goto_2
 
-    .line 1796
     :cond_4
     :try_start_1
     invoke-virtual {v12}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
@@ -42337,12 +37646,10 @@
 
     if-eqz v13, :cond_6
 
-    .line 1797
     if-eqz p2, :cond_5
 
     if-eqz p4, :cond_5
 
-    .line 1798
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mContext:Landroid/content/Context;
@@ -42357,34 +37664,27 @@
 
     invoke-direct {v0, v13, v1, v2, v3}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->configureWifi(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1809
     :cond_5
     :goto_4
     const/4 v9, 0x0
 
     goto :goto_3
 
-    .line 1801
     :cond_6
     const/4 v13, 0x1
 
     sput-boolean v13, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiConfigure:Z
 
-    .line 1802
     const/4 v13, 0x1
 
     sput-boolean v13, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiEap:Z
 
-    .line 1803
     sput-object p2, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiSSID:Ljava/lang/String;
 
-    .line 1804
     sput-object p3, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiUsername:Ljava/lang/String;
 
-    .line 1805
     sput-object p4, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->mWifiPassword:Ljava/lang/String;
 
-    .line 1807
     const/4 v13, 0x1
 
     invoke-virtual {v12, v13}, Landroid/net/wifi/WifiManager;->setWifiEnabled(Z)Z
@@ -42393,13 +37693,11 @@
 
     goto :goto_4
 
-    .line 1819
     .end local v7    # "ok":Z
     .end local v12    # "wifiManager":Landroid/net/wifi/WifiManager;
     :catch_0
     move-exception v5
 
-    .line 1820
     .local v5, "e":Ljava/lang/Exception;
     const-string v13, "KnoxCustomManagerService"
 
@@ -42423,12 +37721,10 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1821
     const/4 v9, -0x1
 
     goto :goto_3
 
-    .line 1813
     .end local v5    # "e":Ljava/lang/Exception;
     .restart local v12    # "wifiManager":Landroid/net/wifi/WifiManager;
     :cond_7
@@ -42439,12 +37735,10 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 1814
     const/4 v9, 0x0
 
     goto :goto_3
 
-    .line 1817
     :cond_8
     const/4 v9, -0x1
 
@@ -42455,9 +37749,7 @@
     .locals 0
 
     .prologue
-    .line 304
     invoke-direct {p0}, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;->registerKnoxCustomReceiver()V
 
-    .line 305
     return-void
 .end method

@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 4484
     iput-object p1, p0, Lcom/android/server/enterprise/sso/GenericSSOService$RetrieveFeedTask;->this$0:Lcom/android/server/enterprise/sso/GenericSSOService;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
@@ -49,7 +48,6 @@
     .param p1, "x0"    # [Ljava/lang/Object;
 
     .prologue
-    .line 4484
     check-cast p1, [Ljava/lang/String;
 
     .end local p1    # "x0":[Ljava/lang/Object;
@@ -65,13 +63,11 @@
     .param p1, "urls"    # [Ljava/lang/String;
 
     .prologue
-    .line 4487
     :try_start_0
     new-instance v0, Lcom/android/server/enterprise/sso/GenericSSOService$SntpClient;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$SntpClient;-><init>()V
 
-    .line 4488
     .local v0, "client":Lcom/android/server/enterprise/sso/GenericSSOService$SntpClient;
     const-string/jumbo v2, "north-america.pool.ntp.org"
 
@@ -83,7 +79,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4489
     iget-object v2, p0, Lcom/android/server/enterprise/sso/GenericSSOService$RetrieveFeedTask;->this$0:Lcom/android/server/enterprise/sso/GenericSSOService;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/sso/GenericSSOService$SntpClient;->getNtpTime()J
@@ -93,12 +88,10 @@
     # setter for: Lcom/android/server/enterprise/sso/GenericSSOService;->initUTCTime:J
     invoke-static {v2, v4, v5}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2302(Lcom/android/server/enterprise/sso/GenericSSOService;J)J
 
-    .line 4490
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 4491
     const-string/jumbo v2, "utc time"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -130,7 +123,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4497
     .end local v0    # "client":Lcom/android/server/enterprise/sso/GenericSSOService$SntpClient;
     :cond_0
     :goto_0
@@ -138,17 +130,14 @@
 
     return-object v2
 
-    .line 4493
     :catch_0
     move-exception v1
 
-    .line 4494
     .local v1, "e":Ljava/lang/Exception;
     sget-boolean v2, Landroid/app/enterprise/sso/GenericSSOConstants;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 4495
     const-string v2, "GenericSSOService"
 
     const-string v3, "In RetrieveFeedTask"
@@ -163,7 +152,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 4484
     check-cast p1, Ljava/lang/Void;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -177,7 +165,6 @@
     .param p1, "tmp"    # Ljava/lang/Void;
 
     .prologue
-    .line 4501
     # getter for: Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatchNTP:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2400()Ljava/util/concurrent/CountDownLatch;
 
@@ -185,7 +172,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4502
     # getter for: Lcom/android/server/enterprise/sso/GenericSSOService;->countDownLatchNTP:Ljava/util/concurrent/CountDownLatch;
     invoke-static {}, Lcom/android/server/enterprise/sso/GenericSSOService;->access$2400()Ljava/util/concurrent/CountDownLatch;
 
@@ -193,7 +179,6 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
-    .line 4504
     :cond_0
     return-void
 .end method

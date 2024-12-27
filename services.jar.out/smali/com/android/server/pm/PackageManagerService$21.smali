@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 20434
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$21;->val$info:Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;
@@ -53,35 +52,30 @@
     .end annotation
 
     .prologue
-    .line 20438
     const-string v0, "PackageManager"
 
     const-string v1, "Finish package remove notify"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 20439
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$21;->val$info:Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;
 
     iget-object v0, v0, Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;->args:Lcom/android/server/pm/PackageManagerService$InstallArgs;
 
     if-eqz v0, :cond_0
 
-    .line 20440
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Runtime;->gc()V
 
-    .line 20443
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$21;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v0, Lcom/android/server/pm/PackageManagerService;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 20444
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PackageManagerService$21;->val$info:Lcom/android/server/pm/PackageManagerService$PackageRemovedInfo;
 
@@ -91,14 +85,11 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/pm/PackageManagerService$InstallArgs;->doPostDeleteLI(Z)Z
 
-    .line 20445
     monitor-exit v1
 
-    .line 20447
     :cond_0
     return-void
 
-    .line 20445
     :catchall_0
     move-exception v0
 

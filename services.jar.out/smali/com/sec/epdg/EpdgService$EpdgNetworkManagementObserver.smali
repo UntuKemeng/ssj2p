@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2457
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$EpdgNetworkManagementObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgNetworkMgmtObserver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/EpdgService$1;
 
     .prologue
-    .line 2457
     invoke-direct {p0, p1}, Lcom/sec/epdg/EpdgService$EpdgNetworkManagementObserver;-><init>(Lcom/sec/epdg/EpdgService;)V
 
     return-void
@@ -51,7 +49,6 @@
     .param p2, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 2559
     return-void
 .end method
 
@@ -61,22 +58,18 @@
     .param p2, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 2534
     if-nez p1, :cond_1
 
-    .line 2535
     const-string v1, "[EPDGService]"
 
     const-string v2, "Link address is null"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2554
     :cond_0
     :goto_0
     return-void
 
-    .line 2537
     :cond_1
     invoke-virtual {p1}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
 
@@ -86,7 +79,6 @@
 
     move-result-object v0
 
-    .line 2538
     .local v0, "address":Ljava/lang/String;
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgRead:Lcom/sec/epdg/EpdgContentReader;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$700()Lcom/sec/epdg/EpdgContentReader;
@@ -103,7 +95,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2539
     const-string v2, "[EPDGService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -154,10 +145,8 @@
 
     invoke-static {v2, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2542
     if-eqz v0, :cond_0
 
-    .line 2543
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getIwlanInterfaceName()Ljava/lang/String;
 
     move-result-object v1
@@ -177,7 +166,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2545
     # invokes: Lcom/sec/epdg/EpdgService;->getConfiguredWifiIntfIpType()Lcom/sec/epdg/EpdgService$IpType;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$4700()Lcom/sec/epdg/EpdgService$IpType;
 
@@ -187,7 +175,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 2546
     const-string v1, "[EPDGService]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -221,7 +208,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2548
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgNetworkManagementObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->startTimerOrPerformDns(Ljava/lang/String;)V
@@ -232,7 +218,6 @@
     :cond_2
     move-object v1, v0
 
-    .line 2539
     goto :goto_1
 
     :cond_3
@@ -246,7 +231,6 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 2521
     return-void
 .end method
 
@@ -257,7 +241,6 @@
     .param p3, "tsNanos"    # J
 
     .prologue
-    .line 2461
     const-string v0, "[EPDGService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -290,7 +273,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2463
     return-void
 .end method
 
@@ -300,7 +282,6 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 2473
     const-string v7, "[EPDGService]"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -338,24 +319,19 @@
 
     invoke-static {v7, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2474
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getMobileInterfacePrefix()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2475
     .local v3, "mobileIntfPrefix":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 2476
     .local v0, "alphabeticSubString":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 2477
     .local v5, "numericSubString":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 2479
     .local v1, "cid":I
     const-string v6, "[EPDGService]"
 
@@ -379,7 +355,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2480
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -390,18 +365,15 @@
 
     if-gt v6, v7, :cond_1
 
-    .line 2481
     const-string v6, "[EPDGService]"
 
     const-string v7, "Not Mobile Interface. Ignoring Interface State Change Event"
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2517
     :goto_1
     return-void
 
-    .line 2473
     .end local v0    # "alphabeticSubString":Ljava/lang/String;
     .end local v1    # "cid":I
     .end local v3    # "mobileIntfPrefix":Ljava/lang/String;
@@ -411,7 +383,6 @@
 
     goto :goto_0
 
-    .line 2485
     .restart local v0    # "alphabeticSubString":Ljava/lang/String;
     .restart local v1    # "cid":I
     .restart local v3    # "mobileIntfPrefix":Ljava/lang/String;
@@ -430,7 +401,6 @@
 
     move-result-object v0
 
-    .line 2491
     const-string v6, "[EPDGService]"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -453,7 +423,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2492
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -466,7 +435,6 @@
 
     move-result-object v5
 
-    .line 2493
     const-string v6, "[EPDGService]"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -489,7 +457,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2495
     :try_start_1
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_1
@@ -497,7 +464,6 @@
 
     move-result v1
 
-    .line 2500
     const-string v6, "[EPDGService]"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -520,14 +486,12 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2501
     invoke-virtual {v0, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v6
 
     if-nez v6, :cond_2
 
-    .line 2502
     const-string v6, "[EPDGService]"
 
     const-string v7, "Ignoring the interface change event as it is not related to bringing up/down the mobile interface."
@@ -536,11 +500,9 @@
 
     goto :goto_1
 
-    .line 2486
     :catch_0
     move-exception v2
 
-    .line 2487
     .local v2, "e":Ljava/lang/StringIndexOutOfBoundsException;
     const-string v6, "[EPDGService]"
 
@@ -548,17 +510,14 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2488
     invoke-virtual {v2}, Ljava/lang/StringIndexOutOfBoundsException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 2496
     .end local v2    # "e":Ljava/lang/StringIndexOutOfBoundsException;
     :catch_1
     move-exception v2
 
-    .line 2497
     .local v2, "e":Ljava/lang/NumberFormatException;
     const-string v6, "[EPDGService]"
 
@@ -568,7 +527,6 @@
 
     goto/16 :goto_1
 
-    .line 2504
     .end local v2    # "e":Ljava/lang/NumberFormatException;
     :cond_2
     # getter for: Lcom/sec/epdg/EpdgService;->mHOStateMachines:[Lcom/sec/epdg/IPSecDataConnSM;
@@ -586,34 +544,28 @@
 
     move-result-object v4
 
-    .line 2506
     .local v4, "msgToHandoverSM":Landroid/os/Message;
     if-nez p2, :cond_3
 
-    .line 2507
     const-string v6, "[EPDGService]"
 
     const-string v7, "Mobile Interface is down. Posting message to SM to disconnect the APN on ePDG."
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2509
     const/16 v6, 0xe
 
     iput v6, v4, Landroid/os/Message;->what:I
 
-    .line 2514
     :goto_2
     add-int/lit8 v6, v1, 0x1
 
     iput v6, v4, Landroid/os/Message;->arg1:I
 
-    .line 2515
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
     goto/16 :goto_1
 
-    .line 2511
     :cond_3
     const-string v6, "[EPDGService]"
 
@@ -621,7 +573,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2512
     const/16 v6, 0x9
 
     iput v6, v4, Landroid/os/Message;->what:I
@@ -634,7 +585,6 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 2525
     return-void
 .end method
 
@@ -644,7 +594,6 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 2467
     const-string v1, "[EPDGService]"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -676,10 +625,8 @@
 
     invoke-static {v1, v0}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2469
     return-void
 
-    .line 2467
     :cond_0
     const-string v0, "down"
 
@@ -692,7 +639,6 @@
     .param p2, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 2529
     return-void
 .end method
 
@@ -703,7 +649,6 @@
     .param p4, "servers"    # [Ljava/lang/String;
 
     .prologue
-    .line 2564
     return-void
 .end method
 
@@ -712,7 +657,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 2578
     return-void
 .end method
 
@@ -721,7 +665,6 @@
     .param p1, "route"    # Landroid/net/RouteInfo;
 
     .prologue
-    .line 2572
     return-void
 .end method
 
@@ -730,6 +673,5 @@
     .param p1, "route"    # Landroid/net/RouteInfo;
 
     .prologue
-    .line 2568
     return-void
 .end method

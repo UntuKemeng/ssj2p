@@ -50,12 +50,10 @@
     .locals 2
 
     .prologue
-    .line 42
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     sput-boolean v0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->DEBUG:Z
 
-    .line 51
     sget-object v0, Landroid/provider/Telephony$Sms;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "raw"
@@ -75,38 +73,30 @@
     .param p2, "smshandler"    # Lcom/android/internal/telephony/InboundSmsHandler;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 65
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mIsAlarmReceiverActive:Z
 
-    .line 66
     new-instance v0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC$1;-><init>(Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;)V
 
     iput-object v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mAlarmReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 359
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mQueuedLmsTokens:Ljava/util/Map;
 
-    .line 76
     iput-object p1, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mContext:Landroid/content/Context;
 
-    .line 77
     iput-object p2, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mInboundSmsHandler:Lcom/android/internal/telephony/InboundSmsHandler;
 
-    .line 79
     invoke-virtual {p0}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->updateMaximalConnectionTimeAlarm()V
 
-    .line 80
     return-void
 .end method
 
@@ -128,7 +118,6 @@
     .end annotation
 
     .prologue
-    .line 346
     const-string v0, "address = ? AND reference_number = ?"
 
     const/4 v1, 0x2
@@ -163,12 +152,10 @@
     .param p1, "lmsToken"    # Landroid/telephony/LmsTokenCTC;
 
     .prologue
-    .line 341
     invoke-static {p1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->dbSelectionForLmsToken(Landroid/telephony/LmsTokenCTC;)Landroid/util/Pair;
 
     move-result-object v0
 
-    .line 342
     .local v0, "selection":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/String;[Ljava/lang/String;>;"
     iget-object v1, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mContext:Landroid/content/Context;
 
@@ -188,7 +175,6 @@
 
     invoke-virtual {v3, v4, v1, v2}, Landroid/content/ContentResolver;->delete(Landroid/net/Uri;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 343
     return-void
 .end method
 
@@ -202,7 +188,6 @@
 
     const/4 v7, 0x0
 
-    .line 250
     const-string v3, "dispatchIncompleteLms, lmsToken=%s, lmsStatus=%d"
 
     const/4 v4, 0x2
@@ -221,29 +206,24 @@
 
     invoke-static {v3, v4}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 252
     sget-object v3, Lcom/android/internal/telephony/SMSDispatcher;->RAW_PROJECTION:[Ljava/lang/String;
 
     invoke-direct {p0, v3, p1, v8}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->queryStoredMessageParts([Ljava/lang/String;Landroid/telephony/LmsTokenCTC;Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
-    .line 253
     .local v1, "cursor":Landroid/database/Cursor;
     if-nez v1, :cond_0
 
-    .line 254
     const-string v3, "LmsAssemblyTrackerCTC"
 
     const-string v4, "dispatchIncompleteLms: cursor is NULL"
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 295
     :goto_0
     return-void
 
-    .line 258
     :cond_0
     new-instance v0, Lcom/android/internal/telephony/InboundSmsHandler$LmsPartCollector;
 
@@ -251,7 +231,6 @@
 
     invoke-direct {v0, v3, v7}, Lcom/android/internal/telephony/InboundSmsHandler$LmsPartCollector;-><init>(IZ)V
 
-    .line 261
     .local v0, "collector":Lcom/android/internal/telephony/InboundSmsHandler$LmsPartCollector;
     :try_start_0
     const-string v3, "sequence"
@@ -276,17 +255,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 268
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 272
     invoke-virtual {v0}, Lcom/android/internal/telephony/InboundSmsHandler$LmsPartCollector;->isEmpty()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 273
     const-string v3, "LmsAssemblyTrackerCTC"
 
     const-string v4, "dispatchIncompleteLms: no parts stored"
@@ -295,7 +271,6 @@
 
     goto :goto_0
 
-    .line 268
     :catchall_0
     move-exception v3
 
@@ -303,11 +278,9 @@
 
     throw v3
 
-    .line 276
     :cond_1
     const/high16 v2, 0x10000
 
-    .line 278
     .local v2, "destPort":I
     const-string v3, "3gpp2"
 
@@ -319,12 +292,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 279
     const/high16 v3, 0x40000
 
     or-int/2addr v2, v3
 
-    .line 284
     :goto_1
     invoke-virtual {v0}, Lcom/android/internal/telephony/InboundSmsHandler$LmsPartCollector;->getDestPort()I
 
@@ -332,7 +303,6 @@
 
     if-eq v3, v2, :cond_3
 
-    .line 285
     const-string v3, "LmsAssemblyTrackerCTC"
 
     const-string v4, "dispatchIncompleteLms: ignoring partial dispatch request for port-addressed LMS"
@@ -341,7 +311,6 @@
 
     goto :goto_0
 
-    .line 281
     :cond_2
     const/high16 v3, 0x20000
 
@@ -349,7 +318,6 @@
 
     goto :goto_1
 
-    .line 289
     :cond_3
     iget-object v3, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mInboundSmsHandler:Lcom/android/internal/telephony/InboundSmsHandler;
 
@@ -384,12 +352,10 @@
 
     const/4 v6, 0x0
 
-    .line 298
     new-instance v1, Ljava/util/LinkedHashSet;
 
     invoke-direct {v1}, Ljava/util/LinkedHashSet;-><init>()V
 
-    .line 300
     .local v1, "result":Ljava/util/Set;, "Ljava/util/Set<Landroid/telephony/LmsTokenCTC;>;"
     const/4 v2, 0x4
 
@@ -427,22 +393,18 @@
 
     move-result-object v0
 
-    .line 307
     .local v0, "cursor":Landroid/database/Cursor;
     if-nez v0, :cond_0
 
-    .line 308
     const-string v2, "LmsAssemblyTrackerCTC"
 
     const-string v3, "findStoredMessagePartsOlderThan, cursor is NULL"
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
     :goto_0
     return-object v1
 
-    .line 313
     :cond_0
     :goto_1
     :try_start_0
@@ -452,7 +414,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 314
     new-instance v2, Landroid/telephony/LmsTokenCTC;
 
     const/4 v3, 0x0
@@ -487,7 +448,6 @@
 
     goto :goto_1
 
-    .line 324
     :catchall_0
     move-exception v2
 
@@ -506,7 +466,6 @@
     .param p0, "msgCount"    # I
 
     .prologue
-    .line 84
     int-to-long v2, p0
 
     const-wide/16 v4, 0x1
@@ -521,20 +480,17 @@
 
     mul-long v0, v2, v4
 
-    .line 85
     .local v0, "defaultValue":J
     sget-boolean v2, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 86
     const-string v2, "debug.lms_assemble_timeout_1st"
 
     invoke-static {v2, v0, v1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->getSystemPropertyAsLong(Ljava/lang/String;J)J
 
     move-result-wide v0
 
-    .line 88
     .end local v0    # "defaultValue":J
     :cond_0
     return-wide v0
@@ -546,23 +502,19 @@
     .prologue
     const-wide/32 v2, 0x2932e00
 
-    .line 93
     const-wide/32 v0, 0x2932e00
 
-    .line 94
     .local v0, "defaultValue":J
     sget-boolean v4, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 95
     const-string v4, "debug.lms_assemble_timeout_max"
 
     invoke-static {v4, v2, v3}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->getSystemPropertyAsLong(Ljava/lang/String;J)J
 
     move-result-wide v2
 
-    .line 97
     :cond_0
     return-wide v2
 .end method
@@ -572,28 +524,23 @@
     .param p1, "lmsTokenCopy"    # Landroid/telephony/LmsTokenCTC;
 
     .prologue
-    .line 366
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->getQueuedLmsToken(Landroid/telephony/LmsTokenCTC;)Landroid/telephony/LmsTokenCTC;
 
     move-result-object v0
 
-    .line 367
     .local v0, "result":Landroid/telephony/LmsTokenCTC;
     if-nez v0, :cond_0
 
-    .line 368
     new-instance v0, Landroid/telephony/LmsTokenCTC;
 
     .end local v0    # "result":Landroid/telephony/LmsTokenCTC;
     invoke-direct {v0, p1}, Landroid/telephony/LmsTokenCTC;-><init>(Landroid/telephony/LmsTokenCTC;)V
 
-    .line 369
     .restart local v0    # "result":Landroid/telephony/LmsTokenCTC;
     iget-object v1, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mQueuedLmsTokens:Ljava/util/Map;
 
     invoke-interface {v1, v0, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 371
     :cond_0
     return-object v0
 .end method
@@ -603,7 +550,6 @@
     .param p1, "lmsTokenCopy"    # Landroid/telephony/LmsTokenCTC;
 
     .prologue
-    .line 362
     iget-object v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mQueuedLmsTokens:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -621,7 +567,6 @@
     .param p1, "defaultValue"    # J
 
     .prologue
-    .line 103
     :try_start_0
     const-string v1, ""
 
@@ -639,17 +584,14 @@
 
     move-result-wide p1
 
-    .line 105
     .end local p1    # "defaultValue":J
     :goto_0
     return-wide p1
 
-    .line 104
     .restart local p1    # "defaultValue":J
     :catch_0
     move-exception v0
 
-    .line 105
     .local v0, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -661,7 +603,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 129
     const-string v0, "handleFirstDisplayTimeout, lmsToken=%s"
 
     new-array v1, v3, [Ljava/lang/Object;
@@ -672,16 +613,12 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 130
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->cancelFirstDisplayTimeout(Landroid/telephony/LmsTokenCTC;)V
 
-    .line 131
     invoke-direct {p0, p1, v3}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->dispatchIncompleteLms(Landroid/telephony/LmsTokenCTC;I)V
 
-    .line 132
     invoke-virtual {p0}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->updateMaximalConnectionTimeAlarm()V
 
-    .line 133
     return-void
 .end method
 
@@ -691,14 +628,12 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 136
     const-string v3, "handleMaximalConnectionTimeout"
 
     new-array v4, v8, [Ljava/lang/Object;
 
     invoke-static {v3, v4}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 139
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -713,7 +648,6 @@
 
     move-result-object v2
 
-    .line 143
     .local v2, "timedOutLms":Ljava/util/Set;, "Ljava/util/Set<Landroid/telephony/LmsTokenCTC;>;"
     const-string v3, "handleMaximalConnectionTimeout: timed out lms: %s"
 
@@ -725,7 +659,6 @@
 
     invoke-static {v3, v4}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 146
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -744,23 +677,19 @@
 
     check-cast v1, Landroid/telephony/LmsTokenCTC;
 
-    .line 147
     .local v1, "lmsToken":Landroid/telephony/LmsTokenCTC;
     const/4 v3, 0x2
 
     invoke-direct {p0, v1, v3}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->dispatchIncompleteLms(Landroid/telephony/LmsTokenCTC;I)V
 
-    .line 148
     invoke-direct {p0, v1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->deleteStoredMessageParts(Landroid/telephony/LmsTokenCTC;)V
 
     goto :goto_0
 
-    .line 152
     .end local v1    # "lmsToken":Landroid/telephony/LmsTokenCTC;
     :cond_0
     invoke-virtual {p0}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->updateMaximalConnectionTimeAlarm()V
 
-    .line 153
     return-void
 .end method
 
@@ -770,12 +699,10 @@
     .param p1, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 380
     sget-boolean v0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 381
     const-string v0, "LmsAssemblyTrackerCTC"
 
     invoke-static {p0, p1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
@@ -784,7 +711,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 383
     :cond_0
     return-void
 .end method
@@ -796,12 +722,10 @@
     .param p3, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 336
     invoke-static {p2}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->dbSelectionForLmsToken(Landroid/telephony/LmsTokenCTC;)Landroid/util/Pair;
 
     move-result-object v6
 
-    .line 337
     .local v6, "selection":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/String;[Ljava/lang/String;>;"
     iget-object v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mContext:Landroid/content/Context;
 
@@ -838,7 +762,6 @@
     .param p4, "sortOrder"    # Ljava/lang/String;
 
     .prologue
-    .line 332
     iget-object v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -866,35 +789,29 @@
     .locals 3
 
     .prologue
-    .line 223
     iget-boolean v1, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mIsAlarmReceiverActive:Z
 
     if-eqz v1, :cond_0
 
-    .line 231
     :goto_0
     return-void
 
-    .line 227
     :cond_0
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 228
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "com.android.internal.telephony.CTC_LMS_CONNECTION_ALARM"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 229
     iget-object v1, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mAlarmReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 230
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mIsAlarmReceiverActive:Z
@@ -907,12 +824,10 @@
     .param p1, "lmsTokenCopy"    # Landroid/telephony/LmsTokenCTC;
 
     .prologue
-    .line 375
     iget-object v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mQueuedLmsTokens:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 376
     return-void
 .end method
 
@@ -920,16 +835,13 @@
     .locals 2
 
     .prologue
-    .line 234
     iget-boolean v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mIsAlarmReceiverActive:Z
 
     if-nez v0, :cond_0
 
-    .line 240
     :goto_0
     return-void
 
-    .line 238
     :cond_0
     iget-object v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mContext:Landroid/content/Context;
 
@@ -937,7 +849,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 239
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mIsAlarmReceiverActive:Z
@@ -954,7 +865,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 166
     const-string v1, "cancelFirstDisplayTimeout, lmsToken=%s"
 
     new-array v2, v4, [Ljava/lang/Object;
@@ -965,22 +875,17 @@
 
     invoke-static {v1, v2}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 167
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->getQueuedLmsToken(Landroid/telephony/LmsTokenCTC;)Landroid/telephony/LmsTokenCTC;
 
     move-result-object v0
 
-    .line 168
     .local v0, "queuedToken":Landroid/telephony/LmsTokenCTC;
     if-eqz v0, :cond_0
 
-    .line 169
     invoke-virtual {p0, v4, v0}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->removeMessages(ILjava/lang/Object;)V
 
-    .line 170
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->removeQueuedLmsToken(Landroid/telephony/LmsTokenCTC;)V
 
-    .line 172
     :cond_0
     return-void
 .end method
@@ -990,17 +895,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 113
     :try_start_0
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 126
     :goto_0
     return-void
 
-    .line 115
     :pswitch_0
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -1012,11 +914,9 @@
 
     goto :goto_0
 
-    .line 121
     :catch_0
     move-exception v0
 
-    .line 124
     .local v0, "ex":Ljava/lang/RuntimeException;
     const-string v1, "LmsAssemblyTrackerCTC"
 
@@ -1028,7 +928,6 @@
 
     goto :goto_0
 
-    .line 118
     .end local v0    # "ex":Ljava/lang/RuntimeException;
     :pswitch_1
     :try_start_1
@@ -1038,7 +937,6 @@
 
     goto :goto_0
 
-    .line 113
     nop
 
     :pswitch_data_0
@@ -1052,7 +950,6 @@
     .locals 1
 
     .prologue
-    .line 182
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->hasMessages(I)Z
@@ -1069,12 +966,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 175
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->getQueuedLmsToken(Landroid/telephony/LmsTokenCTC;)Landroid/telephony/LmsTokenCTC;
 
     move-result-object v0
 
-    .line 176
     .local v0, "queuedToken":Landroid/telephony/LmsTokenCTC;
     if-eqz v0, :cond_0
 
@@ -1097,7 +992,6 @@
     .locals 1
 
     .prologue
-    .line 245
     iget-boolean v0, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mIsAlarmReceiverActive:Z
 
     return v0
@@ -1110,7 +1004,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 158
     const-string v4, "scheduleFirstDisplayTimeout, lmsToken=%s"
 
     new-array v5, v7, [Ljava/lang/Object;
@@ -1121,12 +1014,10 @@
 
     invoke-static {v4, v5}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 159
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->getOrCreateLmsToken(Landroid/telephony/LmsTokenCTC;)Landroid/telephony/LmsTokenCTC;
 
     move-result-object v1
 
-    .line 160
     .local v1, "queuedToken":Landroid/telephony/LmsTokenCTC;
     iget v4, p1, Landroid/telephony/LmsTokenCTC;->msgCount:I
 
@@ -1134,17 +1025,14 @@
 
     move-result-wide v2
 
-    .line 161
     .local v2, "timeout":J
     invoke-virtual {p0, v7, v1}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 162
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {p0, v0, v2, v3}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 163
     return-void
 .end method
 
@@ -1158,14 +1046,12 @@
 
     const/4 v10, 0x0
 
-    .line 187
     const-string v5, "updateMaximalConnectionTimeAlarm"
 
     new-array v6, v10, [Ljava/lang/Object;
 
     invoke-static {v5, v6}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 189
     new-array v5, v11, [Ljava/lang/String;
 
     const-string v6, "date"
@@ -1178,26 +1064,21 @@
 
     move-result-object v1
 
-    .line 190
     .local v1, "c":Landroid/database/Cursor;
     if-nez v1, :cond_0
 
-    .line 191
     const-string v5, "LmsAssemblyTrackerCTC"
 
     const-string v6, "updateMaximalConnectionTimeAlarm: cursor is NULL"
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     :goto_0
     return-void
 
-    .line 195
     :cond_0
     const/4 v4, 0x0
 
-    .line 197
     .local v4, "triggerAtTime":Ljava/lang/Long;
     :try_start_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
@@ -1206,7 +1087,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 199
     const/4 v5, 0x0
 
     invoke-interface {v1, v5}, Landroid/database/Cursor;->getLong(I)J
@@ -1225,18 +1105,15 @@
 
     move-result-object v4
 
-    .line 204
     :cond_1
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 207
     new-instance v2, Landroid/content/Intent;
 
     const-string v5, "com.android.internal.telephony.CTC_LMS_CONNECTION_ALARM"
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 208
     .local v2, "intent":Landroid/content/Intent;
     iget-object v5, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mContext:Landroid/content/Context;
 
@@ -1246,7 +1123,6 @@
 
     move-result-object v3
 
-    .line 210
     .local v3, "operation":Landroid/app/PendingIntent;
     iget-object v5, p0, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->mContext:Landroid/content/Context;
 
@@ -1258,11 +1134,9 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 211
     .local v0, "am":Landroid/app/AlarmManager;
     if-eqz v4, :cond_2
 
-    .line 212
     const-string v5, "updateMaximalConnectionTimeAlarm: set alarm at %s"
 
     new-array v6, v11, [Ljava/lang/Object;
@@ -1279,10 +1153,8 @@
 
     invoke-static {v5, v6}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 213
     invoke-direct {p0}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->registerAlarmReceiver()V
 
-    .line 214
     invoke-virtual {v4}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v6
@@ -1291,7 +1163,6 @@
 
     goto :goto_0
 
-    .line 204
     .end local v0    # "am":Landroid/app/AlarmManager;
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v3    # "operation":Landroid/app/PendingIntent;
@@ -1302,7 +1173,6 @@
 
     throw v5
 
-    .line 216
     .restart local v0    # "am":Landroid/app/AlarmManager;
     .restart local v2    # "intent":Landroid/content/Intent;
     .restart local v3    # "operation":Landroid/app/PendingIntent;
@@ -1313,10 +1183,8 @@
 
     invoke-static {v5, v6}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->logd(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 217
     invoke-direct {p0}, Lcom/android/internal/telephony/LmsAssemblyTrackerCTC;->unregisterAlarmReceiver()V
 
-    .line 218
     invoke-virtual {v0, v3}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
     goto :goto_0

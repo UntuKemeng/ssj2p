@@ -117,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 267
     new-instance v0, Lcom/samsung/android/camera/iris/EyeInfo$1;
 
     invoke-direct {v0}, Lcom/samsung/android/camera/iris/EyeInfo$1;-><init>()V
@@ -138,48 +137,38 @@
 
     const/4 v1, -0x1
 
-    .line 209
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 193
     iput-object v2, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
-    .line 195
     iput-object v2, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
-    .line 197
     iput v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mAcquireInfo:I
 
-    .line 199
     iput v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionNum:I
 
-    .line 210
     new-array v1, v3, [Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     iput-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
-    .line 211
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionNum:I
 
-    .line 212
     iget v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionNum:I
 
     new-array v1, v1, [Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     iput-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
-    .line 213
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 214
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     new-instance v2, Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
@@ -188,7 +177,6 @@
 
     aput-object v2, v1, v0
 
-    .line 215
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -199,7 +187,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;->mRect:Landroid/graphics/Rect;
 
-    .line 217
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -212,7 +199,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 218
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -225,7 +211,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 219
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -238,7 +223,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->right:I
 
-    .line 220
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -251,7 +235,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 221
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -262,7 +245,6 @@
 
     iput v2, v1, Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;->mDistance:I
 
-    .line 222
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -273,7 +255,6 @@
 
     iput v2, v1, Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;->mOpening:I
 
-    .line 223
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -284,12 +265,10 @@
 
     iput v2, v1, Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;->mMsgId:I
 
-    .line 213
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 225
     :cond_0
     const/4 v0, 0x0
 
@@ -298,7 +277,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 226
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     new-instance v2, Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
@@ -307,7 +285,6 @@
 
     aput-object v2, v1, v0
 
-    .line 227
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -318,7 +295,6 @@
 
     iput-object v2, v1, Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;->mRect:Landroid/graphics/Rect;
 
-    .line 229
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -331,7 +307,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->left:I
 
-    .line 230
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -344,7 +319,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->top:I
 
-    .line 231
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -357,7 +331,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->right:I
 
-    .line 232
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -370,7 +343,6 @@
 
     iput v2, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 233
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -381,12 +353,10 @@
 
     iput v2, v1, Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;->mMsgId:I
 
-    .line 225
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 235
     :cond_1
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -394,7 +364,6 @@
 
     iput v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mAcquireInfo:I
 
-    .line 236
     return-void
 .end method
 
@@ -404,7 +373,6 @@
     .param p2, "x1"    # Lcom/samsung/android/camera/iris/EyeInfo$1;
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/iris/EyeInfo;-><init>(Landroid/os/Parcel;)V
 
     return-void
@@ -422,34 +390,24 @@
 
     const/4 v0, -0x1
 
-    .line 202
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 193
     iput-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
-    .line 195
     iput-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
-    .line 197
     iput v0, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mAcquireInfo:I
 
-    .line 199
     iput v0, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionNum:I
 
-    .line 203
     iput-object p1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
-    .line 204
     iput-object p2, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
-    .line 205
     iput p3, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mAcquireInfo:I
 
-    .line 206
     iput p4, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionNum:I
 
-    .line 207
     return-void
 .end method
 
@@ -459,7 +417,6 @@
     .locals 1
 
     .prologue
-    .line 240
     const/4 v0, 0x0
 
     return v0
@@ -471,12 +428,10 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 245
     iget v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionNum:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 246
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -485,7 +440,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 247
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -496,7 +450,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 248
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -507,7 +460,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 249
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -518,7 +470,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 250
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -529,7 +480,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 251
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -538,7 +488,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 252
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -547,7 +496,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 253
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mPupilInfo:[Lcom/samsung/android/camera/iris/EyeInfo$PupilInfo;
 
     aget-object v1, v1, v0
@@ -556,12 +504,10 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 246
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 256
     :cond_0
     const/4 v0, 0x0
 
@@ -570,7 +516,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 257
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -581,7 +526,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 258
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -592,7 +536,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 259
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -603,7 +546,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 260
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -614,7 +556,6 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 261
     iget-object v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mReflectionInfo:[Lcom/samsung/android/camera/iris/EyeInfo$ReflectionInfo;
 
     aget-object v1, v1, v0
@@ -623,17 +564,14 @@
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 256
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 263
     :cond_1
     iget v1, p0, Lcom/samsung/android/camera/iris/EyeInfo;->mAcquireInfo:I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 264
     return-void
 .end method

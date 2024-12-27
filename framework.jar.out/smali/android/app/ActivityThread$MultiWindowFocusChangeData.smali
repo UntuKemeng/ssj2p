@@ -33,21 +33,15 @@
     .param p4, "_keepInputMethod"    # Z
 
     .prologue
-    .line 775
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 776
     iput-object p1, p0, Landroid/app/ActivityThread$MultiWindowFocusChangeData;->activityToken:Landroid/os/IBinder;
 
-    .line 777
     iput p2, p0, Landroid/app/ActivityThread$MultiWindowFocusChangeData;->notifyReason:I
 
-    .line 778
     iput-boolean p3, p0, Landroid/app/ActivityThread$MultiWindowFocusChangeData;->focus:Z
 
-    .line 779
     iput-boolean p4, p0, Landroid/app/ActivityThread$MultiWindowFocusChangeData;->keepInputMethod:Z
 
-    .line 780
     return-void
 .end method

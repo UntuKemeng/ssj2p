@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 776
     new-instance v0, Landroid/hardware/scontext/SContextPedometer$1;
 
     invoke-direct {v0}, Landroid/hardware/scontext/SContextPedometer$1;-><init>()V
@@ -41,22 +40,18 @@
     .locals 1
 
     .prologue
-    .line 163
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 164
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
-    .line 165
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
-    .line 166
     return-void
 .end method
 
@@ -65,13 +60,10 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 171
     invoke-direct {p0}, Landroid/hardware/scontext/SContextEventContext;-><init>()V
 
-    .line 172
     invoke-direct {p0, p1}, Landroid/hardware/scontext/SContextPedometer;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 173
     return-void
 .end method
 
@@ -80,21 +72,18 @@
     .param p1, "src"    # Landroid/os/Parcel;
 
     .prologue
-    .line 767
     invoke-virtual {p1}, Landroid/os/Parcel;->readBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
-    .line 768
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
-    .line 769
     return-void
 .end method
 
@@ -104,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 153
     invoke-super {p0}, Landroid/hardware/scontext/SContextEventContext;->describeContents()I
 
     move-result v0
@@ -116,10 +104,8 @@
     .locals 3
 
     .prologue
-    .line 727
     const/4 v0, 0x0
 
-    .line 728
     .local v0, "res":I
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -133,7 +119,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 729
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -143,7 +128,6 @@
 
     move-result v0
 
-    .line 731
     :cond_1
     return v0
 .end method
@@ -152,7 +136,6 @@
     .locals 2
 
     .prologue
-    .line 218
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeCalorie"
@@ -168,7 +151,6 @@
     .locals 2
 
     .prologue
-    .line 336
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CalorieDiff"
@@ -184,10 +166,8 @@
     .locals 3
 
     .prologue
-    .line 589
     const/4 v0, 0x0
 
-    .line 590
     .local v0, "res":[D
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -201,7 +181,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 591
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -211,7 +190,6 @@
 
     move-result-object v0
 
-    .line 593
     :cond_1
     return-object v0
 .end method
@@ -222,7 +200,6 @@
     .end annotation
 
     .prologue
-    .line 467
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeCalorie"
@@ -240,7 +217,6 @@
     .end annotation
 
     .prologue
-    .line 454
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeDistance"
@@ -258,7 +234,6 @@
     .end annotation
 
     .prologue
-    .line 565
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeRunDownStepCount"
@@ -276,7 +251,6 @@
     .end annotation
 
     .prologue
-    .line 537
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeRunFlatStepCount"
@@ -294,7 +268,6 @@
     .end annotation
 
     .prologue
-    .line 551
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeRunUpStepCount"
@@ -312,7 +285,6 @@
     .end annotation
 
     .prologue
-    .line 481
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeTotalStepCount"
@@ -330,7 +302,6 @@
     .end annotation
 
     .prologue
-    .line 523
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeWalkDownStepCount"
@@ -348,7 +319,6 @@
     .end annotation
 
     .prologue
-    .line 495
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeWalkFlatStepCount"
@@ -366,7 +336,6 @@
     .end annotation
 
     .prologue
-    .line 509
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeWalkUpStepCount"
@@ -382,7 +351,6 @@
     .locals 2
 
     .prologue
-    .line 229
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeDistance"
@@ -398,7 +366,6 @@
     .locals 2
 
     .prologue
-    .line 345
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "DistanceDiff"
@@ -414,10 +381,8 @@
     .locals 3
 
     .prologue
-    .line 603
     const/4 v0, 0x0
 
-    .line 604
     .local v0, "res":[D
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -431,7 +396,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 605
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -441,7 +405,6 @@
 
     move-result-object v0
 
-    .line 607
     :cond_1
     return-object v0
 .end method
@@ -450,7 +413,6 @@
     .locals 1
 
     .prologue
-    .line 182
     iget v0, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
     return v0
@@ -460,7 +422,6 @@
     .locals 2
 
     .prologue
-    .line 310
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeRunDownStepCount"
@@ -476,7 +437,6 @@
     .locals 2
 
     .prologue
-    .line 415
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "RunDownStepCountDiff"
@@ -492,10 +452,8 @@
     .locals 3
 
     .prologue
-    .line 701
     const/4 v0, 0x0
 
-    .line 702
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -509,7 +467,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 703
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -519,7 +476,6 @@
 
     move-result-object v0
 
-    .line 705
     :cond_1
     return-object v0
 .end method
@@ -528,7 +484,6 @@
     .locals 2
 
     .prologue
-    .line 287
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeRunFlatStepCount"
@@ -544,7 +499,6 @@
     .locals 2
 
     .prologue
-    .line 395
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "RunStepCountDiff"
@@ -560,10 +514,8 @@
     .locals 3
 
     .prologue
-    .line 673
     const/4 v0, 0x0
 
-    .line 674
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -577,7 +529,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 675
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -587,7 +538,6 @@
 
     move-result-object v0
 
-    .line 677
     :cond_1
     return-object v0
 .end method
@@ -596,7 +546,6 @@
     .locals 2
 
     .prologue
-    .line 298
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeRunUpStepCount"
@@ -612,7 +561,6 @@
     .locals 2
 
     .prologue
-    .line 405
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "RunUpStepCountDiff"
@@ -628,10 +576,8 @@
     .locals 3
 
     .prologue
-    .line 687
     const/4 v0, 0x0
 
-    .line 688
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -645,7 +591,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 689
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -655,7 +600,6 @@
 
     move-result-object v0
 
-    .line 691
     :cond_1
     return-object v0
 .end method
@@ -664,7 +608,6 @@
     .locals 2
 
     .prologue
-    .line 207
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Speed"
@@ -680,10 +623,8 @@
     .locals 3
 
     .prologue
-    .line 575
     const/4 v0, 0x0
 
-    .line 576
     .local v0, "res":[D
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -697,7 +638,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 577
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -707,7 +647,6 @@
 
     move-result-object v0
 
-    .line 579
     :cond_1
     return-object v0
 .end method
@@ -716,7 +655,6 @@
     .locals 2
 
     .prologue
-    .line 198
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "StepStatus"
@@ -732,10 +670,8 @@
     .locals 3
 
     .prologue
-    .line 714
     const/4 v0, 0x0
 
-    .line 715
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -749,7 +685,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 716
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -759,7 +694,6 @@
 
     move-result-object v0
 
-    .line 718
     :cond_1
     return-object v0
 .end method
@@ -768,7 +702,6 @@
     .locals 2
 
     .prologue
-    .line 240
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeTotalStepCount"
@@ -784,7 +717,6 @@
     .locals 2
 
     .prologue
-    .line 355
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "TotalStepCountDiff"
@@ -800,10 +732,8 @@
     .locals 3
 
     .prologue
-    .line 617
     const/4 v0, 0x0
 
-    .line 618
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -817,7 +747,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 619
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -827,7 +756,6 @@
 
     move-result-object v0
 
-    .line 621
     :cond_1
     return-object v0
 .end method
@@ -838,7 +766,6 @@
     .end annotation
 
     .prologue
-    .line 327
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "UpDownStepCount"
@@ -856,7 +783,6 @@
     .end annotation
 
     .prologue
-    .line 432
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "UpDownStepCountDiff"
@@ -872,7 +798,6 @@
     .locals 2
 
     .prologue
-    .line 275
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeWalkDownStepCount"
@@ -888,7 +813,6 @@
     .locals 2
 
     .prologue
-    .line 385
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "WalkDownStepCountDiff"
@@ -904,10 +828,8 @@
     .locals 3
 
     .prologue
-    .line 659
     const/4 v0, 0x0
 
-    .line 660
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -921,7 +843,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 661
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -931,7 +852,6 @@
 
     move-result-object v0
 
-    .line 663
     :cond_1
     return-object v0
 .end method
@@ -940,7 +860,6 @@
     .locals 2
 
     .prologue
-    .line 252
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeWalkFlatStepCount"
@@ -956,7 +875,6 @@
     .locals 2
 
     .prologue
-    .line 365
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "WalkStepCountDiff"
@@ -972,10 +890,8 @@
     .locals 3
 
     .prologue
-    .line 631
     const/4 v0, 0x0
 
-    .line 632
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -989,7 +905,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 633
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -999,7 +914,6 @@
 
     move-result-object v0
 
-    .line 635
     :cond_1
     return-object v0
 .end method
@@ -1008,7 +922,6 @@
     .locals 2
 
     .prologue
-    .line 263
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "CumulativeWalkUpStepCount"
@@ -1024,7 +937,6 @@
     .locals 2
 
     .prologue
-    .line 375
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "WalkUpStepCountDiff"
@@ -1040,10 +952,8 @@
     .locals 3
 
     .prologue
-    .line 645
     const/4 v0, 0x0
 
-    .line 646
     .local v0, "res":[J
     iget v1, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
@@ -1057,7 +967,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 647
     :cond_0
     iget-object v1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
@@ -1067,7 +976,6 @@
 
     move-result-object v0
 
-    .line 649
     :cond_1
     return-object v0
 .end method
@@ -1076,7 +984,6 @@
     .locals 2
 
     .prologue
-    .line 441
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "WalkingFrequency"
@@ -1093,10 +1000,8 @@
     .param p1, "context"    # Landroid/os/Bundle;
 
     .prologue
-    .line 741
     iput-object p1, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
-    .line 742
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     const-string v1, "Mode"
@@ -1107,7 +1012,6 @@
 
     iput v0, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
-    .line 743
     return-void
 .end method
 
@@ -1117,16 +1021,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 756
     iget-object v0, p0, Landroid/hardware/scontext/SContextPedometer;->mContext:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 
-    .line 757
     iget v0, p0, Landroid/hardware/scontext/SContextPedometer;->mMode:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 758
     return-void
 .end method

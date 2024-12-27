@@ -24,13 +24,10 @@
     .param p2, "callInfo"    # Lcom/sec/ims/volte2/data/ImsCallInfo;
 
     .prologue
-    .line 320
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener60$OnCallModified;->this$0:Lcom/sec/epdg/handover/EpdgImsListener60;
 
-    .line 321
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/handover/EpdgImsListener60$ImsCallRunnable;-><init>(Lcom/sec/epdg/handover/EpdgImsListener60;Lcom/sec/ims/volte2/data/ImsCallInfo;)V
 
-    .line 322
     return-void
 .end method
 
@@ -40,14 +37,12 @@
     .locals 2
 
     .prologue
-    .line 325
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onCallModified: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 326
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$900()Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
@@ -57,6 +52,5 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/handover/EpdgImsCallStatus;->onCallModified(Lcom/sec/ims/volte2/data/ImsCallInfo;)V
 
-    .line 327
     return-void
 .end method

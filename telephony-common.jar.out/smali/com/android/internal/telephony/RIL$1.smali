@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 393
     iput-object p1, p0, Lcom/android/internal/telephony/RIL$1;->this$0:Lcom/android/internal/telephony/RIL;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -49,7 +48,6 @@
 
     const/4 v8, 0x0
 
-    .line 396
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
@@ -62,14 +60,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 397
     const-string v6, "reason"
 
     invoke-virtual {p2, v6, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v5
 
-    .line 398
     .local v5, "state":I
     const-string v6, "enterType"
 
@@ -77,26 +73,22 @@
 
     move-result v1
 
-    .line 399
     .local v1, "enterType":I
     if-ne v5, v11, :cond_1
 
     if-eq v1, v12, :cond_1
 
-    .line 401
     iget-object v6, p0, Lcom/android/internal/telephony/RIL$1;->this$0:Lcom/android/internal/telephony/RIL;
 
     # invokes: Lcom/android/internal/telephony/RIL;->sendSafemode(Z)V
     invoke-static {v6, v10}, Lcom/android/internal/telephony/RIL;->access$000(Lcom/android/internal/telephony/RIL;Z)V
 
-    .line 437
     .end local v1    # "enterType":I
     .end local v5    # "state":I
     :cond_0
     :goto_0
     return-void
 
-    .line 402
     .restart local v1    # "enterType":I
     .restart local v5    # "state":I
     :cond_1
@@ -106,7 +98,6 @@
 
     if-eq v1, v12, :cond_0
 
-    .line 404
     iget-object v6, p0, Lcom/android/internal/telephony/RIL$1;->this$0:Lcom/android/internal/telephony/RIL;
 
     # invokes: Lcom/android/internal/telephony/RIL;->sendSafemode(Z)V
@@ -114,7 +105,6 @@
 
     goto :goto_0
 
-    .line 406
     .end local v1    # "enterType":I
     .end local v5    # "state":I
     :cond_2
@@ -142,7 +132,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 408
     :cond_3
     const-string v6, "eng"
 
@@ -162,16 +151,13 @@
 
     if-eqz v6, :cond_0
 
-    .line 409
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v2
 
-    .line 411
     .local v2, "extras":Landroid/os/Bundle;
     if-nez v2, :cond_4
 
-    .line 412
     const-string v6, "RILJ"
 
     const-string v7, "intent.getExtras() = null"
@@ -180,7 +166,6 @@
 
     goto :goto_0
 
-    .line 416
     :cond_4
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -200,21 +185,18 @@
 
     if-eqz v6, :cond_5
 
-    .line 417
     const-string v6, "RILJ"
 
     const-string v7, "ETWS_TEST receive"
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 418
     const-string v6, "pdus"
 
     invoke-virtual {v2, v6}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 419
     .local v3, "sendData":Ljava/lang/Object;
     iget-object v6, p0, Lcom/android/internal/telephony/RIL$1;->this$0:Lcom/android/internal/telephony/RIL;
 
@@ -228,7 +210,6 @@
 
     goto :goto_0
 
-    .line 420
     .end local v3    # "sendData":Ljava/lang/Object;
     :cond_5
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -249,14 +230,12 @@
 
     if-eqz v6, :cond_0
 
-    .line 421
     const-string v6, "RILJ"
 
     const-string v7, "WAPPUSH_TEST receive"
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 422
     const-string v6, "pdus"
 
     invoke-virtual {v2, v6}, Landroid/os/Bundle;->get(Ljava/lang/String;)Ljava/lang/Object;
@@ -265,27 +244,22 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 423
     .local v3, "sendData":Ljava/lang/String;
     new-array v0, v11, [Ljava/lang/String;
 
-    .line 424
     .local v0, "a":[Ljava/lang/String;
     aput-object v3, v0, v10
 
-    .line 427
     const-string v6, "RILJ"
 
     const-string v7, "call newFromCMT"
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
     invoke-static {v0}, Landroid/telephony/SmsMessage;->newFromCMT([Ljava/lang/String;)Landroid/telephony/SmsMessage;
 
     move-result-object v4
 
-    .line 429
     .local v4, "sms":Landroid/telephony/SmsMessage;
     const-string v6, "RILJ"
 
@@ -293,7 +267,6 @@
 
     invoke-static {v6, v7}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 430
     iget-object v6, p0, Lcom/android/internal/telephony/RIL$1;->this$0:Lcom/android/internal/telephony/RIL;
 
     iget-object v6, v6, Lcom/android/internal/telephony/RIL;->mGsmSmsRegistrant:Landroid/os/Registrant;
@@ -306,7 +279,6 @@
 
     goto/16 :goto_0
 
-    .line 435
     .end local v0    # "a":[Ljava/lang/String;
     .end local v2    # "extras":Landroid/os/Bundle;
     .end local v3    # "sendData":Ljava/lang/String;

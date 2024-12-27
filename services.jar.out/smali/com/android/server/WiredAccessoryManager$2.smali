@@ -26,7 +26,6 @@
     .param p4, "x2"    # Z
 
     .prologue
-    .line 298
     iput-object p1, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     invoke-direct {p0, p2, p3, p4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
@@ -41,16 +40,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 301
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 317
     :goto_0
     return-void
 
-    .line 303
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
@@ -65,7 +61,6 @@
     # invokes: Lcom/android/server/WiredAccessoryManager;->setDevicesState(IILjava/lang/String;)V
     invoke-static {v1, v2, v3, v0}, Lcom/android/server/WiredAccessoryManager;->access$100(Lcom/android/server/WiredAccessoryManager;IILjava/lang/String;)V
 
-    .line 304
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     # getter for: Lcom/android/server/WiredAccessoryManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -77,14 +72,12 @@
 
     goto :goto_0
 
-    .line 307
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     # invokes: Lcom/android/server/WiredAccessoryManager;->onSystemReady()V
     invoke-static {v0}, Lcom/android/server/WiredAccessoryManager;->access$300(Lcom/android/server/WiredAccessoryManager;)V
 
-    .line 308
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     # getter for: Lcom/android/server/WiredAccessoryManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -96,7 +89,6 @@
 
     goto :goto_0
 
-    .line 311
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
@@ -149,7 +141,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 314
     iget-object v0, p0, Lcom/android/server/WiredAccessoryManager$2;->this$0:Lcom/android/server/WiredAccessoryManager;
 
     # getter for: Lcom/android/server/WiredAccessoryManager;->mWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -161,13 +152,11 @@
 
     goto :goto_0
 
-    .line 311
     :cond_0
     const v0, 0x1040a9f
 
     goto :goto_1
 
-    .line 301
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

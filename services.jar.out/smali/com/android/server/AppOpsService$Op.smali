@@ -64,46 +64,36 @@
     .param p4, "_mode"    # I
 
     .prologue
-    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 183
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/AppOpsService$Op;->proxyUid:I
 
-    .line 198
     iput p1, p0, Lcom/android/server/AppOpsService$Op;->uid:I
 
-    .line 199
     iput-object p2, p0, Lcom/android/server/AppOpsService$Op;->packageName:Ljava/lang/String;
 
-    .line 200
     iput p3, p0, Lcom/android/server/AppOpsService$Op;->op:I
 
-    .line 201
     iput p4, p0, Lcom/android/server/AppOpsService$Op;->mode:I
 
-    .line 202
     new-instance v0, Lcom/android/server/PermissionDialogReqQueue;
 
     invoke-direct {v0}, Lcom/android/server/PermissionDialogReqQueue;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/AppOpsService$Op;->dialogReqQueue:Lcom/android/server/PermissionDialogReqQueue;
 
-    .line 203
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/AppOpsService$Op;->clientTokens:Ljava/util/ArrayList;
 
-    .line 204
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/AppOpsService$Op;->remember:Z
 
-    .line 205
     return-void
 .end method
 
@@ -113,7 +103,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 180
     iput-boolean p1, p0, Lcom/android/server/AppOpsService$Op;->remember:Z
 
     return p1

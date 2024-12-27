@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 160
     iput-object p1, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManagerService$ScreenWatchingReceiver;->this$0:Lcom/samsung/android/displaysolution/DisplaySolutionManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 163
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 164
     .local v0, "action":Ljava/lang/String;
     return-void
 .end method

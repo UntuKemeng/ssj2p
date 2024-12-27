@@ -34,26 +34,20 @@
     .param p4, "dns2"    # Ljava/lang/String;
 
     .prologue
-    .line 1581
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1576
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mUsageCounter:I
 
-    .line 1582
     iput p2, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mNetId:I
 
-    .line 1583
     iput-object p3, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns1:Ljava/lang/String;
 
-    .line 1584
     iput-object p4, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns2:Ljava/lang/String;
 
-    .line 1585
     return-void
 .end method
 
@@ -63,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 1594
     monitor-enter p0
 
     :try_start_0
@@ -91,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 1598
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns1:Ljava/lang/String;
 
     return-object v0
@@ -101,7 +93,6 @@
     .locals 1
 
     .prologue
-    .line 1602
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns2:Ljava/lang/String;
 
     return-object v0
@@ -111,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 1610
     iget v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mNetId:I
 
     return v0
@@ -121,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 1606
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetworkIdInfo;->mDns2:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -141,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 1589
     monitor-enter p0
 
     :try_start_0
@@ -169,7 +157,6 @@
     .locals 3
 
     .prologue
-    .line 1615
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;

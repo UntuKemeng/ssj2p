@@ -85,18 +85,14 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 222
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 232
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lcom/android/internal/widget/LockPatternView$CellState;->alpha:F
 
-    .line 233
     iput v1, p0, Lcom/android/internal/widget/LockPatternView$CellState;->lineEndX:F
 
-    .line 234
     iput v1, p0, Lcom/android/internal/widget/LockPatternView$CellState;->lineEndY:F
 
     return-void

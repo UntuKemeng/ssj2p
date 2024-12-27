@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2177
     iput-object p1, p0, Landroid/speech/tts/TextToSpeech$Connection$1;->this$1:Landroid/speech/tts/TextToSpeech$Connection;
 
     invoke-direct {p0}, Landroid/speech/tts/ITextToSpeechCallback$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "errorCode"    # I
 
     .prologue
-    .line 2195
     iget-object v1, p0, Landroid/speech/tts/TextToSpeech$Connection$1;->this$1:Landroid/speech/tts/TextToSpeech$Connection;
 
     iget-object v1, v1, Landroid/speech/tts/TextToSpeech$Connection;->this$0:Landroid/speech/tts/TextToSpeech;
@@ -49,14 +47,11 @@
 
     move-result-object v0
 
-    .line 2196
     .local v0, "listener":Landroid/speech/tts/UtteranceProgressListener;
     if-eqz v0, :cond_0
 
-    .line 2197
     invoke-virtual {v0, p1}, Landroid/speech/tts/UtteranceProgressListener;->onError(Ljava/lang/String;)V
 
-    .line 2199
     :cond_0
     return-void
 .end method
@@ -66,7 +61,6 @@
     .param p1, "utteranceId"    # Ljava/lang/String;
 
     .prologue
-    .line 2203
     iget-object v1, p0, Landroid/speech/tts/TextToSpeech$Connection$1;->this$1:Landroid/speech/tts/TextToSpeech$Connection;
 
     iget-object v1, v1, Landroid/speech/tts/TextToSpeech$Connection;->this$0:Landroid/speech/tts/TextToSpeech;
@@ -76,14 +70,11 @@
 
     move-result-object v0
 
-    .line 2204
     .local v0, "listener":Landroid/speech/tts/UtteranceProgressListener;
     if-eqz v0, :cond_0
 
-    .line 2205
     invoke-virtual {v0, p1}, Landroid/speech/tts/UtteranceProgressListener;->onStart(Ljava/lang/String;)V
 
-    .line 2207
     :cond_0
     return-void
 .end method
@@ -99,7 +90,6 @@
     .end annotation
 
     .prologue
-    .line 2179
     iget-object v1, p0, Landroid/speech/tts/TextToSpeech$Connection$1;->this$1:Landroid/speech/tts/TextToSpeech$Connection;
 
     iget-object v1, v1, Landroid/speech/tts/TextToSpeech$Connection;->this$0:Landroid/speech/tts/TextToSpeech;
@@ -109,14 +99,11 @@
 
     move-result-object v0
 
-    .line 2180
     .local v0, "listener":Landroid/speech/tts/UtteranceProgressListener;
     if-eqz v0, :cond_0
 
-    .line 2181
     invoke-virtual {v0, p1, p2}, Landroid/speech/tts/UtteranceProgressListener;->onStop(Ljava/lang/String;Z)V
 
-    .line 2183
     :cond_0
     return-void
 .end method
@@ -126,7 +113,6 @@
     .param p1, "utteranceId"    # Ljava/lang/String;
 
     .prologue
-    .line 2187
     iget-object v1, p0, Landroid/speech/tts/TextToSpeech$Connection$1;->this$1:Landroid/speech/tts/TextToSpeech$Connection;
 
     iget-object v1, v1, Landroid/speech/tts/TextToSpeech$Connection;->this$0:Landroid/speech/tts/TextToSpeech;
@@ -136,14 +122,11 @@
 
     move-result-object v0
 
-    .line 2188
     .local v0, "listener":Landroid/speech/tts/UtteranceProgressListener;
     if-eqz v0, :cond_0
 
-    .line 2189
     invoke-virtual {v0, p1}, Landroid/speech/tts/UtteranceProgressListener;->onDone(Ljava/lang/String;)V
 
-    .line 2191
     :cond_0
     return-void
 .end method

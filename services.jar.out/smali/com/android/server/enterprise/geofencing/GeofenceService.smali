@@ -69,43 +69,34 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 115
     invoke-direct {p0}, Landroid/app/enterprise/geofencing/IGeofencing$Stub;-><init>()V
 
-    .line 91
     iput-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 95
     iput-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 96
     iput-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mHandler:Lcom/android/server/enterprise/geofencing/GeofenceService$GeofencingHandler;
 
-    .line 98
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
 
-    .line 134
     new-instance v1, Lcom/android/server/enterprise/geofencing/GeofenceService$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/geofencing/GeofenceService$1;-><init>(Lcom/android/server/enterprise/geofencing/GeofenceService;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 212
     new-instance v1, Lcom/android/server/enterprise/geofencing/GeofenceService$2;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/geofencing/GeofenceService$2;-><init>(Lcom/android/server/enterprise/geofencing/GeofenceService;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mUserRemovedReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 117
     iput-object p1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
 
-    .line 118
     new-instance v1, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v2, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
@@ -114,10 +105,8 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 119
     invoke-direct {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->initializeHandlerThread()V
 
-    .line 120
     iget-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
 
     const-string v2, "enterprise_policy"
@@ -130,14 +119,12 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 123
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.location.PROVIDERS_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 124
     .local v0, "filter":Landroid/content/IntentFilter;
     iget-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
 
@@ -145,7 +132,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 125
     return-void
 .end method
 
@@ -155,7 +141,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 87
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->loadGeofenceActiveList(I)V
 
     return-void
@@ -166,7 +151,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/geofencing/GeofenceService;
 
     .prologue
-    .line 87
     invoke-direct {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->checkMonitoring()V
 
     return-void
@@ -178,7 +162,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 87
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->isDeviceInsideGeofence(I)Ljava/util/List;
 
     move-result-object v0
@@ -192,7 +175,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 87
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v0
@@ -205,7 +187,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/geofencing/GeofenceService;
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -216,7 +197,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/geofencing/GeofenceService;
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     return-object v0
@@ -228,7 +208,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 87
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deleteGeofenceActiveListByAdmin(I)V
 
     return-void
@@ -240,7 +219,6 @@
     .param p1, "x1"    # Landroid/location/Location;
 
     .prologue
-    .line 87
     iput-object p1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocation:Landroid/location/Location;
 
     return-object p1
@@ -253,7 +231,6 @@
     .param p2, "x2"    # Z
 
     .prologue
-    .line 87
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/geofencing/GeofenceService;->checkDeviceInsideOrOutsideGeo(Landroid/location/Location;Z)Ljava/util/List;
 
     move-result-object v0
@@ -278,14 +255,11 @@
     .local p1, "point":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const/4 v6, 0x0
 
-    .line 1701
     const/4 v0, 0x0
 
-    .line 1702
     .local v0, "boundingBox":Landroid/app/enterprise/geofencing/BoundingBox;
     if-eqz p1, :cond_4
 
-    .line 1703
     new-instance v0, Landroid/app/enterprise/geofencing/BoundingBox;
 
     .end local v0    # "boundingBox":Landroid/app/enterprise/geofencing/BoundingBox;
@@ -315,7 +289,6 @@
 
     invoke-direct {v0, v3, v4, v5, v6}, Landroid/app/enterprise/geofencing/BoundingBox;-><init>(Landroid/app/enterprise/geofencing/LatLongPoint;Landroid/app/enterprise/geofencing/LatLongPoint;Landroid/app/enterprise/geofencing/LatLongPoint;Landroid/app/enterprise/geofencing/LatLongPoint;)V
 
-    .line 1704
     .restart local v0    # "boundingBox":Landroid/app/enterprise/geofencing/BoundingBox;
     const/4 v1, 0x1
 
@@ -327,14 +300,12 @@
 
     if-ge v1, v3, :cond_4
 
-    .line 1705
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1707
     .local v2, "p1":Landroid/app/enterprise/geofencing/LatLongPoint;
     iget-wide v4, v2, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
@@ -346,10 +317,8 @@
 
     if-gez v3, :cond_0
 
-    .line 1708
     iput-object v2, v0, Landroid/app/enterprise/geofencing/BoundingBox;->left:Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1710
     :cond_0
     iget-wide v4, v2, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
@@ -361,10 +330,8 @@
 
     if-lez v3, :cond_1
 
-    .line 1711
     iput-object v2, v0, Landroid/app/enterprise/geofencing/BoundingBox;->right:Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1713
     :cond_1
     iget-wide v4, v2, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
@@ -376,10 +343,8 @@
 
     if-lez v3, :cond_2
 
-    .line 1714
     iput-object v2, v0, Landroid/app/enterprise/geofencing/BoundingBox;->top:Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1716
     :cond_2
     iget-wide v4, v2, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
@@ -391,16 +356,13 @@
 
     if-gez v3, :cond_3
 
-    .line 1718
     iput-object v2, v0, Landroid/app/enterprise/geofencing/BoundingBox;->bottom:Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1704
     :cond_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1722
     .end local v1    # "i":I
     .end local v2    # "p1":Landroid/app/enterprise/geofencing/LatLongPoint;
     :cond_4
@@ -415,31 +377,26 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1403
     if-eqz p1, :cond_0
 
     iget-object v5, p2, Landroid/app/enterprise/geofencing/BoundingBox;->left:Landroid/app/enterprise/geofencing/LatLongPoint;
 
     if-nez v5, :cond_1
 
-    .line 1412
     :cond_0
     :goto_0
     return v4
 
-    .line 1405
     :cond_1
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v0
 
-    .line 1406
     .local v0, "lat":D
     invoke-virtual {p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v2
 
-    .line 1408
     .local v2, "lng":D
     iget-object v5, p2, Landroid/app/enterprise/geofencing/BoundingBox;->top:Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -473,7 +430,6 @@
 
     if-ltz v5, :cond_0
 
-    .line 1410
     const/4 v4, 0x1
 
     goto :goto_0
@@ -485,22 +441,18 @@
     .param p2, "cfence"    # Landroid/app/enterprise/geofencing/CircularGeofence;
 
     .prologue
-    .line 1366
     const-wide v2, 0x40b8e30000000000L    # 6371.0
 
-    .line 1368
     .local v2, "R":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLatitude()D
 
     move-result-wide v18
 
-    .line 1369
     .local v18, "pointlat":D
     invoke-virtual/range {p1 .. p1}, Landroid/location/Location;->getLongitude()D
 
     move-result-wide v20
 
-    .line 1370
     .local v20, "pointlong":D
     move-object/from16 v0, p2
 
@@ -512,7 +464,6 @@
 
     iget-wide v4, v0, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
-    .line 1371
     .local v4, "centerlat":D
     move-object/from16 v0, p2
 
@@ -524,31 +475,26 @@
 
     iget-wide v6, v0, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
-    .line 1373
     .local v6, "centerlong":D
     invoke-static/range {v18 .. v19}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v12
 
-    .line 1374
     .local v12, "lat2":D
     invoke-static/range {v20 .. v21}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v16
 
-    .line 1375
     .local v16, "lon2":D
     invoke-static {v4, v5}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v10
 
-    .line 1376
     .local v10, "lat1":D
     invoke-static {v6, v7}, Ljava/lang/Math;->toRadians(D)D
 
     move-result-wide v14
 
-    .line 1378
     .local v14, "lon1":D
     const-wide v24, 0x409925604189374cL    # 1609.344
 
@@ -560,7 +506,6 @@
 
     mul-double v22, v24, v26
 
-    .line 1380
     .local v22, "radInMiles":D
     invoke-static {v10, v11}, Ljava/lang/Math;->sin(D)D
 
@@ -602,16 +547,13 @@
 
     mul-double v8, v24, v26
 
-    .line 1383
     .local v8, "distance":D
     cmpg-double v24, v8, v22
 
     if-gtz v24, :cond_0
 
-    .line 1384
     const/16 v24, 0x1
 
-    .line 1387
     :goto_0
     return v24
 
@@ -631,14 +573,11 @@
 
     const/4 v7, 0x1
 
-    .line 1519
     iget-object v1, p2, Landroid/app/enterprise/geofencing/LinearGeofence;->optimizedPoints:Ljava/util/List;
 
-    .line 1520
     .local v1, "point":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const/4 v6, 0x1
 
-    .line 1521
     .local v6, "status":Z
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
@@ -658,26 +597,22 @@
 
     move v6, v7
 
-    .line 1523
     :goto_0
     if-ne v6, v7, :cond_1
 
     move v0, v7
 
-    .line 1527
     :goto_1
     return v0
 
     :cond_0
     move v6, v8
 
-    .line 1521
     goto :goto_0
 
     :cond_1
     move v0, v8
 
-    .line 1527
     goto :goto_1
 .end method
 
@@ -698,12 +633,10 @@
     .end annotation
 
     .prologue
-    .line 1292
     monitor-enter p0
 
     const/4 v2, 0x0
 
-    .line 1294
     .local v2, "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
@@ -714,14 +647,12 @@
 
     if-nez v4, :cond_4
 
-    .line 1296
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1298
     .end local v2    # "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .local v3, "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     :try_start_1
@@ -735,7 +666,6 @@
 
     move-result-object v1
 
-    .line 1300
     .local v1, "idItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :cond_0
     :goto_0
@@ -745,14 +675,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 1301
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 1303
     .local v0, "id":Ljava/lang/Integer;
     iget-object v4, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
 
@@ -768,14 +696,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 1304
     invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 1292
     .end local v0    # "id":Ljava/lang/Integer;
     .end local v1    # "idItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     :catchall_0
@@ -790,7 +716,6 @@
 
     throw v4
 
-    .line 1308
     .end local v2    # "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .restart local v1    # "idItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     .restart local v3    # "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -799,11 +724,9 @@
 
     if-ne p2, v4, :cond_2
 
-    .line 1309
     :try_start_2
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/geofencing/GeofenceService;->sendIntenttoAdmins(Ljava/util/List;)V
 
-    .line 1312
     :cond_2
     invoke-interface {v3}, Ljava/util/List;->isEmpty()Z
     :try_end_2
@@ -818,7 +741,6 @@
     :goto_2
     move-object v2, v3
 
-    .line 1315
     .end local v1    # "idItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
     .end local v3    # "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .restart local v2    # "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
@@ -833,7 +755,6 @@
     :cond_3
     move-object v4, v3
 
-    .line 1312
     goto :goto_2
 
     .end local v1    # "idItr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/Integer;>;"
@@ -842,10 +763,8 @@
     :cond_4
     move-object v4, v2
 
-    .line 1315
     goto :goto_3
 
-    .line 1292
     :catchall_1
     move-exception v4
 
@@ -862,14 +781,11 @@
 
     const/4 v9, 0x1
 
-    .line 1469
     iget-object v1, p2, Landroid/app/enterprise/geofencing/PolygonalGeofence;->optimizedPoints:Ljava/util/List;
 
-    .line 1470
     .local v1, "point":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const/4 v8, 0x1
 
-    .line 1472
     .local v8, "status":Z
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
 
@@ -889,23 +805,19 @@
 
     move v8, v9
 
-    .line 1474
     :goto_0
     if-ne v8, v9, :cond_1
 
     move v0, v9
 
-    .line 1482
     :goto_1
     return v0
 
     :cond_0
     move v8, v10
 
-    .line 1472
     goto :goto_0
 
-    .line 1477
     :cond_1
     iget-object v3, p2, Landroid/app/enterprise/geofencing/PolygonalGeofence;->pointsWithinGraceLimit:Ljava/util/List;
 
@@ -927,25 +839,21 @@
 
     move v8, v9
 
-    .line 1479
     :goto_2
     if-ne v8, v9, :cond_3
 
     move v0, v9
 
-    .line 1480
     goto :goto_1
 
     :cond_2
     move v8, v10
 
-    .line 1477
     goto :goto_2
 
     :cond_3
     move v0, v10
 
-    .line 1482
     goto :goto_1
 .end method
 
@@ -964,17 +872,14 @@
     .end annotation
 
     .prologue
-    .line 1426
     .local p1, "points":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const/4 v0, 0x0
 
-    .line 1427
     .local v0, "c":I
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v4
 
-    .line 1428
     .local v4, "nvert":I
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -982,7 +887,6 @@
 
     new-array v5, v7, [D
 
-    .line 1429
     .local v5, "vertx":[D
     invoke-interface {p1}, Ljava/util/List;->size()I
 
@@ -990,7 +894,6 @@
 
     new-array v6, v7, [D
 
-    .line 1431
     .local v6, "verty":[D
     const/4 v1, 0x0
 
@@ -1002,7 +905,6 @@
 
     if-ge v1, v7, :cond_0
 
-    .line 1432
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -1013,7 +915,6 @@
 
     aput-wide v8, v5, v1
 
-    .line 1433
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -1024,12 +925,10 @@
 
     aput-wide v8, v6, v1
 
-    .line 1431
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1446
     :cond_0
     const/4 v1, 0x0
 
@@ -1043,7 +942,6 @@
     :goto_1
     if-ge v2, v4, :cond_5
 
-    .line 1447
     aget-wide v8, v6, v2
 
     cmpl-double v7, v8, p4
@@ -1092,13 +990,10 @@
 
     if-gtz v7, :cond_1
 
-    .line 1450
     if-nez v0, :cond_4
 
-    .line 1451
     const/4 v0, 0x1
 
-    .line 1446
     :cond_1
     :goto_4
     add-int/lit8 v1, v2, 0x1
@@ -1113,7 +1008,6 @@
     .restart local v2    # "i":I
     goto :goto_1
 
-    .line 1447
     :cond_2
     const/4 v7, 0x0
 
@@ -1124,13 +1018,11 @@
 
     goto :goto_3
 
-    .line 1453
     :cond_4
     const/4 v0, 0x0
 
     goto :goto_4
 
-    .line 1456
     :cond_5
     return v0
 .end method
@@ -1143,12 +1035,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1328
     iget v0, p2, Landroid/app/enterprise/geofencing/Geofence;->type:I
 
     if-ne v0, v1, :cond_0
 
-    .line 1329
     check-cast p2, Landroid/app/enterprise/geofencing/CircularGeofence;
 
     .end local p2    # "fence":Landroid/app/enterprise/geofencing/Geofence;
@@ -1160,11 +1050,9 @@
 
     move v0, v1
 
-    .line 1347
     :goto_0
     return v0
 
-    .line 1332
     .restart local p2    # "fence":Landroid/app/enterprise/geofencing/Geofence;
     :cond_0
     iget v0, p2, Landroid/app/enterprise/geofencing/Geofence;->type:I
@@ -1175,7 +1063,6 @@
 
     move-object v0, p2
 
-    .line 1333
     check-cast v0, Landroid/app/enterprise/geofencing/PolygonalGeofence;
 
     iget-object v0, v0, Landroid/app/enterprise/geofencing/PolygonalGeofence;->boundingBox:Landroid/app/enterprise/geofencing/BoundingBox;
@@ -1186,7 +1073,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1334
     check-cast p2, Landroid/app/enterprise/geofencing/PolygonalGeofence;
 
     .end local p2    # "fence":Landroid/app/enterprise/geofencing/Geofence;
@@ -1198,10 +1084,8 @@
 
     move v0, v1
 
-    .line 1335
     goto :goto_0
 
-    .line 1339
     .restart local p2    # "fence":Landroid/app/enterprise/geofencing/Geofence;
     :cond_1
     iget v0, p2, Landroid/app/enterprise/geofencing/Geofence;->type:I
@@ -1212,7 +1096,6 @@
 
     move-object v0, p2
 
-    .line 1340
     check-cast v0, Landroid/app/enterprise/geofencing/LinearGeofence;
 
     iget-object v0, v0, Landroid/app/enterprise/geofencing/LinearGeofence;->boundingBox:Landroid/app/enterprise/geofencing/BoundingBox;
@@ -1223,7 +1106,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1341
     check-cast p2, Landroid/app/enterprise/geofencing/LinearGeofence;
 
     .end local p2    # "fence":Landroid/app/enterprise/geofencing/Geofence;
@@ -1235,10 +1117,8 @@
 
     move v0, v1
 
-    .line 1342
     goto :goto_0
 
-    .line 1347
     :cond_2
     const/4 v0, 0x0
 
@@ -1249,7 +1129,6 @@
     .locals 8
 
     .prologue
-    .line 1903
     monitor-enter p0
 
     :try_start_0
@@ -1257,28 +1136,23 @@
 
     if-nez v1, :cond_0
 
-    .line 1904
     invoke-direct {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->setLocationManager()V
 
-    .line 1908
     :cond_0
     sget-object v1, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationListener:Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;
 
     if-eqz v1, :cond_1
 
-    .line 1909
     iget-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationManager:Landroid/location/LocationManager;
 
     sget-object v2, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationListener:Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;
 
     invoke-virtual {v1, v2}, Landroid/location/LocationManager;->removeUpdates(Landroid/location/LocationListener;)V
 
-    .line 1910
     const/4 v1, 0x0
 
     sput-object v1, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationListener:Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;
 
-    .line 1913
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
 
@@ -1290,46 +1164,38 @@
 
     if-eqz v1, :cond_2
 
-    .line 1936
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1919
     :cond_2
     :try_start_1
     new-instance v5, Landroid/location/Criteria;
 
     invoke-direct {v5}, Landroid/location/Criteria;-><init>()V
 
-    .line 1920
     .local v5, "criteria":Landroid/location/Criteria;
     const/4 v1, 0x1
 
     invoke-virtual {v5, v1}, Landroid/location/Criteria;->setAccuracy(I)V
 
-    .line 1921
     const/4 v1, 0x0
 
     invoke-virtual {v5, v1}, Landroid/location/Criteria;->setAltitudeRequired(Z)V
 
-    .line 1922
     const/4 v1, 0x0
 
     invoke-virtual {v5, v1}, Landroid/location/Criteria;->setBearingRequired(Z)V
 
-    .line 1923
     const/4 v1, 0x0
 
     invoke-virtual {v5, v1}, Landroid/location/Criteria;->setCostAllowed(Z)V
 
-    .line 1924
     const/4 v1, 0x1
 
     invoke-virtual {v5, v1}, Landroid/location/Criteria;->setPowerRequirement(I)V
 
-    .line 1926
     new-instance v1, Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;
 
     const/4 v2, 0x0
@@ -1338,7 +1204,6 @@
 
     sput-object v1, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationListener:Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;
 
-    .line 1928
     iget-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationManager:Landroid/location/LocationManager;
 
     invoke-direct {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getEffectiveMinTimeParameter()J
@@ -1364,12 +1229,10 @@
 
     goto :goto_0
 
-    .line 1931
     .end local v5    # "criteria":Landroid/location/Criteria;
     :catch_0
     move-exception v0
 
-    .line 1932
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v1, "GeofenceService"
@@ -1394,12 +1257,10 @@
 
     invoke-static {v1, v2}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1933
     const/4 v1, 0x0
 
     sput-object v1, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationListener:Lcom/android/server/enterprise/geofencing/GeofenceService$GeoLocationListener;
 
-    .line 1934
     const/4 v1, -0x1
 
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deviceLocationUnavailableMessage(I)V
@@ -1408,7 +1269,6 @@
 
     goto :goto_0
 
-    .line 1903
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -1434,27 +1294,23 @@
     .end annotation
 
     .prologue
-    .line 1248
     iget-object v9, p1, Landroid/app/enterprise/geofencing/LinearGeofence;->points:Ljava/util/List;
 
     invoke-interface {v9}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 1249
     .local v3, "length":I
     const/4 v0, 0x0
 
     .local v0, "i":I
     add-int/lit8 v1, v3, -0x1
 
-    .line 1250
     .local v1, "j":I
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1252
     .local v8, "pointList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const/4 v0, 0x0
 
@@ -1463,7 +1319,6 @@
 
     if-ge v0, v9, :cond_0
 
-    .line 1253
     iget-object v9, p1, Landroid/app/enterprise/geofencing/LinearGeofence;->points:Ljava/util/List;
 
     invoke-interface {v9, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1490,7 +1345,6 @@
 
     mul-double v4, v10, v12
 
-    .line 1254
     .local v4, "midValueLat":D
     iget-object v9, p1, Landroid/app/enterprise/geofencing/LinearGeofence;->points:Ljava/util/List;
 
@@ -1518,25 +1372,20 @@
 
     mul-double v6, v10, v12
 
-    .line 1255
     .local v6, "midValueLong":D
     new-instance v2, Landroid/app/enterprise/geofencing/LatLongPoint;
 
     invoke-direct {v2, v4, v5, v6, v7}, Landroid/app/enterprise/geofencing/LatLongPoint;-><init>(DD)V
 
-    .line 1256
     .local v2, "lTemp":Landroid/app/enterprise/geofencing/LatLongPoint;
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1257
     add-int/lit8 v1, v1, -0x1
 
-    .line 1252
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1260
     .end local v2    # "lTemp":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v4    # "midValueLat":D
     .end local v6    # "midValueLong":D
@@ -1562,46 +1411,38 @@
     .end annotation
 
     .prologue
-    .line 815
     .local p1, "points":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 816
     .local v14, "frontList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     new-instance v34, Ljava/util/ArrayList;
 
     invoke-direct/range {v34 .. v34}, Ljava/util/ArrayList;-><init>()V
 
-    .line 817
     .local v34, "slopes":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Double;>;"
     new-instance v20, Ljava/util/ArrayList;
 
     invoke-direct/range {v20 .. v20}, Ljava/util/ArrayList;-><init>()V
 
-    .line 818
     .local v20, "listAbove":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const-wide/16 v32, 0x0
 
     .local v32, "slopePerpendicularAB":D
     const-wide/16 v8, 0x0
 
-    .line 822
     .local v8, "distanceToPoint":D
     const-wide v18, 0x3f747ae147ae147bL    # 0.005
 
-    .line 824
     .local v18, "latitudeNoise":D
     const-wide v22, 0x3f747ae147ae147bL    # 0.005
 
-    .line 830
     .local v22, "longitudeNoise":D
     const-wide v42, 0x3ee2cc82c7677f8dL    # 8.964E-6
 
     mul-double p2, p2, v42
 
-    .line 835
     const/4 v15, 0x0
 
     .local v15, "i":I
@@ -1614,7 +1455,6 @@
 
     if-ge v15, v0, :cond_b
 
-    .line 836
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
     move-result v42
@@ -1625,7 +1465,6 @@
 
     if-ne v15, v0, :cond_5
 
-    .line 837
     move-object/from16 v0, p1
 
     invoke-interface {v0, v15}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1634,7 +1473,6 @@
 
     check-cast v6, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 838
     .local v6, "a":Landroid/app/enterprise/geofencing/LatLongPoint;
     const/16 v42, 0x0
 
@@ -1648,7 +1486,6 @@
 
     check-cast v7, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 844
     .local v7, "b":Landroid/app/enterprise/geofencing/LatLongPoint;
     :goto_1
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
@@ -1667,7 +1504,6 @@
 
     if-nez v42, :cond_0
 
-    .line 845
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
     move-wide/from16 v42, v0
@@ -1678,7 +1514,6 @@
 
     if-ltz v42, :cond_6
 
-    .line 846
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
     move-wide/from16 v42, v0
@@ -1689,7 +1524,6 @@
 
     iput-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
-    .line 851
     :cond_0
     :goto_2
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -1708,7 +1542,6 @@
 
     if-nez v42, :cond_1
 
-    .line 852
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
     move-wide/from16 v42, v0
@@ -1719,7 +1552,6 @@
 
     if-ltz v42, :cond_7
 
-    .line 853
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
     move-wide/from16 v42, v0
@@ -1730,7 +1562,6 @@
 
     iput-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
-    .line 858
     :cond_1
     :goto_3
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -1755,7 +1586,6 @@
 
     div-double v30, v42, v44
 
-    .line 860
     .local v30, "slopeAB":D
     invoke-static/range {v30 .. v31}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -1767,7 +1597,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 864
     new-instance v21, Landroid/app/enterprise/geofencing/LatLongPoint;
 
     iget-wide v0, v6, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
@@ -1806,7 +1635,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/app/enterprise/geofencing/LatLongPoint;-><init>(DD)V
 
-    .line 868
     .local v21, "mid1":Landroid/app/enterprise/geofencing/LatLongPoint;
     const-wide/high16 v42, 0x3ff0000000000000L    # 1.0
 
@@ -1818,7 +1646,6 @@
 
     move-wide/from16 v32, v0
 
-    .line 870
     const-wide/high16 v42, 0x3ff0000000000000L    # 1.0
 
     mul-double v44, v32, v32
@@ -1831,7 +1658,6 @@
 
     div-double v8, p2, v42
 
-    .line 874
     const-wide/16 v42, 0x0
 
     cmpl-double v42, v30, v42
@@ -1869,7 +1695,6 @@
 
     if-lez v42, :cond_8
 
-    .line 876
     :cond_3
     move-object/from16 v0, v21
 
@@ -1881,7 +1706,6 @@
 
     add-double v38, v42, v44
 
-    .line 877
     .local v38, "yNewAbove":D
     move-object/from16 v0, v21
 
@@ -1903,7 +1727,6 @@
 
     div-double v36, v42, v32
 
-    .line 879
     .local v36, "xNewAbove":D
     new-instance v42, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -1921,7 +1744,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 835
     .end local v36    # "xNewAbove":D
     .end local v38    # "yNewAbove":D
     :cond_4
@@ -1930,7 +1752,6 @@
 
     goto/16 :goto_0
 
-    .line 840
     .end local v6    # "a":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v7    # "b":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v21    # "mid1":Landroid/app/enterprise/geofencing/LatLongPoint;
@@ -1944,7 +1765,6 @@
 
     check-cast v6, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 841
     .restart local v6    # "a":Landroid/app/enterprise/geofencing/LatLongPoint;
     add-int/lit8 v42, v15, 0x1
 
@@ -1961,7 +1781,6 @@
     .restart local v7    # "b":Landroid/app/enterprise/geofencing/LatLongPoint;
     goto/16 :goto_1
 
-    .line 848
     :cond_6
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
@@ -1975,7 +1794,6 @@
 
     goto/16 :goto_2
 
-    .line 855
     :cond_7
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
@@ -1989,7 +1807,6 @@
 
     goto/16 :goto_3
 
-    .line 884
     .restart local v21    # "mid1":Landroid/app/enterprise/geofencing/LatLongPoint;
     .restart local v30    # "slopeAB":D
     :cond_8
@@ -2030,7 +1847,6 @@
 
     if-gez v42, :cond_4
 
-    .line 886
     :cond_a
     move-object/from16 v0, v21
 
@@ -2042,7 +1858,6 @@
 
     sub-double v38, v42, v44
 
-    .line 887
     .restart local v38    # "yNewAbove":D
     move-object/from16 v0, v21
 
@@ -2064,7 +1879,6 @@
 
     div-double v36, v42, v32
 
-    .line 889
     .restart local v36    # "xNewAbove":D
     new-instance v42, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -2084,7 +1898,6 @@
 
     goto/16 :goto_4
 
-    .line 899
     .end local v6    # "a":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v7    # "b":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v21    # "mid1":Landroid/app/enterprise/geofencing/LatLongPoint;
@@ -2094,7 +1907,6 @@
     :cond_b
     const/16 v35, 0x0
 
-    .line 900
     .local v35, "z":I
     invoke-interface/range {v20 .. v20}, Ljava/util/List;->size()I
 
@@ -2102,7 +1914,6 @@
 
     add-int/lit8 v41, v42, -0x1
 
-    .line 901
     .local v41, "z1":I
     const/4 v15, 0x0
 
@@ -2124,7 +1935,6 @@
 
     if-ge v15, v0, :cond_c
 
-    .line 903
     move-object/from16 v0, v34
 
     invoke-interface {v0, v15}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2137,7 +1947,6 @@
 
     move-result-wide v24
 
-    .line 904
     .local v24, "m1":D
     move-object/from16 v0, v34
 
@@ -2153,7 +1962,6 @@
 
     move-result-wide v26
 
-    .line 905
     .local v26, "m2":D
     move-object/from16 v0, v20
 
@@ -2165,7 +1973,6 @@
 
     check-cast v28, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 906
     .local v28, "p1":Landroid/app/enterprise/geofencing/LatLongPoint;
     move-object/from16 v0, v20
 
@@ -2177,7 +1984,6 @@
 
     check-cast v29, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 907
     .local v29, "p2":Landroid/app/enterprise/geofencing/LatLongPoint;
     move-object/from16 v0, v29
 
@@ -2217,7 +2023,6 @@
 
     div-double v10, v42, v44
 
-    .line 909
     .local v10, "finx":D
     mul-double v42, v24, v10
 
@@ -2239,7 +2044,6 @@
 
     add-double v12, v42, v44
 
-    .line 910
     .local v12, "finy":D
     new-instance v42, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -2251,14 +2055,12 @@
 
     invoke-interface {v14, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 911
     add-int/lit8 v40, v35, 0x1
 
     .end local v35    # "z":I
     .local v40, "z":I
     move/from16 v41, v35
 
-    .line 901
     add-int/lit8 v16, v15, 0x1
 
     .end local v15    # "i":I
@@ -2275,7 +2077,6 @@
     .restart local v35    # "z":I
     goto/16 :goto_5
 
-    .line 916
     .end local v10    # "finx":D
     .end local v12    # "finy":D
     .end local v24    # "m1":D
@@ -2292,7 +2093,6 @@
     .param p2, "_id"    # I
 
     .prologue
-    .line 1680
     monitor-enter p0
 
     :try_start_0
@@ -2300,13 +2100,11 @@
 
     move-result v1
 
-    .line 1681
     .local v1, "userId":I
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 1682
     .local v0, "geofence_id_value":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const-string v2, "_id"
 
@@ -2316,7 +2114,6 @@
 
     invoke-virtual {v0, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1683
     iget-object v2, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v3, "GEOFENCING"
@@ -2329,16 +2126,13 @@
 
     if-nez v2, :cond_0
 
-    .line 1685
     const/4 v2, 0x0
 
-    .line 1688
     :goto_0
     monitor-exit p0
 
     return v2
 
-    .line 1687
     :cond_0
     :try_start_1
     iget-object v2, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
@@ -2351,12 +2145,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1688
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 1680
     .end local v0    # "geofence_id_value":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     .end local v1    # "userId":I
     :catchall_0
@@ -2372,12 +2164,10 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1189
     monitor-enter p0
 
     const/4 v1, 0x0
 
-    .line 1192
     .local v1, "cursor":Landroid/database/Cursor;
     const/4 v3, 0x1
 
@@ -2390,7 +2180,6 @@
 
     aput-object v4, v0, v3
 
-    .line 1196
     .local v0, "columns":[Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2400,10 +2189,8 @@
 
     move-result-object v1
 
-    .line 1198
     if-eqz v1, :cond_1
 
-    .line 1199
     :goto_0
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -2411,7 +2198,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 1201
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
 
     const-string v4, "_id"
@@ -2435,12 +2221,10 @@
 
     goto :goto_0
 
-    .line 1206
     .end local v0    # "columns":[Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 1207
     .local v2, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v3, "GeofenceService"
@@ -2451,17 +2235,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1210
     if-eqz v1, :cond_0
 
-    .line 1211
     :try_start_2
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1214
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_0
     :goto_1
@@ -2469,12 +2250,10 @@
 
     return-void
 
-    .line 1210
     .restart local v0    # "columns":[Ljava/lang/String;
     :cond_1
     if-eqz v1, :cond_0
 
-    .line 1211
     :try_start_3
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_3
@@ -2483,28 +2262,23 @@
 
     goto :goto_1
 
-    .line 1212
     :catch_1
     move-exception v3
 
     goto :goto_1
 
-    .line 1209
     .end local v0    # "columns":[Ljava/lang/String;
     :catchall_0
     move-exception v3
 
-    .line 1210
     if-eqz v1, :cond_2
 
-    .line 1211
     :try_start_4
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 1212
     :cond_2
     :goto_2
     :try_start_5
@@ -2512,7 +2286,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1189
     :catchall_1
     move-exception v3
 
@@ -2520,7 +2293,6 @@
 
     throw v3
 
-    .line 1212
     .restart local v2    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v3
@@ -2541,7 +2313,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1271
     :try_start_0
     new-instance v1, Ljava/io/ObjectInputStream;
 
@@ -2551,36 +2322,30 @@
 
     invoke-direct {v1, v5}, Ljava/io/ObjectInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 1272
     .local v1, "in":Ljava/io/ObjectInputStream;
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->readObject()Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 1273
     .local v3, "object":Ljava/lang/Object;
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->close()V
     :try_end_0
     .catch Ljava/lang/ClassNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1278
     .end local v1    # "in":Ljava/io/ObjectInputStream;
     .end local v3    # "object":Ljava/lang/Object;
     :goto_0
     return-object v3
 
-    .line 1275
     :catch_0
     move-exception v0
 
     .local v0, "cnfe":Ljava/lang/ClassNotFoundException;
     move-object v3, v4
 
-    .line 1276
     goto :goto_0
 
-    .line 1277
     .end local v0    # "cnfe":Ljava/lang/ClassNotFoundException;
     :catch_1
     move-exception v2
@@ -2588,7 +2353,6 @@
     .local v2, "ioe":Ljava/io/IOException;
     move-object v3, v4
 
-    .line 1278
     goto :goto_0
 .end method
 
@@ -2597,21 +2361,18 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1636
     const-string v2, "GeofenceService"
 
     const-string v3, "DEVICE_LOCATION_UNAVAILABLE"
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1637
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "edm.intent.action.device.location.unavailable"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1638
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "edm.intent.extra.geofence.user.id"
 
@@ -2621,24 +2382,20 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1639
     const-string v2, "admin_uid"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1640
     const/4 v2, -0x1
 
     if-eq p1, v2, :cond_0
 
-    .line 1641
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1643
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2646,7 +2403,6 @@
 
     move-result v1
 
-    .line 1645
     .local v1, "ownerUid":I
     iget-object v2, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
 
@@ -2662,7 +2418,6 @@
 
     invoke-virtual {v2, v0, v3, v4}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 1647
     return-void
 .end method
 
@@ -2671,7 +2426,6 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     const-string v1, "android.permission.sec.MDM_GEOFENCING"
@@ -2700,7 +2454,6 @@
     .end annotation
 
     .prologue
-    .line 1736
     .local p1, "point":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     new-instance v8, Ljava/util/ArrayList;
 
@@ -2711,11 +2464,9 @@
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1737
     .local v4, "collinear":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const/4 v11, 0x0
 
-    .line 1739
     .local v11, "p3":Landroid/app/enterprise/geofencing/LatLongPoint;
     const/4 v12, 0x0
 
@@ -2727,7 +2478,6 @@
 
     invoke-interface {v8, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1741
     const/4 v5, 0x0
 
     .local v5, "i":I
@@ -2744,7 +2494,6 @@
 
     if-ge v7, v12, :cond_5
 
-    .line 1742
     move-object/from16 v0, p1
 
     invoke-interface {v0, v5}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -2753,7 +2502,6 @@
 
     check-cast v9, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1743
     .local v9, "p1":Landroid/app/enterprise/geofencing/LatLongPoint;
     move-object/from16 v0, p1
 
@@ -2763,7 +2511,6 @@
 
     check-cast v10, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1744
     .local v10, "p2":Landroid/app/enterprise/geofencing/LatLongPoint;
     move-object/from16 v0, p1
 
@@ -2774,7 +2521,6 @@
     .end local v11    # "p3":Landroid/app/enterprise/geofencing/LatLongPoint;
     check-cast v11, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1748
     .restart local v11    # "p3":Landroid/app/enterprise/geofencing/LatLongPoint;
     iget-wide v12, v9, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
@@ -2820,7 +2566,6 @@
 
     add-double v2, v12, v14
 
-    .line 1750
     .local v2, "area":D
     const-wide/16 v12, 0x0
 
@@ -2828,17 +2573,14 @@
 
     if-nez v12, :cond_3
 
-    .line 1751
     invoke-interface {v4, v9}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v12
 
     if-nez v12, :cond_0
 
-    .line 1752
     invoke-interface {v4, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1753
     :cond_0
     invoke-interface {v4, v10}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -2846,10 +2588,8 @@
 
     if-nez v12, :cond_1
 
-    .line 1754
     invoke-interface {v4, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1755
     :cond_1
     invoke-interface {v4, v11}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -2857,10 +2597,8 @@
 
     if-nez v12, :cond_2
 
-    .line 1756
     invoke-interface {v4, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1741
     :cond_2
     :goto_1
     add-int/lit8 v5, v5, 0x1
@@ -2871,7 +2609,6 @@
 
     goto :goto_0
 
-    .line 1759
     :cond_3
     invoke-interface {v4}, Ljava/util/List;->isEmpty()Z
 
@@ -2879,7 +2616,6 @@
 
     if-nez v12, :cond_4
 
-    .line 1760
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/android/server/enterprise/geofencing/GeofenceService;->findFirst(Ljava/util/List;)Landroid/app/enterprise/geofencing/LatLongPoint;
@@ -2888,7 +2624,6 @@
 
     invoke-interface {v8, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1761
     move-object/from16 v0, p0
 
     invoke-direct {v0, v4}, Lcom/android/server/enterprise/geofencing/GeofenceService;->findLast(Ljava/util/List;)Landroid/app/enterprise/geofencing/LatLongPoint;
@@ -2897,18 +2632,15 @@
 
     invoke-interface {v8, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1762
     invoke-interface {v4}, Ljava/util/List;->clear()V
 
     goto :goto_1
 
-    .line 1764
     :cond_4
     invoke-interface {v8, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 1767
     .end local v2    # "area":D
     .end local v9    # "p1":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v10    # "p2":Landroid/app/enterprise/geofencing/LatLongPoint;
@@ -2927,7 +2659,6 @@
 
     invoke-interface {v8, v12}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1768
     return-object v8
 .end method
 
@@ -2945,7 +2676,6 @@
     .end annotation
 
     .prologue
-    .line 1796
     .local p1, "point":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const/4 v2, 0x0
 
@@ -2955,7 +2685,6 @@
 
     check-cast v0, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1798
     .local v0, "first":Landroid/app/enterprise/geofencing/LatLongPoint;
     const/4 v1, 0x1
 
@@ -2967,7 +2696,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 1799
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -2996,7 +2724,6 @@
 
     if-gez v2, :cond_0
 
-    .line 1800
     invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -3004,14 +2731,12 @@
     .end local v0    # "first":Landroid/app/enterprise/geofencing/LatLongPoint;
     check-cast v0, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1798
     .restart local v0    # "first":Landroid/app/enterprise/geofencing/LatLongPoint;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1803
     :cond_1
     return-object v0
 .end method
@@ -3030,7 +2755,6 @@
     .end annotation
 
     .prologue
-    .line 1778
     .local p1, "point":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const/4 v2, 0x0
 
@@ -3040,7 +2764,6 @@
 
     check-cast v1, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1780
     .local v1, "last":Landroid/app/enterprise/geofencing/LatLongPoint;
     const/4 v0, 0x1
 
@@ -3052,7 +2775,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1781
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -3081,7 +2803,6 @@
 
     if-lez v2, :cond_0
 
-    .line 1782
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -3089,14 +2810,12 @@
     .end local v1    # "last":Landroid/app/enterprise/geofencing/LatLongPoint;
     check-cast v1, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1780
     .restart local v1    # "last":Landroid/app/enterprise/geofencing/LatLongPoint;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1785
     :cond_1
     return-object v1
 .end method
@@ -3122,7 +2841,6 @@
     .local p1, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const/4 v8, 0x0
 
-    .line 1597
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
@@ -3131,25 +2849,21 @@
 
     if-eqz v9, :cond_1
 
-    .line 1625
     :cond_0
     :goto_0
     return-object v8
 
-    .line 1601
     :cond_1
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v6
 
-    .line 1604
     .local v6, "userId":I
     :try_start_0
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1606
     .local v5, "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const/4 v9, 0x2
 
@@ -3167,7 +2881,6 @@
 
     aput-object v10, v0, v9
 
-    .line 1610
     .local v0, "columns":[Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3177,7 +2890,6 @@
 
     move-result-object v7
 
-    .line 1613
     .local v7, "values":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3198,7 +2910,6 @@
 
     check-cast v4, Landroid/content/ContentValues;
 
-    .line 1614
     .local v4, "item":Landroid/content/ContentValues;
     const-string v9, "_id"
 
@@ -3210,7 +2921,6 @@
 
     move-result v3
 
-    .line 1615
     .local v3, "id":I
     const-string v9, "adminUid"
 
@@ -3234,7 +2944,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 1616
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v9
@@ -3245,7 +2954,6 @@
 
     goto :goto_1
 
-    .line 1621
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "id":I
@@ -3255,7 +2963,6 @@
     :catch_0
     move-exception v1
 
-    .line 1622
     .local v1, "e":Ljava/lang/Exception;
     const-string v9, "GeofenceService"
 
@@ -3265,7 +2972,6 @@
 
     goto :goto_0
 
-    .line 1620
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "columns":[Ljava/lang/String;
     .restart local v2    # "i$":Ljava/util/Iterator;
@@ -3296,10 +3002,8 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 765
     const/4 v3, 0x0
 
-    .line 767
     .local v3, "ret":F
     const/4 v6, 0x2
 
@@ -3317,7 +3021,6 @@
 
     aput-object v7, v0, v6
 
-    .line 772
     .local v0, "columns":[Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3327,7 +3030,6 @@
 
     move-result-object v5
 
-    .line 775
     .local v5, "values":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3348,7 +3050,6 @@
 
     check-cast v2, Landroid/content/ContentValues;
 
-    .line 777
     .local v2, "item":Landroid/content/ContentValues;
     const-string/jumbo v6, "state"
 
@@ -3362,7 +3063,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 782
     const-string v6, "distance"
 
     invoke-virtual {v2, v6}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
@@ -3373,18 +3073,15 @@
 
     move-result v4
 
-    .line 784
     .local v4, "value":F
     cmpl-float v6, v3, v8
 
     if-nez v6, :cond_1
 
-    .line 785
     move v3, v4
 
     goto :goto_0
 
-    .line 786
     :cond_1
     cmpl-float v6, v4, v8
 
@@ -3394,12 +3091,10 @@
 
     if-lez v6, :cond_0
 
-    .line 787
     move v3, v4
 
     goto :goto_0
 
-    .line 791
     .end local v2    # "item":Landroid/content/ContentValues;
     .end local v4    # "value":F
     :cond_2
@@ -3412,10 +3107,8 @@
     .prologue
     const-wide/16 v10, 0x0
 
-    .line 700
     const-wide/16 v4, 0x0
 
-    .line 702
     .local v4, "ret":J
     const/4 v8, 0x2
 
@@ -3433,7 +3126,6 @@
 
     aput-object v9, v0, v8
 
-    .line 707
     .local v0, "columns":[Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3443,7 +3135,6 @@
 
     move-result-object v3
 
-    .line 710
     .local v3, "values":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3464,7 +3155,6 @@
 
     check-cast v2, Landroid/content/ContentValues;
 
-    .line 712
     .local v2, "item":Landroid/content/ContentValues;
     const-string/jumbo v8, "state"
 
@@ -3478,7 +3168,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 717
     const-string/jumbo v8, "time"
 
     invoke-virtual {v2, v8}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
@@ -3489,18 +3178,15 @@
 
     move-result-wide v6
 
-    .line 719
     .local v6, "value":J
     cmp-long v8, v4, v10
 
     if-nez v8, :cond_1
 
-    .line 720
     move-wide v4, v6
 
     goto :goto_0
 
-    .line 721
     :cond_1
     cmp-long v8, v6, v10
 
@@ -3510,12 +3196,10 @@
 
     if-lez v8, :cond_0
 
-    .line 722
     move-wide v4, v6
 
     goto :goto_0
 
-    .line 726
     .end local v2    # "item":Landroid/content/ContentValues;
     .end local v6    # "value":J
     :cond_2
@@ -3535,7 +3219,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1654
     const-string v2, "GeofenceService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3558,7 +3241,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1655
     const/16 v2, 0x3e8
 
     if-eq p1, v2, :cond_1
@@ -3571,7 +3253,6 @@
 
     if-le p1, v2, :cond_1
 
-    .line 1657
     :cond_0
     const-string v2, "GeofenceService"
 
@@ -3579,14 +3260,11 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1658
     const-string v2, "com.sec.enterprise.knox.cloudmdm.smdms"
 
-    .line 1669
     :goto_0
     return-object v2
 
-    .line 1660
     :cond_1
     iget-object v2, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3598,29 +3276,24 @@
 
     move-result-object v1
 
-    .line 1662
     .local v1, "pkgName":Ljava/lang/String;
     if-nez v1, :cond_2
 
-    .line 1663
     const-string v2, "GeofenceService"
 
     const-string v3, "@getPackageNameForUid - returning null"
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1664
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1667
     :cond_2
     invoke-static {v1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 1668
     .local v0, "compName":Landroid/content/ComponentName;
     const-string v2, "GeofenceService"
 
@@ -3648,7 +3321,6 @@
 
     invoke-static {v2, v3}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1669
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -3660,7 +3332,6 @@
     .locals 2
 
     .prologue
-    .line 129
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "GeofenceService"
@@ -3669,12 +3340,10 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 130
     iget-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 131
     new-instance v0, Lcom/android/server/enterprise/geofencing/GeofenceService$GeofencingHandler;
 
     iget-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mHandlerThread:Landroid/os/HandlerThread;
@@ -3687,7 +3356,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mHandler:Lcom/android/server/enterprise/geofencing/GeofenceService$GeofencingHandler;
 
-    .line 132
     return-void
 .end method
 
@@ -3698,10 +3366,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1217
     const/4 v1, 0x0
 
-    .line 1220
     .local v1, "cursor":Landroid/database/Cursor;
     const/4 v4, 0x1
 
@@ -3714,7 +3380,6 @@
 
     aput-object v5, v0, v4
 
-    .line 1224
     .local v0, "columns":[Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3724,7 +3389,6 @@
 
     move-result-object v1
 
-    .line 1227
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -3732,26 +3396,21 @@
 
     move-result v3
 
-    .line 1233
     if-eqz v1, :cond_0
 
-    .line 1234
     :try_start_1
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 1239
     .end local v0    # "columns":[Ljava/lang/String;
     :cond_0
     :goto_0
     return v3
 
-    .line 1229
     :catch_0
     move-exception v2
 
-    .line 1230
     .local v2, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v4, "GeofenceService"
@@ -3762,10 +3421,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1233
     if-eqz v1, :cond_0
 
-    .line 1234
     :try_start_3
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_3
@@ -3773,32 +3430,26 @@
 
     goto :goto_0
 
-    .line 1236
     :catch_1
     move-exception v4
 
     goto :goto_0
 
-    .line 1232
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v3
 
-    .line 1233
     if-eqz v1, :cond_1
 
-    .line 1234
     :try_start_4
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 1237
     :cond_1
     :goto_1
     throw v3
 
-    .line 1236
     .restart local v0    # "columns":[Ljava/lang/String;
     :catch_2
     move-exception v4
@@ -3830,56 +3481,43 @@
 
     const/4 v10, 0x0
 
-    .line 563
     const-string v8, "GeofenceService"
 
     const-string/jumbo v9, "isDeviceInsideGeofence"
 
     invoke-static {v8, v9}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 564
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 566
     .local v6, "token":J
     const/4 v0, 0x0
 
-    .line 567
     .local v0, "activeGeofences":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const/4 v4, 0x0
 
-    .line 569
     .local v4, "location":Landroid/location/Location;
     new-instance v1, Landroid/location/Criteria;
 
     invoke-direct {v1}, Landroid/location/Criteria;-><init>()V
 
-    .line 570
     .local v1, "criteria":Landroid/location/Criteria;
     invoke-virtual {v1, v11}, Landroid/location/Criteria;->setAccuracy(I)V
 
-    .line 571
     invoke-virtual {v1, v10}, Landroid/location/Criteria;->setAltitudeRequired(Z)V
 
-    .line 572
     invoke-virtual {v1, v10}, Landroid/location/Criteria;->setBearingRequired(Z)V
 
-    .line 573
     invoke-virtual {v1, v10}, Landroid/location/Criteria;->setCostAllowed(Z)V
 
-    .line 574
     invoke-virtual {v1, v11}, Landroid/location/Criteria;->setPowerRequirement(I)V
 
-    .line 577
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocation:Landroid/location/Location;
 
-    .line 578
     if-nez v4, :cond_0
 
-    .line 579
     iget-object v8, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationManager:Landroid/location/LocationManager;
 
     const/4 v9, 0x1
@@ -3888,7 +3526,6 @@
 
     move-result-object v5
 
-    .line 580
     .local v5, "provider":Ljava/lang/String;
     if-eqz v5, :cond_0
 
@@ -3900,7 +3537,6 @@
 
     if-nez v8, :cond_0
 
-    .line 581
     iget-object v8, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationManager:Landroid/location/LocationManager;
 
     invoke-virtual {v8, v5}, Landroid/location/LocationManager;->getLastKnownLocation(Ljava/lang/String;)Landroid/location/Location;
@@ -3909,27 +3545,21 @@
 
     move-result-object v4
 
-    .line 590
     .end local v5    # "provider":Ljava/lang/String;
     :cond_0
     :goto_0
     if-nez v4, :cond_1
 
-    .line 591
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deviceLocationUnavailableMessage(I)V
 
-    .line 597
     :goto_1
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 598
     return-object v0
 
-    .line 584
     :catch_0
     move-exception v2
 
-    .line 585
     .local v2, "e":Ljava/lang/Exception;
     const-string v8, "GeofenceService"
 
@@ -3937,22 +3567,18 @@
 
     invoke-static {v8, v9, v2}, Lcom/android/server/enterprise/log/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 586
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 587
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 593
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     invoke-direct {p0, v4, v10}, Lcom/android/server/enterprise/geofencing/GeofenceService;->checkDeviceInsideOrOutsideGeo(Landroid/location/Location;Z)Ljava/util/List;
 
     move-result-object v3
 
-    .line 594
     .local v3, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     invoke-direct {p0, v3, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getActiveGeofenceIdsbyAdmin(Ljava/util/List;I)Ljava/util/List;
 
@@ -3966,7 +3592,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1108
     monitor-enter p0
 
     :try_start_0
@@ -3980,13 +3605,11 @@
 
     check-cast v6, Landroid/os/UserManager;
 
-    .line 1109
     .local v6, "userManager":Landroid/os/UserManager;
     invoke-virtual {v6}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v7
 
-    .line 1110
     .local v7, "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4008,7 +3631,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1113
     .local v5, "user":Landroid/content/pm/UserInfo;
     :try_start_1
     iget-object v8, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -4023,13 +3645,11 @@
 
     move-result-object v4
 
-    .line 1116
     .local v4, "uidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v8, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
 
     invoke-virtual {v8}, Ljava/util/HashMap;->clear()V
 
-    .line 1118
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
@@ -4053,7 +3673,6 @@
 
     move-result v3
 
-    .line 1120
     .local v3, "storedUid":I
     iget-object v8, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -4069,7 +3688,6 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 1123
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/geofencing/GeofenceService;->updateGeofenceActiveListbyAdmin(I)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -4077,14 +3695,12 @@
 
     goto :goto_1
 
-    .line 1127
     .end local v2    # "i$":Ljava/util/Iterator;
     .end local v3    # "storedUid":I
     .end local v4    # "uidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :catch_0
     move-exception v0
 
-    .line 1128
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v8, "GeofenceService"
@@ -4117,7 +3733,6 @@
 
     goto :goto_0
 
-    .line 1108
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v5    # "user":Landroid/content/pm/UserInfo;
     .end local v6    # "userManager":Landroid/os/UserManager;
@@ -4129,7 +3744,6 @@
 
     throw v8
 
-    .line 1132
     .restart local v6    # "userManager":Landroid/os/UserManager;
     .restart local v7    # "userlist":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :cond_2
@@ -4143,7 +3757,6 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 796
     :try_start_0
     invoke-static {p1}, Ljava/lang/Float;->parseFloat(Ljava/lang/String;)F
     :try_end_0
@@ -4151,15 +3764,12 @@
 
     move-result v1
 
-    .line 798
     :goto_0
     return v1
 
-    .line 797
     :catch_0
     move-exception v0
 
-    .line 798
     .local v0, "e":Ljava/lang/Exception;
     const/4 v1, 0x0
 
@@ -4171,7 +3781,6 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 804
     :try_start_0
     invoke-static {p1}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_0
@@ -4179,15 +3788,12 @@
 
     move-result-wide v2
 
-    .line 806
     :goto_0
     return-wide v2
 
-    .line 805
     :catch_0
     move-exception v0
 
-    .line 806
     .local v0, "e":Ljava/lang/Exception;
     const-wide/16 v2, 0x0
 
@@ -4207,7 +3813,6 @@
     .end annotation
 
     .prologue
-    .line 1539
     .local p1, "relevantGeofences":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const-string v15, "GeofenceService"
 
@@ -4215,7 +3820,6 @@
 
     invoke-static/range {v15 .. v16}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1540
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
@@ -4228,13 +3832,11 @@
 
     check-cast v14, Landroid/os/UserManager;
 
-    .line 1541
     .local v14, "userManager":Landroid/os/UserManager;
     invoke-virtual {v14}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v13
 
-    .line 1544
     .local v13, "userList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4253,7 +3855,6 @@
 
     check-cast v12, Landroid/content/pm/UserInfo;
 
-    .line 1545
     .local v12, "user":Landroid/content/pm/UserInfo;
     invoke-virtual {v12}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
 
@@ -4265,7 +3866,6 @@
 
     if-eqz v15, :cond_0
 
-    .line 1549
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -4282,7 +3882,6 @@
 
     move-result-object v11
 
-    .line 1552
     .local v11, "uidList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v11}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -4307,7 +3906,6 @@
 
     move-result v10
 
-    .line 1553
     .local v10, "uid":I
     move-object/from16 v0, p0
 
@@ -4317,18 +3915,15 @@
 
     move-result-object v8
 
-    .line 1555
     .local v8, "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz v8, :cond_3
 
-    .line 1556
     new-instance v6, Landroid/content/Intent;
 
     const-string v15, "edm.intent.action.device.inside"
 
     invoke-direct {v6, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1557
     .local v6, "intent":Landroid/content/Intent;
     invoke-interface {v8}, Ljava/util/List;->size()I
 
@@ -4336,7 +3931,6 @@
 
     new-array v5, v15, [I
 
-    .line 1558
     .local v5, "id":[I
     const/4 v2, 0x0
 
@@ -4348,7 +3942,6 @@
 
     if-ge v2, v15, :cond_2
 
-    .line 1559
     invoke-interface {v8, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v15
@@ -4361,18 +3954,15 @@
 
     aput v15, v5, v2
 
-    .line 1558
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1561
     :cond_2
     const-string v15, "edm.intent.extra.geofence.id"
 
     invoke-virtual {v6, v15, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[I)Landroid/content/Intent;
 
-    .line 1562
     const-string v15, "edm.intent.extra.geofence.user.id"
 
     invoke-static {v10}, Landroid/os/UserHandle;->getUserId(I)I
@@ -4383,12 +3973,10 @@
 
     invoke-virtual {v6, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1563
     const-string v15, "admin_uid"
 
     invoke-virtual {v6, v15, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1564
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -4397,7 +3985,6 @@
 
     move-result v7
 
-    .line 1566
     .local v7, "ownerUid":I
     const-string v15, "GeofenceService"
 
@@ -4423,14 +4010,12 @@
 
     invoke-static/range {v15 .. v16}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1567
     move-object/from16 v0, p0
 
     invoke-direct {v0, v7}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getPackageNameForUid(I)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 1568
     .local v9, "thePackageNameFortheUID":Ljava/lang/String;
     const-string v15, "GeofenceService"
 
@@ -4456,10 +4041,8 @@
 
     invoke-static/range {v15 .. v16}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1569
     invoke-virtual {v6, v9}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1570
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
@@ -4482,7 +4065,6 @@
 
     goto/16 :goto_0
 
-    .line 1575
     .end local v2    # "i":I
     .end local v5    # "id":[I
     .end local v6    # "intent":Landroid/content/Intent;
@@ -4512,14 +4094,12 @@
 
     if-ne v15, v0, :cond_1
 
-    .line 1577
     new-instance v6, Landroid/content/Intent;
 
     const-string v15, "edm.intent.action.device.outside"
 
     invoke-direct {v6, v15}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1578
     .restart local v6    # "intent":Landroid/content/Intent;
     const-string v15, "edm.intent.extra.geofence.user.id"
 
@@ -4531,12 +4111,10 @@
 
     invoke-virtual {v6, v15, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1579
     const-string v15, "admin_uid"
 
     invoke-virtual {v6, v15, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1580
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -4545,7 +4123,6 @@
 
     move-result v7
 
-    .line 1582
     .restart local v7    # "ownerUid":I
     move-object/from16 v0, p0
 
@@ -4555,7 +4132,6 @@
 
     invoke-virtual {v6, v15}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1583
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
@@ -4580,7 +4156,6 @@
 
     goto/16 :goto_0
 
-    .line 1587
     .end local v6    # "intent":Landroid/content/Intent;
     .end local v7    # "ownerUid":I
     :catch_0
@@ -4588,7 +4163,6 @@
 
     goto/16 :goto_0
 
-    .line 1593
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v8    # "ret":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     .end local v10    # "uid":I
@@ -4603,46 +4177,37 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 1857
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 1860
     .local v0, "bos":Ljava/io/ByteArrayOutputStream;
     :try_start_0
     new-instance v2, Ljava/io/ObjectOutputStream;
 
     invoke-direct {v2, v0}, Ljava/io/ObjectOutputStream;-><init>(Ljava/io/OutputStream;)V
 
-    .line 1861
     .local v2, "out":Ljava/io/ObjectOutput;
     invoke-interface {v2, p1}, Ljava/io/ObjectOutput;->writeObject(Ljava/lang/Object;)V
 
-    .line 1862
     invoke-interface {v2}, Ljava/io/ObjectOutput;->close()V
 
-    .line 1866
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v3
 
-    .line 1870
     .end local v2    # "out":Ljava/io/ObjectOutput;
     :goto_0
     return-object v3
 
-    .line 1867
     :catch_0
     move-exception v1
 
-    .line 1868
     .local v1, "ioe":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 1870
     const/4 v3, 0x0
 
     goto :goto_0
@@ -4652,7 +4217,6 @@
     .locals 2
 
     .prologue
-    .line 156
     iget-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "location"
@@ -4665,7 +4229,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mLocationManager:Landroid/location/LocationManager;
 
-    .line 157
     return-void
 .end method
 
@@ -4678,12 +4241,10 @@
 
     const/4 v11, 0x2
 
-    .line 1135
     monitor-enter p0
 
     const/4 v2, 0x0
 
-    .line 1138
     .local v2, "cursor":Landroid/database/Cursor;
     const/4 v9, 0x3
 
@@ -4708,7 +4269,6 @@
 
     aput-object v10, v1, v9
 
-    .line 1143
     .local v1, "columns":[Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -4718,10 +4278,8 @@
 
     move-result-object v2
 
-    .line 1146
     if-eqz v2, :cond_5
 
-    .line 1147
     :cond_0
     :goto_0
     invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
@@ -4730,7 +4288,6 @@
 
     if-eqz v9, :cond_5
 
-    .line 1149
     const-string v9, "_id"
 
     invoke-interface {v2, v9}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -4741,7 +4298,6 @@
 
     move-result v5
 
-    .line 1151
     .local v5, "id":I
     iget-object v9, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
 
@@ -4755,7 +4311,6 @@
 
     if-nez v9, :cond_0
 
-    .line 1153
     const-string/jumbo v9, "type"
 
     invoke-interface {v2, v9}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -4766,7 +4321,6 @@
 
     move-result v8
 
-    .line 1155
     .local v8, "type":I
     const-string v9, "blobdata"
 
@@ -4778,25 +4332,20 @@
 
     move-result-object v3
 
-    .line 1158
     .local v3, "data":[B
     if-ne v8, v11, :cond_2
 
-    .line 1159
     invoke-static {v3}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deserializeGeoFence([B)Ljava/lang/Object;
 
     move-result-object v7
 
     check-cast v7, Landroid/app/enterprise/geofencing/PolygonalGeofence;
 
-    .line 1160
     .local v7, "pFence":Landroid/app/enterprise/geofencing/PolygonalGeofence;
     iput v5, v7, Landroid/app/enterprise/geofencing/PolygonalGeofence;->id:I
 
-    .line 1161
     iput v8, v7, Landroid/app/enterprise/geofencing/PolygonalGeofence;->type:I
 
-    .line 1162
     iget-object v9, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4810,7 +4359,6 @@
 
     goto :goto_0
 
-    .line 1178
     .end local v1    # "columns":[Ljava/lang/String;
     .end local v3    # "data":[B
     .end local v5    # "id":I
@@ -4819,7 +4367,6 @@
     :catch_0
     move-exception v4
 
-    .line 1179
     .local v4, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v9, "GeofenceService"
@@ -4830,17 +4377,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1182
     if-eqz v2, :cond_1
 
-    .line 1183
     :try_start_2
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 1186
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_1
@@ -4848,7 +4392,6 @@
 
     return-void
 
-    .line 1163
     .restart local v1    # "columns":[Ljava/lang/String;
     .restart local v3    # "data":[B
     .restart local v5    # "id":I
@@ -4856,7 +4399,6 @@
     :cond_2
     if-ne v8, v12, :cond_4
 
-    .line 1164
     :try_start_3
     invoke-static {v3}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deserializeGeoFence([B)Ljava/lang/Object;
 
@@ -4864,14 +4406,11 @@
 
     check-cast v6, Landroid/app/enterprise/geofencing/LinearGeofence;
 
-    .line 1165
     .local v6, "lFence":Landroid/app/enterprise/geofencing/LinearGeofence;
     iput v5, v6, Landroid/app/enterprise/geofencing/LinearGeofence;->id:I
 
-    .line 1166
     iput v8, v6, Landroid/app/enterprise/geofencing/LinearGeofence;->type:I
 
-    .line 1167
     iget-object v9, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4885,7 +4424,6 @@
 
     goto :goto_0
 
-    .line 1181
     .end local v1    # "columns":[Ljava/lang/String;
     .end local v3    # "data":[B
     .end local v5    # "id":I
@@ -4894,17 +4432,14 @@
     :catchall_0
     move-exception v9
 
-    .line 1182
     if-eqz v2, :cond_3
 
-    .line 1183
     :try_start_4
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 1184
     :cond_3
     :goto_2
     :try_start_5
@@ -4912,7 +4447,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1135
     :catchall_1
     move-exception v9
 
@@ -4920,7 +4454,6 @@
 
     throw v9
 
-    .line 1169
     .restart local v1    # "columns":[Ljava/lang/String;
     .restart local v3    # "data":[B
     .restart local v5    # "id":I
@@ -4933,14 +4466,11 @@
 
     check-cast v0, Landroid/app/enterprise/geofencing/CircularGeofence;
 
-    .line 1170
     .local v0, "cFence":Landroid/app/enterprise/geofencing/CircularGeofence;
     iput v5, v0, Landroid/app/enterprise/geofencing/CircularGeofence;->id:I
 
-    .line 1171
     iput v8, v0, Landroid/app/enterprise/geofencing/CircularGeofence;->type:I
 
-    .line 1172
     iget-object v9, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mActiveGeofenceList:Ljava/util/HashMap;
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4954,7 +4484,6 @@
 
     goto/16 :goto_0
 
-    .line 1182
     .end local v0    # "cFence":Landroid/app/enterprise/geofencing/CircularGeofence;
     .end local v3    # "data":[B
     .end local v5    # "id":I
@@ -4962,7 +4491,6 @@
     :cond_5
     if-eqz v2, :cond_1
 
-    .line 1183
     :try_start_7
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
     :try_end_7
@@ -4971,7 +4499,6 @@
 
     goto :goto_1
 
-    .line 1184
     :catch_1
     move-exception v9
 
@@ -4997,10 +4524,8 @@
     .param p2, "radius"    # D
 
     .prologue
-    .line 1885
     const/4 v0, 0x1
 
-    .line 1886
     .local v0, "valid":Z
     const-wide/16 v2, 0x0
 
@@ -5008,15 +4533,12 @@
 
     if-gtz v1, :cond_1
 
-    .line 1887
     const/4 v0, 0x0
 
-    .line 1894
     :cond_0
     :goto_0
     return v0
 
-    .line 1889
     :cond_1
     iget-wide v2, p1, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
@@ -5050,7 +4572,6 @@
 
     if-gez v1, :cond_0
 
-    .line 1891
     :cond_2
     const/4 v0, 0x0
 
@@ -5070,11 +4591,9 @@
     .end annotation
 
     .prologue
-    .line 1815
     .local p1, "points":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const/4 v2, 0x1
 
-    .line 1816
     .local v2, "valid":Z
     const/4 v0, 0x0
 
@@ -5086,14 +4605,12 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 1817
     invoke-interface {p1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1818
     .local v1, "latlongPoint":Landroid/app/enterprise/geofencing/LatLongPoint;
     iget-wide v4, v1, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
@@ -5127,20 +4644,17 @@
 
     if-gez v4, :cond_1
 
-    .line 1821
     :cond_0
     const/4 v2, 0x0
 
     move v3, v2
 
-    .line 1825
     .end local v1    # "latlongPoint":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v2    # "valid":Z
     .local v3, "valid":I
     :goto_1
     return v3
 
-    .line 1816
     .end local v3    # "valid":I
     .restart local v1    # "latlongPoint":Landroid/app/enterprise/geofencing/LatLongPoint;
     .restart local v2    # "valid":Z
@@ -5153,7 +4667,6 @@
     :cond_2
     move v3, v2
 
-    .line 1825
     .restart local v3    # "valid":I
     goto :goto_1
 .end method
@@ -5165,27 +4678,21 @@
     .param p3, "serializedBlob"    # [B
 
     .prologue
-    .line 1836
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 1837
     .local v0, "callingUid":I
     if-nez p3, :cond_0
 
-    .line 1838
     const/4 v1, -0x1
 
-    .line 1846
     :goto_0
     return v1
 
-    .line 1839
     :cond_0
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1840
     .local v2, "values":Landroid/content/ContentValues;
     const-string v3, "adminUid"
 
@@ -5195,7 +4702,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1841
     const-string/jumbo v3, "type"
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5204,12 +4710,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1842
     const-string v3, "blobdata"
 
     invoke-virtual {v2, v3, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    .line 1843
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "GEOFENCING"
@@ -5218,7 +4722,6 @@
 
     move-result v1
 
-    .line 1845
     .local v1, "id":I
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->updateGeofenceActiveListbyAdmin(I)V
 
@@ -5235,26 +4738,21 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 383
     const-string v5, "GeofenceService"
 
     const-string v6, "createGeofence"
 
     invoke-static {v5, v6}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 384
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 385
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 387
     .local v0, "callingUid":I
     const/4 v1, -0x1
 
-    .line 388
     .local v1, "id":I
     iget-object v5, p2, Landroid/app/enterprise/geofencing/CircularGeofence;->center:Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -5266,25 +4764,21 @@
 
     if-eqz v5, :cond_1
 
-    .line 390
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/geofencing/GeofenceService;->serializeGeoFence(Ljava/lang/Object;)[B
 
     move-result-object v4
 
-    .line 391
     .local v4, "serializedBlob":[B
     if-nez v4, :cond_0
 
     move v2, v1
 
-    .line 400
     .end local v1    # "id":I
     .end local v4    # "serializedBlob":[B
     .local v2, "id":I
     :goto_0
     return v2
 
-    .line 394
     .end local v2    # "id":I
     .restart local v1    # "id":I
     .restart local v4    # "serializedBlob":[B
@@ -5293,14 +4787,12 @@
 
     move-result v1
 
-    .line 395
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->isGeofencingEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 396
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v5
@@ -5313,7 +4805,6 @@
 
     move-result-object v3
 
-    .line 397
     .local v3, "message":Landroid/os/Message;
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -5326,7 +4817,6 @@
     :cond_1
     move v2, v1
 
-    .line 400
     .end local v1    # "id":I
     .restart local v2    # "id":I
     goto :goto_0
@@ -5338,10 +4828,8 @@
     .param p2, "geofence"    # Landroid/app/enterprise/geofencing/Geofence;
 
     .prologue
-    .line 319
     const/4 v0, -0x1
 
-    .line 321
     .local v0, "id":I
     iget v1, p2, Landroid/app/enterprise/geofencing/Geofence;->type:I
 
@@ -5349,7 +4837,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 322
     check-cast p2, Landroid/app/enterprise/geofencing/CircularGeofence;
 
     .end local p2    # "geofence":Landroid/app/enterprise/geofencing/Geofence;
@@ -5357,12 +4844,10 @@
 
     move-result v0
 
-    .line 332
     :cond_0
     :goto_0
     return v0
 
-    .line 325
     .restart local p2    # "geofence":Landroid/app/enterprise/geofencing/Geofence;
     :cond_1
     iget v1, p2, Landroid/app/enterprise/geofencing/Geofence;->type:I
@@ -5371,7 +4856,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 326
     check-cast p2, Landroid/app/enterprise/geofencing/PolygonalGeofence;
 
     .end local p2    # "geofence":Landroid/app/enterprise/geofencing/Geofence;
@@ -5381,7 +4865,6 @@
 
     goto :goto_0
 
-    .line 329
     .restart local p2    # "geofence":Landroid/app/enterprise/geofencing/Geofence;
     :cond_2
     iget v1, p2, Landroid/app/enterprise/geofencing/Geofence;->type:I
@@ -5390,7 +4873,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 330
     check-cast p2, Landroid/app/enterprise/geofencing/LinearGeofence;
 
     .end local p2    # "geofence":Landroid/app/enterprise/geofencing/Geofence;
@@ -5407,40 +4889,33 @@
     .param p2, "linearGeofence"    # Landroid/app/enterprise/geofencing/LinearGeofence;
 
     .prologue
-    .line 341
     const-string v12, "GeofenceService"
 
     const-string v13, "createGeofence"
 
     invoke-static {v12, v13}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 342
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 343
     move-object/from16 v0, p1
 
     iget v8, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 344
     .local v8, "callingUid":I
     const/4 v9, -0x1
 
-    .line 345
     .local v9, "id":I
     move-object/from16 v0, p2
 
     iget-wide v6, v0, Landroid/app/enterprise/geofencing/LinearGeofence;->width:D
 
-    .line 346
     .local v6, "toleranceVal":D
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 347
     .local v3, "polygonList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     move-object/from16 v0, p2
 
@@ -5452,14 +4927,12 @@
 
     if-gtz v12, :cond_2
 
-    .line 348
     const-wide/high16 v12, 0x3ff0000000000000L    # 1.0
 
     move-object/from16 v0, p2
 
     iput-wide v12, v0, Landroid/app/enterprise/geofencing/LinearGeofence;->width:D
 
-    .line 352
     :cond_0
     :goto_0
     move-object/from16 v0, p2
@@ -5476,7 +4949,6 @@
 
     move-result-object v3
 
-    .line 354
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v12
@@ -5485,7 +4957,6 @@
 
     if-le v12, v13, :cond_5
 
-    .line 355
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/android/server/enterprise/geofencing/GeofenceService;->validatePolygonalGeofence(Ljava/util/List;)Z
@@ -5494,14 +4965,12 @@
 
     if-eqz v12, :cond_4
 
-    .line 356
     move-object/from16 v0, p0
 
     invoke-direct {v0, v3}, Lcom/android/server/enterprise/geofencing/GeofenceService;->findCollinear(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 357
     .local v4, "latlongs":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     if-eqz v4, :cond_1
 
@@ -5513,16 +4982,13 @@
 
     if-gt v12, v13, :cond_3
 
-    .line 358
     :cond_1
     const/4 v12, -0x1
 
-    .line 371
     .end local v4    # "latlongs":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     :goto_1
     return v12
 
-    .line 349
     :cond_2
     move-object/from16 v0, p2
 
@@ -5534,7 +5000,6 @@
 
     if-lez v12, :cond_0
 
-    .line 350
     const-wide v12, 0x412e847e00000000L    # 999999.0
 
     move-object/from16 v0, p2
@@ -5543,7 +5008,6 @@
 
     goto :goto_0
 
-    .line 359
     .restart local v4    # "latlongs":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     :cond_3
     move-object/from16 v0, p0
@@ -5552,13 +5016,11 @@
 
     move-result-object v5
 
-    .line 360
     .local v5, "boundingBox":Landroid/app/enterprise/geofencing/BoundingBox;
     new-instance v2, Landroid/app/enterprise/geofencing/LinearGeofence;
 
     invoke-direct/range {v2 .. v7}, Landroid/app/enterprise/geofencing/LinearGeofence;-><init>(Ljava/util/List;Ljava/util/List;Landroid/app/enterprise/geofencing/BoundingBox;D)V
 
-    .line 362
     .local v2, "lFence":Landroid/app/enterprise/geofencing/LinearGeofence;
     move-object/from16 v0, p0
 
@@ -5566,7 +5028,6 @@
 
     move-result-object v11
 
-    .line 363
     .local v11, "serializedBlob":[B
     const/4 v12, 0x3
 
@@ -5578,14 +5039,12 @@
 
     move-result v9
 
-    .line 364
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->isGeofencingEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v12
 
     if-eqz v12, :cond_4
 
-    .line 365
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v12
@@ -5600,7 +5059,6 @@
 
     move-result-object v10
 
-    .line 366
     .local v10, "message":Landroid/os/Message;
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -5616,13 +5074,11 @@
     :cond_4
     move v12, v9
 
-    .line 369
     goto :goto_1
 
     :cond_5
     move v12, v9
 
-    .line 371
     goto :goto_1
 .end method
 
@@ -5632,28 +5088,23 @@
     .param p2, "polygonalGeofence"    # Landroid/app/enterprise/geofencing/PolygonalGeofence;
 
     .prologue
-    .line 411
     const-string v3, "GeofenceService"
 
     const-string v4, "createGeofence"
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 412
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 413
     move-object/from16 v0, p1
 
     iget v9, v0, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 416
     .local v9, "callingUid":I
     const/4 v10, -0x1
 
-    .line 417
     .local v10, "id":I
     move-object/from16 v0, p2
 
@@ -5667,7 +5118,6 @@
 
     if-le v3, v4, :cond_2
 
-    .line 418
     move-object/from16 v0, p2
 
     iget-object v3, v0, Landroid/app/enterprise/geofencing/PolygonalGeofence;->points:Ljava/util/List;
@@ -5680,7 +5130,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 419
     move-object/from16 v0, p2
 
     iget-object v3, v0, Landroid/app/enterprise/geofencing/PolygonalGeofence;->points:Ljava/util/List;
@@ -5691,7 +5140,6 @@
 
     move-result-object v6
 
-    .line 420
     .local v6, "latlongs":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     if-eqz v6, :cond_0
 
@@ -5703,16 +5151,13 @@
 
     if-gt v3, v4, :cond_1
 
-    .line 421
     :cond_0
     const/4 v3, -0x1
 
-    .line 441
     .end local v6    # "latlongs":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     :goto_0
     return v3
 
-    .line 422
     .restart local v6    # "latlongs":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     :cond_1
     move-object/from16 v0, p0
@@ -5721,7 +5166,6 @@
 
     move-result-object v8
 
-    .line 423
     .local v8, "boundingBox":Landroid/app/enterprise/geofencing/BoundingBox;
     move-object/from16 v0, p2
 
@@ -5733,10 +5177,8 @@
 
     if-nez v3, :cond_3
 
-    .line 424
     move-object v7, v6
 
-    .line 430
     .local v7, "gracePoints":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     :goto_1
     new-instance v2, Landroid/app/enterprise/geofencing/PolygonalGeofence;
@@ -5751,7 +5193,6 @@
 
     invoke-direct/range {v2 .. v8}, Landroid/app/enterprise/geofencing/PolygonalGeofence;-><init>(Ljava/util/List;DLjava/util/List;Ljava/util/List;Landroid/app/enterprise/geofencing/BoundingBox;)V
 
-    .line 432
     .local v2, "pGeofence":Landroid/app/enterprise/geofencing/PolygonalGeofence;
     move-object/from16 v0, p0
 
@@ -5759,7 +5200,6 @@
 
     move-result-object v12
 
-    .line 433
     .local v12, "serializedBlob":[B
     const/4 v3, 0x2
 
@@ -5771,14 +5211,12 @@
 
     move-result v10
 
-    .line 435
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->isGeofencingEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 436
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -5793,7 +5231,6 @@
 
     move-result-object v11
 
-    .line 437
     .local v11, "message":Landroid/os/Message;
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -5810,10 +5247,8 @@
     :cond_2
     move v3, v10
 
-    .line 441
     goto :goto_0
 
-    .line 426
     .restart local v6    # "latlongs":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     .restart local v8    # "boundingBox":Landroid/app/enterprise/geofencing/BoundingBox;
     :cond_3
@@ -5849,52 +5284,43 @@
     .end annotation
 
     .prologue
-    .line 925
     .local p1, "points":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     new-instance v13, Ljava/util/ArrayList;
 
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    .line 926
     .local v13, "frontList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     new-instance v12, Ljava/util/ArrayList;
 
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
-    .line 927
     .local v12, "endList":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     new-instance v42, Ljava/util/ArrayList;
 
     invoke-direct/range {v42 .. v42}, Ljava/util/ArrayList;-><init>()V
 
-    .line 928
     .local v42, "slopes":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Double;>;"
     new-instance v23, Ljava/util/ArrayList;
 
     invoke-direct/range {v23 .. v23}, Ljava/util/ArrayList;-><init>()V
 
-    .line 929
     .local v23, "listAbove":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     new-instance v26, Ljava/util/ArrayList;
 
     invoke-direct/range {v26 .. v26}, Ljava/util/ArrayList;-><init>()V
 
-    .line 930
     .local v26, "listBelow":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/LatLongPoint;>;"
     const-wide/16 v40, 0x0
 
     .local v40, "slopePerpendicularAB":D
     const-wide/16 v8, 0x0
 
-    .line 933
     .local v8, "distanceToPoint":D
     const-wide v24, 0x3f747ae147ae147bL    # 0.005
 
-    .line 935
     .local v24, "latitudeNoise":D
     const-wide v28, 0x3f747ae147ae147bL    # 0.005
 
-    .line 939
     .local v28, "longitudeNoise":D
     const/16 v43, 0x0
 
@@ -5904,13 +5330,11 @@
     .local v10, "end1":Landroid/app/enterprise/geofencing/LatLongPoint;
     const/4 v11, 0x0
 
-    .line 944
     .local v11, "end2":Landroid/app/enterprise/geofencing/LatLongPoint;
     const-wide v54, 0x3ee2cc82c7677f8dL    # 8.964E-6
 
     mul-double p2, p2, v54
 
-    .line 946
     const/16 v22, 0x0
 
     .local v22, "i":I
@@ -5925,7 +5349,6 @@
 
     if-ge v0, v1, :cond_15
 
-    .line 947
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
     move-result v53
@@ -5938,7 +5361,6 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 948
     add-int/lit8 v53, v22, -0x1
 
     move-object/from16 v0, p1
@@ -5951,7 +5373,6 @@
 
     check-cast v6, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 949
     .local v6, "a":Landroid/app/enterprise/geofencing/LatLongPoint;
     move-object/from16 v0, p1
 
@@ -5963,7 +5384,6 @@
 
     check-cast v7, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 955
     .local v7, "b":Landroid/app/enterprise/geofencing/LatLongPoint;
     :goto_1
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
@@ -5982,7 +5402,6 @@
 
     if-nez v53, :cond_0
 
-    .line 956
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
     move-wide/from16 v54, v0
@@ -5993,7 +5412,6 @@
 
     if-ltz v53, :cond_9
 
-    .line 957
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
     move-wide/from16 v54, v0
@@ -6004,7 +5422,6 @@
 
     iput-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
-    .line 962
     :cond_0
     :goto_2
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -6023,7 +5440,6 @@
 
     if-nez v53, :cond_1
 
-    .line 963
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
     move-wide/from16 v54, v0
@@ -6034,7 +5450,6 @@
 
     if-ltz v53, :cond_a
 
-    .line 964
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
     move-wide/from16 v54, v0
@@ -6045,7 +5460,6 @@
 
     iput-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
-    .line 969
     :cond_1
     :goto_3
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -6070,7 +5484,6 @@
 
     div-double v38, v54, v56
 
-    .line 971
     .local v38, "slopeAB":D
     invoke-static/range {v38 .. v39}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
@@ -6082,7 +5495,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 975
     new-instance v27, Landroid/app/enterprise/geofencing/LatLongPoint;
 
     iget-wide v0, v6, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
@@ -6121,7 +5533,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/app/enterprise/geofencing/LatLongPoint;-><init>(DD)V
 
-    .line 979
     .local v27, "mid1":Landroid/app/enterprise/geofencing/LatLongPoint;
     const-wide/high16 v54, 0x3ff0000000000000L    # 1.0
 
@@ -6133,7 +5544,6 @@
 
     move-wide/from16 v40, v0
 
-    .line 981
     const-wide/high16 v54, 0x3ff0000000000000L    # 1.0
 
     mul-double v56, v40, v40
@@ -6146,7 +5556,6 @@
 
     div-double v8, p2, v54
 
-    .line 985
     const-wide/16 v54, 0x0
 
     cmpl-double v53, v38, v54
@@ -6184,7 +5593,6 @@
 
     if-lez v53, :cond_d
 
-    .line 987
     :cond_3
     move-object/from16 v0, v27
 
@@ -6196,7 +5604,6 @@
 
     add-double v48, v54, v56
 
-    .line 988
     .local v48, "yNewAbove":D
     move-object/from16 v0, v27
 
@@ -6218,7 +5625,6 @@
 
     div-double v44, v54, v40
 
-    .line 990
     .local v44, "xNewAbove":D
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -6236,7 +5642,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 993
     move-object/from16 v0, v27
 
     iget-wide v0, v0, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -6247,7 +5652,6 @@
 
     sub-double v50, v54, v56
 
-    .line 994
     .local v50, "yNewBelow":D
     move-object/from16 v0, v27
 
@@ -6269,7 +5673,6 @@
 
     div-double v46, v54, v40
 
-    .line 996
     .local v46, "xNewBelow":D
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -6287,13 +5690,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 998
     if-nez v22, :cond_4
 
-    .line 999
     move-object/from16 v43, v6
 
-    .line 1000
     :cond_4
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
@@ -6307,10 +5707,8 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 1001
     move-object/from16 v43, v7
 
-    .line 1003
     :cond_5
     if-eqz v22, :cond_6
 
@@ -6326,7 +5724,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 1004
     :cond_6
     move-object/from16 v0, v43
 
@@ -6338,7 +5735,6 @@
 
     add-double v48, v54, v56
 
-    .line 1005
     move-object/from16 v0, v43
 
     iget-wide v0, v0, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -6359,10 +5755,8 @@
 
     div-double v44, v54, v40
 
-    .line 1007
     if-nez v22, :cond_b
 
-    .line 1008
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
     move-object/from16 v0, v53
@@ -6377,7 +5771,6 @@
 
     invoke-interface {v13, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1013
     :goto_4
     move-object/from16 v0, v43
 
@@ -6389,7 +5782,6 @@
 
     sub-double v50, v54, v56
 
-    .line 1014
     move-object/from16 v0, v43
 
     iget-wide v0, v0, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -6410,10 +5802,8 @@
 
     div-double v46, v54, v40
 
-    .line 1016
     if-nez v22, :cond_c
 
-    .line 1017
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
     move-object/from16 v0, v53
@@ -6428,7 +5818,6 @@
 
     invoke-interface {v12, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 946
     .end local v44    # "xNewAbove":D
     .end local v46    # "xNewBelow":D
     .end local v48    # "yNewAbove":D
@@ -6439,7 +5828,6 @@
 
     goto/16 :goto_0
 
-    .line 951
     .end local v6    # "a":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v7    # "b":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v27    # "mid1":Landroid/app/enterprise/geofencing/LatLongPoint;
@@ -6455,7 +5843,6 @@
 
     check-cast v6, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 952
     .restart local v6    # "a":Landroid/app/enterprise/geofencing/LatLongPoint;
     add-int/lit8 v53, v22, 0x1
 
@@ -6472,7 +5859,6 @@
     .restart local v7    # "b":Landroid/app/enterprise/geofencing/LatLongPoint;
     goto/16 :goto_1
 
-    .line 959
     :cond_9
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->latitude:D
 
@@ -6486,7 +5872,6 @@
 
     goto/16 :goto_2
 
-    .line 966
     :cond_a
     iget-wide v0, v7, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
 
@@ -6500,7 +5885,6 @@
 
     goto/16 :goto_3
 
-    .line 1010
     .restart local v27    # "mid1":Landroid/app/enterprise/geofencing/LatLongPoint;
     .restart local v38    # "slopeAB":D
     .restart local v44    # "xNewAbove":D
@@ -6520,7 +5904,6 @@
     .restart local v10    # "end1":Landroid/app/enterprise/geofencing/LatLongPoint;
     goto :goto_4
 
-    .line 1019
     :cond_c
     new-instance v11, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -6534,7 +5917,6 @@
     .restart local v11    # "end2":Landroid/app/enterprise/geofencing/LatLongPoint;
     goto :goto_5
 
-    .line 1026
     .end local v44    # "xNewAbove":D
     .end local v46    # "xNewBelow":D
     .end local v48    # "yNewAbove":D
@@ -6577,7 +5959,6 @@
 
     if-gez v53, :cond_7
 
-    .line 1028
     :cond_f
     move-object/from16 v0, v27
 
@@ -6589,7 +5970,6 @@
 
     sub-double v48, v54, v56
 
-    .line 1029
     .restart local v48    # "yNewAbove":D
     move-object/from16 v0, v27
 
@@ -6611,7 +5991,6 @@
 
     div-double v44, v54, v40
 
-    .line 1031
     .restart local v44    # "xNewAbove":D
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -6629,7 +6008,6 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1034
     move-object/from16 v0, v27
 
     iget-wide v0, v0, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -6640,7 +6018,6 @@
 
     add-double v50, v54, v56
 
-    .line 1035
     .restart local v50    # "yNewBelow":D
     move-object/from16 v0, v27
 
@@ -6662,7 +6039,6 @@
 
     div-double v46, v54, v40
 
-    .line 1037
     .restart local v46    # "xNewBelow":D
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -6680,13 +6056,10 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1039
     if-nez v22, :cond_10
 
-    .line 1040
     move-object/from16 v43, v6
 
-    .line 1041
     :cond_10
     invoke-interface/range {p1 .. p1}, Ljava/util/List;->size()I
 
@@ -6700,10 +6073,8 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 1042
     move-object/from16 v43, v7
 
-    .line 1044
     :cond_11
     if-eqz v22, :cond_12
 
@@ -6719,7 +6090,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 1045
     :cond_12
     move-object/from16 v0, v43
 
@@ -6731,7 +6101,6 @@
 
     sub-double v48, v54, v56
 
-    .line 1046
     move-object/from16 v0, v43
 
     iget-wide v0, v0, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -6752,10 +6121,8 @@
 
     div-double v44, v54, v40
 
-    .line 1048
     if-nez v22, :cond_13
 
-    .line 1049
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
     move-object/from16 v0, v53
@@ -6770,7 +6137,6 @@
 
     invoke-interface {v13, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1054
     :goto_6
     move-object/from16 v0, v43
 
@@ -6782,7 +6148,6 @@
 
     add-double v50, v54, v56
 
-    .line 1055
     move-object/from16 v0, v43
 
     iget-wide v0, v0, Landroid/app/enterprise/geofencing/LatLongPoint;->longitude:D
@@ -6803,10 +6168,8 @@
 
     div-double v46, v54, v40
 
-    .line 1057
     if-nez v22, :cond_14
 
-    .line 1058
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
     move-object/from16 v0, v53
@@ -6823,7 +6186,6 @@
 
     goto/16 :goto_5
 
-    .line 1051
     :cond_13
     new-instance v10, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -6837,7 +6199,6 @@
     .restart local v10    # "end1":Landroid/app/enterprise/geofencing/LatLongPoint;
     goto :goto_6
 
-    .line 1060
     :cond_14
     new-instance v11, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -6851,7 +6212,6 @@
     .restart local v11    # "end2":Landroid/app/enterprise/geofencing/LatLongPoint;
     goto/16 :goto_5
 
-    .line 1071
     .end local v6    # "a":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v7    # "b":Landroid/app/enterprise/geofencing/LatLongPoint;
     .end local v27    # "mid1":Landroid/app/enterprise/geofencing/LatLongPoint;
@@ -6863,7 +6223,6 @@
     :cond_15
     const/16 v52, 0x0
 
-    .line 1072
     .local v52, "z":I
     const/16 v22, 0x0
 
@@ -6880,7 +6239,6 @@
 
     if-ge v0, v1, :cond_16
 
-    .line 1075
     move-object/from16 v0, v42
 
     move/from16 v1, v22
@@ -6895,7 +6253,6 @@
 
     move-result-wide v30
 
-    .line 1076
     .local v30, "m1":D
     add-int/lit8 v53, v22, 0x1
 
@@ -6913,7 +6270,6 @@
 
     move-result-wide v32
 
-    .line 1077
     .local v32, "m2":D
     move-object/from16 v0, v23
 
@@ -6925,7 +6281,6 @@
 
     check-cast v34, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1078
     .local v34, "p1":Landroid/app/enterprise/geofencing/LatLongPoint;
     add-int/lit8 v53, v52, 0x1
 
@@ -6939,7 +6294,6 @@
 
     check-cast v35, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1079
     .local v35, "p2":Landroid/app/enterprise/geofencing/LatLongPoint;
     move-object/from16 v0, v35
 
@@ -6979,7 +6333,6 @@
 
     div-double v14, v54, v56
 
-    .line 1081
     .local v14, "finx":D
     mul-double v54, v30, v14
 
@@ -7001,7 +6354,6 @@
 
     add-double v18, v54, v56
 
-    .line 1082
     .local v18, "finy":D
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -7015,7 +6367,6 @@
 
     invoke-interface {v13, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1084
     move-object/from16 v0, v26
 
     move/from16 v1, v52
@@ -7026,7 +6377,6 @@
 
     check-cast v36, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1085
     .local v36, "p3":Landroid/app/enterprise/geofencing/LatLongPoint;
     add-int/lit8 v53, v52, 0x1
 
@@ -7040,7 +6390,6 @@
 
     check-cast v37, Landroid/app/enterprise/geofencing/LatLongPoint;
 
-    .line 1086
     .local v37, "p4":Landroid/app/enterprise/geofencing/LatLongPoint;
     move-object/from16 v0, v36
 
@@ -7080,7 +6429,6 @@
 
     div-double v16, v54, v56
 
-    .line 1088
     .local v16, "finxbelow":D
     mul-double v54, v30, v16
 
@@ -7102,7 +6450,6 @@
 
     add-double v20, v54, v56
 
-    .line 1089
     .local v20, "finybelow":D
     new-instance v53, Landroid/app/enterprise/geofencing/LatLongPoint;
 
@@ -7118,15 +6465,12 @@
 
     invoke-interface {v12, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1090
     add-int/lit8 v52, v52, 0x1
 
-    .line 1072
     add-int/lit8 v22, v22, 0x1
 
     goto/16 :goto_7
 
-    .line 1094
     .end local v14    # "finx":D
     .end local v16    # "finxbelow":D
     .end local v18    # "finy":D
@@ -7140,10 +6484,8 @@
     :cond_16
     invoke-interface {v13, v10}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1095
     invoke-interface {v12, v11}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1096
     invoke-interface {v12}, Ljava/util/List;->size()I
 
     move-result v53
@@ -7153,7 +6495,6 @@
     :goto_8
     if-ltz v22, :cond_17
 
-    .line 1097
     move/from16 v0, v22
 
     invoke-interface {v12, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -7164,12 +6505,10 @@
 
     invoke-interface {v13, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1096
     add-int/lit8 v22, v22, -0x1
 
     goto :goto_8
 
-    .line 1099
     :cond_17
     return-object v13
 .end method
@@ -7180,7 +6519,6 @@
     .param p2, "id"    # I
 
     .prologue
-    .line 452
     monitor-enter p0
 
     :try_start_0
@@ -7190,21 +6528,17 @@
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 453
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 454
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 455
     .local v0, "callingUid":I
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deleteFromDB(Landroid/app/enterprise/ContextInfo;I)Z
 
     move-result v2
 
-    .line 456
     .local v2, "ret":Z
     if-eqz v2, :cond_1
 
@@ -7214,7 +6548,6 @@
 
     if-nez v3, :cond_1
 
-    .line 457
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v4, "GEOFENCINGSETTINGS"
@@ -7225,7 +6558,6 @@
 
     invoke-virtual {v3, v0, v4, v5, v6}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->putInt(ILjava/lang/String;Ljava/lang/String;I)Z
 
-    .line 459
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -7236,7 +6568,6 @@
 
     move-result-object v1
 
-    .line 460
     .local v1, "message":Landroid/os/Message;
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -7246,7 +6577,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 465
     .end local v1    # "message":Landroid/os/Message;
     :cond_0
     :goto_0
@@ -7254,11 +6584,9 @@
 
     return v2
 
-    .line 461
     :cond_1
     if-eqz v2, :cond_0
 
-    .line 462
     :try_start_1
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -7274,7 +6602,6 @@
 
     move-result-object v1
 
-    .line 463
     .restart local v1    # "message":Landroid/os/Message;
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -7286,7 +6613,6 @@
 
     goto :goto_0
 
-    .line 452
     .end local v0    # "callingUid":I
     .end local v1    # "message":Landroid/os/Message;
     .end local v2    # "ret":Z
@@ -7304,10 +6630,8 @@
     .param p2, "point2"    # Landroid/app/enterprise/geofencing/LatLongPoint;
 
     .prologue
-    .line 1495
     const-wide v2, 0x40aeed880a82edb3L    # 3958.765705195919
 
-    .line 1497
     .local v2, "R":D
     move-object/from16 v0, p1
 
@@ -7317,7 +6641,6 @@
 
     move-result-wide v8
 
-    .line 1498
     .local v8, "lat2":D
     move-object/from16 v0, p1
 
@@ -7327,7 +6650,6 @@
 
     move-result-wide v12
 
-    .line 1499
     .local v12, "lon2":D
     move-object/from16 v0, p2
 
@@ -7337,7 +6659,6 @@
 
     move-result-wide v6
 
-    .line 1500
     .local v6, "lat1":D
     move-object/from16 v0, p2
 
@@ -7347,7 +6668,6 @@
 
     move-result-wide v10
 
-    .line 1502
     .local v10, "lon1":D
     invoke-static {v6, v7}, Ljava/lang/Math;->sin(D)D
 
@@ -7385,7 +6705,6 @@
 
     mul-double v4, v14, v2
 
-    .line 1506
     .local v4, "distance":D
     return-wide v4
 .end method
@@ -7406,32 +6725,26 @@
     .end annotation
 
     .prologue
-    .line 609
     const-string v11, "GeofenceService"
 
     const-string/jumbo v12, "getGeofences"
 
     invoke-static {v11, v12}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 610
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 611
     iget v1, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 612
     .local v1, "callingUid":I
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 613
     .local v9, "result":Ljava/util/List;, "Ljava/util/List<Landroid/app/enterprise/geofencing/Geofence;>;"
     const/4 v3, 0x0
 
-    .line 616
     .local v3, "cursor":Landroid/database/Cursor;
     const/4 v11, 0x3
 
@@ -7456,7 +6769,6 @@
 
     aput-object v12, v2, v11
 
-    .line 621
     .local v2, "columns":[Ljava/lang/String;
     iget-object v11, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -7466,10 +6778,8 @@
 
     move-result-object v3
 
-    .line 624
     if-eqz v3, :cond_5
 
-    .line 625
     :goto_0
     invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -7477,7 +6787,6 @@
 
     if-eqz v11, :cond_5
 
-    .line 627
     const-string v11, "_id"
 
     invoke-interface {v3, v11}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -7488,7 +6797,6 @@
 
     move-result v6
 
-    .line 628
     .local v6, "id":I
     const-string/jumbo v11, "type"
 
@@ -7500,7 +6808,6 @@
 
     move-result v10
 
-    .line 629
     .local v10, "type":I
     const-string v11, "blobdata"
 
@@ -7512,27 +6819,22 @@
 
     move-result-object v4
 
-    .line 632
     .local v4, "data":[B
     const/4 v11, 0x2
 
     if-ne v10, v11, :cond_2
 
-    .line 633
     invoke-static {v4}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deserializeGeoFence([B)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Landroid/app/enterprise/geofencing/PolygonalGeofence;
 
-    .line 634
     .local v8, "pFence":Landroid/app/enterprise/geofencing/PolygonalGeofence;
     iput v6, v8, Landroid/app/enterprise/geofencing/PolygonalGeofence;->id:I
 
-    .line 635
     iput v10, v8, Landroid/app/enterprise/geofencing/PolygonalGeofence;->type:I
 
-    .line 636
     invoke-interface {v9, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -7540,7 +6842,6 @@
 
     goto :goto_0
 
-    .line 651
     .end local v2    # "columns":[Ljava/lang/String;
     .end local v4    # "data":[B
     .end local v6    # "id":I
@@ -7549,7 +6850,6 @@
     :catch_0
     move-exception v5
 
-    .line 652
     .local v5, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v11, "GeofenceService"
@@ -7560,16 +6860,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 655
     if-eqz v3, :cond_0
 
-    .line 656
     :try_start_2
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 660
     .end local v5    # "e":Ljava/lang/Exception;
     :cond_0
     :goto_1
@@ -7585,7 +6882,6 @@
     :cond_1
     return-object v9
 
-    .line 637
     .restart local v2    # "columns":[Ljava/lang/String;
     .restart local v4    # "data":[B
     .restart local v6    # "id":I
@@ -7596,7 +6892,6 @@
 
     if-ne v10, v11, :cond_4
 
-    .line 638
     :try_start_3
     invoke-static {v4}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deserializeGeoFence([B)Ljava/lang/Object;
 
@@ -7604,21 +6899,17 @@
 
     check-cast v7, Landroid/app/enterprise/geofencing/LinearGeofence;
 
-    .line 639
     .local v7, "lFence":Landroid/app/enterprise/geofencing/LinearGeofence;
     iput v6, v7, Landroid/app/enterprise/geofencing/LinearGeofence;->id:I
 
-    .line 640
     iput v10, v7, Landroid/app/enterprise/geofencing/LinearGeofence;->type:I
 
-    .line 641
     invoke-direct {p0, v7}, Lcom/android/server/enterprise/geofencing/GeofenceService;->convertToLinear(Landroid/app/enterprise/geofencing/LinearGeofence;)Ljava/util/List;
 
     move-result-object v11
 
     iput-object v11, v7, Landroid/app/enterprise/geofencing/LinearGeofence;->points:Ljava/util/List;
 
-    .line 642
     invoke-interface {v9, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
@@ -7626,7 +6917,6 @@
 
     goto :goto_0
 
-    .line 654
     .end local v2    # "columns":[Ljava/lang/String;
     .end local v4    # "data":[B
     .end local v6    # "id":I
@@ -7635,21 +6925,17 @@
     :catchall_0
     move-exception v11
 
-    .line 655
     if-eqz v3, :cond_3
 
-    .line 656
     :try_start_4
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 657
     :cond_3
     :goto_2
     throw v11
 
-    .line 644
     .restart local v2    # "columns":[Ljava/lang/String;
     .restart local v4    # "data":[B
     .restart local v6    # "id":I
@@ -7662,14 +6948,11 @@
 
     check-cast v0, Landroid/app/enterprise/geofencing/CircularGeofence;
 
-    .line 645
     .local v0, "cFence":Landroid/app/enterprise/geofencing/CircularGeofence;
     iput v6, v0, Landroid/app/enterprise/geofencing/CircularGeofence;->id:I
 
-    .line 646
     iput v10, v0, Landroid/app/enterprise/geofencing/CircularGeofence;->type:I
 
-    .line 647
     invoke-interface {v9, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
@@ -7677,7 +6960,6 @@
 
     goto :goto_0
 
-    .line 655
     .end local v0    # "cFence":Landroid/app/enterprise/geofencing/CircularGeofence;
     .end local v4    # "data":[B
     .end local v6    # "id":I
@@ -7685,7 +6967,6 @@
     :cond_5
     if-eqz v3, :cond_0
 
-    .line 656
     :try_start_6
     invoke-interface {v3}, Landroid/database/Cursor;->close()V
     :try_end_6
@@ -7693,7 +6974,6 @@
 
     goto :goto_1
 
-    .line 657
     :catch_1
     move-exception v11
 
@@ -7717,7 +6997,6 @@
     .locals 1
 
     .prologue
-    .line 149
     iget-object v0, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mHandler:Lcom/android/server/enterprise/geofencing/GeofenceService$GeofencingHandler;
 
     return-object v0
@@ -7728,12 +7007,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 758
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrUserUid(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 759
     .local v0, "callingUid":I
     iget-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -7757,12 +7034,10 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 694
     invoke-static {p1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getCallingOrUserUid(Landroid/app/enterprise/ContextInfo;)I
 
     move-result v0
 
-    .line 695
     .local v0, "callingUid":I
     iget-object v1, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -7797,12 +7072,10 @@
     .end annotation
 
     .prologue
-    .line 558
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 559
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->isDeviceInsideGeofence(I)Ljava/util/List;
@@ -7821,12 +7094,10 @@
 
     const/4 v2, 0x0
 
-    .line 540
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 543
     :try_start_0
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -7844,24 +7115,20 @@
 
     if-ne v3, v1, :cond_0
 
-    .line 547
     :goto_0
     return v1
 
     :cond_0
     move v1, v2
 
-    .line 543
     goto :goto_0
 
-    .line 546
     :catch_0
     move-exception v0
 
     .local v0, "e":Lcom/android/server/enterprise/storage/SettingNotFoundException;
     move v1, v2
 
-    .line 547
     goto :goto_0
 .end method
 
@@ -7870,7 +7137,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 252
     return-void
 .end method
 
@@ -7879,7 +7145,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 268
     return-void
 .end method
 
@@ -7888,10 +7153,8 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 260
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deleteGeofenceActiveListByAdmin(I)V
 
-    .line 261
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v1
@@ -7902,7 +7165,6 @@
 
     move-result-object v0
 
-    .line 262
     .local v0, "message":Landroid/os/Message;
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -7910,7 +7172,6 @@
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 263
     return-void
 .end method
 
@@ -7920,15 +7181,12 @@
     .param p2, "distance"    # F
 
     .prologue
-    .line 735
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 736
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 737
     .local v0, "callingUid":I
     const/4 v3, 0x0
 
@@ -7936,15 +7194,12 @@
 
     if-gez v3, :cond_1
 
-    .line 738
     const/4 v2, 0x0
 
-    .line 749
     :cond_0
     :goto_0
     return v2
 
-    .line 740
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -7960,11 +7215,9 @@
 
     move-result v2
 
-    .line 744
     .local v2, "ret":Z
     if-eqz v2, :cond_0
 
-    .line 745
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -7975,7 +7228,6 @@
 
     move-result-object v1
 
-    .line 746
     .local v1, "message":Landroid/os/Message;
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -7992,15 +7244,12 @@
     .param p2, "time"    # J
 
     .prologue
-    .line 670
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 671
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 673
     .local v0, "callingUid":I
     const-wide/16 v4, 0x0
 
@@ -8008,15 +7257,12 @@
 
     if-gez v3, :cond_1
 
-    .line 674
     const/4 v2, 0x0
 
-    .line 685
     :cond_0
     :goto_0
     return v2
 
-    .line 676
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -8032,11 +7278,9 @@
 
     move-result v2
 
-    .line 680
     .local v2, "ret":Z
     if-eqz v2, :cond_0
 
-    .line 681
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -8047,7 +7291,6 @@
 
     move-result-object v1
 
-    .line 682
     .local v1, "message":Landroid/os/Message;
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -8065,22 +7308,18 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 475
     const-string v3, "GeofenceService"
 
     const-string/jumbo v4, "startGeofencing"
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 476
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 477
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 479
     .local v0, "callingUid":I
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->isAdminHasGeofence(I)Z
 
@@ -8088,15 +7327,12 @@
 
     if-nez v3, :cond_1
 
-    .line 480
     const/4 v2, 0x0
 
-    .line 497
     :cond_0
     :goto_0
     return v2
 
-    .line 483
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->isGeofencingEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
@@ -8108,7 +7344,6 @@
 
     if-nez v3, :cond_0
 
-    .line 487
     :cond_2
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -8120,14 +7355,11 @@
 
     move-result v2
 
-    .line 491
     .local v2, "ret":Z
     if-eqz v2, :cond_0
 
-    .line 492
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->updateGeofenceActiveListbyAdmin(I)V
 
-    .line 493
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -8138,7 +7370,6 @@
 
     move-result-object v1
 
-    .line 494
     .local v1, "message":Landroid/os/Message;
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -8156,22 +7387,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 508
     const-string v3, "GeofenceService"
 
     const-string/jumbo v4, "stopGeofencing"
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 509
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->enforceGeofencingPermission(Landroid/app/enterprise/ContextInfo;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 510
     iget v0, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
-    .line 512
     .local v0, "callingUid":I
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->isAdminHasGeofence(I)Z
 
@@ -8179,12 +7406,10 @@
 
     if-nez v3, :cond_1
 
-    .line 530
     :cond_0
     :goto_0
     return v2
 
-    .line 516
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/geofencing/GeofenceService;->isGeofencingEnabled(Landroid/app/enterprise/ContextInfo;)Z
 
@@ -8192,12 +7417,10 @@
 
     if-nez v3, :cond_2
 
-    .line 517
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 520
     :cond_2
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -8209,14 +7432,11 @@
 
     move-result v2
 
-    .line 524
     .local v2, "ret":Z
     if-eqz v2, :cond_0
 
-    .line 525
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->deleteGeofenceActiveListByAdmin(I)V
 
-    .line 526
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -8227,7 +7447,6 @@
 
     move-result-object v1
 
-    .line 527
     .local v1, "message":Landroid/os/Message;
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
@@ -8242,34 +7461,28 @@
     .locals 6
 
     .prologue
-    .line 237
     const/4 v0, 0x0
 
-    .line 238
     .local v0, "count":I
     new-instance v1, Landroid/content/IntentFilter;
 
     invoke-direct {v1}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 239
     .local v1, "intentFilter":Landroid/content/IntentFilter;
     const-string v3, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 240
     const-string v3, "android.intent.action.USER_STOPPED"
 
     invoke-virtual {v1, v3}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 241
     iget-object v3, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mContext:Landroid/content/Context;
 
     iget-object v4, p0, Lcom/android/server/enterprise/geofencing/GeofenceService;->mUserRemovedReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v3, v4, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 243
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -8280,7 +7493,6 @@
 
     move-result-object v2
 
-    .line 244
     .local v2, "message":Landroid/os/Message;
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
@@ -8288,7 +7500,6 @@
 
     iput v3, v2, Landroid/os/Message;->arg1:I
 
-    .line 245
     invoke-virtual {p0}, Lcom/android/server/enterprise/geofencing/GeofenceService;->getHandler()Landroid/os/Handler;
 
     move-result-object v3
@@ -8297,6 +7508,5 @@
 
     invoke-virtual {v3, v2, v4, v5}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 247
     return-void
 .end method

@@ -20,12 +20,10 @@
     .param p2, "type"    # Lorg/simpleframework/xml/strategy/Type;
 
     .prologue
-    .line 73
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lorg/simpleframework/xml/core/Factory;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;Ljava/lang/Class;)V
 
-    .line 74
     return-void
 .end method
 
@@ -36,26 +34,20 @@
     .param p3, "override"    # Ljava/lang/Class;
 
     .prologue
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Context;->getSupport()Lorg/simpleframework/xml/core/Support;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/Factory;->support:Lorg/simpleframework/xml/core/Support;
 
-    .line 88
     iput-object p3, p0, Lorg/simpleframework/xml/core/Factory;->override:Ljava/lang/Class;
 
-    .line 89
     iput-object p1, p0, Lorg/simpleframework/xml/core/Factory;->context:Lorg/simpleframework/xml/core/Context;
 
-    .line 90
     iput-object p2, p0, Lorg/simpleframework/xml/core/Factory;->type:Lorg/simpleframework/xml/strategy/Type;
 
-    .line 91
     return-void
 .end method
 
@@ -70,25 +62,21 @@
     .end annotation
 
     .prologue
-    .line 185
     iget-object v1, p0, Lorg/simpleframework/xml/core/Factory;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-static {p2}, Lorg/simpleframework/xml/core/Support;->getPrimitive(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 187
     .local v0, "convert":Ljava/lang/Class;
     if-eq v0, p2, :cond_0
 
-    .line 188
     new-instance v1, Lorg/simpleframework/xml/core/OverrideType;
 
     invoke-direct {v1, p1, v0}, Lorg/simpleframework/xml/core/OverrideType;-><init>(Lorg/simpleframework/xml/strategy/Type;Ljava/lang/Class;)V
 
     move-object p1, v1
 
-    .line 190
     .end local p1    # "type":Lorg/simpleframework/xml/strategy/Type;
     :cond_0
     return-object p1
@@ -100,19 +88,16 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 231
     invoke-virtual {p0}, Ljava/lang/Class;->isArray()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 232
     invoke-virtual {p0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
     move-result-object p0
 
-    .line 234
     :cond_0
     invoke-virtual {p0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -128,12 +113,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 248
     invoke-virtual {p0}, Ljava/lang/Class;->getModifiers()I
 
     move-result v0
 
-    .line 250
     .local v0, "modifiers":I
     invoke-static {v0}, Ljava/lang/reflect/Modifier;->isAbstract(I)Z
 
@@ -141,7 +124,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 253
     :cond_0
     :goto_0
     return v1
@@ -170,7 +152,6 @@
     .end annotation
 
     .prologue
-    .line 207
     iget-object v2, p0, Lorg/simpleframework/xml/core/Factory;->context:Lorg/simpleframework/xml/core/Context;
 
     iget-object v3, p0, Lorg/simpleframework/xml/core/Factory;->type:Lorg/simpleframework/xml/strategy/Type;
@@ -179,7 +160,6 @@
 
     move-result-object v1
 
-    .line 209
     .local v1, "value":Lorg/simpleframework/xml/strategy/Value;
     if-eqz v1, :cond_0
 
@@ -187,12 +167,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 210
     invoke-interface {v1}, Lorg/simpleframework/xml/strategy/Value;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 212
     .local v0, "proposed":Ljava/lang/Class;
     iget-object v2, p0, Lorg/simpleframework/xml/core/Factory;->override:Ljava/lang/Class;
 
@@ -202,7 +180,6 @@
 
     if-nez v2, :cond_0
 
-    .line 213
     new-instance v2, Lorg/simpleframework/xml/core/OverrideValue;
 
     iget-object v3, p0, Lorg/simpleframework/xml/core/Factory;->override:Ljava/lang/Class;
@@ -211,7 +188,6 @@
 
     move-object v1, v2
 
-    .line 216
     .end local v0    # "proposed":Ljava/lang/Class;
     .end local v1    # "value":Lorg/simpleframework/xml/strategy/Value;
     :cond_0
@@ -227,12 +203,10 @@
     .end annotation
 
     .prologue
-    .line 116
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/Factory;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 118
     .local v0, "type":Ljava/lang/Class;
     invoke-static {v0}, Lorg/simpleframework/xml/core/Factory;->isInstantiable(Ljava/lang/Class;)Z
 
@@ -240,7 +214,6 @@
 
     if-nez v1, :cond_0
 
-    .line 119
     new-instance v1, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v2, "Type %s can not be instantiated"
@@ -257,7 +230,6 @@
 
     throw v1
 
-    .line 121
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
@@ -276,33 +248,27 @@
     .end annotation
 
     .prologue
-    .line 139
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/Factory;->getConversion(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/strategy/Value;
 
     move-result-object v3
 
-    .line 141
     .local v3, "value":Lorg/simpleframework/xml/strategy/Value;
     if-eqz v3, :cond_0
 
-    .line 142
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getPosition()Lorg/simpleframework/xml/stream/Position;
 
     move-result-object v1
 
-    .line 143
     .local v1, "line":Lorg/simpleframework/xml/stream/Position;
     invoke-interface {v3}, Lorg/simpleframework/xml/strategy/Value;->getType()Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 144
     .local v2, "proposed":Ljava/lang/Class;
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/Factory;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 146
     .local v0, "expect":Ljava/lang/Class;
     invoke-static {v0, v2}, Lorg/simpleframework/xml/core/Factory;->isCompatible(Ljava/lang/Class;Ljava/lang/Class;)Z
 
@@ -310,7 +276,6 @@
 
     if-nez v4, :cond_0
 
-    .line 147
     new-instance v4, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v5, "Incompatible %s for %s at %s"
@@ -337,7 +302,6 @@
 
     throw v4
 
-    .line 150
     .end local v0    # "expect":Ljava/lang/Class;
     .end local v1    # "line":Lorg/simpleframework/xml/stream/Position;
     .end local v2    # "proposed":Ljava/lang/Class;
@@ -349,15 +313,12 @@
     .locals 1
 
     .prologue
-    .line 101
     iget-object v0, p0, Lorg/simpleframework/xml/core/Factory;->override:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
-    .line 102
     iget-object v0, p0, Lorg/simpleframework/xml/core/Factory;->override:Ljava/lang/Class;
 
-    .line 104
     :goto_0
     return-object v0
 
@@ -383,12 +344,10 @@
     .end annotation
 
     .prologue
-    .line 165
     invoke-interface {p1}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 167
     .local v0, "expect":Ljava/lang/Class;
     invoke-virtual {v0}, Ljava/lang/Class;->isPrimitive()Z
 
@@ -396,12 +355,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 168
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/core/Factory;->getPrimitive(Lorg/simpleframework/xml/strategy/Type;Ljava/lang/Class;)Lorg/simpleframework/xml/strategy/Type;
 
     move-result-object p1
 
-    .line 170
     :cond_0
     iget-object v1, p0, Lorg/simpleframework/xml/core/Factory;->context:Lorg/simpleframework/xml/core/Context;
 

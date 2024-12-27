@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4168
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,16 +46,13 @@
 
     const/4 v9, 0x1
 
-    .line 4171
     iget-object v3, p1, Landroid/hardware/scontext/SContextEvent;->scontext:Landroid/hardware/scontext/SContext;
 
-    .line 4172
     .local v3, "scontext":Landroid/hardware/scontext/SContext;
     invoke-virtual {p1}, Landroid/hardware/scontext/SContextEvent;->getHallSensorContext()Landroid/hardware/scontext/SContextHallSensor;
 
     move-result-object v4
 
-    .line 4173
     .local v4, "smartHallSensor":Landroid/hardware/scontext/SContextHallSensor;
     invoke-virtual {v3}, Landroid/hardware/scontext/SContext;->getType()I
 
@@ -66,12 +62,10 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 4174
     invoke-virtual {v4}, Landroid/hardware/scontext/SContextHallSensor;->getType()S
 
     move-result v5
 
-    .line 4176
     .local v5, "smartHallState":I
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -82,7 +76,6 @@
 
     if-eq v6, v5, :cond_3
 
-    .line 4177
     const-string v6, "InputManager"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -122,7 +115,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4179
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mControlWakeKey:Lcom/android/server/input/InputManagerService$ControlWakeKey;
@@ -132,7 +124,6 @@
 
     if-nez v6, :cond_0
 
-    .line 4180
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     new-instance v7, Lcom/android/server/input/InputManagerService$ControlWakeKey;
@@ -142,16 +133,13 @@
     # setter for: Lcom/android/server/input/InputManagerService;->mControlWakeKey:Lcom/android/server/input/InputManagerService$ControlWakeKey;
     invoke-static {v6, v7}, Lcom/android/server/input/InputManagerService;->access$3402(Lcom/android/server/input/InputManagerService;Lcom/android/server/input/InputManagerService$ControlWakeKey;)Lcom/android/server/input/InputManagerService$ControlWakeKey;
 
-    .line 4183
     :cond_0
     if-nez v5, :cond_4
 
-    .line 4184
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {v6, v10, v10}, Lcom/android/server/input/InputManagerService;->setInputDispatchMode(ZZ)V
 
-    .line 4185
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mControlWakeKey:Lcom/android/server/input/InputManagerService$ControlWakeKey;
@@ -163,24 +151,19 @@
 
     invoke-virtual {v6, v10, v7}, Lcom/android/server/input/InputManagerService$ControlWakeKey;->setWakeKeyDynamically(ZLjava/lang/String;)V
 
-    .line 4193
     :cond_1
     :goto_0
     const/4 v2, 0x0
 
-    .line 4194
     .local v2, "cnt":I
     const-string v1, "/efs/FactoryApp/CoverCount"
 
-    .line 4195
     .local v1, "closePath":Ljava/lang/String;
     const-string v0, "/efs/FactoryApp/BackCoverCount"
 
-    .line 4196
     .local v0, "backOpenPath":Ljava/lang/String;
     if-nez v5, :cond_5
 
-    .line 4197
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->sysfsRead(Ljava/lang/String;Z)I
@@ -188,10 +171,8 @@
 
     move-result v2
 
-    .line 4198
     if-ltz v2, :cond_2
 
-    .line 4199
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     add-int/lit8 v7, v2, 0x1
@@ -199,7 +180,6 @@
     # invokes: Lcom/android/server/input/InputManagerService;->sysfsWrite(Ljava/lang/String;I)Z
     invoke-static {v6, v1, v7}, Lcom/android/server/input/InputManagerService;->access$3600(Lcom/android/server/input/InputManagerService;Ljava/lang/String;I)Z
 
-    .line 4213
     :cond_2
     :goto_1
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
@@ -207,7 +187,6 @@
     # setter for: Lcom/android/server/input/InputManagerService;->mLastSmartHallFlipState:I
     invoke-static {v6, v5}, Lcom/android/server/input/InputManagerService;->access$3302(Lcom/android/server/input/InputManagerService;I)I
 
-    .line 4215
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mWindowManagerCallbacks:Lcom/android/server/input/InputManagerService$WindowManagerCallbacks;
@@ -219,7 +198,6 @@
 
     invoke-interface {v6, v8, v9, v5}, Lcom/android/server/input/InputManagerService$WindowManagerCallbacks;->notifyFoldingSwitchStateChanged(JI)V
 
-    .line 4218
     .end local v0    # "backOpenPath":Ljava/lang/String;
     .end local v1    # "closePath":Ljava/lang/String;
     .end local v2    # "cnt":I
@@ -227,7 +205,6 @@
     :cond_3
     return-void
 
-    .line 4187
     .restart local v5    # "smartHallState":I
     :cond_4
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
@@ -239,12 +216,10 @@
 
     if-nez v6, :cond_1
 
-    .line 4188
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {v6, v9, v10}, Lcom/android/server/input/InputManagerService;->setInputDispatchMode(ZZ)V
 
-    .line 4189
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mControlWakeKey:Lcom/android/server/input/InputManagerService$ControlWakeKey;
@@ -258,7 +233,6 @@
 
     goto :goto_0
 
-    .line 4201
     .restart local v0    # "backOpenPath":Ljava/lang/String;
     .restart local v1    # "closePath":Ljava/lang/String;
     .restart local v2    # "cnt":I
@@ -267,7 +241,6 @@
 
     if-ne v5, v6, :cond_7
 
-    .line 4202
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->sysfsRead(Ljava/lang/String;Z)I
@@ -275,10 +248,8 @@
 
     move-result v2
 
-    .line 4203
     if-ltz v2, :cond_6
 
-    .line 4204
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     add-int/lit8 v7, v2, 0x1
@@ -286,7 +257,6 @@
     # invokes: Lcom/android/server/input/InputManagerService;->sysfsWrite(Ljava/lang/String;I)Z
     invoke-static {v6, v0, v7}, Lcom/android/server/input/InputManagerService;->access$3600(Lcom/android/server/input/InputManagerService;Ljava/lang/String;I)Z
 
-    .line 4206
     :cond_6
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
@@ -295,11 +265,9 @@
 
     goto :goto_1
 
-    .line 4207
     :cond_7
     if-ne v5, v9, :cond_2
 
-    .line 4208
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$22;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->setDisplayInputDropForMillisecond(ZZZI)V

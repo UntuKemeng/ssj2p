@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 4414
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$PackageDeleteObs;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
@@ -45,22 +44,18 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 4420
     monitor-enter p0
 
-    .line 4421
     const/4 v1, 0x1
 
     :try_start_0
     iput-boolean v1, p0, Lcom/android/server/pm/PersonaManagerService$PackageDeleteObs;->finished:Z
 
-    .line 4422
     if-ne p2, v0, :cond_0
 
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/pm/PersonaManagerService$PackageDeleteObs;->result:Z
 
-    .line 4423
     const-string v0, "PersonaManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -93,22 +88,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4424
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 4425
     monitor-exit p0
 
-    .line 4426
     return-void
 
-    .line 4422
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 4425
     :catchall_0
     move-exception v0
 

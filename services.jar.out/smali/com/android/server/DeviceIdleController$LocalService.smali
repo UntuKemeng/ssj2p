@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 969
     iput-object p1, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p5, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 972
     iget-object v1, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     const/4 v2, 0x0
@@ -56,7 +54,6 @@
 
     invoke-virtual/range {v1 .. v7}, Lcom/android/server/DeviceIdleController;->addPowerSaveTempWhitelistAppDirectInternal(IIJZLjava/lang/String;)V
 
-    .line 973
     return-void
 .end method
 
@@ -73,28 +70,22 @@
     .end annotation
 
     .prologue
-    .line 981
     .local p1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v5, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     monitor-enter v5
 
-    .line 982
     const/4 v3, 0x0
 
-    .line 984
     .local v3, "whitelistChanged":Z
     if-nez p1, :cond_0
 
-    .line 985
     :try_start_0
     monitor-exit v5
 
-    .line 1008
     :goto_0
     return-void
 
-    .line 987
     :cond_0
     const/4 v1, 0x0
 
@@ -106,7 +97,6 @@
 
     if-ge v1, v4, :cond_2
 
-    .line 988
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -115,11 +105,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 989
     .local v2, "name":Ljava/lang/String;
     if-eqz v2, :cond_1
 
-    .line 991
     :try_start_1
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -137,7 +125,6 @@
 
     move-result-object v0
 
-    .line 995
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
@@ -163,10 +150,8 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 998
     const/4 v3, 0x1
 
-    .line 987
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_1
     :goto_2
@@ -174,27 +159,23 @@
 
     goto :goto_1
 
-    .line 1003
     .end local v2    # "name":Ljava/lang/String;
     :cond_2
     const/4 v4, 0x1
 
     if-ne v3, v4, :cond_3
 
-    .line 1004
     :try_start_2
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     # invokes: Lcom/android/server/DeviceIdleController;->updateWhitelistAppIdsLocked()V
     invoke-static {v4}, Lcom/android/server/DeviceIdleController;->access$300(Lcom/android/server/DeviceIdleController;)V
 
-    .line 1005
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     # invokes: Lcom/android/server/DeviceIdleController;->reportPowerSaveWhitelistChangedLocked()V
     invoke-static {v4}, Lcom/android/server/DeviceIdleController;->access$200(Lcom/android/server/DeviceIdleController;)V
 
-    .line 1007
     :cond_3
     monitor-exit v5
 
@@ -210,7 +191,6 @@
 
     throw v4
 
-    .line 999
     .restart local v1    # "i":I
     .restart local v2    # "name":Ljava/lang/String;
     :catch_0
@@ -232,28 +212,22 @@
     .end annotation
 
     .prologue
-    .line 1011
     .local p1, "list":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v4, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     monitor-enter v4
 
-    .line 1012
     const/4 v2, 0x0
 
-    .line 1014
     .local v2, "whitelistChanged":Z
     if-nez p1, :cond_0
 
-    .line 1015
     :try_start_0
     monitor-exit v4
 
-    .line 1031
     :goto_0
     return-void
 
-    .line 1017
     :cond_0
     const/4 v0, 0x0
 
@@ -265,18 +239,15 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 1018
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1019
     .local v1, "name":Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 1020
     iget-object v3, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     # getter for: Lcom/android/server/DeviceIdleController;->mInternalWhitelistAppsExceptIdle:Landroid/util/ArrayMap;
@@ -290,35 +261,29 @@
 
     if-eqz v3, :cond_1
 
-    .line 1021
     const/4 v2, 0x1
 
-    .line 1017
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1026
     .end local v1    # "name":Ljava/lang/String;
     :cond_2
     const/4 v3, 0x1
 
     if-ne v2, v3, :cond_3
 
-    .line 1027
     iget-object v3, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     # invokes: Lcom/android/server/DeviceIdleController;->updateWhitelistAppIdsLocked()V
     invoke-static {v3}, Lcom/android/server/DeviceIdleController;->access$300(Lcom/android/server/DeviceIdleController;)V
 
-    .line 1028
     iget-object v3, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     # invokes: Lcom/android/server/DeviceIdleController;->reportPowerSaveWhitelistChangedLocked()V
     invoke-static {v3}, Lcom/android/server/DeviceIdleController;->access$200(Lcom/android/server/DeviceIdleController;)V
 
-    .line 1030
     :cond_3
     monitor-exit v4
 
@@ -340,11 +305,9 @@
     .param p1, "callback"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 976
     iget-object v0, p0, Lcom/android/server/DeviceIdleController$LocalService;->this$0:Lcom/android/server/DeviceIdleController;
 
     invoke-virtual {v0, p1}, Lcom/android/server/DeviceIdleController;->setNetworkPolicyTempWhitelistCallbackInternal(Ljava/lang/Runnable;)V
 
-    .line 977
     return-void
 .end method

@@ -62,14 +62,12 @@
     .locals 1
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     new-array v0, v0, [Landroid/hardware/display/WifiDisplay;
 
     sput-object v0, Landroid/hardware/display/WifiDisplay;->EMPTY_ARRAY:[Landroid/hardware/display/WifiDisplay;
 
-    .line 48
     new-instance v0, Landroid/hardware/display/WifiDisplay$1;
 
     invoke-direct {v0}, Landroid/hardware/display/WifiDisplay$1;-><init>()V
@@ -89,18 +87,14 @@
     .param p6, "remembered"    # Z
 
     .prologue
-    .line 82
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/display/WifiDisplay;->mDevInfo:I
 
-    .line 83
     if-nez p1, :cond_0
 
-    .line 84
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "deviceAddress must not be null"
@@ -109,11 +103,9 @@
 
     throw v0
 
-    .line 86
     :cond_0
     if-nez p2, :cond_1
 
-    .line 87
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "deviceName must not be null"
@@ -122,26 +114,19 @@
 
     throw v0
 
-    .line 90
     :cond_1
     iput-object p1, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAddress:Ljava/lang/String;
 
-    .line 91
     iput-object p2, p0, Landroid/hardware/display/WifiDisplay;->mDeviceName:Ljava/lang/String;
 
-    .line 92
     iput-object p3, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAlias:Ljava/lang/String;
 
-    .line 93
     iput-boolean p4, p0, Landroid/hardware/display/WifiDisplay;->mIsAvailable:Z
 
-    .line 94
     iput-boolean p5, p0, Landroid/hardware/display/WifiDisplay;->mCanConnect:Z
 
-    .line 95
     iput-boolean p6, p0, Landroid/hardware/display/WifiDisplay;->mIsRemembered:Z
 
-    .line 96
     return-void
 .end method
 
@@ -156,18 +141,14 @@
     .param p7, "primaryDeviceType"    # Ljava/lang/String;
 
     .prologue
-    .line 101
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/hardware/display/WifiDisplay;->mDevInfo:I
 
-    .line 102
     if-nez p1, :cond_0
 
-    .line 103
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "deviceAddress must not be null"
@@ -176,11 +157,9 @@
 
     throw v0
 
-    .line 105
     :cond_0
     if-nez p2, :cond_1
 
-    .line 106
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "deviceName must not be null"
@@ -189,29 +168,21 @@
 
     throw v0
 
-    .line 109
     :cond_1
     iput-object p1, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAddress:Ljava/lang/String;
 
-    .line 110
     iput-object p2, p0, Landroid/hardware/display/WifiDisplay;->mDeviceName:Ljava/lang/String;
 
-    .line 111
     iput-object p3, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAlias:Ljava/lang/String;
 
-    .line 112
     iput-boolean p4, p0, Landroid/hardware/display/WifiDisplay;->mIsAvailable:Z
 
-    .line 113
     iput-boolean p5, p0, Landroid/hardware/display/WifiDisplay;->mCanConnect:Z
 
-    .line 114
     iput-boolean p6, p0, Landroid/hardware/display/WifiDisplay;->mIsRemembered:Z
 
-    .line 116
     iput-object p7, p0, Landroid/hardware/display/WifiDisplay;->mPrimaryDeviceType:Ljava/lang/String;
 
-    .line 117
     return-void
 .end method
 
@@ -221,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 166
     iget-boolean v0, p0, Landroid/hardware/display/WifiDisplay;->mCanConnect:Z
 
     return v0
@@ -232,7 +202,6 @@
     .param p1, "other"    # Landroid/hardware/display/WifiDisplay;
 
     .prologue
-    .line 365
     const/4 v0, -0x1
 
     return v0
@@ -243,7 +212,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 32
     check-cast p1, Landroid/hardware/display/WifiDisplay;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -258,7 +226,6 @@
     .locals 1
 
     .prologue
-    .line 338
     const/4 v0, 0x0
 
     return v0
@@ -269,7 +236,6 @@
     .param p1, "other"    # Landroid/hardware/display/WifiDisplay;
 
     .prologue
-    .line 293
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAddress:Ljava/lang/String;
@@ -318,7 +284,6 @@
     .param p1, "o"    # Ljava/lang/Object;
 
     .prologue
-    .line 284
     instance-of v0, p1, Landroid/hardware/display/WifiDisplay;
 
     if-eqz v0, :cond_0
@@ -347,7 +312,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAddress:Ljava/lang/String;
 
     return-object v0
@@ -357,7 +321,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAlias:Ljava/lang/String;
 
     return-object v0
@@ -367,7 +330,6 @@
     .locals 1
 
     .prologue
-    .line 215
     const/4 v0, 0x0
 
     return v0
@@ -377,7 +339,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceName:Ljava/lang/String;
 
     return-object v0
@@ -387,7 +348,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAlias:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -407,7 +367,6 @@
     .locals 1
 
     .prologue
-    .line 198
     const/4 v0, 0x0
 
     return-object v0
@@ -417,7 +376,6 @@
     .locals 1
 
     .prologue
-    .line 242
     const-string v0, ""
 
     return-object v0
@@ -428,7 +386,6 @@
     .param p1, "other"    # Landroid/hardware/display/WifiDisplay;
 
     .prologue
-    .line 306
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAddress:Ljava/lang/String;
@@ -456,7 +413,6 @@
     .locals 1
 
     .prologue
-    .line 313
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAddress:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -470,7 +426,6 @@
     .locals 1
 
     .prologue
-    .line 158
     iget-boolean v0, p0, Landroid/hardware/display/WifiDisplay;->mIsAvailable:Z
 
     return v0
@@ -480,7 +435,6 @@
     .locals 1
 
     .prologue
-    .line 266
     const/4 v0, 0x0
 
     return v0
@@ -490,7 +444,6 @@
     .locals 1
 
     .prologue
-    .line 174
     iget-boolean v0, p0, Landroid/hardware/display/WifiDisplay;->mIsRemembered:Z
 
     return v0
@@ -501,7 +454,6 @@
     .param p1, "devInfo"    # I
 
     .prologue
-    .line 229
     return-void
 .end method
 
@@ -510,7 +462,6 @@
     .param p1, "isEmptySurface"    # Z
 
     .prologue
-    .line 278
     return-void
 .end method
 
@@ -519,7 +470,6 @@
     .param p1, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 255
     return-void
 .end method
 
@@ -527,7 +477,6 @@
     .locals 3
 
     .prologue
-    .line 345
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -560,13 +509,11 @@
 
     move-result-object v0
 
-    .line 346
     .local v0, "result":Ljava/lang/String;
     iget-object v1, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAlias:Ljava/lang/String;
 
     if-eqz v1, :cond_0
 
-    .line 347
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -591,7 +538,6 @@
 
     move-result-object v0
 
-    .line 349
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -689,7 +635,6 @@
 
     move-result-object v0
 
-    .line 352
     return-object v0
 .end method
 
@@ -703,22 +648,18 @@
 
     const/4 v2, 0x0
 
-    .line 319
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAddress:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 320
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 321
     iget-object v0, p0, Landroid/hardware/display/WifiDisplay;->mDeviceAlias:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 322
     iget-boolean v0, p0, Landroid/hardware/display/WifiDisplay;->mIsAvailable:Z
 
     if-eqz v0, :cond_0
@@ -728,7 +669,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 323
     iget-boolean v0, p0, Landroid/hardware/display/WifiDisplay;->mCanConnect:Z
 
     if-eqz v0, :cond_1
@@ -738,7 +678,6 @@
     :goto_1
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 324
     iget-boolean v0, p0, Landroid/hardware/display/WifiDisplay;->mIsRemembered:Z
 
     if-eqz v0, :cond_2
@@ -746,24 +685,20 @@
     :goto_2
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 333
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 322
     goto :goto_0
 
     :cond_1
     move v0, v2
 
-    .line 323
     goto :goto_1
 
     :cond_2
     move v1, v2
 
-    .line 324
     goto :goto_2
 .end method

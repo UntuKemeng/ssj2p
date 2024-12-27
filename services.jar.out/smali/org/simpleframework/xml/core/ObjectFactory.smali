@@ -11,10 +11,8 @@
     .param p3, "override"    # Ljava/lang/Class;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1, p2, p3}, Lorg/simpleframework/xml/core/PrimitiveFactory;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;Ljava/lang/Class;)V
 
-    .line 49
     return-void
 .end method
 
@@ -30,29 +28,24 @@
     .end annotation
 
     .prologue
-    .line 63
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/ObjectFactory;->getOverride(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/strategy/Value;
 
     move-result-object v1
 
-    .line 64
     .local v1, "value":Lorg/simpleframework/xml/strategy/Value;
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ObjectFactory;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 66
     .local v0, "expect":Ljava/lang/Class;
     if-nez v1, :cond_1
 
-    .line 67
     invoke-static {v0}, Lorg/simpleframework/xml/core/ObjectFactory;->isInstantiable(Ljava/lang/Class;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 68
     new-instance v2, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v3, "Cannot instantiate %s for %s"
@@ -75,7 +68,6 @@
 
     throw v2
 
-    .line 70
     :cond_0
     iget-object v2, p0, Lorg/simpleframework/xml/core/ObjectFactory;->context:Lorg/simpleframework/xml/core/Context;
 
@@ -83,7 +75,6 @@
 
     move-result-object v2
 
-    .line 72
     :goto_0
     return-object v2
 

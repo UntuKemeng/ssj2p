@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6433
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$6;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,14 +38,12 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 6435
     const-string v4, "ApplicationPolicy"
 
     const-string v5, "boot completed - refreshWidgetStatus"
 
     invoke-static {v4, v5}, Lcom/android/server/enterprise/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6436
     iget-object v4, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$6;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     const/4 v5, 0x1
@@ -54,14 +51,12 @@
     # setter for: Lcom/android/server/enterprise/application/ApplicationPolicy;->mBootCompleted:Z
     invoke-static {v4, v5}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$3002(Lcom/android/server/enterprise/application/ApplicationPolicy;Z)Z
 
-    .line 6438
     new-instance v4, Lcom/android/server/enterprise/application/ApplicationPolicy$6$1;
 
     invoke-direct {v4, p0}, Lcom/android/server/enterprise/application/ApplicationPolicy$6$1;-><init>(Lcom/android/server/enterprise/application/ApplicationPolicy$6;)V
 
     invoke-virtual {v4}, Lcom/android/server/enterprise/application/ApplicationPolicy$6$1;->start()V
 
-    .line 6447
     iget-object v4, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$6;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     iget-object v4, v4, Lcom/android/server/enterprise/application/ApplicationPolicy;->mContext:Landroid/content/Context;
@@ -74,20 +69,16 @@
 
     check-cast v2, Landroid/os/UserManager;
 
-    .line 6448
     .local v2, "userManager":Landroid/os/UserManager;
     if-eqz v2, :cond_0
 
-    .line 6449
     invoke-virtual {v2}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v3
 
-    .line 6450
     .local v3, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     if-eqz v3, :cond_0
 
-    .line 6451
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -106,7 +97,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 6452
     .local v1, "user":Landroid/content/pm/UserInfo;
     iget-object v4, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$6;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
@@ -117,7 +107,6 @@
 
     goto :goto_0
 
-    .line 6457
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "user":Landroid/content/pm/UserInfo;
     .end local v3    # "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"

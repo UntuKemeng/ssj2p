@@ -280,14 +280,12 @@
     .locals 1
 
     .prologue
-    .line 134
     invoke-static {}, Landroid/os/PowerManager;->useTwilightAdjustmentFeature()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/display/AutomaticBrightnessController;->USE_TWILIGHT_ADJUSTMENT:Z
 
-    .line 335
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/display/AutomaticBrightnessController;->HBM_USER_ENABLE:Z
@@ -315,294 +313,238 @@
     .param p18, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 353
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 205
     const/high16 v3, 0x43fa0000    # 500.0f
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
-    .line 238
     const-string v3, "[DAB] "
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->TAG_DAB:Ljava/lang/String;
 
-    .line 239
     const-string v3, "[sensor] "
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->TAG_SENSOR:Ljava/lang/String;
 
-    .line 243
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAutoBrightnessForEbookOnly:Z
 
-    .line 244
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseAutoBrightnessController:Z
 
-    .line 245
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseSystemPowerSaveMode:Z
 
-    .line 248
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTemporaryScreenBrightnessSettingOverride:I
 
-    .line 249
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastTemporaryScreenBrightnessSettingOverride:I
 
-    .line 253
     const-string v3, "/sys/class/backlight/panel/auto_brightness"
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->AUTO_BRIGHTNESS_LEVEL_PATH:Ljava/lang/String;
 
-    .line 254
     const-string v3, "/sys/class/tcon/tcon/auto_br"
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->TCON_BRIGHTNESS_MODE_PATH:Ljava/lang/String;
 
-    .line 255
     const-string v3, "/sys/class/tcon/tcon/lux"
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->TCON_LUX_PATH:Ljava/lang/String;
 
-    .line 256
     const-string v3, "/sys/class/lcd/panel/lux"
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->COMMON_LUX_PATH:Ljava/lang/String;
 
-    .line 257
     const-string v3, "/sys/class/mdnie/mdnie/auto_brightness"
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->MDNIE_AUTO_BRIGHTNESS_LEVEL_PATH:Ljava/lang/String;
 
-    .line 258
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mExistAutoBrightnessLevelPath:Z
 
-    .line 259
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mExistTconBrightnessModePath:Z
 
-    .line 260
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mExistTconLuxPath:Z
 
-    .line 261
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mExistCommonLuxPath:Z
 
-    .line 262
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mExistMdnieAutoBrightnessLevelPath:Z
 
-    .line 263
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPrevTconLuxLevel:I
 
-    .line 264
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPrevTconBrightnessMode:Z
 
-    .line 265
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastAmbientLux:I
 
-    .line 266
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPrevAutoBrightnessLevel:I
 
-    .line 270
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHasRetailModeApp:Z
 
-    .line 276
     const-wide/16 v4, 0x190
 
     iput-wide v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->LIGHT_SENSOR_UPDATE_TIMEOUT_MILLIS:J
 
-    .line 280
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLatestAnimationTarget:I
 
-    .line 281
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPendingScreenAutoBrightness:Z
 
-    .line 291
     const/4 v3, 0x5
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHBMDisableLevel:I
 
-    .line 294
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseHbmAtManualMax:Z
 
-    .line 298
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsSupportedSensorHubAutoBrightness:Z
 
-    .line 314
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
 
-    .line 317
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightnessAdjustment:F
 
-    .line 320
     const/high16 v3, 0x3f800000    # 1.0f
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastScreenAutoBrightnessGamma:F
 
-    .line 733
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$1;
 
     invoke-direct {v3, p0}, Lcom/android/server/display/AutomaticBrightnessController$1;-><init>(Lcom/android/server/display/AutomaticBrightnessController;)V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorListenerRegistrationRunnable:Ljava/lang/Runnable;
 
-    .line 760
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$2;
 
     invoke-direct {v3, p0}, Lcom/android/server/display/AutomaticBrightnessController$2;-><init>(Lcom/android/server/display/AutomaticBrightnessController;)V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorListenerUnregistrationRunnable:Ljava/lang/Runnable;
 
-    .line 779
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$3;
 
     invoke-direct {v3, p0}, Lcom/android/server/display/AutomaticBrightnessController$3;-><init>(Lcom/android/server/display/AutomaticBrightnessController;)V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorListenerUpdateTimeoutRunnable:Ljava/lang/Runnable;
 
-    .line 1067
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLowHysteresis:F
 
-    .line 1068
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHighHysteresis:F
 
-    .line 1126
     const/high16 v3, 0x437f0000    # 255.0f
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->lastRawBrightnessValue:F
 
-    .line 1127
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastHBM:Z
 
-    .line 1128
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mWasTconMaxLevel:Z
 
-    .line 1290
     const/high16 v3, -0x40800000    # -1.0f
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTiltAngle:F
 
-    .line 1291
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsLockZone:Z
 
-    .line 1293
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$4;
 
     invoke-direct {v3, p0}, Lcom/android/server/display/AutomaticBrightnessController$4;-><init>(Lcom/android/server/display/AutomaticBrightnessController;)V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTiltListener:Landroid/hardware/SensorEventListener;
 
-    .line 1480
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$5;
 
     invoke-direct {v3, p0}, Lcom/android/server/display/AutomaticBrightnessController$5;-><init>(Lcom/android/server/display/AutomaticBrightnessController;)V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorListener:Landroid/hardware/SensorEventListener;
 
-    .line 1517
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$6;
 
     invoke-direct {v3, p0}, Lcom/android/server/display/AutomaticBrightnessController$6;-><init>(Lcom/android/server/display/AutomaticBrightnessController;)V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorHubAutoBrightnessListener:Landroid/hardware/scontext/SContextListener;
 
-    .line 1550
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$7;
 
     invoke-direct {v3, p0}, Lcom/android/server/display/AutomaticBrightnessController$7;-><init>(Lcom/android/server/display/AutomaticBrightnessController;)V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTwilightListener:Lcom/android/server/twilight/TwilightListener;
 
-    .line 1810
     new-instance v3, Ljava/lang/Object;
 
     invoke-direct {v3}, Ljava/lang/Object;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLockPAB:Ljava/lang/Object;
 
-    .line 1826
     const/4 v3, 0x0
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->OFFSET_FIX:I
 
-    .line 1827
     const/4 v3, 0x1
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->OFFSET_USER:I
 
-    .line 1828
     const/4 v3, 0x2
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->OFFSET_SUB:I
 
-    .line 1829
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mNeedToAddPersonalAutoBrightnessPoint:Z
 
-    .line 1830
     const/4 v3, -0x1
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPendingScreenBrightnessSetting:I
 
-    .line 357
     move-object/from16 v0, p18
 
     iput-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mContext:Landroid/content/Context;
 
-    .line 360
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCallbacks:Lcom/android/server/display/AutomaticBrightnessController$Callbacks;
 
-    .line 361
     const-class v3, Lcom/android/server/twilight/TwilightManager;
 
     invoke-static {v3}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -613,52 +555,40 @@
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTwilight:Lcom/android/server/twilight/TwilightManager;
 
-    .line 362
     iput-object p3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
-    .line 363
     iput-object p4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightnessSpline:Landroid/util/Spline;
 
-    .line 364
     iput p6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessRangeMinimum:I
 
-    .line 365
     iput p7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessRangeMaximum:I
 
-    .line 366
     iput p5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorWarmUpTimeConfig:I
 
-    .line 367
     iput p8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDozeScaleFactor:F
 
-    .line 368
     move/from16 v0, p9
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorRate:I
 
-    .line 369
     const-wide/16 v4, 0x7d0
 
     iput-wide v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrighteningLightDebounceConfig:J
 
-    .line 370
     const-wide/16 v4, 0xbb8
 
     iput-wide v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDarkeningLightDebounceConfig:J
 
-    .line 371
     move/from16 v0, p14
 
     iput-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mResetAmbientLuxAfterWarmUpConfig:Z
 
-    .line 373
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
     invoke-direct {v3, p0, p2}, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;-><init>(Lcom/android/server/display/AutomaticBrightnessController;Landroid/os/Looper;)V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
-    .line 374
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorRate:I
@@ -669,7 +599,6 @@
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
-    .line 377
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v4, 0x5
@@ -680,7 +609,6 @@
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensor:Landroid/hardware/Sensor;
 
-    .line 379
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
     const/4 v4, 0x1
@@ -691,12 +619,10 @@
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTiltSensor:Landroid/hardware/Sensor;
 
-    .line 383
     sget-boolean v3, Lcom/android/server/display/AutomaticBrightnessController;->USE_TWILIGHT_ADJUSTMENT:Z
 
     if-eqz v3, :cond_0
 
-    .line 384
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTwilight:Lcom/android/server/twilight/TwilightManager;
 
     iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTwilightListener:Lcom/android/server/twilight/TwilightListener;
@@ -705,30 +631,25 @@
 
     invoke-interface {v3, v4, v5}, Lcom/android/server/twilight/TwilightManager;->registerListener(Lcom/android/server/twilight/TwilightListener;Landroid/os/Handler;)V
 
-    .line 387
     :cond_0
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSContextManager:Landroid/hardware/scontext/SContextManager;
 
-    .line 388
     move/from16 v0, p16
 
     iput-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsSupportedSensorHubAutoBrightness:Z
 
-    .line 389
     move-object/from16 v0, p17
 
     iput-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
-    .line 390
     new-instance v3, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-direct {v3}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;-><init>()V
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
-    .line 392
     new-instance v3, Landroid/os/HandlerThread;
 
     const-string v4, "RegisterInSeperateThread"
@@ -737,12 +658,10 @@
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperateThread:Landroid/os/HandlerThread;
 
-    .line 393
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperateThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v3}, Landroid/os/HandlerThread;->start()V
 
-    .line 394
     new-instance v3, Landroid/os/Handler;
 
     iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperateThread:Landroid/os/HandlerThread;
@@ -755,14 +674,12 @@
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
-    .line 398
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
 
-    .line 399
     .local v2, "resolver":Landroid/content/ContentResolver;
     new-instance v3, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;
 
@@ -772,20 +689,16 @@
 
     iput-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSettingsObserver:Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;
 
-    .line 404
     invoke-direct {p0}, Lcom/android/server/display/AutomaticBrightnessController;->readHbmLevelLimitFromFile()V
 
-    .line 405
     sget-boolean v3, Lcom/android/server/display/AutomaticBrightnessController;->SPECIFIC_HBM_FEATURE:Z
 
     if-eqz v3, :cond_1
 
-    .line 406
     const v3, 0x453b8000    # 3000.0f
 
     sput v3, Lcom/android/server/power/PowerManagerUtil;->HBM_LUX:F
 
-    .line 410
     :cond_1
     const-string/jumbo v3, "screen_brightness_mode"
 
@@ -801,7 +714,6 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 424
     return-void
 .end method
 
@@ -810,7 +722,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -821,7 +732,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessModeSetting:I
 
     return v0
@@ -832,7 +742,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorListener:Landroid/hardware/SensorEventListener;
 
     return-object v0
@@ -844,7 +753,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 97
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessModeSetting:I
 
     return p1
@@ -855,7 +763,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensor:Landroid/hardware/Sensor;
 
     return-object v0
@@ -866,7 +773,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorRate:I
 
     return v0
@@ -877,7 +783,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     return-object v0
@@ -888,7 +793,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorManager:Landroid/hardware/SensorManager;
 
     return-object v0
@@ -899,7 +803,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTiltListener:Landroid/hardware/SensorEventListener;
 
     return-object v0
@@ -910,7 +813,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTiltSensor:Landroid/hardware/Sensor;
 
     return-object v0
@@ -922,7 +824,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 97
     iput-boolean p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
     return p1
@@ -934,7 +835,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 97
     invoke-direct {p0, p1}, Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightnessSEC(Z)V
 
     return-void
@@ -945,7 +845,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTiltAngle:F
 
     return v0
@@ -957,7 +856,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 97
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTiltAngle:F
 
     return p1
@@ -968,7 +866,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsSupportedSensorHubAutoBrightness:Z
 
     return v0
@@ -980,7 +877,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 97
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/AutomaticBrightnessController;->updateAmbientLuxSEC(J)V
 
     return-void
@@ -991,7 +887,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     invoke-direct {p0}, Lcom/android/server/display/AutomaticBrightnessController;->collectBrightnessAdjustmentSample()V
 
     return-void
@@ -1002,7 +897,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     invoke-direct {p0}, Lcom/android/server/display/AutomaticBrightnessController;->printLastLightSensorEvent()V
 
     return-void
@@ -1013,7 +907,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorEnabled:Z
 
     return v0
@@ -1024,7 +917,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLockPAB:Ljava/lang/Object;
 
     return-object v0
@@ -1035,7 +927,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mNeedToAddPersonalAutoBrightnessPoint:Z
 
     return v0
@@ -1047,7 +938,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 97
     iput-boolean p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mNeedToAddPersonalAutoBrightnessPoint:Z
 
     return p1
@@ -1058,7 +948,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPendingScreenBrightnessSetting:I
 
     return v0
@@ -1069,7 +958,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPersonalAutoBrightness:Lcom/android/server/display/AutomaticBrightnessController$PersonalAutoBrightness;
 
     return-object v0
@@ -1080,7 +968,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
 
     return v0
@@ -1092,7 +979,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 97
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
 
     return p1
@@ -1104,7 +990,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
 
     add-int/2addr v0, p1
@@ -1121,7 +1006,6 @@
     .param p3, "x2"    # F
 
     .prologue
-    .line 97
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/display/AutomaticBrightnessController;->handleLightSensorEvent(JF)V
 
     return-void
@@ -1132,7 +1016,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     invoke-direct {p0}, Lcom/android/server/display/AutomaticBrightnessController;->getAmbientLuxAndCandelaFromSensorHub()V
 
     return-void
@@ -1144,7 +1027,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 97
     iput-wide p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->lastLightSensorEventTime:J
 
     return-wide p1
@@ -1156,7 +1038,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 97
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->lastLightSensorValue:F
 
     return p1
@@ -1167,7 +1048,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
     return v0
@@ -1179,7 +1059,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 97
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
     return p1
@@ -1190,7 +1069,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientCandela:F
 
     return v0
@@ -1202,7 +1080,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 97
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientCandela:F
 
     return p1
@@ -1214,7 +1091,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 97
     iput-wide p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastObservedSensorHubLuxTime:J
 
     return-wide p1
@@ -1226,7 +1102,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 97
     invoke-direct {p0, p1}, Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightness(Z)V
 
     return-void
@@ -1238,7 +1113,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 97
     iput-boolean p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUserSwitched:Z
 
     return p1
@@ -1250,7 +1124,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 97
     invoke-direct {p0, p1}, Lcom/android/server/display/AutomaticBrightnessController;->updatePersonalScreenAutoBrightnessTableLocked(Z)V
 
     return-void
@@ -1261,7 +1134,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
     return-object v0
@@ -1272,7 +1144,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
     return-object v0
@@ -1283,7 +1154,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     return-object v0
@@ -1295,7 +1165,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 97
     iput-wide p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorEnableTime:J
 
     return-wide p1
@@ -1306,7 +1175,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAutoBrightnessForEbookOnly:Z
 
     return v0
@@ -1317,7 +1185,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorHubAutoBrightnessListener:Landroid/hardware/scontext/SContextListener;
 
     return-object v0
@@ -1328,7 +1195,6 @@
     .param p0, "x0"    # Lcom/android/server/display/AutomaticBrightnessController;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSContextManager:Landroid/hardware/scontext/SContextManager;
 
     return-object v0
@@ -1340,14 +1206,12 @@
     .param p3, "lux"    # F
 
     .prologue
-    .line 854
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
 
-    .line 855
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     const-wide/16 v2, 0x2710
@@ -1356,18 +1220,14 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->prune(J)V
 
-    .line 856
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->push(JF)V
 
-    .line 859
     iput p3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastObservedLux:F
 
-    .line 860
     iput-wide p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastObservedLuxTime:J
 
-    .line 861
     return-void
 .end method
 
@@ -1381,43 +1241,33 @@
 
     const/4 v6, 0x0
 
-    .line 807
     iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
 
     add-int/lit8 v4, v4, 0x1
 
     iput v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
 
-    .line 808
     iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
 
     if-ne v4, v7, :cond_0
 
-    .line 809
     iput p3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSECAverageLux:F
 
-    .line 848
     :goto_0
     iput p3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastObservedLux:F
 
-    .line 849
     iput-wide p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastObservedLuxTime:J
 
-    .line 850
     return-void
 
-    .line 814
     :cond_0
     const/4 v1, 0x1
 
-    .line 823
     .local v1, "useLockZone":Z
     if-eqz v1, :cond_3
 
-    .line 824
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsLockZone:Z
 
-    .line 825
     .local v0, "prevLockZone":Z
     iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTiltAngle:F
 
@@ -1427,10 +1277,8 @@
 
     if-gez v4, :cond_4
 
-    .line 826
     iput-boolean v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsLockZone:Z
 
-    .line 830
     :goto_1
     iget-boolean v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsLockZone:Z
 
@@ -1446,13 +1294,10 @@
 
     if-gez v4, :cond_1
 
-    .line 831
     iput-boolean v6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsLockZone:Z
 
-    .line 832
     iget p3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLowHysteresis:F
 
-    .line 834
     :cond_1
     iget-boolean v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsLockZone:Z
 
@@ -1464,16 +1309,13 @@
 
     if-gez v4, :cond_2
 
-    .line 835
     iget p3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
-    .line 837
     :cond_2
     iget-boolean v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsLockZone:Z
 
     if-eq v0, v4, :cond_3
 
-    .line 838
     const-string v4, "AutomaticBrightnessController"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1498,14 +1340,12 @@
 
     invoke-static {v4, v5}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 843
     .end local v0    # "prevLockZone":Z
     :cond_3
     iget-wide v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastObservedLuxTime:J
 
     sub-long v2, p1, v4
 
-    .line 844
     .local v2, "timeDelta":J
     iget v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastObservedLux:F
 
@@ -1519,7 +1359,6 @@
 
     goto :goto_0
 
-    .line 828
     .end local v2    # "timeDelta":J
     .restart local v0    # "prevLockZone":Z
     :cond_4
@@ -1533,44 +1372,35 @@
     .param p1, "now"    # J
 
     .prologue
-    .line 878
     iget-object v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     invoke-virtual {v10}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->size()I
 
     move-result v0
 
-    .line 879
     .local v0, "N":I
     if-nez v0, :cond_0
 
-    .line 880
     const-string v10, "AutomaticBrightnessController"
 
     const-string v11, "calculateAmbientLux: No ambient light readings available"
 
     invoke-static {v10, v11}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 881
     const/high16 v10, -0x40800000    # -1.0f
 
-    .line 903
     :goto_0
     return v10
 
-    .line 883
     :cond_0
     const/4 v5, 0x0
 
-    .line 884
     .local v5, "sum":F
     const/4 v8, 0x0
 
-    .line 885
     .local v8, "totalWeight":F
     const-wide/16 v2, 0x64
 
-    .line 886
     .local v2, "endTime":J
     add-int/lit8 v1, v0, -0x1
 
@@ -1578,7 +1408,6 @@
     :goto_1
     if-ltz v1, :cond_1
 
-    .line 887
     iget-object v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     invoke-virtual {v10, v1}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->getTime(I)J
@@ -1587,13 +1416,11 @@
 
     sub-long v6, v10, p1
 
-    .line 888
     .local v6, "startTime":J
     invoke-static {v6, v7, v2, v3}, Lcom/android/server/display/AutomaticBrightnessController;->calculateWeight(JJ)F
 
     move-result v9
 
-    .line 889
     .local v9, "weight":F
     iget-object v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
@@ -1601,11 +1428,9 @@
 
     move-result v4
 
-    .line 895
     .local v4, "lux":F
     add-float/2addr v8, v9
 
-    .line 896
     iget-object v10, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     invoke-virtual {v10, v1}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->getLux(I)F
@@ -1616,15 +1441,12 @@
 
     add-float/2addr v5, v10
 
-    .line 897
     move-wide v2, v6
 
-    .line 886
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_1
 
-    .line 903
     .end local v4    # "lux":F
     .end local v6    # "startTime":J
     .end local v9    # "weight":F
@@ -1640,7 +1462,6 @@
     .param p2, "endDelta"    # J
 
     .prologue
-    .line 907
     invoke-static {p2, p3}, Lcom/android/server/display/AutomaticBrightnessController;->weightIntegral(J)F
 
     move-result v0
@@ -1658,24 +1479,20 @@
     .locals 2
 
     .prologue
-    .line 1388
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSamplePending:Z
 
     if-eqz v0, :cond_0
 
-    .line 1389
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSamplePending:Z
 
-    .line 1390
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->removeMessages(I)V
 
-    .line 1392
     :cond_0
     return-void
 .end method
@@ -1685,12 +1502,10 @@
     .param p1, "mode"    # I
 
     .prologue
-    .line 680
     new-instance v0, Landroid/hardware/scontext/SContextAutoBrightnessAttribute;
 
     invoke-direct {v0, p1}, Landroid/hardware/scontext/SContextAutoBrightnessAttribute;-><init>(I)V
 
-    .line 681
     .local v0, "attribute":Landroid/hardware/scontext/SContextAttribute;
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSContextManager:Landroid/hardware/scontext/SContextManager;
 
@@ -1700,7 +1515,6 @@
 
     invoke-virtual {v1, v2, v3, v0}, Landroid/hardware/scontext/SContextManager;->changeParameters(Landroid/hardware/scontext/SContextListener;ILandroid/hardware/scontext/SContextAttribute;)Z
 
-    .line 682
     return-void
 .end method
 
@@ -1711,21 +1525,17 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 668
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLockPAB:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 669
     :try_start_0
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTemporaryScreenBrightnessSettingOverride:I
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastTemporaryScreenBrightnessSettingOverride:I
 
-    .line 670
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTemporaryScreenBrightnessSettingOverride:I
 
-    .line 671
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastTemporaryScreenBrightnessSettingOverride:I
 
     if-eq v0, v2, :cond_0
@@ -1734,19 +1544,15 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 672
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lcom/android/server/display/AutomaticBrightnessController;->updatePersonalScreenAutoBrightnessTableLocked(Z)V
 
-    .line 674
     :cond_0
     monitor-exit v1
 
-    .line 675
     return-void
 
-    .line 674
     :catchall_0
     move-exception v0
 
@@ -1762,7 +1568,6 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 1368
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessRangeMinimum:I
 
     iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessRangeMaximum:I
@@ -1780,15 +1585,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1395
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSamplePending:Z
 
     if-eqz v0, :cond_0
 
-    .line 1396
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSamplePending:Z
 
-    .line 1397
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
     if-eqz v0, :cond_0
@@ -1797,7 +1599,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 1407
     const v0, 0x88b8
 
     const/16 v1, 0x8
@@ -1884,7 +1685,6 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 1418
     :cond_0
     return-void
 .end method
@@ -1893,16 +1693,13 @@
     .locals 5
 
     .prologue
-    .line 1877
     const/4 v1, 0x2
 
-    .line 1878
     .local v1, "mode":I
     new-instance v0, Landroid/hardware/scontext/SContextAutoBrightnessAttribute;
 
     invoke-direct {v0, v1}, Landroid/hardware/scontext/SContextAutoBrightnessAttribute;-><init>(I)V
 
-    .line 1879
     .local v0, "attribute":Landroid/hardware/scontext/SContextAttribute;
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSContextManager:Landroid/hardware/scontext/SContextManager;
 
@@ -1912,14 +1709,12 @@
 
     invoke-virtual {v2, v3, v4, v0}, Landroid/hardware/scontext/SContextManager;->changeParameters(Landroid/hardware/scontext/SContextListener;ILandroid/hardware/scontext/SContextAttribute;)Z
 
-    .line 1881
     const-string v2, "AutomaticBrightnessController"
 
     const-string v3, "[PAB] request AmbientLuxAndCandelaFromSensorHub"
 
     invoke-static {v2, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1882
     return-void
 .end method
 
@@ -1940,7 +1735,6 @@
 
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 1421
     cmp-long v2, p2, v6
 
     if-ltz v2, :cond_0
@@ -1960,12 +1754,10 @@
     :cond_0
     move v0, v1
 
-    .line 1436
     :cond_1
     :goto_0
     return v0
 
-    .line 1426
     :cond_2
     add-long v2, p2, v8
 
@@ -1973,7 +1765,6 @@
 
     if-gez v2, :cond_3
 
-    .line 1427
     sub-long v2, p0, p2
 
     long-to-float v2, v2
@@ -1986,7 +1777,6 @@
 
     goto :goto_0
 
-    .line 1431
     :cond_3
     sub-long v2, p4, v8
 
@@ -1994,7 +1784,6 @@
 
     if-lez v2, :cond_1
 
-    .line 1432
     sub-long v2, p4, p0
 
     long-to-float v2, v2
@@ -2014,20 +1803,16 @@
     .param p3, "lux"    # F
 
     .prologue
-    .line 792
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->removeMessages(I)V
 
-    .line 798
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/display/AutomaticBrightnessController;->applyLightSensorMeasurementSEC(JF)V
 
-    .line 799
     invoke-direct {p0, p1, p2}, Lcom/android/server/display/AutomaticBrightnessController;->updateAmbientLuxSEC(J)V
 
-    .line 801
     return-void
 .end method
 
@@ -2036,18 +1821,15 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 917
     iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     invoke-virtual {v4}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->size()I
 
     move-result v0
 
-    .line 918
     .local v0, "N":I
     move-wide v2, p1
 
-    .line 919
     .local v2, "earliestValidTime":J
     add-int/lit8 v1, v0, -0x1
 
@@ -2055,7 +1837,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 920
     iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     invoke-virtual {v4, v1}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->getLux(I)F
@@ -2068,7 +1849,6 @@
 
     if-gtz v4, :cond_1
 
-    .line 925
     :cond_0
     iget-wide v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrighteningLightDebounceConfig:J
 
@@ -2076,7 +1856,6 @@
 
     return-wide v4
 
-    .line 923
     :cond_1
     iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
@@ -2084,7 +1863,6 @@
 
     move-result-wide v2
 
-    .line 919
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
@@ -2095,18 +1873,15 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 929
     iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     invoke-virtual {v4}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->size()I
 
     move-result v0
 
-    .line 930
     .local v0, "N":I
     move-wide v2, p1
 
-    .line 931
     .local v2, "earliestValidTime":J
     add-int/lit8 v1, v0, -0x1
 
@@ -2114,7 +1889,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 932
     iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     invoke-virtual {v4, v1}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->getLux(I)F
@@ -2127,7 +1901,6 @@
 
     if-ltz v4, :cond_1
 
-    .line 937
     :cond_0
     iget-wide v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDarkeningLightDebounceConfig:J
 
@@ -2135,7 +1908,6 @@
 
     return-wide v4
 
-    .line 935
     :cond_1
     iget-object v4, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
@@ -2143,7 +1915,6 @@
 
     move-result-wide v2
 
-    .line 931
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
@@ -2153,7 +1924,6 @@
     .locals 5
 
     .prologue
-    .line 1790
     :try_start_0
     const-string v2, "SurfaceFlinger"
 
@@ -2161,27 +1931,22 @@
 
     move-result-object v1
 
-    .line 1791
     .local v1, "flinger":Landroid/os/IBinder;
     if-eqz v1, :cond_0
 
-    .line 1792
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 1793
     .local v0, "data":Landroid/os/Parcel;
     const-string v2, "android.ui.ISurfaceComposer"
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 1794
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1795
     const/16 v2, 0x3ee
 
     const/4 v3, 0x0
@@ -2190,19 +1955,16 @@
 
     invoke-interface {v1, v2, v0, v3, v4}, Landroid/os/IBinder;->transact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    .line 1796
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1803
     .end local v0    # "data":Landroid/os/Parcel;
     .end local v1    # "flinger":Landroid/os/IBinder;
     :cond_0
     :goto_0
     return-void
 
-    .line 1798
     :catch_0
     move-exception v2
 
@@ -2215,22 +1977,18 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 1373
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSamplePending:Z
 
     if-nez v0, :cond_1
 
-    .line 1374
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSamplePending:Z
 
-    .line 1375
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightnessAdjustment:F
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSampleOldAdjustment:F
 
-    .line 1376
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
     if-eqz v0, :cond_0
@@ -2240,17 +1998,14 @@
     :goto_0
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSampleOldLux:F
 
-    .line 1377
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSampleOldBrightness:I
 
-    .line 1378
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastScreenAutoBrightnessGamma:F
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrightnessAdjustmentSampleOldGamma:F
 
-    .line 1383
     :goto_1
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
@@ -2258,16 +2013,13 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 1385
     return-void
 
-    .line 1376
     :cond_0
     const/high16 v0, -0x40800000    # -1.0f
 
     goto :goto_0
 
-    .line 1380
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
@@ -2280,12 +2032,10 @@
     .locals 4
 
     .prologue
-    .line 1473
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 1474
     const-string v0, "AutomaticBrightnessController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2322,7 +2072,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1477
     :cond_0
     return-void
 .end method
@@ -2331,14 +2080,12 @@
     .locals 4
 
     .prologue
-    .line 482
     const-string v1, "/sys/class/backlight/panel/auto_brightness_level"
 
     invoke-virtual {p0, v1}, Lcom/android/server/display/AutomaticBrightnessController;->readFromFile(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 483
     .local v0, "hbmLevelLimit":Ljava/lang/String;
     const-string v1, "12"
 
@@ -2348,17 +2095,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 484
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/server/display/AutomaticBrightnessController;->SPECIFIC_HBM_FEATURE:Z
 
-    .line 485
     const/4 v1, 0x4
 
     iput v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHBMDisableLevel:I
 
-    .line 486
     const-string v1, "AutomaticBrightnessController"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2381,22 +2125,18 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 492
     :goto_0
     return-void
 
-    .line 488
     :cond_0
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/android/server/display/AutomaticBrightnessController;->SPECIFIC_HBM_FEATURE:Z
 
-    .line 489
     const/4 v1, 0x5
 
     iput v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHBMDisableLevel:I
 
-    .line 490
     const-string v1, "AutomaticBrightnessController"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2438,10 +2178,8 @@
 
     const/4 v5, 0x6
 
-    .line 1696
     const/4 v2, 0x0
 
-    .line 1697
     .local v2, "tconLuxLevel":I
     cmpg-float v3, p1, v6
 
@@ -2449,7 +2187,6 @@
 
     const/4 v2, 0x0
 
-    .line 1700
     :goto_0
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mExistTconLuxPath:Z
 
@@ -2459,15 +2196,12 @@
 
     if-eq v3, v2, :cond_0
 
-    .line 1701
     iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPrevTconLuxLevel:I
 
-    .line 1702
     const-string v3, "/sys/class/tcon/tcon/lux"
 
     invoke-static {v3, v2}, Lcom/android/server/power/PowerManagerUtil;->fileWriteInt(Ljava/lang/String;I)V
 
-    .line 1706
     :cond_0
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mExistTconBrightnessModePath:Z
 
@@ -2479,12 +2213,10 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 1707
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsBrightnessModeAuto:Z
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPrevTconBrightnessMode:Z
 
-    .line 1708
     const-string v4, "/sys/class/tcon/tcon/auto_br"
 
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsBrightnessModeAuto:Z
@@ -2496,7 +2228,6 @@
     :goto_1
     invoke-static {v4, v3}, Lcom/android/server/power/PowerManagerUtil;->fileWriteInt(Ljava/lang/String;I)V
 
-    .line 1714
     :cond_1
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsBrightnessModeAuto:Z
 
@@ -2511,7 +2242,6 @@
     :cond_2
     float-to-int v0, p1
 
-    .line 1715
     .local v0, "ambientLux":I
     :goto_2
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mExistCommonLuxPath:Z
@@ -2522,19 +2252,15 @@
 
     if-eq v3, v0, :cond_3
 
-    .line 1716
     const-string v3, "/sys/class/lcd/panel/lux"
 
     invoke-static {v3, v0}, Lcom/android/server/power/PowerManagerUtil;->fileWriteInt(Ljava/lang/String;I)V
 
-    .line 1717
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastAmbientLux:I
 
-    .line 1722
     :cond_3
     const/4 v1, 0x0
 
-    .line 1723
     .local v1, "autoBrightnessLevel":I
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsBrightnessModeAuto:Z
 
@@ -2544,20 +2270,17 @@
 
     if-eqz v3, :cond_1f
 
-    .line 1724
     :cond_4
     sget-boolean v3, Lcom/android/server/display/AutomaticBrightnessController;->SPECIFIC_HBM_FEATURE:Z
 
     if-eqz v3, :cond_19
 
-    .line 1725
     cmpg-float v3, p1, v7
 
     if-gez v3, :cond_f
 
     const/4 v1, 0x1
 
-    .line 1750
     :cond_5
     :goto_3
     if-ge v1, v5, :cond_6
@@ -2570,10 +2293,8 @@
 
     if-nez v3, :cond_6
 
-    .line 1751
     const/4 v1, 0x0
 
-    .line 1755
     :cond_6
     if-lt v1, v5, :cond_7
 
@@ -2581,14 +2302,12 @@
 
     if-eqz v3, :cond_7
 
-    .line 1756
     add-int/lit8 v3, v1, -0x2
 
     invoke-static {v3, v5}, Ljava/lang/Math;->max(II)I
 
     move-result v1
 
-    .line 1759
     :cond_7
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
@@ -2596,10 +2315,8 @@
 
     if-nez p2, :cond_8
 
-    .line 1760
     const/4 v1, 0x0
 
-    .line 1764
     :cond_8
     sget-boolean v3, Lcom/android/server/display/AutomaticBrightnessController;->HBM_USER_ENABLE:Z
 
@@ -2607,40 +2324,32 @@
 
     if-lt v1, v5, :cond_9
 
-    .line 1765
     iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHBMDisableLevel:I
 
-    .line 1766
     const-string v3, "AutomaticBrightnessController"
 
     const-string v4, "[DAB] HBM is disabled from user"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1769
     :cond_9
     iget v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPrevAutoBrightnessLevel:I
 
     if-eq v3, v1, :cond_a
 
-    .line 1770
     iput v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mPrevAutoBrightnessLevel:I
 
-    .line 1771
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mExistAutoBrightnessLevelPath:Z
 
     if-eqz v3, :cond_a
 
-    .line 1772
     const-string v3, "/sys/class/backlight/panel/auto_brightness"
 
     invoke-static {v3, v1}, Lcom/android/server/power/PowerManagerUtil;->fileWriteInt(Ljava/lang/String;I)V
 
-    .line 1784
     :cond_a
     return-void
 
-    .line 1698
     .end local v0    # "ambientLux":I
     .end local v1    # "autoBrightnessLevel":I
     :cond_b
@@ -2654,25 +2363,21 @@
 
     goto/16 :goto_0
 
-    .line 1699
     :cond_c
     const/4 v2, 0x2
 
     goto/16 :goto_0
 
-    .line 1708
     :cond_d
     const/4 v3, 0x0
 
     goto :goto_1
 
-    .line 1714
     :cond_e
     const/4 v0, -0x1
 
     goto :goto_2
 
-    .line 1726
     .restart local v0    # "ambientLux":I
     .restart local v1    # "autoBrightnessLevel":I
     :cond_f
@@ -2684,7 +2389,6 @@
 
     goto :goto_3
 
-    .line 1727
     :cond_10
     cmpg-float v3, p1, v8
 
@@ -2694,7 +2398,6 @@
 
     goto :goto_3
 
-    .line 1728
     :cond_11
     const v3, 0x453b8000    # 3000.0f
 
@@ -2706,7 +2409,6 @@
 
     goto :goto_3
 
-    .line 1729
     :cond_12
     const/high16 v3, 0x457a0000    # 4000.0f
 
@@ -2718,7 +2420,6 @@
 
     goto :goto_3
 
-    .line 1730
     :cond_13
     cmpg-float v3, p1, v9
 
@@ -2728,7 +2429,6 @@
 
     goto :goto_3
 
-    .line 1731
     :cond_14
     const v3, 0x461c4000    # 10000.0f
 
@@ -2740,7 +2440,6 @@
 
     goto :goto_3
 
-    .line 1732
     :cond_15
     const v3, 0x469c4000    # 20000.0f
 
@@ -2752,7 +2451,6 @@
 
     goto/16 :goto_3
 
-    .line 1733
     :cond_16
     const v3, 0x46ea6000    # 30000.0f
 
@@ -2764,7 +2462,6 @@
 
     goto/16 :goto_3
 
-    .line 1734
     :cond_17
     const v3, 0x471c4000    # 40000.0f
 
@@ -2776,7 +2473,6 @@
 
     goto/16 :goto_3
 
-    .line 1735
     :cond_18
     const v3, 0x471c4000    # 40000.0f
 
@@ -2788,7 +2484,6 @@
 
     goto/16 :goto_3
 
-    .line 1737
     :cond_19
     cmpg-float v3, p1, v7
 
@@ -2798,7 +2493,6 @@
 
     goto/16 :goto_3
 
-    .line 1738
     :cond_1a
     cmpg-float v3, p1, v6
 
@@ -2808,7 +2502,6 @@
 
     goto/16 :goto_3
 
-    .line 1739
     :cond_1b
     cmpg-float v3, p1, v8
 
@@ -2818,7 +2511,6 @@
 
     goto/16 :goto_3
 
-    .line 1740
     :cond_1c
     cmpg-float v3, p1, v9
 
@@ -2828,7 +2520,6 @@
 
     goto/16 :goto_3
 
-    .line 1741
     :cond_1d
     sget v3, Lcom/android/server/power/PowerManagerUtil;->HBM_LUX:F
 
@@ -2840,13 +2531,11 @@
 
     goto/16 :goto_3
 
-    .line 1742
     :cond_1e
     const/4 v1, 0x6
 
     goto/16 :goto_3
 
-    .line 1746
     :cond_1f
     sget v3, Lcom/android/server/power/PowerManagerUtil;->HBM_LUX:F
 
@@ -2864,10 +2553,8 @@
     .param p1, "lux"    # F
 
     .prologue
-    .line 872
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
-    .line 873
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
     const v1, 0x3f8ccccd    # 1.1f
@@ -2876,7 +2563,6 @@
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrighteningLuxThreshold:F
 
-    .line 874
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
     const v1, 0x3f4ccccd    # 0.8f
@@ -2885,7 +2571,6 @@
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDarkeningLuxThreshold:F
 
-    .line 875
     return-void
 .end method
 
@@ -2898,50 +2583,41 @@
 
     const/4 v3, 0x0
 
-    .line 686
     const/4 v0, 0x0
 
-    .line 687
     .local v0, "sensorSwitched":Z
     if-eqz p1, :cond_1
 
-    .line 688
     iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorEnabled:Z
 
     if-nez v1, :cond_0
 
-    .line 689
     iput-boolean v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorEnabled:Z
 
-    .line 697
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorListenerRegistrationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 698
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorListenerUnregistrationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 699
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorListenerUpdateTimeoutRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 700
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorListenerRegistrationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 701
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorListenerUpdateTimeoutRunnable:Ljava/lang/Runnable;
@@ -2950,24 +2626,19 @@
 
     invoke-virtual {v1, v2, v4, v5}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 703
     const/4 v0, 0x1
 
-    .line 729
     :cond_0
     :goto_0
     return v0
 
-    .line 707
     :cond_1
     iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorEnabled:Z
 
     if-eqz v1, :cond_0
 
-    .line 708
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorEnabled:Z
 
-    .line 709
     iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mResetAmbientLuxAfterWarmUpConfig:Z
 
     if-nez v1, :cond_2
@@ -2977,58 +2648,48 @@
     :goto_1
     iput-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
-    .line 710
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mRecentLightSamples:I
 
-    .line 711
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
     invoke-virtual {v1}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->clear()V
 
-    .line 712
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
     invoke-virtual {v1, v2}, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->removeMessages(I)V
 
-    .line 717
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorListenerRegistrationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 718
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorListenerUnregistrationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 719
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorListenerUpdateTimeoutRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 720
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandlerRegisterInSeperate:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSensorListenerUnregistrationRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 721
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
     const/4 v2, 0x3
 
     invoke-virtual {v1, v2}, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->removeMessages(I)V
 
-    .line 722
     const/4 v0, 0x1
 
-    .line 724
     iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
     invoke-direct {p0, v1, v3}, Lcom/android/server/display/AutomaticBrightnessController;->sendLuxLevel(FZ)V
@@ -3038,7 +2699,6 @@
     :cond_2
     move v1, v3
 
-    .line 709
     goto :goto_1
 .end method
 
@@ -3047,20 +2707,16 @@
     .param p1, "adjustment"    # F
 
     .prologue
-    .line 864
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightnessAdjustment:F
 
     cmpl-float v0, p1, v0
 
     if-eqz v0, :cond_0
 
-    .line 865
     iput p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightnessAdjustment:F
 
-    .line 866
     const/4 v0, 0x1
 
-    .line 868
     :goto_0
     return v0
 
@@ -3074,12 +2730,10 @@
     .locals 6
 
     .prologue
-    .line 941
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v0
 
-    .line 942
     .local v0, "time":J
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLightRingBuffer:Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;
 
@@ -3089,10 +2743,8 @@
 
     invoke-virtual {v2, v4, v5}, Lcom/android/server/display/AutomaticBrightnessController$AmbientLightRingBuffer;->prune(J)V
 
-    .line 943
     invoke-direct {p0, v0, v1}, Lcom/android/server/display/AutomaticBrightnessController;->updateAmbientLux(J)V
 
-    .line 944
     return-void
 .end method
 
@@ -3101,12 +2753,10 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 949
     iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
     if-nez v1, :cond_1
 
-    .line 950
     iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorWarmUpTimeConfig:I
 
     int-to-long v10, v1
@@ -3115,25 +2765,21 @@
 
     add-long v8, v10, v12
 
-    .line 952
     .local v8, "timeWhenSensorWarmedUp":J
     cmp-long v1, p1, v8
 
     if-gez v1, :cond_0
 
-    .line 958
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
     const/4 v10, 0x1
 
     invoke-virtual {v1, v10, v8, v9}, Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;->sendEmptyMessageAtTime(IJ)Z
 
-    .line 1004
     .end local v8    # "timeWhenSensorWarmedUp":J
     :goto_0
     return-void
 
-    .line 962
     .restart local v8    # "timeWhenSensorWarmedUp":J
     :cond_0
     invoke-direct/range {p0 .. p2}, Lcom/android/server/display/AutomaticBrightnessController;->calculateAmbientLux(J)F
@@ -3142,36 +2788,30 @@
 
     invoke-direct {p0, v1}, Lcom/android/server/display/AutomaticBrightnessController;->setAmbientLux(F)V
 
-    .line 963
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
-    .line 969
     const/4 v1, 0x1
 
     invoke-direct {p0, v1}, Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightness(Z)V
 
-    .line 972
     .end local v8    # "timeWhenSensorWarmedUp":J
     :cond_1
     invoke-direct/range {p0 .. p2}, Lcom/android/server/display/AutomaticBrightnessController;->nextAmbientLightBrighteningTransition(J)J
 
     move-result-wide v2
 
-    .line 973
     .local v2, "nextBrightenTransition":J
     invoke-direct/range {p0 .. p2}, Lcom/android/server/display/AutomaticBrightnessController;->nextAmbientLightDarkeningTransition(J)J
 
     move-result-wide v4
 
-    .line 974
     .local v4, "nextDarkenTransition":J
     invoke-direct/range {p0 .. p2}, Lcom/android/server/display/AutomaticBrightnessController;->calculateAmbientLux(J)F
 
     move-result v0
 
-    .line 976
     .local v0, "ambientLux":F
     iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mBrighteningLuxThreshold:F
 
@@ -3194,38 +2834,31 @@
 
     if-gtz v1, :cond_4
 
-    .line 978
     :cond_3
     invoke-direct {p0, v0}, Lcom/android/server/display/AutomaticBrightnessController;->setAmbientLux(F)V
 
-    .line 986
     const/4 v1, 0x1
 
     invoke-direct {p0, v1}, Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightness(Z)V
 
-    .line 987
     invoke-direct/range {p0 .. p2}, Lcom/android/server/display/AutomaticBrightnessController;->nextAmbientLightBrighteningTransition(J)J
 
     move-result-wide v2
 
-    .line 988
     invoke-direct/range {p0 .. p2}, Lcom/android/server/display/AutomaticBrightnessController;->nextAmbientLightDarkeningTransition(J)J
 
     move-result-wide v4
 
-    .line 990
     :cond_4
     invoke-static {v4, v5, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v6
 
-    .line 997
     .local v6, "nextTransitionTime":J
     cmp-long v1, v6, p1
 
     if-lez v1, :cond_5
 
-    .line 1003
     :goto_1
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
@@ -3235,7 +2868,6 @@
 
     goto :goto_0
 
-    .line 997
     :cond_5
     iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLightSensorRate:I
 
@@ -3255,7 +2887,6 @@
 
     const/4 v6, 0x1
 
-    .line 1073
     iget-boolean v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
     if-eqz v2, :cond_0
@@ -3276,33 +2907,25 @@
 
     if-gez v2, :cond_2
 
-    .line 1076
     :cond_0
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSECAverageLux:F
 
     iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
-    .line 1077
     iput-boolean v6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
-    .line 1078
     iput v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxDirection:I
 
-    .line 1079
     iput-wide p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxTime:J
 
-    .line 1080
     iput-boolean v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mNeedToAddPersonalAutoBrightnessPoint:Z
 
-    .line 1081
     invoke-direct {p0, v6}, Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightnessSEC(Z)V
 
-    .line 1124
     :cond_1
     :goto_0
     return-void
 
-    .line 1086
     :cond_2
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSECAverageLux:F
 
@@ -3312,18 +2935,14 @@
 
     if-ltz v2, :cond_5
 
-    .line 1087
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxDirection:I
 
     if-gtz v2, :cond_3
 
-    .line 1088
     iput v6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxDirection:I
 
-    .line 1089
     iput-wide p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxTime:J
 
-    .line 1091
     :cond_3
     iget-wide v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxTime:J
 
@@ -3331,23 +2950,19 @@
 
     add-long v0, v2, v4
 
-    .line 1092
     .local v0, "debounceTime":J
     cmp-long v2, p1, v0
 
     if-ltz v2, :cond_4
 
-    .line 1093
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSECAverageLux:F
 
     iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
-    .line 1094
     invoke-direct {p0, v6}, Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightnessSEC(Z)V
 
     goto :goto_0
 
-    .line 1096
     :cond_4
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
@@ -3355,7 +2970,6 @@
 
     goto :goto_0
 
-    .line 1102
     .end local v0    # "debounceTime":J
     :cond_5
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSECAverageLux:F
@@ -3374,20 +2988,16 @@
 
     if-lez v2, :cond_8
 
-    .line 1103
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxDirection:I
 
     if-ltz v2, :cond_6
 
-    .line 1104
     const/4 v2, -0x1
 
     iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxDirection:I
 
-    .line 1105
     iput-wide p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxTime:J
 
-    .line 1107
     :cond_6
     iget-wide v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxTime:J
 
@@ -3395,23 +3005,19 @@
 
     add-long v0, v2, v4
 
-    .line 1108
     .restart local v0    # "debounceTime":J
     cmp-long v2, p1, v0
 
     if-ltz v2, :cond_7
 
-    .line 1111
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mSECAverageLux:F
 
     iput v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
-    .line 1112
     invoke-direct {p0, v6}, Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightnessSEC(Z)V
 
     goto :goto_0
 
-    .line 1114
     :cond_7
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHandler:Lcom/android/server/display/AutomaticBrightnessController$AutomaticBrightnessHandler;
 
@@ -3419,17 +3025,14 @@
 
     goto :goto_0
 
-    .line 1120
     .end local v0    # "debounceTime":J
     :cond_8
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxDirection:I
 
     if-eqz v2, :cond_1
 
-    .line 1121
     iput v7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxDirection:I
 
-    .line 1122
     iput-wide p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDebounceLuxTime:J
 
     goto :goto_0
@@ -3440,17 +3043,14 @@
     .param p1, "sendUpdate"    # Z
 
     .prologue
-    .line 1007
     iget-boolean v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
     if-nez v2, :cond_1
 
-    .line 1064
     :cond_0
     :goto_0
     return-void
 
-    .line 1011
     :cond_1
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightnessSpline:Landroid/util/Spline;
 
@@ -3460,11 +3060,9 @@
 
     move-result v13
 
-    .line 1012
     .local v13, "value":F
     const/high16 v8, 0x3f800000    # 1.0f
 
-    .line 1014
     .local v8, "gamma":F
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightnessAdjustment:F
 
@@ -3474,7 +3072,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1016
     const/high16 v2, 0x40400000    # 3.0f
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -3497,25 +3094,21 @@
 
     move-result v6
 
-    .line 1018
     .local v6, "adjGamma":F
     mul-float/2addr v8, v6
 
-    .line 1024
     .end local v6    # "adjGamma":F
     :cond_2
     sget-boolean v2, Lcom/android/server/display/AutomaticBrightnessController;->USE_TWILIGHT_ADJUSTMENT:Z
 
     if-eqz v2, :cond_3
 
-    .line 1025
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mTwilight:Lcom/android/server/twilight/TwilightManager;
 
     invoke-interface {v2}, Lcom/android/server/twilight/TwilightManager;->getCurrentState()Lcom/android/server/twilight/TwilightState;
 
     move-result-object v12
 
-    .line 1026
     .local v12, "state":Lcom/android/server/twilight/TwilightState;
     if-eqz v12, :cond_3
 
@@ -3525,12 +3118,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 1027
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 1028
     .local v0, "now":J
     invoke-virtual {v12}, Lcom/android/server/twilight/TwilightState;->getYesterdaySunset()J
 
@@ -3544,7 +3135,6 @@
 
     move-result v7
 
-    .line 1030
     .local v7, "earlyGamma":F
     invoke-virtual {v12}, Lcom/android/server/twilight/TwilightState;->getTodaySunset()J
 
@@ -3558,13 +3148,11 @@
 
     move-result v10
 
-    .line 1032
     .local v10, "lateGamma":F
     mul-float v2, v7, v10
 
     mul-float/2addr v8, v2
 
-    .line 1040
     .end local v0    # "now":J
     .end local v7    # "earlyGamma":F
     .end local v10    # "lateGamma":F
@@ -3576,16 +3164,13 @@
 
     if-eqz v2, :cond_4
 
-    .line 1041
     move v9, v13
 
-    .line 1042
     .local v9, "in":F
     invoke-static {v13, v8}, Landroid/util/MathUtils;->pow(FF)F
 
     move-result v13
 
-    .line 1049
     .end local v9    # "in":F
     :cond_4
     const/high16 v2, 0x437f0000    # 255.0f
@@ -3600,22 +3185,17 @@
 
     move-result v11
 
-    .line 1051
     .local v11, "newScreenAutoBrightness":I
     iget v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
 
     if-eq v2, v11, :cond_0
 
-    .line 1058
     iput v11, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
 
-    .line 1059
     iput v8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastScreenAutoBrightnessGamma:F
 
-    .line 1060
     if-eqz p1, :cond_0
 
-    .line 1061
     iget-object v2, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCallbacks:Lcom/android/server/display/AutomaticBrightnessController$Callbacks;
 
     invoke-interface {v2}, Lcom/android/server/display/AutomaticBrightnessController$Callbacks;->updateBrightness()V
@@ -3630,30 +3210,24 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1143
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
     if-nez v3, :cond_0
 
-    .line 1144
     const-string v3, "AutomaticBrightnessController"
 
     const-string v4, "[DAB] no lux value from sensor manager"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1145
     iput-boolean v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseManualAutoBrightness:Z
 
-    .line 1180
     :goto_0
     return-void
 
-    .line 1150
     :cond_0
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 1151
     .local v1, "gamma":F
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
@@ -3663,7 +3237,6 @@
 
     move-result v2
 
-    .line 1152
     .local v2, "value":F
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
@@ -3673,7 +3246,6 @@
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLowHysteresis:F
 
-    .line 1153
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
     invoke-virtual {v3, v2}, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->getDynamicAutoBrightnessHighHysteresis(F)F
@@ -3682,16 +3254,13 @@
 
     iput v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mHighHysteresis:F
 
-    .line 1155
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightnessAdjustment:F
 
-    .line 1161
     .local v0, "autoBrightnessAdj":F
     sget-boolean v3, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_FORCE_ADJUST_MANUAL_BRIGHTNESS_IN_LOW_LUX:Z
 
     if-eqz v3, :cond_2
 
-    .line 1162
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsBrightnessModeAuto:Z
 
     if-nez v3, :cond_3
@@ -3704,48 +3273,40 @@
 
     if-gtz v3, :cond_3
 
-    .line 1164
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseManualAutoBrightness:Z
 
     if-nez v3, :cond_1
 
-    .line 1165
     const-string v3, "AutomaticBrightnessController"
 
     const-string v4, "[DAB] use ManualAutoBrightness is changed from false -> true"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1167
     :cond_1
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseManualAutoBrightness:Z
 
-    .line 1168
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mManualAdjustment:F
 
-    .line 1179
     :cond_2
     :goto_1
     invoke-direct {p0, p1, v2, v1, v0}, Lcom/android/server/display/AutomaticBrightnessController;->updateFinalAutoBrightness(ZFFF)V
 
     goto :goto_0
 
-    .line 1171
     :cond_3
     iget-boolean v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseManualAutoBrightness:Z
 
     if-eqz v3, :cond_4
 
-    .line 1172
     const-string v3, "AutomaticBrightnessController"
 
     const-string v4, "[DAB] use ManualAutoBrightness is changed from true -> false"
 
     invoke-static {v3, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1174
     :cond_4
     iput-boolean v5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseManualAutoBrightness:Z
 
@@ -3760,7 +3321,6 @@
     .param p4, "autoBrightnessAdj"    # F
 
     .prologue
-    .line 1184
     const/4 v12, 0x0
 
     cmpl-float v12, p4, v12
@@ -3788,7 +3348,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 1186
     :cond_1
     const/high16 v12, 0x3f800000    # 1.0f
 
@@ -3810,22 +3369,18 @@
 
     mul-float v2, v12, v13
 
-    .line 1187
     .local v2, "adjLevel":F
     const/4 v3, 0x0
 
-    .line 1189
     .local v3, "autoBrightnessLevelStepRatio":F
     iget-boolean v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAutoBrightnessForEbookOnly:Z
 
     if-eqz v12, :cond_c
 
-    .line 1190
     iget-object v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
     iget v3, v12, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mAutoBrightnessLevelStepRatioForEbook:F
 
-    .line 1201
     :goto_0
     const/4 v12, 0x0
 
@@ -3853,11 +3408,9 @@
 
     move-result v1
 
-    .line 1202
     .local v1, "adjGamma":F
     mul-float p3, p3, v1
 
-    .line 1208
     iget-object v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
     iget v12, v12, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mValueOfVirtualZeroCandela:I
@@ -3876,13 +3429,11 @@
 
     add-float v10, v12, v13
 
-    .line 1209
     .local v10, "valueFromGamma":F
     iget-object v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
     iget v7, v12, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mMinimumBrightnessStepValue:I
 
-    .line 1210
     .local v7, "minBrightnessStep":I
     float-to-int v12, v2
 
@@ -3894,7 +3445,6 @@
 
     add-int v11, v12, v13
 
-    .line 1211
     .local v11, "valueFromOffset":I
     const/4 v12, 0x0
 
@@ -3921,13 +3471,11 @@
 
     if-lez v12, :cond_11
 
-    .line 1213
     :cond_3
     int-to-float v0, v11
 
     move/from16 p2, v0
 
-    .line 1222
     .end local v1    # "adjGamma":F
     .end local v2    # "adjLevel":F
     .end local v3    # "autoBrightnessLevelStepRatio":F
@@ -3950,10 +3498,8 @@
 
     if-gez v12, :cond_5
 
-    .line 1223
     const/high16 p2, 0x437f0000    # 255.0f
 
-    .line 1228
     :cond_5
     iget-object v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
@@ -3969,7 +3515,6 @@
 
     move/from16 p2, v0
 
-    .line 1231
     invoke-static/range {p2 .. p2}, Ljava/lang/Math;->round(F)I
 
     move-result v12
@@ -3978,7 +3523,6 @@
 
     move-result v9
 
-    .line 1233
     .local v9, "newScreenAutoBrightness":I
     iget v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->lastRawBrightnessValue:F
 
@@ -3992,7 +3536,6 @@
 
     if-gt v12, v13, :cond_7
 
-    .line 1234
     :cond_6
     const-string v13, "AutomaticBrightnessController"
 
@@ -4093,7 +3636,6 @@
 
     invoke-static {v13, v12}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1239
     :cond_7
     iget v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
@@ -4105,18 +3647,15 @@
 
     const/4 v8, 0x1
 
-    .line 1240
     .local v8, "needHBM":Z
     :goto_5
     const/4 v4, 0x0
 
-    .line 1242
     .local v4, "isHBMChanged":Z
     iget-boolean v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastHBM:Z
 
     if-eq v12, v8, :cond_8
 
-    .line 1243
     const-string v13, "AutomaticBrightnessController"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -4154,13 +3693,10 @@
 
     invoke-static {v13, v12}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1246
     iput-boolean v8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastHBM:Z
 
-    .line 1247
     const/4 v4, 0x1
 
-    .line 1249
     iget-object v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mContext:Landroid/content/Context;
 
     invoke-virtual {v12}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -4176,7 +3712,6 @@
     :goto_7
     invoke-static {v13, v14, v12}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1253
     :cond_8
     iget v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
@@ -4188,35 +3723,28 @@
 
     const/4 v6, 0x1
 
-    .line 1254
     .local v6, "isTconMaxLevel":Z
     :goto_8
     const/4 v5, 0x0
 
-    .line 1255
     .local v5, "isTconLevelChanged":Z
     iget-boolean v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mWasTconMaxLevel:Z
 
     if-eq v12, v6, :cond_9
 
-    .line 1256
     if-eqz v6, :cond_17
 
-    .line 1257
     const-string v12, "AutomaticBrightnessController"
 
     const-string v13, "[DAB] The Ambient Lux has gone over 20000."
 
     invoke-static {v12, v13}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1262
     :goto_9
     iput-boolean v6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mWasTconMaxLevel:Z
 
-    .line 1263
     const/4 v5, 0x1
 
-    .line 1266
     :cond_9
     iget v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
 
@@ -4228,48 +3756,39 @@
 
     if-eq v12, v13, :cond_18
 
-    .line 1268
     :cond_a
     iput v9, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
 
-    .line 1269
     move/from16 v0, p3
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastScreenAutoBrightnessGamma:F
 
-    .line 1270
     if-eqz p1, :cond_b
 
-    .line 1271
     const-string v12, "AutomaticBrightnessController"
 
     const-string/jumbo v13, "mCallbacks.updateBrightness()"
 
     invoke-static {v12, v13}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1272
     iget-object v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCallbacks:Lcom/android/server/display/AutomaticBrightnessController$Callbacks;
 
     invoke-interface {v12}, Lcom/android/server/display/AutomaticBrightnessController$Callbacks;->updateBrightness()V
 
-    .line 1273
     iget v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
     const/4 v13, 0x0
 
     invoke-direct {p0, v12, v13}, Lcom/android/server/display/AutomaticBrightnessController;->sendLuxLevel(FZ)V
 
-    .line 1285
     :cond_b
     :goto_a
     move/from16 v0, p2
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->lastRawBrightnessValue:F
 
-    .line 1286
     return-void
 
-    .line 1193
     .end local v4    # "isHBMChanged":Z
     .end local v5    # "isTconLevelChanged":Z
     .end local v6    # "isTconMaxLevel":Z
@@ -4309,14 +3828,12 @@
 
     if-gez v12, :cond_e
 
-    .line 1195
     iget-object v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
     iget v3, v12, Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;->mAutoBrightnessLevelStepRatioAt0Lux:F
 
     goto/16 :goto_0
 
-    .line 1197
     :cond_e
     iget-object v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
@@ -4324,7 +3841,6 @@
 
     goto/16 :goto_0
 
-    .line 1201
     :cond_f
     const/high16 v12, 0x3f800000    # 1.0f
 
@@ -4339,7 +3855,6 @@
 
     goto/16 :goto_2
 
-    .line 1215
     .restart local v1    # "adjGamma":F
     .restart local v7    # "minBrightnessStep":I
     .restart local v10    # "valueFromGamma":F
@@ -4349,7 +3864,6 @@
 
     goto/16 :goto_3
 
-    .line 1234
     .end local v1    # "adjGamma":F
     .end local v2    # "adjLevel":F
     .end local v3    # "autoBrightnessLevelStepRatio":F
@@ -4362,13 +3876,11 @@
 
     goto/16 :goto_4
 
-    .line 1239
     :cond_13
     const/4 v8, 0x0
 
     goto/16 :goto_5
 
-    .line 1243
     .restart local v4    # "isHBMChanged":Z
     .restart local v8    # "needHBM":Z
     :cond_14
@@ -4376,19 +3888,16 @@
 
     goto/16 :goto_6
 
-    .line 1249
     :cond_15
     const/4 v12, 0x0
 
     goto/16 :goto_7
 
-    .line 1253
     :cond_16
     const/4 v6, 0x0
 
     goto :goto_8
 
-    .line 1259
     .restart local v5    # "isTconLevelChanged":Z
     .restart local v6    # "isTconMaxLevel":Z
     :cond_17
@@ -4400,7 +3909,6 @@
 
     goto :goto_9
 
-    .line 1278
     :cond_18
     if-eqz p1, :cond_b
 
@@ -4408,13 +3916,11 @@
 
     if-eqz v5, :cond_b
 
-    .line 1279
     :cond_19
     iget-object v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCallbacks:Lcom/android/server/display/AutomaticBrightnessController$Callbacks;
 
     invoke-interface {v12}, Lcom/android/server/display/AutomaticBrightnessController$Callbacks;->updateBrightness()V
 
-    .line 1280
     iget v12, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
     const/4 v13, 0x0
@@ -4429,14 +3935,12 @@
     .param p1, "needUpdate"    # Z
 
     .prologue
-    .line 1834
     const-string v0, "AutomaticBrightnessController"
 
     const-string v1, "[PAB] PowerManagerUtil.USE_PERSONAL_AUTO_BRIGHTNESS is false."
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1835
     return-void
 .end method
 
@@ -4445,7 +3949,6 @@
     .param p0, "x"    # J
 
     .prologue
-    .line 913
     long-to-float v0, p0
 
     long-to-float v1, p0
@@ -4483,7 +3986,6 @@
 
     const/4 v3, 0x0
 
-    .line 567
     iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsSupportedSensorHubAutoBrightness:Z
 
     if-nez v1, :cond_1
@@ -4492,40 +3994,32 @@
 
     if-nez v1, :cond_1
 
-    .line 568
     const-string v1, "AutomaticBrightnessController"
 
     const-string v2, "[DAB] mLightSensor is null."
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 608
     :cond_0
     :goto_0
     return-void
 
-    .line 571
     :cond_1
     iput-boolean p6, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseSystemPowerSaveMode:Z
 
-    .line 577
     const/4 v0, 0x0
 
-    .line 578
     .local v0, "changed":Z
     iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAutoBrightnessForEbookOnly:Z
 
     if-eq v1, p5, :cond_3
 
-    .line 579
     iput-boolean p5, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAutoBrightnessForEbookOnly:Z
 
-    .line 580
     iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsSupportedSensorHubAutoBrightness:Z
 
     if-eqz v1, :cond_2
 
-    .line 582
     iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAutoBrightnessForEbookOnly:Z
 
     if-eqz v1, :cond_7
@@ -4535,11 +4029,9 @@
     :goto_1
     invoke-direct {p0, v1}, Lcom/android/server/display/AutomaticBrightnessController;->changeModeInSensorHubAutoBrightness(I)V
 
-    .line 586
     :cond_2
     or-int/lit8 v0, v0, 0x1
 
-    .line 589
     .end local v0    # "changed":Z
     :cond_3
     iget-boolean v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseAutoBrightnessController:Z
@@ -4560,23 +4052,17 @@
 
     if-eq v1, p9, :cond_5
 
-    .line 593
     :cond_4
     iput p7, p0, Lcom/android/server/display/AutomaticBrightnessController;->mManualAdjustment:F
 
-    .line 594
     iput-boolean p8, p0, Lcom/android/server/display/AutomaticBrightnessController;->mIsBrightnessModeAuto:Z
 
-    .line 595
     iput-boolean p9, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseHbmAtManualMax:Z
 
-    .line 596
     iput-boolean p1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseAutoBrightnessController:Z
 
-    .line 597
     or-int/lit8 v0, v0, 0x1
 
-    .line 599
     :cond_5
     if-eqz p1, :cond_8
 
@@ -4589,7 +4075,6 @@
 
     or-int/2addr v0, v1
 
-    .line 600
     .restart local v0    # "changed":Z
     invoke-direct {p0, p2}, Lcom/android/server/display/AutomaticBrightnessController;->setScreenAutoBrightnessAdjustment(F)Z
 
@@ -4597,13 +4082,10 @@
 
     or-int/2addr v0, v1
 
-    .line 602
     if-eqz v0, :cond_6
 
-    .line 603
     invoke-direct {p0, v3}, Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightnessSEC(Z)V
 
-    .line 605
     :cond_6
     if-eqz p1, :cond_0
 
@@ -4611,7 +4093,6 @@
 
     if-eqz p4, :cond_0
 
-    .line 606
     invoke-direct {p0}, Lcom/android/server/display/AutomaticBrightnessController;->prepareBrightnessAdjustmentSample()V
 
     goto :goto_0
@@ -4619,14 +4100,12 @@
     :cond_7
     move v1, v3
 
-    .line 582
     goto :goto_1
 
     .end local v0    # "changed":Z
     :cond_8
     move v2, v3
 
-    .line 599
     goto :goto_2
 .end method
 
@@ -4635,15 +4114,12 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 612
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 613
     const-string v0, "Automatic Brightness Controller Configuration:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 614
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4666,7 +4142,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 615
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4689,7 +4164,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 616
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4712,7 +4186,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 617
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4735,7 +4208,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 618
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4758,7 +4230,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 619
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4781,7 +4252,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 620
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4804,15 +4274,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 622
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 623
     const-string v0, "Automatic Brightness Controller State:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 624
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4835,7 +4302,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 625
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4862,7 +4328,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 626
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4885,7 +4350,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 627
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4912,7 +4376,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 628
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4935,7 +4398,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 629
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4958,7 +4420,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 630
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4981,7 +4442,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 631
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5004,7 +4464,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 632
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5031,7 +4490,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 633
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5054,7 +4512,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 634
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5077,7 +4534,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 635
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5100,7 +4556,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 636
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5123,7 +4578,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 637
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5146,7 +4600,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 638
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5169,15 +4622,12 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 641
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 642
     const-string v0, "Automatic Brightness in Sensorhub:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 643
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5200,7 +4650,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 644
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5223,7 +4672,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 645
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5250,7 +4698,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 646
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5273,7 +4720,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 653
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5296,7 +4742,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 654
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5319,7 +4764,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 658
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5342,7 +4786,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 662
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -5365,7 +4808,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 664
     return-void
 .end method
 
@@ -5373,7 +4815,6 @@
     .locals 1
 
     .prologue
-    .line 533
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
     return v0
@@ -5383,12 +4824,10 @@
     .locals 2
 
     .prologue
-    .line 525
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mDozing:Z
 
     if-eqz v0, :cond_0
 
-    .line 526
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mScreenAutoBrightness:I
 
     int-to-float v0, v0
@@ -5399,7 +4838,6 @@
 
     float-to-int v0, v0
 
-    .line 528
     :goto_0
     return v0
 
@@ -5413,7 +4851,6 @@
     .locals 1
 
     .prologue
-    .line 1132
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
 
     return v0
@@ -5423,7 +4860,6 @@
     .locals 1
 
     .prologue
-    .line 537
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLastHBM:Z
 
     return v0
@@ -5433,7 +4869,6 @@
     .locals 1
 
     .prologue
-    .line 1138
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mUseManualAutoBrightness:Z
 
     return v0
@@ -5443,12 +4878,10 @@
     .locals 2
 
     .prologue
-    .line 428
     iget-object v1, p0, Lcom/android/server/display/AutomaticBrightnessController;->mLockPAB:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 429
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mNeedToAddPersonalAutoBrightnessPoint:Z
 
@@ -5456,7 +4889,6 @@
 
     return v0
 
-    .line 430
     :catchall_0
     move-exception v0
 
@@ -5472,20 +4904,16 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 495
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 496
     .local v4, "sb":Ljava/lang/StringBuilder;
     const/4 v1, 0x0
 
-    .line 497
     .local v1, "line":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 500
     .local v2, "reader":Ljava/io/BufferedReader;
     :try_start_0
     new-instance v3, Ljava/io/BufferedReader;
@@ -5499,7 +4927,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_4
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 502
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .local v3, "reader":Ljava/io/BufferedReader;
     :goto_0
@@ -5510,7 +4937,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 503
     invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v5
@@ -5524,13 +4950,11 @@
 
     goto :goto_0
 
-    .line 506
     :catch_0
     move-exception v0
 
     move-object v2, v3
 
-    .line 508
     .end local v3    # "reader":Ljava/io/BufferedReader;
     .local v0, "e":Ljava/io/IOException;
     .restart local v2    # "reader":Ljava/io/BufferedReader;
@@ -5560,16 +4984,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 510
     if-eqz v2, :cond_0
 
-    .line 512
     :try_start_3
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 519
     .end local v0    # "e":Ljava/io/IOException;
     :cond_0
     :goto_2
@@ -5583,13 +5004,11 @@
 
     return-object v5
 
-    .line 510
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "reader":Ljava/io/BufferedReader;
     :cond_1
     if-eqz v3, :cond_3
 
-    .line 512
     :try_start_4
     invoke-virtual {v3}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -5597,18 +5016,15 @@
 
     move-object v2, v3
 
-    .line 516
     .end local v3    # "reader":Ljava/io/BufferedReader;
     .restart local v2    # "reader":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 513
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "reader":Ljava/io/BufferedReader;
     :catch_1
     move-exception v0
 
-    .line 515
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v5, "AutomaticBrightnessController"
 
@@ -5634,16 +5050,13 @@
 
     move-object v2, v3
 
-    .line 516
     .end local v3    # "reader":Ljava/io/BufferedReader;
     .restart local v2    # "reader":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 513
     :catch_2
     move-exception v0
 
-    .line 515
     const-string v5, "AutomaticBrightnessController"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -5668,7 +5081,6 @@
 
     goto :goto_2
 
-    .line 510
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v5
@@ -5676,22 +5088,18 @@
     :goto_3
     if-eqz v2, :cond_2
 
-    .line 512
     :try_start_5
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 516
     :cond_2
     :goto_4
     throw v5
 
-    .line 513
     :catch_3
     move-exception v0
 
-    .line 515
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v6, "AutomaticBrightnessController"
 
@@ -5717,7 +5125,6 @@
 
     goto :goto_4
 
-    .line 510
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "reader":Ljava/io/BufferedReader;
@@ -5730,7 +5137,6 @@
     .restart local v2    # "reader":Ljava/io/BufferedReader;
     goto :goto_3
 
-    .line 506
     :catch_4
     move-exception v0
 
@@ -5751,7 +5157,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 1691
     if-eqz p1, :cond_0
 
     sget v0, Lcom/android/server/power/PowerManagerUtil;->HBM_LUX:F
@@ -5759,10 +5164,8 @@
     :goto_0
     invoke-direct {p0, v0, p1}, Lcom/android/server/display/AutomaticBrightnessController;->sendLuxLevel(FZ)V
 
-    .line 1692
     return-void
 
-    .line 1691
     :cond_0
     const/4 v0, 0x0
 

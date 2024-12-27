@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1308
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     invoke-direct {p0}, Landroid/content/IProviderCallBack$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/bridge/BridgeProxy$1;
 
     .prologue
-    .line 1308
     invoke-direct {p0, p1}, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;-><init>(Lcom/android/server/bridge/BridgeProxy;)V
 
     return-void
@@ -49,7 +47,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 1308
     invoke-direct {p0, p1}, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->getComponentName(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
@@ -62,7 +59,6 @@
     .param p1, "providerName"    # Ljava/lang/String;
 
     .prologue
-    .line 1550
     iget-object v7, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mContext:Landroid/content/Context;
@@ -83,13 +79,11 @@
 
     move-result-object v5
 
-    .line 1552
     .local v5, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v5}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
     move-result-object v2
 
-    .line 1554
     .local v2, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/Map;->isEmpty()Z
 
@@ -97,7 +91,6 @@
 
     if-nez v7, :cond_1
 
-    .line 1555
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v7
@@ -120,7 +113,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 1556
     .local v4, "pairs":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -134,7 +126,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 1557
     new-instance v6, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;
 
     iget-object v8, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -147,15 +138,12 @@
 
     invoke-direct {v6, v8, v7}, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;-><init>(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)V
 
-    .line 1558
     .local v6, "si":Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;
     iget-object v0, v6, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;->serviceName:Ljava/lang/String;
 
-    .line 1559
     .local v0, "fullServiceName":Ljava/lang/String;
     iget-object v3, v6, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;->packageName:Ljava/lang/String;
 
-    .line 1560
     .local v3, "packageName":Ljava/lang/String;
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -192,12 +180,10 @@
 
     invoke-static {v7, v8}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1562
     new-instance v7, Landroid/content/ComponentName;
 
     invoke-direct {v7, v3, v0}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1567
     .end local v0    # "fullServiceName":Ljava/lang/String;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "packageName":Ljava/lang/String;
@@ -206,7 +192,6 @@
     :goto_0
     return-object v7
 
-    .line 1566
     :cond_1
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -233,7 +218,6 @@
 
     invoke-static {v7, v8}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1567
     const/4 v7, 0x0
 
     goto :goto_0
@@ -244,33 +228,27 @@
     .param p1, "image"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 1532
     const/16 v2, 0x90
 
-    .line 1533
     .local v2, "maxSize":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    .line 1534
     .local v3, "width":I
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
-    .line 1535
     .local v1, "height":I
     if-ne v1, v3, :cond_0
 
     if-ne v3, v2, :cond_0
 
-    .line 1545
     .end local p1    # "image":Landroid/graphics/Bitmap;
     :goto_0
     return-object p1
 
-    .line 1537
     .restart local p1    # "image":Landroid/graphics/Bitmap;
     :cond_0
     int-to-float v4, v3
@@ -279,7 +257,6 @@
 
     div-float v0, v4, v5
 
-    .line 1538
     .local v0, "bitmapRatio":F
     const/4 v4, 0x0
 
@@ -287,17 +264,14 @@
 
     if-lez v4, :cond_1
 
-    .line 1539
     move v3, v2
 
-    .line 1540
     int-to-float v4, v3
 
     div-float/2addr v4, v0
 
     float-to-int v1, v4
 
-    .line 1545
     :goto_1
     const/4 v4, 0x1
 
@@ -307,11 +281,9 @@
 
     goto :goto_0
 
-    .line 1542
     :cond_1
     move v1, v2
 
-    .line 1543
     int-to-float v4, v1
 
     mul-float/2addr v4, v0
@@ -333,7 +305,6 @@
     .end annotation
 
     .prologue
-    .line 1421
     iget-object v4, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     const-string/jumbo v5, "getCallerInfoDetails"
@@ -341,7 +312,6 @@
     # invokes: Lcom/android/server/bridge/BridgeProxy;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v4, v5}, Lcom/android/server/bridge/BridgeProxy;->access$1800(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)I
 
-    .line 1422
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -351,18 +321,15 @@
 
     invoke-static {v4, v5}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1424
     const-string v4, "Contacts"
 
     invoke-direct {p0, v4}, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->getComponentName(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 1426
     .local v1, "cn":Landroid/content/ComponentName;
     if-eqz v1, :cond_0
 
-    .line 1427
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -372,12 +339,10 @@
 
     invoke-static {v4, v5}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1428
     const-class v5, Lcom/android/server/bridge/BridgeProxy;
 
     monitor-enter v5
 
-    .line 1430
     :try_start_0
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -388,21 +353,17 @@
 
     invoke-static {v4, v6}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1431
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1432
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1434
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1435
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v4, "action"
 
@@ -410,12 +371,10 @@
 
     invoke-virtual {v0, v4, v6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1436
     const-string v4, "contactRefUriAsString"
 
     invoke-virtual {v0, v4, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1438
     const-string/jumbo v4, "messenger"
 
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -427,12 +386,10 @@
 
     invoke-virtual {v0, v4, v6}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1439
     const-string v4, "binderBundle"
 
     invoke-virtual {v3, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 1441
     iget-object v4, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mContext:Landroid/content/Context;
@@ -449,7 +406,6 @@
 
     invoke-virtual {v4, v3, v6}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 1442
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -482,7 +438,6 @@
 
     invoke-static {v4, v6}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1443
     iget-object v4, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->resultLock:Ljava/lang/Object;
@@ -495,7 +450,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 1444
     :try_start_1
     iget-object v4, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
@@ -508,12 +462,10 @@
 
     invoke-virtual {v4, v8, v9}, Ljava/lang/Object;->wait(J)V
 
-    .line 1445
     monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1447
     :try_start_2
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -547,7 +499,6 @@
 
     invoke-static {v4, v6}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1448
     iget-object v4, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mCallerInfoResult:Landroid/content/CustomCursor;
@@ -563,13 +514,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1454
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v3    # "intent":Landroid/content/Intent;
     :goto_0
     return-object v4
 
-    .line 1445
     .restart local v0    # "bundle":Landroid/os/Bundle;
     .restart local v3    # "intent":Landroid/content/Intent;
     :catchall_0
@@ -586,28 +535,23 @@
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 1449
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v3    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v2
 
-    .line 1450
     .local v2, "e":Ljava/lang/InterruptedException;
     :try_start_6
     invoke-virtual {v2}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 1452
     monitor-exit v5
 
-    .line 1454
     .end local v2    # "e":Ljava/lang/InterruptedException;
     :cond_0
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 1452
     :catchall_1
     move-exception v4
 
@@ -633,7 +577,6 @@
     .end annotation
 
     .prologue
-    .line 1461
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     const-string/jumbo v7, "handleShortcut"
@@ -641,7 +584,6 @@
     # invokes: Lcom/android/server/bridge/BridgeProxy;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v6, v7}, Lcom/android/server/bridge/BridgeProxy;->access$1800(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)I
 
-    .line 1462
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -651,18 +593,15 @@
 
     invoke-static {v6, v7}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1464
     const-string v6, "RemoteShortcuts"
 
     invoke-direct {p0, v6}, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->getComponentName(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 1466
     .local v1, "cn":Landroid/content/ComponentName;
     if-eqz v1, :cond_3
 
-    .line 1467
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -672,7 +611,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1469
     :try_start_0
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -683,24 +621,19 @@
 
     invoke-static {v6, v7}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1470
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 1471
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {v3, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1472
     if-eqz p4, :cond_0
 
-    .line 1473
     invoke-direct {p0, p4}, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->getResizedBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/Bitmap;
 
     move-result-object p4
 
-    .line 1474
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -744,7 +677,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1479
     :cond_0
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -771,43 +703,35 @@
 
     invoke-static {v6, v7}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1481
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1482
     .local v0, "bundle":Landroid/os/Bundle;
     const-string/jumbo v6, "userId"
 
     invoke-virtual {v0, v6, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1483
     const-string/jumbo v6, "packageName"
 
     invoke-virtual {v0, v6, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1484
     const-string/jumbo v6, "packageLabel"
 
     invoke-virtual {v0, v6, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1485
     const-string/jumbo v6, "shortcutIcon"
 
     invoke-virtual {v0, v6, p4}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1486
     const-string/jumbo v6, "shortcutIntentUri"
 
     invoke-virtual {v0, v6, p5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1487
     const-string v6, "createOrRemove"
 
     invoke-virtual {v0, v6, p6}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1489
     const-string v6, "create"
 
     invoke-virtual {p6, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -816,7 +740,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 1490
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->preInstalledAppsMinusEmail:Ljava/util/Set;
@@ -826,7 +749,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 1491
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->preInstalledAppsMinusEmail:Ljava/util/Set;
@@ -840,7 +762,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 1492
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -866,14 +787,12 @@
 
     invoke-static {v6, v7}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1493
     const-string/jumbo v6, "isPreInstalledPackage"
 
     const/4 v7, 0x1
 
     invoke-virtual {v0, v6, v7}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1501
     :cond_1
     :goto_0
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -885,12 +804,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 1502
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 1504
     .local v4, "req":Landroid/os/Bundle;
     const-string v6, "action"
 
@@ -898,12 +815,10 @@
 
     invoke-virtual {v4, v6, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1505
     const-string/jumbo v6, "pkgName"
 
     invoke-virtual {v4, v6, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1507
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mbridge:Landroid/os/RCPManager;
@@ -922,11 +837,9 @@
 
     move-result-object v5
 
-    .line 1509
     .local v5, "resp":Landroid/os/Bundle;
     if-eqz v5, :cond_2
 
-    .line 1510
     const-string/jumbo v6, "pkg_names"
 
     const-string/jumbo v7, "pkg_names"
@@ -937,7 +850,6 @@
 
     invoke-virtual {v0, v6, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1511
     const-string v6, "class_names"
 
     const-string v7, "class_names"
@@ -948,7 +860,6 @@
 
     invoke-virtual {v0, v6, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1512
     const-string v6, "counts"
 
     const-string v7, "counts"
@@ -959,7 +870,6 @@
 
     invoke-virtual {v0, v6, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1514
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -1023,13 +933,11 @@
 
     invoke-static {v6, v7}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1521
     .end local v4    # "req":Landroid/os/Bundle;
     .end local v5    # "resp":Landroid/os/Bundle;
     :cond_2
     invoke-virtual {v3, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 1522
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -1039,7 +947,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1523
     iget-object v6, p0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->mContext:Landroid/content/Context;
@@ -1056,14 +963,12 @@
 
     invoke-virtual {v6, v3, v7}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 1529
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v3    # "intent":Landroid/content/Intent;
     :cond_3
     :goto_1
     return-void
 
-    .line 1495
     .restart local v0    # "bundle":Landroid/os/Bundle;
     .restart local v3    # "intent":Landroid/content/Intent;
     :cond_4
@@ -1080,19 +985,16 @@
 
     goto/16 :goto_0
 
-    .line 1524
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v3    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v2
 
-    .line 1525
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 1497
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "bundle":Landroid/os/Bundle;
     .restart local v3    # "intent":Landroid/content/Intent;
@@ -1128,7 +1030,6 @@
     .end annotation
 
     .prologue
-    .line 1314
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -1140,7 +1041,6 @@
     # invokes: Lcom/android/server/bridge/BridgeProxy;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static/range {v20 .. v21}, Lcom/android/server/bridge/BridgeProxy;->access$1800(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)I
 
-    .line 1315
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -1150,7 +1050,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1317
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -1179,13 +1078,11 @@
 
     move-result-object v14
 
-    .line 1319
     .local v14, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v14}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
     move-result-object v10
 
-    .line 1320
     .local v10, "map":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v10}, Ljava/util/Map;->isEmpty()Z
 
@@ -1193,7 +1090,6 @@
 
     if-nez v20, :cond_6
 
-    .line 1321
     invoke-interface {v10}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v20
@@ -1217,11 +1113,9 @@
 
     check-cast v17, Ljava/util/Map$Entry;
 
-    .line 1322
     .local v17, "stringStringEntry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     move-object/from16 v12, v17
 
-    .line 1324
     .local v12, "pairs":Ljava/util/Map$Entry;
     invoke-interface {v12}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1239,7 +1133,6 @@
 
     if-eqz v20, :cond_0
 
-    .line 1325
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -1269,14 +1162,11 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1328
     const-string/jumbo v15, "false"
 
-    .line 1329
     .local v15, "sanitizeData":Ljava/lang/String;
     const/16 v18, 0x0
 
-    .line 1332
     .local v18, "syncOnlyFavoritesContactsPolicy":Z
     invoke-interface {v12}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1332,7 +1222,6 @@
 
     if-eqz v20, :cond_4
 
-    .line 1337
     :cond_1
     move-object/from16 v0, p0
 
@@ -1355,7 +1244,6 @@
 
     move-result-object v13
 
-    .line 1339
     .local v13, "policy":Ljava/lang/String;
     if-eqz v13, :cond_2
 
@@ -1369,7 +1257,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 1340
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -1379,10 +1266,8 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1341
     const/16 v20, 0x0
 
-    .line 1414
     .end local v9    # "i$":Ljava/util/Iterator;
     .end local v12    # "pairs":Ljava/util/Map$Entry;
     .end local v13    # "policy":Ljava/lang/String;
@@ -1392,7 +1277,6 @@
     :goto_1
     return-object v20
 
-    .line 1343
     .restart local v9    # "i$":Ljava/util/Iterator;
     .restart local v12    # "pairs":Ljava/util/Map$Entry;
     .restart local v13    # "policy":Ljava/lang/String;
@@ -1421,7 +1305,6 @@
 
     move-result-object v15
 
-    .line 1347
     invoke-interface {v12}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v20
@@ -1434,7 +1317,6 @@
 
     if-eqz v20, :cond_4
 
-    .line 1348
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -1446,7 +1328,6 @@
 
     move-result-object v19
 
-    .line 1350
     .local v19, "syncPolicy":Ljava/lang/String;
     const-string/jumbo v20, "fav_contacts"
 
@@ -1460,10 +1341,8 @@
 
     if-eqz v20, :cond_3
 
-    .line 1351
     const/16 v18, 0x1
 
-    .line 1353
     :cond_3
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -1494,7 +1373,6 @@
 
     invoke-static/range {v20 .. v21}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1357
     .end local v13    # "policy":Ljava/lang/String;
     .end local v19    # "syncPolicy":Ljava/lang/String;
     :cond_4
@@ -1502,7 +1380,6 @@
 
     monitor-enter v21
 
-    .line 1359
     :try_start_0
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -1517,12 +1394,10 @@
 
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1360
     new-instance v8, Landroid/content/Intent;
 
     invoke-direct {v8}, Landroid/content/Intent;-><init>()V
 
-    .line 1361
     .local v8, "i":Landroid/content/Intent;
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -1557,7 +1432,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1364
     new-instance v16, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;
 
     move-object/from16 v0, p0
@@ -1580,19 +1454,16 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;-><init>(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)V
 
-    .line 1365
     .local v16, "si":Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;
     move-object/from16 v0, v16
 
     iget-object v7, v0, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;->serviceName:Ljava/lang/String;
 
-    .line 1366
     .local v7, "fullServiceName":Ljava/lang/String;
     move-object/from16 v0, v16
 
     iget-object v11, v0, Lcom/android/server/bridge/BridgeProxy$RCPServiceInfo;->packageName:Ljava/lang/String;
 
-    .line 1367
     .local v11, "packageName":Ljava/lang/String;
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -1637,7 +1508,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1370
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -1669,21 +1539,17 @@
 
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1372
     new-instance v5, Landroid/content/ComponentName;
 
     invoke-direct {v5, v11, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1373
     .local v5, "cn":Landroid/content/ComponentName;
     invoke-virtual {v8, v5}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1375
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    .line 1376
     .local v4, "bundle":Landroid/os/Bundle;
     const-string/jumbo v20, "messenger"
 
@@ -1704,7 +1570,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 1379
     const-string/jumbo v20, "providerName"
 
     move-object/from16 v0, v20
@@ -1713,7 +1578,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1380
     const-string/jumbo v20, "resourceName"
 
     move-object/from16 v0, v20
@@ -1722,7 +1586,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1381
     const-string v20, "containerId"
 
     move-object/from16 v0, v20
@@ -1731,7 +1594,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1382
     const-string/jumbo v20, "projection"
 
     move-object/from16 v0, v20
@@ -1740,7 +1602,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1383
     const-string/jumbo v20, "selection"
 
     move-object/from16 v0, v20
@@ -1749,7 +1610,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1384
     const-string/jumbo v20, "selectionArgs"
 
     move-object/from16 v0, v20
@@ -1758,7 +1618,6 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 1385
     const-string/jumbo v20, "sortOrder"
 
     move-object/from16 v0, v20
@@ -1767,14 +1626,12 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1386
     const-string/jumbo v20, "sanitizeData"
 
     move-object/from16 v0, v20
 
     invoke-virtual {v4, v0, v15}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1387
     const-string/jumbo v20, "syncOnlyFavoritesContactsPolicy"
 
     move-object/from16 v0, v20
@@ -1783,14 +1640,12 @@
 
     invoke-virtual {v4, v0, v1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1390
     const-string v20, "binderBundle"
 
     move-object/from16 v0, v20
 
     invoke-virtual {v8, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 1391
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -1819,7 +1674,6 @@
 
     invoke-virtual {v0, v8, v1}, Landroid/content/Context;->startServiceAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)Landroid/content/ComponentName;
 
-    .line 1392
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
 
@@ -1860,7 +1714,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1393
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -1877,7 +1730,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1394
     :try_start_1
     move-object/from16 v0, p0
 
@@ -1898,12 +1750,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/Object;->wait(J)V
 
-    .line 1395
     monitor-exit v22
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1398
     :try_start_2
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/bridge/BridgeProxy;->access$800()Ljava/lang/String;
@@ -1945,7 +1795,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/bridge/BridgeProxy$BridgeLog;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1399
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -1959,7 +1808,6 @@
 
     if-eqz v20, :cond_5
 
-    .line 1400
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/bridge/BridgeProxy$IBridgeProvider;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -1977,7 +1825,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/CustomCursor;->setCursorOwnerId(I)V
 
-    .line 1402
     :cond_5
     move-object/from16 v0, p0
 
@@ -1998,7 +1845,6 @@
 
     goto/16 :goto_1
 
-    .line 1407
     .end local v4    # "bundle":Landroid/os/Bundle;
     .end local v5    # "cn":Landroid/content/ComponentName;
     .end local v7    # "fullServiceName":Ljava/lang/String;
@@ -2014,7 +1860,6 @@
 
     throw v20
 
-    .line 1395
     .restart local v4    # "bundle":Landroid/os/Bundle;
     .restart local v5    # "cn":Landroid/content/ComponentName;
     .restart local v7    # "fullServiceName":Ljava/lang/String;
@@ -2035,7 +1880,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 1404
     .end local v4    # "bundle":Landroid/os/Bundle;
     .end local v5    # "cn":Landroid/content/ComponentName;
     .end local v7    # "fullServiceName":Ljava/lang/String;
@@ -2045,19 +1889,16 @@
     :catch_0
     move-exception v6
 
-    .line 1405
     .local v6, "e":Ljava/lang/InterruptedException;
     :try_start_6
     invoke-virtual {v6}, Ljava/lang/InterruptedException;->printStackTrace()V
 
-    .line 1407
     monitor-exit v21
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
     goto/16 :goto_0
 
-    .line 1411
     .end local v6    # "e":Ljava/lang/InterruptedException;
     .end local v9    # "i$":Ljava/util/Iterator;
     .end local v12    # "pairs":Ljava/util/Map$Entry;
@@ -2074,7 +1915,6 @@
 
     invoke-static/range {v20 .. v21}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1414
     :cond_7
     const/16 v20, 0x0
 

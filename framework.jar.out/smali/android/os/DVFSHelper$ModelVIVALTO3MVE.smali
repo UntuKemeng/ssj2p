@@ -23,16 +23,13 @@
     .locals 1
 
     .prologue
-    .line 2885
     iput-object p1, p0, Landroid/os/DVFSHelper$ModelVIVALTO3MVE;->this$0:Landroid/os/DVFSHelper;
 
     invoke-direct {p0, p1}, Landroid/os/DVFSHelper$ModelJBP;-><init>(Landroid/os/DVFSHelper;)V
 
-    .line 2886
     const/16 v0, 0xbb8
 
     sput v0, Landroid/os/DVFSHelper;->AMS_RESUME_TAIL_BOOST_TIMEOUT:I
 
-    .line 2887
     return-void
 .end method

@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lcom/samsung/android/rlc/util/XMLUtil;
 
     .prologue
-    .line 74
     .local p0, "this":Lcom/samsung/android/rlc/util/XMLUtil$EmptyElementConverter;, "Lcom/samsung/android/rlc/util/XMLUtil<TT;>.EmptyElementConverter;"
     iput-object p1, p0, Lcom/samsung/android/rlc/util/XMLUtil$EmptyElementConverter;->this$0:Lcom/samsung/android/rlc/util/XMLUtil;
 
@@ -57,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 74
     .local p0, "this":Lcom/samsung/android/rlc/util/XMLUtil$EmptyElementConverter;, "Lcom/samsung/android/rlc/util/XMLUtil<TT;>.EmptyElementConverter;"
     invoke-virtual {p0, p1}, Lcom/samsung/android/rlc/util/XMLUtil$EmptyElementConverter;->read(Lorg/simpleframework/xml/stream/InputNode;)Ljava/lang/String;
 
@@ -76,19 +74,16 @@
     .end annotation
 
     .prologue
-    .line 79
     .local p0, "this":Lcom/samsung/android/rlc/util/XMLUtil$EmptyElementConverter;, "Lcom/samsung/android/rlc/util/XMLUtil<TT;>.EmptyElementConverter;"
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 80
     .local v0, "value":Ljava/lang/String;
     if-nez v0, :cond_0
 
     const-string v0, ""
 
-    .line 81
     :cond_0
     return-object v0
 .end method
@@ -102,7 +97,6 @@
     .end annotation
 
     .prologue
-    .line 74
     .local p0, "this":Lcom/samsung/android/rlc/util/XMLUtil$EmptyElementConverter;, "Lcom/samsung/android/rlc/util/XMLUtil<TT;>.EmptyElementConverter;"
     check-cast p2, Ljava/lang/String;
 
@@ -122,16 +116,13 @@
     .end annotation
 
     .prologue
-    .line 86
     .local p0, "this":Lcom/samsung/android/rlc/util/XMLUtil$EmptyElementConverter;, "Lcom/samsung/android/rlc/util/XMLUtil<TT;>.EmptyElementConverter;"
     if-nez p2, :cond_0
 
     const-string p2, ""
 
-    .line 87
     :cond_0
     invoke-interface {p1, p2}, Lorg/simpleframework/xml/stream/OutputNode;->setValue(Ljava/lang/String;)V
 
-    .line 88
     return-void
 .end method

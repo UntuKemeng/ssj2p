@@ -66,10 +66,8 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 378
     return-void
 .end method
 
@@ -78,7 +76,6 @@
     .param p0, "resolver"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 407
     const-string/jumbo v0, "ml_color_assistive"
 
     # getter for: Landroid/provider/SmartGlow$COLOR;->CODE_RED:I
@@ -101,21 +98,17 @@
     .prologue
     const/high16 v2, -0x1000000
 
-    .line 433
     # getter for: Landroid/provider/SmartGlow$COLOR;->CODE_BLACK:I
     invoke-static {}, Landroid/provider/SmartGlow$COLOR;->access$100()I
 
     move-result v0
 
-    .line 435
     .local v0, "color":I
     packed-switch p1, :pswitch_data_0
 
-    .line 454
     :goto_0
     return v0
 
-    .line 437
     :pswitch_0
     const-string/jumbo v1, "ml_color_1"
 
@@ -128,10 +121,8 @@
 
     move-result v0
 
-    .line 439
     goto :goto_0
 
-    .line 441
     :pswitch_1
     const-string/jumbo v1, "ml_color_2"
 
@@ -139,10 +130,8 @@
 
     move-result v0
 
-    .line 444
     goto :goto_0
 
-    .line 446
     :pswitch_2
     const-string/jumbo v1, "ml_color_3"
 
@@ -150,10 +139,8 @@
 
     move-result v0
 
-    .line 448
     goto :goto_0
 
-    .line 450
     :pswitch_3
     const-string/jumbo v1, "ml_color_4"
 
@@ -163,7 +150,6 @@
 
     goto :goto_0
 
-    .line 435
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -179,12 +165,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 402
     const-string/jumbo v0, "ml_color_assistive"
 
     invoke-static {p0, v0, p1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 404
     return-void
 .end method
 
@@ -195,14 +179,11 @@
     .param p2, "color"    # I
 
     .prologue
-    .line 413
     packed-switch p1, :pswitch_data_0
 
-    .line 429
     :goto_0
     return-void
 
-    .line 415
     :pswitch_0
     const-string/jumbo v0, "ml_color_1"
 
@@ -210,7 +191,6 @@
 
     goto :goto_0
 
-    .line 418
     :pswitch_1
     const-string/jumbo v0, "ml_color_2"
 
@@ -218,7 +198,6 @@
 
     goto :goto_0
 
-    .line 422
     :pswitch_2
     const-string/jumbo v0, "ml_color_3"
 
@@ -226,7 +205,6 @@
 
     goto :goto_0
 
-    .line 425
     :pswitch_3
     const-string/jumbo v0, "ml_color_4"
 
@@ -234,7 +212,6 @@
 
     goto :goto_0
 
-    .line 413
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

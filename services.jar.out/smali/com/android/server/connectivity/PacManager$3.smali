@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 391
     iput-object p1, p0, Lcom/android/server/connectivity/PacManager$3;->this$0:Lcom/android/server/connectivity/PacManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 394
     iget-object v0, p0, Lcom/android/server/connectivity/PacManager$3;->this$0:Lcom/android/server/connectivity/PacManager;
 
     # getter for: Lcom/android/server/connectivity/PacManager;->mLastPort:I
@@ -53,7 +51,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 396
     iget-object v0, p0, Lcom/android/server/connectivity/PacManager$3;->this$0:Lcom/android/server/connectivity/PacManager;
 
     const/4 v1, 0x0
@@ -61,17 +58,14 @@
     # setter for: Lcom/android/server/connectivity/PacManager;->mHasSentBroadcast:Z
     invoke-static {v0, v1}, Lcom/android/server/connectivity/PacManager;->access$1302(Lcom/android/server/connectivity/PacManager;Z)Z
 
-    .line 398
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/PacManager$3;->this$0:Lcom/android/server/connectivity/PacManager;
 
     # setter for: Lcom/android/server/connectivity/PacManager;->mLastPort:I
     invoke-static {v0, p1}, Lcom/android/server/connectivity/PacManager;->access$1202(Lcom/android/server/connectivity/PacManager;I)I
 
-    .line 399
     if-eq p1, v2, :cond_1
 
-    .line 400
     const-string v0, "PacManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -94,7 +88,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/connectivity/PacManager$3$1;
@@ -105,11 +98,9 @@
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 410
     :goto_0
     return-void
 
-    .line 408
     :cond_1
     const-string v0, "PacManager"
 

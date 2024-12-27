@@ -20,22 +20,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->dmurl:Ljava/lang/String;
 
-    .line 12
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->dsurl:Ljava/lang/String;
 
-    .line 13
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->mgurl:Ljava/lang/String;
 
-    .line 14
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->ospurl:Ljava/lang/String;
 
-    .line 15
     return-void
 .end method
 
@@ -47,22 +41,16 @@
     .param p4, "ospurl"    # Ljava/lang/String;
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->dmurl:Ljava/lang/String;
 
-    .line 18
     iput-object p2, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->dsurl:Ljava/lang/String;
 
-    .line 19
     iput-object p3, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->mgurl:Ljava/lang/String;
 
-    .line 20
     iput-object p4, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->ospurl:Ljava/lang/String;
 
-    .line 21
     return-void
 .end method
 
@@ -72,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 24
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->dmurl:Ljava/lang/String;
 
     return-object v0
@@ -82,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 30
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->dsurl:Ljava/lang/String;
 
     return-object v0
@@ -92,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 36
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->mgurl:Ljava/lang/String;
 
     return-object v0
@@ -102,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 42
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->ospurl:Ljava/lang/String;
 
     return-object v0
@@ -113,10 +97,8 @@
     .param p1, "dmurl"    # Ljava/lang/String;
 
     .prologue
-    .line 27
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->dmurl:Ljava/lang/String;
 
-    .line 28
     return-void
 .end method
 
@@ -125,10 +107,8 @@
     .param p1, "dsurl"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->dsurl:Ljava/lang/String;
 
-    .line 34
     return-void
 .end method
 
@@ -137,10 +117,8 @@
     .param p1, "mgurl"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->mgurl:Ljava/lang/String;
 
-    .line 40
     return-void
 .end method
 
@@ -149,10 +127,8 @@
     .param p1, "ospurl"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/URLInfoVO;->ospurl:Ljava/lang/String;
 
-    .line 46
     return-void
 .end method
 
@@ -160,7 +136,6 @@
     .locals 2
 
     .prologue
-    .line 50
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

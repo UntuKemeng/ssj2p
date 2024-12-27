@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .param p1, "deadzone"    # Landroid/os/Bundle;
 
     .prologue
-    .line 125
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -53,7 +51,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 126
     :cond_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -89,19 +86,16 @@
 
     throw v2
 
-    .line 132
     :cond_1
     invoke-virtual {p0}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v1
 
-    .line 133
     .local v1, "rootView":Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
-    .line 135
     .local v0, "parentView":Landroid/view/ViewParent;
     if-eqz v0, :cond_2
 
@@ -109,7 +103,6 @@
 
     if-nez v2, :cond_3
 
-    .line 136
     :cond_2
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -119,14 +112,12 @@
 
     throw v2
 
-    .line 140
     :cond_3
     check-cast v0, Landroid/view/ViewRootImpl;
 
     .end local v0    # "parentView":Landroid/view/ViewParent;
     invoke-virtual {v0, p1}, Landroid/view/ViewRootImpl;->setTspDeadzone(Landroid/os/Bundle;)V
 
-    .line 141
     return-void
 .end method
 
@@ -136,7 +127,6 @@
     .param p1, "deadzoneHole"    # Landroid/os/Bundle;
 
     .prologue
-    .line 158
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/os/Bundle;->isEmpty()Z
@@ -145,7 +135,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 159
     :cond_0
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -155,7 +144,6 @@
 
     throw v2
 
-    .line 162
     :cond_1
     const-string v2, "window"
 
@@ -167,22 +155,18 @@
 
     move-result-object v1
 
-    .line 165
     .local v1, "windowManager":Landroid/view/IWindowManager;
     :try_start_0
     invoke-interface {v1, p1}, Landroid/view/IWindowManager;->setDeadzoneHole(Landroid/os/Bundle;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 169
     :goto_0
     return-void
 
-    .line 166
     :catch_0
     move-exception v0
 
-    .line 167
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

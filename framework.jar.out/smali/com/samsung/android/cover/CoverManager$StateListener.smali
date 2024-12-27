@@ -19,10 +19,8 @@
     .locals 0
 
     .prologue
-    .line 550
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 551
     return-void
 .end method
 
@@ -33,6 +31,5 @@
     .param p1, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 560
     return-void
 .end method

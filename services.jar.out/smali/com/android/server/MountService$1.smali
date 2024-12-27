@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 875
     iput-object p1, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 878
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 879
     .local v0, "action":Ljava/lang/String;
     const-string v5, "android.intent.extra.user_handle"
 
@@ -54,7 +51,6 @@
 
     move-result v3
 
-    .line 882
     .local v3, "userId":I
     :try_start_0
     const-string v5, "android.intent.action.USER_ADDED"
@@ -65,7 +61,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 883
     iget-object v5, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     # getter for: Lcom/android/server/MountService;->mContext:Landroid/content/Context;
@@ -81,13 +76,11 @@
 
     check-cast v2, Landroid/os/UserManager;
 
-    .line 884
     .local v2, "um":Landroid/os/UserManager;
     invoke-virtual {v2, v3}, Landroid/os/UserManager;->getUserSerialNumber(I)I
 
     move-result v4
 
-    .line 885
     .local v4, "userSerialNumber":I
     iget-object v5, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
@@ -126,14 +119,12 @@
 
     invoke-virtual {v5, v6, v7}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 894
     .end local v2    # "um":Landroid/os/UserManager;
     .end local v4    # "userSerialNumber":I
     :cond_0
     :goto_0
     return-void
 
-    .line 886
     :cond_1
     const-string v5, "android.intent.action.USER_REMOVED"
 
@@ -143,7 +134,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 887
     iget-object v5, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     # getter for: Lcom/android/server/MountService;->mConnector:Lcom/android/server/NativeDaemonConnector;
@@ -177,11 +167,9 @@
 
     goto :goto_0
 
-    .line 891
     :catch_0
     move-exception v1
 
-    .line 892
     .local v1, "e":Lcom/android/server/NativeDaemonConnectorException;
     const-string v5, "MountService"
 
@@ -191,7 +179,6 @@
 
     goto :goto_0
 
-    .line 888
     .end local v1    # "e":Lcom/android/server/NativeDaemonConnectorException;
     :cond_2
     :try_start_1
@@ -203,7 +190,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 889
     iget-object v5, p0, Lcom/android/server/MountService$1;->this$0:Lcom/android/server/MountService;
 
     # invokes: Lcom/android/server/MountService;->logEncryptionState()V

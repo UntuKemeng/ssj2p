@@ -33,12 +33,10 @@
     .locals 1
 
     .prologue
-    .line 546
     iput-object p1, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->this$0:Lcom/android/server/lights/LightsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 548
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -64,7 +62,6 @@
     .param p2, "x1"    # Lcom/android/server/lights/LightsService$1;
 
     .prologue
-    .line 546
     invoke-direct {p0, p1}, Lcom/android/server/lights/LightsService$SmartGlowImpl;-><init>(Lcom/android/server/lights/LightsService;)V
 
     return-void
@@ -75,7 +72,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/LightsService$SmartGlowImpl;
 
     .prologue
-    .line 546
     iget v0, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mRepeatCount:I
 
     return v0
@@ -87,7 +83,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 546
     iput p1, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mRepeatCount:I
 
     return p1
@@ -98,7 +93,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/LightsService$SmartGlowImpl;
 
     .prologue
-    .line 546
     iget v0, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mRepeatCount:I
 
     add-int/lit8 v1, v0, -0x1
@@ -113,7 +107,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/LightsService$SmartGlowImpl;
 
     .prologue
-    .line 546
     iget v0, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mLedno:I
 
     return v0
@@ -125,7 +118,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 546
     iput p1, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mLedno:I
 
     return p1
@@ -136,7 +128,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/LightsService$SmartGlowImpl;
 
     .prologue
-    .line 546
     iget-object v0, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mColor:[I
 
     return-object v0
@@ -148,7 +139,6 @@
     .param p1, "x1"    # [I
 
     .prologue
-    .line 546
     iput-object p1, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mColor:[I
 
     return-object p1
@@ -159,7 +149,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/LightsService$SmartGlowImpl;
 
     .prologue
-    .line 546
     iget-object v0, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mOnMS:[I
 
     return-object v0
@@ -171,7 +160,6 @@
     .param p1, "x1"    # [I
 
     .prologue
-    .line 546
     iput-object p1, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mOnMS:[I
 
     return-object p1
@@ -182,7 +170,6 @@
     .param p0, "x0"    # Lcom/android/server/lights/LightsService$SmartGlowImpl;
 
     .prologue
-    .line 546
     iget-object v0, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mOffMS:[I
 
     return-object v0
@@ -194,7 +181,6 @@
     .param p1, "x1"    # [I
 
     .prologue
-    .line 546
     iput-object p1, p0, Lcom/android/server/lights/LightsService$SmartGlowImpl;->mOffMS:[I
 
     return-object p1

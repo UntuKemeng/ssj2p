@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 669
     iput-object p1, p0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl$2;->this$0:Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
 
     iput-object p2, p0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl$2;->val$resultElement:Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
@@ -38,7 +37,6 @@
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
-    .line 670
     iget-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl$2;->val$resultElement:Lcom/samsung/android/smartclip/SmartClipDataElementImpl;
 
     iput-object v0, p0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl$2;->mResult:Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipDataElement;
@@ -53,30 +51,25 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 673
     const-string v1, "SmartClipDataCropperImpl"
 
     const-string v2, "Pending meta data arrived from third party"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 674
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 675
     .local v0, "bundle":Landroid/os/Bundle;
     if-nez v0, :cond_0
 
-    .line 676
     const-string v1, "SmartClipDataCropperImpl"
 
     const-string v2, "The bundle is null!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 677
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl$2;->this$0:Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
 
     iget-object v2, p0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl$2;->val$view:Landroid/view/View;
@@ -85,11 +78,9 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;->setPendingExtractionResult(Landroid/view/View;Lcom/samsung/android/sdk/look/smartclip/SlookSmartClipDataElement;)Z
 
-    .line 682
     :goto_0
     return-void
 
-    .line 680
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl$2;->this$0:Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
 
@@ -100,7 +91,6 @@
     # invokes: Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;->updateDataElementWithBundle(Landroid/view/View;Landroid/os/Bundle;Lcom/samsung/android/smartclip/SmartClipDataElementImpl;)Z
     invoke-static {v1, v2, v0, v3}, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;->access$200(Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;Landroid/view/View;Landroid/os/Bundle;Lcom/samsung/android/smartclip/SmartClipDataElementImpl;)Z
 
-    .line 681
     iget-object v1, p0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl$2;->this$0:Lcom/samsung/android/smartclip/SmartClipDataCropperImpl;
 
     iget-object v2, p0, Lcom/samsung/android/smartclip/SmartClipDataCropperImpl$2;->val$view:Landroid/view/View;

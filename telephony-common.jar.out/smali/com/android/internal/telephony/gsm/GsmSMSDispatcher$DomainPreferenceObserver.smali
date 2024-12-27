@@ -23,24 +23,20 @@
     .locals 2
 
     .prologue
-    .line 1122
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmSMSDispatcher$DomainPreferenceObserver;->this$0:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
 
-    .line 1123
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 1125
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/gsm/GsmSMSDispatcher$DomainPreferenceObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 1126
     return-void
 .end method
 
@@ -51,12 +47,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1144
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, v0}, Lcom/android/internal/telephony/gsm/GsmSMSDispatcher$DomainPreferenceObserver;->onChange(ZLandroid/net/Uri;)V
 
-    .line 1145
     return-void
 .end method
 
@@ -66,7 +60,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1149
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmSMSDispatcher$DomainPreferenceObserver;->this$0:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
 
     # getter for: Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;->mContext:Landroid/content/Context;
@@ -78,7 +71,6 @@
 
     move-result-object v0
 
-    .line 1151
     .local v0, "cr":Landroid/content/ContentResolver;
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -92,11 +84,9 @@
 
     if-nez v3, :cond_0
 
-    .line 1159
     :goto_0
     return-void
 
-    .line 1154
     :cond_0
     const-string v3, "sms_prefmode"
 
@@ -106,7 +96,6 @@
 
     move-result v1
 
-    .line 1155
     .local v1, "pref":I
     const-string v3, "sms_prefmode_domestic"
 
@@ -116,7 +105,6 @@
 
     move-result v2
 
-    .line 1157
     .local v2, "pref_domestic":I
     const-string v3, "ril.sms_preference"
 
@@ -161,7 +149,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1129
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmSMSDispatcher$DomainPreferenceObserver;->this$0:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
 
     # getter for: Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;->mContext:Landroid/content/Context;
@@ -173,7 +160,6 @@
 
     move-result-object v0
 
-    .line 1130
     .local v0, "cr":Landroid/content/ContentResolver;
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -187,11 +173,9 @@
 
     if-nez v1, :cond_0
 
-    .line 1135
     :goto_0
     return-void
 
-    .line 1132
     :cond_0
     const-string v1, "sms_prefmode"
 
@@ -201,7 +185,6 @@
 
     invoke-virtual {v0, v1, v3, p0}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 1133
     const-string v1, "sms_prefmode_domestic"
 
     invoke-static {v1}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -217,7 +200,6 @@
     .locals 2
 
     .prologue
-    .line 1138
     iget-object v1, p0, Lcom/android/internal/telephony/gsm/GsmSMSDispatcher$DomainPreferenceObserver;->this$0:Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;
 
     # getter for: Lcom/android/internal/telephony/gsm/GsmSMSDispatcher;->mContext:Landroid/content/Context;
@@ -229,10 +211,8 @@
 
     move-result-object v0
 
-    .line 1139
     .local v0, "cr":Landroid/content/ContentResolver;
     invoke-virtual {v0, p0}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 1140
     return-void
 .end method

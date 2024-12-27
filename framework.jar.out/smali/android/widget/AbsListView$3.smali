@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1778
     iput-object p1, p0, Landroid/widget/AbsListView$3;->this$0:Landroid/widget/AbsListView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1799
     return-void
 .end method
 
@@ -50,7 +48,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1790
     :try_start_0
     const-string v0, "AbsListView"
 
@@ -58,7 +55,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1791
     iget-object v0, p0, Landroid/widget/AbsListView$3;->this$0:Landroid/widget/AbsListView;
 
     const/4 v1, 0x2
@@ -66,7 +62,6 @@
     # setter for: Landroid/widget/AbsListView;->mShowFadeOutGTP:I
     invoke-static {v0, v1}, Landroid/widget/AbsListView;->access$102(Landroid/widget/AbsListView;I)I
 
-    .line 1792
     iget-object v0, p0, Landroid/widget/AbsListView$3;->this$0:Landroid/widget/AbsListView;
 
     const/4 v1, 0x0
@@ -75,11 +70,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1795
     :goto_0
     return-void
 
-    .line 1793
     :catch_0
     move-exception v0
 
@@ -91,7 +84,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1797
     return-void
 .end method
 
@@ -100,7 +92,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1782
     :try_start_0
     const-string v0, "AbsListView"
 
@@ -108,7 +99,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1783
     iget-object v0, p0, Landroid/widget/AbsListView$3;->this$0:Landroid/widget/AbsListView;
 
     const/4 v1, 0x1
@@ -118,11 +108,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1786
     :goto_0
     return-void
 
-    .line 1784
     :catch_0
     move-exception v0
 

@@ -20,19 +20,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 20
     invoke-direct {p0}, Landroid/hardware/scontext/SContextAttribute;-><init>()V
 
-    .line 14
     iput v0, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mStatus:I
 
-    .line 15
     iput v0, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mData:I
 
-    .line 21
     invoke-direct {p0}, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->setAttribute()V
 
-    .line 22
     return-void
 .end method
 
@@ -44,25 +39,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 36
     invoke-direct {p0}, Landroid/hardware/scontext/SContextAttribute;-><init>()V
 
-    .line 14
     iput v0, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mStatus:I
 
-    .line 15
     iput v0, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mData:I
 
-    .line 37
     iput p1, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mStatus:I
 
-    .line 38
     iput p2, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mData:I
 
-    .line 39
     invoke-direct {p0}, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->setAttribute()V
 
-    .line 40
     return-void
 .end method
 
@@ -74,18 +62,15 @@
 
     const/4 v5, 0x0
 
-    .line 59
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 60
     .local v1, "attribute":Landroid/os/Bundle;
     const/4 v2, 0x2
 
     new-array v0, v2, [B
 
-    .line 61
     .local v0, "acData":[B
     iget v2, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mStatus:I
 
@@ -93,19 +78,16 @@
 
     aput-byte v2, v0, v5
 
-    .line 62
     iget v2, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mData:I
 
     int-to-byte v2, v2
 
     aput-byte v2, v0, v6
 
-    .line 63
     const-string v2, "activity_calibration"
 
     invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 64
     const-string v2, "SContextActivityCalibrationAttribute"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -136,12 +118,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     const/16 v2, 0x35
 
     invoke-super {p0, v2, v1}, Landroid/hardware/scontext/SContextAttribute;->setAttribute(ILandroid/os/Bundle;)V
 
-    .line 66
     return-void
 .end method
 
@@ -153,7 +133,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 45
     iget v1, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mStatus:I
 
     if-ltz v1, :cond_0
@@ -164,7 +143,6 @@
 
     if-le v1, v2, :cond_1
 
-    .line 47
     :cond_0
     const-string v1, "SContextActivityCalibrationAttribute"
 
@@ -172,11 +150,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 55
     :goto_0
     return v0
 
-    .line 50
     :cond_1
     iget v1, p0, Landroid/hardware/scontext/SContextActivityCalibrationAttribute;->mData:I
 
@@ -188,7 +164,6 @@
 
     if-le v1, v2, :cond_3
 
-    .line 52
     :cond_2
     const-string v1, "SContextActivityCalibrationAttribute"
 
@@ -198,7 +173,6 @@
 
     goto :goto_0
 
-    .line 55
     :cond_3
     const/4 v0, 0x1
 

@@ -72,16 +72,12 @@
 
     const/4 v2, 0x0
 
-    .line 59
     sput-boolean v2, Lcom/android/server/am/AppStateBroadcaster;->sBroadcastEnabled:Z
 
-    .line 60
     sput-object v0, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
-    .line 61
     sput-object v0, Lcom/android/server/am/AppStateBroadcaster;->sAppLosingFocus:Ljava/lang/String;
 
-    .line 194
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -110,7 +106,6 @@
 
     sput-object v0, Lcom/android/server/am/AppStateBroadcaster;->APP_TERM_REASONS:[Ljava/lang/String;
 
-    .line 249
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
@@ -124,7 +119,6 @@
     .locals 0
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -137,7 +131,6 @@
     .param p2, "termReason"    # Ljava/lang/String;
 
     .prologue
-    .line 234
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -150,14 +143,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 237
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "diagandroid.app.ApplicationState"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 238
     .local v0, "appStateIntent":Landroid/content/Intent;
     const-string v1, "ApplicationPackageName"
 
@@ -167,19 +158,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 239
     const-string v1, "ApplicationState"
 
     const-string v2, "EXITED"
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 240
     const-string v1, "ApplicationTermReason"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 241
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -188,7 +176,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 243
     .end local v0    # "appStateIntent":Landroid/content/Intent;
     :cond_0
     return-void
@@ -201,7 +188,6 @@
     .param p2, "appState"    # Ljava/lang/String;
 
     .prologue
-    .line 222
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
@@ -222,14 +208,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 226
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "diagandroid.app.ApplicationState"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 227
     .local v0, "appStateIntent":Landroid/content/Intent;
     const-string v1, "ApplicationPackageName"
 
@@ -239,12 +223,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 228
     const-string v1, "ApplicationState"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 229
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -253,7 +235,6 @@
 
     invoke-virtual {p0, v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 231
     .end local v0    # "appStateIntent":Landroid/content/Intent;
     :cond_0
     return-void
@@ -263,34 +244,27 @@
     .locals 2
 
     .prologue
-    .line 77
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/server/am/AppStateBroadcaster;->sBroadcastEnabled:Z
 
-    .line 78
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
-    .line 80
     sget-object v1, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 81
     :try_start_0
     sget-object v0, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 82
     monitor-exit v1
 
-    .line 83
     return-void
 
-    .line 82
     :catchall_0
     move-exception v0
 
@@ -316,21 +290,17 @@
     .end annotation
 
     .prologue
-    .line 67
     .local p1, "processes":Lcom/android/internal/app/ProcessMap;, "Lcom/android/internal/app/ProcessMap<Lcom/android/server/am/ProcessRecord;>;"
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/am/AppStateBroadcaster;->sBroadcastEnabled:Z
 
-    .line 68
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
-    .line 70
     invoke-static {p0, p1}, Lcom/android/server/am/AppStateBroadcaster;->populateRunningProcesses(Landroid/content/Context;Lcom/android/internal/app/ProcessMap;)V
 
-    .line 71
     return-void
 .end method
 
@@ -339,16 +309,13 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 256
     const/4 v0, 0x0
 
-    .line 258
     .local v0, "result":Z
     sget-object v2, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
     monitor-enter v2
 
-    .line 259
     :try_start_0
     sget-object v1, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
@@ -360,13 +327,10 @@
 
     move-result v0
 
-    .line 260
     monitor-exit v2
 
-    .line 261
     return v0
 
-    .line 260
     :catchall_0
     move-exception v1
 
@@ -382,7 +346,6 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 209
     if-nez p0, :cond_0
 
     const/4 v0, 0x1
@@ -401,12 +364,10 @@
     .param p0, "content"    # Ljava/lang/String;
 
     .prologue
-    .line 202
     new-instance v0, Ljava/lang/Throwable;
 
     invoke-direct {v0}, Ljava/lang/Throwable;-><init>()V
 
-    .line 204
     .local v0, "dummy":Ljava/lang/Throwable;
     invoke-virtual {v0}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
 
@@ -418,7 +379,6 @@
 
     if-le v1, v2, :cond_0
 
-    .line 205
     const-string v1, "AppStateBroadcaster"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -457,7 +417,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 206
     :cond_0
     return-void
 .end method
@@ -469,22 +428,18 @@
     .param p2, "processId"    # I
 
     .prologue
-    .line 283
     const/4 v1, 0x0
 
-    .line 285
     .local v1, "isAppStateNull":Z
     sget-object v4, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
     monitor-enter v4
 
-    .line 286
     :try_start_0
     invoke-static {p1}, Lcom/android/server/am/AppStateBroadcaster;->stripPackageName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 291
     .local v2, "rootPackageName":Ljava/lang/String;
     sget-object v3, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
@@ -494,47 +449,37 @@
 
     check-cast v0, Lcom/android/server/am/ApplicationState;
 
-    .line 293
     .local v0, "appState":Lcom/android/server/am/ApplicationState;
     if-nez v0, :cond_0
 
-    .line 295
     new-instance v0, Lcom/android/server/am/ApplicationState;
 
     .end local v0    # "appState":Lcom/android/server/am/ApplicationState;
     invoke-direct {v0}, Lcom/android/server/am/ApplicationState;-><init>()V
 
-    .line 296
     .restart local v0    # "appState":Lcom/android/server/am/ApplicationState;
     sget-object v3, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
     invoke-virtual {v3, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 298
     const/4 v1, 0x1
 
-    .line 300
     :cond_0
     invoke-virtual {v0, p2}, Lcom/android/server/am/ApplicationState;->addProcess(I)V
 
-    .line 301
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 303
     if-eqz v1, :cond_1
 
-    .line 304
     const-string v3, "START"
 
     invoke-static {p0, p1, v3}, Lcom/android/server/am/AppStateBroadcaster;->broadcastAppState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 308
     :cond_1
     return-void
 
-    .line 301
     .end local v0    # "appState":Lcom/android/server/am/ApplicationState;
     .end local v2    # "rootPackageName":Ljava/lang/String;
     :catchall_0
@@ -556,30 +501,24 @@
     .param p3, "stopReason"    # I
 
     .prologue
-    .line 315
     const/4 v4, 0x0
 
-    .line 316
     .local v4, "willSendAppStop":Z
     const/4 v3, 0x0
 
-    .line 317
     .local v3, "willSendAppFocusLoss":Z
     const-string v2, ""
 
-    .line 318
     .local v2, "stopTermReason":Ljava/lang/String;
     invoke-static {p1}, Lcom/android/server/am/AppStateBroadcaster;->stripPackageName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 320
     .local v1, "rootPackageName":Ljava/lang/String;
     sget-object v6, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
     monitor-enter v6
 
-    .line 324
     :try_start_0
     sget-object v5, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
@@ -589,18 +528,15 @@
 
     check-cast v0, Lcom/android/server/am/ApplicationState;
 
-    .line 326
     .local v0, "appState":Lcom/android/server/am/ApplicationState;
     if-eqz v0, :cond_5
 
-    .line 330
     invoke-virtual {v0, p2, p3}, Lcom/android/server/am/ApplicationState;->removeProcess(II)Z
 
     move-result v5
 
     if-eqz v5, :cond_4
 
-    .line 333
     sget-object v5, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
     if-eqz v5, :cond_0
@@ -613,89 +549,72 @@
 
     if-eqz v5, :cond_0
 
-    .line 334
     const/4 v3, 0x1
 
-    .line 335
     const/4 v5, 0x0
 
     sput-object v5, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
-    .line 338
     :cond_0
     sget-object v5, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
     invoke-virtual {v5, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 340
     invoke-virtual {v0}, Lcom/android/server/am/ApplicationState;->getTermReason()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 341
     const/4 v4, 0x1
 
-    .line 360
     :cond_1
     :goto_0
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 362
     if-eqz v3, :cond_2
 
     invoke-static {p0, p1}, Lcom/android/server/am/AppStateBroadcaster;->sendApplicationFocusLoss(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 364
     :cond_2
     if-eqz v4, :cond_3
 
     invoke-static {p0, v1, v2}, Lcom/android/server/am/AppStateBroadcaster;->broadcastAppExit(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 365
     :cond_3
     return-void
 
-    .line 345
     :cond_4
     const/4 v5, 0x2
 
     if-ge p3, v5, :cond_1
 
-    .line 346
     :try_start_1
     sget-object v5, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
     invoke-virtual {v5, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 348
     invoke-virtual {v0}, Lcom/android/server/am/ApplicationState;->getTermReason()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 349
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 355
     :cond_5
     sget-object v5, Lcom/android/server/am/AppStateBroadcaster;->sKnownRunningPackages:Ljava/util/HashMap;
 
     invoke-virtual {v5, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 357
     sget-object v5, Lcom/android/server/am/AppStateBroadcaster;->APP_TERM_REASONS:[Ljava/lang/String;
 
     aget-object v2, v5, p3
 
-    .line 358
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 360
     .end local v0    # "appState":Lcom/android/server/am/ApplicationState;
     :catchall_0
     move-exception v5
@@ -722,7 +641,6 @@
     .end annotation
 
     .prologue
-    .line 269
     .local p1, "processes":Lcom/android/internal/app/ProcessMap;, "Lcom/android/internal/app/ProcessMap<Lcom/android/server/am/ProcessRecord;>;"
     invoke-virtual {p1}, Lcom/android/internal/app/ProcessMap;->getMap()Landroid/util/ArrayMap;
 
@@ -750,7 +668,6 @@
 
     check-cast v3, Landroid/util/SparseArray;
 
-    .line 270
     .local v3, "processRecords":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Lcom/android/server/am/ProcessRecord;>;"
     const/4 v1, 0x0
 
@@ -762,14 +679,12 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 271
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/am/ProcessRecord;
 
-    .line 272
     .local v2, "process":Lcom/android/server/am/ProcessRecord;
     iget-object v4, v2, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
 
@@ -779,12 +694,10 @@
 
     invoke-static {p0, v4, v5}, Lcom/android/server/am/AppStateBroadcaster;->sendApplicationStart(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 270
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 275
     .end local v1    # "index":I
     .end local v2    # "process":Lcom/android/server/am/ProcessRecord;
     .end local v3    # "processRecords":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Lcom/android/server/am/ProcessRecord;>;"
@@ -798,7 +711,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     sget-boolean v0, Lcom/android/server/am/AppStateBroadcaster;->sBroadcastEnabled:Z
 
     if-eqz v0, :cond_2
@@ -809,7 +721,6 @@
 
     if-nez v0, :cond_2
 
-    .line 104
     sget-object v0, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -822,29 +733,24 @@
 
     if-nez v0, :cond_2
 
-    .line 105
     :cond_0
     sget-object v0, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    .line 106
     sget-object v0, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
     const-string v1, "FOCUS_LOSS"
 
     invoke-static {p0, v0, v1}, Lcom/android/server/am/AppStateBroadcaster;->broadcastAppState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 110
     :cond_1
     const-string v0, "FOCUS_GAIN"
 
     invoke-static {p0, p1, v0}, Lcom/android/server/am/AppStateBroadcaster;->broadcastAppState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 113
     sput-object p1, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
-    .line 116
     :cond_2
     return-void
 .end method
@@ -855,7 +761,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 124
     sget-boolean v0, Lcom/android/server/am/AppStateBroadcaster;->sBroadcastEnabled:Z
 
     if-eqz v0, :cond_0
@@ -866,12 +771,10 @@
 
     if-nez v0, :cond_0
 
-    .line 125
     const-string v0, "FOCUS_LOSS"
 
     invoke-static {p0, p1, v0}, Lcom/android/server/am/AppStateBroadcaster;->broadcastAppState(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 129
     sget-object v0, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -880,12 +783,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 132
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/am/AppStateBroadcaster;->sLastFocusAppName:Ljava/lang/String;
 
-    .line 135
     :cond_0
     return-void
 .end method
@@ -897,7 +798,6 @@
     .param p2, "processId"    # I
 
     .prologue
-    .line 90
     sget-boolean v0, Lcom/android/server/am/AppStateBroadcaster;->sBroadcastEnabled:Z
 
     if-eqz v0, :cond_0
@@ -908,10 +808,8 @@
 
     if-nez v0, :cond_0
 
-    .line 91
     invoke-static {p0, p1, p2}, Lcom/android/server/am/AppStateBroadcaster;->packageRunning(Landroid/content/Context;Ljava/lang/String;I)V
 
-    .line 92
     :cond_0
     return-void
 .end method
@@ -924,7 +822,6 @@
     .param p3, "stopReason"    # I
 
     .prologue
-    .line 155
     sget-boolean v0, Lcom/android/server/am/AppStateBroadcaster;->sBroadcastEnabled:Z
 
     if-eqz v0, :cond_0
@@ -935,7 +832,6 @@
 
     if-nez v0, :cond_0
 
-    .line 156
     if-ltz p3, :cond_0
 
     sget-object v0, Lcom/android/server/am/AppStateBroadcaster;->APP_TERM_REASONS:[Ljava/lang/String;
@@ -944,10 +840,8 @@
 
     if-ge p3, v0, :cond_0
 
-    .line 157
     invoke-static {p0, p1, p2, p3}, Lcom/android/server/am/AppStateBroadcaster;->packageStopped(Landroid/content/Context;Ljava/lang/String;II)V
 
-    .line 160
     :cond_0
     return-void
 .end method
@@ -957,10 +851,8 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 213
     move-object v1, p0
 
-    .line 214
     .local v1, "result":Ljava/lang/String;
     const/16 v2, 0x3a
 
@@ -968,7 +860,6 @@
 
     move-result v0
 
-    .line 216
     .local v0, "packageEnd":I
     const/4 v2, -0x1
 
@@ -980,7 +871,6 @@
 
     move-result-object v1
 
-    .line 218
     :cond_0
     return-object v1
 .end method

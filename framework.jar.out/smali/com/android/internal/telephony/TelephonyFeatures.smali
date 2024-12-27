@@ -98,7 +98,6 @@
 
     const/4 v2, 0x0
 
-    .line 46
     const-string/jumbo v0, "ro.product_ship"
 
     const-string v3, "false"
@@ -113,7 +112,6 @@
 
     sput-boolean v0, Lcom/android/internal/telephony/TelephonyFeatures;->SHIP_BUILD:Z
 
-    .line 47
     const-string/jumbo v0, "ro.csc.sales_code"
 
     const-string v3, "NONE"
@@ -124,7 +122,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->SALES_CODE:Ljava/lang/String;
 
-    .line 48
     const-string/jumbo v0, "persist.ril.ims.legacy.enabled"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
@@ -138,7 +135,6 @@
     :goto_0
     sput-boolean v0, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedLegacyIms:Z
 
-    .line 49
     const-string/jumbo v0, "persist.radio.multisim.config"
 
     const-string v3, ""
@@ -149,24 +145,20 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mMultiSimConfig:Ljava/lang/String;
 
-    .line 55
     sput-boolean v2, Lcom/android/internal/telephony/TelephonyFeatures;->mEnableCmccVolte:Z
 
-    .line 56
     invoke-static {v2}, Lcom/android/internal/telephony/TelephonyFeatures;->InitializeNetworkTypeCapability(I)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mMainOperator:Ljava/lang/String;
 
-    .line 57
     invoke-static {v1}, Lcom/android/internal/telephony/TelephonyFeatures;->InitializeNetworkTypeCapability(I)Ljava/lang/String;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mSubOperator:Ljava/lang/String;
 
-    .line 58
     const/4 v0, 0x2
 
     invoke-static {v0}, Lcom/android/internal/telephony/TelephonyFeatures;->InitializeNetworkTypeCapability(I)Ljava/lang/String;
@@ -175,7 +167,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mOperatorType:Ljava/lang/String;
 
-    .line 59
     const/4 v0, 0x3
 
     invoke-static {v0}, Lcom/android/internal/telephony/TelephonyFeatures;->InitializeNetworkTypeCapability(I)Ljava/lang/String;
@@ -184,12 +175,10 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mCountry:Ljava/lang/String;
 
-    .line 60
     const-string v0, "EUR"
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
-    .line 61
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -202,7 +191,6 @@
 
     sput-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
-    .line 62
     const-string/jumbo v0, "persist.radio.enable.stubDebug"
 
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
@@ -211,7 +199,6 @@
 
     sput-boolean v0, Lcom/android/internal/telephony/TelephonyFeatures;->mImsStubEnabled:Z
 
-    .line 63
     const-string v0, "QCOM"
 
     const-string v3, ""
@@ -246,7 +233,6 @@
     :cond_1
     sput-boolean v2, Lcom/android/internal/telephony/TelephonyFeatures;->mSimHotswapSupported:Z
 
-    .line 65
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -264,7 +250,6 @@
     :cond_2
     move v0, v2
 
-    .line 48
     goto :goto_0
 .end method
 
@@ -272,7 +257,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -283,7 +267,6 @@
     .param p0, "ntcType"    # I
 
     .prologue
-    .line 140
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v2
@@ -294,7 +277,6 @@
 
     move-result-object v0
 
-    .line 141
     .local v0, "configNetworkTypeCapability":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -302,7 +284,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 142
     const-string v2, "EUR"
 
     const-string v3, "EUR"
@@ -313,31 +294,25 @@
 
     if-eqz v2, :cond_1
 
-    .line 143
     const/4 v2, 0x2
 
     if-ne p0, v2, :cond_0
 
-    .line 144
     const-string v2, "GSM"
 
-    .line 161
     :goto_0
     return-object v2
 
-    .line 146
     :cond_0
     const-string v2, "EUR"
 
     goto :goto_0
 
-    .line 148
     :cond_1
     const-string v2, "---"
 
     goto :goto_0
 
-    .line 151
     :cond_2
     const-string v2, "-"
 
@@ -345,7 +320,6 @@
 
     move-result-object v1
 
-    .line 152
     .local v1, "ntcValue":[Ljava/lang/String;
     array-length v2, v1
 
@@ -353,16 +327,13 @@
 
     if-eq v2, v3, :cond_3
 
-    .line 153
     const-string v2, "---"
 
     goto :goto_0
 
-    .line 156
     :cond_3
     if-nez p0, :cond_5
 
-    .line 157
     const-string v2, "CHM"
 
     aget-object v3, v1, p0
@@ -383,13 +354,11 @@
 
     if-eqz v2, :cond_5
 
-    .line 158
     :cond_4
     const/4 v2, 0x1
 
     sput-boolean v2, Lcom/android/internal/telephony/TelephonyFeatures;->mEnableCmccVolte:Z
 
-    .line 161
     :cond_5
     aget-object v2, v1, p0
 
@@ -405,7 +374,6 @@
 
     const/4 v0, 0x0
 
-    .line 368
     const-string v2, "CHN"
 
     sget-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mCountry:Ljava/lang/String;
@@ -436,12 +404,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 380
     :cond_0
     :goto_0
     return v0
 
-    .line 372
     :cond_1
     new-array v2, v1, [Ljava/lang/String;
 
@@ -455,7 +421,6 @@
 
     if-nez v2, :cond_0
 
-    .line 376
     const-string v2, "KDI"
 
     sget-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mMainOperator:Ljava/lang/String;
@@ -468,7 +433,6 @@
 
     move v0, v1
 
-    .line 380
     goto :goto_0
 .end method
 
@@ -478,7 +442,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 398
     const-string v1, "DTM"
 
     sget-object v2, Lcom/android/internal/telephony/TelephonyFeatures;->SALES_CODE:Ljava/lang/String;
@@ -489,12 +452,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 405
     :cond_0
     :goto_0
     return v0
 
-    .line 401
     :cond_1
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
@@ -512,7 +473,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 402
     :cond_2
     const/4 v0, 0x0
 
@@ -523,7 +483,6 @@
     .locals 1
 
     .prologue
-    .line 177
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mCountry:Ljava/lang/String;
 
     return-object v0
@@ -533,7 +492,6 @@
     .locals 1
 
     .prologue
-    .line 335
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
@@ -542,10 +500,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 336
     const/4 v0, 0x1
 
-    .line 338
     :goto_0
     return v0
 
@@ -559,7 +515,6 @@
     .locals 1
 
     .prologue
-    .line 165
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mMainOperator:Ljava/lang/String;
 
     return-object v0
@@ -569,7 +524,6 @@
     .locals 1
 
     .prologue
-    .line 342
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mMultiSimConfig:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -578,10 +532,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 343
     const-string v0, ""
 
-    .line 345
     :goto_0
     return-object v0
 
@@ -600,10 +552,8 @@
 
     const/4 v2, 0x1
 
-    .line 183
     packed-switch p0, :pswitch_data_0
 
-    .line 274
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -628,12 +578,10 @@
     :pswitch_0
     move v2, v3
 
-    .line 278
     :cond_1
     :goto_0
     return v2
 
-    .line 186
     :pswitch_1
     const-string/jumbo v4, "ril.voicecapable"
 
@@ -641,7 +589,6 @@
 
     move-result v1
 
-    .line 187
     .local v1, "isVoiceCapable":Z
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
@@ -661,7 +608,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 190
     :cond_2
     const-string/jumbo v4, "ro.config.combined_signal"
 
@@ -669,13 +615,11 @@
 
     move-result v0
 
-    .line 191
     .local v0, "combinedSignal":Z
     if-eqz v0, :cond_0
 
     goto :goto_0
 
-    .line 196
     .end local v0    # "combinedSignal":Z
     .end local v1    # "isVoiceCapable":Z
     :pswitch_2
@@ -691,7 +635,6 @@
 
     goto :goto_0
 
-    .line 201
     :pswitch_3
     const-string v4, "VZW"
 
@@ -705,7 +648,6 @@
 
     goto :goto_0
 
-    .line 206
     :pswitch_4
     const-string v4, "USC"
 
@@ -719,7 +661,6 @@
 
     goto :goto_0
 
-    .line 211
     :pswitch_5
     const-string v4, "SPR"
 
@@ -733,7 +674,6 @@
 
     goto :goto_0
 
-    .line 218
     :pswitch_6
     const-string v4, "SPR"
 
@@ -747,7 +687,6 @@
 
     goto :goto_0
 
-    .line 223
     :pswitch_7
     const-string v4, "SPR"
 
@@ -761,7 +700,6 @@
 
     goto :goto_0
 
-    .line 228
     :pswitch_8
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
@@ -771,7 +709,6 @@
 
     goto :goto_0
 
-    .line 233
     :pswitch_9
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
@@ -781,7 +718,6 @@
 
     goto :goto_0
 
-    .line 238
     :pswitch_a
     const-string v4, "VZW"
 
@@ -795,7 +731,6 @@
 
     goto :goto_0
 
-    .line 243
     :pswitch_b
     const-string v4, "SPR"
 
@@ -819,7 +754,6 @@
 
     goto/16 :goto_0
 
-    .line 250
     :pswitch_c
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
@@ -829,7 +763,6 @@
 
     goto/16 :goto_0
 
-    .line 255
     :pswitch_d
     const-string v4, "DCM"
 
@@ -843,13 +776,11 @@
 
     goto/16 :goto_0
 
-    .line 266
     :pswitch_e
     sget-boolean v2, Lcom/android/internal/telephony/TelephonyFeatures;->mEnableCmccVolte:Z
 
     goto/16 :goto_0
 
-    .line 183
     nop
 
     :pswitch_data_0
@@ -883,7 +814,6 @@
     .locals 1
 
     .prologue
-    .line 173
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mOperatorType:Ljava/lang/String;
 
     return-object v0
@@ -893,7 +823,6 @@
     .locals 1
 
     .prologue
-    .line 169
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mSubOperator:Ljava/lang/String;
 
     return-object v0
@@ -903,7 +832,6 @@
     .locals 1
 
     .prologue
-    .line 328
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -912,10 +840,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 329
     const-string v0, "UNKNOWN"
 
-    .line 331
     :goto_0
     return-object v0
 
@@ -929,7 +855,6 @@
     .locals 1
 
     .prologue
-    .line 320
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -938,10 +863,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 322
     const-string v0, "UNKNOWN"
 
-    .line 324
     :goto_0
     return-object v0
 
@@ -955,7 +878,6 @@
     .locals 2
 
     .prologue
-    .line 296
     const-string v0, "CHN"
 
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mCountry:Ljava/lang/String;
@@ -976,10 +898,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 297
     const/4 v0, 0x1
 
-    .line 299
     :goto_0
     return v0
 
@@ -993,7 +913,6 @@
     .locals 1
 
     .prologue
-    .line 316
     sget-boolean v0, Lcom/android/internal/telephony/TelephonyFeatures;->mCrossMappingSupported:Z
 
     return v0
@@ -1003,7 +922,6 @@
     .locals 3
 
     .prologue
-    .line 483
     const-string/jumbo v1, "persist.ims.gcfmode"
 
     const-string v2, "0"
@@ -1012,7 +930,6 @@
 
     move-result-object v0
 
-    .line 484
     .local v0, "gcfMode":Ljava/lang/String;
     const-string v1, "GCF"
 
@@ -1052,7 +969,6 @@
     .param p1, "Numeric"    # [Ljava/lang/String;
 
     .prologue
-    .line 349
     const-string v5, "gsm.sim.operator.numeric"
 
     const-string v6, ""
@@ -1061,7 +977,6 @@
 
     move-result-object v2
 
-    .line 352
     .local v2, "iccOperatorNumeric":Ljava/lang/String;
     move-object v0, p1
 
@@ -1077,7 +992,6 @@
 
     aget-object v4, v0, v1
 
-    .line 353
     .local v4, "x":Ljava/lang/String;
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1085,22 +999,18 @@
 
     if-eqz v5, :cond_0
 
-    .line 354
     const/4 v5, 0x1
 
-    .line 358
     .end local v4    # "x":Ljava/lang/String;
     :goto_1
     return v5
 
-    .line 352
     .restart local v4    # "x":Ljava/lang/String;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 358
     .end local v4    # "x":Ljava/lang/String;
     :cond_1
     const/4 v5, 0x0
@@ -1113,7 +1023,6 @@
     .param p0, "Operator"    # [Ljava/lang/String;
 
     .prologue
-    .line 303
     move-object v0, p0
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -1128,7 +1037,6 @@
 
     aget-object v3, v0, v1
 
-    .line 304
     .local v3, "x":Ljava/lang/String;
     sget-object v4, Lcom/android/internal/telephony/TelephonyFeatures;->mMainOperator:Ljava/lang/String;
 
@@ -1138,22 +1046,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 305
     const/4 v4, 0x1
 
-    .line 308
     .end local v3    # "x":Ljava/lang/String;
     :goto_1
     return v4
 
-    .line 303
     .restart local v3    # "x":Ljava/lang/String;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 308
     .end local v3    # "x":Ljava/lang/String;
     :cond_1
     const/4 v4, 0x0
@@ -1165,7 +1069,6 @@
     .locals 1
 
     .prologue
-    .line 312
     sget-boolean v0, Lcom/android/internal/telephony/TelephonyFeatures;->mSimHotswapSupported:Z
 
     return v0
@@ -1175,7 +1078,6 @@
     .locals 2
 
     .prologue
-    .line 282
     const-string v0, "USA"
 
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mCountry:Ljava/lang/String;
@@ -1216,11 +1118,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 283
     :cond_0
     const/4 v0, 0x1
 
-    .line 285
     :goto_0
     return v0
 
@@ -1234,7 +1134,6 @@
     .locals 2
 
     .prologue
-    .line 289
     const-string v0, "USA"
 
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mCountry:Ljava/lang/String;
@@ -1255,10 +1154,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 290
     const/4 v0, 0x1
 
-    .line 292
     :goto_0
     return v0
 
@@ -1273,12 +1170,10 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 488
     const-string v0, "TelephonyFeatures"
 
     invoke-static {v0, p0}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     return-void
 .end method
 
@@ -1287,12 +1182,10 @@
     .param p0, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 492
     const-string v0, "TelephonyFeatures"
 
     invoke-static {v0, p0}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 493
     return-void
 .end method
 
@@ -1305,7 +1198,6 @@
 
     const/4 v1, 0x0
 
-    .line 421
     const/4 v3, 0x4
 
     new-array v3, v3, [Ljava/lang/String;
@@ -1336,12 +1228,10 @@
 
     if-nez v3, :cond_1
 
-    .line 436
     :cond_0
     :goto_0
     return v1
 
-    .line 425
     :cond_1
     const-string/jumbo v3, "ril.simtype"
 
@@ -1351,7 +1241,6 @@
 
     move-result-object v0
 
-    .line 427
     .local v0, "simType":Ljava/lang/String;
     const-string v3, "2"
 
@@ -1418,10 +1307,8 @@
     :cond_4
     move v1, v2
 
-    .line 430
     goto :goto_0
 
-    .line 431
     :cond_5
     const-string v3, "KOO"
 
@@ -1460,7 +1347,6 @@
     :cond_6
     move v1, v2
 
-    .line 433
     goto :goto_0
 .end method
 
@@ -1468,30 +1354,23 @@
     .locals 8
 
     .prologue
-    .line 117
     sget-object v2, Lcom/android/internal/telephony/TelephonyFeatures;->mMainOperator:Ljava/lang/String;
 
-    .line 118
     .local v2, "oldMainOperator":Ljava/lang/String;
     sget-object v4, Lcom/android/internal/telephony/TelephonyFeatures;->mSubOperator:Ljava/lang/String;
 
-    .line 119
     .local v4, "oldSubOperator":Ljava/lang/String;
     sget-object v3, Lcom/android/internal/telephony/TelephonyFeatures;->mOperatorType:Ljava/lang/String;
 
-    .line 120
     .local v3, "oldOperatorType":Ljava/lang/String;
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mCountry:Ljava/lang/String;
 
-    .line 121
     .local v1, "oldCountry":Ljava/lang/String;
     sget-object v5, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
-    .line 122
     .local v5, "oldUsedNetworkType":Ljava/lang/String;
     sget-object v0, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
-    .line 124
     .local v0, "oldConfigVolteRedialPolicy":Ljava/lang/String;
     const/4 v6, 0x0
 
@@ -1501,7 +1380,6 @@
 
     sput-object v6, Lcom/android/internal/telephony/TelephonyFeatures;->mMainOperator:Ljava/lang/String;
 
-    .line 125
     const/4 v6, 0x1
 
     invoke-static {v6}, Lcom/android/internal/telephony/TelephonyFeatures;->InitializeNetworkTypeCapability(I)Ljava/lang/String;
@@ -1510,7 +1388,6 @@
 
     sput-object v6, Lcom/android/internal/telephony/TelephonyFeatures;->mSubOperator:Ljava/lang/String;
 
-    .line 126
     const/4 v6, 0x2
 
     invoke-static {v6}, Lcom/android/internal/telephony/TelephonyFeatures;->InitializeNetworkTypeCapability(I)Ljava/lang/String;
@@ -1519,7 +1396,6 @@
 
     sput-object v6, Lcom/android/internal/telephony/TelephonyFeatures;->mOperatorType:Ljava/lang/String;
 
-    .line 127
     const/4 v6, 0x3
 
     invoke-static {v6}, Lcom/android/internal/telephony/TelephonyFeatures;->InitializeNetworkTypeCapability(I)Ljava/lang/String;
@@ -1528,12 +1404,10 @@
 
     sput-object v6, Lcom/android/internal/telephony/TelephonyFeatures;->mCountry:Ljava/lang/String;
 
-    .line 128
     const-string v6, "EUR"
 
     sput-object v6, Lcom/android/internal/telephony/TelephonyFeatures;->mUsedNetworkType:Ljava/lang/String;
 
-    .line 129
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v6
@@ -1546,7 +1420,6 @@
 
     sput-object v6, Lcom/android/internal/telephony/TelephonyFeatures;->mConfigVolteRedialPolicy:Ljava/lang/String;
 
-    .line 131
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1579,7 +1452,6 @@
 
     invoke-static {v6}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 132
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1612,7 +1484,6 @@
 
     invoke-static {v6}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 133
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1645,7 +1516,6 @@
 
     invoke-static {v6}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 134
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1678,7 +1548,6 @@
 
     invoke-static {v6}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 135
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1711,7 +1580,6 @@
 
     invoke-static {v6}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 136
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1744,7 +1612,6 @@
 
     invoke-static {v6}, Lcom/android/internal/telephony/TelephonyFeatures;->log(Ljava/lang/String;)V
 
-    .line 137
     return-void
 .end method
 
@@ -1753,7 +1620,6 @@
     .param p0, "enable"    # Z
 
     .prologue
-    .line 478
     const-string v0, "TGY"
 
     sget-object v1, Lcom/android/internal/telephony/TelephonyFeatures;->mMainOperator:Ljava/lang/String;
@@ -1764,10 +1630,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 479
     sput-boolean p0, Lcom/android/internal/telephony/TelephonyFeatures;->mEnableCmccVolte:Z
 
-    .line 481
     :cond_0
     return-void
 .end method
@@ -1780,7 +1644,6 @@
 
     const/4 v0, 0x0
 
-    .line 470
     const/4 v2, 0x4
 
     new-array v2, v2, [Ljava/lang/String;
@@ -1811,7 +1674,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 474
     :goto_0
     return v0
 
@@ -1825,7 +1687,6 @@
     .locals 2
 
     .prologue
-    .line 387
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
 
     move-result v0
@@ -1842,11 +1703,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 388
     :cond_0
     const/4 v0, 0x1
 
-    .line 391
     :goto_0
     return v0
 
@@ -1860,7 +1719,6 @@
     .locals 2
 
     .prologue
-    .line 412
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -1873,10 +1731,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 414
     const/4 v0, 0x0
 
-    .line 417
     :goto_0
     return v0
 
@@ -1899,7 +1755,6 @@
 
     const/4 v1, 0x0
 
-    .line 444
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v3
@@ -1912,12 +1767,10 @@
 
     if-nez v3, :cond_1
 
-    .line 462
     :cond_0
     :goto_0
     return v1
 
-    .line 448
     :cond_1
     new-array v3, v2, [Ljava/lang/String;
 
@@ -1931,12 +1784,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 449
     sget-boolean v1, Lcom/android/internal/telephony/TelephonyFeatures;->mEnableCmccVolte:Z
 
     goto :goto_0
 
-    .line 452
     :cond_2
     new-array v3, v6, [Ljava/lang/String;
 
@@ -1958,7 +1809,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 453
     const-string/jumbo v3, "ril.ICC_TYPE"
 
     const-string v4, "0"
@@ -1971,11 +1821,9 @@
 
     move-result v0
 
-    .line 455
     .local v0, "iccType":I
     if-le v0, v2, :cond_0
 
-    .line 458
     const/4 v3, 0x7
 
     new-array v3, v3, [Ljava/lang/String;
@@ -2022,6 +1870,5 @@
 
     move v1, v2
 
-    .line 459
     goto :goto_0
 .end method

@@ -58,19 +58,15 @@
     .end annotation
 
     .prologue
-    .line 181
     .local p2, "av":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .local p3, "ac":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetherStateChange;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 182
     iput-object p2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetherStateChange;->available:Ljava/util/ArrayList;
 
-    .line 183
     iput-object p3, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetherStateChange;->active:Ljava/util/ArrayList;
 
-    .line 184
     return-void
 .end method

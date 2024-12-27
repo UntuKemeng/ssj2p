@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 4004
     iput-object p1, p0, Lcom/android/server/enterprise/wifi/WifiPolicy$3;->this$0:Lcom/android/server/enterprise/wifi/WifiPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 4007
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v6
@@ -54,7 +52,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 4008
     const-string/jumbo v6, "wifi_state"
 
     const/4 v7, 0x4
@@ -63,28 +60,23 @@
 
     move-result v1
 
-    .line 4010
     .local v1, "state":I
     const/4 v6, 0x3
 
     if-ne v1, v6, :cond_0
 
-    .line 4015
     new-instance v3, Lcom/android/server/enterprise/wifi/WifiPolicy$3$1;
 
     invoke-direct {v3, p0}, Lcom/android/server/enterprise/wifi/WifiPolicy$3$1;-><init>(Lcom/android/server/enterprise/wifi/WifiPolicy$3;)V
 
-    .line 4020
     .local v3, "taskToupdateConfiguredNetworks":Ljava/lang/Runnable;
     new-instance v4, Ljava/lang/Thread;
 
     invoke-direct {v4, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 4022
     .local v4, "threadToUpdateConfiguredNetworks":Ljava/lang/Thread;
     invoke-virtual {v4}, Ljava/lang/Thread;->start()V
 
-    .line 4041
     .end local v1    # "state":I
     .end local v3    # "taskToupdateConfiguredNetworks":Ljava/lang/Runnable;
     .end local v4    # "threadToUpdateConfiguredNetworks":Ljava/lang/Thread;
@@ -92,7 +84,6 @@
     :goto_0
     return-void
 
-    .line 4024
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -106,7 +97,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 4025
     const-string/jumbo v6, "networkInfo"
 
     invoke-virtual {p2, v6}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -115,7 +105,6 @@
 
     check-cast v0, Landroid/net/NetworkInfo;
 
-    .line 4027
     .local v0, "info":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_0
 
@@ -144,24 +133,20 @@
 
     if-eqz v6, :cond_0
 
-    .line 4030
     new-instance v2, Lcom/android/server/enterprise/wifi/WifiPolicy$3$2;
 
     invoke-direct {v2, p0}, Lcom/android/server/enterprise/wifi/WifiPolicy$3$2;-><init>(Lcom/android/server/enterprise/wifi/WifiPolicy$3;)V
 
-    .line 4035
     .local v2, "taskToWpsBlockedNetworks":Ljava/lang/Runnable;
     new-instance v5, Ljava/lang/Thread;
 
     invoke-direct {v5, v2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 4036
     .local v5, "threadToUpdateWpsBlockedNetworks":Ljava/lang/Thread;
     invoke-virtual {v5}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 
-    .line 4038
     .end local v0    # "info":Landroid/net/NetworkInfo;
     .end local v2    # "taskToWpsBlockedNetworks":Ljava/lang/Runnable;
     .end local v5    # "threadToUpdateWpsBlockedNetworks":Ljava/lang/Thread;
@@ -178,7 +163,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 4039
     # setter for: Lcom/android/server/enterprise/wifi/WifiPolicy;->isBootCompleted:Z
     invoke-static {v8}, Lcom/android/server/enterprise/wifi/WifiPolicy;->access$402(Z)Z
 

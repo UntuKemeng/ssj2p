@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 185
     iput-object p1, p0, Lcom/android/server/UiModeManagerService$4;->this$0:Lcom/android/server/UiModeManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,6 +38,5 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 211
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 13772
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$47;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,11 +39,9 @@
     .locals 1
 
     .prologue
-    .line 13780
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$47;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->requestTransientBars()V
 
-    .line 13784
     return-void
 .end method

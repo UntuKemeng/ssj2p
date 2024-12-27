@@ -26,20 +26,16 @@
     .param p1, "contract"    # Lorg/simpleframework/xml/strategy/Contract;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Lorg/simpleframework/xml/util/WeakCache;-><init>()V
 
-    .line 58
     new-instance v0, Lorg/simpleframework/xml/strategy/Loader;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/strategy/Loader;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/strategy/ReadState;->loader:Lorg/simpleframework/xml/strategy/Loader;
 
-    .line 59
     iput-object p1, p0, Lorg/simpleframework/xml/strategy/ReadState;->contract:Lorg/simpleframework/xml/strategy/Contract;
 
-    .line 60
     return-void
 .end method
 
@@ -53,18 +49,15 @@
     .end annotation
 
     .prologue
-    .line 92
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/strategy/ReadState;->fetch(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/simpleframework/xml/strategy/ReadGraph;
 
-    .line 94
     .local v0, "read":Lorg/simpleframework/xml/strategy/ReadGraph;
     if-nez v0, :cond_0
 
-    .line 95
     new-instance v0, Lorg/simpleframework/xml/strategy/ReadGraph;
 
     .end local v0    # "read":Lorg/simpleframework/xml/strategy/ReadGraph;
@@ -74,11 +67,9 @@
 
     invoke-direct {v0, v1, v2}, Lorg/simpleframework/xml/strategy/ReadGraph;-><init>(Lorg/simpleframework/xml/strategy/Contract;Lorg/simpleframework/xml/strategy/Loader;)V
 
-    .line 96
     .restart local v0    # "read":Lorg/simpleframework/xml/strategy/ReadGraph;
     invoke-virtual {p0, p1, v0}, Lorg/simpleframework/xml/strategy/ReadState;->cache(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 98
     :cond_0
     return-object v0
 .end method
@@ -95,18 +86,15 @@
     .end annotation
 
     .prologue
-    .line 73
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/strategy/ReadState;->fetch(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/simpleframework/xml/strategy/ReadGraph;
 
-    .line 75
     .local v0, "read":Lorg/simpleframework/xml/strategy/ReadGraph;
     if-eqz v0, :cond_0
 
-    .line 78
     .end local v0    # "read":Lorg/simpleframework/xml/strategy/ReadGraph;
     :goto_0
     return-object v0

@@ -22,7 +22,6 @@
     .locals 1
 
     .prologue
-    .line 38
     const v0, 0x88207
 
     sput v0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->defaultFlagSet:I
@@ -36,23 +35,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 45
     const/4 v0, 0x1
 
     sget v1, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->defaultFlagSet:I
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;-><init>(II)V
 
-    .line 35
     iput-object v2, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->type1MessageString:Ljava/lang/String;
 
-    .line 46
     iput-object v2, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->domain:Ljava/lang/String;
 
-    .line 47
     iput-object v2, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->workstation:Ljava/lang/String;
 
-    .line 48
     return-void
 .end method
 
@@ -63,28 +57,22 @@
     .param p3, "workstation"    # Ljava/lang/String;
 
     .prologue
-    .line 51
     const/4 v0, 0x1
 
     sget v1, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->defaultFlagSet:I
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;-><init>(II)V
 
-    .line 35
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->type1MessageString:Ljava/lang/String;
 
-    .line 52
     invoke-virtual {p0, p1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->setFlags(I)V
 
-    .line 53
     iput-object p2, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->domain:Ljava/lang/String;
 
-    .line 54
     iput-object p3, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->workstation:Ljava/lang/String;
 
-    .line 55
     return-void
 .end method
 
@@ -96,26 +84,21 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 59
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->type1MessageString:Ljava/lang/String;
 
     if-eqz v4, :cond_0
 
-    .line 60
     iget-object v3, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->type1MessageString:Ljava/lang/String;
 
-    .line 90
     :goto_0
     return-object v3
 
-    .line 61
     :cond_0
     const/4 v0, 0x0
 
     .local v0, "domainBytes":[B
     const/4 v2, 0x0
 
-    .line 63
     .local v2, "workstationBytes":[B
     :try_start_0
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->domain:Ljava/lang/String;
@@ -130,7 +113,6 @@
 
     if-lez v4, :cond_3
 
-    .line 64
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->domain:Ljava/lang/String;
 
     invoke-virtual {v4}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -143,14 +125,12 @@
 
     move-result-object v0
 
-    .line 65
     const/16 v4, 0x1000
 
     const/4 v5, 0x1
 
     invoke-virtual {p0, v4, v5}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->setThisFlag(IZ)V
 
-    .line 69
     :goto_1
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->workstation:Ljava/lang/String;
 
@@ -164,7 +144,6 @@
 
     if-lez v4, :cond_4
 
-    .line 70
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->workstation:Ljava/lang/String;
 
     invoke-virtual {v4}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -177,14 +156,12 @@
 
     move-result-object v2
 
-    .line 71
     const/16 v4, 0x2000
 
     const/4 v5, 0x1
 
     invoke-virtual {p0, v4, v5}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->setThisFlag(IZ)V
 
-    .line 75
     :goto_2
     if-nez v0, :cond_5
 
@@ -202,7 +179,6 @@
 
     new-array v1, v4, [B
 
-    .line 77
     .local v1, "finalMessageBytes":[B
     sget-object v4, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->NTLM_HEADER_BYTES:[B
 
@@ -214,7 +190,6 @@
 
     invoke-static {v4, v5, v1, v6, v7}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 78
     const/16 v4, 0x8
 
     const/4 v5, 0x1
@@ -223,7 +198,6 @@
 
     invoke-static {v1, v4, v5, v6}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setUnsignedValue([BIII)V
 
-    .line 79
     const/16 v4, 0xc
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->getFlags()I
@@ -234,7 +208,6 @@
 
     invoke-static {v1, v4, v5, v6}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setUnsignedValue([BIII)V
 
-    .line 80
     const/16 v4, 0x1000
 
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->isFlagSet(I)Z
@@ -243,14 +216,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 81
     const/16 v4, 0x10
 
     const/16 v5, 0x20
 
     invoke-static {v1, v4, v5, v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setSecurityDataAndAttributes([BII[B)V
 
-    .line 82
     :cond_1
     const/16 v4, 0x2000
 
@@ -260,7 +231,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 83
     const/16 v4, 0x18
 
     if-nez v0, :cond_7
@@ -270,7 +240,6 @@
 
     invoke-static {v1, v4, v3, v2}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setSecurityDataAndAttributes([BII[B)V
 
-    .line 86
     :cond_2
     const/4 v3, 0x2
 
@@ -280,12 +249,10 @@
 
     iput-object v3, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->type1MessageString:Ljava/lang/String;
 
-    .line 87
     iget-object v3, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->type1MessageString:Ljava/lang/String;
 
     goto/16 :goto_0
 
-    .line 67
     .end local v1    # "finalMessageBytes":[B
     :cond_3
     const/16 v4, 0x1000
@@ -296,16 +263,13 @@
 
     goto :goto_1
 
-    .line 88
     :catch_0
     move-exception v3
 
-    .line 90
     const/4 v3, 0x0
 
     goto/16 :goto_0
 
-    .line 73
     :cond_4
     const/16 v4, 0x2000
 
@@ -315,7 +279,6 @@
 
     goto :goto_2
 
-    .line 75
     :cond_5
     array-length v4, v0
 
@@ -328,7 +291,6 @@
 
     goto :goto_4
 
-    .line 83
     .restart local v1    # "finalMessageBytes":[B
     :cond_7
     array-length v3, v0
@@ -348,6 +310,5 @@
     .end annotation
 
     .prologue
-    .line 95
     return-void
 .end method

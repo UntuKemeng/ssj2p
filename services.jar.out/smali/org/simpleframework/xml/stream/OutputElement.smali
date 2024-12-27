@@ -34,38 +34,30 @@
     .param p3, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     new-instance v0, Lorg/simpleframework/xml/stream/PrefixResolver;
 
     invoke-direct {v0, p1}, Lorg/simpleframework/xml/stream/PrefixResolver;-><init>(Lorg/simpleframework/xml/stream/OutputNode;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->scope:Lorg/simpleframework/xml/stream/NamespaceMap;
 
-    .line 89
     new-instance v0, Lorg/simpleframework/xml/stream/OutputNodeMap;
 
     invoke-direct {v0, p0}, Lorg/simpleframework/xml/stream/OutputNodeMap;-><init>(Lorg/simpleframework/xml/stream/OutputNode;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->table:Lorg/simpleframework/xml/stream/OutputNodeMap;
 
-    .line 90
     sget-object v0, Lorg/simpleframework/xml/stream/Mode;->INHERIT:Lorg/simpleframework/xml/stream/Mode;
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->mode:Lorg/simpleframework/xml/stream/Mode;
 
-    .line 91
     iput-object p2, p0, Lorg/simpleframework/xml/stream/OutputElement;->writer:Lorg/simpleframework/xml/stream/NodeWriter;
 
-    .line 92
     iput-object p1, p0, Lorg/simpleframework/xml/stream/OutputElement;->parent:Lorg/simpleframework/xml/stream/OutputNode;
 
-    .line 93
     iput-object p3, p0, Lorg/simpleframework/xml/stream/OutputElement;->name:Ljava/lang/String;
 
-    .line 94
     return-void
 .end method
 
@@ -80,12 +72,10 @@
     .end annotation
 
     .prologue
-    .line 366
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->writer:Lorg/simpleframework/xml/stream/NodeWriter;
 
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/stream/NodeWriter;->commit(Lorg/simpleframework/xml/stream/OutputNode;)V
 
-    .line 367
     return-void
 .end method
 
@@ -93,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 30
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/OutputElement;->getAttributes()Lorg/simpleframework/xml/stream/OutputNodeMap;
 
     move-result-object v0
@@ -105,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 264
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->table:Lorg/simpleframework/xml/stream/OutputNodeMap;
 
     return-object v0
@@ -121,7 +109,6 @@
     .end annotation
 
     .prologue
-    .line 342
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->writer:Lorg/simpleframework/xml/stream/NodeWriter;
 
     invoke-virtual {v0, p0, p1}, Lorg/simpleframework/xml/stream/NodeWriter;->writeElement(Lorg/simpleframework/xml/stream/OutputNode;Ljava/lang/String;)Lorg/simpleframework/xml/stream/OutputNode;
@@ -135,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->comment:Ljava/lang/String;
 
     return-object v0
@@ -145,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->mode:Lorg/simpleframework/xml/stream/Mode;
 
     return-object v0
@@ -155,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 190
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->name:Ljava/lang/String;
 
     return-object v0
@@ -165,7 +149,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->scope:Lorg/simpleframework/xml/stream/NamespaceMap;
 
     return-object v0
@@ -175,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 30
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/OutputElement;->getParent()Lorg/simpleframework/xml/stream/OutputNode;
 
     move-result-object v0
@@ -187,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 179
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->parent:Lorg/simpleframework/xml/stream/OutputNode;
 
     return-object v0
@@ -197,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 106
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lorg/simpleframework/xml/stream/OutputElement;->getPrefix(Z)Ljava/lang/String;
@@ -212,7 +192,6 @@
     .param p1, "inherit"    # Z
 
     .prologue
-    .line 121
     iget-object v1, p0, Lorg/simpleframework/xml/stream/OutputElement;->scope:Lorg/simpleframework/xml/stream/NamespaceMap;
 
     iget-object v2, p0, Lorg/simpleframework/xml/stream/OutputElement;->reference:Ljava/lang/String;
@@ -221,21 +200,17 @@
 
     move-result-object v0
 
-    .line 123
     .local v0, "prefix":Ljava/lang/String;
     if-eqz p1, :cond_0
 
-    .line 124
     if-nez v0, :cond_0
 
-    .line 125
     iget-object v1, p0, Lorg/simpleframework/xml/stream/OutputElement;->parent:Lorg/simpleframework/xml/stream/OutputNode;
 
     invoke-interface {v1}, Lorg/simpleframework/xml/stream/OutputNode;->getPrefix()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 128
     .end local v0    # "prefix":Ljava/lang/String;
     :cond_0
     return-object v0
@@ -245,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 140
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->reference:Ljava/lang/String;
 
     return-object v0
@@ -255,7 +229,6 @@
     .locals 1
 
     .prologue
-    .line 201
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->value:Ljava/lang/String;
 
     return-object v0
@@ -265,7 +238,6 @@
     .locals 1
 
     .prologue
-    .line 379
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->writer:Lorg/simpleframework/xml/stream/NodeWriter;
 
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/stream/NodeWriter;->isCommitted(Lorg/simpleframework/xml/stream/OutputNode;)Z
@@ -279,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->writer:Lorg/simpleframework/xml/stream/NodeWriter;
 
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/stream/NodeWriter;->isRoot(Lorg/simpleframework/xml/stream/OutputNode;)Z
@@ -298,12 +269,10 @@
     .end annotation
 
     .prologue
-    .line 354
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->writer:Lorg/simpleframework/xml/stream/NodeWriter;
 
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/stream/NodeWriter;->remove(Lorg/simpleframework/xml/stream/OutputNode;)V
 
-    .line 355
     return-void
 .end method
 
@@ -313,7 +282,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 329
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->table:Lorg/simpleframework/xml/stream/OutputNodeMap;
 
     invoke-virtual {v0, p1, p2}, Lorg/simpleframework/xml/stream/OutputNodeMap;->put(Ljava/lang/String;Ljava/lang/String;)Lorg/simpleframework/xml/stream/OutputNode;
@@ -328,10 +296,8 @@
     .param p1, "comment"    # Ljava/lang/String;
 
     .prologue
-    .line 275
     iput-object p1, p0, Lorg/simpleframework/xml/stream/OutputElement;->comment:Ljava/lang/String;
 
-    .line 276
     return-void
 .end method
 
@@ -340,19 +306,15 @@
     .param p1, "data"    # Z
 
     .prologue
-    .line 311
     if-eqz p1, :cond_0
 
-    .line 312
     sget-object v0, Lorg/simpleframework/xml/stream/Mode;->DATA:Lorg/simpleframework/xml/stream/Mode;
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/OutputElement;->mode:Lorg/simpleframework/xml/stream/Mode;
 
-    .line 316
     :goto_0
     return-void
 
-    .line 314
     :cond_0
     sget-object v0, Lorg/simpleframework/xml/stream/Mode;->ESCAPE:Lorg/simpleframework/xml/stream/Mode;
 
@@ -366,10 +328,8 @@
     .param p1, "mode"    # Lorg/simpleframework/xml/stream/Mode;
 
     .prologue
-    .line 252
     iput-object p1, p0, Lorg/simpleframework/xml/stream/OutputElement;->mode:Lorg/simpleframework/xml/stream/Mode;
 
-    .line 253
     return-void
 .end method
 
@@ -378,10 +338,8 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 298
     iput-object p1, p0, Lorg/simpleframework/xml/stream/OutputElement;->name:Ljava/lang/String;
 
-    .line 299
     return-void
 .end method
 
@@ -390,10 +348,8 @@
     .param p1, "reference"    # Ljava/lang/String;
 
     .prologue
-    .line 154
     iput-object p1, p0, Lorg/simpleframework/xml/stream/OutputElement;->reference:Ljava/lang/String;
 
-    .line 155
     return-void
 .end method
 
@@ -402,10 +358,8 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 286
     iput-object p1, p0, Lorg/simpleframework/xml/stream/OutputElement;->value:Ljava/lang/String;
 
-    .line 287
     return-void
 .end method
 
@@ -413,7 +367,6 @@
     .locals 4
 
     .prologue
-    .line 390
     const-string v0, "element %s"
 
     const/4 v1, 0x1

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 501
     iput-object p1, p0, Lcom/android/server/BatteryService$2$6;->this$1:Lcom/android/server/BatteryService$2;
 
     iput-boolean p2, p0, Lcom/android/server/BatteryService$2$6;->val$otgEnable:Z
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 504
     iget-object v0, p0, Lcom/android/server/BatteryService$2$6;->this$1:Lcom/android/server/BatteryService$2;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 505
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$1000()Ljava/lang/String;
 
@@ -85,7 +82,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 506
     iget-object v0, p0, Lcom/android/server/BatteryService$2$6;->this$1:Lcom/android/server/BatteryService$2;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
@@ -93,11 +89,9 @@
     # invokes: Lcom/android/server/BatteryService;->sendOTGIntentLocked()V
     invoke-static {v0}, Lcom/android/server/BatteryService;->access$1400(Lcom/android/server/BatteryService;)V
 
-    .line 510
     :goto_0
     return-void
 
-    .line 508
     :cond_0
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$1000()Ljava/lang/String;

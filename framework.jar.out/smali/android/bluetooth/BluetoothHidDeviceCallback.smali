@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 26
     const-class v0, Landroid/bluetooth/BluetoothHidDeviceCallback;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -28,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +41,6 @@
     .param p3, "registered"    # Z
 
     .prologue
-    .line 51
     sget-object v1, Landroid/bluetooth/BluetoothHidDeviceCallback;->TAG:Ljava/lang/String;
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -81,10 +78,8 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 53
     return-void
 
-    .line 51
     :cond_0
     invoke-virtual {p1}, Landroid/bluetooth/BluetoothDevice;->toString()Ljava/lang/String;
 
@@ -99,7 +94,6 @@
     .param p2, "state"    # I
 
     .prologue
-    .line 65
     sget-object v0, Landroid/bluetooth/BluetoothHidDeviceCallback;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -136,7 +130,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     return-void
 .end method
 
@@ -147,7 +140,6 @@
     .param p3, "bufferSize"    # I
 
     .prologue
-    .line 80
     sget-object v0, Landroid/bluetooth/BluetoothHidDeviceCallback;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -190,7 +182,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     return-void
 .end method
 
@@ -200,7 +191,6 @@
     .param p2, "data"    # [B
 
     .prologue
-    .line 117
     sget-object v0, Landroid/bluetooth/BluetoothHidDeviceCallback;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -223,7 +213,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 118
     return-void
 .end method
 
@@ -232,7 +221,6 @@
     .param p1, "protocol"    # B
 
     .prologue
-    .line 105
     sget-object v0, Landroid/bluetooth/BluetoothHidDeviceCallback;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -255,7 +243,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     return-void
 .end method
 
@@ -266,7 +253,6 @@
     .param p3, "data"    # [B
 
     .prologue
-    .line 93
     sget-object v0, Landroid/bluetooth/BluetoothHidDeviceCallback;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -299,7 +285,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     return-void
 .end method
 
@@ -307,13 +292,11 @@
     .locals 2
 
     .prologue
-    .line 126
     sget-object v0, Landroid/bluetooth/BluetoothHidDeviceCallback;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "onVirtualCableUnplug"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 127
     return-void
 .end method

@@ -35,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 532
     iput-object p1, p0, Lcom/android/server/FMRadioService$6;->this$0:Lcom/android/server/FMRadioService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -50,7 +49,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 540
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,17 +77,14 @@
 
     invoke-static {v0}, Lcom/android/server/FMRadioService;->log(Ljava/lang/String;)V
 
-    .line 542
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 554
     :goto_0
     :pswitch_0
     return-void
 
-    .line 547
     :pswitch_1
     iget-object v0, p0, Lcom/android/server/FMRadioService$6;->this$0:Lcom/android/server/FMRadioService;
 
@@ -98,7 +93,6 @@
     # invokes: Lcom/android/server/FMRadioService;->responedFocusEvent(I)V
     invoke-static {v0, v1}, Lcom/android/server/FMRadioService;->access$2100(Lcom/android/server/FMRadioService;I)V
 
-    .line 548
     iget-object v0, p0, Lcom/android/server/FMRadioService$6;->this$0:Lcom/android/server/FMRadioService;
 
     iget v1, p1, Landroid/os/Message;->what:I
@@ -106,7 +100,6 @@
     # invokes: Lcom/android/server/FMRadioService;->respondAudioFocusChangeForDns(I)V
     invoke-static {v0, v1}, Lcom/android/server/FMRadioService;->access$2200(Lcom/android/server/FMRadioService;I)V
 
-    .line 549
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +130,6 @@
 
     goto :goto_0
 
-    .line 542
     :pswitch_data_0
     .packed-switch -0x3
         :pswitch_1

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 906
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,6 +36,5 @@
     .param p2, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 925
     return-void
 .end method

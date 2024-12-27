@@ -137,10 +137,8 @@
     .locals 0
 
     .prologue
-    .line 227
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 887
     return-void
 .end method
 
@@ -150,7 +148,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 227
     iput p1, p0, Landroid/accessibilityservice/AccessibilityService;->mConnectionId:I
 
     return p1
@@ -162,7 +159,6 @@
     .param p1, "x1"    # Landroid/os/IBinder;
 
     .prologue
-    .line 227
     iput-object p1, p0, Landroid/accessibilityservice/AccessibilityService;->mWindowToken:Landroid/os/IBinder;
 
     return-object p1
@@ -172,7 +168,6 @@
     .locals 4
 
     .prologue
-    .line 806
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v2
@@ -183,7 +178,6 @@
 
     move-result-object v0
 
-    .line 808
     .local v0, "connection":Landroid/accessibilityservice/IAccessibilityServiceConnection;
     iget-object v2, p0, Landroid/accessibilityservice/AccessibilityService;->mInfo:Landroid/accessibilityservice/AccessibilityServiceInfo;
 
@@ -191,18 +185,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 810
     :try_start_0
     iget-object v2, p0, Landroid/accessibilityservice/AccessibilityService;->mInfo:Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     invoke-interface {v0, v2}, Landroid/accessibilityservice/IAccessibilityServiceConnection;->setServiceInfo(Landroid/accessibilityservice/AccessibilityServiceInfo;)V
 
-    .line 811
     const/4 v2, 0x0
 
     iput-object v2, p0, Landroid/accessibilityservice/AccessibilityService;->mInfo:Landroid/accessibilityservice/AccessibilityServiceInfo;
 
-    .line 812
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v2
@@ -211,16 +202,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 817
     :cond_0
     :goto_0
     return-void
 
-    .line 813
     :catch_0
     move-exception v1
 
-    .line 814
     .local v1, "re":Landroid/os/RemoteException;
     const-string v2, "AccessibilityService"
 
@@ -238,7 +226,6 @@
     .param p1, "focus"    # I
 
     .prologue
-    .line 760
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v1
@@ -262,7 +249,6 @@
     .locals 2
 
     .prologue
-    .line 698
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v0
@@ -280,7 +266,6 @@
     .locals 2
 
     .prologue
-    .line 687
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v0
@@ -298,7 +283,6 @@
     .locals 4
 
     .prologue
-    .line 775
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v2
@@ -309,11 +293,9 @@
 
     move-result-object v0
 
-    .line 777
     .local v0, "connection":Landroid/accessibilityservice/IAccessibilityServiceConnection;
     if-eqz v0, :cond_0
 
-    .line 779
     :try_start_0
     invoke-interface {v0}, Landroid/accessibilityservice/IAccessibilityServiceConnection;->getServiceInfo()Landroid/accessibilityservice/AccessibilityServiceInfo;
     :try_end_0
@@ -321,15 +303,12 @@
 
     move-result-object v2
 
-    .line 784
     :goto_0
     return-object v2
 
-    .line 780
     :catch_0
     move-exception v1
 
-    .line 781
     .local v1, "re":Landroid/os/RemoteException;
     const-string v2, "AccessibilityService"
 
@@ -337,7 +316,6 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 784
     .end local v1    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v2, 0x0
@@ -350,14 +328,12 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 821
     invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityService;->getBaseContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 822
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "System services not available to Activities before onCreate()"
@@ -366,7 +342,6 @@
 
     throw v0
 
-    .line 827
     :cond_0
     const-string/jumbo v0, "window"
 
@@ -376,12 +351,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 828
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityService;->mWindowManager:Landroid/view/WindowManager;
 
     if-nez v0, :cond_1
 
-    .line 829
     invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityService;->getBaseContext()Landroid/content/Context;
 
     move-result-object v0
@@ -394,11 +367,9 @@
 
     iput-object v0, p0, Landroid/accessibilityservice/AccessibilityService;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 831
     :cond_1
     iget-object v0, p0, Landroid/accessibilityservice/AccessibilityService;->mWindowManager:Landroid/view/WindowManager;
 
-    .line 833
     :goto_0
     return-object v0
 
@@ -423,7 +394,6 @@
     .end annotation
 
     .prologue
-    .line 669
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v0
@@ -441,7 +411,6 @@
     .locals 2
 
     .prologue
-    .line 709
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v0
@@ -463,7 +432,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 842
     new-instance v0, Landroid/accessibilityservice/AccessibilityService$IAccessibilityServiceClientWrapper;
 
     invoke-virtual {p0}, Landroid/accessibilityservice/AccessibilityService;->getMainLooper()Landroid/os/Looper;
@@ -484,7 +452,6 @@
     .param p1, "gestureId"    # I
 
     .prologue
-    .line 616
     const/4 v0, 0x0
 
     return v0
@@ -498,7 +465,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 642
     const/4 v0, 0x0
 
     return v0
@@ -508,7 +474,6 @@
     .locals 0
 
     .prologue
-    .line 583
     return-void
 .end method
 
@@ -517,7 +482,6 @@
     .param p1, "action"    # I
 
     .prologue
-    .line 727
     invoke-static {}, Landroid/view/accessibility/AccessibilityInteractionClient;->getInstance()Landroid/view/accessibility/AccessibilityInteractionClient;
 
     move-result-object v2
@@ -528,11 +492,9 @@
 
     move-result-object v0
 
-    .line 729
     .local v0, "connection":Landroid/accessibilityservice/IAccessibilityServiceConnection;
     if-eqz v0, :cond_0
 
-    .line 731
     :try_start_0
     invoke-interface {v0, p1}, Landroid/accessibilityservice/IAccessibilityServiceConnection;->performGlobalAction(I)Z
     :try_end_0
@@ -540,15 +502,12 @@
 
     move-result v2
 
-    .line 736
     :goto_0
     return v2
 
-    .line 732
     :catch_0
     move-exception v1
 
-    .line 733
     .local v1, "re":Landroid/os/RemoteException;
     const-string v2, "AccessibilityService"
 
@@ -556,7 +515,6 @@
 
     invoke-static {v2, v3, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 736
     .end local v1    # "re":Landroid/os/RemoteException;
     :cond_0
     const/4 v2, 0x0
@@ -569,12 +527,9 @@
     .param p1, "info"    # Landroid/accessibilityservice/AccessibilityServiceInfo;
 
     .prologue
-    .line 796
     iput-object p1, p0, Landroid/accessibilityservice/AccessibilityService;->mInfo:Landroid/accessibilityservice/AccessibilityServiceInfo;
 
-    .line 797
     invoke-direct {p0}, Landroid/accessibilityservice/AccessibilityService;->sendServiceInfo()V
 
-    .line 798
     return-void
 .end method

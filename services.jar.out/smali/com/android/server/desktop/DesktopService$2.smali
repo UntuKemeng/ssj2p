@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 515
     iput-object p1, p0, Lcom/android/server/desktop/DesktopService$2;->this$0:Lcom/android/server/desktop/DesktopService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 518
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$2;->this$0:Lcom/android/server/desktop/DesktopService;
 
     # invokes: Lcom/android/server/desktop/DesktopService;->updateExternalMonitorStatus()V
     invoke-static {v0}, Lcom/android/server/desktop/DesktopService;->access$1400(Lcom/android/server/desktop/DesktopService;)V
 
-    .line 519
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 528
     return-void
 .end method
 
@@ -65,12 +61,10 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 523
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$2;->this$0:Lcom/android/server/desktop/DesktopService;
 
     # invokes: Lcom/android/server/desktop/DesktopService;->updateExternalMonitorStatus()V
     invoke-static {v0}, Lcom/android/server/desktop/DesktopService;->access$1400(Lcom/android/server/desktop/DesktopService;)V
 
-    .line 524
     return-void
 .end method

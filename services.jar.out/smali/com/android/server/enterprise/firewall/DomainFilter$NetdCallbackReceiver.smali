@@ -34,17 +34,14 @@
     .locals 1
 
     .prologue
-    .line 1259
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1260
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->mConnected:Z
 
-    .line 1351
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/firewall/DomainFilter$1;
 
     .prologue
-    .line 1259
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;-><init>(Lcom/android/server/enterprise/firewall/DomainFilter;)V
 
     return-void
@@ -66,7 +62,6 @@
     .locals 2
 
     .prologue
-    .line 1264
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$100()Ljava/lang/String;
 
@@ -76,12 +71,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1265
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->mConnected:Z
 
-    .line 1266
     return-void
 .end method
 
@@ -91,7 +84,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1270
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$100()Ljava/lang/String;
 
@@ -101,17 +93,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1271
     iget-boolean v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->mConnected:Z
 
     if-eqz v1, :cond_0
 
-    .line 1274
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0}, Ljava/util/Timer;-><init>()V
 
-    .line 1275
     .local v0, "timer":Ljava/util/Timer;
     new-instance v1, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver$ScheduleReInitializationOfDaemonCache;
 
@@ -121,18 +110,15 @@
 
     invoke-virtual {v0, v1, v2, v3}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;J)V
 
-    .line 1276
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->mConnected:Z
 
-    .line 1277
     iget-object v1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     # setter for: Lcom/android/server/enterprise/firewall/DomainFilter;->mThread:Ljava/lang/Thread;
     invoke-static {v1, v4}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$1102(Lcom/android/server/enterprise/firewall/DomainFilter;Ljava/lang/Thread;)Ljava/lang/Thread;
 
-    .line 1279
     .end local v0    # "timer":Ljava/util/Timer;
     :cond_0
     return-void
@@ -145,10 +131,8 @@
     .param p3, "cooked"    # [Ljava/lang/String;
 
     .prologue
-    .line 1283
     packed-switch p1, :pswitch_data_0
 
-    .line 1346
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$100()Ljava/lang/String;
 
@@ -176,7 +160,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1348
     :cond_0
     :goto_0
     const/4 v11, 0x1
@@ -184,7 +167,6 @@
     :goto_1
     return v11
 
-    .line 1285
     :pswitch_0
     move-object/from16 v0, p3
 
@@ -194,7 +176,6 @@
 
     if-lt v11, v12, :cond_7
 
-    .line 1289
     const/4 v11, 0x3
 
     :try_start_0
@@ -206,29 +187,24 @@
 
     move-result v10
 
-    .line 1294
     .local v10, "uid":I
     :goto_2
     const/4 v11, 0x5
 
     aget-object v9, p3, v11
 
-    .line 1296
     .local v9, "processName":Ljava/lang/String;
     if-nez v9, :cond_1
 
-    .line 1297
     const/4 v11, 0x1
 
     goto :goto_1
 
-    .line 1290
     .end local v9    # "processName":Ljava/lang/String;
     .end local v10    # "uid":I
     :catch_0
     move-exception v5
 
-    .line 1291
     .local v5, "e":Ljava/lang/NumberFormatException;
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$100()Ljava/lang/String;
@@ -239,13 +215,11 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1292
     const/4 v10, 0x0
 
     .restart local v10    # "uid":I
     goto :goto_2
 
-    .line 1301
     .end local v5    # "e":Ljava/lang/NumberFormatException;
     .restart local v9    # "processName":Ljava/lang/String;
     :cond_1
@@ -256,20 +230,16 @@
 
     move-result-object v8
 
-    .line 1303
     .local v8, "packageName":Ljava/lang/String;
     if-nez v8, :cond_2
 
-    .line 1304
     const/4 v11, 0x1
 
     goto :goto_1
 
-    .line 1308
     :cond_2
     const/4 v4, 0x0
 
-    .line 1309
     .local v4, "duplicated":Z
     new-instance v3, Lcom/android/server/enterprise/firewall/DomainFilter$BlockReport;
 
@@ -289,7 +259,6 @@
 
     invoke-direct {v3, v11, v12, v13, v14}, Lcom/android/server/enterprise/firewall/DomainFilter$BlockReport;-><init>(Lcom/android/server/enterprise/firewall/DomainFilter;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1310
     .local v3, "br":Lcom/android/server/enterprise/firewall/DomainFilter$BlockReport;
     const/4 v7, 0x0
 
@@ -299,7 +268,6 @@
 
     if-ge v7, v11, :cond_4
 
-    .line 1311
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->mReportCache:[Lcom/android/server/enterprise/firewall/DomainFilter$BlockReport;
@@ -326,20 +294,16 @@
 
     if-eqz v11, :cond_3
 
-    .line 1312
     const/4 v4, 0x1
 
-    .line 1310
     :cond_3
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_3
 
-    .line 1316
     :cond_4
     if-nez v4, :cond_0
 
-    .line 1318
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->mReportCache:[Lcom/android/server/enterprise/firewall/DomainFilter$BlockReport;
@@ -356,13 +320,11 @@
 
     aput-object v3, v11, v12
 
-    .line 1319
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     # operator++ for: Lcom/android/server/enterprise/firewall/DomainFilter;->mReportCacheIndex:I
     invoke-static {v11}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$1408(Lcom/android/server/enterprise/firewall/DomainFilter;)I
 
-    .line 1320
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     # getter for: Lcom/android/server/enterprise/firewall/DomainFilter;->mReportCacheIndex:I
@@ -374,7 +336,6 @@
 
     if-ne v11, v12, :cond_5
 
-    .line 1321
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     const/4 v12, 0x0
@@ -382,7 +343,6 @@
     # setter for: Lcom/android/server/enterprise/firewall/DomainFilter;->mReportCacheIndex:I
     invoke-static {v11, v12}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$1402(Lcom/android/server/enterprise/firewall/DomainFilter;I)I
 
-    .line 1324
     :cond_5
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
@@ -399,7 +359,6 @@
 
     check-cast v1, Landroid/app/ActivityManager;
 
-    .line 1326
     .local v1, "actMngr":Landroid/app/ActivityManager;
     const/4 v11, 0x1
 
@@ -415,7 +374,6 @@
 
     check-cast v6, Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 1327
     .local v6, "foregroundTaskInfo":Landroid/app/ActivityManager$RunningTaskInfo;
     new-instance v2, Landroid/content/Intent;
 
@@ -423,13 +381,11 @@
 
     invoke-direct {v2, v11}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1328
     .local v2, "blockIntent":Landroid/content/Intent;
     const-string v11, "com.sec.enterprise.intent.extra.BLOCKED_DOMAIN_PACKAGENAME"
 
     invoke-virtual {v2, v11, v8}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1329
     const-string v11, "com.sec.enterprise.intent.extra.BLOCKED_DOMAIN_TIMESTAMP"
 
     const/4 v12, 0x2
@@ -438,7 +394,6 @@
 
     invoke-virtual {v2, v11, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1330
     const-string v11, "com.sec.enterprise.intent.extra.BLOCKED_DOMAIN_UID"
 
     const/4 v12, 0x3
@@ -447,7 +402,6 @@
 
     invoke-virtual {v2, v11, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1331
     const-string v11, "com.sec.enterprise.intent.extra.BLOCKED_DOMAIN_URL"
 
     const/4 v12, 0x4
@@ -456,7 +410,6 @@
 
     invoke-virtual {v2, v11, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1332
     iget-object v11, v6, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
     invoke-virtual {v11}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -469,14 +422,12 @@
 
     if-eqz v11, :cond_6
 
-    .line 1333
     const-string v11, "com.sec.enterprise.intent.extra.BLOCKED_DOMAIN_ISFOREGROUND"
 
     const/4 v12, 0x1
 
     invoke-virtual {v2, v11, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1337
     :goto_4
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
@@ -491,7 +442,6 @@
 
     invoke-virtual {v11, v2, v12, v13}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 1339
     iget-object v11, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     const/4 v12, 0x2
@@ -511,7 +461,6 @@
 
     goto/16 :goto_0
 
-    .line 1335
     :cond_6
     const-string v11, "com.sec.enterprise.intent.extra.BLOCKED_DOMAIN_ISFOREGROUND"
 
@@ -521,7 +470,6 @@
 
     goto :goto_4
 
-    .line 1342
     .end local v1    # "actMngr":Landroid/app/ActivityManager;
     .end local v2    # "blockIntent":Landroid/content/Intent;
     .end local v3    # "br":Lcom/android/server/enterprise/firewall/DomainFilter$BlockReport;
@@ -543,7 +491,6 @@
 
     goto/16 :goto_0
 
-    .line 1283
     :pswitch_data_0
     .packed-switch 0x320
         :pswitch_0

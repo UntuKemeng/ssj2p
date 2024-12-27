@@ -43,17 +43,14 @@
     .locals 1
 
     .prologue
-    .line 3645
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3647
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mPackageSet:Ljava/util/HashSet;
 
-    .line 3649
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -70,15 +67,12 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3652
     if-nez p1, :cond_1
 
-    .line 3664
     :cond_0
     :goto_0
     return-void
 
-    .line 3655
     :cond_1
     const-string v0, "*"
 
@@ -88,7 +82,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3656
     iget-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mRegExpList:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -97,7 +90,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3657
     iget-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mRegExpList:Ljava/util/ArrayList;
 
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
@@ -108,7 +100,6 @@
 
     goto :goto_0
 
-    .line 3660
     :cond_2
     iget-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mPackageSet:Ljava/util/HashSet;
 
@@ -118,7 +109,6 @@
 
     if-nez v0, :cond_0
 
-    .line 3661
     iget-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mPackageSet:Ljava/util/HashSet;
 
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
@@ -134,17 +124,14 @@
     .locals 1
 
     .prologue
-    .line 3697
     iget-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mPackageSet:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
-    .line 3698
     iget-object v0, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mRegExpList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 3699
     return-void
 .end method
 
@@ -153,18 +140,14 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 3681
     if-nez p1, :cond_1
 
-    .line 3682
     const/4 v1, 0x0
 
-    .line 3693
     :cond_0
     :goto_0
     return v1
 
-    .line 3684
     :cond_1
     iget-object v3, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mPackageSet:Ljava/util/HashSet;
 
@@ -172,11 +155,9 @@
 
     move-result v1
 
-    .line 3685
     .local v1, "match":Z
     if-nez v1, :cond_0
 
-    .line 3686
     iget-object v3, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mRegExpList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -197,7 +178,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 3687
     .local v2, "regExp":Ljava/lang/String;
     if-eqz p1, :cond_2
 
@@ -207,10 +187,8 @@
 
     if-eqz v3, :cond_2
 
-    .line 3688
     const/4 v1, 0x1
 
-    .line 3689
     goto :goto_0
 .end method
 
@@ -218,553 +196,444 @@
     .locals 1
 
     .prologue
-    .line 3716
     const-string v0, ".*reminder.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3717
     const-string v0, ".*alert.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3718
     const-string v0, "com.sec.screencheck"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3719
     const-string v0, "com.sec.dsm.system"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3720
     const-string v0, "com.samsung.android.fmm"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3721
     const-string v0, "com.samsung.ssd.wolfserver"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3722
     const-string v0, "ch.bitspin.timely"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3723
     const-string v0, "com.nhn.android.nmap"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3724
     const-string v0, "com.qihoo.security"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3725
     const-string v0, ".*vodafone.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3728
     const-string v0, ".*vzw.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3729
     const-string v0, ".*verizon.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3730
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->VZW:Z
 
     if-eqz v0, :cond_0
 
-    .line 3731
     const-string v0, ".*amazon.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3732
     const-string v0, "com.audible.application"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3733
     const-string v0, "com.imdb.mobile"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3734
     const-string v0, "com.amazon.fv"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3735
     const-string v0, "com.gotv.nflgamecenter.us.lite"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3736
     const-string v0, "com.slacker.radio"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3737
     const-string v0, "com.telecomsys.directedsms.android.SCG"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3738
     const-string v0, "com.LogiaGroup.LogiaDeck"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3739
     const-string v0, "com.vznavigator.Generic"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3740
     const-string v0, "com.cequint.ecid"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3741
     const-string v0, "com.vcast.mediamanager"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3742
     const-string v0, "com.sec.android.app.cmas"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3743
     const-string v0, "com.samsung.spg"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3744
     const-string v0, "com.sec.android.app.setupwizard"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3745
     const-string v0, "com.samsung.vvm"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3746
     const-string v0, "com.samsung.carrier.logcollector"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3747
     const-string v0, "com.samsung.sdm"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3748
     const-string v0, "com.samsung.syncmlservice"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3749
     const-string v0, "com.samsung.syncmlphonedataservice"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3750
     const-string v0, "com.samsung.sdm.sdmviewer"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3751
     const-string v0, "com.samsung.PAYGPrePayDetection"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3752
     const-string v0, "com.fusionone.android.sync.vzbuaclient"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3756
     :cond_0
     const-string v0, ".*att.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3757
     const-string v0, ".*mizmowireless.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3758
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->ATT:Z
 
     if-eqz v0, :cond_1
 
-    .line 3759
     const-string v0, "com.welldoc.diabetesmanager"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3760
     const-string v0, "deezer.android.app"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3764
     :cond_1
     const-string v0, ".*sprint.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3765
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->SPR:Z
 
     if-eqz v0, :cond_2
 
-    .line 3766
     const-string v0, "com.airg"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3767
     const-string v0, "com.amazon.mShop"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3768
     const-string v0, "com.amazon.mShop.android"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3769
     const-string v0, "com.amazon.avod.thirdpartyclient"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3770
     const-string v0, "com.amazon.mp3"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3771
     const-string v0, "com.amazon.clouddrive.photos"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3772
     const-string v0, "com.boostmobile.boosttv"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3773
     const-string v0, "com.coremobility.app.vnotes"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3774
     const-string v0, "com.ebay.mobile"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3775
     const-string v0, "com.familyandco.framilywall"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3776
     const-string v0, "com.handmark.expressweather"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3777
     const-string v0, "com.itsoninc.android.itsonclient"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3778
     const-string v0, "com.itsoninc.android.itsonservice"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3779
     const-string v0, "com.itsoninc.android.uid"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3780
     const-string v0, "com.kineto.smartwifi"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3781
     const-string v0, "com.livewiremobile.musicstore.boost"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3782
     const-string v0, "com.locationlabs.sparkle.yellow.pre"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3783
     const-string v0, "com.lookout"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3784
     const-string v0, "com.nascar.nascarmobile"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3785
     const-string v0, "com.nbadigital.gametimelite"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3786
     const-string v0, "com.nextradioapp.nextradio"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3787
     const-string v0, "com.oem.smartwifisupport"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3788
     const-string v0, "com.pinsight.v1"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3789
     const-string v0, "com.smithmicro.EDM"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3790
     const-string v0, "com.smithmicro.mnd"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3791
     const-string v0, "com.soleo.numbersearch"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3792
     const-string v0, "com.spotify.music"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3793
     const-string v0, "com.telenav.app.android.scout_us"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3794
     const-string v0, "com.ubercab"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3795
     const-string v0, "com.wipit.android.boostwallet"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3796
     const-string/jumbo v0, "msgplus.jibe.sca"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3797
     const-string v0, "com.privacystar.android.spg"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3798
     const-string v0, "com.playphone.gamestore"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3799
     const-string v0, "com.livewiremobile.musicstore.vmu"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3803
     :cond_2
     const-string v0, ".*tmobile.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3804
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->TMO:Z
 
     if-eqz v0, :cond_3
 
-    .line 3805
     const-string v0, "com.amazon.mShop.android"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3806
     const-string v0, "com.lookout"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3807
     const-string v0, "com.customermobile.preload"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3811
     :cond_3
     const-string v0, ".*metro.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3812
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->MPCS:Z
 
     if-eqz v0, :cond_4
 
-    .line 3813
     const-string v0, "com.tmobile.pr.adapt"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3814
     const-string v0, "com.lookout"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3815
     const-string v0, "com.mobileposse.client"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3816
     const-string v0, "com.sec.tetheringprovision"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3820
     :cond_4
     const-string v0, ".*tracfone.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3823
     const-string v0, ".*uscc.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3824
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->USCC:Z
 
     if-eqz v0, :cond_5
 
-    .line 3825
     const-string v0, "com.cequint.ecid"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3826
     const-string v0, "com.synchronoss.sm"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3827
     const-string v0, "com.amazon.mShop.android"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3828
     const-string v0, "com.LogiaGroup.LogiaDeck"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3829
     const-string v0, "com.zed.TrdWapLauncher"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3830
     const-string v0, "com.amazon.windowshop"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3834
     :cond_5
     sget-boolean v0, Lcom/android/server/AlarmManagerServiceExt$Sales;->JAPAN:Z
 
     if-eqz v0, :cond_6
 
-    .line 3835
     const-string v0, "com.nttdocomo.android.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3836
     const-string/jumbo v0, "jp.co.nttdocomo.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3837
     const-string v0, "com.ipg.gguide.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3838
     const-string v0, "com.rsupport.rs.activity.ntt"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3839
     const-string v0, "com.mcafee.vsm_android_dcm"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3840
     const-string v0, "com.mcafee.safecall.docomo"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3841
     const-string v0, "com.mcafee.android.scanservice"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3842
     const-string/jumbo v0, "jp.id_credit_sp.android"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3843
     const-string/jumbo v0, "jp.dmapnavi.navi02"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3844
     const-string/jumbo v0, "jp.co.mcdonalds.android"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3845
     const-string/jumbo v0, "jp.co.lawson.activity"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3847
     :cond_6
     return-void
 .end method
@@ -773,57 +642,46 @@
     .locals 1
 
     .prologue
-    .line 3702
     const-string v0, ".*alarm.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3703
     const-string v0, ".*clock.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3705
     const-string v0, "com.sec\\..*ims.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3706
     const-string v0, "com.samsung\\..*ims.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3707
     const-string v0, "com.iloen.melon"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3708
     const-string v0, "com.iloen.melon.tablet"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3709
     const-string v0, ".*knox.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3710
     const-string v0, "android"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3711
     const-string v0, ".*email.ui"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3712
     const-string v0, ".*shealth.*"
 
     invoke-virtual {p0, v0}, Lcom/android/server/AlarmManagerServiceExt$PackageList;->add(Ljava/lang/String;)V
 
-    .line 3713
     return-void
 .end method
 
@@ -831,12 +689,10 @@
     .locals 6
 
     .prologue
-    .line 3668
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 3670
     .local v3, "sb":Ljava/lang/StringBuilder;
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mPackageSet:Ljava/util/HashSet;
 
@@ -844,7 +700,6 @@
 
     move-result-object v1
 
-    .line 3671
     .local v1, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -853,7 +708,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 3672
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -882,7 +736,6 @@
 
     goto :goto_0
 
-    .line 3674
     :cond_0
     iget-object v4, p0, Lcom/android/server/AlarmManagerServiceExt$PackageList;->mRegExpList:Ljava/util/ArrayList;
 
@@ -904,7 +757,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 3675
     .local v2, "regExp":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -928,7 +780,6 @@
 
     goto :goto_1
 
-    .line 3677
     .end local v2    # "regExp":Ljava/lang/String;
     :cond_1
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

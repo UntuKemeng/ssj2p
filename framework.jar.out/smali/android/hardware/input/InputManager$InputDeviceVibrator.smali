@@ -28,22 +28,18 @@
     .param p2, "deviceId"    # I
 
     .prologue
-    .line 1310
     iput-object p1, p0, Landroid/hardware/input/InputManager$InputDeviceVibrator;->this$0:Landroid/hardware/input/InputManager;
 
     invoke-direct {p0}, Landroid/os/Vibrator;-><init>()V
 
-    .line 1311
     iput p2, p0, Landroid/hardware/input/InputManager$InputDeviceVibrator;->mDeviceId:I
 
-    .line 1312
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Landroid/hardware/input/InputManager$InputDeviceVibrator;->mToken:Landroid/os/Binder;
 
-    .line 1313
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .locals 4
 
     .prologue
-    .line 1347
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager$InputDeviceVibrator;->this$0:Landroid/hardware/input/InputManager;
 
@@ -70,15 +65,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1351
     :goto_0
     return-void
 
-    .line 1348
     :catch_0
     move-exception v0
 
-    .line 1349
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 
@@ -93,7 +85,6 @@
     .locals 1
 
     .prologue
-    .line 1317
     const/4 v0, 0x1
 
     return v0
@@ -107,7 +98,6 @@
     .param p5, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 1325
     const/4 v0, 0x2
 
     new-array v0, v0, [J
@@ -126,7 +116,6 @@
 
     invoke-virtual {p0, v0, v1}, Landroid/hardware/input/InputManager$InputDeviceVibrator;->vibrate([JI)V
 
-    .line 1326
     return-void
 .end method
 
@@ -139,19 +128,16 @@
     .param p5, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 1334
     array-length v1, p3
 
     if-lt p4, v1, :cond_0
 
-    .line 1335
     new-instance v1, Ljava/lang/ArrayIndexOutOfBoundsException;
 
     invoke-direct {v1}, Ljava/lang/ArrayIndexOutOfBoundsException;-><init>()V
 
     throw v1
 
-    .line 1338
     :cond_0
     :try_start_0
     iget-object v1, p0, Landroid/hardware/input/InputManager$InputDeviceVibrator;->this$0:Landroid/hardware/input/InputManager;
@@ -169,15 +155,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1342
     :goto_0
     return-void
 
-    .line 1339
     :catch_0
     move-exception v0
 
-    .line 1340
     .local v0, "ex":Landroid/os/RemoteException;
     const-string v1, "InputManager"
 

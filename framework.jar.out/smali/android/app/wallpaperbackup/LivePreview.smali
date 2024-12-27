@@ -50,15 +50,12 @@
 
     const/4 v1, 0x0
 
-    .line 29
     const/4 v2, -0x1
 
     sput v2, Landroid/app/wallpaperbackup/LivePreview;->isSetGlasslock:I
 
-    .line 35
     sput-boolean v1, Landroid/app/wallpaperbackup/LivePreview;->bFlagLockwall:Z
 
-    .line 37
     const-string/jumbo v2, "ro.debuggable"
 
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
@@ -83,13 +80,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 47
     sput-object p1, Landroid/app/wallpaperbackup/LivePreview;->mContext:Landroid/content/Context;
 
-    .line 48
     return-void
 .end method
 
@@ -97,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 24
     sget-object v0, Landroid/app/wallpaperbackup/LivePreview;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -107,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 24
     sget-object v0, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperConnection:Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
 
     return-object v0
@@ -117,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 24
     sget-object v0, Landroid/app/wallpaperbackup/LivePreview;->mView:Landroid/view/View;
 
     return-object v0
@@ -129,24 +120,20 @@
     .locals 3
 
     .prologue
-    .line 74
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mIntent:Landroid/content/Intent;
 
     if-nez v1, :cond_0
 
-    .line 76
     const/4 v1, 0x0
 
     sput-boolean v1, Landroid/app/wallpaperbackup/LivePreview;->bFlagLockwall:Z
 
-    .line 77
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mContext:Landroid/content/Context;
 
     check-cast v1, Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->finish()V
 
-    .line 80
     :cond_0
     :try_start_0
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mContext:Landroid/content/Context;
@@ -165,7 +152,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 87
     :cond_1
     :goto_0
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mContext:Landroid/content/Context;
@@ -176,7 +162,6 @@
 
     sput-object v1, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperManager:Landroid/app/WallpaperManager;
 
-    .line 88
     new-instance v1, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
 
     sget-object v2, Landroid/app/wallpaperbackup/LivePreview;->mIntent:Landroid/content/Intent;
@@ -185,29 +170,23 @@
 
     sput-object v1, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperConnection:Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
 
-    .line 89
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mIntent:Landroid/content/Intent;
 
     if-eqz v1, :cond_2
 
-    .line 90
     invoke-virtual {p0}, Landroid/app/wallpaperbackup/LivePreview;->setLiveWallpaper()V
 
-    .line 93
     :cond_2
     return-void
 
-    .line 81
     :catch_0
     move-exception v0
 
-    .line 82
     .local v0, "e":Ljava/lang/Exception;
     sget-boolean v1, Landroid/app/wallpaperbackup/LivePreview;->DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 83
     const-string/jumbo v1, "zeroshuttle"
 
     const-string/jumbo v2, "system.getInt Failed!"
@@ -225,10 +204,8 @@
     .param p4, "isLockScreen"    # Z
 
     .prologue
-    .line 55
     if-nez p3, :cond_0
 
-    .line 56
     const-string v1, "LiveWallpaperPreview"
 
     const-string v2, "Failure showing preview"
@@ -239,32 +216,25 @@
 
     invoke-static {v1, v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 67
     :goto_0
     return-void
 
-    .line 60
     :cond_0
     sput-object p2, Landroid/app/wallpaperbackup/LivePreview;->mIntent:Landroid/content/Intent;
 
-    .line 61
     if-eqz p3, :cond_1
 
-    .line 62
     invoke-virtual {p3}, Landroid/app/WallpaperInfo;->getSettingsActivity()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 63
     .local v0, "mSettingsActivityName":Ljava/lang/String;
     invoke-virtual {p3}, Landroid/app/WallpaperInfo;->getPackageName()Ljava/lang/String;
 
-    .line 65
     .end local v0    # "mSettingsActivityName":Ljava/lang/String;
     :cond_1
     sput-boolean p4, Landroid/app/wallpaperbackup/LivePreview;->bFlagLockwall:Z
 
-    .line 66
     invoke-virtual {p0}, Landroid/app/wallpaperbackup/LivePreview;->create()V
 
     goto :goto_0
@@ -276,31 +246,26 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 99
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperConnection:Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
 
     if-eqz v1, :cond_2
 
-    .line 100
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperConnection:Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
 
     iget-object v1, v1, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mEngine:Landroid/service/wallpaper/IWallpaperEngine;
 
     if-eqz v1, :cond_1
 
-    .line 101
     sget-boolean v1, Landroid/app/wallpaperbackup/LivePreview;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 102
     const-string v1, "LiveWallpaperPreview"
 
     const-string/jumbo v2, "setLiveWallpaper: Destroy engine..."
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     :cond_0
     :try_start_0
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperConnection:Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
@@ -311,20 +276,17 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 112
     :cond_1
     :goto_0
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperConnection:Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
 
     invoke-virtual {v1}, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->disconnect()V
 
-    .line 114
     :cond_2
     const/4 v1, 0x0
 
     sput-object v1, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperConnection:Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
 
-    .line 117
     :try_start_1
     sget-boolean v1, Landroid/app/wallpaperbackup/LivePreview;->bFlagLockwall:Z
 
@@ -332,7 +294,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 118
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -345,7 +306,6 @@
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 124
     :cond_3
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperManager:Landroid/app/WallpaperManager;
 
@@ -361,7 +321,6 @@
 
     invoke-interface {v1, v2}, Landroid/app/IWallpaperManager;->setWallpaperComponent(Landroid/content/ComponentName;)V
 
-    .line 126
     sget-object v1, Landroid/app/wallpaperbackup/LivePreview;->mWallpaperManager:Landroid/app/WallpaperManager;
 
     const/high16 v2, 0x3f000000    # 0.5f
@@ -373,30 +332,24 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_2
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 135
     :cond_4
     :goto_1
     sput-boolean v4, Landroid/app/wallpaperbackup/LivePreview;->bFlagLockwall:Z
 
-    .line 136
     const/4 v1, -0x1
 
     sput v1, Landroid/app/wallpaperbackup/LivePreview;->isSetGlasslock:I
 
-    .line 137
     return-void
 
-    .line 106
     :catch_0
     move-exception v0
 
-    .line 107
     .local v0, "e":Landroid/os/RemoteException;
     sget-boolean v1, Landroid/app/wallpaperbackup/LivePreview;->DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 108
     const-string v1, "LiveWallpaperPreview"
 
     const-string/jumbo v2, "setLiveWallpaper: RemoteException in engine destroy"
@@ -405,18 +358,15 @@
 
     goto :goto_0
 
-    .line 130
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 131
     .local v0, "e":Ljava/lang/RuntimeException;
     sget-boolean v1, Landroid/app/wallpaperbackup/LivePreview;->DEBUG:Z
 
     if-eqz v1, :cond_4
 
-    .line 132
     const-string v1, "LiveWallpaperPreview"
 
     const-string v2, "Failure setting wallpaper"
@@ -425,7 +375,6 @@
 
     goto :goto_1
 
-    .line 128
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_2
     move-exception v1

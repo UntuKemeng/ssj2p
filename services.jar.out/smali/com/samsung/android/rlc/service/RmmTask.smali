@@ -119,12 +119,10 @@
     .locals 1
 
     .prologue
-    .line 37
     const/4 v0, 0x0
 
     sput-object v0, Lcom/samsung/android/rlc/service/RmmTask;->rmmTask:Lcom/samsung/android/rlc/service/RmmTask;
 
-    .line 54
     const-class v0, Lcom/samsung/android/rlc/service/RmmTask;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -141,22 +139,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/rlc/service/RmmTask;->queue:Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;
 
-    .line 42
     sget-object v0, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
 
     const-string v1, "RmmTask created"
 
     invoke-static {v0, v1}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 43
     new-instance v0, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;
 
     new-instance v1, Ljava/util/concurrent/PriorityBlockingQueue;
@@ -167,10 +161,8 @@
 
     iput-object v0, p0, Lcom/samsung/android/rlc/service/RmmTask;->queue:Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;
 
-    .line 44
     iput-object p1, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
-    .line 45
     return-void
 .end method
 
@@ -180,7 +172,6 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Lcom/samsung/android/rlc/service/RmmTask;->handleIntent(Landroid/content/Intent;)V
 
     return-void
@@ -191,7 +182,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 48
     const-class v1, Lcom/samsung/android/rlc/service/RmmTask;
 
     monitor-enter v1
@@ -201,14 +191,12 @@
 
     if-nez v0, :cond_0
 
-    .line 49
     new-instance v0, Lcom/samsung/android/rlc/service/RmmTask;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/rlc/service/RmmTask;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/samsung/android/rlc/service/RmmTask;->rmmTask:Lcom/samsung/android/rlc/service/RmmTask;
 
-    .line 51
     :cond_0
     sget-object v0, Lcom/samsung/android/rlc/service/RmmTask;->rmmTask:Lcom/samsung/android/rlc/service/RmmTask;
     :try_end_0
@@ -218,7 +206,6 @@
 
     return-object v0
 
-    .line 48
     :catchall_0
     move-exception v0
 
@@ -232,16 +219,13 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 74
     if-nez p0, :cond_0
 
     const-string v0, "BOOT"
 
-    .line 89
     :goto_0
     return-object v0
 
-    .line 75
     :cond_0
     const/4 v0, 0x1
 
@@ -251,7 +235,6 @@
 
     goto :goto_0
 
-    .line 76
     :cond_1
     const/4 v0, 0x2
 
@@ -261,7 +244,6 @@
 
     goto :goto_0
 
-    .line 77
     :cond_2
     const/4 v0, 0x3
 
@@ -271,7 +253,6 @@
 
     goto :goto_0
 
-    .line 78
     :cond_3
     const/4 v0, 0x4
 
@@ -281,7 +262,6 @@
 
     goto :goto_0
 
-    .line 79
     :cond_4
     const/4 v0, 0x5
 
@@ -291,7 +271,6 @@
 
     goto :goto_0
 
-    .line 80
     :cond_5
     const/4 v0, 0x6
 
@@ -301,7 +280,6 @@
 
     goto :goto_0
 
-    .line 81
     :cond_6
     const/4 v0, 0x7
 
@@ -311,7 +289,6 @@
 
     goto :goto_0
 
-    .line 82
     :cond_7
     const/16 v0, 0x8
 
@@ -321,7 +298,6 @@
 
     goto :goto_0
 
-    .line 83
     :cond_8
     const/16 v0, 0xc
 
@@ -331,7 +307,6 @@
 
     goto :goto_0
 
-    .line 84
     :cond_9
     const/16 v0, 0xb
 
@@ -341,7 +316,6 @@
 
     goto :goto_0
 
-    .line 85
     :cond_a
     const/16 v0, 0xa
 
@@ -351,7 +325,6 @@
 
     goto :goto_0
 
-    .line 86
     :cond_b
     const/16 v0, 0x9
 
@@ -361,7 +334,6 @@
 
     goto :goto_0
 
-    .line 87
     :cond_c
     const/16 v0, 0xd
 
@@ -371,7 +343,6 @@
 
     goto :goto_0
 
-    .line 88
     :cond_d
     const/16 v0, 0xe
 
@@ -381,7 +352,6 @@
 
     goto :goto_0
 
-    .line 89
     :cond_e
     const-string v0, "UNKNOWN"
 
@@ -393,7 +363,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 94
     const-string v3, "type"
 
     const/4 v4, -0x1
@@ -402,7 +371,6 @@
 
     move-result v2
 
-    .line 95
     .local v2, "type":I
     sget-object v3, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
 
@@ -430,7 +398,6 @@
 
     invoke-static {v3, v4}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 97
     const/16 v3, 0xd
 
     if-eq v2, v3, :cond_1
@@ -447,26 +414,22 @@
 
     if-eqz v3, :cond_1
 
-    .line 98
     sget-object v3, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
 
     const-string v4, "RLC Cleared !!! "
 
     invoke-static {v3, v4}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
     :cond_0
     :goto_0
     return-void
 
-    .line 102
     :cond_1
     packed-switch v2, :pswitch_data_0
 
     :pswitch_0
     goto :goto_0
 
-    .line 105
     :pswitch_1
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -474,7 +437,6 @@
 
     goto :goto_0
 
-    .line 108
     :pswitch_2
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -482,7 +444,6 @@
 
     goto :goto_0
 
-    .line 111
     :pswitch_3
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -490,7 +451,6 @@
 
     goto :goto_0
 
-    .line 114
     :pswitch_4
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -498,7 +458,6 @@
 
     goto :goto_0
 
-    .line 118
     :pswitch_5
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -506,7 +465,6 @@
 
     goto :goto_0
 
-    .line 121
     :pswitch_6
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -514,7 +472,6 @@
 
     goto :goto_0
 
-    .line 124
     :pswitch_7
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -522,7 +479,6 @@
 
     goto :goto_0
 
-    .line 127
     :pswitch_8
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -542,7 +498,6 @@
 
     move-result v1
 
-    .line 128
     .local v1, "resultReport":Z
     if-eqz v1, :cond_0
 
@@ -564,12 +519,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 129
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 130
     .local v0, "clearBundle":Landroid/os/Bundle;
     const-string v3, "clearOp"
 
@@ -577,7 +530,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 132
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
     const/16 v4, 0xc
@@ -586,7 +538,6 @@
 
     goto :goto_0
 
-    .line 136
     .end local v0    # "clearBundle":Landroid/os/Bundle;
     .end local v1    # "resultReport":Z
     :pswitch_9
@@ -600,7 +551,6 @@
 
     goto :goto_0
 
-    .line 140
     :pswitch_a
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -608,7 +558,6 @@
 
     goto :goto_0
 
-    .line 143
     :pswitch_b
     iget-object v3, p0, Lcom/samsung/android/rlc/service/RmmTask;->mContext:Landroid/content/Context;
 
@@ -616,7 +565,6 @@
 
     goto :goto_0
 
-    .line 102
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -642,7 +590,6 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 189
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -656,7 +603,6 @@
 
     move-result-object v1
 
-    .line 190
     .local v1, "pi":Landroid/content/pm/PackageInfo;
     sget-object v2, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
 
@@ -684,19 +630,15 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 191
     const/4 v2, 0x1
 
-    .line 195
     .end local v1    # "pi":Landroid/content/pm/PackageInfo;
     :goto_0
     return v2
 
-    .line 192
     :catch_0
     move-exception v0
 
-    .line 193
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     sget-object v2, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
 
@@ -724,7 +666,6 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
     const/4 v2, 0x0
 
     goto :goto_0
@@ -735,14 +676,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 199
     const-string v17, "ro.csc.sales_code"
 
     invoke-static/range {v17 .. v17}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 200
     .local v9, "salesCode":Ljava/lang/String;
     const-string v17, "ro.security.vaultkeeper.feature"
 
@@ -750,7 +689,6 @@
 
     move-result-object v12
 
-    .line 201
     .local v12, "supportRMM":Ljava/lang/String;
     sget-object v17, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
 
@@ -788,7 +726,6 @@
 
     invoke-static/range {v17 .. v18}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 203
     invoke-static/range {p1 .. p1}, Lcom/samsung/android/rlc/service/RmmTask;->isInstalled(Landroid/content/Context;)Z
 
     move-result v17
@@ -805,7 +742,6 @@
 
     if-nez v17, :cond_1
 
-    .line 204
     :cond_0
     sget-object v17, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
 
@@ -813,11 +749,9 @@
 
     invoke-static/range {v17 .. v18}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 284
     :goto_0
     return-void
 
-    .line 207
     :cond_1
     const-string v17, "SER"
 
@@ -841,7 +775,6 @@
 
     const-string v17, "CAC"
 
-    .line 208
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -860,19 +793,16 @@
 
     if-eqz v17, :cond_3
 
-    .line 209
     :cond_2
     new-instance v3, Lcom/samsung/android/rlc/receiver/GCMReceiver;
 
     invoke-direct {v3}, Lcom/samsung/android/rlc/receiver/GCMReceiver;-><init>()V
 
-    .line 210
     .local v3, "gcmReceiver":Lcom/samsung/android/rlc/receiver/GCMReceiver;
     new-instance v6, Landroid/content/IntentFilter;
 
     invoke-direct {v6}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 211
     .local v6, "intentfilter":Landroid/content/IntentFilter;
     const-string v17, "com.google.android.c2dm.intent.RECEIVE"
 
@@ -880,14 +810,12 @@
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 212
     const-string v17, "com.samsung.android.rlc"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 213
     const-string v17, "com.google.android.c2dm.permission.SEND"
 
     const/16 v18, 0x0
@@ -900,21 +828,18 @@
 
     invoke-virtual {v0, v3, v6, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 214
     const-string v17, "com.google.android.c2dm.intent.REGISTRATION"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 215
     const-string v17, "com.samsung.android.rlc"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addCategory(Ljava/lang/String;)V
 
-    .line 216
     const-string v17, "com.google.android.c2dm.permission.SEND"
 
     const/16 v18, 0x0
@@ -927,14 +852,12 @@
 
     invoke-virtual {v0, v3, v6, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 217
     const-string v17, "android.intent.action.REGISTRATION_COMPLETED"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 218
     const-string v17, "com.google.android.c2dm.permission.SEND"
 
     const/16 v18, 0x0
@@ -947,14 +870,12 @@
 
     invoke-virtual {v0, v3, v6, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 219
     const-string v17, "android.intent.action.REGISTRATION_CANCELED"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v6, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 220
     const-string v17, "com.google.android.c2dm.permission.SEND"
 
     const/16 v18, 0x0
@@ -967,18 +888,15 @@
 
     invoke-virtual {v0, v3, v6, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 222
     new-instance v13, Landroid/content/IntentFilter;
 
     invoke-direct {v13}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 223
     .local v13, "sysIntentfilter":Landroid/content/IntentFilter;
     new-instance v14, Lcom/samsung/android/rlc/receiver/SYSTEMReceiver;
 
     invoke-direct {v14}, Lcom/samsung/android/rlc/receiver/SYSTEMReceiver;-><init>()V
 
-    .line 224
     .local v14, "systemReceiver":Lcom/samsung/android/rlc/receiver/SYSTEMReceiver;
     const-string v17, "android.intent.action.BOOT_COMPLETED"
 
@@ -986,7 +904,6 @@
 
     invoke-virtual {v13, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 225
     const-string v17, "com.sec.pcw.device.permission.PROTECT_SYSTEM"
 
     const/16 v18, 0x0
@@ -999,14 +916,12 @@
 
     invoke-virtual {v0, v14, v13, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 226
     const-string v17, "android.intent.action.NOTI_CANCELED"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v13, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 227
     const-string v17, "com.sec.pcw.device.permission.PROTECT_SYSTEM"
 
     const/16 v18, 0x0
@@ -1019,18 +934,15 @@
 
     invoke-virtual {v0, v14, v13, v1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 229
     new-instance v15, Landroid/content/IntentFilter;
 
     invoke-direct {v15}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 230
     .local v15, "wakeIntentfilter":Landroid/content/IntentFilter;
     new-instance v16, Lcom/samsung/android/rlc/receiver/WakeUPReceiver;
 
     invoke-direct/range {v16 .. v16}, Lcom/samsung/android/rlc/receiver/WakeUPReceiver;-><init>()V
 
-    .line 231
     .local v16, "wakeupReceiver":Lcom/samsung/android/rlc/receiver/WakeUPReceiver;
     const-string v17, "com.samsung.remotelock.CLIENT_WAKEUP"
 
@@ -1038,14 +950,12 @@
 
     invoke-virtual {v15, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 232
     const-string v17, "rlc"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v15, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 233
     const-string v17, "operation.initialize"
 
     const/16 v18, 0x0
@@ -1056,25 +966,21 @@
 
     invoke-virtual {v15, v0, v1}, Landroid/content/IntentFilter;->addDataAuthority(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 234
     move-object/from16 v0, p1
 
     move-object/from16 v1, v16
 
     invoke-virtual {v0, v1, v15}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 236
     new-instance v7, Landroid/content/IntentFilter;
 
     invoke-direct {v7}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 237
     .local v7, "retIntentfilter":Landroid/content/IntentFilter;
     new-instance v8, Lcom/samsung/android/rlc/receiver/RetryReceiver;
 
     invoke-direct {v8}, Lcom/samsung/android/rlc/receiver/RetryReceiver;-><init>()V
 
-    .line 238
     .local v8, "retryReceiver":Lcom/samsung/android/rlc/receiver/RetryReceiver;
     const-string v17, "com.samsung.android.rlc.SPP_REGISTRATION_RETRY"
 
@@ -1082,167 +988,139 @@
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 239
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 240
     const-string v17, "com.samsung.android.rlc.C2DM_REGISTRATION_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 241
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 242
     const-string v17, "com.samsung.android.rlc.GCM_REGISTRATION_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 243
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 244
     const-string v17, "com.samsung.android.rlc.TOKEN_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 245
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 246
     const-string v17, "com.samsung.android.rlc.HTTP_REQUEST_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 247
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 248
     const-string v17, "com.samsung.android.rlc.COMPLETE_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 249
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 250
     const-string v17, "com.samsung.android.rlc.PREPARE_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 251
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 252
     const-string v17, "com.samsung.android.rlc.UNLOCK_REPORT_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 253
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 254
     const-string v17, "com.samsung.android.rlc.CHECK_DEVICE_STATUS_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 255
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 256
     const-string v17, "com.samsung.android.rlc.REPORT_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 257
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 258
     const-string v17, "com.samsung.android.rlc.SPP_MG_REGISTRATION_REQUEST_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 259
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 260
     const-string v17, "com.samsung.android.rlc.GCM_MG_REGISTRATION_REQUEST_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 261
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 262
     const-string v17, "com.samsung.android.rlc.DELIVERY_REQUEST_RETRY"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v7, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 263
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v8, v7}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 265
     new-instance v10, Landroid/content/IntentFilter;
 
     invoke-direct {v10}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 266
     .local v10, "sppIntentfilter":Landroid/content/IntentFilter;
     new-instance v11, Lcom/samsung/android/rlc/receiver/SPPReceiver;
 
     invoke-direct {v11}, Lcom/samsung/android/rlc/receiver/SPPReceiver;-><init>()V
 
-    .line 267
     .local v11, "sppRecevier":Lcom/samsung/android/rlc/receiver/SPPReceiver;
     const-string v17, "eb850acb179b3447"
 
@@ -1250,59 +1128,49 @@
 
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 268
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v11, v10}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 269
     const-string v17, "com.sec.spp.NotificationAckResultAction"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 270
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v11, v10}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 271
     const-string v17, "com.sec.spp.RegistrationChangedAction"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 272
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v11, v10}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 273
     const-string v17, "com.sec.spp.ServiceAbnormallyStoppedAction"
 
     move-object/from16 v0, v17
 
     invoke-virtual {v10, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 274
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v11, v10}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 276
     new-instance v4, Landroid/content/IntentFilter;
 
     invoke-direct {v4}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 277
     .local v4, "initFilter":Landroid/content/IntentFilter;
     new-instance v5, Lcom/samsung/android/rlc/receiver/InitalizeReceiver;
 
     invoke-direct {v5}, Lcom/samsung/android/rlc/receiver/InitalizeReceiver;-><init>()V
 
-    .line 278
     .local v5, "initReceiver":Lcom/samsung/android/rlc/receiver/InitalizeReceiver;
     const-string v17, "com.samsung.android.rmm.initialize"
 
@@ -1310,7 +1178,6 @@
 
     invoke-virtual {v4, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 279
     const-string v17, "com.samsung.android.permission.RMM_INIT"
 
     const/16 v18, 0x0
@@ -1325,7 +1192,6 @@
 
     goto/16 :goto_0
 
-    .line 281
     .end local v3    # "gcmReceiver":Lcom/samsung/android/rlc/receiver/GCMReceiver;
     .end local v4    # "initFilter":Landroid/content/IntentFilter;
     .end local v5    # "initReceiver":Lcom/samsung/android/rlc/receiver/InitalizeReceiver;
@@ -1355,31 +1221,25 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 288
     if-eqz p0, :cond_1
 
     const/4 v1, -0x1
 
     if-eq p2, v1, :cond_1
 
-    .line 289
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 290
     .local v0, "taskIntent":Landroid/content/Intent;
     const-string v1, "type"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 292
     if-eqz p1, :cond_0
 
-    .line 293
     invoke-virtual {v0, p1}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 296
     :cond_0
     sget-object v1, Lcom/samsung/android/rlc/service/RmmTask;->TAG:Ljava/lang/String;
 
@@ -1407,7 +1267,6 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 297
     invoke-static {p0}, Lcom/samsung/android/rlc/service/RmmTask;->getInstance(Landroid/content/Context;)Lcom/samsung/android/rlc/service/RmmTask;
 
     move-result-object v1
@@ -1420,7 +1279,6 @@
 
     invoke-virtual {v1, v2}, Lcom/samsung/android/rlc/service/RmmTask$RmmTaskQueue;->add(Lcom/samsung/android/rlc/service/RmmTask$RmmTaskObject;)V
 
-    .line 299
     .end local v0    # "taskIntent":Landroid/content/Intent;
     :cond_1
     return-void

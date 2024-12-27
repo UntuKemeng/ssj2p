@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 27
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/EngineeringModeDeviceInfo;->uniqueInstance:Lcom/android/server/EngineeringModeDeviceInfo;
@@ -33,13 +32,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iput-object p1, p0, Lcom/android/server/EngineeringModeDeviceInfo;->mContext:Landroid/content/Context;
 
-    .line 43
     return-void
 .end method
 
@@ -48,42 +44,35 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 30
     sget-object v0, Lcom/android/server/EngineeringModeDeviceInfo;->uniqueInstance:Lcom/android/server/EngineeringModeDeviceInfo;
 
     if-nez v0, :cond_1
 
-    .line 31
     const-class v1, Lcom/android/server/EngineeringModeDeviceInfo;
 
     monitor-enter v1
 
-    .line 32
     :try_start_0
     sget-object v0, Lcom/android/server/EngineeringModeDeviceInfo;->uniqueInstance:Lcom/android/server/EngineeringModeDeviceInfo;
 
     if-nez v0, :cond_0
 
-    .line 33
     new-instance v0, Lcom/android/server/EngineeringModeDeviceInfo;
 
     invoke-direct {v0, p0}, Lcom/android/server/EngineeringModeDeviceInfo;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/EngineeringModeDeviceInfo;->uniqueInstance:Lcom/android/server/EngineeringModeDeviceInfo;
 
-    .line 35
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 38
     :cond_1
     sget-object v0, Lcom/android/server/EngineeringModeDeviceInfo;->uniqueInstance:Lcom/android/server/EngineeringModeDeviceInfo;
 
     return-object v0
 
-    .line 35
     :catchall_0
     move-exception v0
 
@@ -102,7 +91,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 59
     const-string v2, "connectivity"
 
     invoke-virtual {p0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -111,18 +99,15 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 61
     .local v0, "cm":Landroid/net/ConnectivityManager;
     if-eqz v0, :cond_0
 
-    .line 62
     invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->isNetworkSupported(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 66
     :goto_0
     return v1
 
@@ -136,7 +121,6 @@
     .locals 3
 
     .prologue
-    .line 54
     const-string/jumbo v1, "ril.serialnumber"
 
     const-string v2, ""
@@ -145,7 +129,6 @@
 
     move-result-object v0
 
-    .line 55
     .local v0, "serialNum":Ljava/lang/String;
     return-object v0
 .end method
@@ -156,7 +139,6 @@
     .locals 3
 
     .prologue
-    .line 70
     iget-object v1, p0, Lcom/android/server/EngineeringModeDeviceInfo;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/EngineeringModeDeviceInfo;->isWifiOnlyModel(Landroid/content/Context;)Z
@@ -165,23 +147,19 @@
 
     if-eqz v1, :cond_0
 
-    .line 71
     const-string v1, "EngineeringModeDeviceInfo"
 
     const-string v2, "Support Only Wifi"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     invoke-static {}, Lcom/android/server/EngineeringModeDeviceInfo;->readSN()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 76
     :goto_0
     return-object v1
 
-    .line 75
     :cond_0
     iget-object v1, p0, Lcom/android/server/EngineeringModeDeviceInfo;->mContext:Landroid/content/Context;
 
@@ -193,7 +171,6 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 76
     .local v0, "tm":Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
@@ -206,12 +183,10 @@
     .locals 5
 
     .prologue
-    .line 46
     invoke-static {}, Lcom/android/server/CscParser;->getCustomerInstance()Lcom/android/server/CscParser;
 
     move-result-object v1
 
-    .line 47
     .local v1, "parser":Lcom/android/server/CscParser;
     const-string v3, "GeneralInfo.SalesCode"
 
@@ -219,7 +194,6 @@
 
     move-result-object v2
 
-    .line 48
     .local v2, "salesCode":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -245,7 +219,6 @@
 
     move-result-object v0
 
-    .line 50
     .local v0, "modelName":Ljava/lang/String;
     return-object v0
 .end method

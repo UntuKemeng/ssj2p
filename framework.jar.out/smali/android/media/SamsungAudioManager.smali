@@ -92,7 +92,6 @@
     .locals 1
 
     .prologue
-    .line 34
     const-string v0, "SamsungAudioManager"
 
     sput-object v0, Landroid/media/SamsungAudioManager;->TAG:Ljava/lang/String;
@@ -105,20 +104,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 134
     new-instance v0, Landroid/media/MySpaceManager;
 
     invoke-direct {v0}, Landroid/media/MySpaceManager;-><init>()V
 
     iput-object v0, p0, Landroid/media/SamsungAudioManager;->mMySpaceManager:Landroid/media/MySpaceManager;
 
-    .line 85
     iput-object p1, p0, Landroid/media/SamsungAudioManager;->mContext:Landroid/content/Context;
 
-    .line 86
     const-string v0, "audio"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -129,7 +124,6 @@
 
     iput-object v0, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
-    .line 87
     return-void
 .end method
 
@@ -138,21 +132,18 @@
     .param p0, "gainOrLevel"    # F
 
     .prologue
-    .line 532
     invoke-static {p0}, Ljava/lang/Float;->isNaN(F)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 533
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
     throw v0
 
-    .line 535
     :cond_0
     const/4 v0, 0x0
 
@@ -160,15 +151,12 @@
 
     if-gez v0, :cond_2
 
-    .line 536
     const/4 p0, 0x0
 
-    .line 540
     :cond_1
     :goto_0
     return p0
 
-    .line 537
     :cond_2
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -176,7 +164,6 @@
 
     if-lez v0, :cond_1
 
-    .line 538
     const/high16 p0, 0x3f800000    # 1.0f
 
     goto :goto_0
@@ -187,7 +174,6 @@
     .param p0, "typeDevice"    # I
 
     .prologue
-    .line 501
     invoke-static {p0}, Landroid/media/AudioDeviceInfo;->convertDeviceTypeToInternalDevice(I)I
 
     move-result v0
@@ -199,7 +185,6 @@
     .locals 1
 
     .prologue
-    .line 469
     const/4 v0, 0x4
 
     return v0
@@ -210,56 +195,41 @@
     .param p0, "samsung_stream"    # I
 
     .prologue
-    .line 439
     const/4 v0, -0x1
 
-    .line 441
     .local v0, "valid_stream":I
     packed-switch p0, :pswitch_data_0
 
-    .line 458
     const/4 v0, -0x1
 
-    .line 462
     :goto_0
     return v0
 
-    .line 443
     :pswitch_0
     const/16 v0, 0xa
 
-    .line 444
     goto :goto_0
 
-    .line 446
     :pswitch_1
     const/16 v0, 0xb
 
-    .line 447
     goto :goto_0
 
-    .line 449
     :pswitch_2
     const/16 v0, 0xd
 
-    .line 450
     goto :goto_0
 
-    .line 452
     :pswitch_3
     const/4 v0, 0x6
 
-    .line 453
     goto :goto_0
 
-    .line 455
     :pswitch_4
     const/4 v0, 0x7
 
-    .line 456
     goto :goto_0
 
-    .line 441
     nop
 
     :pswitch_data_0
@@ -278,7 +248,6 @@
     .locals 3
 
     .prologue
-    .line 382
     iget-object v1, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v2, "device_mask_QSP"
@@ -287,18 +256,15 @@
 
     move-result-object v0
 
-    .line 383
     .local v0, "strReturn":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 384
     const/16 v1, 0x10
 
     invoke-static {v0, v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 386
     :goto_0
     return v1
 
@@ -312,7 +278,6 @@
     .locals 3
 
     .prologue
-    .line 339
     iget-object v1, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v2, "audioParam;outDevice"
@@ -321,7 +286,6 @@
 
     move-result-object v0
 
-    .line 340
     .local v0, "path":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -333,7 +297,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 341
     :cond_0
     sget-object v1, Landroid/media/SamsungAudioManager;->TAG:Ljava/lang/String;
 
@@ -341,10 +304,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     const/4 v1, 0x0
 
-    .line 344
     :goto_0
     return v1
 
@@ -368,7 +329,6 @@
     .locals 4
 
     .prologue
-    .line 269
     iget-object v2, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v3, "fine_volume"
@@ -377,7 +337,6 @@
 
     move-result-object v1
 
-    .line 271
     .local v1, "strReturn":Ljava/lang/String;
     :try_start_0
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -386,15 +345,12 @@
 
     move-result v2
 
-    .line 273
     :goto_0
     return v2
 
-    .line 272
     :catch_0
     move-exception v0
 
-    .line 273
     .local v0, "e":Ljava/lang/NumberFormatException;
     const/4 v2, 0x0
 
@@ -406,12 +362,10 @@
     .param p1, "streamType"    # I
 
     .prologue
-    .line 300
     const/4 v2, 0x3
 
     if-eq p1, v2, :cond_0
 
-    .line 301
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -436,7 +390,6 @@
 
     throw v2
 
-    .line 303
     :cond_0
     iget-object v2, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
@@ -446,7 +399,6 @@
 
     move-result-object v1
 
-    .line 305
     .local v1, "strReturn":Ljava/lang/String;
     :try_start_0
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -455,15 +407,12 @@
 
     move-result v2
 
-    .line 307
     :goto_0
     return v2
 
-    .line 306
     :catch_0
     move-exception v0
 
-    .line 307
     .local v0, "e":Ljava/lang/NumberFormatException;
     const/4 v2, 0x0
 
@@ -474,7 +423,6 @@
     .locals 3
 
     .prologue
-    .line 246
     iget-object v1, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v2, "HMTstate"
@@ -483,7 +431,6 @@
 
     move-result-object v0
 
-    .line 247
     .local v0, "strReturn":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -495,10 +442,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 248
     const/4 v1, 0x1
 
-    .line 250
     :goto_0
     return v1
 
@@ -512,14 +457,12 @@
     .locals 2
 
     .prologue
-    .line 232
     const-string v1, "audioParam;split_sound_for_call"
 
     invoke-static {v1}, Landroid/media/AudioSystem;->getParameters(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 233
     .local v0, "isRemoteSubmixOn":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -529,10 +472,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 234
     const/4 v1, 0x1
 
-    .line 236
     :goto_0
     return v1
 
@@ -546,7 +487,6 @@
     .locals 3
 
     .prologue
-    .line 368
     iget-object v1, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v2, "SafeMediaVolumeDevice"
@@ -555,7 +495,6 @@
 
     move-result-object v0
 
-    .line 369
     .local v0, "strReturn":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -567,10 +506,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 370
     const/4 v1, 0x1
 
-    .line 372
     :goto_0
     return v1
 
@@ -584,7 +521,6 @@
     .locals 3
 
     .prologue
-    .line 206
     iget-object v1, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     const-string v2, "SplitSound"
@@ -593,7 +529,6 @@
 
     move-result-object v0
 
-    .line 207
     .local v0, "strReturn":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -605,10 +540,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 208
     const/4 v1, 0x1
 
-    .line 210
     :goto_0
     return v1
 
@@ -622,14 +555,12 @@
     .locals 2
 
     .prologue
-    .line 219
     const-string v1, "audioParam;split_sound_for_call"
 
     invoke-static {v1}, Landroid/media/AudioSystem;->getParameters(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 220
     .local v0, "isRemoteSubmixOn":Ljava/lang/String;
     const-string/jumbo v1, "true"
 
@@ -639,10 +570,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 221
     const/4 v1, 0x1
 
-    .line 223
     :goto_0
     return v1
 
@@ -659,7 +588,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 354
     if-eqz p1, :cond_0
 
     const-string v2, ""
@@ -670,12 +598,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 360
     :cond_0
     :goto_0
     return v1
 
-    .line 356
     :cond_1
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -695,7 +621,6 @@
 
     move-result-object v0
 
-    .line 357
     .local v0, "strIsUsingAudio":Ljava/lang/String;
     const-string/jumbo v2, "true"
 
@@ -709,7 +634,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 358
     const/4 v1, 0x1
 
     goto :goto_0
@@ -720,19 +644,15 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 327
     if-eqz p1, :cond_0
 
-    .line 328
     const-string v0, "audioParam;High_ampere_game=true"
 
     invoke-static {v0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 332
     :goto_0
     return-void
 
-    .line 330
     :cond_0
     const-string v0, "audioParam;High_ampere_game=false"
 
@@ -748,10 +668,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 189
     const/4 v0, 0x1
 
-    .line 190
     .local v0, "GLOBAL_EFFECT_ENABLED":Z
     if-eqz v0, :cond_0
 
@@ -775,12 +693,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 196
     :cond_0
     :goto_0
     return v4
 
-    .line 194
     :cond_1
     iget-object v1, p0, Landroid/media/SamsungAudioManager;->mMySpaceManager:Landroid/media/MySpaceManager;
 
@@ -792,7 +708,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/media/MySpaceManager;->playMySpaceEffect(Landroid/media/AudioAttributes;I)V
 
-    .line 195
     sget-object v1, Landroid/media/SamsungAudioManager;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "playMySpaceEffect RING FADE OUT"
@@ -808,12 +723,10 @@
     .param p2, "trackVolume"    # F
 
     .prologue
-    .line 511
     invoke-static {p2}, Landroid/media/SamsungAudioManager;->clampGainOrLevel(F)F
 
     move-result p2
 
-    .line 512
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -844,7 +757,6 @@
 
     invoke-static {v0}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
-    .line 513
     return-void
 .end method
 
@@ -854,7 +766,6 @@
     .param p2, "trackVolume"    # F
 
     .prologue
-    .line 521
     if-eqz p1, :cond_0
 
     const-string v0, ""
@@ -865,7 +776,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 522
     :cond_0
     sget-object v0, Landroid/media/SamsungAudioManager;->TAG:Ljava/lang/String;
 
@@ -873,17 +783,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 527
     :goto_0
     return-void
 
-    .line 525
     :cond_1
     invoke-static {p2}, Landroid/media/SamsungAudioManager;->clampGainOrLevel(F)F
 
     move-result p2
 
-    .line 526
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -922,7 +829,6 @@
     .param p1, "volume"    # I
 
     .prologue
-    .line 260
     iget-object v0, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -945,7 +851,6 @@
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->setAudioServiceConfig(Ljava/lang/String;)V
 
-    .line 261
     return-void
 .end method
 
@@ -956,12 +861,10 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 284
     iget-object v0, p0, Landroid/media/SamsungAudioManager;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 285
     sget-object v0, Landroid/media/SamsungAudioManager;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1020,13 +923,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 287
     :cond_0
     const/4 v0, 0x3
 
     if-eq p1, v0, :cond_1
 
-    .line 288
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1051,7 +952,6 @@
 
     throw v0
 
-    .line 290
     :cond_1
     iget-object v0, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
@@ -1097,7 +997,6 @@
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->setAudioServiceConfig(Ljava/lang/String;)V
 
-    .line 292
     return-void
 .end method
 
@@ -1106,7 +1005,6 @@
     .param p1, "forced_config"    # I
 
     .prologue
-    .line 395
     iget-object v0, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1129,7 +1027,6 @@
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->setAudioServiceConfig(Ljava/lang/String;)V
 
-    .line 396
     return-void
 .end method
 
@@ -1139,7 +1036,6 @@
     .param p2, "sampleRate"    # I
 
     .prologue
-    .line 318
     iget-object v0, p0, Landroid/media/SamsungAudioManager;->mAudioManager:Landroid/media/AudioManager;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1162,6 +1058,5 @@
 
     invoke-virtual {v0, v1}, Landroid/media/AudioManager;->setAudioServiceConfig(Ljava/lang/String;)V
 
-    .line 319
     return-void
 .end method

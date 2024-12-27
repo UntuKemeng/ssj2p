@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 826
     iput-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$5;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 829
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 830
     .local v0, "action":Ljava/lang/String;
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->access$100()Ljava/lang/String;
@@ -71,7 +68,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 831
     const-string v5, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v5, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -80,18 +76,15 @@
 
     if-eqz v5, :cond_1
 
-    .line 832
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v4
 
-    .line 833
     .local v4, "uri":Landroid/net/Uri;
     invoke-virtual {v4}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 834
     .local v3, "packageName":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$5;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
@@ -106,11 +99,9 @@
 
     move-result-object v2
 
-    .line 835
     .local v2, "msg":Landroid/os/Message;
     iput-object v3, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 836
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$5;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->mContainerHandler:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$ContainerHandler;
@@ -120,7 +111,6 @@
 
     invoke-virtual {v5, v2}, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$ContainerHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 845
     .end local v2    # "msg":Landroid/os/Message;
     .end local v3    # "packageName":Ljava/lang/String;
     .end local v4    # "uri":Landroid/net/Uri;
@@ -128,7 +118,6 @@
     :goto_0
     return-void
 
-    .line 837
     :cond_1
     const-string v5, "android.intent.action.PACKAGE_REMOVED"
 
@@ -138,18 +127,15 @@
 
     if-eqz v5, :cond_0
 
-    .line 838
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v4
 
-    .line 839
     .restart local v4    # "uri":Landroid/net/Uri;
     invoke-virtual {v4}, Landroid/net/Uri;->getSchemeSpecificPart()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 840
     .restart local v3    # "packageName":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$5;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
@@ -159,7 +145,6 @@
 
     move-result v1
 
-    .line 841
     .local v1, "currentUserId":I
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$5;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
@@ -174,11 +159,9 @@
 
     move-result-object v2
 
-    .line 842
     .restart local v2    # "msg":Landroid/os/Message;
     iput-object v3, v2, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 843
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$5;->this$0:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;
 
     # getter for: Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy;->mContainerHandler:Lcom/android/server/enterprise/container/KnoxMUMContainerPolicy$ContainerHandler;

@@ -29,17 +29,14 @@
     .locals 1
 
     .prologue
-    .line 1964
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1966
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mWaitObj:Ljava/lang/Object;
 
-    .line 1967
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/smartclip/SmartClipRemoteRequestSyncManager$RequestInfo;->mResponseArrived:Z

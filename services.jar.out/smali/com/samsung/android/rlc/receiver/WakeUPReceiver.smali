@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 14
     const-class v0, Lcom/samsung/android/rlc/receiver/WakeUPReceiver;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -30,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -44,7 +42,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 19
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -53,7 +50,6 @@
 
     if-nez v1, :cond_2
 
-    .line 20
     :cond_0
     sget-object v1, Lcom/samsung/android/rlc/receiver/WakeUPReceiver;->TAG:Ljava/lang/String;
 
@@ -61,18 +57,15 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 30
     :cond_1
     :goto_0
     return-void
 
-    .line 24
     :cond_2
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 25
     .local v0, "action":Ljava/lang/String;
     sget-object v1, Lcom/samsung/android/rlc/receiver/WakeUPReceiver;->TAG:Ljava/lang/String;
 
@@ -96,7 +89,6 @@
 
     invoke-static {v1, v2}, Lcom/samsung/android/rlc/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 27
     const-string v1, "com.samsung.remotelock.CLIENT_WAKEUP"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -105,7 +97,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 28
     invoke-static {p1}, Lcom/samsung/android/rlc/util/RLCUtil;->getInstance(Landroid/content/Context;)Lcom/samsung/android/rlc/util/RLCUtil;
 
     move-result-object v1

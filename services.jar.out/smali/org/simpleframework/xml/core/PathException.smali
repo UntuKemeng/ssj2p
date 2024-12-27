@@ -10,9 +10,7 @@
     .param p2, "list"    # [Ljava/lang/Object;
 
     .prologue
-    .line 40
     invoke-direct {p0, p1, p2}, Lorg/simpleframework/xml/core/PersistenceException;-><init>(Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 41
     return-void
 .end method

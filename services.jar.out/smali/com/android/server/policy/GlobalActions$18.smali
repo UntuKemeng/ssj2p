@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2092
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$18;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,12 +45,10 @@
 
     const/4 v3, 0x0
 
-    .line 2095
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 2096
     .local v0, "action":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -59,7 +56,6 @@
 
     float-to-int v1, v5
 
-    .line 2097
     .local v1, "eventX":I
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
@@ -67,11 +63,9 @@
 
     float-to-int v2, v5
 
-    .line 2098
     .local v2, "eventY":I
     if-nez v0, :cond_5
 
-    .line 2099
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$4500()Z
 
@@ -139,12 +133,10 @@
 
     if-gt v2, v5, :cond_1
 
-    .line 2131
     :cond_0
     :goto_0
     return v3
 
-    .line 2105
     :cond_1
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$4500()Z
@@ -183,7 +175,6 @@
 
     if-le v1, v5, :cond_0
 
-    .line 2109
     :cond_2
     sget-boolean v5, Lcom/android/server/policy/GlobalActions;->mAccessibiltyShortcutEnabled:Z
 
@@ -198,10 +189,8 @@
 
     move v3, v4
 
-    .line 2110
     goto :goto_0
 
-    .line 2112
     :cond_3
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$4500()Z
@@ -210,7 +199,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 2113
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$18;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->onClickForHidePortraitConfirmDialog(Z)V
@@ -219,10 +207,8 @@
     :goto_1
     move v3, v4
 
-    .line 2117
     goto :goto_0
 
-    .line 2115
     :cond_4
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$18;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -235,16 +221,13 @@
 
     goto :goto_1
 
-    .line 2121
     :cond_5
     if-ne v0, v4, :cond_0
 
-    .line 2122
     sget-boolean v4, Lcom/android/server/policy/GlobalActions;->mAccessibiltyShortcutEnabled:Z
 
     if-eqz v4, :cond_0
 
-    .line 2123
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$4500()Z
 
@@ -252,17 +235,14 @@
 
     if-eqz v4, :cond_6
 
-    .line 2124
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {v3}, Lcom/android/server/policy/GlobalActions;->access$4502(Z)Z
 
     goto :goto_0
 
-    .line 2126
     :cond_6
     sput-boolean v3, Lcom/android/server/policy/GlobalActions;->mAccessibiltyShortcutEnabled:Z
 
-    .line 2127
     iget-object v4, p0, Lcom/android/server/policy/GlobalActions$18;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mHandler:Landroid/os/Handler;

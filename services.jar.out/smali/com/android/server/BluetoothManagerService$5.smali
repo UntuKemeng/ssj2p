@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3171
     iput-object p1, p0, Lcom/android/server/BluetoothManagerService$5;->this$0:Lcom/android/server/BluetoothManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,18 +40,15 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 3174
     iget-object v0, p0, Lcom/android/server/BluetoothManagerService$5;->this$0:Lcom/android/server/BluetoothManagerService;
 
     # invokes: Lcom/android/server/BluetoothManagerService;->cancelChinaPopupState()V
     invoke-static {v0}, Lcom/android/server/BluetoothManagerService;->access$5800(Lcom/android/server/BluetoothManagerService;)V
 
-    .line 3175
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 3176
     :cond_0
     return-void
 .end method

@@ -22,29 +22,22 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mContext:Landroid/content/Context;
 
-    .line 32
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mXMLHandler:Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
 
-    .line 33
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mDBHandler:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
-    .line 36
     iput-object p1, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mContext:Landroid/content/Context;
 
-    .line 37
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mXMLHandler:Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
 
-    .line 38
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -53,7 +46,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mDBHandler:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
-    .line 39
     return-void
 .end method
 
@@ -62,7 +54,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -73,7 +64,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mXMLHandler:Lcom/android/server/enterprise/otp/engine/handler/xml/XMLHandler;
 
     return-object v0
@@ -86,7 +76,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->prepareDataForDbStorage(Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
@@ -99,7 +88,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mDBHandler:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
     return-object v0
@@ -112,7 +100,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->prepareDataForSecureStorage(Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
@@ -125,17 +112,13 @@
     .param p1, "oathProtocol"    # Ljava/lang/String;
 
     .prologue
-    .line 294
     if-nez p1, :cond_0
 
-    .line 295
     const/16 v0, 0x401
 
-    .line 303
     :goto_0
     return v0
 
-    .line 297
     :cond_0
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -151,12 +134,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 298
     const/16 v0, 0x100
 
     goto :goto_0
 
-    .line 299
     :cond_1
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -172,12 +153,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 300
     const/16 v0, 0x101
 
     goto :goto_0
 
-    .line 301
     :cond_2
     sget-object v0, Ljava/util/Locale;->ENGLISH:Ljava/util/Locale;
 
@@ -193,12 +172,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 302
     const/16 v0, 0x102
 
     goto :goto_0
 
-    .line 303
     :cond_3
     const/16 v0, 0x404
 
@@ -214,12 +191,10 @@
     .param p5, "containerId"    # I
 
     .prologue
-    .line 203
     const-string v0, "PSKCProvision::doProvisionInThread Enter"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 204
     new-instance v0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision$1;
 
     move-object v1, p0
@@ -238,7 +213,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision$1;->start()V
 
-    .line 291
     return-void
 .end method
 
@@ -248,12 +222,10 @@
     .param p2, "tokenId"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 104
     .local v1, "bundle":Landroid/os/Bundle;
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
@@ -261,12 +233,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 105
     const-string v2, "OTP_INTERNAL_TOKEN_ID"
 
     invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 106
     const-string v2, "DISPLAY_NAME"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -279,7 +249,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 107
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
     move-result-object v2
@@ -292,18 +261,15 @@
 
     move-result v0
 
-    .line 108
     .local v0, "algoType":I
     const-string v2, "OTP_OATH_PROTOCOL"
 
     invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 109
     const/16 v2, 0x102
 
     if-ne v0, v2, :cond_1
 
-    .line 110
     const-string v2, "OCRA_SUITE"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -320,20 +286,17 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 120
     :cond_0
     :goto_0
     const-string v2, "PSKCProvision::prepareDataForDbStorage KeyPackage Key is extracted"
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 121
     .end local v0    # "algoType":I
     .end local v1    # "bundle":Landroid/os/Bundle;
     :goto_1
     return-object v1
 
-    .line 112
     .restart local v0    # "algoType":I
     .restart local v1    # "bundle":Landroid/os/Bundle;
     :cond_1
@@ -341,7 +304,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 113
     const-string v2, "OTP_PARAM"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -362,14 +324,12 @@
 
     goto :goto_0
 
-    .line 116
     .end local v0    # "algoType":I
     :cond_2
     const-string v2, "PSKCProvision::prepareDataForDbStorage - KeyPage does not contain any Key"
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 117
     const/4 v1, 0x0
 
     goto :goto_1
@@ -381,36 +341,29 @@
     .param p2, "tokenId"    # Ljava/lang/String;
 
     .prologue
-    .line 128
     const-string v7, "PSKCProvision::prepareDataForSecureStorage Enter"
 
     invoke-static {v7}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 129
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 130
     .local v1, "bundle":Landroid/os/Bundle;
     const/4 v6, 0x0
 
-    .line 132
     .local v6, "sharedSecret":Ljava/lang/String;
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 133
     :cond_0
     const/4 v1, 0x0
 
-    .line 198
     .end local v1    # "bundle":Landroid/os/Bundle;
     :goto_0
     return-object v1
 
-    .line 135
     .restart local v1    # "bundle":Landroid/os/Bundle;
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -421,13 +374,11 @@
 
     move-result-object v4
 
-    .line 136
     .local v4, "oathProtocol":Ljava/lang/String;
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->convertStringToAlgoType(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 138
     .local v0, "algoType":I
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
@@ -439,7 +390,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 139
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
     move-result-object v7
@@ -452,13 +402,11 @@
 
     move-result-object v6
 
-    .line 141
     :cond_2
     const-string v7, "OTP_INTERNAL_TOKEN_ID"
 
     invoke-virtual {v1, v7, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 143
     :try_start_0
     const-string v7, "SHARED_SECRET"
 
@@ -472,14 +420,12 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 152
     const-string v7, "OTP_HASH_ALGO"
 
     const/16 v8, 0x170
 
     invoke-virtual {v1, v7, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 155
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
     move-result-object v7
@@ -504,7 +450,6 @@
 
     if-lez v7, :cond_3
 
-    .line 156
     const-string v7, "SECRET_ENCRYPTION_ALGO"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -525,7 +470,6 @@
 
     invoke-virtual {v1, v7, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 158
     const/4 v7, 0x1
 
     new-array v3, v7, [B
@@ -536,13 +480,11 @@
 
     aput-byte v8, v3, v7
 
-    .line 161
     .local v3, "encryptionKey":[B
     const-string v7, "SECRET_ENCRYPTION_KEY"
 
     invoke-virtual {v1, v7, v3}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 164
     .end local v3    # "encryptionKey":[B
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -559,12 +501,10 @@
 
     if-eqz v7, :cond_5
 
-    .line 165
     const/16 v7, 0x102
 
     if-eq v0, v7, :cond_4
 
-    .line 166
     const-string v7, "OTP_LENGTH"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -585,7 +525,6 @@
 
     invoke-virtual {v1, v7, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 168
     :cond_4
     const-string v7, "OTP_ENCODING"
 
@@ -607,25 +546,21 @@
 
     invoke-virtual {v1, v7, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 173
     :cond_5
     const/16 v7, 0x100
 
     if-ne v0, v7, :cond_6
 
-    .line 174
     const-string v7, "PSKCProvision::prepareDataForSecureStorage creating hotp"
 
     invoke-static {v7}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 175
     const-string v7, "OTP_OATH_PROTOCOL"
 
     const/16 v8, 0x100
 
     invoke-virtual {v1, v7, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 176
     const-string v7, "OTP_PARAM"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -646,11 +581,9 @@
 
     goto/16 :goto_0
 
-    .line 145
     :catch_0
     move-exception v2
 
-    .line 146
     .local v2, "e":Ljava/lang/IllegalArgumentException;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -676,31 +609,26 @@
 
     invoke-static {v7}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 147
     const/4 v1, 0x0
 
     goto/16 :goto_0
 
-    .line 178
     .end local v2    # "e":Ljava/lang/IllegalArgumentException;
     :cond_6
     const/16 v7, 0x101
 
     if-ne v0, v7, :cond_7
 
-    .line 179
     const-string v7, "PSKCProvision::prepareDataForSecureStorage creating totp"
 
     invoke-static {v7}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 180
     const-string v7, "OTP_OATH_PROTOCOL"
 
     const/16 v8, 0x101
 
     invoke-virtual {v1, v7, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 181
     const-string v7, "OTP_PARAM"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -721,25 +649,21 @@
 
     goto/16 :goto_0
 
-    .line 183
     :cond_7
     const/16 v7, 0x102
 
     if-ne v0, v7, :cond_a
 
-    .line 184
     const-string v7, "PSKCProvision::prepareDataForSecureStorage creating ocra"
 
     invoke-static {v7}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 185
     const-string v7, "OTP_OATH_PROTOCOL"
 
     const/16 v8, 0x102
 
     invoke-virtual {v1, v7, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 186
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
 
     move-result-object v7
@@ -752,7 +676,6 @@
 
     move-result-object v5
 
-    .line 187
     .local v5, "ocraSuite":Ljava/lang/String;
     invoke-static {v5}, Lcom/android/server/enterprise/otp/OCRACheck;->isOcraSuiteValid(Ljava/lang/String;)Z
 
@@ -766,19 +689,16 @@
 
     if-eqz v7, :cond_9
 
-    .line 189
     :cond_8
     const/4 v1, 0x0
 
     goto/16 :goto_0
 
-    .line 190
     :cond_9
     const-string v7, "OCRA_SUITE"
 
     invoke-virtual {v1, v7, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 191
     const-string v7, "OTP_PARAM"
 
     invoke-virtual {p1}, Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyPackage;->getKey()Lcom/android/server/enterprise/otp/engine/handler/proto/pskc/generic/KeyType;
@@ -799,7 +719,6 @@
 
     goto/16 :goto_0
 
-    .line 193
     .end local v5    # "ocraSuite":Ljava/lang/String;
     :cond_a
     new-instance v7, Ljava/lang/StringBuilder;
@@ -828,7 +747,6 @@
 
     invoke-static {v7}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 195
     const/4 v1, 0x0
 
     goto/16 :goto_0
@@ -841,15 +759,12 @@
     .param p1, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 43
     const-string v0, "PSKCProvision::doProvision ENTER"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 44
     const/4 v6, 0x0
 
-    .line 45
     .local v6, "ret":I
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mContext:Landroid/content/Context;
 
@@ -865,7 +780,6 @@
 
     move-result-object v4
 
-    .line 46
     .local v4, "callerPackage":Ljava/lang/String;
     new-instance v0, Landroid/app/enterprise/ContextInfo;
 
@@ -877,19 +791,15 @@
 
     iget v5, v0, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 47
     .local v5, "containerId":I
     const/4 v2, 0x0
 
-    .line 48
     .local v2, "internalTokenId":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 49
     .local v7, "tokenId":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 52
     .local v1, "pskcBuffer":Ljava/lang/String;
     const-string v0, "OTP_PSKC_XML_DATA"
 
@@ -897,40 +807,32 @@
 
     move-result-object v1
 
-    .line 53
     if-nez v1, :cond_0
 
-    .line 54
     const-string v0, "PSKCProvision::doProvision - Invalid PSKC XML data provided"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 55
     const/16 v6, 0x401
 
-    .line 59
     :cond_0
     if-nez v6, :cond_1
 
-    .line 60
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v4, v5, p1}, Lcom/android/server/enterprise/otp/engine/provision/ProvisionUtil;->setWhitelistAndSignerInfo(Landroid/content/Context;Ljava/lang/String;ILandroid/os/Bundle;)I
 
     move-result v6
 
-    .line 64
     :cond_1
     if-nez v6, :cond_3
 
-    .line 66
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/provision/ProvisionUtil;->generateTokenId(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 67
     const-string v0, "OTP_TOKEN_ID"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -939,49 +841,40 @@
 
     if-nez v7, :cond_2
 
-    .line 68
     const-string v0, "PSKCProvision::doProvision -  No vendor id assigned. Assigning from OTP Service"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 69
     const-string v0, "OTP_TOKEN_ID"
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 70
     move-object v7, v2
 
-    .line 72
     :cond_2
     const-string v0, "OTP_INTERNAL_TOKEN_ID"
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 73
     const-string v0, "TOKEN_STATE"
 
     const/16 v3, 0x300
 
     invoke-virtual {p1, v0, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 74
     const-string v0, "CONTAINER_ID"
 
     invoke-virtual {p1, v0, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 78
     :cond_3
     if-nez v6, :cond_4
 
-    .line 79
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mDBHandler:Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->storeProvisioningData(Landroid/os/Bundle;)I
 
     move-result v6
 
-    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1002,7 +895,6 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 83
     :cond_4
     if-nez v6, :cond_5
 
@@ -1010,14 +902,11 @@
 
     move-object v3, p1
 
-    .line 84
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->doProvisionInThread(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Ljava/lang/String;I)V
 
-    .line 93
     :goto_0
     return-object v7
 
-    .line 86
     :cond_5
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mContext:Landroid/content/Context;
 
@@ -1025,12 +914,10 @@
 
     invoke-static {v0, v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->showUserToast(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 87
     iget-object v0, p0, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;->mContext:Landroid/content/Context;
 
     invoke-static {v0, v7, v4, v5, v6}, Lcom/android/server/enterprise/otp/OtpCallback;->otpStatusCallbackInThread(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 89
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1066,12 +953,10 @@
     .param p2, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 98
     const-string v0, "PSKCProvision::doResync - not supported"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 99
     const/16 v0, 0x4ff
 
     return v0

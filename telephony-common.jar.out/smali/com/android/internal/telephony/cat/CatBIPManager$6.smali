@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 1919
     invoke-static {}, Landroid/net/NetworkInfo$State;->values()[Landroid/net/NetworkInfo$State;
 
     move-result-object v0
@@ -83,7 +82,6 @@
     :try_end_2
     .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_3
 
-    .line 921
     :goto_2
     invoke-static {}, Lcom/android/internal/telephony/cat/AppInterface$CommandType;->values()[Lcom/android/internal/telephony/cat/AppInterface$CommandType;
 
@@ -160,7 +158,6 @@
 
     goto :goto_3
 
-    .line 1919
     :catch_3
     move-exception v0
 

@@ -25,13 +25,10 @@
     .param p3, "featureId"    # I
 
     .prologue
-    .line 231
     iput-object p1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
-    .line 232
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;-><init>(Lcom/android/internal/policy/MultiPhoneWindow;Landroid/content/Context;I)V
 
-    .line 233
     return-void
 .end method
 
@@ -53,7 +50,6 @@
 
     const/4 v8, 0x1
 
-    .line 550
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->isDesktopMode()Z
@@ -62,39 +58,30 @@
 
     if-nez v6, :cond_1
 
-    .line 551
     invoke-super {p0, p1, p2}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->adjustPenWindowSize(Landroid/graphics/Rect;F)V
 
-    .line 624
     :cond_0
     :goto_0
     return-void
 
-    .line 555
     :cond_1
     const/4 v3, 0x0
 
-    .line 556
     .local v3, "UNDER_MIN_WIDTH":I
     const/4 v1, 0x1
 
-    .line 557
     .local v1, "EXCEED_MAX_WIDTH":I
     const/4 v2, 0x2
 
-    .line 558
     .local v2, "UNDER_MIN_HEIGHT":I
     const/4 v0, 0x3
 
-    .line 559
     .local v0, "EXCEED_MAX_HEIGHT":I
     const/4 v5, -0x1
 
-    .line 560
     .local v5, "what":I
     const/4 v4, 0x1
 
-    .line 561
     .local v4, "lastStackBoundIsMax":Z
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -130,11 +117,9 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 563
     :cond_2
     const/4 v4, 0x0
 
-    .line 567
     :cond_3
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
@@ -144,7 +129,6 @@
 
     if-ge v6, v7, :cond_9
 
-    .line 568
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     invoke-virtual {v6, v9}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->isEdge(I)Z
@@ -153,7 +137,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 569
     iget v6, p1, Landroid/graphics/Rect;->right:I
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMinWidth:I
@@ -162,12 +145,10 @@
 
     iput v6, p1, Landroid/graphics/Rect;->left:I
 
-    .line 573
     :cond_4
     :goto_1
     const/4 v5, 0x0
 
-    .line 583
     :cond_5
     :goto_2
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
@@ -178,7 +159,6 @@
 
     if-ge v6, v7, :cond_d
 
-    .line 584
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     invoke-virtual {v6, v8}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->isEdge(I)Z
@@ -187,7 +167,6 @@
 
     if-eqz v6, :cond_c
 
-    .line 585
     iget v6, p1, Landroid/graphics/Rect;->bottom:I
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMinHeight:I
@@ -196,12 +175,10 @@
 
     iput v6, p1, Landroid/graphics/Rect;->top:I
 
-    .line 589
     :cond_6
     :goto_3
     const/4 v5, 0x2
 
-    .line 599
     :cond_7
     :goto_4
     const/4 v6, 0x0
@@ -210,12 +187,10 @@
 
     if-eqz v6, :cond_0
 
-    .line 600
     packed-switch v5, :pswitch_data_0
 
     goto :goto_0
 
-    .line 603
     :pswitch_0
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -225,7 +200,6 @@
 
     if-eqz v6, :cond_10
 
-    .line 604
     iget v6, p1, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
@@ -246,7 +220,6 @@
 
     goto :goto_0
 
-    .line 570
     :cond_8
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -256,7 +229,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 571
     iget v6, p1, Landroid/graphics/Rect;->left:I
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMinWidth:I
@@ -267,7 +239,6 @@
 
     goto :goto_1
 
-    .line 574
     :cond_9
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
@@ -287,7 +258,6 @@
 
     if-nez v4, :cond_5
 
-    .line 575
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     invoke-virtual {v6, v9}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->isEdge(I)Z
@@ -296,7 +266,6 @@
 
     if-eqz v6, :cond_b
 
-    .line 576
     iget v6, p1, Landroid/graphics/Rect;->right:I
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMaxWidth:I
@@ -305,14 +274,12 @@
 
     iput v6, p1, Landroid/graphics/Rect;->left:I
 
-    .line 580
     :cond_a
     :goto_5
     const/4 v5, 0x1
 
     goto :goto_2
 
-    .line 577
     :cond_b
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -322,7 +289,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 578
     iget v6, p1, Landroid/graphics/Rect;->left:I
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMaxWidth:I
@@ -333,7 +299,6 @@
 
     goto :goto_5
 
-    .line 586
     :cond_c
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -343,7 +308,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 587
     iget v6, p1, Landroid/graphics/Rect;->top:I
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMinHeight:I
@@ -354,7 +318,6 @@
 
     goto :goto_3
 
-    .line 590
     :cond_d
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
 
@@ -374,7 +337,6 @@
 
     if-nez v4, :cond_7
 
-    .line 591
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     invoke-virtual {v6, v8}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->isEdge(I)Z
@@ -383,7 +345,6 @@
 
     if-eqz v6, :cond_f
 
-    .line 592
     iget v6, p1, Landroid/graphics/Rect;->bottom:I
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMaxHeight:I
@@ -392,14 +353,12 @@
 
     iput v6, p1, Landroid/graphics/Rect;->top:I
 
-    .line 596
     :cond_e
     :goto_6
     const/4 v5, 0x3
 
     goto/16 :goto_4
 
-    .line 593
     :cond_f
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -409,7 +368,6 @@
 
     if-eqz v6, :cond_e
 
-    .line 594
     iget v6, p1, Landroid/graphics/Rect;->top:I
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMaxHeight:I
@@ -420,7 +378,6 @@
 
     goto :goto_6
 
-    .line 606
     :cond_10
     iget v6, p1, Landroid/graphics/Rect;->top:I
 
@@ -442,7 +399,6 @@
 
     goto/16 :goto_0
 
-    .line 612
     :pswitch_1
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -452,7 +408,6 @@
 
     if-eqz v6, :cond_11
 
-    .line 613
     iget v6, p1, Landroid/graphics/Rect;->right:I
 
     invoke-virtual {p1}, Landroid/graphics/Rect;->height()I
@@ -471,7 +426,6 @@
 
     goto/16 :goto_0
 
-    .line 615
     :cond_11
     iget v6, p1, Landroid/graphics/Rect;->left:I
 
@@ -491,7 +445,6 @@
 
     goto/16 :goto_0
 
-    .line 600
     nop
 
     :pswitch_data_0
@@ -508,10 +461,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 781
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 783
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->isDesktopMode()Z
@@ -520,7 +471,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 784
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
@@ -531,14 +481,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 785
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     if-eqz v0, :cond_0
 
-    .line 786
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -549,12 +497,10 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->drawDesktopWindowHeader(Z)V
 
-    .line 801
     :cond_0
     :goto_0
     return-void
 
-    .line 788
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -566,14 +512,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 789
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopSplitWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     if-eqz v0, :cond_0
 
-    .line 790
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopSplitWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -582,7 +526,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->updateWindowHeaderViewVisibility(I)V
 
-    .line 791
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopSplitWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -595,7 +538,6 @@
 
     goto :goto_0
 
-    .line 793
     :cond_2
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -607,14 +549,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 794
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopNormalWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     if-eqz v0, :cond_0
 
-    .line 795
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopNormalWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -633,7 +573,6 @@
     .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->dispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -646,7 +585,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 407
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -657,22 +595,18 @@
 
     if-nez v14, :cond_0
 
-    .line 408
     invoke-super/range {p0 .. p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
 
     move-result v14
 
-    .line 532
     :goto_0
     return v14
 
-    .line 411
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v12
 
-    .line 413
     .local v12, "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     const/4 v14, 0x0
 
@@ -688,7 +622,6 @@
 
     const/4 v8, 0x1
 
-    .line 414
     .local v8, "isMouse":Z
     :goto_1
     move-object/from16 v0, p0
@@ -699,7 +632,6 @@
 
     move-result v5
 
-    .line 415
     .local v5, "isDesktopMode":Z
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -709,7 +641,6 @@
 
     move-result v9
 
-    .line 416
     .local v9, "isNormal":Z
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -719,7 +650,6 @@
 
     move-result v10
 
-    .line 417
     .local v10, "isSplit":Z
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -729,18 +659,15 @@
 
     move-result v3
 
-    .line 419
     .local v3, "isCascade":Z
     if-nez v8, :cond_2
 
-    .line 420
     invoke-virtual/range {p0 .. p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->superDispatchHoverEventMW(Landroid/view/MotionEvent;)Z
 
     move-result v14
 
     goto :goto_0
 
-    .line 413
     .end local v3    # "isCascade":Z
     .end local v5    # "isDesktopMode":Z
     .end local v8    # "isMouse":Z
@@ -751,7 +678,6 @@
 
     goto :goto_1
 
-    .line 423
     .restart local v3    # "isCascade":Z
     .restart local v5    # "isDesktopMode":Z
     .restart local v8    # "isMouse":Z
@@ -762,7 +688,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 425
     if-eqz v9, :cond_3
 
     move-object/from16 v0, p0
@@ -784,7 +709,6 @@
 
     if-nez v14, :cond_3
 
-    .line 426
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v14
@@ -807,7 +731,6 @@
 
     const/4 v13, 0x0
 
-    .line 427
     .local v13, "visible":I
     :goto_2
     move-object/from16 v0, p0
@@ -818,7 +741,6 @@
 
     invoke-virtual {v14}, Landroid/view/View;->bringToFront()V
 
-    .line 428
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -827,7 +749,6 @@
 
     invoke-virtual {v14, v13}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->updateWindowHeaderViewVisibility(I)V
 
-    .line 432
     .end local v13    # "visible":I
     :cond_3
     if-eqz v10, :cond_4
@@ -840,7 +761,6 @@
 
     if-eqz v14, :cond_4
 
-    .line 433
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -851,7 +771,6 @@
 
     invoke-virtual {v14, v15}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->updateWindowHeaderViewVisibility(I)V
 
-    .line 437
     :cond_4
     if-eqz v3, :cond_5
 
@@ -863,7 +782,6 @@
 
     if-eqz v14, :cond_8
 
-    .line 438
     :cond_5
     move-object/from16 v0, p0
 
@@ -875,7 +793,6 @@
 
     if-eq v14, v15, :cond_6
 
-    .line 440
     :try_start_0
     move-object/from16 v0, p0
 
@@ -885,7 +802,6 @@
 
     iput v15, v14, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mLastHoverIcon:I
 
-    .line 441
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -898,7 +814,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 447
     :cond_6
     :goto_3
     invoke-virtual/range {p0 .. p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->superDispatchHoverEventMW(Landroid/view/MotionEvent;)Z
@@ -907,17 +822,14 @@
 
     goto/16 :goto_0
 
-    .line 426
     :cond_7
     const/16 v13, 0x8
 
     goto :goto_2
 
-    .line 442
     :catch_0
     move-exception v1
 
-    .line 443
     .local v1, "e":Landroid/os/RemoteException;
     const-string v14, "DesktopMultiPhoneWindow"
 
@@ -927,7 +839,6 @@
 
     goto :goto_3
 
-    .line 450
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_8
     if-eqz v9, :cond_9
@@ -958,18 +869,15 @@
 
     if-gez v14, :cond_9
 
-    .line 451
     invoke-virtual/range {p0 .. p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->superDispatchHoverEventMW(Landroid/view/MotionEvent;)Z
 
     move-result v14
 
     goto/16 :goto_0
 
-    .line 454
     :cond_9
     const/4 v2, -0x1
 
-    .line 455
     .local v2, "hoverIcon":I
     const/high16 v14, 0x10000
 
@@ -977,7 +885,6 @@
 
     move-result v7
 
-    .line 457
     .local v7, "isFixedSize":Z
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -995,7 +902,6 @@
 
     if-ne v14, v15, :cond_19
 
-    .line 459
     :cond_a
     move-object/from16 v0, p0
 
@@ -1003,7 +909,6 @@
 
     invoke-virtual {v14}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->clear()V
 
-    .line 461
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -1012,7 +917,6 @@
 
     move-result-object v11
 
-    .line 463
     .local v11, "stackBounds":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -1026,7 +930,6 @@
 
     if-eqz v14, :cond_b
 
-    .line 464
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -1035,7 +938,6 @@
 
     invoke-virtual {v11, v14}, Landroid/graphics/Rect;->scale(F)V
 
-    .line 468
     :cond_b
     move-object/from16 v0, p0
 
@@ -1052,7 +954,6 @@
 
     invoke-virtual {v14, v11, v15}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->set(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 469
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
@@ -1075,7 +976,6 @@
 
     invoke-virtual/range {v14 .. v16}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->check(II)V
 
-    .line 471
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
@@ -1084,7 +984,6 @@
 
     move-result v6
 
-    .line 472
     .local v6, "isEdge":Z
     move-object/from16 v0, p0
 
@@ -1094,7 +993,6 @@
 
     move-result v4
 
-    .line 474
     .local v4, "isCorner":Z
     if-nez v7, :cond_13
 
@@ -1106,14 +1004,12 @@
 
     if-nez v4, :cond_13
 
-    .line 475
     const/4 v14, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mConsumeHoverEvent:Z
 
-    .line 476
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -1122,7 +1018,6 @@
 
     if-eqz v14, :cond_10
 
-    .line 477
     if-nez v8, :cond_c
 
     move-object/from16 v0, p0
@@ -1145,11 +1040,9 @@
 
     if-gt v14, v15, :cond_d
 
-    .line 479
     :cond_c
     const/16 v2, 0x79
 
-    .line 481
     :cond_d
     const/4 v14, 0x0
 
@@ -1157,20 +1050,17 @@
 
     iput-boolean v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mConsumeHoverEvent:Z
 
-    .line 490
     :goto_4
     move-object/from16 v0, p0
 
     iput-boolean v6, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastHoverEdge:Z
 
-    .line 491
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastCorner:Z
 
-    .line 521
     .end local v4    # "isCorner":Z
     .end local v6    # "isEdge":Z
     .end local v11    # "stackBounds":Landroid/graphics/Rect;
@@ -1178,7 +1068,6 @@
     :goto_5
     if-lez v2, :cond_f
 
-    .line 522
     :try_start_1
     move-object/from16 v0, p0
 
@@ -1186,14 +1075,12 @@
 
     iput v2, v14, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mLastHoverIcon:I
 
-    .line 523
     const/4 v14, -0x1
 
     invoke-static {v2, v14}, Landroid/view/PointerIcon;->setMouseIcon(II)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 529
     :cond_f
     :goto_6
     move-object/from16 v0, p0
@@ -1202,12 +1089,10 @@
 
     if-eqz v14, :cond_1a
 
-    .line 530
     const/4 v14, 0x1
 
     goto/16 :goto_0
 
-    .line 482
     .restart local v4    # "isCorner":Z
     .restart local v6    # "isEdge":Z
     .restart local v11    # "stackBounds":Landroid/graphics/Rect;
@@ -1224,12 +1109,10 @@
 
     if-eqz v14, :cond_11
 
-    .line 483
     const/16 v2, 0x7b
 
     goto :goto_4
 
-    .line 484
     :cond_11
     move-object/from16 v0, p0
 
@@ -1243,16 +1126,13 @@
 
     if-eqz v14, :cond_12
 
-    .line 485
     const/16 v2, 0x7a
 
     goto :goto_4
 
-    .line 487
     :cond_12
     const/16 v2, 0x79
 
-    .line 488
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
@@ -1261,7 +1141,6 @@
 
     goto :goto_4
 
-    .line 492
     :cond_13
     if-nez v7, :cond_e
 
@@ -1271,14 +1150,12 @@
 
     if-eq v14, v4, :cond_e
 
-    .line 493
     const/4 v14, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mConsumeHoverEvent:Z
 
-    .line 494
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
@@ -1301,7 +1178,6 @@
 
     if-nez v14, :cond_16
 
-    .line 495
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
@@ -1314,17 +1190,14 @@
 
     if-eqz v14, :cond_15
 
-    .line 496
     const/16 v2, 0x7d
 
-    .line 510
     :cond_14
     :goto_7
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastCorner:Z
 
-    .line 511
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
@@ -1333,7 +1206,6 @@
 
     goto :goto_5
 
-    .line 497
     :cond_15
     move-object/from16 v0, p0
 
@@ -1347,12 +1219,10 @@
 
     if-eqz v14, :cond_14
 
-    .line 498
     const/16 v2, 0x7c
 
     goto :goto_7
 
-    .line 500
     :cond_16
     move-object/from16 v0, p0
 
@@ -1384,7 +1254,6 @@
 
     if-nez v14, :cond_18
 
-    .line 501
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
@@ -1397,12 +1266,10 @@
 
     if-eqz v14, :cond_17
 
-    .line 502
     const/16 v2, 0x7c
 
     goto :goto_7
 
-    .line 503
     :cond_17
     move-object/from16 v0, p0
 
@@ -1416,16 +1283,13 @@
 
     if-eqz v14, :cond_14
 
-    .line 504
     const/16 v2, 0x7d
 
     goto :goto_7
 
-    .line 507
     :cond_18
     const/16 v2, 0x79
 
-    .line 508
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
@@ -1434,7 +1298,6 @@
 
     goto :goto_7
 
-    .line 513
     .end local v4    # "isCorner":Z
     .end local v6    # "isEdge":Z
     .end local v11    # "stackBounds":Landroid/graphics/Rect;
@@ -1447,24 +1310,20 @@
 
     if-ne v14, v15, :cond_e
 
-    .line 514
     const/16 v2, 0x79
 
-    .line 515
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mConsumeHoverEvent:Z
 
-    .line 516
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v14, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastHoverEdge:Z
 
-    .line 517
     const/4 v14, 0x0
 
     move-object/from16 v0, p0
@@ -1473,11 +1332,9 @@
 
     goto/16 :goto_5
 
-    .line 525
     :catch_1
     move-exception v1
 
-    .line 526
     .restart local v1    # "e":Landroid/os/RemoteException;
     const-string v14, "DesktopMultiPhoneWindow"
 
@@ -1503,7 +1360,6 @@
 
     goto/16 :goto_6
 
-    .line 532
     .end local v1    # "e":Landroid/os/RemoteException;
     :cond_1a
     invoke-virtual/range {p0 .. p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->superDispatchHoverEventMW(Landroid/view/MotionEvent;)Z
@@ -1518,7 +1374,6 @@
     .param p1, "x0"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
@@ -1531,7 +1386,6 @@
     .param p1, "x0"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->dispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
@@ -1544,7 +1398,6 @@
     .param p1, "x0"    # Landroid/view/accessibility/AccessibilityEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->dispatchPopulateAccessibilityEventInternal(Landroid/view/accessibility/AccessibilityEvent;)Z
 
     move-result v0
@@ -1557,7 +1410,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 240
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -1577,7 +1429,6 @@
 
     const/4 v5, 0x1
 
-    .line 245
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mIsDesktopTouchBlocked:Z
@@ -1587,23 +1438,19 @@
 
     if-eqz v6, :cond_1
 
-    .line 246
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->superDispatchTouchEventMW(Landroid/view/MotionEvent;)Z
 
     move-result v5
 
-    .line 402
     :cond_0
     :goto_0
     return v5
 
-    .line 249
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v3
 
-    .line 250
     .local v3, "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     invoke-virtual {v3}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isCascade()Z
 
@@ -1619,23 +1466,19 @@
 
     if-eqz v6, :cond_3
 
-    .line 251
     :cond_2
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->dismissGuide()V
 
-    .line 253
     if-nez p2, :cond_0
 
-    .line 257
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->superDispatchTouchEventMW(Landroid/view/MotionEvent;)Z
 
     move-result v5
 
     goto :goto_0
 
-    .line 260
     :cond_3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -1712,23 +1555,19 @@
 
     if-gez v6, :cond_5
 
-    .line 263
     :cond_4
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->clear()V
 
-    .line 265
     if-nez p2, :cond_0
 
-    .line 269
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->superDispatchTouchEventMW(Landroid/view/MotionEvent;)Z
 
     move-result v5
 
     goto :goto_0
 
-    .line 272
     :cond_5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1736,19 +1575,16 @@
 
     packed-switch v6, :pswitch_data_0
 
-    .line 398
     :cond_6
     :goto_1
     if-nez p2, :cond_0
 
-    .line 402
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->superDispatchTouchEventMW(Landroid/view/MotionEvent;)Z
 
     move-result v5
 
     goto :goto_0
 
-    .line 274
     :pswitch_0
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -1760,7 +1596,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 275
     sget-boolean v5, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->DEBUG:Z
 
     if-eqz v5, :cond_7
@@ -1771,7 +1606,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 276
     :cond_7
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->superDispatchTouchEventMW(Landroid/view/MotionEvent;)Z
 
@@ -1779,7 +1613,6 @@
 
     goto/16 :goto_0
 
-    .line 278
     :cond_8
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getButtonState()I
 
@@ -1789,28 +1622,23 @@
 
     if-eqz v6, :cond_9
 
-    .line 279
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iput-boolean v5, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mIsPenButtonPressed:Z
 
-    .line 281
     :cond_9
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->initStackBound()V
 
-    .line 282
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->clear()V
 
-    .line 283
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    .line 285
     .local v2, "rect":Landroid/graphics/Rect;
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -1820,7 +1648,6 @@
 
     invoke-virtual {v2, v6}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 287
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     iget-object v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -1832,7 +1659,6 @@
 
     invoke-virtual {v6, v2, v7}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->set(Landroid/graphics/Rect;Landroid/graphics/Rect;)V
 
-    .line 289
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v6
@@ -1841,7 +1667,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastMoveX:I
 
-    .line 290
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v6
@@ -1850,7 +1675,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastMoveY:I
 
-    .line 291
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastMoveX:I
@@ -1859,20 +1683,17 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->check(II)V
 
-    .line 294
     new-instance v1, Landroid/content/Intent;
 
     const-string v6, "com.sec.android.OUTSIDE_TOUCH"
 
     invoke-direct {v1, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 295
     .local v1, "intent":Landroid/content/Intent;
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 297
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->isEdge()Z
@@ -1887,7 +1708,6 @@
 
     if-nez v6, :cond_6
 
-    .line 298
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-boolean v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mIsSupportDiagonalResizable:Z
@@ -1902,13 +1722,11 @@
 
     if-eqz v6, :cond_6
 
-    .line 301
     :cond_a
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->forceHideInputMethod()Z
 
-    .line 302
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -1917,10 +1735,8 @@
 
     invoke-virtual {v6, v0}, Landroid/view/View;->performHapticFeedback(I)Z
 
-    .line 303
     iput-boolean v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mIsResize:Z
 
-    .line 305
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -1933,7 +1749,6 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 306
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
     iget-object v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -1942,7 +1757,6 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 308
     new-instance v4, Landroid/graphics/Rect;
 
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -1953,27 +1767,23 @@
 
     invoke-direct {v4, v6}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 309
     .local v4, "tempStackBound":Landroid/graphics/Rect;
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6, v4, v0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->showGuideDT(Landroid/graphics/Rect;I)V
 
-    .line 311
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-boolean v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mContentLayoutGenerated:Z
 
     if-eqz v6, :cond_0
 
-    .line 312
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     if-eqz v6, :cond_0
 
-    .line 313
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -1982,7 +1792,6 @@
 
     goto/16 :goto_0
 
-    .line 322
     .end local v1    # "intent":Landroid/content/Intent;
     .end local v2    # "rect":Landroid/graphics/Rect;
     .end local v4    # "tempStackBound":Landroid/graphics/Rect;
@@ -2016,7 +1825,6 @@
 
     if-eqz v6, :cond_f
 
-    .line 324
     :cond_c
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2043,7 +1851,6 @@
     :cond_d
     move v0, v5
 
-    .line 327
     .local v0, "fixedRatio":Z
     :cond_e
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -2052,12 +1859,10 @@
 
     if-nez v6, :cond_0
 
-    .line 328
     invoke-virtual {p0, v0, p1, v3}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->resizePenWindow(ZLandroid/view/MotionEvent;Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
     goto/16 :goto_0
 
-    .line 331
     .end local v0    # "fixedRatio":Z
     :cond_f
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
@@ -2068,7 +1873,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 332
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v6
@@ -2077,7 +1881,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastMoveX:I
 
-    .line 333
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v6
@@ -2086,7 +1889,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastMoveY:I
 
-    .line 334
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastMoveX:I
@@ -2095,7 +1897,6 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->check(II)V
 
-    .line 335
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-boolean v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mIsSupportDiagonalResizable:Z
@@ -2119,13 +1920,11 @@
 
     if-eqz v6, :cond_6
 
-    .line 336
     :cond_11
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->forceHideInputMethod()Z
 
-    .line 337
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -2134,7 +1933,6 @@
 
     invoke-virtual {v6, v0}, Landroid/view/View;->performHapticFeedback(I)Z
 
-    .line 339
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -2147,7 +1945,6 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 340
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
     iget-object v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -2156,7 +1953,6 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 342
     new-instance v4, Landroid/graphics/Rect;
 
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -2167,46 +1963,37 @@
 
     invoke-direct {v4, v6}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 343
     .restart local v4    # "tempStackBound":Landroid/graphics/Rect;
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6, v4, v0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->showGuideDT(Landroid/graphics/Rect;I)V
 
-    .line 345
     iput-boolean v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mIsResize:Z
 
-    .line 346
     const/4 v6, 0x3
 
     invoke-virtual {p1, v6}, Landroid/view/MotionEvent;->setAction(I)V
 
     goto/16 :goto_1
 
-    .line 354
     .end local v4    # "tempStackBound":Landroid/graphics/Rect;
     :pswitch_2
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iput-boolean v0, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mIsPenButtonPressed:Z
 
-    .line 355
     iput-boolean v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mIsResize:Z
 
-    .line 356
     iput v9, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mFixedRatio:F
 
-    .line 358
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->dismissGuide()V
 
-    .line 360
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     if-eqz v6, :cond_6
 
-    .line 361
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->isEdge()Z
@@ -2215,7 +2002,6 @@
 
     if-eqz v6, :cond_1b
 
-    .line 362
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-boolean v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mIsSupportDiagonalResizable:Z
@@ -2230,7 +2016,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 365
     :cond_12
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
@@ -2270,7 +2055,6 @@
 
     if-eqz v6, :cond_16
 
-    .line 368
     :cond_15
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2278,7 +2062,6 @@
 
     goto/16 :goto_0
 
-    .line 371
     :cond_16
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2290,7 +2073,6 @@
 
     if-eqz v6, :cond_1a
 
-    .line 372
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -2299,7 +2081,6 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 373
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -2308,7 +2089,6 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->checkMaxStackSize(Landroid/graphics/Rect;)V
 
-    .line 374
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -2321,7 +2101,6 @@
 
     if-nez v6, :cond_18
 
-    .line 375
     sget-boolean v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->DEBUG:Z
 
     if-eqz v6, :cond_17
@@ -2378,7 +2157,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     :cond_17
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
@@ -2388,7 +2166,6 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 379
     :cond_18
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2396,7 +2173,6 @@
 
     if-eqz v6, :cond_19
 
-    .line 380
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
     iget-object v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -2411,7 +2187,6 @@
 
     if-eqz v6, :cond_19
 
-    .line 381
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -2420,7 +2195,6 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->setWindowHeaderAlpha(F)V
 
-    .line 385
     :cond_19
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2428,7 +2202,6 @@
 
     invoke-virtual {v6, v7}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->setStackBound(Landroid/graphics/Rect;)V
 
-    .line 387
     :cond_1a
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2436,19 +2209,16 @@
 
     invoke-virtual {v6}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 388
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
     invoke-virtual {v6}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 389
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->adjustScaleFactor()V
 
     goto/16 :goto_0
 
-    .line 392
     :cond_1b
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -2456,7 +2226,6 @@
 
     goto/16 :goto_1
 
-    .line 272
     nop
 
     :pswitch_data_0
@@ -2473,7 +2242,6 @@
     .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->dispatchTrackballEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -2486,7 +2254,6 @@
     .param p1, "x0"    # J
 
     .prologue
-    .line 230
     invoke-super {p0, p1, p2}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->dispatchWallpaperAnimationStart(J)V
 
     return-void
@@ -2497,7 +2264,6 @@
     .param p1, "x0"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->draw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -2508,7 +2274,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 628
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mBorder:Lcom/android/internal/policy/multiwindow/Border;
@@ -2521,10 +2286,8 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/multiwindow/Border;->setDesktopMode(Z)V
 
-    .line 629
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->drawBorder(Landroid/graphics/Canvas;)V
 
-    .line 630
     return-void
 .end method
 
@@ -2532,7 +2295,6 @@
     .locals 0
 
     .prologue
-    .line 230
     invoke-super {p0}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->finishChanging()V
 
     return-void
@@ -2542,7 +2304,6 @@
     .locals 1
 
     .prologue
-    .line 633
     iget-boolean v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mIsResize:Z
 
     return v0
@@ -2552,7 +2313,6 @@
     .locals 1
 
     .prologue
-    .line 230
     invoke-super {p0}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->isTransitionGroup()Z
 
     move-result v0
@@ -2565,7 +2325,6 @@
     .param p1, "x0"    # Landroid/view/WindowInsets;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onApplyWindowInsets(Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
     move-result-object v0
@@ -2578,7 +2337,6 @@
     .param p1, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onCloseSystemDialogs(Ljava/lang/String;)V
 
     return-void
@@ -2589,17 +2347,14 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 770
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 772
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopNormalWindowHeaderView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 773
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     # getter for: Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mIsDesktopViewBlocked:Z
@@ -2617,7 +2372,6 @@
 
     if-nez v0, :cond_1
 
-    .line 774
     :cond_0
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2627,7 +2381,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->updateWindowHeaderViewVisibility(I)V
 
-    .line 777
     :cond_1
     return-void
 .end method
@@ -2636,7 +2389,6 @@
     .locals 0
 
     .prologue
-    .line 230
     invoke-super {p0}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onDetachedFromWindow()V
 
     return-void
@@ -2647,7 +2399,6 @@
     .param p1, "x0"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onDraw(Landroid/graphics/Canvas;)V
 
     return-void
@@ -2658,7 +2409,6 @@
     .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -2671,7 +2421,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onRootViewScrollYChanged(I)V
 
     return-void
@@ -2682,7 +2431,6 @@
     .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -2695,10 +2443,8 @@
     .param p1, "hasWindowFocus"    # Z
 
     .prologue
-    .line 537
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onWindowFocusChanged(Z)V
 
-    .line 539
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->isDesktopMode()Z
@@ -2707,7 +2453,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 540
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
@@ -2724,19 +2469,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 541
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopSplitWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;->drawDesktopWindowHeader(Z)V
 
-    .line 546
     :cond_0
     :goto_0
     return-void
 
-    .line 542
     :cond_1
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -2754,7 +2496,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 543
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopNormalWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -2769,7 +2510,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->onWindowSystemUiVisibilityChanged(I)V
 
     return-void
@@ -2782,7 +2522,6 @@
     .param p3, "style"    # Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     .prologue
-    .line 638
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v6}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->isDesktopMode()Z
@@ -2791,14 +2530,11 @@
 
     if-nez v6, :cond_0
 
-    .line 639
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->resizePenWindow(ZLandroid/view/MotionEvent;Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 765
     :goto_0
     return-void
 
-    .line 643
     :cond_0
     const/high16 v6, 0x10000
 
@@ -2808,7 +2544,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 644
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
@@ -2819,7 +2554,6 @@
 
     goto :goto_0
 
-    .line 648
     :cond_1
     const/16 v6, 0x800
 
@@ -2829,15 +2563,12 @@
 
     if-nez v6, :cond_2
 
-    .line 653
     :cond_2
     const/4 v3, 0x0
 
-    .line 654
     .local v3, "resizable":Z
     if-eqz p1, :cond_11
 
-    .line 655
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
     invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
@@ -2858,10 +2589,8 @@
 
     if-lt v6, v7, :cond_3
 
-    .line 656
     const/4 v3, 0x1
 
-    .line 663
     :cond_3
     :goto_1
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
@@ -2874,7 +2603,6 @@
 
     if-eqz v6, :cond_12
 
-    .line 664
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v6
@@ -2887,7 +2615,6 @@
 
     sub-int v0, v6, v7
 
-    .line 665
     .local v0, "dx":I
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2905,14 +2632,12 @@
 
     if-le v6, v7, :cond_5
 
-    .line 666
     if-nez v3, :cond_4
 
     if-eqz p1, :cond_5
 
     if-gez v0, :cond_5
 
-    .line 667
     :cond_4
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2924,10 +2649,8 @@
 
     iput v7, v6, Landroid/graphics/Rect;->left:I
 
-    .line 668
     const/4 v3, 0x1
 
-    .line 684
     .end local v0    # "dx":I
     :cond_5
     :goto_2
@@ -2941,7 +2664,6 @@
 
     if-eqz v6, :cond_8
 
-    .line 685
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v6
@@ -2956,7 +2678,6 @@
 
     float-to-int v1, v6
 
-    .line 686
     .local v1, "dy":I
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2974,14 +2695,12 @@
 
     if-le v6, v7, :cond_8
 
-    .line 687
     if-nez v3, :cond_6
 
     if-eqz p1, :cond_8
 
     if-lez v1, :cond_8
 
-    .line 688
     :cond_6
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -2993,7 +2712,6 @@
 
     iput v7, v6, Landroid/graphics/Rect;->bottom:I
 
-    .line 689
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -3006,7 +2724,6 @@
 
     if-gt v6, v7, :cond_7
 
-    .line 690
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -3023,11 +2740,9 @@
 
     iput v7, v6, Landroid/graphics/Rect;->bottom:I
 
-    .line 692
     :cond_7
     const/4 v3, 0x1
 
-    .line 696
     .end local v1    # "dy":I
     :cond_8
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -3038,12 +2753,10 @@
 
     invoke-virtual {p0, v6, v7}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->adjustPenWindowSize(Landroid/graphics/Rect;F)V
 
-    .line 699
     if-eqz p1, :cond_d
 
     if-eqz v3, :cond_d
 
-    .line 700
     iget v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mFixedRatio:F
 
     const/4 v7, 0x0
@@ -3052,7 +2765,6 @@
 
     if-nez v6, :cond_9
 
-    .line 701
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
     invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
@@ -3073,7 +2785,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mFixedRatio:F
 
-    .line 703
     :cond_9
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3083,7 +2794,6 @@
 
     move-result v5
 
-    .line 704
     .local v5, "width":I
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3093,7 +2803,6 @@
 
     move-result v2
 
-    .line 706
     .local v2, "height":I
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -3115,7 +2824,6 @@
 
     if-eqz v6, :cond_16
 
-    .line 707
     :cond_a
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3125,7 +2833,6 @@
 
     move-result v5
 
-    .line 708
     int-to-float v6, v5
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mFixedRatio:F
@@ -3136,15 +2843,12 @@
 
     move-result v2
 
-    .line 709
     iget v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMinHeight:I
 
     if-ge v2, v6, :cond_b
 
-    .line 710
     iget v2, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mMinHeight:I
 
-    .line 712
     :cond_b
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -3156,7 +2860,6 @@
 
     if-eqz v6, :cond_15
 
-    .line 713
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -3171,7 +2874,6 @@
 
     iput v7, v6, Landroid/graphics/Rect;->top:I
 
-    .line 728
     :cond_c
     :goto_3
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -3182,7 +2884,6 @@
 
     invoke-virtual {p0, v6, v7}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->adjustPenWindowSize(Landroid/graphics/Rect;F)V
 
-    .line 731
     .end local v2    # "height":I
     .end local v5    # "width":I
     :cond_d
@@ -3194,7 +2895,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastMoveX:I
 
-    .line 732
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawYForScaledWindow()F
 
     move-result v6
@@ -3203,7 +2903,6 @@
 
     iput v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastMoveY:I
 
-    .line 733
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
     iget v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mLastMoveX:I
@@ -3212,7 +2911,6 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/internal/policy/multiwindow/EdgeInspector;->check(II)V
 
-    .line 735
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
     iget-object v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -3221,7 +2919,6 @@
 
     invoke-virtual {v6, v7}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 738
     if-eqz p1, :cond_f
 
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
@@ -3260,7 +2957,6 @@
 
     if-ne v6, v7, :cond_f
 
-    .line 740
     :cond_e
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
@@ -3280,7 +2976,6 @@
 
     if-ne v6, v7, :cond_18
 
-    .line 741
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
     iget-object v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -3293,7 +2988,6 @@
 
     iput v7, v6, Landroid/graphics/Rect;->bottom:I
 
-    .line 748
     :cond_f
     :goto_4
     new-instance v4, Landroid/graphics/Rect;
@@ -3302,7 +2996,6 @@
 
     invoke-direct {v4, v6}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 749
     .local v4, "tempGuideBound":Landroid/graphics/Rect;
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3310,7 +3003,6 @@
 
     if-eqz v6, :cond_10
 
-    .line 750
     iget v6, v4, Landroid/graphics/Rect;->top:I
 
     iget-object v7, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -3325,7 +3017,6 @@
 
     iput v6, v4, Landroid/graphics/Rect;->top:I
 
-    .line 753
     :cond_10
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
@@ -3335,7 +3026,6 @@
 
     if-eqz v6, :cond_19
 
-    .line 754
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     new-instance v7, Landroid/graphics/Rect;
@@ -3354,7 +3044,6 @@
 
     invoke-virtual {v6, v7, v8}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->showGuideDT(Landroid/graphics/Rect;I)V
 
-    .line 764
     :goto_5
     const/4 v6, 0x1
 
@@ -3362,14 +3051,12 @@
 
     goto/16 :goto_0
 
-    .line 659
     .end local v4    # "tempGuideBound":Landroid/graphics/Rect;
     :cond_11
     const/4 v3, 0x1
 
     goto/16 :goto_1
 
-    .line 671
     :cond_12
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -3381,7 +3068,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 672
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawXForScaledWindow()F
 
     move-result v6
@@ -3394,7 +3080,6 @@
 
     sub-int v0, v6, v7
 
-    .line 673
     .restart local v0    # "dx":I
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3412,14 +3097,12 @@
 
     if-le v6, v7, :cond_5
 
-    .line 674
     if-nez v3, :cond_13
 
     if-eqz p1, :cond_5
 
     if-lez v0, :cond_5
 
-    .line 675
     :cond_13
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3431,7 +3114,6 @@
 
     iput v7, v6, Landroid/graphics/Rect;->right:I
 
-    .line 676
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -3444,7 +3126,6 @@
 
     if-gt v6, v7, :cond_14
 
-    .line 677
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -3461,13 +3142,11 @@
 
     iput v7, v6, Landroid/graphics/Rect;->right:I
 
-    .line 679
     :cond_14
     const/4 v3, 0x1
 
     goto/16 :goto_2
 
-    .line 715
     .end local v0    # "dx":I
     .restart local v2    # "height":I
     .restart local v5    # "width":I
@@ -3488,7 +3167,6 @@
 
     goto/16 :goto_3
 
-    .line 718
     :cond_16
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mTouchEdgeInspector:Lcom/android/internal/policy/multiwindow/EdgeInspector;
 
@@ -3500,7 +3178,6 @@
 
     if-eqz v6, :cond_17
 
-    .line 719
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -3525,7 +3202,6 @@
 
     goto/16 :goto_3
 
-    .line 721
     :cond_17
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3549,7 +3225,6 @@
 
     iput v7, v6, Landroid/graphics/Rect;->right:I
 
-    .line 722
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -3562,7 +3237,6 @@
 
     if-gt v6, v7, :cond_c
 
-    .line 723
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v6, v6, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mTmpBound:Landroid/graphics/Rect;
@@ -3581,7 +3255,6 @@
 
     goto/16 :goto_3
 
-    .line 743
     .end local v2    # "height":I
     .end local v5    # "width":I
     :cond_18
@@ -3599,7 +3272,6 @@
 
     goto/16 :goto_4
 
-    .line 755
     .restart local v4    # "tempGuideBound":Landroid/graphics/Rect;
     :cond_19
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
@@ -3622,7 +3294,6 @@
 
     if-gt v6, v7, :cond_1a
 
-    .line 756
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     const/4 v7, 0x1
@@ -3631,7 +3302,6 @@
 
     goto/16 :goto_5
 
-    .line 757
     :cond_1a
     if-eqz p1, :cond_1c
 
@@ -3655,7 +3325,6 @@
 
     if-ne v6, v7, :cond_1c
 
-    .line 758
     :cond_1b
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3665,7 +3334,6 @@
 
     goto/16 :goto_5
 
-    .line 759
     :cond_1c
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->mGuideViewBound:Landroid/graphics/Rect;
 
@@ -3687,7 +3355,6 @@
 
     if-le v6, v7, :cond_1e
 
-    .line 760
     :cond_1d
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3709,7 +3376,6 @@
 
     goto/16 :goto_5
 
-    .line 762
     :cond_1e
     iget-object v6, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -3725,7 +3391,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->sendAccessibilityEvent(I)V
 
     return-void
@@ -3736,7 +3401,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setBackgroundColor(I)V
 
     return-void
@@ -3747,7 +3411,6 @@
     .param p1, "x0"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -3758,7 +3421,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setBackgroundFallback(I)V
 
     return-void
@@ -3769,7 +3431,6 @@
     .param p1, "x0"    # Z
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setFloatingMenuEnabled(Z)V
 
     return-void
@@ -3780,7 +3441,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setSurfaceFormat(I)V
 
     return-void
@@ -3791,7 +3451,6 @@
     .param p1, "x0"    # Z
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setSurfaceKeepScreenOn(Z)V
 
     return-void
@@ -3802,7 +3461,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setSurfaceType(I)V
 
     return-void
@@ -3813,7 +3471,6 @@
     .param p1, "x0"    # Landroid/view/View$OnWallpaperAnimationStateListener;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setWallpaperAnimationStateListener(Landroid/view/View$OnWallpaperAnimationStateListener;)V
 
     return-void
@@ -3824,7 +3481,6 @@
     .param p1, "x0"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setWindowBackground(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -3835,7 +3491,6 @@
     .param p1, "x0"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->setWindowFrame(Landroid/graphics/drawable/Drawable;)V
 
     return-void
@@ -3846,7 +3501,6 @@
     .param p1, "x0"    # Landroid/view/View;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->showContextMenuForChild(Landroid/view/View;)Z
 
     move-result v0
@@ -3859,7 +3513,6 @@
     .param p1, "x0"    # Landroid/view/ActionMode$Callback;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->startActionMode(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
 
     move-result-object v0
@@ -3873,7 +3526,6 @@
     .param p2, "x1"    # I
 
     .prologue
-    .line 230
     invoke-super {p0, p1, p2}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->startActionMode(Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
 
     move-result-object v0
@@ -3887,7 +3539,6 @@
     .param p2, "x1"    # Landroid/view/ActionMode$Callback;
 
     .prologue
-    .line 230
     invoke-super {p0, p1, p2}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->startActionModeForChild(Landroid/view/View;Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode;
 
     move-result-object v0
@@ -3902,7 +3553,6 @@
     .param p3, "x2"    # I
 
     .prologue
-    .line 230
     invoke-super {p0, p1, p2, p3}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->startActionModeForChild(Landroid/view/View;Landroid/view/ActionMode$Callback;I)Landroid/view/ActionMode;
 
     move-result-object v0
@@ -3914,7 +3564,6 @@
     .locals 0
 
     .prologue
-    .line 230
     invoke-super {p0}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->startChanging()V
 
     return-void
@@ -3925,7 +3574,6 @@
     .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->superDispatchGenericMotionEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -3938,7 +3586,6 @@
     .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->superDispatchHoverEventMW(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -3951,7 +3598,6 @@
     .param p1, "x0"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->superDispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
@@ -3964,7 +3610,6 @@
     .param p1, "x0"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->superDispatchKeyShortcutEvent(Landroid/view/KeyEvent;)Z
 
     move-result v0
@@ -3977,7 +3622,6 @@
     .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->superDispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -3990,7 +3634,6 @@
     .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->superDispatchTouchEventMW(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -4003,7 +3646,6 @@
     .param p1, "x0"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 230
     invoke-super {p0, p1}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->superDispatchTrackballEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -4022,7 +3664,6 @@
     .param p7, "animate"    # Z
 
     .prologue
-    .line 806
     iget-object v0, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->isDesktopMode()Z
@@ -4031,7 +3672,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 807
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -4050,7 +3690,6 @@
 
     invoke-super/range {v0 .. v7}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->updateColorViewInt(Lcom/android/internal/policy/PhoneWindow$ColorViewState;IIIZIZ)V
 
-    .line 808
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
@@ -4061,12 +3700,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 809
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;->getViewRootImpl()Landroid/view/ViewRootImpl;
 
     move-result-object v8
 
-    .line 810
     .local v8, "viewRootImpl":Landroid/view/ViewRootImpl;
     iget-object v0, p1, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->view:Landroid/view/View;
 
@@ -4080,14 +3717,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 811
     iget-object v0, p1, Lcom/android/internal/policy/PhoneWindow$ColorViewState;->view:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 816
     .end local v8    # "viewRootImpl":Landroid/view/ViewRootImpl;
     :cond_0
     const/4 v5, 0x0
@@ -4108,7 +3743,6 @@
 
     invoke-super/range {v0 .. v7}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->updateColorViewInt(Lcom/android/internal/policy/PhoneWindow$ColorViewState;IIIZIZ)V
 
-    .line 817
     return-void
 .end method
 
@@ -4116,7 +3750,6 @@
     .locals 1
 
     .prologue
-    .line 230
     invoke-super {p0}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->willYouTakeTheInputQueue()Landroid/view/InputQueue$Callback;
 
     move-result-object v0
@@ -4128,7 +3761,6 @@
     .locals 1
 
     .prologue
-    .line 230
     invoke-super {p0}, Lcom/android/internal/policy/MultiPhoneWindow$MultiPhoneDecorView;->willYouTakeTheSurface()Landroid/view/SurfaceHolder$Callback2;
 
     move-result-object v0

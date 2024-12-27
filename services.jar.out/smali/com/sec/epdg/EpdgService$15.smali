@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1769
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$15;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1772
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -52,7 +50,6 @@
     .param p1, "state"    # Ljava/lang/Object;
 
     .prologue
-    .line 1777
     # invokes: Lcom/sec/epdg/EpdgService;->getIsSimCardRemoved()Z
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2500()Z
 
@@ -60,19 +57,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 1778
     const-string v0, "[EPDGService]"
 
     const-string v1, "mWifiLinkChangedIntentReceiver: No Sim card. Ignore all notifications"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1796
     :cond_0
     :goto_0
     return-void
 
-    .line 1781
     :cond_1
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$15;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -89,14 +83,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1782
     const-string v0, "[EPDGService]"
 
     const-string v1, "Wifi link configuration changed"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1783
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2800()Lcom/sec/epdg/EpdgTimers;
 
@@ -123,7 +115,6 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 1785
     const-string v0, "[EPDGService]"
 
     const-string v1, "TEpdg timer running"
@@ -132,7 +123,6 @@
 
     goto :goto_0
 
-    .line 1786
     :cond_2
     invoke-static {}, Lcom/sec/epdg/EpdgServerSelection;->getInstance()Lcom/sec/epdg/EpdgServerSelection;
 
@@ -144,7 +134,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1787
     invoke-static {}, Lcom/sec/epdg/EpdgServerSelection;->getInstance()Lcom/sec/epdg/EpdgServerSelection;
 
     move-result-object v0
@@ -157,14 +146,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 1789
     const-string v0, "[EPDGService]"
 
     const-string v1, "DNS is successful, start profiling"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1790
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$15;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->startWifiProfiling()V
@@ -172,7 +159,6 @@
 
     goto :goto_0
 
-    .line 1792
     :cond_3
     const-string v0, "[EPDGService]"
 

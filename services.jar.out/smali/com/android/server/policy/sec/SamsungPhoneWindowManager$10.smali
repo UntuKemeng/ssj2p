@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 818
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$10;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 820
     iget-object v0, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$10;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     # invokes: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->initCameraManager()V
     invoke-static {v0}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$500(Lcom/android/server/policy/sec/SamsungPhoneWindowManager;)V
 
-    .line 821
     return-void
 .end method

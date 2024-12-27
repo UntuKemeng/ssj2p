@@ -27,24 +27,20 @@
     .param p1, "format"    # Lorg/simpleframework/xml/stream/Format;
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/EmptyExpression;->list:Ljava/util/List;
 
-    .line 59
     invoke-virtual {p1}, Lorg/simpleframework/xml/stream/Format;->getStyle()Lorg/simpleframework/xml/stream/Style;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/EmptyExpression;->style:Lorg/simpleframework/xml/stream/Style;
 
-    .line 60
     return-void
 .end method
 
@@ -55,7 +51,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 159
     iget-object v0, p0, Lorg/simpleframework/xml/core/EmptyExpression;->style:Lorg/simpleframework/xml/stream/Style;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/stream/Style;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -70,7 +65,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 145
     iget-object v0, p0, Lorg/simpleframework/xml/core/EmptyExpression;->style:Lorg/simpleframework/xml/stream/Style;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/stream/Style;->getElement(Ljava/lang/String;)Ljava/lang/String;
@@ -84,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 107
     const/4 v0, 0x0
 
     return-object v0
@@ -94,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 83
     const/4 v0, 0x0
 
     return v0
@@ -104,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 119
     const/4 v0, 0x0
 
     return-object v0
@@ -114,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 131
     const-string v0, ""
 
     return-object v0
@@ -125,7 +115,6 @@
     .param p1, "from"    # I
 
     .prologue
-    .line 174
     const/4 v0, 0x0
 
     return-object v0
@@ -137,7 +126,6 @@
     .param p2, "trim"    # I
 
     .prologue
-    .line 190
     const/4 v0, 0x0
 
     return-object v0
@@ -147,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 95
     const/4 v0, 0x0
 
     return-object v0
@@ -157,7 +144,6 @@
     .locals 1
 
     .prologue
-    .line 202
     const/4 v0, 0x0
 
     return v0
@@ -167,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 224
     const/4 v0, 0x1
 
     return v0
@@ -177,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 213
     const/4 v0, 0x0
 
     return v0
@@ -196,7 +180,6 @@
     .end annotation
 
     .prologue
-    .line 71
     iget-object v0, p0, Lorg/simpleframework/xml/core/EmptyExpression;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;

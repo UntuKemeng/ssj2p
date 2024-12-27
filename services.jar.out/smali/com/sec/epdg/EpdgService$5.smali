@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1517
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$5;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1520
     const-string v0, "[EPDGService]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -78,14 +76,11 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1521
     packed-switch p2, :pswitch_data_0
 
-    .line 1535
     :goto_0
     return-void
 
-    .line 1523
     :pswitch_0
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1900()Landroid/os/Handler;
@@ -101,7 +96,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1524
     # getter for: Lcom/sec/epdg/EpdgService;->mSmartWifiAdapter:Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2000()Lcom/sec/epdg/smartwifi/SmartWifiAdapter;
 
@@ -109,7 +103,6 @@
 
     invoke-virtual {v0}, Lcom/sec/epdg/smartwifi/SmartWifiAdapter;->stopProfiling()V
 
-    .line 1526
     invoke-static {}, Lcom/sec/epdg/EpdgServerSelection;->getInstance()Lcom/sec/epdg/EpdgServerSelection;
 
     move-result-object v0
@@ -118,11 +111,9 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/EpdgServerSelection;->resetEpdgServerIpAddressAndPool(Lcom/sec/epdg/EpdgService$EpdgServerIpResetReason;)V
 
-    .line 1529
     # invokes: Lcom/sec/epdg/EpdgService;->setIsOnDemandApnConnectionFailed(Z)V
     invoke-static {v3}, Lcom/sec/epdg/EpdgService;->access$100(Z)V
 
-    .line 1530
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$5;->this$0:Lcom/sec/epdg/EpdgService;
 
     # setter for: Lcom/sec/epdg/EpdgService;->mFqdnRetryCount:I
@@ -130,7 +121,6 @@
 
     goto :goto_0
 
-    .line 1521
     nop
 
     :pswitch_data_0

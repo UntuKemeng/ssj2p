@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 44
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/BigIntegerTransform;->read(Ljava/lang/String;)Ljava/math/BigInteger;
 
     move-result-object v0
@@ -54,7 +52,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     new-instance v0, Ljava/math/BigInteger;
 
     invoke-direct {v0, p1}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;)V
@@ -72,7 +69,6 @@
     .end annotation
 
     .prologue
-    .line 44
     check-cast p1, Ljava/math/BigInteger;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -88,7 +84,6 @@
     .param p1, "value"    # Ljava/math/BigInteger;
 
     .prologue
-    .line 71
     invoke-virtual {p1}, Ljava/math/BigInteger;->toString()Ljava/lang/String;
 
     move-result-object v0

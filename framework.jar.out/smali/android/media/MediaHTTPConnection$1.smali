@@ -29,16 +29,13 @@
     .locals 2
 
     .prologue
-    .line 115
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 117
     const-string v0, "TimeSeekRange.dlna.org"
 
     const-string v1, " ="
 
     invoke-virtual {p0, v0, v1}, Landroid/media/MediaHTTPConnection$1;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
     return-void
 .end method

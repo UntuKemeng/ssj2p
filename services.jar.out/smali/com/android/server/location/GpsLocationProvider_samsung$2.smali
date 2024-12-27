@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2137
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     invoke-direct {p0}, Landroid/location/IExerciseLocationProvider$Stub;-><init>()V
@@ -43,10 +42,8 @@
     .end annotation
 
     .prologue
-    .line 2140
     if-nez p1, :cond_0
 
-    .line 2141
     new-instance v5, Ljava/lang/NullPointerException;
 
     const-string/jumbo v6, "listener is null in addExerciseLocationListener"
@@ -55,7 +52,6 @@
 
     throw v5
 
-    .line 2144
     :cond_0
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
@@ -66,13 +62,11 @@
 
     monitor-enter v6
 
-    .line 2145
     :try_start_0
     invoke-interface {p1}, Landroid/location/IExerciseLocationListener;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 2146
     .local v0, "binder":Landroid/os/IBinder;
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
@@ -85,7 +79,6 @@
 
     move-result v3
 
-    .line 2147
     .local v3, "size":I
     const/4 v1, 0x0
 
@@ -93,7 +86,6 @@
     :goto_0
     if-ge v1, v3, :cond_2
 
-    .line 2148
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     # getter for: Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
@@ -107,7 +99,6 @@
 
     check-cast v4, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
 
-    .line 2149
     .local v4, "test":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     iget-object v5, v4, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->mListener:Landroid/location/IExerciseLocationListener;
 
@@ -121,22 +112,18 @@
 
     if-eqz v5, :cond_1
 
-    .line 2151
     monitor-exit v6
 
-    .line 2159
     .end local v4    # "test":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     :goto_1
     return-void
 
-    .line 2147
     .restart local v4    # "test":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2155
     .end local v4    # "test":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     :cond_2
     new-instance v2, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
@@ -145,13 +132,11 @@
 
     invoke-direct {v2, v5, p1}, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;-><init>(Lcom/android/server/location/GpsLocationProvider_samsung;Landroid/location/IExerciseLocationListener;)V
 
-    .line 2156
     .local v2, "l":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     const/4 v5, 0x0
 
     invoke-interface {v0, v2, v5}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 2157
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     # getter for: Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
@@ -161,7 +146,6 @@
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2158
     monitor-exit v6
 
     goto :goto_1
@@ -185,10 +169,8 @@
     .param p1, "listener"    # Landroid/location/IExerciseLocationListener;
 
     .prologue
-    .line 2163
     if-nez p1, :cond_0
 
-    .line 2164
     new-instance v5, Ljava/lang/NullPointerException;
 
     const-string/jumbo v6, "listener is null in addExerciseLocationListener"
@@ -197,7 +179,6 @@
 
     throw v5
 
-    .line 2167
     :cond_0
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
@@ -208,17 +189,14 @@
 
     monitor-enter v6
 
-    .line 2168
     :try_start_0
     invoke-interface {p1}, Landroid/location/IExerciseLocationListener;->asBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 2169
     .local v0, "binder":Landroid/os/IBinder;
     const/4 v2, 0x0
 
-    .line 2170
     .local v2, "l":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
@@ -231,7 +209,6 @@
 
     move-result v3
 
-    .line 2171
     .local v3, "size":I
     const/4 v1, 0x0
 
@@ -241,7 +218,6 @@
 
     if-nez v2, :cond_2
 
-    .line 2172
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     # getter for: Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
@@ -255,7 +231,6 @@
 
     check-cast v4, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
 
-    .line 2173
     .local v4, "test":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     iget-object v5, v4, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->mListener:Landroid/location/IExerciseLocationListener;
 
@@ -269,21 +244,17 @@
 
     if-eqz v5, :cond_1
 
-    .line 2174
     move-object v2, v4
 
-    .line 2171
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2178
     .end local v4    # "test":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 2179
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     # getter for: Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
@@ -293,12 +264,10 @@
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2180
     const/4 v5, 0x0
 
     invoke-interface {v0, v2, v5}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 2183
     :cond_3
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
@@ -313,19 +282,15 @@
 
     if-nez v5, :cond_4
 
-    .line 2185
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung$2;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     invoke-virtual {v5}, Lcom/android/server/location/GpsLocationProvider_samsung;->removeExerciseLocation()V
 
-    .line 2187
     :cond_4
     monitor-exit v6
 
-    .line 2188
     return-void
 
-    .line 2187
     .end local v0    # "binder":Landroid/os/IBinder;
     .end local v1    # "i":I
     .end local v2    # "l":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;

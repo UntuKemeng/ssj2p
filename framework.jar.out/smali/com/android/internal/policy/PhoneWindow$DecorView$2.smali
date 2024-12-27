@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3566
     iput-object p1, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     iput-object p2, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$2;->val$decorView:Lcom/android/internal/policy/PhoneWindow$DecorView;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 3569
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/PhoneWindow$DecorView;->getViewRootImpl()Landroid/view/ViewRootImpl;
@@ -53,7 +51,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3570
     iget-object v0, p0, Lcom/android/internal/policy/PhoneWindow$DecorView$2;->this$1:Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     invoke-virtual {v0}, Lcom/android/internal/policy/PhoneWindow$DecorView;->getViewRootImpl()Landroid/view/ViewRootImpl;
@@ -64,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewRootImpl;->recomputeViewAttributes(Landroid/view/View;)V
 
-    .line 3572
     :cond_0
     return-void
 .end method

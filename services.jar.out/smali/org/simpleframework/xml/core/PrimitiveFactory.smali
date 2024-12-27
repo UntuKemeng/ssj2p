@@ -10,10 +10,8 @@
     .param p2, "type"    # Lorg/simpleframework/xml/strategy/Type;
 
     .prologue
-    .line 52
     invoke-direct {p0, p1, p2}, Lorg/simpleframework/xml/core/Factory;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;)V
 
-    .line 53
     return-void
 .end method
 
@@ -24,10 +22,8 @@
     .param p3, "override"    # Ljava/lang/Class;
 
     .prologue
-    .line 68
     invoke-direct {p0, p1, p2, p3}, Lorg/simpleframework/xml/core/Factory;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;Ljava/lang/Class;)V
 
-    .line 69
     return-void
 .end method
 
@@ -44,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 105
     iget-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveFactory;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-virtual {v0, p1, p2}, Lorg/simpleframework/xml/core/Support;->read(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
@@ -64,29 +59,24 @@
     .end annotation
 
     .prologue
-    .line 82
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/PrimitiveFactory;->getOverride(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/strategy/Value;
 
     move-result-object v1
 
-    .line 83
     .local v1, "value":Lorg/simpleframework/xml/strategy/Value;
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/PrimitiveFactory;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 85
     .local v0, "type":Ljava/lang/Class;
     if-nez v1, :cond_0
 
-    .line 86
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveFactory;->context:Lorg/simpleframework/xml/core/Context;
 
     invoke-interface {v2, v0}, Lorg/simpleframework/xml/core/Context;->getInstance(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Instance;
 
     move-result-object v2
 
-    .line 88
     :goto_0
     return-object v2
 
@@ -110,12 +100,10 @@
     .end annotation
 
     .prologue
-    .line 123
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 125
     .local v0, "type":Ljava/lang/Class;
     invoke-virtual {v0}, Ljava/lang/Class;->isEnum()Z
 
@@ -123,14 +111,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 126
     iget-object v1, p0, Lorg/simpleframework/xml/core/PrimitiveFactory;->support:Lorg/simpleframework/xml/core/Support;
 
     invoke-virtual {v1, p1, v0}, Lorg/simpleframework/xml/core/Support;->write(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 128
     :goto_0
     return-object v1
 

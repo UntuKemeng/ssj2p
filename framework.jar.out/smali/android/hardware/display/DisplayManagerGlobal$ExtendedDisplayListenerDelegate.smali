@@ -29,7 +29,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 707
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -41,16 +40,12 @@
 
     invoke-direct {p0, v0, v2, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 708
     iput-object p1, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mOldListener:Landroid/hardware/display/ExtendedDisplayListener;
 
-    .line 709
     iput-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mListener:Landroid/hardware/display/SemDisplayStatusListener;
 
-    .line 710
     return-void
 
-    .line 707
     :cond_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -67,7 +62,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 713
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -79,16 +73,12 @@
 
     invoke-direct {p0, v0, v2, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 714
     iput-object p1, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mListener:Landroid/hardware/display/SemDisplayStatusListener;
 
-    .line 715
     iput-object v2, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mOldListener:Landroid/hardware/display/ExtendedDisplayListener;
 
-    .line 716
     return-void
 
-    .line 713
     :cond_0
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
@@ -103,12 +93,10 @@
     .locals 1
 
     .prologue
-    .line 724
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 725
     return-void
 .end method
 
@@ -117,18 +105,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 729
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 758
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 731
     :pswitch_1
     const-string v0, "DisplayManager"
 
@@ -154,7 +139,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 732
     iget-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mOldListener:Landroid/hardware/display/ExtendedDisplayListener;
 
     if-eqz v0, :cond_1
@@ -165,7 +149,6 @@
 
     invoke-virtual {v0, v1}, Landroid/hardware/display/ExtendedDisplayListener;->onConnectionStatusChanged(I)V
 
-    .line 733
     :cond_1
     iget-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mListener:Landroid/hardware/display/SemDisplayStatusListener;
 
@@ -179,7 +162,6 @@
 
     goto :goto_0
 
-    .line 736
     :pswitch_2
     const-string v0, "DisplayManager"
 
@@ -205,7 +187,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 737
     iget-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mOldListener:Landroid/hardware/display/ExtendedDisplayListener;
 
     if-eqz v0, :cond_0
@@ -218,7 +199,6 @@
 
     goto :goto_0
 
-    .line 740
     :pswitch_3
     const-string v0, "DisplayManager"
 
@@ -244,7 +224,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 741
     iget-object v0, p0, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->mOldListener:Landroid/hardware/display/ExtendedDisplayListener;
 
     if-eqz v0, :cond_0
@@ -257,7 +236,6 @@
 
     goto :goto_0
 
-    .line 729
     :pswitch_data_0
     .packed-switch 0x4
         :pswitch_1
@@ -273,17 +251,14 @@
     .param p2, "event"    # I
 
     .prologue
-    .line 719
     const/4 v1, 0x0
 
     invoke-virtual {p0, p2, p1, v1}, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->obtainMessage(III)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 720
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {p0, v0}, Landroid/hardware/display/DisplayManagerGlobal$ExtendedDisplayListenerDelegate;->sendMessage(Landroid/os/Message;)Z
 
-    .line 721
     return-void
 .end method

@@ -28,10 +28,8 @@
     .locals 0
 
     .prologue
-    .line 353
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 354
     return-void
 .end method
 
@@ -40,9 +38,7 @@
     .param p1, "list"    # Lorg/simpleframework/xml/core/SignatureBuilder$ParameterList;
 
     .prologue
-    .line 362
     invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 363
     return-void
 .end method

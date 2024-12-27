@@ -64,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 18
     const-string v0, "UCM.SCP.Param"
 
     sput-object v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->TAG:Ljava/lang/String;
@@ -80,98 +79,80 @@
 
     const/4 v2, 0x0
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->protocol:[B
 
-    .line 20
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyId:[B
 
-    .line 21
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyVersion:[B
 
-    .line 22
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyUsage:[B
 
-    .line 23
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyLength:[B
 
-    .line 24
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyType:[B
 
-    .line 25
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramECC:[B
 
-    .line 26
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHP:[B
 
-    .line 27
     new-array v0, v1, [B
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHG:[B
 
-    .line 39
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->protocol:[B
 
     const/16 v1, 0x65
 
     aput-byte v1, v0, v2
 
-    .line 40
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyId:[B
 
     aput-byte v2, v0, v2
 
-    .line 41
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyVersion:[B
 
     aput-byte v2, v0, v2
 
-    .line 42
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyUsage:[B
 
     const/16 v1, 0x3c
 
     aput-byte v1, v0, v2
 
-    .line 45
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyLength:[B
 
     const/16 v1, 0x20
 
     aput-byte v1, v0, v2
 
-    .line 46
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyType:[B
 
     const/16 v1, -0x70
 
     aput-byte v1, v0, v2
 
-    .line 47
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramECC:[B
 
     aput-byte v2, v0, v2
 
-    .line 48
     return-void
 .end method
 
@@ -189,16 +170,13 @@
 
     const/4 v1, 0x0
 
-    .line 301
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;
 
     invoke-direct {v0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;-><init>()V
 
-    .line 303
     .local v0, "param":Lcom/samsung/ucm/ucmservice/scp/CreationParam;
     if-nez p0, :cond_0
 
-    .line 304
     sget-object v2, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->TAG:Ljava/lang/String;
 
     const-string v3, "no bundle for SCP"
@@ -207,12 +185,10 @@
 
     move-object v0, v1
 
-    .line 370
     .end local v0    # "param":Lcom/samsung/ucm/ucmservice/scp/CreationParam;
     :goto_0
     return-object v0
 
-    .line 308
     .restart local v0    # "param":Lcom/samsung/ucm/ucmservice/scp/CreationParam;
     :cond_0
     const-string v2, "scp_protocol"
@@ -223,7 +199,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 309
     const-string v2, "scp_protocol"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -232,7 +207,6 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->setProtocol(I)V
 
-    .line 315
     const-string v2, "scp_key_id"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -241,7 +215,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 316
     const-string v2, "scp_key_id"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -250,7 +223,6 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->setKeyId(I)V
 
-    .line 318
     :cond_1
     const-string v2, "scp_key_version"
 
@@ -260,7 +232,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 319
     const-string v2, "scp_key_version"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -269,7 +240,6 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->setKeyVersion(I)V
 
-    .line 321
     :cond_2
     const-string v2, "scp_key_length"
 
@@ -279,7 +249,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 322
     const-string v2, "scp_key_length"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -288,7 +257,6 @@
 
     invoke-virtual {v0, v2}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->setKeyLength(I)V
 
-    .line 324
     :cond_3
     const-string v2, "scp_encryption"
 
@@ -298,7 +266,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 325
     const-string v2, "scp_encryption"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -307,10 +274,8 @@
 
     if-eqz v2, :cond_7
 
-    .line 326
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->enableEncryption()V
 
-    .line 331
     :cond_4
     :goto_1
     const-string v2, "scp_mac"
@@ -321,7 +286,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 332
     const-string v2, "scp_mac"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -330,10 +294,8 @@
 
     if-eqz v2, :cond_8
 
-    .line 333
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->enableMAC()V
 
-    .line 338
     :cond_5
     :goto_2
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getProtocol()I
@@ -344,11 +306,9 @@
 
     goto :goto_0
 
-    .line 340
     :pswitch_0
     invoke-virtual {v0, v3}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->setKeyType(I)V
 
-    .line 341
     const-string v2, "scp_key_agreement_param_ecc"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -357,7 +317,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 342
     const-string v1, "scp_key_agreement_param_ecc"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -368,7 +327,6 @@
 
     goto/16 :goto_0
 
-    .line 311
     :cond_6
     sget-object v2, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->TAG:Ljava/lang/String;
 
@@ -378,22 +336,18 @@
 
     move-object v0, v1
 
-    .line 312
     goto/16 :goto_0
 
-    .line 328
     :cond_7
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->disableEncryption()V
 
     goto :goto_1
 
-    .line 335
     :cond_8
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->disableMAC()V
 
     goto :goto_2
 
-    .line 344
     :cond_9
     sget-object v2, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->TAG:Ljava/lang/String;
 
@@ -403,14 +357,11 @@
 
     move-object v0, v1
 
-    .line 345
     goto/16 :goto_0
 
-    .line 349
     :pswitch_1
     invoke-virtual {v0, v3}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->setKeyType(I)V
 
-    .line 350
     const-string v2, "scp_key_agreement_param_ecc"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -419,7 +370,6 @@
 
     if-eqz v2, :cond_a
 
-    .line 351
     const-string v1, "scp_key_agreement_param_ecc"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -430,7 +380,6 @@
 
     goto/16 :goto_0
 
-    .line 353
     :cond_a
     sget-object v2, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->TAG:Ljava/lang/String;
 
@@ -440,16 +389,13 @@
 
     move-object v0, v1
 
-    .line 354
     goto/16 :goto_0
 
-    .line 358
     :pswitch_2
     const/16 v2, 0x89
 
     invoke-virtual {v0, v2}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->setKeyType(I)V
 
-    .line 359
     const-string v2, "scp_key_agreement_param_dh_p"
 
     invoke-virtual {p0, v2}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
@@ -466,7 +412,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 361
     const-string v1, "scp_key_agreement_param_dh_p"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
@@ -475,7 +420,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->setParamDHP([B)V
 
-    .line 362
     const-string v1, "scp_key_agreement_param_dh_g"
 
     invoke-virtual {p0, v1}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
@@ -486,7 +430,6 @@
 
     goto/16 :goto_0
 
-    .line 364
     :cond_b
     sget-object v2, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->TAG:Ljava/lang/String;
 
@@ -496,10 +439,8 @@
 
     move-object v0, v1
 
-    .line 365
     goto/16 :goto_0
 
-    .line 338
     :pswitch_data_0
     .packed-switch 0x64
         :pswitch_0
@@ -518,22 +459,18 @@
     .end annotation
 
     .prologue
-    .line 381
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;
 
     invoke-direct {v0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;-><init>()V
 
-    .line 382
     .local v0, "param":Lcom/samsung/ucm/ucmservice/scp/CreationParam;
     invoke-static {p0}, Lcom/samsung/ucm/ucmservice/scp/BerTLV;->parse([B)Lcom/samsung/ucm/ucmservice/scp/BerTLV;
 
     move-result-object v1
 
-    .line 384
     .local v1, "tlv_scp_param":Lcom/samsung/ucm/ucmservice/scp/BerTLV;
     const/4 v2, 0x0
 
-    .line 386
     .local v2, "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     new-instance v3, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
@@ -548,7 +485,6 @@
     .end local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 387
     .restart local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-nez v2, :cond_0
 
@@ -560,7 +496,6 @@
 
     throw v3
 
-    .line 388
     :cond_0
     invoke-virtual {v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getValue()[B
 
@@ -568,7 +503,6 @@
 
     iput-object v3, v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->protocol:[B
 
-    .line 390
     new-instance v3, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     const/16 v4, -0x6d
@@ -582,7 +516,6 @@
     .end local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 391
     .restart local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-nez v2, :cond_1
 
@@ -594,7 +527,6 @@
 
     throw v3
 
-    .line 392
     :cond_1
     invoke-virtual {v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getValue()[B
 
@@ -602,7 +534,6 @@
 
     iput-object v3, v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyId:[B
 
-    .line 394
     new-instance v3, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     const/16 v4, -0x6c
@@ -616,7 +547,6 @@
     .end local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 395
     .restart local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-nez v2, :cond_2
 
@@ -628,7 +558,6 @@
 
     throw v3
 
-    .line 396
     :cond_2
     invoke-virtual {v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getValue()[B
 
@@ -636,7 +565,6 @@
 
     iput-object v3, v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyVersion:[B
 
-    .line 398
     new-instance v3, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     const/16 v4, -0x6b
@@ -650,7 +578,6 @@
     .end local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 399
     .restart local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-nez v2, :cond_3
 
@@ -662,7 +589,6 @@
 
     throw v3
 
-    .line 400
     :cond_3
     invoke-virtual {v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getValue()[B
 
@@ -670,7 +596,6 @@
 
     iput-object v3, v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyUsage:[B
 
-    .line 402
     new-instance v3, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     const/16 v4, -0x7f
@@ -684,7 +609,6 @@
     .end local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 403
     .restart local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-nez v2, :cond_4
 
@@ -696,7 +620,6 @@
 
     throw v3
 
-    .line 404
     :cond_4
     invoke-virtual {v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getValue()[B
 
@@ -704,7 +627,6 @@
 
     iput-object v3, v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyLength:[B
 
-    .line 406
     new-instance v3, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     const/16 v4, -0x80
@@ -718,7 +640,6 @@
     .end local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 407
     .restart local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-nez v2, :cond_5
 
@@ -730,7 +651,6 @@
 
     throw v3
 
-    .line 408
     :cond_5
     invoke-virtual {v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getValue()[B
 
@@ -738,7 +658,6 @@
 
     iput-object v3, v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyType:[B
 
-    .line 410
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyType()I
 
     move-result v3
@@ -747,7 +666,6 @@
 
     if-ne v3, v4, :cond_8
 
-    .line 411
     new-instance v3, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     const/16 v4, -0x75
@@ -761,7 +679,6 @@
     .end local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 412
     .restart local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-nez v2, :cond_6
 
@@ -773,7 +690,6 @@
 
     throw v3
 
-    .line 413
     :cond_6
     invoke-virtual {v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getValue()[B
 
@@ -781,7 +697,6 @@
 
     iput-object v3, v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHP:[B
 
-    .line 415
     new-instance v3, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     const/16 v4, -0x74
@@ -795,7 +710,6 @@
     .end local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 416
     .restart local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-nez v2, :cond_7
 
@@ -807,7 +721,6 @@
 
     throw v3
 
-    .line 417
     :cond_7
     invoke-virtual {v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getValue()[B
 
@@ -815,11 +728,9 @@
 
     iput-object v3, v0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHG:[B
 
-    .line 426
     :goto_0
     return-object v0
 
-    .line 418
     :cond_8
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyType()I
 
@@ -829,7 +740,6 @@
 
     if-ne v3, v4, :cond_a
 
-    .line 419
     new-instance v3, Lcom/samsung/ucm/ucmservice/scp/Tag;
 
     const/16 v4, -0x76
@@ -843,7 +753,6 @@
     .end local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     check-cast v2, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
-    .line 420
     .restart local v2    # "tmp":Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
     if-nez v2, :cond_9
 
@@ -855,7 +764,6 @@
 
     throw v3
 
-    .line 421
     :cond_9
     invoke-virtual {v2}, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;->getValue()[B
 
@@ -865,7 +773,6 @@
 
     goto :goto_0
 
-    .line 423
     :cond_a
     new-instance v3, Ljava/security/InvalidParameterException;
 
@@ -881,7 +788,6 @@
     .param p1, "a"    # [B
 
     .prologue
-    .line 251
     new-instance v4, Ljava/lang/StringBuilder;
 
     array-length v5, p1
@@ -890,7 +796,6 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 252
     .local v4, "sb":Ljava/lang/StringBuilder;
     move-object v0, p1
 
@@ -906,7 +811,6 @@
 
     aget-byte v1, v0, v2
 
-    .line 253
     .local v1, "b":B
     const-string v5, "%02X"
 
@@ -930,12 +834,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 252
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 254
     .end local v1    # "b":B
     :cond_0
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -956,7 +858,6 @@
     .end annotation
 
     .prologue
-    .line 93
     new-instance v0, Ljava/lang/Exception;
 
     const-string v1, "disable encryption not supported"
@@ -975,7 +876,6 @@
     .end annotation
 
     .prologue
-    .line 113
     new-instance v0, Ljava/lang/Exception;
 
     const-string v1, "disable MAC not supported"
@@ -989,16 +889,13 @@
     .locals 4
 
     .prologue
-    .line 81
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyUsage()I
 
     move-result v0
 
-    .line 82
     .local v0, "usage":I
     or-int/lit8 v0, v0, 0x8
 
-    .line 83
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyUsage:[B
 
     const/4 v2, 0x0
@@ -1007,7 +904,6 @@
 
     aput-byte v3, v1, v2
 
-    .line 84
     return-void
 .end method
 
@@ -1015,16 +911,13 @@
     .locals 4
 
     .prologue
-    .line 101
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyUsage()I
 
     move-result v0
 
-    .line 102
     .local v0, "usage":I
     or-int/lit8 v0, v0, 0x8
 
-    .line 103
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyUsage:[B
 
     const/4 v2, 0x0
@@ -1033,7 +926,6 @@
 
     aput-byte v3, v1, v2
 
-    .line 104
     return-void
 .end method
 
@@ -1041,7 +933,6 @@
     .locals 2
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyId:[B
 
     const/4 v1, 0x0
@@ -1057,7 +948,6 @@
     .locals 2
 
     .prologue
-    .line 164
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyLength:[B
 
     const/4 v1, 0x0
@@ -1073,7 +963,6 @@
     .locals 2
 
     .prologue
-    .line 168
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyType:[B
 
     const/4 v1, 0x0
@@ -1089,7 +978,6 @@
     .locals 2
 
     .prologue
-    .line 160
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyUsage:[B
 
     const/4 v1, 0x0
@@ -1105,7 +993,6 @@
     .locals 2
 
     .prologue
-    .line 156
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyVersion:[B
 
     const/4 v1, 0x0
@@ -1121,7 +1008,6 @@
     .locals 1
 
     .prologue
-    .line 180
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHG:[B
 
     return-object v0
@@ -1131,7 +1017,6 @@
     .locals 1
 
     .prologue
-    .line 176
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHP:[B
 
     return-object v0
@@ -1141,7 +1026,6 @@
     .locals 2
 
     .prologue
-    .line 172
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramECC:[B
 
     const/4 v1, 0x0
@@ -1157,7 +1041,6 @@
     .locals 2
 
     .prologue
-    .line 148
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->protocol:[B
 
     const/4 v1, 0x0
@@ -1174,7 +1057,6 @@
     .param p1, "arg"    # I
 
     .prologue
-    .line 65
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyId:[B
 
     const/4 v1, 0x0
@@ -1183,7 +1065,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 66
     return-void
 .end method
 
@@ -1197,12 +1078,10 @@
     .end annotation
 
     .prologue
-    .line 122
     const/16 v0, 0x20
 
     if-eq p1, v0, :cond_0
 
-    .line 123
     new-instance v0, Ljava/lang/Exception;
 
     const-string v1, "key length is fixed as 256 bit"
@@ -1211,7 +1090,6 @@
 
     throw v0
 
-    .line 125
     :cond_0
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyLength:[B
 
@@ -1221,7 +1099,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 126
     return-void
 .end method
 
@@ -1230,7 +1107,6 @@
     .param p1, "arg"    # I
 
     .prologue
-    .line 129
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyType:[B
 
     const/4 v1, 0x0
@@ -1239,7 +1115,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 130
     return-void
 .end method
 
@@ -1248,7 +1123,6 @@
     .param p1, "arg"    # I
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->keyVersion:[B
 
     const/4 v1, 0x0
@@ -1257,7 +1131,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 74
     return-void
 .end method
 
@@ -1266,10 +1139,8 @@
     .param p1, "arg"    # [B
 
     .prologue
-    .line 143
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHG:[B
 
-    .line 144
     return-void
 .end method
 
@@ -1278,7 +1149,6 @@
     .param p1, "arg"    # [B
 
     .prologue
-    .line 139
     invoke-virtual {p1}, [B->clone()Ljava/lang/Object;
 
     move-result-object v0
@@ -1287,7 +1157,6 @@
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHP:[B
 
-    .line 140
     return-void
 .end method
 
@@ -1301,7 +1170,6 @@
     .end annotation
 
     .prologue
-    .line 134
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramECC:[B
 
     const/4 v1, 0x0
@@ -1310,7 +1178,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 136
     return-void
 .end method
 
@@ -1319,7 +1186,6 @@
     .param p1, "arg"    # I
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->protocol:[B
 
     const/4 v1, 0x0
@@ -1328,7 +1194,6 @@
 
     aput-byte v2, v0, v1
 
-    .line 58
     return-void
 .end method
 
@@ -1340,12 +1205,10 @@
 
     const/4 v3, 0x0
 
-    .line 220
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 221
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v1, "scp_protocol"
 
@@ -1355,7 +1218,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 222
     const-string v1, "scp_key_id"
 
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyId()I
@@ -1364,7 +1226,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 223
     const-string v1, "scp_key_version"
 
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyVersion()I
@@ -1373,7 +1234,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 224
     const-string v1, "scp_key_length"
 
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyLength()I
@@ -1382,7 +1242,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 226
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyUsage()I
 
     move-result v1
@@ -1393,12 +1252,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 227
     const-string v1, "scp_encryption"
 
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 231
     :goto_0
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyUsage()I
 
@@ -1410,12 +1267,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 232
     const-string v1, "scp_mac"
 
     invoke-virtual {v0, v1, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 236
     :goto_1
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getProtocol()I
 
@@ -1423,11 +1278,9 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 247
     :goto_2
     return-object v0
 
-    .line 229
     :cond_0
     const-string v1, "scp_encryption"
 
@@ -1435,7 +1288,6 @@
 
     goto :goto_0
 
-    .line 234
     :cond_1
     const-string v1, "scp_mac"
 
@@ -1443,7 +1295,6 @@
 
     goto :goto_1
 
-    .line 239
     :pswitch_0
     const-string v1, "scp_key_agreement_param_ecc"
 
@@ -1453,7 +1304,6 @@
 
     goto :goto_2
 
-    .line 242
     :pswitch_1
     const-string v1, "scp_key_agreement_param_dh_p"
 
@@ -1461,7 +1311,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 243
     const-string v1, "scp_key_agreement_param_dh_g"
 
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHG:[B
@@ -1470,7 +1319,6 @@
 
     goto :goto_2
 
-    .line 236
     nop
 
     :pswitch_data_0
@@ -1487,18 +1335,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 258
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 259
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v1, "SCP creation-param {"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 261
     new-instance v1, Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1621,17 +1466,14 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 269
     const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 271
     const-string v1, "KEY PARAM {"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 272
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyType()I
 
     move-result v1
@@ -1640,28 +1482,23 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 273
     const-string v1, "DH-P:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 274
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHP:[B
 
     if-nez v1, :cond_0
 
-    .line 275
     const-string v1, "null"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 278
     :goto_0
     const-string v1, ", DH-G:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 279
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHG:[B
 
     invoke-direct {p0, v1}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->toHex([B)Ljava/lang/String;
@@ -1670,20 +1507,17 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 287
     :goto_1
     const-string v1, "}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 289
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 277
     :cond_0
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHP:[B
 
@@ -1695,7 +1529,6 @@
 
     goto :goto_0
 
-    .line 280
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyType()I
 
@@ -1705,12 +1538,10 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 281
     const-string v1, "ECC curveId:"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 282
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramECC:[B
 
     aget-byte v1, v1, v4
@@ -1719,7 +1550,6 @@
 
     goto :goto_1
 
-    .line 284
     :cond_2
     const-string v1, "unknown"
 
@@ -1737,7 +1567,6 @@
     .end annotation
 
     .prologue
-    .line 197
     new-instance v0, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;
 
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/Tag;
@@ -1748,7 +1577,6 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;-><init>(Lcom/samsung/ucm/ucmservice/scp/Tag;)V
 
-    .line 198
     .local v0, "tlv_scp_param":Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
@@ -1764,7 +1592,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 199
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
     new-instance v2, Lcom/samsung/ucm/ucmservice/scp/Tag;
@@ -1779,7 +1606,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 200
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
     new-instance v2, Lcom/samsung/ucm/ucmservice/scp/Tag;
@@ -1794,7 +1620,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 201
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
     new-instance v2, Lcom/samsung/ucm/ucmservice/scp/Tag;
@@ -1809,7 +1634,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 202
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
     new-instance v2, Lcom/samsung/ucm/ucmservice/scp/Tag;
@@ -1824,7 +1648,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 203
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
     new-instance v2, Lcom/samsung/ucm/ucmservice/scp/Tag;
@@ -1839,7 +1662,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 205
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyType()I
 
     move-result v1
@@ -1848,7 +1670,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 206
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->paramDHP:[B
 
     if-nez v1, :cond_0
@@ -1861,7 +1682,6 @@
 
     throw v1
 
-    .line 208
     :cond_0
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
@@ -1877,7 +1697,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 209
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
     new-instance v2, Lcom/samsung/ucm/ucmservice/scp/Tag;
@@ -1892,7 +1711,6 @@
 
     invoke-virtual {v0, v1}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->add(Lcom/samsung/ucm/ucmservice/scp/BerTLV;)V
 
-    .line 216
     :goto_0
     invoke-virtual {v0}, Lcom/samsung/ucm/ucmservice/scp/ConstructedBerTLV;->write()[B
 
@@ -1900,7 +1718,6 @@
 
     return-object v1
 
-    .line 210
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/ucm/ucmservice/scp/CreationParam;->getKeyType()I
 
@@ -1910,7 +1727,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 211
     new-instance v1, Lcom/samsung/ucm/ucmservice/scp/PrimitiveBerTLV;
 
     new-instance v2, Lcom/samsung/ucm/ucmservice/scp/Tag;
@@ -1927,7 +1743,6 @@
 
     goto :goto_0
 
-    .line 213
     :cond_2
     new-instance v1, Ljava/security/InvalidParameterException;
 

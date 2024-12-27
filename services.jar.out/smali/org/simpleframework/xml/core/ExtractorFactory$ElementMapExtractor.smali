@@ -48,19 +48,14 @@
     .end annotation
 
     .prologue
-    .line 375
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 376
     iput-object p1, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementMapExtractor;->contact:Lorg/simpleframework/xml/core/Contact;
 
-    .line 377
     iput-object p3, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementMapExtractor;->format:Lorg/simpleframework/xml/stream/Format;
 
-    .line 378
     iput-object p2, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementMapExtractor;->union:Lorg/simpleframework/xml/ElementMapUnion;
 
-    .line 379
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 349
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ExtractorFactory$ElementMapExtractor;->getAnnotations()[Lorg/simpleframework/xml/ElementMap;
 
     move-result-object v0
@@ -87,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 391
     iget-object v0, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementMapExtractor;->union:Lorg/simpleframework/xml/ElementMapUnion;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/ElementMapUnion;->value()[Lorg/simpleframework/xml/ElementMap;
@@ -107,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 349
     check-cast p1, Lorg/simpleframework/xml/ElementMap;
 
     .end local p1    # "x0":Ljava/lang/annotation/Annotation;
@@ -123,7 +115,6 @@
     .param p1, "element"    # Lorg/simpleframework/xml/ElementMap;
 
     .prologue
-    .line 405
     new-instance v0, Lorg/simpleframework/xml/core/ElementMapLabel;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementMapExtractor;->contact:Lorg/simpleframework/xml/core/Contact;
@@ -145,7 +136,6 @@
     .end annotation
 
     .prologue
-    .line 349
     check-cast p1, Lorg/simpleframework/xml/ElementMap;
 
     .end local p1    # "x0":Ljava/lang/annotation/Annotation;
@@ -161,7 +151,6 @@
     .param p1, "element"    # Lorg/simpleframework/xml/ElementMap;
 
     .prologue
-    .line 418
     invoke-interface {p1}, Lorg/simpleframework/xml/ElementMap;->valueType()Ljava/lang/Class;
 
     move-result-object v0

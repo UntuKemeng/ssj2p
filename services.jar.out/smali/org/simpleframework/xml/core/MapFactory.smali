@@ -10,10 +10,8 @@
     .param p2, "type"    # Lorg/simpleframework/xml/strategy/Type;
 
     .prologue
-    .line 50
     invoke-direct {p0, p1, p2}, Lorg/simpleframework/xml/core/Factory;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;)V
 
-    .line 51
     return-void
 .end method
 
@@ -22,7 +20,6 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 153
     const-class v0, Ljava/util/Map;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -44,7 +41,6 @@
     .end annotation
 
     .prologue
-    .line 134
     const-class v0, Ljava/util/HashMap;
 
     invoke-virtual {p1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
@@ -53,14 +49,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 135
     const-class v0, Ljava/util/HashMap;
 
-    .line 138
     :goto_0
     return-object v0
 
-    .line 137
     :cond_0
     const-class v0, Ljava/util/TreeMap;
 
@@ -70,12 +63,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 138
     const-class v0, Ljava/util/TreeMap;
 
     goto :goto_0
 
-    .line 140
     :cond_1
     new-instance v0, Lorg/simpleframework/xml/core/InstantiationException;
 
@@ -109,16 +100,13 @@
     .end annotation
 
     .prologue
-    .line 62
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/MapFactory;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 63
     .local v0, "expect":Ljava/lang/Class;
     move-object v1, v0
 
-    .line 65
     .local v1, "real":Ljava/lang/Class;
     invoke-static {v1}, Lorg/simpleframework/xml/core/MapFactory;->isInstantiable(Ljava/lang/Class;)Z
 
@@ -126,12 +114,10 @@
 
     if-nez v2, :cond_0
 
-    .line 66
     invoke-virtual {p0, v0}, Lorg/simpleframework/xml/core/MapFactory;->getConversion(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 68
     :cond_0
     invoke-direct {p0, v1}, Lorg/simpleframework/xml/core/MapFactory;->isMap(Ljava/lang/Class;)Z
 
@@ -139,7 +125,6 @@
 
     if-nez v2, :cond_1
 
-    .line 69
     new-instance v2, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v3, "Invalid map %s for %s"
@@ -162,7 +147,6 @@
 
     throw v2
 
-    .line 71
     :cond_1
     invoke-virtual {v1}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
@@ -181,12 +165,10 @@
     .end annotation
 
     .prologue
-    .line 111
     invoke-interface {p1}, Lorg/simpleframework/xml/strategy/Value;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 113
     .local v0, "expect":Ljava/lang/Class;
     invoke-static {v0}, Lorg/simpleframework/xml/core/MapFactory;->isInstantiable(Ljava/lang/Class;)Z
 
@@ -194,12 +176,10 @@
 
     if-nez v1, :cond_0
 
-    .line 114
     invoke-virtual {p0, v0}, Lorg/simpleframework/xml/core/MapFactory;->getConversion(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 116
     :cond_0
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/core/MapFactory;->isMap(Ljava/lang/Class;)Z
 
@@ -207,7 +187,6 @@
 
     if-nez v1, :cond_1
 
-    .line 117
     new-instance v1, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v2, "Invalid map %s for %s"
@@ -230,7 +209,6 @@
 
     throw v1
 
-    .line 119
     :cond_1
     new-instance v1, Lorg/simpleframework/xml/core/ConversionInstance;
 
@@ -251,31 +229,25 @@
     .end annotation
 
     .prologue
-    .line 85
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/MapFactory;->getOverride(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/strategy/Value;
 
     move-result-object v1
 
-    .line 86
     .local v1, "value":Lorg/simpleframework/xml/strategy/Value;
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/MapFactory;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 88
     .local v0, "expect":Ljava/lang/Class;
     if-eqz v1, :cond_0
 
-    .line 89
     invoke-virtual {p0, v1}, Lorg/simpleframework/xml/core/MapFactory;->getInstance(Lorg/simpleframework/xml/strategy/Value;)Lorg/simpleframework/xml/core/Instance;
 
     move-result-object v2
 
-    .line 97
     :goto_0
     return-object v2
 
-    .line 91
     :cond_0
     invoke-static {v0}, Lorg/simpleframework/xml/core/MapFactory;->isInstantiable(Ljava/lang/Class;)Z
 
@@ -283,12 +255,10 @@
 
     if-nez v2, :cond_1
 
-    .line 92
     invoke-virtual {p0, v0}, Lorg/simpleframework/xml/core/MapFactory;->getConversion(Ljava/lang/Class;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 94
     :cond_1
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/core/MapFactory;->isMap(Ljava/lang/Class;)Z
 
@@ -296,7 +266,6 @@
 
     if-nez v2, :cond_2
 
-    .line 95
     new-instance v2, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v3, "Invalid map %s for %s"
@@ -319,7 +288,6 @@
 
     throw v2
 
-    .line 97
     :cond_2
     iget-object v2, p0, Lorg/simpleframework/xml/core/MapFactory;->context:Lorg/simpleframework/xml/core/Context;
 

@@ -24,13 +24,10 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 322
     iput-object p1, p0, Lcom/android/server/SEAMService$SpdHandler;->this$0:Lcom/android/server/SEAMService;
 
-    .line 323
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 324
     return-void
 .end method
 
@@ -41,6 +38,5 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 327
     return-void
 .end method

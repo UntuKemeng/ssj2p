@@ -40,7 +40,6 @@
 
     const/4 v0, 0x0
 
-    .line 57
     const/4 v2, 0x3
 
     new-array v2, v2, [Ljava/lang/String;
@@ -61,7 +60,6 @@
 
     sput-object v2, Lcom/sec/epdg/EpdgUtils;->MCCMNC_TMO:[Ljava/lang/String;
 
-    .line 59
     const-string v2, "user"
 
     sget-object v3, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -88,7 +86,6 @@
     :cond_1
     sput-boolean v0, Lcom/sec/epdg/EpdgUtils;->isUserBinary:Z
 
-    .line 62
     const-string v0, "true"
 
     const-string v1, "ro.product_ship"
@@ -112,7 +109,6 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -122,7 +118,6 @@
     .locals 3
 
     .prologue
-    .line 133
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -156,7 +151,6 @@
     .locals 5
 
     .prologue
-    .line 299
     const-string v2, "persist.sys.omc_etcpath"
 
     const-string v3, "/system/etc/"
@@ -165,7 +159,6 @@
 
     move-result-object v1
 
-    .line 300
     .local v1, "path":Ljava/lang/String;
     const-string v2, "/"
 
@@ -181,7 +174,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 301
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -200,7 +192,6 @@
 
     move-result-object v1
 
-    .line 303
     :cond_0
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -210,7 +201,6 @@
 
     move-result-object v0
 
-    .line 304
     .local v0, "certiName":Ljava/lang/String;
     if-eqz v0, :cond_1
 
@@ -222,11 +212,9 @@
 
     if-eqz v2, :cond_2
 
-    .line 305
     :cond_1
     const-string v0, "ca.crt"
 
-    .line 307
     :cond_2
     const-string v2, "[UTILS]"
 
@@ -254,7 +242,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 308
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -281,7 +268,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 573
     const-string v3, "[UTILS]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -304,22 +290,18 @@
 
     invoke-static {v2, v3, v4}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 575
     if-nez p0, :cond_0
 
     move v0, v2
 
-    .line 582
     :goto_0
     return v0
 
-    .line 578
     :cond_0
     invoke-virtual {p0}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v1
 
-    .line 579
     .local v1, "addrBytes":[B
     const/4 v3, 0x3
 
@@ -355,7 +337,6 @@
 
     or-int v0, v3, v4
 
-    .line 581
     .local v0, "addr":I
     const-string v3, "[UTILS]"
 
@@ -387,7 +368,6 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 709
     const-string v3, "wifi"
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -396,23 +376,19 @@
 
     check-cast v2, Landroid/net/wifi/WifiManager;
 
-    .line 711
     .local v2, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v1
 
-    .line 712
     .local v1, "wifiInfo":Landroid/net/wifi/WifiInfo;
     invoke-virtual {v1}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 713
     .local v0, "mac":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 714
     invoke-virtual {v0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v3
@@ -425,7 +401,6 @@
 
     move-result-object v0
 
-    .line 716
     :cond_0
     return-object v0
 .end method
@@ -437,33 +412,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 338
     if-nez p0, :cond_0
 
-    .line 339
     const-string v4, "[UTILS]"
 
     const-string v5, "getApnNamebyType null Apn Type"
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 354
     :goto_0
     return-object v2
 
-    .line 342
     :cond_0
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getAllApnSettings()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 343
     .local v0, "allApnList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/sec/epdg/IWlanApnSetting;>;"
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 344
     .local v1, "apnIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/sec/epdg/IWlanApnSetting;>;"
     :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -472,14 +441,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 345
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lcom/sec/epdg/IWlanApnSetting;
 
-    .line 346
     .local v3, "iwlanApnSetting":Lcom/sec/epdg/IWlanApnSetting;
     invoke-virtual {v3}, Lcom/sec/epdg/IWlanApnSetting;->getmApnType()Ljava/lang/String;
 
@@ -491,12 +458,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 347
     invoke-virtual {v3}, Lcom/sec/epdg/IWlanApnSetting;->getmIpsecRemoteUri()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 348
     .local v2, "apnName":Ljava/lang/String;
     const-string v4, "[UTILS]"
 
@@ -532,7 +497,6 @@
 
     goto :goto_0
 
-    .line 353
     .end local v2    # "apnName":Ljava/lang/String;
     .end local v3    # "iwlanApnSetting":Lcom/sec/epdg/IWlanApnSetting;
     :cond_2
@@ -568,33 +532,27 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 358
     if-nez p0, :cond_0
 
-    .line 359
     const-string v5, "[UTILS]"
 
     const-string v6, "getApnTypeByName null Apn Type"
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 375
     :goto_0
     return-object v3
 
-    .line 362
     :cond_0
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getAllApnSettings()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 363
     .local v0, "allApnList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/sec/epdg/IWlanApnSetting;>;"
     invoke-virtual {v0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 364
     .local v1, "apnIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/sec/epdg/IWlanApnSetting;>;"
     :cond_1
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -603,20 +561,17 @@
 
     if-eqz v5, :cond_2
 
-    .line 365
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/sec/epdg/IWlanApnSetting;
 
-    .line 366
     .local v4, "iwlanApnSetting":Lcom/sec/epdg/IWlanApnSetting;
     invoke-virtual {v4}, Lcom/sec/epdg/IWlanApnSetting;->getmIpsecRemoteUri()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 367
     .local v2, "apnName":Ljava/lang/String;
     if-eqz v2, :cond_1
 
@@ -626,12 +581,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 368
     invoke-virtual {v4}, Lcom/sec/epdg/IWlanApnSetting;->getmApnType()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 369
     .local v3, "apnType":Ljava/lang/String;
     const-string v5, "[UTILS]"
 
@@ -667,7 +620,6 @@
 
     goto :goto_0
 
-    .line 374
     .end local v2    # "apnName":Ljava/lang/String;
     .end local v3    # "apnType":Ljava/lang/String;
     .end local v4    # "iwlanApnSetting":Lcom/sec/epdg/IWlanApnSetting;
@@ -702,7 +654,6 @@
     .param p0, "networkType"    # I
 
     .prologue
-    .line 406
     const-string v1, "[UTILS]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -725,14 +676,11 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 407
     const/4 v0, 0x0
 
-    .line 408
     .local v0, "apnType":Ljava/lang/String;
     sparse-switch p0, :sswitch_data_0
 
-    .line 430
     const-string v1, "[UTILS]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -755,7 +703,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 434
     :goto_0
     const-string v1, "[UTILS]"
 
@@ -779,24 +726,18 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 435
     return-object v0
 
-    .line 410
     :sswitch_0
     const-string v0, "default"
 
-    .line 411
     goto :goto_0
 
-    .line 414
     :sswitch_1
     const-string v0, "ims"
 
-    .line 415
     goto :goto_0
 
-    .line 419
     :sswitch_2
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorTmo()Ljava/lang/Boolean;
 
@@ -808,26 +749,20 @@
 
     if-eqz v1, :cond_0
 
-    .line 420
     const-string v0, "mms"
 
     goto :goto_0
 
-    .line 422
     :cond_0
     const-string v0, "cbs"
 
-    .line 423
     goto :goto_0
 
-    .line 426
     :sswitch_3
     const-string v0, "bip"
 
-    .line 427
     goto :goto_0
 
-    .line 408
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_0
@@ -846,7 +781,6 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 624
     sget-object v0, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-static {p0, p1, p2, p3, v0}, Landroid/app/PendingIntent;->getBroadcastAsUser(Landroid/content/Context;ILandroid/content/Intent;ILandroid/os/UserHandle;)Landroid/app/PendingIntent;
@@ -860,7 +794,6 @@
     .locals 1
 
     .prologue
-    .line 598
     const-string v0, "epdg"
 
     return-object v0
@@ -871,7 +804,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 704
     const-string v1, "phone"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -880,7 +812,6 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 705
     .local v0, "tm":Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getGroupIdLevel1()Ljava/lang/String;
 
@@ -894,10 +825,8 @@
     .param p0, "code"    # I
 
     .prologue
-    .line 856
     const/4 v0, 0x0
 
-    .line 857
     .local v0, "ret":I
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
@@ -909,12 +838,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 858
     invoke-static {p0}, Lcom/sec/epdg/VerizonIkeError;->getVerizonIkeErrorCode(I)I
 
     move-result v0
 
-    .line 859
     const-string v1, "[UTILS]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -941,17 +868,14 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 864
     :goto_0
     return v0
 
-    .line 861
     :cond_0
     invoke-static {p0}, Lcom/sec/epdg/RfcIkeError;->getRfcIkeErrorCode(I)I
 
     move-result v0
 
-    .line 862
     const-string v1, "[UTILS]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -986,7 +910,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 699
     const-string v1, "phone"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -995,7 +918,6 @@
 
     check-cast v0, Landroid/telephony/TelephonyManager;
 
-    .line 700
     .local v0, "tm":Landroid/telephony/TelephonyManager;
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
 
@@ -1008,7 +930,6 @@
     .locals 1
 
     .prologue
-    .line 696
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v0
@@ -1028,7 +949,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 894
     const-string v4, "phone"
 
     invoke-virtual {p0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1037,11 +957,9 @@
 
     check-cast v3, Landroid/telephony/TelephonyManager;
 
-    .line 896
     .local v3, "tm":Landroid/telephony/TelephonyManager;
     const/4 v1, 0x0
 
-    .line 897
     .local v1, "imsi":Ljava/lang/String;
     const-string v4, "SPR"
 
@@ -1055,29 +973,24 @@
 
     if-eqz v4, :cond_0
 
-    .line 898
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Landroid/telephony/TelephonyManager;->getSubscriberIdDm(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 922
     :goto_0
     return-object v1
 
-    .line 899
     :cond_0
     sget-boolean v4, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_IMSI_FROM_IMPI:Z
 
     if-eqz v4, :cond_3
 
-    .line 901
     invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getIsimImpi()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 902
     .local v0, "impi":Ljava/lang/String;
     const-string v4, "[UTILS]"
 
@@ -1101,27 +1014,23 @@
 
     invoke-static {v7, v4, v5}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 904
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 905
     const-string v4, "@"
 
     invoke-virtual {v0, v4}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 906
     .local v2, "index":I
     invoke-virtual {v0, v7, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 907
     const-string v4, "[UTILS]"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1146,7 +1055,6 @@
 
     goto :goto_0
 
-    .line 909
     .end local v2    # "index":I
     :cond_1
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isDualSimModel()Ljava/lang/Boolean;
@@ -1159,14 +1067,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 910
     invoke-virtual {v3, p1}, Landroid/telephony/TelephonyManager;->getSubscriberId(I)Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 912
     :cond_2
     invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
 
@@ -1174,7 +1080,6 @@
 
     goto :goto_0
 
-    .line 916
     .end local v0    # "impi":Ljava/lang/String;
     :cond_3
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isDualSimModel()Ljava/lang/Boolean;
@@ -1187,14 +1092,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 917
     invoke-virtual {v3, p1}, Landroid/telephony/TelephonyManager;->getSubscriberId(I)Ljava/lang/String;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 919
     :cond_4
     invoke-virtual {v3}, Landroid/telephony/TelephonyManager;->getSubscriberId()Ljava/lang/String;
 
@@ -1207,7 +1110,6 @@
     .locals 2
 
     .prologue
-    .line 852
     const-class v0, Lcom/sec/epdg/EpdgUtils;
 
     monitor-enter v0
@@ -1235,7 +1137,6 @@
     .locals 2
 
     .prologue
-    .line 845
     const-class v0, Lcom/sec/epdg/EpdgUtils;
 
     monitor-enter v0
@@ -1263,7 +1164,6 @@
     .locals 2
 
     .prologue
-    .line 849
     const-class v0, Lcom/sec/epdg/EpdgUtils;
 
     monitor-enter v0
@@ -1291,7 +1191,6 @@
     .locals 1
 
     .prologue
-    .line 602
     const-string v0, "wlan0"
 
     return-object v0
@@ -1302,10 +1201,8 @@
     .param p0, "cid"    # I
 
     .prologue
-    .line 629
     const/4 v0, 0x0
 
-    .line 630
     .local v0, "iwlanIfName":Ljava/lang/String;
     const-string v1, "[UTILS]"
 
@@ -1329,12 +1226,10 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 632
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getEpdgInterfacePrefix()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 633
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1343,7 +1238,6 @@
 
     move-result-object v0
 
-    .line 635
     const-string v1, "[UTILS]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1366,7 +1260,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 637
     return-object v0
 .end method
 
@@ -1375,10 +1268,8 @@
     .param p0, "cid"    # I
 
     .prologue
-    .line 606
     const/4 v0, 0x0
 
-    .line 607
     .local v0, "mobileIfName":Ljava/lang/String;
     const-string v1, "[UTILS]"
 
@@ -1402,12 +1293,10 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 609
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getMobileInterfacePrefix()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 610
     invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -1416,7 +1305,6 @@
 
     move-result-object v0
 
-    .line 612
     const-string v1, "[UTILS]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1439,7 +1327,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 614
     return-object v0
 .end method
 
@@ -1447,7 +1334,6 @@
     .locals 2
 
     .prologue
-    .line 594
     const-string v0, "ril.data.intfprefix"
 
     const-string v1, "rmnet"
@@ -1466,7 +1352,6 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 380
     const-string v1, "[UTILS]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1489,21 +1374,17 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 381
     if-nez p0, :cond_0
 
-    .line 382
     const-string v1, "[UTILS]"
 
     const-string v2, "getNetworkTypeByApnType apnType is null.. returning -1"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 401
     :goto_0
     return v0
 
-    .line 385
     :cond_0
     const-string v1, "default"
 
@@ -1513,12 +1394,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 386
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 387
     :cond_1
     const-string v1, "ims"
 
@@ -1528,12 +1407,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 388
     const/16 v0, 0xb
 
     goto :goto_0
 
-    .line 389
     :cond_2
     const-string v1, "cbs"
 
@@ -1543,12 +1420,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 390
     const/16 v0, 0xc
 
     goto :goto_0
 
-    .line 391
     :cond_3
     const-string v1, "bip"
 
@@ -1558,12 +1433,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 392
     const/16 v0, 0x17
 
     goto :goto_0
 
-    .line 393
     :cond_4
     const-string v1, "mms"
 
@@ -1573,12 +1446,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 394
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 395
     :cond_5
     const-string v1, "xcap"
 
@@ -1588,12 +1459,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 396
     const/16 v0, 0x1b
 
     goto :goto_0
 
-    .line 397
     :cond_6
     const-string v1, "emergency"
 
@@ -1603,12 +1472,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 398
     const/16 v0, 0xf
 
     goto :goto_0
 
-    .line 400
     :cond_7
     const-string v1, "[UTILS]"
 
@@ -1639,7 +1506,6 @@
     .locals 5
 
     .prologue
-    .line 155
     sget-object v2, Lcom/sec/epdg/EpdgConstants;->MccmncMap:Ljava/util/HashMap;
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getSimOperator()Ljava/lang/String;
@@ -1652,7 +1518,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 156
     .local v1, "simBasedSalescode":Ljava/lang/String;
     const-string v2, "persist.omc.sales_code"
 
@@ -1668,7 +1533,6 @@
 
     move-result-object v0
 
-    .line 157
     .local v0, "cscSalesCode":Ljava/lang/String;
     const-string v2, "[UTILS]"
 
@@ -1702,7 +1566,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 158
     if-eqz v1, :cond_0
 
     const-string v2, ""
@@ -1713,7 +1576,6 @@
 
     if-nez v2, :cond_0
 
-    .line 161
     .end local v1    # "simBasedSalescode":Ljava/lang/String;
     :goto_0
     return-object v1
@@ -1729,7 +1591,6 @@
     .locals 1
 
     .prologue
-    .line 690
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v0
@@ -1745,7 +1606,6 @@
     .locals 1
 
     .prologue
-    .line 693
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v0
@@ -1768,7 +1628,6 @@
 
     const/4 v2, -0x1
 
-    .line 497
     const-string v3, "[UTILS]"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1791,19 +1650,16 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 498
     const/4 v1, -0x1
 
     .local v1, "profileId":I
     const/4 v0, -0x1
 
-    .line 500
     .local v0, "internalNetworkType":I
     invoke-static {p0}, Lcom/sec/epdg/EpdgUtils;->getProfileIDbyNetworkTypeInternal(I)I
 
     move-result v1
 
-    .line 502
     if-ne v1, v2, :cond_5
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
@@ -1816,35 +1672,29 @@
 
     if-eqz v3, :cond_5
 
-    .line 503
     const/16 v3, 0xc
 
     if-ne p0, v3, :cond_1
 
-    .line 504
     const-string v3, "[UTILS]"
 
     const-string v4, "Profile id returned for CBS is -1, retry for MMS"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 505
     const/4 v0, 0x2
 
-    .line 518
     :goto_0
     invoke-static {v0}, Lcom/sec/epdg/EpdgUtils;->getProfileIDbyNetworkTypeInternal(I)I
 
     move-result v1
 
-    .line 519
     if-eq v1, v2, :cond_0
 
     if-eq v1, v7, :cond_0
 
     if-ne v1, v6, :cond_4
 
-    .line 522
     :cond_0
     const-string v3, "[UTILS]"
 
@@ -1852,47 +1702,39 @@
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 536
     :goto_1
     return v2
 
-    .line 506
     :cond_1
     const/4 v3, 0x2
 
     if-ne p0, v3, :cond_2
 
-    .line 507
     const-string v3, "[UTILS]"
 
     const-string v4, "Profile id returned for MMS is -1, retry for CBS"
 
     invoke-static {v3, v4}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 508
     const/16 v0, 0xc
 
     goto :goto_0
 
-    .line 509
     :cond_2
     const/16 v2, 0xb
 
     if-ne p0, v2, :cond_3
 
-    .line 510
     const-string v2, "[UTILS]"
 
     const-string v3, "Profile id returned for IMS"
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 511
     const/4 v2, 0x1
 
     goto :goto_1
 
-    .line 513
     :cond_3
     const-string v2, "[UTILS]"
 
@@ -1902,10 +1744,8 @@
 
     move v2, v1
 
-    .line 515
     goto :goto_1
 
-    .line 525
     :cond_4
     const-string v2, "[UTILS]"
 
@@ -1931,14 +1771,11 @@
 
     move v2, v1
 
-    .line 526
     goto :goto_1
 
-    .line 528
     :cond_5
     if-ne v1, v6, :cond_6
 
-    .line 529
     const-string v3, "[UTILS]"
 
     const-string v4, "Some number parsing error happens, returning -1 as id"
@@ -1947,11 +1784,9 @@
 
     goto :goto_1
 
-    .line 531
     :cond_6
     if-ne v1, v7, :cond_7
 
-    .line 532
     const-string v3, "[UTILS]"
 
     const-string v4, "Connectivity manager instance is null, returning -1 as id"
@@ -1960,7 +1795,6 @@
 
     goto :goto_1
 
-    .line 535
     :cond_7
     const-string v2, "[UTILS]"
 
@@ -1986,7 +1820,6 @@
 
     move v2, v1
 
-    .line 536
     goto :goto_1
 .end method
 
@@ -1999,7 +1832,6 @@
 
     const/4 v10, -0x1
 
-    .line 439
     const-string v11, "[UTILS]"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -2022,33 +1854,26 @@
 
     invoke-static {v11, v12}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 440
     const/4 v3, 0x0
 
-    .line 441
     .local v3, "mConnMgr":Landroid/net/ConnectivityManager;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getConnMgrInstance()Landroid/net/ConnectivityManager;
 
     move-result-object v3
 
-    .line 442
     if-nez v3, :cond_0
 
-    .line 443
     const-string v9, "[UTILS]"
 
     const-string v10, "getProfileIDbyNetworkTypeInternal() . MConnMgr instance is null.. returning -2 as profile ID"
 
     invoke-static {v9, v10}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 445
     const/4 v9, -0x2
 
-    .line 493
     :goto_0
     return v9
 
-    .line 447
     :cond_0
     const-string v11, "[UTILS]"
 
@@ -2056,18 +1881,15 @@
 
     invoke-static {v11, v12}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 450
     invoke-virtual {v3, p0}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
 
     move-result-object v8
 
-    .line 451
     .local v8, "nwkInfo":Landroid/net/NetworkInfo;
     invoke-virtual {v8}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v6
 
-    .line 453
     .local v6, "networkState":Landroid/net/NetworkInfo$State;
     const-string v11, "[UTILS]"
 
@@ -2091,7 +1913,6 @@
 
     invoke-static {v11, v12}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 454
     sget-object v11, Landroid/net/NetworkInfo$State;->DISCONNECTED:Landroid/net/NetworkInfo$State;
 
     if-eq v6, v11, :cond_1
@@ -2100,7 +1921,6 @@
 
     if-ne v6, v11, :cond_2
 
-    .line 456
     :cond_1
     const-string v9, "[UTILS]"
 
@@ -2110,44 +1930,35 @@
 
     move v9, v10
 
-    .line 458
     goto :goto_0
 
-    .line 460
     :cond_2
     const/4 v2, 0x0
 
-    .line 461
     .local v2, "lp":Landroid/net/LinkProperties;
     invoke-virtual {v3, p0}, Landroid/net/ConnectivityManager;->getLinkProperties(I)Landroid/net/LinkProperties;
 
     move-result-object v2
 
-    .line 462
     const/4 v4, 0x0
 
     .local v4, "mIntfName":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 463
     .local v7, "numericSubString":Ljava/lang/String;
     if-eqz v2, :cond_3
 
-    .line 464
     invoke-virtual {v2}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 469
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getMobileInterfacePrefix()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 470
     .local v5, "mobileIntfPrefix":Ljava/lang/String;
     if-eqz v4, :cond_4
 
-    .line 472
     :try_start_0
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
@@ -2163,7 +1974,6 @@
 
     move-result-object v7
 
-    .line 482
     const-string v10, "[UTILS]"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -2196,7 +2006,6 @@
 
     invoke-static {v10, v11}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 486
     :try_start_1
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_1
@@ -2204,7 +2013,6 @@
 
     move-result v1
 
-    .line 491
     .local v1, "interfaceid":I
     const-string v9, "[UTILS]"
 
@@ -2230,12 +2038,10 @@
 
     invoke-static {v9, v10}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
     add-int/lit8 v9, v1, 0x1
 
     goto/16 :goto_0
 
-    .line 466
     .end local v1    # "interfaceid":I
     .end local v5    # "mobileIntfPrefix":Ljava/lang/String;
     :cond_3
@@ -2247,15 +2053,12 @@
 
     move v9, v10
 
-    .line 467
     goto/16 :goto_0
 
-    .line 474
     .restart local v5    # "mobileIntfPrefix":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 475
     .local v0, "e":Ljava/lang/StringIndexOutOfBoundsException;
     const-string v10, "[UTILS]"
 
@@ -2265,7 +2068,6 @@
 
     goto/16 :goto_0
 
-    .line 479
     .end local v0    # "e":Ljava/lang/StringIndexOutOfBoundsException;
     :cond_4
     const-string v9, "[UTILS]"
@@ -2276,14 +2078,11 @@
 
     move v9, v10
 
-    .line 480
     goto/16 :goto_0
 
-    .line 487
     :catch_1
     move-exception v0
 
-    .line 488
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string v10, "[UTILS]"
 
@@ -2299,30 +2098,24 @@
     .param p0, "apnType"    # Ljava/lang/String;
 
     .prologue
-    .line 541
     if-nez p0, :cond_0
 
-    .line 542
     const-string v1, "[UTILS]"
 
     const-string v2, "getProfileIdbyApnType apnType is null.. returning -1"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 543
     const/4 v1, -0x1
 
-    .line 546
     :goto_0
     return v1
 
-    .line 545
     :cond_0
     invoke-static {p0}, Lcom/sec/epdg/EpdgUtils;->getNetworkTypeByApnType(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 546
     .local v0, "mNetworkType":I
     invoke-static {v0}, Lcom/sec/epdg/EpdgUtils;->getProfileIDbyNetworkType(I)I
 
@@ -2335,18 +2128,15 @@
     .locals 3
 
     .prologue
-    .line 144
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getMccmnc()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 145
     .local v1, "mccmnc":Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getGid1()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 146
     .local v0, "gid1":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -2358,7 +2148,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 147
     if-eqz v0, :cond_0
 
     const-string v2, "BAE0000000000000"
@@ -2369,10 +2158,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 148
     const-string v1, "311480"
 
-    .line 151
     :cond_0
     return-object v1
 .end method
@@ -2382,7 +2169,6 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 754
     const-string v3, "wifi"
 
     invoke-virtual {p0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -2391,23 +2177,19 @@
 
     check-cast v2, Landroid/net/wifi/WifiManager;
 
-    .line 756
     .local v2, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual {v2}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v1
 
-    .line 757
     .local v1, "wifiInfo":Landroid/net/wifi/WifiInfo;
     invoke-virtual {v1}, Landroid/net/wifi/WifiInfo;->getMacAddress()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 758
     .local v0, "mac":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 759
     invoke-virtual {v0}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v3
@@ -2420,7 +2202,6 @@
 
     move-result-object v0
 
-    .line 761
     :cond_0
     return-object v0
 .end method
@@ -2430,10 +2211,8 @@
     .param p0, "ss"    # Landroid/telephony/ServiceState;
 
     .prologue
-    .line 868
     const/4 v2, -0x1
 
-    .line 870
     .local v2, "vops":I
     :try_start_0
     const-class v3, Landroid/telephony/ServiceState;
@@ -2448,7 +2227,6 @@
 
     move-result-object v1
 
-    .line 871
     .local v1, "md":Ljava/lang/reflect/Method;
     const/4 v3, 0x0
 
@@ -2469,16 +2247,13 @@
 
     move-result v2
 
-    .line 881
     .end local v1    # "md":Ljava/lang/reflect/Method;
     :goto_0
     return v2
 
-    .line 872
     :catch_0
     move-exception v0
 
-    .line 873
     .local v0, "e":Ljava/lang/NoSuchMethodException;
     const-string v3, "[UTILS]"
 
@@ -2488,12 +2263,10 @@
 
     goto :goto_0
 
-    .line 874
     .end local v0    # "e":Ljava/lang/NoSuchMethodException;
     :catch_1
     move-exception v0
 
-    .line 875
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     const-string v3, "[UTILS]"
 
@@ -2503,12 +2276,10 @@
 
     goto :goto_0
 
-    .line 876
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catch_2
     move-exception v0
 
-    .line 877
     .local v0, "e":Ljava/lang/IllegalAccessException;
     const-string v3, "[UTILS]"
 
@@ -2518,12 +2289,10 @@
 
     goto :goto_0
 
-    .line 878
     .end local v0    # "e":Ljava/lang/IllegalAccessException;
     :catch_3
     move-exception v0
 
-    .line 879
     .local v0, "e":Ljava/lang/reflect/InvocationTargetException;
     const-string v3, "[UTILS]"
 
@@ -2538,7 +2307,6 @@
     .locals 1
 
     .prologue
-    .line 765
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v0
@@ -2564,7 +2332,6 @@
     .locals 1
 
     .prologue
-    .line 720
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v0
@@ -2594,7 +2361,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 724
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->idiMacInclude()Z
 
     move-result v4
@@ -2607,7 +2373,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 725
     :cond_0
     const/16 v4, 0x40
 
@@ -2615,14 +2380,11 @@
 
     move-result v3
 
-    .line 726
     .local v3, "offset":I
     if-ltz v3, :cond_4
 
-    .line 728
     const/4 v2, 0x0
 
-    .line 730
     .local v2, "macAddress":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isIncludeUeWiFiMac()Z
@@ -2631,16 +2393,13 @@
 
     if-eqz v4, :cond_1
 
-    .line 731
     invoke-static {p0}, Lcom/sec/epdg/EpdgUtils;->getUeWiFiMac(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 735
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 736
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4, p1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
@@ -2673,7 +2432,6 @@
 
     move-result-object v1
 
-    .line 738
     .local v1, "idi":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -2699,14 +2457,12 @@
 
     invoke-static {v4, v5, v6}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 750
     .end local v1    # "idi":Ljava/lang/String;
     .end local v2    # "macAddress":Ljava/lang/String;
     .end local v3    # "offset":I
     :goto_1
     return-object v1
 
-    .line 733
     .restart local v2    # "macAddress":Ljava/lang/String;
     .restart local v3    # "offset":I
     :cond_1
@@ -2716,7 +2472,6 @@
 
     goto :goto_0
 
-    .line 741
     :cond_2
     const-string v4, "[UTILS]"
 
@@ -2732,16 +2487,13 @@
     :goto_2
     move-object v1, p1
 
-    .line 750
     goto :goto_1
 
-    .line 743
     .restart local v2    # "macAddress":Ljava/lang/String;
     .restart local v3    # "offset":I
     :catch_0
     move-exception v0
 
-    .line 744
     .local v0, "e":Ljava/lang/StringIndexOutOfBoundsException;
     const-string v4, "[UTILS]"
 
@@ -2767,7 +2519,6 @@
 
     goto :goto_2
 
-    .line 747
     .end local v0    # "e":Ljava/lang/StringIndexOutOfBoundsException;
     .end local v2    # "macAddress":Ljava/lang/String;
     :cond_4
@@ -2784,7 +2535,6 @@
     .locals 1
 
     .prologue
-    .line 1065
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorDT()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -2800,7 +2550,6 @@
     .locals 2
 
     .prologue
-    .line 285
     const-string v0, "1"
 
     const-string v1, "ril.ICC_TYPE"
@@ -2825,7 +2574,6 @@
     .param p0, "apnType"    # Ljava/lang/String;
 
     .prologue
-    .line 662
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v1
@@ -2838,7 +2586,6 @@
 
     move-result v0
 
-    .line 663
     .local v0, "result":Z
     const-string v1, "[UTILS]"
 
@@ -2862,7 +2609,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 664
     return v0
 .end method
 
@@ -2873,10 +2619,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 645
     if-ne p0, v0, :cond_0
 
-    .line 646
     .local v0, "result":Z
     :goto_0
     const-string v1, "[UTILS]"
@@ -2917,10 +2661,8 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 648
     return v0
 
-    .line 645
     .end local v0    # "result":Z
     :cond_0
     const/4 v0, 0x0
@@ -2932,7 +2674,6 @@
     .locals 1
 
     .prologue
-    .line 330
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v0
@@ -2952,7 +2693,6 @@
     .locals 2
 
     .prologue
-    .line 289
     const-string v0, "dsds"
 
     const-string v1, "persist.radio.multisim.config"
@@ -2977,14 +2717,12 @@
     .param p0, "apnType"    # Ljava/lang/String;
 
     .prologue
-    .line 668
     const-string v1, "emergency"
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 669
     .local v0, "result":Z
     const-string v1, "[UTILS]"
 
@@ -3008,7 +2746,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 670
     return v0
 .end method
 
@@ -3016,7 +2753,6 @@
     .locals 2
 
     .prologue
-    .line 312
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -3043,27 +2779,21 @@
 
     const/4 v4, 0x2
 
-    .line 934
     const/4 v1, 0x0
 
-    .line 935
     .local v1, "ret":Z
     invoke-static {p0}, Lcom/sec/epdg/EpdgUtils;->getApnTypeByName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 937
     .local v0, "apnType":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 938
     const/4 v2, 0x0
 
-    .line 954
     :goto_0
     return v2
 
-    .line 941
     :cond_0
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
@@ -3075,7 +2805,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 942
     invoke-static {v0}, Lcom/sec/epdg/EpdgUtils;->getNetworkTypeByApnType(Ljava/lang/String;)I
 
     move-result v2
@@ -3095,17 +2824,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 945
     const/4 v1, 0x1
 
     :cond_2
     :goto_1
     move v2, v1
 
-    .line 954
     goto :goto_0
 
-    .line 948
     :cond_3
     invoke-static {v0}, Lcom/sec/epdg/EpdgUtils;->getNetworkTypeByApnType(Ljava/lang/String;)I
 
@@ -3127,7 +2853,6 @@
 
     if-ne v4, v2, :cond_2
 
-    .line 951
     :cond_4
     const/4 v1, 0x1
 
@@ -3138,7 +2863,6 @@
     .locals 3
 
     .prologue
-    .line 137
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v1
@@ -3149,7 +2873,6 @@
 
     move-result-object v0
 
-    .line 139
     .local v0, "version":Ljava/lang/String;
     const-string v1, "6.0"
 
@@ -3168,7 +2891,6 @@
     .locals 1
 
     .prologue
-    .line 985
     const/4 v0, 0x0
 
     return v0
@@ -3178,7 +2900,6 @@
     .locals 3
 
     .prologue
-    .line 316
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -3212,7 +2933,6 @@
     .locals 1
 
     .prologue
-    .line 334
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_KEEP_ALIVE:Z
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -3226,7 +2946,6 @@
     .locals 1
 
     .prologue
-    .line 1058
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -3241,10 +2960,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 1059
     const/4 v0, 0x1
 
-    .line 1061
     :goto_0
     return v0
 
@@ -3258,7 +2975,6 @@
     .locals 3
 
     .prologue
-    .line 326
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -3292,7 +3008,6 @@
     .locals 1
 
     .prologue
-    .line 170
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVerizon()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -3343,7 +3058,6 @@
     .locals 1
 
     .prologue
-    .line 166
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorVod()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -3355,12 +3069,10 @@
     .locals 2
 
     .prologue
-    .line 276
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 277
     .local v0, "salesCode":Ljava/lang/String;
     const-string v1, "ZVV"
 
@@ -3380,14 +3092,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 278
     const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    .line 280
     :goto_0
     return-object v1
 
@@ -3405,7 +3115,6 @@
     .locals 2
 
     .prologue
-    .line 267
     const-string v0, "FTM"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3442,7 +3151,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 269
     :cond_0
     const/4 v0, 0x1
 
@@ -3450,7 +3158,6 @@
 
     move-result-object v0
 
-    .line 271
     :goto_0
     return-object v0
 
@@ -3468,7 +3175,6 @@
     .locals 2
 
     .prologue
-    .line 82
     const-string v0, "ATT"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3490,7 +3196,6 @@
     .locals 2
 
     .prologue
-    .line 263
     const-string v0, "CTI"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3512,7 +3217,6 @@
     .locals 2
 
     .prologue
-    .line 214
     const-string v0, "DTM"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3534,7 +3238,6 @@
     .locals 2
 
     .prologue
-    .line 222
     const-string v0, "TMZ"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3556,7 +3259,6 @@
     .locals 2
 
     .prologue
-    .line 196
     const-string v0, "THL"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3578,7 +3280,6 @@
     .locals 2
 
     .prologue
-    .line 180
     const-string v0, "EVR"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3600,7 +3301,6 @@
     .locals 2
 
     .prologue
-    .line 184
     const-string v0, "FTM"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3622,7 +3322,6 @@
     .locals 2
 
     .prologue
-    .line 234
     const-string v0, "GLB"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3644,7 +3343,6 @@
     .locals 2
 
     .prologue
-    .line 128
     const-string v0, "HTS"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3666,7 +3364,6 @@
     .locals 2
 
     .prologue
-    .line 255
     const-string v0, "INU"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3688,7 +3385,6 @@
     .locals 2
 
     .prologue
-    .line 226
     const-string v0, "XFA"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3706,7 +3402,6 @@
     .locals 2
 
     .prologue
-    .line 218
     const-string v0, "ORO"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3724,10 +3419,8 @@
     .locals 3
 
     .prologue
-    .line 238
     const-string v0, "none"
 
-    .line 239
     .local v0, "operatorNumeric":Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isDualSimModel()Ljava/lang/Boolean;
 
@@ -3739,7 +3432,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 240
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
@@ -3752,7 +3444,6 @@
 
     move-result-object v0
 
-    .line 244
     :goto_0
     const-string v1, "22803"
 
@@ -3802,7 +3493,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 249
     :cond_0
     const/4 v1, 0x1
 
@@ -3810,11 +3500,9 @@
 
     move-result-object v1
 
-    .line 251
     :goto_1
     return-object v1
 
-    .line 242
     :cond_1
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -3826,7 +3514,6 @@
 
     goto :goto_0
 
-    .line 251
     :cond_2
     const/4 v1, 0x0
 
@@ -3841,7 +3528,6 @@
     .locals 2
 
     .prologue
-    .line 78
     const-string v0, "PTR"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3886,7 +3572,6 @@
     .locals 2
 
     .prologue
-    .line 192
     const-string v0, "PRT"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3908,7 +3593,6 @@
     .locals 2
 
     .prologue
-    .line 174
     const-string v0, "FMC"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -3933,7 +3617,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 175
     :cond_0
     const/4 v0, 0x1
 
@@ -3941,7 +3624,6 @@
 
     move-result-object v0
 
-    .line 177
     :goto_0
     return-object v0
 
@@ -3959,7 +3641,6 @@
     .locals 2
 
     .prologue
-    .line 95
     const-string v0, "SPR"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4008,7 +3689,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 99
     :cond_0
     const/4 v0, 0x1
 
@@ -4016,7 +3696,6 @@
 
     move-result-object v0
 
-    .line 101
     :goto_0
     return-object v0
 
@@ -4034,7 +3713,6 @@
     .locals 2
 
     .prologue
-    .line 259
     const-string v0, "THL"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4056,7 +3734,6 @@
     .locals 2
 
     .prologue
-    .line 200
     const-string v0, "TEL"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4078,7 +3755,6 @@
     .locals 2
 
     .prologue
-    .line 74
     const-string v0, "TMB"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4100,12 +3776,10 @@
     .locals 8
 
     .prologue
-    .line 109
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getSimOperator()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 110
     .local v4, "mOperatorSim":Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorXaa()Ljava/lang/Boolean;
 
@@ -4117,7 +3791,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 111
     sget-object v1, Lcom/sec/epdg/EpdgUtils;->MCCMNC_TMO:[Ljava/lang/String;
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -4132,7 +3805,6 @@
 
     aget-object v0, v1, v2
 
-    .line 112
     .local v0, "SIMOperator":Ljava/lang/String;
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4140,7 +3812,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 113
     const-string v5, "[UTILS]"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -4163,14 +3834,12 @@
 
     invoke-static {v5, v6}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 114
     const/4 v5, 0x1
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v5
 
-    .line 118
     .end local v0    # "SIMOperator":Ljava/lang/String;
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
@@ -4178,7 +3847,6 @@
     :goto_1
     return-object v5
 
-    .line 111
     .restart local v0    # "SIMOperator":Ljava/lang/String;
     .restart local v1    # "arr$":[Ljava/lang/String;
     .restart local v2    # "i$":I
@@ -4188,7 +3856,6 @@
 
     goto :goto_0
 
-    .line 118
     .end local v0    # "SIMOperator":Ljava/lang/String;
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
@@ -4207,12 +3874,10 @@
     .locals 4
 
     .prologue
-    .line 204
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getSimOperator()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 206
     .local v0, "mOperatorSim":Ljava/lang/String;
     const-string v1, "[UTILS]"
 
@@ -4236,7 +3901,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 207
     const-string v1, "TUR"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4257,14 +3921,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 208
     const/4 v1, 0x1
 
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v1
 
-    .line 210
     :goto_0
     return-object v1
 
@@ -4282,7 +3944,6 @@
     .locals 2
 
     .prologue
-    .line 230
     const-string v0, "VD2"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4304,7 +3965,6 @@
     .locals 2
 
     .prologue
-    .line 123
     const-string v0, "VDF"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4326,7 +3986,6 @@
     .locals 2
 
     .prologue
-    .line 66
     const-string v0, "VZW"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4369,7 +4028,6 @@
     .locals 3
 
     .prologue
-    .line 70
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -4403,7 +4061,6 @@
     .locals 2
 
     .prologue
-    .line 188
     const-string v0, "VOD"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4425,7 +4082,6 @@
     .locals 2
 
     .prologue
-    .line 105
     const-string v0, "XAA"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4447,7 +4103,6 @@
     .locals 2
 
     .prologue
-    .line 978
     const-string v0, "AMO"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -4460,10 +4115,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 979
     const/4 v0, 0x1
 
-    .line 981
     :goto_0
     return v0
 
@@ -4477,16 +4130,13 @@
     .locals 5
 
     .prologue
-    .line 1013
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1014
     .local v1, "salesCode":Ljava/lang/String;
     const-string v0, "none"
 
-    .line 1015
     .local v0, "operatorNumeric":Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isDualSimModel()Ljava/lang/Boolean;
 
@@ -4498,7 +4148,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1016
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v2
@@ -4511,7 +4160,6 @@
 
     move-result-object v0
 
-    .line 1020
     :goto_0
     const-string v2, "[UTILS]"
 
@@ -4535,7 +4183,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1021
     const-string v2, "THL"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -4624,15 +4271,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 1030
     :cond_0
     const/4 v2, 0x1
 
-    .line 1032
     :goto_1
     return v2
 
-    .line 1018
     :cond_1
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -4644,7 +4288,6 @@
 
     goto :goto_0
 
-    .line 1032
     :cond_2
     const/4 v2, 0x0
 
@@ -4655,7 +4298,6 @@
     .locals 3
 
     .prologue
-    .line 657
     const-string v0, "[UTILS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4680,7 +4322,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 658
     sget-boolean v0, Lcom/sec/epdg/EpdgUtils;->isShipBinary:Z
 
     return v0
@@ -4690,7 +4331,6 @@
     .locals 2
 
     .prologue
-    .line 1051
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorInu()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -4711,7 +4351,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1052
     :cond_0
     const-string v0, "[UTILS]"
 
@@ -4719,10 +4358,8 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1053
     const/4 v0, 0x1
 
-    .line 1055
     :goto_0
     return v0
 
@@ -4736,7 +4373,6 @@
     .locals 7
 
     .prologue
-    .line 997
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v6
@@ -4745,7 +4381,6 @@
 
     move-result v4
 
-    .line 998
     .local v4, "threshold4gRoveIn":I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -4755,7 +4390,6 @@
 
     move-result v5
 
-    .line 999
     .local v5, "threshold4gRoveOut":I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -4765,7 +4399,6 @@
 
     move-result v2
 
-    .line 1000
     .local v2, "threshold3gRoveIn":I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -4775,7 +4408,6 @@
 
     move-result v3
 
-    .line 1001
     .local v3, "threshold3gRoveOut":I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -4785,7 +4417,6 @@
 
     move-result v0
 
-    .line 1002
     .local v0, "threshold2gRoveIn":I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -4795,7 +4426,6 @@
 
     move-result v1
 
-    .line 1004
     .local v1, "threshold2gRoveOut":I
     if-eqz v4, :cond_0
 
@@ -4809,11 +4439,9 @@
 
     if-nez v1, :cond_1
 
-    .line 1007
     :cond_0
     const/4 v6, 0x0
 
-    .line 1009
     :goto_0
     return v6
 
@@ -4827,7 +4455,6 @@
     .locals 2
 
     .prologue
-    .line 925
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorTmo()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -4898,11 +4525,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 928
     :cond_0
     const/4 v0, 0x1
 
-    .line 930
     :goto_0
     return v0
 
@@ -4916,7 +4541,6 @@
     .locals 3
 
     .prologue
-    .line 91
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -4950,7 +4574,6 @@
     .locals 3
 
     .prologue
-    .line 652
     const-string v0, "[UTILS]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4975,7 +4598,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 653
     sget-boolean v0, Lcom/sec/epdg/EpdgUtils;->isUserBinary:Z
 
     return v0
@@ -4985,7 +4607,6 @@
     .locals 1
 
     .prologue
-    .line 293
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v0
@@ -4996,14 +4617,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 294
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    .line 296
     :goto_0
     return-object v0
 
@@ -5021,7 +4640,6 @@
     .locals 4
 
     .prologue
-    .line 320
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v1
@@ -5048,7 +4666,6 @@
 
     move-result-object v0
 
-    .line 321
     .local v0, "mIsUsingErisClient":Ljava/lang/Boolean;
     const-string v1, "[UTILS]"
 
@@ -5072,7 +4689,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 322
     return-object v0
 .end method
 
@@ -5080,7 +4696,6 @@
     .locals 3
 
     .prologue
-    .line 87
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -5114,7 +4729,6 @@
     .locals 2
 
     .prologue
-    .line 971
     const-string v0, "VOD"
 
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getOperatorName()Ljava/lang/String;
@@ -5127,10 +4741,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 972
     const/4 v0, 0x1
 
-    .line 974
     :goto_0
     return v0
 
@@ -5146,7 +4758,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 885
     const-string v1, "6.0"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -5165,12 +4776,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 891
     :cond_0
     :goto_0
     return v0
 
-    .line 888
     :cond_1
     const-string v1, "EVR"
 
@@ -5220,7 +4829,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 889
     :cond_2
     const/4 v0, 0x1
 
@@ -5231,7 +4839,6 @@
     .locals 1
 
     .prologue
-    .line 1036
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isOperatorDT()Ljava/lang/Boolean;
 
     move-result-object v0
@@ -5301,10 +4908,8 @@
 
     if-nez v0, :cond_1
 
-    .line 1044
     const/4 v0, 0x1
 
-    .line 1046
     :goto_0
     return v0
 
@@ -5319,7 +4924,6 @@
     .param p0, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 586
     const-string v1, "wifi"
 
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -5328,7 +4932,6 @@
 
     check-cast v0, Landroid/net/wifi/WifiManager;
 
-    .line 588
     .local v0, "wifi":Landroid/net/wifi/WifiManager;
     const-string v1, "[UTILS]"
 
@@ -5356,7 +4959,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 590
     invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->isWifiEnabled()Z
 
     move-result v1
@@ -5371,7 +4973,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 554
     const-string v4, "[UTILS]"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -5394,7 +4995,6 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 557
     :try_start_0
     invoke-static {p0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
     :try_end_0
@@ -5402,13 +5002,11 @@
 
     move-result-object v3
 
-    .line 562
     .local v3, "inetaddr":Ljava/net/InetAddress;
     invoke-virtual {v3}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v1
 
-    .line 563
     .local v1, "addrBytes":[B
     const/4 v4, 0x3
 
@@ -5444,7 +5042,6 @@
 
     or-int v0, v4, v5
 
-    .line 565
     .local v0, "addr":I
     const-string v4, "[UTILS]"
 
@@ -5468,18 +5065,15 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 566
     .end local v0    # "addr":I
     .end local v1    # "addrBytes":[B
     .end local v3    # "inetaddr":Ljava/net/InetAddress;
     :goto_0
     return v0
 
-    .line 558
     :catch_0
     move-exception v2
 
-    .line 559
     .local v2, "e":Ljava/net/UnknownHostException;
     const-string v4, "[UTILS]"
 
@@ -5496,12 +5090,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 619
     sget-object v0, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {p0, p1, v0}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 620
     return-void
 .end method
 
@@ -5514,17 +5106,14 @@
 
     const/4 v1, 0x1
 
-    .line 674
     sget-boolean v3, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_VOLTE:Z
 
     if-nez v3, :cond_1
 
-    .line 687
     :cond_0
     :goto_0
     return v1
 
-    .line 678
     :cond_1
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getIsCellularAvailable()Z
 
@@ -5532,21 +5121,17 @@
 
     if-eqz v3, :cond_0
 
-    .line 680
     if-lez p0, :cond_2
 
-    .line 681
     const/4 v3, 0x2
 
     invoke-static {v3}, Lcom/sec/epdg/EpdgUtils;->getProfileIDbyNetworkType(I)I
 
     move-result v0
 
-    .line 683
     .local v0, "profileId":I
     if-lez v0, :cond_2
 
-    .line 684
     if-eq v0, p0, :cond_0
 
     move v1, v2
@@ -5557,7 +5142,6 @@
     :cond_2
     move v1, v2
 
-    .line 687
     goto :goto_0
 .end method
 
@@ -5565,7 +5149,6 @@
     .locals 1
 
     .prologue
-    .line 641
     invoke-static {}, Lcom/sec/epdg/EpdgService;->isAnyPdnConnectedOverWifi()Z
 
     move-result v0
@@ -5578,18 +5161,14 @@
     .param p0, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 958
     if-nez p0, :cond_1
 
-    .line 959
     const/4 p0, 0x0
 
-    .line 967
     :cond_0
     :goto_0
     return-object p0
 
-    .line 961
     :cond_1
     const-string v0, "\""
 
@@ -5599,7 +5178,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 962
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -5610,7 +5188,6 @@
 
     move-result-object p0
 
-    .line 964
     :cond_2
     const-string v0, "\""
 
@@ -5620,7 +5197,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 965
     const/4 v0, 0x0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -5642,7 +5218,6 @@
     .param p1, "ipsecOwnUri"    # Ljava/lang/String;
 
     .prologue
-    .line 769
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getSimState()Z
 
     move-result v16
@@ -5655,7 +5230,6 @@
 
     if-nez v16, :cond_1
 
-    .line 770
     :cond_0
     const/16 v16, 0x0
 
@@ -5699,12 +5273,10 @@
 
     invoke-static/range {v16 .. v18}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 835
     .end local p1    # "ipsecOwnUri":Ljava/lang/String;
     :goto_0
     return-object p1
 
-    .line 776
     .restart local p1    # "ipsecOwnUri":Ljava/lang/String;
     :cond_1
     const/4 v6, 0x0
@@ -5712,11 +5284,9 @@
     .local v6, "mcc":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 777
     .local v8, "mnc":Ljava/lang/String;
     const/4 v12, -0x1
 
-    .line 778
     .local v12, "subscription":I
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isDualSimModel()Ljava/lang/Boolean;
 
@@ -5728,7 +5298,6 @@
 
     if-eqz v16, :cond_3
 
-    .line 779
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
 
     move-result v16
@@ -5741,12 +5310,10 @@
 
     move-result-object v4
 
-    .line 783
     .local v4, "imsi":Ljava/lang/String;
     :goto_1
     const/4 v5, 0x0
 
-    .line 785
     .local v5, "mOwnUri":Ljava/lang/String;
     const/16 v16, 0x0
 
@@ -5794,7 +5361,6 @@
 
     invoke-static/range {v16 .. v18}, Lcom/sec/epdg/Log;->d(ZLjava/lang/String;Ljava/lang/String;)V
 
-    .line 788
     if-eqz v4, :cond_2
 
     if-eqz v4, :cond_4
@@ -5809,7 +5375,6 @@
 
     if-eqz v16, :cond_4
 
-    .line 789
     :cond_2
     const-string v16, "[UTILS]"
 
@@ -5837,7 +5402,6 @@
 
     goto :goto_0
 
-    .line 781
     .end local v4    # "imsi":Ljava/lang/String;
     .end local v5    # "mOwnUri":Ljava/lang/String;
     :cond_3
@@ -5850,7 +5414,6 @@
     .restart local v4    # "imsi":Ljava/lang/String;
     goto :goto_1
 
-    .line 793
     .restart local v5    # "mOwnUri":Ljava/lang/String;
     :cond_4
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
@@ -5863,7 +5426,6 @@
 
     if-nez v16, :cond_5
 
-    .line 794
     const-string v16, "[UTILS]"
 
     const-string v17, "use static User FQDN from epdg app"
@@ -5872,7 +5434,6 @@
 
     goto/16 :goto_0
 
-    .line 798
     :cond_5
     if-eqz v4, :cond_8
 
@@ -5888,7 +5449,6 @@
 
     if-le v0, v1, :cond_8
 
-    .line 799
     const-string v16, "phone"
 
     move-object/from16 v0, p0
@@ -5901,11 +5461,9 @@
 
     check-cast v13, Landroid/telephony/TelephonyManager;
 
-    .line 801
     .local v13, "tm":Landroid/telephony/TelephonyManager;
     const/4 v11, 0x0
 
-    .line 803
     .local v11, "operator":Ljava/lang/String;
     const/16 v16, 0x0
 
@@ -5924,7 +5482,6 @@
 
     move-result v7
 
-    .line 804
     .local v7, "mccFromImsi":I
     const/16 v16, 0x0
 
@@ -5944,7 +5501,6 @@
 
     move-result-object v11
 
-    .line 808
     .end local v7    # "mccFromImsi":I
     :goto_2
     if-eqz v11, :cond_6
@@ -5973,7 +5529,6 @@
 
     if-le v0, v1, :cond_7
 
-    .line 809
     :cond_6
     const-string v16, "[UTILS]"
 
@@ -5983,11 +5538,9 @@
 
     goto/16 :goto_0
 
-    .line 805
     :catch_0
     move-exception v2
 
-    .line 806
     .local v2, "e":Ljava/lang/NumberFormatException;
     const-string v16, "[UTILS]"
 
@@ -6015,7 +5568,6 @@
 
     goto :goto_2
 
-    .line 814
     .end local v2    # "e":Ljava/lang/NumberFormatException;
     :cond_7
     const/16 v16, 0x0
@@ -6030,7 +5582,6 @@
 
     move-result-object v6
 
-    .line 815
     invoke-virtual {v11}, Ljava/lang/String;->length()I
 
     move-result v16
@@ -6043,7 +5594,6 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 816
     new-instance v16, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
@@ -6074,14 +5624,12 @@
 
     move-result-object v8
 
-    .line 822
     .end local v11    # "operator":Ljava/lang/String;
     .end local v13    # "tm":Landroid/telephony/TelephonyManager;
     :cond_8
     :goto_3
     move-object/from16 v5, p1
 
-    .line 823
     const-string v16, "@"
 
     move-object/from16 v0, v16
@@ -6090,13 +5638,11 @@
 
     move-result-object v14
 
-    .line 824
     .local v14, "uriList":[Ljava/lang/String;
     const/16 v16, 0x1
 
     aget-object v9, v14, v16
 
-    .line 825
     .local v9, "naiStr":Ljava/lang/String;
     new-instance v16, Ljava/lang/StringBuilder;
 
@@ -6130,7 +5676,6 @@
 
     move-result-object v10
 
-    .line 826
     .local v10, "newOwnUri":Ljava/lang/String;
     const-string v16, "nai.epc.mnc"
 
@@ -6140,7 +5685,6 @@
 
     move-result-object v15
 
-    .line 827
     .local v15, "uriList1":[Ljava/lang/String;
     const/16 v16, 0x0
 
@@ -6154,7 +5698,6 @@
 
     if-eqz v16, :cond_a
 
-    .line 828
     const-string v16, "[UTILS]"
 
     const-string v17, "nai.epc.mnc not present"
@@ -6163,7 +5706,6 @@
 
     goto/16 :goto_0
 
-    .line 818
     .end local v9    # "naiStr":Ljava/lang/String;
     .end local v10    # "newOwnUri":Ljava/lang/String;
     .end local v14    # "uriList":[Ljava/lang/String;
@@ -6185,7 +5727,6 @@
 
     goto :goto_3
 
-    .line 832
     .end local v11    # "operator":Ljava/lang/String;
     .end local v13    # "tm":Landroid/telephony/TelephonyManager;
     .restart local v9    # "naiStr":Ljava/lang/String;
@@ -6239,7 +5780,6 @@
 
     move-result-object v3
 
-    .line 834
     .local v3, "finalOwnUri":Ljava/lang/String;
     const/16 v16, 0x0
 
@@ -6269,6 +5809,5 @@
 
     move-object/from16 p1, v3
 
-    .line 835
     goto/16 :goto_0
 .end method

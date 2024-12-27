@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 858
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$5;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 866
     iget-object v1, p0, Lcom/android/server/net/NetworkPolicyManagerService$5;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -52,7 +50,6 @@
 
     move-result-object v0
 
-    .line 867
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -66,7 +63,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 869
     const-string/jumbo v1, "why"
 
     invoke-virtual {p2, v1, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -75,7 +71,6 @@
 
     iput v1, v0, Landroid/os/Message;->arg1:I
 
-    .line 870
     const-string v1, "NetworkPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -106,14 +101,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 874
     :goto_0
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 876
     return-void
 
-    .line 872
     :cond_0
     iput v3, v0, Landroid/os/Message;->arg1:I
 

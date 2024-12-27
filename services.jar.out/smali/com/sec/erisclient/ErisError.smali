@@ -121,7 +121,6 @@
 
     const/4 v3, 0x0
 
-    .line 4
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_OK"
@@ -130,7 +129,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_OK:Lcom/sec/erisclient/ErisError;
 
-    .line 5
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_GENERIC_FAILED"
@@ -139,7 +137,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_GENERIC_FAILED:Lcom/sec/erisclient/ErisError;
 
-    .line 6
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_PEER_ADDR_FAILED"
@@ -148,7 +145,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_PEER_ADDR_FAILED:Lcom/sec/erisclient/ErisError;
 
-    .line 7
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_PEER_AUTH_FAILED"
@@ -157,7 +153,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_PEER_AUTH_FAILED:Lcom/sec/erisclient/ErisError;
 
-    .line 8
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_PEER_INIT_UNREACHABLE"
@@ -166,7 +161,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_PEER_INIT_UNREACHABLE:Lcom/sec/erisclient/ErisError;
 
-    .line 9
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_NO_CONNECTION"
@@ -177,7 +171,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_NO_CONNECTION:Lcom/sec/erisclient/ErisError;
 
-    .line 10
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_TIMEOUT"
@@ -188,7 +181,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_TIMEOUT:Lcom/sec/erisclient/ErisError;
 
-    .line 11
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_NEGOTIATION_ERROR"
@@ -199,7 +191,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_NEGOTIATION_ERROR:Lcom/sec/erisclient/ErisError;
 
-    .line 12
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_NOT_CONNECTED"
@@ -210,7 +201,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_NOT_CONNECTED:Lcom/sec/erisclient/ErisError;
 
-    .line 14
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_DAEMON_NOT_CONNECTED"
@@ -221,7 +211,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_DAEMON_NOT_CONNECTED:Lcom/sec/erisclient/ErisError;
 
-    .line 15
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_DAEMON_STOPPED"
@@ -232,7 +221,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_DAEMON_STOPPED:Lcom/sec/erisclient/ErisError;
 
-    .line 16
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_ALREADY_CONNECTED"
@@ -243,7 +231,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_ALREADY_CONNECTED:Lcom/sec/erisclient/ErisError;
 
-    .line 18
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_PARAMETER"
@@ -254,7 +241,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_PARAMETER:Lcom/sec/erisclient/ErisError;
 
-    .line 19
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_GW_ADDRESS"
@@ -265,7 +251,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_GW_ADDRESS:Lcom/sec/erisclient/ErisError;
 
-    .line 20
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_HOST_AUTHENTICATION"
@@ -276,7 +261,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_HOST_AUTHENTICATION:Lcom/sec/erisclient/ErisError;
 
-    .line 21
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_PRESHARED_KEY"
@@ -287,7 +271,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_PRESHARED_KEY:Lcom/sec/erisclient/ErisError;
 
-    .line 22
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_TUNNEL_MODE"
@@ -298,7 +281,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_TUNNEL_MODE:Lcom/sec/erisclient/ErisError;
 
-    .line 23
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_OWN_IDENTITY"
@@ -309,7 +291,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_OWN_IDENTITY:Lcom/sec/erisclient/ErisError;
 
-    .line 24
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_REMOTE_IDENTITY"
@@ -320,7 +301,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_REMOTE_IDENTITY:Lcom/sec/erisclient/ErisError;
 
-    .line 25
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_CA_CERTIFICATE"
@@ -331,7 +311,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_CA_CERTIFICATE:Lcom/sec/erisclient/ErisError;
 
-    .line 26
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_CERTIFICATE"
@@ -342,7 +321,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_CERTIFICATE:Lcom/sec/erisclient/ErisError;
 
-    .line 27
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IKE_LIFETIME"
@@ -353,7 +331,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IKE_LIFETIME:Lcom/sec/erisclient/ErisError;
 
-    .line 28
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IKE_DH_GROUP"
@@ -364,7 +341,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IKE_DH_GROUP:Lcom/sec/erisclient/ErisError;
 
-    .line 29
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IKE_ENCRYPTION"
@@ -375,7 +351,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IKE_ENCRYPTION:Lcom/sec/erisclient/ErisError;
 
-    .line 30
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IKE_INTEGRITY"
@@ -386,7 +361,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IKE_INTEGRITY:Lcom/sec/erisclient/ErisError;
 
-    .line 31
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IKE_VERSION"
@@ -397,7 +371,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IKE_VERSION:Lcom/sec/erisclient/ErisError;
 
-    .line 32
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IKE_WINDOW_SIZE"
@@ -408,7 +381,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IKE_WINDOW_SIZE:Lcom/sec/erisclient/ErisError;
 
-    .line 33
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IPSEC_LIFETIME"
@@ -419,7 +391,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IPSEC_LIFETIME:Lcom/sec/erisclient/ErisError;
 
-    .line 34
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IPSEC_ENCRYPTION"
@@ -430,7 +401,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IPSEC_ENCRYPTION:Lcom/sec/erisclient/ErisError;
 
-    .line 35
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IPSEC_INTEGRITY"
@@ -441,7 +411,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IPSEC_INTEGRITY:Lcom/sec/erisclient/ErisError;
 
-    .line 36
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IPSEC_ALGORITHM_COMBINATION"
@@ -452,7 +421,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IPSEC_ALGORITHM_COMBINATION:Lcom/sec/erisclient/ErisError;
 
-    .line 37
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_PFS_DH_GROUP"
@@ -463,7 +431,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_PFS_DH_GROUP:Lcom/sec/erisclient/ErisError;
 
-    .line 38
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_INTERNAL_SUBNET"
@@ -474,7 +441,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_INTERNAL_SUBNET:Lcom/sec/erisclient/ErisError;
 
-    .line 39
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_INTERFACE"
@@ -485,7 +451,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_INTERFACE:Lcom/sec/erisclient/ErisError;
 
-    .line 40
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_EAP_METHOD"
@@ -496,7 +461,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_EAP_METHOD:Lcom/sec/erisclient/ErisError;
 
-    .line 41
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_IM_CERTIFICATE"
@@ -507,7 +471,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_IM_CERTIFICATE:Lcom/sec/erisclient/ErisError;
 
-    .line 42
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_PRIVATE_KEY"
@@ -518,7 +481,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_PRIVATE_KEY:Lcom/sec/erisclient/ErisError;
 
-    .line 43
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_USERNAME"
@@ -529,7 +491,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_USERNAME:Lcom/sec/erisclient/ErisError;
 
-    .line 44
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_PASSWORD"
@@ -540,7 +501,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_PASSWORD:Lcom/sec/erisclient/ErisError;
 
-    .line 45
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_VIRTUAL_ADAPTER_NAME"
@@ -551,7 +511,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_VIRTUAL_ADAPTER_NAME:Lcom/sec/erisclient/ErisError;
 
-    .line 46
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_VIRTUAL_ADAPTER_CONFIGURATION"
@@ -562,7 +521,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_VIRTUAL_ADAPTER_CONFIGURATION:Lcom/sec/erisclient/ErisError;
 
-    .line 47
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_RAC_ATTRIBUTE"
@@ -573,7 +531,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_RAC_ATTRIBUTE:Lcom/sec/erisclient/ErisError;
 
-    .line 48
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_NATT_KEEPALIVE_TIMEOUT"
@@ -584,7 +541,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_NATT_KEEPALIVE_TIMEOUT:Lcom/sec/erisclient/ErisError;
 
-    .line 49
     new-instance v0, Lcom/sec/erisclient/ErisError;
 
     const-string v1, "ERIS_INVALID_DPD_TIMEOUT"
@@ -595,7 +551,6 @@
 
     sput-object v0, Lcom/sec/erisclient/ErisError;->ERIS_INVALID_DPD_TIMEOUT:Lcom/sec/erisclient/ErisError;
 
-    .line 3
     const/16 v0, 0x2c
 
     new-array v0, v0, [Lcom/sec/erisclient/ErisError;
@@ -868,7 +823,6 @@
     .end annotation
 
     .prologue
-    .line 3
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -879,7 +833,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 3
     const-class v0, Lcom/sec/erisclient/ErisError;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -895,7 +848,6 @@
     .locals 1
 
     .prologue
-    .line 3
     sget-object v0, Lcom/sec/erisclient/ErisError;->$VALUES:[Lcom/sec/erisclient/ErisError;
 
     invoke-virtual {v0}, [Lcom/sec/erisclient/ErisError;->clone()Ljava/lang/Object;

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 68
     iput-object p1, p0, Lcom/android/server/bridge/operations/ProcessBadgeData$1;->this$0:Lcom/android/server/bridge/operations/ProcessBadgeData;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 71
     const-string v1, "ProcessBadgeData"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -70,7 +68,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 72
     iget-object v1, p0, Lcom/android/server/bridge/operations/ProcessBadgeData$1;->this$0:Lcom/android/server/bridge/operations/ProcessBadgeData;
 
     # getter for: Lcom/android/server/bridge/operations/ProcessBadgeData;->mDelegateUserId:I
@@ -80,7 +77,6 @@
 
     if-nez v1, :cond_0
 
-    .line 73
     iget-object v1, p0, Lcom/android/server/bridge/operations/ProcessBadgeData$1;->this$0:Lcom/android/server/bridge/operations/ProcessBadgeData;
 
     # invokes: Lcom/android/server/bridge/operations/ProcessBadgeData;->getPersonaIds()[I
@@ -88,7 +84,6 @@
 
     move-result-object v0
 
-    .line 74
     .local v0, "ids":[I
     iget-object v1, p0, Lcom/android/server/bridge/operations/ProcessBadgeData$1;->this$0:Lcom/android/server/bridge/operations/ProcessBadgeData;
 
@@ -102,12 +97,10 @@
     # invokes: Lcom/android/server/bridge/operations/ProcessBadgeData;->handleObserverOwner(Landroid/net/Uri;[I)V
     invoke-static {v1, v2, v0}, Lcom/android/server/bridge/operations/ProcessBadgeData;->access$300(Lcom/android/server/bridge/operations/ProcessBadgeData;Landroid/net/Uri;[I)V
 
-    .line 78
     .end local v0    # "ids":[I
     :goto_0
     return-void
 
-    .line 76
     :cond_0
     iget-object v1, p0, Lcom/android/server/bridge/operations/ProcessBadgeData$1;->this$0:Lcom/android/server/bridge/operations/ProcessBadgeData;
 

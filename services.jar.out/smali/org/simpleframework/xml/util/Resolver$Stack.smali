@@ -36,13 +36,11 @@
     .locals 0
 
     .prologue
-    .line 318
     .local p0, "this":Lorg/simpleframework/xml/util/Resolver$Stack;, "Lorg/simpleframework/xml/util/Resolver<TM;>.Stack;"
     iput-object p1, p0, Lorg/simpleframework/xml/util/Resolver$Stack;->this$0:Lorg/simpleframework/xml/util/Resolver;
 
     invoke-direct {p0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 364
     return-void
 .end method
 
@@ -52,7 +50,6 @@
     .param p2, "x1"    # Lorg/simpleframework/xml/util/Resolver$1;
 
     .prologue
-    .line 318
     .local p0, "this":Lorg/simpleframework/xml/util/Resolver$Stack;, "Lorg/simpleframework/xml/util/Resolver<TM;>.Stack;"
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/util/Resolver$Stack;-><init>(Lorg/simpleframework/xml/util/Resolver;)V
 
@@ -66,7 +63,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 340
     .local p0, "this":Lorg/simpleframework/xml/util/Resolver$Stack;, "Lorg/simpleframework/xml/util/Resolver<TM;>.Stack;"
     iget-object v0, p0, Lorg/simpleframework/xml/util/Resolver$Stack;->this$0:Lorg/simpleframework/xml/util/Resolver;
 
@@ -74,10 +70,8 @@
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/util/Resolver$Cache;->clear()V
 
-    .line 341
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/util/Resolver$Stack;->remove(I)Ljava/lang/Object;
 
-    .line 342
     return-void
 .end method
 
@@ -86,7 +80,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 318
     .local p0, "this":Lorg/simpleframework/xml/util/Resolver$Stack;, "Lorg/simpleframework/xml/util/Resolver<TM;>.Stack;"
     check-cast p1, Lorg/simpleframework/xml/util/Match;
 
@@ -105,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 328
     .local p0, "this":Lorg/simpleframework/xml/util/Resolver$Stack;, "Lorg/simpleframework/xml/util/Resolver<TM;>.Stack;"
     .local p1, "match":Lorg/simpleframework/xml/util/Match;, "TM;"
     iget-object v0, p0, Lorg/simpleframework/xml/util/Resolver$Stack;->this$0:Lorg/simpleframework/xml/util/Resolver;
@@ -114,10 +106,8 @@
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/util/Resolver$Cache;->clear()V
 
-    .line 329
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/util/Resolver$Stack;->addFirst(Ljava/lang/Object;)V
 
-    .line 330
     return-void
 .end method
 
@@ -132,7 +122,6 @@
     .end annotation
 
     .prologue
-    .line 353
     .local p0, "this":Lorg/simpleframework/xml/util/Resolver$Stack;, "Lorg/simpleframework/xml/util/Resolver<TM;>.Stack;"
     new-instance v0, Lorg/simpleframework/xml/util/Resolver$Stack$Sequence;
 

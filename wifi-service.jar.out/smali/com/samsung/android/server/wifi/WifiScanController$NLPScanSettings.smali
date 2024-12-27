@@ -27,20 +27,15 @@
     .param p2, "scanDelay"    # J
 
     .prologue
-    .line 696
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 694
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/samsung/android/server/wifi/WifiScanController$NLPScanSettings;->mScanDelayMillis:J
 
-    .line 697
     iput p1, p0, Lcom/samsung/android/server/wifi/WifiScanController$NLPScanSettings;->mScanType:I
 
-    .line 698
     iput-wide p2, p0, Lcom/samsung/android/server/wifi/WifiScanController$NLPScanSettings;->mScanDelayMillis:J
 
-    .line 699
     return-void
 .end method

@@ -21,15 +21,12 @@
     .param p1, "profile"    # Lcom/android/internal/os/PowerProfile;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Lcom/android/internal/os/PowerCalculator;-><init>()V
 
-    .line 37
     invoke-virtual {p1}, Lcom/android/internal/os/PowerProfile;->getNumGpuSpeedSteps()I
 
     move-result v1
 
-    .line 38
     .local v1, "speedSteps":I
     const-string v2, "GpuPowerCalculator"
 
@@ -53,24 +50,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     new-array v2, v1, [D
 
     iput-object v2, p0, Lcom/android/internal/os/GpuPowerCalculator;->mPowerGpuNormal:[D
 
-    .line 40
     new-array v2, v1, [J
 
     iput-object v2, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSpeedStepTimes:[J
 
-    .line 41
     const/4 v0, 0x0
 
     .local v0, "p":I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 42
     iget-object v2, p0, Lcom/android/internal/os/GpuPowerCalculator;->mPowerGpuNormal:[D
 
     const-string v3, "gpu.active"
@@ -81,7 +74,6 @@
 
     aput-wide v4, v2, v0
 
-    .line 43
     const-string v2, "GpuPowerCalculator"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -108,12 +100,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 41
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 45
     :cond_0
     return-void
 .end method
@@ -129,12 +119,10 @@
     .param p7, "statsType"    # I
 
     .prologue
-    .line 50
     iget-object v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSpeedStepTimes:[J
 
     array-length v6, v8
 
-    .line 52
     .local v6, "speedSteps":I
     const/4 v7, 0x0
 
@@ -142,7 +130,6 @@
     :goto_0
     if-ge v7, v6, :cond_0
 
-    .line 53
     iget-object v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSpeedStepTimes:[J
 
     move/from16 v0, p7
@@ -153,23 +140,19 @@
 
     aput-wide v10, v8, v7
 
-    .line 52
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 56
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 57
     .local v2, "gpuPowerMaMs":D
     const/4 v7, 0x0
 
     :goto_1
     if-ge v7, v6, :cond_1
 
-    .line 58
     iget-object v8, p0, Lcom/android/internal/os/GpuPowerCalculator;->mSpeedStepTimes:[J
 
     aget-wide v8, v8, v7
@@ -182,16 +165,13 @@
 
     mul-double v4, v8, v10
 
-    .line 63
     .local v4, "gpuSpeedStepPower":D
     add-double/2addr v2, v4
 
-    .line 57
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 71
     .end local v4    # "gpuSpeedStepPower":D
     :cond_1
     const-wide/16 v8, 0x0
@@ -206,7 +186,6 @@
 
     iput-wide v8, p1, Lcom/android/internal/os/BatterySipper;->gpuPowerMah:D
 
-    .line 72
     :cond_2
     return-void
 .end method

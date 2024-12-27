@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 660
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$7;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 663
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 665
     .local v0, "action":Ljava/lang/String;
     const-string/jumbo v1, "sec.app.policy.UPDATE.MARs"
 
@@ -54,21 +51,18 @@
 
     if-eqz v1, :cond_0
 
-    .line 666
     const-string v1, "MARsTrigger"
 
     const-string/jumbo v2, "mScpmUpdateIntentReceiver----sec.app.policy.UPDATE.MARs"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 667
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger$7;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v1, v1, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v1}, Lcom/android/server/am/MARsPolicyManager;->checkSCPMParameters()V
 
-    .line 669
     :cond_0
     return-void
 .end method

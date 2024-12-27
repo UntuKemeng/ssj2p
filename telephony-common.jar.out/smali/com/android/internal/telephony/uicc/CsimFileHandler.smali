@@ -18,10 +18,8 @@
     .param p3, "ci"    # Lcom/android/internal/telephony/CommandsInterface;
 
     .prologue
-    .line 41
     invoke-direct {p0, p1, p2, p3}, Lcom/android/internal/telephony/uicc/IccFileHandler;-><init>(Lcom/android/internal/telephony/uicc/UiccCardApplication;Ljava/lang/String;Lcom/android/internal/telephony/CommandsInterface;)V
 
-    .line 42
     return-void
 .end method
 
@@ -42,7 +40,6 @@
 
     const/4 v6, 0x1
 
-    .line 46
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v3
@@ -53,7 +50,6 @@
 
     if-le v3, v6, :cond_f
 
-    .line 47
     const-string v3, "CTC"
 
     sget-object v4, Lcom/android/internal/telephony/TelephonyFeatures;->SALES_CODE:Ljava/lang/String;
@@ -70,7 +66,6 @@
 
     if-nez v3, :cond_7
 
-    .line 49
     const-string v3, "ril.IsCSIM"
 
     const/4 v4, 0x0
@@ -85,63 +80,51 @@
 
     move-result v1
 
-    .line 50
     .local v1, "isCsim":I
     const/16 v3, 0x6f3c
 
     if-ne p1, v3, :cond_3
 
-    .line 51
     invoke-static {}, Landroid/telephony/TelephonyManager;->isSelectTelecomDF()Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 52
     const-string v2, "3F007F10"
 
-    .line 146
     .end local v1    # "isCsim":I
     :cond_0
     :goto_0
     return-object v2
 
-    .line 54
     .restart local v1    # "isCsim":I
     :cond_1
     if-ne v1, v6, :cond_2
 
-    .line 55
     const-string v2, "3F007FFF"
 
     goto :goto_0
 
-    .line 57
     :cond_2
     const-string v2, "3F007F25"
 
     goto :goto_0
 
-    .line 60
     :cond_3
     if-ne p1, v10, :cond_5
 
-    .line 61
     if-ne v1, v6, :cond_4
 
-    .line 62
     const-string v2, "3F007FFF"
 
     goto :goto_0
 
-    .line 64
     :cond_4
     const-string v2, "3F007F25"
 
     goto :goto_0
 
-    .line 66
     :cond_5
     if-eq p1, v7, :cond_6
 
@@ -149,13 +132,11 @@
 
     if-ne p1, v9, :cond_17
 
-    .line 67
     :cond_6
     const-string v2, "3F007F105F3C"
 
     goto :goto_0
 
-    .line 69
     .end local v1    # "isCsim":I
     :cond_7
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -170,7 +151,6 @@
 
     if-eqz v3, :cond_17
 
-    .line 70
     const-string v3, "ril.ICC_TYPE"
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/CsimFileHandler;->getPhoneId()I
@@ -187,7 +167,6 @@
 
     move-result v0
 
-    .line 71
     .local v0, "icctype":I
     const/4 v3, 0x4
 
@@ -197,7 +176,6 @@
 
     if-ne v0, v3, :cond_17
 
-    .line 72
     :cond_8
     const-string v3, "ril.IsCSIM"
 
@@ -215,58 +193,47 @@
 
     move-result v1
 
-    .line 73
     .restart local v1    # "isCsim":I
     const/16 v3, 0x6f3c
 
     if-ne p1, v3, :cond_b
 
-    .line 74
     invoke-static {}, Landroid/telephony/TelephonyManager;->isSelectTelecomDF()Z
 
     move-result v3
 
     if-eqz v3, :cond_9
 
-    .line 75
     const-string v2, "3F007F10"
 
     goto :goto_0
 
-    .line 77
     :cond_9
     if-ne v1, v6, :cond_a
 
-    .line 78
     const-string v2, "3F007FFF"
 
     goto :goto_0
 
-    .line 80
     :cond_a
     const-string v2, "3F007F25"
 
     goto :goto_0
 
-    .line 83
     :cond_b
     if-ne p1, v10, :cond_d
 
-    .line 84
     if-ne v1, v6, :cond_c
 
-    .line 85
     const-string v2, "3F007FFF"
 
     goto :goto_0
 
-    .line 87
     :cond_c
     const-string v2, "3F007F25"
 
     goto :goto_0
 
-    .line 89
     :cond_d
     if-eq p1, v7, :cond_e
 
@@ -274,13 +241,11 @@
 
     if-ne p1, v9, :cond_17
 
-    .line 90
     :cond_e
     const-string v2, "3F007F105F3C"
 
     goto :goto_0
 
-    .line 95
     .end local v0    # "icctype":I
     .end local v1    # "isCsim":I
     :cond_f
@@ -296,7 +261,6 @@
 
     if-eqz v3, :cond_17
 
-    .line 96
     const-string v3, "ril.ICC_TYPE"
 
     invoke-virtual {p0}, Lcom/android/internal/telephony/uicc/CsimFileHandler;->getPhoneId()I
@@ -313,7 +277,6 @@
 
     move-result v0
 
-    .line 97
     .restart local v0    # "icctype":I
     const/4 v3, 0x4
 
@@ -323,7 +286,6 @@
 
     if-ne v0, v3, :cond_17
 
-    .line 98
     :cond_10
     const-string v3, "ril.IsCSIM"
 
@@ -341,58 +303,47 @@
 
     move-result v1
 
-    .line 99
     .restart local v1    # "isCsim":I
     const/16 v3, 0x6f3c
 
     if-ne p1, v3, :cond_13
 
-    .line 100
     invoke-static {}, Landroid/telephony/TelephonyManager;->isSelectTelecomDF()Z
 
     move-result v3
 
     if-eqz v3, :cond_11
 
-    .line 101
     const-string v2, "3F007F10"
 
     goto/16 :goto_0
 
-    .line 103
     :cond_11
     if-ne v1, v6, :cond_12
 
-    .line 104
     const-string v2, "3F007FFF"
 
     goto/16 :goto_0
 
-    .line 106
     :cond_12
     const-string v2, "3F007F25"
 
     goto/16 :goto_0
 
-    .line 109
     :cond_13
     if-ne p1, v10, :cond_15
 
-    .line 110
     if-ne v1, v6, :cond_14
 
-    .line 111
     const-string v2, "3F007FFF"
 
     goto/16 :goto_0
 
-    .line 113
     :cond_14
     const-string v2, "3F007F25"
 
     goto/16 :goto_0
 
-    .line 115
     :cond_15
     if-eq p1, v7, :cond_16
 
@@ -400,40 +351,33 @@
 
     if-ne p1, v9, :cond_17
 
-    .line 116
     :cond_16
     const-string v2, "3F007F105F3C"
 
     goto/16 :goto_0
 
-    .line 121
     .end local v0    # "icctype":I
     .end local v1    # "isCsim":I
     :cond_17
     sparse-switch p1, :sswitch_data_0
 
-    .line 139
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/uicc/CsimFileHandler;->getCommonIccEFPath(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 140
     .local v2, "path":Ljava/lang/String;
     if-nez v2, :cond_0
 
-    .line 144
     const-string v2, "3F007F105F3A"
 
     goto/16 :goto_0
 
-    .line 137
     .end local v2    # "path":Ljava/lang/String;
     :sswitch_0
     const-string v2, "3F007FFF"
 
     goto/16 :goto_0
 
-    .line 121
     nop
 
     :sswitch_data_0
@@ -459,12 +403,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 151
     const-string v0, "CsimFH"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     return-void
 .end method
 
@@ -473,11 +415,9 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 156
     const-string v0, "CsimFH"
 
     invoke-static {v0, p1}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     return-void
 .end method

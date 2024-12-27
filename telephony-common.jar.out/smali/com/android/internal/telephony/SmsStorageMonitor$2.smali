@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 242
     iput-object p1, p0, Lcom/android/internal/telephony/SmsStorageMonitor$2;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -45,14 +44,12 @@
 
     const/4 v2, 0x0
 
-    .line 245
     const-string v0, "SmsStorageMonitor"
 
     const-string v1, "BroadcastReceiver - mGcfResultReceiver "
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 246
     const-string v0, "On"
 
     const-string v1, "ril.sms.gcf-mode"
@@ -67,7 +64,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 247
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -80,14 +76,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 248
     const-string v0, "SmsStorageMonitor"
 
     const-string v1, "ACTION_GCF_DEVICE_STORAGE_LOW "
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$2;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
 
     iget-object v0, v0, Lcom/android/internal/telephony/SmsStorageMonitor;->mCi:Lcom/android/internal/telephony/CommandsInterface;
@@ -100,12 +94,10 @@
 
     invoke-interface {v0, v2, v1}, Lcom/android/internal/telephony/CommandsInterface;->reportSmsMemoryStatus(ZLandroid/os/Message;)V
 
-    .line 250
     iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$2;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
 
     iput-boolean v2, v0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageAvailable:Z
 
-    .line 252
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -119,14 +111,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 253
     const-string v0, "SmsStorageMonitor"
 
     const-string v1, "ACTION_GCF_DEVICE_STORAGE_OK "
 
     invoke-static {v0, v1}, Landroid/util/secutil/Log;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$2;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
 
     iget-object v0, v0, Lcom/android/internal/telephony/SmsStorageMonitor;->mCi:Lcom/android/internal/telephony/CommandsInterface;
@@ -139,12 +129,10 @@
 
     invoke-interface {v0, v3, v1}, Lcom/android/internal/telephony/CommandsInterface;->reportSmsMemoryStatus(ZLandroid/os/Message;)V
 
-    .line 255
     iget-object v0, p0, Lcom/android/internal/telephony/SmsStorageMonitor$2;->this$0:Lcom/android/internal/telephony/SmsStorageMonitor;
 
     iput-boolean v3, v0, Lcom/android/internal/telephony/SmsStorageMonitor;->mStorageAvailable:Z
 
-    .line 258
     :cond_1
     return-void
 .end method

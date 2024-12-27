@@ -53,14 +53,12 @@
     .locals 1
 
     .prologue
-    .line 2271
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;-><init>(Landroid/os/Looper;)V
 
-    .line 2272
     return-void
 .end method
 
@@ -69,31 +67,26 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 2278
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2267
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->mStrongAuthRequiredForUser:Landroid/util/SparseIntArray;
 
-    .line 2340
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker$1;-><init>(Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;)V
 
     iput-object v0, p0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->mStub:Landroid/app/trust/IStrongAuthTracker$Stub;
 
-    .line 2279
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker$H;
 
     invoke-direct {v0, p0, p1}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker$H;-><init>(Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;Landroid/os/Looper;)V
 
     iput-object v0, p0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->mHandler:Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker$H;
 
-    .line 2280
     return-void
 .end method
 
@@ -102,7 +95,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;
 
     .prologue
-    .line 2216
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->mHandler:Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker$H;
 
     return-object v0
@@ -115,7 +107,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2290
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->mStrongAuthRequiredForUser:Landroid/util/SparseIntArray;
 
     const/4 v1, 0x1
@@ -133,34 +124,27 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 2328
     invoke-virtual {p0, p2}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->getStrongAuthForUser(I)I
 
     move-result v0
 
-    .line 2329
     .local v0, "oldValue":I
     if-eq p1, v0, :cond_0
 
-    .line 2330
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 2331
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->mStrongAuthRequiredForUser:Landroid/util/SparseIntArray;
 
     invoke-virtual {v1, p2}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 2335
     :goto_0
     invoke-virtual {p0, p2}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->onStrongAuthRequiredChanged(I)V
 
-    .line 2337
     :cond_0
     return-void
 
-    .line 2333
     :cond_1
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->mStrongAuthRequiredForUser:Landroid/util/SparseIntArray;
 
@@ -174,7 +158,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2316
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->getStrongAuthForUser(I)I
 
     move-result v0
@@ -199,7 +182,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2307
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->getStrongAuthForUser(I)I
 
     move-result v0
@@ -224,7 +206,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2298
     invoke-virtual {p0, p1}, Lcom/android/internal/widget/LockPatternUtils$StrongAuthTracker;->getStrongAuthForUser(I)I
 
     move-result v0
@@ -247,6 +228,5 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2323
     return-void
 .end method

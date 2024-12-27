@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lcom/samsung/android/rlc/util/RLCUtil;
 
     .prologue
-    .line 48
     iput-object p1, p0, Lcom/samsung/android/rlc/util/RLCUtil$1;->this$0:Lcom/samsung/android/rlc/util/RLCUtil;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 51
     iget-object v1, p0, Lcom/samsung/android/rlc/util/RLCUtil$1;->this$0:Lcom/samsung/android/rlc/util/RLCUtil;
 
     # getter for: Lcom/samsung/android/rlc/util/RLCUtil;->mcontext:Landroid/content/Context;
@@ -53,7 +51,6 @@
 
     move-result-object v0
 
-    .line 52
     .local v0, "bundle":Landroid/os/Bundle;
     iget-object v1, p0, Lcom/samsung/android/rlc/util/RLCUtil$1;->this$0:Lcom/samsung/android/rlc/util/RLCUtil;
 
@@ -66,6 +63,5 @@
 
     invoke-static {v1, v0, v2}, Lcom/samsung/android/rlc/service/RmmTask;->startTask(Landroid/content/Context;Landroid/os/Bundle;I)V
 
-    .line 53
     return-void
 .end method

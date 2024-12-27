@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 773
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .param p3, "errString"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 782
     return-void
 .end method
 
@@ -43,6 +41,5 @@
     .param p1, "iris"    # Lcom/samsung/android/camera/iris/Iris;
 
     .prologue
-    .line 790
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 486
     iput-object p1, p0, Landroid/bluetooth/BluetoothA2dpSink$2;->this$0:Landroid/bluetooth/BluetoothA2dpSink;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 488
     # getter for: Landroid/bluetooth/BluetoothA2dpSink;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothA2dpSink;->access$000()Z
 
@@ -56,7 +54,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 489
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothA2dpSink$2;->this$0:Landroid/bluetooth/BluetoothA2dpSink;
 
@@ -67,7 +64,6 @@
     # setter for: Landroid/bluetooth/BluetoothA2dpSink;->mService:Landroid/bluetooth/IBluetoothA2dpSink;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothA2dpSink;->access$202(Landroid/bluetooth/BluetoothA2dpSink;Landroid/bluetooth/IBluetoothA2dpSink;)Landroid/bluetooth/IBluetoothA2dpSink;
 
-    .line 491
     iget-object v0, p0, Landroid/bluetooth/BluetoothA2dpSink$2;->this$0:Landroid/bluetooth/BluetoothA2dpSink;
 
     # getter for: Landroid/bluetooth/BluetoothA2dpSink;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -77,7 +73,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 492
     iget-object v0, p0, Landroid/bluetooth/BluetoothA2dpSink$2;->this$0:Landroid/bluetooth/BluetoothA2dpSink;
 
     # getter for: Landroid/bluetooth/BluetoothA2dpSink;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -91,7 +86,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/bluetooth/BluetoothProfile$ServiceListener;->onServiceConnected(ILandroid/bluetooth/BluetoothProfile;)V
 
-    .line 495
     :cond_1
     return-void
 .end method
@@ -101,7 +95,6 @@
     .param p1, "className"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 497
     # getter for: Landroid/bluetooth/BluetoothA2dpSink;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothA2dpSink;->access$000()Z
 
@@ -115,7 +108,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothA2dpSink$2;->this$0:Landroid/bluetooth/BluetoothA2dpSink;
 
@@ -124,7 +116,6 @@
     # setter for: Landroid/bluetooth/BluetoothA2dpSink;->mService:Landroid/bluetooth/IBluetoothA2dpSink;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothA2dpSink;->access$202(Landroid/bluetooth/BluetoothA2dpSink;Landroid/bluetooth/IBluetoothA2dpSink;)Landroid/bluetooth/IBluetoothA2dpSink;
 
-    .line 499
     iget-object v0, p0, Landroid/bluetooth/BluetoothA2dpSink$2;->this$0:Landroid/bluetooth/BluetoothA2dpSink;
 
     # getter for: Landroid/bluetooth/BluetoothA2dpSink;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -134,7 +125,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 500
     iget-object v0, p0, Landroid/bluetooth/BluetoothA2dpSink$2;->this$0:Landroid/bluetooth/BluetoothA2dpSink;
 
     # getter for: Landroid/bluetooth/BluetoothA2dpSink;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -146,7 +136,6 @@
 
     invoke-interface {v0, v1}, Landroid/bluetooth/BluetoothProfile$ServiceListener;->onServiceDisconnected(I)V
 
-    .line 502
     :cond_1
     return-void
 .end method

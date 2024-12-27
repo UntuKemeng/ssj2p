@@ -45,25 +45,20 @@
     .param p1, "parser"    # Lorg/xmlpull/v1/XmlPullParser;
 
     .prologue
-    .line 4129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4127
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mTypeListLocal:Ljava/util/ArrayList;
 
-    .line 4130
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mParser:Lorg/xmlpull/v1/XmlPullParser;
 
-    .line 4131
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mTypeListLocal:Ljava/util/ArrayList;
 
-    .line 4132
     return-void
 .end method
 
@@ -82,7 +77,6 @@
     .end annotation
 
     .prologue
-    .line 4135
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mTypeListLocal:Ljava/util/ArrayList;
 
     return-object v0
@@ -92,7 +86,6 @@
     .locals 10
 
     .prologue
-    .line 4140
     :try_start_0
     iget-object v7, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mParser:Lorg/xmlpull/v1/XmlPullParser;
 
@@ -100,21 +93,17 @@
 
     move-result v1
 
-    .line 4141
     .local v1, "event":I
     const/4 v3, 0x0
 
-    .line 4143
     .local v3, "row":Lcom/android/server/pm/PersonaManagerService$AppUpgradeInfo;
     :goto_0
     const/4 v7, 0x1
 
     if-eq v1, v7, :cond_2
 
-    .line 4144
     packed-switch v1, :pswitch_data_0
 
-    .line 4170
     :cond_0
     :goto_1
     iget-object v7, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mParser:Lorg/xmlpull/v1/XmlPullParser;
@@ -125,7 +114,6 @@
 
     goto :goto_0
 
-    .line 4146
     :pswitch_0
     iget-object v7, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mParser:Lorg/xmlpull/v1/XmlPullParser;
 
@@ -133,7 +121,6 @@
 
     move-result-object v5
 
-    .line 4147
     .local v5, "tag":Ljava/lang/String;
     const-string/jumbo v7, "package"
 
@@ -143,14 +130,12 @@
 
     if-eqz v7, :cond_0
 
-    .line 4148
     const-string v7, "PersonaManagerService"
 
     const-string v8, "New row found "
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4149
     iget-object v7, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mParser:Lorg/xmlpull/v1/XmlPullParser;
 
     const/4 v8, 0x0
@@ -161,7 +146,6 @@
 
     move-result-object v2
 
-    .line 4150
     .local v2, "name":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mParser:Lorg/xmlpull/v1/XmlPullParser;
 
@@ -173,11 +157,9 @@
 
     move-result-object v6
 
-    .line 4151
     .local v6, "value":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 4152
     .local v4, "system":Z
     if-eqz v6, :cond_1
 
@@ -189,10 +171,8 @@
 
     if-eqz v7, :cond_1
 
-    .line 4153
     const/4 v4, 0x1
 
-    .line 4156
     :cond_1
     new-instance v3, Lcom/android/server/pm/PersonaManagerService$AppUpgradeInfo;
 
@@ -202,7 +182,6 @@
     .restart local v3    # "row":Lcom/android/server/pm/PersonaManagerService$AppUpgradeInfo;
     goto :goto_1
 
-    .line 4161
     .end local v2    # "name":Ljava/lang/String;
     .end local v4    # "system":Z
     .end local v5    # "tag":Ljava/lang/String;
@@ -214,7 +193,6 @@
 
     move-result-object v5
 
-    .line 4162
     .restart local v5    # "tag":Ljava/lang/String;
     const-string/jumbo v7, "package"
 
@@ -226,17 +204,14 @@
 
     if-eqz v3, :cond_0
 
-    .line 4163
     invoke-virtual {v3}, Lcom/android/server/pm/PersonaManagerService$AppUpgradeInfo;->dumpState()V
 
-    .line 4164
     const-string v7, "PersonaManagerService"
 
     const-string v8, "ROW added to list"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4165
     iget-object v7, p0, Lcom/android/server/pm/PersonaManagerService$FotaXmlDataParser;->mTypeListLocal:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -245,14 +220,12 @@
 
     goto :goto_1
 
-    .line 4172
     .end local v1    # "event":I
     .end local v3    # "row":Lcom/android/server/pm/PersonaManagerService$AppUpgradeInfo;
     .end local v5    # "tag":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 4173
     .local v0, "e":Ljava/lang/Exception;
     const-string v7, "PersonaManagerService"
 
@@ -280,12 +253,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4175
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     return-void
 
-    .line 4144
     nop
 
     :pswitch_data_0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 190
     iput-object p1, p0, Landroid/bluetooth/BluetoothA2dp$1;->this$0:Landroid/bluetooth/BluetoothA2dp;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "up"    # Z
 
     .prologue
-    .line 192
     # getter for: Landroid/bluetooth/BluetoothA2dp;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothA2dp;->access$000()Z
 
@@ -68,11 +66,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     :cond_0
     if-nez p1, :cond_1
 
-    .line 195
     iget-object v1, p0, Landroid/bluetooth/BluetoothA2dp$1;->this$0:Landroid/bluetooth/BluetoothA2dp;
 
     # getter for: Landroid/bluetooth/BluetoothA2dp;->mConnection:Landroid/content/ServiceConnection;
@@ -82,7 +78,6 @@
 
     monitor-enter v2
 
-    .line 197
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothA2dp$1;->this$0:Landroid/bluetooth/BluetoothA2dp;
 
@@ -91,7 +86,6 @@
     # setter for: Landroid/bluetooth/BluetoothA2dp;->mService:Landroid/bluetooth/IBluetoothA2dp;
     invoke-static {v1, v3}, Landroid/bluetooth/BluetoothA2dp;->access$202(Landroid/bluetooth/BluetoothA2dp;Landroid/bluetooth/IBluetoothA2dp;)Landroid/bluetooth/IBluetoothA2dp;
 
-    .line 198
     iget-object v1, p0, Landroid/bluetooth/BluetoothA2dp$1;->this$0:Landroid/bluetooth/BluetoothA2dp;
 
     # getter for: Landroid/bluetooth/BluetoothA2dp;->mContext:Landroid/content/Context;
@@ -111,20 +105,16 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 202
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 215
     :goto_1
     return-void
 
-    .line 199
     :catch_0
     move-exception v0
 
-    .line 200
     .local v0, "re":Ljava/lang/Exception;
     const-string v1, "BluetoothA2dp"
 
@@ -134,7 +124,6 @@
 
     goto :goto_0
 
-    .line 202
     .end local v0    # "re":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -145,7 +134,6 @@
 
     throw v1
 
-    .line 204
     :cond_1
     iget-object v1, p0, Landroid/bluetooth/BluetoothA2dp$1;->this$0:Landroid/bluetooth/BluetoothA2dp;
 
@@ -156,7 +144,6 @@
 
     monitor-enter v2
 
-    .line 206
     :try_start_2
     iget-object v1, p0, Landroid/bluetooth/BluetoothA2dp$1;->this$0:Landroid/bluetooth/BluetoothA2dp;
 
@@ -167,7 +154,6 @@
 
     if-nez v1, :cond_3
 
-    .line 207
     # getter for: Landroid/bluetooth/BluetoothA2dp;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothA2dp;->access$000()Z
 
@@ -181,7 +167,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 208
     :cond_2
     iget-object v1, p0, Landroid/bluetooth/BluetoothA2dp$1;->this$0:Landroid/bluetooth/BluetoothA2dp;
 
@@ -190,7 +175,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 213
     :cond_3
     :goto_2
     :try_start_3
@@ -207,11 +191,9 @@
 
     throw v1
 
-    .line 210
     :catch_1
     move-exception v0
 
-    .line 211
     .restart local v0    # "re":Ljava/lang/Exception;
     :try_start_4
     const-string v1, "BluetoothA2dp"

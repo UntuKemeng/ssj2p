@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 5204
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput-object p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->val$wipeReason:Ljava/lang/String;
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 5207
     :try_start_0
     const-string v1, "DevicePolicyManagerService"
 
@@ -52,7 +50,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5208
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$5;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v1, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -61,7 +58,6 @@
 
     invoke-static {v1, v2}, Landroid/os/RecoverySystem;->rebootWipeUserData(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 5209
     const-string v1, "DevicePolicyManagerService"
 
     const-string v2, "RecoverySystem.rebootWipeUserData() end"
@@ -71,15 +67,12 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 5215
     :goto_0
     return-void
 
-    .line 5210
     :catch_0
     move-exception v0
 
-    .line 5211
     .local v0, "e":Ljava/io/IOException;
     const-string v1, "DevicePolicyManagerService"
 
@@ -89,12 +82,10 @@
 
     goto :goto_0
 
-    .line 5212
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 5213
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v1, "DevicePolicyManagerService"
 

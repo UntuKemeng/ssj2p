@@ -64,37 +64,28 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 46
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsListener:Lcom/sec/epdg/handover/EpdgImsListener60;
 
-    .line 50
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
-    .line 51
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
-    .line 52
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsRegStatus:Lcom/sec/epdg/handover/EpdgImsRegStatus;
 
-    .line 53
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mImsManager:Lcom/sec/ims/ImsManager;
 
-    .line 54
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mSvcConn:Landroid/content/ServiceConnection;
 
-    .line 56
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mIpmeStatus:Z
 
-    .line 58
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsListener60$1;
 
     invoke-direct {v0}, Lcom/sec/epdg/handover/EpdgImsListener60$1;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mImsIpmeListener:Lcom/sec/ims/im/IImSessionListener$Stub;
 
-    .line 194
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsListener60$3;
 
     invoke-direct {v0}, Lcom/sec/epdg/handover/EpdgImsListener60$3;-><init>()V
@@ -110,23 +101,18 @@
     .param p2, "hdlr"    # Landroid/os/Handler;
 
     .prologue
-    .line 69
     invoke-direct {p0}, Lcom/sec/epdg/handover/EpdgImsListener;-><init>()V
 
-    .line 250
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsListener60$4;
 
     invoke-direct {v0, p0}, Lcom/sec/epdg/handover/EpdgImsListener60$4;-><init>(Lcom/sec/epdg/handover/EpdgImsListener60;)V
 
     iput-object v0, p0, Lcom/sec/epdg/handover/EpdgImsListener60;->mImsRegistrationListener:Lcom/sec/ims/IImsRegistrationListener;
 
-    .line 70
     sput-object p2, Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
 
-    .line 71
     sput-object p1, Lcom/sec/epdg/handover/EpdgImsListener60;->mContext:Landroid/content/Context;
 
-    .line 73
     const/4 v0, 0x0
 
     invoke-static {p1, p2, v0}, Lcom/sec/epdg/handover/EpdgImsSettings;->getInstance(Landroid/content/Context;Landroid/os/Handler;Landroid/util/SparseArray;)Lcom/sec/epdg/handover/EpdgImsSettings;
@@ -135,29 +121,24 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
-    .line 74
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
     invoke-direct {v0}, Lcom/sec/epdg/handover/EpdgImsCallStatus;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
-    .line 75
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsRegStatus;
 
     invoke-direct {v0}, Lcom/sec/epdg/handover/EpdgImsRegStatus;-><init>()V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsRegStatus:Lcom/sec/epdg/handover/EpdgImsRegStatus;
 
-    .line 76
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_VOWIFI_PROVISIONING:Z
 
     if-nez v0, :cond_0
 
-    .line 77
     invoke-direct {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->postImsReadyToEpdgService()V
 
-    .line 79
     :cond_0
     return-void
 .end method
@@ -167,7 +148,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 43
     invoke-static {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->setIpmeStatus(Z)V
 
     return-void
@@ -178,7 +158,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 43
     invoke-static {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->informIpmeStatusChangeToHandoverModule(Z)V
 
     return-void
@@ -188,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsRegStatus:Lcom/sec/epdg/handover/EpdgImsRegStatus;
 
     return-object v0
@@ -198,7 +176,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -208,7 +185,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mService:Lcom/sec/ims/volte2/IVolteService;
 
     return-object v0
@@ -219,7 +195,6 @@
     .param p0, "x0"    # Lcom/sec/ims/volte2/IVolteService;
 
     .prologue
-    .line 43
     sput-object p0, Lcom/sec/epdg/handover/EpdgImsListener60;->mService:Lcom/sec/ims/volte2/IVolteService;
 
     return-object p0
@@ -230,7 +205,6 @@
     .param p0, "x0"    # Lcom/sec/epdg/handover/EpdgImsListener60;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->resetCallList()V
 
     return-void
@@ -240,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
 
     return-object v0
@@ -250,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
     return-object v0
@@ -261,7 +233,6 @@
     .param p0, "x0"    # Ljava/util/List;
 
     .prologue
-    .line 43
     invoke-static {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->initImsSettings(Ljava/util/List;)V
 
     return-void
@@ -271,7 +242,6 @@
     .locals 1
 
     .prologue
-    .line 43
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
     return-object v0
@@ -281,12 +251,10 @@
     .locals 3
 
     .prologue
-    .line 89
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mImsManager:Lcom/sec/ims/ImsManager;
 
     if-nez v0, :cond_0
 
-    .line 90
     new-instance v0, Lcom/sec/ims/ImsManager;
 
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60;->mContext:Landroid/content/Context;
@@ -297,12 +265,10 @@
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mImsManager:Lcom/sec/ims/ImsManager;
 
-    .line 91
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mImsManager:Lcom/sec/ims/ImsManager;
 
     invoke-virtual {v0}, Lcom/sec/ims/ImsManager;->connectService()V
 
-    .line 93
     :cond_0
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mImsManager:Lcom/sec/ims/ImsManager;
 
@@ -315,19 +281,16 @@
     .param p1, "hdlr"    # Landroid/os/Handler;
 
     .prologue
-    .line 82
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsListener:Lcom/sec/epdg/handover/EpdgImsListener60;
 
     if-nez v0, :cond_0
 
-    .line 83
     new-instance v0, Lcom/sec/epdg/handover/EpdgImsListener60;
 
     invoke-direct {v0, p0, p1}, Lcom/sec/epdg/handover/EpdgImsListener60;-><init>(Landroid/content/Context;Landroid/os/Handler;)V
 
     sput-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsListener:Lcom/sec/epdg/handover/EpdgImsListener60;
 
-    .line 85
     :cond_0
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsListener:Lcom/sec/epdg/handover/EpdgImsListener60;
 
@@ -338,12 +301,10 @@
     .locals 3
 
     .prologue
-    .line 412
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->IMS_CALL_MONITORING:Z
 
     if-eqz v0, :cond_0
 
-    .line 413
     const/16 v0, 0x3e
 
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
@@ -356,7 +317,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/sec/epdg/handover/EpdgImsListener60;->postToEpdgService(ILjava/lang/Object;I)V
 
-    .line 416
     :cond_0
     return-void
 .end method
@@ -365,7 +325,6 @@
     .locals 3
 
     .prologue
-    .line 419
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v0
@@ -376,7 +335,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 420
     const/16 v0, 0x3d
 
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
@@ -389,7 +347,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/sec/epdg/handover/EpdgImsListener60;->postToEpdgService(ILjava/lang/Object;I)V
 
-    .line 423
     :cond_0
     return-void
 .end method
@@ -399,12 +356,10 @@
     .param p0, "networkType"    # I
 
     .prologue
-    .line 426
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->IMS_REGISTRATION_MONITORING:Z
 
     if-eqz v0, :cond_0
 
-    .line 427
     const/16 v0, 0x40
 
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsRegStatus:Lcom/sec/epdg/handover/EpdgImsRegStatus;
@@ -415,7 +370,6 @@
 
     invoke-static {v0, v1, p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->postToEpdgService(ILjava/lang/Object;I)V
 
-    .line 431
     :cond_0
     return-void
 .end method
@@ -425,12 +379,10 @@
     .param p0, "isExist"    # Z
 
     .prologue
-    .line 466
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_WIFI_OVER_IPME:Z
 
     if-eqz v0, :cond_0
 
-    .line 467
     const/16 v0, 0x4e
 
     invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -441,7 +393,6 @@
 
     invoke-static {v0, v1, v2}, Lcom/sec/epdg/handover/EpdgImsListener60;->postToEpdgService(ILjava/lang/Object;I)V
 
-    .line 469
     :cond_0
     return-void
 .end method
@@ -459,7 +410,6 @@
     .end annotation
 
     .prologue
-    .line 154
     .local p0, "fields":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
@@ -473,7 +423,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/handover/EpdgImsSettings;->initImsSettings(Ljava/util/HashMap;)V
 
-    .line 155
     return-void
 .end method
 
@@ -481,23 +430,19 @@
     .locals 2
 
     .prologue
-    .line 616
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
 
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 617
     .local v0, "msg":Landroid/os/Message;
     const/16 v1, 0x4c
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 618
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 619
     return-void
 .end method
 
@@ -508,27 +453,21 @@
     .param p2, "arg1"    # I
 
     .prologue
-    .line 473
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
 
     invoke-static {v1}, Landroid/os/Message;->obtain(Landroid/os/Handler;)Landroid/os/Message;
 
     move-result-object v0
 
-    .line 474
     .local v0, "msg":Landroid/os/Message;
     iput p0, v0, Landroid/os/Message;->what:I
 
-    .line 475
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 476
     iput p2, v0, Landroid/os/Message;->arg1:I
 
-    .line 477
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 478
     return-void
 .end method
 
@@ -536,19 +475,16 @@
     .locals 4
 
     .prologue
-    .line 163
     const-string v1, "[EpdgImsListener]"
 
     const-string v2, "registerCallStatusListener()"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 166
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.sec.imsservice"
 
@@ -556,14 +492,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 169
     new-instance v1, Lcom/sec/epdg/handover/EpdgImsListener60$2;
 
     invoke-direct {v1, p0}, Lcom/sec/epdg/handover/EpdgImsListener60$2;-><init>(Lcom/sec/epdg/handover/EpdgImsListener60;)V
 
     sput-object v1, Lcom/sec/epdg/handover/EpdgImsListener60;->mSvcConn:Landroid/content/ServiceConnection;
 
-    .line 191
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60;->mContext:Landroid/content/Context;
 
     sget-object v2, Lcom/sec/epdg/handover/EpdgImsListener60;->mSvcConn:Landroid/content/ServiceConnection;
@@ -572,7 +506,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
 
-    .line 192
     return-void
 .end method
 
@@ -580,14 +513,12 @@
     .locals 2
 
     .prologue
-    .line 434
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "registerIpmeListener()"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 435
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->getImsManager()Lcom/sec/ims/ImsManager;
 
     move-result-object v0
@@ -596,7 +527,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/ims/ImsManager;->registerImSessionListener(Lcom/sec/ims/im/IImSessionListener;)V
 
-    .line 436
     return-void
 .end method
 
@@ -604,7 +534,6 @@
     .locals 2
 
     .prologue
-    .line 247
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->getImsManager()Lcom/sec/ims/ImsManager;
 
     move-result-object v0
@@ -613,7 +542,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/ims/ImsManager;->registerImsRegistrationListener(Lcom/sec/ims/IImsRegistrationListener;)V
 
-    .line 248
     return-void
 .end method
 
@@ -621,14 +549,12 @@
     .locals 2
 
     .prologue
-    .line 266
     sget-object v1, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
     invoke-virtual {v1}, Lcom/sec/epdg/handover/EpdgImsSettings;->getFields()Ljava/util/List;
 
     move-result-object v0
 
-    .line 267
     .local v0, "fields":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->getInstance()Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;
 
@@ -636,7 +562,6 @@
 
     invoke-virtual {v1, v0}, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgImsManager;->registerForSettingChangeEvent(Ljava/util/List;)V
 
-    .line 268
     return-void
 .end method
 
@@ -644,19 +569,16 @@
     .locals 2
 
     .prologue
-    .line 158
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "resetCallList()"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 159
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
     invoke-virtual {v0}, Lcom/sec/epdg/handover/EpdgImsCallStatus;->resetCallList()V
 
-    .line 160
     return-void
 .end method
 
@@ -665,7 +587,6 @@
     .param p0, "value"    # Z
 
     .prologue
-    .line 448
     const-string v0, "[EpdgImsListener]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -688,10 +609,8 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 449
     sput-boolean p0, Lcom/sec/epdg/handover/EpdgImsListener60;->mIpmeStatus:Z
 
-    .line 450
     return-void
 .end method
 
@@ -699,14 +618,12 @@
     .locals 2
 
     .prologue
-    .line 439
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "unregisterIpmeListener()"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 440
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->getImsManager()Lcom/sec/ims/ImsManager;
 
     move-result-object v0
@@ -715,7 +632,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/ims/ImsManager;->unregisterImSessionListener(Lcom/sec/ims/im/IImSessionListener;)V
 
-    .line 441
     return-void
 .end method
 
@@ -725,7 +641,6 @@
     .locals 1
 
     .prologue
-    .line 117
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
     invoke-virtual {v0}, Lcom/sec/epdg/handover/EpdgImsCallStatus;->getCallCount()[I
@@ -739,7 +654,6 @@
     .locals 1
 
     .prologue
-    .line 109
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
     invoke-virtual {v0}, Lcom/sec/epdg/handover/EpdgImsCallStatus;->getCallStatus()Lcom/sec/epdg/handover/EpdgImsConstants$EpdgCallStatus;
@@ -753,7 +667,6 @@
     .locals 1
 
     .prologue
-    .line 121
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
     invoke-virtual {v0}, Lcom/sec/epdg/handover/EpdgImsCallStatus;->getE911CallCount()I
@@ -767,7 +680,6 @@
     .locals 1
 
     .prologue
-    .line 113
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
     return-object v0
@@ -777,7 +689,6 @@
     .locals 1
 
     .prologue
-    .line 444
     sget-boolean v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mIpmeStatus:Z
 
     return v0
@@ -787,7 +698,6 @@
     .locals 1
 
     .prologue
-    .line 125
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
     invoke-virtual {v0}, Lcom/sec/epdg/handover/EpdgImsCallStatus;->getNonE911CallCount()I
@@ -801,7 +711,6 @@
     .locals 1
 
     .prologue
-    .line 105
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsRegStatus:Lcom/sec/epdg/handover/EpdgImsRegStatus;
 
     invoke-virtual {v0}, Lcom/sec/epdg/handover/EpdgImsRegStatus;->getRegStatus()Lcom/sec/epdg/handover/EpdgImsConstants$IMSRegStatus;
@@ -815,10 +724,8 @@
     .locals 4
 
     .prologue
-    .line 453
     const/4 v0, 0x0
 
-    .line 454
     .local v0, "result":Z
     const-string v1, "[EpdgImsListener]"
 
@@ -846,7 +753,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 455
     const-string v1, "[EpdgImsListener]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -873,7 +779,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 457
     sget-boolean v1, Lcom/sec/epdg/EpdgOperatorConstants;->KEEP_EPDG_CONNECTION_WHILE_VOWIFI_SESSION_ON:Z
 
     if-eqz v1, :cond_1
@@ -895,7 +800,6 @@
     :cond_0
     const/4 v0, 0x1
 
-    .line 460
     :goto_0
     const-string v1, "[EpdgImsListener]"
 
@@ -919,10 +823,8 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 462
     return v0
 
-    .line 457
     :cond_1
     const/4 v0, 0x0
 
@@ -934,12 +836,10 @@
     .param p1, "settings"    # Lcom/sec/epdg/EpdgSettings;
 
     .prologue
-    .line 97
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
     if-eqz v0, :cond_0
 
-    .line 98
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsSettings:Lcom/sec/epdg/handover/EpdgImsSettings;
 
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->getImsManager()Lcom/sec/ims/ImsManager;
@@ -948,11 +848,9 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/sec/epdg/handover/EpdgImsSettings;->onEpdgSettingChanged(Lcom/sec/ims/ImsManager;Lcom/sec/epdg/EpdgSettings;)V
 
-    .line 102
     :goto_0
     return-void
 
-    .line 100
     :cond_0
     const-string v0, "[EpdgImsListener]"
 
@@ -967,42 +865,33 @@
     .locals 1
 
     .prologue
-    .line 133
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->IMS_CALL_MONITORING:Z
 
     if-eqz v0, :cond_0
 
-    .line 134
     invoke-direct {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->registerCallStatusListener()V
 
-    .line 136
     :cond_0
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->IMS_REGISTRATION_MONITORING:Z
 
     if-eqz v0, :cond_1
 
-    .line 137
     invoke-direct {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->registerRegStatusListener()V
 
-    .line 139
     :cond_1
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_VOWIFI_PROVISIONING:Z
 
     if-eqz v0, :cond_2
 
-    .line 140
     invoke-direct {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->registerSettingsChangeListener()V
 
-    .line 142
     :cond_2
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_WIFI_OVER_IPME:Z
 
     if-eqz v0, :cond_3
 
-    .line 143
     invoke-direct {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->registerIpmeListener()V
 
-    .line 145
     :cond_3
     return-void
 .end method
@@ -1012,12 +901,10 @@
     .param p1, "ecbmModeOn"    # Z
 
     .prologue
-    .line 129
     sget-object v0, Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
     invoke-virtual {v0, p1}, Lcom/sec/epdg/handover/EpdgImsCallStatus;->setEcbmChanged(Z)V
 
-    .line 130
     return-void
 .end method
 
@@ -1025,22 +912,18 @@
     .locals 4
 
     .prologue
-    .line 606
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 607
     .local v1, "status":Ljava/lang/StringBuffer;
     invoke-virtual {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->getCallCount()[I
 
     move-result-object v0
 
-    .line 608
     .local v0, "callCount":[I
     if-eqz v0, :cond_0
 
-    .line 609
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1079,7 +962,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 611
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1105,7 +987,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 612
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -1117,15 +998,12 @@
     .locals 1
 
     .prologue
-    .line 148
     sget-boolean v0, Lcom/sec/epdg/EpdgOperatorConstants;->SUPPORT_WIFI_OVER_IPME:Z
 
     if-eqz v0, :cond_0
 
-    .line 149
     invoke-direct {p0}, Lcom/sec/epdg/handover/EpdgImsListener60;->unregisterIpmeListener()V
 
-    .line 151
     :cond_0
     return-void
 .end method

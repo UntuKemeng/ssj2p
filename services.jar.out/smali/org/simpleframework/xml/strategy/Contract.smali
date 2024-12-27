@@ -22,22 +22,16 @@
     .param p4, "length"    # Ljava/lang/String;
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object p4, p0, Lorg/simpleframework/xml/strategy/Contract;->length:Ljava/lang/String;
 
-    .line 66
     iput-object p3, p0, Lorg/simpleframework/xml/strategy/Contract;->label:Ljava/lang/String;
 
-    .line 67
     iput-object p2, p0, Lorg/simpleframework/xml/strategy/Contract;->refer:Ljava/lang/String;
 
-    .line 68
     iput-object p1, p0, Lorg/simpleframework/xml/strategy/Contract;->mark:Ljava/lang/String;
 
-    .line 69
     return-void
 .end method
 
@@ -47,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-object v0, p0, Lorg/simpleframework/xml/strategy/Contract;->mark:Ljava/lang/String;
 
     return-object v0
@@ -57,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lorg/simpleframework/xml/strategy/Contract;->label:Ljava/lang/String;
 
     return-object v0
@@ -67,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Lorg/simpleframework/xml/strategy/Contract;->length:Ljava/lang/String;
 
     return-object v0
@@ -77,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Lorg/simpleframework/xml/strategy/Contract;->refer:Ljava/lang/String;
 
     return-object v0

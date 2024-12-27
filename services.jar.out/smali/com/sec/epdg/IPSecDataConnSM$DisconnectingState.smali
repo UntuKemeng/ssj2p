@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1483
     iput-object p1, p0, Lcom/sec/epdg/IPSecDataConnSM$DisconnectingState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/IPSecDataConnSM$1;
 
     .prologue
-    .line 1483
     invoke-direct {p0, p1}, Lcom/sec/epdg/IPSecDataConnSM$DisconnectingState;-><init>(Lcom/sec/epdg/IPSecDataConnSM;)V
 
     return-void
@@ -49,14 +47,12 @@
     .locals 2
 
     .prologue
-    .line 1486
     const-string v0, "[IPSECDATACONNSM]"
 
     const-string v1, "SM in Disconnecting state : Entered DisconnectingState "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1488
     iget-object v0, p0, Lcom/sec/epdg/IPSecDataConnSM$DisconnectingState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     # getter for: Lcom/sec/epdg/IPSecDataConnSM;->mIWlanApnContext:Lcom/sec/epdg/IWlanApnContext;
@@ -68,7 +64,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/epdg/IWlanApnContext;->setState(I)V
 
-    .line 1490
     return-void
 .end method
 
@@ -76,14 +71,12 @@
     .locals 2
 
     .prologue
-    .line 1494
     const-string v0, "[IPSECDATACONNSM]"
 
     const-string v1, "SM in Disconnecting state : Exiting DisconnectingState "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1495
     return-void
 .end method
 
@@ -92,10 +85,8 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1499
     const/4 v0, 0x0
 
-    .line 1500
     .local v0, "status":Z
     const-string v1, "[IPSECDATACONNSM]"
 
@@ -142,12 +133,10 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1502
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 1534
     :pswitch_0
     const-string v1, "[IPSECDATACONNSM]"
 
@@ -177,11 +166,9 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1540
     :goto_0
     return v0
 
-    .line 1504
     :pswitch_1
     iget-object v1, p0, Lcom/sec/epdg/IPSecDataConnSM$DisconnectingState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -190,7 +177,6 @@
     # setter for: Lcom/sec/epdg/IPSecDataConnSM;->mIsNeededL2WHO:Z
     invoke-static {v1, v2}, Lcom/sec/epdg/IPSecDataConnSM;->access$7602(Lcom/sec/epdg/IPSecDataConnSM;Z)Z
 
-    .line 1505
     const-string v1, "[IPSECDATACONNSM]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -228,7 +214,6 @@
 
     goto :goto_0
 
-    .line 1511
     :pswitch_2
     iget-object v1, p0, Lcom/sec/epdg/IPSecDataConnSM$DisconnectingState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -237,7 +222,6 @@
     # invokes: Lcom/sec/epdg/IPSecDataConnSM;->informHandoverFailureToRilAndFramework(I)V
     invoke-static {v1, v2}, Lcom/sec/epdg/IPSecDataConnSM;->access$2200(Lcom/sec/epdg/IPSecDataConnSM;I)V
 
-    .line 1512
     const-string v1, "[IPSECDATACONNSM]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -273,7 +257,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1514
     iget-object v1, p0, Lcom/sec/epdg/IPSecDataConnSM$DisconnectingState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
     iget-object v2, p0, Lcom/sec/epdg/IPSecDataConnSM$DisconnectingState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
@@ -287,7 +270,6 @@
 
     goto :goto_0
 
-    .line 1522
     :pswitch_3
     const-string v1, "[IPSECDATACONNSM]"
 
@@ -326,7 +308,6 @@
 
     goto/16 :goto_0
 
-    .line 1527
     :pswitch_4
     iget-object v1, p0, Lcom/sec/epdg/IPSecDataConnSM$DisconnectingState;->this$0:Lcom/sec/epdg/IPSecDataConnSM;
 
@@ -335,7 +316,6 @@
 
     goto/16 :goto_0
 
-    .line 1530
     :pswitch_5
     const-string v1, "[IPSECDATACONNSM]"
 
@@ -345,7 +325,6 @@
 
     goto/16 :goto_0
 
-    .line 1502
     nop
 
     :pswitch_data_0

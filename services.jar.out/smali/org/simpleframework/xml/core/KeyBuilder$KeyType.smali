@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 115
     new-instance v0, Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
     const-string v1, "TEXT"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/core/KeyBuilder$KeyType;->TEXT:Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
-    .line 116
     new-instance v0, Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
     const-string v1, "ATTRIBUTE"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/core/KeyBuilder$KeyType;->ATTRIBUTE:Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
-    .line 117
     new-instance v0, Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
     const-string v1, "ELEMENT"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/core/KeyBuilder$KeyType;->ELEMENT:Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
-    .line 114
     const/4 v0, 0x3
 
     new-array v0, v0, [Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 114
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,7 +108,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 114
     const-class v0, Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -129,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 114
     sget-object v0, Lorg/simpleframework/xml/core/KeyBuilder$KeyType;->$VALUES:[Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
     invoke-virtual {v0}, [Lorg/simpleframework/xml/core/KeyBuilder$KeyType;->clone()Ljava/lang/Object;

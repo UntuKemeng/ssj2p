@@ -24,13 +24,10 @@
     .param p2, "networkType"    # I
 
     .prologue
-    .line 4178
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$WifiToLteHOSuccessRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
-    .line 4179
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/EpdgService$HORunnable;-><init>(Lcom/sec/epdg/EpdgService;I)V
 
-    .line 4180
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 5
 
     .prologue
-    .line 4184
     invoke-virtual {p0}, Lcom/sec/epdg/EpdgService$WifiToLteHOSuccessRunnable;->getNetworkType()I
 
     move-result v2
@@ -51,11 +47,9 @@
 
     add-int/lit8 v0, v2, -0x1
 
-    .line 4185
     .local v0, "cid":I
     if-gez v0, :cond_1
 
-    .line 4186
     const-string v2, "[EPDGService]"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -82,7 +76,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4188
     iget-object v2, p0, Lcom/sec/epdg/EpdgService$WifiToLteHOSuccessRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->getHasPendingCdmaIndication()Z
@@ -92,14 +85,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 4189
     const-string v2, "[EPDGService]"
 
     const-string v3, "W2L not initiated, still send cdma availability to IMS"
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4190
     iget-object v2, p0, Lcom/sec/epdg/EpdgService$WifiToLteHOSuccessRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getIsCsAvailable()Z
@@ -109,7 +100,6 @@
     # invokes: Lcom/sec/epdg/EpdgService;->sendEpdgRegisterBroadcast(Z)V
     invoke-static {v2, v3}, Lcom/sec/epdg/EpdgService;->access$3000(Lcom/sec/epdg/EpdgService;Z)V
 
-    .line 4191
     iget-object v2, p0, Lcom/sec/epdg/EpdgService$WifiToLteHOSuccessRunnable;->this$0:Lcom/sec/epdg/EpdgService;
 
     const/4 v3, 0x0
@@ -117,12 +107,10 @@
     # invokes: Lcom/sec/epdg/EpdgService;->setHasPendingCdmaIndication(Z)V
     invoke-static {v2, v3}, Lcom/sec/epdg/EpdgService;->access$9400(Lcom/sec/epdg/EpdgService;Z)V
 
-    .line 4198
     :cond_0
     :goto_0
     return-void
 
-    .line 4195
     :cond_1
     # getter for: Lcom/sec/epdg/EpdgService;->mHOStateMachines:[Lcom/sec/epdg/IPSecDataConnSM;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$4500()[Lcom/sec/epdg/IPSecDataConnSM;
@@ -139,13 +127,11 @@
 
     move-result-object v1
 
-    .line 4196
     .local v1, "msg":Landroid/os/Message;
     const/4 v2, 0x1
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 4197
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
     goto :goto_0

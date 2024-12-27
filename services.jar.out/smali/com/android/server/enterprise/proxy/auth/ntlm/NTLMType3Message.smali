@@ -47,12 +47,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 58
     const/4 v0, 0x3
 
     invoke-direct {p0, v0, p2}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;-><init>(II)V
 
-    .line 50
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->username:Ljava/lang/String;
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->password:Ljava/lang/String;
@@ -61,39 +59,30 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->workstation:Ljava/lang/String;
 
-    .line 51
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->serverChallenge:[B
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->lmResponse:[B
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->ntResponse:[B
 
-    .line 53
     new-instance v0, Ljava/security/SecureRandom;
 
     invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->randomBytesGenerator:Ljava/security/SecureRandom;
 
-    .line 59
     iput-object p3, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->username:Ljava/lang/String;
 
-    .line 60
     iput-object p4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->password:Ljava/lang/String;
 
-    .line 61
     iput-object p5, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->domain:Ljava/lang/String;
 
-    .line 62
     iput-object p6, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->workstation:Ljava/lang/String;
 
-    .line 63
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->serverChallenge:[B
 
-    .line 64
     iput p7, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->lmCompatibility:I
 
-    .line 65
     return-void
 .end method
 
@@ -111,18 +100,15 @@
     .end annotation
 
     .prologue
-    .line 162
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->getSecret([B)Ljava/security/Key;
 
     move-result-object v1
 
-    .line 163
     .local v1, "key":Ljava/security/Key;
     const/4 v2, 0x1
 
     invoke-virtual {p2, v2, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 164
     const-string v2, "KGS!@#$%"
 
     const-string v3, "US-ASCII"
@@ -135,7 +121,6 @@
 
     move-result-object v0
 
-    .line 165
     .local v0, "hash":[B
     return-object v0
 .end method
@@ -148,16 +133,13 @@
     .prologue
     const/4 v2, 0x7
 
-    .line 80
     new-array v0, v2, [B
 
-    .line 81
     .local v0, "keyBytes":[B
     const/4 v1, 0x0
 
     invoke-static {p1, p2, v0, v1, v2}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 82
     return-object v0
 .end method
 
@@ -174,29 +156,24 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 173
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->hashForLm([B)[B
 
     move-result-object v2
 
-    .line 174
     .local v2, "lmHash":[B
     const/16 v5, 0x15
 
     new-array v1, v5, [B
 
-    .line 175
     .local v1, "keyBytes":[B
     const/16 v5, 0x10
 
     invoke-static {v2, v6, v1, v6, v5}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 176
     invoke-direct {p0, v1, v6}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->createKeyFrom([BI)[B
 
     move-result-object v0
 
-    .line 177
     .local v0, "firstKey":[B
     const/4 v5, 0x7
 
@@ -204,7 +181,6 @@
 
     move-result-object v3
 
-    .line 178
     .local v3, "secondKey":[B
     const/16 v5, 0xe
 
@@ -212,7 +188,6 @@
 
     move-result-object v4
 
-    .line 179
     .local v4, "thirdKey":[B
     invoke-direct {p0, p2, v0, v3, v4}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->getLmBytes([B[B[B[B)[B
 
@@ -234,29 +209,24 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 183
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->hashForNtlm([B)[B
 
     move-result-object v2
 
-    .line 184
     .local v2, "ntlmHash":[B
     const/16 v5, 0x15
 
     new-array v1, v5, [B
 
-    .line 185
     .local v1, "keyBytes":[B
     const/16 v5, 0x10
 
     invoke-static {v2, v6, v1, v6, v5}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 186
     invoke-direct {p0, v1, v6}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->createKeyFrom([BI)[B
 
     move-result-object v0
 
-    .line 187
     .local v0, "firstKey":[B
     const/4 v5, 0x7
 
@@ -264,7 +234,6 @@
 
     move-result-object v3
 
-    .line 188
     .local v3, "secondKey":[B
     const/16 v5, 0xe
 
@@ -272,7 +241,6 @@
 
     move-result-object v4
 
-    .line 189
     .local v4, "thirdKey":[B
     invoke-direct {p0, p2, v0, v3, v4}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->getLmBytes([B[B[B[B)[B
 
@@ -285,7 +253,6 @@
     .locals 21
 
     .prologue
-    .line 193
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->ntResponse:[B
@@ -310,15 +277,12 @@
 
     if-nez v17, :cond_1
 
-    .line 194
     :cond_0
     const/4 v12, 0x0
 
-    .line 253
     :goto_0
     return-object v12
 
-    .line 197
     :cond_1
     const/16 v17, 0x1
 
@@ -335,16 +299,13 @@
 
     const-string v6, "UTF-16LE"
 
-    .line 201
     .local v6, "encodingStandard":Ljava/lang/String;
     :goto_1
     const/4 v4, 0x0
 
-    .line 202
     .local v4, "domainBytes":[B
     const/4 v5, 0x0
 
-    .line 203
     .local v5, "domainLength":I
     move-object/from16 v0, p0
 
@@ -354,7 +315,6 @@
 
     if-eqz v17, :cond_2
 
-    .line 204
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->domain:Ljava/lang/String;
@@ -367,18 +327,14 @@
 
     move-result-object v4
 
-    .line 205
     array-length v5, v4
 
-    .line 208
     :cond_2
     const/4 v15, 0x0
 
-    .line 209
     .local v15, "workstationBytes":[B
     const/16 v16, 0x0
 
-    .line 210
     .local v16, "workstationLength":I
     move-object/from16 v0, p0
 
@@ -388,7 +344,6 @@
 
     if-eqz v17, :cond_3
 
-    .line 211
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->workstation:Ljava/lang/String;
@@ -401,20 +356,16 @@
 
     move-result-object v15
 
-    .line 212
     array-length v0, v15
 
     move/from16 v16, v0
 
-    .line 215
     :cond_3
     const/4 v13, 0x0
 
-    .line 216
     .local v13, "usernameBytes":[B
     const/4 v14, 0x0
 
-    .line 217
     .local v14, "usernameLength":I
     const-string v17, "Cp850"
 
@@ -426,7 +377,6 @@
 
     if-eqz v17, :cond_4
 
-    .line 218
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->username:Ljava/lang/String;
@@ -443,7 +393,6 @@
 
     iput-object v0, v1, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->username:Ljava/lang/String;
 
-    .line 220
     :cond_4
     move-object/from16 v0, p0
 
@@ -457,17 +406,13 @@
 
     move-result-object v13
 
-    .line 221
     array-length v14, v13
 
-    .line 223
     const/4 v10, 0x0
 
-    .line 224
     .local v10, "sessionKeyBytes":[B
     const/4 v11, 0x0
 
-    .line 226
     .local v11, "sessionKeyLength":I
     move-object/from16 v0, p0
 
@@ -479,7 +424,6 @@
 
     array-length v8, v0
 
-    .line 227
     .local v8, "ntResponseLength":I
     move-object/from16 v0, p0
 
@@ -491,7 +435,6 @@
 
     array-length v7, v0
 
-    .line 228
     .local v7, "lmResponseLength":I
     add-int/lit8 v17, v5, 0x40
 
@@ -509,7 +452,6 @@
 
     new-array v12, v0, [B
 
-    .line 231
     .local v12, "type3MessageBytes":[B
     sget-object v17, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->NTLM_HEADER_BYTES:[B
 
@@ -529,7 +471,6 @@
 
     invoke-static {v0, v1, v12, v2, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 232
     const/16 v17, 0x8
 
     const/16 v18, 0x3
@@ -544,10 +485,8 @@
 
     invoke-static {v12, v0, v1, v2}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setUnsignedValue([BIII)V
 
-    .line 233
     const/16 v9, 0x40
 
-    .line 234
     .local v9, "offset":I
     const/16 v17, 0xc
 
@@ -563,10 +502,8 @@
 
     invoke-static {v12, v0, v9, v1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setSecurityDataAndAttributes([BII[B)V
 
-    .line 235
     add-int/2addr v9, v7
 
-    .line 236
     const/16 v17, 0x14
 
     move-object/from16 v0, p0
@@ -581,47 +518,38 @@
 
     invoke-static {v12, v0, v9, v1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setSecurityDataAndAttributes([BII[B)V
 
-    .line 237
     add-int/2addr v9, v8
 
-    .line 238
     const/16 v17, 0x1c
 
     move/from16 v0, v17
 
     invoke-static {v12, v0, v9, v4}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setSecurityDataAndAttributes([BII[B)V
 
-    .line 239
     add-int/2addr v9, v5
 
-    .line 240
     const/16 v17, 0x24
 
     move/from16 v0, v17
 
     invoke-static {v12, v0, v9, v13}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setSecurityDataAndAttributes([BII[B)V
 
-    .line 241
     add-int/2addr v9, v14
 
-    .line 242
     const/16 v17, 0x2c
 
     move/from16 v0, v17
 
     invoke-static {v12, v0, v9, v15}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setSecurityDataAndAttributes([BII[B)V
 
-    .line 243
     add-int v9, v9, v16
 
-    .line 244
     const/16 v17, 0x34
 
     move/from16 v0, v17
 
     invoke-static {v12, v0, v9, v10}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMUtils;->setSecurityDataAndAttributes([BII[B)V
 
-    .line 245
     const/16 v17, 0x3c
 
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->getFlags()I
@@ -640,7 +568,6 @@
 
     goto/16 :goto_0
 
-    .line 248
     .end local v4    # "domainBytes":[B
     .end local v5    # "domainLength":I
     .end local v6    # "encodingStandard":Ljava/lang/String;
@@ -657,13 +584,11 @@
     :catch_0
     move-exception v17
 
-    .line 253
     :goto_2
     const/4 v12, 0x0
 
     goto/16 :goto_0
 
-    .line 197
     :cond_5
     const-string v6, "Cp850"
     :try_end_0
@@ -672,7 +597,6 @@
 
     goto/16 :goto_1
 
-    .line 250
     :catch_1
     move-exception v17
 
@@ -695,23 +619,19 @@
     .end annotation
 
     .prologue
-    .line 113
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->getSecret([B)Ljava/security/Key;
 
     move-result-object v0
 
-    .line 114
     .local v0, "key":Ljava/security/Key;
     const/4 v2, 0x1
 
     invoke-virtual {p4, v2, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 115
     invoke-virtual {p4, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
     move-result-object v1
 
-    .line 116
     .local v1, "partialResult":[B
     const/4 v2, 0x0
 
@@ -719,7 +639,6 @@
 
     invoke-static {v1, v2, p3, p5, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 117
     return-void
 .end method
 
@@ -739,12 +658,10 @@
 
     const/4 v8, 0x0
 
-    .line 131
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->hashForNtlm([B)[B
 
     move-result-object v3
 
-    .line 132
     .local v3, "ntlmHash":[B
     const-string v7, "MD5"
 
@@ -752,17 +669,13 @@
 
     move-result-object v2
 
-    .line 133
     .local v2, "md5":Ljava/security/MessageDigest;
     invoke-virtual {v2, p2}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 134
     invoke-virtual {v2, p3, v8, v9}, Ljava/security/MessageDigest;->update([BII)V
 
-    .line 135
     new-array v5, v9, [B
 
-    .line 136
     .local v5, "sessionHash":[B
     invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
 
@@ -770,23 +683,19 @@
 
     invoke-static {v7, v8, v5, v8, v9}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 137
     const/16 v7, 0x15
 
     new-array v1, v7, [B
 
-    .line 138
     .local v1, "keyBytes":[B
     const/16 v7, 0x10
 
     invoke-static {v3, v8, v1, v8, v7}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 139
     invoke-direct {p0, v1, v8}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->createKeyFrom([BI)[B
 
     move-result-object v0
 
-    .line 140
     .local v0, "firstKey":[B
     const/4 v7, 0x7
 
@@ -794,7 +703,6 @@
 
     move-result-object v4
 
-    .line 141
     .local v4, "secondKey":[B
     const/16 v7, 0xe
 
@@ -802,7 +710,6 @@
 
     move-result-object v6
 
-    .line 142
     .local v6, "thirdKey":[B
     invoke-direct {p0, v5, v0, v4, v6}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->getLmBytes([B[B[B[B)[B
 
@@ -824,12 +731,10 @@
     .end annotation
 
     .prologue
-    .line 100
     const/16 v0, 0x18
 
     new-array v3, v0, [B
 
-    .line 102
     .local v3, "result":[B
     const-string v0, "DES/ECB/NoPadding"
 
@@ -837,7 +742,6 @@
 
     move-result-object v4
 
-    .line 103
     .local v4, "des":Ljavax/crypto/Cipher;
     const/4 v5, 0x0
 
@@ -849,7 +753,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->encriptAndFillResponse([B[B[BLjavax/crypto/Cipher;I)V
 
-    .line 104
     const/16 v5, 0x8
 
     move-object v0, p0
@@ -860,7 +763,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->encriptAndFillResponse([B[B[BLjavax/crypto/Cipher;I)V
 
-    .line 105
     const/16 v5, 0x10
 
     move-object v0, p0
@@ -871,7 +773,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->encriptAndFillResponse([B[B[BLjavax/crypto/Cipher;I)V
 
-    .line 107
     return-object v3
 .end method
 
@@ -885,7 +786,6 @@
     .end annotation
 
     .prologue
-    .line 169
     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
     move-result-object v0
@@ -909,7 +809,6 @@
     .end annotation
 
     .prologue
-    .line 126
     const-string v0, "UTF-16LE"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
@@ -926,18 +825,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 68
     const/16 v2, 0x8
 
     new-array v1, v2, [B
 
-    .line 69
     .local v1, "material":[B
     aget-byte v2, p1, v3
 
     aput-byte v2, v1, v3
 
-    .line 70
     const/4 v0, 0x1
 
     .local v0, "i":I
@@ -948,7 +844,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 71
     add-int/lit8 v2, v0, -0x1
 
     aget-byte v2, p1, v2
@@ -971,12 +866,10 @@
 
     aput-byte v2, v1, v0
 
-    .line 70
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 74
     :cond_0
     array-length v2, v1
 
@@ -992,10 +885,8 @@
 
     aput-byte v3, v1, v2
 
-    .line 75
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->processParityForBytes([B)V
 
-    .line 76
     new-instance v2, Ljavax/crypto/spec/SecretKeySpec;
 
     const-string v3, "DES"
@@ -1021,29 +912,24 @@
 
     const/4 v7, 0x0
 
-    .line 146
     array-length v6, p1
 
     invoke-static {v6, v9}, Ljava/lang/Math;->min(II)I
 
     move-result v3
 
-    .line 147
     .local v3, "length":I
     new-array v2, v9, [B
 
-    .line 148
     .local v2, "keyBytes":[B
     invoke-static {p1, v7, v2, v7, v3}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 149
     const-string v6, "DES/ECB/NoPadding"
 
     invoke-static {v6}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v0
 
-    .line 150
     .local v0, "des":Ljavax/crypto/Cipher;
     invoke-direct {p0, v2, v7}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->createKeyFrom([BI)[B
 
@@ -1053,7 +939,6 @@
 
     move-result-object v1
 
-    .line 151
     .local v1, "firstHash":[B
     const/4 v6, 0x7
 
@@ -1065,20 +950,16 @@
 
     move-result-object v5
 
-    .line 153
     .local v5, "secondHash":[B
     const/16 v6, 0x10
 
     new-array v4, v6, [B
 
-    .line 154
     .local v4, "lmHash":[B
     invoke-static {v1, v7, v4, v7, v8}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 155
     invoke-static {v5, v7, v4, v8, v8}, Ljava/lang/System;->arraycopy([BI[BII)V
 
-    .line 157
     return-object v4
 .end method
 
@@ -1092,16 +973,13 @@
     .end annotation
 
     .prologue
-    .line 120
     new-instance v0, Lcom/android/server/enterprise/proxy/auth/ntlm/MD4;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/MD4;-><init>()V
 
-    .line 121
     .local v0, "md4":Ljava/security/MessageDigest;
     invoke-virtual {v0, p1}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 122
     invoke-virtual {v0}, Ljava/security/MessageDigest;->digest()[B
 
     move-result-object v1
@@ -1114,7 +992,6 @@
     .param p1, "bytes"    # [B
 
     .prologue
-    .line 86
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -1123,10 +1000,8 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 87
     aget-byte v0, p1, v1
 
-    .line 88
     .local v0, "b":B
     ushr-int/lit8 v3, v0, 0x7
 
@@ -1160,12 +1035,10 @@
 
     const/4 v2, 0x1
 
-    .line 91
     .local v2, "needsParity":Z
     :goto_1
     if-eqz v2, :cond_1
 
-    .line 92
     aget-byte v3, p1, v1
 
     or-int/lit8 v3, v3, 0x1
@@ -1174,20 +1047,17 @@
 
     aput-byte v3, p1, v1
 
-    .line 86
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 88
     .end local v2    # "needsParity":Z
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 94
     .restart local v2    # "needsParity":Z
     :cond_1
     aget-byte v3, p1, v1
@@ -1200,7 +1070,6 @@
 
     goto :goto_2
 
-    .line 97
     .end local v0    # "b":B
     .end local v2    # "needsParity":Z
     :cond_2
@@ -1215,7 +1084,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 259
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->username:Ljava/lang/String;
 
     if-eqz v4, :cond_0
@@ -1228,12 +1096,10 @@
 
     if-nez v4, :cond_1
 
-    .line 296
     :cond_0
     :goto_0
     return-object v1
 
-    .line 262
     :cond_1
     iget v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->lmCompatibility:I
 
@@ -1241,7 +1107,6 @@
 
     goto :goto_0
 
-    .line 265
     :pswitch_0
     const/high16 v4, 0x80000
 
@@ -1252,18 +1117,15 @@
 
     if-eqz v4, :cond_2
 
-    .line 266
     const/16 v4, 0x18
 
     new-array v2, v4, [B
 
-    .line 267
     .local v2, "randomClientNonce":[B
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->randomBytesGenerator:Ljava/security/SecureRandom;
 
     invoke-virtual {v4, v2}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    .line 268
     const/16 v4, 0x8
 
     array-length v5, v2
@@ -1272,7 +1134,6 @@
 
     invoke-static {v2, v4, v5, v6}, Ljava/util/Arrays;->fill([BIIB)V
 
-    .line 270
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->password:Ljava/lang/String;
 
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->getPasswordForNtlm(Ljava/lang/String;)[B
@@ -1287,30 +1148,24 @@
 
     iput-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->ntResponse:[B
 
-    .line 272
     iput-object v2, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->lmResponse:[B
 
-    .line 273
     invoke-direct {p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->createType3Message()[B
 
     move-result-object v3
 
-    .line 274
     .local v3, "type3MessageBytes":[B
     if-eqz v3, :cond_0
 
-    .line 277
     const/4 v4, 0x2
 
     invoke-static {v3, v4}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 278
     .local v1, "encode":Ljava/lang/String;
     goto :goto_0
 
-    .line 280
     .end local v1    # "encode":Ljava/lang/String;
     .end local v2    # "randomClientNonce":[B
     .end local v3    # "type3MessageBytes":[B
@@ -1329,7 +1184,6 @@
 
     iput-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->lmResponse:[B
 
-    .line 281
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->password:Ljava/lang/String;
 
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->getPasswordForNtlm(Ljava/lang/String;)[B
@@ -1344,16 +1198,13 @@
 
     iput-object v4, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->ntResponse:[B
 
-    .line 282
     invoke-direct {p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->createType3Message()[B
 
     move-result-object v3
 
-    .line 283
     .restart local v3    # "type3MessageBytes":[B
     if-eqz v3, :cond_0
 
-    .line 286
     const/4 v4, 0x2
 
     invoke-static {v3, v4}, Landroid/util/Base64;->encodeToString([BI)Ljava/lang/String;
@@ -1362,23 +1213,19 @@
 
     move-result-object v1
 
-    .line 287
     .restart local v1    # "encode":Ljava/lang/String;
     goto :goto_0
 
-    .line 289
     .end local v1    # "encode":Ljava/lang/String;
     .end local v3    # "type3MessageBytes":[B
     :catch_0
     move-exception v0
 
-    .line 290
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 262
     nop
 
     :pswitch_data_0
@@ -1397,6 +1244,5 @@
     .end annotation
 
     .prologue
-    .line 301
     return-void
 .end method

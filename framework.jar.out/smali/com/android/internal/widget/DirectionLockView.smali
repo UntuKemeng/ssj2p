@@ -167,17 +167,14 @@
     .locals 2
 
     .prologue
-    .line 91
     const-wide v0, 0x4056800000000000L    # 90.0
 
     sput-wide v0, Lcom/android/internal/widget/DirectionLockView;->DIRECTION_TOLERANCE_ANGLE:D
 
-    .line 95
     const/16 v0, 0xb6
 
     sput v0, Lcom/android/internal/widget/DirectionLockView;->DEFAULT_ARROW_SIZE:I
 
-    .line 119
     const-string/jumbo v0, "ro.build.characteristics"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -194,12 +191,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 129
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/android/internal/widget/DirectionLockView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 130
     return-void
 .end method
 
@@ -209,12 +204,10 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 140
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/android/internal/widget/DirectionLockView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 141
     return-void
 .end method
 
@@ -233,15 +226,12 @@
 
     const/4 v1, 0x0
 
-    .line 152
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 56
     const-string v0, "DirectionLockView"
 
     iput-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
-    .line 58
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mBlankBitmap:Landroid/graphics/Bitmap;
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapUp:Landroid/graphics/Bitmap;
@@ -256,69 +246,56 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mErrorBitmap:Landroid/graphics/Bitmap;
 
-    .line 65
     iput-boolean v2, p0, Lcom/android/internal/widget/DirectionLockView;->SETTINGS_APP:Z
 
     iput-boolean v2, p0, Lcom/android/internal/widget/DirectionLockView;->isParentArrowSize:Z
 
     iput-boolean v2, p0, Lcom/android/internal/widget/DirectionLockView;->mAllowDouble:Z
 
-    .line 73
     iput v2, p0, Lcom/android/internal/widget/DirectionLockView;->mParentArrowSize:I
 
     iput v2, p0, Lcom/android/internal/widget/DirectionLockView;->currentErrorResId:I
 
-    .line 74
     const-string/jumbo v0, "tts_default_rate"
 
     iput-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TTS_DEFAULT_RATE_STRING:Ljava/lang/String;
 
-    .line 77
     const/16 v0, 0x55
 
     iput-char v0, p0, Lcom/android/internal/widget/DirectionLockView;->mUpChar:C
 
-    .line 78
     const/16 v0, 0x44
 
     iput-char v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDownChar:C
 
-    .line 79
     const/16 v0, 0x4c
 
     iput-char v0, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftChar:C
 
-    .line 80
     const/16 v0, 0x52
 
     iput-char v0, p0, Lcom/android/internal/widget/DirectionLockView;->mRightChar:C
 
-    .line 81
     const/16 v0, 0x31
 
     iput v0, p0, Lcom/android/internal/widget/DirectionLockView;->mUpNumber:I
 
-    .line 82
     const/16 v0, 0x39
 
     iput v0, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftNumber:I
 
-    .line 83
     const/16 v0, 0x33
 
     iput v0, p0, Lcom/android/internal/widget/DirectionLockView;->mRightNumber:I
 
-    .line 84
     const/16 v0, 0x37
 
     iput v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDownNumber:I
 
-    .line 94
     const/16 v0, 0x64
 
     iput v0, p0, Lcom/android/internal/widget/DirectionLockView;->REFERENCE_SQUARE_DIMENSION:I
 
-    .line 107
     iput v3, p0, Lcom/android/internal/widget/DirectionLockView;->mVibration_pattern_up:I
 
     iput v3, p0, Lcom/android/internal/widget/DirectionLockView;->mVibration_pattern_down:I
@@ -327,20 +304,16 @@
 
     iput v4, p0, Lcom/android/internal/widget/DirectionLockView;->mVibration_pattern_left:I
 
-    .line 313
     new-instance v0, Lcom/android/internal/widget/DirectionLockView$1;
 
     invoke-direct {v0, p0}, Lcom/android/internal/widget/DirectionLockView$1;-><init>(Lcom/android/internal/widget/DirectionLockView;)V
 
     iput-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->_TTSListener:Landroid/speech/tts/TextToSpeech$OnInitListener;
 
-    .line 153
     iput-object p1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
-    .line 154
     invoke-direct {p0}, Lcom/android/internal/widget/DirectionLockView;->initDirectionLockView()V
 
-    .line 155
     return-void
 .end method
 
@@ -351,32 +324,25 @@
     .param p3, "reqHeight"    # I
 
     .prologue
-    .line 1193
     iget v2, p1, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    .line 1194
     .local v2, "height":I
     iget v4, p1, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    .line 1195
     .local v4, "width":I
     const/4 v3, 0x1
 
-    .line 1197
     .local v3, "inSampleSize":I
     if-gt v2, p3, :cond_0
 
     if-le v4, p2, :cond_1
 
-    .line 1199
     :cond_0
     div-int/lit8 v0, v2, 0x2
 
-    .line 1200
     .local v0, "halfHeight":I
     div-int/lit8 v1, v4, 0x2
 
-    .line 1205
     .local v1, "halfWidth":I
     :goto_0
     div-int v5, v0, v3
@@ -387,12 +353,10 @@
 
     if-le v5, p2, :cond_1
 
-    .line 1206
     mul-int/lit8 v3, v3, 0x2
 
     goto :goto_0
 
-    .line 1210
     .end local v0    # "halfHeight":I
     .end local v1    # "halfWidth":I
     :cond_1
@@ -407,34 +371,28 @@
     .prologue
     const-wide/high16 v4, 0x4000000000000000L    # 2.0
 
-    .line 706
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v1, "in calculateTradeSpace()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 707
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
-    .line 708
     const-wide v0, 0x4056800000000000L    # 90.0
 
     cmpl-double v0, p3, v0
 
     if-ltz v0, :cond_0
 
-    .line 709
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
-    .line 710
     const-wide/16 v0, 0x0
 
-    .line 712
     :goto_0
     return-wide v0
 
@@ -471,14 +429,12 @@
 
     const-wide/16 v6, 0x0
 
-    .line 767
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v1, "in createReferenceSquare()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 768
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mSquare_size:D
 
     div-double/2addr v0, v2
@@ -487,7 +443,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftX:D
 
-    .line 769
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mSquare_size:D
 
     div-double/2addr v0, v2
@@ -496,7 +451,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mTopY:D
 
-    .line 770
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mSquare_size:D
 
     div-double/2addr v0, v2
@@ -505,7 +459,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mRightX:D
 
-    .line 771
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mSquare_size:D
 
     div-double/2addr v0, v2
@@ -514,17 +467,14 @@
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBottomY:D
 
-    .line 773
     if-eqz p5, :cond_1
 
-    .line 774
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftX:D
 
     cmpg-double v0, v0, v6
 
     if-gez v0, :cond_2
 
-    .line 775
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mRightX:D
 
     iget-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftX:D
@@ -533,10 +483,8 @@
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mRightX:D
 
-    .line 776
     iput-wide v6, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftX:D
 
-    .line 782
     :cond_0
     :goto_0
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mTopY:D
@@ -545,7 +493,6 @@
 
     if-gez v0, :cond_3
 
-    .line 783
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBottomY:D
 
     iget-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mTopY:D
@@ -554,10 +501,8 @@
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBottomY:D
 
-    .line 784
     iput-wide v6, p0, Lcom/android/internal/widget/DirectionLockView;->mTopY:D
 
-    .line 791
     :cond_1
     :goto_1
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
@@ -592,7 +537,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 792
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -653,10 +597,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 795
     return-void
 
-    .line 777
     :cond_2
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mRightX:D
 
@@ -666,7 +608,6 @@
 
     if-lez v0, :cond_0
 
-    .line 778
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftX:D
 
     iget-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mRightX:D
@@ -679,14 +620,12 @@
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftX:D
 
-    .line 779
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mScreenWidth:D
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mRightX:D
 
     goto/16 :goto_0
 
-    .line 785
     :cond_3
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBottomY:D
 
@@ -696,7 +635,6 @@
 
     if-lez v0, :cond_1
 
-    .line 786
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mTopY:D
 
     iget-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mBottomY:D
@@ -709,7 +647,6 @@
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mTopY:D
 
-    .line 787
     iget-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mScreenHeight:D
 
     iput-wide v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBottomY:D
@@ -722,7 +659,6 @@
     .param p1, "dipValue"    # D
 
     .prologue
-    .line 231
     invoke-virtual {p0}, Lcom/android/internal/widget/DirectionLockView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -731,7 +667,6 @@
 
     move-result-object v0
 
-    .line 232
     .local v0, "metrics":Landroid/util/DisplayMetrics;
     const/4 v1, 0x1
 
@@ -752,58 +687,46 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1132
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v1, "in freeBitmapMemory()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1134
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBlankBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 1135
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBlankBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1136
     iput-object v2, p0, Lcom/android/internal/widget/DirectionLockView;->mBlankBitmap:Landroid/graphics/Bitmap;
 
-    .line 1139
     :cond_0
     invoke-direct {p0}, Lcom/android/internal/widget/DirectionLockView;->releaseDirectionBitmaps()V
 
-    .line 1141
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    .line 1142
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1143
     iput-object v2, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
-    .line 1146
     :cond_1
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mErrorBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_2
 
-    .line 1147
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mErrorBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1148
     iput-object v2, p0, Lcom/android/internal/widget/DirectionLockView;->mErrorBitmap:Landroid/graphics/Bitmap;
 
-    .line 1150
     :cond_2
     return-void
 .end method
@@ -818,7 +741,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 1155
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -861,44 +783,35 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1157
     new-instance v1, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v1}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 1158
     .local v1, "options":Landroid/graphics/BitmapFactory$Options;
     iput-boolean v7, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 1159
     invoke-static {p1, p2, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 1162
     invoke-direct {p0, v1, p3, p4}, Lcom/android/internal/widget/DirectionLockView;->calculateInSampleSize(Landroid/graphics/BitmapFactory$Options;II)I
 
     move-result v4
 
     iput v4, v1, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 1165
     const/4 v4, 0x0
 
     iput-boolean v4, v1, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 1167
     invoke-static {p1, p2, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;ILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
     move-result-object v3
 
-    .line 1170
     .local v3, "tempBitmap":Landroid/graphics/Bitmap;
     const/4 v2, 0x0
 
-    .line 1171
     .local v2, "returnBitmap":Landroid/graphics/Bitmap;
     if-eqz v3, :cond_0
 
-    .line 1173
     const/4 v4, 0x1
 
     :try_start_0
@@ -909,27 +822,22 @@
 
     move-result-object v2
 
-    .line 1179
     invoke-virtual {v3, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 1180
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v5, "getBitmapFromResource recycle"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1181
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1182
     const/4 v3, 0x0
 
-    .line 1186
     :cond_0
     :goto_0
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
@@ -938,43 +846,35 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1187
     return-object v2
 
-    .line 1175
     :catch_0
     move-exception v0
 
-    .line 1176
     .local v0, "e":Ljava/lang/OutOfMemoryError;
     :try_start_1
     invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1179
     invoke-virtual {v3, v2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 1180
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v5, "getBitmapFromResource recycle"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1181
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1182
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 1179
     .end local v0    # "e":Ljava/lang/OutOfMemoryError;
     :catchall_0
     move-exception v4
@@ -985,17 +885,14 @@
 
     if-nez v5, :cond_1
 
-    .line 1180
     iget-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v6, "getBitmapFromResource recycle"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1181
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1182
     const/4 v3, 0x0
 
     :cond_1
@@ -1012,59 +909,47 @@
     .prologue
     const/4 v3, -0x2
 
-    .line 670
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v2, "in getDirectionImageView()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 671
     iget-boolean v1, p0, Lcom/android/internal/widget/DirectionLockView;->isParentArrowSize:Z
 
     if-eqz v1, :cond_0
 
-    .line 672
     iput p4, p0, Lcom/android/internal/widget/DirectionLockView;->mParentArrowSize:I
 
-    .line 674
     :cond_0
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
     if-eqz v1, :cond_1
 
-    .line 675
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v1}, Lcom/android/internal/widget/DirectionLockView;->removeView(Landroid/view/View;)V
 
-    .line 676
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
-    .line 679
     :cond_1
     new-instance v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     invoke-direct {v0, v3, v3}, Landroid/widget/RelativeLayout$LayoutParams;-><init>(II)V
 
-    .line 681
     .local v0, "layoutParams":Landroid/widget/RelativeLayout$LayoutParams;
     if-eqz p3, :cond_2
 
-    .line 682
     const/16 v1, 0xe
 
     invoke-virtual {v0, v1}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(I)V
 
-    .line 683
     iput p1, v0, Landroid/widget/RelativeLayout$LayoutParams;->topMargin:I
 
-    .line 684
     iput p2, v0, Landroid/widget/RelativeLayout$LayoutParams;->bottomMargin:I
 
-    .line 689
     :goto_0
     new-instance v1, Landroid/widget/ImageView;
 
@@ -1074,20 +959,16 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
-    .line 690
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v1, v0}, Lcom/android/internal/widget/DirectionLockView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 691
     invoke-virtual {p0}, Lcom/android/internal/widget/DirectionLockView;->invalidate()V
 
-    .line 693
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
     return-object v1
 
-    .line 686
     :cond_2
     const/16 v1, 0xd
 
@@ -1104,21 +985,18 @@
 
     const/4 v6, 0x1
 
-    .line 536
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v2, "in initDirectinLockView()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 538
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mHashMap:Ljava/util/HashMap;
 
-    .line 539
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mHashMap:Ljava/util/HashMap;
 
     const-string v2, "com.samsung.SMT.KEY_PARAM"
@@ -1127,46 +1005,34 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 541
     invoke-direct {p0}, Lcom/android/internal/widget/DirectionLockView;->refreshScreenDimensions()V
 
-    .line 542
     invoke-virtual {p0}, Lcom/android/internal/widget/DirectionLockView;->getDirectionImageView()Landroid/widget/ImageView;
 
-    .line 544
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPassword:Ljava/lang/String;
 
-    .line 545
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPasswordNumbers:Ljava/lang/String;
 
-    .line 551
     iput-boolean v6, p0, Lcom/android/internal/widget/DirectionLockView;->mInsideReferenceSquare:Z
 
-    .line 557
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/widget/DirectionLockView;->mForceRestart:Z
 
-    .line 560
     iput-boolean v6, p0, Lcom/android/internal/widget/DirectionLockView;->mAllow:Z
 
-    .line 562
     iput-boolean v6, p0, Lcom/android/internal/widget/DirectionLockView;->mShowArrow:Z
 
-    .line 563
     iput-boolean v6, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVoice:Z
 
-    .line 564
     iput-boolean v6, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVibration:Z
 
-    .line 565
     iput-boolean v6, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayBeep:Z
 
-    .line 568
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const v2, 0x11000d5
@@ -1177,7 +1043,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepNorth:Landroid/media/MediaPlayer;
 
-    .line 569
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const v2, 0x11000d2
@@ -1188,7 +1053,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepSouth:Landroid/media/MediaPlayer;
 
-    .line 570
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const v2, 0x11000d4
@@ -1199,7 +1063,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepEast:Landroid/media/MediaPlayer;
 
-    .line 571
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const v2, 0x11000d3
@@ -1210,7 +1073,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepWest:Landroid/media/MediaPlayer;
 
-    .line 573
     new-instance v1, Landroid/speech/tts/TextToSpeech;
 
     iget-object v2, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
@@ -1221,7 +1083,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
-    .line 576
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -1236,7 +1097,6 @@
 
     move-result v0
 
-    .line 578
     .local v0, "mDefaultRate":I
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
@@ -1260,7 +1120,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 579
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     int-to-float v2, v0
@@ -1271,7 +1130,6 @@
 
     invoke-virtual {v1, v2}, Landroid/speech/tts/TextToSpeech;->setSpeechRate(F)I
 
-    .line 581
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const v2, 0x1040a6a
@@ -1282,7 +1140,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mUpAnnounce:Ljava/lang/String;
 
-    .line 582
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const v2, 0x1040a6d
@@ -1293,7 +1150,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDownAnnounce:Ljava/lang/String;
 
-    .line 583
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const v2, 0x1040a6c
@@ -1304,7 +1160,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftAnnounce:Ljava/lang/String;
 
-    .line 584
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const v2, 0x1040a6b
@@ -1315,7 +1170,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mRightAnnounce:Ljava/lang/String;
 
-    .line 586
     iget v1, p0, Lcom/android/internal/widget/DirectionLockView;->REFERENCE_SQUARE_DIMENSION:I
 
     int-to-double v2, v1
@@ -1326,19 +1180,14 @@
 
     iput-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mSquare_size:D
 
-    .line 587
     iput-wide v4, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftX:D
 
-    .line 588
     iput-wide v4, p0, Lcom/android/internal/widget/DirectionLockView;->mRightX:D
 
-    .line 589
     iput-wide v4, p0, Lcom/android/internal/widget/DirectionLockView;->mBottomY:D
 
-    .line 590
     iput-wide v4, p0, Lcom/android/internal/widget/DirectionLockView;->mTopY:D
 
-    .line 593
     iget-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mSquare_size:D
 
     sget-wide v4, Lcom/android/internal/widget/DirectionLockView;->DIRECTION_TOLERANCE_ANGLE:D
@@ -1349,7 +1198,6 @@
 
     iput-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mTradeSpace:D
 
-    .line 595
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1374,7 +1222,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 597
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const-string/jumbo v2, "vibrator"
@@ -1387,7 +1234,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mVibrator:Landroid/os/Vibrator;
 
-    .line 600
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const-string v2, "accessibility"
@@ -1400,10 +1246,8 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mAccessibilityManager:Landroid/view/accessibility/AccessibilityManager;
 
-    .line 603
     invoke-virtual {p0, v6}, Lcom/android/internal/widget/DirectionLockView;->setImportantForAccessibility(I)V
 
-    .line 604
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     const v2, 0x1040a6f
@@ -1414,7 +1258,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/internal/widget/DirectionLockView;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 606
     return-void
 .end method
 
@@ -1422,7 +1265,6 @@
     .locals 2
 
     .prologue
-    .line 716
     sget-object v0, Lcom/android/internal/widget/DirectionLockView;->mBuildCharacteristics:Ljava/lang/String;
 
     const-string/jumbo v1, "tablet"
@@ -1439,14 +1281,12 @@
     .param p1, "arrowSize"    # I
 
     .prologue
-    .line 1098
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v5, "in loadDirectionBitmaps()"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1100
     const/4 v1, 0x0
 
     .local v1, "resIDLeft":I
@@ -1458,7 +1298,6 @@
     .local v3, "resIDUp":I
     const/4 v2, 0x0
 
-    .line 1101
     .local v2, "resIDRight":I
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->isParentArrowSize:Z
 
@@ -1468,24 +1307,18 @@
     :goto_0
     iput p1, p0, Lcom/android/internal/widget/DirectionLockView;->ARROW_SIZE:I
 
-    .line 1103
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->SETTINGS_APP:Z
 
     if-nez v4, :cond_1
 
-    .line 1105
     const v1, 0x10802db
 
-    .line 1106
     const v2, 0x10802dc
 
-    .line 1107
     const v3, 0x10802dd
 
-    .line 1108
     const v0, 0x10802da
 
-    .line 1117
     :goto_1
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
@@ -1503,7 +1336,6 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapLeft:Landroid/graphics/Bitmap;
 
-    .line 1119
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1520,7 +1352,6 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapRight:Landroid/graphics/Bitmap;
 
-    .line 1121
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1537,7 +1368,6 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapUp:Landroid/graphics/Bitmap;
 
-    .line 1123
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -1554,10 +1384,8 @@
 
     iput-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapDown:Landroid/graphics/Bitmap;
 
-    .line 1125
     return-void
 
-    .line 1101
     .restart local p1    # "arrowSize":I
     :cond_0
     int-to-double v4, p1
@@ -1570,18 +1398,14 @@
 
     goto :goto_0
 
-    .line 1111
     .end local p1    # "arrowSize":I
     :cond_1
     const v1, 0x10802e0
 
-    .line 1112
     const v2, 0x10802e2
 
-    .line 1113
     const v3, 0x10802e4
 
-    .line 1114
     const v0, 0x10802de
 
     goto :goto_1
@@ -1591,23 +1415,19 @@
     .locals 6
 
     .prologue
-    .line 725
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v2, "in refreshScreenDimensions()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 726
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    .line 727
     .local v0, "rect":Landroid/graphics/Rect;
     invoke-virtual {p0, v0}, Lcom/android/internal/widget/DirectionLockView;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 729
     iget v1, v0, Landroid/graphics/Rect;->top:I
 
     iget v2, v0, Landroid/graphics/Rect;->bottom:I
@@ -1622,7 +1442,6 @@
 
     iput-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mScreenHeight:D
 
-    .line 730
     iget v1, v0, Landroid/graphics/Rect;->right:I
 
     iget v2, v0, Landroid/graphics/Rect;->left:I
@@ -1637,7 +1456,6 @@
 
     iput-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mScreenWidth:D
 
-    .line 736
     invoke-direct {p0}, Lcom/android/internal/widget/DirectionLockView;->isTablet()Z
 
     move-result v1
@@ -1652,22 +1470,18 @@
 
     if-gez v1, :cond_0
 
-    .line 737
     iget-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mScreenHeight:D
 
     iput-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mVariableUsedToSwap:D
 
-    .line 738
     iget-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mScreenWidth:D
 
     iput-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mScreenHeight:D
 
-    .line 739
     iget-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mVariableUsedToSwap:D
 
     iput-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mScreenWidth:D
 
-    .line 742
     :cond_0
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
@@ -1705,7 +1519,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 743
     return-void
 .end method
 
@@ -1715,62 +1528,49 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1215
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapUp:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 1216
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapUp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1217
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapUp:Landroid/graphics/Bitmap;
 
-    .line 1220
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapRight:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_1
 
-    .line 1221
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapRight:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1222
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapRight:Landroid/graphics/Bitmap;
 
-    .line 1225
     :cond_1
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapLeft:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_2
 
-    .line 1226
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapLeft:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1227
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapLeft:Landroid/graphics/Bitmap;
 
-    .line 1230
     :cond_2
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapDown:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_3
 
-    .line 1231
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapDown:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1232
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapDown:Landroid/graphics/Bitmap;
 
-    .line 1234
     :cond_3
     return-void
 .end method
@@ -1781,13 +1581,11 @@
     .locals 4
 
     .prologue
-    .line 166
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mBlankBitmap:Landroid/graphics/Bitmap;
 
     if-nez v1, :cond_0
 
-    .line 167
     iget-wide v2, p0, Lcom/android/internal/widget/DirectionLockView;->mScreenWidth:D
 
     double-to-int v1, v2
@@ -1804,7 +1602,6 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mBlankBitmap:Landroid/graphics/Bitmap;
 
-    .line 171
     :cond_0
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
@@ -1812,20 +1609,16 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 172
     invoke-virtual {p0}, Lcom/android/internal/widget/DirectionLockView;->invalidate()V
     :try_end_0
     .catch Ljava/lang/OutOfMemoryError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 176
     :goto_0
     return-void
 
-    .line 173
     :catch_0
     move-exception v0
 
-    .line 174
     .local v0, "e":Ljava/lang/OutOfMemoryError;
     invoke-virtual {v0}, Ljava/lang/OutOfMemoryError;->printStackTrace()V
 
@@ -1836,7 +1629,6 @@
     .locals 1
 
     .prologue
-    .line 255
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPassword:Ljava/lang/String;
 
     return-object v0
@@ -1846,7 +1638,6 @@
     .locals 1
 
     .prologue
-    .line 266
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPasswordNumbers:Ljava/lang/String;
 
     return-object v0
@@ -1862,7 +1653,6 @@
     .param p11, "bottomY"    # D
 
     .prologue
-    .line 813
     iget-object v3, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1939,10 +1729,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 816
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->INVALID:Lcom/android/internal/widget/DirectionLockView$Direction;
 
-    .line 818
     .local v2, "curDirection":Lcom/android/internal/widget/DirectionLockView$Direction;
     sget-boolean v3, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
@@ -1956,26 +1744,21 @@
 
     if-gtz v3, :cond_2
 
-    .line 819
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->UP_RIGHT:Lcom/android/internal/widget/DirectionLockView$Direction;
 
-    .line 846
     :cond_0
     :goto_0
     sget-object v3, Lcom/android/internal/widget/DirectionLockView$Direction;->INVALID:Lcom/android/internal/widget/DirectionLockView$Direction;
 
     if-eq v2, v3, :cond_1
 
-    .line 847
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionDetected:Z
 
-    .line 849
     :cond_1
     return-object v2
 
-    .line 821
     :cond_2
     sget-boolean v3, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
@@ -1989,12 +1772,10 @@
 
     if-gtz v3, :cond_3
 
-    .line 822
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->UP_LEFT:Lcom/android/internal/widget/DirectionLockView$Direction;
 
     goto :goto_0
 
-    .line 824
     :cond_3
     sget-boolean v3, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
@@ -2008,12 +1789,10 @@
 
     if-ltz v3, :cond_4
 
-    .line 825
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->DOWN_RIGHT:Lcom/android/internal/widget/DirectionLockView$Direction;
 
     goto :goto_0
 
-    .line 827
     :cond_4
     sget-boolean v3, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
@@ -2027,12 +1806,10 @@
 
     if-ltz v3, :cond_5
 
-    .line 828
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->DOWN_LEFT:Lcom/android/internal/widget/DirectionLockView$Direction;
 
     goto :goto_0
 
-    .line 830
     :cond_5
     sget-boolean v3, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
@@ -2051,12 +1828,10 @@
 
     if-gez v3, :cond_7
 
-    .line 832
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->UP:Lcom/android/internal/widget/DirectionLockView$Direction;
 
     goto :goto_0
 
-    .line 834
     :cond_7
     sget-boolean v3, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
@@ -2075,12 +1850,10 @@
 
     if-lez v3, :cond_9
 
-    .line 836
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->DOWN:Lcom/android/internal/widget/DirectionLockView$Direction;
 
     goto :goto_0
 
-    .line 838
     :cond_9
     sget-boolean v3, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
@@ -2099,12 +1872,10 @@
 
     if-lez v3, :cond_b
 
-    .line 840
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->RIGHT:Lcom/android/internal/widget/DirectionLockView$Direction;
 
     goto :goto_0
 
-    .line 842
     :cond_b
     sget-boolean v3, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
@@ -2123,7 +1894,6 @@
 
     if-gez v3, :cond_0
 
-    .line 844
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->LEFT:Lcom/android/internal/widget/DirectionLockView$Direction;
 
     goto :goto_0
@@ -2135,10 +1905,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 620
     iput-boolean v0, p0, Lcom/android/internal/widget/DirectionLockView;->isParentArrowSize:Z
 
-    .line 621
     invoke-direct {p0, v0, v0, v0, v0}, Lcom/android/internal/widget/DirectionLockView;->getDirectionImageView(IIZI)Landroid/widget/ImageView;
 
     move-result-object v0
@@ -2153,12 +1921,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 632
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/widget/DirectionLockView;->isParentArrowSize:Z
 
-    .line 633
     invoke-direct {p0, v1, v1, v1, p1}, Lcom/android/internal/widget/DirectionLockView;->getDirectionImageView(IIZI)Landroid/widget/ImageView;
 
     move-result-object v0
@@ -2174,10 +1940,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 646
     iput-boolean v1, p0, Lcom/android/internal/widget/DirectionLockView;->isParentArrowSize:Z
 
-    .line 647
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, p2, v0, v1}, Lcom/android/internal/widget/DirectionLockView;->getDirectionImageView(IIZI)Landroid/widget/ImageView;
@@ -2196,10 +1960,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 660
     iput-boolean v0, p0, Lcom/android/internal/widget/DirectionLockView;->isParentArrowSize:Z
 
-    .line 661
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/android/internal/widget/DirectionLockView;->getDirectionImageView(IIZI)Landroid/widget/ImageView;
 
     move-result-object v0
@@ -2223,17 +1985,14 @@
 
     const/4 v4, 0x0
 
-    .line 873
     iget-object v6, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v7, "in handleDirectionEvent()"
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 874
     iput-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mInsideReferenceSquare:Z
 
-    .line 881
     iget-object v6, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPassword:Ljava/lang/String;
 
     invoke-virtual {v6}, Ljava/lang/String;->length()I
@@ -2244,18 +2003,15 @@
 
     move v2, v5
 
-    .line 888
     .local v2, "lengthCondition":Z
     :goto_0
     const/4 v1, 0x0
 
-    .line 895
     .local v1, "lastDirectionCondition":Z
     if-eqz v2, :cond_6
 
     move v0, v4
 
-    .line 898
     .local v0, "lastDirectionChar":C
     :goto_1
     iget-object v6, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
@@ -2280,18 +2036,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 899
     const/4 v6, 0x0
 
     iput-object v6, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
-    .line 900
     iput v9, p0, Lcom/android/internal/widget/DirectionLockView;->mVibratePattern:I
 
-    .line 901
     const-string v3, ""
 
-    .line 902
     .local v3, "mCurrentDirection":Ljava/lang/String;
     sget-object v6, Lcom/android/internal/widget/DirectionLockView$2;->$SwitchMap$com$android$internal$widget$DirectionLockView$Direction:[I
 
@@ -2303,14 +2055,12 @@
 
     packed-switch v6, :pswitch_data_0
 
-    .line 1016
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v5, "Invalid Direction !"
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1020
     :cond_0
     :goto_2
     if-nez v2, :cond_1
@@ -2319,20 +2069,17 @@
 
     if-eqz v1, :cond_1f
 
-    .line 1022
     :cond_1
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mShowArrow:Z
 
     if-eqz v4, :cond_2
 
-    .line 1023
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
     iget-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1026
     :cond_2
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVibration:Z
 
@@ -2342,7 +2089,6 @@
 
     if-lez v4, :cond_3
 
-    .line 1027
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mVibrator:Landroid/os/Vibrator;
 
     iget v5, p0, Lcom/android/internal/widget/DirectionLockView;->mVibratePattern:I
@@ -2353,20 +2099,17 @@
 
     invoke-virtual {v4, v5, v9, v6, v7}, Landroid/os/Vibrator;->vibrate(IILandroid/media/AudioAttributes;Landroid/os/Vibrator$MagnitudeTypes;)V
 
-    .line 1030
     :cond_3
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionLockTouchListener:Lcom/android/internal/widget/DirectionLockTouchListener;
 
     if-eqz v4, :cond_4
 
-    .line 1031
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionLockTouchListener:Lcom/android/internal/widget/DirectionLockTouchListener;
 
     iget-boolean v5, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionDetected:Z
 
     invoke-interface {v4, v3, v5}, Lcom/android/internal/widget/DirectionLockTouchListener;->onDirectionDetected(Ljava/lang/String;Z)V
 
-    .line 1036
     :cond_4
     :goto_3
     return-void
@@ -2378,10 +2121,8 @@
     :cond_5
     move v2, v4
 
-    .line 881
     goto :goto_0
 
-    .line 895
     .restart local v1    # "lastDirectionCondition":Z
     .restart local v2    # "lengthCondition":Z
     :cond_6
@@ -2401,7 +2142,6 @@
 
     goto :goto_1
 
-    .line 904
     .restart local v0    # "lastDirectionChar":C
     .restart local v3    # "mCurrentDirection":Ljava/lang/String;
     :pswitch_0
@@ -2411,7 +2151,6 @@
 
     move v1, v5
 
-    .line 905
     :goto_4
     if-nez v2, :cond_7
 
@@ -2419,7 +2158,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 907
     :cond_7
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2443,7 +2181,6 @@
 
     iput-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPassword:Ljava/lang/String;
 
-    .line 908
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2466,12 +2203,10 @@
 
     iput-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPasswordNumbers:Ljava/lang/String;
 
-    .line 910
     iget-boolean v5, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVoice:Z
 
     if-eqz v5, :cond_8
 
-    .line 911
     iget-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     iget-object v6, p0, Lcom/android/internal/widget/DirectionLockView;->mUpAnnounce:Ljava/lang/String;
@@ -2480,38 +2215,31 @@
 
     invoke-virtual {v5, v6, v4, v7}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 915
     :cond_8
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayBeep:Z
 
     if-eqz v4, :cond_9
 
-    .line 916
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepNorth:Landroid/media/MediaPlayer;
 
     invoke-virtual {v4}, Landroid/media/MediaPlayer;->start()V
 
-    .line 919
     :cond_9
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVibration:Z
 
     if-eqz v4, :cond_a
 
-    .line 920
     iput v10, p0, Lcom/android/internal/widget/DirectionLockView;->mVibratePattern:I
 
-    .line 923
     :cond_a
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mShowArrow:Z
 
     if-eqz v4, :cond_b
 
-    .line 924
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapUp:Landroid/graphics/Bitmap;
 
     iput-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
-    .line 927
     :cond_b
     const-string v3, "UP"
 
@@ -2520,10 +2248,8 @@
     :cond_c
     move v1, v4
 
-    .line 904
     goto :goto_4
 
-    .line 932
     :pswitch_1
     const/16 v6, 0x52
 
@@ -2531,7 +2257,6 @@
 
     move v1, v5
 
-    .line 933
     :goto_5
     if-nez v2, :cond_d
 
@@ -2539,7 +2264,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 935
     :cond_d
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2563,7 +2287,6 @@
 
     iput-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPassword:Ljava/lang/String;
 
-    .line 936
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2586,12 +2309,10 @@
 
     iput-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPasswordNumbers:Ljava/lang/String;
 
-    .line 938
     iget-boolean v5, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVoice:Z
 
     if-eqz v5, :cond_e
 
-    .line 939
     iget-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     iget-object v6, p0, Lcom/android/internal/widget/DirectionLockView;->mRightAnnounce:Ljava/lang/String;
@@ -2600,38 +2321,31 @@
 
     invoke-virtual {v5, v6, v4, v7}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 943
     :cond_e
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayBeep:Z
 
     if-eqz v4, :cond_f
 
-    .line 944
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepEast:Landroid/media/MediaPlayer;
 
     invoke-virtual {v4}, Landroid/media/MediaPlayer;->start()V
 
-    .line 947
     :cond_f
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVibration:Z
 
     if-eqz v4, :cond_10
 
-    .line 948
     iput v11, p0, Lcom/android/internal/widget/DirectionLockView;->mVibratePattern:I
 
-    .line 951
     :cond_10
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mShowArrow:Z
 
     if-eqz v4, :cond_11
 
-    .line 952
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapRight:Landroid/graphics/Bitmap;
 
     iput-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
-    .line 955
     :cond_11
     const-string v3, "RIGHT"
 
@@ -2640,10 +2354,8 @@
     :cond_12
     move v1, v4
 
-    .line 932
     goto :goto_5
 
-    .line 960
     :pswitch_2
     const/16 v6, 0x44
 
@@ -2651,7 +2363,6 @@
 
     move v1, v5
 
-    .line 961
     :goto_6
     if-nez v2, :cond_13
 
@@ -2659,7 +2370,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 963
     :cond_13
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2683,7 +2393,6 @@
 
     iput-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPassword:Ljava/lang/String;
 
-    .line 964
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2706,12 +2415,10 @@
 
     iput-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPasswordNumbers:Ljava/lang/String;
 
-    .line 966
     iget-boolean v5, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVoice:Z
 
     if-eqz v5, :cond_14
 
-    .line 967
     iget-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     iget-object v6, p0, Lcom/android/internal/widget/DirectionLockView;->mDownAnnounce:Ljava/lang/String;
@@ -2720,38 +2427,31 @@
 
     invoke-virtual {v5, v6, v4, v7}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 971
     :cond_14
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayBeep:Z
 
     if-eqz v4, :cond_15
 
-    .line 972
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepSouth:Landroid/media/MediaPlayer;
 
     invoke-virtual {v4}, Landroid/media/MediaPlayer;->start()V
 
-    .line 975
     :cond_15
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVibration:Z
 
     if-eqz v4, :cond_16
 
-    .line 976
     iput v10, p0, Lcom/android/internal/widget/DirectionLockView;->mVibratePattern:I
 
-    .line 979
     :cond_16
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mShowArrow:Z
 
     if-eqz v4, :cond_17
 
-    .line 980
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapDown:Landroid/graphics/Bitmap;
 
     iput-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
-    .line 983
     :cond_17
     const-string v3, "DOWN"
 
@@ -2760,10 +2460,8 @@
     :cond_18
     move v1, v4
 
-    .line 960
     goto :goto_6
 
-    .line 988
     :pswitch_3
     const/16 v6, 0x4c
 
@@ -2771,7 +2469,6 @@
 
     move v1, v5
 
-    .line 989
     :goto_7
     if-nez v2, :cond_19
 
@@ -2779,7 +2476,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 991
     :cond_19
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2803,7 +2499,6 @@
 
     iput-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPassword:Ljava/lang/String;
 
-    .line 992
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -2826,12 +2521,10 @@
 
     iput-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPasswordNumbers:Ljava/lang/String;
 
-    .line 994
     iget-boolean v5, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVoice:Z
 
     if-eqz v5, :cond_1a
 
-    .line 995
     iget-object v5, p0, Lcom/android/internal/widget/DirectionLockView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     iget-object v6, p0, Lcom/android/internal/widget/DirectionLockView;->mLeftAnnounce:Ljava/lang/String;
@@ -2840,38 +2533,31 @@
 
     invoke-virtual {v5, v6, v4, v7}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 999
     :cond_1a
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayBeep:Z
 
     if-eqz v4, :cond_1b
 
-    .line 1000
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepWest:Landroid/media/MediaPlayer;
 
     invoke-virtual {v4}, Landroid/media/MediaPlayer;->start()V
 
-    .line 1003
     :cond_1b
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVibration:Z
 
     if-eqz v4, :cond_1c
 
-    .line 1004
     iput v11, p0, Lcom/android/internal/widget/DirectionLockView;->mVibratePattern:I
 
-    .line 1007
     :cond_1c
     iget-boolean v4, p0, Lcom/android/internal/widget/DirectionLockView;->mShowArrow:Z
 
     if-eqz v4, :cond_1d
 
-    .line 1008
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapLeft:Landroid/graphics/Bitmap;
 
     iput-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
-    .line 1011
     :cond_1d
     const-string v3, "LEFT"
 
@@ -2880,10 +2566,8 @@
     :cond_1e
     move v1, v4
 
-    .line 988
     goto :goto_7
 
-    .line 1034
     :cond_1f
     iget-object v4, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
@@ -2909,7 +2593,6 @@
 
     goto/16 :goto_3
 
-    .line 902
     :pswitch_data_0
     .packed-switch 0x5
         :pswitch_0
@@ -2923,34 +2606,28 @@
     .locals 4
 
     .prologue
-    .line 1261
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onAttachedToWindow()V
 
-    .line 1262
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v2, "in onAttached()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1263
     iget-boolean v1, p0, Lcom/android/internal/widget/DirectionLockView;->mShowArrow:Z
 
     if-eqz v1, :cond_0
 
-    .line 1264
     iget-boolean v1, p0, Lcom/android/internal/widget/DirectionLockView;->isParentArrowSize:Z
 
     if-eqz v1, :cond_1
 
     iget v0, p0, Lcom/android/internal/widget/DirectionLockView;->mParentArrowSize:I
 
-    .line 1265
     .local v0, "arrowSize":I
     :goto_0
     invoke-direct {p0, v0}, Lcom/android/internal/widget/DirectionLockView;->loadDirectionBitmaps(I)V
 
-    .line 1267
     .end local v0    # "arrowSize":I
     :cond_0
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
@@ -2965,10 +2642,8 @@
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1269
     return-void
 
-    .line 1264
     :cond_1
     sget v0, Lcom/android/internal/widget/DirectionLockView;->DEFAULT_ARROW_SIZE:I
 
@@ -2980,20 +2655,16 @@
     .param p1, "newConfig"    # Landroid/content/res/Configuration;
 
     .prologue
-    .line 854
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v1, "in onConfigurationChanged()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 857
     invoke-direct {p0}, Lcom/android/internal/widget/DirectionLockView;->refreshScreenDimensions()V
 
-    .line 859
     invoke-super {p0, p1}, Landroid/widget/RelativeLayout;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 860
     return-void
 .end method
 
@@ -3003,20 +2674,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1279
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onDetachedFromWindow()V
 
-    .line 1280
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v1, "in onDetached()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1281
     invoke-direct {p0}, Lcom/android/internal/widget/DirectionLockView;->freeBitmapMemory()V
 
-    .line 1282
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -3029,26 +2696,21 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$Secure;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1286
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     if-eqz v0, :cond_0
 
-    .line 1287
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
     invoke-virtual {v0}, Landroid/speech/tts/TextToSpeech;->shutdown()V
 
-    .line 1288
     iput-object v3, p0, Lcom/android/internal/widget/DirectionLockView;->mTextToSpeech:Landroid/speech/tts/TextToSpeech;
 
-    .line 1291
     :cond_0
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepNorth:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_2
 
-    .line 1292
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepNorth:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
@@ -3057,27 +2719,22 @@
 
     if-eqz v0, :cond_1
 
-    .line 1293
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepNorth:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 1295
     :cond_1
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepNorth:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 1296
     iput-object v3, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepNorth:Landroid/media/MediaPlayer;
 
-    .line 1299
     :cond_2
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepSouth:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_4
 
-    .line 1300
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepSouth:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
@@ -3086,27 +2743,22 @@
 
     if-eqz v0, :cond_3
 
-    .line 1301
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepSouth:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 1303
     :cond_3
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepSouth:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 1304
     iput-object v3, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepSouth:Landroid/media/MediaPlayer;
 
-    .line 1307
     :cond_4
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepEast:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_6
 
-    .line 1308
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepEast:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
@@ -3115,27 +2767,22 @@
 
     if-eqz v0, :cond_5
 
-    .line 1309
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepEast:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 1311
     :cond_5
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepEast:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 1312
     iput-object v3, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepEast:Landroid/media/MediaPlayer;
 
-    .line 1315
     :cond_6
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepWest:Landroid/media/MediaPlayer;
 
     if-eqz v0, :cond_8
 
-    .line 1316
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepWest:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
@@ -3144,21 +2791,17 @@
 
     if-eqz v0, :cond_7
 
-    .line 1317
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepWest:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 1319
     :cond_7
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepWest:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
 
-    .line 1320
     iput-object v3, p0, Lcom/android/internal/widget/DirectionLockView;->mBeepWest:Landroid/media/MediaPlayer;
 
-    .line 1322
     :cond_8
     return-void
 .end method
@@ -3168,7 +2811,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 329
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
@@ -3177,21 +2819,17 @@
 
     invoke-static {v3, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 330
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DirectionLockView;->isEnabled()Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 331
     const/4 v3, 0x0
 
-    .line 524
     :goto_0
     return v3
 
-    .line 333
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -3213,7 +2851,6 @@
 
     if-ne v3, v8, :cond_3
 
-    .line 336
     :cond_1
     move-object/from16 v0, p0
 
@@ -3223,14 +2860,12 @@
 
     invoke-static {v3, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/widget/DirectionLockView;->mDirectionLockTouchListener:Lcom/android/internal/widget/DirectionLockTouchListener;
 
     if-eqz v3, :cond_2
 
-    .line 338
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/widget/DirectionLockView;->mDirectionLockTouchListener:Lcom/android/internal/widget/DirectionLockTouchListener;
@@ -3243,7 +2878,6 @@
 
     invoke-interface {v3, v8, v9}, Lcom/android/internal/widget/DirectionLockTouchListener;->onDirectionDetected(Ljava/lang/String;Z)V
 
-    .line 340
     :cond_2
     const/4 v3, 0x0
 
@@ -3251,12 +2885,10 @@
 
     iput-boolean v3, v0, Lcom/android/internal/widget/DirectionLockView;->mDirectionDetected:Z
 
-    .line 341
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 344
     :cond_3
     move-object/from16 v0, p0
 
@@ -3264,14 +2896,12 @@
 
     if-eqz v3, :cond_4
 
-    .line 345
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/widget/DirectionLockView;->mDirectionLockTouchListener:Lcom/android/internal/widget/DirectionLockTouchListener;
 
     invoke-interface {v3}, Lcom/android/internal/widget/DirectionLockTouchListener;->onDirectionStarted()V
 
-    .line 347
     :cond_4
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -3293,7 +2923,6 @@
 
     if-ltz v3, :cond_5
 
-    .line 349
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
@@ -3307,7 +2936,6 @@
 
     float-to-double v6, v3
 
-    .line 351
     .local v6, "curY":D
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -3317,7 +2945,6 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 524
     .end local v4    # "curX":D
     .end local v6    # "curY":D
     :cond_5
@@ -3327,7 +2954,6 @@
 
     goto :goto_0
 
-    .line 360
     .restart local v4    # "curX":D
     .restart local v6    # "curY":D
     :pswitch_1
@@ -3337,21 +2963,18 @@
 
     iput-boolean v3, v0, Lcom/android/internal/widget/DirectionLockView;->mAllowDouble:Z
 
-    .line 367
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/widget/DirectionLockView;->mForceRestart:Z
 
-    .line 373
     const/4 v8, 0x1
 
     move-object/from16 v3, p0
 
     invoke-direct/range {v3 .. v8}, Lcom/android/internal/widget/DirectionLockView;->createReferenceSquare(DDZ)V
 
-    .line 375
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
@@ -3360,14 +2983,12 @@
 
     invoke-static {v3, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/widget/DirectionLockView;->mInsideReferenceSquare:Z
 
-    .line 377
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -3376,7 +2997,6 @@
 
     goto :goto_1
 
-    .line 386
     :pswitch_2
     move-object/from16 v0, p0
 
@@ -3384,30 +3004,25 @@
 
     if-nez v3, :cond_5
 
-    .line 387
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/widget/DirectionLockView;->mInsideReferenceSquare:Z
 
     if-eqz v3, :cond_13
 
-    .line 393
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/widget/DirectionLockView;->mAllow:Z
 
     if-eqz v3, :cond_5
 
-    .line 395
     const/16 v16, 0x0
 
-    .line 396
     .local v16, "insideTradeArea":Z
     sget-boolean v3, Lcom/android/internal/widget/DirectionLockView;->FOUR_CONFIGURATION_MODE:Z
 
     if-nez v3, :cond_7
 
-    .line 397
     move-object/from16 v0, p0
 
     iget-wide v8, v0, Lcom/android/internal/widget/DirectionLockView;->mRightX:D
@@ -3454,7 +3069,6 @@
 
     const/16 v19, 0x1
 
-    .line 401
     .local v19, "isTradeNorthEast":Z
     :goto_2
     move-object/from16 v0, p0
@@ -3503,7 +3117,6 @@
 
     const/16 v17, 0x1
 
-    .line 405
     .local v17, "isTradeEastNorth":Z
     :goto_3
     move-object/from16 v0, p0
@@ -3552,7 +3165,6 @@
 
     const/16 v18, 0x1
 
-    .line 409
     .local v18, "isTradeEastSouth":Z
     :goto_4
     move-object/from16 v0, p0
@@ -3601,7 +3213,6 @@
 
     const/16 v21, 0x1
 
-    .line 413
     .local v21, "isTradeSouthEast":Z
     :goto_5
     move-object/from16 v0, p0
@@ -3650,7 +3261,6 @@
 
     const/16 v22, 0x1
 
-    .line 417
     .local v22, "isTradeSouthWest":Z
     :goto_6
     move-object/from16 v0, p0
@@ -3699,7 +3309,6 @@
 
     const/16 v24, 0x1
 
-    .line 421
     .local v24, "isTradeWestSouth":Z
     :goto_7
     move-object/from16 v0, p0
@@ -3748,7 +3357,6 @@
 
     const/16 v23, 0x1
 
-    .line 425
     .local v23, "isTradeWestNorth":Z
     :goto_8
     move-object/from16 v0, p0
@@ -3797,7 +3405,6 @@
 
     const/16 v20, 0x1
 
-    .line 435
     .local v20, "isTradeNorthWest":Z
     :goto_9
     if-nez v19, :cond_6
@@ -3816,11 +3423,9 @@
 
     if-eqz v20, :cond_7
 
-    .line 439
     :cond_6
     const/16 v16, 0x1
 
-    .line 447
     .end local v17    # "isTradeEastNorth":Z
     .end local v18    # "isTradeEastSouth":Z
     .end local v19    # "isTradeNorthEast":Z
@@ -3832,11 +3437,9 @@
     :cond_7
     sget-object v2, Lcom/android/internal/widget/DirectionLockView$Direction;->INVALID:Lcom/android/internal/widget/DirectionLockView$Direction;
 
-    .line 448
     .local v2, "curDirection":Lcom/android/internal/widget/DirectionLockView$Direction;
     if-nez v16, :cond_8
 
-    .line 449
     move-object/from16 v0, p0
 
     iget-wide v8, v0, Lcom/android/internal/widget/DirectionLockView;->mLeftX:D
@@ -3859,7 +3462,6 @@
 
     move-result-object v2
 
-    .line 452
     :cond_8
     sget-object v3, Lcom/android/internal/widget/DirectionLockView$2;->$SwitchMap$com$android$internal$widget$DirectionLockView$Direction:[I
 
@@ -3873,7 +3475,6 @@
 
     goto/16 :goto_1
 
-    .line 460
     :pswitch_3
     move-object/from16 v0, p0
 
@@ -3883,17 +3484,14 @@
 
     invoke-static {v3, v8}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 468
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lcom/android/internal/widget/DirectionLockView;->mForceRestart:Z
 
-    .line 469
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DirectionLockView;->clearScreen()V
 
-    .line 471
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lcom/android/internal/widget/DirectionLockView;->mPlayVoice:Z
@@ -3910,7 +3508,6 @@
 
     if-eqz v3, :cond_a
 
-    .line 472
     :cond_9
     move-object/from16 v0, p0
 
@@ -3934,18 +3531,15 @@
 
     invoke-virtual {v3, v8, v9, v10}, Landroid/speech/tts/TextToSpeech;->speak(Ljava/lang/String;ILjava/util/HashMap;)I
 
-    .line 478
     :cond_a
     invoke-virtual/range {p0 .. p0}, Lcom/android/internal/widget/DirectionLockView;->resetPassword()V
 
-    .line 479
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/widget/DirectionLockView;->mDirectionLockTouchListener:Lcom/android/internal/widget/DirectionLockTouchListener;
 
     if-eqz v3, :cond_5
 
-    .line 480
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/android/internal/widget/DirectionLockView;->mDirectionLockTouchListener:Lcom/android/internal/widget/DirectionLockTouchListener;
@@ -3960,63 +3554,54 @@
 
     goto/16 :goto_1
 
-    .line 397
     .end local v2    # "curDirection":Lcom/android/internal/widget/DirectionLockView$Direction;
     :cond_b
     const/16 v19, 0x0
 
     goto/16 :goto_2
 
-    .line 401
     .restart local v19    # "isTradeNorthEast":Z
     :cond_c
     const/16 v17, 0x0
 
     goto/16 :goto_3
 
-    .line 405
     .restart local v17    # "isTradeEastNorth":Z
     :cond_d
     const/16 v18, 0x0
 
     goto/16 :goto_4
 
-    .line 409
     .restart local v18    # "isTradeEastSouth":Z
     :cond_e
     const/16 v21, 0x0
 
     goto/16 :goto_5
 
-    .line 413
     .restart local v21    # "isTradeSouthEast":Z
     :cond_f
     const/16 v22, 0x0
 
     goto/16 :goto_6
 
-    .line 417
     .restart local v22    # "isTradeSouthWest":Z
     :cond_10
     const/16 v24, 0x0
 
     goto/16 :goto_7
 
-    .line 421
     .restart local v24    # "isTradeWestSouth":Z
     :cond_11
     const/16 v23, 0x0
 
     goto/16 :goto_8
 
-    .line 425
     .restart local v23    # "isTradeWestNorth":Z
     :cond_12
     const/16 v20, 0x0
 
     goto/16 :goto_9
 
-    .line 489
     .end local v17    # "isTradeEastNorth":Z
     .end local v18    # "isTradeEastSouth":Z
     .end local v19    # "isTradeNorthEast":Z
@@ -4034,14 +3619,12 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/internal/widget/DirectionLockView;->handleDirectionEvent(Lcom/android/internal/widget/DirectionLockView$Direction;Z)V
 
-    .line 495
     const/4 v8, 0x0
 
     move-object/from16 v3, p0
 
     invoke-direct/range {v3 .. v8}, Lcom/android/internal/widget/DirectionLockView;->createReferenceSquare(DDZ)V
 
-    .line 505
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
@@ -4050,7 +3633,6 @@
 
     goto/16 :goto_1
 
-    .line 518
     .end local v2    # "curDirection":Lcom/android/internal/widget/DirectionLockView$Direction;
     .end local v16    # "insideTradeArea":Z
     :cond_13
@@ -4062,7 +3644,6 @@
 
     goto/16 :goto_1
 
-    .line 351
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -4070,7 +3651,6 @@
         :pswitch_2
     .end packed-switch
 
-    .line 452
     :pswitch_data_1
     .packed-switch 0x1
         :pswitch_3
@@ -4088,39 +3668,32 @@
     .locals 3
 
     .prologue
-    .line 1243
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v2, "in reloadBitmap()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1245
     invoke-direct {p0}, Lcom/android/internal/widget/DirectionLockView;->releaseDirectionBitmaps()V
 
-    .line 1247
     iget-boolean v1, p0, Lcom/android/internal/widget/DirectionLockView;->mShowArrow:Z
 
     if-eqz v1, :cond_0
 
-    .line 1248
     iget-boolean v1, p0, Lcom/android/internal/widget/DirectionLockView;->isParentArrowSize:Z
 
     if-eqz v1, :cond_1
 
     iget v0, p0, Lcom/android/internal/widget/DirectionLockView;->mParentArrowSize:I
 
-    .line 1249
     .local v0, "arrowSize":I
     :goto_0
     invoke-direct {p0, v0}, Lcom/android/internal/widget/DirectionLockView;->loadDirectionBitmaps(I)V
 
-    .line 1251
     .end local v0    # "arrowSize":I
     :cond_0
     return-void
 
-    .line 1248
     :cond_1
     sget v0, Lcom/android/internal/widget/DirectionLockView;->DEFAULT_ARROW_SIZE:I
 
@@ -4131,17 +3704,14 @@
     .locals 1
 
     .prologue
-    .line 243
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPassword:Ljava/lang/String;
 
-    .line 244
     const-string v0, ""
 
     iput-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPasswordNumbers:Ljava/lang/String;
 
-    .line 245
     return-void
 .end method
 
@@ -4150,17 +3720,14 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 752
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v1, "in setAllow()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 753
     iput-boolean p1, p0, Lcom/android/internal/widget/DirectionLockView;->mAllow:Z
 
-    .line 754
     return-void
 .end method
 
@@ -4169,15 +3736,12 @@
     .param p1, "givenPassword"    # Ljava/lang/String;
 
     .prologue
-    .line 277
     iput-object p1, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPassword:Ljava/lang/String;
 
-    .line 278
     const-string v1, ""
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mCurrentPasswordNumbers:Ljava/lang/String;
 
-    .line 280
     const/4 v0, 0x0
 
     .local v0, "counter":I
@@ -4188,20 +3752,17 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 281
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 280
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 283
     :sswitch_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4227,7 +3788,6 @@
 
     goto :goto_1
 
-    .line 286
     :sswitch_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4253,7 +3813,6 @@
 
     goto :goto_1
 
-    .line 289
     :sswitch_2
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4279,7 +3838,6 @@
 
     goto :goto_1
 
-    .line 292
     :sswitch_3
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -4305,11 +3863,9 @@
 
     goto :goto_1
 
-    .line 298
     :cond_0
     return-void
 
-    .line 281
     :sswitch_data_0
     .sparse-switch
         0x44 -> :sswitch_1
@@ -4324,10 +3880,8 @@
     .param p1, "listener"    # Lcom/android/internal/widget/DirectionLockTouchListener;
 
     .prologue
-    .line 309
     iput-object p1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionLockTouchListener:Lcom/android/internal/widget/DirectionLockTouchListener;
 
-    .line 310
     return-void
 .end method
 
@@ -4336,10 +3890,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 219
     iput-boolean p1, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayBeep:Z
 
-    .line 220
     return-void
 .end method
 
@@ -4348,10 +3900,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 197
     iput-boolean p1, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVibration:Z
 
-    .line 198
     return-void
 .end method
 
@@ -4360,10 +3910,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 208
     iput-boolean p1, p0, Lcom/android/internal/widget/DirectionLockView;->mPlayVoice:Z
 
-    .line 209
     return-void
 .end method
 
@@ -4371,12 +3919,10 @@
     .locals 1
 
     .prologue
-    .line 609
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/internal/widget/DirectionLockView;->SETTINGS_APP:Z
 
-    .line 610
     return-void
 .end method
 
@@ -4385,10 +3931,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 186
     iput-boolean p1, p0, Lcom/android/internal/widget/DirectionLockView;->mShowArrow:Z
 
-    .line 187
     return-void
 .end method
 
@@ -4397,37 +3941,31 @@
     .param p1, "direction"    # C
 
     .prologue
-    .line 1040
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v1, "in showDirectionArrow()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1042
     const/16 v0, 0x55
 
     if-ne p1, v0, :cond_1
 
-    .line 1043
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapUp:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1050
     :cond_0
     :goto_0
     return-void
 
-    .line 1044
     :cond_1
     const/16 v0, 0x4c
 
     if-ne p1, v0, :cond_2
 
-    .line 1045
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapLeft:Landroid/graphics/Bitmap;
@@ -4436,13 +3974,11 @@
 
     goto :goto_0
 
-    .line 1046
     :cond_2
     const/16 v0, 0x52
 
     if-ne p1, v0, :cond_3
 
-    .line 1047
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapRight:Landroid/graphics/Bitmap;
@@ -4451,13 +3987,11 @@
 
     goto :goto_0
 
-    .line 1048
     :cond_3
     const/16 v0, 0x44
 
     if-ne p1, v0, :cond_0
 
-    .line 1049
     iget-object v0, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapDown:Landroid/graphics/Bitmap;
@@ -4471,22 +4005,18 @@
     .locals 4
 
     .prologue
-    .line 1060
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->TAG:Ljava/lang/String;
 
     const-string v2, "in showErrorImage()"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1061
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/widget/DirectionLockView;->mForceRestart:Z
 
-    .line 1062
     const/4 v0, 0x0
 
-    .line 1064
     .local v0, "resIDError":I
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
@@ -4496,7 +4026,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 1066
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
     iget-object v2, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionBitmapLeft:Landroid/graphics/Bitmap;
@@ -4507,10 +4036,8 @@
 
     if-eqz v1, :cond_5
 
-    .line 1067
     const v0, 0x10802e1
 
-    .line 1076
     :cond_0
     :goto_0
     iget v1, p0, Lcom/android/internal/widget/DirectionLockView;->currentErrorResId:I
@@ -4521,23 +4048,19 @@
 
     if-nez v1, :cond_3
 
-    .line 1077
     :cond_1
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mErrorBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_2
 
-    .line 1078
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mErrorBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 1079
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mErrorBitmap:Landroid/graphics/Bitmap;
 
-    .line 1082
     :cond_2
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->myContext:Landroid/content/Context;
 
@@ -4555,10 +4078,8 @@
 
     iput-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mErrorBitmap:Landroid/graphics/Bitmap;
 
-    .line 1085
     iput v0, p0, Lcom/android/internal/widget/DirectionLockView;->currentErrorResId:I
 
-    .line 1089
     :cond_3
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mDirectionImageView:Landroid/widget/ImageView;
 
@@ -4566,11 +4087,9 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1091
     :cond_4
     return-void
 
-    .line 1068
     :cond_5
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
@@ -4582,12 +4101,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 1069
     const v0, 0x10802e3
 
     goto :goto_0
 
-    .line 1070
     :cond_6
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
@@ -4599,12 +4116,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 1071
     const v0, 0x10802e5
 
     goto :goto_0
 
-    .line 1072
     :cond_7
     iget-object v1, p0, Lcom/android/internal/widget/DirectionLockView;->mCurBitmap:Landroid/graphics/Bitmap;
 
@@ -4616,7 +4131,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1073
     const v0, 0x10802df
 
     goto :goto_0

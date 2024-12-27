@@ -539,7 +539,6 @@
 
     const/4 v1, 0x0
 
-    .line 285
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v2
@@ -551,7 +550,6 @@
     :cond_0
     sput-boolean v0, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
-    .line 586
     sput-boolean v1, Lcom/android/server/ConnectivityService;->mInCaptivePortal:Z
 
     return-void
@@ -565,10 +563,8 @@
     .param p4, "policyManager"    # Landroid/net/INetworkPolicyManager;
 
     .prologue
-    .line 928
     invoke-direct/range {p0 .. p0}, Landroid/net/IConnectivityManager$Stub;-><init>()V
 
-    .line 325
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
@@ -577,7 +573,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
-    .line 332
     new-instance v2, Ljava/lang/Object;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
@@ -586,7 +581,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mRulesLock:Ljava/lang/Object;
 
-    .line 334
     new-instance v2, Landroid/util/SparseIntArray;
 
     invoke-direct {v2}, Landroid/util/SparseIntArray;-><init>()V
@@ -595,7 +589,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mUidRules:Landroid/util/SparseIntArray;
 
-    .line 336
     invoke-static {}, Lcom/google/android/collect/Sets;->newHashSet()Ljava/util/HashSet;
 
     move-result-object v2
@@ -604,42 +597,36 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mMeteredIfaces:Ljava/util/HashSet;
 
-    .line 338
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mIntentInfo:Landroid/net/NetworkInfo;
 
-    .line 341
     const/4 v2, -0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mActiveDefaultNetwork:I
 
-    .line 343
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mDefaultInetConditionPublished:I
 
-    .line 527
     const-string v2, ""
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLockCausedBy:Ljava/lang/String;
 
-    .line 538
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
-    .line 539
     new-instance v2, Ljava/lang/Object;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
@@ -648,28 +635,24 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mProxyLock:Ljava/lang/Object;
 
-    .line 540
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mDefaultProxyDisabled:Z
 
-    .line 543
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
-    .line 545
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mPacManager:Lcom/android/server/connectivity/PacManager;
 
-    .line 555
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
@@ -678,7 +661,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mEnterpriseSytemVPN:Landroid/util/SparseArray;
 
-    .line 557
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
@@ -687,35 +669,30 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
-    .line 558
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mVpnPolicy:Lcom/sec/enterprise/knox/vpn/IEnterprisePremiumVpnPolicy;
 
-    .line 559
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mKnoxVpnPolicy:Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
-    .line 560
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
-    .line 562
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->numberOfConnectedProfile:I
 
-    .line 570
     new-instance v2, Ljava/lang/Object;
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
@@ -724,28 +701,24 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->knoxVpnLock:Ljava/lang/Object;
 
-    .line 584
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mCountryIso:Ljava/lang/String;
 
-    .line 587
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mHeadUpNotificationMode:Z
 
-    .line 590
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mRouteIdCtr:I
 
-    .line 593
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
@@ -754,56 +727,48 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mPolicyDataMap:Ljava/util/HashMap;
 
-    .line 596
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mTempNri:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 601
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mBackUpLp:Landroid/net/LinkProperties;
 
-    .line 602
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mDummyLp:Landroid/net/LinkProperties;
 
-    .line 603
     const/4 v2, -0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mBackUpNetId:I
 
-    .line 604
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mBackUpNi:Landroid/net/NetworkInfo;
 
-    .line 605
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mRefCount:I
 
-    .line 606
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mEmergencyMgr:Lcom/sec/android/emergencymode/EmergencyManager;
 
-    .line 609
     new-instance v2, Landroid/telephony/SignalStrength;
 
     invoke-direct {v2}, Landroid/telephony/SignalStrength;-><init>()V
@@ -812,56 +777,48 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mSignalStrength:Landroid/telephony/SignalStrength;
 
-    .line 613
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mSendIntentForSUSPENDED:Z
 
-    .line 614
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mSendIntentForCONNECTED:Z
 
-    .line 615
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mSuspendCallBack:Z
 
-    .line 618
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mLteCaEnabled:Z
 
-    .line 621
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->defaultCaptivePortalCheckShown:Z
 
-    .line 659
     const/16 v2, 0x1f5
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mNextNetId:I
 
-    .line 662
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mNextNetworkRequestId:I
 
-    .line 666
     new-instance v2, Landroid/util/LocalLog;
 
     const/16 v3, 0x14
@@ -872,7 +829,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetworkRequestInfoLogs:Landroid/util/LocalLog;
 
-    .line 670
     new-instance v2, Ljava/util/ArrayDeque;
 
     const/16 v3, 0xa
@@ -883,42 +839,36 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mValidationLogs:Ljava/util/ArrayDeque;
 
-    .line 683
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mIsMobilePolicyEnabled:Z
 
-    .line 693
     const/4 v2, -0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->KNOXVPN_FEATURE:I
 
-    .line 694
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->KNOXVPN_MDM_ENABLED:I
 
-    .line 695
     const/4 v2, 0x2
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->KNOXVPN_CONTAINER_ENABLED:I
 
-    .line 708
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mExceptApnListForDataLimit:Ljava/util/HashMap;
 
-    .line 920
     new-instance v2, Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     move-object/from16 v0, p0
@@ -929,14 +879,12 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
-    .line 1150
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mMPTCPEnabled:Z
 
-    .line 1934
     new-instance v2, Lcom/android/server/ConnectivityService$1;
 
     move-object/from16 v0, p0
@@ -947,7 +895,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mDataActivityObserver:Landroid/net/INetworkManagementEventObserver;
 
-    .line 2177
     new-instance v2, Lcom/android/server/ConnectivityService$2;
 
     move-object/from16 v0, p0
@@ -958,7 +905,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mPolicyListener:Landroid/net/INetworkPolicyListener;
 
-    .line 2579
     new-instance v2, Lcom/android/server/ConnectivityService$3;
 
     move-object/from16 v0, p0
@@ -969,7 +915,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mLteCaEnableReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 2596
     new-instance v2, Lcom/android/server/ConnectivityService$4;
 
     move-object/from16 v0, p0
@@ -980,7 +925,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mUserPresentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 4651
     new-instance v2, Lcom/android/server/ConnectivityService$5;
 
     move-object/from16 v0, p0
@@ -991,7 +935,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mPhoneStateListener:Landroid/telephony/PhoneStateListener;
 
-    .line 5221
     const-string/jumbo v2, "v30"
 
     const-string/jumbo v3, "ro.config.knox"
@@ -1010,28 +953,24 @@
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mIsKnoxContainerV30:Z
 
-    .line 5812
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNotificationIntent:Landroid/app/PendingIntent;
 
-    .line 5813
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mNotificationId:I
 
-    .line 5814
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNotificationExtrainfo:Ljava/lang/String;
 
-    .line 6015
     new-instance v2, Ljava/io/File;
 
     const-string v3, "/data/misc/radio/provisioning_urls.xml"
@@ -1042,7 +981,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mProvisioningUrlFile:Ljava/io/File;
 
-    .line 6225
     new-instance v2, Lcom/android/server/ConnectivityService$7;
 
     move-object/from16 v0, p0
@@ -1053,7 +991,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mUserIntentReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 6248
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
@@ -1062,7 +999,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetworkFactoryInfos:Ljava/util/HashMap;
 
-    .line 6250
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
@@ -1071,7 +1007,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
 
-    .line 6646
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
@@ -1080,7 +1015,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetworkForRequestId:Landroid/util/SparseArray;
 
-    .line 6650
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
@@ -1089,7 +1023,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
-    .line 6656
     new-instance v2, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v2}, Landroid/util/SparseBooleanArray;-><init>()V
@@ -1098,7 +1031,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetIdInUse:Landroid/util/SparseBooleanArray;
 
-    .line 6662
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
@@ -1107,19 +1039,16 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
-    .line 7941
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->bLPUpdatedBeforeConnected:Z
 
-    .line 929
     const-string v2, "ConnectivityService starting up"
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 931
     const/4 v2, -0x1
 
     move-object/from16 v0, p0
@@ -1132,7 +1061,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mDefaultRequest:Landroid/net/NetworkRequest;
 
-    .line 932
     new-instance v1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     const/4 v3, 0x0
@@ -1151,7 +1079,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/server/ConnectivityService$NetworkRequestInfo;-><init>(Lcom/android/server/ConnectivityService;Landroid/os/Messenger;Landroid/net/NetworkRequest;Landroid/os/IBinder;Z)V
 
-    .line 934
     .local v1, "defaultNRI":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     move-object/from16 v0, p0
 
@@ -1163,7 +1090,6 @@
 
     invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 935
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mNetworkRequestInfoLogs:Landroid/util/LocalLog;
@@ -1188,7 +1114,6 @@
 
     invoke-virtual {v2, v3}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 937
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -1201,7 +1126,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mDefaultMobileDataRequest:Landroid/net/NetworkRequest;
 
-    .line 940
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->createHandlerThread()Landroid/os/HandlerThread;
 
     move-result-object v2
@@ -1210,14 +1134,12 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mHandlerThread:Landroid/os/HandlerThread;
 
-    .line 941
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mHandlerThread:Landroid/os/HandlerThread;
 
     invoke-virtual {v2}, Landroid/os/HandlerThread;->start()V
 
-    .line 942
     new-instance v2, Lcom/android/server/ConnectivityService$InternalHandler;
 
     move-object/from16 v0, p0
@@ -1236,7 +1158,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
-    .line 943
     new-instance v2, Lcom/android/server/ConnectivityService$NetworkStateTrackerHandler;
 
     move-object/from16 v0, p0
@@ -1255,7 +1176,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mTrackerHandler:Lcom/android/server/ConnectivityService$NetworkStateTrackerHandler;
 
-    .line 946
     const-string/jumbo v2, "net.hostname"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -1268,7 +1188,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 947
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v2
@@ -1279,7 +1198,6 @@
 
     move-result-object v13
 
-    .line 949
     .local v13, "id":Ljava/lang/String;
     if-eqz v13, :cond_0
 
@@ -1289,7 +1207,6 @@
 
     if-lez v2, :cond_0
 
-    .line 950
     new-instance v2, Ljava/lang/String;
 
     const-string v3, "android-"
@@ -1300,7 +1217,6 @@
 
     move-result-object v19
 
-    .line 951
     .local v19, "name":Ljava/lang/String;
     const-string/jumbo v2, "net.hostname"
 
@@ -1308,7 +1224,6 @@
 
     invoke-static {v2, v0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 956
     .end local v13    # "id":Ljava/lang/String;
     .end local v19    # "name":Ljava/lang/String;
     :cond_0
@@ -1322,7 +1237,6 @@
 
     move-result-object v9
 
-    .line 958
     .local v9, "dns":Ljava/lang/String;
     if-eqz v9, :cond_1
 
@@ -1332,7 +1246,6 @@
 
     if-nez v2, :cond_2
 
-    .line 959
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1344,7 +1257,6 @@
 
     move-result-object v9
 
-    .line 963
     :cond_2
     :try_start_0
     invoke-static {v9}, Landroid/net/NetworkUtils;->numericToInetAddress(Ljava/lang/String;)Ljava/net/InetAddress;
@@ -1357,7 +1269,6 @@
     :try_end_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 968
     :goto_0
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -1375,7 +1286,6 @@
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mReleasePendingIntentDelayMs:I
 
-    .line 971
     const-string/jumbo v2, "missing Context"
 
     move-object/from16 v0, p1
@@ -1390,7 +1300,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
-    .line 972
     const-string/jumbo v2, "missing INetworkManagementService"
 
     move-object/from16 v0, p2
@@ -1405,7 +1314,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
-    .line 973
     const-string/jumbo v2, "missing INetworkStatsService"
 
     move-object/from16 v0, p3
@@ -1420,7 +1328,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mStatsService:Landroid/net/INetworkStatsService;
 
-    .line 974
     const-string/jumbo v2, "missing INetworkPolicyManager"
 
     move-object/from16 v0, p4
@@ -1435,7 +1342,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mPolicyManager:Landroid/net/INetworkPolicyManager;
 
-    .line 975
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v2
@@ -1444,7 +1350,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mKeyStore:Landroid/security/KeyStore;
 
-    .line 976
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -1461,7 +1366,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
-    .line 978
     const-string v2, "KDI"
 
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->getMainOperatorName()Ljava/lang/String;
@@ -1474,7 +1378,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 979
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
@@ -1487,7 +1390,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
 
-    .line 983
     :cond_3
     :try_start_1
     move-object/from16 v0, p0
@@ -1502,7 +1404,6 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 990
     :goto_1
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
@@ -1540,7 +1441,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 993
     :cond_4
     move-object/from16 v0, p0
 
@@ -1554,7 +1454,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mEmergencyMgr:Lcom/sec/android/emergencymode/EmergencyManager;
 
-    .line 997
     :cond_5
     const-string/jumbo v2, "power"
 
@@ -1566,7 +1465,6 @@
 
     check-cast v21, Landroid/os/PowerManager;
 
-    .line 999
     .local v21, "powerManager":Landroid/os/PowerManager;
     const/4 v2, 0x1
 
@@ -1582,7 +1480,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 1000
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -1601,7 +1498,6 @@
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLockTimeout:I
 
-    .line 1004
     const/16 v2, 0x1e
 
     new-array v2, v2, [Landroid/net/NetworkConfig;
@@ -1610,7 +1506,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mNetConfigs:[Landroid/net/NetworkConfig;
 
-    .line 1008
     const/16 v2, 0x1e
 
     new-array v2, v2, [Lcom/android/server/ConnectivityService$RouteAttributes;
@@ -1619,7 +1514,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mRouteAttributes:[Lcom/android/server/ConnectivityService$RouteAttributes;
 
-    .line 1009
     const/4 v11, 0x0
 
     .local v11, "i":I
@@ -1628,7 +1522,6 @@
 
     if-ge v11, v2, :cond_6
 
-    .line 1010
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mRouteAttributes:[Lcom/android/server/ConnectivityService$RouteAttributes;
@@ -1641,18 +1534,15 @@
 
     aput-object v3, v2, v11
 
-    .line 1009
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_2
 
-    .line 964
     .end local v11    # "i":I
     .end local v21    # "powerManager":Landroid/os/PowerManager;
     :catch_0
     move-exception v10
 
-    .line 965
     .local v10, "e":Ljava/lang/IllegalArgumentException;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1676,12 +1566,10 @@
 
     goto/16 :goto_0
 
-    .line 984
     .end local v10    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v10
 
-    .line 986
     .local v10, "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1709,7 +1597,6 @@
 
     goto/16 :goto_1
 
-    .line 1015
     .end local v10    # "e":Landroid/os/RemoteException;
     .restart local v11    # "i":I
     .restart local v21    # "powerManager":Landroid/os/PowerManager;
@@ -1722,7 +1609,6 @@
 
     move-result v24
 
-    .line 1016
     .local v24, "wifiOnly":Z
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1746,14 +1632,12 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1018
     const-string/jumbo v2, "ro.csc.sales_code"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v23
 
-    .line 1020
     .local v23, "salesCode":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1765,7 +1649,6 @@
 
     move-result-object v18
 
-    .line 1022
     .local v18, "naStrings":[Ljava/lang/String;
     move-object/from16 v8, v18
 
@@ -1781,14 +1664,12 @@
 
     aget-object v17, v8, v12
 
-    .line 1024
     .local v17, "naString":Ljava/lang/String;
     :try_start_2
     new-instance v16, Landroid/net/NetworkConfig;
 
     invoke-direct/range {v16 .. v17}, Landroid/net/NetworkConfig;-><init>(Ljava/lang/String;)V
 
-    .line 1025
     .local v16, "n":Landroid/net/NetworkConfig;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1824,7 +1705,6 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1027
     move-object/from16 v0, v16
 
     iget v2, v0, Landroid/net/NetworkConfig;->type:I
@@ -1833,7 +1713,6 @@
 
     if-le v2, v3, :cond_7
 
-    .line 1028
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1858,14 +1737,12 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 1022
     .end local v16    # "n":Landroid/net/NetworkConfig;
     :goto_4
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_3
 
-    .line 1032
     .restart local v16    # "n":Landroid/net/NetworkConfig;
     :cond_7
     if-eqz v24, :cond_8
@@ -1880,7 +1757,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 1033
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1907,14 +1783,12 @@
 
     goto :goto_4
 
-    .line 1056
     .end local v16    # "n":Landroid/net/NetworkConfig;
     :catch_2
     move-exception v2
 
     goto :goto_4
 
-    .line 1037
     .restart local v16    # "n":Landroid/net/NetworkConfig;
     :cond_8
     move-object/from16 v0, p0
@@ -1929,7 +1803,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 1038
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1956,7 +1829,6 @@
 
     goto :goto_4
 
-    .line 1043
     :cond_9
     const-string v2, "SIN"
 
@@ -1988,7 +1860,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 1044
     :cond_a
     move-object/from16 v0, v16
 
@@ -1998,14 +1869,12 @@
 
     if-ne v2, v3, :cond_b
 
-    .line 1045
     const/4 v2, -0x1
 
     move-object/from16 v0, v16
 
     iput v2, v0, Landroid/net/NetworkConfig;->restoreTime:I
 
-    .line 1048
     :cond_b
     const-string v2, "TEL"
 
@@ -2025,7 +1894,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 1049
     move-object/from16 v0, v16
 
     iget v2, v0, Landroid/net/NetworkConfig;->type:I
@@ -2042,7 +1910,6 @@
 
     if-ne v2, v3, :cond_d
 
-    .line 1050
     :cond_c
     const/4 v2, -0x1
 
@@ -2050,7 +1917,6 @@
 
     iput v2, v0, Landroid/net/NetworkConfig;->restoreTime:I
 
-    .line 1052
     :cond_d
     move-object/from16 v0, p0
 
@@ -2062,7 +1928,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->addSupportedType(I)V
 
-    .line 1054
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mNetConfigs:[Landroid/net/NetworkConfig;
@@ -2073,7 +1938,6 @@
 
     aput-object v16, v2, v3
 
-    .line 1055
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/ConnectivityService;->mNetworksDefined:I
@@ -2088,7 +1952,6 @@
 
     goto/16 :goto_4
 
-    .line 1062
     .end local v16    # "n":Landroid/net/NetworkConfig;
     .end local v17    # "naString":Ljava/lang/String;
     :cond_e
@@ -2102,7 +1965,6 @@
 
     if-nez v2, :cond_f
 
-    .line 1065
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -2111,7 +1973,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->addSupportedType(I)V
 
-    .line 1066
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/ConnectivityService;->mNetworksDefined:I
@@ -2122,7 +1983,6 @@
 
     iput v2, v0, Lcom/android/server/ConnectivityService;->mNetworksDefined:I
 
-    .line 1069
     :cond_f
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2148,7 +2008,6 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1071
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -2157,7 +2016,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mProtectedNetworks:Ljava/util/List;
 
-    .line 1072
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -2168,7 +2026,6 @@
 
     move-result-object v22
 
-    .line 1074
     .local v22, "protectedNetworks":[I
     move-object/from16 v8, v22
 
@@ -2182,7 +2039,6 @@
 
     aget v20, v8, v12
 
-    .line 1075
     .local v20, "p":I
     move-object/from16 v0, p0
 
@@ -2206,7 +2062,6 @@
 
     if-nez v2, :cond_10
 
-    .line 1076
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mProtectedNetworks:Ljava/util/List;
@@ -2217,13 +2072,11 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1074
     :goto_6
     add-int/lit8 v12, v12, 0x1
 
     goto :goto_5
 
-    .line 1078
     :cond_10
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2249,7 +2102,6 @@
 
     goto :goto_6
 
-    .line 1082
     .end local v20    # "p":I
     :cond_11
     const-string v2, "cm.test.mode"
@@ -2287,7 +2139,6 @@
 
     iput-boolean v2, v0, Lcom/android/server/ConnectivityService;->mTestMode:Z
 
-    .line 1085
     new-instance v2, Lcom/android/server/connectivity/Tethering;
 
     move-object/from16 v0, p0
@@ -2316,7 +2167,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
-    .line 1088
     new-instance v2, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     move-object/from16 v0, p0
@@ -2343,7 +2193,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
-    .line 1092
     new-instance v2, Lcom/android/server/connectivity/PermissionMonitor;
 
     move-object/from16 v0, p0
@@ -2360,18 +2209,15 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mPermissionMonitor:Lcom/android/server/connectivity/PermissionMonitor;
 
-    .line 1095
     new-instance v15, Landroid/content/IntentFilter;
 
     invoke-direct {v15}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1096
     .local v15, "lteCaIntentFilter":Landroid/content/IntentFilter;
     const-string v2, "com.sec.android.LTE_WIDEBAND_INFO"
 
     invoke-virtual {v15, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1097
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -2382,28 +2228,23 @@
 
     invoke-virtual {v2, v3, v15}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 1102
     new-instance v5, Landroid/content/IntentFilter;
 
     invoke-direct {v5}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1103
     .local v5, "intentFilter":Landroid/content/IntentFilter;
     const-string v2, "android.intent.action.USER_STARTING"
 
     invoke-virtual {v5, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1104
     const-string v2, "android.intent.action.USER_STOPPING"
 
     invoke-virtual {v5, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1105
     const-string v2, "android.intent.action.USER_STARTED"
 
     invoke-virtual {v5, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1106
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -2420,7 +2261,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 1111
     :try_start_3
     move-object/from16 v0, p0
 
@@ -2432,7 +2272,6 @@
 
     invoke-interface {v2, v3}, Landroid/os/INetworkManagementService;->registerObserver(Landroid/net/INetworkManagementEventObserver;)V
 
-    .line 1112
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
@@ -2445,7 +2284,6 @@
     :try_end_3
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 1118
     :goto_8
     new-instance v2, Ljava/util/ArrayList;
 
@@ -2455,7 +2293,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mInetLog:Ljava/util/ArrayList;
 
-    .line 1121
     new-instance v2, Lcom/android/server/ConnectivityService$SettingsObserver;
 
     move-object/from16 v0, p0
@@ -2472,10 +2309,8 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mSettingsObserver:Lcom/android/server/ConnectivityService$SettingsObserver;
 
-    .line 1122
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->registerSettingsCallbacks()V
 
-    .line 1124
     new-instance v2, Lcom/android/server/connectivity/DataConnectionStats;
 
     move-object/from16 v0, p0
@@ -2488,14 +2323,12 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mDataConnectionStats:Lcom/android/server/connectivity/DataConnectionStats;
 
-    .line 1125
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mDataConnectionStats:Lcom/android/server/connectivity/DataConnectionStats;
 
     invoke-virtual {v2}, Lcom/android/server/connectivity/DataConnectionStats;->startMonitoring()V
 
-    .line 1128
     new-instance v2, Lcom/android/server/connectivity/PacManager;
 
     move-object/from16 v0, p0
@@ -2516,7 +2349,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mPacManager:Lcom/android/server/connectivity/PacManager;
 
-    .line 1133
     const-string/jumbo v2, "user"
 
     move-object/from16 v0, p1
@@ -2531,7 +2363,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mUserManager:Landroid/os/UserManager;
 
-    .line 1135
     new-instance v2, Lcom/android/server/connectivity/KeepaliveTracker;
 
     move-object/from16 v0, p0
@@ -2544,7 +2375,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mKeepaliveTracker:Lcom/android/server/connectivity/KeepaliveTracker;
 
-    .line 1137
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v2
@@ -2577,7 +2407,6 @@
 
     if-eqz v2, :cond_13
 
-    .line 1140
     :cond_12
     new-instance v2, Lcom/android/server/ConnectivityService$MPTCPObserver;
 
@@ -2589,7 +2418,6 @@
 
     iput-object v2, v0, Lcom/android/server/ConnectivityService;->mMPTCPObserver:Lcom/android/server/ConnectivityService$MPTCPObserver;
 
-    .line 1141
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mMPTCPObserver:Lcom/android/server/ConnectivityService$MPTCPObserver;
@@ -2598,14 +2426,11 @@
 
     invoke-virtual {v2, v0}, Lcom/android/server/ConnectivityService$MPTCPObserver;->register(Landroid/content/Context;)V
 
-    .line 1146
     :cond_13
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->createExceptApnListForDataLimit()V
 
-    .line 1148
     return-void
 
-    .line 1082
     .end local v5    # "intentFilter":Landroid/content/IntentFilter;
     .end local v15    # "lteCaIntentFilter":Landroid/content/IntentFilter;
     :cond_14
@@ -2613,13 +2438,11 @@
 
     goto/16 :goto_7
 
-    .line 1113
     .restart local v5    # "intentFilter":Landroid/content/IntentFilter;
     .restart local v15    # "lteCaIntentFilter":Landroid/content/IntentFilter;
     :catch_3
     move-exception v10
 
-    .line 1114
     .restart local v10    # "e":Landroid/os/RemoteException;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2651,7 +2474,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 8585
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v4
@@ -2662,7 +2484,6 @@
 
     move-result-object v0
 
-    .line 8586
     .local v0, "ConfigFixedApn":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2670,12 +2491,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 8596
     :cond_0
     :goto_0
     return v3
 
-    .line 8589
     :cond_1
     const-string v4, ","
 
@@ -2683,7 +2502,6 @@
 
     move-result-object v2
 
-    .line 8590
     .local v2, "types":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -2693,7 +2511,6 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 8591
     aget-object v4, v2, v1
 
     invoke-virtual {v4}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -2706,7 +2523,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 8592
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -2733,12 +2549,10 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8593
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 8590
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
@@ -2750,7 +2564,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget v0, p0, Lcom/android/server/ConnectivityService;->mRouteIdCtr:I
 
     add-int/lit8 v0, v0, 0x1
@@ -2766,7 +2579,6 @@
     .param p1, "x1"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->isDefaultNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
 
     move-result v0
@@ -2779,7 +2591,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mUidRules:Landroid/util/SparseIntArray;
 
     return-object v0
@@ -2790,7 +2601,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mMeteredIfaces:Ljava/util/HashSet;
 
     return-object v0
@@ -2802,7 +2612,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 276
     iput-boolean p1, p0, Lcom/android/server/ConnectivityService;->mLteCaEnabled:Z
 
     return p1
@@ -2813,7 +2622,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget v0, p0, Lcom/android/server/ConnectivityService;->mActiveDefaultNetwork:I
 
     return v0
@@ -2824,7 +2632,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     return-object v0
@@ -2836,7 +2643,6 @@
     .param p1, "x1"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->updateTcpBufferSizes(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     return-void
@@ -2848,7 +2654,6 @@
     .param p1, "x1"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->updateTcpDelayedAckSettings(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     return-void
@@ -2860,7 +2665,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handleAsyncChannelHalfConnect(Landroid/os/Message;)V
 
     return-void
@@ -2871,7 +2675,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
     return-object v0
@@ -2883,7 +2686,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handleAsyncChannelDisconnected(Landroid/os/Message;)V
 
     return-void
@@ -2894,7 +2696,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-boolean v0, p0, Lcom/android/server/ConnectivityService;->mSendIntentForCONNECTED:Z
 
     return v0
@@ -2905,7 +2706,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 276
     invoke-static {p0}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
     return-void
@@ -2918,7 +2718,6 @@
     .param p2, "x2"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->updateCapabilities(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkCapabilities;)V
 
     return-void
@@ -2929,7 +2728,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->handleDefaultNetworkSwitch()V
 
     return-void
@@ -2940,7 +2738,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-boolean v0, p0, Lcom/android/server/ConnectivityService;->bLPUpdatedBeforeConnected:Z
 
     return v0
@@ -2953,7 +2750,6 @@
     .param p2, "x2"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->updateLinkProperties(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/LinkProperties;)V
 
     return-void
@@ -2966,7 +2762,6 @@
     .param p2, "x2"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->updateNetworkInfo(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo;)V
 
     return-void
@@ -2979,7 +2774,6 @@
     .param p2, "x2"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->replaceNetworkInfo(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo;)V
 
     return-void
@@ -2992,7 +2786,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->updateNetworkScore(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
     return-void
@@ -3003,7 +2796,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
     return-object v0
@@ -3014,7 +2806,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mKeepaliveTracker:Lcom/android/server/connectivity/KeepaliveTracker;
 
     return-object v0
@@ -3028,7 +2819,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/ConnectivityService;->sendLegacyNetworkBroadcast(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo$DetailedState;I)V
 
     return-void
@@ -3041,7 +2831,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->isLiveNetworkAgent(Lcom/android/server/connectivity/NetworkAgentInfo;Ljava/lang/String;)Z
 
     move-result v0
@@ -3054,7 +2843,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 276
     sput-boolean p0, Lcom/android/server/ConnectivityService;->mInCaptivePortal:Z
 
     return p0
@@ -3066,7 +2854,6 @@
     .param p1, "x1"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->sendUpdatedScoreToFactories(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     return-void
@@ -3078,7 +2865,6 @@
     .param p1, "x1"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->updateInetCondition(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     return-void
@@ -3090,7 +2876,6 @@
     .param p1, "x1"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handleLingerComplete(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     return-void
@@ -3102,7 +2887,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 276
     iput-boolean p1, p0, Lcom/android/server/ConnectivityService;->mHeadUpNotificationMode:Z
 
     return p1
@@ -3113,7 +2897,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     return-object v0
@@ -3131,7 +2914,6 @@
     .param p7, "x7"    # Z
 
     .prologue
-    .line 276
     invoke-direct/range {p0 .. p7}, Lcom/android/server/ConnectivityService;->setProvNotificationVisibleIntent(ZILcom/android/server/ConnectivityService$NotificationType;ILjava/lang/String;Landroid/app/PendingIntent;Z)V
 
     return-void
@@ -3142,7 +2924,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget v0, p0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLockSerialNumber:I
 
     return v0
@@ -3153,7 +2934,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLock:Landroid/os/PowerManager$WakeLock;
 
     return-object v0
@@ -3164,7 +2944,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-boolean v0, p0, Lcom/android/server/ConnectivityService;->mMPTCPEnabled:Z
 
     return v0
@@ -3175,7 +2954,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLockCausedBy:Ljava/lang/String;
 
     return-object v0
@@ -3187,7 +2965,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 276
     iput-boolean p1, p0, Lcom/android/server/ConnectivityService;->mMPTCPEnabled:Z
 
     return p1
@@ -3198,7 +2975,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->handleDeprecatedGlobalHttpProxy()V
 
     return-void
@@ -3210,7 +2986,6 @@
     .param p1, "x1"    # Landroid/content/Intent;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->sendStickyBroadcast(Landroid/content/Intent;)V
 
     return-void
@@ -3223,7 +2998,6 @@
     .param p2, "x2"    # Z
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->handleSetPolicyDataEnable(IZ)V
 
     return-void
@@ -3235,7 +3009,6 @@
     .param p1, "x1"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handleApplyDefaultProxy(Landroid/net/ProxyInfo;)V
 
     return-void
@@ -3246,7 +3019,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     return-object v0
@@ -3258,7 +3030,6 @@
     .param p1, "x1"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 276
     iput-object p1, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     return-object p1
@@ -3270,7 +3041,6 @@
     .param p1, "x1"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyInfo;)V
 
     return-void
@@ -3281,7 +3051,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
     return-object v0
@@ -3293,7 +3062,6 @@
     .param p1, "x1"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 276
     iput-object p1, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
     return-object p1
@@ -3305,7 +3073,6 @@
     .param p1, "x1"    # Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handleRegisterNetworkFactory(Lcom/android/server/ConnectivityService$NetworkFactoryInfo;)V
 
     return-void
@@ -3317,7 +3084,6 @@
     .param p1, "x1"    # Landroid/os/Messenger;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handleUnregisterNetworkFactory(Landroid/os/Messenger;)V
 
     return-void
@@ -3328,7 +3094,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -3340,7 +3105,6 @@
     .param p1, "x1"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handleRegisterNetworkAgent(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     return-void
@@ -3352,7 +3116,6 @@
     .param p1, "x1"    # Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handleRegisterNetworkRequest(Lcom/android/server/ConnectivityService$NetworkRequestInfo;)V
 
     return-void
@@ -3364,7 +3127,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handleRegisterNetworkRequestWithIntent(Landroid/os/Message;)V
 
     return-void
@@ -3377,7 +3139,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->handleReleaseNetworkRequestWithIntent(Landroid/app/PendingIntent;I)V
 
     return-void
@@ -3390,7 +3151,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->handleReleaseNetworkRequest(Landroid/net/NetworkRequest;I)V
 
     return-void
@@ -3404,7 +3164,6 @@
     .param p3, "x3"    # Z
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/ConnectivityService;->handleSetAcceptUnvalidated(Landroid/net/Network;ZZ)V
 
     return-void
@@ -3416,7 +3175,6 @@
     .param p1, "x1"    # Landroid/net/Network;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->handlePromptUnvalidated(Landroid/net/Network;)V
 
     return-void
@@ -3427,7 +3185,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->handleMobileDataAlwaysOn()V
 
     return-void
@@ -3439,7 +3196,6 @@
     .param p1, "x1"    # Landroid/net/Network;
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
@@ -3452,7 +3208,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mSignalStrength:Landroid/telephony/SignalStrength;
 
     return-object v0
@@ -3464,7 +3219,6 @@
     .param p1, "x1"    # Landroid/telephony/SignalStrength;
 
     .prologue
-    .line 276
     iput-object p1, p0, Lcom/android/server/ConnectivityService;->mSignalStrength:Landroid/telephony/SignalStrength;
 
     return-object p1
@@ -3475,7 +3229,6 @@
     .param p0, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 276
     invoke-static {p0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
     return-void
@@ -3487,7 +3240,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->onUserStart(I)V
 
     return-void
@@ -3499,7 +3251,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 276
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->onUserStop(I)V
 
     return-void
@@ -3510,7 +3261,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->updateMptcpDefaultRoute()V
 
     return-void
@@ -3524,7 +3274,6 @@
     .param p3, "x3"    # J
 
     .prologue
-    .line 276
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/ConnectivityService;->sendDataActivityBroadcast(IZJ)V
 
     return-void
@@ -3535,7 +3284,6 @@
     .param p0, "x0"    # Lcom/android/server/ConnectivityService;
 
     .prologue
-    .line 276
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mRulesLock:Ljava/lang/Object;
 
     return-object v0
@@ -3549,7 +3297,6 @@
     .param p4, "uid"    # I
 
     .prologue
-    .line 2124
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getAllRoutes()Ljava/util/List;
 
     move-result-object v3
@@ -3558,11 +3305,9 @@
 
     move-result-object v0
 
-    .line 2125
     .local v0, "bestRoute":Landroid/net/RouteInfo;
     if-nez v0, :cond_0
 
-    .line 2126
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v3
@@ -3571,7 +3316,6 @@
 
     move-result-object v0
 
-    .line 2138
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3607,7 +3351,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2140
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -3615,19 +3358,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2146
     const/4 v3, 0x1
 
     :goto_1
     return v3
 
-    .line 2128
     :cond_0
     invoke-virtual {v0}, Landroid/net/RouteInfo;->getInterface()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2129
     .local v2, "iface":Ljava/lang/String;
     invoke-virtual {v0}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
@@ -3639,14 +3379,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 2131
     invoke-static {p2, v2}, Landroid/net/RouteInfo;->makeHostRoute(Ljava/net/InetAddress;Ljava/lang/String;)Landroid/net/RouteInfo;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 2135
     :cond_1
     invoke-virtual {v0}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
@@ -3658,12 +3396,10 @@
 
     goto :goto_0
 
-    .line 2141
     .end local v2    # "iface":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 2143
     .local v1, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -3685,7 +3421,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 2144
     const/4 v3, 0x0
 
     goto :goto_1
@@ -3697,12 +3432,10 @@
     .param p2, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 674
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mValidationLogs:Ljava/util/ArrayDeque;
 
     monitor-enter v1
 
-    .line 675
     :goto_0
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mValidationLogs:Ljava/util/ArrayDeque;
@@ -3715,14 +3448,12 @@
 
     if-lt v0, v2, :cond_0
 
-    .line 676
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mValidationLogs:Ljava/util/ArrayDeque;
 
     invoke-virtual {v0}, Ljava/util/ArrayDeque;->removeLast()Ljava/lang/Object;
 
     goto :goto_0
 
-    .line 679
     :catchall_0
     move-exception v0
 
@@ -3732,7 +3463,6 @@
 
     throw v0
 
-    .line 678
     :cond_0
     :try_start_1
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mValidationLogs:Ljava/util/ArrayDeque;
@@ -3743,12 +3473,10 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayDeque;->addFirst(Ljava/lang/Object;)V
 
-    .line 679
     monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 680
     return-void
 .end method
 
@@ -3761,7 +3489,6 @@
 
     const/4 v1, 0x0
 
-    .line 6387
     const-string v2, "VZW"
 
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->getMainOperatorName()Ljava/lang/String;
@@ -3774,7 +3501,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 6390
     const/16 v2, 0xc
 
     invoke-virtual {p1, v2}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
@@ -3783,16 +3509,13 @@
 
     if-nez v2, :cond_0
 
-    .line 6391
     const-string v1, "allowOnRestricted() only internet APN is restricted on background restricted enabled"
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6413
     :goto_0
     return v0
 
-    .line 6395
     :cond_0
     const/4 v2, 0x3
 
@@ -3832,7 +3555,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 6400
     :cond_1
     const-string v1, "allowOnRestricted() also allowed if other Capabilities exist"
 
@@ -3843,10 +3565,8 @@
     :cond_2
     move v0, v1
 
-    .line 6403
     goto :goto_0
 
-    .line 6407
     :cond_3
     invoke-virtual {p1, v1}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
@@ -3854,7 +3574,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 6408
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -3880,7 +3599,6 @@
     :cond_4
     move v0, v1
 
-    .line 6413
     goto :goto_0
 .end method
 
@@ -3890,10 +3608,8 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 4831
     const/4 v0, 0x0
 
-    .line 4833
     .local v0, "anyconnectSupportingKnox":Z
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
@@ -3904,7 +3620,6 @@
 
     if-lt v7, v8, :cond_3
 
-    .line 4834
     sget-boolean v7, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v7, :cond_0
@@ -3931,7 +3646,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4835
     :cond_0
     sget-boolean v7, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
@@ -3959,7 +3673,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4836
     :cond_1
     new-instance v2, Landroid/content/Intent;
 
@@ -3967,7 +3680,6 @@
 
     invoke-direct {v2, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4837
     .local v2, "i":Landroid/content/Intent;
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -3975,7 +3687,6 @@
 
     move-result-object v4
 
-    .line 4838
     .local v4, "pm":Landroid/content/pm/PackageManager;
     const/4 v7, 0x0
 
@@ -3983,7 +3694,6 @@
 
     move-result-object v5
 
-    .line 4839
     .local v5, "proxyServices":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->size()I
 
@@ -3991,7 +3701,6 @@
 
     if-lez v7, :cond_3
 
-    .line 4840
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -4010,7 +3719,6 @@
 
     check-cast v6, Landroid/content/pm/ResolveInfo;
 
-    .line 4841
     .local v6, "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v7, v6, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
@@ -4024,10 +3732,8 @@
 
     if-eqz v7, :cond_2
 
-    .line 4842
     const/4 v0, 0x1
 
-    .line 4851
     .end local v2    # "i":Landroid/content/Intent;
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "pm":Landroid/content/pm/PackageManager;
@@ -4061,15 +3767,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4852
     :cond_4
     return v0
 
-    .line 4848
     :catch_0
     move-exception v1
 
-    .line 4849
     .local v1, "e":Ljava/lang/Exception;
     const-string v7, "ConnectivityService"
 
@@ -4106,7 +3809,6 @@
     .param p2, "target"    # Ljava/lang/String;
 
     .prologue
-    .line 2853
     move-object v1, p1
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -4121,7 +3823,6 @@
 
     aget-object v0, v1, v2
 
-    .line 2854
     .local v0, "arg":Ljava/lang/String;
     invoke-virtual {v0, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -4131,19 +3832,16 @@
 
     const/4 v4, 0x1
 
-    .line 2856
     .end local v0    # "arg":Ljava/lang/String;
     :goto_1
     return v4
 
-    .line 2853
     .restart local v0    # "arg":Ljava/lang/String;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 2856
     .end local v0    # "arg":Ljava/lang/String;
     :cond_1
     const/4 v4, 0x0
@@ -4158,25 +3856,21 @@
     .param p3, "notificationType"    # I
 
     .prologue
-    .line 7355
     if-eqz p1, :cond_0
 
     iget-object v6, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->messenger:Landroid/os/Messenger;
 
     if-nez v6, :cond_1
 
-    .line 7410
     :cond_0
     :goto_0
     return-void
 
-    .line 7356
     :cond_1
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 7357
     .local v0, "bundle":Landroid/os/Bundle;
     const-class v6, Landroid/net/NetworkRequest;
 
@@ -4192,12 +3886,10 @@
 
     invoke-virtual {v0, v6, v7}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 7359
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v5
 
-    .line 7360
     .local v5, "msg":Landroid/os/Message;
     const v6, 0x80005
 
@@ -4207,7 +3899,6 @@
 
     if-eq p3, v6, :cond_2
 
-    .line 7362
     const-class v6, Landroid/net/Network;
 
     invoke-virtual {v6}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -4218,20 +3909,16 @@
 
     invoke-virtual {v0, v6, v7}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 7364
     :cond_2
     packed-switch p3, :pswitch_data_0
 
-    .line 7398
     :cond_3
     :goto_1
     :pswitch_0
     iput p3, v5, Landroid/os/Message;->what:I
 
-    .line 7399
     invoke-virtual {v5, v0}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 7402
     :try_start_0
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -4269,7 +3956,6 @@
 
     invoke-static {v6}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7405
     iget-object v6, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->messenger:Landroid/os/Messenger;
 
     invoke-virtual {v6, v5}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
@@ -4278,11 +3964,9 @@
 
     goto :goto_0
 
-    .line 7406
     :catch_0
     move-exception v1
 
-    .line 7408
     .local v1, "e":Landroid/os/RemoteException;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -4308,7 +3992,6 @@
 
     goto :goto_0
 
-    .line 7366
     .end local v1    # "e":Landroid/os/RemoteException;
     :pswitch_1
     const/16 v6, 0x7530
@@ -4317,7 +4000,6 @@
 
     goto :goto_1
 
-    .line 7370
     :pswitch_2
     const-class v6, Landroid/net/NetworkCapabilities;
 
@@ -4335,7 +4017,6 @@
 
     goto :goto_1
 
-    .line 7375
     :pswitch_3
     const-class v6, Landroid/net/LinkProperties;
 
@@ -4353,7 +4034,6 @@
 
     goto :goto_1
 
-    .line 7380
     :pswitch_4
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isDomesticModel()Z
 
@@ -4361,21 +4041,18 @@
 
     if-eqz v6, :cond_3
 
-    .line 7381
     invoke-virtual {p2}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
 
     move-result v6
 
     if-eqz v6, :cond_4
 
-    .line 7382
     const-string/jumbo v6, "net.vpn.status"
 
     const-string/jumbo v7, "ok"
 
     invoke-static {v6, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7384
     :cond_4
     const-string/jumbo v6, "ok"
 
@@ -4391,7 +4068,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 7385
     iget-object v6, p2, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/4 v7, 0x0
@@ -4400,7 +4076,6 @@
 
     move-result v3
 
-    .line 7386
     .local v3, "hasMMSCapability":Z
     iget-object v6, p2, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -4410,17 +4085,14 @@
 
     move-result v2
 
-    .line 7387
     .local v2, "hasIMSCapability":Z
     if-nez v3, :cond_5
 
     if-eqz v2, :cond_3
 
-    .line 7388
     :cond_5
     iget-object v4, p2, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 7389
     .local v4, "lp":Landroid/net/LinkProperties;
     invoke-virtual {v4}, Landroid/net/LinkProperties;->hasGlobalIPv6Address()Z
 
@@ -4428,7 +4100,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 7390
     const-string/jumbo v6, "net.legacy.netid"
 
     iget-object v7, p2, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
@@ -4443,7 +4114,6 @@
 
     goto/16 :goto_1
 
-    .line 7364
     :pswitch_data_0
     .packed-switch 0x80002
         :pswitch_4
@@ -4460,7 +4130,6 @@
     .param p1, "proxy"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 4266
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Landroid/net/ProxyInfo;->getHost()Ljava/lang/String;
@@ -4491,11 +4160,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 4268
     :cond_0
     const/4 p1, 0x0
 
-    .line 4270
     :cond_1
     return-object p1
 .end method
@@ -4508,14 +4175,12 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 4798
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v6
 
     if-lt v6, v9, :cond_1
 
-    .line 4799
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -4544,7 +4209,6 @@
 
     move-result-object v5
 
-    .line 4800
     .local v5, "transformedVendorName":Ljava/lang/String;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -4554,7 +4218,6 @@
 
     move-result-object v2
 
-    .line 4801
     .local v2, "callingApp":Ljava/lang/String;
     if-eqz v2, :cond_1
 
@@ -4566,14 +4229,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 4802
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
     move-result-object v6
 
     if-eqz v6, :cond_1
 
-    .line 4804
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
@@ -4583,7 +4244,6 @@
 
     move-result-object v1
 
-    .line 4805
     .local v1, "activeProfiles":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v6, "ConnectivityService"
 
@@ -4617,10 +4277,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4806
     const/4 v0, 0x0
 
-    .line 4807
     .local v0, "activeAnyConnectProfile":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -4630,7 +4288,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 4808
     const-string v6, "ConnectivityService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -4657,7 +4314,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4809
     const/4 v6, 0x0
 
     invoke-interface {v1, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -4667,11 +4323,9 @@
     .end local v0    # "activeAnyConnectProfile":Ljava/lang/String;
     check-cast v0, Ljava/lang/String;
 
-    .line 4810
     .restart local v0    # "activeAnyConnectProfile":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 4811
     const-string v6, "ConnectivityService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -4694,14 +4348,11 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4812
     iput-object v0, p1, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
-    .line 4816
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 4817
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
     move-result-object v6
@@ -4710,18 +4361,15 @@
 
     move-result v4
 
-    .line 4818
     .local v4, "profileType":I
     if-ne v4, v9, :cond_1
 
-    .line 4819
     const/4 v6, 0x0
 
     iput-object v6, p1, Lcom/android/internal/net/VpnConfig;->routes:Ljava/util/List;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4828
     .end local v0    # "activeAnyConnectProfile":Ljava/lang/String;
     .end local v1    # "activeProfiles":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "callingApp":Ljava/lang/String;
@@ -4731,13 +4379,11 @@
     :goto_0
     return-void
 
-    .line 4822
     .restart local v2    # "callingApp":Ljava/lang/String;
     .restart local v5    # "transformedVendorName":Ljava/lang/String;
     :catch_0
     move-exception v3
 
-    .line 4823
     .local v3, "e":Ljava/lang/Exception;
     const-string v6, "ConnectivityService"
 
@@ -4773,22 +4419,17 @@
     .param p1, "na"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 6755
     const/4 v0, 0x0
 
-    .line 6756
     .local v0, "isKnoxNetwork":Z
     if-eqz p1, :cond_0
 
-    .line 6757
     iget-boolean v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->knoxProfile:Z
 
     if-eqz v1, :cond_0
 
-    .line 6758
     const/4 v0, 0x1
 
-    .line 6761
     :cond_0
     const-string v1, "ConnectivityService"
 
@@ -4812,7 +4453,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6762
     return v0
 .end method
 
@@ -4821,10 +4461,8 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 4951
     const/4 v0, 0x0
 
-    .line 4952
     .local v0, "profileExists":Z
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -4834,7 +4472,6 @@
 
     if-lt v3, v4, :cond_0
 
-    .line 4953
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
@@ -4843,7 +4480,6 @@
 
     move-result v1
 
-    .line 4955
     .local v1, "user":I
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
@@ -4853,7 +4489,6 @@
 
     check-cast v2, Ljava/util/HashMap;
 
-    .line 4956
     .local v2, "vpnStoreMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/connectivity/EnterpriseVpn;>;"
     if-eqz v2, :cond_0
 
@@ -4863,10 +4498,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 4957
     const/4 v0, 0x1
 
-    .line 4960
     .end local v1    # "user":I
     .end local v2    # "vpnStoreMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/connectivity/EnterpriseVpn;>;"
     :cond_0
@@ -4880,10 +4513,8 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 4754
     const/4 v3, 0x0
 
-    .line 4755
     .local v3, "type":I
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -4891,7 +4522,6 @@
 
     if-ge v6, v9, :cond_0
 
-    .line 4756
     const-string v6, "ConnectivityService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -4920,13 +4550,11 @@
 
     move v4, v3
 
-    .line 4778
     .end local v3    # "type":I
     .local v4, "type":I
     :goto_0
     return v4
 
-    .line 4760
     .end local v4    # "type":I
     .restart local v3    # "type":I
     :cond_0
@@ -4941,7 +4569,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 4761
     sget-boolean v6, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v6, :cond_1
@@ -4970,19 +4597,16 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4762
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 4763
     .local v0, "callingUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
 
-    .line 4764
     .local v5, "userId":I
     sget-boolean v6, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
@@ -5010,7 +4634,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4765
     :cond_2
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnPolicy:Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
@@ -5020,7 +4643,6 @@
 
     move-result v2
 
-    .line 4766
     .local v2, "profileCreatedByKnoxAdmin":Z
     sget-boolean v6, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
@@ -5048,11 +4670,9 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4767
     :cond_3
     if-eqz v2, :cond_5
 
-    .line 4768
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnPolicy:Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
     iget-object v7, p1, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
@@ -5061,7 +4681,6 @@
 
     move-result v3
 
-    .line 4769
     sget-boolean v6, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v6, :cond_4
@@ -5088,11 +4707,9 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4770
     :cond_4
     if-ne v3, v9, :cond_5
 
-    .line 4771
     const/4 v6, 0x0
 
     iput-object v6, p1, Lcom/android/internal/net/VpnConfig;->routes:Ljava/util/List;
@@ -5106,18 +4723,15 @@
     :goto_1
     move v4, v3
 
-    .line 4778
     .end local v3    # "type":I
     .restart local v4    # "type":I
     goto/16 :goto_0
 
-    .line 4775
     .end local v4    # "type":I
     .restart local v3    # "type":I
     :catch_0
     move-exception v1
 
-    .line 4776
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "ConnectivityService"
 
@@ -5162,18 +4776,15 @@
     .end annotation
 
     .prologue
-    .line 4568
     .local p0, "value":Ljava/lang/Object;, "TT;"
     if-nez p0, :cond_0
 
-    .line 4569
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0, p1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 4571
     :cond_0
     return-object p0
 .end method
@@ -5185,12 +4796,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 7054
     if-eqz p1, :cond_0
 
     if-ne p1, v0, :cond_2
 
-    .line 7055
     :cond_0
     const-string v1, "enabled"
 
@@ -5212,12 +4821,10 @@
 
     if-nez v1, :cond_2
 
-    .line 7065
     :cond_1
     :goto_0
     return v0
 
-    .line 7060
     :cond_2
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -5231,12 +4838,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 7061
     const/4 v1, 0x5
 
     if-eq p1, v1, :cond_1
 
-    .line 7065
     :cond_3
     const/4 v0, 0x0
 
@@ -5249,7 +4854,6 @@
     .prologue
     const/4 v13, 0x2
 
-    .line 1746
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v10
@@ -5262,20 +4866,17 @@
 
     move-result-object v4
 
-    .line 1747
     .local v4, "cscValue":Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mExceptApnListForDataLimit:Ljava/util/HashMap;
 
     if-nez v10, :cond_1
 
-    .line 1748
     new-instance v10, Ljava/util/HashMap;
 
     invoke-direct {v10}, Ljava/util/HashMap;-><init>()V
 
     iput-object v10, p0, Lcom/android/server/ConnectivityService;->mExceptApnListForDataLimit:Ljava/util/HashMap;
 
-    .line 1753
     :goto_0
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -5283,14 +4884,12 @@
 
     if-nez v10, :cond_4
 
-    .line 1754
     const-string v10, ","
 
     invoke-virtual {v4, v10}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1758
     .local v2, "argList":[Ljava/lang/String;
     move-object v3, v2
 
@@ -5306,7 +4905,6 @@
 
     aget-object v1, v3, v5
 
-    .line 1759
     .local v1, "arg":Ljava/lang/String;
     const-string v10, "_"
 
@@ -5314,13 +4912,11 @@
 
     move-result-object v9
 
-    .line 1760
     .local v9, "options":[Ljava/lang/String;
     array-length v10, v9
 
     if-le v10, v13, :cond_2
 
-    .line 1761
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -5341,14 +4937,12 @@
 
     invoke-static {v10}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1758
     :cond_0
     :goto_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 1750
     .end local v1    # "arg":Ljava/lang/String;
     .end local v2    # "argList":[Ljava/lang/String;
     .end local v3    # "arr$":[Ljava/lang/String;
@@ -5362,7 +4956,6 @@
 
     goto :goto_0
 
-    .line 1765
     .restart local v1    # "arg":Ljava/lang/String;
     .restart local v2    # "argList":[Ljava/lang/String;
     .restart local v3    # "arr$":[Ljava/lang/String;
@@ -5378,7 +4971,6 @@
 
     move-result-object v0
 
-    .line 1766
     .local v0, "apnType":Ljava/lang/String;
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mExceptApnListForDataLimit:Ljava/util/HashMap;
 
@@ -5388,7 +4980,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 1767
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mExceptApnListForDataLimit:Ljava/util/HashMap;
 
     invoke-virtual {v10, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -5397,14 +4988,12 @@
 
     check-cast v8, Ljava/util/Set;
 
-    .line 1772
     .local v8, "optionSet":Ljava/util/Set;
     :goto_3
     array-length v10, v9
 
     if-ne v10, v13, :cond_0
 
-    .line 1773
     const/4 v10, 0x1
 
     aget-object v10, v9, v10
@@ -5413,13 +5002,11 @@
 
     move-result-object v7
 
-    .line 1774
     .local v7, "option":Ljava/lang/String;
     invoke-interface {v8, v7}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 1769
     .end local v7    # "option":Ljava/lang/String;
     .end local v8    # "optionSet":Ljava/util/Set;
     :cond_3
@@ -5427,7 +5014,6 @@
 
     invoke-direct {v8}, Ljava/util/HashSet;-><init>()V
 
-    .line 1770
     .restart local v8    # "optionSet":Ljava/util/Set;
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mExceptApnListForDataLimit:Ljava/util/HashMap;
 
@@ -5435,7 +5021,6 @@
 
     goto :goto_3
 
-    .line 1778
     .end local v0    # "apnType":Ljava/lang/String;
     .end local v1    # "arg":Ljava/lang/String;
     .end local v2    # "argList":[Ljava/lang/String;
@@ -5455,29 +5040,23 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 1213
     new-instance v0, Landroid/net/NetworkCapabilities;
 
     invoke-direct {v0}, Landroid/net/NetworkCapabilities;-><init>()V
 
-    .line 1214
     .local v0, "netCap":Landroid/net/NetworkCapabilities;
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkCapabilities;->addCapability(I)Landroid/net/NetworkCapabilities;
 
-    .line 1215
     const/16 v1, 0xd
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkCapabilities;->addCapability(I)Landroid/net/NetworkCapabilities;
 
-    .line 1216
     if-le p1, v3, :cond_0
 
-    .line 1217
     invoke-virtual {v0, p1}, Landroid/net/NetworkCapabilities;->addTransportType(I)Landroid/net/NetworkCapabilities;
 
-    .line 1219
     :cond_0
     new-instance v1, Landroid/net/NetworkRequest;
 
@@ -5495,7 +5074,6 @@
     .param p1, "info"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 8514
     new-instance v0, Landroid/net/NetworkInfo;
 
     const/16 v1, 0x2000
@@ -5514,7 +5092,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Landroid/net/NetworkInfo;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 8515
     .local v0, "ni":Landroid/net/NetworkInfo;
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getDetailedState()Landroid/net/NetworkInfo$DetailedState;
 
@@ -5530,21 +5107,18 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8516
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isFailover()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setFailover(Z)V
 
-    .line 8517
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isAvailable()Z
 
     move-result v1
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setIsAvailable(Z)V
 
-    .line 8519
     return-object v0
 .end method
 
@@ -5555,37 +5129,30 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 5656
     invoke-virtual {p1}, Lcom/android/server/connectivity/Vpn;->getVpnInfo()Lcom/android/internal/net/VpnInfo;
 
     move-result-object v1
 
-    .line 5657
     .local v1, "info":Lcom/android/internal/net/VpnInfo;
     if-nez v1, :cond_0
 
-    .line 5674
     .end local v1    # "info":Lcom/android/internal/net/VpnInfo;
     :goto_0
     return-object v4
 
-    .line 5660
     .restart local v1    # "info":Lcom/android/internal/net/VpnInfo;
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/connectivity/Vpn;->getUnderlyingNetworks()[Landroid/net/Network;
 
     move-result-object v3
 
-    .line 5663
     .local v3, "underlyingNetworks":[Landroid/net/Network;
     if-nez v3, :cond_3
 
-    .line 5664
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
 
-    .line 5665
     .local v0, "defaultNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v0, :cond_1
 
@@ -5593,7 +5160,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 5666
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v5
@@ -5606,7 +5172,6 @@
 
     iput-object v5, v1, Lcom/android/internal/net/VpnInfo;->primaryUnderlyingIface:Ljava/lang/String;
 
-    .line 5674
     .end local v0    # "defaultNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_1
     :goto_1
@@ -5622,14 +5187,12 @@
 
     goto :goto_0
 
-    .line 5668
     .restart local v1    # "info":Lcom/android/internal/net/VpnInfo;
     :cond_3
     array-length v5, v3
 
     if-lez v5, :cond_1
 
-    .line 5669
     const/4 v5, 0x0
 
     aget-object v5, v3, v5
@@ -5638,11 +5201,9 @@
 
     move-result-object v2
 
-    .line 5670
     .local v2, "linkProperties":Landroid/net/LinkProperties;
     if-eqz v2, :cond_1
 
-    .line 5671
     invoke-virtual {v2}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v5
@@ -5658,18 +5219,14 @@
     .param p2, "callingUid"    # I
 
     .prologue
-    .line 5398
     const/4 v13, 0x0
 
-    .line 5399
     .local v13, "isSystemVpn":Z
     const/16 v23, 0x0
 
-    .line 5400
     .local v23, "vpnState":Landroid/net/NetworkInfo$State;
     const-wide/16 v18, -0x1
 
-    .line 5401
     .local v18, "showIdentity":J
     const-string v25, "ConnectivityService"
 
@@ -5711,7 +5268,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5402
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v25
@@ -5724,7 +5280,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 5403
     const-string v25, "ConnectivityService"
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -5751,14 +5306,11 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5404
     const/16 v25, 0x0
 
-    .line 5535
     :goto_0
     return v25
 
-    .line 5406
     :cond_0
     move-object/from16 v0, p0
 
@@ -5768,10 +5320,8 @@
 
     monitor-enter v26
 
-    .line 5407
     if-nez p1, :cond_2
 
-    .line 5408
     :try_start_0
     const-string v25, "ConnectivityService"
 
@@ -5783,32 +5333,27 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5534
     :cond_1
     :goto_1
     monitor-exit v26
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5535
     const/16 v25, 0x0
 
     goto :goto_0
 
-    .line 5411
     :cond_2
     :try_start_1
     new-instance v5, Lcom/android/internal/net/VpnConfig;
 
     invoke-direct {v5}, Lcom/android/internal/net/VpnConfig;-><init>()V
 
-    .line 5412
     .local v5, "config":Lcom/android/internal/net/VpnConfig;
     move-object/from16 v0, p1
 
     iput-object v0, v5, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
-    .line 5413
     const-string v25, "ConnectivityService"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -5839,16 +5384,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5414
     const/4 v10, 0x0
 
-    .line 5415
     .local v10, "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     invoke-static/range {p2 .. p2}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v22
 
-    .line 5416
     .local v22, "user":I
     const-string v25, "ConnectivityService"
 
@@ -5880,7 +5422,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5417
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
@@ -5897,7 +5438,6 @@
 
     if-eqz v25, :cond_3
 
-    .line 5418
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
@@ -5925,12 +5465,10 @@
     .end local v10    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     check-cast v10, Lcom/android/server/connectivity/EnterpriseVpn;
 
-    .line 5421
     .restart local v10    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     :cond_3
     if-nez v10, :cond_6
 
-    .line 5422
     const-string v25, "ConnectivityService"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -5959,14 +5497,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5423
     const/4 v15, 0x0
 
-    .line 5424
     .local v15, "mProfileFound":Z
     const/4 v14, 0x0
 
-    .line 5425
     .local v14, "key":I
     const/4 v11, 0x0
 
@@ -5986,7 +5521,6 @@
 
     if-ge v11, v0, :cond_4
 
-    .line 5426
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
@@ -5999,7 +5533,6 @@
 
     move-result v14
 
-    .line 5427
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
@@ -6014,7 +5547,6 @@
 
     if-eqz v25, :cond_5
 
-    .line 5428
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
@@ -6043,21 +5575,16 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5429
     .restart local v10    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     if-eqz v10, :cond_5
 
-    .line 5430
     const/4 v15, 0x1
 
-    .line 5431
     move/from16 v22, v14
 
-    .line 5436
     :cond_4
     if-nez v15, :cond_6
 
-    .line 5437
     const/16 v25, 0x0
 
     :try_start_2
@@ -6065,7 +5592,6 @@
 
     goto/16 :goto_0
 
-    .line 5534
     .end local v5    # "config":Lcom/android/internal/net/VpnConfig;
     .end local v10    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v11    # "i":I
@@ -6081,7 +5607,6 @@
 
     throw v25
 
-    .line 5425
     .restart local v5    # "config":Lcom/android/internal/net/VpnConfig;
     .restart local v10    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .restart local v11    # "i":I
@@ -6093,14 +5618,12 @@
 
     goto :goto_2
 
-    .line 5441
     .end local v11    # "i":I
     .end local v14    # "key":I
     .end local v15    # "mProfileFound":Z
     :cond_6
     if-eqz v10, :cond_1
 
-    .line 5442
     :try_start_3
     const-string v25, "ConnectivityService"
 
@@ -6130,10 +5653,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5443
     const/4 v4, 0x1
 
-    .line 5444
     .local v4, "bVpnDialogCall":Z
     invoke-virtual {v10}, Lcom/android/server/connectivity/EnterpriseVpn;->getNetworkInfo()Landroid/net/NetworkInfo;
 
@@ -6143,7 +5664,6 @@
 
     move-result-object v23
 
-    .line 5445
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mEnterpriseSytemVPN:Landroid/util/SparseArray;
@@ -6168,19 +5688,15 @@
 
     if-eqz v25, :cond_8
 
-    .line 5446
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v20
 
-    .line 5447
     .local v20, "token":J
     invoke-virtual {v10}, Lcom/android/server/connectivity/EnterpriseVpn;->prepare()Z
 
-    .line 5448
     invoke-static/range {v20 .. v21}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5449
     move-object/from16 v0, p0
 
     move/from16 v1, p2
@@ -6189,7 +5705,6 @@
 
     move-result-object v16
 
-    .line 5450
     .local v16, "packageNameFromUid":Ljava/lang/String;
     if-eqz v16, :cond_7
 
@@ -6213,7 +5728,6 @@
 
     if-eq v0, v1, :cond_7
 
-    .line 5451
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mEnterpriseSytemVPN:Landroid/util/SparseArray;
@@ -6226,14 +5740,11 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 5452
     const/4 v4, 0x0
 
-    .line 5454
     :cond_7
     const/4 v13, 0x1
 
-    .line 5456
     .end local v16    # "packageNameFromUid":Ljava/lang/String;
     .end local v20    # "token":J
     :cond_8
@@ -6269,7 +5780,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5457
     const-string v25, "ConnectivityService"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -6300,7 +5810,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5458
     sget-object v25, Landroid/net/NetworkInfo$State;->DISCONNECTED:Landroid/net/NetworkInfo$State;
 
     move-object/from16 v0, v23
@@ -6317,32 +5826,27 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 5459
     :cond_9
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 5460
     const/16 v25, 0x0
 
     move/from16 v0, v25
 
     invoke-virtual {v10, v5, v0}, Lcom/android/server/connectivity/EnterpriseVpn;->showNotification(Lcom/android/internal/net/VpnConfig;Z)V
 
-    .line 5461
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 5466
     :try_start_4
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 5467
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/ConnectivityService;->mIsKnoxContainerV30:Z
@@ -6351,15 +5855,12 @@
 
     if-eqz v25, :cond_12
 
-    .line 5468
     if-eqz v13, :cond_e
 
-    .line 5470
     invoke-virtual {v10}, Lcom/android/server/connectivity/EnterpriseVpn;->getPersonaUserIds()Ljava/util/ArrayList;
 
     move-result-object v7
 
-    .line 5471
     .local v7, "domains":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/16 v25, 0x0
 
@@ -6371,7 +5872,6 @@
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5473
     invoke-virtual {v7}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
@@ -6395,7 +5895,6 @@
 
     move-result v6
 
-    .line 5474
     .local v6, "domain":I
     move-object/from16 v0, p0
 
@@ -6405,7 +5904,6 @@
 
     if-nez v25, :cond_a
 
-    .line 5475
     const-string v25, "ConnectivityService"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -6434,7 +5932,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5476
     invoke-virtual {v10, v6}, Lcom/android/server/connectivity/EnterpriseVpn;->hideNotification(I)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
@@ -6442,14 +5939,12 @@
 
     goto :goto_3
 
-    .line 5511
     .end local v6    # "domain":I
     .end local v7    # "domains":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v12    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v9
 
-    .line 5512
     .local v9, "e":Ljava/lang/Exception;
     :try_start_5
     const-string v25, "ConnectivityService"
@@ -6484,11 +5979,9 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 5514
     :try_start_6
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5517
     .end local v9    # "e":Ljava/lang/Exception;
     :goto_4
     move-object/from16 v0, p0
@@ -6507,18 +6000,15 @@
 
     check-cast v24, Ljava/util/HashMap;
 
-    .line 5518
     .local v24, "vpnStoreObj":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/connectivity/EnterpriseVpn;>;"
     if-eqz v4, :cond_b
 
-    .line 5519
     move-object/from16 v0, v24
 
     move-object/from16 v1, p1
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5520
     :cond_b
     invoke-virtual/range {v24 .. v24}, Ljava/util/HashMap;->size()I
 
@@ -6532,7 +6022,6 @@
 
     if-eqz v25, :cond_15
 
-    .line 5521
     :cond_c
     const-string v25, "ConnectivityService"
 
@@ -6564,7 +6053,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5522
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
@@ -6580,7 +6068,6 @@
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 5528
     :goto_5
     const/16 v25, 0x1
 
@@ -6589,7 +6076,6 @@
 
     goto/16 :goto_0
 
-    .line 5463
     .end local v24    # "vpnStoreObj":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/connectivity/EnterpriseVpn;>;"
     :cond_d
     const/16 v25, 0x0
@@ -6600,14 +6086,12 @@
 
     goto/16 :goto_0
 
-    .line 5480
     :cond_e
     :try_start_8
     invoke-direct/range {p0 .. p1}, Lcom/android/server/ConnectivityService;->getDomainsByProfileName(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v8
 
-    .line 5481
     .local v8, "domains":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v8, :cond_10
 
@@ -6617,7 +6101,6 @@
 
     if-lez v25, :cond_10
 
-    .line 5482
     const/4 v11, 0x0
 
     .restart local v11    # "i":I
@@ -6630,7 +6113,6 @@
 
     if-ge v11, v0, :cond_14
 
-    .line 5483
     invoke-interface {v8, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v25
@@ -6651,7 +6133,6 @@
 
     if-nez v25, :cond_f
 
-    .line 5484
     const-string v27, "ConnectivityService"
 
     new-instance v25, Ljava/lang/StringBuilder;
@@ -6692,7 +6173,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5485
     invoke-interface {v8, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v25
@@ -6707,20 +6187,17 @@
 
     invoke-virtual {v10, v0}, Lcom/android/server/connectivity/EnterpriseVpn;->hideNotification(I)V
 
-    .line 5482
     :cond_f
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_6
 
-    .line 5490
     .end local v11    # "i":I
     :cond_10
     invoke-virtual {v10}, Lcom/android/server/connectivity/EnterpriseVpn;->getPersonaUserIds()Ljava/util/ArrayList;
 
     move-result-object v17
 
-    .line 5491
     .local v17, "personas":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/16 v25, 0x0
 
@@ -6734,7 +6211,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5493
     invoke-virtual/range {v17 .. v17}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
@@ -6758,7 +6234,6 @@
 
     move-result v6
 
-    .line 5494
     .restart local v6    # "domain":I
     move-object/from16 v0, p0
 
@@ -6768,7 +6243,6 @@
 
     if-nez v25, :cond_11
 
-    .line 5495
     const-string v25, "ConnectivityService"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -6797,7 +6271,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5496
     invoke-virtual {v10, v6}, Lcom/android/server/connectivity/EnterpriseVpn;->hideNotification(I)V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
@@ -6805,7 +6278,6 @@
 
     goto :goto_7
 
-    .line 5514
     .end local v6    # "domain":I
     .end local v8    # "domains":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v12    # "i$":Ljava/util/Iterator;
@@ -6821,7 +6293,6 @@
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_1
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 5530
     .end local v4    # "bVpnDialogCall":Z
     .end local v5    # "config":Lcom/android/internal/net/VpnConfig;
     .end local v10    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
@@ -6829,7 +6300,6 @@
     :catch_1
     move-exception v9
 
-    .line 5531
     .restart local v9    # "e":Ljava/lang/Exception;
     :try_start_a
     const-string v25, "ConnectivityService"
@@ -6866,7 +6336,6 @@
 
     goto/16 :goto_1
 
-    .line 5502
     .end local v9    # "e":Ljava/lang/Exception;
     .restart local v4    # "bVpnDialogCall":Z
     .restart local v5    # "config":Lcom/android/internal/net/VpnConfig;
@@ -6882,7 +6351,6 @@
 
     if-lez v25, :cond_13
 
-    .line 5503
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/ConnectivityService;->numberOfConnectedProfile:I
@@ -6897,7 +6365,6 @@
 
     iput v0, v1, Lcom/android/server/ConnectivityService;->numberOfConnectedProfile:I
 
-    .line 5505
     :cond_13
     const-string v25, "ConnectivityService"
 
@@ -6931,7 +6398,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5506
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/ConnectivityService;->numberOfConnectedProfile:I
@@ -6940,7 +6406,6 @@
 
     if-nez v25, :cond_14
 
-    .line 5507
     const-string v25, "ConnectivityService"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -6973,20 +6438,17 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5508
     invoke-virtual {v10}, Lcom/android/server/connectivity/EnterpriseVpn;->hideNotification()V
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_0
     .catchall {:try_start_b .. :try_end_b} :catchall_1
 
-    .line 5514
     :cond_14
     :try_start_c
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_4
 
-    .line 5524
     .restart local v24    # "vpnStoreObj":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/connectivity/EnterpriseVpn;>;"
     :cond_15
     move-object/from16 v0, p0
@@ -7013,7 +6475,6 @@
     .locals 3
 
     .prologue
-    .line 2293
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.ACCESS_NETWORK_STATE"
@@ -7022,7 +6483,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2296
     return-void
 .end method
 
@@ -7030,16 +6490,13 @@
     .locals 4
 
     .prologue
-    .line 8999
     invoke-static {}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getInstance()Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
     move-result-object v1
 
-    .line 9000
     .local v1, "edmService":Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
     if-eqz v1, :cond_0
 
-    .line 9002
     :try_start_0
     const-string v2, "android.permission.sec.MDM_SECURITY"
 
@@ -7047,15 +6504,12 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9009
     :goto_0
     return-void
 
-    .line 9003
     :catch_0
     move-exception v0
 
-    .line 9004
     .local v0, "e":Ljava/lang/SecurityException;
     const-string v2, "android.permission.sec.MDM_FIREWALL"
 
@@ -7063,7 +6517,6 @@
 
     goto :goto_0
 
-    .line 9007
     .end local v0    # "e":Ljava/lang/SecurityException;
     :cond_0
     new-instance v2, Ljava/lang/SecurityException;
@@ -7079,12 +6532,10 @@
     .locals 1
 
     .prologue
-    .line 2299
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/net/ConnectivityManager;->enforceChangePermission(Landroid/content/Context;)V
 
-    .line 2300
     return-void
 .end method
 
@@ -7092,7 +6543,6 @@
     .locals 3
 
     .prologue
-    .line 2309
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.CONNECTIVITY_INTERNAL"
@@ -7101,7 +6551,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2312
     return-void
 .end method
 
@@ -7110,18 +6559,15 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 2227
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
     if-ne p1, v0, :cond_0
 
-    .line 2234
     :goto_0
     return-void
 
-    .line 2231
     :cond_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -7138,7 +6584,6 @@
     .locals 3
 
     .prologue
-    .line 2287
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.INTERNET"
@@ -7147,7 +6592,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2290
     return-void
 .end method
 
@@ -7155,7 +6599,6 @@
     .locals 3
 
     .prologue
-    .line 2315
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.PACKET_KEEPALIVE_OFFLOAD"
@@ -7164,7 +6607,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2316
     return-void
 .end method
 
@@ -7175,25 +6617,21 @@
     .prologue
     const/16 v5, 0xb
 
-    .line 6470
     invoke-virtual {p1, v5}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 6472
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 6473
     .local v0, "uid":I
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 6474
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mUidRules:Landroid/util/SparseIntArray;
 
@@ -7203,32 +6641,26 @@
 
     move-result v1
 
-    .line 6475
     .local v1, "uidRules":I
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6476
     if-eqz v1, :cond_0
 
-    .line 6477
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->allowOnRestricted(Landroid/net/NetworkCapabilities;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 6480
     invoke-virtual {p1, v5}, Landroid/net/NetworkCapabilities;->addCapability(I)Landroid/net/NetworkCapabilities;
 
-    .line 6484
     .end local v0    # "uid":I
     .end local v1    # "uidRules":I
     :cond_0
     return-void
 
-    .line 6475
     .restart local v0    # "uid":I
     :catchall_0
     move-exception v2
@@ -7246,7 +6678,6 @@
     .param p1, "networkCapabilities"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 6443
     const/16 v0, 0xd
 
     invoke-virtual {p1, v0}, Landroid/net/NetworkCapabilities;->hasCapability(I)Z
@@ -7255,14 +6686,11 @@
 
     if-nez v0, :cond_0
 
-    .line 6444
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 6448
     :goto_0
     return-void
 
-    .line 6446
     :cond_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceChangePermission()V
 
@@ -7273,7 +6701,6 @@
     .locals 2
 
     .prologue
-    .line 8836
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
@@ -7284,7 +6711,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 8837
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Can only be called by system process"
@@ -7293,7 +6719,6 @@
 
     throw v0
 
-    .line 8839
     :cond_0
     return-void
 .end method
@@ -7302,7 +6727,6 @@
     .locals 3
 
     .prologue
-    .line 2303
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.ACCESS_NETWORK_STATE"
@@ -7311,7 +6735,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2306
     return-void
 .end method
 
@@ -7320,16 +6743,13 @@
     .param p1, "networkCapabilities"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 6344
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->describeFirstNonRequestableCapability()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6345
     .local v0, "badCapability":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 6346
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -7354,7 +6774,6 @@
 
     throw v1
 
-    .line 6348
     :cond_0
     return-void
 .end method
@@ -7367,10 +6786,8 @@
     .param p4, "vpnProfileName"    # Ljava/lang/String;
 
     .prologue
-    .line 5127
     const/4 v3, 0x0
 
-    .line 5128
     .local v3, "fd":Landroid/os/ParcelFileDescriptor;
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -7380,7 +6797,6 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 5129
     const-string v4, "ConnectivityService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -7409,11 +6825,9 @@
 
     move-object v4, v3
 
-    .line 5162
     :goto_0
     return-object v4
 
-    .line 5133
     :cond_0
     :try_start_0
     iget-object v4, p2, Lcom/android/internal/net/VpnConfig;->routes:Ljava/util/List;
@@ -7428,7 +6842,6 @@
 
     if-lez v4, :cond_1
 
-    .line 5134
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v4
@@ -7437,7 +6850,6 @@
 
     move-result-object v1
 
-    .line 5135
     .local v1, "callingApp":Ljava/lang/String;
     if-eqz v1, :cond_1
 
@@ -7449,40 +6861,32 @@
 
     if-eqz v4, :cond_1
 
-    .line 5136
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mEnterpriseSytemVPN:Landroid/util/SparseArray;
 
     invoke-virtual {v4, p3, p4}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 5139
     .end local v1    # "callingApp":Ljava/lang/String;
     :cond_1
     if-eqz p1, :cond_5
 
-    .line 5140
     iput-object p4, p2, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
-    .line 5141
     invoke-virtual {p1, p2}, Lcom/android/server/connectivity/EnterpriseVpn;->establish(Lcom/android/internal/net/VpnConfig;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v3
 
-    .line 5142
     if-eqz v3, :cond_4
 
-    .line 5143
     iget-boolean v4, p0, Lcom/android/server/ConnectivityService;->mIsKnoxContainerV30:Z
 
     if-nez v4, :cond_2
 
-    .line 5144
     iget v4, p0, Lcom/android/server/ConnectivityService;->numberOfConnectedProfile:I
 
     add-int/lit8 v4, v4, 0x1
 
     iput v4, p0, Lcom/android/server/ConnectivityService;->numberOfConnectedProfile:I
 
-    .line 5146
     :cond_2
     iget-object v4, p2, Lcom/android/internal/net/VpnConfig;->routes:Ljava/util/List;
 
@@ -7496,13 +6900,11 @@
 
     if-nez v4, :cond_4
 
-    .line 5147
     :cond_3
     invoke-virtual {p1}, Lcom/android/server/connectivity/EnterpriseVpn;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5148
     .local v0, "callerName":Ljava/lang/String;
     const-string v4, "com.mocana.vpn.android"
 
@@ -7512,14 +6914,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 5149
     iget-object v4, p2, Lcom/android/internal/net/VpnConfig;->dnsServers:Ljava/util/List;
 
     iget-object v5, p2, Lcom/android/internal/net/VpnConfig;->searchDomains:Ljava/util/List;
 
     invoke-direct {p0, p4, v4, v5}, Lcom/android/server/ConnectivityService;->setDnsToVpnV10(Ljava/lang/String;Ljava/util/List;Ljava/util/List;)V
 
-    .line 5153
     .end local v0    # "callerName":Ljava/lang/String;
     :cond_4
     const-string v4, "ConnectivityService"
@@ -7546,10 +6946,8 @@
 
     move-object v4, v3
 
-    .line 5154
     goto :goto_0
 
-    .line 5156
     :cond_5
     const-string v4, "ConnectivityService"
 
@@ -7559,16 +6957,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5157
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 5159
     :catch_0
     move-exception v2
 
-    .line 5160
     .local v2, "e":Ljava/lang/Exception;
     const-string v4, "ConnectivityService"
 
@@ -7598,7 +6993,6 @@
 
     move-object v4, v3
 
-    .line 5162
     goto/16 :goto_0
 .end method
 
@@ -7612,10 +7006,8 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 5166
     const/4 v1, 0x0
 
-    .line 5167
     .local v1, "fd":Landroid/os/ParcelFileDescriptor;
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -7623,7 +7015,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 5168
     const-string v3, "ConnectivityService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -7652,13 +7043,11 @@
 
     move-object v2, v1
 
-    .line 5189
     .end local v1    # "fd":Landroid/os/ParcelFileDescriptor;
     .local v2, "fd":Landroid/os/ParcelFileDescriptor;
     :goto_0
     return-object v2
 
-    .line 5172
     .end local v2    # "fd":Landroid/os/ParcelFileDescriptor;
     .restart local v1    # "fd":Landroid/os/ParcelFileDescriptor;
     :cond_0
@@ -7669,7 +7058,6 @@
 
     if-ne v3, v4, :cond_4
 
-    .line 5173
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v3, :cond_1
@@ -7680,13 +7068,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5174
     :cond_1
     iget-object v3, p2, Lcom/android/internal/net/VpnConfig;->routes:Ljava/util/List;
 
     if-eqz v3, :cond_3
 
-    .line 5175
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v3, :cond_2
@@ -7697,13 +7083,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5176
     :cond_2
     const/4 v3, 0x0
 
     iput-object v3, p2, Lcom/android/internal/net/VpnConfig;->routes:Ljava/util/List;
 
-    .line 5178
     :cond_3
     invoke-virtual {p1, p2}, Lcom/android/server/connectivity/EnterpriseVpn;->establish(Lcom/android/internal/net/VpnConfig;)Landroid/os/ParcelFileDescriptor;
 
@@ -7712,12 +7096,10 @@
     :goto_1
     move-object v2, v1
 
-    .line 5189
     .end local v1    # "fd":Landroid/os/ParcelFileDescriptor;
     .restart local v2    # "fd":Landroid/os/ParcelFileDescriptor;
     goto :goto_0
 
-    .line 5180
     .end local v2    # "fd":Landroid/os/ParcelFileDescriptor;
     .restart local v1    # "fd":Landroid/os/ParcelFileDescriptor;
     :cond_4
@@ -7731,7 +7113,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5181
     :cond_5
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -7739,7 +7120,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5182
     :try_start_1
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -7753,7 +7133,6 @@
 
     move-result-object v1
 
-    .line 5183
     monitor-exit v4
 
     goto :goto_1
@@ -7770,11 +7149,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 5186
     :catch_0
     move-exception v0
 
-    .line 5187
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "ConnectivityService"
 
@@ -7810,12 +7187,10 @@
     .param p1, "pendingIntent"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 3458
     invoke-virtual {p1}, Landroid/app/PendingIntent;->getIntent()Landroid/content/Intent;
 
     move-result-object v3
 
-    .line 3459
     .local v3, "intent":Landroid/content/Intent;
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
 
@@ -7841,7 +7216,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 3460
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/net/NetworkRequest;Lcom/android/server/ConnectivityService$NetworkRequestInfo;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -7851,7 +7225,6 @@
 
     iget-object v1, v4, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPendingIntent:Landroid/app/PendingIntent;
 
-    .line 3461
     .local v1, "existingPendingIntent":Landroid/app/PendingIntent;
     if-eqz v1, :cond_0
 
@@ -7865,14 +7238,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 3463
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 3466
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Landroid/net/NetworkRequest;Lcom/android/server/ConnectivityService$NetworkRequestInfo;>;"
     .end local v1    # "existingPendingIntent":Landroid/app/PendingIntent;
     :goto_0
@@ -7888,30 +7259,25 @@
     .locals 5
 
     .prologue
-    .line 2810
     new-instance v2, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.CLEAR_DNS_CACHE"
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2811
     .local v2, "intent":Landroid/content/Intent;
     const/high16 v3, 0x20000000
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2815
     const/high16 v3, 0x4000000
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2816
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2818
     .local v0, "ident":J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -7922,13 +7288,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2820
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2822
     return-void
 
-    .line 2820
     :catchall_0
     move-exception v3
 
@@ -7942,34 +7305,28 @@
     .param p1, "legacyType"    # I
 
     .prologue
-    .line 8613
     sparse-switch p1, :sswitch_data_0
 
-    .line 8621
     const-string v0, "default"
 
     :goto_0
     return-object v0
 
-    .line 8615
     :sswitch_0
     const-string v0, "cbs"
 
     goto :goto_0
 
-    .line 8617
     :sswitch_1
     const-string/jumbo v0, "xcap"
 
     goto :goto_0
 
-    .line 8619
     :sswitch_2
     const-string v0, "bip"
 
     goto :goto_0
 
-    .line 8613
     :sswitch_data_0
     .sparse-switch
         0xc -> :sswitch_0
@@ -7983,34 +7340,28 @@
     .param p1, "netCap"    # I
 
     .prologue
-    .line 8626
     sparse-switch p1, :sswitch_data_0
 
-    .line 8634
     const-string v0, "default"
 
     :goto_0
     return-object v0
 
-    .line 8628
     :sswitch_0
     const-string v0, "cbs"
 
     goto :goto_0
 
-    .line 8630
     :sswitch_1
     const-string/jumbo v0, "xcap"
 
     goto :goto_0
 
-    .line 8632
     :sswitch_2
     const-string v0, "bip"
 
     goto :goto_0
 
-    .line 8626
     :sswitch_data_0
     .sparse-switch
         0x5 -> :sswitch_0
@@ -8023,7 +7374,6 @@
     .locals 2
 
     .prologue
-    .line 6673
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetworkForRequestId:Landroid/util/SparseArray;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mDefaultRequest:Landroid/net/NetworkRequest;
@@ -8043,14 +7393,12 @@
     .locals 5
 
     .prologue
-    .line 4193
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnEngineInstance()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
-    .line 4194
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -8061,11 +7409,9 @@
 
     move-result-object v0
 
-    .line 4195
     .local v0, "knoxProxyInfo":Landroid/net/ProxyInfo;
     if-eqz v0, :cond_0
 
-    .line 4196
     const-string v2, "ConnectivityService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -8092,22 +7438,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4205
     .end local v0    # "knoxProxyInfo":Landroid/net/ProxyInfo;
     :goto_0
     return-object v0
 
-    .line 4202
     :cond_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mProxyLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 4203
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
-    .line 4204
     .local v1, "ret":Landroid/net/ProxyInfo;
     if-nez v1, :cond_1
 
@@ -8117,7 +7459,6 @@
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
-    .line 4205
     :cond_1
     monitor-exit v3
 
@@ -8125,7 +7466,6 @@
 
     goto :goto_0
 
-    .line 4206
     .end local v1    # "ret":Landroid/net/ProxyInfo;
     :catchall_0
     move-exception v2
@@ -8153,12 +7493,10 @@
     .end annotation
 
     .prologue
-    .line 5313
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->knoxVpnLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 5314
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -8168,7 +7506,6 @@
 
     if-lt v2, v4, :cond_1
 
-    .line 5315
     const-string/jumbo v2, "net.vpn.framework"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -8177,7 +7514,6 @@
 
     move-result-object v1
 
-    .line 5317
     .local v1, "getProperty":Ljava/lang/String;
     :try_start_1
     const-string v2, "2.0"
@@ -8188,7 +7524,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 5318
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
     move-result-object v2
@@ -8205,12 +7540,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 5327
     .end local v1    # "getProperty":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 5320
     .restart local v1    # "getProperty":Ljava/lang/String;
     :cond_0
     :try_start_3
@@ -8230,7 +7563,6 @@
 
     goto :goto_0
 
-    .line 5326
     .end local v1    # "getProperty":Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -8241,12 +7573,10 @@
 
     throw v2
 
-    .line 5322
     .restart local v1    # "getProperty":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 5323
     .local v0, "e":Ljava/lang/Exception;
     :try_start_5
     const-string v2, "ConnectivityService"
@@ -8275,7 +7605,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5326
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "getProperty":Ljava/lang/String;
     :cond_1
@@ -8283,7 +7612,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 5327
     const/4 v2, 0x0
 
     goto :goto_0
@@ -8298,7 +7626,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1409
     if-eqz p1, :cond_0
 
     invoke-direct {p0, p2, p3}, Lcom/android/server/ConnectivityService;->isNetworkWithLinkPropertiesBlocked(Landroid/net/LinkProperties;I)Z
@@ -8307,19 +7634,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 1411
     new-instance v2, Landroid/net/NetworkInfo;
 
     invoke-direct {v2, p1}, Landroid/net/NetworkInfo;-><init>(Landroid/net/NetworkInfo;)V
 
-    .line 1412
     .end local p1    # "info":Landroid/net/NetworkInfo;
     .local v2, "info":Landroid/net/NetworkInfo;
     sget-object v4, Landroid/net/NetworkInfo$DetailedState;->BLOCKED:Landroid/net/NetworkInfo$DetailedState;
 
     invoke-virtual {v2, v4, v5, v5}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1414
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -8356,7 +7680,6 @@
 
     move-object p1, v2
 
-    .line 1418
     .end local v2    # "info":Landroid/net/NetworkInfo;
     .restart local p1    # "info":Landroid/net/NetworkInfo;
     :cond_0
@@ -8366,23 +7689,19 @@
 
     if-eqz v4, :cond_1
 
-    .line 1419
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
     invoke-virtual {v4, p1}, Lcom/android/server/net/LockdownVpnTracker;->augmentNetworkInfo(Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
     move-result-object p1
 
-    .line 1420
     const-string/jumbo v4, "returning Locked NetworkInfo"
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1423
     :cond_1
     if-eqz p1, :cond_2
 
-    .line 1424
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
@@ -8393,7 +7712,6 @@
 
     move-result v1
 
-    .line 1425
     .local v1, "entType":I
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
 
@@ -8405,12 +7723,10 @@
 
     if-eq v1, v4, :cond_2
 
-    .line 1426
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->getNetworkInfoForType(I)Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 1427
     .local v0, "entInfo":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_2
 
@@ -8420,28 +7736,23 @@
 
     if-nez v4, :cond_2
 
-    .line 1428
     new-instance p1, Landroid/net/NetworkInfo;
 
     .end local p1    # "info":Landroid/net/NetworkInfo;
     invoke-direct {p1, v0}, Landroid/net/NetworkInfo;-><init>(Landroid/net/NetworkInfo;)V
 
-    .line 1429
     .restart local p1    # "info":Landroid/net/NetworkInfo;
     const/4 v3, 0x0
 
-    .line 1430
     .local v3, "networkType":I
     invoke-virtual {p1, v3}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1431
     invoke-static {v3}, Landroid/net/ConnectivityManager;->getNetworkTypeName(I)Ljava/lang/String;
 
     move-result-object v4
 
     invoke-virtual {p1, v4}, Landroid/net/NetworkInfo;->setTypeName(Ljava/lang/String;)V
 
-    .line 1436
     .end local v0    # "entInfo":Landroid/net/NetworkInfo;
     .end local v1    # "entType":I
     .end local v3    # "networkType":I
@@ -8457,26 +7768,20 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1271
     const/4 v1, 0x0
 
-    .line 1272
     .local v1, "info":Landroid/net/NetworkInfo;
     const/4 v2, 0x0
 
-    .line 1273
     .local v2, "lp":Landroid/net/LinkProperties;
     const/4 v3, 0x0
 
-    .line 1274
     .local v3, "nc":Landroid/net/NetworkCapabilities;
     const/4 v4, 0x0
 
-    .line 1275
     .local v4, "network":Landroid/net/Network;
     const/4 v5, 0x0
 
-    .line 1277
     .local v5, "subscriberId":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
@@ -8486,21 +7791,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 1278
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     invoke-virtual {v0, p1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->getNetworkForType(I)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v9
 
-    .line 1279
     .local v9, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v9, :cond_2
 
-    .line 1280
     monitor-enter v9
 
-    .line 1281
     :try_start_0
     new-instance v7, Landroid/net/NetworkInfo;
 
@@ -8510,7 +7811,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1282
     .end local v1    # "info":Landroid/net/NetworkInfo;
     .local v7, "info":Landroid/net/NetworkInfo;
     :try_start_1
@@ -8522,7 +7822,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1283
     .end local v2    # "lp":Landroid/net/LinkProperties;
     .local v8, "lp":Landroid/net/LinkProperties;
     :try_start_2
@@ -8534,13 +7833,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 1286
     .end local v3    # "nc":Landroid/net/NetworkCapabilities;
     .local v10, "nc":Landroid/net/NetworkCapabilities;
     :try_start_3
     iget-object v4, v9, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
-    .line 1287
     iget-object v0, v9, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
     if-eqz v0, :cond_1
@@ -8549,13 +7846,11 @@
 
     iget-object v5, v0, Landroid/net/NetworkMisc;->subscriberId:Ljava/lang/String;
 
-    .line 1288
     :goto_0
     monitor-exit v9
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_3
 
-    .line 1289
     invoke-virtual {v7, p1}, Landroid/net/NetworkInfo;->setType(I)V
 
     move-object v3, v10
@@ -8568,7 +7863,6 @@
     .restart local v2    # "lp":Landroid/net/LinkProperties;
     move-object v1, v7
 
-    .line 1298
     .end local v7    # "info":Landroid/net/NetworkInfo;
     .restart local v1    # "info":Landroid/net/NetworkInfo;
     :goto_1
@@ -8576,7 +7870,6 @@
 
     move-result-object v1
 
-    .line 1301
     .end local v9    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_0
     new-instance v0, Landroid/net/NetworkState;
@@ -8595,10 +7888,8 @@
     :cond_1
     move-object v5, v6
 
-    .line 1287
     goto :goto_0
 
-    .line 1288
     .end local v7    # "info":Landroid/net/NetworkInfo;
     .end local v8    # "lp":Landroid/net/LinkProperties;
     .end local v10    # "nc":Landroid/net/NetworkCapabilities;
@@ -8616,7 +7907,6 @@
 
     throw v0
 
-    .line 1291
     :cond_2
     new-instance v1, Landroid/net/NetworkInfo;
 
@@ -8631,37 +7921,31 @@
 
     invoke-direct {v1, p1, v0, v11, v12}, Landroid/net/NetworkInfo;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 1292
     .restart local v1    # "info":Landroid/net/NetworkInfo;
     sget-object v0, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     invoke-virtual {v1, v0, v6, v6}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1293
     const/4 v0, 0x1
 
     invoke-virtual {v1, v0}, Landroid/net/NetworkInfo;->setIsAvailable(Z)V
 
-    .line 1294
     new-instance v2, Landroid/net/LinkProperties;
 
     .end local v2    # "lp":Landroid/net/LinkProperties;
     invoke-direct {v2}, Landroid/net/LinkProperties;-><init>()V
 
-    .line 1295
     .restart local v2    # "lp":Landroid/net/LinkProperties;
     new-instance v3, Landroid/net/NetworkCapabilities;
 
     .end local v3    # "nc":Landroid/net/NetworkCapabilities;
     invoke-direct {v3}, Landroid/net/NetworkCapabilities;-><init>()V
 
-    .line 1296
     .restart local v3    # "nc":Landroid/net/NetworkCapabilities;
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 1288
     .end local v1    # "info":Landroid/net/NetworkInfo;
     .restart local v7    # "info":Landroid/net/NetworkInfo;
     :catchall_1
@@ -8718,7 +8002,6 @@
     .locals 3
 
     .prologue
-    .line 8770
     :try_start_0
     const-string/jumbo v2, "network_management"
 
@@ -8732,19 +8015,15 @@
 
     move-result-object v1
 
-    .line 8774
     :goto_0
     return-object v1
 
-    .line 8772
     :catch_0
     move-exception v0
 
-    .line 8773
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     invoke-virtual {v0}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
 
-    .line 8774
     const/4 v1, 0x0
 
     goto :goto_0
@@ -8754,12 +8033,10 @@
     .locals 1
 
     .prologue
-    .line 4732
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     if-nez v0, :cond_0
 
-    .line 4733
     const-string/jumbo v0, "knox_vpn_policy"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -8770,7 +8047,6 @@
 
     iput-object v0, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
-    .line 4736
     :cond_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
@@ -8781,12 +8057,10 @@
     .locals 1
 
     .prologue
-    .line 713
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/ConnectivityService;->KNOXVPN_FEATURE:I
 
-    .line 715
     iget v0, p0, Lcom/android/server/ConnectivityService;->KNOXVPN_FEATURE:I
 
     return v0
@@ -8796,7 +8070,6 @@
     .locals 3
 
     .prologue
-    .line 6744
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v1
@@ -8805,19 +8078,16 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 6745
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnPolicy:Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
     if-nez v1, :cond_0
 
-    .line 6746
     const-string/jumbo v1, "knox_vpn_policy"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 6748
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
@@ -8825,7 +8095,6 @@
 
     iput-object v1, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnPolicy:Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
-    .line 6751
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnPolicy:Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
@@ -8838,22 +8107,18 @@
     .param p1, "link"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 6767
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 6768
     :try_start_0
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6769
     .local v0, "interfaceName":Ljava/lang/String;
     const/4 v1, -0x1
 
-    .line 6770
     .local v1, "netId":I
     if-eqz v0, :cond_0
 
@@ -8863,7 +8128,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 6771
     :cond_0
     new-instance v3, Ljava/lang/IllegalStateException;
 
@@ -8873,7 +8137,6 @@
 
     throw v3
 
-    .line 6790
     .end local v0    # "interfaceName":Ljava/lang/String;
     .end local v1    # "netId":I
     :catchall_0
@@ -8885,7 +8148,6 @@
 
     throw v3
 
-    .line 6773
     .restart local v0    # "interfaceName":Ljava/lang/String;
     .restart local v1    # "netId":I
     :cond_1
@@ -8898,10 +8160,8 @@
 
     if-nez v3, :cond_3
 
-    .line 6774
     const/16 v1, 0x64
 
-    .line 6779
     :goto_0
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
@@ -8939,7 +8199,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6787
     :cond_2
     const/16 v3, 0x64
 
@@ -8949,12 +8208,10 @@
 
     if-gt v1, v3, :cond_4
 
-    .line 6788
     monitor-exit v4
 
     return v1
 
-    .line 6776
     :cond_3
     const/4 v3, 0x3
 
@@ -8966,7 +8223,6 @@
 
     move-result v2
 
-    .line 6777
     .local v2, "passedinterfaceID":I
     const/4 v3, 0x3
 
@@ -8982,14 +8238,12 @@
 
     goto :goto_0
 
-    .line 6790
     .end local v2    # "passedinterfaceID":I
     :cond_4
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6791
     new-instance v3, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v4, "netId allocation failed due to unknown reason"
@@ -9004,20 +8258,16 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1483
     const/4 v4, 0x0
 
-    .line 1484
     .local v4, "vpnNetId":I
     const/4 v1, 0x0
 
-    .line 1485
     .local v1, "interfaceName":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->knoxVpnLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 1486
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
@@ -9025,14 +8275,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 1487
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 1489
     .local v2, "token":J
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
@@ -9046,11 +8294,9 @@
 
     move-result-object v1
 
-    .line 1493
     :try_start_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1496
     .end local v2    # "token":J
     :cond_0
     :goto_0
@@ -9058,10 +8304,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1497
     if-eqz v1, :cond_1
 
-    .line 1499
     :try_start_3
     invoke-virtual {p0, v1}, Lcom/android/server/ConnectivityService;->getNetIdForInterface(Ljava/lang/String;)I
     :try_end_3
@@ -9069,17 +8313,14 @@
 
     move-result v4
 
-    .line 1504
     :cond_1
     :goto_1
     return v4
 
-    .line 1490
     .restart local v2    # "token":J
     :catch_0
     move-exception v0
 
-    .line 1491
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_4
     const-string v5, "ConnectivityService"
@@ -9106,13 +8347,11 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 1493
     :try_start_5
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 1496
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v2    # "token":J
     :catchall_0
@@ -9124,7 +8363,6 @@
 
     throw v5
 
-    .line 1493
     .restart local v2    # "token":J
     :catchall_1
     move-exception v5
@@ -9136,12 +8374,10 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 1500
     .end local v2    # "token":J
     :catch_1
     move-exception v0
 
-    .line 1501
     .local v0, "e":Ljava/lang/IllegalStateException;
     const-string v5, "ConnectivityService"
 
@@ -9173,23 +8409,18 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 1305
     if-nez p1, :cond_0
 
-    .line 1306
     const/4 v0, 0x0
 
-    .line 1309
     :goto_0
     return-object v0
 
-    .line 1308
     :cond_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v1
 
-    .line 1309
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
@@ -9205,7 +8436,6 @@
 
     goto :goto_0
 
-    .line 1310
     :catchall_0
     move-exception v0
 
@@ -9221,19 +8451,15 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 1727
     if-eqz p1, :cond_1
 
-    .line 1728
     monitor-enter p1
 
-    .line 1729
     :try_start_0
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     if-eqz v0, :cond_0
 
-    .line 1730
     new-instance v0, Landroid/net/NetworkCapabilities;
 
     iget-object v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
@@ -9242,21 +8468,17 @@
 
     monitor-exit p1
 
-    .line 1734
     :goto_0
     return-object v0
 
-    .line 1732
     :cond_0
     monitor-exit p1
 
-    .line 1734
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1732
     :catchall_0
     move-exception v0
 
@@ -9274,7 +8496,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 8294
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     invoke-virtual {v3, p1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->isTypeSupported(I)Z
@@ -9285,12 +8506,10 @@
 
     move-object v1, v2
 
-    .line 8309
     :cond_0
     :goto_0
     return-object v1
 
-    .line 8297
     :cond_1
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
@@ -9298,24 +8517,20 @@
 
     move-result-object v0
 
-    .line 8298
     .local v0, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v0, :cond_2
 
-    .line 8299
     new-instance v1, Landroid/net/NetworkInfo;
 
     iget-object v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-direct {v1, v2}, Landroid/net/NetworkInfo;-><init>(Landroid/net/NetworkInfo;)V
 
-    .line 8300
     .local v1, "result":Landroid/net/NetworkInfo;
     invoke-virtual {v1, p1}, Landroid/net/NetworkInfo;->setType(I)V
 
     goto :goto_0
 
-    .line 8303
     .end local v1    # "result":Landroid/net/NetworkInfo;
     :cond_2
     new-instance v1, Landroid/net/NetworkInfo;
@@ -9330,18 +8545,15 @@
 
     invoke-direct {v1, p1, v3, v4, v5}, Landroid/net/NetworkInfo;-><init>(IILjava/lang/String;Ljava/lang/String;)V
 
-    .line 8305
     .restart local v1    # "result":Landroid/net/NetworkInfo;
     sget-object v3, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     invoke-virtual {v1, v3, v2, v2}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8306
     const/16 v2, 0xd
 
     if-eq p1, v2, :cond_0
 
-    .line 8307
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/net/NetworkInfo;->setIsAvailable(Z)V
@@ -9354,34 +8566,28 @@
     .param p1, "netCap"    # I
 
     .prologue
-    .line 8600
     sparse-switch p1, :sswitch_data_0
 
-    .line 8608
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 8602
     :sswitch_0
     const/16 v0, 0xc
 
     goto :goto_0
 
-    .line 8604
     :sswitch_1
     const/16 v0, 0x1b
 
     goto :goto_0
 
-    .line 8606
     :sswitch_2
     const/16 v0, 0x17
 
     goto :goto_0
 
-    .line 8600
     :sswitch_data_0
     .sparse-switch
         0x5 -> :sswitch_0
@@ -9395,10 +8601,8 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 5715
     const/4 v2, 0x0
 
-    .line 5717
     .local v2, "packageName":Ljava/lang/String;
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
@@ -9409,7 +8613,6 @@
 
     if-lt v3, v4, :cond_0
 
-    .line 5718
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -9420,16 +8623,13 @@
 
     move-result-object v1
 
-    .line 5719
     .local v1, "packageList":[Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 5720
     const/4 v3, 0x0
 
     aget-object v2, v1, v3
 
-    .line 5721
     const-string v3, "ConnectivityService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -9454,17 +8654,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 5727
     .end local v1    # "packageList":[Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v2
 
-    .line 5724
     :catch_0
     move-exception v0
 
-    .line 5725
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "ConnectivityService"
 
@@ -9509,12 +8706,10 @@
     .end annotation
 
     .prologue
-    .line 5331
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->knoxVpnLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 5332
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -9524,7 +8719,6 @@
 
     if-lt v2, v4, :cond_1
 
-    .line 5333
     const-string/jumbo v2, "net.vpn.framework"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -9533,7 +8727,6 @@
 
     move-result-object v1
 
-    .line 5335
     .local v1, "getProperty":Ljava/lang/String;
     :try_start_1
     const-string v2, "2.0"
@@ -9544,7 +8737,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 5336
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
     move-result-object v2
@@ -9565,12 +8757,10 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 5345
     .end local v1    # "getProperty":Ljava/lang/String;
     :goto_0
     return-object v2
 
-    .line 5338
     .restart local v1    # "getProperty":Ljava/lang/String;
     :cond_0
     :try_start_3
@@ -9594,7 +8784,6 @@
 
     goto :goto_0
 
-    .line 5344
     .end local v1    # "getProperty":Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -9605,12 +8794,10 @@
 
     throw v2
 
-    .line 5340
     .restart local v1    # "getProperty":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 5341
     .local v0, "e":Ljava/lang/Exception;
     :try_start_5
     const-string v2, "ConnectivityService"
@@ -9639,7 +8826,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5344
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "getProperty":Ljava/lang/String;
     :cond_1
@@ -9647,7 +8833,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 5345
     const/4 v2, 0x0
 
     goto :goto_0
@@ -9659,14 +8844,11 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 6027
     const/4 v3, 0x0
 
-    .line 6028
     .local v3, "fileReader":Ljava/io/FileReader;
     const/4 v7, 0x0
 
-    .line 6029
     .local v7, "parser":Lorg/xmlpull/v1/XmlPullParser;
     iget-object v9, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -9678,7 +8860,6 @@
 
     move-result-object v0
 
-    .line 6032
     .local v0, "config":Landroid/content/res/Configuration;
     :try_start_0
     new-instance v4, Ljava/io/FileReader;
@@ -9692,7 +8873,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6033
     .end local v3    # "fileReader":Ljava/io/FileReader;
     .local v4, "fileReader":Ljava/io/FileReader;
     :try_start_1
@@ -9700,20 +8880,16 @@
 
     move-result-object v7
 
-    .line 6034
     invoke-interface {v7, v4}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 6035
     const-string/jumbo v9, "provisioningUrls"
 
     invoke-static {v7, v9}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 6038
     :cond_0
     :goto_0
     invoke-static {v7}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 6040
     invoke-interface {v7}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
@@ -9723,14 +8899,11 @@
 
     move-result-object v2
 
-    .line 6041
     .local v2, "element":Ljava/lang/String;
     if-nez v2, :cond_3
 
-    .line 6068
     if-eqz v4, :cond_1
 
-    .line 6070
     :try_start_2
     invoke-virtual {v4}, Ljava/io/FileReader;->close()V
     :try_end_2
@@ -9740,7 +8913,6 @@
     :goto_1
     move-object v3, v4
 
-    .line 6074
     .end local v2    # "element":Ljava/lang/String;
     .end local v4    # "fileReader":Ljava/io/FileReader;
     .restart local v3    # "fileReader":Ljava/io/FileReader;
@@ -9748,7 +8920,6 @@
     :goto_2
     return-object v8
 
-    .line 6043
     .end local v3    # "fileReader":Ljava/io/FileReader;
     .restart local v2    # "element":Ljava/lang/String;
     .restart local v4    # "fileReader":Ljava/io/FileReader;
@@ -9762,7 +8933,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 6044
     const/4 v9, 0x0
 
     const-string/jumbo v10, "mcc"
@@ -9776,7 +8946,6 @@
 
     move-result-object v5
 
-    .line 6046
     .local v5, "mcc":Ljava/lang/String;
     if-eqz v5, :cond_0
 
@@ -9789,7 +8958,6 @@
 
     if-ne v9, v10, :cond_0
 
-    .line 6047
     const/4 v9, 0x0
 
     const-string/jumbo v10, "mnc"
@@ -9798,7 +8966,6 @@
 
     move-result-object v6
 
-    .line 6048
     .local v6, "mnc":Ljava/lang/String;
     if-eqz v6, :cond_0
 
@@ -9810,10 +8977,8 @@
 
     if-ne v9, v10, :cond_0
 
-    .line 6049
     invoke-interface {v7}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 6050
     invoke-interface {v7}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v9
@@ -9822,7 +8987,6 @@
 
     if-ne v9, v10, :cond_0
 
-    .line 6051
     invoke-interface {v7}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
     :try_end_4
     .catch Ljava/lang/NumberFormatException; {:try_start_4 .. :try_end_4} :catch_0
@@ -9833,10 +8997,8 @@
 
     move-result-object v8
 
-    .line 6068
     if-eqz v4, :cond_4
 
-    .line 6070
     :try_start_5
     invoke-virtual {v4}, Ljava/io/FileReader;->close()V
     :try_end_5
@@ -9846,19 +9008,16 @@
     :goto_3
     move-object v3, v4
 
-    .line 6071
     .end local v4    # "fileReader":Ljava/io/FileReader;
     .restart local v3    # "fileReader":Ljava/io/FileReader;
     goto :goto_2
 
-    .line 6055
     .end local v3    # "fileReader":Ljava/io/FileReader;
     .end local v6    # "mnc":Ljava/lang/String;
     .restart local v4    # "fileReader":Ljava/io/FileReader;
     :catch_0
     move-exception v1
 
-    .line 6056
     .local v1, "e":Ljava/lang/NumberFormatException;
     :try_start_6
     new-instance v9, Ljava/lang/StringBuilder;
@@ -9888,7 +9047,6 @@
 
     goto :goto_0
 
-    .line 6061
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     .end local v2    # "element":Ljava/lang/String;
     .end local v5    # "mcc":Ljava/lang/String;
@@ -9897,7 +9055,6 @@
 
     move-object v3, v4
 
-    .line 6062
     .end local v4    # "fileReader":Ljava/io/FileReader;
     .local v1, "e":Ljava/io/FileNotFoundException;
     .restart local v3    # "fileReader":Ljava/io/FileReader;
@@ -9909,10 +9066,8 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 6068
     if-eqz v3, :cond_2
 
-    .line 6070
     :try_start_8
     invoke-virtual {v3}, Ljava/io/FileReader;->close()V
     :try_end_8
@@ -9920,18 +9075,15 @@
 
     goto :goto_2
 
-    .line 6071
     :catch_2
     move-exception v9
 
     goto :goto_2
 
-    .line 6063
     .end local v1    # "e":Ljava/io/FileNotFoundException;
     :catch_3
     move-exception v1
 
-    .line 6064
     .local v1, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :goto_5
     :try_start_9
@@ -9957,10 +9109,8 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_0
 
-    .line 6068
     if-eqz v3, :cond_2
 
-    .line 6070
     :try_start_a
     invoke-virtual {v3}, Ljava/io/FileReader;->close()V
     :try_end_a
@@ -9968,18 +9118,15 @@
 
     goto/16 :goto_2
 
-    .line 6071
     :catch_4
     move-exception v9
 
     goto/16 :goto_2
 
-    .line 6065
     .end local v1    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_5
     move-exception v1
 
-    .line 6066
     .local v1, "e":Ljava/io/IOException;
     :goto_6
     :try_start_b
@@ -10005,10 +9152,8 @@
     :try_end_b
     .catchall {:try_start_b .. :try_end_b} :catchall_0
 
-    .line 6068
     if-eqz v3, :cond_2
 
-    .line 6070
     :try_start_c
     invoke-virtual {v3}, Ljava/io/FileReader;->close()V
     :try_end_c
@@ -10016,13 +9161,11 @@
 
     goto/16 :goto_2
 
-    .line 6071
     :catch_6
     move-exception v9
 
     goto/16 :goto_2
 
-    .line 6068
     .end local v1    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v8
@@ -10030,13 +9173,11 @@
     :goto_7
     if-eqz v3, :cond_5
 
-    .line 6070
     :try_start_d
     invoke-virtual {v3}, Ljava/io/FileReader;->close()V
     :try_end_d
     .catch Ljava/io/IOException; {:try_start_d .. :try_end_d} :catch_9
 
-    .line 6071
     :cond_5
     :goto_8
     throw v8
@@ -10066,7 +9207,6 @@
 
     goto :goto_8
 
-    .line 6068
     .end local v3    # "fileReader":Ljava/io/FileReader;
     .restart local v4    # "fileReader":Ljava/io/FileReader;
     :catchall_1
@@ -10078,7 +9218,6 @@
     .restart local v3    # "fileReader":Ljava/io/FileReader;
     goto :goto_7
 
-    .line 6065
     .end local v3    # "fileReader":Ljava/io/FileReader;
     .restart local v4    # "fileReader":Ljava/io/FileReader;
     :catch_a
@@ -10090,7 +9229,6 @@
     .restart local v3    # "fileReader":Ljava/io/FileReader;
     goto :goto_6
 
-    .line 6063
     .end local v3    # "fileReader":Ljava/io/FileReader;
     .restart local v4    # "fileReader":Ljava/io/FileReader;
     :catch_b
@@ -10102,7 +9240,6 @@
     .restart local v3    # "fileReader":Ljava/io/FileReader;
     goto :goto_5
 
-    .line 6061
     :catch_c
     move-exception v1
 
@@ -10125,16 +9262,13 @@
     .end annotation
 
     .prologue
-    .line 6351
     new-instance v2, Ljava/util/TreeSet;
 
     invoke-direct {v2}, Ljava/util/TreeSet;-><init>()V
 
-    .line 6352
     .local v2, "thresholds":Ljava/util/SortedSet;, "Ljava/util/SortedSet<Ljava/lang/Integer;>;"
     monitor-enter p1
 
-    .line 6353
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
 
@@ -10161,7 +9295,6 @@
 
     check-cast v1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 6354
     .local v1, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     iget-object v3, v1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
@@ -10181,7 +9314,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 6356
     iget-object v3, v1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     iget-object v3, v3, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
@@ -10198,7 +9330,6 @@
 
     goto :goto_0
 
-    .line 6359
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     :catchall_0
@@ -10217,7 +9348,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6360
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3, v2}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
@@ -10232,47 +9362,37 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1327
     const/4 v1, 0x0
 
-    .line 1328
     .local v1, "info":Landroid/net/NetworkInfo;
     const/4 v2, 0x0
 
-    .line 1329
     .local v2, "lp":Landroid/net/LinkProperties;
     const/4 v3, 0x0
 
-    .line 1330
     .local v3, "nc":Landroid/net/NetworkCapabilities;
     const/4 v4, 0x0
 
-    .line 1331
     .local v4, "network":Landroid/net/Network;
     const/4 v5, 0x0
 
-    .line 1333
     .local v5, "subscriberId":Ljava/lang/String;
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v9
 
-    .line 1335
     .local v9, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getVpnUnderlyingNetworks(I)[Landroid/net/Network;
 
     move-result-object v11
 
-    .line 1336
     .local v11, "networks":[Landroid/net/Network;
     if-eqz v11, :cond_0
 
-    .line 1342
     array-length v0, v11
 
     if-lez v0, :cond_2
 
-    .line 1343
     const/4 v0, 0x0
 
     aget-object v0, v11, v0
@@ -10281,15 +9401,12 @@
 
     move-result-object v9
 
-    .line 1349
     :cond_0
     :goto_0
     if-eqz v9, :cond_1
 
-    .line 1350
     monitor-enter v9
 
-    .line 1351
     :try_start_0
     new-instance v7, Landroid/net/NetworkInfo;
 
@@ -10299,7 +9416,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1352
     .end local v1    # "info":Landroid/net/NetworkInfo;
     .local v7, "info":Landroid/net/NetworkInfo;
     :try_start_1
@@ -10311,7 +9427,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1353
     .end local v2    # "lp":Landroid/net/LinkProperties;
     .local v8, "lp":Landroid/net/LinkProperties;
     :try_start_2
@@ -10323,13 +9438,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 1356
     .end local v3    # "nc":Landroid/net/NetworkCapabilities;
     .local v10, "nc":Landroid/net/NetworkCapabilities;
     :try_start_3
     iget-object v4, v9, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
-    .line 1357
     iget-object v0, v9, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
     if-eqz v0, :cond_3
@@ -10338,7 +9451,6 @@
 
     iget-object v5, v0, Landroid/net/NetworkMisc;->subscriberId:Ljava/lang/String;
 
-    .line 1358
     :goto_1
     monitor-exit v9
     :try_end_3
@@ -10354,7 +9466,6 @@
     .restart local v2    # "lp":Landroid/net/LinkProperties;
     move-object v1, v7
 
-    .line 1361
     .end local v7    # "info":Landroid/net/NetworkInfo;
     .restart local v1    # "info":Landroid/net/NetworkInfo;
     :cond_1
@@ -10364,7 +9475,6 @@
 
     return-object v0
 
-    .line 1345
     :cond_2
     const/4 v9, 0x0
 
@@ -10379,10 +9489,8 @@
     :cond_3
     move-object v5, v6
 
-    .line 1357
     goto :goto_1
 
-    .line 1358
     .end local v7    # "info":Landroid/net/NetworkInfo;
     .end local v8    # "lp":Landroid/net/LinkProperties;
     .end local v10    # "nc":Landroid/net/NetworkCapabilities;
@@ -10456,7 +9564,6 @@
     .locals 3
 
     .prologue
-    .line 5208
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v1
@@ -10465,23 +9572,19 @@
 
     if-lt v1, v2, :cond_1
 
-    .line 5209
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpnPolicy:Lcom/sec/enterprise/knox/vpn/IEnterprisePremiumVpnPolicy;
 
     if-nez v1, :cond_1
 
-    .line 5210
     const-string v1, "enterprise_premium_vpn_policy"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 5212
     .local v0, "b":Landroid/os/IBinder;
     if-nez v0, :cond_0
 
-    .line 5213
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "VPN policy service is not available"
@@ -10490,7 +9593,6 @@
 
     throw v1
 
-    .line 5215
     :cond_0
     invoke-static {v0}, Lcom/sec/enterprise/knox/vpn/IEnterprisePremiumVpnPolicy$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/enterprise/knox/vpn/IEnterprisePremiumVpnPolicy;
 
@@ -10498,7 +9600,6 @@
 
     iput-object v1, p0, Lcom/android/server/ConnectivityService;->mVpnPolicy:Lcom/sec/enterprise/knox/vpn/IEnterprisePremiumVpnPolicy;
 
-    .line 5218
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_1
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpnPolicy:Lcom/sec/enterprise/knox/vpn/IEnterprisePremiumVpnPolicy;
@@ -10511,23 +9612,19 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1314
     iget-boolean v2, p0, Lcom/android/server/ConnectivityService;->mLockdownEnabled:Z
 
     if-nez v2, :cond_1
 
-    .line 1315
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v0
 
-    .line 1316
     .local v0, "user":I
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 1317
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -10537,7 +9634,6 @@
 
     check-cast v1, Lcom/android/server/connectivity/Vpn;
 
-    .line 1318
     .local v1, "vpn":Lcom/android/server/connectivity/Vpn;
     if-eqz v1, :cond_0
 
@@ -10547,26 +9643,22 @@
 
     if-eqz v2, :cond_0
 
-    .line 1319
     invoke-virtual {v1}, Lcom/android/server/connectivity/Vpn;->getUnderlyingNetworks()[Landroid/net/Network;
 
     move-result-object v2
 
     monitor-exit v3
 
-    .line 1323
     .end local v0    # "user":I
     .end local v1    # "vpn":Lcom/android/server/connectivity/Vpn;
     :goto_0
     return-object v2
 
-    .line 1321
     .restart local v0    # "user":I
     .restart local v1    # "vpn":Lcom/android/server/connectivity/Vpn;
     :cond_0
     monitor-exit v3
 
-    .line 1323
     .end local v0    # "user":I
     .end local v1    # "vpn":Lcom/android/server/connectivity/Vpn;
     :cond_1
@@ -10574,7 +9666,6 @@
 
     goto :goto_0
 
-    .line 1321
     .restart local v0    # "user":I
     :catchall_0
     move-exception v2
@@ -10592,7 +9683,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 8744
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->getNetworkInfoForType(I)Landroid/net/NetworkInfo;
 
     move-result-object v1
@@ -10605,7 +9695,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 8745
     .local v0, "mIsWifiConnected":Z
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -10628,10 +9717,8 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8754
     return v0
 
-    .line 8744
     .end local v0    # "mIsWifiConnected":Z
     :cond_0
     const/4 v0, 0x0
@@ -10643,10 +9730,8 @@
     .locals 9
 
     .prologue
-    .line 8917
     const/4 v0, 0x0
 
-    .line 8919
     .local v0, "result":Landroid/net/ProxyInfo;
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -10658,32 +9743,26 @@
 
     check-cast v5, Landroid/net/wifi/WifiManager;
 
-    .line 8920
     .local v5, "wifiManager":Landroid/net/wifi/WifiManager;
     if-eqz v5, :cond_1
 
-    .line 8921
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 8923
     .local v2, "token":J
     :try_start_0
     invoke-virtual {v5}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v4
 
-    .line 8924
     .local v4, "wifiInfo":Landroid/net/wifi/WifiInfo;
     if-eqz v4, :cond_0
 
-    .line 8925
     invoke-virtual {v4}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 8926
     .local v1, "ssid":Ljava/lang/String;
     const-string/jumbo v7, "wifi_policy"
 
@@ -10693,7 +9772,6 @@
 
     check-cast v6, Lcom/android/server/enterprise/wifi/WifiPolicy;
 
-    .line 8928
     .local v6, "wifiPolicyService":Lcom/android/server/enterprise/wifi/WifiPolicy;
     if-eqz v6, :cond_0
 
@@ -10703,26 +9781,22 @@
 
     if-eqz v7, :cond_0
 
-    .line 8929
     invoke-virtual {v6, v1}, Lcom/android/server/enterprise/wifi/WifiPolicy;->retrieveEnterpriseProxy(Ljava/lang/String;)Landroid/net/ProxyInfo;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 8933
     .end local v1    # "ssid":Ljava/lang/String;
     .end local v6    # "wifiPolicyService":Lcom/android/server/enterprise/wifi/WifiPolicy;
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8936
     .end local v2    # "token":J
     .end local v4    # "wifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_1
     return-object v0
 
-    .line 8933
     .restart local v2    # "token":J
     :catchall_0
     move-exception v7
@@ -10737,7 +9811,6 @@
     .param p1, "proxy"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 4420
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/net/ProxyInfo;->getHost()Ljava/lang/String;
@@ -10762,10 +9835,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 4422
     const/4 p1, 0x0
 
-    .line 4424
     :cond_0
     const-string v0, "SBM"
 
@@ -10783,16 +9854,13 @@
 
     if-nez v0, :cond_1
 
-    .line 4425
     const/4 p1, 0x0
 
-    .line 4427
     :cond_1
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mProxyLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 4428
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
@@ -10808,11 +9876,9 @@
 
     monitor-exit v1
 
-    .line 4463
     :goto_0
     return-void
 
-    .line 4429
     :cond_2
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
@@ -10822,7 +9888,6 @@
 
     goto :goto_0
 
-    .line 4462
     :catchall_0
     move-exception v0
 
@@ -10832,7 +9897,6 @@
 
     throw v0
 
-    .line 4430
     :cond_3
     if-eqz p1, :cond_4
 
@@ -10843,7 +9907,6 @@
 
     if-nez v0, :cond_4
 
-    .line 4431
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -10868,12 +9931,10 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 4432
     monitor-exit v1
 
     goto :goto_0
 
-    .line 4440
     :cond_4
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
@@ -10909,20 +9970,16 @@
 
     if-eqz v0, :cond_5
 
-    .line 4443
     iput-object p1, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
-    .line 4444
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyInfo;)V
 
-    .line 4445
     monitor-exit v1
 
     goto :goto_0
 
-    .line 4451
     :cond_5
     if-eqz p1, :cond_6
 
@@ -10936,16 +9993,13 @@
 
     if-eqz v0, :cond_6
 
-    .line 4452
     const/4 v0, 0x2
 
     invoke-virtual {p1, v0}, Landroid/net/ProxyInfo;->setEnterpriseProxy(I)V
 
-    .line 4456
     :cond_6
     iput-object p1, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
-    .line 4458
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     if-eqz v0, :cond_7
@@ -10954,16 +10008,13 @@
 
     goto :goto_0
 
-    .line 4459
     :cond_7
     iget-boolean v0, p0, Lcom/android/server/ConnectivityService;->mDefaultProxyDisabled:Z
 
     if-nez v0, :cond_8
 
-    .line 4460
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyInfo;)V
 
-    .line 4462
     :cond_8
     monitor-exit v1
     :try_end_1
@@ -10977,7 +10028,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 3328
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
@@ -10992,11 +10042,9 @@
 
     check-cast v12, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 3329
     .local v12, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v12, :cond_9
 
-    .line 3331
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -11031,7 +10079,6 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3362
     iget-object v1, v12, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnected()Z
@@ -11040,7 +10087,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3363
     iget-object v1, v12, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     sget-object v2, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
@@ -11051,7 +10097,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3366
     :cond_0
     move-object/from16 v0, p0
 
@@ -11059,29 +10104,24 @@
 
     move-result v16
 
-    .line 3367
     .local v16, "wasDefault":Z
     if-eqz v16, :cond_1
 
-    .line 3368
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
 
     iput v1, v0, Lcom/android/server/ConnectivityService;->mDefaultInetConditionPublished:I
 
-    .line 3370
     :cond_1
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->notifyIfacesChanged()V
 
-    .line 3375
     const v1, 0x80004
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v12, v1}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 3376
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mKeepaliveTracker:Lcom/android/server/connectivity/KeepaliveTracker;
@@ -11090,14 +10130,12 @@
 
     invoke-virtual {v1, v12, v2}, Lcom/android/server/connectivity/KeepaliveTracker;->handleStopAllKeepalives(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 3378
     iget-object v1, v12, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v2, 0x82007
 
     invoke-virtual {v1, v2}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(I)V
 
-    .line 3379
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
@@ -11108,7 +10146,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3380
     const/4 v1, 0x0
 
     iget-object v2, v12, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
@@ -11117,14 +10154,12 @@
 
     invoke-direct {v0, v1, v2, v12}, Lcom/android/server/ConnectivityService;->updateClat(Landroid/net/LinkProperties;Landroid/net/LinkProperties;Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 3389
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 3392
     :try_start_0
     move-object/from16 v0, p0
 
@@ -11136,12 +10171,10 @@
 
     invoke-virtual {v1, v3}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 3393
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3395
     const/4 v11, 0x0
 
     .local v11, "i":I
@@ -11154,7 +10187,6 @@
 
     if-ge v11, v1, :cond_3
 
-    .line 3396
     iget-object v1, v12, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v11}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -11163,7 +10195,6 @@
 
     check-cast v15, Landroid/net/NetworkRequest;
 
-    .line 3397
     .local v15, "request":Landroid/net/NetworkRequest;
     move-object/from16 v0, p0
 
@@ -11177,7 +10208,6 @@
 
     check-cast v9, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 3398
     .local v9, "currentNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v9, :cond_2
 
@@ -11191,7 +10221,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 3399
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mNetworkForRequestId:Landroid/util/SparseArray;
@@ -11200,20 +10229,17 @@
 
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 3400
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15, v1}, Lcom/android/server/ConnectivityService;->sendUpdatedScoreToFactories(Landroid/net/NetworkRequest;I)V
 
-    .line 3395
     :cond_2
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    .line 3393
     .end local v9    # "currentNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v11    # "i":I
     .end local v15    # "request":Landroid/net/NetworkRequest;
@@ -11227,7 +10253,6 @@
 
     throw v1
 
-    .line 3403
     .restart local v11    # "i":I
     :cond_3
     iget-object v1, v12, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
@@ -11244,12 +10269,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 3404
     move-object/from16 v0, p0
 
     invoke-direct {v0, v12}, Lcom/android/server/ConnectivityService;->removeDataActivityTracking(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 3406
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
@@ -11260,12 +10283,10 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->onActiveNetworkChanged(ILandroid/net/LinkProperties;)V
 
-    .line 3409
     move-object/from16 v0, p0
 
     invoke-direct {v0, v12}, Lcom/android/server/ConnectivityService;->notifyLockdownVpn(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 3410
     invoke-virtual {v12}, Lcom/android/server/connectivity/NetworkAgentInfo;->name()Ljava/lang/String;
 
     move-result-object v1
@@ -11274,7 +10295,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/ConnectivityService;->requestNetworkTransitionWakelock(Ljava/lang/String;)V
 
-    .line 3412
     :cond_4
     move-object/from16 v0, p0
 
@@ -11284,7 +10304,6 @@
 
     invoke-virtual {v1, v12, v0}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->remove(Lcom/android/server/connectivity/NetworkAgentInfo;Z)V
 
-    .line 3413
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -11293,7 +10312,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/ConnectivityService;->rematchAllNetworksAndRequests(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 3414
     iget-boolean v1, v12, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
     if-nez v1, :cond_5
@@ -11308,7 +10326,6 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 3426
     :cond_5
     :try_start_2
     move-object/from16 v0, p0
@@ -11323,7 +10340,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 3430
     :goto_1
     const/4 v2, 0x0
 
@@ -11345,7 +10361,6 @@
 
     invoke-direct/range {v1 .. v8}, Lcom/android/server/ConnectivityService;->setProvNotificationVisibleIntent(ZILcom/android/server/ConnectivityService$NotificationType;ILjava/lang/String;Landroid/app/PendingIntent;Z)V
 
-    .line 3432
     :cond_6
     move-object/from16 v0, p0
 
@@ -11353,7 +10368,6 @@
 
     monitor-enter v2
 
-    .line 3433
     :try_start_3
     move-object/from16 v0, p0
 
@@ -11365,12 +10379,10 @@
 
     invoke-virtual {v1, v3}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 3434
     monitor-exit v2
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 3436
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v1
@@ -11397,14 +10409,12 @@
 
     if-eqz v1, :cond_7
 
-    .line 3440
     const-string v1, "ConnectivityService"
 
     const-string/jumbo v2, "handleAsyncChannelDisconnected() update default network"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3441
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -11415,13 +10425,11 @@
 
     move-result-object v13
 
-    .line 3442
     .local v13, "naiWIFI":Lcom/android/server/connectivity/NetworkAgentInfo;
     move-object/from16 v0, p0
 
     invoke-direct {v0, v13}, Lcom/android/server/ConnectivityService;->makeDefault(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 3445
     .end local v13    # "naiWIFI":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_7
     const-string v1, "ConnectivityService"
@@ -11430,25 +10438,21 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3446
     iget-object v1, v12, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-virtual {v1}, Lcom/android/server/connectivity/NetworkMonitor;->doQuit()V
 
-    .line 3452
     .end local v11    # "i":I
     .end local v16    # "wasDefault":Z
     :cond_8
     :goto_2
     return-void
 
-    .line 3427
     .restart local v11    # "i":I
     .restart local v16    # "wasDefault":Z
     :catch_0
     move-exception v10
 
-    .line 3428
     .local v10, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -11472,7 +10476,6 @@
 
     goto :goto_1
 
-    .line 3434
     .end local v10    # "e":Ljava/lang/Exception;
     :catchall_1
     move-exception v1
@@ -11484,7 +10487,6 @@
 
     throw v1
 
-    .line 3449
     .end local v11    # "i":I
     .end local v16    # "wasDefault":Z
     :cond_9
@@ -11502,7 +10504,6 @@
 
     check-cast v14, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
 
-    .line 3450
     .local v14, "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     if-eqz v14, :cond_8
 
@@ -11542,12 +10543,10 @@
 
     const/4 v6, 0x0
 
-    .line 3278
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/util/AsyncChannel;
 
-    .line 3279
     .local v0, "ac":Lcom/android/internal/util/AsyncChannel;
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkFactoryInfos:Ljava/util/HashMap;
 
@@ -11559,17 +10558,14 @@
 
     if-eqz v5, :cond_4
 
-    .line 3280
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     if-nez v5, :cond_2
 
-    .line 3281
     const-string v5, "NetworkFactory connected"
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3282
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkFactoryInfos:Ljava/util/HashMap;
 
     iget-object v7, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
@@ -11584,7 +10580,6 @@
 
     invoke-virtual {v5, v9}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 3285
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -11610,13 +10605,11 @@
 
     check-cast v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 3286
     .local v3, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     iget-boolean v5, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->isRequest:Z
 
     if-eqz v5, :cond_0
 
-    .line 3287
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkForRequestId:Landroid/util/SparseArray;
 
     iget-object v7, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -11629,7 +10622,6 @@
 
     check-cast v2, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 3288
     .local v2, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     const v7, 0x83000
 
@@ -11651,7 +10643,6 @@
 
     goto :goto_1
 
-    .line 3292
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v3    # "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
@@ -11660,19 +10651,16 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 3293
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkFactoryInfos:Ljava/util/HashMap;
 
     iget-object v6, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     invoke-virtual {v5, v6}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3325
     :cond_3
     :goto_2
     return-void
 
-    .line 3295
     :cond_4
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
@@ -11684,17 +10672,14 @@
 
     if-eqz v5, :cond_3
 
-    .line 3296
     iget v5, p1, Landroid/os/Message;->arg1:I
 
     if-nez v5, :cond_6
 
-    .line 3297
     const-string v5, "NetworkAgent connected"
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3299
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
     iget-object v6, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
@@ -11705,11 +10690,9 @@
 
     check-cast v2, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 3300
     .restart local v2    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v2, :cond_3
 
-    .line 3301
     iget-object v5, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v5}, Landroid/net/NetworkInfo;->getType()I
@@ -11718,12 +10701,10 @@
 
     if-ne v5, v8, :cond_5
 
-    .line 3302
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     invoke-virtual {v5, v8, v2}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->add(ILcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 3304
     :cond_5
     iget-object v5, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -11731,14 +10712,12 @@
 
     goto :goto_2
 
-    .line 3307
     .end local v2    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_6
     const-string v5, "Error connecting NetworkAgent"
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 3308
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
     iget-object v6, p1, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
@@ -11749,22 +10728,18 @@
 
     check-cast v2, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 3309
     .restart local v2    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v2, :cond_3
 
-    .line 3310
     invoke-direct {p0, v2}, Lcom/android/server/ConnectivityService;->isDefaultNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
 
     move-result v4
 
-    .line 3311
     .local v4, "wasDefault":Z
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v6
 
-    .line 3312
     :try_start_0
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
@@ -11774,7 +10749,6 @@
 
     invoke-virtual {v5, v7}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 3313
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetIdInUse:Landroid/util/SparseBooleanArray;
 
     iget-object v7, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
@@ -11783,31 +10757,26 @@
 
     invoke-virtual {v5, v7}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 3314
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3316
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     invoke-virtual {v5, v2, v4}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->remove(Lcom/android/server/connectivity/NetworkAgentInfo;Z)V
 
-    .line 3319
     const-string v5, "ConnectivityService"
 
     const-string/jumbo v6, "nai.networkMonitor.doQuit()"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3320
     iget-object v5, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-virtual {v5}, Lcom/android/server/connectivity/NetworkMonitor;->doQuit()V
 
     goto :goto_2
 
-    .line 3314
     :catchall_0
     move-exception v5
 
@@ -11823,10 +10792,8 @@
     .locals 6
 
     .prologue
-    .line 7438
     const/4 v0, 0x0
 
-    .line 7439
     .local v0, "currentDefaultNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
@@ -11852,7 +10819,6 @@
 
     check-cast v2, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 7440
     .local v2, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v4, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
@@ -11866,20 +10832,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 7441
     move-object v0, v2
 
-    .line 7445
     .end local v2    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_1
     if-nez v0, :cond_3
 
-    .line 7460
     :cond_2
     :goto_0
     return-void
 
-    .line 7446
     :cond_3
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -11901,10 +10863,8 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7447
     move-object v3, v0
 
-    .line 7448
     .local v3, "networkSwitchTo":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
@@ -11930,7 +10890,6 @@
 
     check-cast v2, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 7449
     .restart local v2    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mDefaultRequest:Landroid/net/NetworkRequest;
 
@@ -11944,7 +10903,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 7451
     invoke-virtual {v2}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v4
@@ -11955,12 +10913,10 @@
 
     if-le v4, v5, :cond_4
 
-    .line 7452
     move-object v3, v2
 
     goto :goto_1
 
-    .line 7456
     .end local v2    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_5
     new-instance v4, Ljava/lang/StringBuilder;
@@ -11983,10 +10939,8 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7457
     if-eq v3, v0, :cond_2
 
-    .line 7458
     iget-object v4, v3, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v5, 0x82001
@@ -12004,7 +10958,6 @@
 
     const/4 v8, 0x0
 
-    .line 4480
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -12017,7 +10970,6 @@
 
     move-result-object v3
 
-    .line 4482
     .local v3, "proxy":Ljava/lang/String;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -12025,41 +10977,34 @@
 
     if-nez v6, :cond_0
 
-    .line 4483
     const-string v6, ":"
 
     invoke-virtual {v3, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4484
     .local v0, "data":[Ljava/lang/String;
     array-length v6, v0
 
     if-nez v6, :cond_1
 
-    .line 4500
     .end local v0    # "data":[Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 4488
     .restart local v0    # "data":[Ljava/lang/String;
     :cond_1
     aget-object v4, v0, v8
 
-    .line 4489
     .local v4, "proxyHost":Ljava/lang/String;
     const/16 v5, 0x1f90
 
-    .line 4490
     .local v5, "proxyPort":I
     array-length v6, v0
 
     if-le v6, v9, :cond_2
 
-    .line 4492
     const/4 v6, 0x1
 
     :try_start_0
@@ -12071,7 +11016,6 @@
 
     move-result v5
 
-    .line 4497
     :cond_2
     new-instance v2, Landroid/net/ProxyInfo;
 
@@ -12081,18 +11025,15 @@
 
     invoke-direct {v2, v6, v5, v7}, Landroid/net/ProxyInfo;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 4498
     .local v2, "p":Landroid/net/ProxyInfo;
     invoke-virtual {p0, v2}, Lcom/android/server/ConnectivityService;->setGlobalProxy(Landroid/net/ProxyInfo;)V
 
     goto :goto_0
 
-    .line 4493
     .end local v2    # "p":Landroid/net/ProxyInfo;
     :catch_0
     move-exception v1
 
-    .line 4494
     .local v1, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method
@@ -12102,19 +11043,15 @@
     .param p1, "oldNetwork"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 7424
     if-nez p1, :cond_0
 
-    .line 7425
     const-string v0, "Unknown NetworkAgentInfo in handleLingerComplete"
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 7430
     :goto_0
     return-void
 
-    .line 7428
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -12140,7 +11077,6 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7429
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->teardownUnneededNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     goto :goto_0
@@ -12154,7 +11090,6 @@
 
     const/4 v5, 0x1
 
-    .line 1223
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -12171,7 +11106,6 @@
 
     move v6, v5
 
-    .line 1225
     .local v6, "enable":Z
     :goto_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
@@ -12186,12 +11120,10 @@
 
     move v7, v5
 
-    .line 1226
     .local v7, "isEnabled":Z
     :goto_1
     if-ne v6, v7, :cond_2
 
-    .line 1236
     :goto_2
     return-void
 
@@ -12200,22 +11132,18 @@
     :cond_0
     move v6, v0
 
-    .line 1223
     goto :goto_0
 
     .restart local v6    # "enable":Z
     :cond_1
     move v7, v0
 
-    .line 1225
     goto :goto_1
 
-    .line 1230
     .restart local v7    # "isEnabled":Z
     :cond_2
     if-eqz v6, :cond_3
 
-    .line 1231
     new-instance v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     const/4 v2, 0x0
@@ -12234,7 +11162,6 @@
 
     goto :goto_2
 
-    .line 1234
     :cond_3
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mDefaultMobileDataRequest:Landroid/net/NetworkRequest;
 
@@ -12250,7 +11177,6 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 3745
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -12271,12 +11197,10 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3746
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
 
-    .line 3751
     .local v0, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v0, :cond_0
 
@@ -12300,7 +11224,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3758
     :cond_0
     return-void
 .end method
@@ -12310,24 +11233,20 @@
     .param p1, "na"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 6728
     const-string v1, "Got NetworkAgent Messenger"
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6729
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
     iget-object v2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->messenger:Landroid/os/Messenger;
 
     invoke-virtual {v1, v2, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6731
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 6732
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
@@ -12337,12 +11256,10 @@
 
     invoke-virtual {v1, v3, p1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 6733
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6735
     iget-object v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -12353,22 +11270,17 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/android/internal/util/AsyncChannel;->connect(Landroid/content/Context;Landroid/os/Handler;Landroid/os/Messenger;)V
 
-    .line 6736
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 6737
     .local v0, "networkInfo":Landroid/net/NetworkInfo;
     const/4 v1, 0x0
 
     iput-object v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 6738
     invoke-direct {p0, p1, v0}, Lcom/android/server/ConnectivityService;->updateNetworkInfo(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkInfo;)V
 
-    .line 6739
     return-void
 
-    .line 6733
     .end local v0    # "networkInfo":Landroid/net/NetworkInfo;
     :catchall_0
     move-exception v1
@@ -12386,7 +11298,6 @@
     .param p1, "nfi"    # Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
 
     .prologue
-    .line 6619
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -12409,14 +11320,12 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6620
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetworkFactoryInfos:Ljava/util/HashMap;
 
     iget-object v1, p1, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;->messenger:Landroid/os/Messenger;
 
     invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6621
     iget-object v0, p1, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -12427,7 +11336,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/internal/util/AsyncChannel;->connect(Landroid/content/Context;Landroid/os/Handler;Landroid/os/Messenger;)V
 
-    .line 6622
     return-void
 .end method
 
@@ -12438,14 +11346,12 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 3482
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
 
     iget-object v1, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3483
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetworkRequestInfoLogs:Landroid/util/LocalLog;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -12468,12 +11374,10 @@
 
     invoke-virtual {v0, v1}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 3484
     iget-boolean v0, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->isRequest:Z
 
     if-nez v0, :cond_1
 
-    .line 3485
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -12499,7 +11403,6 @@
 
     check-cast v7, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 3486
     .local v7, "network":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v0, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
@@ -12519,7 +11422,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3488
     const-string v0, "REGISTER"
 
     iget-object v1, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -12528,13 +11430,11 @@
 
     goto :goto_0
 
-    .line 3493
     .end local v6    # "i$":Ljava/util/Iterator;
     .end local v7    # "network":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_1
     const/4 v4, 0x0
 
-    .line 3494
     .local v4, "flushDns":Z
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mEmergencyMgr:Lcom/sec/android/emergencymode/EmergencyManager;
 
@@ -12548,7 +11448,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 3495
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mBackUpNi:Landroid/net/NetworkInfo;
 
     if-eqz v0, :cond_2
@@ -12563,7 +11462,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 3496
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -12586,7 +11484,6 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3497
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mBackUpLp:Landroid/net/LinkProperties;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mDummyLp:Landroid/net/LinkProperties;
@@ -12597,7 +11494,6 @@
 
     move-result v4
 
-    .line 3498
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mBackUpLp:Landroid/net/LinkProperties;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mDummyLp:Landroid/net/LinkProperties;
@@ -12610,7 +11506,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/ConnectivityService;->updateDnses(Landroid/net/LinkProperties;Landroid/net/LinkProperties;IZZ)V
 
-    .line 3500
     :cond_2
     iget v0, p0, Lcom/android/server/ConnectivityService;->mRefCount:I
 
@@ -12618,13 +11513,11 @@
 
     iput v0, p0, Lcom/android/server/ConnectivityService;->mRefCount:I
 
-    .line 3503
     :cond_3
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, v8}, Lcom/android/server/ConnectivityService;->rematchAllNetworksAndRequests(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 3504
     iget-boolean v0, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->isRequest:Z
 
     if-eqz v0, :cond_5
@@ -12641,7 +11534,6 @@
 
     if-nez v0, :cond_5
 
-    .line 3506
     iget-object v0, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     iget v0, v0, Landroid/net/NetworkRequest;->legacyType:I
@@ -12656,16 +11548,13 @@
 
     if-eqz v0, :cond_4
 
-    .line 3507
     iput-object p1, p0, Lcom/android/server/ConnectivityService;->mTempNri:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 3510
     :cond_4
     iget-object v0, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-direct {p0, v0, v8}, Lcom/android/server/ConnectivityService;->sendUpdatedScoreToFactories(Landroid/net/NetworkRequest;I)V
 
-    .line 3512
     :cond_5
     return-void
 .end method
@@ -12675,7 +11564,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 3470
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
@@ -12684,7 +11572,6 @@
 
     check-cast v1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 3472
     .local v1, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     iget-object v2, v1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPendingIntent:Landroid/app/PendingIntent;
 
@@ -12692,11 +11579,9 @@
 
     move-result-object v0
 
-    .line 3473
     .local v0, "existingRequest":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     if-eqz v0, :cond_0
 
-    .line 3474
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -12737,7 +11622,6 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3476
     iget-object v2, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-static {}, Lcom/android/server/ConnectivityService;->getCallingUid()I
@@ -12746,11 +11630,9 @@
 
     invoke-direct {p0, v2, v3}, Lcom/android/server/ConnectivityService;->handleReleaseNetworkRequest(Landroid/net/NetworkRequest;I)V
 
-    .line 3478
     :cond_0
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->handleRegisterNetworkRequest(Lcom/android/server/ConnectivityService$NetworkRequestInfo;)V
 
-    .line 3479
     return-void
 .end method
 
@@ -12760,7 +11642,6 @@
     .param p2, "callingUid"    # I
 
     .prologue
-    .line 3571
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
@@ -12773,11 +11654,9 @@
 
     check-cast v14, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 3572
     .local v14, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     if-eqz v14, :cond_0
 
-    .line 3573
     const/16 v1, 0x3e8
 
     move/from16 v0, p2
@@ -12790,7 +11669,6 @@
 
     if-eq v1, v0, :cond_1
 
-    .line 3574
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -12813,12 +11691,10 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3689
     :cond_0
     :goto_0
     return-void
 
-    .line 3577
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -12842,10 +11718,8 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3578
     invoke-virtual {v14}, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->unlinkDeathRecipient()V
 
-    .line 3579
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
@@ -12854,7 +11728,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3580
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mNetworkRequestInfoLogs:Landroid/util/LocalLog;
@@ -12879,15 +11752,12 @@
 
     invoke-virtual {v1, v2}, Landroid/util/LocalLog;->log(Ljava/lang/String;)V
 
-    .line 3581
     iget-boolean v1, v14, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->isRequest:Z
 
     if-eqz v1, :cond_e
 
-    .line 3586
     const/16 v18, 0x0
 
-    .line 3587
     .local v18, "wasKept":Z
     move-object/from16 v0, p0
 
@@ -12916,7 +11786,6 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 3588
     .local v11, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
@@ -12930,7 +11799,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 3589
     iget-object v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     iget-object v2, v14, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -12939,7 +11807,6 @@
 
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 3591
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -12986,20 +11853,16 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3596
     iget-object v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
     iget v4, v1, Landroid/net/Network;->netId:I
 
-    .line 3597
     .local v4, "netId":I
     iget-object v13, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 3598
     .local v13, "ni":Landroid/net/NetworkInfo;
     const/4 v5, 0x0
 
-    .line 3599
     .local v5, "flushDns":Z
     move-object/from16 v0, p0
 
@@ -13017,7 +11880,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 3600
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -13056,7 +11918,6 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3601
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/ConnectivityService;->mRefCount:I
@@ -13073,7 +11934,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 3602
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mDummyLp:Landroid/net/LinkProperties;
@@ -13088,7 +11948,6 @@
 
     move-result v5
 
-    .line 3603
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/ConnectivityService;->mDummyLp:Landroid/net/LinkProperties;
@@ -13103,7 +11962,6 @@
 
     invoke-direct/range {v1 .. v6}, Lcom/android/server/ConnectivityService;->updateDnses(Landroid/net/LinkProperties;Landroid/net/LinkProperties;IZZ)V
 
-    .line 3605
     :cond_3
     move-object/from16 v0, p0
 
@@ -13115,7 +11973,6 @@
 
     iput v1, v0, Lcom/android/server/ConnectivityService;->mRefCount:I
 
-    .line 3609
     :cond_4
     iget-object v1, v14, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
@@ -13135,14 +11992,12 @@
 
     if-eqz v1, :cond_5
 
-    .line 3610
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/android/server/ConnectivityService;->isDefaultNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
 
     move-result v17
 
-    .line 3611
     .local v17, "wasDefault":Z
     move-object/from16 v0, p0
 
@@ -13156,7 +12011,6 @@
 
     invoke-virtual {v1, v2, v11, v0}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->remove(ILcom/android/server/connectivity/NetworkAgentInfo;Z)V
 
-    .line 3614
     .end local v17    # "wasDefault":Z
     :cond_5
     move-object/from16 v0, p0
@@ -13167,7 +12021,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 3615
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -13198,20 +12051,17 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3616
     move-object/from16 v0, p0
 
     invoke-direct {v0, v11}, Lcom/android/server/ConnectivityService;->teardownUnneededNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     goto/16 :goto_1
 
-    .line 3620
     :cond_6
     or-int/lit8 v18, v18, 0x1
 
     goto/16 :goto_1
 
-    .line 3625
     .end local v4    # "netId":I
     .end local v5    # "flushDns":Z
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -13231,11 +12081,9 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 3626
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v11, :cond_8
 
-    .line 3627
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mNetworkForRequestId:Landroid/util/SparseArray;
@@ -13246,7 +12094,6 @@
 
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 3635
     :cond_8
     iget-object v1, v14, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
@@ -13258,14 +12105,11 @@
 
     if-eqz v11, :cond_d
 
-    .line 3636
     const/4 v7, 0x1
 
-    .line 3637
     .local v7, "doRemove":Z
     if-eqz v18, :cond_a
 
-    .line 3640
     const/4 v9, 0x0
 
     .local v9, "i":I
@@ -13278,7 +12122,6 @@
 
     if-ge v9, v1, :cond_a
 
-    .line 3641
     iget-object v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v9}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -13287,7 +12130,6 @@
 
     check-cast v15, Landroid/net/NetworkRequest;
 
-    .line 3642
     .local v15, "otherRequest":Landroid/net/NetworkRequest;
     iget v1, v15, Landroid/net/NetworkRequest;->legacyType:I
 
@@ -13305,27 +12147,22 @@
 
     if-eqz v1, :cond_9
 
-    .line 3644
     const-string v1, " still have other legacy request - leaving"
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3645
     const/4 v7, 0x0
 
-    .line 3640
     :cond_9
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 3651
     .end local v9    # "i":I
     .end local v15    # "otherRequest":Landroid/net/NetworkRequest;
     :cond_a
     const/4 v8, 0x0
 
-    .line 3652
     .local v8, "hasImsCapability":Z
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->isDomesticModel()Z
 
@@ -13333,7 +12170,6 @@
 
     if-eqz v1, :cond_c
 
-    .line 3653
     iget-object v1, v14, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     iget v1, v1, Landroid/net/NetworkRequest;->legacyType:I
@@ -13342,7 +12178,6 @@
 
     if-ne v1, v2, :cond_c
 
-    .line 3654
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
@@ -13368,7 +12203,6 @@
 
     check-cast v16, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 3655
     .local v16, "r":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     move-object/from16 v0, v16
 
@@ -13382,7 +12216,6 @@
 
     if-eq v1, v2, :cond_b
 
-    .line 3656
     move-object/from16 v0, v16
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -13395,10 +12228,8 @@
 
     move-result v8
 
-    .line 3657
     if-eqz v8, :cond_b
 
-    .line 3658
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -13419,14 +12250,12 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3667
     .end local v16    # "r":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     :cond_c
     if-eqz v7, :cond_d
 
     if-nez v8, :cond_d
 
-    .line 3668
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -13439,7 +12268,6 @@
 
     invoke-virtual {v1, v2, v11, v3}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->remove(ILcom/android/server/connectivity/NetworkAgentInfo;Z)V
 
-    .line 3672
     .end local v7    # "doRemove":Z
     .end local v8    # "hasImsCapability":Z
     :cond_d
@@ -13468,7 +12296,6 @@
 
     check-cast v12, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
 
-    .line 3673
     .local v12, "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     iget-object v1, v12, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -13480,7 +12307,6 @@
 
     goto :goto_3
 
-    .line 3679
     .end local v10    # "i$":Ljava/util/Iterator;
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v12    # "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
@@ -13513,7 +12339,6 @@
 
     check-cast v11, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 3680
     .restart local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v1, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
@@ -13523,7 +12348,6 @@
 
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 3681
     iget-object v1, v14, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     iget-object v1, v1, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
@@ -13542,7 +12366,6 @@
 
     if-eqz v1, :cond_f
 
-    .line 3683
     const-string v1, "RELEASE"
 
     iget-object v2, v14, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -13553,7 +12376,6 @@
 
     goto :goto_4
 
-    .line 3687
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_10
     const/4 v1, 0x0
@@ -13573,21 +12395,17 @@
     .param p2, "callingUid"    # I
 
     .prologue
-    .line 3516
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->findExistingNetworkRequestInfo(Landroid/app/PendingIntent;)Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     move-result-object v0
 
-    .line 3517
     .local v0, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     if-eqz v0, :cond_0
 
-    .line 3518
     iget-object v1, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-direct {p0, v1, p2}, Lcom/android/server/ConnectivityService;->handleReleaseNetworkRequest(Landroid/net/NetworkRequest;I)V
 
-    .line 3520
     :cond_0
     return-void
 .end method
@@ -13599,7 +12417,6 @@
     .param p3, "always"    # Z
 
     .prologue
-    .line 3698
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -13640,41 +12457,34 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3701
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
 
-    .line 3702
     .local v0, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v0, :cond_1
 
-    .line 3735
     :cond_0
     :goto_0
     return-void
 
-    .line 3707
     :cond_1
     iget-boolean v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->everValidated:Z
 
     if-nez v2, :cond_0
 
-    .line 3712
     iget-object v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
     iget-boolean v2, v2, Landroid/net/NetworkMisc;->explicitlySelected:Z
 
     if-nez v2, :cond_2
 
-    .line 3713
     const-string v2, "ConnectivityService"
 
     const-string v3, "BUG: setAcceptUnvalidated non non-explicitly selected network"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3716
     :cond_2
     iget-object v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
@@ -13682,29 +12492,23 @@
 
     if-eq p2, v2, :cond_3
 
-    .line 3717
     invoke-virtual {v0}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v1
 
-    .line 3718
     .local v1, "oldScore":I
     iget-object v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
     iput-boolean p2, v2, Landroid/net/NetworkMisc;->acceptUnvalidated:Z
 
-    .line 3719
     invoke-direct {p0, v0, v1}, Lcom/android/server/ConnectivityService;->rematchAllNetworksAndRequests(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 3720
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->sendUpdatedScoreToFactories(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 3723
     .end local v1    # "oldScore":I
     :cond_3
     if-eqz p3, :cond_4
 
-    .line 3724
     iget-object v3, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     const v4, 0x81009
@@ -13716,23 +12520,19 @@
     :goto_1
     invoke-virtual {v3, v4, v2}, Lcom/android/internal/util/AsyncChannel;->sendMessage(II)V
 
-    .line 3728
     :cond_4
     if-nez p2, :cond_0
 
-    .line 3730
     iget-object v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     const v3, 0x8100f
 
     invoke-virtual {v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 3732
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->teardownUnneededNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     goto :goto_0
 
-    .line 3724
     :cond_5
     const/4 v2, 0x0
 
@@ -13749,7 +12549,6 @@
 
     const/4 v6, 0x0
 
-    .line 2264
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v4}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
@@ -13758,7 +12557,6 @@
 
     move-result v1
 
-    .line 2265
     .local v1, "dds":I
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -13766,7 +12564,6 @@
 
     move-result-object v0
 
-    .line 2268
     .local v0, "SubscriberID":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mPolicyDataMap:Ljava/util/HashMap;
 
@@ -13776,7 +12573,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 2269
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mPolicyDataMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -13789,12 +12585,10 @@
 
     move-result v3
 
-    .line 2273
     .local v3, "policyStatus":I
     :goto_0
     if-nez p1, :cond_1
 
-    .line 2274
     const/4 v4, 0x2
 
     if-eq v3, v4, :cond_0
@@ -13805,29 +12599,24 @@
 
     if-eq v3, v4, :cond_1
 
-    .line 2275
     :cond_0
     iput-boolean p2, p0, Lcom/android/server/ConnectivityService;->mIsMobilePolicyEnabled:Z
 
-    .line 2276
     new-instance v2, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.SET_POLICY_DATA_ENABLE"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2277
     .local v2, "intent":Landroid/content/Intent;
     const-string v4, "enabled"
 
     invoke-virtual {v2, v4, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2278
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 2279
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mPolicyDataMap:Ljava/util/HashMap;
 
     if-ne p2, v5, :cond_3
@@ -13841,12 +12630,10 @@
 
     invoke-virtual {v7, v0, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2284
     .end local v2    # "intent":Landroid/content/Intent;
     :cond_1
     return-void
 
-    .line 2271
     .end local v3    # "policyStatus":I
     :cond_2
     const/4 v3, 0x2
@@ -13858,7 +12645,6 @@
     :cond_3
     move v4, v6
 
-    .line 2279
     goto :goto_1
 .end method
 
@@ -13867,7 +12653,6 @@
     .param p1, "messenger"    # Landroid/os/Messenger;
 
     .prologue
-    .line 6631
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetworkFactoryInfos:Ljava/util/HashMap;
 
     invoke-virtual {v1, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -13876,20 +12661,16 @@
 
     check-cast v0, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
 
-    .line 6632
     .local v0, "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     if-nez v0, :cond_0
 
-    .line 6633
     const-string v1, "Failed to find Messenger in unregisterNetworkFactory"
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 6637
     :goto_0
     return-void
 
-    .line 6636
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -13925,7 +12706,6 @@
 
     const/4 v8, 0x0
 
-    .line 5224
     const-string v7, "ConnectivityService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -13948,14 +12728,12 @@
 
     invoke-static {v7, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5225
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v7
 
     if-ge v7, v9, :cond_0
 
-    .line 5226
     const-string v7, "ConnectivityService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -13984,26 +12762,21 @@
 
     move v7, v8
 
-    .line 5274
     :goto_0
     return v7
 
-    .line 5230
     :cond_0
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getProfilesByDomain(I)Ljava/util/List;
 
     move-result-object v5
 
-    .line 5231
     .local v5, "profiles":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
-    .line 5234
     .local v1, "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     if-eqz v5, :cond_5
 
-    .line 5235
     const-string v7, "ConnectivityService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -14030,7 +12803,6 @@
 
     invoke-static {v7, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5236
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -14041,7 +12813,6 @@
 
     if-ge v2, v7, :cond_6
 
-    .line 5237
     const/4 v3, 0x0
 
     .local v3, "j":I
@@ -14054,14 +12825,12 @@
 
     if-ge v3, v7, :cond_4
 
-    .line 5238
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v7, v3}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v4
 
-    .line 5239
     .local v4, "key":I
     const-string v10, "ConnectivityService"
 
@@ -14101,7 +12870,6 @@
 
     invoke-static {v10, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5240
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v7, v4}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -14110,7 +12878,6 @@
 
     if-eqz v7, :cond_3
 
-    .line 5241
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v7, v4}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -14130,11 +12897,9 @@
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     check-cast v1, Lcom/android/server/connectivity/EnterpriseVpn;
 
-    .line 5242
     .restart local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     if-eqz v1, :cond_2
 
-    .line 5243
     invoke-virtual {v1}, Lcom/android/server/connectivity/EnterpriseVpn;->getNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v7
@@ -14143,7 +12908,6 @@
 
     move-result-object v6
 
-    .line 5244
     .local v6, "vpnState":Landroid/net/NetworkInfo$State;
     invoke-virtual {v1}, Lcom/android/server/connectivity/EnterpriseVpn;->getInterfaceName()Ljava/lang/String;
 
@@ -14155,7 +12919,6 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 5245
     const-string v7, "ConnectivityService"
 
     const-string/jumbo v10, "hasInterfaceAsUser : return true"
@@ -14164,10 +12927,8 @@
 
     move v7, v9
 
-    .line 5246
     goto/16 :goto_0
 
-    .line 5248
     :cond_1
     const-string v7, "ConnectivityService"
 
@@ -14175,7 +12936,6 @@
 
     invoke-static {v7, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5237
     .end local v6    # "vpnState":Landroid/net/NetworkInfo$State;
     :cond_2
     :goto_3
@@ -14183,7 +12943,6 @@
 
     goto :goto_2
 
-    .line 5251
     :cond_3
     const-string v7, "ConnectivityService"
 
@@ -14211,7 +12970,6 @@
 
     goto :goto_3
 
-    .line 5272
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v2    # "i":I
     .end local v3    # "j":I
@@ -14220,7 +12978,6 @@
     :catch_0
     move-exception v0
 
-    .line 5273
     .local v0, "e":Ljava/lang/Exception;
     const-string v7, "ConnectivityService"
 
@@ -14250,10 +13007,8 @@
 
     move v7, v8
 
-    .line 5274
     goto/16 :goto_0
 
-    .line 5236
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .restart local v2    # "i":I
@@ -14264,7 +13019,6 @@
 
     goto/16 :goto_1
 
-    .line 5256
     .end local v2    # "i":I
     .end local v3    # "j":I
     :cond_5
@@ -14275,7 +13029,6 @@
 
     invoke-static {v7, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5260
     :cond_6
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mEnterpriseSytemVPN:Landroid/util/SparseArray;
 
@@ -14285,7 +13038,6 @@
 
     if-eqz v7, :cond_7
 
-    .line 5261
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v7, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -14307,18 +13059,15 @@
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     check-cast v1, Lcom/android/server/connectivity/EnterpriseVpn;
 
-    .line 5262
     .restart local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     if-eqz v1, :cond_7
 
-    .line 5263
     invoke-virtual {v1}, Lcom/android/server/connectivity/EnterpriseVpn;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v7
 
     if-eqz v7, :cond_7
 
-    .line 5264
     const-string v7, "ConnectivityService"
 
     const-string/jumbo v10, "hasInterfaceAsUser : return true"
@@ -14327,10 +13076,8 @@
 
     move v7, v9
 
-    .line 5265
     goto/16 :goto_0
 
-    .line 5270
     :cond_7
     const-string v7, "ConnectivityService"
 
@@ -14342,7 +13089,6 @@
 
     move v7, v8
 
-    .line 5271
     goto/16 :goto_0
 .end method
 
@@ -14355,21 +13101,17 @@
 
     const/4 v2, 0x0
 
-    .line 6523
     if-nez p1, :cond_1
 
-    .line 6537
     :cond_0
     :goto_0
     return v2
 
-    .line 6526
     :cond_1
     invoke-virtual {p1}, Landroid/net/NetworkCapabilities;->getTransportTypes()[I
 
     move-result-object v1
 
-    .line 6527
     .local v1, "transportTypes":[I
     array-length v4, v1
 
@@ -14379,7 +13121,6 @@
 
     if-ne v4, v3, :cond_0
 
-    .line 6531
     :try_start_0
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -14393,14 +13134,11 @@
 
     move v2, v3
 
-    .line 6537
     goto :goto_0
 
-    .line 6534
     :catch_0
     move-exception v0
 
-    .line 6535
     .local v0, "e":Ljava/lang/SecurityException;
     goto :goto_0
 .end method
@@ -14410,18 +13148,15 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1924
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getUnfilteredActiveNetworkState(I)Landroid/net/NetworkState;
 
     move-result-object v0
 
-    .line 1925
     .local v0, "state":Landroid/net/NetworkState;
     iget-object v1, v0, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
     if-eqz v1, :cond_0
 
-    .line 1927
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mPolicyManager:Landroid/net/INetworkPolicyManager;
 
@@ -14431,15 +13166,12 @@
 
     move-result v1
 
-    .line 1931
     :goto_0
     return v1
 
-    .line 1928
     :catch_0
     move-exception v1
 
-    .line 1931
     :cond_0
     const/4 v1, 0x0
 
@@ -14450,7 +13182,6 @@
     .locals 4
 
     .prologue
-    .line 8758
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v3, "wifi"
@@ -14461,13 +13192,11 @@
 
     check-cast v1, Landroid/net/wifi/WifiManager;
 
-    .line 8759
     .local v1, "mWifiManager":Landroid/net/wifi/WifiManager;
     if-nez v1, :cond_1
 
     const/4 v0, 0x0
 
-    .line 8760
     .local v0, "mWifiInfo":Landroid/net/wifi/WifiInfo;
     :goto_0
     if-eqz v0, :cond_0
@@ -14496,7 +13225,6 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8761
     :cond_0
     if-nez v0, :cond_2
 
@@ -14505,7 +13233,6 @@
     :goto_1
     return v2
 
-    .line 8759
     .end local v0    # "mWifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_1
     invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
@@ -14514,7 +13241,6 @@
 
     goto :goto_0
 
-    .line 8761
     .restart local v0    # "mWifiInfo":Landroid/net/wifi/WifiInfo;
     :cond_2
     invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->isCaptivePortal()Z
@@ -14528,7 +13254,6 @@
     .locals 3
 
     .prologue
-    .line 8504
     const-string/jumbo v1, "ro.debug_level"
 
     const-string v2, "0x4f4c"
@@ -14537,7 +13262,6 @@
 
     move-result-object v0
 
-    .line 8506
     .local v0, "sysLoglevel":Ljava/lang/String;
     const-string v1, "0x4f4c"
 
@@ -14547,10 +13271,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 8507
     const/4 v1, 0x0
 
-    .line 8509
     :goto_0
     return v1
 
@@ -14565,7 +13287,6 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 6677
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
@@ -14589,7 +13310,6 @@
     .param p2, "nri"    # Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     .prologue
-    .line 3559
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
     move-result-object v1
@@ -14598,7 +13318,6 @@
 
     move-result v0
 
-    .line 3560
     .local v0, "netType":I
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -14638,15 +13357,12 @@
 
     if-eqz p1, :cond_0
 
-    .line 3563
     const-string/jumbo v1, "no live requests. But it\'s EPDG MMS so keep it."
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3564
     const/4 p1, 0x0
 
-    .line 3566
     :cond_0
     return p1
 .end method
@@ -14656,10 +13372,8 @@
     .param p1, "apn"    # Ljava/lang/String;
 
     .prologue
-    .line 1781
     const/4 v1, 0x0
 
-    .line 1782
     .local v1, "isExceptApn":Z
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mExceptApnListForDataLimit:Ljava/util/HashMap;
 
@@ -14669,7 +13383,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1783
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mExceptApnListForDataLimit:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -14678,7 +13391,6 @@
 
     check-cast v2, Ljava/util/Set;
 
-    .line 1784
     .local v2, "optionSet":Ljava/util/Set;
     invoke-interface {v2}, Ljava/util/Set;->size()I
 
@@ -14686,7 +13398,6 @@
 
     if-lez v4, :cond_1
 
-    .line 1785
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v4}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
@@ -14695,7 +13406,6 @@
 
     move-result v0
 
-    .line 1786
     .local v0, "dds":I
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -14703,7 +13413,6 @@
 
     move-result-object v3
 
-    .line 1787
     .local v3, "simOperator":Ljava/lang/String;
     invoke-interface {v2, v3}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -14711,10 +13420,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 1788
     const/4 v1, 0x1
 
-    .line 1795
     .end local v0    # "dds":I
     .end local v2    # "optionSet":Ljava/util/Set;
     .end local v3    # "simOperator":Ljava/lang/String;
@@ -14722,7 +13429,6 @@
     :goto_0
     return v1
 
-    .line 1791
     .restart local v2    # "optionSet":Ljava/util/Set;
     :cond_1
     const/4 v1, 0x1
@@ -14734,10 +13440,8 @@
     .locals 3
 
     .prologue
-    .line 1204
     const/4 v1, 0x0
 
-    .line 1205
     .local v1, "isValid":Z
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -14745,18 +13449,15 @@
 
     move-result-object v0
 
-    .line 1206
     .local v0, "imsi":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 1207
     const-string v2, "28603"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 1209
     :cond_0
     return v1
 .end method
@@ -14769,16 +13470,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 3012
     iget-object v2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
     if-nez v2, :cond_0
 
-    .line 3019
     :goto_0
     return v1
 
-    .line 3013
     :cond_0
     iget-object v2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
@@ -14786,7 +13484,6 @@
 
     move-result-object v0
 
-    .line 3014
     .local v0, "officialNai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v0, :cond_1
 
@@ -14800,11 +13497,9 @@
 
     goto :goto_0
 
-    .line 3015
     :cond_1
     if-nez v0, :cond_2
 
-    .line 3016
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -14853,19 +13548,16 @@
 
     const/4 v6, 0x1
 
-    .line 1371
     if-nez p1, :cond_1
 
     const-string v1, ""
 
-    .line 1372
     .local v1, "iface":Ljava/lang/String;
     :goto_0
     iget-object v8, p0, Lcom/android/server/ConnectivityService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 1373
     :try_start_0
     iget-object v9, p0, Lcom/android/server/ConnectivityService;->mMeteredIfaces:Ljava/util/HashSet;
 
@@ -14873,7 +13565,6 @@
 
     move-result v4
 
-    .line 1374
     .local v4, "networkCostly":Z
     iget-object v9, p0, Lcom/android/server/ConnectivityService;->mUidRules:Landroid/util/SparseIntArray;
 
@@ -14883,23 +13574,19 @@
 
     move-result v5
 
-    .line 1375
     .local v5, "uidRules":I
     monitor-exit v8
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1377
     const/4 v8, 0x2
 
     if-ne v5, v8, :cond_2
 
-    .line 1399
     :cond_0
     :goto_1
     return v6
 
-    .line 1371
     .end local v1    # "iface":Ljava/lang/String;
     .end local v4    # "networkCostly":Z
     .end local v5    # "uidRules":I
@@ -14910,7 +13597,6 @@
 
     goto :goto_0
 
-    .line 1375
     .restart local v1    # "iface":Ljava/lang/String;
     :catchall_0
     move-exception v6
@@ -14922,7 +13608,6 @@
 
     throw v6
 
-    .line 1379
     .restart local v4    # "networkCostly":Z
     .restart local v5    # "uidRules":I
     :cond_2
@@ -14930,7 +13615,6 @@
 
     if-nez v4, :cond_0
 
-    .line 1383
     :cond_3
     invoke-static {p2}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -14942,17 +13626,14 @@
 
     if-eqz v8, :cond_5
 
-    .line 1385
     const-wide/16 v2, 0x0
 
-    .line 1387
     .local v2, "id":J
     :try_start_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1388
     iget-object v8, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v8, p2}, Lcom/android/server/enterprise/dlp/DLPManagerPolicyService;->isFirewallDenyRuleEnabledForUid(Landroid/content/Context;I)Z
@@ -14964,7 +13645,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 1395
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -14977,22 +13657,18 @@
     :goto_2
     move v6, v7
 
-    .line 1399
     goto :goto_1
 
-    .line 1392
     .restart local v2    # "id":J
     :catch_0
     move-exception v0
 
-    .line 1393
     .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 1395
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
@@ -15013,7 +13689,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2696
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Landroid/telephony/SubscriptionManager;->from(Landroid/content/Context;)Landroid/telephony/SubscriptionManager;
@@ -15024,11 +13699,9 @@
 
     move-result v0
 
-    .line 2697
     .local v0, "prefSimId":I
     const/4 v1, -0x1
 
-    .line 2698
     .local v1, "slotOfApn":I
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
 
@@ -15038,17 +13711,14 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 2699
     const/4 v1, 0x0
 
-    .line 2704
     :cond_0
     :goto_0
     const/4 v3, -0x1
 
     if-ne v1, v3, :cond_3
 
-    .line 2705
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -15099,12 +13769,10 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2709
     :cond_1
     :goto_1
     return v2
 
-    .line 2701
     :cond_2
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
 
@@ -15114,12 +13782,10 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 2702
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 2708
     :cond_3
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -15165,7 +13831,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2709
     if-eq v0, v1, :cond_1
 
     const/4 v2, 0x1
@@ -15181,7 +13846,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 8466
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -15194,20 +13858,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 8485
     :cond_0
     :goto_0
     return v8
 
-    .line 8469
     :cond_1
     const/4 v8, 0x0
 
-    .line 8470
     .local v8, "result":Z
     const/4 v6, 0x0
 
-    .line 8471
     .local v6, "cursor":Landroid/database/Cursor;
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -15215,7 +13875,6 @@
 
     move-result-object v0
 
-    .line 8473
     .local v0, "cr":Landroid/content/ContentResolver;
     :try_start_0
     const-string v1, "content://com.verizon.vzwavs.provider/apis"
@@ -15236,7 +13895,6 @@
 
     move-result-object v6
 
-    .line 8474
     if-eqz v6, :cond_2
 
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
@@ -15245,7 +13903,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 8475
     const/4 v1, 0x0
 
     invoke-interface {v6, v1}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -15259,14 +13916,11 @@
 
     move-result v8
 
-    .line 8480
     :cond_2
     if-eqz v6, :cond_3
 
-    .line 8481
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 8484
     :cond_3
     :goto_1
     new-instance v1, Ljava/lang/StringBuilder;
@@ -15291,33 +13945,27 @@
 
     goto :goto_0
 
-    .line 8477
     :catch_0
     move-exception v7
 
-    .line 8478
     .local v7, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8480
     if-eqz v6, :cond_3
 
-    .line 8481
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
-    .line 8480
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
 
     if-eqz v6, :cond_4
 
-    .line 8481
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
     :cond_4
@@ -15329,7 +13977,6 @@
     .param p1, "request"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 3023
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -15338,10 +13985,8 @@
 
     if-nez v0, :cond_0
 
-    .line 3024
     const/4 v0, 0x0
 
-    .line 3026
     :goto_0
     return v0
 
@@ -15364,24 +14009,20 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 3259
     const/4 v0, 0x1
 
     iput-boolean v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->lingering:Z
 
-    .line 3260
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v1, 0x82003
 
     invoke-virtual {v0, v1}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(I)V
 
-    .line 3261
     const v0, 0x80003
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 3262
     return-void
 .end method
 
@@ -15389,14 +14030,12 @@
     .locals 11
 
     .prologue
-    .line 4364
     iget-object v9, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v8
 
-    .line 4365
     .local v8, "res":Landroid/content/ContentResolver;
     const-string/jumbo v9, "global_http_proxy_host"
 
@@ -15404,7 +14043,6 @@
 
     move-result-object v1
 
-    .line 4366
     .local v1, "host":Ljava/lang/String;
     const-string/jumbo v9, "global_http_proxy_port"
 
@@ -15414,7 +14052,6 @@
 
     move-result v2
 
-    .line 4368
     .local v2, "port":I
     const-string/jumbo v9, "global_http_proxy_username"
 
@@ -15422,7 +14059,6 @@
 
     move-result-object v3
 
-    .line 4369
     .local v3, "username":Ljava/lang/String;
     const-string/jumbo v9, "global_http_proxy_password"
 
@@ -15430,7 +14066,6 @@
 
     move-result-object v4
 
-    .line 4371
     .local v4, "password":Ljava/lang/String;
     const-string/jumbo v9, "global_http_proxy_exclusion_list"
 
@@ -15438,7 +14073,6 @@
 
     move-result-object v5
 
-    .line 4373
     .local v5, "exclList":Ljava/lang/String;
     const-string/jumbo v9, "global_proxy_pac_url"
 
@@ -15446,7 +14080,6 @@
 
     move-result-object v7
 
-    .line 4374
     .local v7, "pacFileUrl":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -15460,7 +14093,6 @@
 
     if-nez v9, :cond_1
 
-    .line 4376
     :cond_0
     invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -15468,12 +14100,10 @@
 
     if-nez v9, :cond_2
 
-    .line 4377
     new-instance v0, Landroid/net/ProxyInfo;
 
     invoke-direct {v0, v7}, Landroid/net/ProxyInfo;-><init>(Ljava/lang/String;)V
 
-    .line 4387
     .local v0, "proxyProperties":Landroid/net/ProxyInfo;
     :goto_0
     invoke-virtual {v0}, Landroid/net/ProxyInfo;->isValid()Z
@@ -15482,7 +14112,6 @@
 
     if-nez v9, :cond_4
 
-    .line 4388
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -15507,13 +14136,11 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 4407
     .end local v0    # "proxyProperties":Landroid/net/ProxyInfo;
     :cond_1
     :goto_1
     return-void
 
-    .line 4380
     :cond_2
     if-eqz v3, :cond_3
 
@@ -15525,7 +14152,6 @@
 
     if-nez v9, :cond_3
 
-    .line 4381
     new-instance v0, Landroid/net/ProxyInfo;
 
     invoke-direct/range {v0 .. v5}, Landroid/net/ProxyInfo;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
@@ -15533,7 +14159,6 @@
     .restart local v0    # "proxyProperties":Landroid/net/ProxyInfo;
     goto :goto_0
 
-    .line 4383
     .end local v0    # "proxyProperties":Landroid/net/ProxyInfo;
     :cond_3
     new-instance v0, Landroid/net/ProxyInfo;
@@ -15543,22 +14168,18 @@
     .restart local v0    # "proxyProperties":Landroid/net/ProxyInfo;
     goto :goto_0
 
-    .line 4392
     :cond_4
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mProxyLock:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 4393
     :try_start_0
     iput-object v0, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
-    .line 4394
     monitor-exit v10
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4397
     const-string/jumbo v9, "misc_policy"
 
     invoke-static {v9}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -15567,7 +14188,6 @@
 
     check-cast v6, Lcom/android/server/enterprise/general/MiscPolicy;
 
-    .line 4401
     .local v6, "miscPolicyService":Lcom/android/server/enterprise/general/MiscPolicy;
     if-eqz v6, :cond_1
 
@@ -15577,21 +14197,18 @@
 
     if-nez v9, :cond_1
 
-    .line 4402
     iget-object v9, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     const/4 v10, 0x2
 
     invoke-virtual {v9, v10}, Landroid/net/ProxyInfo;->setEnterpriseProxy(I)V
 
-    .line 4403
     iget-object v9, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     invoke-direct {p0, v9}, Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyInfo;)V
 
     goto :goto_1
 
-    .line 4394
     .end local v6    # "miscPolicyService":Lcom/android/server/enterprise/general/MiscPolicy;
     :catchall_0
     move-exception v9
@@ -15609,12 +14226,10 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 4560
     const-string v0, "ConnectivityService"
 
     invoke-static {v0, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4561
     return-void
 .end method
 
@@ -15623,12 +14238,10 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 4564
     const-string v0, "ConnectivityService"
 
     invoke-static {v0, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4565
     return-void
 .end method
 
@@ -15637,7 +14250,6 @@
     .param p1, "newNetwork"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 7463
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -15658,7 +14270,6 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7464
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v1
@@ -15702,20 +14313,16 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 7467
     const-string/jumbo v1, "makeDefault(): Currently Mobile is Default for MPTCP"
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7489
     :goto_0
     return-void
 
-    .line 7470
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->setupDataActivityTracking(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7472
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -15727,7 +14334,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7478
     :goto_1
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
@@ -15741,10 +14347,8 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->onActiveNetworkChanged(ILandroid/net/LinkProperties;)V
 
-    .line 7482
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->notifyLockdownVpn(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7483
     iget-object v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v1}, Landroid/net/LinkProperties;->getHttpProxy()Landroid/net/ProxyInfo;
@@ -15753,10 +14357,8 @@
 
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->handleApplyDefaultProxy(Landroid/net/ProxyInfo;)V
 
-    .line 7484
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->updateTcpBufferSizes(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7486
     iget-object v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
     iget-object v2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
@@ -15765,7 +14367,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/ConnectivityService;->setIpAddressType(Landroid/net/LinkProperties;I)V
 
-    .line 7488
     iget-object v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v1}, Landroid/net/LinkProperties;->getDnsServers()Ljava/util/List;
@@ -15776,11 +14377,9 @@
 
     goto :goto_0
 
-    .line 7473
     :catch_0
     move-exception v0
 
-    .line 7474
     .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -15815,25 +14414,21 @@
 
     const/4 v6, 0x1
 
-    .line 2335
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
     if-eqz v4, :cond_0
 
-    .line 2336
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
     invoke-virtual {v4, p1}, Lcom/android/server/net/LockdownVpnTracker;->augmentNetworkInfo(Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
     move-result-object p1
 
-    .line 2339
     :cond_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1, p2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2341
     .local v1, "intent":Landroid/content/Intent;
     const-string v4, "VZW"
 
@@ -15855,18 +14450,15 @@
 
     if-ne v4, v5, :cond_6
 
-    .line 2342
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->createNewNetworkInfo(Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
     move-result-object v3
 
-    .line 2343
     .local v3, "ni":Landroid/net/NetworkInfo;
     const-string/jumbo v4, "networkInfo"
 
     invoke-virtual {v1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 2344
     const-string/jumbo v4, "networkType"
 
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getType()I
@@ -15875,7 +14467,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2351
     .end local v3    # "ni":Landroid/net/NetworkInfo;
     :goto_0
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->isFailover()Z
@@ -15884,15 +14475,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 2352
     const-string/jumbo v4, "isFailover"
 
     invoke-virtual {v1, v4, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2353
     invoke-virtual {p1, v7}, Landroid/net/NetworkInfo;->setFailover(Z)V
 
-    .line 2355
     :cond_1
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getReason()Ljava/lang/String;
 
@@ -15900,7 +14488,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 2356
     const-string/jumbo v4, "reason"
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getReason()Ljava/lang/String;
@@ -15909,7 +14496,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2358
     :cond_2
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
 
@@ -15917,7 +14503,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 2359
     const-string v4, "extraInfo"
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
@@ -15926,7 +14511,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2362
     :cond_3
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetworkForRequestId:Landroid/util/SparseArray;
 
@@ -15940,15 +14524,12 @@
 
     check-cast v0, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2363
     .local v0, "def":Lcom/android/server/connectivity/NetworkAgentInfo;
     const/4 v2, 0x0
 
-    .line 2364
     .local v2, "isDefault":Z
     if-eqz v0, :cond_5
 
-    .line 2365
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v4
@@ -15967,10 +14548,8 @@
 
     if-eqz v4, :cond_4
 
-    .line 2367
     const/4 v2, 0x1
 
-    .line 2369
     :cond_4
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
 
@@ -15990,29 +14569,23 @@
 
     if-eqz v4, :cond_5
 
-    .line 2371
     const/4 v2, 0x1
 
-    .line 2374
     :cond_5
     const-string/jumbo v4, "isDefault"
 
     invoke-virtual {v1, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2375
     const-string/jumbo v4, "inetCondition"
 
     iget v5, p0, Lcom/android/server/ConnectivityService;->mDefaultInetConditionPublished:I
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2376
     iput-object p1, p0, Lcom/android/server/ConnectivityService;->mIntentInfo:Landroid/net/NetworkInfo;
 
-    .line 2377
     return-object v1
 
-    .line 2346
     .end local v0    # "def":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v2    # "isDefault":Z
     :cond_6
@@ -16024,7 +14597,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 2347
     const-string/jumbo v4, "networkType"
 
     invoke-virtual {p1}, Landroid/net/NetworkInfo;->getType()I
@@ -16044,28 +14616,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2401
     new-instance v0, Landroid/net/NetworkInfo;
 
     invoke-direct {v0, p2}, Landroid/net/NetworkInfo;-><init>(Landroid/net/NetworkInfo;)V
 
-    .line 2402
     .local v0, "maskInfo":Landroid/net/NetworkInfo;
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 2403
     invoke-static {v1}, Landroid/net/ConnectivityManager;->getNetworkTypeName(I)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setTypeName(Ljava/lang/String;)V
 
-    .line 2404
     const-string/jumbo v1, "networkInfo"
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 2405
     const-string/jumbo v1, "networkType"
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
@@ -16074,7 +14641,6 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2407
     return-object p1
 .end method
 
@@ -16082,7 +14648,6 @@
     .locals 2
 
     .prologue
-    .line 1251
     monitor-enter p0
 
     :try_start_0
@@ -16110,7 +14675,6 @@
     .locals 1
 
     .prologue
-    .line 8288
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mStatsService:Landroid/net/INetworkStatsService;
 
@@ -16118,11 +14682,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8291
     :goto_0
     return-void
 
-    .line 8289
     :catch_0
     move-exception v0
 
@@ -16134,12 +14696,10 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 7905
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
     if-eqz v0, :cond_0
 
-    .line 7906
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
@@ -16148,19 +14708,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 7907
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
     iget-object v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v0, v1}, Lcom/android/server/net/LockdownVpnTracker;->onVpnStateChanged(Landroid/net/NetworkInfo;)V
 
-    .line 7912
     :cond_0
     :goto_0
     return-void
 
-    .line 7909
     :cond_1
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
@@ -16174,77 +14731,64 @@
     .param p1, "notifyType"    # I
 
     .prologue
-    .line 8267
     packed-switch p1, :pswitch_data_0
 
-    .line 8279
     :pswitch_0
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 8268
     :pswitch_1
     const-string v0, "PRECHECK"
 
     goto :goto_0
 
-    .line 8269
     :pswitch_2
     const-string v0, "AVAILABLE"
 
     goto :goto_0
 
-    .line 8270
     :pswitch_3
     const-string v0, "LOSING"
 
     goto :goto_0
 
-    .line 8271
     :pswitch_4
     const-string v0, "LOST"
 
     goto :goto_0
 
-    .line 8272
     :pswitch_5
     const-string v0, "UNAVAILABLE"
 
     goto :goto_0
 
-    .line 8273
     :pswitch_6
     const-string v0, "CAP_CHANGED"
 
     goto :goto_0
 
-    .line 8274
     :pswitch_7
     const-string v0, "IP_CHANGED"
 
     goto :goto_0
 
-    .line 8275
     :pswitch_8
     const-string v0, "RELEASED"
 
     goto :goto_0
 
-    .line 8276
     :pswitch_9
     const-string v0, "SUSPENDED"
 
     goto :goto_0
 
-    .line 8277
     :pswitch_a
     const-string v0, "RESUME"
 
     goto :goto_0
 
-    .line 8267
     :pswitch_data_0
     .packed-switch 0x80001
         :pswitch_1
@@ -16267,7 +14811,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 6201
     monitor-enter p0
 
     :try_start_0
@@ -16293,14 +14836,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6202
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 6203
     :try_start_1
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -16310,27 +14851,22 @@
 
     check-cast v0, Lcom/android/server/connectivity/Vpn;
 
-    .line 6204
     .local v0, "userVpn":Lcom/android/server/connectivity/Vpn;
     if-eqz v0, :cond_0
 
-    .line 6205
     const-string v1, "Starting user already has a VPN"
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 6206
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6212
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 6208
     :cond_0
     :try_start_2
     new-instance v0, Lcom/android/server/connectivity/Vpn;
@@ -16348,7 +14884,6 @@
 
     invoke-direct {v0, v1, v3, v4, p1}, Lcom/android/server/connectivity/Vpn;-><init>(Landroid/os/Looper;Landroid/content/Context;Landroid/os/INetworkManagementService;I)V
 
-    .line 6209
     .restart local v0    # "userVpn":Lcom/android/server/connectivity/Vpn;
     const-string v1, "ConnectivityService"
 
@@ -16372,12 +14907,10 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6210
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 6211
     monitor-exit v2
 
     goto :goto_0
@@ -16395,7 +14928,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 6201
     :catchall_1
     move-exception v1
 
@@ -16409,12 +14941,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 6215
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 6216
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -16424,29 +14954,23 @@
 
     check-cast v0, Lcom/android/server/connectivity/Vpn;
 
-    .line 6217
     .local v0, "userVpn":Lcom/android/server/connectivity/Vpn;
     if-nez v0, :cond_0
 
-    .line 6218
     const-string v1, "Stopping user has no VPN"
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 6219
     monitor-exit v2
 
-    .line 6223
     :goto_0
     return-void
 
-    .line 6221
     :cond_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->delete(I)V
 
-    .line 6222
     monitor-exit v2
 
     goto :goto_0
@@ -16468,17 +14992,14 @@
     .param p2, "b"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 4283
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->canonicalizeProxyInfo(Landroid/net/ProxyInfo;)Landroid/net/ProxyInfo;
 
     move-result-object p1
 
-    .line 4284
     invoke-direct {p0, p2}, Lcom/android/server/ConnectivityService;->canonicalizeProxyInfo(Landroid/net/ProxyInfo;)Landroid/net/ProxyInfo;
 
     move-result-object p2
 
-    .line 4287
     invoke-static {p1, p2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v0
@@ -16517,7 +15038,6 @@
     .locals 3
 
     .prologue
-    .line 1240
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mSettingsObserver:Lcom/android/server/ConnectivityService$SettingsObserver;
 
     const-string/jumbo v1, "http_proxy"
@@ -16530,7 +15050,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/ConnectivityService$SettingsObserver;->observe(Landroid/net/Uri;I)V
 
-    .line 1245
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mSettingsObserver:Lcom/android/server/ConnectivityService$SettingsObserver;
 
     const-string/jumbo v1, "mobile_data_always_on"
@@ -16543,7 +15062,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/ConnectivityService$SettingsObserver;->observe(Landroid/net/Uri;I)V
 
-    .line 1248
     return-void
 .end method
 
@@ -16552,7 +15070,6 @@
     .param p1, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 6506
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -16575,7 +15092,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 6509
     return-void
 .end method
 
@@ -16585,7 +15101,6 @@
     .param p2, "oldScore"    # I
 
     .prologue
-    .line 7869
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
@@ -16594,16 +15109,13 @@
 
     if-ge p2, v5, :cond_1
 
-    .line 7870
     sget-object v5, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;->REAP:Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
     invoke-direct {p0, p1, v5}, Lcom/android/server/ConnectivityService;->rematchNetworkAndRequests(Lcom/android/server/connectivity/NetworkAgentInfo;Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;)V
 
-    .line 7887
     :cond_0
     return-void
 
-    .line 7872
     :cond_1
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
 
@@ -16625,11 +15137,9 @@
 
     check-cast v4, [Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 7877
     .local v4, "nais":[Lcom/android/server/connectivity/NetworkAgentInfo;
     invoke-static {v4}, Ljava/util/Arrays;->sort([Ljava/lang/Object;)V
 
-    .line 7878
     move-object v0, v4
 
     .local v0, "arr$":[Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -16644,7 +15154,6 @@
 
     aget-object v3, v0, v1
 
-    .line 7879
     .local v3, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     array-length v5, v4
 
@@ -16659,12 +15168,10 @@
     :goto_1
     invoke-direct {p0, v3, v5}, Lcom/android/server/ConnectivityService;->rematchNetworkAndRequests(Lcom/android/server/connectivity/NetworkAgentInfo;Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;)V
 
-    .line 7878
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 7879
     :cond_2
     sget-object v5, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;->REAP:Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
@@ -16677,7 +15184,6 @@
     .param p2, "reapUnvalidatedNetworks"    # Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
     .prologue
-    .line 7520
     move-object/from16 v0, p1
 
     iget-boolean v0, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
@@ -16704,26 +15210,21 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 7846
     :cond_0
     :goto_0
     return-void
 
-    .line 7521
     :cond_1
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
 
     move-result v14
 
-    .line 7522
     .local v14, "keep":Z
     const/4 v13, 0x0
 
-    .line 7523
     .local v13, "isNewDefault":Z
     const/16 v20, 0x0
 
-    .line 7524
     .local v20, "oldDefaultNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     new-instance v28, Ljava/lang/StringBuilder;
 
@@ -16749,18 +15250,15 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7527
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7528
     .local v5, "affectedNetworks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/connectivity/NetworkAgentInfo;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7529
     .local v4, "addedRequests":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/ConnectivityService$NetworkRequestInfo;>;"
     new-instance v28, Ljava/lang/StringBuilder;
 
@@ -16786,7 +15284,6 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7530
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
@@ -16816,7 +15313,6 @@
 
     check-cast v18, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 7531
     .local v18, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     const-string v28, "CTC"
 
@@ -16898,7 +15394,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 7537
     :cond_3
     const-string/jumbo v28, "mms/mms2 should not be default active network"
 
@@ -16906,7 +15401,6 @@
 
     goto :goto_1
 
-    .line 7542
     :cond_4
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -16956,14 +15450,12 @@
 
     if-nez v28, :cond_5
 
-    .line 7547
     const-string/jumbo v28, "rematchNetworkAndRequests: Skip rematchNetworkAndRequests bcz wifi is disconnect but newNetwork SUSPENDED state"
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 7553
     :cond_5
     invoke-static {}, Landroid/telephony/TelephonyManager;->getDefault()Landroid/telephony/TelephonyManager;
 
@@ -16973,7 +15465,6 @@
 
     move-result v16
 
-    .line 7554
     .local v16, "netType":I
     move-object/from16 v0, p0
 
@@ -16989,13 +15480,11 @@
 
     check-cast v26, Landroid/telephony/TelephonyManager;
 
-    .line 7555
     .local v26, "tm":Landroid/telephony/TelephonyManager;
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
 
     move-result v25
 
-    .line 7556
     .local v25, "subID":I
     move-object/from16 v0, v26
 
@@ -17005,7 +15494,6 @@
 
     move-result-object v19
 
-    .line 7557
     .local v19, "numeric":Ljava/lang/String;
     move-object/from16 v0, v18
 
@@ -17021,7 +15509,6 @@
 
     move-result v22
 
-    .line 7558
     .local v22, "satisfies":Z
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -17127,14 +15614,12 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 7567
     const-string/jumbo v28, "rematchNetworkAndRequests: Skip rematchNetworkAndRequests bcz EPDG Xcap should not be matched with Internet Xcap"
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 7572
     :cond_6
     move-object/from16 v0, p0
 
@@ -17160,7 +15645,6 @@
 
     check-cast v9, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 7573
     .local v9, "currentNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     move-object/from16 v0, p1
 
@@ -17168,7 +15652,6 @@
 
     if-eqz v22, :cond_7
 
-    .line 7575
     new-instance v28, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
@@ -17227,13 +15710,10 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7578
     const/4 v14, 0x1
 
-    .line 7579
     goto/16 :goto_1
 
-    .line 7583
     :cond_7
     new-instance v28, Ljava/lang/StringBuilder;
 
@@ -17291,10 +15771,8 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7584
     if-eqz v22, :cond_16
 
-    .line 7585
     move-object/from16 v0, v18
 
     iget-boolean v0, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->isRequest:Z
@@ -17303,7 +15781,6 @@
 
     if-nez v28, :cond_8
 
-    .line 7588
     move-object/from16 v0, v18
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -17326,7 +15803,6 @@
 
     goto/16 :goto_1
 
-    .line 7593
     :cond_8
     const-string/jumbo v28, "ro.csc.sales_code"
 
@@ -17334,7 +15810,6 @@
 
     move-result-object v21
 
-    .line 7594
     .local v21, "salesCode":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->isDomesticModel()Z
 
@@ -17382,7 +15857,6 @@
 
     if-nez v28, :cond_a
 
-    .line 7597
     :cond_9
     move-object/from16 v0, p0
 
@@ -17414,7 +15888,6 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 7598
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -17429,7 +15902,6 @@
 
     check-cast v8, Landroid/net/ConnectivityManager;
 
-    .line 7600
     .local v8, "cm":Landroid/net/ConnectivityManager;
     invoke-virtual {v8}, Landroid/net/ConnectivityManager;->getMobileDataEnabled()Z
 
@@ -17449,7 +15921,6 @@
 
     if-eqz v28, :cond_2
 
-    .line 7608
     .end local v8    # "cm":Landroid/net/ConnectivityManager;
     :cond_a
     const-string v28, "CHN"
@@ -17500,7 +15971,6 @@
 
     if-eqz v28, :cond_c
 
-    .line 7609
     :cond_b
     move-object/from16 v0, p1
 
@@ -17520,7 +15990,6 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 7610
     move-object/from16 v0, v18
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -17541,7 +16010,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 7619
     :cond_c
     new-instance v28, Ljava/lang/StringBuilder;
 
@@ -17588,7 +16056,6 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7623
     if-eqz v9, :cond_d
 
     invoke-virtual {v9}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
@@ -17647,7 +16114,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 7627
     :cond_d
     if-eqz v9, :cond_f
 
@@ -17691,7 +16157,6 @@
 
     if-ne v0, v1, :cond_f
 
-    .line 7629
     new-instance v28, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
@@ -17742,13 +16207,11 @@
 
     goto/16 :goto_1
 
-    .line 7619
     :cond_e
     const/16 v28, 0x0
 
     goto/16 :goto_2
 
-    .line 7631
     :cond_f
     new-instance v28, Ljava/lang/StringBuilder;
 
@@ -17774,10 +16237,8 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7632
     if-eqz v9, :cond_14
 
-    .line 7634
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v28
@@ -17818,17 +16279,14 @@
 
     if-nez v28, :cond_13
 
-    .line 7638
     const-string v28, "   skipping mobile down on wifi event"
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7660
     :cond_10
     :goto_3
     invoke-direct/range {p0 .. p1}, Lcom/android/server/ConnectivityService;->unlinger(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7661
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mNetworkForRequestId:Landroid/util/SparseArray;
@@ -17855,7 +16313,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 7662
     move-object/from16 v0, v18
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -17872,7 +16329,6 @@
 
     if-nez v28, :cond_11
 
-    .line 7663
     const-string v28, "ConnectivityService"
 
     new-instance v29, Ljava/lang/StringBuilder;
@@ -17915,16 +16371,13 @@
 
     invoke-static/range {v28 .. v29}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7665
     :cond_11
     move-object/from16 v0, v18
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7666
     const/4 v14, 0x1
 
-    .line 7674
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v28
@@ -18067,7 +16520,6 @@
 
     if-ne v0, v1, :cond_15
 
-    .line 7680
     :cond_12
     new-instance v28, Ljava/lang/StringBuilder;
 
@@ -18101,7 +16553,6 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7681
     move-object/from16 v0, v18
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -18118,10 +16569,8 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/ConnectivityService;->sendUpdatedScoreToFactories(Landroid/net/NetworkRequest;I)V
 
-    .line 7682
     const/4 v14, 0x0
 
-    .line 7688
     :goto_4
     move-object/from16 v0, p0
 
@@ -18153,15 +16602,12 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 7689
     const/4 v13, 0x1
 
-    .line 7690
     move-object/from16 v20, v9
 
     goto/16 :goto_1
 
-    .line 7641
     :cond_13
     new-instance v28, Ljava/lang/StringBuilder;
 
@@ -18187,7 +16633,6 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7642
     iget-object v0, v9, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     move-object/from16 v28, v0
@@ -18206,7 +16651,6 @@
 
     invoke-virtual/range {v28 .. v29}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 7643
     iget-object v0, v9, Lcom/android/server/connectivity/NetworkAgentInfo;->networkLingered:Ljava/util/ArrayList;
 
     move-object/from16 v28, v0
@@ -18219,10 +16663,8 @@
 
     invoke-virtual/range {v28 .. v29}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7644
     invoke-virtual {v5, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7645
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v28
@@ -18247,7 +16689,6 @@
 
     if-eqz v28, :cond_10
 
-    .line 7647
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
@@ -18276,7 +16717,6 @@
 
     if-nez v28, :cond_10
 
-    .line 7649
     iget-object v0, v9, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
     move-object/from16 v28, v0
@@ -18285,7 +16725,6 @@
 
     move-result-object v12
 
-    .line 7650
     .local v12, "ifaceName":Ljava/lang/String;
     invoke-static {v12}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -18293,7 +16732,6 @@
 
     if-nez v28, :cond_10
 
-    .line 7651
     new-instance v28, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
@@ -18316,7 +16754,6 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7652
     const/16 v28, 0x3
 
     move/from16 v0, v28
@@ -18325,7 +16762,6 @@
 
     goto/16 :goto_3
 
-    .line 7658
     .end local v12    # "ifaceName":Ljava/lang/String;
     :cond_14
     const-string v28, "   accepting network in place of null"
@@ -18334,7 +16770,6 @@
 
     goto/16 :goto_3
 
-    .line 7686
     :cond_15
     move-object/from16 v0, v18
 
@@ -18356,7 +16791,6 @@
 
     goto/16 :goto_4
 
-    .line 7694
     .end local v21    # "salesCode":Ljava/lang/String;
     :cond_16
     move-object/from16 v0, p1
@@ -18383,7 +16817,6 @@
 
     if-eqz v28, :cond_2
 
-    .line 7703
     new-instance v28, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
@@ -18436,7 +16869,6 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7706
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
@@ -18457,12 +16889,10 @@
 
     invoke-virtual/range {v28 .. v29}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 7707
     move-object/from16 v0, p1
 
     if-ne v9, v0, :cond_18
 
-    .line 7708
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mNetworkForRequestId:Landroid/util/SparseArray;
@@ -18483,7 +16913,6 @@
 
     invoke-virtual/range {v28 .. v29}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 7709
     move-object/from16 v0, v18
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -18500,7 +16929,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/ConnectivityService;->sendUpdatedScoreToFactories(Landroid/net/NetworkRequest;I)V
 
-    .line 7724
     :cond_17
     :goto_5
     const v28, 0x80004
@@ -18517,7 +16945,6 @@
 
     goto/16 :goto_1
 
-    .line 7711
     :cond_18
     move-object/from16 v0, v18
 
@@ -18533,7 +16960,6 @@
 
     if-ne v0, v1, :cond_17
 
-    .line 7712
     const-string v28, "ConnectivityService"
 
     new-instance v29, Ljava/lang/StringBuilder;
@@ -18590,7 +17016,6 @@
 
     goto :goto_5
 
-    .line 7728
     .end local v9    # "currentNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v16    # "netType":I
     .end local v18    # "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
@@ -18617,7 +17042,6 @@
 
     check-cast v15, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 7729
     .local v15, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-boolean v0, v15, Lcom/android/server/connectivity/NetworkAgentInfo;->lingering:Z
 
@@ -18625,7 +17049,6 @@
 
     if-nez v28, :cond_1a
 
-    .line 7736
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15}, Lcom/android/server/ConnectivityService;->unneeded(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
@@ -18634,14 +17057,12 @@
 
     if-eqz v28, :cond_1b
 
-    .line 7737
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15}, Lcom/android/server/ConnectivityService;->linger(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     goto :goto_6
 
-    .line 7740
     :cond_1b
     move-object/from16 v0, p0
 
@@ -18649,18 +17070,14 @@
 
     goto :goto_6
 
-    .line 7743
     .end local v15    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_1c
     if-eqz v13, :cond_1e
 
-    .line 7745
     invoke-direct/range {p0 .. p1}, Lcom/android/server/ConnectivityService;->makeDefault(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7746
     monitor-enter p0
 
-    .line 7750
     :try_start_0
     move-object/from16 v0, p0
 
@@ -18674,7 +17091,6 @@
 
     if-eqz v28, :cond_1d
 
-    .line 7751
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -18705,13 +17121,11 @@
 
     invoke-virtual/range {v28 .. v31}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 7756
     :cond_1d
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7761
     :cond_1e
     invoke-virtual {v4}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -18741,7 +17155,6 @@
 
     goto :goto_7
 
-    .line 7756
     .end local v18    # "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     :catchall_0
     move-exception v28
@@ -18753,14 +17166,11 @@
 
     throw v28
 
-    .line 7763
     :cond_1f
     if-eqz v13, :cond_21
 
-    .line 7768
     if-eqz v20, :cond_20
 
-    .line 7769
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -18789,7 +17199,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->remove(ILcom/android/server/connectivity/NetworkAgentInfo;Z)V
 
-    .line 7772
     :cond_20
     move-object/from16 v0, p1
 
@@ -18808,7 +17217,6 @@
 
     iput v0, v1, Lcom/android/server/ConnectivityService;->mDefaultInetConditionPublished:I
 
-    .line 7773
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -18833,20 +17241,16 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->add(ILcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7774
     invoke-direct/range {p0 .. p1}, Lcom/android/server/ConnectivityService;->notifyLockdownVpn(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7777
     :cond_21
     if-eqz v14, :cond_26
 
-    .line 7782
     :try_start_2
     invoke-static {}, Lcom/android/server/am/BatteryStatsService;->getService()Lcom/android/internal/app/IBatteryStats;
 
     move-result-object v7
 
-    .line 7783
     .local v7, "bs":Lcom/android/internal/app/IBatteryStats;
     move-object/from16 v0, p1
 
@@ -18858,7 +17262,6 @@
 
     move-result v27
 
-    .line 7785
     .local v27, "type":I
     move-object/from16 v0, p1
 
@@ -18870,13 +17273,11 @@
 
     move-result-object v6
 
-    .line 7786
     .local v6, "baseIface":Ljava/lang/String;
     move/from16 v0, v27
 
     invoke-interface {v7, v6, v0}, Lcom/android/internal/app/IBatteryStats;->noteNetworkInterfaceType(Ljava/lang/String;I)V
 
-    .line 7787
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
@@ -18904,13 +17305,11 @@
 
     check-cast v23, Landroid/net/LinkProperties;
 
-    .line 7788
     .local v23, "stacked":Landroid/net/LinkProperties;
     invoke-virtual/range {v23 .. v23}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v24
 
-    .line 7789
     .local v24, "stackedIface":Ljava/lang/String;
     move-object/from16 v0, v24
 
@@ -18918,7 +17317,6 @@
 
     invoke-interface {v7, v0, v1}, Lcom/android/internal/app/IBatteryStats;->noteNetworkInterfaceType(Ljava/lang/String;I)V
 
-    .line 7790
     move-object/from16 v0, v24
 
     invoke-static {v0, v6}, Lcom/android/internal/net/NetworkStatsFactory;->noteStackedIface(Ljava/lang/String;Ljava/lang/String;)V
@@ -18927,7 +17325,6 @@
 
     goto :goto_9
 
-    .line 7792
     .end local v6    # "baseIface":Ljava/lang/String;
     .end local v7    # "bs":Lcom/android/internal/app/IBatteryStats;
     .end local v23    # "stacked":Landroid/net/LinkProperties;
@@ -18936,7 +17333,6 @@
     :catch_0
     move-exception v28
 
-    .line 7809
     :cond_22
     const/4 v10, 0x0
 
@@ -18956,7 +17352,6 @@
 
     if-ge v10, v0, :cond_25
 
-    .line 7810
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
@@ -18971,7 +17366,6 @@
 
     check-cast v17, Landroid/net/NetworkRequest;
 
-    .line 7811
     .local v17, "nr":Landroid/net/NetworkRequest;
     move-object/from16 v0, v17
 
@@ -18997,7 +17391,6 @@
 
     if-eqz v28, :cond_23
 
-    .line 7813
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -19018,13 +17411,11 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->add(ILcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7809
     :cond_23
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_a
 
-    .line 7772
     .end local v10    # "i":I
     .end local v17    # "nr":Landroid/net/NetworkRequest;
     :cond_24
@@ -19032,7 +17423,6 @@
 
     goto/16 :goto_8
 
-    .line 7821
     .restart local v10    # "i":I
     :cond_25
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
@@ -19041,7 +17431,6 @@
 
     if-eqz v28, :cond_26
 
-    .line 7822
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -19058,7 +17447,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->add(ILcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7825
     .end local v10    # "i":I
     :cond_26
     sget-object v28, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;->REAP:Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
@@ -19069,7 +17457,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 7826
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
@@ -19098,7 +17485,6 @@
 
     check-cast v15, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 7827
     .restart local v15    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     move-object/from16 v0, p0
 
@@ -19124,7 +17510,6 @@
 
     if-eq v0, v1, :cond_27
 
-    .line 7829
     new-instance v28, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
@@ -19149,14 +17534,12 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7830
     const-string/jumbo v28, "ro.csc.sales_code"
 
     invoke-static/range {v28 .. v28}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v21
 
-    .line 7831
     .restart local v21    # "salesCode":Ljava/lang/String;
     const-string v28, "CHN"
 
@@ -19230,7 +17613,6 @@
 
     if-eqz v28, :cond_29
 
-    .line 7833
     :cond_28
     iget-object v0, v15, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -19254,7 +17636,6 @@
 
     if-nez v28, :cond_29
 
-    .line 7835
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -19267,11 +17648,9 @@
 
     move-result-object v9
 
-    .line 7836
     .restart local v9    # "currentNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v9, :cond_29
 
-    .line 7837
     new-instance v28, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v28 .. v28}, Ljava/lang/StringBuilder;-><init>()V
@@ -19294,12 +17673,10 @@
 
     invoke-static/range {v28 .. v28}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7838
     move-object/from16 v0, p0
 
     invoke-direct {v0, v9}, Lcom/android/server/ConnectivityService;->teardownUnneededNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7842
     .end local v9    # "currentNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_29
     move-object/from16 v0, p0
@@ -19314,18 +17691,15 @@
     .param p1, "networkAgent"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 2650
     iget-object v3, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v3}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2651
     .local v2, "iface":Ljava/lang/String;
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 2653
     .local v0, "caps":Landroid/net/NetworkCapabilities;
     if-eqz v2, :cond_1
 
@@ -19345,7 +17719,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 2657
     :cond_0
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
@@ -19354,16 +17727,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2662
     :cond_1
     :goto_0
     return-void
 
-    .line 2658
     :catch_0
     move-exception v1
 
-    .line 2659
     .local v1, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -19393,10 +17763,8 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 6582
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 6584
     :try_start_0
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetworkFactoryInfos:Ljava/util/HashMap;
 
@@ -19423,7 +17791,6 @@
 
     check-cast v3, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
 
-    .line 6585
     .local v3, "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     iget-object v4, v3, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;->name:Ljava/lang/String;
 
@@ -19433,7 +17800,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 6586
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     const/4 v5, 0x0
@@ -19442,30 +17808,25 @@
 
     move-result-object v2
 
-    .line 6587
     .local v2, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v2, :cond_0
 
-    .line 6588
     const-string/jumbo v4, "tear down invalid network"
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6589
     invoke-direct {p0, v2}, Lcom/android/server/ConnectivityService;->teardownUnneededNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)V
     :try_end_0
     .catch Ljava/util/ConcurrentModificationException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 6593
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v3    # "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     :catch_0
     move-exception v0
 
-    .line 6594
     .local v0, "e":Ljava/util/ConcurrentModificationException;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -19487,7 +17848,6 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 6596
     .end local v0    # "e":Ljava/util/ConcurrentModificationException;
     :cond_1
     return-void
@@ -19501,7 +17861,6 @@
     .param p4, "uid"    # I
 
     .prologue
-    .line 2151
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getAllRoutes()Ljava/util/List;
 
     move-result-object v3
@@ -19510,11 +17869,9 @@
 
     move-result-object v0
 
-    .line 2152
     .local v0, "bestRoute":Landroid/net/RouteInfo;
     if-nez v0, :cond_0
 
-    .line 2153
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v3
@@ -19523,7 +17880,6 @@
 
     move-result-object v0
 
-    .line 2165
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -19559,7 +17915,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2167
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -19567,19 +17922,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2173
     const/4 v3, 0x1
 
     :goto_1
     return v3
 
-    .line 2155
     :cond_0
     invoke-virtual {v0}, Landroid/net/RouteInfo;->getInterface()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2156
     .local v2, "iface":Ljava/lang/String;
     invoke-virtual {v0}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
@@ -19591,14 +17943,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 2158
     invoke-static {p2, v2}, Landroid/net/RouteInfo;->makeHostRoute(Ljava/net/InetAddress;Ljava/lang/String;)Landroid/net/RouteInfo;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 2162
     :cond_1
     invoke-virtual {v0}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
@@ -19610,12 +17960,10 @@
 
     goto :goto_0
 
-    .line 2168
     .end local v2    # "iface":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 2170
     .local v1, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -19637,7 +17985,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 2171
     const/4 v3, 0x0
 
     goto :goto_1
@@ -19649,45 +17996,36 @@
     .param p2, "newInfo"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 7915
     const-string v3, "ConnectivityService"
 
     const-string/jumbo v4, "replaceNetworkInfo()"
 
     invoke-static {v3, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7916
     invoke-virtual {p2}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v2
 
-    .line 7917
     .local v2, "state":Landroid/net/NetworkInfo$State;
     const/4 v0, 0x0
 
-    .line 7918
     .local v0, "oldInfo":Landroid/net/NetworkInfo;
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v1
 
-    .line 7920
     .local v1, "oldScore":I
     monitor-enter p1
 
-    .line 7921
     :try_start_0
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 7922
     iput-object p2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 7923
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7926
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -19757,12 +18095,10 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7932
     sget-object v3, Landroid/net/NetworkInfo$State;->CONNECTED:Landroid/net/NetworkInfo$State;
 
     if-ne v2, v3, :cond_1
 
-    .line 7933
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -19787,14 +18123,11 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7934
     iput-object p2, p0, Lcom/android/server/ConnectivityService;->mWifiNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 7939
     :goto_1
     return-void
 
-    .line 7923
     :catchall_0
     move-exception v3
 
@@ -19805,7 +18138,6 @@
 
     throw v3
 
-    .line 7926
     :cond_0
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
@@ -19813,7 +18145,6 @@
 
     goto :goto_0
 
-    .line 7936
     :cond_1
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -19839,7 +18170,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7937
     const/4 v3, 0x0
 
     iput-object v3, p0, Lcom/android/server/ConnectivityService;->mWifiNetworkInfo:Landroid/net/NetworkInfo;
@@ -19852,14 +18182,11 @@
     .param p1, "forWhom"    # Ljava/lang/String;
 
     .prologue
-    .line 4138
     const/4 v0, 0x0
 
-    .line 4139
     .local v0, "serialNum":I
     monitor-enter p0
 
-    .line 4140
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLock:Landroid/os/PowerManager$WakeLock;
 
@@ -19871,11 +18198,9 @@
 
     monitor-exit p0
 
-    .line 4148
     :goto_0
     return-void
 
-    .line 4141
     :cond_0
     iget v2, p0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLockSerialNumber:I
 
@@ -19885,7 +18210,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4142
     .end local v0    # "serialNum":I
     .local v1, "serialNum":I
     :try_start_1
@@ -19893,15 +18217,12 @@
 
     invoke-virtual {v2}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 4143
     iput-object p1, p0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLockCausedBy:Ljava/lang/String;
 
-    .line 4144
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4145
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -19922,12 +18243,10 @@
 
     move v0, v1
 
-    .line 4148
     .end local v1    # "serialNum":I
     .restart local v0    # "serialNum":I
     goto :goto_0
 
-    .line 4144
     :catchall_0
     move-exception v2
 
@@ -19956,7 +18275,6 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 3738
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -19979,7 +18297,6 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3739
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -19996,7 +18313,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3742
     return-void
 .end method
 
@@ -20007,14 +18323,12 @@
     .param p3, "tsNanos"    # J
 
     .prologue
-    .line 2385
     new-instance v3, Landroid/content/Intent;
 
     const-string v2, "android.net.conn.DATA_ACTIVITY_CHANGE"
 
     invoke-direct {v3, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2386
     .local v3, "intent":Landroid/content/Intent;
     const-string v2, "deviceType"
 
@@ -20022,26 +18336,22 @@
 
     invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2387
     const-string/jumbo v2, "isActive"
 
     move/from16 v0, p2
 
     invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2388
     const-string/jumbo v2, "tsNanos"
 
     move-wide/from16 v0, p3
 
     invoke-virtual {v3, v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 2389
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 2391
     .local v12, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -20064,13 +18374,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2394
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2396
     return-void
 
-    .line 2394
     :catchall_0
     move-exception v2
 
@@ -20085,14 +18392,12 @@
     .param p2, "bcastType"    # Ljava/lang/String;
 
     .prologue
-    .line 2381
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->makeGeneralIntent(Landroid/net/NetworkInfo;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->sendStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 2382
     return-void
 .end method
 
@@ -20101,12 +18406,10 @@
     .param p1, "info"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 2331
     const-string v0, "android.net.conn.INET_CONDITION_ACTION"
 
     invoke-direct {p0, p1, v0}, Lcom/android/server/ConnectivityService;->sendGeneralBroadcast(Landroid/net/NetworkInfo;Ljava/lang/String;)V
 
-    .line 2332
     return-void
 .end method
 
@@ -20116,7 +18419,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 7335
     :try_start_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -20138,7 +18440,6 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7336
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x0
@@ -20155,15 +18456,12 @@
     :try_end_0
     .catch Landroid/app/PendingIntent$CanceledException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7342
     :goto_0
     return-void
 
-    .line 7337
     :catch_0
     move-exception v6
 
-    .line 7338
     .local v6, "e":Landroid/app/PendingIntent$CanceledException;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -20185,7 +18483,6 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7339
     invoke-virtual {p0, p1}, Lcom/android/server/ConnectivityService;->releasePendingNetworkRequest(Landroid/app/PendingIntent;)V
 
     goto :goto_0
@@ -20200,23 +18497,19 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 8196
     new-instance v0, Landroid/net/NetworkInfo;
 
     iget-object v4, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-direct {v0, v4}, Landroid/net/NetworkInfo;-><init>(Landroid/net/NetworkInfo;)V
 
-    .line 8197
     .local v0, "info":Landroid/net/NetworkInfo;
     invoke-virtual {v0, p3}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 8198
     sget-object v4, Landroid/net/NetworkInfo$DetailedState;->DISCONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     if-eq p2, v4, :cond_1
 
-    .line 8199
     const/4 v4, 0x0
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
@@ -20225,15 +18518,12 @@
 
     invoke-virtual {v0, p2, v4, v5}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8200
     invoke-virtual {p0, v0}, Lcom/android/server/ConnectivityService;->sendConnectedBroadcast(Landroid/net/NetworkInfo;)V
 
-    .line 8241
     :cond_0
     :goto_0
     return-void
 
-    .line 8202
     :cond_1
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getReason()Ljava/lang/String;
 
@@ -20245,14 +18535,12 @@
 
     invoke-virtual {v0, p2, v4, v5}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8203
     new-instance v1, Landroid/content/Intent;
 
     const-string v4, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 8205
     .local v1, "intent":Landroid/content/Intent;
     const-string v4, "VZW"
 
@@ -20274,18 +18562,15 @@
 
     if-ne v4, v5, :cond_6
 
-    .line 8206
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->createNewNetworkInfo(Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
     move-result-object v3
 
-    .line 8207
     .local v3, "ni":Landroid/net/NetworkInfo;
     const-string/jumbo v4, "networkInfo"
 
     invoke-virtual {v1, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 8208
     const-string/jumbo v4, "networkType"
 
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getType()I
@@ -20294,7 +18579,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 8214
     .end local v3    # "ni":Landroid/net/NetworkInfo;
     :goto_1
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isFailover()Z
@@ -20303,19 +18587,16 @@
 
     if-eqz v4, :cond_2
 
-    .line 8215
     const-string/jumbo v4, "isFailover"
 
     invoke-virtual {v1, v4, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 8216
     iget-object v4, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/4 v5, 0x0
 
     invoke-virtual {v4, v5}, Landroid/net/NetworkInfo;->setFailover(Z)V
 
-    .line 8218
     :cond_2
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getReason()Ljava/lang/String;
 
@@ -20323,7 +18604,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 8219
     const-string/jumbo v4, "reason"
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getReason()Ljava/lang/String;
@@ -20332,7 +18612,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 8221
     :cond_3
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
 
@@ -20340,7 +18619,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 8222
     const-string v4, "extraInfo"
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
@@ -20349,11 +18627,9 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 8224
     :cond_4
     const/4 v2, 0x0
 
-    .line 8225
     .local v2, "newDefaultAgent":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v4, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
@@ -20367,22 +18643,18 @@
 
     if-eqz v4, :cond_5
 
-    .line 8226
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v2
 
-    .line 8227
     if-eqz v2, :cond_7
 
-    .line 8228
     const-string/jumbo v4, "otherNetwork"
 
     iget-object v5, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 8234
     :cond_5
     :goto_2
     const-string/jumbo v4, "inetCondition"
@@ -20391,27 +18663,22 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 8236
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->sendStickyBroadcast(Landroid/content/Intent;)V
 
-    .line 8237
     if-eqz v2, :cond_0
 
-    .line 8238
     iget-object v4, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {p0, v4}, Lcom/android/server/ConnectivityService;->sendConnectedBroadcast(Landroid/net/NetworkInfo;)V
 
     goto/16 :goto_0
 
-    .line 8210
     .end local v2    # "newDefaultAgent":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_6
     const-string/jumbo v4, "networkInfo"
 
     invoke-virtual {v1, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 8211
     const-string/jumbo v4, "networkType"
 
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
@@ -20422,7 +18689,6 @@
 
     goto :goto_1
 
-    .line 8231
     .restart local v2    # "newDefaultAgent":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_7
     const-string/jumbo v4, "noConnectivity"
@@ -20439,7 +18705,6 @@
     .param p3, "notificationType"    # I
 
     .prologue
-    .line 7323
     const v1, 0x80002
 
     if-ne p3, v1, :cond_0
@@ -20448,12 +18713,10 @@
 
     if-nez v1, :cond_0
 
-    .line 7324
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 7325
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "android.net.extra.NETWORK"
 
@@ -20461,24 +18724,20 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 7326
     const-string v1, "android.net.extra.NETWORK_REQUEST"
 
     iget-object v2, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 7327
     const/4 v1, 0x1
 
     iput-boolean v1, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPendingIntentSent:Z
 
-    .line 7328
     iget-object v1, p1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPendingIntent:Landroid/app/PendingIntent;
 
     invoke-direct {p0, v1, v0}, Lcom/android/server/ConnectivityService;->sendIntent(Landroid/app/PendingIntent;Landroid/content/Intent;)V
 
-    .line 7331
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void
@@ -20489,7 +18748,6 @@
     .param p1, "proxy"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 4503
     if-nez p1, :cond_0
 
     new-instance p1, Landroid/net/ProxyInfo;
@@ -20503,7 +18761,6 @@
 
     invoke-direct {p1, v5, v6, v7}, Landroid/net/ProxyInfo;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 4504
     .restart local p1    # "proxy":Landroid/net/ProxyInfo;
     :cond_0
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mPacManager:Lcom/android/server/connectivity/PacManager;
@@ -20514,11 +18771,9 @@
 
     if-eqz v5, :cond_2
 
-    .line 4523
     :cond_1
     return-void
 
-    .line 4505
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -20540,30 +18795,25 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 4506
     new-instance v1, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.PROXY_CHANGE"
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4507
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v5, 0x24000000
 
     invoke-virtual {v1, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 4509
     const-string v5, "android.intent.extra.PROXY_INFO"
 
     invoke-virtual {v1, v5, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 4510
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 4512
     .local v2, "ident":J
     :try_start_0
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -20574,10 +18824,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4514
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4519
     sget-object v5, Landroid/sec/enterprise/proxy/EnterpriseProxyConstants;->LOCAL_ENTERPRISE_PROXY_WHITELIST:Ljava/util/List;
 
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -20598,13 +18846,11 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 4520
     .local v4, "packageName":Ljava/lang/String;
     invoke-virtual {p0, v4}, Lcom/android/server/ConnectivityService;->sendEnterpriseProxyBroadcast(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 4514
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v4    # "packageName":Ljava/lang/String;
     :catchall_0
@@ -20622,29 +18868,24 @@
     .prologue
     const/4 v12, 0x5
 
-    .line 2412
     monitor-enter p0
 
-    .line 2413
     :try_start_0
     iget-boolean v10, p0, Lcom/android/server/ConnectivityService;->mSystemReady:Z
 
     if-nez v10, :cond_0
 
-    .line 2414
     new-instance v10, Landroid/content/Intent;
 
     invoke-direct {v10, p1}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
     iput-object v10, p0, Lcom/android/server/ConnectivityService;->mInitialBroadcast:Landroid/content/Intent;
 
-    .line 2416
     :cond_0
     const/high16 v10, 0x4000000
 
     invoke-virtual {p1, v10}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2418
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -20669,12 +18910,10 @@
 
     invoke-static {v10}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2421
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 2422
     .local v4, "ident":J
     const-string v10, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -20688,7 +18927,6 @@
 
     if-eqz v10, :cond_2
 
-    .line 2423
     const-string/jumbo v10, "networkInfo"
 
     invoke-virtual {p1, v10}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -20697,7 +18935,6 @@
 
     check-cast v8, Landroid/net/NetworkInfo;
 
-    .line 2425
     .local v8, "ni":Landroid/net/NetworkInfo;
     invoke-virtual {v8}, Landroid/net/NetworkInfo;->getType()I
 
@@ -20707,17 +18944,14 @@
 
     if-ne v10, v11, :cond_1
 
-    .line 2426
     const-string v10, "android.net.conn.CONNECTIVITY_CHANGE_SUPL"
 
     invoke-virtual {p1, v10}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2427
     const/high16 v10, 0x40000000    # 2.0f
 
     invoke-virtual {p1, v10}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 2429
     :cond_1
     invoke-static {}, Lcom/android/server/am/BatteryStatsService;->getService()Lcom/android/internal/app/IBatteryStats;
     :try_end_0
@@ -20725,7 +18959,6 @@
 
     move-result-object v1
 
-    .line 2431
     .local v1, "bs":Lcom/android/internal/app/IBatteryStats;
     :try_start_1
     const-string/jumbo v10, "networkType"
@@ -20752,7 +18985,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2439
     .end local v1    # "bs":Lcom/android/internal/app/IBatteryStats;
     .end local v8    # "ni":Landroid/net/NetworkInfo;
     :cond_2
@@ -20766,7 +18998,6 @@
 
     move-result v7
 
-    .line 2441
     .local v7, "networkType":I
     const-string/jumbo v10, "user"
 
@@ -20778,7 +19009,6 @@
 
     move-result-object v9
 
-    .line 2443
     .local v9, "userMgr":Landroid/os/IUserManager;
     const/4 v10, 0x1
 
@@ -20786,7 +19016,6 @@
 
     move-result-object v0
 
-    .line 2518
     .local v0, "allUsers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     const-string v10, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -20800,7 +19029,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 2519
     const-string/jumbo v10, "networkInfo"
 
     invoke-virtual {p1, v10}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -20809,7 +19037,6 @@
 
     check-cast v6, Landroid/net/NetworkInfo;
 
-    .line 2521
     .local v6, "networkInfo":Landroid/net/NetworkInfo;
     invoke-virtual {v6}, Landroid/net/NetworkInfo;->getType()I
 
@@ -20827,7 +19054,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 2523
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     const/4 v11, 0x5
@@ -20836,11 +19062,9 @@
 
     move-result-object v3
 
-    .line 2525
     .local v3, "naiDefault":Lcom/android/server/connectivity/NetworkAgentInfo;
     invoke-direct {p0, v3}, Lcom/android/server/ConnectivityService;->makeDefault(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 2528
     .end local v3    # "naiDefault":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v6    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_3
@@ -20853,11 +19077,9 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 2533
     :try_start_3
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2535
     .end local v0    # "allUsers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     .end local v7    # "networkType":I
     .end local v9    # "userMgr":Landroid/os/IUserManager;
@@ -20866,10 +19088,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2536
     return-void
 
-    .line 2431
     .restart local v1    # "bs":Lcom/android/internal/app/IBatteryStats;
     .restart local v8    # "ni":Landroid/net/NetworkInfo;
     :cond_4
@@ -20881,13 +19101,11 @@
 
     goto :goto_0
 
-    .line 2530
     .end local v1    # "bs":Lcom/android/internal/app/IBatteryStats;
     .end local v8    # "ni":Landroid/net/NetworkInfo;
     :catch_0
     move-exception v2
 
-    .line 2531
     .local v2, "e":Ljava/lang/Exception;
     :try_start_5
     new-instance v10, Ljava/lang/StringBuilder;
@@ -20912,13 +19130,11 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 2533
     :try_start_6
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
 
-    .line 2535
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v4    # "ident":J
     :catchall_0
@@ -20930,7 +19146,6 @@
 
     throw v10
 
-    .line 2533
     .restart local v4    # "ident":J
     :catchall_1
     move-exception v10
@@ -20942,7 +19157,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 2434
     .restart local v1    # "bs":Lcom/android/internal/app/IBatteryStats;
     .restart local v8    # "ni":Landroid/net/NetworkInfo;
     :catch_1
@@ -20957,7 +19171,6 @@
     .param p2, "user"    # I
 
     .prologue
-    .line 2540
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/os/UserHandle;
@@ -20966,7 +19179,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 2541
     return-void
 .end method
 
@@ -20976,7 +19188,6 @@
     .param p2, "score"    # I
 
     .prologue
-    .line 7314
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -21011,7 +19222,6 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7315
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetworkFactoryInfos:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -21036,7 +19246,6 @@
 
     check-cast v1, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
 
-    .line 7316
     .local v1, "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     iget-object v2, v1, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
@@ -21048,7 +19257,6 @@
 
     goto :goto_0
 
-    .line 7319
     .end local v1    # "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     :cond_0
     return-void
@@ -21059,7 +19267,6 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 7305
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -21072,7 +19279,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 7306
     iget-object v2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -21081,7 +19287,6 @@
 
     check-cast v1, Landroid/net/NetworkRequest;
 
-    .line 7308
     .local v1, "nr":Landroid/net/NetworkRequest;
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->isRequest(Landroid/net/NetworkRequest;)Z
 
@@ -21089,13 +19294,11 @@
 
     if-nez v2, :cond_0
 
-    .line 7305
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 7309
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
@@ -21105,7 +19308,6 @@
 
     goto :goto_1
 
-    .line 7311
     .end local v1    # "nr":Landroid/net/NetworkRequest;
     :cond_1
     return-void
@@ -21124,11 +19326,9 @@
     .end annotation
 
     .prologue
-    .line 7214
     .local p1, "dnses":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/net/InetAddress;>;"
     const/4 v4, 0x0
 
-    .line 7215
     .local v4, "last":I
     invoke-interface {p1}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -21148,11 +19348,9 @@
 
     check-cast v0, Ljava/net/InetAddress;
 
-    .line 7216
     .local v0, "dns":Ljava/net/InetAddress;
     add-int/lit8 v4, v4, 0x1
 
-    .line 7217
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -21171,19 +19369,16 @@
 
     move-result-object v3
 
-    .line 7218
     .local v3, "key":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 7219
     .local v5, "value":Ljava/lang/String;
     invoke-static {v3, v5}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 7221
     .end local v0    # "dns":Ljava/net/InetAddress;
     .end local v3    # "key":Ljava/lang/String;
     .end local v5    # "value":Ljava/lang/String;
@@ -21196,7 +19391,6 @@
 
     if-gt v1, v6, :cond_1
 
-    .line 7222
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -21215,23 +19409,19 @@
 
     move-result-object v3
 
-    .line 7223
     .restart local v3    # "key":Ljava/lang/String;
     const-string v6, ""
 
     invoke-static {v3, v6}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7221
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 7225
     .end local v3    # "key":Ljava/lang/String;
     :cond_1
     iput v4, p0, Lcom/android/server/ConnectivityService;->mNumDnsEntries:I
 
-    .line 7226
     return-void
 .end method
 
@@ -21240,17 +19430,14 @@
     .param p1, "delAckSize"    # Ljava/lang/String;
 
     .prologue
-    .line 8708
     :try_start_0
     const-string v2, "/sys/kernel/ipv4/tcp_delack_seg"
 
-    .line 8709
     .local v2, "mProcFile":Ljava/lang/String;
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 8711
     .local v0, "delAck":I
     if-lez v0, :cond_0
 
@@ -21258,16 +19445,13 @@
 
     if-le v0, v3, :cond_1
 
-    .line 8712
     :cond_0
     const-string v3, " delAck size is out of range, configuring to default"
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 8713
     const/4 v0, 0x1
 
-    .line 8716
     :cond_1
     const-string v3, "/sys/kernel/ipv4/tcp_delack_seg"
 
@@ -21275,17 +19459,14 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8720
     .end local v0    # "delAck":I
     .end local v2    # "mProcFile":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 8717
     :catch_0
     move-exception v1
 
-    .line 8718
     .local v1, "e":Ljava/io/IOException;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -21329,7 +19510,6 @@
     .end annotation
 
     .prologue
-    .line 5194
     .local p2, "dnsList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p3, "searchDomainList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v1, "ConnectivityService"
@@ -21364,12 +19544,10 @@
 
     invoke-static {v1, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5195
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 5197
     .local v2, "token":J
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
@@ -21380,7 +19558,6 @@
 
     if-lt v1, v4, :cond_0
 
-    .line 5198
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getVpnPolicy()Lcom/sec/enterprise/knox/vpn/IEnterprisePremiumVpnPolicy;
 
     move-result-object v1
@@ -21390,19 +19567,15 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5203
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5205
     :goto_0
     return-void
 
-    .line 5200
     :catch_0
     move-exception v0
 
-    .line 5201
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v1, "ConnectivityService"
@@ -21433,7 +19606,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5203
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -21453,16 +19625,13 @@
     .param p2, "netId"    # I
 
     .prologue
-    .line 7195
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getAddresses()Ljava/util/List;
 
     move-result-object v1
 
-    .line 7196
     .local v1, "addrlist":Ljava/util/List;, "Ljava/util/List<Ljava/net/InetAddress;>;"
     const-string v4, ""
 
-    .line 7197
     .local v4, "ipType":Ljava/lang/String;
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -21483,13 +19652,11 @@
 
     check-cast v0, Ljava/net/InetAddress;
 
-    .line 7198
     .local v0, "addr":Ljava/net/InetAddress;
     invoke-virtual {v0}, Ljava/net/InetAddress;->getAddress()[B
 
     move-result-object v2
 
-    .line 7199
     .local v2, "getaddr":[B
     invoke-virtual {v0}, Ljava/net/InetAddress;->isLinkLocalAddress()Z
 
@@ -21503,7 +19670,6 @@
 
     if-nez v5, :cond_0
 
-    .line 7200
     array-length v5, v2
 
     const/16 v6, 0x10
@@ -21522,7 +19688,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 7201
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -21543,7 +19708,6 @@
 
     goto :goto_0
 
-    .line 7203
     :cond_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -21565,7 +19729,6 @@
 
     goto :goto_0
 
-    .line 7207
     .end local v0    # "addr":Ljava/net/InetAddress;
     .end local v2    # "getaddr":[B
     :cond_2
@@ -21593,7 +19756,6 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7208
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -21616,12 +19778,10 @@
 
     move-result-object v4
 
-    .line 7209
     const-string/jumbo v5, "net.iptype"
 
     invoke-static {v5, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7210
     return-void
 .end method
 
@@ -21630,26 +19790,20 @@
     .param p1, "tracker"    # Lcom/android/server/net/LockdownVpnTracker;
 
     .prologue
-    .line 5778
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
-    .line 5779
     .local v0, "existing":Lcom/android/server/net/LockdownVpnTracker;
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
-    .line 5780
     if-eqz v0, :cond_0
 
-    .line 5781
     invoke-virtual {v0}, Lcom/android/server/net/LockdownVpnTracker;->shutdown()V
 
-    .line 5785
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 5786
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -21657,7 +19811,6 @@
 
     invoke-interface {v1, v2}, Landroid/os/INetworkManagementService;->setFirewallEnabled(Z)V
 
-    .line 5787
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
     const-string/jumbo v2, "lo"
@@ -21666,19 +19819,15 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/INetworkManagementService;->setFirewallInterfaceRule(Ljava/lang/String;Z)V
 
-    .line 5788
     iput-object p1, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
-    .line 5789
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mLockdownTracker:Lcom/android/server/net/LockdownVpnTracker;
 
     invoke-virtual {v1}, Lcom/android/server/net/LockdownVpnTracker;->init()V
 
-    .line 5796
     :goto_0
     return-void
 
-    .line 5791
     :cond_1
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -21690,7 +19839,6 @@
 
     goto :goto_0
 
-    .line 5793
     :catch_0
     move-exception v1
 
@@ -21706,7 +19854,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 5818
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -21747,12 +19894,10 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 5821
     new-instance v8, Landroid/content/Intent;
 
     invoke-direct {v8, p3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5822
     .local v8, "intent":Landroid/content/Intent;
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -21760,7 +19905,6 @@
 
     move-result-object v6
 
-    .line 5824
     .local v6, "pendingIntent":Landroid/app/PendingIntent;
     const/high16 v0, 0x10000
 
@@ -21768,7 +19912,6 @@
 
     add-int v2, v0, v1
 
-    .line 5825
     .local v2, "id":I
     sget-object v3, Lcom/android/server/ConnectivityService$NotificationType;->SIGN_IN:Lcom/android/server/ConnectivityService$NotificationType;
 
@@ -21782,7 +19925,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/ConnectivityService;->setProvNotificationVisibleIntent(ZILcom/android/server/ConnectivityService$NotificationType;ILjava/lang/String;Landroid/app/PendingIntent;Z)V
 
-    .line 5827
     return-void
 .end method
 
@@ -21797,7 +19939,6 @@
     .param p7, "highPriority"    # Z
 
     .prologue
-    .line 5848
     new-instance v21, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
@@ -21878,7 +20019,6 @@
 
     invoke-static/range {v21 .. v21}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 5856
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v21
@@ -21889,7 +20029,6 @@
 
     move-result-object v9
 
-    .line 5857
     .local v9, "feature":Ljava/lang/String;
     const-string v21, "VZW"
 
@@ -21901,7 +20040,6 @@
 
     if-eqz v21, :cond_1
 
-    .line 5858
     const-string/jumbo v21, "persist.sys.pcovalue"
 
     const/16 v22, 0x0
@@ -21910,7 +20048,6 @@
 
     move-result v18
 
-    .line 5859
     .local v18, "value":I
     const/16 v21, 0x3
 
@@ -21928,18 +20065,15 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 5860
     :cond_0
     const/16 p1, 0x0
 
-    .line 5873
     .end local v18    # "value":I
     :cond_1
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v14
 
-    .line 5874
     .local v14, "r":Landroid/content/res/Resources;
     move-object/from16 v0, p0
 
@@ -21955,11 +20089,9 @@
 
     check-cast v12, Landroid/app/NotificationManager;
 
-    .line 5877
     .local v12, "notificationManager":Landroid/app/NotificationManager;
     if-eqz p1, :cond_e
 
-    .line 5881
     sget-object v21, Lcom/android/server/ConnectivityService$NotificationType;->NO_INTERNET:Lcom/android/server/ConnectivityService$NotificationType;
 
     move-object/from16 v0, p3
@@ -21976,7 +20108,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 5883
     const v21, 0x10403ae
 
     const/16 v22, 0x1
@@ -22005,7 +20136,6 @@
 
     move-result-object v17
 
-    .line 5884
     .local v17, "title":Ljava/lang/CharSequence;
     const v21, 0x10403af
 
@@ -22015,11 +20145,9 @@
 
     move-result-object v7
 
-    .line 5885
     .local v7, "details":Ljava/lang/CharSequence;
     const v10, 0x108079f
 
-    .line 5926
     .local v10, "icon":I
     :goto_0
     sget-object v21, Lcom/android/server/ConnectivityService$NotificationType;->SIGN_IN:Lcom/android/server/ConnectivityService$NotificationType;
@@ -22030,18 +20158,15 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 5927
     new-instance v16, Landroid/app/Notification$BigTextStyle;
 
     invoke-direct/range {v16 .. v16}, Landroid/app/Notification$BigTextStyle;-><init>()V
 
-    .line 5928
     .local v16, "style":Landroid/app/Notification$BigTextStyle;
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v7}, Landroid/app/Notification$BigTextStyle;->bigText(Ljava/lang/CharSequence;)Landroid/app/Notification$BigTextStyle;
 
-    .line 5929
     const/16 v21, 0x0
 
     move-object/from16 v0, p0
@@ -22056,7 +20181,6 @@
 
     const/16 v20, 0x1
 
-    .line 5931
     .local v20, "wifiOnly":Z
     :goto_1
     new-instance v21, Landroid/app/Notification$Builder;
@@ -22135,7 +20259,6 @@
 
     move-result-object v6
 
-    .line 5940
     .local v6, "builder":Landroid/app/Notification$Builder;
     move-object/from16 v0, p0
 
@@ -22145,12 +20268,10 @@
 
     if-eqz v21, :cond_3
 
-    .line 5941
     const-string v21, "HUN for captive portal."
 
     invoke-static/range {v21 .. v21}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 5942
     new-instance v8, Landroid/content/Intent;
 
     const-string v21, "android.net.netmon.dismissHunNotification"
@@ -22159,7 +20280,6 @@
 
     invoke-direct {v8, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5943
     .local v8, "dismissIntent":Landroid/content/Intent;
     new-instance v21, Landroid/app/Notification$Action$Builder;
 
@@ -22199,7 +20319,6 @@
 
     move-result-object v4
 
-    .line 5946
     .local v4, "actionDismiss":Landroid/app/Notification$Action;
     new-instance v15, Landroid/content/Intent;
 
@@ -22209,7 +20328,6 @@
 
     invoke-direct {v15, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5947
     .local v15, "signinIntent":Landroid/content/Intent;
     new-instance v21, Landroid/app/Notification$Action$Builder;
 
@@ -22249,7 +20367,6 @@
 
     move-result-object v5
 
-    .line 5951
     .local v5, "actionSignin":Landroid/app/Notification$Action;
     const/16 v21, 0x1
 
@@ -22299,7 +20416,6 @@
 
     invoke-virtual/range {v21 .. v22}, Landroid/app/Notification$Builder;->setDeleteIntent(Landroid/app/PendingIntent;)Landroid/app/Notification$Builder;
 
-    .line 5958
     .end local v4    # "actionDismiss":Landroid/app/Notification$Action;
     .end local v5    # "actionSignin":Landroid/app/Notification$Action;
     .end local v8    # "dismissIntent":Landroid/content/Intent;
@@ -22309,7 +20425,6 @@
 
     move-result-object v11
 
-    .line 5959
     .local v11, "notification":Landroid/app/Notification;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -22319,7 +20434,6 @@
 
     iput-wide v0, v11, Landroid/app/Notification;->when:J
 
-    .line 5960
     if-nez v20, :cond_4
 
     move-object/from16 v0, p0
@@ -22330,14 +20444,12 @@
 
     if-nez v21, :cond_4
 
-    .line 5961
     const/16 v21, -0x2
 
     move/from16 v0, v21
 
     iput v0, v11, Landroid/app/Notification;->flags:I
 
-    .line 5983
     .end local v6    # "builder":Landroid/app/Notification$Builder;
     .end local v16    # "style":Landroid/app/Notification$BigTextStyle;
     .end local v20    # "wifiOnly":Z
@@ -22352,7 +20464,6 @@
 
     invoke-virtual {v12, v0, v1, v11}, Landroid/app/NotificationManager;->notify(Ljava/lang/String;ILandroid/app/Notification;)V
 
-    .line 5984
     iget-object v0, v11, Landroid/app/Notification;->contentIntent:Landroid/app/PendingIntent;
 
     move-object/from16 v21, v0
@@ -22363,14 +20474,12 @@
 
     iput-object v0, v1, Lcom/android/server/ConnectivityService;->mNotificationIntent:Landroid/app/PendingIntent;
 
-    .line 5985
     move/from16 v0, p2
 
     move-object/from16 v1, p0
 
     iput v0, v1, Lcom/android/server/ConnectivityService;->mNotificationId:I
 
-    .line 5986
     move-object/from16 v0, p5
 
     move-object/from16 v1, p0
@@ -22379,7 +20488,6 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6003
     .end local v7    # "details":Ljava/lang/CharSequence;
     .end local v10    # "icon":I
     .end local v11    # "notification":Landroid/app/Notification;
@@ -22387,7 +20495,6 @@
     :goto_4
     return-void
 
-    .line 5886
     :cond_5
     sget-object v21, Lcom/android/server/ConnectivityService$NotificationType;->SIGN_IN:Lcom/android/server/ConnectivityService$NotificationType;
 
@@ -22397,10 +20504,8 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 5887
     packed-switch p4, :pswitch_data_0
 
-    .line 5913
     :pswitch_0
     const v21, 0x10403ac
 
@@ -22430,7 +20535,6 @@
 
     move-result-object v17
 
-    .line 5914
     .restart local v17    # "title":Ljava/lang/CharSequence;
     const v21, 0x10403ad
 
@@ -22454,15 +20558,12 @@
 
     move-result-object v7
 
-    .line 5916
     .restart local v7    # "details":Ljava/lang/CharSequence;
     const v10, 0x1080797
 
-    .line 5917
     .restart local v10    # "icon":I
     goto/16 :goto_0
 
-    .line 5889
     .end local v7    # "details":Ljava/lang/CharSequence;
     .end local v10    # "icon":I
     .end local v17    # "title":Ljava/lang/CharSequence;
@@ -22495,7 +20596,6 @@
 
     move-result-object v17
 
-    .line 5890
     .restart local v17    # "title":Ljava/lang/CharSequence;
     const-string v21, "captive_portal_detected"
 
@@ -22509,7 +20609,6 @@
 
     if-eqz v21, :cond_6
 
-    .line 5891
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -22524,7 +20623,6 @@
 
     check-cast v19, Landroid/net/wifi/WifiManager;
 
-    .line 5892
     .local v19, "wifiManager":Landroid/net/wifi/WifiManager;
     invoke-virtual/range {v19 .. v19}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
@@ -22534,7 +20632,6 @@
 
     move-result-object p5
 
-    .line 5893
     new-instance v21, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
@@ -22559,7 +20656,6 @@
 
     invoke-static/range {v21 .. v21}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 5895
     .end local v19    # "wifiManager":Landroid/net/wifi/WifiManager;
     :cond_6
     const v21, 0x10409fe
@@ -22584,7 +20680,6 @@
 
     move-result-object v7
 
-    .line 5896
     .restart local v7    # "details":Ljava/lang/CharSequence;
     move-object/from16 v0, p0
 
@@ -22594,17 +20689,13 @@
 
     if-eqz v21, :cond_7
 
-    .line 5897
     move-object/from16 v7, p5
 
-    .line 5898
     add-int/lit8 p2, p2, 0x64
 
-    .line 5900
     :cond_7
     const v10, 0x108079f
 
-    .line 5901
     .restart local v10    # "icon":I
     const/16 v21, 0x1
 
@@ -22616,7 +20707,6 @@
 
     goto/16 :goto_0
 
-    .line 5905
     .end local v7    # "details":Ljava/lang/CharSequence;
     .end local v10    # "icon":I
     .end local v17    # "title":Ljava/lang/CharSequence;
@@ -22649,7 +20739,6 @@
 
     move-result-object v17
 
-    .line 5908
     .restart local v17    # "title":Ljava/lang/CharSequence;
     move-object/from16 v0, p0
 
@@ -22665,15 +20754,12 @@
 
     move-result-object v7
 
-    .line 5910
     .restart local v7    # "details":Ljava/lang/CharSequence;
     const v10, 0x1080797
 
-    .line 5911
     .restart local v10    # "icon":I
     goto/16 :goto_0
 
-    .line 5920
     .end local v7    # "details":Ljava/lang/CharSequence;
     .end local v10    # "icon":I
     .end local v17    # "title":Ljava/lang/CharSequence;
@@ -22720,7 +20806,6 @@
 
     goto/16 :goto_4
 
-    .line 5929
     .restart local v7    # "details":Ljava/lang/CharSequence;
     .restart local v10    # "icon":I
     .restart local v16    # "style":Landroid/app/Notification$BigTextStyle;
@@ -22730,14 +20815,12 @@
 
     goto/16 :goto_1
 
-    .line 5931
     .restart local v20    # "wifiOnly":Z
     :cond_a
     const/16 v21, 0x0
 
     goto/16 :goto_2
 
-    .line 5964
     .end local v16    # "style":Landroid/app/Notification$BigTextStyle;
     .end local v20    # "wifiOnly":Z
     :cond_b
@@ -22871,12 +20954,10 @@
 
     goto :goto_6
 
-    .line 5987
     .restart local v11    # "notification":Landroid/app/Notification;
     :catch_0
     move-exception v13
 
-    .line 5988
     .local v13, "npe":Ljava/lang/NullPointerException;
     new-instance v21, Ljava/lang/StringBuilder;
 
@@ -22900,12 +20981,10 @@
 
     invoke-static/range {v21 .. v21}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 5989
     invoke-virtual {v13}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto/16 :goto_4
 
-    .line 5993
     .end local v7    # "details":Ljava/lang/CharSequence;
     .end local v10    # "icon":I
     .end local v11    # "notification":Landroid/app/Notification;
@@ -22921,7 +21000,6 @@
 
     iput-boolean v0, v1, Lcom/android/server/ConnectivityService;->defaultCaptivePortalCheckShown:Z
 
-    .line 5994
     const-string v21, "CaptivePortal.Notification"
 
     move-object/from16 v0, v21
@@ -22930,7 +21008,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
 
-    .line 5995
     const/16 v21, 0x0
 
     move-object/from16 v0, v21
@@ -22939,7 +21016,6 @@
 
     iput-object v0, v1, Lcom/android/server/ConnectivityService;->mNotificationIntent:Landroid/app/PendingIntent;
 
-    .line 5996
     const/16 v21, 0x0
 
     move/from16 v0, v21
@@ -22948,7 +21024,6 @@
 
     iput v0, v1, Lcom/android/server/ConnectivityService;->mNotificationId:I
 
-    .line 5997
     const/16 v21, 0x0
 
     move-object/from16 v0, v21
@@ -22961,11 +21036,9 @@
 
     goto/16 :goto_4
 
-    .line 5998
     :catch_1
     move-exception v13
 
-    .line 5999
     .restart local v13    # "npe":Ljava/lang/NullPointerException;
     new-instance v21, Ljava/lang/StringBuilder;
 
@@ -22989,12 +21062,10 @@
 
     invoke-static/range {v21 .. v21}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 6000
     invoke-virtual {v13}, Ljava/lang/NullPointerException;->printStackTrace()V
 
     goto/16 :goto_4
 
-    .line 5887
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2
@@ -23011,17 +21082,14 @@
     .param p1, "userConfig"    # Ljava/lang/String;
 
     .prologue
-    .line 8728
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v2
 
-    .line 8729
     .local v2, "userCfg":I
     const-string v1, "/sys/kernel/ipv4/tcp_use_userconfig"
 
-    .line 8731
     .local v1, "mProcFile":Ljava/lang/String;
     if-eqz v2, :cond_0
 
@@ -23029,19 +21097,16 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 8732
     :cond_0
     const-string v3, "/sys/kernel/ipv4/tcp_use_userconfig"
 
     invoke-static {v3, p1}, Landroid/os/FileUtils;->stringToFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8739
     .end local v1    # "mProcFile":Ljava/lang/String;
     .end local v2    # "userCfg":I
     :goto_0
     return-void
 
-    .line 8734
     .restart local v1    # "mProcFile":Ljava/lang/String;
     .restart local v2    # "userCfg":I
     :cond_1
@@ -23069,13 +21134,11 @@
 
     goto :goto_0
 
-    .line 8736
     .end local v1    # "mProcFile":Ljava/lang/String;
     .end local v2    # "userCfg":I
     :catch_0
     move-exception v0
 
-    .line 8737
     .local v0, "e":Ljava/io/IOException;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -23105,18 +21168,15 @@
     .param p1, "networkAgent"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 2614
     iget-object v4, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v4}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2617
     .local v1, "iface":Ljava/lang/String;
     const/4 v3, -0x1
 
-    .line 2619
     .local v3, "type":I
     iget-object v4, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -23128,7 +21188,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 2621
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -23143,11 +21202,9 @@
 
     move-result v2
 
-    .line 2624
     .local v2, "timeout":I
     const/4 v3, 0x0
 
-    .line 2636
     :goto_0
     if-lez v2, :cond_0
 
@@ -23157,7 +21214,6 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 2638
     :try_start_0
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -23165,12 +21221,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2644
     :cond_0
     :goto_1
     return-void
 
-    .line 2625
     .end local v2    # "timeout":I
     :cond_1
     iget-object v4, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
@@ -23183,7 +21237,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 2627
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -23198,13 +21251,11 @@
 
     move-result v2
 
-    .line 2630
     .restart local v2    # "timeout":I
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 2633
     .end local v2    # "timeout":I
     :cond_2
     const/4 v2, 0x0
@@ -23212,11 +21263,9 @@
     .restart local v2    # "timeout":I
     goto :goto_0
 
-    .line 2639
     :catch_0
     move-exception v0
 
-    .line 2641
     .local v0, "e":Ljava/lang/Exception;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -23246,7 +21295,6 @@
     .param p1, "ssid"    # Ljava/lang/String;
 
     .prologue
-    .line 8314
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->skipCaptivePortalCheck()Z
 
     move-result v0
@@ -23269,7 +21317,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 8318
     :cond_0
     const-string v0, "ConnectivityService"
 
@@ -23293,10 +21340,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8319
     const/4 v0, 0x1
 
-    .line 8321
     :goto_0
     return v0
 
@@ -23310,7 +21355,6 @@
     .locals 2
 
     .prologue
-    .line 8325
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mCountryIso:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -23325,11 +21369,9 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 8326
     :cond_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->updateCountryIsoCode()V
 
-    .line 8328
     :cond_1
     const-string v0, "cn"
 
@@ -23341,17 +21383,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 8329
     const-string v0, "ConnectivityService"
 
     const-string v1, "Need to skip captive portal check."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8330
     const/4 v0, 0x1
 
-    .line 8332
     :goto_0
     return v0
 
@@ -23366,7 +21405,6 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 7413
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -23379,7 +21417,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 7414
     iget-object v2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -23388,7 +21425,6 @@
 
     check-cast v1, Landroid/net/NetworkRequest;
 
-    .line 7416
     .local v1, "nr":Landroid/net/NetworkRequest;
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->isRequest(Landroid/net/NetworkRequest;)Z
 
@@ -23396,12 +21432,10 @@
 
     if-nez v2, :cond_0
 
-    .line 7413
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 7417
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -23423,14 +21457,12 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 7420
     .end local v1    # "nr":Landroid/net/NetworkRequest;
     :cond_1
     iget-object v2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     invoke-virtual {v2}, Lcom/android/internal/util/AsyncChannel;->disconnect()V
 
-    .line 7421
     return-void
 .end method
 
@@ -23438,12 +21470,10 @@
     .locals 2
 
     .prologue
-    .line 5799
     iget-boolean v0, p0, Lcom/android/server/ConnectivityService;->mLockdownEnabled:Z
 
     if-eqz v0, :cond_0
 
-    .line 5800
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Unavailable in lockdown mode"
@@ -23452,7 +21482,6 @@
 
     throw v0
 
-    .line 5802
     :cond_0
     return-void
 .end method
@@ -23462,27 +21491,22 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 3270
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkLingered:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 3271
     iget-boolean v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->lingering:Z
 
     if-nez v0, :cond_0
 
-    .line 3275
     :goto_0
     return-void
 
-    .line 3272
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->lingering:Z
 
-    .line 3273
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -23507,7 +21531,6 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3274
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v1, 0x82001
@@ -23524,7 +21547,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3526
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -23545,7 +21567,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3527
     iget-boolean v3, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
     if-eqz v3, :cond_0
@@ -23563,11 +21584,9 @@
     :cond_0
     move v3, v4
 
-    .line 3554
     :goto_0
     return v3
 
-    .line 3528
     :cond_1
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
 
@@ -23594,7 +21613,6 @@
 
     check-cast v2, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 3529
     .local v2, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -23616,7 +21634,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3531
     iget-object v3, v2, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     iget-object v3, v3, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
@@ -23625,20 +21642,17 @@
 
     move-result-object v0
 
-    .line 3532
     .local v0, "capaTypes":[I
     array-length v3, v0
 
     if-nez v3, :cond_3
 
-    .line 3533
     const-string v3, "Do not compare when Capabilities is null"
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 3539
     :cond_3
     iget-boolean v3, v2, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->isRequest:Z
 
@@ -23701,10 +21715,8 @@
     :cond_4
     move v3, v4
 
-    .line 3551
     goto :goto_0
 
-    .line 3554
     .end local v0    # "capaTypes":[I
     .end local v2    # "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     :cond_5
@@ -23719,15 +21731,12 @@
     .param p2, "add"    # Z
 
     .prologue
-    .line 7135
     if-eqz p1, :cond_0
 
-    .line 7136
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 7137
     .local v1, "ifaceName":Ljava/lang/String;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -23759,14 +21768,12 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7138
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 7141
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -23776,7 +21783,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7147
     :goto_0
     :try_start_1
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
@@ -23787,18 +21793,15 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 7153
     .end local v1    # "ifaceName":Ljava/lang/String;
     :cond_0
     :goto_1
     return-void
 
-    .line 7142
     .restart local v1    # "ifaceName":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 7143
     .local v0, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -23822,12 +21825,10 @@
 
     goto :goto_0
 
-    .line 7148
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 7149
     .restart local v0    # "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -23858,14 +21859,11 @@
     .param p2, "networkCapabilities"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 7237
     const/4 v0, 0x0
 
-    .line 7238
     .local v0, "action":I
     const/4 v5, 0x0
 
-    .line 7240
     .local v5, "types":[I
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -23899,35 +21897,29 @@
 
     invoke-static {v7}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7245
     new-instance v2, Landroid/net/NetworkCapabilities;
 
     invoke-direct {v2, p2}, Landroid/net/NetworkCapabilities;-><init>(Landroid/net/NetworkCapabilities;)V
 
-    .line 7246
     .end local p2    # "networkCapabilities":Landroid/net/NetworkCapabilities;
     .local v2, "networkCapabilities":Landroid/net/NetworkCapabilities;
     iget-boolean v7, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->lastValidated:Z
 
     if-eqz v7, :cond_3
 
-    .line 7247
     const/16 v7, 0x10
 
     invoke-virtual {v2, v7}, Landroid/net/NetworkCapabilities;->addCapability(I)Landroid/net/NetworkCapabilities;
 
-    .line 7251
     :goto_0
     iget-boolean v7, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->lastCaptivePortalDetected:Z
 
     if-eqz v7, :cond_4
 
-    .line 7252
     const/16 v7, 0x11
 
     invoke-virtual {v2, v7}, Landroid/net/NetworkCapabilities;->addCapability(I)Landroid/net/NetworkCapabilities;
 
-    .line 7256
     :goto_1
     iget-object v7, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -23937,12 +21929,10 @@
 
     if-nez v7, :cond_2
 
-    .line 7257
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v4
 
-    .line 7258
     .local v4, "oldScore":I
     iget-object v7, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -23960,7 +21950,6 @@
 
     if-eq v7, v8, :cond_0
 
-    .line 7261
     :try_start_0
     iget-object v8, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -23983,12 +21972,10 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7270
     :cond_0
     :goto_3
     iget-object v3, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 7271
     .local v3, "oldNetCap":Landroid/net/NetworkCapabilities;
     invoke-virtual {v3, v2}, Landroid/net/NetworkCapabilities;->satisfiedByNetworkCapabilities(Landroid/net/NetworkCapabilities;)Z
 
@@ -23996,12 +21983,10 @@
 
     if-eqz v7, :cond_6
 
-    .line 7272
     invoke-virtual {v3, v2}, Landroid/net/NetworkCapabilities;->getDiffCapabilities(Landroid/net/NetworkCapabilities;)[I
 
     move-result-object v5
 
-    .line 7273
     array-length v7, v5
 
     const/4 v8, 0x1
@@ -24022,54 +22007,43 @@
 
     if-eqz v7, :cond_1
 
-    .line 7274
     const/4 v0, 0x1
 
-    .line 7275
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mTempNri:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     if-eqz v7, :cond_1
 
-    .line 7276
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mTempNri:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     iget-object v7, v7, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-virtual {p1, v7}, Lcom/android/server/connectivity/NetworkAgentInfo;->addRequest(Landroid/net/NetworkRequest;)Z
 
-    .line 7277
     const/4 v7, 0x0
 
     iput-object v7, p0, Lcom/android/server/ConnectivityService;->mTempNri:Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 7288
     :cond_1
     :goto_4
     monitor-enter p1
 
-    .line 7289
     :try_start_1
     iput-object v2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
-    .line 7290
     monitor-exit p1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 7291
     invoke-direct {p0, p1, v4}, Lcom/android/server/ConnectivityService;->rematchAllNetworksAndRequests(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 7292
     const v7, 0x80006
 
     invoke-virtual {p0, p1, v7}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 7294
     const/4 v7, 0x1
 
     if-ne v0, v7, :cond_7
 
-    .line 7295
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     const/4 v8, 0x0
@@ -24082,14 +22056,12 @@
 
     invoke-virtual {v7, v8, p1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->add(ILcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7302
     .end local v3    # "oldNetCap":Landroid/net/NetworkCapabilities;
     .end local v4    # "oldScore":I
     :cond_2
     :goto_5
     return-void
 
-    .line 7249
     :cond_3
     const/16 v7, 0x10
 
@@ -24097,7 +22069,6 @@
 
     goto/16 :goto_0
 
-    .line 7254
     :cond_4
     const/16 v7, 0x11
 
@@ -24105,7 +22076,6 @@
 
     goto/16 :goto_1
 
-    .line 7261
     .restart local v4    # "oldScore":I
     :cond_5
     :try_start_2
@@ -24115,11 +22085,9 @@
 
     goto :goto_2
 
-    .line 7264
     :catch_0
     move-exception v1
 
-    .line 7265
     .local v1, "e":Landroid/os/RemoteException;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -24143,7 +22111,6 @@
 
     goto :goto_3
 
-    .line 7280
     .end local v1    # "e":Landroid/os/RemoteException;
     .restart local v3    # "oldNetCap":Landroid/net/NetworkCapabilities;
     :cond_6
@@ -24153,12 +22120,10 @@
 
     if-eqz v7, :cond_1
 
-    .line 7281
     invoke-virtual {v2, v3}, Landroid/net/NetworkCapabilities;->getDiffCapabilities(Landroid/net/NetworkCapabilities;)[I
 
     move-result-object v5
 
-    .line 7282
     array-length v7, v5
 
     const/4 v8, 0x1
@@ -24179,12 +22144,10 @@
 
     if-eqz v7, :cond_1
 
-    .line 7283
     const/4 v0, 0x2
 
     goto :goto_4
 
-    .line 7290
     :catchall_0
     move-exception v7
 
@@ -24195,18 +22158,15 @@
 
     throw v7
 
-    .line 7296
     :cond_7
     const/4 v7, 0x2
 
     if-ne v0, v7, :cond_2
 
-    .line 7297
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->isDefaultNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
 
     move-result v6
 
-    .line 7298
     .local v6, "wasDefault":Z
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
@@ -24234,7 +22194,6 @@
 
     const/4 v4, 0x0
 
-    .line 6923
     iget-object v5, p3, Lcom/android/server/connectivity/NetworkAgentInfo;->clatd:Lcom/android/server/connectivity/Nat464Xlat;
 
     if-eqz v5, :cond_3
@@ -24249,18 +22208,15 @@
 
     move v2, v3
 
-    .line 6924
     .local v2, "wasRunningClat":Z
     :goto_0
     invoke-static {p3}, Lcom/android/server/connectivity/Nat464Xlat;->requiresClat(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
 
     move-result v1
 
-    .line 6925
     .local v1, "shouldRunClat":Z
     const/4 v0, 0x1
 
-    .line 6928
     .local v0, "mhasCapability":Z
     iget-object v5, p3, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -24270,7 +22226,6 @@
 
     move-result v0
 
-    .line 6929
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v5
@@ -24283,7 +22238,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 6931
     if-nez v0, :cond_0
 
     iget-object v5, p3, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
@@ -24299,7 +22253,6 @@
     :cond_0
     move v0, v3
 
-    .line 6934
     :cond_1
     :goto_1
     if-nez v2, :cond_5
@@ -24308,7 +22261,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 6935
     new-instance v3, Lcom/android/server/connectivity/Nat464Xlat;
 
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -24321,12 +22273,10 @@
 
     iput-object v3, p3, Lcom/android/server/connectivity/NetworkAgentInfo;->clatd:Lcom/android/server/connectivity/Nat464Xlat;
 
-    .line 6936
     iget-object v3, p3, Lcom/android/server/connectivity/NetworkAgentInfo;->clatd:Lcom/android/server/connectivity/Nat464Xlat;
 
     invoke-virtual {v3}, Lcom/android/server/connectivity/Nat464Xlat;->start()V
 
-    .line 6940
     :cond_2
     :goto_2
     return-void
@@ -24337,7 +22287,6 @@
     :cond_3
     move v2, v4
 
-    .line 6923
     goto :goto_0
 
     .restart local v0    # "mhasCapability":Z
@@ -24346,10 +22295,8 @@
     :cond_4
     move v0, v4
 
-    .line 6931
     goto :goto_1
 
-    .line 6937
     :cond_5
     if-eqz v2, :cond_2
 
@@ -24357,7 +22304,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 6938
     iget-object v3, p3, Lcom/android/server/connectivity/NetworkAgentInfo;->clatd:Lcom/android/server/connectivity/Nat464Xlat;
 
     invoke-virtual {v3}, Lcom/android/server/connectivity/Nat464Xlat;->stop()V
@@ -24371,12 +22317,10 @@
     .prologue
     const/4 v5, 0x2
 
-    .line 8337
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-nez v2, :cond_0
 
-    .line 8339
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -24392,14 +22336,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8345
     :cond_0
     :goto_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     if-eqz v2, :cond_1
 
-    .line 8346
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getNetworkCountryIso()Ljava/lang/String;
@@ -24408,7 +22350,6 @@
 
     iput-object v2, p0, Lcom/android/server/ConnectivityService;->mCountryIso:Ljava/lang/String;
 
-    .line 8347
     const-string v2, "ConnectivityService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -24433,7 +22374,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8350
     :cond_1
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mCountryIso:Ljava/lang/String;
 
@@ -24447,7 +22387,6 @@
 
     if-eq v2, v5, :cond_3
 
-    .line 8351
     :cond_2
     const-string/jumbo v2, "ro.csc.countryiso_code"
 
@@ -24455,7 +22394,6 @@
 
     move-result-object v0
 
-    .line 8352
     .local v0, "countryCode":Ljava/lang/String;
     if-eqz v0, :cond_4
 
@@ -24465,10 +22403,8 @@
 
     if-ne v2, v5, :cond_4
 
-    .line 8353
     iput-object v0, p0, Lcom/android/server/ConnectivityService;->mCountryIso:Ljava/lang/String;
 
-    .line 8357
     :goto_1
     const-string v2, "ConnectivityService"
 
@@ -24494,16 +22430,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8359
     .end local v0    # "countryCode":Ljava/lang/String;
     :cond_3
     return-void
 
-    .line 8340
     :catch_0
     move-exception v1
 
-    .line 8341
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "ConnectivityService"
 
@@ -24513,7 +22446,6 @@
 
     goto :goto_0
 
-    .line 8355
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "countryCode":Ljava/lang/String;
     :cond_4
@@ -24533,7 +22465,6 @@
     .param p5, "useDefaultDns"    # Z
 
     .prologue
-    .line 7158
     if-eqz p2, :cond_0
 
     invoke-virtual {p1, p2}, Landroid/net/LinkProperties;->isIdenticalDnses(Landroid/net/LinkProperties;)Z
@@ -24542,13 +22473,11 @@
 
     if-nez v3, :cond_5
 
-    .line 7159
     :cond_0
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getDnsServers()Ljava/util/List;
 
     move-result-object v1
 
-    .line 7160
     .local v1, "dnses":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/net/InetAddress;>;"
     invoke-interface {v1}, Ljava/util/Collection;->size()I
 
@@ -24562,13 +22491,11 @@
 
     if-eqz p5, :cond_1
 
-    .line 7161
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "dnses":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/net/InetAddress;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 7162
     .restart local v1    # "dnses":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/net/InetAddress;>;"
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
@@ -24576,12 +22503,10 @@
 
     if-eqz v3, :cond_4
 
-    .line 7163
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mDefaultDns:Ljava/net/InetAddress;
 
     invoke-interface {v1, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 7164
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -24608,7 +22533,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 7170
     :cond_1
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -24641,7 +22565,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7173
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -24657,13 +22580,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7178
     :goto_1
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
 
-    .line 7179
     .local v0, "defaultNai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v0, :cond_2
 
@@ -24673,21 +22594,17 @@
 
     if-ne v3, p3, :cond_2
 
-    .line 7180
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->setDefaultDnsSystemProperties(Ljava/util/Collection;)V
 
-    .line 7182
     :cond_2
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->flushVmDnsCache()V
 
-    .line 7191
     .end local v0    # "defaultNai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v1    # "dnses":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/net/InetAddress;>;"
     :cond_3
     :goto_2
     return-void
 
-    .line 7166
     .restart local v1    # "dnses":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/net/InetAddress;>;"
     :cond_4
     const-string v3, "0.0.0.0"
@@ -24698,7 +22615,6 @@
 
     invoke-interface {v1, v3}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
 
-    .line 7167
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -24727,11 +22643,9 @@
 
     goto :goto_0
 
-    .line 7175
     :catch_0
     move-exception v2
 
-    .line 7176
     .local v2, "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -24755,13 +22669,11 @@
 
     goto :goto_1
 
-    .line 7183
     .end local v1    # "dnses":Ljava/util/Collection;, "Ljava/util/Collection<Ljava/net/InetAddress;>;"
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_5
     if-eqz p4, :cond_3
 
-    .line 7185
     :try_start_1
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -24769,17 +22681,14 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 7189
     :goto_3
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->flushVmDnsCache()V
 
     goto :goto_2
 
-    .line 7186
     :catch_1
     move-exception v2
 
-    .line 7187
     .restart local v2    # "e":Ljava/lang/Exception;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -24809,17 +22718,14 @@
     .param p1, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 7891
     iget-boolean v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->everValidated:Z
 
     if-nez v1, :cond_1
 
-    .line 7902
     :cond_0
     :goto_0
     return-void
 
-    .line 7894
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->isDefaultNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
 
@@ -24827,31 +22733,26 @@
 
     if-eqz v1, :cond_0
 
-    .line 7896
     iget-boolean v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->lastValidated:Z
 
     if-eqz v1, :cond_2
 
     const/16 v0, 0x64
 
-    .line 7898
     .local v0, "newInetCondition":I
     :goto_1
     iget v1, p0, Lcom/android/server/ConnectivityService;->mDefaultInetConditionPublished:I
 
     if-eq v0, v1, :cond_0
 
-    .line 7900
     iput v0, p0, Lcom/android/server/ConnectivityService;->mDefaultInetConditionPublished:I
 
-    .line 7901
     iget-object v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->sendInetConditionBroadcast(Landroid/net/NetworkInfo;)V
 
     goto :goto_0
 
-    .line 7896
     .end local v0    # "newInetCondition":I
     :cond_2
     const/4 v0, 0x0
@@ -24866,21 +22767,17 @@
     .param p3, "netId"    # I
 
     .prologue
-    .line 6943
     new-instance v3, Landroid/net/LinkProperties$CompareResult;
 
     invoke-direct {v3}, Landroid/net/LinkProperties$CompareResult;-><init>()V
 
-    .line 6944
     .local v3, "interfaceDiff":Landroid/net/LinkProperties$CompareResult;, "Landroid/net/LinkProperties$CompareResult<Ljava/lang/String;>;"
     if-eqz p2, :cond_1
 
-    .line 6945
     invoke-virtual {p2, p1}, Landroid/net/LinkProperties;->compareAllInterfaceNames(Landroid/net/LinkProperties;)Landroid/net/LinkProperties$CompareResult;
 
     move-result-object v3
 
-    .line 6949
     :cond_0
     :goto_0
     iget-object v4, v3, Landroid/net/LinkProperties$CompareResult;->added:Ljava/util/List;
@@ -24903,7 +22800,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 6951
     .local v2, "iface":Ljava/lang/String;
     :try_start_0
     new-instance v4, Ljava/lang/StringBuilder;
@@ -24936,7 +22832,6 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6952
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
     invoke-interface {v4, v2, p3}, Landroid/os/INetworkManagementService;->addInterfaceToNetwork(Ljava/lang/String;I)V
@@ -24945,11 +22840,9 @@
 
     goto :goto_1
 
-    .line 6953
     :catch_0
     move-exception v0
 
-    .line 6954
     .local v0, "e":Ljava/lang/Exception;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -24973,14 +22866,12 @@
 
     goto :goto_1
 
-    .line 6946
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "iface":Ljava/lang/String;
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 6947
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getAllInterfaceNames()Ljava/util/List;
 
     move-result-object v4
@@ -24989,7 +22880,6 @@
 
     goto :goto_0
 
-    .line 6957
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_2
     iget-object v4, v3, Landroid/net/LinkProperties$CompareResult;->removed:Ljava/util/List;
@@ -25011,7 +22901,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 6959
     .restart local v2    # "iface":Ljava/lang/String;
     :try_start_1
     new-instance v4, Ljava/lang/StringBuilder;
@@ -25044,7 +22933,6 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6960
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
     invoke-interface {v4, v2, p3}, Landroid/os/INetworkManagementService;->removeInterfaceFromNetwork(Ljava/lang/String;I)V
@@ -25053,11 +22941,9 @@
 
     goto :goto_2
 
-    .line 6961
     :catch_1
     move-exception v0
 
-    .line 6962
     .restart local v0    # "e":Ljava/lang/Exception;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -25081,7 +22967,6 @@
 
     goto :goto_2
 
-    .line 6965
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v2    # "iface":Ljava/lang/String;
     :cond_3
@@ -25096,16 +22981,13 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 6805
     iget-object v1, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 6806
     .local v1, "newLp":Landroid/net/LinkProperties;
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
     iget v3, v0, Landroid/net/Network;->netId:I
 
-    .line 6808
     .local v3, "netId":I
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -25113,19 +22995,15 @@
 
     move-result v8
 
-    .line 6809
     .local v8, "netType":I
     const/4 v4, 0x0
 
-    .line 6810
     .local v4, "flushDns":Z
     const/4 v7, 0x1
 
-    .line 6812
     .local v7, "hasCapability":Z
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 6813
     .local v9, "ni":Landroid/net/NetworkInfo;
     invoke-virtual {v9}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
@@ -25141,21 +23019,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 6814
     const-string v0, "ConnectivityService"
 
     const-string/jumbo v2, "updateLinkProperties: ignore addRoute while SUSPENDED."
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6815
     iput-object p2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 6920
     :goto_0
     return-void
 
-    .line 6817
     :cond_0
     invoke-virtual {v9}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
@@ -25171,19 +23045,14 @@
 
     if-nez v0, :cond_3
 
-    .line 6819
     iput-object p2, p0, Lcom/android/server/ConnectivityService;->mBackUpLp:Landroid/net/LinkProperties;
 
-    .line 6820
     iput-object v1, p0, Lcom/android/server/ConnectivityService;->mDummyLp:Landroid/net/LinkProperties;
 
-    .line 6821
     iput v3, p0, Lcom/android/server/ConnectivityService;->mBackUpNetId:I
 
-    .line 6822
     iput-object v9, p0, Lcom/android/server/ConnectivityService;->mBackUpNi:Landroid/net/NetworkInfo;
 
-    .line 6823
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mEmergencyMgr:Lcom/sec/android/emergencymode/EmergencyManager;
 
     if-eqz v0, :cond_1
@@ -25200,7 +23069,6 @@
 
     if-lez v0, :cond_1
 
-    .line 6824
     const-string v0, "ConnectivityService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -25227,7 +23095,6 @@
 
     goto :goto_0
 
-    .line 6827
     :cond_1
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mEmergencyMgr:Lcom/sec/android/emergencymode/EmergencyManager;
 
@@ -25246,28 +23113,23 @@
 
     if-eqz v0, :cond_3
 
-    .line 6828
     const-string v0, "ConnectivityService"
 
     const-string/jumbo v2, "updateLinkProperties: reset mRefCount."
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6829
     iput v5, p0, Lcom/android/server/ConnectivityService;->mRefCount:I
 
-    .line 6837
     :cond_3
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->clatd:Lcom/android/server/connectivity/Nat464Xlat;
 
     if-eqz v0, :cond_4
 
-    .line 6838
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->clatd:Lcom/android/server/connectivity/Nat464Xlat;
 
     invoke-virtual {v0, p2}, Lcom/android/server/connectivity/Nat464Xlat;->fixupLinkProperties(Landroid/net/LinkProperties;)V
 
-    .line 6842
     :cond_4
     const-string v0, "ConnectivityService"
 
@@ -25301,29 +23163,23 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6843
     invoke-virtual {v1}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v0
 
     if-eqz v0, :cond_a
 
-    .line 6844
     invoke-direct {p0, v1, p2, v3}, Lcom/android/server/ConnectivityService;->updateInterfaces(Landroid/net/LinkProperties;Landroid/net/LinkProperties;I)V
 
-    .line 6845
     invoke-direct {p0, v1, p2, v3}, Lcom/android/server/ConnectivityService;->updateRoutes(Landroid/net/LinkProperties;Landroid/net/LinkProperties;I)Z
 
     move-result v4
 
-    .line 6849
     :goto_1
     invoke-direct {p0, v1, p2}, Lcom/android/server/ConnectivityService;->updateMtu(Landroid/net/LinkProperties;Landroid/net/LinkProperties;)V
 
-    .line 6854
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->updateTcpBufferSizes(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 6861
     const/4 v10, 0x0
 
     .local v10, "useDefaultDns":Z
@@ -25331,15 +23187,12 @@
 
     move-object v2, p2
 
-    .line 6862
     invoke-direct/range {v0 .. v5}, Lcom/android/server/ConnectivityService;->updateDnses(Landroid/net/LinkProperties;Landroid/net/LinkProperties;IZZ)V
 
-    .line 6865
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v6
 
-    .line 6866
     .local v6, "defaultNai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v6, :cond_5
 
@@ -25349,10 +23202,8 @@
 
     if-ne v0, v3, :cond_5
 
-    .line 6867
     invoke-direct {p0, v1, v3}, Lcom/android/server/ConnectivityService;->setIpAddressType(Landroid/net/LinkProperties;I)V
 
-    .line 6871
     :cond_5
     invoke-virtual {v9}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
@@ -25368,14 +23219,12 @@
 
     if-nez v0, :cond_b
 
-    .line 6872
     const-string v0, "ConnectivityService"
 
     const-string/jumbo v2, "updateLinkProperties: skip updateClat when SUSPENDED."
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6878
     :goto_2
     iget-object v0, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -25385,17 +23234,14 @@
 
     move-result v7
 
-    .line 6881
     if-eqz v7, :cond_6
 
     const/4 v0, 0x1
 
     if-eq v8, v0, :cond_6
 
-    .line 6882
     invoke-direct {p0, v1, p2, v8}, Lcom/android/server/ConnectivityService;->updateSourceRoutes(Landroid/net/LinkProperties;Landroid/net/LinkProperties;I)V
 
-    .line 6885
     :cond_6
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->isDefaultNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
 
@@ -25403,14 +23249,12 @@
 
     if-eqz v0, :cond_c
 
-    .line 6886
     invoke-virtual {v1}, Landroid/net/LinkProperties;->getHttpProxy()Landroid/net/ProxyInfo;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->handleApplyDefaultProxy(Landroid/net/ProxyInfo;)V
 
-    .line 6892
     :goto_3
     invoke-static {v1, p2}, Ljava/util/Objects;->equals(Ljava/lang/Object;Ljava/lang/Object;)Z
 
@@ -25418,15 +23262,12 @@
 
     if-nez v0, :cond_7
 
-    .line 6893
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->notifyIfacesChanged()V
 
-    .line 6894
     const v0, 0x80007
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 6899
     :cond_7
     iget-boolean v0, p0, Lcom/android/server/ConnectivityService;->mSuspendCallBack:Z
 
@@ -25454,7 +23295,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 6902
     :cond_8
     invoke-virtual {v9}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
@@ -25469,34 +23309,27 @@
     :goto_4
     invoke-virtual {p0, p1, v0}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 6905
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     invoke-virtual {v0, p1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->update(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 6906
     iput-boolean v5, p0, Lcom/android/server/ConnectivityService;->mSuspendCallBack:Z
 
-    .line 6908
     :cond_9
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mKeepaliveTracker:Lcom/android/server/connectivity/KeepaliveTracker;
 
     invoke-virtual {v0, p1}, Lcom/android/server/connectivity/KeepaliveTracker;->handleCheckKeepalivesStillValid(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 6910
     iget-boolean v0, p0, Lcom/android/server/ConnectivityService;->mSendIntentForSUSPENDED:Z
 
     if-eqz v0, :cond_e
 
-    .line 6911
     invoke-virtual {p0, v9}, Lcom/android/server/ConnectivityService;->sendConnectedBroadcast(Landroid/net/NetworkInfo;)V
 
-    .line 6912
     iput-boolean v5, p0, Lcom/android/server/ConnectivityService;->mSendIntentForSUSPENDED:Z
 
     goto/16 :goto_0
 
-    .line 6847
     .end local v6    # "defaultNai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v10    # "useDefaultDns":Z
     :cond_a
@@ -25506,7 +23339,6 @@
 
     goto/16 :goto_1
 
-    .line 6874
     .restart local v6    # "defaultNai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .restart local v10    # "useDefaultDns":Z
     :cond_b
@@ -25514,19 +23346,16 @@
 
     goto :goto_2
 
-    .line 6888
     :cond_c
     invoke-direct {p0, v1, p2, p1}, Lcom/android/server/ConnectivityService;->updateProxy(Landroid/net/LinkProperties;Landroid/net/LinkProperties;Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     goto :goto_3
 
-    .line 6902
     :cond_d
     const v0, 0x8000c
 
     goto :goto_4
 
-    .line 6913
     :cond_e
     iget-boolean v0, p0, Lcom/android/server/ConnectivityService;->mSendIntentForCONNECTED:Z
 
@@ -25538,22 +23367,18 @@
 
     if-eqz v0, :cond_f
 
-    .line 6914
     const-string v0, "ConnectivityService"
 
     const-string/jumbo v2, "send Intent after changing to CONNECTED."
 
     invoke-static {v0, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6915
     invoke-virtual {p0, v9}, Lcom/android/server/ConnectivityService;->sendConnectedBroadcast(Landroid/net/NetworkInfo;)V
 
-    .line 6916
     iput-boolean v5, p0, Lcom/android/server/ConnectivityService;->mSendIntentForCONNECTED:Z
 
     goto/16 :goto_0
 
-    .line 6918
     :cond_f
     const-string v0, "ConnectivityService"
 
@@ -25570,31 +23395,25 @@
     .prologue
     const/4 v6, 0x5
 
-    .line 1181
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getWifiActualConneted()Z
 
     move-result v2
 
-    .line 1182
     .local v2, "mWifiConnected":Z
     const/4 v1, 0x0
 
-    .line 1183
     .local v1, "mMobileConnected":Z
     invoke-virtual {p0, v6}, Lcom/android/server/ConnectivityService;->getNetworkInfo(I)Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 1184
     .local v0, "info":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_0
 
-    .line 1185
     invoke-virtual {v0}, Landroid/net/NetworkInfo;->isConnected()Z
 
     move-result v1
 
-    .line 1187
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -25638,36 +23457,29 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1189
     iget-boolean v4, p0, Lcom/android/server/ConnectivityService;->mMPTCPEnabled:Z
 
     if-eqz v4, :cond_2
 
-    .line 1190
     if-eqz v1, :cond_1
 
-    .line 1191
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     invoke-virtual {v4, v6}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->getNetworkForType(I)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v3
 
-    .line 1192
     .local v3, "naiDefault":Lcom/android/server/connectivity/NetworkAgentInfo;
     invoke-direct {p0, v3}, Lcom/android/server/ConnectivityService;->makeDefault(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 1200
     .end local v3    # "naiDefault":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_1
     :goto_0
     return-void
 
-    .line 1195
     :cond_2
     if-eqz v2, :cond_1
 
-    .line 1196
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     const/4 v5, 0x1
@@ -25676,7 +23488,6 @@
 
     move-result-object v3
 
-    .line 1197
     .restart local v3    # "naiDefault":Lcom/android/server/connectivity/NetworkAgentInfo;
     invoke-direct {p0, v3}, Lcom/android/server/ConnectivityService;->makeDefault(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
@@ -25689,18 +23500,15 @@
     .param p2, "oldLp"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 2669
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2670
     .local v1, "iface":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getMtu()I
 
     move-result v2
 
-    .line 2671
     .local v2, "mtu":I
     if-eqz p2, :cond_0
 
@@ -25710,16 +23518,13 @@
 
     if-eqz v3, :cond_0
 
-    .line 2672
     const-string/jumbo v3, "identical MTU - not setting"
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2693
     :goto_0
     return-void
 
-    .line 2676
     :cond_0
     invoke-virtual {p1}, Landroid/net/LinkProperties;->hasGlobalIPv6Address()Z
 
@@ -25731,7 +23536,6 @@
 
     if-nez v3, :cond_1
 
-    .line 2677
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -25764,7 +23568,6 @@
 
     goto :goto_0
 
-    .line 2682
     :cond_1
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -25772,14 +23575,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 2683
     const-string v3, "Setting MTU size with null iface."
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 2688
     :cond_2
     :try_start_0
     new-instance v3, Ljava/lang/StringBuilder;
@@ -25812,7 +23613,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2689
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
     invoke-interface {v3, v1, v2}, Landroid/os/INetworkManagementService;->setMtu(Ljava/lang/String;I)V
@@ -25821,11 +23621,9 @@
 
     goto :goto_0
 
-    .line 2690
     :catch_0
     move-exception v0
 
-    .line 2691
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "ConnectivityService"
 
@@ -25858,41 +23656,33 @@
     .param p2, "newInfo"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 7943
     const-string v9, "ConnectivityService"
 
     const-string/jumbo v10, "updateNetworkInfo()"
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7944
     invoke-virtual {p2}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
     move-result-object v7
 
-    .line 7945
     .local v7, "state":Landroid/net/NetworkInfo$State;
     const/4 v3, 0x0
 
-    .line 7946
     .local v3, "oldInfo":Landroid/net/NetworkInfo;
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v4
 
-    .line 7947
     .local v4, "oldScore":I
     const/4 v2, 0x0
 
-    .line 7949
     .local v2, "isSuspendedToConnected":Z
     monitor-enter p1
 
-    .line 7950
     :try_start_0
     iget-object v3, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 7952
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/16 v10, 0x13
@@ -25903,24 +23693,19 @@
 
     if-eqz v9, :cond_0
 
-    .line 7954
     const/16 v9, 0x1c
 
     invoke-virtual {p2, v9}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 7957
     :cond_0
     iput-object p2, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
-    .line 7958
     monitor-exit p1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 7959
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->notifyLockdownVpn(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 7961
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v9}, Landroid/net/NetworkInfo;->getType()I
@@ -25939,7 +23724,6 @@
 
     if-ne v9, v10, :cond_2
 
-    .line 7966
     :try_start_1
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
 
@@ -25947,7 +23731,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 7967
     iget-object v11, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
@@ -25989,23 +23772,19 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 7981
     :goto_2
     iget-boolean v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
     if-nez v9, :cond_2
 
-    .line 7982
     const/4 v9, 0x0
 
     invoke-direct {p0, p1, v9}, Lcom/android/server/ConnectivityService;->updateLinkProperties(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/LinkProperties;)V
 
-    .line 7983
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/server/ConnectivityService;->bLPUpdatedBeforeConnected:Z
 
-    .line 7987
     :cond_2
     invoke-static {}, Landroid/net/wifi/WifiManager;->showWebBrowserAtCaptivePortal()Z
 
@@ -26041,12 +23820,10 @@
 
     if-eqz v9, :cond_3
 
-    .line 7991
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 7992
     .local v8, "uid":I
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -26068,19 +23845,16 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7993
     const/4 v9, 0x1
 
     sput-boolean v9, Lcom/android/server/ConnectivityService;->mInCaptivePortal:Z
 
-    .line 7994
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v10, 0x8200f
 
     invoke-virtual {v9, v10, v8}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(II)V
 
-    .line 7997
     .end local v8    # "uid":I
     :cond_3
     if-eqz v3, :cond_9
@@ -26091,7 +23865,6 @@
 
     if-ne v9, v7, :cond_9
 
-    .line 7998
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -26126,12 +23899,10 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8155
     :cond_4
     :goto_3
     return-void
 
-    .line 7958
     :catchall_0
     move-exception v9
 
@@ -26142,7 +23913,6 @@
 
     throw v9
 
-    .line 7967
     :cond_5
     const/4 v9, 0x0
 
@@ -26155,7 +23925,6 @@
 
     goto/16 :goto_1
 
-    .line 7972
     :cond_7
     :try_start_3
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
@@ -26183,11 +23952,9 @@
 
     goto/16 :goto_2
 
-    .line 7977
     :catch_0
     move-exception v1
 
-    .line 7978
     .local v1, "ee":Ljava/lang/Exception;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -26211,7 +23978,6 @@
 
     goto/16 :goto_2
 
-    .line 7972
     .end local v1    # "ee":Ljava/lang/Exception;
     :cond_8
     :try_start_4
@@ -26221,7 +23987,6 @@
 
     goto :goto_4
 
-    .line 8004
     :cond_9
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -26292,7 +24057,6 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8011
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/16 v10, 0x15
@@ -26315,17 +24079,14 @@
 
     if-ne v7, v9, :cond_a
 
-    .line 8014
     const-string v9, "ConnectivityService"
 
     const-string v10, "Network Capability BIP : Broadcast network info changed"
 
     invoke-static {v9, v10}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8015
     invoke-virtual {p0, p2}, Lcom/android/server/ConnectivityService;->sendConnectedBroadcast(Landroid/net/NetworkInfo;)V
 
-    .line 8019
     :cond_a
     if-eqz v3, :cond_c
 
@@ -26349,7 +24110,6 @@
 
     if-eqz v9, :cond_c
 
-    .line 8021
     :cond_b
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
@@ -26363,12 +24123,10 @@
 
     if-ne v7, v9, :cond_16
 
-    .line 8022
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/server/ConnectivityService;->mSendIntentForSUSPENDED:Z
 
-    .line 8023
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -26389,7 +24147,6 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8043
     :cond_c
     :goto_6
     sget-object v9, Landroid/net/NetworkInfo$State;->CONNECTED:Landroid/net/NetworkInfo$State;
@@ -26402,7 +24159,6 @@
 
     if-eqz v2, :cond_1c
 
-    .line 8044
     :cond_d
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -26418,7 +24174,6 @@
 
     if-nez v9, :cond_11
 
-    .line 8049
     :try_start_5
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -26430,7 +24185,6 @@
 
     if-ne v9, v10, :cond_e
 
-    .line 8050
     const-string/jumbo v9, "ril.ims_netid"
 
     iget-object v10, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
@@ -26443,14 +24197,12 @@
 
     invoke-static {v9, v10}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8051
     const-string/jumbo v9, "ril.ims_netid"
 
     invoke-static {v9}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 8052
     .local v5, "prop":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -26472,7 +24224,6 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8054
     .end local v5    # "prop":Ljava/lang/String;
     :cond_e
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
@@ -26485,7 +24236,6 @@
 
     if-ne v9, v10, :cond_f
 
-    .line 8055
     const-string/jumbo v9, "ril.epdn_netid"
 
     iget-object v10, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
@@ -26498,14 +24248,12 @@
 
     invoke-static {v9, v10}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8056
     const-string/jumbo v9, "ril.epdn_netid"
 
     invoke-static {v9}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 8057
     .restart local v5    # "prop":Ljava/lang/String;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -26527,7 +24275,6 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8062
     .end local v5    # "prop":Ljava/lang/String;
     :cond_f
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
@@ -26536,7 +24283,6 @@
 
     if-eqz v9, :cond_1a
 
-    .line 8063
     iget-object v11, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
@@ -26578,7 +24324,6 @@
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
 
-    .line 8079
     :cond_11
     :goto_9
     iget-boolean v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
@@ -26595,50 +24340,41 @@
 
     if-eq v9, v10, :cond_12
 
-    .line 8082
     const/4 v9, 0x0
 
     invoke-direct {p0, p1, v9}, Lcom/android/server/ConnectivityService;->updateLinkProperties(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/LinkProperties;)V
 
-    .line 8084
     :cond_12
     const/4 v9, 0x1
 
     iput-boolean v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->created:Z
 
-    .line 8085
     const/4 v9, 0x0
 
     invoke-direct {p0, p1, v9}, Lcom/android/server/ConnectivityService;->updateLinkProperties(Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/LinkProperties;)V
 
-    .line 8086
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->notifyIfacesChanged()V
 
-    .line 8097
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     const v10, 0x82001
 
     invoke-virtual {v9, v10}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(I)V
 
-    .line 8098
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->scheduleUnvalidatedPrompt(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 8100
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
 
     move-result v9
 
     if-eqz v9, :cond_14
 
-    .line 8102
     const-string/jumbo v9, "ro.csc.sales_code"
 
     invoke-static {v9}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 8103
     .local v6, "salesCode":Ljava/lang/String;
     const-string v9, "DCM"
 
@@ -26648,23 +24384,19 @@
 
     if-nez v9, :cond_14
 
-    .line 8104
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mProxyLock:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 8105
     :try_start_6
     iget-boolean v9, p0, Lcom/android/server/ConnectivityService;->mDefaultProxyDisabled:Z
 
     if-nez v9, :cond_13
 
-    .line 8106
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/server/ConnectivityService;->mDefaultProxyDisabled:Z
 
-    .line 8107
     iget-object v9, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     if-nez v9, :cond_13
@@ -26673,18 +24405,15 @@
 
     if-eqz v9, :cond_13
 
-    .line 8108
     const/4 v9, 0x0
 
     invoke-direct {p0, v9}, Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyInfo;)V
 
-    .line 8111
     :cond_13
     monitor-exit v10
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 8123
     .end local v6    # "salesCode":Ljava/lang/String;
     :cond_14
     const-string v9, "CONNECT"
@@ -26693,19 +24422,16 @@
 
     invoke-direct {p0, p1, v9, v10}, Lcom/android/server/ConnectivityService;->updateSignalStrengthThresholds(Lcom/android/server/connectivity/NetworkAgentInfo;Ljava/lang/String;Landroid/net/NetworkRequest;)V
 
-    .line 8126
     sget-object v9, Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;->REAP:Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;
 
     invoke-direct {p0, p1, v9}, Lcom/android/server/ConnectivityService;->rematchNetworkAndRequests(Lcom/android/server/connectivity/NetworkAgentInfo;Lcom/android/server/ConnectivityService$ReapUnvalidatedNetworks;)V
 
-    .line 8129
     const v9, 0x80001
 
     invoke-virtual {p0, p1, v9}, Lcom/android/server/ConnectivityService;->notifyNetworkCallbacks(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
     goto/16 :goto_3
 
-    .line 8004
     :cond_15
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
@@ -26713,7 +24439,6 @@
 
     goto/16 :goto_5
 
-    .line 8024
     :cond_16
     invoke-virtual {v3}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
 
@@ -26727,17 +24452,14 @@
 
     if-ne v7, v9, :cond_c
 
-    .line 8025
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/server/ConnectivityService;->mSendIntentForCONNECTED:Z
 
-    .line 8026
     const/4 v9, 0x1
 
     iput-boolean v9, p0, Lcom/android/server/ConnectivityService;->mSuspendCallBack:Z
 
-    .line 8027
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v9
@@ -26756,10 +24478,8 @@
 
     if-nez v9, :cond_17
 
-    .line 8030
     const/4 v2, 0x1
 
-    .line 8031
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -26780,7 +24500,6 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8032
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -26801,16 +24520,13 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8033
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->makeDefault(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     goto/16 :goto_6
 
-    .line 8035
     :cond_17
     const/4 v2, 0x1
 
-    .line 8036
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -26831,7 +24547,6 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8037
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -26854,7 +24569,6 @@
 
     goto/16 :goto_6
 
-    .line 8063
     :cond_18
     const/4 v9, 0x0
 
@@ -26867,7 +24581,6 @@
 
     goto/16 :goto_8
 
-    .line 8068
     :cond_1a
     :try_start_7
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
@@ -26895,11 +24608,9 @@
 
     goto/16 :goto_9
 
-    .line 8073
     :catch_1
     move-exception v0
 
-    .line 8074
     .local v0, "e":Ljava/lang/Exception;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -26941,7 +24652,6 @@
 
     goto/16 :goto_3
 
-    .line 8068
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1b
     :try_start_8
@@ -26951,7 +24661,6 @@
 
     goto :goto_a
 
-    .line 8111
     .restart local v6    # "salesCode":Ljava/lang/String;
     :catchall_1
     move-exception v9
@@ -26963,7 +24672,6 @@
 
     throw v9
 
-    .line 8130
     .end local v6    # "salesCode":Ljava/lang/String;
     :cond_1c
     sget-object v9, Landroid/net/NetworkInfo$State;->DISCONNECTED:Landroid/net/NetworkInfo$State;
@@ -26980,40 +24688,33 @@
 
     if-eq v9, v10, :cond_1e
 
-    .line 8132
     iget-object v9, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     invoke-virtual {v9}, Lcom/android/internal/util/AsyncChannel;->disconnect()V
 
-    .line 8133
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/android/server/ConnectivityService;->bLPUpdatedBeforeConnected:Z
 
-    .line 8135
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
 
     move-result v9
 
     if-eqz v9, :cond_4
 
-    .line 8136
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mProxyLock:Ljava/lang/Object;
 
     monitor-enter v10
 
-    .line 8137
     :try_start_a
     iget-boolean v9, p0, Lcom/android/server/ConnectivityService;->mDefaultProxyDisabled:Z
 
     if-eqz v9, :cond_1d
 
-    .line 8138
     const/4 v9, 0x0
 
     iput-boolean v9, p0, Lcom/android/server/ConnectivityService;->mDefaultProxyDisabled:Z
 
-    .line 8139
     iget-object v9, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     if-nez v9, :cond_1d
@@ -27022,12 +24723,10 @@
 
     if-eqz v9, :cond_1d
 
-    .line 8140
     iget-object v9, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
     invoke-direct {p0, v9}, Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyInfo;)V
 
-    .line 8143
     :cond_1d
     monitor-exit v10
 
@@ -27042,7 +24741,6 @@
 
     throw v9
 
-    .line 8145
     :cond_1e
     if-eqz v3, :cond_1f
 
@@ -27059,7 +24757,6 @@
 
     if-ne v7, v9, :cond_4
 
-    .line 8148
     :cond_20
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
@@ -27067,10 +24764,8 @@
 
     if-eq v9, v4, :cond_21
 
-    .line 8149
     invoke-direct {p0, p1, v4}, Lcom/android/server/ConnectivityService;->rematchAllNetworksAndRequests(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 8152
     :cond_21
     const/4 v9, 0x1
 
@@ -27085,7 +24780,6 @@
     .param p2, "score"    # I
 
     .prologue
-    .line 8158
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -27120,10 +24814,8 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8159
     if-gez p2, :cond_0
 
-    .line 8160
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -27164,26 +24856,20 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 8162
     const/4 p2, 0x0
 
-    .line 8165
     :cond_0
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->getCurrentScore()I
 
     move-result v0
 
-    .line 8166
     .local v0, "oldScore":I
     invoke-virtual {p1, p2}, Lcom/android/server/connectivity/NetworkAgentInfo;->setCurrentScore(I)V
 
-    .line 8168
     invoke-direct {p0, p1, v0}, Lcom/android/server/ConnectivityService;->rematchAllNetworksAndRequests(Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 8170
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->sendUpdatedScoreToFactories(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
-    .line 8171
     return-void
 .end method
 
@@ -27196,17 +24882,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4471
     if-nez p1, :cond_1
 
     move-object v0, v1
 
-    .line 4472
     .local v0, "newProxyInfo":Landroid/net/ProxyInfo;
     :goto_0
     if-nez p2, :cond_2
 
-    .line 4474
     .local v1, "oldProxyInfo":Landroid/net/ProxyInfo;
     :goto_1
     invoke-direct {p0, v0, v1}, Lcom/android/server/ConnectivityService;->proxyInfoEqual(Landroid/net/ProxyInfo;Landroid/net/ProxyInfo;)Z
@@ -27215,18 +24898,15 @@
 
     if-nez v2, :cond_0
 
-    .line 4475
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultProxy()Landroid/net/ProxyInfo;
 
     move-result-object v2
 
     invoke-direct {p0, v2}, Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyInfo;)V
 
-    .line 4477
     :cond_0
     return-void
 
-    .line 4471
     .end local v0    # "newProxyInfo":Landroid/net/ProxyInfo;
     .end local v1    # "oldProxyInfo":Landroid/net/ProxyInfo;
     :cond_1
@@ -27236,7 +24916,6 @@
 
     goto :goto_0
 
-    .line 4472
     .restart local v0    # "newProxyInfo":Landroid/net/ProxyInfo;
     :cond_2
     invoke-virtual {p2}, Landroid/net/LinkProperties;->getHttpProxy()Landroid/net/ProxyInfo;
@@ -27253,21 +24932,17 @@
     .param p3, "netId"    # I
 
     .prologue
-    .line 6972
     new-instance v4, Landroid/net/LinkProperties$CompareResult;
 
     invoke-direct {v4}, Landroid/net/LinkProperties$CompareResult;-><init>()V
 
-    .line 6973
     .local v4, "routeDiff":Landroid/net/LinkProperties$CompareResult;, "Landroid/net/LinkProperties$CompareResult<Landroid/net/RouteInfo;>;"
     if-eqz p2, :cond_4
 
-    .line 6974
     invoke-virtual {p2, p1}, Landroid/net/LinkProperties;->compareAllRoutes(Landroid/net/LinkProperties;)Landroid/net/LinkProperties$CompareResult;
 
     move-result-object v4
 
-    .line 6982
     :cond_0
     :goto_0
     iget-object v5, v4, Landroid/net/LinkProperties$CompareResult;->added:Ljava/util/List;
@@ -27291,7 +24966,6 @@
 
     check-cast v3, Landroid/net/RouteInfo;
 
-    .line 6983
     .local v3, "route":Landroid/net/RouteInfo;
     if-eqz v3, :cond_2
 
@@ -27301,7 +24975,6 @@
 
     if-nez v5, :cond_1
 
-    .line 6984
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -27333,7 +25006,6 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6986
     :try_start_0
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -27343,15 +25015,12 @@
 
     goto :goto_1
 
-    .line 6987
     :catch_0
     move-exception v0
 
-    .line 6988
     .local v0, "e":Ljava/lang/Exception;
     if-eqz v3, :cond_1
 
-    .line 6989
     invoke-virtual {v3}, Landroid/net/RouteInfo;->getDestination()Landroid/net/IpPrefix;
 
     move-result-object v5
@@ -27364,7 +25033,6 @@
 
     if-nez v5, :cond_3
 
-    .line 6990
     :cond_3
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -27388,14 +25056,12 @@
 
     goto :goto_1
 
-    .line 6975
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "route":Landroid/net/RouteInfo;
     :cond_4
     if-eqz p1, :cond_0
 
-    .line 6976
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getAllRoutes()Ljava/util/List;
 
     move-result-object v5
@@ -27404,7 +25070,6 @@
 
     goto :goto_0
 
-    .line 6995
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_5
     iget-object v5, v4, Landroid/net/LinkProperties$CompareResult;->added:Ljava/util/List;
@@ -27427,11 +25092,9 @@
 
     check-cast v3, Landroid/net/RouteInfo;
 
-    .line 6996
     .restart local v3    # "route":Landroid/net/RouteInfo;
     const/4 v2, 0x0
 
-    .line 6997
     .local v2, "retry":Z
     if-eqz v3, :cond_7
 
@@ -27441,7 +25104,6 @@
 
     if-eqz v5, :cond_6
 
-    .line 7000
     :cond_7
     if-eqz v3, :cond_8
 
@@ -27459,7 +25121,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 7011
     :cond_8
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -27491,7 +25152,6 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7013
     :try_start_1
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -27499,12 +25159,10 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 7024
     :cond_9
     :goto_3
     if-eqz v2, :cond_6
 
-    .line 7026
     :try_start_2
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -27514,15 +25172,12 @@
 
     goto :goto_2
 
-    .line 7027
     :catch_1
     move-exception v0
 
-    .line 7028
     .restart local v0    # "e":Ljava/lang/Exception;
     if-eqz v3, :cond_6
 
-    .line 7029
     invoke-virtual {v3}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
     move-result-object v5
@@ -27531,7 +25186,6 @@
 
     if-nez v5, :cond_a
 
-    .line 7030
     :cond_a
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -27555,16 +25209,13 @@
 
     goto :goto_2
 
-    .line 7014
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v0
 
-    .line 7015
     .restart local v0    # "e":Ljava/lang/Exception;
     if-eqz v3, :cond_9
 
-    .line 7016
     invoke-virtual {v3}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
     move-result-object v5
@@ -27573,7 +25224,6 @@
 
     if-nez v5, :cond_b
 
-    .line 7017
     :cond_b
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -27595,7 +25245,6 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 7019
     const-string v5, "China"
 
     const-string/jumbo v6, "ro.csc.country_code"
@@ -27610,12 +25259,10 @@
 
     if-eqz v5, :cond_9
 
-    .line 7020
     const/4 v2, 0x1
 
     goto :goto_3
 
-    .line 7037
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v2    # "retry":Z
     .end local v3    # "route":Landroid/net/RouteInfo;
@@ -27639,7 +25286,6 @@
 
     check-cast v3, Landroid/net/RouteInfo;
 
-    .line 7038
     .restart local v3    # "route":Landroid/net/RouteInfo;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -27671,7 +25317,6 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7040
     :try_start_3
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -27681,11 +25326,9 @@
 
     goto :goto_4
 
-    .line 7041
     :catch_3
     move-exception v0
 
-    .line 7042
     .restart local v0    # "e":Ljava/lang/Exception;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -27709,7 +25352,6 @@
 
     goto :goto_4
 
-    .line 7045
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v3    # "route":Landroid/net/RouteInfo;
     :cond_d
@@ -27750,24 +25392,20 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 6365
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getSignalStrengthThresholds(Lcom/android/server/connectivity/NetworkAgentInfo;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 6366
     .local v2, "thresholdsArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 6367
     .local v1, "thresholds":Landroid/os/Bundle;
     const-string/jumbo v3, "thresholds"
 
     invoke-virtual {v1, v3, v2}, Landroid/os/Bundle;->putIntegerArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 6372
     if-eqz p3, :cond_0
 
     iget-object v3, p3, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
@@ -27778,7 +25416,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 6373
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -27807,7 +25444,6 @@
 
     move-result-object v0
 
-    .line 6377
     .local v0, "detail":Ljava/lang/String;
     :goto_0
     const-string/jumbo v3, "updateSignalStrengthThresholds: %s, sending %s to %s"
@@ -27844,17 +25480,14 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6381
     iget-object v3, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     const v4, 0x8100e
 
     invoke-virtual {v3, v4, v7, v7, v1}, Lcom/android/internal/util/AsyncChannel;->sendMessage(IIILjava/lang/Object;)V
 
-    .line 6384
     return-void
 
-    .line 6375
     .end local v0    # "detail":Ljava/lang/String;
     :cond_0
     move-object v0, p2
@@ -27870,7 +25503,6 @@
     .param p3, "netType"    # I
 
     .prologue
-    .line 7069
     move/from16 v0, p3
 
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->checkSourceRouteCondition(I)Z
@@ -27879,40 +25511,33 @@
 
     if-nez v10, :cond_1
 
-    .line 7070
     const-string/jumbo v10, "updateSourceRoutes : no source routing conditions"
 
     invoke-static {v10}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7130
     :cond_0
     return-void
 
-    .line 7074
     :cond_1
     new-instance v7, Landroid/net/LinkProperties$CompareResult;
 
     invoke-direct {v7}, Landroid/net/LinkProperties$CompareResult;-><init>()V
 
-    .line 7075
     .local v7, "localAddrDiff":Landroid/net/LinkProperties$CompareResult;, "Landroid/net/LinkProperties$CompareResult<Landroid/net/LinkAddress;>;"
     if-eqz p2, :cond_3
 
-    .line 7076
     move-object/from16 v0, p2
 
     invoke-virtual {v0, p1}, Landroid/net/LinkProperties;->compareAddresses(Landroid/net/LinkProperties;)Landroid/net/LinkProperties$CompareResult;
 
     move-result-object v7
 
-    .line 7081
     :cond_2
     :goto_0
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mRouteAttributes:[Lcom/android/server/ConnectivityService$RouteAttributes;
 
     aget-object v9, v10, p3
 
-    .line 7083
     .local v9, "ra":Lcom/android/server/ConnectivityService$RouteAttributes;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -27936,7 +25561,6 @@
 
     invoke-static {v10}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7084
     iget-object v10, v7, Landroid/net/LinkProperties$CompareResult;->removed:Ljava/util/List;
 
     invoke-interface {v10}, Ljava/util/List;->size()I
@@ -27945,7 +25569,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 7085
     iget-object v10, v7, Landroid/net/LinkProperties$CompareResult;->removed:Ljava/util/List;
 
     invoke-interface {v10}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -27966,7 +25589,6 @@
 
     check-cast v6, Landroid/net/LinkAddress;
 
-    .line 7086
     .local v6, "la":Landroid/net/LinkAddress;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -27996,7 +25618,6 @@
 
     invoke-static {v10}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7088
     :try_start_0
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -28018,11 +25639,9 @@
 
     goto :goto_1
 
-    .line 7089
     :catch_0
     move-exception v1
 
-    .line 7090
     .local v1, "e":Ljava/lang/Exception;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -28046,7 +25665,6 @@
 
     goto :goto_1
 
-    .line 7077
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v6    # "la":Landroid/net/LinkAddress;
@@ -28054,7 +25672,6 @@
     :cond_3
     if-eqz p1, :cond_2
 
-    .line 7078
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getLinkAddresses()Ljava/util/List;
 
     move-result-object v10
@@ -28063,7 +25680,6 @@
 
     goto/16 :goto_0
 
-    .line 7095
     .restart local v9    # "ra":Lcom/android/server/ConnectivityService$RouteAttributes;
     :cond_4
     iget-object v10, v7, Landroid/net/LinkProperties$CompareResult;->added:Ljava/util/List;
@@ -28074,22 +25690,18 @@
 
     if-eqz v10, :cond_0
 
-    .line 7096
     const/4 v2, 0x0
 
     .local v2, "gw4Addr":Ljava/net/InetAddress;
     const/4 v3, 0x0
 
-    .line 7097
     .local v3, "gw6Addr":Ljava/net/InetAddress;
     if-eqz p1, :cond_0
 
-    .line 7098
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getInterfaceName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 7099
     .local v5, "ifaceName":Ljava/lang/String;
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -28097,7 +25709,6 @@
 
     if-nez v10, :cond_0
 
-    .line 7100
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getRoutes()Ljava/util/List;
 
     move-result-object v10
@@ -28120,7 +25731,6 @@
 
     check-cast v8, Landroid/net/RouteInfo;
 
-    .line 7101
     .local v8, "r":Landroid/net/RouteInfo;
     invoke-virtual {v8}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
@@ -28130,14 +25740,12 @@
 
     if-eqz v10, :cond_5
 
-    .line 7102
     invoke-virtual {v8}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
     move-result-object v2
 
     goto :goto_2
 
-    .line 7104
     :cond_5
     invoke-virtual {v8}, Landroid/net/RouteInfo;->getGateway()Ljava/net/InetAddress;
 
@@ -28145,7 +25753,6 @@
 
     goto :goto_2
 
-    .line 7107
     .end local v8    # "r":Landroid/net/RouteInfo;
     :cond_6
     iget-object v10, v7, Landroid/net/LinkProperties$CompareResult;->added:Ljava/util/List;
@@ -28168,7 +25775,6 @@
 
     check-cast v6, Landroid/net/LinkAddress;
 
-    .line 7109
     .restart local v6    # "la":Landroid/net/LinkAddress;
     :try_start_1
     invoke-virtual {v6}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
@@ -28179,7 +25785,6 @@
 
     if-eqz v10, :cond_8
 
-    .line 7110
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -28208,10 +25813,8 @@
 
     invoke-static {v10}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7111
     if-eqz v2, :cond_7
 
-    .line 7112
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
     invoke-virtual {v6}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
@@ -28236,11 +25839,9 @@
 
     goto :goto_3
 
-    .line 7122
     :catch_1
     move-exception v1
 
-    .line 7124
     .restart local v1    # "e":Ljava/lang/Exception;
     new-instance v10, Ljava/lang/StringBuilder;
 
@@ -28264,7 +25865,6 @@
 
     goto :goto_3
 
-    .line 7116
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_8
     :try_start_2
@@ -28296,10 +25896,8 @@
 
     invoke-static {v10}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7117
     if-eqz v3, :cond_7
 
-    .line 7118
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
     invoke-virtual {v6}, Landroid/net/LinkAddress;->getAddress()Ljava/net/InetAddress;
@@ -28332,19 +25930,16 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 2734
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->isDefaultNetwork(Lcom/android/server/connectivity/NetworkAgentInfo;)Z
 
     move-result v8
 
     if-nez v8, :cond_1
 
-    .line 2804
     :cond_0
     :goto_0
     return-void
 
-    .line 2749
     :cond_1
     iget-object v8, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
@@ -28352,22 +25947,18 @@
 
     move-result-object v6
 
-    .line 2750
     .local v6, "tcpBufferSizes":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 2751
     .local v7, "values":[Ljava/lang/String;
     if-eqz v6, :cond_2
 
-    .line 2752
     const-string v8, ","
 
     invoke-virtual {v6, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 2755
     :cond_2
     if-eqz v7, :cond_3
 
@@ -28377,7 +25968,6 @@
 
     if-eq v8, v9, :cond_4
 
-    .line 2756
     :cond_3
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -28405,17 +25995,14 @@
 
     invoke-static {v8}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2757
     const-string v6, "4096,87380,110208,4096,16384,110208"
 
-    .line 2758
     const-string v8, ","
 
     invoke-virtual {v6, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 2761
     :cond_4
     iget-object v8, p0, Lcom/android/server/ConnectivityService;->mCurrentTcpBufferSizes:Ljava/lang/String;
 
@@ -28425,7 +26012,6 @@
 
     if-nez v8, :cond_0
 
-    .line 2764
     :try_start_0
     const-string v8, "ConnectivityService"
 
@@ -28449,10 +26035,8 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2766
     const-string v2, "/sys/kernel/ipv4/tcp_"
 
-    .line 2767
     .local v2, "prefix":Ljava/lang/String;
     const-string v8, "/sys/kernel/ipv4/tcp_rmem_min"
 
@@ -28462,7 +26046,6 @@
 
     invoke-static {v8, v9}, Landroid/os/FileUtils;->stringToFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2768
     const-string v8, "/sys/kernel/ipv4/tcp_rmem_def"
 
     const/4 v9, 0x1
@@ -28471,7 +26054,6 @@
 
     invoke-static {v8, v9}, Landroid/os/FileUtils;->stringToFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2769
     const-string v8, "/sys/kernel/ipv4/tcp_rmem_max"
 
     const/4 v9, 0x2
@@ -28480,7 +26062,6 @@
 
     invoke-static {v8, v9}, Landroid/os/FileUtils;->stringToFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2770
     const-string v8, "/sys/kernel/ipv4/tcp_wmem_min"
 
     const/4 v9, 0x3
@@ -28489,7 +26070,6 @@
 
     invoke-static {v8, v9}, Landroid/os/FileUtils;->stringToFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2771
     const-string v8, "/sys/kernel/ipv4/tcp_wmem_def"
 
     const/4 v9, 0x4
@@ -28498,7 +26078,6 @@
 
     invoke-static {v8, v9}, Landroid/os/FileUtils;->stringToFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2772
     const-string v8, "/sys/kernel/ipv4/tcp_wmem_max"
 
     const/4 v9, 0x5
@@ -28507,12 +26086,10 @@
 
     invoke-static {v8, v9}, Landroid/os/FileUtils;->stringToFile(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2773
     iput-object v6, p0, Lcom/android/server/ConnectivityService;->mCurrentTcpBufferSizes:Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2778
     .end local v2    # "prefix":Ljava/lang/String;
     :goto_1
     iget-object v8, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -28535,11 +26112,9 @@
 
     move-result-object v3
 
-    .line 2780
     .local v3, "rwndValue":Ljava/lang/Integer;
     const-string/jumbo v4, "sys.sysctl.tcp_def_init_rwnd"
 
-    .line 2781
     .local v4, "sysctlKeyRwnd":Ljava/lang/String;
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
@@ -28547,7 +26122,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 2782
     const-string/jumbo v8, "sys.sysctl.tcp_def_init_rwnd"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->toString()Ljava/lang/String;
@@ -28556,13 +26130,11 @@
 
     invoke-static {v8, v9}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2785
     :cond_5
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 2787
     .local v0, "AdvWinScale":Ljava/lang/Integer;
     iget-object v8, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -28578,11 +26150,9 @@
 
     packed-switch v8, :pswitch_data_0
 
-    .line 2797
     :goto_2
     const-string/jumbo v5, "sys.sysctl.tcp_adv_win_scale"
 
-    .line 2798
     .local v5, "sysctlKeyWinScale":Ljava/lang/String;
     const-string/jumbo v8, "sys.sysctl.tcp_adv_win_scale"
 
@@ -28592,7 +26162,6 @@
 
     invoke-static {v8, v9}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2801
     const-string/jumbo v8, "true"
 
     const-string/jumbo v9, "persist.tcp.delack.enable"
@@ -28607,12 +26176,10 @@
 
     if-eqz v8, :cond_0
 
-    .line 2802
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->updateTcpDelayedAckSettings(Lcom/android/server/connectivity/NetworkAgentInfo;)V
 
     goto/16 :goto_0
 
-    .line 2774
     .end local v0    # "AdvWinScale":Ljava/lang/Integer;
     .end local v3    # "rwndValue":Ljava/lang/Integer;
     .end local v4    # "sysctlKeyRwnd":Ljava/lang/String;
@@ -28620,7 +26187,6 @@
     :catch_0
     move-exception v1
 
-    .line 2775
     .local v1, "e":Ljava/io/IOException;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -28644,7 +26210,6 @@
 
     goto :goto_1
 
-    .line 2789
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v0    # "AdvWinScale":Ljava/lang/Integer;
     .restart local v3    # "rwndValue":Ljava/lang/Integer;
@@ -28654,10 +26219,8 @@
 
     move-result-object v0
 
-    .line 2790
     goto :goto_2
 
-    .line 2787
     nop
 
     :pswitch_data_0
@@ -28671,14 +26234,11 @@
     .param p1, "newNetwork"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 8645
     const-string v1, ""
 
-    .line 8646
     .local v1, "key1":Ljava/lang/String;
     const-string v2, ""
 
-    .line 8647
     .local v2, "key2":Ljava/lang/String;
     const-string v4, "WIFI"
 
@@ -28694,18 +26254,14 @@
 
     if-eqz v4, :cond_6
 
-    .line 8648
     const-string/jumbo v4, "updateTcpDelayedAckSetting - WiFi setting"
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8649
     const-string/jumbo v1, "net.tcp.usercfg.wifi"
 
-    .line 8650
     const-string/jumbo v2, "net.tcp.delack.wifi"
 
-    .line 8661
     :cond_0
     :goto_0
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -28720,30 +26276,24 @@
 
     if-eqz v4, :cond_1
 
-    .line 8662
     const-string/jumbo v4, "updateTcpDelayedAckSetting - Default setting"
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8663
     const-string/jumbo v1, "net.tcp.usercfg.default"
 
-    .line 8664
     const-string/jumbo v2, "net.tcp.delack.default"
 
-    .line 8667
     :cond_1
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 8668
     .local v3, "userCfg":Ljava/lang/String;
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 8670
     .local v0, "delAck":Ljava/lang/String;
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -28751,7 +26301,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 8671
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -28772,15 +26321,12 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 8674
     const-string/jumbo v1, "net.tcp.usercfg.default"
 
-    .line 8675
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 8678
     :cond_2
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -28788,7 +26334,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 8679
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -28809,15 +26354,12 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->loge(Ljava/lang/String;)V
 
-    .line 8682
     const-string/jumbo v2, "net.tcp.delack.default"
 
-    .line 8683
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 8687
     :cond_3
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -28825,7 +26367,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 8689
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -28862,10 +26403,8 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8691
     invoke-direct {p0, v3}, Lcom/android/server/ConnectivityService;->setUserConfig(Ljava/lang/String;)V
 
-    .line 8694
     :cond_4
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -28873,7 +26412,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 8696
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -28910,14 +26448,11 @@
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8698
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->setDelAckSize(Ljava/lang/String;)V
 
-    .line 8700
     :cond_5
     return-void
 
-    .line 8651
     .end local v0    # "delAck":Ljava/lang/String;
     .end local v3    # "userCfg":Ljava/lang/String;
     :cond_6
@@ -28949,22 +26484,18 @@
 
     if-eqz v4, :cond_0
 
-    .line 8653
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isDomesticModel()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 8656
     const-string/jumbo v4, "updateTcpDelayedAckSetting - Mobile setting"
 
     invoke-static {v4}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8657
     const-string/jumbo v1, "net.tcp.usercfg.lte"
 
-    .line 8658
     const-string/jumbo v2, "net.tcp.delack.lte"
 
     goto/16 :goto_0
@@ -28978,10 +26509,8 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 8363
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->throwIfLockdownEnabled()V
 
-    .line 8364
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
@@ -28990,13 +26519,11 @@
 
     move-result v0
 
-    .line 8365
     .local v0, "user":I
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 8366
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -29014,7 +26541,6 @@
 
     return v1
 
-    .line 8367
     :catchall_0
     move-exception v1
 
@@ -29030,10 +26556,8 @@
     .param p1, "port"    # I
 
     .prologue
-    .line 5036
     const/4 v1, 0x0
 
-    .line 5038
     .local v1, "isLocalProxyPortExists":Z
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnEngineInstance()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
@@ -29042,7 +26566,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 5039
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnEngineInstance()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     move-result-object v2
@@ -29053,16 +26576,13 @@
 
     move-result v1
 
-    .line 5044
     :cond_0
     :goto_0
     return v1
 
-    .line 5041
     :catch_0
     move-exception v0
 
-    .line 5042
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ConnectivityService"
 
@@ -29078,7 +26598,6 @@
     .param p1, "suggestedTimeOutMs"    # I
 
     .prologue
-    .line 5807
     const/4 v0, -0x1
 
     return v0
@@ -29089,7 +26608,6 @@
     .param p1, "newNetwork"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 8546
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -29110,7 +26628,6 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8547
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->values()Ljava/util/Collection;
@@ -29135,13 +26652,11 @@
 
     check-cast v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 8548
     .local v3, "r":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     iget-object v5, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     if-eqz v5, :cond_0
 
-    .line 8549
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -29164,7 +26679,6 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8550
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkForRequestId:Landroid/util/SparseArray;
 
     iget-object v6, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -29177,13 +26691,11 @@
 
     check-cast v0, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 8551
     .local v0, "currentNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-boolean v5, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->isRequest:Z
 
     if-eqz v5, :cond_0
 
-    .line 8552
     if-eqz v0, :cond_0
 
     iget-object v5, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
@@ -29196,7 +26708,6 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 8553
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -29217,7 +26728,6 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8554
     iget-object v5, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v5}, Landroid/net/NetworkInfo;->getState()Landroid/net/NetworkInfo$State;
@@ -29228,7 +26738,6 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 8555
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -29241,7 +26750,6 @@
 
     if-ge v1, v5, :cond_0
 
-    .line 8556
     iget-object v5, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v5, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -29250,11 +26758,9 @@
 
     check-cast v4, Landroid/net/NetworkRequest;
 
-    .line 8557
     .local v4, "request":Landroid/net/NetworkRequest;
     if-eqz v4, :cond_1
 
-    .line 8558
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -29275,7 +26781,6 @@
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8559
     iget-object v5, v4, Landroid/net/NetworkRequest;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     iget-object v6, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
@@ -29288,14 +26793,12 @@
 
     if-eqz v5, :cond_1
 
-    .line 8560
     iget v5, v4, Landroid/net/NetworkRequest;->legacyType:I
 
     const/4 v6, -0x1
 
     if-eq v5, v6, :cond_2
 
-    .line 8561
     iget-object v5, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     iget v5, v5, Landroid/net/NetworkRequest;->legacyType:I
@@ -29304,7 +26807,6 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 8562
     iget-object v5, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     iget v5, v5, Landroid/net/NetworkRequest;->requestId:I
@@ -29313,24 +26815,20 @@
 
     if-eq v5, v6, :cond_1
 
-    .line 8563
     const-string v5, "[checkReleaseNetworkRequest] call releaseNetworkRequest"
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8564
     iget-object v5, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-virtual {p0, v5}, Lcom/android/server/ConnectivityService;->releaseNetworkRequest(Landroid/net/NetworkRequest;)V
 
-    .line 8555
     :cond_1
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 8568
     :cond_2
     iget-object v5, v3, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
@@ -29340,19 +26838,16 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 8569
     const-string v5, "[checkReleaseNetworkRequest] call asyncChannel disconnect"
 
     invoke-static {v5}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8570
     iget-object v5, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     invoke-virtual {v5}, Lcom/android/internal/util/AsyncChannel;->disconnect()V
 
     goto :goto_1
 
-    .line 8580
     .end local v0    # "currentNetwork":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v1    # "i":I
     .end local v3    # "r":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
@@ -29371,7 +26866,6 @@
 
     const/4 v10, 0x0
 
-    .line 4916
     const-string v1, "ConnectivityService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -29394,14 +26888,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4917
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v1
 
     if-ge v1, v9, :cond_0
 
-    .line 4918
     const-string v1, "ConnectivityService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -29430,17 +26922,14 @@
 
     move v1, v9
 
-    .line 4946
     :goto_0
     return v1
 
-    .line 4921
     :cond_0
     if-eqz p1, :cond_1
 
     if-nez p2, :cond_2
 
-    .line 4922
     :cond_1
     const-string v1, "ConnectivityService"
 
@@ -29450,16 +26939,13 @@
 
     move v1, v10
 
-    .line 4923
     goto :goto_0
 
-    .line 4925
     :cond_2
     iget-object v11, p0, Lcom/android/server/ConnectivityService;->knoxVpnLock:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 4927
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -29469,7 +26955,6 @@
 
     move-result v6
 
-    .line 4928
     .local v6, "user":I
     invoke-direct {p0, p2}, Lcom/android/server/ConnectivityService;->checkIfKnoxVpnProfileExists(Ljava/lang/String;)Z
 
@@ -29477,7 +26962,6 @@
 
     if-nez v1, :cond_4
 
-    .line 4929
     new-instance v0, Lcom/android/server/connectivity/EnterpriseVpn;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -29496,7 +26980,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/connectivity/EnterpriseVpn;-><init>(Landroid/os/Looper;Landroid/content/Context;Ljava/lang/String;Landroid/os/INetworkManagementService;Landroid/net/IConnectivityManager;I)V
 
-    .line 4930
     .local v0, "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
@@ -29506,27 +26989,22 @@
 
     check-cast v8, Ljava/util/HashMap;
 
-    .line 4931
     .local v8, "vpnStoreMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/connectivity/EnterpriseVpn;>;"
     if-nez v8, :cond_3
 
-    .line 4932
     new-instance v8, Ljava/util/HashMap;
 
     .end local v8    # "vpnStoreMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/connectivity/EnterpriseVpn;>;"
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 4934
     .restart local v8    # "vpnStoreMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/connectivity/EnterpriseVpn;>;"
     :cond_3
     invoke-virtual {v8, p2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4935
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v1, v6, v8}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 4936
     const-string v1, "ConnectivityService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -29552,7 +27030,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4945
     :try_start_1
     monitor-exit v11
     :try_end_1
@@ -29560,10 +27037,8 @@
 
     move v1, v9
 
-    .line 4946
     goto :goto_0
 
-    .line 4938
     .end local v0    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v8    # "vpnStoreMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/connectivity/EnterpriseVpn;>;"
     :cond_4
@@ -29577,7 +27052,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4939
     :try_start_3
     monitor-exit v11
 
@@ -29585,12 +27059,10 @@
 
     goto :goto_0
 
-    .line 4941
     .end local v6    # "user":I
     :catch_0
     move-exception v7
 
-    .line 4942
     .local v7, "e":Ljava/lang/Exception;
     const-string v1, "ConnectivityService"
 
@@ -29618,14 +27090,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4943
     monitor-exit v11
 
     move v1, v10
 
     goto/16 :goto_0
 
-    .line 4945
     .end local v7    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -29641,7 +27111,6 @@
     .locals 2
 
     .prologue
-    .line 924
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "ConnectivityServiceThread"
@@ -29659,7 +27128,6 @@
     .param p4, "defaultRequest"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 8453
     new-instance v0, Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {v0, p1, p2, p3, p4}, Lcom/android/server/connectivity/NetworkMonitor;-><init>(Landroid/content/Context;Landroid/os/Handler;Lcom/android/server/connectivity/NetworkAgentInfo;Landroid/net/NetworkRequest;)V
@@ -29673,7 +27141,6 @@
     .param p2, "isConnectedProfile"    # Z
 
     .prologue
-    .line 5387
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v1
@@ -29682,7 +27149,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 5388
     const-string v1, "ConnectivityService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -29709,26 +27175,21 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5389
     const/4 v1, 0x0
 
-    .line 5393
     :goto_0
     return v1
 
-    .line 5391
     :cond_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->knoxVpnLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 5392
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 5393
     .local v0, "callingUid":I
     invoke-direct {p0, p1, v0}, Lcom/android/server/ConnectivityService;->disconnect(Ljava/lang/String;I)Z
 
@@ -29738,7 +27199,6 @@
 
     goto :goto_0
 
-    .line 5394
     .end local v0    # "callingUid":I
     :catchall_0
     move-exception v1
@@ -29756,7 +27216,6 @@
     .param p2, "callingUid"    # I
 
     .prologue
-    .line 5557
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v0
@@ -29765,7 +27224,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 5558
     const-string v0, "ConnectivityService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -29792,20 +27250,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5559
     const/4 v0, 0x0
 
-    .line 5562
     :goto_0
     return v0
 
-    .line 5561
     :cond_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->knoxVpnLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 5562
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/ConnectivityService;->disconnect(Ljava/lang/String;I)Z
 
@@ -29815,7 +27269,6 @@
 
     goto :goto_0
 
-    .line 5563
     :catchall_0
     move-exception v0
 
@@ -29831,12 +27284,10 @@
     .param p1, "user"    # I
 
     .prologue
-    .line 5540
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->knoxVpnLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 5541
     :try_start_0
     const-string v2, "ConnectivityService"
 
@@ -29860,7 +27311,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5542
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v2
@@ -29869,7 +27319,6 @@
 
     if-lt v2, v4, :cond_0
 
-    .line 5543
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mEnterpriseSytemVPN:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -29878,7 +27327,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 5544
     .local v1, "systemVPNProfile":Ljava/lang/String;
     const-string v2, "ConnectivityService"
 
@@ -29902,22 +27350,18 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5545
     if-eqz v1, :cond_0
 
-    .line 5546
     const-string v2, "ConnectivityService"
 
     const-string v4, "disconnect is called from disconnectSystemVpn"
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5547
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 5548
     .local v0, "callingUid":I
     const-string v2, "ConnectivityService"
 
@@ -29941,19 +27385,15 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5549
     invoke-direct {p0, v1, v0}, Lcom/android/server/ConnectivityService;->disconnect(Ljava/lang/String;I)Z
 
-    .line 5552
     .end local v0    # "callingUid":I
     .end local v1    # "systemVPNProfile":Ljava/lang/String;
     :cond_0
     monitor-exit v3
 
-    .line 5553
     return-void
 
-    .line 5552
     :catchall_0
     move-exception v2
 
@@ -29971,7 +27411,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 2861
     new-instance v20, Lcom/android/internal/util/IndentingPrintWriter;
 
     const-string v21, "  "
@@ -29984,7 +27423,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/internal/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 2862
     .local v20, "pw":Lcom/android/internal/util/IndentingPrintWriter;
     move-object/from16 v0, p0
 
@@ -30000,7 +27438,6 @@
 
     if-eqz v21, :cond_1
 
-    .line 2865
     new-instance v21, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
@@ -30039,18 +27476,15 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 3009
     :cond_0
     :goto_0
     return-void
 
-    .line 2871
     :cond_1
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2872
     .local v15, "netDiags":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/connectivity/NetworkDiagnostics;>;"
     const-string v21, "--diag"
 
@@ -30066,10 +27500,8 @@
 
     if-eqz v21, :cond_3
 
-    .line 2873
     const-wide/16 v4, 0x1388
 
-    .line 2874
     .local v4, "DIAG_TIME_MS":J
     move-object/from16 v0, p0
 
@@ -30099,7 +27531,6 @@
 
     check-cast v13, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2876
     .local v13, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     new-instance v21, Lcom/android/server/connectivity/NetworkDiagnostics;
 
@@ -30125,7 +27556,6 @@
 
     goto :goto_1
 
-    .line 2882
     .end local v13    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_2
     invoke-interface {v15}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -30145,21 +27575,17 @@
 
     check-cast v14, Lcom/android/server/connectivity/NetworkDiagnostics;
 
-    .line 2883
     .local v14, "netDiag":Lcom/android/server/connectivity/NetworkDiagnostics;
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2884
     invoke-virtual {v14}, Lcom/android/server/connectivity/NetworkDiagnostics;->waitForMeasurements()V
 
-    .line 2885
     move-object/from16 v0, v20
 
     invoke-virtual {v14, v0}, Lcom/android/server/connectivity/NetworkDiagnostics;->dump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
     goto :goto_2
 
-    .line 2891
     .end local v4    # "DIAG_TIME_MS":J
     .end local v10    # "i$":Ljava/util/Iterator;
     .end local v14    # "netDiag":Lcom/android/server/connectivity/NetworkDiagnostics;
@@ -30168,7 +27594,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2892
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mNetworkFactoryInfos:Ljava/util/HashMap;
@@ -30197,7 +27622,6 @@
 
     check-cast v16, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
 
-    .line 2893
     .local v16, "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     new-instance v21, Ljava/lang/StringBuilder;
 
@@ -30227,46 +27651,36 @@
 
     goto :goto_3
 
-    .line 2895
     .end local v16    # "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     :cond_4
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2896
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2898
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v8
 
-    .line 2899
     .local v8, "defaultNai":Lcom/android/server/connectivity/NetworkAgentInfo;
     const-string v21, "Active default network: "
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2900
     if-nez v8, :cond_5
 
-    .line 2901
     const-string/jumbo v21, "none"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2905
     :goto_4
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2907
     const-string v21, "Current Networks:"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2908
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 2909
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mNetworkAgentInfos:Ljava/util/HashMap;
@@ -30295,7 +27709,6 @@
 
     check-cast v13, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 2910
     .restart local v13    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     invoke-virtual {v13}, Lcom/android/server/connectivity/NetworkAgentInfo;->toString()Ljava/lang/String;
 
@@ -30303,18 +27716,14 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2911
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 2912
     const-string v21, "Requests:"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2913
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 2914
     const/4 v9, 0x0
 
     .local v9, "i":I
@@ -30331,7 +27740,6 @@
 
     if-ge v9, v0, :cond_6
 
-    .line 2915
     iget-object v0, v13, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     move-object/from16 v21, v0
@@ -30350,12 +27758,10 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2914
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_6
 
-    .line 2903
     .end local v9    # "i":I
     .end local v13    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .restart local v10    # "i$":Ljava/util/Iterator;
@@ -30374,22 +27780,18 @@
 
     goto :goto_4
 
-    .line 2917
     .end local v10    # "i$":Ljava/util/Iterator;
     .restart local v9    # "i":I
     .restart local v13    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_6
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 2918
     const-string v21, "Lingered:"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2919
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 2920
     iget-object v0, v13, Lcom/android/server/connectivity/NetworkAgentInfo;->networkLingered:Ljava/util/ArrayList;
 
     move-object/from16 v21, v0
@@ -30421,35 +27823,28 @@
 
     goto :goto_7
 
-    .line 2921
     .end local v17    # "nr":Landroid/net/NetworkRequest;
     :cond_7
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 2922
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
     goto :goto_5
 
-    .line 2924
     .end local v9    # "i":I
     .end local v11    # "i$":Ljava/util/Iterator;
     .end local v13    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_8
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 2925
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2927
     const-string/jumbo v21, "tcp window buffer size for:"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2928
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 2929
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -30466,7 +27861,6 @@
 
     move-result-object v7
 
-    .line 2931
     .local v7, "configOverride":[Ljava/lang/String;
     const/4 v9, 0x0
 
@@ -30480,32 +27874,25 @@
 
     if-ge v9, v0, :cond_9
 
-    .line 2932
     aget-object v21, v7, v9
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2931
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_8
 
-    .line 2934
     :cond_9
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 2935
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2937
     const-string v21, "Mobile interface mtu size with config_mobile_mtu :"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2938
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 2939
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -30522,27 +27909,21 @@
 
     move-result v12
 
-    .line 2941
     .local v12, "mtusize":I
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v12}, Lcom/android/internal/util/IndentingPrintWriter;->println(I)V
 
-    .line 2942
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 2943
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2945
     const-string v21, "Network Requests:"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2946
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 2947
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
@@ -30571,7 +27952,6 @@
 
     check-cast v18, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 2948
     .local v18, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     invoke-virtual/range {v18 .. v18}, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->toString()Ljava/lang/String;
 
@@ -30581,15 +27961,12 @@
 
     goto :goto_9
 
-    .line 2950
     .end local v18    # "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     :cond_a
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2951
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 2953
     new-instance v21, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
@@ -30616,7 +27993,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2954
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/ConnectivityService;->mActiveDefaultNetwork:I
@@ -30631,16 +28007,13 @@
 
     if-eq v0, v1, :cond_b
 
-    .line 2955
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v6
 
-    .line 2956
     .local v6, "activeNetworkInfo":Landroid/net/NetworkInfo;
     if-eqz v6, :cond_b
 
-    .line 2957
     new-instance v21, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
@@ -30679,12 +28052,10 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2961
     .end local v6    # "activeNetworkInfo":Landroid/net/NetworkInfo;
     :cond_b
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2963
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -30697,10 +28068,8 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->dump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
-    .line 2965
     monitor-enter p0
 
-    .line 2966
     :try_start_0
     new-instance v21, Ljava/lang/StringBuilder;
 
@@ -30747,7 +28116,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->print(Ljava/lang/String;)V
 
-    .line 2968
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mNetTransitionWakeLockCausedBy:Ljava/lang/String;
@@ -30760,7 +28128,6 @@
 
     if-nez v21, :cond_d
 
-    .line 2969
     new-instance v21, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v21 .. v21}, Ljava/lang/StringBuilder;-><init>()V
@@ -30787,16 +28154,13 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2973
     :goto_b
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2975
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2976
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
@@ -30813,10 +28177,8 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/connectivity/Tethering;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 2978
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2979
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mKeepaliveTracker:Lcom/android/server/connectivity/KeepaliveTracker;
@@ -30829,7 +28191,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/connectivity/KeepaliveTracker;->dump(Lcom/android/internal/util/IndentingPrintWriter;)V
 
-    .line 2981
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mInetLog:Ljava/util/ArrayList;
@@ -30850,18 +28211,14 @@
 
     if-lez v21, :cond_f
 
-    .line 2982
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2983
     const-string v21, "Inet condition reports:"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2984
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 2985
     const/4 v9, 0x0
 
     :goto_c
@@ -30879,7 +28236,6 @@
 
     if-ge v9, v0, :cond_e
 
-    .line 2986
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mInetLog:Ljava/util/ArrayList;
@@ -30894,19 +28250,16 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 2985
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_c
 
-    .line 2966
     :cond_c
     :try_start_1
     const-string/jumbo v21, "not "
 
     goto/16 :goto_a
 
-    .line 2971
     :cond_d
     const-string v21, ", last requested never"
 
@@ -30914,7 +28267,6 @@
 
     goto :goto_b
 
-    .line 2973
     :catchall_0
     move-exception v21
 
@@ -30924,11 +28276,9 @@
 
     throw v21
 
-    .line 2988
     :cond_e
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 2991
     :cond_f
     const-string v21, "--short"
 
@@ -30944,10 +28294,8 @@
 
     if-nez v21, :cond_0
 
-    .line 2992
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 2993
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mValidationLogs:Ljava/util/ArrayDeque;
@@ -30956,13 +28304,11 @@
 
     monitor-enter v22
 
-    .line 2994
     :try_start_2
     const-string/jumbo v21, "mValidationLogs (most recent first):"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 2995
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mValidationLogs:Ljava/util/ArrayDeque;
@@ -30986,7 +28332,6 @@
 
     check-cast v19, Landroid/util/Pair;
 
-    .line 2996
     .local v19, "p":Landroid/util/Pair;, "Landroid/util/Pair<Landroid/net/Network;Landroid/util/LocalLog$ReadOnlyLocalLog;>;"
     move-object/from16 v0, v19
 
@@ -30996,10 +28341,8 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 2997
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 2998
     move-object/from16 v0, v19
 
     iget-object v0, v0, Landroid/util/Pair;->second:Ljava/lang/Object;
@@ -31018,12 +28361,10 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/util/LocalLog$ReadOnlyLocalLog;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 2999
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
     goto :goto_d
 
-    .line 3001
     .end local v19    # "p":Landroid/util/Pair;, "Landroid/util/Pair<Landroid/net/Network;Landroid/util/LocalLog$ReadOnlyLocalLog;>;"
     :catchall_1
     move-exception v21
@@ -31040,18 +28381,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 3003
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->println()V
 
-    .line 3004
     const-string/jumbo v21, "mNetworkRequestInfoLogs (most recent first):"
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 3005
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 3006
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mNetworkRequestInfoLogs:Landroid/util/LocalLog;
@@ -31068,7 +28405,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/util/LocalLog;->reverseDump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 3007
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
     goto/16 :goto_0
@@ -31079,20 +28415,17 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 8495
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 8496
     .local v1, "mPackageManager":Landroid/content/pm/PackageManager;
     invoke-virtual {v1, p1}, Landroid/content/pm/PackageManager;->getPackagesForUid(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 8497
     .local v0, "callingPackageName":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -31106,7 +28439,6 @@
 
     if-nez v2, :cond_0
 
-    .line 8498
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "The caller do not have APN permission"
@@ -31115,7 +28447,6 @@
 
     throw v2
 
-    .line 8501
     :cond_0
     return-void
 .end method
@@ -31126,10 +28457,8 @@
     .param p2, "vpnProfileName"    # Ljava/lang/String;
 
     .prologue
-    .line 5058
     const/4 v3, 0x0
 
-    .line 5059
     .local v3, "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -31139,7 +28468,6 @@
 
     if-ge v6, v7, :cond_0
 
-    .line 5060
     const-string v6, "ConnectivityService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -31168,13 +28496,11 @@
 
     move-object v4, v3
 
-    .line 5122
     .end local v3    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .local v4, "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     :goto_0
     return-object v4
 
-    .line 5063
     .end local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .restart local v3    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     :cond_0
@@ -31182,7 +28508,6 @@
 
     if-nez p2, :cond_2
 
-    .line 5064
     :cond_1
     const-string v6, "ConnectivityService"
 
@@ -31192,12 +28517,10 @@
 
     move-object v4, v3
 
-    .line 5065
     .end local v3    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .restart local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     goto :goto_0
 
-    .line 5067
     .end local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .restart local v3    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     :cond_2
@@ -31205,7 +28528,6 @@
 
     monitor-enter v7
 
-    .line 5068
     :try_start_0
     const-string v6, "ConnectivityService"
 
@@ -31243,7 +28565,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 5070
     :try_start_1
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -31253,7 +28574,6 @@
 
     move-result v5
 
-    .line 5071
     .local v5, "user":I
     const-string/jumbo v6, "net.vpn.framework"
 
@@ -31261,7 +28581,6 @@
 
     move-result-object v2
 
-    .line 5072
     .local v2, "getProperty":Ljava/lang/String;
     sget-boolean v6, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
@@ -31295,11 +28614,9 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5073
     :cond_3
     const/4 v1, 0x0
 
-    .line 5074
     .local v1, "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
@@ -31309,7 +28626,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 5075
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v6, v5}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -31325,13 +28641,11 @@
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     check-cast v1, Lcom/android/server/connectivity/EnterpriseVpn;
 
-    .line 5080
     .restart local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     iget-boolean v6, p0, Lcom/android/server/ConnectivityService;->mIsKnoxContainerV30:Z
 
     if-nez v6, :cond_7
 
-    .line 5081
     sget-boolean v6, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v6, :cond_4
@@ -31342,18 +28656,15 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5082
     :cond_4
     if-eqz v1, :cond_6
 
-    .line 5083
     const-string v6, "ConnectivityService"
 
     const-string v8, "establishEnterpriseVpn:knoxV1Enabled:Returning enterpriseVpn is not null"
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5084
     invoke-direct {p0, v1, p1, v5, p2}, Lcom/android/server/ConnectivityService;->establishEnterpriseVpnForKnox1VpnClients(Lcom/android/server/connectivity/EnterpriseVpn;Lcom/android/internal/net/VpnConfig;ILjava/lang/String;)Landroid/os/ParcelFileDescriptor;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -31361,14 +28672,12 @@
 
     move-result-object v3
 
-    .line 5120
     :goto_1
     :try_start_2
     monitor-exit v7
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 5121
     const-string v6, "ConnectivityService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -31393,12 +28702,10 @@
 
     move-object v4, v3
 
-    .line 5122
     .end local v3    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .restart local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     goto/16 :goto_0
 
-    .line 5077
     .end local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .restart local v3    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     :cond_5
@@ -31428,7 +28735,6 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 5078
     :try_start_4
     monitor-exit v7
     :try_end_4
@@ -31440,7 +28746,6 @@
     .restart local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     goto/16 :goto_0
 
-    .line 5086
     .end local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .restart local v3    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     :cond_6
@@ -31454,7 +28759,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 5087
     :try_start_6
     monitor-exit v7
     :try_end_6
@@ -31466,7 +28770,6 @@
     .restart local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     goto/16 :goto_0
 
-    .line 5089
     .end local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .restart local v3    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     :cond_7
@@ -31475,7 +28778,6 @@
 
     if-eqz v6, :cond_d
 
-    .line 5090
     sget-boolean v6, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v6, :cond_8
@@ -31486,14 +28788,11 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5091
     :cond_8
     if-eqz v1, :cond_c
 
-    .line 5092
     iput-object p2, p1, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
-    .line 5093
     const-string v6, "1.0"
 
     invoke-virtual {v2, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -31502,14 +28801,12 @@
 
     if-eqz v6, :cond_9
 
-    .line 5094
     invoke-direct {p0, v1, p1, v5, p2}, Lcom/android/server/ConnectivityService;->establishEnterpriseVpnForKnox1VpnClients(Lcom/android/server/connectivity/EnterpriseVpn;Lcom/android/internal/net/VpnConfig;ILjava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v3
 
     goto :goto_1
 
-    .line 5096
     :cond_9
     const-string v6, "2.0"
 
@@ -31519,14 +28816,12 @@
 
     if-eqz v6, :cond_a
 
-    .line 5097
     invoke-direct {p0, v1, p1, v5, p2}, Lcom/android/server/ConnectivityService;->establishEnterpriseVpnForKnox2VpnClients(Lcom/android/server/connectivity/EnterpriseVpn;Lcom/android/internal/net/VpnConfig;ILjava/lang/String;)Landroid/os/ParcelFileDescriptor;
 
     move-result-object v3
 
     goto :goto_1
 
-    .line 5100
     :cond_a
     sget-boolean v6, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
@@ -31538,7 +28833,6 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5101
     :cond_b
     iget-object v8, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -31547,7 +28841,6 @@
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_0
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 5102
     :try_start_8
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -31561,7 +28854,6 @@
 
     move-result-object v3
 
-    .line 5103
     monitor-exit v8
 
     goto/16 :goto_1
@@ -31579,14 +28871,12 @@
     .catch Ljava/lang/Exception; {:try_start_9 .. :try_end_9} :catch_0
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 5114
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v2    # "getProperty":Ljava/lang/String;
     .end local v5    # "user":I
     :catch_0
     move-exception v0
 
-    .line 5115
     .local v0, "e":Ljava/lang/Exception;
     :try_start_a
     const-string v6, "ConnectivityService"
@@ -31617,7 +28907,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_1
 
-    .line 5116
     :try_start_b
     monitor-exit v7
     :try_end_b
@@ -31629,7 +28918,6 @@
     .restart local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     goto/16 :goto_0
 
-    .line 5106
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .restart local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
@@ -31647,7 +28935,6 @@
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_0
     .catchall {:try_start_c .. :try_end_c} :catchall_1
 
-    .line 5107
     :try_start_d
     monitor-exit v7
     :try_end_d
@@ -31659,7 +28946,6 @@
     .restart local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     goto/16 :goto_0
 
-    .line 5110
     .end local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     .restart local v3    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     :cond_d
@@ -31677,7 +28963,6 @@
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_0
     .catchall {:try_start_e .. :try_end_e} :catchall_1
 
-    .line 5111
     :cond_e
     :try_start_f
     monitor-exit v7
@@ -31688,7 +28973,6 @@
     .restart local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
     goto/16 :goto_0
 
-    .line 5118
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v2    # "getProperty":Ljava/lang/String;
     .end local v4    # "knoxVpnFd":Landroid/os/ParcelFileDescriptor;
@@ -31699,7 +28983,6 @@
 
     throw v6
 
-    .line 5120
     :catchall_2
     move-exception v6
 
@@ -31717,10 +29000,8 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 4680
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->throwIfLockdownEnabled()V
 
-    .line 4681
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
@@ -31729,11 +29010,9 @@
 
     move-result v2
 
-    .line 4683
     .local v2, "user":I
     const/4 v1, 0x0
 
-    .line 4684
     .local v1, "fd":Landroid/os/ParcelFileDescriptor;
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -31741,7 +29020,6 @@
 
     if-lt v3, v6, :cond_c
 
-    .line 4685
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
@@ -31750,7 +29028,6 @@
 
     move-result-object v0
 
-    .line 4686
     .local v0, "callingApp":Ljava/lang/String;
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
@@ -31778,7 +29055,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4687
     :cond_0
     if-eqz v0, :cond_7
 
@@ -31790,7 +29066,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 4688
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v3, :cond_1
@@ -31801,7 +29076,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4689
     :cond_1
     invoke-direct {p0, v0, v2}, Lcom/android/server/ConnectivityService;->anyConnectSupportingKnox(Ljava/lang/String;I)Z
 
@@ -31809,15 +29083,12 @@
 
     if-nez v3, :cond_3
 
-    .line 4690
     invoke-direct {p0, p1, v2}, Lcom/android/server/ConnectivityService;->checkIfCallerIsProxyCisco(Lcom/android/internal/net/VpnConfig;I)V
 
-    .line 4691
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 4692
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -31831,12 +29102,10 @@
 
     move-result-object v1
 
-    .line 4693
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4723
     .end local v0    # "callingApp":Ljava/lang/String;
     :cond_2
     :goto_0
@@ -31864,10 +29133,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4724
     return-object v1
 
-    .line 4693
     .restart local v0    # "callingApp":Ljava/lang/String;
     :catchall_0
     move-exception v3
@@ -31879,7 +29146,6 @@
 
     throw v3
 
-    .line 4695
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->checkKnoxVpnProfileType(Lcom/android/internal/net/VpnConfig;)I
 
@@ -31887,7 +29153,6 @@
 
     if-ne v3, v6, :cond_5
 
-    .line 4696
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v3, :cond_4
@@ -31898,7 +29163,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4697
     :cond_4
     iget-object v3, p1, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
@@ -31908,7 +29172,6 @@
 
     goto :goto_0
 
-    .line 4698
     :cond_5
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->checkKnoxVpnProfileType(Lcom/android/internal/net/VpnConfig;)I
 
@@ -31916,7 +29179,6 @@
 
     if-nez v3, :cond_2
 
-    .line 4699
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v3, :cond_6
@@ -31927,13 +29189,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4700
     :cond_6
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 4701
     :try_start_2
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -31947,7 +29207,6 @@
 
     move-result-object v1
 
-    .line 4702
     monitor-exit v4
 
     goto :goto_0
@@ -31961,7 +29220,6 @@
 
     throw v3
 
-    .line 4705
     :cond_7
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->checkKnoxVpnProfileType(Lcom/android/internal/net/VpnConfig;)I
 
@@ -31969,7 +29227,6 @@
 
     if-ne v3, v6, :cond_a
 
-    .line 4706
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v3, :cond_8
@@ -31998,7 +29255,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4707
     :cond_8
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
@@ -32010,13 +29266,11 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4708
     :cond_9
     iget-object v3, p1, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
     invoke-virtual {p0, v0, v3}, Lcom/android/server/ConnectivityService;->createEnterpriseVpn(Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4709
     iget-object v3, p1, Lcom/android/internal/net/VpnConfig;->session:Ljava/lang/String;
 
     invoke-virtual {p0, p1, v3}, Lcom/android/server/ConnectivityService;->establishEnterpriseVpn(Lcom/android/internal/net/VpnConfig;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
@@ -32025,13 +29279,11 @@
 
     goto/16 :goto_0
 
-    .line 4711
     :cond_a
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 4712
     :try_start_3
     sget-boolean v3, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
@@ -32043,7 +29295,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4713
     :cond_b
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -32057,7 +29308,6 @@
 
     move-result-object v1
 
-    .line 4714
     monitor-exit v4
 
     goto/16 :goto_0
@@ -32071,14 +29321,12 @@
 
     throw v3
 
-    .line 4719
     .end local v0    # "callingApp":Ljava/lang/String;
     :cond_c
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 4720
     :try_start_4
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -32092,7 +29340,6 @@
 
     move-result-object v1
 
-    .line 4721
     monitor-exit v4
 
     goto/16 :goto_0
@@ -32113,10 +29360,8 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 8411
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 8413
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mUserManager:Landroid/os/UserManager;
 
     const-string/jumbo v7, "no_network_reset"
@@ -32127,22 +29372,18 @@
 
     if-eqz v6, :cond_1
 
-    .line 8448
     :cond_0
     :goto_0
     return-void
 
-    .line 8417
     :cond_1
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 8420
     .local v4, "userId":I
     invoke-virtual {p0, v8}, Lcom/android/server/ConnectivityService;->setAirplaneMode(Z)V
 
-    .line 8422
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mUserManager:Landroid/os/UserManager;
 
     const-string/jumbo v7, "no_config_tethering"
@@ -32153,7 +29394,6 @@
 
     if-nez v6, :cond_2
 
-    .line 8424
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->getTetheredIfaces()[Ljava/lang/String;
 
     move-result-object v0
@@ -32170,16 +29410,13 @@
 
     aget-object v3, v0, v1
 
-    .line 8425
     .local v3, "tether":Ljava/lang/String;
     invoke-virtual {p0, v3}, Lcom/android/server/ConnectivityService;->untether(Ljava/lang/String;)I
 
-    .line 8424
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 8429
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -32195,32 +29432,26 @@
 
     if-nez v6, :cond_0
 
-    .line 8431
     invoke-virtual {p0, v4}, Lcom/android/server/ConnectivityService;->getVpnConfig(I)Lcom/android/internal/net/VpnConfig;
 
     move-result-object v5
 
-    .line 8432
     .local v5, "vpnConfig":Lcom/android/internal/net/VpnConfig;
     if-eqz v5, :cond_0
 
-    .line 8433
     iget-boolean v6, p0, Lcom/android/server/ConnectivityService;->mLockdownEnabled:Z
 
     if-eqz v6, :cond_3
 
-    .line 8434
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->updateLockdownVpn()Z
 
     goto :goto_0
 
-    .line 8436
     :cond_3
     iget-boolean v6, v5, Lcom/android/internal/net/VpnConfig;->legacy:Z
 
     if-eqz v6, :cond_4
 
-    .line 8437
     const-string v6, "[Legacy VPN]"
 
     const-string v7, "[Legacy VPN]"
@@ -32229,13 +29460,11 @@
 
     goto :goto_0
 
-    .line 8441
     :cond_4
     iget-object v6, v5, Lcom/android/internal/net/VpnConfig;->user:Ljava/lang/String;
 
     invoke-virtual {p0, v6, v4, v8}, Lcom/android/server/ConnectivityService;->setVpnPackageAuthorization(Ljava/lang/String;IZ)V
 
-    .line 8443
     iget-object v6, v5, Lcom/android/internal/net/VpnConfig;->user:Ljava/lang/String;
 
     const-string v7, "[Legacy VPN]"
@@ -32250,10 +29479,8 @@
     .param p1, "apn"    # Ljava/lang/String;
 
     .prologue
-    .line 4110
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 4111
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->getActiveEnterpriseNetworkType(Ljava/lang/String;)I
@@ -32267,21 +29494,17 @@
     .locals 3
 
     .prologue
-    .line 1685
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1686
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 1687
     .local v1, "uid":I
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->getUnfilteredActiveNetworkState(I)Landroid/net/NetworkState;
 
     move-result-object v0
 
-    .line 1688
     .local v0, "state":Landroid/net/NetworkState;
     iget-object v2, v0, Landroid/net/NetworkState;->linkProperties:Landroid/net/LinkProperties;
 
@@ -32292,39 +29515,31 @@
     .locals 7
 
     .prologue
-    .line 1456
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1457
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 1458
     .local v1, "uid":I
     invoke-static {v1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
 
-    .line 1459
     .local v2, "user":I
     const/4 v4, 0x0
 
-    .line 1461
     .local v4, "vpnNetId":I
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->getNetIdForUid(I)I
 
     move-result v4
 
-    .line 1462
     if-nez v4, :cond_1
 
-    .line 1463
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v6
 
-    .line 1464
     :try_start_0
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -32334,7 +29549,6 @@
 
     check-cast v3, Lcom/android/server/connectivity/Vpn;
 
-    .line 1465
     .local v3, "vpn":Lcom/android/server/connectivity/Vpn;
     if-eqz v3, :cond_0
 
@@ -32348,23 +29562,19 @@
 
     move-result v4
 
-    .line 1466
     :cond_0
     monitor-exit v6
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1470
     .end local v3    # "vpn":Lcom/android/server/connectivity/Vpn;
     :cond_1
     if-eqz v4, :cond_2
 
-    .line 1471
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v6
 
-    .line 1472
     :try_start_1
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
@@ -32374,22 +29584,18 @@
 
     check-cast v0, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 1473
     .local v0, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1474
     if-eqz v0, :cond_2
 
     iget-object v5, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
-    .line 1478
     :goto_0
     return-object v5
 
-    .line 1466
     .end local v0    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :catchall_0
     move-exception v5
@@ -32401,7 +29607,6 @@
 
     throw v5
 
-    .line 1473
     :catchall_1
     move-exception v5
 
@@ -32412,13 +29617,11 @@
 
     throw v5
 
-    .line 1476
     :cond_2
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
 
-    .line 1477
     .restart local v0    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v0, :cond_3
 
@@ -32432,7 +29635,6 @@
 
     const/4 v0, 0x0
 
-    .line 1478
     :cond_3
     if-eqz v0, :cond_4
 
@@ -32450,21 +29652,17 @@
     .locals 4
 
     .prologue
-    .line 1448
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1449
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 1450
     .local v1, "uid":I
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->getUnfilteredActiveNetworkState(I)Landroid/net/NetworkState;
 
     move-result-object v0
 
-    .line 1451
     .local v0, "state":Landroid/net/NetworkState;
     iget-object v2, v0, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -32482,15 +29680,12 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 1517
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 1518
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getUnfilteredActiveNetworkState(I)Landroid/net/NetworkState;
 
     move-result-object v0
 
-    .line 1519
     .local v0, "state":Landroid/net/NetworkState;
     iget-object v1, v0, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -32507,21 +29702,17 @@
     .locals 3
 
     .prologue
-    .line 1509
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1510
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 1511
     .local v1, "uid":I
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->getUnfilteredActiveNetworkState(I)Landroid/net/NetworkState;
 
     move-result-object v0
 
-    .line 1512
     .local v0, "state":Landroid/net/NetworkState;
     iget-object v2, v0, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -32532,28 +29723,23 @@
     .locals 5
 
     .prologue
-    .line 1894
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1895
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 1896
     .local v1, "uid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 1898
     .local v2, "token":J
     :try_start_0
     invoke-direct {p0, v1}, Lcom/android/server/ConnectivityService;->getUnfilteredActiveNetworkState(I)Landroid/net/NetworkState;
 
     move-result-object v0
 
-    .line 1899
     .local v0, "state":Landroid/net/NetworkState;
     iget-object v4, v0, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
     :try_end_0
@@ -32561,7 +29747,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1901
     :try_start_1
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mPolicyManager:Landroid/net/INetworkPolicyManager;
 
@@ -32572,21 +29757,17 @@
 
     move-result-object v4
 
-    .line 1907
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     :goto_0
     return-object v4
 
-    .line 1902
     :catch_0
     move-exception v4
 
-    .line 1905
     :cond_0
     const/4 v4, 0x0
 
-    .line 1907
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -32604,15 +29785,12 @@
     .locals 4
 
     .prologue
-    .line 1568
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1569
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 1570
     .local v2, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/NetworkInfo;>;"
     const/4 v1, 0x0
 
@@ -32622,24 +29800,20 @@
 
     if-gt v1, v3, :cond_1
 
-    .line 1571
     invoke-virtual {p0, v1}, Lcom/android/server/ConnectivityService;->getNetworkInfo(I)Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 1572
     .local v0, "info":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_0
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1570
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1574
     .end local v0    # "info":Landroid/net/NetworkInfo;
     :cond_1
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -32661,15 +29835,12 @@
     .locals 4
 
     .prologue
-    .line 1580
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1581
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 1582
     .local v2, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/NetworkInfo;>;"
     const/4 v1, 0x0
 
@@ -32679,24 +29850,20 @@
 
     if-gt v1, v3, :cond_1
 
-    .line 1583
     invoke-virtual {p0, v1}, Lcom/android/server/ConnectivityService;->getNetworkInfo(I)Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 1584
     .local v0, "info":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_0
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1582
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1586
     .end local v0    # "info":Landroid/net/NetworkInfo;
     :cond_1
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -32718,15 +29885,12 @@
     .locals 13
 
     .prologue
-    .line 1802
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 1804
     invoke-static {}, Lcom/google/android/collect/Lists;->newArrayList()Ljava/util/ArrayList;
 
     move-result-object v12
 
-    .line 1806
     .local v12, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/net/NetworkState;>;"
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -32740,7 +29904,6 @@
 
     move-result-object v8
 
-    .line 1808
     .local v8, "configApnTypeByCapa":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->getAllNetworks()[Landroid/net/Network;
 
@@ -32758,17 +29921,14 @@
 
     aget-object v4, v7, v9
 
-    .line 1809
     .local v4, "network":Landroid/net/Network;
     invoke-direct {p0, v4}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v11
 
-    .line 1810
     .local v11, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v11, :cond_b
 
-    .line 1811
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -32791,7 +29951,6 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1814
     invoke-static {v8}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -32802,7 +29961,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 1815
     const-string/jumbo v0, "ims"
 
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->isExceptApnForDataLimit(Ljava/lang/String;)Z
@@ -32821,14 +29979,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1817
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0xb
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1819
     :cond_0
     const-string/jumbo v0, "mms"
 
@@ -32848,14 +30004,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 1821
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1823
     :cond_1
     const-string/jumbo v0, "fota"
 
@@ -32875,14 +30029,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 1825
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1827
     :cond_2
     const-string v0, "cbs"
 
@@ -32902,14 +30054,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 1829
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1831
     :cond_3
     const-string v0, "cas"
 
@@ -32929,14 +30079,12 @@
 
     if-eqz v0, :cond_4
 
-    .line 1833
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0x18
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1835
     :cond_4
     const-string v0, "bip"
 
@@ -32956,14 +30104,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 1837
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0x17
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1839
     :cond_5
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -33001,7 +30147,6 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1844
     :cond_6
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isNaGsm()Z
 
@@ -33009,7 +30154,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 1845
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     if-eqz v0, :cond_7
@@ -33042,14 +30186,12 @@
 
     if-eqz v0, :cond_7
 
-    .line 1848
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0xb
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1852
     :cond_7
     const-string v0, "VZW"
 
@@ -33063,7 +30205,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 1853
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     if-eqz v0, :cond_9
@@ -33086,7 +30227,6 @@
 
     if-nez v0, :cond_9
 
-    .line 1855
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
     const/4 v1, 0x4
@@ -33097,14 +30237,12 @@
 
     if-eqz v0, :cond_c
 
-    .line 1856
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0xb
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1868
     :cond_8
     :goto_1
     new-instance v0, Ljava/lang/StringBuilder;
@@ -33137,7 +30275,6 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1873
     :cond_9
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -33171,14 +30308,12 @@
 
     if-eqz v0, :cond_a
 
-    .line 1876
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0xf
 
     invoke-virtual {v0, v1}, Landroid/net/NetworkInfo;->setType(I)V
 
-    .line 1877
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -33209,11 +30344,9 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1881
     :cond_a
     monitor-enter v11
 
-    .line 1882
     :try_start_0
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMisc:Landroid/net/NetworkMisc;
 
@@ -33223,7 +30356,6 @@
 
     iget-object v5, v0, Landroid/net/NetworkMisc;->subscriberId:Ljava/lang/String;
 
-    .line 1884
     .local v5, "subscriberId":Ljava/lang/String;
     :goto_2
     new-instance v0, Landroid/net/NetworkState;
@@ -33240,19 +30372,16 @@
 
     invoke-virtual {v12, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1886
     monitor-exit v11
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1808
     .end local v5    # "subscriberId":Ljava/lang/String;
     :cond_b
     add-int/lit8 v9, v9, 0x1
 
     goto/16 :goto_0
 
-    .line 1857
     :cond_c
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -33264,7 +30393,6 @@
 
     if-eqz v0, :cond_d
 
-    .line 1858
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/4 v1, 0x2
@@ -33273,7 +30401,6 @@
 
     goto/16 :goto_1
 
-    .line 1859
     :cond_d
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -33285,7 +30412,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 1860
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0xa
@@ -33294,7 +30420,6 @@
 
     goto/16 :goto_1
 
-    .line 1861
     :cond_e
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -33306,7 +30431,6 @@
 
     if-eqz v0, :cond_f
 
-    .line 1862
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0xc
@@ -33315,7 +30439,6 @@
 
     goto/16 :goto_1
 
-    .line 1863
     :cond_f
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -33327,7 +30450,6 @@
 
     if-eqz v0, :cond_10
 
-    .line 1864
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0x18
@@ -33336,7 +30458,6 @@
 
     goto/16 :goto_1
 
-    .line 1865
     :cond_10
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkCapabilities:Landroid/net/NetworkCapabilities;
 
@@ -33348,7 +30469,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 1866
     iget-object v0, v11, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     const/16 v1, 0x17
@@ -33357,13 +30477,11 @@
 
     goto/16 :goto_1
 
-    .line 1882
     :cond_11
     const/4 v5, 0x0
 
     goto :goto_2
 
-    .line 1886
     :catchall_0
     move-exception v0
 
@@ -33374,7 +30492,6 @@
 
     throw v0
 
-    .line 1889
     .end local v4    # "network":Landroid/net/Network;
     .end local v11    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_12
@@ -33397,15 +30514,12 @@
     .locals 4
 
     .prologue
-    .line 1610
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1611
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 1612
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
@@ -33415,7 +30529,6 @@
 
     new-array v1, v2, [Landroid/net/Network;
 
-    .line 1613
     .local v1, "result":[Landroid/net/Network;
     const/4 v0, 0x0
 
@@ -33429,7 +30542,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1614
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -33442,18 +30554,15 @@
 
     aput-object v2, v1, v0
 
-    .line 1613
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1616
     :cond_0
     monitor-exit v3
 
     return-object v1
 
-    .line 1617
     .end local v0    # "i":I
     .end local v1    # "result":[Landroid/net/Network;
     :catchall_0
@@ -33470,36 +30579,29 @@
     .locals 5
 
     .prologue
-    .line 5633
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 5634
     iget-boolean v3, p0, Lcom/android/server/ConnectivityService;->mLockdownEnabled:Z
 
     if-eqz v3, :cond_0
 
-    .line 5635
     const/4 v3, 0x0
 
     new-array v3, v3, [Lcom/android/internal/net/VpnInfo;
 
-    .line 5646
     :goto_0
     return-object v3
 
-    .line 5638
     :cond_0
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 5639
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5640
     .local v2, "infoList":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/net/VpnInfo;>;"
     const/4 v0, 0x0
 
@@ -33513,7 +30615,6 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 5641
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -33526,20 +30627,16 @@
 
     move-result-object v1
 
-    .line 5642
     .local v1, "info":Lcom/android/internal/net/VpnInfo;
     if-eqz v1, :cond_1
 
-    .line 5643
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 5640
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 5646
     .end local v1    # "info":Lcom/android/internal/net/VpnInfo;
     :cond_2
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -33558,7 +30655,6 @@
 
     goto :goto_0
 
-    .line 5647
     .end local v0    # "i":I
     .end local v2    # "infoList":Ljava/util/List;, "Ljava/util/List<Lcom/android/internal/net/VpnInfo;>;"
     :catchall_0
@@ -33578,7 +30674,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4993
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
@@ -33586,7 +30681,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4994
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
     move-result-object v2
@@ -33599,26 +30693,21 @@
 
     packed-switch v2, :pswitch_data_0
 
-    .line 5004
     :cond_0
     :goto_0
     return v1
 
-    .line 4996
     :pswitch_0
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 5003
     :catch_0
     move-exception v0
 
-    .line 5004
     .local v0, "e":Ljava/lang/Exception;
     goto :goto_0
 
-    .line 4994
     nop
 
     :pswitch_data_0
@@ -33632,47 +30721,38 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 1636
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1638
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 1640
     .local v8, "result":Ljava/util/HashMap;, "Ljava/util/HashMap<Landroid/net/Network;Landroid/net/NetworkCapabilities;>;"
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v3
 
-    .line 1641
     .local v3, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     invoke-direct {p0, v3}, Lcom/android/server/ConnectivityService;->getNetworkCapabilitiesInternal(Lcom/android/server/connectivity/NetworkAgentInfo;)Landroid/net/NetworkCapabilities;
 
     move-result-object v4
 
-    .line 1642
     .local v4, "nc":Landroid/net/NetworkCapabilities;
     if-eqz v4, :cond_0
 
-    .line 1643
     iget-object v10, v3, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
     invoke-virtual {v8, v10, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1646
     :cond_0
     iget-boolean v10, p0, Lcom/android/server/ConnectivityService;->mLockdownEnabled:Z
 
     if-nez v10, :cond_3
 
-    .line 1647
     iget-object v11, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v11
 
-    .line 1648
     :try_start_0
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -33682,20 +30762,16 @@
 
     check-cast v9, Lcom/android/server/connectivity/Vpn;
 
-    .line 1649
     .local v9, "vpn":Lcom/android/server/connectivity/Vpn;
     if-eqz v9, :cond_2
 
-    .line 1650
     invoke-virtual {v9}, Lcom/android/server/connectivity/Vpn;->getUnderlyingNetworks()[Landroid/net/Network;
 
     move-result-object v6
 
-    .line 1651
     .local v6, "networks":[Landroid/net/Network;
     if-eqz v6, :cond_2
 
-    .line 1652
     move-object v0, v6
 
     .local v0, "arr$":[Landroid/net/Network;
@@ -33710,30 +30786,24 @@
 
     aget-object v5, v0, v1
 
-    .line 1653
     .local v5, "network":Landroid/net/Network;
     invoke-direct {p0, v5}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v3
 
-    .line 1654
     invoke-direct {p0, v3}, Lcom/android/server/ConnectivityService;->getNetworkCapabilitiesInternal(Lcom/android/server/connectivity/NetworkAgentInfo;)Landroid/net/NetworkCapabilities;
 
     move-result-object v4
 
-    .line 1655
     if-eqz v4, :cond_1
 
-    .line 1656
     invoke-virtual {v8, v5, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1652
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1661
     .end local v0    # "arr$":[Landroid/net/Network;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -33744,7 +30814,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1664
     .end local v9    # "vpn":Lcom/android/server/connectivity/Vpn;
     :cond_3
     invoke-virtual {v8}, Ljava/util/HashMap;->size()I
@@ -33753,7 +30822,6 @@
 
     new-array v7, v10, [Landroid/net/NetworkCapabilities;
 
-    .line 1665
     .local v7, "out":[Landroid/net/NetworkCapabilities;
     invoke-virtual {v8}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -33766,11 +30834,9 @@
     .end local v7    # "out":[Landroid/net/NetworkCapabilities;
     check-cast v7, [Landroid/net/NetworkCapabilities;
 
-    .line 1666
     .restart local v7    # "out":[Landroid/net/NetworkCapabilities;
     return-object v7
 
-    .line 1661
     .end local v7    # "out":[Landroid/net/NetworkCapabilities;
     :catchall_0
     move-exception v10
@@ -33787,10 +30853,8 @@
     .locals 2
 
     .prologue
-    .line 2718
     const-string/jumbo v0, "net.tcp.default_init_rwnd"
 
-    .line 2720
     .local v0, "RwndKey":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
@@ -33806,7 +30870,6 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 2730
     :goto_0
     const/4 v1, 0x0
 
@@ -33816,14 +30879,11 @@
 
     return v1
 
-    .line 2722
     :pswitch_0
     const-string/jumbo v0, "net.tcp.2g_init_rwnd"
 
-    .line 2723
     goto :goto_0
 
-    .line 2720
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -33836,27 +30896,23 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 6116
     const-string v4, "ConnectivityService"
 
     const-string/jumbo v6, "getDhcpServerConfiguration()"
 
     invoke-static {v4, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6117
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 6118
     .local v0, "cr":Landroid/content/ContentResolver;
     new-instance v3, Landroid/net/DhcpServerConfiguration;
 
     invoke-direct {v3}, Landroid/net/DhcpServerConfiguration;-><init>()V
 
-    .line 6120
     .local v3, "serverConfig":Landroid/net/DhcpServerConfiguration;
     :try_start_0
     const-string/jumbo v4, "wifiap_local_ip"
@@ -33867,7 +30923,6 @@
 
     iput-object v4, v3, Landroid/net/DhcpServerConfiguration;->localIp:Ljava/lang/String;
 
-    .line 6121
     const-string/jumbo v4, "wifiap_subnet_mask"
 
     invoke-static {v0, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
@@ -33876,7 +30931,6 @@
 
     iput-object v4, v3, Landroid/net/DhcpServerConfiguration;->subnetmask:Ljava/lang/String;
 
-    .line 6122
     const-string/jumbo v4, "wifiap_dhcp_enable"
 
     invoke-static {v0, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
@@ -33890,7 +30944,6 @@
     :goto_0
     iput-boolean v4, v3, Landroid/net/DhcpServerConfiguration;->dhcpEnable:Z
 
-    .line 6123
     const-string/jumbo v4, "wifiap_dhcp_start_ip"
 
     invoke-static {v0, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
@@ -33899,7 +30952,6 @@
 
     iput-object v4, v3, Landroid/net/DhcpServerConfiguration;->ipRangeStart:Ljava/lang/String;
 
-    .line 6124
     const-string/jumbo v4, "wifiap_dhcp_end_ip"
 
     invoke-static {v0, v4}, Landroid/provider/Settings$System;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
@@ -33908,7 +30960,6 @@
 
     iput-object v4, v3, Landroid/net/DhcpServerConfiguration;->ipRangeEnd:Ljava/lang/String;
 
-    .line 6125
     const-string/jumbo v4, "wifiap_dhcp_lease_time"
 
     invoke-static {v0, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
@@ -33917,7 +30968,6 @@
 
     iput v4, v3, Landroid/net/DhcpServerConfiguration;->leaseTime:I
 
-    .line 6126
     const-string/jumbo v4, "wifiap_dhcp_max_user"
 
     invoke-static {v0, v4}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;)I
@@ -33928,23 +30978,19 @@
     :try_end_0
     .catch Landroid/provider/Settings$SettingNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6142
     .end local v3    # "serverConfig":Landroid/net/DhcpServerConfiguration;
     :goto_1
     return-object v3
 
-    .line 6122
     .restart local v3    # "serverConfig":Landroid/net/DhcpServerConfiguration;
     :cond_0
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 6129
     :catch_0
     move-exception v2
 
-    .line 6130
     .local v2, "e":Landroid/provider/Settings$SettingNotFoundException;
     const-string v4, "ConnectivityService"
 
@@ -33952,51 +30998,41 @@
 
     invoke-static {v4, v6}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6131
     new-instance v1, Landroid/net/DhcpServerConfiguration;
 
     invoke-direct {v1}, Landroid/net/DhcpServerConfiguration;-><init>()V
 
-    .line 6133
     .local v1, "defaultServerConfig":Landroid/net/DhcpServerConfiguration;
     const-string v4, "192.168.43.1"
 
     iput-object v4, v1, Landroid/net/DhcpServerConfiguration;->localIp:Ljava/lang/String;
 
-    .line 6134
     const-string v4, "255.255.255.0"
 
     iput-object v4, v1, Landroid/net/DhcpServerConfiguration;->subnetmask:Ljava/lang/String;
 
-    .line 6135
     iput-boolean v5, v1, Landroid/net/DhcpServerConfiguration;->dhcpEnable:Z
 
-    .line 6136
     const-string v4, "192.168.43.100"
 
     iput-object v4, v1, Landroid/net/DhcpServerConfiguration;->ipRangeStart:Ljava/lang/String;
 
-    .line 6137
     const-string v4, "192.168.43.254"
 
     iput-object v4, v1, Landroid/net/DhcpServerConfiguration;->ipRangeEnd:Ljava/lang/String;
 
-    .line 6138
     const/16 v4, 0x5a
 
     iput v4, v1, Landroid/net/DhcpServerConfiguration;->leaseTime:I
 
-    .line 6139
     const/16 v4, 0x64
 
     iput v4, v1, Landroid/net/DhcpServerConfiguration;->maxClient:I
 
-    .line 6141
     invoke-virtual {p0, v1}, Lcom/android/server/ConnectivityService;->saveDhcpServerConfiguration(Landroid/net/DhcpServerConfiguration;)Z
 
     move-object v3, v1
 
-    .line 6142
     goto :goto_1
 .end method
 
@@ -34004,12 +31040,10 @@
     .locals 2
 
     .prologue
-    .line 4414
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mProxyLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 4415
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
@@ -34017,7 +31051,6 @@
 
     return-object v0
 
-    .line 4416
     :catchall_0
     move-exception v0
 
@@ -34032,10 +31065,8 @@
     .locals 10
 
     .prologue
-    .line 8946
     const/4 v4, 0x0
 
-    .line 8948
     .local v4, "proxy":Landroid/net/ProxyInfo;
     iget-object v7, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -34043,7 +31074,6 @@
 
     move-result-object v6
 
-    .line 8949
     .local v6, "res":Landroid/content/ContentResolver;
     const-string/jumbo v7, "global_http_proxy_host"
 
@@ -34051,7 +31081,6 @@
 
     move-result-object v1
 
-    .line 8950
     .local v1, "host":Ljava/lang/String;
     const-string/jumbo v7, "global_http_proxy_port"
 
@@ -34061,7 +31090,6 @@
 
     move-result v3
 
-    .line 8951
     .local v3, "port":I
     const-string/jumbo v7, "global_http_proxy_exclusion_list"
 
@@ -34069,7 +31097,6 @@
 
     move-result-object v0
 
-    .line 8952
     .local v0, "exclList":Ljava/lang/String;
     const-string/jumbo v7, "global_proxy_pac_url"
 
@@ -34077,7 +31104,6 @@
 
     move-result-object v2
 
-    .line 8954
     .local v2, "pacFileUrl":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -34091,7 +31117,6 @@
 
     if-nez v7, :cond_1
 
-    .line 8956
     :cond_0
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -34099,12 +31124,10 @@
 
     if-nez v7, :cond_2
 
-    .line 8957
     new-instance v5, Landroid/net/ProxyInfo;
 
     invoke-direct {v5, v2}, Landroid/net/ProxyInfo;-><init>(Ljava/lang/String;)V
 
-    .line 8961
     .local v5, "proxyProperties":Landroid/net/ProxyInfo;
     :goto_0
     invoke-virtual {v5}, Landroid/net/ProxyInfo;->isValid()Z
@@ -34113,16 +31136,13 @@
 
     if-eqz v7, :cond_3
 
-    .line 8962
     move-object v4, v5
 
-    .line 8968
     .end local v5    # "proxyProperties":Landroid/net/ProxyInfo;
     :cond_1
     :goto_1
     return-object v4
 
-    .line 8959
     :cond_2
     new-instance v5, Landroid/net/ProxyInfo;
 
@@ -34131,7 +31151,6 @@
     .restart local v5    # "proxyProperties":Landroid/net/ProxyInfo;
     goto :goto_0
 
-    .line 8964
     :cond_3
     const-string v7, "ConnectivityService"
 
@@ -34169,7 +31188,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 5355
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v3
@@ -34178,7 +31196,6 @@
 
     if-ge v3, v5, :cond_0
 
-    .line 5356
     const-string v3, "ConnectivityService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -34207,15 +31224,12 @@
 
     move-object v3, v4
 
-    .line 5377
     :goto_0
     return-object v3
 
-    .line 5359
     :cond_0
     if-nez p1, :cond_1
 
-    .line 5360
     const-string v3, "ConnectivityService"
 
     const-string v5, "Profile Name passed is null in getInterfaceName"
@@ -34224,10 +31238,8 @@
 
     move-object v3, v4
 
-    .line 5361
     goto :goto_0
 
-    .line 5364
     :cond_1
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -34238,11 +31250,9 @@
 
     move-result v2
 
-    .line 5365
     .local v2, "user":I
     const/4 v1, 0x0
 
-    .line 5366
     .local v1, "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
@@ -34252,7 +31262,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 5367
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -34268,12 +31277,10 @@
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     check-cast v1, Lcom/android/server/connectivity/EnterpriseVpn;
 
-    .line 5369
     .restart local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     :cond_2
     if-eqz v1, :cond_3
 
-    .line 5370
     invoke-virtual {v1}, Lcom/android/server/connectivity/EnterpriseVpn;->getInterfaceName()Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -34285,16 +31292,13 @@
     :cond_3
     move-object v3, v4
 
-    .line 5373
     goto :goto_0
 
-    .line 5375
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v2    # "user":I
     :catch_0
     move-exception v0
 
-    .line 5376
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "ConnectivityService"
 
@@ -34324,7 +31328,6 @@
 
     move-object v3, v4
 
-    .line 5377
     goto :goto_0
 .end method
 
@@ -34332,7 +31335,6 @@
     .locals 1
 
     .prologue
-    .line 4662
     const/4 v0, 0x0
 
     return-object v0
@@ -34342,7 +31344,6 @@
     .locals 1
 
     .prologue
-    .line 4667
     const/4 v0, 0x0
 
     return-object v0
@@ -34353,24 +31354,20 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 3933
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceTetherAccessPermission()V
 
-    .line 3935
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isTetheringSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3936
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0, p1}, Lcom/android/server/connectivity/Tethering;->getLastTetherError(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 3938
     :goto_0
     return v0
 
@@ -34384,7 +31381,6 @@
     .locals 1
 
     .prologue
-    .line 6799
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lcom/android/server/ConnectivityService;->getLegacyVpnInfo(I)Lcom/android/internal/net/LegacyVpnInfo;
@@ -34401,25 +31397,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 5611
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->enforceCrossUserPermission(I)V
 
-    .line 5612
     iget-boolean v2, p0, Lcom/android/server/ConnectivityService;->mLockdownEnabled:Z
 
     if-eqz v2, :cond_0
 
-    .line 5622
     :goto_0
     return-object v1
 
-    .line 5616
     :cond_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 5617
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -34429,11 +31420,9 @@
 
     check-cast v0, Lcom/android/server/connectivity/Vpn;
 
-    .line 5618
     .local v0, "vpn":Lcom/android/server/connectivity/Vpn;
     if-eqz v0, :cond_1
 
-    .line 5619
     invoke-virtual {v0}, Lcom/android/server/connectivity/Vpn;->getLegacyVpnInfo()Lcom/android/internal/net/LegacyVpnInfo;
 
     move-result-object v1
@@ -34442,7 +31431,6 @@
 
     goto :goto_0
 
-    .line 5624
     .end local v0    # "vpn":Lcom/android/server/connectivity/Vpn;
     :catchall_0
     move-exception v1
@@ -34453,7 +31441,6 @@
 
     throw v1
 
-    .line 5621
     .restart local v0    # "vpn":Lcom/android/server/connectivity/Vpn;
     :cond_1
     :try_start_1
@@ -34463,7 +31450,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5622
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -34476,22 +31462,17 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 1716
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1717
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
 
-    .line 1718
     .local v0, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v0, :cond_0
 
-    .line 1719
     monitor-enter v0
 
-    .line 1720
     :try_start_0
     new-instance v1, Landroid/net/LinkProperties;
 
@@ -34501,11 +31482,9 @@
 
     monitor-exit v0
 
-    .line 1723
     :goto_0
     return-object v1
 
-    .line 1721
     :catchall_0
     move-exception v1
 
@@ -34515,7 +31494,6 @@
 
     throw v1
 
-    .line 1723
     :cond_0
     const/4 v1, 0x0
 
@@ -34527,15 +31505,12 @@
     .param p1, "networkType"    # I
 
     .prologue
-    .line 1693
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1696
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 1697
     .local v2, "uid":I
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
@@ -34543,14 +31518,11 @@
 
     move-result v0
 
-    .line 1698
     .local v0, "entType":I
     if-eq v0, p1, :cond_0
 
-    .line 1699
     move p1, v0
 
-    .line 1704
     :cond_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
@@ -34558,14 +31530,11 @@
 
     move-result-object v1
 
-    .line 1705
     .local v1, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v1, :cond_1
 
-    .line 1706
     monitor-enter v1
 
-    .line 1707
     :try_start_0
     new-instance v3, Landroid/net/LinkProperties;
 
@@ -34575,11 +31544,9 @@
 
     monitor-exit v1
 
-    .line 1710
     :goto_0
     return-object v3
 
-    .line 1708
     :catchall_0
     move-exception v3
 
@@ -34589,7 +31556,6 @@
 
     throw v3
 
-    .line 1710
     :cond_1
     const/4 v3, 0x0
 
@@ -34600,15 +31566,12 @@
     .locals 5
 
     .prologue
-    .line 6079
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 6080
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getProvisioningUrlBaseFromFile()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6081
     .local v1, "url":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -34616,7 +31579,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 6082
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -34629,7 +31591,6 @@
 
     move-result-object v1
 
-    .line 6083
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -34650,7 +31611,6 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6088
     :goto_0
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -34658,14 +31618,12 @@
 
     if-nez v2, :cond_1
 
-    .line 6089
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mTelephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6090
     .local v0, "phoneNumber":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -34673,10 +31631,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 6091
     const-string v0, "0000000000"
 
-    .line 6093
     :cond_0
     const/4 v2, 0x3
 
@@ -34710,12 +31666,10 @@
 
     move-result-object v1
 
-    .line 6099
     .end local v0    # "phoneNumber":Ljava/lang/String;
     :cond_1
     return-object v1
 
-    .line 6085
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -34745,7 +31699,6 @@
     .param p1, "interfaceName"    # Ljava/lang/String;
 
     .prologue
-    .line 5567
     const-string v4, "ConnectivityService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -34768,12 +31721,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5568
     iget-object v5, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v5
 
-    .line 5569
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -34787,7 +31738,6 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 5570
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -34796,11 +31746,9 @@
 
     check-cast v2, Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 5571
     .local v2, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     iget-object v1, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 5572
     .local v1, "lp":Landroid/net/LinkProperties;
     if-eqz v1, :cond_0
 
@@ -34818,12 +31766,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 5573
     iget-object v4, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
     iget v3, v4, Landroid/net/Network;->netId:I
 
-    .line 5574
     .local v3, "netId":I
     const-string v4, "ConnectivityService"
 
@@ -34847,19 +31793,16 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5575
     monitor-exit v5
 
     return v3
 
-    .line 5569
     .end local v3    # "netId":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 5578
     .end local v1    # "lp":Landroid/net/LinkProperties;
     .end local v2    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_1
@@ -34867,7 +31810,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5579
     new-instance v4, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v5, "netId not found for the interface"
@@ -34876,7 +31818,6 @@
 
     throw v4
 
-    .line 5578
     :catchall_0
     move-exception v4
 
@@ -34893,16 +31834,13 @@
     .param p1, "networkInfo"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 4741
     const/4 v1, -0x1
 
-    .line 4742
     .local v1, "netId":I
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 4743
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -34916,7 +31854,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 4744
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -34941,26 +31878,22 @@
 
     if-eqz v2, :cond_0
 
-    .line 4745
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v1
 
-    .line 4743
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 4748
     :cond_1
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4749
     const-string v2, "ConnectivityService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -34983,10 +31916,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4750
     return v1
 
-    .line 4748
     :catchall_0
     move-exception v2
 
@@ -35003,10 +31934,8 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 1739
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1740
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
@@ -35025,21 +31954,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1592
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1593
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 1594
     .local v1, "uid":I
     invoke-direct {p0, p1, v1}, Lcom/android/server/ConnectivityService;->getFilteredNetworkState(II)Landroid/net/NetworkState;
 
     move-result-object v0
 
-    .line 1595
     .local v0, "state":Landroid/net/NetworkState;
     iget-object v3, v0, Landroid/net/NetworkState;->linkProperties:Landroid/net/LinkProperties;
 
@@ -35049,15 +31974,12 @@
 
     if-nez v3, :cond_1
 
-    .line 1596
     iget-object v2, v0, Landroid/net/NetworkState;->network:Landroid/net/Network;
 
-    .line 1605
     :cond_0
     :goto_0
     return-object v2
 
-    .line 1598
     :cond_1
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -35071,7 +31993,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1600
     const/4 v3, 0x5
 
     if-ne p1, v3, :cond_0
@@ -35094,27 +32015,22 @@
     .param p1, "networkType"    # I
 
     .prologue
-    .line 1525
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1526
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 1527
     .local v2, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
 
-    .line 1529
     .local v0, "pid":I
     const/4 v3, 0x1
 
     if-ne p1, v3, :cond_0
 
-    .line 1530
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mWifiNetworkInfo:Landroid/net/NetworkInfo;
 
     if-eqz v3, :cond_0
@@ -35129,14 +32045,11 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 1531
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mWifiNetworkInfo:Landroid/net/NetworkInfo;
 
-    .line 1548
     :goto_0
     return-object v3
 
-    .line 1535
     :cond_0
     invoke-direct {p0, v2}, Lcom/android/server/ConnectivityService;->getVpnUnderlyingNetworks(I)[Landroid/net/Network;
 
@@ -35144,12 +32057,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 1539
     invoke-direct {p0, v2}, Lcom/android/server/ConnectivityService;->getUnfilteredActiveNetworkState(I)Landroid/net/NetworkState;
 
     move-result-object v1
 
-    .line 1540
     .local v1, "state":Landroid/net/NetworkState;
     iget-object v3, v1, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -35163,7 +32074,6 @@
 
     if-ne v3, p1, :cond_1
 
-    .line 1541
     iget-object v3, v1, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
     iget-object v4, v1, Landroid/net/NetworkState;->linkProperties:Landroid/net/LinkProperties;
@@ -35174,20 +32084,17 @@
 
     goto :goto_0
 
-    .line 1544
     .end local v1    # "state":Landroid/net/NetworkState;
     :cond_1
     invoke-direct {p0, p1, v2}, Lcom/android/server/ConnectivityService;->getFilteredNetworkState(II)Landroid/net/NetworkState;
 
     move-result-object v1
 
-    .line 1545
     .restart local v1    # "state":Landroid/net/NetworkState;
     iget-object v3, v1, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
     if-eqz v3, :cond_2
 
-    .line 1546
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -35244,7 +32151,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1548
     :cond_2
     iget-object v3, v1, Landroid/net/NetworkState;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -35256,25 +32162,20 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 1553
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1554
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 1555
     .local v3, "uid":I
     const/4 v0, 0x0
 
-    .line 1556
     .local v0, "info":Landroid/net/NetworkInfo;
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v2
 
-    .line 1557
     .local v2, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-eqz v2, :cond_0
 
@@ -35282,10 +32183,8 @@
 
     if-eqz v4, :cond_0
 
-    .line 1558
     monitor-enter v2
 
-    .line 1559
     :try_start_0
     new-instance v1, Landroid/net/NetworkInfo;
 
@@ -35295,7 +32194,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1560
     .end local v0    # "info":Landroid/net/NetworkInfo;
     .local v1, "info":Landroid/net/NetworkInfo;
     :try_start_1
@@ -35307,17 +32205,14 @@
 
     move-result-object v0
 
-    .line 1561
     .end local v1    # "info":Landroid/net/NetworkInfo;
     .restart local v0    # "info":Landroid/net/NetworkInfo;
     :try_start_2
     monitor-exit v2
 
-    .line 1563
     :cond_0
     return-object v0
 
-    .line 1561
     :catchall_0
     move-exception v4
 
@@ -35345,14 +32240,12 @@
     .param p1, "network"    # Landroid/net/Network;
 
     .prologue
-    .line 4212
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnEngineInstance()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     move-result-object v14
 
     if-eqz v14, :cond_0
 
-    .line 4213
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/ConnectivityService;->mKnoxVpnEngineService:Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
@@ -35365,11 +32258,9 @@
 
     move-result-object v6
 
-    .line 4214
     .local v6, "knoxProxyInfo":Landroid/net/ProxyInfo;
     if-eqz v6, :cond_0
 
-    .line 4215
     const-string v14, "ConnectivityService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -35396,12 +32287,10 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4258
     .end local v6    # "knoxProxyInfo":Landroid/net/ProxyInfo;
     :goto_0
     return-object v6
 
-    .line 4223
     :cond_0
     move-object/from16 v0, p0
 
@@ -35419,16 +32308,13 @@
 
     move-result-object v9
 
-    .line 4224
     .local v9, "packageList":[Ljava/lang/String;
     if-eqz v9, :cond_4
 
-    .line 4225
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 4227
     .local v12, "token":J
     move-object v2, v9
 
@@ -35445,7 +32331,6 @@
 
     aget-object v10, v2, v5
 
-    .line 4229
     .local v10, "packageName":Ljava/lang/String;
     sget-object v14, Landroid/sec/enterprise/proxy/EnterpriseProxyConstants;->LOCAL_ENTERPRISE_PROXY_WHITELIST:Ljava/util/List;
 
@@ -35455,7 +32340,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 4230
     const/4 v14, 0x1
 
     move-object/from16 v0, p0
@@ -35464,16 +32348,13 @@
 
     move-result-object v3
 
-    .line 4231
     .local v3, "enterpriseProxyInfo":Landroid/net/ProxyInfo;
     if-eqz v3, :cond_2
 
-    .line 4232
     sget-boolean v14, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v14, :cond_1
 
-    .line 4233
     const-string v14, "ConnectivityService"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -35512,7 +32393,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4241
     :cond_1
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -35520,19 +32400,16 @@
 
     goto :goto_0
 
-    .line 4227
     .end local v3    # "enterpriseProxyInfo":Landroid/net/ProxyInfo;
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 4241
     .end local v10    # "packageName":Ljava/lang/String;
     :cond_3
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4247
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v5    # "i$":I
     .end local v7    # "len$":I
@@ -35546,7 +32423,6 @@
 
     goto :goto_0
 
-    .line 4241
     .restart local v2    # "arr$":[Ljava/lang/String;
     .restart local v12    # "token":J
     :catchall_0
@@ -35556,7 +32432,6 @@
 
     throw v14
 
-    .line 4248
     .end local v2    # "arr$":[Ljava/lang/String;
     .end local v12    # "token":J
     :cond_5
@@ -35564,7 +32439,6 @@
 
     move-result-object v4
 
-    .line 4249
     .local v4, "globalProxy":Landroid/net/ProxyInfo;
     if-eqz v4, :cond_6
 
@@ -35572,7 +32446,6 @@
 
     goto :goto_0
 
-    .line 4250
     :cond_6
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -35592,13 +32465,11 @@
 
     goto/16 :goto_0
 
-    .line 4253
     :cond_7
     invoke-direct/range {p0 .. p1}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v8
 
-    .line 4254
     .local v8, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v8, :cond_8
 
@@ -35606,11 +32477,9 @@
 
     goto/16 :goto_0
 
-    .line 4255
     :cond_8
     monitor-enter v8
 
-    .line 4256
     :try_start_1
     iget-object v14, v8, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
@@ -35618,7 +32487,6 @@
 
     move-result-object v11
 
-    .line 4257
     .local v11, "proxyInfo":Landroid/net/ProxyInfo;
     if-nez v11, :cond_9
 
@@ -35628,7 +32496,6 @@
 
     goto/16 :goto_0
 
-    .line 4259
     .end local v11    # "proxyInfo":Landroid/net/ProxyInfo;
     :catchall_1
     move-exception v14
@@ -35639,7 +32506,6 @@
 
     throw v14
 
-    .line 4258
     .restart local v11    # "proxyInfo":Landroid/net/ProxyInfo;
     :cond_9
     :try_start_2
@@ -35659,12 +32525,10 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 5022
     const/4 v2, 0x2
 
     new-array v1, v2, [Ljava/lang/String;
 
-    .line 5024
     .local v1, "proxyInfoDetails":[Ljava/lang/String;
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnEngineInstance()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
@@ -35673,7 +32537,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 5025
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnEngineInstance()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     move-result-object v2
@@ -35684,16 +32547,13 @@
 
     move-result-object v1
 
-    .line 5030
     :cond_0
     :goto_0
     return-object v1
 
-    .line 5027
     :catch_0
     move-exception v0
 
-    .line 5028
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ConnectivityService"
 
@@ -35724,7 +32584,6 @@
     .locals 2
 
     .prologue
-    .line 8817
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
@@ -35735,10 +32594,8 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 8818
     const/4 v0, -0x1
 
-    .line 8820
     :goto_0
     return v0
 
@@ -35755,14 +32612,12 @@
     .param p1, "networkType"    # I
 
     .prologue
-    .line 2826
     const-string v3, "android.telephony.apn-restore"
 
     invoke-static {v3}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2830
     .local v1, "restoreDefaultNetworkDelayStr":Ljava/lang/String;
     const/16 v3, 0xb
 
@@ -35776,7 +32631,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 2834
     :try_start_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
@@ -35788,25 +32642,20 @@
 
     move-result v2
 
-    .line 2849
     :cond_0
     :goto_0
     return v2
 
-    .line 2835
     :catch_0
     move-exception v0
 
-    .line 2836
     .local v0, "e":Ljava/lang/NumberFormatException;
     invoke-virtual {v0}, Ljava/lang/NumberFormatException;->printStackTrace()V
 
-    .line 2842
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :cond_1
     const v2, 0xea60
 
-    .line 2845
     .local v2, "ret":I
     const/16 v3, 0x1d
 
@@ -35818,7 +32667,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2847
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetConfigs:[Landroid/net/NetworkConfig;
 
     aget-object v3, v3, p1
@@ -35833,10 +32681,8 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 8806
     const/4 v0, 0x0
 
-    .line 8808
     .local v0, "policy":I
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mPolicyManager:Landroid/net/INetworkPolicyManager;
@@ -35847,11 +32693,9 @@
 
     move-result v0
 
-    .line 8811
     :goto_0
     return v0
 
-    .line 8809
     :catch_0
     move-exception v1
 
@@ -35865,10 +32709,8 @@
     .param p3, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 5010
     const/4 v1, 0x0
 
-    .line 5012
     .local v1, "response":Ljava/lang/String;
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnEngineInstance()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
@@ -35877,7 +32719,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 5013
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnEngineInstance()Lcom/android/server/enterprise/vpn/knoxvpn/KnoxVpnEngineService;
 
     move-result-object v2
@@ -35888,16 +32729,13 @@
 
     move-result-object v1
 
-    .line 5018
     :cond_0
     :goto_0
     return-object v1
 
-    .line 5015
     :catch_0
     move-exception v0
 
-    .line 5016
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ConnectivityService"
 
@@ -35932,24 +32770,20 @@
     .locals 1
 
     .prologue
-    .line 3967
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceTetherAccessPermission()V
 
-    .line 3968
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isTetheringSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3969
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/Tethering;->getTetherableBluetoothRegexs()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3971
     :goto_0
     return-object v0
 
@@ -35965,10 +32799,8 @@
     .locals 1
 
     .prologue
-    .line 4043
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceTetherAccessPermission()V
 
-    .line 4044
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/Tethering;->getTetherableIfaces()[Ljava/lang/String;
@@ -35984,17 +32816,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 3944
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceTetherAccessPermission()V
 
-    .line 3945
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isTetheringSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 3946
     const/4 v0, 0x7
 
     invoke-static {v0}, Lcom/android/internal/telephony/TelephonyFeatures;->getNtcFeature(I)Z
@@ -36003,7 +32832,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3947
     const-string/jumbo v0, "persist.sys.tether_data"
 
     const/4 v1, 0x1
@@ -36016,14 +32844,11 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3948
     new-array v0, v2, [Ljava/lang/String;
 
-    .line 3953
     :goto_0
     return-object v0
 
-    .line 3951
     :cond_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
@@ -36033,7 +32858,6 @@
 
     goto :goto_0
 
-    .line 3953
     :cond_1
     new-array v0, v2, [Ljava/lang/String;
 
@@ -36044,24 +32868,20 @@
     .locals 1
 
     .prologue
-    .line 3958
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceTetherAccessPermission()V
 
-    .line 3959
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isTetheringSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3960
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/Tethering;->getTetherableWifiRegexs()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3962
     :goto_0
     return-object v0
 
@@ -36077,10 +32897,8 @@
     .locals 1
 
     .prologue
-    .line 4058
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 4059
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/Tethering;->getTetheredDhcpRanges()[Ljava/lang/String;
@@ -36094,10 +32912,8 @@
     .locals 1
 
     .prologue
-    .line 4048
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceTetherAccessPermission()V
 
-    .line 4049
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/Tethering;->getTetheredIfaces()[Ljava/lang/String;
@@ -36111,10 +32927,8 @@
     .locals 1
 
     .prologue
-    .line 4053
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceTetherAccessPermission()V
 
-    .line 4054
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0}, Lcom/android/server/connectivity/Tethering;->getErroredIfaces()[Ljava/lang/String;
@@ -36129,10 +32943,8 @@
     .param p1, "apn"    # Ljava/lang/String;
 
     .prologue
-    .line 4102
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 4103
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->getUidsForApnType(Ljava/lang/String;)[I
@@ -36147,10 +32959,8 @@
     .param p1, "networkType"    # I
 
     .prologue
-    .line 4118
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 4119
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->getUsersForNetwork(I)[I
@@ -36165,15 +32975,12 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 5685
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->enforceCrossUserPermission(I)V
 
-    .line 5687
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 5688
     :try_start_0
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -36183,20 +32990,16 @@
 
     check-cast v0, Lcom/android/server/connectivity/Vpn;
 
-    .line 5689
     .local v0, "vpn":Lcom/android/server/connectivity/Vpn;
     const/4 v2, 0x0
 
-    .line 5690
     .local v2, "vpnConfig":Lcom/android/internal/net/VpnConfig;
     if-eqz v0, :cond_1
 
-    .line 5691
     invoke-virtual {v0}, Lcom/android/server/connectivity/Vpn;->getVpnConfig()Lcom/android/internal/net/VpnConfig;
 
     move-result-object v2
 
-    .line 5697
     :goto_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -36206,10 +33009,8 @@
 
     if-lt v3, v5, :cond_0
 
-    .line 5698
     if-nez v2, :cond_2
 
-    .line 5699
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     const/4 v5, 0x0
@@ -36220,16 +33021,13 @@
 
     check-cast v1, Lcom/android/server/connectivity/Vpn;
 
-    .line 5700
     .local v1, "vpn2":Lcom/android/server/connectivity/Vpn;
     if-eqz v1, :cond_0
 
-    .line 5701
     invoke-virtual {v1}, Lcom/android/server/connectivity/Vpn;->getVpnConfig()Lcom/android/internal/net/VpnConfig;
 
     move-result-object v2
 
-    .line 5709
     .end local v1    # "vpn2":Lcom/android/server/connectivity/Vpn;
     :cond_0
     :goto_1
@@ -36237,13 +33035,11 @@
 
     return-object v2
 
-    .line 5693
     :cond_1
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 5704
     :cond_2
     const-string v3, "ConnectivityService"
 
@@ -36271,7 +33067,6 @@
 
     goto :goto_1
 
-    .line 5710
     .end local v0    # "vpn":Lcom/android/server/connectivity/Vpn;
     .end local v2    # "vpnConfig":Lcom/android/internal/net/VpnConfig;
     :catchall_0
@@ -36288,21 +33083,17 @@
     .locals 4
 
     .prologue
-    .line 1913
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1914
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
 
-    .line 1915
     .local v2, "uid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1917
     .local v0, "token":J
     :try_start_0
     invoke-direct {p0, v2}, Lcom/android/server/ConnectivityService;->isActiveNetworkMeteredUnchecked(I)Z
@@ -36311,7 +33102,6 @@
 
     move-result v3
 
-    .line 1919
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v3
@@ -36328,7 +33118,6 @@
     .locals 2
 
     .prologue
-    .line 8526
     const-string v0, "SKT"
 
     const-string v1, "EUR"
@@ -36359,11 +33148,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 8529
     :cond_0
     const/4 v0, 0x1
 
-    .line 8532
     :goto_0
     return v0
 
@@ -36378,10 +33165,8 @@
     .param p1, "connectionType"    # I
 
     .prologue
-    .line 4094
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 4095
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->isEntApnEnabled(I)Z
@@ -36398,10 +33183,8 @@
     .param p3, "mnc"    # Ljava/lang/String;
 
     .prologue
-    .line 4126
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 4127
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyInternal;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/billing/EnterpriseBillingPolicyInternal;
@@ -36419,23 +33202,18 @@
     .locals 3
 
     .prologue
-    .line 6268
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 6269
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/ConnectivityService;->mIsMobilePolicyEnabled:Z
 
-    .line 6270
     .local v0, "enabled":Z
     monitor-exit v2
 
-    .line 6271
     return v0
 
-    .line 6270
     .end local v0    # "enabled":Z
     :catchall_0
     move-exception v1
@@ -36451,7 +33229,6 @@
     .locals 2
 
     .prologue
-    .line 8537
     const-string v0, "ATT"
 
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->getMainOperatorName()Ljava/lang/String;
@@ -36488,11 +33265,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 8538
     :cond_0
     const/4 v0, 0x1
 
-    .line 8540
     :goto_0
     return v0
 
@@ -36507,10 +33282,8 @@
     .param p1, "networkType"    # I
 
     .prologue
-    .line 1671
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 1672
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     invoke-virtual {v0, p1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->isTypeSupported(I)Z
@@ -36524,10 +33297,8 @@
     .locals 1
 
     .prologue
-    .line 4086
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 4087
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-virtual {v0}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->isAnyConnectionEnabled()Z
@@ -36545,10 +33316,8 @@
 
     const/4 v3, 0x1
 
-    .line 4066
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceTetherAccessPermission()V
 
-    .line 4067
     const-string/jumbo v4, "ro.tether.denied"
 
     invoke-static {v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -36565,7 +33334,6 @@
 
     move v0, v2
 
-    .line 4068
     .local v0, "defaultVal":I
     :goto_0
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -36594,7 +33362,6 @@
 
     move v1, v3
 
-    .line 4071
     .local v1, "tetherEnabledInSettings":Z
     :goto_1
     const/4 v4, 0x7
@@ -36605,7 +33372,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 4072
     const-string/jumbo v4, "persist.sys.tether_data"
 
     invoke-static {v4, v3}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
@@ -36614,14 +33380,12 @@
 
     if-ne v4, v3, :cond_2
 
-    .line 4073
     const-string v3, "ConnectivityService"
 
     const-string v4, "all_tether_disable"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4077
     :goto_2
     return v2
 
@@ -36630,17 +33394,14 @@
     :cond_0
     move v0, v3
 
-    .line 4067
     goto :goto_0
 
     .restart local v0    # "defaultVal":I
     :cond_1
     move v1, v2
 
-    .line 4068
     goto :goto_1
 
-    .line 4077
     .restart local v1    # "tetherEnabledInSettings":Z
     :cond_2
     if-eqz v1, :cond_4
@@ -36702,10 +33463,8 @@
     .param p1, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 4782
     const/4 v1, 0x0
 
-    .line 4784
     .local v1, "profileType":I
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
@@ -36716,7 +33475,6 @@
 
     if-lt v2, v3, :cond_0
 
-    .line 4785
     if-eqz p1, :cond_0
 
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
@@ -36725,7 +33483,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 4786
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mKnoxVpnPolicy:Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
     invoke-interface {v2, p1}, Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;->getKnoxVpnProfileType(Ljava/lang/String;)I
@@ -36734,7 +33491,6 @@
 
     move-result v1
 
-    .line 4792
     :cond_0
     :goto_0
     sget-boolean v2, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
@@ -36763,15 +33519,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4793
     :cond_1
     return v1
 
-    .line 4789
     :catch_0
     move-exception v0
 
-    .line 4790
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "ConnectivityService"
 
@@ -36809,17 +33562,14 @@
     .param p3, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 6543
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->hasWifiNetworkListenPermission(Landroid/net/NetworkCapabilities;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 6544
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 6547
     :cond_0
     new-instance v3, Landroid/net/NetworkRequest;
 
@@ -36835,7 +33585,6 @@
 
     invoke-direct {v3, v1, v2, v4}, Landroid/net/NetworkRequest;-><init>(Landroid/net/NetworkCapabilities;II)V
 
-    .line 6549
     .local v3, "networkRequest":Landroid/net/NetworkRequest;
     new-instance v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
@@ -36849,7 +33598,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/ConnectivityService$NetworkRequestInfo;-><init>(Lcom/android/server/ConnectivityService;Landroid/os/Messenger;Landroid/net/NetworkRequest;Landroid/os/IBinder;Z)V
 
-    .line 6551
     .local v0, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -36871,7 +33619,6 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6553
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -36884,7 +33631,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6554
     return-object v3
 .end method
 
@@ -36894,23 +33640,18 @@
     .param p2, "nri"    # Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     .prologue
-    .line 8175
     const v0, 0x80002
 
-    .line 8182
     .local v0, "notifyType":I
     iget-object v1, p2, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPendingIntent:Landroid/app/PendingIntent;
 
     if-nez v1, :cond_0
 
-    .line 8183
     invoke-direct {p0, p2, p1, v0}, Lcom/android/server/ConnectivityService;->callCallbackForRequest(Lcom/android/server/ConnectivityService$NetworkRequestInfo;Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 8187
     :goto_0
     return-void
 
-    .line 8185
     :cond_0
     invoke-direct {p0, p2, p1, v0}, Lcom/android/server/ConnectivityService;->sendPendingIntentForRequest(Lcom/android/server/ConnectivityService$NetworkRequestInfo;Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
@@ -36923,7 +33664,6 @@
     .param p2, "notifyType"    # I
 
     .prologue
-    .line 8244
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -36962,7 +33702,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8245
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -36975,7 +33714,6 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 8246
     iget-object v3, p1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -36984,7 +33722,6 @@
 
     check-cast v1, Landroid/net/NetworkRequest;
 
-    .line 8247
     .local v1, "nr":Landroid/net/NetworkRequest;
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetworkRequests:Ljava/util/HashMap;
 
@@ -36994,7 +33731,6 @@
 
     check-cast v2, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
-    .line 8248
     .local v2, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -37016,30 +33752,25 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 8250
     if-eqz v2, :cond_0
 
     iget-object v3, v2, Lcom/android/server/ConnectivityService$NetworkRequestInfo;->mPendingIntent:Landroid/app/PendingIntent;
 
     if-nez v3, :cond_1
 
-    .line 8252
     :cond_0
     invoke-direct {p0, v2, p1, p2}, Lcom/android/server/ConnectivityService;->callCallbackForRequest(Lcom/android/server/ConnectivityService$NetworkRequestInfo;Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
-    .line 8245
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 8254
     :cond_1
     invoke-direct {p0, v2, p1, p2}, Lcom/android/server/ConnectivityService;->sendPendingIntentForRequest(Lcom/android/server/ConnectivityService$NetworkRequestInfo;Lcom/android/server/connectivity/NetworkAgentInfo;I)V
 
     goto :goto_1
 
-    .line 8258
     .end local v1    # "nr":Landroid/net/NetworkRequest;
     .end local v2    # "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     :cond_2
@@ -37049,7 +33780,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 8259
     invoke-virtual {p1}, Lcom/android/server/connectivity/NetworkAgentInfo;->isVPN()Z
 
     move-result v3
@@ -37068,21 +33798,18 @@
 
     if-eqz v3, :cond_3
 
-    .line 8260
     const-string/jumbo v3, "net.vpn.status"
 
     const-string v4, ""
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8261
     const-string/jumbo v3, "net.legacy.netid"
 
     const-string v4, ""
 
     invoke-static {v3, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8264
     :cond_3
     return-void
 .end method
@@ -37096,7 +33823,6 @@
     .param p5, "resultExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 7347
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -37117,10 +33843,8 @@
 
     invoke-static {v0}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 7350
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->releasePendingNetworkRequestWithDelay(Landroid/app/PendingIntent;)V
 
-    .line 7351
     return-void
 .end method
 
@@ -37130,22 +33854,18 @@
     .param p2, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 6560
     const-string v2, "PendingIntent cannot be null."
 
     invoke-static {p2, v2}, Lcom/android/server/ConnectivityService;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6561
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->hasWifiNetworkListenPermission(Landroid/net/NetworkCapabilities;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 6562
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 6565
     :cond_0
     new-instance v0, Landroid/net/NetworkRequest;
 
@@ -37161,7 +33881,6 @@
 
     invoke-direct {v0, v2, v3, v4}, Landroid/net/NetworkRequest;-><init>(Landroid/net/NetworkCapabilities;II)V
 
-    .line 6567
     .local v0, "networkRequest":Landroid/net/NetworkRequest;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -37193,14 +33912,12 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6568
     new-instance v1, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
     const/4 v2, 0x0
 
     invoke-direct {v1, p0, v0, p2, v2}, Lcom/android/server/ConnectivityService$NetworkRequestInfo;-><init>(Lcom/android/server/ConnectivityService;Landroid/net/NetworkRequest;Landroid/app/PendingIntent;Z)V
 
-    .line 6571
     .local v1, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
@@ -37214,7 +33931,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6572
     return-void
 .end method
 
@@ -37224,28 +33940,22 @@
     .param p2, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 6489
     const-string v3, "PendingIntent cannot be null."
 
     invoke-static {p2, v3}, Lcom/android/server/ConnectivityService;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6490
     new-instance v0, Landroid/net/NetworkCapabilities;
 
     invoke-direct {v0, p1}, Landroid/net/NetworkCapabilities;-><init>(Landroid/net/NetworkCapabilities;)V
 
-    .line 6491
     .end local p1    # "networkCapabilities":Landroid/net/NetworkCapabilities;
     .local v0, "networkCapabilities":Landroid/net/NetworkCapabilities;
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->enforceNetworkRequestPermissions(Landroid/net/NetworkCapabilities;)V
 
-    .line 6492
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->enforceMeteredApnPolicy(Landroid/net/NetworkCapabilities;)V
 
-    .line 6493
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->ensureRequestableCapabilities(Landroid/net/NetworkCapabilities;)V
 
-    .line 6495
     new-instance v1, Landroid/net/NetworkRequest;
 
     const/4 v3, -0x1
@@ -37256,7 +33966,6 @@
 
     invoke-direct {v1, v0, v3, v4}, Landroid/net/NetworkRequest;-><init>(Landroid/net/NetworkCapabilities;II)V
 
-    .line 6497
     .local v1, "networkRequest":Landroid/net/NetworkRequest;
     new-instance v2, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
@@ -37264,7 +33973,6 @@
 
     invoke-direct {v2, p0, v1, p2, v3}, Lcom/android/server/ConnectivityService$NetworkRequestInfo;-><init>(Lcom/android/server/ConnectivityService;Landroid/net/NetworkRequest;Landroid/app/PendingIntent;Z)V
 
-    .line 6499
     .local v2, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -37286,7 +33994,6 @@
 
     invoke-static {v3}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6500
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -37299,7 +34006,6 @@
 
     invoke-virtual {v3, v4}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6502
     return-object v1
 .end method
 
@@ -37314,7 +34020,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 4968
     const-string v2, "ConnectivityService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -37357,16 +34062,13 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4969
     const/4 v0, 0x1
 
-    .line 4970
     .local v0, "returnVal":Z
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->knoxVpnLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 4971
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -37374,20 +34076,16 @@
 
     if-lt v2, v5, :cond_0
 
-    .line 4972
     if-eqz p5, :cond_0
 
-    .line 4973
     if-ne p4, v5, :cond_1
 
-    .line 4975
     const-string v2, "ConnectivityService"
 
     const-string/jumbo v4, "prepareEnterpriseVpn : System VPN"
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4976
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
@@ -37396,36 +34094,30 @@
 
     move-result v1
 
-    .line 4977
     .local v1, "user":I
     invoke-virtual {p0, p1, p2, v1}, Lcom/android/server/ConnectivityService;->prepareVpn(Ljava/lang/String;Ljava/lang/String;I)Z
 
     move-result v0
 
-    .line 4979
     invoke-virtual {p0, p1, p3}, Lcom/android/server/ConnectivityService;->createEnterpriseVpn(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 4980
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mEnterpriseSytemVPN:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1, p3}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 4987
     .end local v1    # "user":I
     :cond_0
     monitor-exit v3
 
     move v2, v0
 
-    .line 4988
     :goto_0
     return v2
 
-    .line 4983
     :cond_1
     invoke-virtual {p0, p1, p3}, Lcom/android/server/ConnectivityService;->createEnterpriseVpn(Ljava/lang/String;Ljava/lang/String;)Z
 
@@ -37435,7 +34127,6 @@
 
     goto :goto_0
 
-    .line 4987
     :catchall_0
     move-exception v2
 
@@ -37454,10 +34145,8 @@
     .param p4, "isMetaEnabled"    # Z
 
     .prologue
-    .line 4857
     const/4 v11, 0x1
 
-    .line 4858
     .local v11, "returnVal":Z
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -37467,7 +34156,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 4859
     const-string v1, "ConnectivityService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -37496,13 +34184,11 @@
 
     move v12, v11
 
-    .line 4905
     .end local v11    # "returnVal":Z
     .local v12, "returnVal":I
     :goto_0
     return v12
 
-    .line 4862
     .end local v12    # "returnVal":I
     .restart local v11    # "returnVal":Z
     :cond_0
@@ -37512,7 +34198,6 @@
 
     monitor-enter v15
 
-    .line 4863
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -37522,13 +34207,11 @@
 
     move-result v14
 
-    .line 4864
     .local v14, "user":I
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v7
 
-    .line 4865
     .local v7, "callingUid":I
     const-string v1, "ConnectivityService"
 
@@ -37590,7 +34273,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4866
     if-eqz p2, :cond_1
 
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
@@ -37601,10 +34283,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 4868
     if-eqz p4, :cond_2
 
-    .line 4869
     :try_start_1
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
@@ -37618,7 +34298,6 @@
 
     if-nez v1, :cond_2
 
-    .line 4870
     new-instance v1, Ljava/lang/SecurityException;
 
     const-string v2, "Unauthorized Call to enable meta data"
@@ -37631,11 +34310,9 @@
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4897
     :catch_0
     move-exception v8
 
-    .line 4898
     .local v8, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v1, "ConnectivityService"
@@ -37664,7 +34341,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4903
     .end local v8    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_1
@@ -37672,7 +34348,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4904
     const-string v1, "ConnectivityService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -37697,11 +34372,9 @@
 
     move v12, v11
 
-    .line 4905
     .restart local v12    # "returnVal":I
     goto/16 :goto_0
 
-    .line 4873
     .end local v12    # "returnVal":I
     :cond_2
     :try_start_3
@@ -37717,7 +34390,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 4874
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnPolicy()Lcom/sec/enterprise/knox/vpn/IKnoxVpnPolicy;
 
     move-result-object v1
@@ -37728,11 +34400,9 @@
 
     move-result v13
 
-    .line 4875
     .local v13, "type":I
     if-nez v13, :cond_3
 
-    .line 4876
     const/4 v3, 0x0
 
     const/4 v5, 0x1
@@ -37751,13 +34421,11 @@
 
     goto :goto_1
 
-    .line 4877
     :cond_3
     const/4 v1, 0x1
 
     if-ne v13, v1, :cond_1
 
-    .line 4878
     const/4 v3, 0x0
 
     const/4 v5, 0x0
@@ -37774,13 +34442,10 @@
 
     move-result v11
 
-    .line 4879
     if-eqz p3, :cond_1
 
-    .line 4880
     const/4 v9, 0x0
 
-    .line 4881
     .local v9, "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     move-object/from16 v0, p0
 
@@ -37792,7 +34457,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 4882
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
@@ -37812,11 +34476,9 @@
     .end local v9    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     check-cast v9, Lcom/android/server/connectivity/EnterpriseVpn;
 
-    .line 4883
     .restart local v9    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     if-eqz v9, :cond_4
 
-    .line 4884
     move/from16 v0, p4
 
     invoke-virtual {v9, v0}, Lcom/android/server/connectivity/EnterpriseVpn;->setMetaDataStateInIP(Z)V
@@ -37827,13 +34489,11 @@
 
     goto :goto_1
 
-    .line 4899
     .end local v9    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v13    # "type":I
     :catch_1
     move-exception v10
 
-    .line 4900
     .local v10, "ne":Ljava/lang/NullPointerException;
     :try_start_4
     const-string v1, "ConnectivityService"
@@ -37864,7 +34524,6 @@
 
     goto/16 :goto_1
 
-    .line 4903
     .end local v7    # "callingUid":I
     .end local v10    # "ne":Ljava/lang/NullPointerException;
     .end local v14    # "user":I
@@ -37877,7 +34536,6 @@
 
     throw v1
 
-    .line 4886
     .restart local v7    # "callingUid":I
     .restart local v9    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .restart local v13    # "type":I
@@ -37892,7 +34550,6 @@
 
     goto/16 :goto_1
 
-    .line 4889
     :cond_5
     const-string v1, "ConnectivityService"
 
@@ -37902,7 +34559,6 @@
 
     goto/16 :goto_1
 
-    .line 4895
     .end local v9    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v13    # "type":I
     :cond_6
@@ -37935,7 +34591,6 @@
     .param p2, "newPackage"    # Ljava/lang/String;
 
     .prologue
-    .line 6795
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/ConnectivityService;->prepareVpn(Ljava/lang/String;Ljava/lang/String;I)Z
@@ -37956,25 +34611,20 @@
 
     const/4 v7, 0x0
 
-    .line 4591
     invoke-direct {p0, p3}, Lcom/android/server/ConnectivityService;->enforceCrossUserPermission(I)V
 
-    .line 4592
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->throwIfLockdownEnabled()V
 
-    .line 4595
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
     move-result v6
 
     if-lt v6, v10, :cond_1
 
-    .line 4596
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 4597
     .local v0, "callingUid":I
     const-string v6, "ConnectivityService"
 
@@ -37998,12 +34648,10 @@
 
     invoke-static {v6, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4598
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 4599
     .local v4, "token":J
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mEnterpriseSytemVPN:Landroid/util/SparseArray;
 
@@ -38013,7 +34661,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 4600
     .local v1, "enterpriseSystemProfile":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -38025,7 +34672,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 4601
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v6, p3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -38040,26 +34686,21 @@
 
     check-cast v2, Lcom/android/server/connectivity/EnterpriseVpn;
 
-    .line 4602
     .local v2, "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     if-eqz v2, :cond_2
 
-    .line 4603
     invoke-direct {p0, p3}, Lcom/android/server/ConnectivityService;->hasInterfaceAsUser(I)Z
 
     move-result v6
 
     if-ne v6, v10, :cond_0
 
-    .line 4604
     invoke-direct {p0, v1, v0}, Lcom/android/server/ConnectivityService;->disconnect(Ljava/lang/String;I)Z
 
-    .line 4611
     .end local v2    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     :cond_0
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4615
     .end local v0    # "callingUid":I
     .end local v1    # "enterpriseSystemProfile":Ljava/lang/String;
     .end local v4    # "token":J
@@ -38068,7 +34709,6 @@
 
     monitor-enter v8
 
-    .line 4616
     :try_start_0
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -38078,11 +34718,9 @@
 
     check-cast v3, Lcom/android/server/connectivity/Vpn;
 
-    .line 4617
     .local v3, "vpn":Lcom/android/server/connectivity/Vpn;
     if-eqz v3, :cond_3
 
-    .line 4618
     invoke-virtual {v3, p1, p2}, Lcom/android/server/connectivity/Vpn;->prepare(Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v6
@@ -38091,12 +34729,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4620
     .end local v3    # "vpn":Lcom/android/server/connectivity/Vpn;
     :goto_0
     return v6
 
-    .line 4607
     .restart local v0    # "callingUid":I
     .restart local v1    # "enterpriseSystemProfile":Ljava/lang/String;
     .restart local v2    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
@@ -38106,10 +34742,8 @@
 
     move v6, v7
 
-    .line 4608
     goto :goto_0
 
-    .line 4620
     .end local v0    # "callingUid":I
     .end local v1    # "enterpriseSystemProfile":Ljava/lang/String;
     .end local v2    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
@@ -38123,7 +34757,6 @@
 
     goto :goto_0
 
-    .line 4622
     .end local v3    # "vpn":Lcom/android/server/connectivity/Vpn;
     :catchall_0
     move-exception v6
@@ -38145,10 +34778,8 @@
     .param p6, "networkMisc"    # Landroid/net/NetworkMisc;
 
     .prologue
-    .line 6683
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 6688
     if-eqz p6, :cond_2
 
     move-object/from16 v0, p6
@@ -38159,7 +34790,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 6689
     sget-boolean v2, Lcom/android/server/ConnectivityService;->KNOX_DBG:Z
 
     if-eqz v2, :cond_0
@@ -38190,7 +34820,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6690
     :cond_0
     move-object/from16 v0, p3
 
@@ -38198,13 +34827,11 @@
 
     move-result v14
 
-    .line 6693
     .local v14, "netid":I
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 6694
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
@@ -38214,22 +34841,18 @@
 
     if-eqz v2, :cond_1
 
-    .line 6695
     monitor-exit v3
 
-    .line 6724
     .end local v14    # "netid":I
     :goto_0
     return v14
 
-    .line 6697
     .restart local v14    # "netid":I
     :cond_1
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6699
     new-instance v1, Lcom/android/server/connectivity/NetworkAgentInfo;
 
     new-instance v3, Lcom/android/internal/util/AsyncChannel;
@@ -38278,11 +34901,9 @@
 
     invoke-direct/range {v1 .. v13}, Lcom/android/server/connectivity/NetworkAgentInfo;-><init>(Landroid/os/Messenger;Lcom/android/internal/util/AsyncChannel;Landroid/net/Network;Landroid/net/NetworkInfo;Landroid/net/LinkProperties;Landroid/net/NetworkCapabilities;ILandroid/content/Context;Landroid/os/Handler;Landroid/net/NetworkMisc;Landroid/net/NetworkRequest;Lcom/android/server/ConnectivityService;)V
 
-    .line 6704
     .local v1, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     monitor-enter p0
 
-    .line 6705
     :try_start_1
     iget-object v2, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -38290,12 +34911,10 @@
 
     iput-boolean v3, v2, Lcom/android/server/connectivity/NetworkMonitor;->systemReady:Z
 
-    .line 6706
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 6707
     iget-object v2, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-virtual {v2}, Lcom/android/server/connectivity/NetworkMonitor;->getValidationLogs()Landroid/util/LocalLog$ReadOnlyLocalLog;
@@ -38306,7 +34925,6 @@
 
     invoke-direct {p0, v2, v3}, Lcom/android/server/ConnectivityService;->addValidationLogs(Landroid/util/LocalLog$ReadOnlyLocalLog;Landroid/net/Network;)V
 
-    .line 6708
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -38327,7 +34945,6 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6709
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -38340,14 +34957,12 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6710
     iget-object v2, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
     iget v14, v2, Landroid/net/Network;->netId:I
 
     goto :goto_0
 
-    .line 6697
     .end local v1    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :catchall_0
     move-exception v2
@@ -38359,7 +34974,6 @@
 
     throw v2
 
-    .line 6706
     .restart local v1    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :catchall_1
     move-exception v2
@@ -38371,7 +34985,6 @@
 
     throw v2
 
-    .line 6714
     .end local v1    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     .end local v14    # "netid":I
     :cond_2
@@ -38427,11 +35040,9 @@
 
     invoke-direct/range {v1 .. v13}, Lcom/android/server/connectivity/NetworkAgentInfo;-><init>(Landroid/os/Messenger;Lcom/android/internal/util/AsyncChannel;Landroid/net/Network;Landroid/net/NetworkInfo;Landroid/net/LinkProperties;Landroid/net/NetworkCapabilities;ILandroid/content/Context;Landroid/os/Handler;Landroid/net/NetworkMisc;Landroid/net/NetworkRequest;Lcom/android/server/ConnectivityService;)V
 
-    .line 6718
     .restart local v1    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     monitor-enter p0
 
-    .line 6719
     :try_start_4
     iget-object v2, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -38439,12 +35050,10 @@
 
     iput-boolean v3, v2, Lcom/android/server/connectivity/NetworkMonitor;->systemReady:Z
 
-    .line 6720
     monitor-exit p0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 6721
     iget-object v2, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-virtual {v2}, Lcom/android/server/connectivity/NetworkMonitor;->getValidationLogs()Landroid/util/LocalLog$ReadOnlyLocalLog;
@@ -38455,7 +35064,6 @@
 
     invoke-direct {p0, v2, v3}, Lcom/android/server/ConnectivityService;->addValidationLogs(Landroid/util/LocalLog$ReadOnlyLocalLog;Landroid/net/Network;)V
 
-    .line 6722
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -38476,7 +35084,6 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6723
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -38489,14 +35096,12 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6724
     iget-object v2, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
     iget v14, v2, Landroid/net/Network;->netId:I
 
     goto/16 :goto_0
 
-    .line 6720
     :catchall_2
     move-exception v2
 
@@ -38514,17 +35119,14 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 6601
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 6602
     const-string/jumbo v2, "ro.csc.sales_code"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6603
     .local v1, "salesCode":Ljava/lang/String;
     const-string v2, "CHN"
 
@@ -38534,7 +35136,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 6604
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v2
@@ -38567,10 +35168,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 6606
     invoke-direct {p0, p2}, Lcom/android/server/ConnectivityService;->removeInvalidNetworkInfo(Ljava/lang/String;)V
 
-    .line 6614
     :cond_0
     :goto_0
     new-instance v0, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
@@ -38581,7 +35180,6 @@
 
     invoke-direct {v0, p2, p1, v2}, Lcom/android/server/ConnectivityService$NetworkFactoryInfo;-><init>(Ljava/lang/String;Landroid/os/Messenger;Lcom/android/internal/util/AsyncChannel;)V
 
-    .line 6615
     .local v0, "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
@@ -38595,10 +35193,8 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6616
     return-void
 
-    .line 6608
     .end local v0    # "nfi":Lcom/android/server/ConnectivityService$NetworkFactoryInfo;
     :cond_1
     const-string v2, "CHC"
@@ -38609,7 +35205,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6609
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v2
@@ -38630,7 +35225,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6611
     invoke-direct {p0, p2}, Lcom/android/server/ConnectivityService;->removeInvalidNetworkInfo(Ljava/lang/String;)V
 
     goto :goto_0
@@ -38641,7 +35235,6 @@
     .param p1, "netId"    # I
 
     .prologue
-    .line 8824
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v0
@@ -38652,23 +35245,19 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 8830
     :goto_0
     return-void
 
-    .line 8827
     :cond_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v1
 
-    .line 8828
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mNetIdInUse:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 8829
     monitor-exit v1
 
     goto :goto_0
@@ -38688,7 +35277,6 @@
     .param p1, "networkRequest"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 6576
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -38707,7 +35295,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6578
     return-void
 .end method
 
@@ -38716,12 +35303,10 @@
     .param p1, "operation"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 6513
     const-string v0, "PendingIntent cannot be null."
 
     invoke-static {p1, v0}, Lcom/android/server/ConnectivityService;->checkNotNull(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 6514
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -38740,7 +35325,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6516
     return-void
 .end method
 
@@ -38752,7 +35336,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2085
     :try_start_0
     invoke-static {p2}, Ljava/net/InetAddress;->getByAddress([B)Ljava/net/InetAddress;
     :try_end_0
@@ -38760,7 +35343,6 @@
 
     move-result-object v0
 
-    .line 2091
     .local v0, "addr":Ljava/net/InetAddress;
     invoke-static {p1}, Landroid/net/ConnectivityManager;->isNetworkTypeValid(I)Z
 
@@ -38768,7 +35350,6 @@
 
     if-nez v9, :cond_0
 
-    .line 2092
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -38789,16 +35370,13 @@
 
     invoke-static {v9}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2118
     .end local v0    # "addr":Ljava/net/InetAddress;
     :goto_0
     return v5
 
-    .line 2086
     :catch_0
     move-exception v1
 
-    .line 2087
     .local v1, "e":Ljava/net/UnknownHostException;
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -38826,7 +35404,6 @@
 
     goto :goto_0
 
-    .line 2096
     .end local v1    # "e":Ljava/net/UnknownHostException;
     .restart local v0    # "addr":Ljava/net/InetAddress;
     :cond_0
@@ -38836,11 +35413,9 @@
 
     move-result-object v3
 
-    .line 2097
     .local v3, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v3, :cond_1
 
-    .line 2098
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -38863,53 +35438,44 @@
 
     goto :goto_0
 
-    .line 2102
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 2103
     .local v8, "uid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2107
     .local v6, "token":J
     :try_start_1
     monitor-enter v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 2108
     :try_start_2
     iget-object v2, v3, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 2109
     .local v2, "lp":Landroid/net/LinkProperties;
     iget-object v9, v3, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
     iget v4, v9, Landroid/net/Network;->netId:I
 
-    .line 2110
     .local v4, "netId":I
     monitor-exit v3
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 2111
     if-eqz v2, :cond_2
 
     if-nez v0, :cond_3
 
-    .line 2118
     :cond_2
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 2110
     .end local v2    # "lp":Landroid/net/LinkProperties;
     .end local v4    # "netId":I
     :catchall_0
@@ -38925,7 +35491,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 2118
     :catchall_1
     move-exception v9
 
@@ -38933,7 +35498,6 @@
 
     throw v9
 
-    .line 2114
     .restart local v2    # "lp":Landroid/net/LinkProperties;
     .restart local v4    # "netId":I
     :cond_3
@@ -38942,7 +35506,6 @@
 
     move-result v5
 
-    .line 2115
     .local v5, "ok":Z
     new-instance v9, Ljava/lang/StringBuilder;
 
@@ -38966,7 +35529,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 2118
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -38978,10 +35540,8 @@
     .param p2, "prefixLength"    # I
 
     .prologue
-    .line 8372
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->throwIfLockdownEnabled()V
 
-    .line 8373
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
@@ -38990,13 +35550,11 @@
 
     move-result v0
 
-    .line 8374
     .local v0, "user":I
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 8375
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -39014,7 +35572,6 @@
 
     return v1
 
-    .line 8376
     :catchall_0
     move-exception v1
 
@@ -39031,22 +35588,18 @@
     .param p2, "percentage"    # I
 
     .prologue
-    .line 4153
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
 
     invoke-virtual {v1, p1}, Lcom/android/server/ConnectivityService$LegacyTypeTracker;->getNetworkForType(I)Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
 
-    .line 4154
     .local v0, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v0, :cond_0
 
-    .line 4156
     :goto_0
     return-void
 
-    .line 4155
     :cond_0
     iget-object v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
 
@@ -39073,21 +35626,16 @@
     .param p2, "hasConnectivity"    # Z
 
     .prologue
-    .line 4159
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 4160
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceInternetPermission()V
 
-    .line 4163
     if-nez p1, :cond_1
 
-    .line 4164
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getDefaultNetwork()Lcom/android/server/connectivity/NetworkAgentInfo;
 
     move-result-object v0
 
-    .line 4168
     .local v0, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :goto_0
     if-eqz v0, :cond_0
@@ -39112,12 +35660,10 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 4184
     :cond_0
     :goto_1
     return-void
 
-    .line 4166
     .end local v0    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -39127,18 +35673,15 @@
     .restart local v0    # "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     goto :goto_0
 
-    .line 4173
     :cond_2
     iget-boolean v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->lastValidated:Z
 
     if-eq p2, v2, :cond_0
 
-    .line 4174
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 4176
     .local v1, "uid":I
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -39184,10 +35727,8 @@
 
     invoke-static {v2}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 4179
     monitor-enter v0
 
-    .line 4180
     :try_start_0
     iget-object v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
@@ -39201,7 +35742,6 @@
 
     goto :goto_1
 
-    .line 4183
     :catchall_0
     move-exception v2
 
@@ -39211,7 +35751,6 @@
 
     throw v2
 
-    .line 4182
     :cond_3
     :try_start_1
     iget-object v2, v0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkMonitor:Lcom/android/server/connectivity/NetworkMonitor;
@@ -39220,7 +35759,6 @@
 
     invoke-virtual {v2, v3, v1}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(II)V
 
-    .line 4183
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -39235,29 +35773,23 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 6452
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceAccessPermission()V
 
-    .line 6453
     const/4 v1, 0x0
 
-    .line 6454
     .local v1, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez p1, :cond_0
 
     move v2, v3
 
-    .line 6464
     :goto_0
     return v2
 
-    .line 6457
     :cond_0
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v4
 
-    .line 6458
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
@@ -39273,27 +35805,22 @@
 
     move-object v1, v0
 
-    .line 6459
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6460
     if-eqz v1, :cond_1
 
-    .line 6461
     iget-object v2, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->asyncChannel:Lcom/android/internal/util/AsyncChannel;
 
     const v3, 0x8100a
 
     invoke-virtual {v2, v3}, Lcom/android/internal/util/AsyncChannel;->sendMessage(I)V
 
-    .line 6462
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 6459
     :catchall_0
     move-exception v2
 
@@ -39307,7 +35834,6 @@
     :cond_1
     move v2, v3
 
-    .line 6464
     goto :goto_0
 .end method
 
@@ -39320,30 +35846,24 @@
     .param p5, "legacyType"    # I
 
     .prologue
-    .line 6419
     new-instance v6, Landroid/net/NetworkCapabilities;
 
     invoke-direct {v6, p1}, Landroid/net/NetworkCapabilities;-><init>(Landroid/net/NetworkCapabilities;)V
 
-    .line 6420
     .end local p1    # "networkCapabilities":Landroid/net/NetworkCapabilities;
     .local v6, "networkCapabilities":Landroid/net/NetworkCapabilities;
     invoke-direct {p0, v6}, Lcom/android/server/ConnectivityService;->enforceNetworkRequestPermissions(Landroid/net/NetworkCapabilities;)V
 
-    .line 6421
     invoke-direct {p0, v6}, Lcom/android/server/ConnectivityService;->enforceMeteredApnPolicy(Landroid/net/NetworkCapabilities;)V
 
-    .line 6422
     invoke-direct {p0, v6}, Lcom/android/server/ConnectivityService;->ensureRequestableCapabilities(Landroid/net/NetworkCapabilities;)V
 
-    .line 6424
     if-ltz p3, :cond_0
 
     const v1, 0x5b8d80
 
     if-le p3, v1, :cond_1
 
-    .line 6425
     :cond_0
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
@@ -39353,7 +35873,6 @@
 
     throw v1
 
-    .line 6428
     :cond_1
     new-instance v3, Landroid/net/NetworkRequest;
 
@@ -39363,7 +35882,6 @@
 
     invoke-direct {v3, v6, p5, v1}, Landroid/net/NetworkRequest;-><init>(Landroid/net/NetworkCapabilities;II)V
 
-    .line 6430
     .local v3, "networkRequest":Landroid/net/NetworkRequest;
     new-instance v0, Lcom/android/server/ConnectivityService$NetworkRequestInfo;
 
@@ -39377,7 +35895,6 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/ConnectivityService$NetworkRequestInfo;-><init>(Lcom/android/server/ConnectivityService;Landroid/os/Messenger;Landroid/net/NetworkRequest;Landroid/os/IBinder;Z)V
 
-    .line 6432
     .local v0, "nri":Lcom/android/server/ConnectivityService$NetworkRequestInfo;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -39399,7 +35916,6 @@
 
     invoke-static {v1}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 6434
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -39412,10 +35928,8 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6435
     if-lez p3, :cond_2
 
-    .line 6436
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -39430,7 +35944,6 @@
 
     invoke-virtual {v1, v2, v4, v5}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 6439
     :cond_2
     return-object v3
 .end method
@@ -39441,10 +35954,8 @@
     .param p2, "hostAddress"    # [B
 
     .prologue
-    .line 1952
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->enforceChangePermission()V
 
-    .line 1953
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mProtectedNetworks:Ljava/util/List;
@@ -39461,10 +35972,8 @@
 
     if-eqz v17, :cond_0
 
-    .line 1954
     invoke-direct/range {p0 .. p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 1959
     :cond_0
     :try_start_0
     invoke-static/range {p2 .. p2}, Ljava/net/InetAddress;->getByAddress([B)Ljava/net/InetAddress;
@@ -39473,11 +35982,9 @@
 
     move-result-object v2
 
-    .line 1967
     .local v2, "addr":Ljava/net/InetAddress;
     const/4 v5, 0x0
 
-    .line 1968
     .local v5, "hasIpv4Address":Z
     :try_start_1
     const-string v17, "VZW"
@@ -39500,18 +36007,15 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 1969
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/ConnectivityService;->getLinkPropertiesForType(I)Landroid/net/LinkProperties;
 
     move-result-object v9
 
-    .line 1970
     .local v9, "lp":Landroid/net/LinkProperties;
     invoke-virtual {v9}, Landroid/net/LinkProperties;->getAddresses()Ljava/util/List;
 
     move-result-object v3
 
-    .line 1971
     .local v3, "addrList":Ljava/util/List;, "Ljava/util/List<Ljava/net/InetAddress;>;"
     move-object/from16 v0, p2
 
@@ -39529,7 +36033,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 1972
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -39548,7 +36051,6 @@
 
     check-cast v8, Ljava/net/InetAddress;
 
-    .line 1973
     .local v8, "inetAddr":Ljava/net/InetAddress;
     invoke-virtual {v8}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -39562,25 +36064,20 @@
 
     if-eqz v17, :cond_1
 
-    .line 1974
     const/4 v5, 0x1
 
-    .line 1978
     .end local v8    # "inetAddr":Ljava/net/InetAddress;
     :cond_2
     if-nez v5, :cond_3
 
-    .line 1979
     const-string v17, "Failed to add route for ipv4 host over the interface without ipv4 address"
 
     invoke-static/range {v17 .. v17}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1980
     const/4 v13, 0x0
 
-    .line 2076
     .end local v2    # "addr":Ljava/net/InetAddress;
     .end local v3    # "addrList":Ljava/util/List;, "Ljava/util/List<Ljava/net/InetAddress;>;"
     .end local v5    # "hasIpv4Address":Z
@@ -39589,11 +36086,9 @@
     :goto_0
     return v13
 
-    .line 1960
     :catch_0
     move-exception v4
 
-    .line 1961
     .local v4, "e":Ljava/net/UnknownHostException;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -39619,12 +36114,10 @@
 
     invoke-static/range {v17 .. v17}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1962
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 1983
     .end local v4    # "e":Ljava/net/UnknownHostException;
     .restart local v2    # "addr":Ljava/net/InetAddress;
     .restart local v3    # "addrList":Ljava/util/List;, "Ljava/util/List<Ljava/net/InetAddress;>;"
@@ -39633,7 +36126,6 @@
     :cond_3
     const/4 v6, 0x0
 
-    .line 1984
     .local v6, "hasIpv6Address":Z
     :try_start_2
     move-object/from16 v0, p2
@@ -39652,7 +36144,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 1985
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v7
@@ -39671,7 +36162,6 @@
 
     check-cast v8, Ljava/net/InetAddress;
 
-    .line 1986
     .restart local v8    # "inetAddr":Ljava/net/InetAddress;
     invoke-virtual {v8}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -39685,27 +36175,22 @@
 
     if-eqz v17, :cond_4
 
-    .line 1987
     const/4 v6, 0x1
 
-    .line 1991
     .end local v8    # "inetAddr":Ljava/net/InetAddress;
     :cond_5
     if-nez v6, :cond_6
 
-    .line 1992
     const-string v17, "Failed to add route for ipv6 host over the interface without ipv6 address"
 
     invoke-static/range {v17 .. v17}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1993
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 1997
     .end local v3    # "addrList":Ljava/util/List;, "Ljava/util/List<Ljava/net/InetAddress;>;"
     .end local v6    # "hasIpv6Address":Z
     .end local v7    # "i$":Ljava/util/Iterator;
@@ -39713,7 +36198,6 @@
     :catch_1
     move-exception v4
 
-    .line 1998
     .local v4, "e":Ljava/lang/Exception;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -39739,12 +36223,10 @@
 
     invoke-static/range {v17 .. v17}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 1999
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 2004
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_6
     const-string v17, "VZW"
@@ -39759,7 +36241,6 @@
 
     if-eqz v17, :cond_7
 
-    .line 2005
     const/16 v17, 0x2000
 
     move/from16 v0, p1
@@ -39768,10 +36249,8 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 2007
     const/16 p1, 0x18
 
-    .line 2012
     :cond_7
     invoke-static/range {p1 .. p1}, Landroid/net/ConnectivityManager;->isNetworkTypeValid(I)Z
 
@@ -39779,7 +36258,6 @@
 
     if-nez v17, :cond_8
 
-    .line 2013
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -39804,12 +36282,10 @@
 
     invoke-static/range {v17 .. v17}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2014
     const/4 v13, 0x0
 
     goto/16 :goto_0
 
-    .line 2017
     :cond_8
     move-object/from16 v0, p0
 
@@ -39825,11 +36301,9 @@
 
     move-result-object v10
 
-    .line 2018
     .local v10, "nai":Lcom/android/server/connectivity/NetworkAgentInfo;
     if-nez v10, :cond_a
 
-    .line 2019
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/ConnectivityService;->mLegacyTypeTracker:Lcom/android/server/ConnectivityService$LegacyTypeTracker;
@@ -39846,7 +36320,6 @@
 
     if-nez v17, :cond_9
 
-    .line 2020
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -39871,13 +36344,11 @@
 
     invoke-static/range {v17 .. v17}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2024
     :goto_1
     const/4 v13, 0x0
 
     goto/16 :goto_0
 
-    .line 2022
     :cond_9
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -39905,11 +36376,9 @@
 
     goto :goto_1
 
-    .line 2028
     :cond_a
     monitor-enter v10
 
-    .line 2029
     :try_start_3
     iget-object v0, v10, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -39919,13 +36388,11 @@
 
     move-result-object v12
 
-    .line 2030
     .local v12, "netState":Landroid/net/NetworkInfo$DetailedState;
     monitor-exit v10
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2032
     sget-object v17, Landroid/net/NetworkInfo$DetailedState;->CONNECTED:Landroid/net/NetworkInfo$DetailedState;
 
     move-object/from16 v0, v17
@@ -39944,7 +36411,6 @@
 
     if-eq v12, v0, :cond_b
 
-    .line 2035
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -39987,12 +36453,10 @@
 
     invoke-static/range {v17 .. v17}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2039
     const/4 v13, 0x0
 
     goto/16 :goto_0
 
-    .line 2030
     .end local v12    # "netState":Landroid/net/NetworkInfo$DetailedState;
     :catchall_0
     move-exception v17
@@ -40004,7 +36468,6 @@
 
     throw v17
 
-    .line 2042
     .restart local v12    # "netState":Landroid/net/NetworkInfo$DetailedState;
     :cond_b
     move-object/from16 v0, p0
@@ -40033,7 +36496,6 @@
 
     if-ne v12, v0, :cond_c
 
-    .line 2044
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -40076,31 +36538,26 @@
 
     invoke-static/range {v17 .. v17}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2048
     const/4 v13, 0x0
 
     goto/16 :goto_0
 
-    .line 2052
     :cond_c
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v16
 
-    .line 2053
     .local v16, "uid":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 2057
     .local v14, "token":J
     :try_start_5
     monitor-enter v10
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_2
 
-    .line 2058
     :try_start_6
     sget-object v17, Landroid/net/NetworkInfo$DetailedState;->SUSPENDED:Landroid/net/NetworkInfo$DetailedState;
 
@@ -40108,10 +36565,8 @@
 
     if-eq v12, v0, :cond_d
 
-    .line 2059
     iget-object v9, v10, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
-    .line 2070
     .restart local v9    # "lp":Landroid/net/LinkProperties;
     :goto_2
     iget-object v0, v10, Lcom/android/server/connectivity/NetworkAgentInfo;->network:Landroid/net/Network;
@@ -40122,13 +36577,11 @@
 
     iget v11, v0, Landroid/net/Network;->netId:I
 
-    .line 2071
     .local v11, "netId":I
     monitor-exit v10
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 2072
     :try_start_7
     move-object/from16 v0, p0
 
@@ -40138,7 +36591,6 @@
 
     move-result v13
 
-    .line 2073
     .local v13, "ok":Z
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -40164,12 +36616,10 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 2076
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 2064
     .end local v9    # "lp":Landroid/net/LinkProperties;
     .end local v11    # "netId":I
     .end local v13    # "ok":Z
@@ -40201,7 +36651,6 @@
 
     invoke-static/range {v17 .. v17}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 2067
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/android/server/ConnectivityService;->mBackUpLp:Landroid/net/LinkProperties;
@@ -40209,7 +36658,6 @@
     .restart local v9    # "lp":Landroid/net/LinkProperties;
     goto :goto_2
 
-    .line 2071
     .end local v9    # "lp":Landroid/net/LinkProperties;
     :catchall_1
     move-exception v17
@@ -40223,7 +36671,6 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_2
 
-    .line 2076
     :catchall_2
     move-exception v17
 
@@ -40238,23 +36685,19 @@
     .prologue
     const v4, 0xffff
 
-    .line 1256
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mNetworkForNetId:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 1257
     const/16 v0, 0x1f5
 
     .local v0, "i":I
     :goto_0
     if-gt v0, v4, :cond_2
 
-    .line 1258
     :try_start_0
     iget v1, p0, Lcom/android/server/ConnectivityService;->mNextNetId:I
 
-    .line 1259
     .local v1, "netId":I
     iget v2, p0, Lcom/android/server/ConnectivityService;->mNextNetId:I
 
@@ -40268,7 +36711,6 @@
 
     iput v2, p0, Lcom/android/server/ConnectivityService;->mNextNetId:I
 
-    .line 1261
     :cond_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetIdInUse:Landroid/util/SparseBooleanArray;
 
@@ -40278,32 +36720,27 @@
 
     if-nez v2, :cond_1
 
-    .line 1262
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mNetIdInUse:Landroid/util/SparseBooleanArray;
 
     const/4 v4, 0x1
 
     invoke-virtual {v2, v1, v4}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 1263
     monitor-exit v3
 
     return v1
 
-    .line 1257
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1266
     .end local v1    # "netId":I
     :cond_2
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1267
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "No free netIds"
@@ -40312,7 +36749,6 @@
 
     throw v2
 
-    .line 1266
     :catchall_0
     move-exception v2
 
@@ -40331,16 +36767,13 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 8896
     if-eqz p1, :cond_0
 
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceSystemProcess()V
 
-    .line 8898
     :cond_0
     const/4 v0, 0x0
 
-    .line 8899
     .local v0, "result":Landroid/net/ProxyInfo;
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
@@ -40354,25 +36787,21 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 8901
     if-eqz p1, :cond_2
 
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->getGlobalProxyFromSettings()Landroid/net/ProxyInfo;
 
     move-result-object v0
 
-    .line 8907
     :cond_1
     :goto_0
     return-object v0
 
-    .line 8901
     :cond_2
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     goto :goto_0
 
-    .line 8902
     :cond_3
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
@@ -40386,7 +36815,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 8904
     if-eqz p1, :cond_4
 
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getWifiEnterpriseProxy()Landroid/net/ProxyInfo;
@@ -40410,10 +36838,8 @@
     .prologue
     const/4 v7, 0x2
 
-    .line 8850
     const/4 v0, 0x0
 
-    .line 8851
     .local v0, "credentials":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
@@ -40427,7 +36853,6 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 8852
     const-string/jumbo v6, "misc_policy"
 
     invoke-static {v6}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -40436,22 +36861,18 @@
 
     check-cast v1, Lcom/android/server/enterprise/general/MiscPolicy;
 
-    .line 8854
     .local v1, "miscPolicyService":Lcom/android/server/enterprise/general/MiscPolicy;
     if-eqz v1, :cond_0
 
-    .line 8855
     invoke-virtual {v1, p1, p2}, Lcom/android/server/enterprise/general/MiscPolicy;->retrieveProxyCredentials(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 8871
     .end local v1    # "miscPolicyService":Lcom/android/server/enterprise/general/MiscPolicy;
     :cond_0
     :goto_0
     return-object v0
 
-    .line 8857
     :cond_1
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
@@ -40465,7 +36886,6 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 8858
     iget-object v6, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v7, "wifi"
@@ -40476,25 +36896,20 @@
 
     check-cast v4, Landroid/net/wifi/WifiManager;
 
-    .line 8859
     .local v4, "wifiManager":Landroid/net/wifi/WifiManager;
     if-eqz v4, :cond_0
 
-    .line 8860
     invoke-virtual {v4}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
     move-result-object v3
 
-    .line 8861
     .local v3, "wifiInfo":Landroid/net/wifi/WifiInfo;
     if-eqz v3, :cond_0
 
-    .line 8862
     invoke-virtual {v3}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 8863
     .local v2, "ssid":Ljava/lang/String;
     const-string/jumbo v6, "wifi_policy"
 
@@ -40504,7 +36919,6 @@
 
     check-cast v5, Lcom/android/server/enterprise/wifi/WifiPolicy;
 
-    .line 8865
     .local v5, "wifiPolicyService":Lcom/android/server/enterprise/wifi/WifiPolicy;
     if-eqz v5, :cond_0
 
@@ -40514,7 +36928,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 8866
     invoke-virtual {v5, v2, p1, p2}, Lcom/android/server/enterprise/wifi/WifiPolicy;->retrieveProxyCredentials(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v0
@@ -40527,28 +36940,22 @@
     .param p1, "newConfig"    # Landroid/net/DhcpServerConfiguration;
 
     .prologue
-    .line 6147
     const-string v2, "ConnectivityService"
 
     const-string/jumbo v3, "saveDhcpServerConfiguration()"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6148
     const/4 v0, 0x0
 
-    .line 6149
     .local v0, "changeHappened":Z
     if-nez p1, :cond_0
 
-    .line 6150
     const/4 v0, 0x0
 
-    .line 6165
     :goto_0
     return v0
 
-    .line 6152
     :cond_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -40556,7 +36963,6 @@
 
     move-result-object v1
 
-    .line 6154
     .local v1, "cr":Landroid/content/ContentResolver;
     const-string/jumbo v2, "wifiap_local_ip"
 
@@ -40564,14 +36970,12 @@
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 6155
     const-string/jumbo v2, "wifiap_subnet_mask"
 
     iget-object v3, p1, Landroid/net/DhcpServerConfiguration;->subnetmask:Ljava/lang/String;
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 6156
     const-string/jumbo v3, "wifiap_dhcp_enable"
 
     iget-boolean v2, p1, Landroid/net/DhcpServerConfiguration;->dhcpEnable:Z
@@ -40583,40 +36987,34 @@
     :goto_1
     invoke-static {v1, v3, v2}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 6157
     const-string/jumbo v2, "wifiap_dhcp_start_ip"
 
     iget-object v3, p1, Landroid/net/DhcpServerConfiguration;->ipRangeStart:Ljava/lang/String;
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 6158
     const-string/jumbo v2, "wifiap_dhcp_end_ip"
 
     iget-object v3, p1, Landroid/net/DhcpServerConfiguration;->ipRangeEnd:Ljava/lang/String;
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 6159
     const-string/jumbo v2, "wifiap_dhcp_lease_time"
 
     iget v3, p1, Landroid/net/DhcpServerConfiguration;->leaseTime:I
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 6160
     const-string/jumbo v2, "wifiap_dhcp_max_user"
 
     iget v3, p1, Landroid/net/DhcpServerConfiguration;->maxClient:I
 
     invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 6162
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 6156
     :cond_1
     const/4 v2, 0x0
 
@@ -40628,10 +37026,8 @@
     .param p1, "info"    # Landroid/net/NetworkInfo;
 
     .prologue
-    .line 2319
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 2321
     const-string v1, "VZW"
 
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->getMainOperatorName()Ljava/lang/String;
@@ -40652,23 +37048,19 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 2322
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->createNewNetworkInfo(Landroid/net/NetworkInfo;)Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 2323
     .local v0, "ni":Landroid/net/NetworkInfo;
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/ConnectivityService;->sendGeneralBroadcast(Landroid/net/NetworkInfo;Ljava/lang/String;)V
 
-    .line 2328
     .end local v0    # "ni":Landroid/net/NetworkInfo;
     :goto_0
     return-void
 
-    .line 2325
     :cond_0
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -40682,16 +37074,13 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 8978
     const/4 v1, 0x0
 
-    .line 8980
     .local v1, "proxyInfo":Landroid/net/ProxyInfo;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 8982
     .local v2, "token":J
     const/4 v4, 0x1
 
@@ -40700,31 +37089,25 @@
 
     move-result-object v1
 
-    .line 8984
     if-eqz v1, :cond_0
 
-    .line 8985
     new-instance v0, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.PROXY_CHANGE"
 
     invoke-direct {v0, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 8986
     .local v0, "intent":Landroid/content/Intent;
     const/high16 v4, 0x24000000
 
     invoke-virtual {v0, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 8988
     const-string v4, "android.intent.extra.PROXY_INFO"
 
     invoke-virtual {v0, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 8989
     invoke-virtual {v0, p1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 8991
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     sget-object v5, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -40733,15 +37116,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8994
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8996
     return-void
 
-    .line 8994
     :catchall_0
     move-exception v4
 
@@ -40761,10 +37141,8 @@
 
     const/4 v1, 0x0
 
-    .line 3692
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 3693
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -40785,13 +37163,11 @@
 
     invoke-virtual {v3, v0}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 3695
     return-void
 
     :cond_0
     move v2, v1
 
-    .line 3693
     goto :goto_0
 
     :cond_1
@@ -40805,15 +37181,12 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 6169
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 6170
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 6172
     .local v2, "ident":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -40822,7 +37195,6 @@
 
     move-result-object v0
 
-    .line 6173
     .local v0, "cr":Landroid/content/ContentResolver;
     const-string v5, "airplane_mode_on"
 
@@ -40833,14 +37205,12 @@
     :goto_0
     invoke-static {v0, v5, v4}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 6174
     const-string v4, "ConnectivityService"
 
     const-string/jumbo v5, "setAirplaneMode() IMS Change"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6177
     if-eqz p1, :cond_1
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -40867,23 +37237,19 @@
 
     if-nez v4, :cond_1
 
-    .line 6180
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 6181
     .local v1, "intent":Landroid/content/Intent;
     const-string v4, "com.sec.android.internal.ims.FLIGHT_MODE"
 
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 6182
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 6183
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     new-instance v5, Lcom/android/server/ConnectivityService$6;
@@ -40896,21 +37262,17 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6196
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6198
     return-void
 
-    .line 6173
     .end local v1    # "intent":Landroid/content/Intent;
     :cond_0
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 6191
     :cond_1
     :try_start_1
     new-instance v1, Landroid/content/Intent;
@@ -40919,13 +37281,11 @@
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 6192
     .restart local v1    # "intent":Landroid/content/Intent;
     const-string/jumbo v4, "state"
 
     invoke-virtual {v1, v4, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 6193
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     sget-object v5, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -40936,7 +37296,6 @@
 
     goto :goto_1
 
-    .line 6196
     .end local v0    # "cr":Landroid/content/ContentResolver;
     .end local v1    # "intent":Landroid/content/Intent;
     :catchall_0
@@ -40952,7 +37311,6 @@
     .param p1, "proxyProperties"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 4291
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/net/ProxyInfo;->getEnterpriseProxy()I
@@ -40963,10 +37321,8 @@
 
     if-ne v10, v11, :cond_0
 
-    .line 4293
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceActiveAdminAndMdmPermission()V
 
-    .line 4299
     :goto_0
     const-string/jumbo v10, "misc_policy"
 
@@ -40976,7 +37332,6 @@
 
     check-cast v2, Lcom/android/server/enterprise/general/MiscPolicy;
 
-    .line 4301
     .local v2, "miscPolicyService":Lcom/android/server/enterprise/general/MiscPolicy;
     if-eqz v2, :cond_1
 
@@ -40986,25 +37341,21 @@
 
     if-nez v10, :cond_1
 
-    .line 4361
     :goto_1
     return-void
 
-    .line 4295
     .end local v2    # "miscPolicyService":Lcom/android/server/enterprise/general/MiscPolicy;
     :cond_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
     goto :goto_0
 
-    .line 4306
     .restart local v2    # "miscPolicyService":Lcom/android/server/enterprise/general/MiscPolicy;
     :cond_1
     iget-object v11, p0, Lcom/android/server/ConnectivityService;->mProxyLock:Ljava/lang/Object;
 
     monitor-enter v11
 
-    .line 4307
     :try_start_0
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
@@ -41014,7 +37365,6 @@
 
     goto :goto_1
 
-    .line 4360
     :catchall_0
     move-exception v10
 
@@ -41024,7 +37374,6 @@
 
     throw v10
 
-    .line 4308
     :cond_2
     if-eqz p1, :cond_3
 
@@ -41041,7 +37390,6 @@
 
     goto :goto_1
 
-    .line 4309
     :cond_3
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
@@ -41059,31 +37407,24 @@
 
     goto :goto_1
 
-    .line 4311
     :cond_4
     const-string v1, ""
 
-    .line 4312
     .local v1, "host":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 4314
     .local v5, "port":I
     const-string v7, ""
 
-    .line 4315
     .local v7, "username":Ljava/lang/String;
     const-string v4, ""
 
-    .line 4317
     .local v4, "password":Ljava/lang/String;
     const-string v0, ""
 
-    .line 4318
     .local v0, "exclList":Ljava/lang/String;
     const-string v3, ""
 
-    .line 4319
     .local v3, "pacFileUrl":Ljava/lang/String;
     if-eqz p1, :cond_9
 
@@ -41109,7 +37450,6 @@
 
     if-nez v10, :cond_9
 
-    .line 4321
     :cond_5
     invoke-virtual {p1}, Landroid/net/ProxyInfo;->isValid()Z
 
@@ -41117,7 +37457,6 @@
 
     if-nez v10, :cond_6
 
-    .line 4323
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -41142,12 +37481,10 @@
 
     invoke-static {v10}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 4324
     monitor-exit v11
 
     goto :goto_1
 
-    .line 4326
     :cond_6
     new-instance v10, Landroid/net/ProxyInfo;
 
@@ -41155,42 +37492,36 @@
 
     iput-object v10, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
-    .line 4327
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     invoke-virtual {v10}, Landroid/net/ProxyInfo;->getHost()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 4328
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     invoke-virtual {v10}, Landroid/net/ProxyInfo;->getPort()I
 
     move-result v5
 
-    .line 4330
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     invoke-virtual {v10}, Landroid/net/ProxyInfo;->getUsername()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 4331
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     invoke-virtual {v10}, Landroid/net/ProxyInfo;->getPassword()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 4333
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     invoke-virtual {v10}, Landroid/net/ProxyInfo;->getExclusionListAsString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4334
     sget-object v10, Landroid/net/Uri;->EMPTY:Landroid/net/Uri;
 
     invoke-virtual {p1}, Landroid/net/ProxyInfo;->getPacFileUrl()Landroid/net/Uri;
@@ -41203,7 +37534,6 @@
 
     if-nez v10, :cond_7
 
-    .line 4335
     invoke-virtual {p1}, Landroid/net/ProxyInfo;->getPacFileUrl()Landroid/net/Uri;
 
     move-result-object v10
@@ -41212,7 +37542,6 @@
 
     move-result-object v3
 
-    .line 4340
     :cond_7
     :goto_2
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -41221,7 +37550,6 @@
 
     move-result-object v6
 
-    .line 4341
     .local v6, "res":Landroid/content/ContentResolver;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -41229,62 +37557,50 @@
 
     move-result-wide v8
 
-    .line 4343
     .local v8, "token":J
     :try_start_2
     const-string/jumbo v10, "global_http_proxy_host"
 
     invoke-static {v6, v10, v1}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4344
     const-string/jumbo v10, "global_http_proxy_port"
 
     invoke-static {v6, v10, v5}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 4346
     const-string/jumbo v10, "global_http_proxy_username"
 
     invoke-static {v6, v10, v7}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4347
     const-string/jumbo v10, "global_http_proxy_password"
 
     invoke-static {v6, v10, v4}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4349
     const-string/jumbo v10, "global_http_proxy_exclusion_list"
 
     invoke-static {v6, v10, v0}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 4351
     const-string/jumbo v10, "global_proxy_pac_url"
 
     invoke-static {v6, v10, v3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 4353
     :try_start_3
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4356
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mGlobalProxy:Landroid/net/ProxyInfo;
 
     if-nez v10, :cond_8
 
-    .line 4357
     iget-object p1, p0, Lcom/android/server/ConnectivityService;->mDefaultProxy:Landroid/net/ProxyInfo;
 
-    .line 4359
     :cond_8
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->sendProxyBroadcast(Landroid/net/ProxyInfo;)V
 
-    .line 4360
     monitor-exit v11
 
     goto/16 :goto_1
 
-    .line 4338
     .end local v6    # "res":Landroid/content/ContentResolver;
     .end local v8    # "token":J
     :cond_9
@@ -41294,7 +37610,6 @@
 
     goto :goto_2
 
-    .line 4353
     .restart local v6    # "res":Landroid/content/ContentResolver;
     .restart local v8    # "token":J
     :catchall_1
@@ -41312,12 +37627,10 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 4035
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/net/ConnectivityManager;->enforceTetherChangePermission(Landroid/content/Context;)V
 
-    .line 4036
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0, p1}, Lcom/android/server/connectivity/Tethering;->setNcmTethering(Z)I
@@ -41333,7 +37646,6 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 2239
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.MANAGE_NETWORK_POLICY"
@@ -41342,7 +37654,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2241
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -41360,10 +37671,8 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2243
     return-void
 
-    .line 2241
     :cond_0
     const/4 v0, 0x0
 
@@ -41377,28 +37686,22 @@
     .param p3, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 6105
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 6106
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 6108
     .local v0, "ident":J
     :try_start_0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/ConnectivityService;->setProvNotificationVisible(ZILjava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6110
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6112
     return-void
 
-    .line 6110
     :catchall_0
     move-exception v2
 
@@ -41413,7 +37716,6 @@
     .param p2, "callback"    # Landroid/sec/enterprise/proxy/IProxyCredentialsCallback;
 
     .prologue
-    .line 8881
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string v1, "com.sec.enterprise.permission.MDM_SET_PROXY_CREDENTIAL_INTERNAL"
@@ -41424,7 +37726,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 8882
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Caller does not have required permission."
@@ -41433,7 +37734,6 @@
 
     throw v0
 
-    .line 8884
     :cond_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -41443,7 +37743,6 @@
 
     invoke-virtual {v0, p1, p2}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->onCredentialsReceived(Landroid/os/Bundle;Landroid/sec/enterprise/proxy/IProxyCredentialsCallback;)V
 
-    .line 8885
     return-void
 .end method
 
@@ -41453,7 +37752,6 @@
     .param p2, "policy"    # I
 
     .prologue
-    .line 8801
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mPolicyManager:Landroid/net/INetworkPolicyManager;
 
@@ -41461,11 +37759,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8803
     :goto_0
     return-void
 
-    .line 8802
     :catch_0
     move-exception v0
 
@@ -41477,10 +37773,8 @@
     .param p1, "networks"    # [Landroid/net/Network;
 
     .prologue
-    .line 8381
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->throwIfLockdownEnabled()V
 
-    .line 8382
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
@@ -41489,13 +37783,11 @@
 
     move-result v1
 
-    .line 8384
     .local v1, "user":I
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 8385
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -41509,23 +37801,18 @@
 
     move-result v0
 
-    .line 8386
     .local v0, "success":Z
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8387
     if-eqz v0, :cond_0
 
-    .line 8388
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->notifyIfacesChanged()V
 
-    .line 8390
     :cond_0
     return v0
 
-    .line 8386
     .end local v0    # "success":Z
     :catchall_0
     move-exception v2
@@ -41547,12 +37834,10 @@
 
     const/4 v9, 0x2
 
-    .line 3976
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v10}, Landroid/net/ConnectivityManager;->enforceTetherChangePermission(Landroid/content/Context;)V
 
-    .line 3978
     const-string v10, "SBM"
 
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->getMainOperatorName()Ljava/lang/String;
@@ -41565,7 +37850,6 @@
 
     if-eqz v10, :cond_5
 
-    .line 3979
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     const-string v11, "activity"
@@ -41576,11 +37860,9 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 3980
     .local v0, "am":Landroid/app/ActivityManager;
     const-string v4, ""
 
-    .line 3982
     .local v4, "packageName":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isTetheringSupported()Z
 
@@ -41588,14 +37870,12 @@
 
     if-nez v10, :cond_1
 
-    .line 4028
     .end local v0    # "am":Landroid/app/ActivityManager;
     .end local v4    # "packageName":Ljava/lang/String;
     :cond_0
     :goto_0
     return v8
 
-    .line 3986
     .restart local v0    # "am":Landroid/app/ActivityManager;
     .restart local v4    # "packageName":Ljava/lang/String;
     :cond_1
@@ -41622,7 +37902,6 @@
 
     check-cast v7, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 3987
     .local v7, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v10, v7, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
@@ -41632,12 +37911,10 @@
 
     if-ne v10, v11, :cond_2
 
-    .line 3988
     iget-object v4, v7, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 3992
     .end local v7    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :cond_3
     new-instance v10, Ljava/lang/StringBuilder;
@@ -41660,7 +37937,6 @@
 
     invoke-static {v10}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
-    .line 3995
     :try_start_0
     iget-object v10, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -41668,7 +37944,6 @@
 
     move-result-object v6
 
-    .line 3996
     .local v6, "pm":Landroid/content/pm/PackageManager;
     const/4 v10, 0x0
 
@@ -41676,7 +37951,6 @@
 
     move-result-object v5
 
-    .line 3997
     .local v5, "pkgInfo":Landroid/content/pm/PackageInfo;
     iget-object v10, v5, Landroid/content/pm/PackageInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -41688,17 +37962,14 @@
 
     if-eq v10, v11, :cond_4
 
-    .line 3998
     const-string v8, "NOT Allowed : pkg does not match uid"
 
     invoke-static {v8}, Lcom/android/server/ConnectivityService;->log(Ljava/lang/String;)V
 
     move v8, v9
 
-    .line 3999
     goto :goto_0
 
-    .line 4002
     :cond_4
     const-string/jumbo v10, "jp.softbank.mb.tether"
 
@@ -41720,10 +37991,8 @@
 
     move v8, v9
 
-    .line 4004
     goto :goto_0
 
-    .line 4006
     .end local v5    # "pkgInfo":Landroid/content/pm/PackageInfo;
     .end local v6    # "pm":Landroid/content/pm/PackageManager;
     :catch_0
@@ -41732,10 +38001,8 @@
     .local v1, "e":Ljava/lang/Exception;
     move v8, v9
 
-    .line 4007
     goto :goto_0
 
-    .line 4020
     .end local v0    # "am":Landroid/app/ActivityManager;
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -41751,7 +38018,6 @@
 
     check-cast v2, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 4022
     .local v2, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v2, :cond_6
 
@@ -41767,10 +38033,8 @@
 
     move v8, v9
 
-    .line 4023
     goto :goto_0
 
-    .line 4025
     :cond_6
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isTetheringSupported()Z
 
@@ -41778,7 +38042,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 4026
     iget-object v8, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v8, p1}, Lcom/android/server/connectivity/Tethering;->setUsbTethering(Z)I
@@ -41795,15 +38058,12 @@
     .param p3, "authorized"    # Z
 
     .prologue
-    .line 4640
     invoke-direct {p0, p2}, Lcom/android/server/ConnectivityService;->enforceCrossUserPermission(I)V
 
-    .line 4642
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v2
 
-    .line 4643
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -41813,21 +38073,16 @@
 
     check-cast v0, Lcom/android/server/connectivity/Vpn;
 
-    .line 4644
     .local v0, "vpn":Lcom/android/server/connectivity/Vpn;
     if-eqz v0, :cond_0
 
-    .line 4645
     invoke-virtual {v0, p1, p3}, Lcom/android/server/connectivity/Vpn;->setPackageAuthorization(Ljava/lang/String;Z)V
 
-    .line 4647
     :cond_0
     monitor-exit v2
 
-    .line 4648
     return-void
 
-    .line 4647
     .end local v0    # "vpn":Lcom/android/server/connectivity/Vpn;
     :catchall_0
     move-exception v1
@@ -41844,19 +38099,15 @@
     .param p1, "profile"    # Lcom/android/internal/net/VpnProfile;
 
     .prologue
-    .line 5590
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->throwIfLockdownEnabled()V
 
-    .line 5591
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->getActiveLinkProperties()Landroid/net/LinkProperties;
 
     move-result-object v0
 
-    .line 5592
     .local v0, "egress":Landroid/net/LinkProperties;
     if-nez v0, :cond_0
 
-    .line 5593
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Missing active network connection"
@@ -41865,7 +38116,6 @@
 
     throw v2
 
-    .line 5595
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -41875,7 +38125,6 @@
 
     move-result v1
 
-    .line 5597
     .local v1, "user":I
     const/4 v2, 0x0
 
@@ -41883,12 +38132,10 @@
 
     invoke-virtual {p0, v2, v3, v1}, Lcom/android/server/ConnectivityService;->prepareVpn(Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 5599
     iget-object v3, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v3
 
-    .line 5600
     :try_start_0
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -41902,13 +38149,10 @@
 
     invoke-virtual {v2, p1, v4, v0}, Lcom/android/server/connectivity/Vpn;->startLegacyVpn(Lcom/android/internal/net/VpnProfile;Landroid/security/KeyStore;Landroid/net/LinkProperties;)V
 
-    .line 5601
     monitor-exit v3
 
-    .line 5602
     return-void
 
-    .line 5601
     :catchall_0
     move-exception v2
 
@@ -41930,10 +38174,8 @@
     .param p7, "dstAddr"    # Ljava/lang/String;
 
     .prologue
-    .line 8396
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceKeepalivePermission()V
 
-    .line 8397
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mKeepaliveTracker:Lcom/android/server/connectivity/KeepaliveTracker;
 
     invoke-direct {p0, p1}, Lcom/android/server/ConnectivityService;->getNetworkAgentInfoForNetwork(Landroid/net/Network;)Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -41956,7 +38198,6 @@
 
     invoke-virtual/range {v0 .. v8}, Lcom/android/server/connectivity/KeepaliveTracker;->startNattKeepalive(Lcom/android/server/connectivity/NetworkAgentInfo;ILandroid/os/Messenger;Landroid/os/IBinder;Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 8401
     return-void
 .end method
 
@@ -41966,7 +38207,6 @@
     .param p2, "slot"    # I
 
     .prologue
-    .line 8405
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -41981,7 +38221,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 8407
     return-void
 .end method
 
@@ -41989,24 +38228,19 @@
     .locals 4
 
     .prologue
-    .line 2545
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->loadGlobalProxy()V
 
-    .line 2547
     monitor-enter p0
 
-    .line 2548
     const/4 v1, 0x1
 
     :try_start_0
     iput-boolean v1, p0, Lcom/android/server/ConnectivityService;->mSystemReady:Z
 
-    .line 2549
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mInitialBroadcast:Landroid/content/Intent;
 
     if-eqz v1, :cond_0
 
-    .line 2550
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mInitialBroadcast:Landroid/content/Intent;
@@ -42015,18 +38249,15 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->sendStickyBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 2551
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/ConnectivityService;->mInitialBroadcast:Landroid/content/Intent;
 
-    .line 2553
     :cond_0
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2555
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -42039,21 +38270,18 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2559
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->updateLockdownVpn()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 2560
     new-instance v0, Landroid/content/IntentFilter;
 
     const-string v1, "android.intent.action.USER_PRESENT"
 
     invoke-direct {v0, v1}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 2561
     .local v0, "filter":Landroid/content/IntentFilter;
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
@@ -42061,7 +38289,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 2565
     .end local v0    # "filter":Landroid/content/IntentFilter;
     :cond_1
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -42076,7 +38303,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2567
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v2, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -42089,20 +38315,16 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2569
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mPermissionMonitor:Lcom/android/server/connectivity/PermissionMonitor;
 
     invoke-virtual {v1}, Lcom/android/server/connectivity/PermissionMonitor;->startMonitoring()V
 
-    .line 2573
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mEnterpriseConnectivity:Lcom/android/server/enterprise/billing/EnterpriseConnectivity;
 
     invoke-virtual {v1}, Lcom/android/server/enterprise/billing/EnterpriseConnectivity;->systemReady()V
 
-    .line 2576
     return-void
 
-    .line 2553
     :catchall_0
     move-exception v1
 
@@ -42121,7 +38343,6 @@
     .param p3, "tag"    # I
 
     .prologue
-    .line 8781
     const-string v1, "ConnectivityService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -42164,7 +38385,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8782
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v1
@@ -42183,14 +38403,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 8787
     const-string v1, "ConnectivityService"
 
     const-string v2, "SamsungOperaMax parcelling done"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8792
     :try_start_0
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mNetd:Landroid/os/INetworkManagementService;
 
@@ -42198,15 +38416,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8797
     :cond_0
     return-void
 
-    .line 8793
     :catch_0
     move-exception v0
 
-    .line 8794
     .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Ljava/lang/IllegalStateException;
 
@@ -42220,26 +38435,22 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 3912
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/net/ConnectivityManager;->enforceTetherChangePermission(Landroid/content/Context;)V
 
-    .line 3913
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isTetheringSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3914
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0, p1}, Lcom/android/server/connectivity/Tethering;->tether(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 3916
     :goto_0
     return v0
 
@@ -42254,10 +38465,8 @@
     .param p1, "messenger"    # Landroid/os/Messenger;
 
     .prologue
-    .line 6626
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->enforceConnectivityInternalPermission()V
 
-    .line 6627
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mHandler:Lcom/android/server/ConnectivityService$InternalHandler;
@@ -42270,7 +38479,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/ConnectivityService$InternalHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 6628
     return-void
 .end method
 
@@ -42279,26 +38487,22 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 3922
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/net/ConnectivityManager;->enforceTetherChangePermission(Landroid/content/Context;)V
 
-    .line 3924
     invoke-virtual {p0}, Lcom/android/server/ConnectivityService;->isTetheringSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 3925
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mTethering:Lcom/android/server/connectivity/Tethering;
 
     invoke-virtual {v0, p1}, Lcom/android/server/connectivity/Tethering;->untether(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 3927
     :goto_0
     return v0
 
@@ -42315,7 +38519,6 @@
     .param p3, "flag"    # Z
 
     .prologue
-    .line 5280
     const-string v4, "ConnectivityService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -42358,7 +38561,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5282
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/ConnectivityService;->getKnoxVpnFeature()I
 
@@ -42368,10 +38570,8 @@
 
     if-lt v4, v5, :cond_1
 
-    .line 5283
     const/4 v1, 0x0
 
-    .line 5285
     .local v1, "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     const/4 v2, 0x0
 
@@ -42385,14 +38585,12 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 5286
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v2}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v3
 
-    .line 5287
     .local v3, "key":I
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
@@ -42402,7 +38600,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 5288
     iget-object v4, p0, Lcom/android/server/ConnectivityService;->mEnterpriseVpnStoreObj:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v3}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -42418,26 +38615,21 @@
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     check-cast v1, Lcom/android/server/connectivity/EnterpriseVpn;
 
-    .line 5289
     .restart local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     if-eqz v1, :cond_2
 
-    .line 5295
     .end local v3    # "key":I
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 5296
     if-nez p3, :cond_3
 
-    .line 5297
     invoke-direct {p0, p2}, Lcom/android/server/ConnectivityService;->hasInterfaceAsUser(I)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 5298
     const-string v4, "ConnectivityService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -42460,20 +38652,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5299
     invoke-virtual {v1, p3, p2}, Lcom/android/server/connectivity/EnterpriseVpn;->refreshNotification(ZI)V
 
-    .line 5300
     invoke-virtual {v1, p2}, Lcom/android/server/connectivity/EnterpriseVpn;->hideNotification(I)V
 
-    .line 5310
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v2    # "i":I
     :cond_1
     :goto_1
     return-void
 
-    .line 5285
     .restart local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .restart local v2    # "i":I
     .restart local v3    # "key":I
@@ -42482,7 +38670,6 @@
 
     goto :goto_0
 
-    .line 5303
     .end local v3    # "key":I
     :cond_3
     invoke-virtual {v1, p3, p2}, Lcom/android/server/connectivity/EnterpriseVpn;->refreshNotification(ZI)V
@@ -42491,13 +38678,11 @@
 
     goto :goto_1
 
-    .line 5307
     .end local v1    # "enterpriseVpn":Lcom/android/server/connectivity/EnterpriseVpn;
     .end local v2    # "i":I
     :catch_0
     move-exception v0
 
-    .line 5308
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "ConnectivityService"
 
@@ -42534,7 +38719,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 5733
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
@@ -42543,18 +38727,15 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 5734
     const-string v1, "ConnectivityService"
 
     const-string v2, "Lockdown VPN only available to AID_SYSTEM"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5769
     :goto_0
     return v0
 
-    .line 5739
     :cond_0
     invoke-static {}, Lcom/android/server/net/LockdownVpnTracker;->isEnabled()Z
 
@@ -42562,12 +38743,10 @@
 
     iput-boolean v1, p0, Lcom/android/server/ConnectivityService;->mLockdownEnabled:Z
 
-    .line 5740
     iget-boolean v1, p0, Lcom/android/server/ConnectivityService;->mLockdownEnabled:Z
 
     if-eqz v1, :cond_3
 
-    .line 5741
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mKeyStore:Landroid/security/KeyStore;
 
     invoke-virtual {v1}, Landroid/security/KeyStore;->isUnlocked()Z
@@ -42576,7 +38755,6 @@
 
     if-nez v1, :cond_1
 
-    .line 5742
     const-string v1, "ConnectivityService"
 
     const-string v2, "KeyStore locked; unable to create LockdownTracker"
@@ -42585,7 +38763,6 @@
 
     goto :goto_0
 
-    .line 5746
     :cond_1
     new-instance v6, Ljava/lang/String;
 
@@ -42599,7 +38776,6 @@
 
     invoke-direct {v6, v0}, Ljava/lang/String;-><init>([B)V
 
-    .line 5747
     .local v6, "profileName":Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mKeyStore:Landroid/security/KeyStore;
 
@@ -42629,7 +38805,6 @@
 
     move-result-object v5
 
-    .line 5757
     .local v5, "profile":Lcom/android/internal/net/VpnProfile;
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -42639,13 +38814,11 @@
 
     move-result v7
 
-    .line 5758
     .local v7, "user":I
     iget-object v8, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
     monitor-enter v8
 
-    .line 5759
     :try_start_0
     iget-object v0, p0, Lcom/android/server/ConnectivityService;->mVpns:Landroid/util/SparseArray;
 
@@ -42655,11 +38828,9 @@
 
     check-cast v4, Lcom/android/server/connectivity/Vpn;
 
-    .line 5760
     .local v4, "vpn":Lcom/android/server/connectivity/Vpn;
     if-eqz v4, :cond_2
 
-    .line 5761
     new-instance v0, Lcom/android/server/net/LockdownVpnTracker;
 
     iget-object v1, p0, Lcom/android/server/ConnectivityService;->mContext:Landroid/content/Context;
@@ -42672,11 +38843,9 @@
 
     invoke-direct {p0, v0}, Lcom/android/server/ConnectivityService;->setLockdownTracker(Lcom/android/server/net/LockdownVpnTracker;)V
 
-    .line 5764
     :cond_2
     monitor-exit v8
 
-    .line 5769
     .end local v4    # "vpn":Lcom/android/server/connectivity/Vpn;
     .end local v5    # "profile":Lcom/android/internal/net/VpnProfile;
     .end local v6    # "profileName":Ljava/lang/String;
@@ -42686,7 +38855,6 @@
 
     goto :goto_0
 
-    .line 5764
     .restart local v5    # "profile":Lcom/android/internal/net/VpnProfile;
     .restart local v6    # "profileName":Ljava/lang/String;
     .restart local v7    # "user":I
@@ -42699,7 +38867,6 @@
 
     throw v0
 
-    .line 5766
     .end local v5    # "profile":Lcom/android/internal/net/VpnProfile;
     .end local v6    # "profileName":Ljava/lang/String;
     .end local v7    # "user":I

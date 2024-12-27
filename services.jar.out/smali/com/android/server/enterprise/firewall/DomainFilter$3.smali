@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 155
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$3;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 158
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,13 +50,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 159
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$3;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
 
     # invokes: Lcom/android/server/enterprise/firewall/DomainFilter;->initUserIdMap()V
     invoke-static {v0}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$700(Lcom/android/server/enterprise/firewall/DomainFilter;)V
 
-    .line 161
     :cond_0
     return-void
 .end method

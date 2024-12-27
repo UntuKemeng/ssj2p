@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 10478
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$31;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 10481
     const-string v0, "android.intent.action.DREAMING_STARTED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,26 +50,22 @@
 
     if-eqz v0, :cond_1
 
-    .line 10482
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$31;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     if-eqz v0, :cond_0
 
-    .line 10483
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$31;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     invoke-virtual {v0}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;->onDreamingStarted()V
 
-    .line 10490
     :cond_0
     :goto_0
     return-void
 
-    .line 10485
     :cond_1
     const-string v0, "android.intent.action.DREAMING_STOPPED"
 
@@ -85,14 +79,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 10486
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$31;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     if-eqz v0, :cond_0
 
-    .line 10487
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$31;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/PhoneWindowManager;->mKeyguardDelegate:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;

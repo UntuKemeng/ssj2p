@@ -29,19 +29,14 @@
     .param p3, "data"    # [B
 
     .prologue
-    .line 1643
     iput-object p1, p0, Lcom/android/server/cover/NfcLedCoverController$Command;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
-    .line 1644
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1645
     iput p2, p0, Lcom/android/server/cover/NfcLedCoverController$Command;->code:I
 
-    .line 1646
     iput-object p3, p0, Lcom/android/server/cover/NfcLedCoverController$Command;->data:[B
 
-    .line 1647
     return-void
 .end method
 
@@ -51,7 +46,6 @@
     .locals 3
 
     .prologue
-    .line 1651
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

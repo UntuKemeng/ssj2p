@@ -54,45 +54,36 @@
 
     const/4 v1, 0x2
 
-    .line 765
     iput-object p1, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->this$0:Landroid/widget/MultiSelectPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 766
     iput v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->MAXIMUM_NUMBER_OF_LISTENERS:I
 
-    .line 768
     new-array v0, v2, [Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
 
     iput-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionListeners:[Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
 
-    .line 769
     new-array v0, v2, [Z
 
     iput-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mCanMove:[Z
 
-    .line 770
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionHasChanged:Z
 
-    .line 776
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mRect:[I
 
-    .line 777
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNewRect:[I
 
-    .line 778
     new-array v0, v1, [I
 
     iput-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mTempCoords:[I
 
-    .line 779
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mTempContentsViewCoords:[I
@@ -106,7 +97,6 @@
     .param p2, "x1"    # Landroid/widget/MultiSelectPopupWindow$1;
 
     .prologue
-    .line 765
     invoke-direct {p0, p1}, Landroid/widget/MultiSelectPopupWindow$PositionListener;-><init>(Landroid/widget/MultiSelectPopupWindow;)V
 
     return-void
@@ -120,7 +110,6 @@
 
     const/4 v1, 0x0
 
-    .line 863
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -130,7 +119,6 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->getLocationInWindow([I)V
 
-    .line 864
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNewRect:[I
 
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
@@ -144,7 +132,6 @@
 
     aput v3, v0, v1
 
-    .line 865
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNewRect:[I
 
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
@@ -158,7 +145,6 @@
 
     aput v3, v0, v2
 
-    .line 867
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mTempCoords:[I
 
     aget v0, v0, v1
@@ -201,21 +187,18 @@
     :goto_0
     iput-boolean v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionHasChanged:Z
 
-    .line 868
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mTempCoords:[I
 
     aget v0, v0, v1
 
     iput v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionX:I
 
-    .line 869
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mTempCoords:[I
 
     aget v0, v0, v2
 
     iput v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionY:I
 
-    .line 870
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mRect:[I
 
     iget-object v3, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNewRect:[I
@@ -224,7 +207,6 @@
 
     aput v3, v0, v1
 
-    .line 871
     iget-object v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mRect:[I
 
     iget-object v1, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNewRect:[I
@@ -233,13 +215,11 @@
 
     aput v1, v0, v2
 
-    .line 872
     return-void
 
     :cond_1
     move v0, v1
 
-    .line 867
     goto :goto_0
 .end method
 
@@ -251,15 +231,12 @@
     .param p2, "canMove"    # Z
 
     .prologue
-    .line 782
     iget v4, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNumberOfListeners:I
 
     if-nez v4, :cond_0
 
-    .line 783
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow$PositionListener;->updatePosition()V
 
-    .line 784
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -269,16 +246,13 @@
 
     move-result-object v3
 
-    .line 785
     .local v3, "vto":Landroid/view/ViewTreeObserver;
     invoke-virtual {v3, p0}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 788
     .end local v3    # "vto":Landroid/view/ViewTreeObserver;
     :cond_0
     const/4 v0, -0x1
 
-    .line 789
     .local v0, "emptySlotIndex":I
     const/4 v1, 0x0
 
@@ -288,49 +262,40 @@
 
     if-ge v1, v4, :cond_3
 
-    .line 790
     iget-object v4, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionListeners:[Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
 
     aget-object v2, v4, v1
 
-    .line 791
     .local v2, "listener":Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
     if-ne v2, p1, :cond_1
 
-    .line 801
     .end local v2    # "listener":Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
     :goto_1
     return-void
 
-    .line 793
     .restart local v2    # "listener":Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
     :cond_1
     if-gez v0, :cond_2
 
     if-nez v2, :cond_2
 
-    .line 794
     move v0, v1
 
-    .line 789
     :cond_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 798
     .end local v2    # "listener":Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
     :cond_3
     iget-object v4, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionListeners:[Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
 
     aput-object p1, v4, v0
 
-    .line 799
     iget-object v4, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mCanMove:[Z
 
     aput-boolean p2, v4, v0
 
-    .line 800
     iget v4, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNumberOfListeners:I
 
     add-int/lit8 v4, v4, 0x1
@@ -344,7 +309,6 @@
     .locals 1
 
     .prologue
-    .line 819
     iget v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionX:I
 
     return v0
@@ -354,7 +318,6 @@
     .locals 1
 
     .prologue
-    .line 823
     iget v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionY:I
 
     return v0
@@ -370,7 +333,6 @@
 
     const/4 v6, 0x1
 
-    .line 828
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -378,33 +340,27 @@
 
     if-nez v2, :cond_1
 
-    .line 829
     const/4 v0, 0x0
 
     .local v0, "i":I
     if-ge v0, v8, :cond_0
 
-    .line 830
     iget-object v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionListeners:[Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
 
     const/4 v3, 0x0
 
     aput-object v3, v2, v0
 
-    .line 833
     :cond_0
     iput v7, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNumberOfListeners:I
 
-    .line 859
     .end local v0    # "i":I
     :goto_0
     return v6
 
-    .line 837
     :cond_1
     invoke-direct {p0}, Landroid/widget/MultiSelectPopupWindow$PositionListener;->updatePosition()V
 
-    .line 839
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -416,15 +372,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 840
     iput-boolean v6, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mScrollHasChanged:Z
 
-    .line 841
     iget-object v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->this$0:Landroid/widget/MultiSelectPopupWindow;
 
     invoke-virtual {v2}, Landroid/widget/MultiSelectPopupWindow;->initMultiSelectControllerPosition()V
 
-    .line 844
     :cond_2
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
@@ -437,7 +390,6 @@
 
     if-nez v2, :cond_3
 
-    .line 845
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -447,7 +399,6 @@
 
     goto :goto_0
 
-    .line 849
     :cond_3
     const/4 v0, 0x0
 
@@ -455,7 +406,6 @@
     :goto_1
     if-ge v0, v8, :cond_6
 
-    .line 850
     iget-boolean v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionHasChanged:Z
 
     if-nez v2, :cond_4
@@ -470,17 +420,14 @@
 
     if-eqz v2, :cond_5
 
-    .line 851
     :cond_4
     iget-object v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionListeners:[Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
 
     aget-object v1, v2, v0
 
-    .line 852
     .local v1, "positionListener":Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
     if-eqz v1, :cond_5
 
-    .line 853
     iget v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionX:I
 
     iget v3, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionY:I
@@ -491,14 +438,12 @@
 
     invoke-interface {v1, v2, v3, v4, v5}, Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;->updatePosition(IIZZ)V
 
-    .line 849
     .end local v1    # "positionListener":Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 858
     :cond_6
     iput-boolean v7, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mScrollHasChanged:Z
 
@@ -509,12 +454,10 @@
     .locals 1
 
     .prologue
-    .line 875
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mScrollHasChanged:Z
 
-    .line 876
     return-void
 .end method
 
@@ -523,7 +466,6 @@
     .param p1, "positionListener"    # Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
 
     .prologue
-    .line 804
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -532,34 +474,29 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 805
     iget-object v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionListeners:[Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
 
     aget-object v2, v2, v0
 
     if-ne v2, p1, :cond_2
 
-    .line 806
     iget-object v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mPositionListeners:[Landroid/widget/MultiSelectPopupWindow$TextViewPositionListener;
 
     const/4 v3, 0x0
 
     aput-object v3, v2, v0
 
-    .line 807
     iget v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNumberOfListeners:I
 
     add-int/lit8 v2, v2, -0x1
 
     iput v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNumberOfListeners:I
 
-    .line 812
     :cond_0
     iget v2, p0, Landroid/widget/MultiSelectPopupWindow$PositionListener;->mNumberOfListeners:I
 
     if-nez v2, :cond_1
 
-    .line 813
     # getter for: Landroid/widget/MultiSelectPopupWindow;->mTextView:Landroid/widget/TextView;
     invoke-static {}, Landroid/widget/MultiSelectPopupWindow;->access$100()Landroid/widget/TextView;
 
@@ -569,16 +506,13 @@
 
     move-result-object v1
 
-    .line 814
     .local v1, "vto":Landroid/view/ViewTreeObserver;
     invoke-virtual {v1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 816
     .end local v1    # "vto":Landroid/view/ViewTreeObserver;
     :cond_1
     return-void
 
-    .line 804
     :cond_2
     add-int/lit8 v0, v0, 0x1
 

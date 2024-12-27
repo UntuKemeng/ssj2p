@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 327
     iput-object p1, p0, Lcom/android/server/usb/UsbDeviceManager$3;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 331
     :try_start_0
     const-string v2, "Connect"
 
@@ -49,7 +47,6 @@
 
     move-result-object v1
 
-    .line 332
     .local v1, "hostConnectonState":Ljava/lang/String;
     const-string v2, "Off"
 
@@ -59,7 +56,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 333
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$3;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     const/4 v3, 0x0
@@ -67,7 +63,6 @@
     # setter for: Lcom/android/server/usb/UsbDeviceManager;->mHostConnectionState:Z
     invoke-static {v2, v3}, Lcom/android/server/usb/UsbDeviceManager;->access$602(Lcom/android/server/usb/UsbDeviceManager;Z)Z
 
-    .line 338
     :goto_0
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$3;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
@@ -78,7 +73,6 @@
 
     if-ne v2, v4, :cond_0
 
-    .line 339
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$3;->this$0:Lcom/android/server/usb/UsbDeviceManager;
 
     const/4 v3, 0x1
@@ -86,7 +80,6 @@
     # setter for: Lcom/android/server/usb/UsbDeviceManager;->mSetNextUsbModeToDefault:Z
     invoke-static {v2, v3}, Lcom/android/server/usb/UsbDeviceManager;->access$702(Lcom/android/server/usb/UsbDeviceManager;Z)Z
 
-    .line 341
     :cond_0
     const-string v2, "UsbDeviceManager"
 
@@ -127,12 +120,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 346
     .end local v1    # "hostConnectonState":Ljava/lang/String;
     :goto_1
     return-void
 
-    .line 335
     .restart local v1    # "hostConnectonState":Ljava/lang/String;
     :cond_1
     iget-object v2, p0, Lcom/android/server/usb/UsbDeviceManager$3;->this$0:Lcom/android/server/usb/UsbDeviceManager;
@@ -146,12 +137,10 @@
 
     goto :goto_0
 
-    .line 343
     .end local v1    # "hostConnectonState":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 344
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "UsbDeviceManager"
 

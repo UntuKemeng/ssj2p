@@ -31,7 +31,6 @@
 
     const/4 v2, 0x0
 
-    .line 37
     new-instance v0, Lorg/simpleframework/xml/stream/Verbosity;
 
     const-string v1, "HIGH"
@@ -40,7 +39,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/stream/Verbosity;->HIGH:Lorg/simpleframework/xml/stream/Verbosity;
 
-    .line 42
     new-instance v0, Lorg/simpleframework/xml/stream/Verbosity;
 
     const-string v1, "LOW"
@@ -49,7 +47,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/stream/Verbosity;->LOW:Lorg/simpleframework/xml/stream/Verbosity;
 
-    .line 32
     const/4 v0, 0x2
 
     new-array v0, v0, [Lorg/simpleframework/xml/stream/Verbosity;
@@ -76,7 +73,6 @@
     .end annotation
 
     .prologue
-    .line 32
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -87,7 +83,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     const-class v0, Lorg/simpleframework/xml/stream/Verbosity;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -103,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 32
     sget-object v0, Lorg/simpleframework/xml/stream/Verbosity;->$VALUES:[Lorg/simpleframework/xml/stream/Verbosity;
 
     invoke-virtual {v0}, [Lorg/simpleframework/xml/stream/Verbosity;->clone()Ljava/lang/Object;

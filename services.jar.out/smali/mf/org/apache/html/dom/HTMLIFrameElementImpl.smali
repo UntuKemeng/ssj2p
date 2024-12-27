@@ -17,10 +17,8 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     invoke-direct {p0, p1, p2}, Lmf/org/apache/html/dom/HTMLElementImpl;-><init>(Lmf/org/apache/html/dom/HTMLDocumentImpl;Ljava/lang/String;)V
 
-    .line 162
     return-void
 .end method
 
@@ -30,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 37
     const-string v0, "align"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -48,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const-string v0, "frameborder"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -62,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const-string v0, "height"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -76,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const-string v0, "longdesc"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -90,7 +84,6 @@
     .locals 1
 
     .prologue
-    .line 84
     const-string v0, "marginheight"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -104,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 96
     const-string v0, "marginwidth"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -118,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 108
     const-string v0, "name"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -132,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 120
     const-string v0, "scrolling"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -150,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 132
     const-string v0, "src"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -164,7 +153,6 @@
     .locals 1
 
     .prologue
-    .line 144
     const-string v0, "width"
 
     invoke-virtual {p0, v0}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -179,12 +167,10 @@
     .param p1, "align"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     const-string v0, "align"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method
 
@@ -193,12 +179,10 @@
     .param p1, "frameBorder"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     const-string v0, "frameborder"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 56
     return-void
 .end method
 
@@ -207,12 +191,10 @@
     .param p1, "height"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     const-string v0, "height"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method
 
@@ -221,12 +203,10 @@
     .param p1, "longDesc"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     const-string v0, "longdesc"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     return-void
 .end method
 
@@ -235,12 +215,10 @@
     .param p1, "marginHeight"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     const-string v0, "marginheight"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
     return-void
 .end method
 
@@ -249,12 +227,10 @@
     .param p1, "marginWidth"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     const-string v0, "marginwidth"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
     return-void
 .end method
 
@@ -263,12 +239,10 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 114
     const-string v0, "name"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 115
     return-void
 .end method
 
@@ -277,12 +251,10 @@
     .param p1, "scrolling"    # Ljava/lang/String;
 
     .prologue
-    .line 126
     const-string v0, "scrolling"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 127
     return-void
 .end method
 
@@ -291,12 +263,10 @@
     .param p1, "src"    # Ljava/lang/String;
 
     .prologue
-    .line 138
     const-string v0, "src"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 139
     return-void
 .end method
 
@@ -305,11 +275,9 @@
     .param p1, "width"    # Ljava/lang/String;
 
     .prologue
-    .line 150
     const-string v0, "width"
 
     invoke-virtual {p0, v0, p1}, Lmf/org/apache/html/dom/HTMLIFrameElementImpl;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 151
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1167
     iput-object p1, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1170
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v2
@@ -54,7 +52,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1171
     iget-object v2, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
     # getter for: Lcom/android/server/VibratorService;->mVibrations:Ljava/util/LinkedList;
@@ -64,7 +61,6 @@
 
     monitor-enter v3
 
-    .line 1177
     :try_start_0
     iget-object v2, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
@@ -88,13 +84,11 @@
 
     if-nez v2, :cond_0
 
-    .line 1179
     iget-object v2, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
     # invokes: Lcom/android/server/VibratorService;->doCancelVibrateLocked()V
     invoke-static {v2}, Lcom/android/server/VibratorService;->access$400(Lcom/android/server/VibratorService;)V
 
-    .line 1183
     :cond_0
     iget-object v2, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
@@ -107,7 +101,6 @@
 
     move-result-object v0
 
-    .line 1184
     .local v0, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/VibratorService$Vibration;>;"
     :cond_1
     :goto_0
@@ -117,14 +110,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 1185
     invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/android/server/VibratorService$Vibration;
 
-    .line 1186
     .local v1, "vibration":Lcom/android/server/VibratorService$Vibration;
     iget-object v2, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
@@ -135,18 +126,15 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 1187
     iget-object v2, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
     # invokes: Lcom/android/server/VibratorService;->unlinkVibration(Lcom/android/server/VibratorService$Vibration;)V
     invoke-static {v2, v1}, Lcom/android/server/VibratorService;->access$2400(Lcom/android/server/VibratorService;Lcom/android/server/VibratorService$Vibration;)V
 
-    .line 1188
     invoke-interface {v0}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 1191
     .end local v0    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/VibratorService$Vibration;>;"
     .end local v1    # "vibration":Lcom/android/server/VibratorService$Vibration;
     :catchall_0
@@ -165,7 +153,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1196
     .end local v0    # "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/VibratorService$Vibration;>;"
     :cond_3
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -180,7 +167,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 1197
     iget-object v2, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
     const/4 v3, 0x1
@@ -188,7 +174,6 @@
     # setter for: Lcom/android/server/VibratorService;->mHMTMount:Z
     invoke-static {v2, v3}, Lcom/android/server/VibratorService;->access$2502(Lcom/android/server/VibratorService;Z)Z
 
-    .line 1199
     :cond_4
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -202,13 +187,11 @@
 
     if-eqz v2, :cond_5
 
-    .line 1200
     iget-object v2, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
     # setter for: Lcom/android/server/VibratorService;->mHMTMount:Z
     invoke-static {v2, v4}, Lcom/android/server/VibratorService;->access$2502(Lcom/android/server/VibratorService;Z)Z
 
-    .line 1202
     :cond_5
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -222,13 +205,11 @@
 
     if-eqz v2, :cond_6
 
-    .line 1203
     iget-object v2, p0, Lcom/android/server/VibratorService$4;->this$0:Lcom/android/server/VibratorService;
 
     # setter for: Lcom/android/server/VibratorService;->mHMTMount:Z
     invoke-static {v2, v4}, Lcom/android/server/VibratorService;->access$2502(Lcom/android/server/VibratorService;Z)Z
 
-    .line 1224
     :cond_6
     return-void
 .end method

@@ -28,13 +28,10 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 44
     iput-object p1, p0, Lorg/simpleframework/xml/transform/EnumTransform;->type:Ljava/lang/Class;
 
-    .line 45
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 58
     iget-object v0, p0, Lorg/simpleframework/xml/transform/EnumTransform;->type:Ljava/lang/Class;
 
     invoke-static {v0, p1}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -70,7 +66,6 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/EnumTransform;->read(Ljava/lang/String;)Ljava/lang/Enum;
 
     move-result-object v0
@@ -88,7 +83,6 @@
     .end annotation
 
     .prologue
-    .line 72
     invoke-virtual {p1}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object v0
@@ -106,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 29
     check-cast p1, Ljava/lang/Enum;
 
     .end local p1    # "x0":Ljava/lang/Object;

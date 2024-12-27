@@ -22,17 +22,14 @@
     .locals 1
 
     .prologue
-    .line 22
     sget-object v0, Ljava/util/logging/Level;->ALL:Ljava/util/logging/Level;
 
     sput-object v0, Lcom/sec/erisclient/Log;->logLevel:Ljava/util/logging/Level;
 
-    .line 24
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/erisclient/Log;->logger:Ljava/util/logging/Logger;
 
-    .line 52
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -52,7 +48,6 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -73,7 +68,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 61
     sget-object v0, Ljava/util/logging/Level;->CONFIG:Ljava/util/logging/Level;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,7 +100,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/erisclient/Log;->logToFile(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 62
     return-void
 .end method
 
@@ -116,7 +109,6 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -137,7 +129,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     sget-object v0, Ljava/util/logging/Level;->SEVERE:Ljava/util/logging/Level;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -170,7 +161,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/erisclient/Log;->logToFile(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 77
     return-void
 .end method
 
@@ -180,7 +170,6 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -201,7 +190,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 66
     sget-object v0, Ljava/util/logging/Level;->INFO:Ljava/util/logging/Level;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -234,7 +222,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/erisclient/Log;->logToFile(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 67
     return-void
 .end method
 
@@ -244,16 +231,13 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     sget-object v0, Lcom/sec/erisclient/Log;->logger:Ljava/util/logging/Logger;
 
     if-nez v0, :cond_0
 
-    .line 83
     :goto_0
     return-void
 
-    .line 82
     :cond_0
     sget-object v0, Lcom/sec/erisclient/Log;->logger:Ljava/util/logging/Logger;
 
@@ -268,7 +252,6 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,7 +272,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     sget-object v0, Ljava/util/logging/Level;->FINE:Ljava/util/logging/Level;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -322,7 +304,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/erisclient/Log;->logToFile(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 57
     return-void
 .end method
 
@@ -332,7 +313,6 @@
     .param p1, "log"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -353,7 +333,6 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 71
     sget-object v0, Ljava/util/logging/Level;->WARNING:Ljava/util/logging/Level;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -386,6 +365,5 @@
 
     invoke-static {v0, v1}, Lcom/sec/erisclient/Log;->logToFile(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 72
     return-void
 .end method

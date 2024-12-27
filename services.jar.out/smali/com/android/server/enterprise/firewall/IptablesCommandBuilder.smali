@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const-string v0, "[0-9]*$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -58,10 +57,8 @@
     .locals 0
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     return-void
 .end method
 
@@ -74,12 +71,10 @@
 
     const/4 v6, 0x0
 
-    .line 604
     invoke-static {}, Lcom/android/server/enterprise/firewall/IptablesCommandBuilder;->getAllNetworkInterfaces()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 605
     .local v0, "allInterfaces":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     sget-object v4, Lcom/sec/enterprise/firewall/Firewall$NetworkInterface;->MOBILE_DATA_ONLY:Lcom/sec/enterprise/firewall/Firewall$NetworkInterface;
 
@@ -89,7 +84,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 606
     const/4 v4, 0x2
 
     new-array v4, v4, [Ljava/lang/String;
@@ -106,7 +100,6 @@
 
     move-result-object v1
 
-    .line 607
     .local v1, "dataPreferredInterfaces":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string/jumbo v4, "net"
 
@@ -116,12 +109,10 @@
 
     move-result-object v2
 
-    .line 614
     .end local v1    # "dataPreferredInterfaces":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_0
     return-object v2
 
-    .line 609
     :cond_0
     sget-object v4, Lcom/sec/enterprise/firewall/Firewall$NetworkInterface;->WIFI_DATA_ONLY:Lcom/sec/enterprise/firewall/Firewall$NetworkInterface;
 
@@ -131,7 +122,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 610
     new-array v4, v7, [Ljava/lang/String;
 
     const-string/jumbo v5, "wlan"
@@ -142,7 +132,6 @@
 
     move-result-object v3
 
-    .line 611
     .local v3, "wifiPreferredInterfaces":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string/jumbo v4, "lan"
 
@@ -152,11 +141,9 @@
 
     move-result-object v2
 
-    .line 612
     .local v2, "interfaceName":Ljava/lang/String;
     goto :goto_0
 
-    .line 614
     .end local v2    # "interfaceName":Ljava/lang/String;
     .end local v3    # "wifiPreferredInterfaces":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
@@ -173,7 +160,6 @@
     .param p3, "type"    # Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
     .prologue
-    .line 72
     sget-object v17, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->ALLOW:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
     move-object/from16 v0, p3
@@ -186,49 +172,39 @@
 
     if-eqz v17, :cond_17
 
-    .line 73
     const-string/jumbo v3, "firewall_allow-input"
 
-    .line 74
     .local v3, "chainInput":Ljava/lang/String;
     const-string/jumbo v4, "firewall_allow-output"
 
-    .line 75
     .local v4, "chainOutput":Ljava/lang/String;
     const-string v5, " -j ACCEPT"
 
-    .line 81
     .local v5, "command":Ljava/lang/String;
     :goto_0
     const/4 v11, 0x0
 
-    .line 85
     .local v11, "listCommands":[Ljava/lang/String;
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 90
     .local v2, "arrayCommands":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v10, 0x0
 
-    .line 91
     .local v10, "isOutput":Z
     const/4 v8, 0x0
 
-    .line 92
     .local v8, "isInput":Z
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 93
     .local v15, "strInput":Ljava/lang/StringBuilder;
     new-instance v16, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 94
     .local v16, "strOutput":Ljava/lang/StringBuilder;
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getAddressType()Lcom/sec/enterprise/firewall/Firewall$AddressType;
 
@@ -240,7 +216,6 @@
 
     move-result v9
 
-    .line 102
     .local v9, "isIpv6":Z
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getDirection()Lcom/sec/enterprise/firewall/Firewall$Direction;
 
@@ -266,11 +241,9 @@
 
     if-eqz v17, :cond_1
 
-    .line 104
     :cond_0
     const/4 v8, 0x1
 
-    .line 105
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -328,7 +301,6 @@
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 109
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getDirection()Lcom/sec/enterprise/firewall/Firewall$Direction;
 
@@ -354,11 +326,9 @@
 
     if-eqz v17, :cond_3
 
-    .line 111
     :cond_2
     const/4 v10, 0x1
 
-    .line 112
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -414,7 +384,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 116
     :cond_3
     const-string v17, "*"
 
@@ -428,7 +397,6 @@
 
     if-nez v17, :cond_4
 
-    .line 117
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getIpAddress()Ljava/lang/String;
 
     move-result-object v17
@@ -441,7 +409,6 @@
 
     if-eqz v17, :cond_1a
 
-    .line 118
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -468,7 +435,6 @@
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 119
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -493,7 +459,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 128
     :cond_4
     :goto_3
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getNetworkInterface()Lcom/sec/enterprise/firewall/Firewall$NetworkInterface;
@@ -508,10 +473,8 @@
 
     if-nez v17, :cond_6
 
-    .line 133
     if-eqz v8, :cond_5
 
-    .line 134
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -542,11 +505,9 @@
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
     :cond_5
     if-eqz v10, :cond_6
 
-    .line 139
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -575,7 +536,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 147
     :cond_6
     const-string v17, "*"
 
@@ -589,7 +549,6 @@
 
     if-nez v17, :cond_1b
 
-    .line 148
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getPortLocation()Lcom/sec/enterprise/firewall/Firewall$PortLocation;
 
     move-result-object v17
@@ -614,7 +573,6 @@
 
     if-eqz v17, :cond_d
 
-    .line 153
     :cond_7
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getProtocol()Lcom/sec/enterprise/firewall/Firewall$Protocol;
 
@@ -640,11 +598,9 @@
 
     if-eqz v17, :cond_a
 
-    .line 155
     :cond_8
     if-eqz v8, :cond_9
 
-    .line 156
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -677,11 +633,9 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 158
     :cond_9
     if-eqz v10, :cond_a
 
-    .line 159
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -714,7 +668,6 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 162
     :cond_a
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getProtocol()Lcom/sec/enterprise/firewall/Firewall$Protocol;
 
@@ -740,11 +693,9 @@
 
     if-eqz v17, :cond_d
 
-    .line 164
     :cond_b
     if-eqz v8, :cond_c
 
-    .line 165
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -777,11 +728,9 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 167
     :cond_c
     if-eqz v10, :cond_d
 
-    .line 168
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -814,7 +763,6 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 172
     :cond_d
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getPortLocation()Lcom/sec/enterprise/firewall/Firewall$PortLocation;
 
@@ -840,7 +788,6 @@
 
     if-eqz v17, :cond_14
 
-    .line 174
     :cond_e
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getProtocol()Lcom/sec/enterprise/firewall/Firewall$Protocol;
 
@@ -866,11 +813,9 @@
 
     if-eqz v17, :cond_11
 
-    .line 176
     :cond_f
     if-eqz v8, :cond_10
 
-    .line 177
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -903,11 +848,9 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 179
     :cond_10
     if-eqz v10, :cond_11
 
-    .line 180
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -940,7 +883,6 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 183
     :cond_11
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getProtocol()Lcom/sec/enterprise/firewall/Firewall$Protocol;
 
@@ -966,11 +908,9 @@
 
     if-eqz v17, :cond_14
 
-    .line 185
     :cond_12
     if-eqz v8, :cond_13
 
-    .line 186
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -1003,11 +943,9 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 188
     :cond_13
     if-eqz v10, :cond_14
 
-    .line 189
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -1040,7 +978,6 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 223
     :cond_14
     :goto_4
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -1051,10 +988,8 @@
 
     new-array v11, v0, [Ljava/lang/String;
 
-    .line 224
     const/4 v6, 0x0
 
-    .line 225
     .local v6, "i":I
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -1074,13 +1009,11 @@
 
     check-cast v13, Ljava/lang/String;
 
-    .line 226
     .local v13, "s":Ljava/lang/String;
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 227
     .local v14, "strBuilder":Ljava/lang/StringBuilder;
     const-string v17, "*"
 
@@ -1094,12 +1027,10 @@
 
     if-nez v17, :cond_16
 
-    .line 228
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
     move-result-object v12
 
-    .line 229
     .local v12, "portNumber":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
@@ -1113,7 +1044,6 @@
 
     if-eqz v17, :cond_15
 
-    .line 230
     const/16 v17, 0x2d
 
     const/16 v18, 0x3a
@@ -1126,11 +1056,9 @@
 
     move-result-object v12
 
-    .line 232
     :cond_15
     invoke-virtual {v14, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 234
     .end local v12    # "portNumber":Ljava/lang/String;
     :cond_16
     const-string v17, " "
@@ -1159,23 +1087,18 @@
 
     invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 235
     invoke-virtual {v14, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 237
     invoke-virtual {v14}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v17
 
     aput-object v17, v11, v6
 
-    .line 238
     add-int/lit8 v6, v6, 0x1
 
-    .line 239
     goto :goto_5
 
-    .line 77
     .end local v2    # "arrayCommands":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .end local v3    # "chainInput":Ljava/lang/String;
     .end local v4    # "chainOutput":Ljava/lang/String;
@@ -1193,18 +1116,15 @@
     :cond_17
     const-string/jumbo v3, "firewall_deny-input"
 
-    .line 78
     .restart local v3    # "chainInput":Ljava/lang/String;
     const-string/jumbo v4, "firewall_deny-output"
 
-    .line 79
     .restart local v4    # "chainOutput":Ljava/lang/String;
     const-string v5, " -j DROP"
 
     .restart local v5    # "command":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 105
     .restart local v2    # "arrayCommands":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     .restart local v8    # "isInput":Z
     .restart local v9    # "isIpv6":Z
@@ -1217,13 +1137,11 @@
 
     goto/16 :goto_1
 
-    .line 112
     :cond_19
     const-string v17, "/system/bin/iptables "
 
     goto/16 :goto_2
 
-    .line 121
     :cond_1a
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -1251,7 +1169,6 @@
 
     invoke-virtual {v15, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 122
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -1278,7 +1195,6 @@
 
     goto/16 :goto_3
 
-    .line 197
     :cond_1b
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getProtocol()Lcom/sec/enterprise/firewall/Firewall$Protocol;
 
@@ -1292,10 +1208,8 @@
 
     if-eqz v17, :cond_1d
 
-    .line 198
     if-eqz v8, :cond_1c
 
-    .line 199
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -1322,11 +1236,9 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 201
     :cond_1c
     if-eqz v10, :cond_14
 
-    .line 202
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -1355,7 +1267,6 @@
 
     goto/16 :goto_4
 
-    .line 204
     :cond_1d
     invoke-virtual/range {p0 .. p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getProtocol()Lcom/sec/enterprise/firewall/Firewall$Protocol;
 
@@ -1369,10 +1280,8 @@
 
     if-eqz v17, :cond_1f
 
-    .line 205
     if-eqz v8, :cond_1e
 
-    .line 206
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -1399,11 +1308,9 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 208
     :cond_1e
     if-eqz v10, :cond_14
 
-    .line 209
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
@@ -1432,11 +1339,9 @@
 
     goto/16 :goto_4
 
-    .line 212
     :cond_1f
     if-eqz v8, :cond_20
 
-    .line 213
     invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v17
@@ -1445,11 +1350,9 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 215
     :cond_20
     if-eqz v10, :cond_14
 
-    .line 216
     invoke-virtual/range {v16 .. v16}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v17
@@ -1460,7 +1363,6 @@
 
     goto/16 :goto_4
 
-    .line 240
     .restart local v6    # "i":I
     .restart local v7    # "i$":Ljava/util/Iterator;
     :cond_21
@@ -1474,12 +1376,10 @@
     .param p2, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 342
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 347
     .local v0, "arrayCommands":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v7, "*"
 
@@ -1493,10 +1393,8 @@
 
     if-eqz v7, :cond_5
 
-    .line 348
     const-string v5, ""
 
-    .line 361
     .local v5, "sourceIpAddress":Ljava/lang/String;
     :goto_0
     const-string v7, "*"
@@ -1511,15 +1409,12 @@
 
     if-eqz v7, :cond_7
 
-    .line 362
     const-string v6, ""
 
-    .line 373
     .local v6, "sourcePortNumber":Ljava/lang/String;
     :goto_1
     const-string v3, ""
 
-    .line 374
     .local v3, "interfaceName":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getNetworkInterface()Lcom/sec/enterprise/firewall/Firewall$NetworkInterface;
 
@@ -1533,7 +1428,6 @@
 
     if-nez v7, :cond_0
 
-    .line 375
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1560,7 +1454,6 @@
 
     move-result-object v3
 
-    .line 383
     :cond_0
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getProtocol()Lcom/sec/enterprise/firewall/Firewall$Protocol;
 
@@ -1586,7 +1479,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 384
     :cond_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1664,7 +1556,6 @@
 
     move-result-object v1
 
-    .line 389
     .local v1, "command":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getAddressType()Lcom/sec/enterprise/firewall/Firewall$AddressType;
 
@@ -1678,7 +1569,6 @@
 
     if-eqz v7, :cond_9
 
-    .line 390
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1719,7 +1609,6 @@
 
     move-result-object v1
 
-    .line 391
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1740,7 +1629,6 @@
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 400
     .end local v1    # "command":Ljava/lang/String;
     :cond_2
     :goto_2
@@ -1768,7 +1656,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 401
     :cond_3
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -1846,7 +1733,6 @@
 
     move-result-object v1
 
-    .line 406
     .restart local v1    # "command":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getAddressType()Lcom/sec/enterprise/firewall/Firewall$AddressType;
 
@@ -1860,7 +1746,6 @@
 
     if-eqz v7, :cond_a
 
-    .line 407
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1901,7 +1786,6 @@
 
     move-result-object v1
 
-    .line 408
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1922,7 +1806,6 @@
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 417
     .end local v1    # "command":Ljava/lang/String;
     :cond_4
     :goto_3
@@ -1932,7 +1815,6 @@
 
     new-array v2, v7, [Ljava/lang/String;
 
-    .line 418
     .local v2, "commandsVector":[Ljava/lang/String;
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -1941,11 +1823,9 @@
     .end local v2    # "commandsVector":[Ljava/lang/String;
     check-cast v2, [Ljava/lang/String;
 
-    .line 419
     .restart local v2    # "commandsVector":[Ljava/lang/String;
     return-object v2
 
-    .line 350
     .end local v2    # "commandsVector":[Ljava/lang/String;
     .end local v3    # "interfaceName":Ljava/lang/String;
     .end local v5    # "sourceIpAddress":Ljava/lang/String;
@@ -1963,7 +1843,6 @@
 
     if-eqz v7, :cond_6
 
-    .line 351
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -1989,7 +1868,6 @@
     .restart local v5    # "sourceIpAddress":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 354
     .end local v5    # "sourceIpAddress":Ljava/lang/String;
     :cond_6
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2017,13 +1895,11 @@
     .restart local v5    # "sourceIpAddress":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 364
     :cond_7
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 365
     .local v4, "portNumber":Ljava/lang/String;
     const-string v7, "-"
 
@@ -2033,7 +1909,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 366
     const/16 v7, 0x2d
 
     const/16 v8, 0x3a
@@ -2042,7 +1917,6 @@
 
     move-result-object v4
 
-    .line 368
     :cond_8
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2071,7 +1945,6 @@
     .restart local v6    # "sourcePortNumber":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 393
     .end local v4    # "portNumber":Ljava/lang/String;
     .restart local v1    # "command":Ljava/lang/String;
     .restart local v3    # "interfaceName":Ljava/lang/String;
@@ -2110,7 +1983,6 @@
 
     move-result-object v1
 
-    .line 394
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2133,7 +2005,6 @@
 
     goto/16 :goto_2
 
-    .line 410
     :cond_a
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2169,7 +2040,6 @@
 
     move-result-object v1
 
-    .line 411
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2200,12 +2070,10 @@
     .param p2, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 255
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 260
     .local v0, "arrayCommands":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v7, "*"
 
@@ -2219,10 +2087,8 @@
 
     if-eqz v7, :cond_5
 
-    .line 261
     const-string v5, ""
 
-    .line 273
     .local v5, "sIpAddress":Ljava/lang/String;
     :goto_0
     const-string v7, "*"
@@ -2237,15 +2103,12 @@
 
     if-eqz v7, :cond_7
 
-    .line 274
     const-string v6, ""
 
-    .line 286
     .local v6, "sPortNumber":Ljava/lang/String;
     :goto_1
     const-string v3, ""
 
-    .line 287
     .local v3, "interfaceName":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getNetworkInterface()Lcom/sec/enterprise/firewall/Firewall$NetworkInterface;
 
@@ -2259,7 +2122,6 @@
 
     if-nez v7, :cond_0
 
-    .line 288
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2286,7 +2148,6 @@
 
     move-result-object v3
 
-    .line 296
     :cond_0
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getProtocol()Lcom/sec/enterprise/firewall/Firewall$Protocol;
 
@@ -2312,7 +2173,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 297
     :cond_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2390,7 +2250,6 @@
 
     move-result-object v1
 
-    .line 301
     .local v1, "command":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getAddressType()Lcom/sec/enterprise/firewall/Firewall$AddressType;
 
@@ -2404,7 +2263,6 @@
 
     if-eqz v7, :cond_9
 
-    .line 302
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2425,7 +2283,6 @@
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 311
     .end local v1    # "command":Ljava/lang/String;
     :cond_2
     :goto_2
@@ -2453,7 +2310,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 312
     :cond_3
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2531,7 +2387,6 @@
 
     move-result-object v1
 
-    .line 316
     .restart local v1    # "command":Ljava/lang/String;
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getAddressType()Lcom/sec/enterprise/firewall/Firewall$AddressType;
 
@@ -2545,7 +2400,6 @@
 
     if-eqz v7, :cond_a
 
-    .line 317
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2566,7 +2420,6 @@
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 325
     .end local v1    # "command":Ljava/lang/String;
     :cond_4
     :goto_3
@@ -2576,7 +2429,6 @@
 
     new-array v2, v7, [Ljava/lang/String;
 
-    .line 326
     .local v2, "commandsVector":[Ljava/lang/String;
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -2585,11 +2437,9 @@
     .end local v2    # "commandsVector":[Ljava/lang/String;
     check-cast v2, [Ljava/lang/String;
 
-    .line 327
     .restart local v2    # "commandsVector":[Ljava/lang/String;
     return-object v2
 
-    .line 263
     .end local v2    # "commandsVector":[Ljava/lang/String;
     .end local v3    # "interfaceName":Ljava/lang/String;
     .end local v5    # "sIpAddress":Ljava/lang/String;
@@ -2607,7 +2457,6 @@
 
     if-eqz v7, :cond_6
 
-    .line 264
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -2633,7 +2482,6 @@
     .restart local v5    # "sIpAddress":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 266
     .end local v5    # "sIpAddress":Ljava/lang/String;
     :cond_6
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2661,13 +2509,11 @@
     .restart local v5    # "sIpAddress":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 276
     :cond_7
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getPortNumber()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 277
     .local v4, "portNumber":Ljava/lang/String;
     const-string v7, "-"
 
@@ -2677,7 +2523,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 278
     const/16 v7, 0x2d
 
     const/16 v8, 0x3a
@@ -2686,7 +2531,6 @@
 
     move-result-object v4
 
-    .line 280
     :cond_8
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2709,7 +2553,6 @@
     .restart local v6    # "sPortNumber":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 304
     .end local v4    # "portNumber":Ljava/lang/String;
     .restart local v1    # "command":Ljava/lang/String;
     .restart local v3    # "interfaceName":Ljava/lang/String;
@@ -2736,7 +2579,6 @@
 
     goto/16 :goto_2
 
-    .line 319
     :cond_a
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -2774,19 +2616,16 @@
     .end annotation
 
     .prologue
-    .line 618
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 620
     .local v0, "allInterfaces":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     :try_start_0
     invoke-static {}, Ljava/net/NetworkInterface;->getNetworkInterfaces()Ljava/util/Enumeration;
 
     move-result-object v3
 
-    .line 621
     .local v3, "networkInterfaces":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
     :cond_0
     :goto_0
@@ -2796,14 +2635,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 622
     invoke-interface {v3}, Ljava/util/Enumeration;->nextElement()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/net/NetworkInterface;
 
-    .line 623
     .local v2, "networkInterface":Ljava/net/NetworkInterface;
     invoke-virtual {v2}, Ljava/net/NetworkInterface;->getName()Ljava/lang/String;
 
@@ -2821,7 +2658,6 @@
 
     if-nez v4, :cond_0
 
-    .line 624
     invoke-virtual {v2}, Ljava/net/NetworkInterface;->getName()Ljava/lang/String;
 
     move-result-object v4
@@ -2832,13 +2668,11 @@
 
     goto :goto_0
 
-    .line 627
     .end local v2    # "networkInterface":Ljava/net/NetworkInterface;
     .end local v3    # "networkInterfaces":Ljava/util/Enumeration;, "Ljava/util/Enumeration<Ljava/net/NetworkInterface;>;"
     :catch_0
     move-exception v1
 
-    .line 628
     .local v1, "e":Ljava/net/SocketException;
     const-string v4, "FirewallCommandBuilder"
 
@@ -2848,7 +2682,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 631
     .end local v1    # "e":Ljava/net/SocketException;
     :cond_1
     return-object v0
@@ -2860,10 +2693,8 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 431
     const-string v4, " -m owner --uid-owner "
 
-    .line 432
     .local v4, "owner":Ljava/lang/String;
     iget v9, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
 
@@ -2871,7 +2702,6 @@
 
     move-result v8
 
-    .line 433
     .local v8, "userId":I
     const-string v9, "*"
 
@@ -2881,17 +2711,13 @@
 
     if-eqz v9, :cond_2
 
-    .line 435
     if-nez v8, :cond_1
 
-    .line 436
     const/16 v3, 0x3e9
 
-    .line 437
     .local v3, "lowerRange":I
     const v5, 0x1869f
 
-    .line 442
     .local v5, "upperRange":I
     :goto_0
     new-instance v9, Ljava/lang/StringBuilder;
@@ -2920,20 +2746,17 @@
 
     move-result-object v4
 
-    .line 459
     .end local v3    # "lowerRange":I
     .end local v5    # "upperRange":I
     :cond_0
     :goto_1
     return-object v4
 
-    .line 439
     :cond_1
     const v9, 0x186a0
 
     mul-int v3, v8, v9
 
-    .line 440
     .restart local v3    # "lowerRange":I
     const v9, 0x1869f
 
@@ -2942,7 +2765,6 @@
     .restart local v5    # "upperRange":I
     goto :goto_0
 
-    .line 444
     .end local v3    # "lowerRange":I
     .end local v5    # "upperRange":I
     :cond_2
@@ -2956,17 +2778,14 @@
 
     move-result-object v2
 
-    .line 446
     .local v2, "iPackageManager":Landroid/content/pm/IPackageManager;
     const/4 v0, 0x0
 
-    .line 447
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 449
     .local v6, "token":J
     const/4 v9, 0x0
 
@@ -2978,14 +2797,11 @@
 
     move-result-object v0
 
-    .line 453
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 455
     :goto_2
     if-eqz v0, :cond_0
 
-    .line 456
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -3006,11 +2822,9 @@
 
     goto :goto_1
 
-    .line 450
     :catch_0
     move-exception v1
 
-    .line 451
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_1
     const-string v9, "FirewallCommandBuilder"
@@ -3041,7 +2855,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 453
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
@@ -3078,7 +2891,6 @@
     .end annotation
 
     .prologue
-    .line 637
     .local p0, "allInterfaces":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     .local p1, "preferredInterfaces":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -3098,7 +2910,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 638
     .local v2, "name":Ljava/lang/String;
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3118,7 +2929,6 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 639
     .local v3, "preferred":Ljava/lang/String;
     invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -3126,7 +2936,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 640
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -3145,7 +2954,6 @@
 
     move-result-object p3
 
-    .line 653
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "name":Ljava/lang/String;
     .end local v3    # "preferred":Ljava/lang/String;
@@ -3154,7 +2962,6 @@
     :goto_0
     return-object p3
 
-    .line 646
     .restart local p3    # "defaultValue":Ljava/lang/String;
     :cond_3
     invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -3175,7 +2982,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 647
     .restart local v2    # "name":Ljava/lang/String;
     invoke-virtual {v2, p2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -3183,7 +2989,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 648
     sget-object v4, Lcom/android/server/enterprise/firewall/IptablesCommandBuilder;->PATTERN_NUMERAL_ENDING_SUFIX:Ljava/util/regex/Pattern;
 
     invoke-virtual {v4, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -3203,164 +3008,132 @@
     .locals 3
 
     .prologue
-    .line 468
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 472
     .local v0, "commandsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v2, "/system/bin/iptables -N firewall_allow-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 473
     const-string v2, "/system/bin/iptables -N firewall_allow-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 474
     const-string v2, "/system/bin/iptables -N firewall_deny-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 475
     const-string v2, "/system/bin/iptables -N firewall_deny-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 476
     const-string v2, "/system/bin/iptables -t nat -N firewall_exceptions-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 477
     const-string v2, "/system/bin/iptables -t nat -N firewall_redirect-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 478
     const-string v2, "/system/bin/iptables -t filter -N firewall_network_app-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 482
     const-string v2, "/system/bin/iptables  -A INPUT -j firewall_allow-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 483
     const-string v2, "/system/bin/iptables  -A OUTPUT -j firewall_allow-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 484
     const-string v2, "/system/bin/iptables  -A INPUT -j firewall_deny-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 485
     const-string v2, "/system/bin/iptables  -A OUTPUT -j firewall_deny-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 486
     const-string v2, "/system/bin/iptables  -t nat -A OUTPUT -j firewall_exceptions-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 487
     const-string v2, "/system/bin/iptables  -t nat -A OUTPUT -j firewall_redirect-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 488
     const-string v2, "/system/bin/iptables  -t filter -A OUTPUT -j firewall_network_app-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 489
     sget-boolean v2, Lcom/android/server/enterprise/firewall/Firewall;->mHasIpv6FilterSupport:Z
 
     if-eqz v2, :cond_0
 
-    .line 493
     const-string v2, "/system/bin/ip6tables -N firewall_allow-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 494
     const-string v2, "/system/bin/ip6tables -N firewall_allow-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 495
     const-string v2, "/system/bin/ip6tables -N firewall_deny-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 496
     const-string v2, "/system/bin/ip6tables -N firewall_deny-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 497
     const-string v2, "/system/bin/ip6tables -t filter -N firewall_network_app-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 501
     const-string v2, "/system/bin/ip6tables  -A INPUT -j firewall_allow-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 502
     const-string v2, "/system/bin/ip6tables  -A OUTPUT -j firewall_allow-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 503
     const-string v2, "/system/bin/ip6tables  -A INPUT -j firewall_deny-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 504
     const-string v2, "/system/bin/ip6tables  -A OUTPUT -j firewall_deny-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 505
     const-string v2, "/system/bin/ip6tables  -t filter -A OUTPUT -j firewall_network_app-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 507
     :cond_0
     sget-boolean v2, Lcom/android/server/enterprise/firewall/Firewall;->mHasIpv6NatSupport:Z
 
     if-eqz v2, :cond_1
 
-    .line 511
     const-string v2, "/system/bin/ip6tables -t nat -N firewall_exceptions-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 512
     const-string v2, "/system/bin/ip6tables -t nat -N firewall_redirect-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 514
     const-string v2, "/system/bin/ip6tables  -t nat -A OUTPUT -j firewall_exceptions-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 515
     const-string v2, "/system/bin/ip6tables  -t nat -A OUTPUT -j firewall_redirect-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 517
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -3368,7 +3141,6 @@
 
     new-array v1, v2, [Ljava/lang/String;
 
-    .line 518
     .local v1, "commandsVector":[Ljava/lang/String;
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -3377,7 +3149,6 @@
     .end local v1    # "commandsVector":[Ljava/lang/String;
     check-cast v1, [Ljava/lang/String;
 
-    .line 519
     .restart local v1    # "commandsVector":[Ljava/lang/String;
     return-object v1
 .end method
@@ -3386,94 +3157,76 @@
     .locals 3
 
     .prologue
-    .line 664
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 668
     .local v0, "commandsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const-string v2, "/system/bin/iptables -F firewall_allow-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 669
     const-string v2, "/system/bin/iptables -F firewall_allow-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 670
     const-string v2, "/system/bin/iptables -F firewall_deny-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 671
     const-string v2, "/system/bin/iptables -F firewall_deny-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 672
     const-string v2, "/system/bin/iptables -t nat -F firewall_exceptions-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 673
     const-string v2, "/system/bin/iptables -t nat -F firewall_redirect-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 674
     const-string v2, "/system/bin/iptables -t filter -F firewall_network_app-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 676
     sget-boolean v2, Lcom/android/server/enterprise/firewall/Firewall;->mHasIpv6FilterSupport:Z
 
     if-eqz v2, :cond_0
 
-    .line 680
     const-string v2, "/system/bin/ip6tables -F firewall_allow-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 681
     const-string v2, "/system/bin/ip6tables -F firewall_allow-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 682
     const-string v2, "/system/bin/ip6tables -F firewall_deny-input"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 683
     const-string v2, "/system/bin/ip6tables -F firewall_deny-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 684
     const-string v2, "/system/bin/ip6tables -t filter -F firewall_network_app-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 686
     :cond_0
     sget-boolean v2, Lcom/android/server/enterprise/firewall/Firewall;->mHasIpv6NatSupport:Z
 
     if-eqz v2, :cond_1
 
-    .line 690
     const-string v2, "/system/bin/ip6tables -t nat -F firewall_exceptions-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 691
     const-string v2, "/system/bin/ip6tables -t nat -F firewall_redirect-output"
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 693
     :cond_1
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -3481,7 +3234,6 @@
 
     new-array v1, v2, [Ljava/lang/String;
 
-    .line 694
     .local v1, "commandsVector":[Ljava/lang/String;
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
@@ -3490,7 +3242,6 @@
     .end local v1    # "commandsVector":[Ljava/lang/String;
     check-cast v1, [Ljava/lang/String;
 
-    .line 695
     .restart local v1    # "commandsVector":[Ljava/lang/String;
     return-object v1
 .end method
@@ -3501,16 +3252,13 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 531
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getRuleType()Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
     move-result-object v1
 
-    .line 532
     .local v1, "type":Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
     const/4 v0, 0x0
 
-    .line 533
     .local v0, "listCommands":[Ljava/lang/String;
     sget-object v2, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->ALLOW:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
@@ -3520,7 +3268,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 534
     const-string v2, "-A"
 
     sget-object v3, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->ALLOW:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
@@ -3532,11 +3279,9 @@
     :goto_0
     move-object v2, v0
 
-    .line 546
     :goto_1
     return-object v2
 
-    .line 535
     :cond_0
     sget-object v2, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->DENY:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
@@ -3546,7 +3291,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 536
     const-string v2, "-A"
 
     sget-object v3, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->DENY:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
@@ -3557,7 +3301,6 @@
 
     goto :goto_0
 
-    .line 537
     :cond_1
     sget-object v2, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->REDIRECT:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
@@ -3567,7 +3310,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 538
     const-string v2, "-A"
 
     invoke-static {p0, p1, v2}, Lcom/android/server/enterprise/firewall/IptablesCommandBuilder;->createRedirectCommands(Lcom/sec/enterprise/firewall/FirewallRule;Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)[Ljava/lang/String;
@@ -3576,7 +3318,6 @@
 
     goto :goto_0
 
-    .line 539
     :cond_2
     sget-object v2, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->REDIRECT_EXCEPTION:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
@@ -3586,7 +3327,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 540
     const-string v2, "-A"
 
     invoke-static {p0, p1, v2}, Lcom/android/server/enterprise/firewall/IptablesCommandBuilder;->createRedirectExceptionCommands(Lcom/sec/enterprise/firewall/FirewallRule;Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)[Ljava/lang/String;
@@ -3595,7 +3335,6 @@
 
     goto :goto_0
 
-    .line 543
     :cond_3
     const/4 v2, 0x0
 
@@ -3608,42 +3347,34 @@
     .param p1, "isIpv6"    # Z
 
     .prologue
-    .line 584
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 585
     .local v0, "stringBuilder":Ljava/lang/StringBuilder;
     if-eqz p1, :cond_0
 
-    .line 586
     const-string v1, "/system/bin/ip6tables "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 590
     :goto_0
     const-string v1, " -t "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 591
     invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 592
     const-string v1, " -L -n --line-numbers -v "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 593
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
     return-object v1
 
-    .line 588
     :cond_0
     const-string v1, "/system/bin/iptables "
 
@@ -3658,16 +3389,13 @@
     .param p1, "cxtInfo"    # Landroid/app/enterprise/ContextInfo;
 
     .prologue
-    .line 558
     invoke-virtual {p0}, Lcom/sec/enterprise/firewall/FirewallRule;->getRuleType()Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
     move-result-object v1
 
-    .line 559
     .local v1, "type":Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
     const/4 v0, 0x0
 
-    .line 560
     .local v0, "listCommands":[Ljava/lang/String;
     sget-object v2, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->ALLOW:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
@@ -3677,7 +3405,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 561
     const-string v2, "-D"
 
     sget-object v3, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->ALLOW:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
@@ -3689,11 +3416,9 @@
     :goto_0
     move-object v2, v0
 
-    .line 573
     :goto_1
     return-object v2
 
-    .line 562
     :cond_0
     sget-object v2, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->DENY:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
@@ -3703,7 +3428,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 563
     const-string v2, "-D"
 
     sget-object v3, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->DENY:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
@@ -3714,7 +3438,6 @@
 
     goto :goto_0
 
-    .line 564
     :cond_1
     sget-object v2, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->REDIRECT:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
@@ -3724,7 +3447,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 565
     const-string v2, "-D"
 
     invoke-static {p0, p1, v2}, Lcom/android/server/enterprise/firewall/IptablesCommandBuilder;->createRedirectCommands(Lcom/sec/enterprise/firewall/FirewallRule;Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)[Ljava/lang/String;
@@ -3733,7 +3455,6 @@
 
     goto :goto_0
 
-    .line 566
     :cond_2
     sget-object v2, Lcom/sec/enterprise/firewall/FirewallRule$RuleType;->REDIRECT_EXCEPTION:Lcom/sec/enterprise/firewall/FirewallRule$RuleType;
 
@@ -3743,7 +3464,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 567
     const-string v2, "-D"
 
     invoke-static {p0, p1, v2}, Lcom/android/server/enterprise/firewall/IptablesCommandBuilder;->createRedirectExceptionCommands(Lcom/sec/enterprise/firewall/FirewallRule;Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)[Ljava/lang/String;
@@ -3752,7 +3472,6 @@
 
     goto :goto_0
 
-    .line 570
     :cond_3
     const/4 v2, 0x0
 
@@ -3764,12 +3483,10 @@
     .param p0, "chain"    # Ljava/lang/String;
 
     .prologue
-    .line 657
     const/4 v1, 0x2
 
     new-array v0, v1, [Ljava/lang/String;
 
-    .line 658
     .local v0, "commandsVector":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -3805,7 +3522,6 @@
 
     aput-object v2, v0, v1
 
-    .line 659
     const/4 v1, 0x1
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3840,6 +3556,5 @@
 
     aput-object v2, v0, v1
 
-    .line 660
     return-object v0
 .end method

@@ -40,32 +40,24 @@
     .param p6, "lastConnectedTime"    # J
 
     .prologue
-    .line 262
     iput-object p1, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->this$0:Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 263
     iput p2, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mLocationid:I
 
-    .line 264
     iput p3, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mNetworkid:I
 
-    .line 265
     iput-object p4, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mConfigKey:Ljava/lang/String;
 
-    .line 266
     iput-object p5, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mBssid:Ljava/lang/String;
 
-    .line 267
     iput-wide p6, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mLastConnectedTime:J
 
-    .line 268
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mIsGeofenceEnter:I
 
-    .line 269
     return-void
 .end method
 
@@ -75,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 284
     iget-object v0, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mBssid:Ljava/lang/String;
 
     return-object v0
@@ -85,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 278
     iget-object v0, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mConfigKey:Ljava/lang/String;
 
     return-object v0
@@ -95,41 +85,31 @@
     .locals 2
 
     .prologue
-    .line 299
     const-string v0, ""
 
-    .line 300
     .local v0, "retVal":Ljava/lang/String;
     iget v1, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mIsGeofenceEnter:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 314
     :goto_0
     return-object v0
 
-    .line 302
     :pswitch_0
     const-string v0, "EXIT"
 
-    .line 303
     goto :goto_0
 
-    .line 305
     :pswitch_1
     const-string v0, "ENTER"
 
-    .line 306
     goto :goto_0
 
-    .line 308
     :pswitch_2
     const-string v0, "UNKNOWN"
 
-    .line 309
     goto :goto_0
 
-    .line 300
     nop
 
     :pswitch_data_0
@@ -144,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 296
     iget v0, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mIsGeofenceEnter:I
 
     return v0
@@ -154,7 +133,6 @@
     .locals 2
 
     .prologue
-    .line 287
     iget-wide v0, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mLastConnectedTime:J
 
     return-wide v0
@@ -164,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 272
     iget v0, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mLocationid:I
 
     return v0
@@ -174,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 275
     iget v0, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mNetworkid:I
 
     return v0
@@ -184,7 +160,6 @@
     .locals 4
 
     .prologue
-    .line 317
     new-instance v0, Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -265,7 +240,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    .line 319
     .local v0, "dump":Ljava/lang/String;
     return-object v0
 .end method
@@ -275,10 +249,8 @@
     .param p1, "configKey"    # Ljava/lang/String;
 
     .prologue
-    .line 281
     iput-object p1, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mConfigKey:Ljava/lang/String;
 
-    .line 282
     return-void
 .end method
 
@@ -287,10 +259,8 @@
     .param p1, "isEnter"    # I
 
     .prologue
-    .line 293
     iput p1, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mIsGeofenceEnter:I
 
-    .line 294
     return-void
 .end method
 
@@ -299,9 +269,7 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 290
     iput-wide p1, p0, Lcom/samsung/android/server/wifi/WifiGeofenceDBHelper$WifiGeofenceData;->mLastConnectedTime:J
 
-    .line 291
     return-void
 .end method

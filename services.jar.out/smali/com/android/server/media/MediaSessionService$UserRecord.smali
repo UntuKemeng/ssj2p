@@ -44,28 +44,22 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 567
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->this$0:Lcom/android/server/media/MediaSessionService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 562
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mSessions:Ljava/util/ArrayList;
 
-    .line 568
     iput-object p2, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mContext:Landroid/content/Context;
 
-    .line 569
     iput p3, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mUserId:I
 
-    .line 570
     invoke-direct {p0}, Lcom/android/server/media/MediaSessionService$UserRecord;->restoreMediaButtonReceiver()V
 
-    .line 571
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService$UserRecord;
 
     .prologue
-    .line 560
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mRestoredMediaButtonReceiver:Landroid/content/ComponentName;
 
     return-object v0
@@ -85,7 +78,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService$UserRecord;
 
     .prologue
-    .line 560
     iget v0, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mUserId:I
 
     return v0
@@ -96,7 +88,6 @@
     .param p0, "x0"    # Lcom/android/server/media/MediaSessionService$UserRecord;
 
     .prologue
-    .line 560
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mLastMediaButtonReceiver:Landroid/app/PendingIntent;
 
     return-object v0
@@ -108,7 +99,6 @@
     .param p1, "x1"    # Landroid/app/PendingIntent;
 
     .prologue
-    .line 560
     iput-object p1, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mLastMediaButtonReceiver:Landroid/app/PendingIntent;
 
     return-object p1
@@ -118,7 +108,6 @@
     .locals 5
 
     .prologue
-    .line 614
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->this$0:Lcom/android/server/media/MediaSessionService;
 
     # getter for: Lcom/android/server/media/MediaSessionService;->mContentResolver:Landroid/content/ContentResolver;
@@ -134,7 +123,6 @@
 
     move-result-object v1
 
-    .line 616
     .local v1, "receiverName":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -142,22 +130,18 @@
 
     if-nez v2, :cond_0
 
-    .line 617
     invoke-static {v1}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 618
     .local v0, "eventReceiver":Landroid/content/ComponentName;
     if-nez v0, :cond_1
 
-    .line 624
     .end local v0    # "eventReceiver":Landroid/content/ComponentName;
     :cond_0
     :goto_0
     return-void
 
-    .line 622
     .restart local v0    # "eventReceiver":Landroid/content/ComponentName;
     :cond_1
     iput-object v0, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mRestoredMediaButtonReceiver:Landroid/content/ComponentName;
@@ -172,12 +156,10 @@
     .param p1, "session"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 592
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mSessions:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 593
     return-void
 .end method
 
@@ -185,7 +167,6 @@
     .locals 3
 
     .prologue
-    .line 581
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mSessions:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -198,7 +179,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 582
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mSessions:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -207,19 +187,16 @@
 
     check-cast v1, Lcom/android/server/media/MediaSessionRecord;
 
-    .line 583
     .local v1, "session":Lcom/android/server/media/MediaSessionRecord;
     iget-object v2, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->this$0:Lcom/android/server/media/MediaSessionService;
 
     # invokes: Lcom/android/server/media/MediaSessionService;->destroySessionLocked(Lcom/android/server/media/MediaSessionRecord;)V
     invoke-static {v2, v1}, Lcom/android/server/media/MediaSessionService;->access$900(Lcom/android/server/media/MediaSessionService;Lcom/android/server/media/MediaSessionRecord;)V
 
-    .line 581
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 585
     .end local v1    # "session":Lcom/android/server/media/MediaSessionRecord;
     :cond_0
     return-void
@@ -231,7 +208,6 @@
     .param p2, "prefix"    # Ljava/lang/String;
 
     .prologue
-    .line 600
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -258,7 +234,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 601
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -277,7 +252,6 @@
 
     move-result-object v1
 
-    .line 602
     .local v1, "indent":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -305,7 +279,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 603
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -332,14 +305,12 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 604
     iget-object v3, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mSessions:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 605
     .local v2, "size":I
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -365,14 +336,12 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 606
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 609
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -403,12 +372,10 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 606
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 611
     :cond_0
     return-void
 .end method
@@ -426,7 +393,6 @@
     .end annotation
 
     .prologue
-    .line 588
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mSessions:Ljava/util/ArrayList;
 
     return-object v0
@@ -437,12 +403,10 @@
     .param p1, "session"    # Lcom/android/server/media/MediaSessionRecord;
 
     .prologue
-    .line 596
     iget-object v0, p0, Lcom/android/server/media/MediaSessionService$UserRecord;->mSessions:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 597
     return-void
 .end method
 
@@ -450,7 +414,6 @@
     .locals 0
 
     .prologue
-    .line 574
     return-void
 .end method
 
@@ -458,6 +421,5 @@
     .locals 0
 
     .prologue
-    .line 578
     return-void
 .end method

@@ -93,10 +93,8 @@
     .locals 0
 
     .prologue
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     return-void
 .end method
 
@@ -114,99 +112,70 @@
 
     const/4 v1, 0x0
 
-    .line 99
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 100
     iput-object p2, p0, Lcom/android/server/am/MARsPackageStatus;->name:Ljava/lang/String;
 
-    .line 101
     iput-object p1, p0, Lcom/android/server/am/MARsPackageStatus;->context:Landroid/content/Context;
 
-    .line 104
     iput p3, p0, Lcom/android/server/am/MARsPackageStatus;->state:I
 
-    .line 105
     iput-wide p4, p0, Lcom/android/server/am/MARsPackageStatus;->resetTime:J
 
-    .line 106
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->needUpdateTime:Z
 
-    .line 109
     iput v1, p0, Lcom/android/server/am/MARsPackageStatus;->restrictedFlag:I
 
-    .line 110
     iput-object v2, p0, Lcom/android/server/am/MARsPackageStatus;->appliedPolicies:Ljava/util/ArrayList;
 
-    .line 113
     iput v1, p0, Lcom/android/server/am/MARsPackageStatus;->score:I
 
-    .line 114
     iput-wide v4, p0, Lcom/android/server/am/MARsPackageStatus;->lastServiceActivityTime:J
 
-    .line 115
     iput-wide v4, p0, Lcom/android/server/am/MARsPackageStatus;->lastUsedTime:J
 
-    .line 116
     iput-object v2, p0, Lcom/android/server/am/MARsPackageStatus;->info:Landroid/content/pm/PackageInfo;
 
-    .line 119
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/MARsPackageStatus;->isC2DMPermAvl(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/am/MARsPackageStatus;->isUsingGcm:Z
 
-    .line 120
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->receivedGcmIntent:Z
 
-    .line 123
     iput v1, p0, Lcom/android/server/am/MARsPackageStatus;->autorun:I
 
-    .line 126
     invoke-direct {p0, p1, p2}, Lcom/android/server/am/MARsPackageStatus;->isWidgetPackage(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/am/MARsPackageStatus;->isWidget:Z
 
-    .line 127
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->isWallpaper:Z
 
-    .line 128
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->hasAppIcon:Z
 
-    .line 131
     iput v1, p0, Lcom/android/server/am/MARsPackageStatus;->runningWidgets:I
 
-    .line 132
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->isWallpaperRunning:Z
 
-    .line 133
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->hasOngoingNoti:Z
 
-    .line 134
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->isNotificationListener:Z
 
-    .line 135
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->isAcceibilityService:Z
 
-    .line 136
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->isActiveDeviceAdmin:Z
 
-    .line 137
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->isDeviceAdmin:Z
 
-    .line 138
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->isRemovableAdmin:Z
 
-    .line 139
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageStatus;->isDefaultIME:Z
 
-    .line 142
     iput-object v2, p0, Lcom/android/server/am/MARsPackageStatus;->skipReason:Ljava/lang/String;
 
-    .line 143
     return-void
 .end method
 
@@ -216,24 +185,19 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 146
     const/4 v0, 0x0
 
-    .line 147
     .local v0, "c2dmPermissionFound":Z
     const/4 v2, 0x0
 
-    .line 148
     .local v2, "packageInfo":Landroid/content/pm/PackageInfo;
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v4
 
-    .line 149
     .local v4, "pm":Landroid/content/pm/PackageManager;
     if-eqz v4, :cond_0
 
-    .line 151
     const/16 v5, 0x1000
 
     :try_start_0
@@ -241,17 +205,13 @@
 
     move-result-object v2
 
-    .line 152
     if-eqz v2, :cond_0
 
-    .line 153
     iget-object v3, v2, Landroid/content/pm/PackageInfo;->permissions:[Landroid/content/pm/PermissionInfo;
 
-    .line 154
     .local v3, "perms":[Landroid/content/pm/PermissionInfo;
     if-eqz v3, :cond_0
 
-    .line 155
     const/4 v1, 0x0
 
     .local v1, "j":I
@@ -260,7 +220,6 @@
 
     if-ge v1, v5, :cond_0
 
-    .line 156
     aget-object v5, v3, v1
 
     if-eqz v5, :cond_1
@@ -279,17 +238,14 @@
 
     if-eqz v5, :cond_1
 
-    .line 157
     const/4 v0, 0x1
 
-    .line 166
     .end local v1    # "j":I
     .end local v3    # "perms":[Landroid/content/pm/PermissionInfo;
     :cond_0
     :goto_1
     return v0
 
-    .line 155
     .restart local v1    # "j":I
     .restart local v3    # "perms":[Landroid/content/pm/PermissionInfo;
     :cond_1
@@ -297,7 +253,6 @@
 
     goto :goto_0
 
-    .line 163
     .end local v1    # "j":I
     .end local v3    # "perms":[Landroid/content/pm/PermissionInfo;
     :catch_0
@@ -312,18 +267,15 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 170
     new-instance v0, Landroid/content/Intent;
 
     const-string v2, "android.appwidget.action.APPWIDGET_UPDATE"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 171
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 172
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
@@ -334,7 +286,6 @@
 
     move-result-object v1
 
-    .line 176
     .local v1, "receivers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v1, :cond_0
 
@@ -344,10 +295,8 @@
 
     if-lez v2, :cond_0
 
-    .line 177
     const/4 v2, 0x1
 
-    .line 179
     :goto_0
     return v2
 

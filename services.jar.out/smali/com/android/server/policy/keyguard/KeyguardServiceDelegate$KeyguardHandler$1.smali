@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 71
     iput-object p1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardHandler$1;->this$1:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardHandler;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,18 +39,15 @@
     .locals 2
 
     .prologue
-    .line 74
     const-string v0, "KeyguardServiceDelegate"
 
     const-string/jumbo v1, "start logging dumpstate_keyguard_error"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 75
     const-string v0, "-z -d -o /data/log/dumpstate_keyguard_error"
 
     invoke-static {v0}, Landroid/os/Debug;->saveDumpstate(Ljava/lang/String;)V
 
-    .line 76
     return-void
 .end method

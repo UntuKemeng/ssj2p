@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 643
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$2;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v4, 0x0
 
-    .line 646
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 647
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.samsung.android.mirrorlink.ML_STATE"
 
@@ -58,18 +55,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 648
     const-string/jumbo v2, "mlstatus"
 
     invoke-virtual {p2, v2, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 649
     .local v1, "mlstatus":I
     if-ne v1, v5, :cond_1
 
-    .line 650
     iget-object v2, p0, Lcom/android/server/input/InputManagerService$2;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mPtr:J
@@ -80,13 +74,11 @@
     # invokes: Lcom/android/server/input/InputManagerService;->nativeSetMirrorLinkMode(JZ)V
     invoke-static {v2, v3, v5}, Lcom/android/server/input/InputManagerService;->access$900(JZ)V
 
-    .line 655
     .end local v1    # "mlstatus":I
     :cond_0
     :goto_0
     return-void
 
-    .line 652
     .restart local v1    # "mlstatus":I
     :cond_1
     iget-object v2, p0, Lcom/android/server/input/InputManagerService$2;->this$0:Lcom/android/server/input/InputManagerService;

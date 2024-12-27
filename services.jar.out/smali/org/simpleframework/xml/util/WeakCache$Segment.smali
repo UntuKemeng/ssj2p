@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 233
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$Segment;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.Segment;"
     iput-object p1, p0, Lorg/simpleframework/xml/util/WeakCache$Segment;->this$0:Lorg/simpleframework/xml/util/WeakCache;
 
@@ -47,7 +46,6 @@
     .param p2, "x1"    # Lorg/simpleframework/xml/util/WeakCache$1;
 
     .prologue
-    .line 233
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$Segment;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.Segment;"
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/util/WeakCache$Segment;-><init>(Lorg/simpleframework/xml/util/WeakCache;)V
 
@@ -68,7 +66,6 @@
     .end annotation
 
     .prologue
-    .line 245
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$Segment;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.Segment;"
     .local p2, "value":Ljava/lang/Object;, "TT;"
     monitor-enter p0
@@ -78,12 +75,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 246
     monitor-exit p0
 
     return-void
 
-    .line 245
     :catchall_0
     move-exception v0
 
@@ -97,7 +92,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 284
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$Segment;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.Segment;"
     monitor-enter p0
 
@@ -132,7 +126,6 @@
     .end annotation
 
     .prologue
-    .line 258
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$Segment;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.Segment;"
     monitor-enter p0
 
@@ -167,7 +160,6 @@
     .end annotation
 
     .prologue
-    .line 271
     .local p0, "this":Lorg/simpleframework/xml/util/WeakCache$Segment;, "Lorg/simpleframework/xml/util/WeakCache<TT;>.Segment;"
     monitor-enter p0
 

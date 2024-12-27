@@ -189,7 +189,6 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -201,12 +200,10 @@
     .param p1, "category"    # I
 
     .prologue
-    .line 162
     const-string v0, ""
 
     invoke-static {p0, p1, v0}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 163
     return-void
 .end method
 
@@ -217,14 +214,12 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 166
     invoke-static {p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, p1, v0}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 167
     return-void
 .end method
 
@@ -235,14 +230,12 @@
     .param p2, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 174
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 175
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must define metric category"
@@ -251,11 +244,9 @@
 
     throw v0
 
-    .line 177
     :cond_0
     invoke-static {p1, p2}, Lcom/android/internal/logging/EventLogTags;->writeSysuiAction(ILjava/lang/String;)V
 
-    .line 178
     return-void
 .end method
 
@@ -266,14 +257,12 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 170
     invoke-static {p2}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     invoke-static {p0, p1, v0}, Lcom/android/internal/logging/MetricsLogger;->action(Landroid/content/Context;ILjava/lang/String;)V
 
-    .line 171
     return-void
 .end method
 
@@ -284,10 +273,8 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 182
     invoke-static {p1, p2}, Lcom/android/internal/logging/EventLogTags;->writeSysuiCount(Ljava/lang/String;I)V
 
-    .line 183
     return-void
 .end method
 
@@ -302,14 +289,12 @@
     .end annotation
 
     .prologue
-    .line 141
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 142
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must define metric category"
@@ -318,13 +303,11 @@
 
     throw v0
 
-    .line 144
     :cond_0
     const/4 v0, 0x0
 
     invoke-static {p1, v0}, Lcom/android/internal/logging/EventLogTags;->writeSysuiViewVisibility(II)V
 
-    .line 145
     return-void
 .end method
 
@@ -335,10 +318,8 @@
     .param p2, "bucket"    # I
 
     .prologue
-    .line 187
     invoke-static {p1, p2}, Lcom/android/internal/logging/EventLogTags;->writeSysuiHistogram(Ljava/lang/String;I)V
 
-    .line 188
     return-void
 .end method
 
@@ -354,7 +335,6 @@
     .end annotation
 
     .prologue
-    .line 158
     if-nez p2, :cond_0
 
     const/4 v0, 0x1
@@ -362,10 +342,8 @@
     :goto_0
     invoke-static {p0, p1, v0}, Lcom/android/internal/logging/MetricsLogger;->visibility(Landroid/content/Context;IZ)V
 
-    .line 159
     return-void
 
-    .line 158
     :cond_0
     const/4 v0, 0x0
 
@@ -384,17 +362,13 @@
     .end annotation
 
     .prologue
-    .line 149
     if-eqz p2, :cond_0
 
-    .line 150
     invoke-static {p0, p1}, Lcom/android/internal/logging/MetricsLogger;->visible(Landroid/content/Context;I)V
 
-    .line 154
     :goto_0
     return-void
 
-    .line 152
     :cond_0
     invoke-static {p0, p1}, Lcom/android/internal/logging/MetricsLogger;->hidden(Landroid/content/Context;I)V
 
@@ -412,14 +386,12 @@
     .end annotation
 
     .prologue
-    .line 134
     sget-boolean v0, Landroid/os/Build;->IS_DEBUGGABLE:Z
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
-    .line 135
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Must define metric category"
@@ -428,12 +400,10 @@
 
     throw v0
 
-    .line 137
     :cond_0
     const/16 v0, 0x64
 
     invoke-static {p1, v0}, Lcom/android/internal/logging/EventLogTags;->writeSysuiViewVisibility(II)V
 
-    .line 138
     return-void
 .end method

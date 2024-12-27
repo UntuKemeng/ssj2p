@@ -47,42 +47,32 @@
 
     const/4 v1, 0x1
 
-    .line 723
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->this$0:Lcom/android/server/accessibility/AccessibilityInputFilter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 726
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->STATE_READY:I
 
-    .line 727
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->STATE_DETECTION:I
 
-    .line 732
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mDetectionState:I
 
-    .line 736
     const/16 v0, 0xe6
 
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->TAP_TIMEOUT_WITH_CORRECTION:I
 
-    .line 739
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->isFirstTapDone:Z
 
-    .line 742
     iput v2, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->firstKeyCode:I
 
-    .line 745
     iput v2, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->currentKeyCode:I
 
-    .line 748
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->MSG_PERFORM_SINGLE_TAP:I
 
-    .line 751
     new-instance v0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector$1;-><init>(Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;)V
@@ -98,7 +88,6 @@
     .param p2, "x1"    # Lcom/android/server/accessibility/AccessibilityInputFilter$1;
 
     .prologue
-    .line 723
     invoke-direct {p0, p1}, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;-><init>(Lcom/android/server/accessibility/AccessibilityInputFilter;)V
 
     return-void
@@ -109,7 +98,6 @@
     .param p0, "x0"    # Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;
 
     .prologue
-    .line 723
     invoke-direct {p0}, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->performSingleTap()V
 
     return-void
@@ -119,24 +107,19 @@
     .locals 2
 
     .prologue
-    .line 819
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->currentKeyCode:I
 
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->firstKeyCode:I
 
-    .line 820
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->firstKeyCode:I
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 831
     :goto_0
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->clear()V
 
-    .line 832
     return-void
 
-    .line 822
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mContext:Landroid/content/Context;
 
@@ -150,7 +133,6 @@
 
     goto :goto_0
 
-    .line 825
     :sswitch_1
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mContext:Landroid/content/Context;
 
@@ -164,7 +146,6 @@
 
     goto :goto_0
 
-    .line 828
     :sswitch_2
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mContext:Landroid/content/Context;
 
@@ -178,7 +159,6 @@
 
     goto :goto_0
 
-    .line 820
     :sswitch_data_0
     .sparse-switch
         0x4 -> :sswitch_0
@@ -192,14 +172,12 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 842
     iget-object v2, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Landroid/view/accessibility/AccessibilityManager;->getInstance(Landroid/content/Context;)Landroid/view/accessibility/AccessibilityManager;
 
     move-result-object v0
 
-    .line 843
     .local v0, "mAccessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     const/16 v2, 0x4000
 
@@ -207,7 +185,6 @@
 
     move-result-object v1
 
-    .line 844
     .local v1, "mTalkbackEvent":Landroid/view/accessibility/AccessibilityEvent;
     invoke-virtual {v1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 
@@ -215,28 +192,22 @@
 
     invoke-interface {v2, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 845
     const-string v2, "com.android.server.accessibility"
 
     invoke-virtual {v1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setPackageName(Ljava/lang/CharSequence;)V
 
-    .line 846
     const-string v2, "AccessibilityInputFilter"
 
     invoke-virtual {v1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setClassName(Ljava/lang/CharSequence;)V
 
-    .line 847
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Landroid/view/accessibility/AccessibilityEvent;->setEnabled(Z)V
 
-    .line 848
     if-eqz v0, :cond_0
 
-    .line 849
     invoke-virtual {v0, v1}, Landroid/view/accessibility/AccessibilityManager;->sendAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 851
     :cond_0
     return-void
 .end method
@@ -247,24 +218,20 @@
     .locals 2
 
     .prologue
-    .line 811
     const/4 v0, 0x1
 
     iput v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mDetectionState:I
 
-    .line 812
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->isFirstTapDone:Z
 
-    .line 813
     iget-object v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 814
     return-void
 .end method
 
@@ -273,13 +240,10 @@
     .param p1, "mContext"    # Landroid/content/Context;
 
     .prologue
-    .line 854
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mContext:Landroid/content/Context;
 
-    .line 855
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->clear()V
 
-    .line 856
     return-void
 .end method
 
@@ -292,21 +256,17 @@
 
     const/4 v4, 0x1
 
-    .line 765
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v0
 
-    .line 766
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 808
     :cond_0
     :goto_0
     return-void
 
-    .line 771
     :pswitch_0
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->isFirstTapDone:Z
 
@@ -316,40 +276,33 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 772
     const/4 v1, 0x2
 
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mDetectionState:I
 
     goto :goto_0
 
-    .line 778
     :pswitch_1
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mDetectionState:I
 
     if-eq v1, v4, :cond_0
 
-    .line 784
     iget-boolean v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->isFirstTapDone:Z
 
     if-nez v1, :cond_1
 
-    .line 785
     iput-boolean v4, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->isFirstTapDone:Z
 
-    .line 786
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->currentKeyCode:I
 
-    .line 787
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 788
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mHandler:Landroid/os/Handler;
 
     iget v2, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->TAP_TIMEOUT_WITH_CORRECTION:I
@@ -360,7 +313,6 @@
 
     goto :goto_0
 
-    .line 795
     :cond_1
     iget v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->firstKeyCode:I
 
@@ -370,28 +322,23 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 796
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->clear()V
 
     goto :goto_0
 
-    .line 798
     :cond_2
     iput-boolean v4, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->isFirstTapDone:Z
 
-    .line 799
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
 
     move-result v1
 
     iput v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->currentKeyCode:I
 
-    .line 800
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v3}, Landroid/os/Handler;->removeCallbacksAndMessages(Ljava/lang/Object;)V
 
-    .line 801
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->mHandler:Landroid/os/Handler;
 
     iget v2, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->TAP_TIMEOUT_WITH_CORRECTION:I
@@ -402,7 +349,6 @@
 
     goto :goto_0
 
-    .line 766
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -415,7 +361,6 @@
     .param p1, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 835
     iget v0, p0, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->firstKeyCode:I
 
     invoke-virtual {p1}, Landroid/view/KeyEvent;->getKeyCode()I
@@ -428,10 +373,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 836
     const/4 v0, 0x1
 
-    .line 838
     :goto_0
     return v0
 
@@ -445,9 +388,7 @@
     .locals 0
 
     .prologue
-    .line 859
     invoke-virtual {p0}, Lcom/android/server/accessibility/AccessibilityInputFilter$DoubleTapDetector;->clear()V
 
-    .line 860
     return-void
 .end method

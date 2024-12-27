@@ -51,22 +51,16 @@
 
     const/4 v3, 0x0
 
-    .line 1148
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
-    .line 1149
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1142
     iput-boolean v3, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mPerformedBadgeAnimation:Z
 
-    .line 1150
     iput-object p2, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mContext:Landroid/content/Context;
 
-    .line 1152
     const/4 v1, 0x0
 
-    .line 1153
     .local v1, "innerView":Landroid/view/View;
     # getter for: Landroid/widget/ActionMenuPresenter;->mUseTextItemMode:Z
     invoke-static {p1}, Landroid/widget/ActionMenuPresenter;->access$1200(Landroid/widget/ActionMenuPresenter;)Z
@@ -75,13 +69,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 1154
     new-instance v1, Landroid/widget/ActionMenuPresenter$SemOverflowText;
 
     .end local v1    # "innerView":Landroid/view/View;
     invoke-direct {v1, p1, p2}, Landroid/widget/ActionMenuPresenter$SemOverflowText;-><init>(Landroid/widget/ActionMenuPresenter;Landroid/content/Context;)V
 
-    .line 1158
     .restart local v1    # "innerView":Landroid/view/View;
     :goto_0
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
@@ -90,7 +82,6 @@
 
     invoke-virtual {p0, v1, v2}, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1161
     const-string v2, "layout_inflater"
 
     invoke-virtual {p2, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -99,7 +90,6 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 1162
     .local v0, "inflater":Landroid/view/LayoutInflater;
     const v2, 0x10900ff
 
@@ -111,7 +101,6 @@
 
     iput-object v2, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
-    .line 1163
     iget-object v2, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
@@ -122,15 +111,12 @@
 
     iput-object v2, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeText:Landroid/widget/TextView;
 
-    .line 1164
     iget-object v2, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
     invoke-virtual {p0, v2}, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->addView(Landroid/view/View;)V
 
-    .line 1165
     return-void
 
-    .line 1156
     .end local v0    # "inflater":Landroid/view/LayoutInflater;
     :cond_0
     new-instance v1, Landroid/widget/ActionMenuPresenter$SemOverflowImage;
@@ -148,7 +134,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 1136
     iput-boolean p1, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mPerformedBadgeAnimation:Z
 
     return p1
@@ -160,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 1174
     const/4 v0, 0x0
 
     return v0
@@ -170,7 +154,6 @@
     .locals 1
 
     .prologue
-    .line 1169
     const/4 v0, 0x0
 
     return v0
@@ -184,7 +167,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1199
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mIsThemeDeviceDefaultFamily:Z
@@ -194,11 +176,9 @@
 
     if-nez v0, :cond_0
 
-    .line 1269
     :goto_0
     return-void
 
-    .line 1203
     :cond_0
     iget-object v2, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeText:Landroid/widget/TextView;
 
@@ -213,7 +193,6 @@
     :goto_1
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1204
     iget-object v2, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
     if-lez p1, :cond_2
@@ -223,38 +202,31 @@
     :goto_2
     invoke-virtual {v2, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 1206
     if-nez p1, :cond_3
 
-    .line 1207
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->clearAnimation()V
 
-    .line 1208
     iput-boolean v1, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mPerformedBadgeAnimation:Z
 
     goto :goto_0
 
-    .line 1203
     :cond_1
     const-string v0, "N"
 
     goto :goto_1
 
-    .line 1204
     :cond_2
     const/16 v0, 0x8
 
     goto :goto_2
 
-    .line 1212
     :cond_3
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mUpdateAnimBadgeBackground:Landroid/view/animation/Animation;
 
     if-nez v0, :cond_4
 
-    .line 1213
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mContext:Landroid/content/Context;
 
     const v1, 0x10a009c
@@ -265,7 +237,6 @@
 
     iput-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mUpdateAnimBadgeBackground:Landroid/view/animation/Animation;
 
-    .line 1214
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mContext:Landroid/content/Context;
 
     const v1, 0x10a009d
@@ -276,7 +247,6 @@
 
     iput-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mUpdateAnimBadgeText:Landroid/view/animation/Animation;
 
-    .line 1215
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mUpdateAnimBadgeBackground:Landroid/view/animation/Animation;
 
     new-instance v1, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton$1;
@@ -285,13 +255,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1234
     :cond_4
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mFirstAnimBadgeBackground:Landroid/view/animation/Animation;
 
     if-nez v0, :cond_5
 
-    .line 1235
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mContext:Landroid/content/Context;
 
     const v1, 0x10a009a
@@ -302,7 +270,6 @@
 
     iput-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mFirstAnimBadgeBackground:Landroid/view/animation/Animation;
 
-    .line 1236
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mContext:Landroid/content/Context;
 
     const v1, 0x10a009b
@@ -313,7 +280,6 @@
 
     iput-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mFirstAnimBadgeText:Landroid/view/animation/Animation;
 
-    .line 1237
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mFirstAnimBadgeBackground:Landroid/view/animation/Animation;
 
     new-instance v1, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton$2;
@@ -322,25 +288,21 @@
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 1256
     :cond_5
     const/4 v0, 0x1
 
     if-eq p2, v0, :cond_7
 
-    .line 1257
     iget-boolean v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mPerformedBadgeAnimation:Z
 
     if-eqz v0, :cond_6
 
-    .line 1258
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mFirstAnimBadgeBackground:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1259
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeText:Landroid/widget/TextView;
 
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mFirstAnimBadgeText:Landroid/view/animation/Animation;
@@ -349,7 +311,6 @@
 
     goto/16 :goto_0
 
-    .line 1261
     :cond_6
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
@@ -357,7 +318,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1262
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeText:Landroid/widget/TextView;
 
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mUpdateAnimBadgeText:Landroid/view/animation/Animation;
@@ -366,7 +326,6 @@
 
     goto/16 :goto_0
 
-    .line 1266
     :cond_7
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
@@ -374,7 +333,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 1267
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeText:Landroid/widget/TextView;
 
     iget-object v1, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mFirstAnimBadgeText:Landroid/view/animation/Animation;
@@ -391,7 +349,6 @@
     .prologue
     const/16 v2, 0x63
 
-    .line 1179
     iget-object v5, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->this$0:Landroid/widget/ActionMenuPresenter;
 
     # getter for: Landroid/widget/ActionMenuPresenter;->mIsThemeDeviceDefaultFamily:Z
@@ -401,10 +358,8 @@
 
     if-eqz v5, :cond_0
 
-    .line 1180
     if-le p1, v2, :cond_1
 
-    .line 1182
     .local v2, "mBadgeNumber":I
     :goto_0
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
@@ -415,7 +370,6 @@
 
     move-result-object v0
 
-    .line 1183
     .local v0, "formatter":Ljava/text/NumberFormat;
     int-to-long v6, v2
 
@@ -423,7 +377,6 @@
 
     move-result-object v1
 
-    .line 1185
     .local v1, "localeFormattedNumber":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->getResources()Landroid/content/res/Resources;
 
@@ -457,7 +410,6 @@
 
     float-to-int v3, v5
 
-    .line 1188
     .local v3, "mBadgeWidth":I
     iget-object v5, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
@@ -465,21 +417,17 @@
 
     move-result-object v4
 
-    .line 1189
     .local v4, "mLayoutParams":Landroid/view/ViewGroup$LayoutParams;
     iput v3, v4, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 1191
     iget-object v5, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeText:Landroid/widget/TextView;
 
     invoke-virtual {v5, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1192
     iget-object v5, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
     invoke-virtual {v5, v4}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1193
     iget-object v6, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mBadgeBackground:Landroid/view/ViewGroup;
 
     if-lez v2, :cond_2
@@ -489,7 +437,6 @@
     :goto_1
     invoke-virtual {v6, v5}, Landroid/view/ViewGroup;->setVisibility(I)V
 
-    .line 1195
     .end local v0    # "formatter":Ljava/text/NumberFormat;
     .end local v1    # "localeFormattedNumber":Ljava/lang/String;
     .end local v2    # "mBadgeNumber":I
@@ -501,10 +448,8 @@
     :cond_1
     move v2, p1
 
-    .line 1180
     goto :goto_0
 
-    .line 1193
     .restart local v0    # "formatter":Ljava/text/NumberFormat;
     .restart local v1    # "localeFormattedNumber":Ljava/lang/String;
     .restart local v2    # "mBadgeNumber":I

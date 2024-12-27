@@ -59,7 +59,6 @@
 
     const/4 v2, 0x0
 
-    .line 48
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v0
@@ -71,22 +70,16 @@
     :goto_0
     sput-boolean v0, Lcom/samsung/android/privatemode/PrivateModeManager;->DEBUG:Z
 
-    .line 97
     sput-object v2, Lcom/samsung/android/privatemode/PrivateModeManager;->mService:Lcom/samsung/android/privatemode/IPrivateModeManager;
 
-    .line 99
     sput-object v2, Lcom/samsung/android/privatemode/PrivateModeManager;->sInstance:Lcom/samsung/android/privatemode/PrivateModeManager;
 
-    .line 101
     sput-object v2, Lcom/samsung/android/privatemode/PrivateModeManager;->mContext:Landroid/content/Context;
 
-    .line 103
     sput-boolean v1, Lcom/samsung/android/privatemode/PrivateModeManager;->mIsServiceBind:Z
 
-    .line 107
     sput-object v2, Lcom/samsung/android/privatemode/PrivateModeManager;->mPrivateClient:Lcom/samsung/android/privatemode/IPrivateModeClient;
 
-    .line 111
     const/4 v0, -0x1
 
     sput v0, Lcom/samsung/android/privatemode/PrivateModeManager;->levelPrivatemode:I
@@ -96,7 +89,6 @@
     :cond_0
     move v0, v1
 
-    .line 48
     goto :goto_0
 .end method
 
@@ -105,15 +97,12 @@
     .param p1, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 105
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/privatemode/PrivateModeManager;->mServiceConn:Landroid/content/ServiceConnection;
 
-    .line 188
     return-void
 .end method
 
@@ -122,7 +111,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 45
     sput-boolean p0, Lcom/samsung/android/privatemode/PrivateModeManager;->mIsServiceBind:Z
 
     return p0
@@ -133,7 +121,6 @@
     .param p0, "x0"    # Lcom/samsung/android/privatemode/IPrivateModeManager;
 
     .prologue
-    .line 45
     sput-object p0, Lcom/samsung/android/privatemode/PrivateModeManager;->mService:Lcom/samsung/android/privatemode/IPrivateModeManager;
 
     return-object p0
@@ -143,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 45
     sget-object v0, Lcom/samsung/android/privatemode/PrivateModeManager;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -153,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 45
     sget-object v0, Lcom/samsung/android/privatemode/PrivateModeManager;->mPrivateClient:Lcom/samsung/android/privatemode/IPrivateModeClient;
 
     return-object v0
@@ -167,7 +152,6 @@
     .param p3, "x3"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1, p2, p3}, Lcom/samsung/android/privatemode/PrivateModeManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
     return-void
@@ -177,7 +161,6 @@
     .locals 4
 
     .prologue
-    .line 191
     monitor-enter p0
 
     :try_start_0
@@ -185,28 +168,24 @@
 
     if-nez v1, :cond_0
 
-    .line 192
     const-string v1, "PPS_PrivateModeManager"
 
     const-string v2, "bindPrivateModeManager called"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     new-instance v1, Lcom/samsung/android/privatemode/PrivateModeManager$2;
 
     invoke-direct {v1, p0}, Lcom/samsung/android/privatemode/PrivateModeManager$2;-><init>(Lcom/samsung/android/privatemode/PrivateModeManager;)V
 
     iput-object v1, p0, Lcom/samsung/android/privatemode/PrivateModeManager;->mServiceConn:Landroid/content/ServiceConnection;
 
-    .line 230
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.samsung.android.personalpage.service.PersonalPageService"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 231
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Landroid/content/ComponentName;
 
@@ -218,7 +197,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 232
     sget-object v1, Lcom/samsung/android/privatemode/PrivateModeManager;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/samsung/android/privatemode/PrivateModeManager;->mServiceConn:Landroid/content/ServiceConnection;
@@ -231,7 +209,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 233
     const-string v1, "PPS_PrivateModeManager"
 
     const-string v2, "bindService: OK"
@@ -240,14 +217,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 236
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 191
     :catchall_0
     move-exception v1
 
@@ -262,7 +237,6 @@
     .param p1, "client"    # Lcom/samsung/android/privatemode/IPrivateModeClient;
 
     .prologue
-    .line 179
     const-class v0, Lcom/samsung/android/privatemode/PrivateModeManager;
 
     monitor-enter v0
@@ -280,7 +254,6 @@
     .param p1, "listener"    # Lcom/samsung/android/privatemode/PrivateModeListener;
 
     .prologue
-    .line 128
     const-class v1, Lcom/samsung/android/privatemode/PrivateModeManager;
 
     monitor-enter v1
@@ -289,7 +262,6 @@
 
     if-nez p1, :cond_1
 
-    .line 129
     :cond_0
     :try_start_0
     const-string v0, "PPS_PrivateModeManager"
@@ -300,10 +272,8 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 130
     const/4 v0, 0x0
 
-    .line 132
     :goto_0
     monitor-exit v1
 
@@ -323,7 +293,6 @@
 
     goto :goto_0
 
-    .line 128
     :catchall_0
     move-exception v0
 
@@ -337,7 +306,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 414
     const-string v0, "/storage/Private"
 
     return-object v0
@@ -348,10 +316,8 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 496
     const/4 v2, -0x1
 
-    .line 499
     .local v2, "knoxVersion":I
     :try_start_0
     const-string v3, "isKnoxMode"
@@ -360,7 +326,6 @@
 
     move-result-object v0
 
-    .line 501
     .local v0, "bundle":Landroid/os/Bundle;
     const-string v3, "2.0"
 
@@ -393,10 +358,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 502
     const/4 v2, 0x2
 
-    .line 510
     .end local v0    # "bundle":Landroid/os/Bundle;
     :cond_0
     :goto_0
@@ -412,10 +375,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 511
     const/4 v2, 0x1
 
-    .line 514
     :cond_1
     if-lez v2, :cond_2
 
@@ -424,11 +385,9 @@
     :goto_1
     return v3
 
-    .line 504
     :catch_0
     move-exception v1
 
-    .line 505
     .local v1, "e":Ljava/lang/NoClassDefFoundError;
     const-string v3, "PPS_PrivateModeManager"
 
@@ -454,12 +413,10 @@
 
     goto :goto_0
 
-    .line 506
     .end local v1    # "e":Ljava/lang/NoClassDefFoundError;
     :catch_1
     move-exception v1
 
-    .line 507
     .local v1, "e":Ljava/lang/NoSuchMethodError;
     const-string v3, "PPS_PrivateModeManager"
 
@@ -485,7 +442,6 @@
 
     goto :goto_0
 
-    .line 514
     .end local v1    # "e":Ljava/lang/NoSuchMethodError;
     :cond_2
     const/4 v3, 0x0
@@ -497,7 +453,6 @@
     .locals 1
 
     .prologue
-    .line 484
     const/4 v0, 0x0
 
     return v0
@@ -507,7 +462,6 @@
     .locals 1
 
     .prologue
-    .line 470
     const/4 v0, 0x0
 
     return v0
@@ -518,7 +472,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 456
     const/4 v0, 0x0
 
     return v0
@@ -529,7 +482,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 404
     const/4 v0, 0x0
 
     return v0
@@ -542,12 +494,10 @@
     .param p3, "extraInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 260
     sget-boolean v0, Lcom/samsung/android/privatemode/PrivateModeManager;->DEBUG:Z
 
     if-eqz v0, :cond_1
 
-    .line 261
     const-string v1, "PPS_PrivateModeManager"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -579,11 +529,9 @@
 
     invoke-static {v1, v0, p2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 265
     :goto_1
     return-void
 
-    .line 261
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -605,7 +553,6 @@
 
     goto :goto_0
 
-    .line 263
     :cond_1
     const-string v1, "PPS_PrivateModeManager"
 
@@ -668,14 +615,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 239
     const-string v1, "PPS_PrivateModeManager"
 
     const-string/jumbo v2, "unBindPrivateModeManager called"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     :try_start_0
     sget-object v1, Lcom/samsung/android/privatemode/PrivateModeManager;->mContext:Landroid/content/Context;
 
@@ -689,42 +634,35 @@
 
     if-eqz v1, :cond_0
 
-    .line 242
     const-string v1, "PPS_PrivateModeManager"
 
     const-string/jumbo v2, "unbindService called"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 243
     sget-object v1, Lcom/samsung/android/privatemode/PrivateModeManager;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/samsung/android/privatemode/PrivateModeManager;->mServiceConn:Landroid/content/ServiceConnection;
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 244
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/samsung/android/privatemode/PrivateModeManager;->mIsServiceBind:Z
 
-    .line 245
     const/4 v1, 0x0
 
     sput-object v1, Lcom/samsung/android/privatemode/PrivateModeManager;->mService:Lcom/samsung/android/privatemode/IPrivateModeManager;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 250
     :cond_0
     :goto_0
     return-void
 
-    .line 247
     :catch_0
     move-exception v0
 
-    .line 248
     .local v0, "e":Ljava/lang/Exception;
     const-string/jumbo v1, "unBindPrivateModeManager"
 
@@ -739,19 +677,16 @@
     .locals 4
 
     .prologue
-    .line 116
     const-string v1, "PPS_PrivateModeManager"
 
     const-string v2, "====== binderDied ====="
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     sget-object v1, Lcom/samsung/android/privatemode/PrivateModeManager;->mPrivateClient:Lcom/samsung/android/privatemode/IPrivateModeClient;
 
     if-eqz v1, :cond_0
 
-    .line 119
     :try_start_0
     const-string v1, "PPS_PrivateModeManager"
 
@@ -759,7 +694,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 120
     sget-object v1, Lcom/samsung/android/privatemode/PrivateModeManager;->mPrivateClient:Lcom/samsung/android/privatemode/IPrivateModeClient;
 
     const/16 v2, 0x15
@@ -770,16 +704,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 125
     :cond_0
     :goto_0
     return-void
 
-    .line 121
     :catch_0
     move-exception v0
 
-    .line 122
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -791,7 +722,6 @@
     .param p1, "client"    # Lcom/samsung/android/privatemode/IPrivateModeClient;
 
     .prologue
-    .line 295
     const/4 v0, 0x0
 
     return-object v0
@@ -804,17 +734,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 268
     if-nez p1, :cond_0
 
-    .line 269
     const-string/jumbo v1, "registerClient"
 
     const-string v2, "listener is null"
 
     invoke-direct {p0, v1, v0, v2}, Lcom/samsung/android/privatemode/PrivateModeManager;->logExceptionInDetail(Ljava/lang/String;Ljava/lang/Exception;Ljava/lang/String;)V
 
-    .line 272
     :goto_0
     return-object v0
 
@@ -835,7 +762,6 @@
     .param p1, "token"    # Landroid/os/IBinder;
 
     .prologue
-    .line 353
     const/4 v0, 0x0
 
     return v0
@@ -847,7 +773,6 @@
     .param p2, "isSuccess"    # Z
 
     .prologue
-    .line 324
     const/4 v0, 0x0
 
     return v0

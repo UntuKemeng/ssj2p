@@ -49,7 +49,6 @@
 
     const/4 v3, 0x0
 
-    .line 38
     new-instance v0, Lorg/simpleframework/xml/transform/DateType;
 
     const-string v1, "FULL"
@@ -60,7 +59,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/transform/DateType;->FULL:Lorg/simpleframework/xml/transform/DateType;
 
-    .line 43
     new-instance v0, Lorg/simpleframework/xml/transform/DateType;
 
     const-string v1, "LONG"
@@ -71,7 +69,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/transform/DateType;->LONG:Lorg/simpleframework/xml/transform/DateType;
 
-    .line 48
     new-instance v0, Lorg/simpleframework/xml/transform/DateType;
 
     const-string v1, "NORMAL"
@@ -82,7 +79,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/transform/DateType;->NORMAL:Lorg/simpleframework/xml/transform/DateType;
 
-    .line 53
     new-instance v0, Lorg/simpleframework/xml/transform/DateType;
 
     const-string v1, "SHORT"
@@ -93,7 +89,6 @@
 
     sput-object v0, Lorg/simpleframework/xml/transform/DateType;->SHORT:Lorg/simpleframework/xml/transform/DateType;
 
-    .line 33
     const/4 v0, 0x4
 
     new-array v0, v0, [Lorg/simpleframework/xml/transform/DateType;
@@ -131,17 +126,14 @@
     .end annotation
 
     .prologue
-    .line 67
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 68
     new-instance v0, Lorg/simpleframework/xml/transform/DateType$DateFormat;
 
     invoke-direct {v0, p3}, Lorg/simpleframework/xml/transform/DateType$DateFormat;-><init>(Ljava/lang/String;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/transform/DateType;->format:Lorg/simpleframework/xml/transform/DateType$DateFormat;
 
-    .line 69
     return-void
 .end method
 
@@ -155,18 +147,15 @@
     .end annotation
 
     .prologue
-    .line 109
     invoke-static {p0}, Lorg/simpleframework/xml/transform/DateType;->getType(Ljava/lang/String;)Lorg/simpleframework/xml/transform/DateType;
 
     move-result-object v1
 
-    .line 110
     .local v1, "type":Lorg/simpleframework/xml/transform/DateType;
     invoke-direct {v1}, Lorg/simpleframework/xml/transform/DateType;->getFormat()Lorg/simpleframework/xml/transform/DateType$DateFormat;
 
     move-result-object v0
 
-    .line 112
     .local v0, "format":Lorg/simpleframework/xml/transform/DateType$DateFormat;
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/transform/DateType$DateFormat;->getDate(Ljava/lang/String;)Ljava/util/Date;
 
@@ -179,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-object v0, p0, Lorg/simpleframework/xml/transform/DateType;->format:Lorg/simpleframework/xml/transform/DateType$DateFormat;
 
     return-object v0
@@ -195,14 +183,12 @@
     .end annotation
 
     .prologue
-    .line 93
     sget-object v1, Lorg/simpleframework/xml/transform/DateType;->FULL:Lorg/simpleframework/xml/transform/DateType;
 
     invoke-direct {v1}, Lorg/simpleframework/xml/transform/DateType;->getFormat()Lorg/simpleframework/xml/transform/DateType$DateFormat;
 
     move-result-object v0
 
-    .line 95
     .local v0, "format":Lorg/simpleframework/xml/transform/DateType$DateFormat;
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/transform/DateType$DateFormat;->getText(Ljava/util/Date;)Ljava/lang/String;
 
@@ -216,47 +202,38 @@
     .param p0, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 126
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 128
     .local v0, "length":I
     const/16 v1, 0x17
 
     if-le v0, v1, :cond_0
 
-    .line 129
     sget-object v1, Lorg/simpleframework/xml/transform/DateType;->FULL:Lorg/simpleframework/xml/transform/DateType;
 
-    .line 137
     :goto_0
     return-object v1
 
-    .line 131
     :cond_0
     const/16 v1, 0x14
 
     if-le v0, v1, :cond_1
 
-    .line 132
     sget-object v1, Lorg/simpleframework/xml/transform/DateType;->LONG:Lorg/simpleframework/xml/transform/DateType;
 
     goto :goto_0
 
-    .line 134
     :cond_1
     const/16 v1, 0xb
 
     if-le v0, v1, :cond_2
 
-    .line 135
     sget-object v1, Lorg/simpleframework/xml/transform/DateType;->NORMAL:Lorg/simpleframework/xml/transform/DateType;
 
     goto :goto_0
 
-    .line 137
     :cond_2
     sget-object v1, Lorg/simpleframework/xml/transform/DateType;->SHORT:Lorg/simpleframework/xml/transform/DateType;
 
@@ -268,7 +245,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     const-class v0, Lorg/simpleframework/xml/transform/DateType;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -284,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 33
     sget-object v0, Lorg/simpleframework/xml/transform/DateType;->$VALUES:[Lorg/simpleframework/xml/transform/DateType;
 
     invoke-virtual {v0}, [Lorg/simpleframework/xml/transform/DateType;->clone()Ljava/lang/Object;

@@ -35,21 +35,16 @@
     .param p4, "pid"    # I
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcom/android/server/pm/PreferredIntentResolver$LogRunnable;->this$0:Lcom/android/server/pm/PreferredIntentResolver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     iput-object p2, p0, Lcom/android/server/pm/PreferredIntentResolver$LogRunnable;->mMessage:Ljava/lang/String;
 
-    .line 81
     iput p3, p0, Lcom/android/server/pm/PreferredIntentResolver$LogRunnable;->mUid:I
 
-    .line 82
     iput p4, p0, Lcom/android/server/pm/PreferredIntentResolver$LogRunnable;->mPid:I
 
-    .line 83
     return-void
 .end method
 
@@ -59,10 +54,8 @@
     .locals 8
 
     .prologue
-    .line 85
     const/4 v4, 0x0
 
-    .line 87
     .local v4, "packageName":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -73,7 +66,6 @@
 
     move-result-object v5
 
-    .line 89
     .local v5, "runingList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -93,7 +85,6 @@
 
     check-cast v2, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 90
     .local v2, "info":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v6, v2, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
@@ -101,12 +92,10 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 91
     iget-object v4, v2, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 99
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "info":Landroid/app/ActivityManager$RunningAppProcessInfo;
     .end local v5    # "runingList":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningAppProcessInfo;>;"
@@ -150,11 +139,9 @@
 
     move-result-object v3
 
-    .line 100
     .local v3, "newMsg":Ljava/lang/String;
     if-eqz v4, :cond_2
 
-    .line 101
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -177,21 +164,17 @@
 
     move-result-object v3
 
-    .line 103
     :cond_2
     const/4 v6, 0x5
 
     invoke-static {v6, v3}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 104
     return-void
 
-    .line 95
     .end local v3    # "newMsg":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 96
     .local v0, "e":Landroid/os/RemoteException;
     const-string v4, "couldn\'t find"
 

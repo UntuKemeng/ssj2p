@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 144
     iput-object p1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 147
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 164
     const-string v1, "FingerprintService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -68,12 +65,10 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     :cond_0
     :goto_0
     return-void
 
-    .line 149
     :sswitch_0
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -82,7 +77,6 @@
 
     goto :goto_0
 
-    .line 152
     :sswitch_1
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -92,7 +86,6 @@
 
     goto :goto_0
 
-    .line 155
     :sswitch_2
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
@@ -102,7 +95,6 @@
 
     move-result v0
 
-    .line 156
     .local v0, "removedUser":I
     # getter for: Lcom/android/server/fingerprint/FingerprintService;->DEBUG:Z
     invoke-static {}, Lcom/android/server/fingerprint/FingerprintService;->access$100()Z
@@ -111,7 +103,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 157
     const-string v1, "FingerprintService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -134,11 +125,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     :cond_1
     if-eqz v0, :cond_0
 
-    .line 160
     iget-object v1, p0, Lcom/android/server/fingerprint/FingerprintService$1;->this$0:Lcom/android/server/fingerprint/FingerprintService;
 
     const/4 v2, -0x1
@@ -150,7 +139,6 @@
 
     goto :goto_0
 
-    .line 147
     :sswitch_data_0
     .sparse-switch
         0xa -> :sswitch_1

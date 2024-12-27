@@ -267,7 +267,6 @@
     .locals 1
 
     .prologue
-    .line 213
     sget v0, Lcom/android/internal/telephony/RILConstants;->PREFERRED_NETWORK_MODE:I
 
     sput v0, Lcom/android/internal/telephony/Phone;->PREFERRED_NT_MODE:I

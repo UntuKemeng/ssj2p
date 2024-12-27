@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1644
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$3$1;->this$1:Lcom/samsung/android/camera/iris/SemIrisManager$3;
 
     iput-object p2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$3$1;->val$wakeLock:Landroid/os/PowerManager$WakeLock;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 1648
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$3$1;->this$1:Lcom/samsung/android/camera/iris/SemIrisManager$3;
 
@@ -54,15 +52,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1650
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$3$1;->val$wakeLock:Landroid/os/PowerManager$WakeLock;
 
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 1652
     return-void
 
-    .line 1650
     :catchall_0
     move-exception v0
 

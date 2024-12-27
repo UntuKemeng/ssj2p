@@ -12,14 +12,12 @@
     .locals 1
 
     .prologue
-    .line 45
     invoke-static {}, Lorg/simpleframework/xml/stream/ProviderFactory;->getInstance()Lorg/simpleframework/xml/stream/Provider;
 
     move-result-object v0
 
     sput-object v0, Lorg/simpleframework/xml/stream/NodeBuilder;->PROVIDER:Lorg/simpleframework/xml/stream/Provider;
 
-    .line 46
     return-void
 .end method
 
@@ -27,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 58
     sget-object v0, Lorg/simpleframework/xml/stream/NodeBuilder;->PROVIDER:Lorg/simpleframework/xml/stream/Provider;
 
     invoke-interface {v0, p0}, Lorg/simpleframework/xml/stream/Provider;->provide(Ljava/io/InputStream;)Lorg/simpleframework/xml/stream/EventReader;
@@ -67,7 +63,6 @@
     .end annotation
 
     .prologue
-    .line 71
     sget-object v0, Lorg/simpleframework/xml/stream/NodeBuilder;->PROVIDER:Lorg/simpleframework/xml/stream/Provider;
 
     invoke-interface {v0, p0}, Lorg/simpleframework/xml/stream/Provider;->provide(Ljava/io/Reader;)Lorg/simpleframework/xml/stream/EventReader;
@@ -91,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 84
     new-instance v0, Lorg/simpleframework/xml/stream/NodeReader;
 
     invoke-direct {v0, p0}, Lorg/simpleframework/xml/stream/NodeReader;-><init>(Lorg/simpleframework/xml/stream/EventReader;)V
@@ -113,7 +107,6 @@
     .end annotation
 
     .prologue
-    .line 98
     new-instance v0, Lorg/simpleframework/xml/stream/Format;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/stream/Format;-><init>()V
@@ -136,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 113
     new-instance v0, Lorg/simpleframework/xml/stream/NodeWriter;
 
     invoke-direct {v0, p0, p1}, Lorg/simpleframework/xml/stream/NodeWriter;-><init>(Ljava/io/Writer;Lorg/simpleframework/xml/stream/Format;)V

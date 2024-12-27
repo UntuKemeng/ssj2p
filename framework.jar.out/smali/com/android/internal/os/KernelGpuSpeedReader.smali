@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 40
     const-string v0, ""
 
     sput-object v0, Lcom/android/internal/os/KernelGpuSpeedReader;->mProcFile:Ljava/lang/String;
@@ -38,20 +37,16 @@
     .prologue
     const/16 v1, 0x3c
 
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-array v0, v1, [J
 
     iput-object v0, p0, Lcom/android/internal/os/KernelGpuSpeedReader;->mLastSpeedTimes:[J
 
-    .line 44
     new-array v0, v1, [J
 
     iput-object v0, p0, Lcom/android/internal/os/KernelGpuSpeedReader;->mDeltaSpeedTimes:[J
 
-    .line 47
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/sys/devices/14ac0000.mali/time_in_state"
@@ -64,12 +59,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 48
     const-string v0, "/sys/devices/14ac0000.mali/time_in_state"
 
     sput-object v0, Lcom/android/internal/os/KernelGpuSpeedReader;->mProcFile:Ljava/lang/String;
 
-    .line 49
     :cond_0
     iget-object v0, p0, Lcom/android/internal/os/KernelGpuSpeedReader;->mDeltaSpeedTimes:[J
 
@@ -77,7 +70,6 @@
 
     invoke-static {v0, v2, v3}, Ljava/util/Arrays;->fill([JJ)V
 
-    .line 50
     return-void
 .end method
 
@@ -87,7 +79,6 @@
     .locals 15
 
     .prologue
-    .line 58
     sget-object v8, Lcom/android/internal/os/KernelGpuSpeedReader;->mProcFile:Ljava/lang/String;
 
     invoke-virtual {v8}, Ljava/lang/String;->length()I
@@ -96,14 +87,11 @@
 
     if-nez v8, :cond_0
 
-    .line 59
     iget-object v8, p0, Lcom/android/internal/os/KernelGpuSpeedReader;->mDeltaSpeedTimes:[J
 
-    .line 80
     :goto_0
     return-object v8
 
-    .line 62
     :cond_0
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
@@ -121,7 +109,6 @@
     .local v2, "reader":Ljava/io/BufferedReader;
     const/4 v9, 0x0
 
-    .line 63
     :try_start_1
     new-instance v4, Landroid/text/TextUtils$SimpleStringSplitter;
 
@@ -129,11 +116,9 @@
 
     invoke-direct {v4, v8}, Landroid/text/TextUtils$SimpleStringSplitter;-><init>(C)V
 
-    .line 65
     .local v4, "splitter":Landroid/text/TextUtils$SimpleStringSplitter;
     const/4 v3, 0x0
 
-    .line 66
     .local v3, "speedIndex":I
     :goto_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -143,17 +128,14 @@
     .local v1, "line":Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 67
     invoke-virtual {v4, v1}, Landroid/text/TextUtils$SimpleStringSplitter;->setString(Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {v4}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-static {v8}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
-    .line 71
     invoke-virtual {v4}, Landroid/text/TextUtils$SimpleStringSplitter;->next()Ljava/lang/String;
 
     move-result-object v8
@@ -166,7 +148,6 @@
 
     mul-long v6, v10, v12
 
-    .line 72
     .local v6, "time":J
     iget-object v8, p0, Lcom/android/internal/os/KernelGpuSpeedReader;->mDeltaSpeedTimes:[J
 
@@ -178,7 +159,6 @@
 
     aput-wide v10, v8, v3
 
-    .line 73
     iget-object v8, p0, Lcom/android/internal/os/KernelGpuSpeedReader;->mLastSpeedTimes:[J
 
     aput-wide v6, v8, v3
@@ -186,13 +166,10 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 74
     add-int/lit8 v3, v3, 0x1
 
-    .line 75
     goto :goto_1
 
-    .line 76
     .end local v6    # "time":J
     :cond_1
     if-eqz v2, :cond_2
@@ -205,7 +182,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 80
     .end local v1    # "line":Ljava/lang/String;
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .end local v3    # "speedIndex":I
@@ -216,7 +192,6 @@
 
     goto :goto_0
 
-    .line 76
     .restart local v1    # "line":Ljava/lang/String;
     .restart local v2    # "reader":Ljava/io/BufferedReader;
     .restart local v3    # "speedIndex":I
@@ -240,7 +215,6 @@
     :catch_1
     move-exception v0
 
-    .line 77
     .local v0, "e":Ljava/io/IOException;
     const-string v8, "KernelGpuSpeedReader"
 
@@ -248,7 +222,6 @@
 
     invoke-static {v8, v9, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 78
     iget-object v8, p0, Lcom/android/internal/os/KernelGpuSpeedReader;->mDeltaSpeedTimes:[J
 
     const-wide/16 v10, 0x0
@@ -257,7 +230,6 @@
 
     goto :goto_2
 
-    .line 76
     .end local v0    # "e":Ljava/io/IOException;
     .restart local v1    # "line":Ljava/lang/String;
     .restart local v2    # "reader":Ljava/io/BufferedReader;
@@ -271,7 +243,6 @@
 
     goto :goto_2
 
-    .line 62
     .end local v1    # "line":Ljava/lang/String;
     .end local v3    # "speedIndex":I
     .end local v4    # "splitter":Landroid/text/TextUtils$SimpleStringSplitter;
@@ -283,7 +254,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 76
     :catchall_0
     move-exception v9
 

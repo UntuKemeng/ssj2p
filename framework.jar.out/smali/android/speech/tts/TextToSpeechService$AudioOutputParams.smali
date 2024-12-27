@@ -29,30 +29,24 @@
     .locals 1
 
     .prologue
-    .line 691
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 692
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;->mSessionId:I
 
-    .line 693
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;->mVolume:F
 
-    .line 694
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;->mPan:F
 
-    .line 695
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;->mAudioAttributes:Landroid/media/AudioAttributes;
 
-    .line 696
     return-void
 .end method
 
@@ -64,22 +58,16 @@
     .param p4, "audioAttributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 699
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 700
     iput p1, p0, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;->mSessionId:I
 
-    .line 701
     iput p2, p0, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;->mVolume:F
 
-    .line 702
     iput p3, p0, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;->mPan:F
 
-    .line 703
     iput-object p4, p0, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;->mAudioAttributes:Landroid/media/AudioAttributes;
 
-    .line 704
     return-void
 .end method
 
@@ -89,19 +77,15 @@
     .param p1, "isSpeech"    # Z
 
     .prologue
-    .line 709
     if-nez p0, :cond_0
 
-    .line 710
     new-instance v2, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;
 
     invoke-direct {v2}, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;-><init>()V
 
-    .line 727
     :goto_0
     return-object v2
 
-    .line 713
     :cond_0
     const-string v2, "audioAttributes"
 
@@ -111,11 +95,9 @@
 
     check-cast v0, Landroid/media/AudioAttributes;
 
-    .line 716
     .local v0, "audioAttributes":Landroid/media/AudioAttributes;
     if-nez v0, :cond_1
 
-    .line 717
     const-string/jumbo v2, "streamType"
 
     const/4 v3, 0x3
@@ -124,7 +106,6 @@
 
     move-result v1
 
-    .line 719
     .local v1, "streamType":I
     new-instance v2, Landroid/media/AudioAttributes$Builder;
 
@@ -147,7 +128,6 @@
 
     move-result-object v0
 
-    .line 727
     .end local v1    # "streamType":I
     :cond_1
     new-instance v2, Landroid/speech/tts/TextToSpeechService$AudioOutputParams;
@@ -180,7 +160,6 @@
 
     goto :goto_0
 
-    .line 719
     .restart local v1    # "streamType":I
     :cond_2
     const/4 v2, 0x4

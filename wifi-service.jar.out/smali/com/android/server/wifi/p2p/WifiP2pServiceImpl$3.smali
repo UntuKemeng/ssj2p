@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 760
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$3;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 763
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$3;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     const/4 v1, 0x1
@@ -47,7 +45,6 @@
     # setter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mIsBootCompleteForLogging:Z
     invoke-static {v0, v1}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->access$602(Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;Z)Z
 
-    .line 764
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$3;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     # getter for: Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;->mP2pStateMachine:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;
@@ -59,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$P2pStateMachine;->sendMessage(I)V
 
-    .line 765
     return-void
 .end method

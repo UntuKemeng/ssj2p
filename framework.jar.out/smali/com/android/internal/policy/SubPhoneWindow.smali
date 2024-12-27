@@ -56,53 +56,42 @@
 
     const/4 v7, 0x0
 
-    .line 75
     invoke-direct {p0, p1}, Lcom/android/internal/policy/PhoneWindow;-><init>(Landroid/content/Context;)V
 
-    .line 63
     iput-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mActivity:Landroid/app/Activity;
 
-    .line 66
     iput-boolean v7, p0, Lcom/android/internal/policy/SubPhoneWindow;->mHasStackFocus:Z
 
-    .line 67
     iput-boolean v7, p0, Lcom/android/internal/policy/SubPhoneWindow;->mIsBorder:Z
 
-    .line 69
     iput-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mToken:Landroid/os/IBinder;
 
-    .line 71
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMinStackBoundForPort:Landroid/graphics/Rect;
 
-    .line 72
     new-instance v5, Landroid/graphics/Rect;
 
     invoke-direct {v5}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMinStackBoundForLand:Landroid/graphics/Rect;
 
-    .line 76
     iput-object p1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mContext:Landroid/content/Context;
 
-    .line 77
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mContext:Landroid/content/Context;
 
     instance-of v5, v5, Landroid/app/Activity;
 
     if-eqz v5, :cond_0
 
-    .line 78
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mContext:Landroid/content/Context;
 
     check-cast v5, Landroid/app/Activity;
 
     iput-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mActivity:Landroid/app/Activity;
 
-    .line 80
     :cond_0
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mContext:Landroid/content/Context;
 
@@ -116,19 +105,16 @@
 
     iput-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
 
-    .line 83
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mActivity:Landroid/app/Activity;
 
     if-eqz v5, :cond_3
 
-    .line 84
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v5}, Landroid/app/Activity;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v4
 
-    .line 85
     .local v4, "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     new-instance v5, Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -136,7 +122,6 @@
 
     iput-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
-    .line 86
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v5}, Landroid/app/Activity;->getActivityToken()Landroid/os/IBinder;
@@ -145,7 +130,6 @@
 
     iput-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mToken:Landroid/os/IBinder;
 
-    .line 90
     .end local v4    # "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :goto_0
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -166,16 +150,13 @@
 
     if-eqz v5, :cond_1
 
-    .line 91
     iput-boolean v9, p0, Lcom/android/internal/policy/SubPhoneWindow;->mIsBorder:Z
 
-    .line 95
     :cond_1
     new-instance v1, Landroid/graphics/Point;
 
     invoke-direct {v1}, Landroid/graphics/Point;-><init>()V
 
-    .line 96
     .local v1, "displaySize":Landroid/graphics/Point;
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
@@ -185,13 +166,11 @@
 
     move-result-object v0
 
-    .line 97
     .local v0, "display":Landroid/view/Display;
     if-eqz v0, :cond_2
 
     invoke-virtual {v0, v1}, Landroid/view/Display;->getSize(Landroid/graphics/Point;)V
 
-    .line 98
     :cond_2
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mContext:Landroid/content/Context;
 
@@ -205,7 +184,6 @@
 
     move-result v2
 
-    .line 100
     .local v2, "floatingMinimumSizeRatioPercentage":I
     new-instance v3, Landroid/graphics/Rect;
 
@@ -231,7 +209,6 @@
 
     invoke-direct {v3, v7, v7, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 102
     .local v3, "minSize":Landroid/graphics/Rect;
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mContext:Landroid/content/Context;
 
@@ -247,12 +224,10 @@
 
     if-ne v5, v9, :cond_4
 
-    .line 103
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMinStackBoundForPort:Landroid/graphics/Rect;
 
     invoke-virtual {v5, v3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 104
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMinStackBoundForLand:Landroid/graphics/Rect;
 
     iget v6, v3, Landroid/graphics/Rect;->left:I
@@ -277,11 +252,9 @@
 
     invoke-virtual {v5, v6, v7, v8, v9}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 111
     :goto_1
     return-void
 
-    .line 88
     .end local v0    # "display":Landroid/view/Display;
     .end local v1    # "displaySize":Landroid/graphics/Point;
     .end local v2    # "floatingMinimumSizeRatioPercentage":I
@@ -295,7 +268,6 @@
 
     goto :goto_0
 
-    .line 107
     .restart local v0    # "display":Landroid/view/Display;
     .restart local v1    # "displaySize":Landroid/graphics/Point;
     .restart local v2    # "floatingMinimumSizeRatioPercentage":I
@@ -325,7 +297,6 @@
 
     invoke-virtual {v5, v6, v7, v8, v9}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 109
     iget-object v5, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMinStackBoundForLand:Landroid/graphics/Rect;
 
     invoke-virtual {v5, v3}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
@@ -338,7 +309,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/SubPhoneWindow;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     return-object v0
@@ -349,7 +319,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/SubPhoneWindow;
 
     .prologue
-    .line 56
     invoke-direct {p0}, Lcom/android/internal/policy/SubPhoneWindow;->forceHideInputMethod()Z
 
     move-result v0
@@ -362,7 +331,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/SubPhoneWindow;
 
     .prologue
-    .line 56
     iget-boolean v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mIsBorder:Z
 
     return v0
@@ -374,7 +342,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 56
     iput-boolean p1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mIsBorder:Z
 
     return p1
@@ -385,7 +352,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/SubPhoneWindow;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mBorder:Lcom/android/internal/policy/multiwindow/Border;
 
     return-object v0
@@ -396,7 +362,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/SubPhoneWindow;
 
     .prologue
-    .line 56
     invoke-direct {p0}, Lcom/android/internal/policy/SubPhoneWindow;->getStackBoxBounds()Landroid/graphics/Rect;
 
     move-result-object v0
@@ -409,7 +374,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/SubPhoneWindow;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMinStackBoundForPort:Landroid/graphics/Rect;
 
     return-object v0
@@ -420,7 +384,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/SubPhoneWindow;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMinStackBoundForLand:Landroid/graphics/Rect;
 
     return-object v0
@@ -431,7 +394,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/SubPhoneWindow;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mToken:Landroid/os/IBinder;
 
     return-object v0
@@ -442,7 +404,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/SubPhoneWindow;
 
     .prologue
-    .line 56
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
 
     return-object v0
@@ -452,21 +413,17 @@
     .locals 2
 
     .prologue
-    .line 353
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 354
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_0
 
-    .line 355
     invoke-virtual {v0}, Landroid/view/inputmethod/InputMethodManager;->forceHideSoftInput()Z
 
     move-result v1
 
-    .line 357
     :goto_0
     return v1
 
@@ -480,7 +437,6 @@
     .locals 2
 
     .prologue
-    .line 308
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
 
     iget-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mToken:Landroid/os/IBinder;
@@ -496,7 +452,6 @@
     .locals 2
 
     .prologue
-    .line 335
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     invoke-virtual {v0}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isCascade()Z
@@ -541,47 +496,39 @@
     .param p1, "focus"    # Z
 
     .prologue
-    .line 339
     iget-boolean v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mHasStackFocus:Z
 
     if-ne v0, p1, :cond_1
 
-    .line 350
     :cond_0
     :goto_0
     return-void
 
-    .line 342
     :cond_1
     iput-boolean p1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mHasStackFocus:Z
 
-    .line 343
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mBorder:Lcom/android/internal/policy/multiwindow/Border;
 
     if-eqz v0, :cond_0
 
-    .line 344
     iget-object v0, p0, Lcom/android/internal/policy/SubPhoneWindow;->mBorder:Lcom/android/internal/policy/multiwindow/Border;
 
     iget-boolean v1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mHasStackFocus:Z
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/multiwindow/Border;->setFocus(Z)V
 
-    .line 345
     invoke-virtual {p0}, Lcom/android/internal/policy/SubPhoneWindow;->peekDecorView()Landroid/view/View;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 346
     invoke-virtual {p0}, Lcom/android/internal/policy/SubPhoneWindow;->peekDecorView()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/view/View;->requestLayout()V
 
-    .line 347
     invoke-virtual {p0}, Lcom/android/internal/policy/SubPhoneWindow;->peekDecorView()Landroid/view/View;
 
     move-result-object v0
@@ -598,10 +545,8 @@
     .param p1, "focus"    # Z
 
     .prologue
-    .line 331
     invoke-direct {p0, p1}, Lcom/android/internal/policy/SubPhoneWindow;->setStackFocus(Z)V
 
-    .line 332
     return-void
 .end method
 
@@ -609,12 +554,10 @@
     .locals 4
 
     .prologue
-    .line 115
     iget-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mBorder:Lcom/android/internal/policy/multiwindow/Border;
 
     if-nez v1, :cond_0
 
-    .line 116
     iget-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mContext:Landroid/content/Context;
 
     const-string/jumbo v2, "window"
@@ -625,11 +568,9 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 118
     .local v0, "wm":Landroid/view/WindowManager;
     if-eqz v0, :cond_0
 
-    .line 119
     new-instance v1, Lcom/android/internal/policy/multiwindow/Border;
 
     iget-object v2, p0, Lcom/android/internal/policy/SubPhoneWindow;->mContext:Landroid/content/Context;
@@ -638,7 +579,6 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mBorder:Lcom/android/internal/policy/multiwindow/Border;
 
-    .line 123
     .end local v0    # "wm":Landroid/view/WindowManager;
     :cond_0
     new-instance v1, Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView;
@@ -658,13 +598,10 @@
     .param p2, "notifyReason"    # I
 
     .prologue
-    .line 313
     invoke-super {p0, p1, p2}, Lcom/android/internal/policy/PhoneWindow;->onMultiWindowStyleChanged(Lcom/samsung/android/multiwindow/MultiWindowStyle;I)V
 
-    .line 314
     const/4 v0, 0x0
 
-    .line 315
     .local v0, "doInvalidate":Z
     iget-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -678,28 +615,23 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 316
     const/4 v0, 0x1
 
-    .line 318
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     invoke-virtual {v1, p1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setTo(Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 319
     invoke-direct {p0}, Lcom/android/internal/policy/SubPhoneWindow;->isCascadeScaledWindow()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 320
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/policy/SubPhoneWindow;->mIsBorder:Z
 
-    .line 324
     :goto_0
     if-eqz v0, :cond_1
 
@@ -709,18 +641,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 325
     invoke-virtual {p0}, Lcom/android/internal/policy/SubPhoneWindow;->peekDecorView()Landroid/view/View;
 
     move-result-object v1
 
     invoke-virtual {v1}, Landroid/view/View;->invalidate()V
 
-    .line 327
     :cond_1
     return-void
 
-    .line 322
     :cond_2
     const/4 v1, 0x0
 

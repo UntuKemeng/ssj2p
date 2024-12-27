@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1526
     iput-object p1, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,53 +40,44 @@
     .prologue
     const/16 v5, 0x3e9
 
-    .line 1532
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->maybeRefreshTrustedTime()V
 
-    .line 1533
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v3, v2, Lcom/android/server/net/NetworkPolicyManagerService;->mRulesLock:Ljava/lang/Object;
 
     monitor-enter v3
 
-    .line 1534
     :try_start_0
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->ensureActiveMobilePolicyLocked()V
     invoke-static {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->access$1200(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
-    .line 1535
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->ensureActiveEntPolicyLocked()V
     invoke-static {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->access$1300(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
-    .line 1536
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->normalizePoliciesLocked()V
     invoke-static {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->access$1400(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
-    .line 1537
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkEnabledLocked()V
 
-    .line 1538
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNetworkRulesLocked()V
 
-    .line 1539
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->updateNotificationsLocked()V
 
-    .line 1540
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v2
@@ -98,7 +88,6 @@
 
     move-result-object v0
 
-    .line 1541
     .local v0, "cscValues":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -110,19 +99,16 @@
 
     if-eqz v2, :cond_0
 
-    .line 1542
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # invokes: Lcom/android/server/net/NetworkPolicyManagerService;->updateRulesForScreenLocked()V
     invoke-static {v2}, Lcom/android/server/net/NetworkPolicyManagerService;->access$1500(Lcom/android/server/net/NetworkPolicyManagerService;)V
 
-    .line 1544
     :cond_0
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1546
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mRoamingReduction:Z
@@ -132,7 +118,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1547
     const-string/jumbo v2, "networkInfo"
 
     invoke-virtual {p2, v2}, Landroid/content/Intent;->getParcelableExtra(Ljava/lang/String;)Landroid/os/Parcelable;
@@ -141,11 +126,9 @@
 
     check-cast v1, Landroid/net/NetworkInfo;
 
-    .line 1548
     .local v1, "networkInfo":Landroid/net/NetworkInfo;
     if-eqz v1, :cond_1
 
-    .line 1549
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v2
@@ -154,7 +137,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 1550
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     # getter for: Lcom/android/server/net/NetworkPolicyManagerService;->mWifiConnected:Z
@@ -170,14 +152,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 1551
     const-string v2, "NetworkPolicy"
 
     const-string/jumbo v3, "wifi is connected"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1552
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnected()Z
@@ -187,7 +167,6 @@
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->mWifiConnected:Z
     invoke-static {v2, v3}, Lcom/android/server/net/NetworkPolicyManagerService;->access$1602(Lcom/android/server/net/NetworkPolicyManagerService;Z)Z
 
-    .line 1553
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v2, v2, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -198,13 +177,11 @@
 
     invoke-virtual {v2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1563
     .end local v1    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_1
     :goto_0
     return-void
 
-    .line 1544
     .end local v0    # "cscValues":Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -216,7 +193,6 @@
 
     throw v2
 
-    .line 1554
     .restart local v0    # "cscValues":Ljava/lang/String;
     .restart local v1    # "networkInfo":Landroid/net/NetworkInfo;
     :cond_2
@@ -235,14 +211,12 @@
 
     if-nez v2, :cond_1
 
-    .line 1555
     const-string v2, "NetworkPolicy"
 
     const-string/jumbo v3, "wifi is disconnected"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1556
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     invoke-virtual {v1}, Landroid/net/NetworkInfo;->isConnected()Z
@@ -252,7 +226,6 @@
     # setter for: Lcom/android/server/net/NetworkPolicyManagerService;->mWifiConnected:Z
     invoke-static {v2, v3}, Lcom/android/server/net/NetworkPolicyManagerService;->access$1602(Lcom/android/server/net/NetworkPolicyManagerService;Z)Z
 
-    .line 1557
     iget-object v2, p0, Lcom/android/server/net/NetworkPolicyManagerService$15;->this$0:Lcom/android/server/net/NetworkPolicyManagerService;
 
     iget-object v2, v2, Lcom/android/server/net/NetworkPolicyManagerService;->mHandler:Landroid/os/Handler;

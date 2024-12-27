@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 1792
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iput-object p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->val$admin:Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
@@ -47,32 +46,26 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1795
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     monitor-enter v9
 
-    .line 1797
     :try_start_0
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->val$admin:Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     iget v0, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowBluetoothMode:I
 
-    .line 1798
     .local v0, "btPolicyOld":I
     const/4 v3, 0x0
 
-    .line 1799
     .local v3, "isBTChanged":Z
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->val$admin:Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     iget-boolean v7, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowWifi:Z
 
-    .line 1800
     .local v7, "wifiPolicyOld":Z
     const/4 v4, 0x0
 
-    .line 1802
     .local v4, "isWifiChanged":Z
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->val$admin:Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
@@ -84,7 +77,6 @@
 
     move-result v6
 
-    .line 1803
     .local v6, "userHandle":I
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -92,7 +84,6 @@
 
     move-result-object v5
 
-    .line 1804
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->val$admin:Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
@@ -104,7 +95,6 @@
 
     move-result v1
 
-    .line 1806
     .local v1, "doProxyCleanup":Z
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -112,7 +102,6 @@
 
     invoke-virtual {v8, v10}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1807
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminMap:Ljava/util/HashMap;
 
     iget-object v10, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->val$adminReceiver:Landroid/content/ComponentName;
@@ -121,7 +110,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1812
     :try_start_1
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -137,7 +125,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1822
     :goto_0
     :try_start_2
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
@@ -157,27 +144,22 @@
 
     if-eqz v8, :cond_0
 
-    .line 1823
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     # invokes: Lcom/android/server/devicepolicy/DevicePolicyManagerService;->resetAppPolicies(I)V
     invoke-static {v8, v6}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->access$700(Lcom/android/server/devicepolicy/DevicePolicyManagerService;I)V
 
-    .line 1827
     :cond_0
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v8, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->validatePasswordOwnerLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 1828
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v8, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 1829
     if-eqz v1, :cond_1
 
-    .line 1830
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     iget-object v10, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
@@ -189,7 +171,6 @@
     # invokes: Lcom/android/server/devicepolicy/DevicePolicyManagerService;->resetGlobalProxyLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
     invoke-static {v8, v10}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->access$800(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 1834
     :cond_1
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -203,7 +184,6 @@
 
     const/4 v3, 0x1
 
-    .line 1835
     :goto_1
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
@@ -217,14 +197,12 @@
 
     const/4 v4, 0x1
 
-    .line 1836
     :goto_2
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     # invokes: Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
     invoke-static {v8, v6, v3, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->access$900(Lcom/android/server/devicepolicy/DevicePolicyManagerService;IZZ)V
 
-    .line 1839
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8}, Ljava/util/ArrayList;->size()I
@@ -233,37 +211,30 @@
 
     if-nez v8, :cond_2
 
-    .line 1840
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     const-string v10, "device_policies_backup.xml"
 
     invoke-virtual {v8, v10, v6}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->deleteBackupFile(Ljava/lang/String;I)V
 
-    .line 1842
     :cond_2
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->this$0:Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     invoke-virtual {v8, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateMaximumTimeToLockLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 1843
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mRemovingAdmins:Ljava/util/ArrayList;
 
     iget-object v10, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;->val$adminReceiver:Landroid/content/ComponentName;
 
     invoke-virtual {v8, v10}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1844
     monitor-exit v9
 
-    .line 1845
     return-void
 
-    .line 1813
     :catch_0
     move-exception v2
 
-    .line 1814
     .local v2, "e":Landroid/os/RemoteException;
     const-string v8, "DevicePolicyManagerService"
 
@@ -293,7 +264,6 @@
 
     goto :goto_0
 
-    .line 1844
     .end local v0    # "btPolicyOld":I
     .end local v1    # "doProxyCleanup":Z
     .end local v2    # "e":Landroid/os/RemoteException;
@@ -311,7 +281,6 @@
 
     throw v8
 
-    .line 1834
     .restart local v0    # "btPolicyOld":I
     .restart local v1    # "doProxyCleanup":Z
     .restart local v3    # "isBTChanged":Z
@@ -324,7 +293,6 @@
 
     goto :goto_1
 
-    .line 1835
     :cond_4
     const/4 v4, 0x0
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 806
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider$7;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "location"    # Landroid/telephony/CellLocation;
 
     .prologue
-    .line 809
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider$7;->this$0:Lcom/android/server/location/GpsLocationProvider;
 
     # setter for: Lcom/android/server/location/GpsLocationProvider;->mCellLocation:Landroid/telephony/CellLocation;
     invoke-static {v0, p1}, Lcom/android/server/location/GpsLocationProvider;->access$2002(Lcom/android/server/location/GpsLocationProvider;Landroid/telephony/CellLocation;)Landroid/telephony/CellLocation;
 
-    .line 810
     return-void
 .end method

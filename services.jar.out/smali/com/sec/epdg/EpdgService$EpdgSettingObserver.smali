@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 2386
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
-    .line 2387
     invoke-direct {p0, p2}, Lcom/sec/epdg/EpdgContentObserverBase;-><init>(Landroid/os/Handler;)V
 
-    .line 2388
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2392
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # getter for: Lcom/sec/epdg/EpdgService;->mWifiOnUri:Landroid/net/Uri;
@@ -58,7 +54,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2396
     # getter for: Lcom/sec/epdg/EpdgService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1700()Landroid/content/Context;
 
@@ -74,7 +69,6 @@
 
     move-result v0
 
-    .line 2398
     .local v0, "wifion":I
     const-string v1, "[EPDGService]"
 
@@ -98,10 +92,8 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2399
     if-nez v0, :cond_0
 
-    .line 2402
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->IsNeedDeregi()Z
@@ -111,7 +103,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2403
     const-string v1, "[EPDGService]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -142,7 +133,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2405
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$EpdgSettingObserver;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->sendEpdgDeregisterBroadcastIfRequired(Z)Z
@@ -152,14 +142,12 @@
 
     if-nez v1, :cond_0
 
-    .line 2406
     const-string v1, "[EPDGService]"
 
     const-string v2, "EpdgSettingObserver - do not need de-register "
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2407
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1900()Landroid/os/Handler;
 
@@ -174,13 +162,11 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2416
     .end local v0    # "wifion":I
     :cond_0
     :goto_0
     return-void
 
-    .line 2409
     .restart local v0    # "wifion":I
     :cond_1
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
@@ -212,14 +198,12 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 2411
     const-string v1, "[EPDGService]"
 
     const-string v2, "DE-registration is not required. start WIFI disconnection"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2412
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1900()Landroid/os/Handler;
 

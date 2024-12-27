@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 125
     iput-object p1, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 127
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 129
     .local v0, "action":Ljava/lang/String;
     const-string v11, "android.hardware.usb.action.USB_STATE"
 
@@ -54,7 +51,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 130
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v11
@@ -65,7 +61,6 @@
 
     move-result v3
 
-    .line 131
     .local v3, "bConnected":Z
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -77,7 +72,6 @@
 
     move-result v2
 
-    .line 132
     .local v2, "bConfigured":Z
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -89,7 +83,6 @@
 
     move-result v7
 
-    .line 133
     .local v7, "bEnabled_MTP":Z
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -101,7 +94,6 @@
 
     move-result v1
 
-    .line 134
     .local v1, "bCDFS":Z
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -113,7 +105,6 @@
 
     move-result v4
 
-    .line 135
     .local v4, "bEnable_PTP":Z
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -125,7 +116,6 @@
 
     move-result v5
 
-    .line 136
     .local v5, "bEnable_VZW_charging":Z
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -137,11 +127,9 @@
 
     move-result v6
 
-    .line 139
     .local v6, "bEnable_midi":Z
     const/4 v9, -0x1
 
-    .line 140
     .local v9, "usbMode":I
     const-string/jumbo v11, "sys.usb.config"
 
@@ -151,7 +139,6 @@
 
     move-result-object v8
 
-    .line 141
     .local v8, "config":Ljava/lang/String;
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -165,7 +152,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 143
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$100()Ljava/lang/String;
 
@@ -191,7 +177,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 144
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$100()Ljava/lang/String;
 
@@ -217,14 +202,12 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 146
     if-eqz v3, :cond_2
 
     if-eqz v2, :cond_2
 
     if-eqz v1, :cond_2
 
-    .line 147
     sget-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
     if-nez v11, :cond_1
@@ -233,7 +216,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 149
     const-string/jumbo v11, "mass_storage"
 
     invoke-virtual {v8, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -250,26 +232,21 @@
 
     if-eqz v11, :cond_1
 
-    .line 150
     :cond_0
     const/4 v11, 0x1
 
     sput-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
-    .line 151
     const/4 v10, 0x1
 
-    .line 152
     .local v10, "usbState":I
     const/16 v9, 0x7d0
 
-    .line 153
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->sendMsg(II)V
     invoke-static {v11, v10, v9}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$000(Lcom/android/server/KiesConnectivity/KiesUsbObserver;II)V
 
-    .line 154
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -279,7 +256,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 155
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -289,7 +265,6 @@
 
     invoke-virtual {v11}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->startCDFSEjectTimer()V
 
-    .line 156
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$100()Ljava/lang/String;
 
@@ -299,7 +274,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 223
     .end local v1    # "bCDFS":Z
     .end local v2    # "bConfigured":Z
     .end local v3    # "bConnected":Z
@@ -314,7 +288,6 @@
     :goto_0
     return-void
 
-    .line 160
     .restart local v1    # "bCDFS":Z
     .restart local v2    # "bConfigured":Z
     .restart local v3    # "bConnected":Z
@@ -329,7 +302,6 @@
 
     if-nez v2, :cond_3
 
-    .line 161
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -339,25 +311,20 @@
 
     if-eqz v11, :cond_1
 
-    .line 162
     const/4 v11, 0x0
 
     sput-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
-    .line 163
     const/4 v10, 0x0
 
-    .line 164
     .restart local v10    # "usbState":I
     const/16 v9, 0x7d0
 
-    .line 165
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->sendMsg(II)V
     invoke-static {v11, v10, v9}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$000(Lcom/android/server/KiesConnectivity/KiesUsbObserver;II)V
 
-    .line 166
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -367,7 +334,6 @@
 
     invoke-virtual {v11}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->stopCDFSEjectTimer()V
 
-    .line 167
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$100()Ljava/lang/String;
 
@@ -379,7 +345,6 @@
 
     goto :goto_0
 
-    .line 169
     .end local v10    # "usbState":I
     :cond_3
     if-eqz v3, :cond_4
@@ -388,7 +353,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 170
     sget-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
     if-eqz v11, :cond_1
@@ -397,25 +361,20 @@
 
     if-eqz v11, :cond_1
 
-    .line 172
     const/4 v11, 0x0
 
     sput-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
-    .line 173
     const/4 v10, 0x0
 
-    .line 174
     .restart local v10    # "usbState":I
     const/16 v9, 0x7d0
 
-    .line 175
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->sendMsg(II)V
     invoke-static {v11, v10, v9}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$000(Lcom/android/server/KiesConnectivity/KiesUsbObserver;II)V
 
-    .line 176
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -425,7 +384,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 177
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -435,7 +393,6 @@
 
     invoke-virtual {v11}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->stopCDFSEjectTimer()V
 
-    .line 178
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$100()Ljava/lang/String;
 
@@ -447,7 +404,6 @@
 
     goto :goto_0
 
-    .line 181
     .end local v10    # "usbState":I
     :cond_4
     if-eqz v3, :cond_5
@@ -456,7 +412,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 182
     sget-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
     if-eqz v11, :cond_1
@@ -465,25 +420,20 @@
 
     if-eqz v11, :cond_1
 
-    .line 184
     const/4 v11, 0x0
 
     sput-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
-    .line 185
     const/4 v10, 0x0
 
-    .line 186
     .restart local v10    # "usbState":I
     const/16 v9, 0x7d0
 
-    .line 187
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->sendMsg(II)V
     invoke-static {v11, v10, v9}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$000(Lcom/android/server/KiesConnectivity/KiesUsbObserver;II)V
 
-    .line 188
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -493,7 +443,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 189
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -503,7 +452,6 @@
 
     invoke-virtual {v11}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->stopCDFSEjectTimer()V
 
-    .line 190
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$100()Ljava/lang/String;
 
@@ -515,7 +463,6 @@
 
     goto/16 :goto_0
 
-    .line 194
     .end local v10    # "usbState":I
     :cond_5
     if-eqz v3, :cond_6
@@ -524,7 +471,6 @@
 
     if-eqz v5, :cond_6
 
-    .line 195
     sget-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
     if-eqz v11, :cond_1
@@ -533,25 +479,20 @@
 
     if-eqz v11, :cond_1
 
-    .line 197
     const/4 v11, 0x0
 
     sput-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
-    .line 198
     const/4 v10, 0x0
 
-    .line 199
     .restart local v10    # "usbState":I
     const/16 v9, 0x7d0
 
-    .line 200
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->sendMsg(II)V
     invoke-static {v11, v10, v9}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$000(Lcom/android/server/KiesConnectivity/KiesUsbObserver;II)V
 
-    .line 201
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -561,7 +502,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 202
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -571,7 +511,6 @@
 
     invoke-virtual {v11}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->stopCDFSEjectTimer()V
 
-    .line 203
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$100()Ljava/lang/String;
 
@@ -583,7 +522,6 @@
 
     goto/16 :goto_0
 
-    .line 207
     .end local v10    # "usbState":I
     :cond_6
     if-eqz v3, :cond_1
@@ -592,7 +530,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 208
     sget-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
     if-eqz v11, :cond_1
@@ -601,25 +538,20 @@
 
     if-eqz v11, :cond_1
 
-    .line 210
     const/4 v11, 0x0
 
     sput-boolean v11, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
-    .line 211
     const/4 v10, 0x0
 
-    .line 212
     .restart local v10    # "usbState":I
     const/16 v9, 0x7d0
 
-    .line 213
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # invokes: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->sendMsg(II)V
     invoke-static {v11, v10, v9}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$000(Lcom/android/server/KiesConnectivity/KiesUsbObserver;II)V
 
-    .line 214
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -629,7 +561,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 215
     iget-object v11, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;->this$0:Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
@@ -639,7 +570,6 @@
 
     invoke-virtual {v11}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->stopCDFSEjectTimer()V
 
-    .line 216
     # getter for: Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->access$100()Ljava/lang/String;
 

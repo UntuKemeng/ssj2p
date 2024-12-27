@@ -83,7 +83,6 @@
     .locals 0
 
     .prologue
-    .line 1940
     iput-object p1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -97,7 +96,6 @@
     .param p2, "x1"    # Landroid/os/DVFSHelper$1;
 
     .prologue
-    .line 1940
     invoke-direct {p0, p1}, Landroid/os/DVFSHelper$Model;-><init>(Landroid/os/DVFSHelper;)V
 
     return-void
@@ -109,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 2062
     iget v0, p0, Landroid/os/DVFSHelper$Model;->AMS_RESUME_BUS_FREQ:I
 
     return v0
@@ -121,7 +118,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2066
     iget-object v0, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     iget-object v0, v0, Landroid/os/DVFSHelper;->mSupportedCPUCoreNum:[I
@@ -138,7 +134,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 2067
     iget v0, p0, Landroid/os/DVFSHelper$Model;->AMS_RESUME_CPU_CORE:I
 
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
@@ -149,24 +144,20 @@
 
     if-le v0, v1, :cond_0
 
-    .line 2068
     iget-object v0, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     iget-object v0, v0, Landroid/os/DVFSHelper;->mSupportedCPUCoreNum:[I
 
     aget v0, v0, v2
 
-    .line 2073
     :goto_0
     return v0
 
-    .line 2070
     :cond_0
     iget v0, p0, Landroid/os/DVFSHelper$Model;->AMS_RESUME_CPU_CORE:I
 
     goto :goto_0
 
-    .line 2073
     :cond_1
     const/4 v0, -0x1
 
@@ -179,7 +170,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 2129
     iget-object v2, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     # getter for: Landroid/os/DVFSHelper;->REGION_JPN:Z
@@ -220,7 +210,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 2131
     :cond_1
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
@@ -230,12 +219,10 @@
 
     move-result v0
 
-    .line 2150
     :cond_2
     :goto_0
     return v0
 
-    .line 2132
     :cond_3
     const-string v2, "MSM8939"
 
@@ -286,7 +273,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 2134
     :cond_4
     iget v2, p0, Landroid/os/DVFSHelper$Model;->AMS_RESUME_ARM_FREQ:I
 
@@ -294,10 +280,8 @@
 
     move v0, v1
 
-    .line 2135
     goto :goto_0
 
-    .line 2137
     :cond_5
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
@@ -309,7 +293,6 @@
 
     goto :goto_0
 
-    .line 2140
     :cond_6
     iget v2, p0, Landroid/os/DVFSHelper$Model;->AMS_RESUME_ARM_FREQ:I
 
@@ -317,10 +300,8 @@
 
     move v0, v1
 
-    .line 2141
     goto :goto_0
 
-    .line 2143
     :cond_7
     iget-object v2, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
@@ -330,22 +311,18 @@
 
     move-result v0
 
-    .line 2144
     .local v0, "freq":I
     if-gtz v0, :cond_8
 
     move v0, v1
 
-    .line 2145
     goto :goto_0
 
-    .line 2147
     :cond_8
     iget v1, p0, Landroid/os/DVFSHelper$Model;->AMS_RESUME_ARM_FREQ:I
 
     if-gt v0, v1, :cond_2
 
-    .line 2150
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     iget v2, p0, Landroid/os/DVFSHelper$Model;->AMS_RESUME_ARM_FREQ:I
@@ -361,7 +338,6 @@
     .locals 1
 
     .prologue
-    .line 2058
     iget v0, p0, Landroid/os/DVFSHelper$Model;->AMS_RESUME_GPU_FREQ:I
 
     return v0
@@ -371,7 +347,6 @@
     .locals 1
 
     .prologue
-    .line 2093
     iget v0, p0, Landroid/os/DVFSHelper$Model;->APP_LAUNCH_BUS_FREQ:I
 
     return v0
@@ -383,7 +358,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2097
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     # getter for: Landroid/os/DVFSHelper;->mSupportedCPUCoreNumForSSRM:[I
@@ -406,12 +380,10 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 2098
     iget v1, p0, Landroid/os/DVFSHelper$Model;->APP_LAUNCH_CPU_CORE:I
 
     if-nez v1, :cond_1
 
-    .line 2099
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     # getter for: Landroid/os/DVFSHelper;->mSupportedCPUCoreNumForSSRM:[I
@@ -421,12 +393,10 @@
 
     aget v0, v1, v0
 
-    .line 2105
     :cond_0
     :goto_0
     return v0
 
-    .line 2100
     :cond_1
     iget v1, p0, Landroid/os/DVFSHelper$Model;->APP_LAUNCH_CPU_CORE:I
 
@@ -441,7 +411,6 @@
 
     if-le v1, v2, :cond_2
 
-    .line 2101
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     # getter for: Landroid/os/DVFSHelper;->mSupportedCPUCoreNumForSSRM:[I
@@ -453,7 +422,6 @@
 
     goto :goto_0
 
-    .line 2103
     :cond_2
     iget v0, p0, Landroid/os/DVFSHelper$Model;->APP_LAUNCH_CPU_CORE:I
 
@@ -466,7 +434,6 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 2077
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     iget-object v1, v1, Landroid/os/DVFSHelper;->mSupportedCPUFrequencyForSSRM:[I
@@ -483,17 +450,14 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 2078
     iget v1, p0, Landroid/os/DVFSHelper$Model;->APP_LAUNCH_ARM_FREQ:I
 
     if-gez v1, :cond_1
 
-    .line 2085
     :cond_0
     :goto_0
     return v0
 
-    .line 2081
     :cond_1
     iget v0, p0, Landroid/os/DVFSHelper$Model;->APP_LAUNCH_ARM_FREQ:I
 
@@ -525,7 +489,6 @@
     .locals 1
 
     .prologue
-    .line 2089
     iget v0, p0, Landroid/os/DVFSHelper$Model;->APP_LAUNCH_GPU_FREQ:I
 
     return v0
@@ -535,7 +498,6 @@
     .locals 1
 
     .prologue
-    .line 2125
     iget v0, p0, Landroid/os/DVFSHelper$Model;->BROWSER_FLING_ARM_FREQ:I
 
     return v0
@@ -545,7 +507,6 @@
     .locals 1
 
     .prologue
-    .line 2054
     iget v0, p0, Landroid/os/DVFSHelper$Model;->BROWSER_TOUCH_BUS_FREQ:I
 
     return v0
@@ -555,7 +516,6 @@
     .locals 1
 
     .prologue
-    .line 2050
     iget v0, p0, Landroid/os/DVFSHelper$Model;->BROWSER_TOUCH_ARM_FREQ:I
 
     return v0
@@ -565,7 +525,6 @@
     .locals 1
 
     .prologue
-    .line 2182
     iget v0, p0, Landroid/os/DVFSHelper$Model;->CONTACT_SCROLL_CPU_CORE:I
 
     return v0
@@ -575,7 +534,6 @@
     .locals 1
 
     .prologue
-    .line 2179
     iget v0, p0, Landroid/os/DVFSHelper$Model;->CONTACT_SCROLL_ARM_FREQ:I
 
     return v0
@@ -585,7 +543,6 @@
     .locals 3
 
     .prologue
-    .line 2168
     iget-object v0, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     # getter for: Landroid/os/DVFSHelper;->mSupportedCPUFrequency:[I
@@ -599,15 +556,12 @@
 
     if-gez v0, :cond_1
 
-    .line 2169
     :cond_0
     const/4 v0, -0x1
 
-    .line 2175
     :goto_0
     return v0
 
-    .line 2171
     :cond_1
     iget v0, p0, Landroid/os/DVFSHelper$Model;->DEVICE_WAKEUP_ARM_FREQ:I
 
@@ -628,7 +582,6 @@
 
     if-le v0, v1, :cond_3
 
-    .line 2173
     :cond_2
     invoke-virtual {p0}, Landroid/os/DVFSHelper$Model;->getAMSResumeCPUFreq()I
 
@@ -636,7 +589,6 @@
 
     goto :goto_0
 
-    .line 2175
     :cond_3
     iget-object v0, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
@@ -653,7 +605,6 @@
     .locals 1
 
     .prologue
-    .line 2024
     iget v0, p0, Landroid/os/DVFSHelper$Model;->GALLERY_TOUCH_BUS_FREQ:I
 
     return v0
@@ -663,7 +614,6 @@
     .locals 1
 
     .prologue
-    .line 2020
     iget v0, p0, Landroid/os/DVFSHelper$Model;->GALLERY_TOUCH_ARM_FREQ:I
 
     return v0
@@ -673,7 +623,6 @@
     .locals 1
 
     .prologue
-    .line 2036
     iget v0, p0, Landroid/os/DVFSHelper$Model;->LAUNCHER_TOUCH_BUS_FREQ:I
 
     return v0
@@ -685,7 +634,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2040
     iget-object v0, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     iget-object v0, v0, Landroid/os/DVFSHelper;->mSupportedCPUCoreNum:[I
@@ -702,7 +650,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 2041
     iget v0, p0, Landroid/os/DVFSHelper$Model;->LAUNCHER_TOUCH_CPU_CORE:I
 
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
@@ -713,24 +660,20 @@
 
     if-le v0, v1, :cond_0
 
-    .line 2042
     iget-object v0, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     iget-object v0, v0, Landroid/os/DVFSHelper;->mSupportedCPUCoreNum:[I
 
     aget v0, v0, v2
 
-    .line 2046
     :goto_0
     return v0
 
-    .line 2044
     :cond_0
     iget v0, p0, Landroid/os/DVFSHelper$Model;->LAUNCHER_TOUCH_CPU_CORE:I
 
     goto :goto_0
 
-    .line 2046
     :cond_1
     const/4 v0, -0x1
 
@@ -741,7 +684,6 @@
     .locals 1
 
     .prologue
-    .line 2028
     iget v0, p0, Landroid/os/DVFSHelper$Model;->LAUNCHER_TOUCH_ARM_FREQ:I
 
     return v0
@@ -751,7 +693,6 @@
     .locals 1
 
     .prologue
-    .line 2032
     iget v0, p0, Landroid/os/DVFSHelper$Model;->LAUNCHER_TOUCH_GPU_FREQ:I
 
     return v0
@@ -761,7 +702,6 @@
     .locals 1
 
     .prologue
-    .line 2117
     iget v0, p0, Landroid/os/DVFSHelper$Model;->LIST_SCROLL_BUS_FREQ:I
 
     return v0
@@ -771,7 +711,6 @@
     .locals 1
 
     .prologue
-    .line 2109
     iget v0, p0, Landroid/os/DVFSHelper$Model;->LIST_SCROLL_ARM_FREQ:I
 
     return v0
@@ -781,7 +720,6 @@
     .locals 1
 
     .prologue
-    .line 2113
     iget v0, p0, Landroid/os/DVFSHelper$Model;->LIST_SCROLL_GPU_FREQ:I
 
     return v0
@@ -791,7 +729,6 @@
     .locals 1
 
     .prologue
-    .line 2016
     iget-object v0, p0, Landroid/os/DVFSHelper$Model;->PLUS_CGB_FREQ:Ljava/lang/String;
 
     return-object v0
@@ -803,7 +740,6 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 2156
     iget-object v1, p0, Landroid/os/DVFSHelper$Model;->this$0:Landroid/os/DVFSHelper;
 
     iget-object v1, v1, Landroid/os/DVFSHelper;->mSupportedCPUFrequencyForSSRM:[I
@@ -820,17 +756,14 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 2157
     iget v1, p0, Landroid/os/DVFSHelper$Model;->ROTATION_ARM_FREQ:I
 
     if-gez v1, :cond_1
 
-    .line 2164
     :cond_0
     :goto_0
     return v0
 
-    .line 2160
     :cond_1
     iget v0, p0, Landroid/os/DVFSHelper$Model;->ROTATION_ARM_FREQ:I
 
@@ -862,7 +795,6 @@
     .locals 1
 
     .prologue
-    .line 2121
     iget v0, p0, Landroid/os/DVFSHelper$Model;->GROUP_PLAY_ARM_FREQ:I
 
     return v0
@@ -873,7 +805,6 @@
     .param p1, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 2003
     const-string v0, "Launcher_touch"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -882,14 +813,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 2004
     iget v0, p0, Landroid/os/DVFSHelper$Model;->LAUNCHER_TOUCH_BOOST_TIMEOUT:I
 
-    .line 2012
     :goto_0
     return v0
 
-    .line 2005
     :cond_0
     const-string v0, "Gallery_touch"
 
@@ -899,12 +827,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2006
     iget v0, p0, Landroid/os/DVFSHelper$Model;->GALLERY_TOUCH_BOOST_TIMEOUT:I
 
     goto :goto_0
 
-    .line 2007
     :cond_1
     const-string v0, "Gallery_touch_tail"
 
@@ -914,12 +840,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 2008
     iget v0, p0, Landroid/os/DVFSHelper$Model;->GALLERY_TOUCH_TAIL_BOOST_TIMEOUT:I
 
     goto :goto_0
 
-    .line 2009
     :cond_2
     const-string v0, "Browser_touch"
 
@@ -929,12 +853,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 2010
     iget v0, p0, Landroid/os/DVFSHelper$Model;->BROWSER_TOUCH_BOOST_TIMEOUT:I
 
     goto :goto_0
 
-    .line 2012
     :cond_3
     const/4 v0, -0x1
 

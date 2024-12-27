@@ -44,7 +44,6 @@
 
     const/4 v1, 0x0
 
-    .line 36
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v2
@@ -56,7 +55,6 @@
     :cond_0
     sput-boolean v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->DBG:Z
 
-    .line 40
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -83,7 +81,6 @@
 
     sput-object v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->BLACKLIST_ROOT:Ljava/lang/String;
 
-    .line 42
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -106,7 +103,6 @@
 
     sput-object v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->PUBKEY_PATH:Ljava/lang/String;
 
-    .line 54
     sput-boolean v1, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mIsBlocked:Z
 
     return-void
@@ -117,17 +113,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 210
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 211
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->registerObservers(Landroid/content/ContentResolver;)V
 
-    .line 212
     return-void
 .end method
 
@@ -135,7 +128,6 @@
     .locals 1
 
     .prologue
-    .line 34
     sget-boolean v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->DBG:Z
 
     return v0
@@ -145,7 +137,6 @@
     .locals 1
 
     .prologue
-    .line 34
     sget-object v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mCertBlacklistListener:Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;
 
     return-object v0
@@ -156,7 +147,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 34
     sput-boolean p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mIsBlocked:Z
 
     return p0
@@ -167,7 +157,6 @@
     .param p1, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 222
     new-instance v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$AuthenticationSettingObserver;
 
     const-string v1, "cover_authentication_blocked"
@@ -182,7 +171,6 @@
     .param p1, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 215
     new-instance v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     const-string v1, "cover_pubkey_blacklist"
@@ -203,14 +191,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 227
     invoke-direct {p0, p1}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->buildPubkeyObserver(Landroid/content/ContentResolver;)Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     move-result-object v0
 
     sput-object v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mBlacklistObserver:Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
-    .line 228
     const-string v0, "cover_pubkey_blacklist"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -221,7 +207,6 @@
 
     invoke-virtual {p1, v0, v2, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 234
     const-string v0, "cover_authentication_blocked"
 
     invoke-static {v0}, Landroid/provider/Settings$Secure;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -234,7 +219,6 @@
 
     invoke-virtual {p1, v0, v2, v1}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 239
     return-void
 .end method
 
@@ -244,7 +228,6 @@
     .locals 1
 
     .prologue
-    .line 67
     sget-boolean v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mIsBlocked:Z
 
     return v0
@@ -255,7 +238,6 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     sget-object v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mBlacklistObserver:Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     invoke-virtual {v0, p1}, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->isThisKeyBlacklisted(Ljava/lang/String;)Z
@@ -269,12 +251,10 @@
     .locals 1
 
     .prologue
-    .line 75
     sget-object v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mBlacklistObserver:Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->readFile()V
 
-    .line 76
     return-void
 .end method
 
@@ -283,9 +263,7 @@
     .param p1, "listener"    # Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;
 
     .prologue
-    .line 62
     sput-object p1, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->mCertBlacklistListener:Lcom/samsung/accessory/manager/authentication/CertBlacklister$CertBlacklistListener;
 
-    .line 63
     return-void
 .end method

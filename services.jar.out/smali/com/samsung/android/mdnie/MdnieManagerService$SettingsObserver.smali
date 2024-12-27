@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 209
     iput-object p1, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
-    .line 210
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 211
     return-void
 .end method
 
@@ -45,12 +42,10 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 215
     iget-object v0, p0, Lcom/samsung/android/mdnie/MdnieManagerService$SettingsObserver;->this$0:Lcom/samsung/android/mdnie/MdnieManagerService;
 
     # invokes: Lcom/samsung/android/mdnie/MdnieManagerService;->setting_is_changed()V
     invoke-static {v0}, Lcom/samsung/android/mdnie/MdnieManagerService;->access$600(Lcom/samsung/android/mdnie/MdnieManagerService;)V
 
-    .line 216
     return-void
 .end method

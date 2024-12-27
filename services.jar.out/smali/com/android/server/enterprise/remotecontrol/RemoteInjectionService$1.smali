@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 389
     iput-object p1, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService$1;->this$0:Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 391
     iget-object v5, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService$1;->this$0:Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;
 
     iget-object v5, v5, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;->mContext:Landroid/content/Context;
@@ -55,19 +53,16 @@
 
     check-cast v2, Landroid/os/UserManager;
 
-    .line 392
     .local v2, "um":Landroid/os/UserManager;
     invoke-virtual {v2, v6}, Landroid/os/UserManager;->getUsers(Z)Ljava/util/List;
 
     move-result-object v4
 
-    .line 393
     .local v4, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 394
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -75,7 +70,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 395
     invoke-interface {v4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -84,7 +78,6 @@
 
     iget v3, v5, Landroid/content/pm/UserInfo;->id:I
 
-    .line 398
     .local v3, "userHandle":I
     iget-object v5, p0, Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService$1;->this$0:Lcom/android/server/enterprise/remotecontrol/RemoteInjectionService;
 
@@ -107,18 +100,15 @@
 
     invoke-virtual {v7, v3, v5}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 394
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 398
     :cond_0
     const/4 v5, 0x0
 
     goto :goto_1
 
-    .line 401
     .end local v3    # "userHandle":I
     :cond_1
     return-void

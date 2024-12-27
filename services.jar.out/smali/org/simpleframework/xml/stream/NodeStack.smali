@@ -19,11 +19,9 @@
     .locals 1
 
     .prologue
-    .line 41
     const/4 v0, 0x6
 
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/stream/Stack;-><init>(I)V
 
-    .line 42
     return-void
 .end method

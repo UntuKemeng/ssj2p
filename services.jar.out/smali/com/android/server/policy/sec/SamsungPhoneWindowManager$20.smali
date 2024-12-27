@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3912
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$20;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 3914
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 3916
     .local v0, "action":Ljava/lang/String;
     const-string v2, "LGT"
 
@@ -61,12 +58,10 @@
 
     if-nez v2, :cond_1
 
-    .line 3945
     :cond_0
     :goto_0
     return-void
 
-    .line 3920
     :cond_1
     const-string v2, "com.lguplus.uvs.REQUEST_ORIENTATION"
 
@@ -76,7 +71,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3921
     const-string/jumbo v2, "orientation"
 
     const/4 v3, -0x1
@@ -85,13 +79,11 @@
 
     move-result v1
 
-    .line 3924
     .local v1, "requestedOrientation":I
     sget-boolean v2, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->SAFE_DEBUG:Z
 
     if-eqz v2, :cond_2
 
-    .line 3925
     const-string v2, "SamsungWindowManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -141,7 +133,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3928
     :cond_2
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$20;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
@@ -152,13 +143,11 @@
 
     if-eq v2, v1, :cond_0
 
-    .line 3929
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$20;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     # invokes: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->setUvsOrieatation(I)V
     invoke-static {v2, v1}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$1200(Lcom/android/server/policy/sec/SamsungPhoneWindowManager;I)V
 
-    .line 3931
     iget-object v2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$20;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v2, v2, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mHandler:Landroid/os/Handler;

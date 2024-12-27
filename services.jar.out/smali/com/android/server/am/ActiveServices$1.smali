@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 200
     iput-object p1, p0, Lcom/android/server/am/ActiveServices$1;->this$0:Lcom/android/server/am/ActiveServices;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 3
 
     .prologue
-    .line 202
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$1;->this$0:Lcom/android/server/am/ActiveServices;
 
     iget-object v1, v0, Lcom/android/server/am/ActiveServices;->mAm:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 203
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActiveServices$1;->this$0:Lcom/android/server/am/ActiveServices;
 
@@ -55,13 +52,10 @@
 
     iput-object v2, v0, Lcom/android/server/am/ActiveServices;->mLastAnrDump:Ljava/lang/String;
 
-    .line 204
     monitor-exit v1
 
-    .line 205
     return-void
 
-    .line 204
     :catchall_0
     move-exception v0
 

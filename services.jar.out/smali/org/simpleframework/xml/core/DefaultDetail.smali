@@ -19,16 +19,12 @@
     .param p2, "access"    # Lorg/simpleframework/xml/DefaultType;
 
     .prologue
-    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput-object p1, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
-    .line 63
     iput-object p2, p0, Lorg/simpleframework/xml/core/DefaultDetail;->access:Lorg/simpleframework/xml/DefaultType;
 
-    .line 64
     return-void
 .end method
 
@@ -38,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 182
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getAccess()Lorg/simpleframework/xml/DefaultType;
@@ -52,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 250
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getAnnotations()[Ljava/lang/annotation/Annotation;
@@ -66,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 262
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getConstructors()[Ljava/lang/reflect/Constructor;
@@ -89,7 +82,6 @@
     .end annotation
 
     .prologue
-    .line 238
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getFields()Ljava/util/List;
@@ -112,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 227
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getMethods()Ljava/util/List;
@@ -126,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getName()Ljava/lang/String;
@@ -140,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getNamespace()Lorg/simpleframework/xml/Namespace;
@@ -154,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 216
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getNamespaceList()Lorg/simpleframework/xml/NamespaceList;
@@ -168,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 171
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getOrder()Lorg/simpleframework/xml/Order;
@@ -182,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 193
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->access:Lorg/simpleframework/xml/DefaultType;
 
     return-object v0
@@ -192,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 158
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getRoot()Lorg/simpleframework/xml/Root;
@@ -206,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 123
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getSuper()Ljava/lang/Class;
@@ -220,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 134
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->getType()Ljava/lang/Class;
@@ -234,7 +217,6 @@
     .locals 1
 
     .prologue
-    .line 101
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->isInstantiable()Z
@@ -248,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->isPrimitive()Z
@@ -262,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->isRequired()Z
@@ -276,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Detail;->isStrict()Z
@@ -290,7 +269,6 @@
     .locals 1
 
     .prologue
-    .line 273
     iget-object v0, p0, Lorg/simpleframework/xml/core/DefaultDetail;->detail:Lorg/simpleframework/xml/core/Detail;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

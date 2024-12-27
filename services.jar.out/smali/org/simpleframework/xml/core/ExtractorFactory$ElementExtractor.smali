@@ -48,19 +48,14 @@
     .end annotation
 
     .prologue
-    .line 208
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 209
     iput-object p1, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementExtractor;->contact:Lorg/simpleframework/xml/core/Contact;
 
-    .line 210
     iput-object p3, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementExtractor;->format:Lorg/simpleframework/xml/stream/Format;
 
-    .line 211
     iput-object p2, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementExtractor;->union:Lorg/simpleframework/xml/ElementUnion;
 
-    .line 212
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 182
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ExtractorFactory$ElementExtractor;->getAnnotations()[Lorg/simpleframework/xml/Element;
 
     move-result-object v0
@@ -87,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-object v0, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementExtractor;->union:Lorg/simpleframework/xml/ElementUnion;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/ElementUnion;->value()[Lorg/simpleframework/xml/Element;
@@ -107,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 182
     check-cast p1, Lorg/simpleframework/xml/Element;
 
     .end local p1    # "x0":Ljava/lang/annotation/Annotation;
@@ -123,7 +115,6 @@
     .param p1, "element"    # Lorg/simpleframework/xml/Element;
 
     .prologue
-    .line 238
     new-instance v0, Lorg/simpleframework/xml/core/ElementLabel;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementExtractor;->contact:Lorg/simpleframework/xml/core/Contact;
@@ -145,7 +136,6 @@
     .end annotation
 
     .prologue
-    .line 182
     check-cast p1, Lorg/simpleframework/xml/Element;
 
     .end local p1    # "x0":Ljava/lang/annotation/Annotation;
@@ -161,25 +151,21 @@
     .param p1, "element"    # Lorg/simpleframework/xml/Element;
 
     .prologue
-    .line 251
     invoke-interface {p1}, Lorg/simpleframework/xml/Element;->type()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 253
     .local v0, "type":Ljava/lang/Class;
     sget-object v1, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     if-ne v0, v1, :cond_0
 
-    .line 254
     iget-object v1, p0, Lorg/simpleframework/xml/core/ExtractorFactory$ElementExtractor;->contact:Lorg/simpleframework/xml/core/Contact;
 
     invoke-interface {v1}, Lorg/simpleframework/xml/core/Contact;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 256
     .end local v0    # "type":Ljava/lang/Class;
     :cond_0
     return-object v0

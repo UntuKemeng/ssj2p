@@ -17,14 +17,12 @@
     .locals 2
 
     .prologue
-    .line 62
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v0, v1}, Lorg/simpleframework/xml/stream/CamelCaseStyle;-><init>(ZZ)V
 
-    .line 63
     return-void
 .end method
 
@@ -33,12 +31,10 @@
     .param p1, "element"    # Z
 
     .prologue
-    .line 75
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/stream/CamelCaseStyle;-><init>(ZZ)V
 
-    .line 76
     return-void
 .end method
 
@@ -48,17 +44,14 @@
     .param p2, "attribute"    # Z
 
     .prologue
-    .line 87
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     new-instance v0, Lorg/simpleframework/xml/stream/CamelCaseBuilder;
 
     invoke-direct {v0, p1, p2}, Lorg/simpleframework/xml/stream/CamelCaseBuilder;-><init>(ZZ)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/CamelCaseStyle;->style:Lorg/simpleframework/xml/stream/Style;
 
-    .line 89
     new-instance v0, Lorg/simpleframework/xml/stream/Builder;
 
     iget-object v1, p0, Lorg/simpleframework/xml/stream/CamelCaseStyle;->style:Lorg/simpleframework/xml/stream/Style;
@@ -67,7 +60,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/CamelCaseStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
-    .line 90
     return-void
 .end method
 
@@ -78,7 +70,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     iget-object v0, p0, Lorg/simpleframework/xml/stream/CamelCaseStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/stream/Builder;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
@@ -93,7 +84,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 130
     iget-object v0, p0, Lorg/simpleframework/xml/stream/CamelCaseStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/stream/Builder;->getElement(Ljava/lang/String;)Ljava/lang/String;
@@ -109,12 +99,10 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     iget-object v0, p0, Lorg/simpleframework/xml/stream/CamelCaseStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
     invoke-virtual {v0, p1, p2}, Lorg/simpleframework/xml/stream/Builder;->setAttribute(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 117
     return-void
 .end method
 
@@ -124,11 +112,9 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 143
     iget-object v0, p0, Lorg/simpleframework/xml/stream/CamelCaseStyle;->builder:Lorg/simpleframework/xml/stream/Builder;
 
     invoke-virtual {v0, p1, p2}, Lorg/simpleframework/xml/stream/Builder;->setElement(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 144
     return-void
 .end method

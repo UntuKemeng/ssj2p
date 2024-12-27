@@ -45,37 +45,28 @@
     .param p7, "blendingOpacity"    # F
 
     .prologue
-    .line 1822
     iput-object p1, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 1868
     const-string v0, "addInnerShadowTextEffect"
 
     iput-object v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->methodName:Ljava/lang/String;
 
-    .line 1823
     iput p2, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->viewId:I
 
-    .line 1824
     iput p3, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->angle:F
 
-    .line 1825
     iput p4, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->offset:F
 
-    .line 1826
     iput p5, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->softness:F
 
-    .line 1827
     iput p6, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->color:I
 
-    .line 1828
     iput p7, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->blendingOpacity:F
 
-    .line 1829
     return-void
 .end method
 
@@ -84,61 +75,52 @@
     .param p2, "parcel"    # Landroid/os/Parcel;
 
     .prologue
-    .line 1831
     iput-object p1, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->this$0:Landroid/widget/RemoteViews;
 
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/widget/RemoteViews$Action;-><init>(Landroid/widget/RemoteViews$1;)V
 
-    .line 1868
     const-string v0, "addInnerShadowTextEffect"
 
     iput-object v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->methodName:Ljava/lang/String;
 
-    .line 1832
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->viewId:I
 
-    .line 1833
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->angle:F
 
-    .line 1834
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->offset:F
 
-    .line 1835
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->softness:F
 
-    .line 1836
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->color:I
 
-    .line 1837
     invoke-virtual {p2}, Landroid/os/Parcel;->readFloat()F
 
     move-result v0
 
     iput v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->blendingOpacity:F
 
-    .line 1838
     return-void
 .end method
 
@@ -151,7 +133,6 @@
     .param p3, "handler"    # Landroid/widget/RemoteViews$OnClickHandler;
 
     .prologue
-    .line 1852
     iget v1, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->viewId:I
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -160,15 +141,12 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 1853
     .local v0, "target":Landroid/widget/TextView;
     if-nez v0, :cond_0
 
-    .line 1856
     :goto_0
     return-void
 
-    .line 1854
     :cond_0
     iget v1, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->angle:F
 
@@ -182,7 +160,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/widget/TextView;->addInnerShadowTextEffect(FFFIF)I
 
-    .line 1855
     invoke-virtual {v0}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v1
@@ -198,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 1859
     const-string v0, "AddInnerShadowAction"
 
     return-object v0
@@ -210,41 +186,33 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 1841
     const/16 v0, 0x17
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1842
     iget v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->viewId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1843
     iget v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->angle:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 1844
     iget v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->offset:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 1845
     iget v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->softness:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 1846
     iget v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->color:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 1847
     iget v0, p0, Landroid/widget/RemoteViews$AddInnerShadowAction;->blendingOpacity:F
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 1848
     return-void
 .end method

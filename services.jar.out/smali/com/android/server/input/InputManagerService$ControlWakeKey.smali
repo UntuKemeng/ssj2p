@@ -45,50 +45,40 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3950
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3943
     iput-object v3, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
-    .line 3944
     const-string v2, "/sys/class/sec/sec_key/"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyFilePath:Ljava/lang/String;
 
-    .line 3945
     const-string/jumbo v2, "wakeup_keys"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyFileName:Ljava/lang/String;
 
-    .line 3946
     const-string v2, "102,116,172"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mDefaultWakeKey:Ljava/lang/String;
 
-    .line 3948
     const-string v2, "WAKEKEY"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->WAKEKEY_TAG:Ljava/lang/String;
 
-    .line 3951
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
-    .line 3952
     iput-object v3, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mfosWakeKey:Ljava/io/FileOutputStream;
 
-    .line 3954
     const-string/jumbo v2, "ro.board.platform"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3955
     .local v1, "platform":Ljava/lang/String;
     const-string/jumbo v2, "ro.product.name"
 
@@ -96,7 +86,6 @@
 
     move-result-object v0
 
-    .line 3957
     .local v0, "buildcarrier":Ljava/lang/String;
     const-string/jumbo v2, "msm7k"
 
@@ -114,23 +103,19 @@
 
     if-eqz v2, :cond_4
 
-    .line 3959
     :cond_0
     const-string v2, "/sys/devices/platform/gpio-event/"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyFilePath:Ljava/lang/String;
 
-    .line 3960
     const-string v2, "0"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mDefaultWakeKey:Ljava/lang/String;
 
-    .line 3969
     :cond_1
     :goto_0
     if-eqz v0, :cond_3
 
-    .line 3970
     const-string/jumbo v2, "ks023g"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -147,18 +132,15 @@
 
     if-eqz v2, :cond_3
 
-    .line 3971
     :cond_2
     const-string v2, "/sys/class/sec/sec_key/"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyFilePath:Ljava/lang/String;
 
-    .line 3972
     const-string v2, "116"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mDefaultWakeKey:Ljava/lang/String;
 
-    .line 3976
     :cond_3
     const/4 v2, 0x1
 
@@ -170,18 +152,15 @@
 
     if-nez v2, :cond_6
 
-    .line 3977
     const-string v2, "WAKEKEY"
 
     const-string/jumbo v3, "makeWakeKeyRefCount in constructor returns false"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3981
     :goto_1
     return-void
 
-    .line 3961
     :cond_4
     const-string/jumbo v2, "montblanc"
 
@@ -191,19 +170,16 @@
 
     if-eqz v2, :cond_5
 
-    .line 3962
     const-string v2, "/sys/devices/platform/gpio-keys.0/"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyFilePath:Ljava/lang/String;
 
-    .line 3963
     const-string v2, "172"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mDefaultWakeKey:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 3964
     :cond_5
     const-string/jumbo v2, "msm8960"
 
@@ -213,19 +189,16 @@
 
     if-eqz v2, :cond_1
 
-    .line 3965
     const-string v2, "/sys/class/sec/sec_key/"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyFilePath:Ljava/lang/String;
 
-    .line 3966
     const-string v2, "172"
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mDefaultWakeKey:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 3980
     :cond_6
     invoke-direct {p0}, Lcom/android/server/input/InputManagerService$ControlWakeKey;->makeWakeKeyString()Ljava/lang/String;
 
@@ -242,18 +215,15 @@
     .param p2, "keycodes"    # Ljava/lang/String;
 
     .prologue
-    .line 4003
     const-string v7, ","
 
     invoke-virtual {p2, v7}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v6
 
-    .line 4005
     .local v6, "splitted_keycodes":[Ljava/lang/String;
     if-eqz p1, :cond_1
 
-    .line 4006
     move-object v0, v6
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -268,13 +238,11 @@
 
     aget-object v5, v0, v2
 
-    .line 4007
     .local v5, "splitted_keycode":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 4009
     .local v3, "keycode":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
@@ -284,7 +252,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 4010
     iget-object v7, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
     invoke-virtual {v7, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -299,7 +266,6 @@
 
     add-int/lit8 v1, v7, 0x1
 
-    .line 4014
     .local v1, "count":I
     :goto_1
     iget-object v7, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
@@ -310,7 +276,6 @@
 
     invoke-virtual {v7, v3, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4015
     const-string v7, "WAKEKEY"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -343,12 +308,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4006
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 4012
     .end local v1    # "count":I
     :cond_0
     const/4 v1, 0x1
@@ -356,7 +319,6 @@
     .restart local v1    # "count":I
     goto :goto_1
 
-    .line 4018
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "count":I
     .end local v2    # "i$":I
@@ -378,13 +340,11 @@
 
     aget-object v5, v0, v2
 
-    .line 4019
     .restart local v5    # "splitted_keycode":Ljava/lang/String;
     invoke-virtual {v5}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 4020
     .restart local v3    # "keycode":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
@@ -394,7 +354,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 4021
     iget-object v7, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
     invoke-virtual {v7, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -409,23 +368,19 @@
 
     add-int/lit8 v1, v7, -0x1
 
-    .line 4022
     .restart local v1    # "count":I
     if-gtz v1, :cond_3
 
-    .line 4023
     iget-object v7, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
     invoke-virtual {v7, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4024
     const-string v7, "WAKEKEY"
 
     const-string/jumbo v8, "keycode is removed"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4018
     .end local v1    # "count":I
     :cond_2
     :goto_3
@@ -433,7 +388,6 @@
 
     goto :goto_2
 
-    .line 4026
     .restart local v1    # "count":I
     :cond_3
     iget-object v7, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
@@ -444,7 +398,6 @@
 
     invoke-virtual {v7, v3, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4027
     const-string v7, "WAKEKEY"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -479,7 +432,6 @@
 
     goto :goto_3
 
-    .line 4032
     .end local v1    # "count":I
     .end local v3    # "keycode":Ljava/lang/String;
     .end local v5    # "splitted_keycode":Ljava/lang/String;
@@ -493,12 +445,10 @@
     .locals 9
 
     .prologue
-    .line 4036
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 4037
     .local v1, "buff":Ljava/lang/StringBuffer;
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
@@ -508,7 +458,6 @@
 
     if-nez v6, :cond_1
 
-    .line 4038
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->size()I
@@ -517,7 +466,6 @@
 
     new-array v4, v6, [Ljava/lang/String;
 
-    .line 4039
     .local v4, "keycodes":[Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
@@ -527,7 +475,6 @@
 
     invoke-interface {v6, v4}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 4040
     move-object v0, v4
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -542,7 +489,6 @@
 
     aget-object v3, v0, v2
 
-    .line 4041
     .local v3, "keycode":Ljava/lang/String;
     invoke-virtual {v1, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -552,12 +498,10 @@
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 4040
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 4043
     .end local v3    # "keycode":Ljava/lang/String;
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->length()I
@@ -568,7 +512,6 @@
 
     invoke-virtual {v1, v6}, Ljava/lang/StringBuffer;->deleteCharAt(I)Ljava/lang/StringBuffer;
 
-    .line 4044
     const-string v6, "WAKEKEY"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -595,7 +538,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4049
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v4    # "keycodes":[Ljava/lang/String;
@@ -611,7 +553,6 @@
 
     return-object v6
 
-    .line 4046
     :cond_1
     const-string v6, "WAKEKEY"
 
@@ -627,7 +568,6 @@
     .param p1, "keycodes"    # Ljava/lang/String;
 
     .prologue
-    .line 4053
     new-instance v1, Ljava/io/File;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -652,7 +592,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 4054
     .local v1, "wakekeyfile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -660,11 +599,9 @@
 
     if-nez v2, :cond_0
 
-    .line 4056
     :try_start_0
     invoke-virtual {v1}, Ljava/io/File;->createNewFile()Z
 
-    .line 4057
     const-string v2, "WAKEKEY"
 
     const-string/jumbo v3, "wakekeyfile is created"
@@ -673,7 +610,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4065
     :cond_0
     :goto_0
     :try_start_1
@@ -683,7 +619,6 @@
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mfosWakeKey:Ljava/io/FileOutputStream;
 
-    .line 4066
     const-string v2, "WAKEKEY"
 
     const-string v3, "FileOutputStream is passed"
@@ -692,14 +627,12 @@
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 4073
     :goto_1
     :try_start_2
     iget-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mfosWakeKey:Ljava/io/FileOutputStream;
 
     if-eqz v2, :cond_1
 
-    .line 4074
     iget-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mfosWakeKey:Ljava/io/FileOutputStream;
 
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
@@ -708,7 +641,6 @@
 
     invoke-virtual {v2, v3}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 4075
     const-string v2, "WAKEKEY"
 
     const-string/jumbo v3, "mfosWakeKey writing is passed"
@@ -717,7 +649,6 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 4084
     :cond_1
     :goto_2
     :try_start_3
@@ -725,17 +656,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 4085
     iget-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mfosWakeKey:Ljava/io/FileOutputStream;
 
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
 
-    .line 4086
     const/4 v2, 0x0
 
     iput-object v2, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mfosWakeKey:Ljava/io/FileOutputStream;
 
-    .line 4087
     const-string v2, "WAKEKEY"
 
     const-string v3, "closing mfosWakeKey is passed"
@@ -744,16 +672,13 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 4093
     :cond_2
     :goto_3
     return-void
 
-    .line 4058
     :catch_0
     move-exception v0
 
-    .line 4059
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "WAKEKEY"
 
@@ -761,17 +686,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4060
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 4067
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 4068
     .local v0, "e":Ljava/io/FileNotFoundException;
     const-string v2, "WAKEKEY"
 
@@ -779,17 +701,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4069
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 4077
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_2
     move-exception v0
 
-    .line 4078
     .local v0, "e":Ljava/io/IOException;
     const-string v2, "WAKEKEY"
 
@@ -797,17 +716,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4079
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 4089
     .end local v0    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v0
 
-    .line 4090
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v2, "WAKEKEY"
 
@@ -815,7 +731,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4091
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_3
@@ -829,7 +744,6 @@
     .param p2, "keycodes"    # Ljava/lang/String;
 
     .prologue
-    .line 3984
     const-string v0, "WAKEKEY"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -862,14 +776,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3986
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 3987
     const-string v1, "WAKEKEY"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -897,17 +809,14 @@
 
     invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4000
     :goto_1
     return-void
 
-    .line 3987
     :cond_0
     const-string v0, "empty"
 
     goto :goto_0
 
-    .line 3991
     :cond_1
     iget-object v0, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mWakeKeyRefCount:Ljava/util/HashMap;
 
@@ -917,14 +826,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 3992
     const/4 v0, 0x1
 
     iget-object v1, p0, Lcom/android/server/input/InputManagerService$ControlWakeKey;->mDefaultWakeKey:Ljava/lang/String;
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/input/InputManagerService$ControlWakeKey;->makeWakeKeyRefCount(ZLjava/lang/String;)Z
 
-    .line 3995
     :cond_2
     invoke-direct {p0, p1, p2}, Lcom/android/server/input/InputManagerService$ControlWakeKey;->makeWakeKeyRefCount(ZLjava/lang/String;)Z
 
@@ -932,7 +839,6 @@
 
     if-nez v0, :cond_3
 
-    .line 3996
     const-string v0, "WAKEKEY"
 
     const-string/jumbo v1, "makeWakeKeyRefCount in setWakeKeyDynamically returns false"
@@ -941,7 +847,6 @@
 
     goto :goto_1
 
-    .line 3999
     :cond_3
     invoke-direct {p0}, Lcom/android/server/input/InputManagerService$ControlWakeKey;->makeWakeKeyString()Ljava/lang/String;
 

@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 33
     const/16 v0, 0x8
 
     new-array v0, v0, [B
@@ -50,16 +49,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->messageType:I
 
-    .line 37
     iput v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->flags:I
 
-    .line 40
     return-void
 .end method
 
@@ -70,19 +65,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->messageType:I
 
-    .line 37
     iput v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->flags:I
 
-    .line 46
     iput p1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->messageType:I
 
-    .line 47
     return-void
 .end method
 
@@ -94,22 +84,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->messageType:I
 
-    .line 37
     iput v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->flags:I
 
-    .line 54
     iput p1, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->messageType:I
 
-    .line 55
     invoke-virtual {p0, p2}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->setFlags(I)V
 
-    .line 56
     return-void
 .end method
 
@@ -122,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->flags:I
 
     return v0
@@ -132,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->messageType:I
 
     return v0
@@ -143,7 +125,6 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 81
     invoke-virtual {p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->getFlags()I
 
     move-result v0
@@ -176,14 +157,12 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 73
     iget v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->flags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->flags:I
 
-    .line 74
     return-void
 .end method
 
@@ -193,7 +172,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 89
     if-eqz p2, :cond_0
 
     invoke-virtual {p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->getFlags()I
@@ -205,10 +183,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->setFlags(I)V
 
-    .line 91
     return-void
 
-    .line 89
     :cond_0
     invoke-virtual {p0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMBaseMessage;->getFlags()I
 

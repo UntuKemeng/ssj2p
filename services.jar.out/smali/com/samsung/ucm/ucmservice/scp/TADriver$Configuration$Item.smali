@@ -34,12 +34,10 @@
     .locals 1
 
     .prologue
-    .line 396
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;->this$0:Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 397
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -56,7 +54,6 @@
     .param p1, "newItem"    # I
 
     .prologue
-    .line 408
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -81,16 +78,13 @@
 
     move-result v0
 
-    .line 409
     .local v0, "entry":I
     if-ne v0, p1, :cond_0
 
-    .line 413
     .end local v0    # "entry":I
     :goto_0
     return-void
 
-    .line 412
     :cond_1
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;->mList:Ljava/util/ArrayList;
 
@@ -108,7 +102,6 @@
     .param p1, "t"    # I
 
     .prologue
-    .line 400
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/scp/TADriver$Configuration$Item;->mList:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -133,14 +126,11 @@
 
     move-result v0
 
-    .line 401
     .local v0, "entry":I
     if-ne v0, p1, :cond_0
 
-    .line 402
     const/4 v2, 0x1
 
-    .line 404
     .end local v0    # "entry":I
     :goto_0
     return v2

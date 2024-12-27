@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 505
     iput-object p1, p0, Lcom/android/server/LocationManagerService$6;->this$0:Lcom/android/server/LocationManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 508
     const-string v0, "LocationManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -65,7 +63,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 509
     iget-object v0, p0, Lcom/android/server/LocationManagerService$6;->this$0:Lcom/android/server/LocationManagerService;
 
     new-instance v1, Landroid/os/Messenger;
@@ -75,7 +72,6 @@
     # setter for: Lcom/android/server/LocationManagerService;->mService:Landroid/os/Messenger;
     invoke-static {v0, v1}, Lcom/android/server/LocationManagerService;->access$802(Lcom/android/server/LocationManagerService;Landroid/os/Messenger;)Landroid/os/Messenger;
 
-    .line 510
     iget-object v0, p0, Lcom/android/server/LocationManagerService$6;->this$0:Lcom/android/server/LocationManagerService;
 
     const/4 v1, 0x1
@@ -83,7 +79,6 @@
     # setter for: Lcom/android/server/LocationManagerService;->mBound:Z
     invoke-static {v0, v1}, Lcom/android/server/LocationManagerService;->access$902(Lcom/android/server/LocationManagerService;Z)Z
 
-    .line 511
     return-void
 .end method
 
@@ -92,7 +87,6 @@
     .param p1, "arg0"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 515
     const-string v0, "LocationManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -115,7 +109,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 516
     iget-object v0, p0, Lcom/android/server/LocationManagerService$6;->this$0:Lcom/android/server/LocationManagerService;
 
     const/4 v1, 0x0
@@ -123,7 +116,6 @@
     # setter for: Lcom/android/server/LocationManagerService;->mService:Landroid/os/Messenger;
     invoke-static {v0, v1}, Lcom/android/server/LocationManagerService;->access$802(Lcom/android/server/LocationManagerService;Landroid/os/Messenger;)Landroid/os/Messenger;
 
-    .line 517
     iget-object v0, p0, Lcom/android/server/LocationManagerService$6;->this$0:Lcom/android/server/LocationManagerService;
 
     const/4 v1, 0x0
@@ -131,6 +123,5 @@
     # setter for: Lcom/android/server/LocationManagerService;->mBound:Z
     invoke-static {v0, v1}, Lcom/android/server/LocationManagerService;->access$902(Lcom/android/server/LocationManagerService;Z)Z
 
-    .line 518
     return-void
 .end method

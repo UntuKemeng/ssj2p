@@ -30,13 +30,10 @@
     .param p1, "active"    # Ljava/util/Set;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 49
     iput-object p1, p0, Lorg/simpleframework/xml/stream/OutputStack;->active:Ljava/util/Set;
 
-    .line 50
     return-void
 .end method
 
@@ -46,19 +43,15 @@
     .locals 2
 
     .prologue
-    .line 92
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/OutputStack;->size()I
 
     move-result v0
 
-    .line 94
     .local v0, "size":I
     if-gtz v0, :cond_0
 
-    .line 95
     const/4 v1, 0x0
 
-    .line 97
     :goto_0
     return-object v1
 
@@ -87,7 +80,6 @@
     .end annotation
 
     .prologue
-    .line 141
     new-instance v0, Lorg/simpleframework/xml/stream/OutputStack$Sequence;
 
     invoke-direct {v0, p0}, Lorg/simpleframework/xml/stream/OutputStack$Sequence;-><init>(Lorg/simpleframework/xml/stream/OutputStack;)V
@@ -99,19 +91,15 @@
     .locals 2
 
     .prologue
-    .line 60
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/OutputStack;->size()I
 
     move-result v0
 
-    .line 62
     .local v0, "size":I
     if-gtz v0, :cond_0
 
-    .line 63
     const/4 v1, 0x0
 
-    .line 65
     :goto_0
     return-object v1
 
@@ -130,23 +118,19 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 124
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/stream/OutputStack;->remove(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/simpleframework/xml/stream/OutputNode;
 
-    .line 126
     .local v0, "node":Lorg/simpleframework/xml/stream/OutputNode;
     if-eqz v0, :cond_0
 
-    .line 127
     iget-object v1, p0, Lorg/simpleframework/xml/stream/OutputStack;->active:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->remove(Ljava/lang/Object;)Z
 
-    .line 129
     :cond_0
     return-object v0
 .end method
@@ -156,15 +140,12 @@
     .param p1, "value"    # Lorg/simpleframework/xml/stream/OutputNode;
 
     .prologue
-    .line 109
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputStack;->active:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 110
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/stream/OutputStack;->add(Ljava/lang/Object;)Z
 
-    .line 111
     return-object p1
 .end method
 
@@ -172,19 +153,15 @@
     .locals 2
 
     .prologue
-    .line 76
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/OutputStack;->size()I
 
     move-result v0
 
-    .line 78
     .local v0, "size":I
     if-gtz v0, :cond_0
 
-    .line 79
     const/4 v1, 0x0
 
-    .line 81
     :goto_0
     return-object v1
 

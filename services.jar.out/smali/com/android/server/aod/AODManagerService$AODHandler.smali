@@ -20,13 +20,11 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 470
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p1, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 471
     return-void
 .end method

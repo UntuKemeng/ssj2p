@@ -281,14 +281,12 @@
 
     const/4 v4, 0x1
 
-    .line 102
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->sPolicies:Ljava/util/List;
 
-    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,14 +311,12 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->DATA_VERSION_FILE:Ljava/lang/String;
 
-    .line 112
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->useOverridePolicy()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/android/server/pm/SELinuxMMAC;->USE_OVERRIDE_POLICY:Z
 
-    .line 115
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -345,7 +341,6 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->DATA_MAC_PERMISSIONS:Ljava/lang/String;
 
-    .line 119
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -370,7 +365,6 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->BASE_MAC_PERMISSIONS:Ljava/lang/String;
 
-    .line 123
     sget-boolean v0, Lcom/android/server/pm/SELinuxMMAC;->USE_OVERRIDE_POLICY:Z
 
     if-eqz v0, :cond_0
@@ -380,7 +374,6 @@
     :goto_0
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->MAC_PERMISSIONS:Ljava/lang/String;
 
-    .line 127
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -405,7 +398,6 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->DATA_SEAPP_CONTEXTS:Ljava/lang/String;
 
-    .line 134
     sget-boolean v0, Lcom/android/server/pm/SELinuxMMAC;->USE_OVERRIDE_POLICY:Z
 
     if-eqz v0, :cond_1
@@ -415,7 +407,6 @@
     :goto_1
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->SEAPP_CONTEXTS:Ljava/lang/String;
 
-    .line 138
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -444,116 +435,96 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->SEAPP_HASH_FILE:Ljava/lang/String;
 
-    .line 143
     sput-object v7, Lcom/android/server/pm/SELinuxMMAC;->sDefaultSeinfo:Ljava/lang/String;
 
-    .line 146
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->sSigSeinfo:Ljava/util/HashMap;
 
-    .line 156
     sput v5, Lcom/android/server/pm/SELinuxMMAC;->SDCARD_TYPE:I
 
-    .line 157
     sput v4, Lcom/android/server/pm/SELinuxMMAC;->BT_TYPE:I
 
-    .line 158
     sput v6, Lcom/android/server/pm/SELinuxMMAC;->RESOURCE_NUM:I
 
-    .line 174
     sput-boolean v5, Lcom/android/server/pm/SELinuxMMAC;->bbc_flag:Z
 
-    .line 236
     const/16 v0, 0x12c
 
     new-array v0, v0, [I
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->generic_containerIDTable:[I
 
-    .line 237
     const/16 v0, 0xc6
 
     new-array v0, v0, [I
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->bbc_containerIDTable:[I
 
-    .line 238
     new-array v0, v4, [I
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->irm_containerIDTable:[I
 
-    .line 239
     new-array v0, v4, [I
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->ddc_containerIDTable:[I
 
-    .line 242
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
-    .line 243
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
 
-    .line 244
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
-    .line 247
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
-    .line 248
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
-    .line 249
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
-    .line 252
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
-    .line 253
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
-    .line 254
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->SBALISTS:Ljava/util/ArrayList;
 
-    .line 257
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/io/File;
@@ -598,7 +569,6 @@
 
     sput-object v0, Lcom/android/server/pm/SELinuxMMAC;->INSTALL_POLICY_FILE:[Ljava/io/File;
 
-    .line 265
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
@@ -621,13 +591,11 @@
 
     return-void
 
-    .line 123
     :cond_0
     sget-object v0, Lcom/android/server/pm/SELinuxMMAC;->BASE_MAC_PERMISSIONS:Ljava/lang/String;
 
     goto/16 :goto_0
 
-    .line 134
     :cond_1
     const-string v0, "/seapp_contexts"
 
@@ -638,10 +606,8 @@
     .locals 0
 
     .prologue
-    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 217
     return-void
 .end method
 
@@ -658,7 +624,6 @@
     .end annotation
 
     .prologue
-    .line 885
     .local p0, "al":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     if-eqz p0, :cond_0
 
@@ -668,15 +633,12 @@
 
     if-nez v4, :cond_2
 
-    .line 889
     :cond_0
     const/4 v0, 0x0
 
-    .line 897
     :cond_1
     return-object v0
 
-    .line 891
     :cond_2
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
@@ -684,17 +646,14 @@
 
     new-array v0, v4, [I
 
-    .line 892
     .local v0, "array":[I
     invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 893
     .local v3, "itr":Ljava/util/Iterator;
     const/4 v1, 0x0
 
-    .line 894
     .local v1, "i":I
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -703,7 +662,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 895
     add-int/lit8 v2, v1, 0x1
 
     .end local v1    # "i":I
@@ -734,10 +692,8 @@
     .param p0, "pkg"    # Landroid/content/pm/PackageParser$Package;
 
     .prologue
-    .line 2467
     const/4 v2, 0x0
 
-    .line 2470
     .local v2, "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     move-object/from16 v0, p0
 
@@ -755,18 +711,15 @@
 
     aget-object v13, v1, v3
 
-    .line 2471
     .local v13, "s":Landroid/content/pm/Signature;
     if-nez v13, :cond_1
 
-    .line 2470
     :cond_0
     :goto_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 2473
     :cond_1
     sget-object v15, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
@@ -776,7 +729,6 @@
 
     if-eqz v15, :cond_0
 
-    .line 2477
     sget-object v15, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     invoke-virtual {v15, v13}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -785,7 +737,6 @@
 
     check-cast v14, Lcom/android/server/pm/Policy;
 
-    .line 2478
     .local v14, "sigSeContainerInfo":Lcom/android/server/pm/Policy;
     if-eqz v14, :cond_14
 
@@ -795,7 +746,6 @@
 
     if-eqz v15, :cond_14
 
-    .line 2479
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -816,7 +766,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 2480
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -829,7 +778,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 2481
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -842,7 +790,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 2482
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -853,7 +800,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 2483
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -864,7 +810,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->accessInfo:I
 
-    .line 2484
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -875,7 +820,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 2485
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -886,7 +830,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 2486
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -897,7 +840,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 2487
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -908,12 +850,10 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bluetoothuseridBL:Ljava/lang/String;
 
-    .line 2491
     new-instance v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v12}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 2492
     .local v12, "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     invoke-virtual {v13}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
@@ -921,14 +861,12 @@
 
     iput-object v15, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 2493
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
     iput-object v15, v12, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 2495
     sget-object v15, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v15, v12}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -937,7 +875,6 @@
 
     if-eqz v15, :cond_2
 
-    .line 2496
     sget-object v15, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v15, v12}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -947,12 +884,10 @@
     .end local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     check-cast v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 2498
     .restart local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     :cond_2
     if-eqz v2, :cond_3
 
-    .line 2499
     sget-object v15, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v15, v12}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -961,7 +896,6 @@
 
     if-eqz v15, :cond_8
 
-    .line 2500
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -974,7 +908,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 2501
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -987,7 +920,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 2502
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1000,7 +932,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 2503
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1013,7 +944,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 2504
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1026,7 +956,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->accessInfo:I
 
-    .line 2505
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1039,7 +968,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 2506
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1052,7 +980,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 2507
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1065,7 +992,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 2508
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1078,7 +1004,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bluetoothuseridBL:Ljava/lang/String;
 
-    .line 2529
     :cond_3
     :goto_2
     sget-object v15, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
@@ -1089,10 +1014,8 @@
 
     if-eqz v15, :cond_4
 
-    .line 2530
     const/4 v2, 0x0
 
-    .line 2531
     sget-object v15, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v15, v12}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1102,11 +1025,9 @@
     .end local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     check-cast v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 2532
     .restart local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     if-eqz v2, :cond_4
 
-    .line 2533
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1119,7 +1040,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->destPackageName:[Ljava/lang/String;
 
-    .line 2534
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1132,7 +1052,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 2535
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1145,7 +1064,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 2536
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1158,7 +1076,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 2553
     :cond_4
     sget-object v15, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
@@ -1168,10 +1085,8 @@
 
     if-eqz v15, :cond_5
 
-    .line 2554
     const/4 v2, 0x0
 
-    .line 2555
     sget-object v15, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v15, v12}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1181,7 +1096,6 @@
     .end local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     check-cast v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 2556
     .restart local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     if-eqz v2, :cond_5
 
@@ -1193,7 +1107,6 @@
 
     if-eqz v15, :cond_5
 
-    .line 2557
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1206,7 +1119,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->bbccategory:I
 
-    .line 2558
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1219,7 +1131,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 2559
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1232,7 +1143,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bbcseinfo:Ljava/lang/String;
 
-    .line 2560
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1241,7 +1151,6 @@
 
     if-nez v15, :cond_a
 
-    .line 2561
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1254,7 +1163,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 2587
     :cond_5
     :goto_3
     const-string/jumbo v15, "platform"
@@ -1288,22 +1196,17 @@
 
     if-eqz v15, :cond_13
 
-    .line 2589
     const/4 v5, 0x0
 
-    .line 2590
     .local v5, "isProvider":Z
     const/4 v7, 0x0
 
-    .line 2591
     .local v7, "isSyncer":Z
     const/4 v6, 0x0
 
-    .line 2592
     .local v6, "isProxy":Z
     const/4 v4, 0x0
 
-    .line 2593
     .local v4, "isFileCopier":Z
     move-object/from16 v0, p0
 
@@ -1313,16 +1216,13 @@
 
     move-result-object v10
 
-    .line 2594
     .local v10, "keys":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     if-eqz v10, :cond_13
 
-    .line 2595
     invoke-interface {v10}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v8
 
-    .line 2596
     .local v8, "it":Ljava/util/Iterator;
     :cond_7
     :goto_4
@@ -1332,14 +1232,12 @@
 
     if-eqz v15, :cond_e
 
-    .line 2597
     invoke-interface {v8}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v9
 
     check-cast v9, Ljava/lang/String;
 
-    .line 2598
     .local v9, "key":Ljava/lang/String;
     const-string v15, "RCPProviderName_"
 
@@ -1349,12 +1247,10 @@
 
     if-eqz v15, :cond_b
 
-    .line 2599
     const/4 v5, 0x1
 
     goto :goto_4
 
-    .line 2518
     .end local v4    # "isFileCopier":Z
     .end local v5    # "isProvider":Z
     .end local v6    # "isProxy":Z
@@ -1367,7 +1263,6 @@
 
     if-eqz v15, :cond_3
 
-    .line 2519
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1386,7 +1281,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 2520
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1399,7 +1293,6 @@
 
     if-eq v15, v0, :cond_9
 
-    .line 2521
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1444,7 +1337,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 2525
     :goto_5
     move-object/from16 v0, p0
 
@@ -1472,7 +1364,6 @@
 
     goto/16 :goto_2
 
-    .line 2523
     :cond_9
     move-object/from16 v0, p0
 
@@ -1488,7 +1379,6 @@
 
     goto :goto_5
 
-    .line 2563
     :cond_a
     move-object/from16 v0, p0
 
@@ -1538,7 +1428,6 @@
 
     goto/16 :goto_3
 
-    .line 2600
     .restart local v4    # "isFileCopier":Z
     .restart local v5    # "isProvider":Z
     .restart local v6    # "isProxy":Z
@@ -1555,12 +1444,10 @@
 
     if-eqz v15, :cond_c
 
-    .line 2601
     const/4 v7, 0x1
 
     goto/16 :goto_4
 
-    .line 2602
     :cond_c
     const-string/jumbo v15, "proxyName"
 
@@ -1570,12 +1457,10 @@
 
     if-eqz v15, :cond_d
 
-    .line 2603
     const/4 v6, 0x1
 
     goto/16 :goto_4
 
-    .line 2604
     :cond_d
     const-string/jumbo v15, "rcpFileCopier"
 
@@ -1585,12 +1470,10 @@
 
     if-eqz v15, :cond_7
 
-    .line 2605
     const/4 v4, 0x1
 
     goto/16 :goto_4
 
-    .line 2608
     .end local v9    # "key":Ljava/lang/String;
     :cond_e
     if-nez v5, :cond_f
@@ -1601,7 +1484,6 @@
 
     if-eqz v4, :cond_13
 
-    .line 2609
     :cond_f
     move-object/from16 v0, p0
 
@@ -1613,10 +1495,8 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->allowedAgentType:I
 
-    .line 2610
     if-eqz v5, :cond_10
 
-    .line 2612
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1631,7 +1511,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->agentType:I
 
-    .line 2614
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1646,11 +1525,9 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->allowedAgentType:I
 
-    .line 2619
     :cond_10
     if-eqz v7, :cond_11
 
-    .line 2621
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1665,7 +1542,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->agentType:I
 
-    .line 2623
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1680,11 +1556,9 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->allowedAgentType:I
 
-    .line 2628
     :cond_11
     if-eqz v6, :cond_12
 
-    .line 2630
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1699,7 +1573,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->agentType:I
 
-    .line 2632
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1714,7 +1587,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->allowedAgentType:I
 
-    .line 2633
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1729,7 +1601,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->allowedAgentType:I
 
-    .line 2634
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1744,11 +1615,9 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->allowedAgentType:I
 
-    .line 2639
     :cond_12
     if-eqz v4, :cond_13
 
-    .line 2641
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1763,7 +1632,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->agentType:I
 
-    .line 2643
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1778,7 +1646,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->allowedAgentType:I
 
-    .line 2651
     .end local v4    # "isFileCopier":Z
     .end local v5    # "isProvider":Z
     .end local v6    # "isProxy":Z
@@ -1788,14 +1655,12 @@
     :cond_13
     const/4 v15, 0x1
 
-    .line 2691
     .end local v12    # "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v13    # "s":Landroid/content/pm/Signature;
     .end local v14    # "sigSeContainerInfo":Lcom/android/server/pm/Policy;
     :goto_6
     return v15
 
-    .line 2653
     .restart local v13    # "s":Landroid/content/pm/Signature;
     .restart local v14    # "sigSeContainerInfo":Lcom/android/server/pm/Policy;
     :cond_14
@@ -1807,7 +1672,6 @@
 
     goto/16 :goto_1
 
-    .line 2657
     .end local v13    # "s":Landroid/content/pm/Signature;
     .end local v14    # "sigSeContainerInfo":Lcom/android/server/pm/Policy;
     :cond_15
@@ -1821,7 +1685,6 @@
 
     if-eqz v15, :cond_16
 
-    .line 2658
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1848,7 +1711,6 @@
 
     iput-object v15, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 2659
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1875,7 +1737,6 @@
 
     iput-object v15, v0, Landroid/content/pm/ApplicationInfo;->bbcseinfo:Ljava/lang/String;
 
-    .line 2660
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1900,7 +1761,6 @@
 
     iput v15, v0, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 2661
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1925,7 +1785,6 @@
 
     iput v15, v0, Landroid/content/pm/ApplicationInfo;->bbccategory:I
 
-    .line 2662
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1950,7 +1809,6 @@
 
     iput-object v15, v0, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 2663
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1975,7 +1833,6 @@
 
     iput-object v15, v0, Landroid/content/pm/ApplicationInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 2664
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1986,7 +1843,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 2665
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1997,7 +1853,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->accessInfo:I
 
-    .line 2666
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2008,7 +1863,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 2667
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2019,7 +1873,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 2668
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2030,7 +1883,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 2669
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2041,12 +1893,10 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bluetoothuseridBL:Ljava/lang/String;
 
-    .line 2673
     const/4 v15, 0x1
 
     goto/16 :goto_6
 
-    .line 2676
     :cond_16
     move-object/from16 v0, p0
 
@@ -2058,7 +1908,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 2677
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2069,7 +1918,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bbcseinfo:Ljava/lang/String;
 
-    .line 2678
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2080,7 +1928,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 2679
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2091,7 +1938,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->bbccategory:I
 
-    .line 2680
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2102,7 +1948,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 2681
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2113,7 +1958,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 2682
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2124,7 +1968,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 2683
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2135,7 +1978,6 @@
 
     iput v0, v15, Landroid/content/pm/ApplicationInfo;->accessInfo:I
 
-    .line 2684
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2146,7 +1988,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 2685
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2157,7 +1998,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 2686
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2168,7 +2008,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 2687
     move-object/from16 v0, p0
 
     iget-object v15, v0, Landroid/content/pm/PackageParser$Package;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -2179,7 +2018,6 @@
 
     iput-object v0, v15, Landroid/content/pm/ApplicationInfo;->bluetoothuseridBL:Ljava/lang/String;
 
-    .line 2689
     const-string v15, "SEContainer"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -2236,7 +2074,6 @@
 
     invoke-static/range {v15 .. v16}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2691
     const/4 v15, 0x0
 
     goto/16 :goto_6
@@ -2251,27 +2088,22 @@
 
     const/4 v4, 0x0
 
-    .line 1800
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1801
     .local v1, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->getSignatureFromPackage(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 1802
     new-instance v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v0}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 1803
     .local v0, "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-eqz v1, :cond_0
 
-    .line 1804
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
@@ -2280,10 +2112,8 @@
 
     iput-object v2, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 1811
     iput-object p0, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 1812
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -2292,7 +2122,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1813
     const-string v2, "SELinuxMMAC"
 
     const-string v4, " Given Package Name has a non-empty BBC Container Allow Category"
@@ -2301,11 +2130,9 @@
 
     move v2, v3
 
-    .line 1820
     :goto_0
     return v2
 
-    .line 1807
     :cond_0
     const-string v2, "SELinuxMMAC"
 
@@ -2315,10 +2142,8 @@
 
     move v2, v4
 
-    .line 1809
     goto :goto_0
 
-    .line 1815
     :cond_1
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
@@ -2328,7 +2153,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1816
     const-string v2, "SELinuxMMAC"
 
     const-string v4, " Given Package Name has a non-empty MyContainer Allow Category"
@@ -2337,10 +2161,8 @@
 
     move v2, v3
 
-    .line 1817
     goto :goto_0
 
-    .line 1819
     :cond_2
     const-string v2, "SELinuxMMAC"
 
@@ -2350,7 +2172,6 @@
 
     move v2, v4
 
-    .line 1820
     goto :goto_0
 .end method
 
@@ -2362,23 +2183,18 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 544
     new-instance v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v1}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 545
     .local v1, "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/4 v0, 0x0
 
-    .line 546
     .local v0, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     iput-object p1, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 547
     iput-object p0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 548
     sget-object v3, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -2387,7 +2203,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 552
     sget-object v3, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v3, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2397,7 +2212,6 @@
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     check-cast v0, Ljava/util/HashSet;
 
-    .line 553
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
 
@@ -2405,11 +2219,9 @@
 
     if-ne v3, v2, :cond_0
 
-    .line 558
     :goto_0
     return v2
 
-    .line 557
     :cond_0
     const-string v2, "SEContainer"
 
@@ -2417,7 +2229,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 558
     const/4 v2, 0x0
 
     goto :goto_0
@@ -2444,7 +2255,6 @@
     .end annotation
 
     .prologue
-    .line 1863
     .local p0, "oldlist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     .local p1, "newlist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const-string v3, "SELinuxMMAC"
@@ -2453,12 +2263,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1864
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 1865
     .local v0, "diffList":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -2479,7 +2287,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1866
     .local v2, "pkgName":Ljava/lang/String;
     const-string v3, "SELinuxMMAC"
 
@@ -2503,14 +2310,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1867
     invoke-virtual {p1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 1868
     const-string v3, "SELinuxMMAC"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2533,12 +2338,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1869
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1872
     .end local v2    # "pkgName":Ljava/lang/String;
     :cond_1
     invoke-virtual {p1}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
@@ -2559,7 +2362,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1873
     .restart local v2    # "pkgName":Ljava/lang/String;
     const-string v3, "SELinuxMMAC"
 
@@ -2583,14 +2385,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1874
     invoke-virtual {p0, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 1875
     const-string v3, "SELinuxMMAC"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2613,12 +2413,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1876
     invoke-virtual {v0, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 1879
     .end local v2    # "pkgName":Ljava/lang/String;
     :cond_3
     return-object v0
@@ -2630,12 +2428,10 @@
     .param p1, "certs"    # Ljava/lang/String;
 
     .prologue
-    .line 434
     const-string v8, "container"
 
     monitor-enter v8
 
-    .line 435
     const/4 v3, 0x0
 
     .local v3, "i":I
@@ -2644,7 +2440,6 @@
 
     if-ge v3, v7, :cond_4
 
-    .line 439
     :try_start_0
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->bbc_containerIDTable:[I
 
@@ -2652,23 +2447,18 @@
 
     if-nez v7, :cond_3
 
-    .line 443
     new-instance v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v0}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 444
     .local v0, "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/4 v1, 0x0
 
-    .line 445
     .local v1, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     iput-object p1, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 446
     iput-object p0, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 447
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v7, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -2677,7 +2467,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 451
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v7, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2687,7 +2476,6 @@
     .end local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     check-cast v1, Ljava/util/HashSet;
 
-    .line 468
     .restart local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :goto_1
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->bbc_containerIDTable:[I
@@ -2696,7 +2484,6 @@
 
     aput v9, v7, v3
 
-    .line 469
     add-int/lit16 v7, v3, 0x1f5
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2705,28 +2492,23 @@
 
     invoke-virtual {v1, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 470
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v7, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 471
     add-int/lit16 v6, v3, 0x1f5
 
-    .line 475
     .local v6, "newContainerID":I
     add-int/lit16 v7, v3, 0x1f5
 
     monitor-exit v8
 
-    .line 479
     .end local v0    # "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v6    # "newContainerID":I
     :goto_2
     return v7
 
-    .line 453
     .restart local v0    # "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .restart local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :cond_0
@@ -2736,7 +2518,6 @@
 
     move-result-object v5
 
-    .line 454
     .local v5, "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;>;"
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -2756,7 +2537,6 @@
 
     check-cast v2, Ljava/util/Map$Entry;
 
-    .line 455
     .local v2, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     invoke-interface {v2}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -2786,21 +2566,18 @@
 
     if-eqz v7, :cond_1
 
-    .line 459
     const-string v7, "SEContainer"
 
     const-string v9, "createBBCContainerID failed"
 
     invoke-static {v7, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
     const/4 v7, -0x1
 
     monitor-exit v8
 
     goto :goto_2
 
-    .line 480
     .end local v0    # "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v2    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
@@ -2815,7 +2592,6 @@
 
     throw v7
 
-    .line 466
     .restart local v0    # "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .restart local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .restart local v4    # "i$":Ljava/util/Iterator;
@@ -2830,7 +2606,6 @@
     .restart local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     goto :goto_1
 
-    .line 435
     .end local v0    # "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v4    # "i$":Ljava/util/Iterator;
@@ -2840,7 +2615,6 @@
 
     goto/16 :goto_0
 
-    .line 478
     :cond_4
     const-string v7, "SEContainer"
 
@@ -2848,7 +2622,6 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 479
     const/4 v7, -0x7
 
     monitor-exit v8
@@ -2864,26 +2637,21 @@
     .param p1, "certs"    # Ljava/lang/String;
 
     .prologue
-    .line 353
     const/4 v0, 0x0
 
-    .line 354
     .local v0, "bbcFlag":Z
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 355
     .local v3, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 356
     .local v2, "pid":I
     const/4 v1, 0x0
 
-    .line 357
     .local v1, "callpkgName":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -2891,37 +2659,30 @@
 
     move-result-object v1
 
-    .line 358
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->isBBCAgent()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 359
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->getBBCFlag()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 360
     const/4 v0, 0x1
 
-    .line 366
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 367
     invoke-static {p0, p1}, Lcom/android/server/pm/SELinuxMMAC;->createBBCContainerID(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v4
 
-    .line 372
     :goto_0
     return v4
 
-    .line 369
     :cond_1
     const-string v4, "com.samsung.android.irm.service"
 
@@ -2931,14 +2692,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 370
     invoke-static {p0, p1}, Lcom/android/server/pm/SELinuxMMAC;->createIRMContainerID(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v4
 
     goto :goto_0
 
-    .line 372
     :cond_2
     invoke-static {p0, p1}, Lcom/android/server/pm/SELinuxMMAC;->createMyContainerID(Ljava/lang/String;Ljava/lang/String;)I
 
@@ -2955,12 +2714,10 @@
     .prologue
     const/16 v2, 0x3ff
 
-    .line 515
     const-string v3, "container"
 
     monitor-enter v3
 
-    .line 516
     :try_start_0
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->ddc_containerIDTable:[I
 
@@ -2970,29 +2727,23 @@
 
     if-nez v4, :cond_0
 
-    .line 520
     new-instance v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v1}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 521
     .local v1, "ddcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/4 v0, 0x0
 
-    .line 522
     .local v0, "category":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     iput-object p1, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 523
     iput-object p0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 525
     new-instance v0, Ljava/util/HashSet;
 
     .end local v0    # "category":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 526
     .restart local v0    # "category":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->ddc_containerIDTable:[I
 
@@ -3002,7 +2753,6 @@
 
     aput v6, v4, v5
 
-    .line 527
     const/16 v4, 0x3ff
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3011,21 +2761,17 @@
 
     invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 528
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 533
     monitor-exit v3
 
-    .line 536
     .end local v0    # "category":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v1    # "ddcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :goto_0
     return v2
 
-    .line 535
     :cond_0
     const-string v2, "SEContainer"
 
@@ -3033,14 +2779,12 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
     const/4 v2, -0x7
 
     monitor-exit v3
 
     goto :goto_0
 
-    .line 537
     :catchall_0
     move-exception v2
 
@@ -3059,12 +2803,10 @@
     .prologue
     const/16 v2, 0x2be
 
-    .line 487
     const-string v3, "container"
 
     monitor-enter v3
 
-    .line 488
     :try_start_0
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->irm_containerIDTable:[I
 
@@ -3074,29 +2816,23 @@
 
     if-nez v4, :cond_0
 
-    .line 492
     new-instance v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v1}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 493
     .local v1, "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/4 v0, 0x0
 
-    .line 494
     .local v0, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     iput-object p1, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 495
     iput-object p0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 497
     new-instance v0, Ljava/util/HashSet;
 
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    .line 498
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->irm_containerIDTable:[I
 
@@ -3106,7 +2842,6 @@
 
     aput v6, v4, v5
 
-    .line 499
     const/16 v4, 0x2be
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3115,21 +2850,17 @@
 
     invoke-virtual {v0, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 500
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 504
     monitor-exit v3
 
-    .line 507
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v1    # "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :goto_0
     return v2
 
-    .line 506
     :cond_0
     const-string v2, "SEContainer"
 
@@ -3137,14 +2868,12 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 507
     const/4 v2, -0x7
 
     monitor-exit v3
 
     goto :goto_0
 
-    .line 508
     :catchall_0
     move-exception v2
 
@@ -3161,12 +2890,10 @@
     .param p1, "certs"    # Ljava/lang/String;
 
     .prologue
-    .line 381
     const-string v8, "container"
 
     monitor-enter v8
 
-    .line 382
     const/4 v3, 0x0
 
     .local v3, "i":I
@@ -3175,7 +2902,6 @@
 
     if-ge v3, v7, :cond_4
 
-    .line 386
     :try_start_0
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->generic_containerIDTable:[I
 
@@ -3183,23 +2909,18 @@
 
     if-nez v7, :cond_3
 
-    .line 390
     new-instance v2, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v2}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 391
     .local v2, "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/4 v0, 0x0
 
-    .line 392
     .local v0, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     iput-object p1, v2, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 393
     iput-object p0, v2, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 394
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v7, v2}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -3208,7 +2929,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 398
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v7, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -3218,7 +2938,6 @@
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     check-cast v0, Ljava/util/HashSet;
 
-    .line 415
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :goto_1
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->generic_containerIDTable:[I
@@ -3227,7 +2946,6 @@
 
     aput v9, v7, v3
 
-    .line 416
     add-int/lit16 v7, v3, 0xc9
 
     invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -3236,28 +2954,23 @@
 
     invoke-virtual {v0, v7}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 417
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v7, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 418
     add-int/lit16 v6, v3, 0xc9
 
-    .line 422
     .local v6, "newContainerID":I
     add-int/lit16 v7, v3, 0xc9
 
     monitor-exit v8
 
-    .line 426
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v2    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v6    # "newContainerID":I
     :goto_2
     return v7
 
-    .line 400
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .restart local v2    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_0
@@ -3267,7 +2980,6 @@
 
     move-result-object v5
 
-    .line 401
     .local v5, "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;>;"
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -3287,7 +2999,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 402
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -3317,21 +3028,18 @@
 
     if-eqz v7, :cond_1
 
-    .line 406
     const-string v7, "SEContainer"
 
     const-string v9, "createMyContainerID failed"
 
     invoke-static {v7, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 407
     const/4 v7, -0x1
 
     monitor-exit v8
 
     goto :goto_2
 
-    .line 427
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     .end local v2    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
@@ -3346,7 +3054,6 @@
 
     throw v7
 
-    .line 413
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .restart local v2    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .restart local v4    # "i$":Ljava/util/Iterator;
@@ -3361,7 +3068,6 @@
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     goto :goto_1
 
-    .line 382
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v2    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v4    # "i$":Ljava/util/Iterator;
@@ -3371,7 +3077,6 @@
 
     goto/16 :goto_0
 
-    .line 425
     :cond_4
     const-string v7, "SEContainer"
 
@@ -3379,7 +3084,6 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 426
     const/4 v7, -0x7
 
     monitor-exit v8
@@ -3400,14 +3104,11 @@
     .end annotation
 
     .prologue
-    .line 2786
     const/4 v0, 0x0
 
-    .line 2787
     .local v0, "fos":Ljava/io/FileOutputStream;
     const/4 v2, 0x0
 
-    .line 2789
     .local v2, "tmp":Ljava/io/File;
     :try_start_0
     const-string/jumbo v3, "seapp_hash"
@@ -3422,39 +3123,33 @@
 
     move-result-object v2
 
-    .line 2790
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/io/File;->setReadable(Z)Z
 
-    .line 2791
     new-instance v1, Ljava/io/FileOutputStream;
 
     invoke-direct {v1, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 2792
     .end local v0    # "fos":Ljava/io/FileOutputStream;
     .local v1, "fos":Ljava/io/FileOutputStream;
     :try_start_1
     invoke-virtual {v1, p1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 2793
     invoke-virtual {v1}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v3
 
     invoke-virtual {v3}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 2794
     invoke-virtual {v2, p0}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 2795
     new-instance v3, Ljava/io/IOException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -3485,7 +3180,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2798
     :catchall_0
     move-exception v3
 
@@ -3496,32 +3190,25 @@
     :goto_0
     if-eqz v2, :cond_0
 
-    .line 2799
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 2801
     :cond_0
     invoke-static {v0}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     throw v3
 
-    .line 2798
     .end local v0    # "fos":Ljava/io/FileOutputStream;
     .restart local v1    # "fos":Ljava/io/FileOutputStream;
     :cond_1
     if-eqz v2, :cond_2
 
-    .line 2799
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 2801
     :cond_2
     invoke-static {v1}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 2803
     return-void
 
-    .line 2798
     .end local v1    # "fos":Ljava/io/FileOutputStream;
     .restart local v0    # "fos":Ljava/io/FileOutputStream;
     :catchall_1
@@ -3536,18 +3223,15 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1168
     const/4 v1, 0x1
 
     new-array v0, v1, [Ljava/lang/String;
 
-    .line 1169
     .local v0, "certs":[Ljava/lang/String;
     const/4 v1, 0x0
 
     aput-object p0, v0, v1
 
-    .line 1170
     invoke-static {p1, v0}, Lcom/android/server/pm/SELinuxMMAC;->getApplicationInfo(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
@@ -3559,25 +3243,21 @@
     .locals 16
 
     .prologue
-    .line 1885
     :try_start_0
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     invoke-virtual {v13}, Ljava/util/HashMap;->clear()V
 
-    .line 1887
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v13}, Ljava/util/HashMap;->clear()V
 
-    .line 1888
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v13}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 1889
     .local v2, "bbc_mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;>;"
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -3597,7 +3277,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 1890
     .local v1, "bbc_entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -3605,7 +3284,6 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 1891
     .local v0, "bbc_containerIDs":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
     :try_end_0
@@ -3613,14 +3291,12 @@
 
     goto :goto_0
 
-    .line 1933
     .end local v0    # "bbc_containerIDs":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v1    # "bbc_entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     .end local v9    # "i$":Ljava/util/Iterator;
     :catch_0
     move-exception v3
 
-    .line 1934
     .local v3, "e":Ljava/lang/Exception;
     const-string v13, "SELinuxMMAC"
 
@@ -3630,12 +3306,10 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1940
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_0
     return-void
 
-    .line 1893
     .restart local v9    # "i$":Ljava/util/Iterator;
     :cond_1
     :try_start_1
@@ -3643,19 +3317,16 @@
 
     invoke-virtual {v13}, Ljava/util/HashMap;->clear()V
 
-    .line 1894
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v13}, Ljava/util/HashMap;->clear()V
 
-    .line 1895
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v13}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v7
 
-    .line 1896
     .local v7, "generic_mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;>;"
     invoke-interface {v7}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -3674,7 +3345,6 @@
 
     check-cast v6, Ljava/util/Map$Entry;
 
-    .line 1897
     .local v6, "generic_entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -3682,13 +3352,11 @@
 
     check-cast v5, Ljava/util/HashSet;
 
-    .line 1898
     .local v5, "generic_containerIDs":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-virtual {v5}, Ljava/util/HashSet;->clear()V
 
     goto :goto_1
 
-    .line 1900
     .end local v5    # "generic_containerIDs":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v6    # "generic_entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     :cond_2
@@ -3696,12 +3364,10 @@
 
     invoke-virtual {v13}, Ljava/util/HashMap;->clear()V
 
-    .line 1901
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v13}, Ljava/util/HashMap;->clear()V
 
-    .line 1902
     const/4 v10, 0x0
 
     .local v10, "pos":I
@@ -3714,7 +3380,6 @@
 
     if-ge v10, v13, :cond_3
 
-    .line 1903
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->SBALISTS:Ljava/util/ArrayList;
 
     invoke-virtual {v13, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3725,18 +3390,15 @@
 
     invoke-virtual {v13}, Ljava/util/HashSet;->clear()V
 
-    .line 1902
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_2
 
-    .line 1905
     :cond_3
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->SBALISTS:Ljava/util/ArrayList;
 
     invoke-virtual {v13}, Ljava/util/ArrayList;->clear()V
 
-    .line 1906
     const/4 v10, 0x0
 
     :goto_3
@@ -3748,7 +3410,6 @@
 
     if-ge v10, v13, :cond_5
 
-    .line 1907
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
     invoke-virtual {v13, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3761,7 +3422,6 @@
 
     move-result-object v11
 
-    .line 1908
     .local v11, "wlaSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/HashSet<Ljava/lang/String;>;>;>;"
     invoke-interface {v11}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -3780,7 +3440,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 1909
     .local v4, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/HashSet<Ljava/lang/String;>;>;"
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -3788,13 +3447,11 @@
 
     check-cast v12, Ljava/util/HashSet;
 
-    .line 1910
     .local v12, "wlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-virtual {v12}, Ljava/util/HashSet;->clear()V
 
     goto :goto_4
 
-    .line 1912
     .end local v4    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/HashSet<Ljava/lang/String;>;>;"
     .end local v12    # "wlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :cond_4
@@ -3808,12 +3465,10 @@
 
     invoke-virtual {v13}, Ljava/util/HashMap;->clear()V
 
-    .line 1906
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_3
 
-    .line 1914
     .end local v11    # "wlaSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/HashSet<Ljava/lang/String;>;>;>;"
     :cond_5
     const/4 v10, 0x0
@@ -3827,7 +3482,6 @@
 
     if-ge v10, v13, :cond_7
 
-    .line 1915
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
     invoke-virtual {v13, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3840,7 +3494,6 @@
 
     move-result-object v11
 
-    .line 1916
     .restart local v11    # "wlaSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/HashSet<Ljava/lang/String;>;>;>;"
     invoke-interface {v11}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -3859,7 +3512,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 1917
     .restart local v4    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/HashSet<Ljava/lang/String;>;>;"
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -3867,13 +3519,11 @@
 
     check-cast v12, Ljava/util/HashSet;
 
-    .line 1918
     .restart local v12    # "wlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-virtual {v12}, Ljava/util/HashSet;->clear()V
 
     goto :goto_6
 
-    .line 1920
     .end local v4    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/HashSet<Ljava/lang/String;>;>;"
     .end local v12    # "wlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :cond_6
@@ -3887,17 +3537,14 @@
 
     invoke-virtual {v13}, Ljava/util/HashMap;->clear()V
 
-    .line 1914
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_5
 
-    .line 1922
     .end local v11    # "wlaSet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/util/HashSet<Ljava/lang/String;>;>;>;"
     :cond_7
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->setupResourceLists()V
 
-    .line 1924
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->irm_containerIDTable:[I
 
     const/4 v14, 0x0
@@ -3906,7 +3553,6 @@
 
     aput v15, v13, v14
 
-    .line 1926
     const/4 v8, 0x0
 
     .local v8, "i":I
@@ -3915,19 +3561,16 @@
 
     if-ge v8, v13, :cond_8
 
-    .line 1927
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->bbc_containerIDTable:[I
 
     const/4 v14, 0x0
 
     aput v14, v13, v8
 
-    .line 1926
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_7
 
-    .line 1929
     :cond_8
     const/4 v8, 0x0
 
@@ -3936,7 +3579,6 @@
 
     if-ge v8, v13, :cond_0
 
-    .line 1930
     sget-object v13, Lcom/android/server/pm/SELinuxMMAC;->generic_containerIDTable:[I
 
     const/4 v14, 0x0
@@ -3945,7 +3587,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1929
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_8
@@ -3955,7 +3596,6 @@
     .locals 1
 
     .prologue
-    .line 308
     sget-object v0, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
 
     return-object v0
@@ -3977,78 +3617,65 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 625
     const-string v6, "container"
 
     monitor-enter v6
 
-    .line 626
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 627
     .local v3, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .line 628
     .local v2, "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;>;"
     const/4 v4, 0x2
 
     if-ne p0, v4, :cond_0
 
-    .line 629
     monitor-exit v6
 
     move-object v3, v5
 
-    .line 646
     .end local v3    # "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_0
     return-object v3
 
-    .line 630
     .restart local v3    # "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     const/4 v4, 0x1
 
     if-ne p0, v4, :cond_1
 
-    .line 631
     monitor-exit v6
 
     move-object v3, v5
 
     goto :goto_0
 
-    .line 632
     :cond_1
     const/4 v4, 0x4
 
     if-ne p0, v4, :cond_2
 
-    .line 633
     monitor-exit v6
 
     move-object v3, v5
 
     goto :goto_0
 
-    .line 634
     :cond_2
     const/4 v4, 0x3
 
     if-ne p0, v4, :cond_5
 
-    .line 635
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 636
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -4067,7 +3694,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 637
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -4081,7 +3707,6 @@
 
     goto :goto_1
 
-    .line 645
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;>;"
@@ -4095,7 +3720,6 @@
 
     throw v4
 
-    .line 639
     .restart local v1    # "i$":Ljava/util/Iterator;
     .restart local v2    # "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;>;"
     .restart local v3    # "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -4107,27 +3731,23 @@
 
     if-nez v4, :cond_4
 
-    .line 640
     const-string v4, "SEContainer"
 
     const-string/jumbo v7, "getAllPackageNamesFromSEContainer, packageNames.size is 0"
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
     monitor-exit v6
 
     move-object v3, v5
 
     goto :goto_0
 
-    .line 643
     :cond_4
     monitor-exit v6
 
     goto :goto_0
 
-    .line 645
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_5
     monitor-exit v6
@@ -4136,7 +3756,6 @@
 
     move-object v3, v5
 
-    .line 646
     goto :goto_0
 .end method
 
@@ -4146,22 +3765,18 @@
     .param p1, "certs"    # [Ljava/lang/String;
 
     .prologue
-    .line 1174
     new-instance v0, Landroid/content/pm/ApplicationInfo;
 
     invoke-direct {v0}, Landroid/content/pm/ApplicationInfo;-><init>()V
 
-    .line 1175
     .local v0, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     array-length v10, p1
 
     new-array v9, v10, [Landroid/content/pm/Signature;
 
-    .line 1176
     .local v9, "signatures":[Landroid/content/pm/Signature;
     const/4 v2, 0x0
 
-    .line 1177
     .local v2, "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     const/4 v3, 0x0
 
@@ -4171,7 +3786,6 @@
 
     if-ge v3, v10, :cond_0
 
-    .line 1178
     new-instance v10, Landroid/content/pm/Signature;
 
     aget-object v11, p1, v3
@@ -4180,12 +3794,10 @@
 
     aput-object v10, v9, v3
 
-    .line 1177
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 1182
     :cond_0
     move-object v1, v9
 
@@ -4201,18 +3813,15 @@
 
     aget-object v7, v1, v4
 
-    .line 1183
     .local v7, "s":Landroid/content/pm/Signature;
     if-nez v7, :cond_2
 
-    .line 1182
     :cond_1
     :goto_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 1186
     :cond_2
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
@@ -4222,7 +3831,6 @@
 
     if-eqz v10, :cond_1
 
-    .line 1190
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     invoke-virtual {v10, v7}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4231,82 +3839,67 @@
 
     check-cast v8, Lcom/android/server/pm/Policy;
 
-    .line 1191
     .local v8, "sigSeContainerInfo":Lcom/android/server/pm/Policy;
     if-eqz v8, :cond_8
 
     if-eqz p0, :cond_8
 
-    .line 1192
     invoke-virtual {v8, p0}, Lcom/android/server/pm/Policy;->checkPolicy(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bbcseinfo:Ljava/lang/String;
 
-    .line 1193
     iget v10, v8, Lcom/android/server/pm/Policy;->category:I
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->bbccategory:I
 
-    .line 1194
     iget-object v10, v8, Lcom/android/server/pm/Policy;->allowCategory:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 1195
     invoke-virtual {v8, p0}, Lcom/android/server/pm/Policy;->checkPolicy(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v10
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 1196
     iget v10, v8, Lcom/android/server/pm/Policy;->category:I
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 1197
     iget-object v10, v8, Lcom/android/server/pm/Policy;->allowCategory:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 1198
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 1199
     const/4 v10, 0x0
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->accessInfo:I
 
-    .line 1200
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 1201
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 1202
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 1203
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bluetoothuseridBL:Ljava/lang/String;
 
-    .line 1204
     new-instance v6, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v6}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 1205
     .local v6, "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     invoke-virtual {v7}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
 
@@ -4314,10 +3907,8 @@
 
     iput-object v10, v6, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 1206
     iput-object p0, v6, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 1208
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v10, v6}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -4326,7 +3917,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 1209
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v10, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4336,53 +3926,43 @@
     .end local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     check-cast v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 1210
     .restart local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     iget v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 1211
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowCategory:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 1212
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowContainerCategory:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 1213
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->seInfo:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 1214
     iget v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->accessInfo:I
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->accessInfo:I
 
-    .line 1215
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->sdcarduserid:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 1216
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bluetoothuserid:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 1217
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->sdcarduseridBL:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 1218
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bluetoothuseridBL:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bluetoothuseridBL:Ljava/lang/String;
 
-    .line 1221
     :cond_3
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
 
@@ -4392,7 +3972,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 1222
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v10, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4402,28 +3981,23 @@
     .end local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     check-cast v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 1223
     .restart local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->destPkgName:[Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->destPackageName:[Ljava/lang/String;
 
-    .line 1224
     iget v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 1225
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowCategory:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 1226
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->seInfo:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 1229
     :cond_4
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
@@ -4433,10 +4007,8 @@
 
     if-eqz v10, :cond_5
 
-    .line 1230
     const/4 v2, 0x0
 
-    .line 1231
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v10, v6}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4446,36 +4018,29 @@
     .end local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     check-cast v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 1232
     .restart local v2    # "containerHelper":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     if-eqz v2, :cond_5
 
-    .line 1233
     iget v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbccategory:I
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->bbccategory:I
 
-    .line 1234
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbcallowCategory:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 1235
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbcseInfo:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bbcseinfo:Ljava/lang/String;
 
-    .line 1236
     iget-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
     if-nez v10, :cond_7
 
-    .line 1237
     iget-object v10, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->sdcarduserid:Ljava/lang/String;
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 1243
     :cond_5
     :goto_3
     const-string/jumbo v10, "sec_container_"
@@ -4494,19 +4059,16 @@
 
     if-eqz v10, :cond_6
 
-    .line 1244
     const-string v10, "container"
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 1245
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->getPackageLevelbyKey(Ljava/lang/String;)I
 
     move-result v10
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 1246
     iget v10, v0, Landroid/content/pm/ApplicationInfo;->category:I
 
     invoke-static {v10}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -4515,7 +4077,6 @@
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 1302
     .end local v6    # "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v7    # "s":Landroid/content/pm/Signature;
     .end local v8    # "sigSeContainerInfo":Lcom/android/server/pm/Policy;
@@ -4523,7 +4084,6 @@
     :goto_4
     return-object v0
 
-    .line 1239
     .restart local v6    # "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .restart local v7    # "s":Landroid/content/pm/Signature;
     .restart local v8    # "sigSeContainerInfo":Lcom/android/server/pm/Policy;
@@ -4558,7 +4118,6 @@
 
     goto :goto_3
 
-    .line 1261
     .end local v6    # "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_8
     const-string v10, "SELinuxMMAC"
@@ -4569,7 +4128,6 @@
 
     goto/16 :goto_2
 
-    .line 1268
     .end local v7    # "s":Landroid/content/pm/Signature;
     .end local v8    # "sigSeContainerInfo":Lcom/android/server/pm/Policy;
     :cond_9
@@ -4583,7 +4141,6 @@
 
     if-eqz v10, :cond_a
 
-    .line 1269
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     const/4 v11, 0x0
@@ -4600,7 +4157,6 @@
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 1270
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     const/4 v11, 0x0
@@ -4617,7 +4173,6 @@
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bbcseinfo:Ljava/lang/String;
 
-    .line 1271
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     const/4 v11, 0x0
@@ -4632,7 +4187,6 @@
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 1272
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     const/4 v11, 0x0
@@ -4647,7 +4201,6 @@
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->bbccategory:I
 
-    .line 1273
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     const/4 v11, 0x0
@@ -4662,7 +4215,6 @@
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 1274
     sget-object v10, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     const/4 v11, 0x0
@@ -4677,95 +4229,77 @@
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 1275
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 1276
     const/4 v10, 0x0
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->accessInfo:I
 
-    .line 1277
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 1278
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 1279
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 1280
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bluetoothuseridBL:Ljava/lang/String;
 
     goto/16 :goto_4
 
-    .line 1286
     :cond_a
     const-string/jumbo v10, "untrusted"
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 1287
     const-string/jumbo v10, "untrusted"
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bbcseinfo:Ljava/lang/String;
 
-    .line 1288
     const/16 v10, 0x3ff
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->category:I
 
-    .line 1289
     const/16 v10, 0x3ff
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->bbccategory:I
 
-    .line 1290
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowCategory:Ljava/lang/String;
 
-    .line 1291
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 1292
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 1293
     const/4 v10, 0x0
 
     iput v10, v0, Landroid/content/pm/ApplicationInfo;->accessInfo:I
 
-    .line 1294
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 1295
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 1296
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 1297
     const/4 v10, 0x0
 
     iput-object v10, v0, Landroid/content/pm/ApplicationInfo;->bluetoothuseridBL:Ljava/lang/String;
@@ -4791,25 +4325,20 @@
     .end annotation
 
     .prologue
-    .line 948
     const-string v3, "container"
 
     monitor-enter v3
 
-    .line 949
     :try_start_0
     new-instance v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v0}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 950
     .local v0, "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     iput-object p1, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 951
     iput-object p0, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 952
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4818,13 +4347,11 @@
 
     check-cast v1, Ljava/util/HashSet;
 
-    .line 953
     .local v1, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     monitor-exit v3
 
     return-object v1
 
-    .line 954
     .end local v0    # "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :catchall_0
@@ -4841,7 +4368,6 @@
     .locals 1
 
     .prologue
-    .line 2107
     sget-boolean v0, Lcom/android/server/pm/SELinuxMMAC;->bbc_flag:Z
 
     return v0
@@ -4862,7 +4388,6 @@
     .end annotation
 
     .prologue
-    .line 300
     sget-object v0, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4890,23 +4415,18 @@
     .param p1, "certs"    # Ljava/lang/String;
 
     .prologue
-    .line 1783
     const/4 v1, 0x0
 
-    .line 1784
     .local v1, "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     new-instance v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v0}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 1785
     .local v0, "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     iput-object p1, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 1786
     iput-object p0, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 1787
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -4915,7 +4435,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1788
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4925,15 +4444,12 @@
     .end local v1    # "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     check-cast v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 1789
     .restart local v1    # "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     iget-object v2, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 1794
     :goto_0
     return-object v2
 
-    .line 1790
     :cond_0
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
@@ -4943,7 +4459,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1791
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -4953,13 +4468,11 @@
     .end local v1    # "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     check-cast v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 1792
     .restart local v1    # "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     iget-object v2, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowContainerCategory:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 1794
     :cond_1
     const/4 v2, 0x0
 
@@ -4973,30 +4486,24 @@
     .param p2, "appType"    # I
 
     .prologue
-    .line 789
     const/4 v2, 0x0
 
-    .line 790
     .local v2, "bbcFlag":Z
     const/4 v9, 0x0
 
-    .line 794
     .local v9, "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;>;"
     const-string v13, "container"
 
     monitor-enter v13
 
-    .line 795
     const/4 v5, 0x0
 
-    .line 796
     .local v5, "existContainerAllowCat":Ljava/lang/String;
     :try_start_0
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 797
     .local v10, "packageNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->isBBCAgent()Z
 
@@ -5004,28 +4511,23 @@
 
     if-eqz v12, :cond_0
 
-    .line 798
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->getBBCFlag()Z
 
     move-result v12
 
     if-eqz v12, :cond_0
 
-    .line 799
     const/4 v2, 0x1
 
-    .line 803
     :cond_0
     if-eqz v2, :cond_4
 
-    .line 804
     sget-object v12, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v12}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v9
 
-    .line 811
     :goto_0
     invoke-interface {v9}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -5044,7 +4546,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 812
     .local v4, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;"
     invoke-interface {v4}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -5054,21 +4555,17 @@
 
     iget-object v5, v12, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 816
     const/4 v11, 0x0
 
-    .line 817
     .local v11, "srcCategories":[Ljava/lang/String;
     if-eqz v5, :cond_1
 
-    .line 818
     const-string v12, ","
 
     invoke-virtual {v5, v12}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v11
 
-    .line 822
     move-object v1, v11
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -5083,7 +4580,6 @@
 
     aget-object v3, v1, v7
 
-    .line 826
     .local v3, "cat":Ljava/lang/String;
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
@@ -5095,7 +4591,6 @@
 
     if-eqz v12, :cond_3
 
-    .line 830
     const/4 v12, 0x1
 
     move/from16 v0, p1
@@ -5108,7 +4603,6 @@
 
     if-ne v0, v12, :cond_2
 
-    .line 831
     const/16 v12, 0x66
 
     invoke-static {v12}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -5121,7 +4615,6 @@
 
     if-eqz v12, :cond_2
 
-    .line 835
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v12
@@ -5132,7 +4625,6 @@
 
     invoke-virtual {v10, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 838
     :cond_2
     const/4 v12, 0x2
 
@@ -5146,7 +4638,6 @@
 
     if-ne v0, v12, :cond_3
 
-    .line 839
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v12
@@ -5157,7 +4648,6 @@
 
     if-eqz v12, :cond_3
 
-    .line 843
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v12
@@ -5168,13 +4658,11 @@
 
     invoke-virtual {v10, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 822
     :cond_3
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 806
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v3    # "cat":Ljava/lang/String;
     .end local v4    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;"
@@ -5190,7 +4678,6 @@
 
     goto :goto_0
 
-    .line 854
     :cond_5
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
 
@@ -5198,7 +4685,6 @@
 
     if-lez v12, :cond_6
 
-    .line 855
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
 
     move-result v12
@@ -5213,11 +4699,9 @@
 
     monitor-exit v13
 
-    .line 858
     :goto_2
     return-object v12
 
-    .line 857
     :cond_6
     const-string v12, "SEContainer"
 
@@ -5225,14 +4709,12 @@
 
     invoke-static {v12, v14}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 858
     const/4 v12, 0x0
 
     monitor-exit v13
 
     goto :goto_2
 
-    .line 859
     .end local v10    # "packageNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :catchall_0
     move-exception v12
@@ -5262,25 +4744,20 @@
     .end annotation
 
     .prologue
-    .line 935
     const-string v3, "container"
 
     monitor-enter v3
 
-    .line 936
     :try_start_0
     new-instance v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v1}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 937
     .local v1, "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     iput-object p1, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 938
     iput-object p0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 939
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -5289,13 +4766,11 @@
 
     check-cast v0, Ljava/util/HashSet;
 
-    .line 940
     .local v0, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     monitor-exit v3
 
     return-object v0
 
-    .line 941
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v1    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :catchall_0
@@ -5313,10 +4788,8 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 312
     const/16 v0, 0x3ff
 
-    .line 313
     .local v0, "category":I
     if-eqz p0, :cond_0
 
@@ -5328,14 +4801,12 @@
 
     if-eqz v5, :cond_0
 
-    .line 314
     const/16 v5, 0x2e
 
     invoke-virtual {p0, v5}, Ljava/lang/String;->indexOf(I)I
 
     move-result v2
 
-    .line 315
     .local v2, "dotIndex":I
     const-string/jumbo v5, "sec_container_"
 
@@ -5343,13 +4814,11 @@
 
     move-result v1
 
-    .line 316
     .local v1, "categoryStartIndex":I
     invoke-virtual {p0, v1, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 318
     .local v4, "strCategory":Ljava/lang/String;
     :try_start_0
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -5358,7 +4827,6 @@
 
     move-result v0
 
-    .line 323
     .end local v1    # "categoryStartIndex":I
     .end local v2    # "dotIndex":I
     .end local v4    # "strCategory":Ljava/lang/String;
@@ -5366,14 +4834,12 @@
     :goto_0
     return v0
 
-    .line 319
     .restart local v1    # "categoryStartIndex":I
     .restart local v2    # "dotIndex":I
     .restart local v4    # "strCategory":Ljava/lang/String;
     :catch_0
     move-exception v3
 
-    .line 320
     .local v3, "e":Ljava/lang/NumberFormatException;
     const-string v5, "SELinuxMMAC"
 
@@ -5409,17 +4875,14 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 565
     const-string v6, "container"
 
     monitor-enter v6
 
-    .line 566
     const/4 v4, 0x2
 
     if-ne p1, v4, :cond_0
 
-    .line 567
     :try_start_0
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->isMyContainerID(I)Z
 
@@ -5427,123 +4890,103 @@
 
     if-nez v4, :cond_3
 
-    .line 569
     const-string v4, "SEContainer"
 
     const-string v7, "Given Container ID is not my Container ID - Returning Null"
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 571
     monitor-exit v6
 
     move-object v4, v5
 
-    .line 617
     :goto_0
     return-object v4
 
-    .line 573
     :cond_0
     const/4 v4, 0x1
 
     if-ne p1, v4, :cond_1
 
-    .line 574
     const/16 v4, 0x66
 
     if-eq p0, v4, :cond_3
 
-    .line 576
     const-string v4, "SEContainer"
 
     const-string v7, "Given Container ID is not GSD_Category - Returning Null"
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 578
     monitor-exit v6
 
     move-object v4, v5
 
     goto :goto_0
 
-    .line 580
     :cond_1
     const/4 v4, 0x4
 
     if-ne p1, v4, :cond_2
 
-    .line 581
     const/16 v4, 0x2be
 
     if-eq p0, v4, :cond_3
 
-    .line 583
     const-string v4, "SEContainer"
 
     const-string v7, "Given Container ID is not IRM Container ID - Returning Null"
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 585
     monitor-exit v6
 
     move-object v4, v5
 
     goto :goto_0
 
-    .line 587
     :cond_2
     const/4 v4, 0x3
 
     if-ne p1, v4, :cond_3
 
-    .line 588
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->isBBCContainerID(I)Z
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    .line 590
     const-string v4, "SEContainer"
 
     const-string v7, "Given Container ID is not BBC Container ID - Returning Null"
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 592
     monitor-exit v6
 
     move-object v4, v5
 
     goto :goto_0
 
-    .line 595
     :cond_3
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 596
     .local v3, "packageNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
-    .line 597
     .local v2, "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;>;"
     const/4 v4, 0x5
 
     if-ne p2, v4, :cond_6
 
-    .line 598
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v2
 
-    .line 602
     :goto_1
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -5564,7 +5007,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 603
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -5586,7 +5028,6 @@
 
     if-ne v4, p0, :cond_4
 
-    .line 607
     :cond_5
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -5600,7 +5041,6 @@
 
     goto :goto_2
 
-    .line 618
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v2    # "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;>;"
@@ -5614,7 +5054,6 @@
 
     throw v4
 
-    .line 600
     .restart local v2    # "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;>;>;"
     .restart local v3    # "packageNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_6
@@ -5627,7 +5066,6 @@
 
     goto :goto_1
 
-    .line 610
     .restart local v1    # "i$":Ljava/util/Iterator;
     :cond_7
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -5636,21 +5074,18 @@
 
     if-nez v4, :cond_8
 
-    .line 614
     const-string v4, "SEContainer"
 
     const-string/jumbo v7, "getPackageNamesFromSEContainerID, packageNames.size is 0"
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 615
     monitor-exit v6
 
     move-object v4, v5
 
     goto/16 :goto_0
 
-    .line 617
     :cond_8
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -5685,7 +5120,6 @@
     .end annotation
 
     .prologue
-    .line 304
     sget-object v0, Lcom/android/server/pm/SELinuxMMAC;->SBALISTS:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5716,28 +5150,23 @@
 
     const/4 v5, -0x1
 
-    .line 650
     const/4 v2, 0x0
 
-    .line 654
     .local v2, "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     const-string v6, "container"
 
     monitor-enter v6
 
-    .line 655
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 656
     .local v3, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {p2}, Lcom/android/server/pm/SELinuxMMAC;->getSignatureFromPackage(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 657
     if-eqz v3, :cond_0
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -5746,19 +5175,16 @@
 
     if-eqz v4, :cond_1
 
-    .line 658
     :cond_0
     invoke-static {p2}, Lcom/android/server/pm/SELinuxMMAC;->getSignatureFromContainerInfo(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 660
     :cond_1
     new-instance v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v1}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 661
     .local v1, "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-eqz v3, :cond_6
 
@@ -5768,7 +5194,6 @@
 
     if-nez v4, :cond_6
 
-    .line 662
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -5779,17 +5204,14 @@
 
     iput-object v4, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 670
     iput-object p2, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 671
     if-eq p3, v8, :cond_2
 
     if-eq p3, v7, :cond_2
 
     if-ne p3, v10, :cond_7
 
-    .line 672
     :cond_2
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
@@ -5803,7 +5225,6 @@
 
     move-object v2, v0
 
-    .line 676
     :cond_3
     :goto_0
     if-eq p3, v8, :cond_4
@@ -5812,7 +5233,6 @@
 
     if-ne p3, v10, :cond_9
 
-    .line 677
     :cond_4
     if-eqz v2, :cond_a
 
@@ -5838,7 +5258,6 @@
 
     if-ne v4, v7, :cond_a
 
-    .line 681
     :cond_5
     iget v4, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
 
@@ -5848,16 +5267,13 @@
 
     if-eqz v4, :cond_8
 
-    .line 685
     iget v4, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
 
     monitor-exit v6
 
-    .line 706
     :goto_1
     return v4
 
-    .line 665
     :cond_6
     const-string v4, "SEContainer"
 
@@ -5865,25 +5281,21 @@
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 667
     const-string v4, "SEContainer"
 
     const-string/jumbo v7, "getSEContainerIDFromPackageName failed"
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 668
     monitor-exit v6
 
     move v4, v5
 
     goto :goto_1
 
-    .line 673
     :cond_7
     if-ne p3, v9, :cond_3
 
-    .line 674
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -5898,7 +5310,6 @@
 
     goto :goto_0
 
-    .line 690
     :cond_8
     const-string v4, "SEContainer"
 
@@ -5906,18 +5317,15 @@
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 691
     monitor-exit v6
 
     move v4, v5
 
     goto :goto_1
 
-    .line 694
     :cond_9
     if-ne p3, v7, :cond_a
 
-    .line 695
     if-eqz v2, :cond_a
 
     iget v4, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
@@ -5926,14 +5334,12 @@
 
     if-ne v4, v7, :cond_a
 
-    .line 699
     iget v4, v2, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
 
     monitor-exit v6
 
     goto :goto_1
 
-    .line 707
     .end local v1    # "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v3    # "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :catchall_0
@@ -5945,7 +5351,6 @@
 
     throw v4
 
-    .line 705
     .restart local v1    # "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .restart local v3    # "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_a
@@ -5956,7 +5361,6 @@
 
     invoke-static {v4, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 706
     monitor-exit v6
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -5979,16 +5383,13 @@
     .end annotation
 
     .prologue
-    .line 903
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 904
     .local v0, "categorys":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     const/4 v5, 0x0
 
-    .line 905
     .local v5, "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;>;"
     sget-object v6, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
@@ -5998,14 +5399,12 @@
 
     if-nez v6, :cond_3
 
-    .line 906
     sget-object v6, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v6}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v5
 
-    .line 907
     invoke-interface {v5}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -6024,7 +5423,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 908
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -6044,7 +5442,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 914
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v6
@@ -6055,7 +5452,6 @@
 
     move-result-object v4
 
-    .line 915
     .local v4, "itr":Ljava/util/Iterator;
     :goto_0
     invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
@@ -6064,7 +5460,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 916
     invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
@@ -6085,7 +5480,6 @@
 
     goto :goto_0
 
-    .line 920
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     .end local v4    # "itr":Ljava/util/Iterator;
     :cond_1
@@ -6095,14 +5489,12 @@
 
     if-nez v6, :cond_2
 
-    .line 921
     const-string v6, "SEContainer"
 
     const-string/jumbo v7, "getSEContainerIDsForSystem, categorys.size is 0"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 923
     :cond_2
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -6125,7 +5517,6 @@
 
     move-result v2
 
-    .line 924
     .local v2, "i":I
     const-string v6, "SEContainer"
 
@@ -6151,7 +5542,6 @@
 
     goto :goto_1
 
-    .line 927
     .end local v2    # "i":I
     .end local v3    # "i$":Ljava/util/Iterator;
     :cond_3
@@ -6167,38 +5557,31 @@
     .param p4, "appType"    # I
 
     .prologue
-    .line 711
     const/4 v2, 0x0
 
-    .line 712
     .local v2, "bbcFlag":Z
     const/4 v9, 0x0
 
-    .line 716
     .local v9, "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 717
     .local v4, "containerIDs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const-string v13, "container"
 
     monitor-enter v13
 
-    .line 718
     :try_start_0
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 719
     .local v10, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static/range {p2 .. p2}, Lcom/android/server/pm/SELinuxMMAC;->getSignatureFromPackage(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v10
 
-    .line 720
     if-eqz v10, :cond_0
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->isEmpty()Z
@@ -6207,19 +5590,16 @@
 
     if-eqz v12, :cond_1
 
-    .line 721
     :cond_0
     invoke-static/range {p2 .. p2}, Lcom/android/server/pm/SELinuxMMAC;->getSignatureFromContainerInfo(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v10
 
-    .line 724
     :cond_1
     new-instance v8, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v8}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 725
     .local v8, "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     if-eqz v10, :cond_4
 
@@ -6229,7 +5609,6 @@
 
     if-nez v12, :cond_4
 
-    .line 726
     const/4 v12, 0x0
 
     invoke-virtual {v10, v12}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -6240,33 +5619,27 @@
 
     iput-object v12, v8, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 734
     move-object/from16 v0, p2
 
     iput-object v0, v8, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 735
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->isBBCAgent()Z
 
     move-result v12
 
     if-eqz v12, :cond_2
 
-    .line 736
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->getBBCFlag()Z
 
     move-result v12
 
     if-eqz v12, :cond_2
 
-    .line 737
     const/4 v2, 0x1
 
-    .line 741
     :cond_2
     if-eqz v2, :cond_5
 
-    .line 742
     sget-object v12, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v12, v8}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -6279,30 +5652,24 @@
 
     move-object v9, v0
 
-    .line 747
     :goto_0
     iget-object v5, v9, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 748
     .local v5, "existContainerAllowCat":Ljava/lang/String;
     const/4 v11, 0x0
 
-    .line 749
     .local v11, "srcCategories":[Ljava/lang/String;
     if-eqz v5, :cond_3
 
-    .line 750
     const-string v12, ","
 
     invoke-virtual {v5, v12}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v11
 
-    .line 752
     :cond_3
     if-eqz v11, :cond_a
 
-    .line 753
     move-object v1, v11
 
     .local v1, "arr$":[Ljava/lang/String;
@@ -6317,7 +5684,6 @@
 
     aget-object v3, v1, v6
 
-    .line 757
     .local v3, "cat":Ljava/lang/String;
     const/4 v12, 0x1
 
@@ -6331,7 +5697,6 @@
 
     if-ne v0, v12, :cond_6
 
-    .line 758
     const/16 v12, 0x66
 
     invoke-static {v12}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -6344,7 +5709,6 @@
 
     if-eqz v12, :cond_6
 
-    .line 762
     const/16 v12, 0x66
 
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6353,14 +5717,12 @@
 
     invoke-virtual {v4, v12}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 763
     invoke-static {v4}, Lcom/android/server/pm/SELinuxMMAC;->arraylist_to_int_array(Ljava/util/ArrayList;)[I
 
     move-result-object v12
 
     monitor-exit v13
 
-    .line 784
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v3    # "cat":Ljava/lang/String;
     .end local v5    # "existContainerAllowCat":Ljava/lang/String;
@@ -6370,7 +5732,6 @@
     :goto_2
     return-object v12
 
-    .line 729
     :cond_4
     const-string v12, "SEContainer"
 
@@ -6378,14 +5739,12 @@
 
     invoke-static {v12, v14}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 731
     const/4 v12, 0x0
 
     monitor-exit v13
 
     goto :goto_2
 
-    .line 785
     .end local v8    # "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v10    # "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :catchall_0
@@ -6397,7 +5756,6 @@
 
     throw v12
 
-    .line 744
     .restart local v8    # "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .restart local v10    # "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_5
@@ -6416,7 +5774,6 @@
 
     goto :goto_0
 
-    .line 766
     .restart local v1    # "arr$":[Ljava/lang/String;
     .restart local v3    # "cat":Ljava/lang/String;
     .restart local v5    # "existContainerAllowCat":Ljava/lang/String;
@@ -6436,7 +5793,6 @@
 
     if-ne v0, v12, :cond_7
 
-    .line 767
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v12
@@ -6447,7 +5803,6 @@
 
     if-eqz v12, :cond_7
 
-    .line 768
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v12
@@ -6460,21 +5815,18 @@
 
     if-nez v12, :cond_8
 
-    .line 769
     const-string v12, "SELinuxMMAC"
 
     const-string v14, "Given Container ID not created by Caller - Returning Refused"
 
     invoke-static {v12, v14}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 753
     :cond_7
     :goto_3
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 774
     :cond_8
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -6488,7 +5840,6 @@
 
     goto :goto_3
 
-    .line 779
     .end local v3    # "cat":Ljava/lang/String;
     :cond_9
     invoke-static {v4}, Lcom/android/server/pm/SELinuxMMAC;->arraylist_to_int_array(Ljava/util/ArrayList;)[I
@@ -6499,7 +5850,6 @@
 
     goto :goto_2
 
-    .line 782
     .end local v1    # "arr$":[Ljava/lang/String;
     .end local v6    # "i$":I
     .end local v7    # "len$":I
@@ -6510,7 +5860,6 @@
 
     invoke-static {v12, v14}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 784
     const/4 v12, 0x0
 
     monitor-exit v13
@@ -6525,42 +5874,34 @@
     .param p0, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 2067
     const/4 v5, 0x0
 
-    .line 2068
     .local v5, "seinfo":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 2069
     .local v0, "cert":Ljava/lang/String;
     new-instance v3, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v3}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 2070
     .local v3, "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/4 v4, 0x0
 
-    .line 2071
     .local v4, "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     if-nez p0, :cond_0
 
     move-object v6, v5
 
-    .line 2094
     .end local v5    # "seinfo":Ljava/lang/String;
     .local v6, "seinfo":Ljava/lang/String;
     :goto_0
     return-object v6
 
-    .line 2075
     .end local v6    # "seinfo":Ljava/lang/String;
     .restart local v5    # "seinfo":Ljava/lang/String;
     :cond_0
     const-string/jumbo v5, "untrusted"
 
-    .line 2076
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v7}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -6585,7 +5926,6 @@
 
     check-cast v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
-    .line 2077
     .local v1, "entry":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     iget-object v7, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
@@ -6595,28 +5935,22 @@
 
     if-eqz v7, :cond_1
 
-    .line 2078
     const-string v7, "SELinuxMMAC"
 
     const-string/jumbo v8, "getSeinfo find packageName"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2079
     iget-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 2083
     .end local v1    # "entry":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_2
     if-eqz v0, :cond_3
 
-    .line 2084
     iput-object v0, v3, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 2085
     iput-object p0, v3, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 2086
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v7, v3}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -6625,14 +5959,12 @@
 
     if-eqz v7, :cond_3
 
-    .line 2087
     const-string v7, "SELinuxMMAC"
 
     const-string/jumbo v8, "getSeinfo find MDMID"
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2088
     sget-object v7, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v7, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -6642,11 +5974,9 @@
     .end local v4    # "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     check-cast v4, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 2089
     .restart local v4    # "seContainerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     iget-object v5, v4, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->seInfo:Ljava/lang/String;
 
-    .line 2090
     const-string v7, "SELinuxMMAC"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -6672,7 +6002,6 @@
     :cond_3
     move-object v6, v5
 
-    .line 2094
     .end local v5    # "seinfo":Ljava/lang/String;
     .restart local v6    # "seinfo":Ljava/lang/String;
     goto :goto_0
@@ -6694,21 +6023,17 @@
     .end annotation
 
     .prologue
-    .line 2036
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2037
     .local v2, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-nez p0, :cond_1
 
-    .line 2063
     :cond_0
     :goto_0
     return-object v2
 
-    .line 2040
     :cond_1
     sget-object v3, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
@@ -6734,7 +6059,6 @@
 
     check-cast v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
-    .line 2041
     .local v0, "entry":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     iget-object v3, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
@@ -6744,12 +6068,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 2042
     iget-object v3, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2046
     .end local v0    # "entry":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_3
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -6758,7 +6080,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 2047
     sget-object v3, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -6782,7 +6103,6 @@
 
     check-cast v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
-    .line 2048
     .restart local v0    # "entry":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     iget-object v3, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
@@ -6792,12 +6112,10 @@
 
     if-eqz v3, :cond_4
 
-    .line 2049
     iget-object v3, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2055
     .end local v0    # "entry":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_5
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -6806,7 +6124,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 2056
     sget-object v3, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v3}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
@@ -6830,7 +6147,6 @@
 
     check-cast v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
-    .line 2057
     .restart local v0    # "entry":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     iget-object v3, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
@@ -6840,7 +6156,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 2058
     iget-object v3, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -6866,10 +6181,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 2008
     if-nez p0, :cond_1
 
-    .line 2010
     const-string v7, "SELinuxMMAC"
 
     const-string/jumbo v8, "getSignatureFromPackage: packageName is null"
@@ -6878,22 +6191,18 @@
 
     move-object v5, v6
 
-    .line 2031
     :cond_0
     :goto_0
     return-object v5
 
-    .line 2014
     :cond_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 2015
     .local v3, "pm":Landroid/content/pm/IPackageManager;
     const/4 v2, 0x0
 
-    .line 2017
     .local v2, "pi":Landroid/content/pm/PackageInfo;
     const/16 v7, 0x40
 
@@ -6906,19 +6215,15 @@
 
     move-result-object v2
 
-    .line 2018
     if-eqz v2, :cond_2
 
-    .line 2019
     iget-object v4, v2, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 2020
     .local v4, "s":[Landroid/content/pm/Signature;
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2021
     .local v5, "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
@@ -6928,7 +6233,6 @@
 
     if-ge v1, v7, :cond_0
 
-    .line 2022
     aget-object v7, v4, v1
 
     invoke-virtual {v7}, Landroid/content/pm/Signature;->toCharsString()Ljava/lang/String;
@@ -6937,12 +6241,10 @@
 
     invoke-virtual {v5, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2021
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 2026
     .end local v1    # "i":I
     .end local v4    # "s":[Landroid/content/pm/Signature;
     .end local v5    # "sigs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
@@ -6957,20 +6259,16 @@
 
     move-object v5, v6
 
-    .line 2027
     goto :goto_0
 
-    .line 2029
     :catch_0
     move-exception v0
 
-    .line 2030
     .local v0, "e1":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     move-object v5, v6
 
-    .line 2031
     goto :goto_0
 .end method
 
@@ -6989,7 +6287,6 @@
     .end annotation
 
     .prologue
-    .line 296
     sget-object v0, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -7015,7 +6312,6 @@
     .locals 1
 
     .prologue
-    .line 1852
     sget-object v0, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
@@ -7029,10 +6325,8 @@
     .locals 3
 
     .prologue
-    .line 1856
     const/4 v0, 0x0
 
-    .line 1857
     .local v0, "retValue":Z
     sget-object v1, Lcom/android/server/pm/SELinuxMMAC;->ddc_containerIDTable:[I
 
@@ -7044,10 +6338,8 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1858
     const/4 v0, 0x1
 
-    .line 1860
     :cond_0
     return v0
 .end method
@@ -7058,7 +6350,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1837
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -7067,24 +6358,20 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1841
     sget-object v2, Lcom/android/server/pm/SELinuxMMAC;->generic_containerIDTable:[I
 
     aget v2, v2, v0
 
     if-ne v2, v1, :cond_0
 
-    .line 1848
     :goto_1
     return v1
 
-    .line 1837
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1848
     :cond_1
     const/4 v1, 0x0
 
@@ -7095,10 +6382,8 @@
     .locals 6
 
     .prologue
-    .line 1824
     const/4 v3, 0x0
 
-    .line 1825
     .local v3, "retval":Z
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
@@ -7106,7 +6391,6 @@
 
     move-result-object v2
 
-    .line 1826
     .local v2, "mySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;>;"
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
@@ -7116,7 +6400,6 @@
 
     if-nez v4, :cond_1
 
-    .line 1827
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -7136,7 +6419,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 1828
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -7154,12 +6436,10 @@
 
     if-nez v4, :cond_0
 
-    .line 1829
     const/4 v3, 0x1
 
     goto :goto_0
 
-    .line 1833
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Lcom/android/server/pm/SELinuxMMAC$MDMID;Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     .end local v1    # "i$":Ljava/util/Iterator;
     :cond_1
@@ -7179,7 +6459,6 @@
     .end annotation
 
     .prologue
-    .line 866
     .local p0, "hs":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     if-eqz p0, :cond_0
 
@@ -7189,15 +6468,12 @@
 
     if-nez v4, :cond_2
 
-    .line 870
     :cond_0
     const/4 v0, 0x0
 
-    .line 878
     :cond_1
     return-object v0
 
-    .line 872
     :cond_2
     invoke-virtual {p0}, Ljava/util/HashSet;->size()I
 
@@ -7205,17 +6481,14 @@
 
     new-array v0, v4, [I
 
-    .line 873
     .local v0, "array":[I
     invoke-virtual {p0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
 
-    .line 874
     .local v3, "itr":Ljava/util/Iterator;
     const/4 v1, 0x0
 
-    .line 875
     .local v1, "i":I
     :goto_0
     invoke-interface {v3}, Ljava/util/Iterator;->hasNext()Z
@@ -7224,7 +6497,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 876
     add-int/lit8 v2, v1, 0x1
 
     .end local v1    # "i":I
@@ -7254,7 +6526,6 @@
     .locals 1
 
     .prologue
-    .line 2098
     invoke-static {}, Lcom/android/server/pm/PackageManagerService;->isBBCAgent()Z
 
     move-result v0
@@ -7267,7 +6538,6 @@
     .param p0, "containerID"    # I
 
     .prologue
-    .line 288
     const/16 v0, 0x1f5
 
     if-lt p0, v0, :cond_0
@@ -7276,14 +6546,11 @@
 
     if-ge p0, v0, :cond_0
 
-    .line 289
     const/4 v0, 0x1
 
-    .line 292
     :goto_0
     return v0
 
-    .line 291
     :cond_0
     const-string v0, "SELinuxMMAC"
 
@@ -7291,7 +6558,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     const/4 v0, 0x0
 
     goto :goto_0
@@ -7304,32 +6570,25 @@
     .param p2, "containerID"    # I
 
     .prologue
-    .line 989
     const/4 v2, 0x0
 
-    .line 990
     .local v2, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     new-instance v3, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v3}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 991
     .local v3, "mdmID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     iput-object p1, v3, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 992
     iput-object p0, v3, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 993
     const/4 v1, 0x0
 
-    .line 994
     .local v1, "bbcFlag":Z
     const-string v5, "container"
 
     monitor-enter v5
 
-    .line 995
     :try_start_0
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->isBBCAgent()Z
 
@@ -7337,21 +6596,17 @@
 
     if-eqz v4, :cond_0
 
-    .line 996
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->getBBCFlag()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 997
     const/4 v1, 0x1
 
-    .line 1000
     :cond_0
     if-eqz v1, :cond_2
 
-    .line 1001
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -7364,11 +6619,9 @@
 
     move-object v2, v0
 
-    .line 1005
     :goto_0
     if-nez v2, :cond_1
 
-    .line 1010
     :cond_1
     if-eqz v2, :cond_3
 
@@ -7382,16 +6635,13 @@
 
     if-eqz v4, :cond_3
 
-    .line 1014
     const/4 v4, 0x1
 
     monitor-exit v5
 
-    .line 1020
     :goto_1
     return v4
 
-    .line 1003
     :cond_2
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
@@ -7407,25 +6657,21 @@
 
     goto :goto_0
 
-    .line 1016
     :cond_3
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1018
     const-string v4, "SEContainer"
 
     const-string/jumbo v5, "isContainerCreatedbyCaller returning false"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1020
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 1016
     :catchall_0
     move-exception v4
 
@@ -7442,7 +6688,6 @@
     .param p0, "containerID"    # I
 
     .prologue
-    .line 280
     const/16 v0, 0xc9
 
     if-lt p0, v0, :cond_0
@@ -7451,14 +6696,11 @@
 
     if-ge p0, v0, :cond_0
 
-    .line 281
     const/4 v0, 0x1
 
-    .line 284
     :goto_0
     return v0
 
-    .line 283
     :cond_0
     const-string v0, "SELinuxMMAC"
 
@@ -7466,7 +6708,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 284
     const/4 v0, 0x0
 
     goto :goto_0
@@ -7477,10 +6718,8 @@
     .param p0, "containerID"    # I
 
     .prologue
-    .line 958
     const/4 v0, 0x0
 
-    .line 959
     .local v0, "bbcFlag":Z
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->isBBCAgent()Z
 
@@ -7488,34 +6727,27 @@
 
     if-eqz v6, :cond_0
 
-    .line 960
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->getBBCFlag()Z
 
     move-result v6
 
     if-eqz v6, :cond_0
 
-    .line 961
     const/4 v0, 0x1
 
-    .line 964
     :cond_0
     const/4 v1, 0x0
 
-    .line 968
     .local v1, "col":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     const/4 v4, 0x0
 
-    .line 969
     .local v4, "res":Z
     const-string v7, "container"
 
     monitor-enter v7
 
-    .line 970
     if-eqz v0, :cond_1
 
-    .line 971
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
@@ -7531,7 +6763,6 @@
     .local v2, "col":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     move-object v1, v2
 
-    .line 975
     .end local v2    # "col":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     .restart local v1    # "col":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     :goto_0
@@ -7545,7 +6776,6 @@
 
     if-ge v3, v6, :cond_3
 
-    .line 977
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -7562,21 +6792,17 @@
 
     if-eqz v6, :cond_2
 
-    .line 978
     const/4 v4, 0x1
 
-    .line 981
     monitor-exit v7
 
     move v5, v4
 
-    .line 985
     .end local v4    # "res":Z
     .local v5, "res":I
     :goto_2
     return v5
 
-    .line 973
     .end local v3    # "i":I
     .end local v5    # "res":I
     .restart local v4    # "res":Z
@@ -7599,24 +6825,20 @@
     .restart local v1    # "col":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/util/HashSet<Ljava/lang/Integer;>;>;"
     goto :goto_0
 
-    .line 975
     .restart local v3    # "i":I
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 984
     :cond_3
     monitor-exit v7
 
     move v5, v4
 
-    .line 985
     .restart local v5    # "res":I
     goto :goto_2
 
-    .line 984
     .end local v3    # "i":I
     .end local v5    # "res":I
     :catchall_0
@@ -7634,7 +6856,6 @@
     .param p0, "seInfo"    # Ljava/lang/String;
 
     .prologue
-    .line 327
     const-string/jumbo v0, "media"
 
     invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7684,7 +6905,6 @@
     .param p0, "parser"    # Lorg/xmlpull/v1/XmlPullParser;
 
     .prologue
-    .line 1960
     const/4 v1, 0x0
 
     const-string/jumbo v2, "value"
@@ -7693,7 +6913,6 @@
 
     move-result-object v0
 
-    .line 1961
     .local v0, "seinfoValue":Ljava/lang/String;
     invoke-static {v0}, Lcom/android/server/pm/SELinuxMMAC;->validateValue(Ljava/lang/String;)Z
 
@@ -7701,7 +6920,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1962
     const-string v1, "SELinuxMMAC"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -7728,10 +6946,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1963
     const/4 v0, 0x0
 
-    .line 1965
     :cond_0
     return-object v0
 .end method
@@ -7747,7 +6963,6 @@
     .end annotation
 
     .prologue
-    .line 2428
     const/4 v0, 0x2
 
     const/4 v1, 0x0
@@ -7756,10 +6971,8 @@
 
     invoke-interface {p0, v0, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 2429
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 2430
     return-void
 .end method
 
@@ -7778,21 +6991,17 @@
 
     const/4 v5, 0x2
 
-    .line 2369
     const-string v3, "default"
 
     invoke-interface {p0, v5, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 2370
     new-instance v0, Lcom/android/server/pm/Policy$PolicyBuilder;
 
     invoke-direct {v0}, Lcom/android/server/pm/Policy$PolicyBuilder;-><init>()V
 
-    .line 2371
     .local v0, "pb":Lcom/android/server/pm/Policy$PolicyBuilder;
     invoke-virtual {v0}, Lcom/android/server/pm/Policy$PolicyBuilder;->setAsDefaultPolicy()Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 2373
     :cond_0
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -7803,19 +7012,16 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 2374
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v3
 
     if-ne v3, v5, :cond_0
 
-    .line 2378
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2379
     .local v2, "tagName":Ljava/lang/String;
     const-string/jumbo v3, "seinfo"
 
@@ -7825,30 +7031,25 @@
 
     if-eqz v3, :cond_1
 
-    .line 2380
     const-string/jumbo v3, "value"
 
     invoke-interface {p0, v6, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2381
     .local v1, "seinfo":Ljava/lang/String;
     invoke-virtual {v0, v1}, Lcom/android/server/pm/Policy$PolicyBuilder;->setGlobalSeinfoOrThrow(Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 2382
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->readSeinfo(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 2384
     .end local v1    # "seinfo":Ljava/lang/String;
     :cond_1
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 2388
     .end local v2    # "tagName":Ljava/lang/String;
     :cond_2
     invoke-virtual {v0}, Lcom/android/server/pm/Policy$PolicyBuilder;->build()Lcom/android/server/pm/Policy;
@@ -7862,32 +7063,25 @@
     .locals 18
 
     .prologue
-    .line 2129
     const/4 v7, 0x0
 
-    .line 2130
     .local v7, "policies":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/Policy;>;"
     const/4 v9, 0x0
 
-    .line 2131
     .local v9, "policyFile":Ljava/io/FileReader;
     const/4 v11, 0x0
 
-    .line 2132
     .local v11, "priorityPolicyFile":Ljava/io/File;
     const/4 v4, 0x0
 
-    .line 2133
     .local v4, "index":I
     const/4 v3, 0x0
 
-    .line 2139
     .local v3, "i":I
     invoke-static {}, Lcom/android/server/pm/Revision;->selinux_android_load_priority()I
 
     move-result v4
 
-    .line 2141
     :try_start_0
     new-instance v10, Ljava/io/FileReader;
 
@@ -7902,7 +7096,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2142
     .end local v9    # "policyFile":Ljava/io/FileReader;
     .local v10, "policyFile":Ljava/io/FileReader;
     :try_start_1
@@ -7915,16 +7108,13 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_11
     .catchall {:try_start_1 .. :try_end_1} :catchall_3
 
-    .line 2149
     if-eqz v10, :cond_0
 
-    .line 2150
     :try_start_2
     invoke-virtual {v10}, Ljava/io/FileReader;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_9
 
-    .line 2156
     :cond_0
     :goto_0
     const/4 v14, 0x7
@@ -7991,29 +7181,24 @@
 
     aput-object v15, v5, v14
 
-    .line 2163
     .local v5, "macPermFiles":[Ljava/io/File;
     const/4 v1, 0x0
 
-    .line 2164
     .local v1, "cnt":I
     const/4 v0, 0x0
 
     .local v0, "cert":Ljava/lang/String;
     move-object v9, v10
 
-    .line 2165
     .end local v10    # "policyFile":Ljava/io/FileReader;
     .restart local v9    # "policyFile":Ljava/io/FileReader;
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->flushInstallPolicy()V
 
-    .line 2166
     :goto_1
     aget-object v14, v5, v1
 
     if-eqz v14, :cond_c
 
-    .line 2167
     const-string v14, "SELinuxMMAC"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -8042,7 +7227,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2169
     :try_start_3
     new-instance v10, Ljava/io/FileReader;
 
@@ -8055,7 +7239,6 @@
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_e
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 2170
     .end local v9    # "policyFile":Ljava/io/FileReader;
     .restart local v10    # "policyFile":Ljava/io/FileReader;
     :try_start_4
@@ -8063,21 +7246,17 @@
 
     move-result-object v6
 
-    .line 2171
     .local v6, "parser":Lorg/xmlpull/v1/XmlPullParser;
     invoke-interface {v6, v10}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
 
-    .line 2172
     const-string/jumbo v14, "policy"
 
     invoke-static {v6, v14}, Lcom/android/internal/util/XmlUtils;->beginDocument(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)V
 
-    .line 2174
     :cond_1
     :goto_2
     invoke-static {v6}, Lcom/android/internal/util/XmlUtils;->nextElement(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 2175
     invoke-interface {v6}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
     :try_end_4
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_4 .. :try_end_4} :catch_1
@@ -8091,10 +7270,8 @@
 
     if-ne v14, v15, :cond_6
 
-    .line 2222
     if-eqz v10, :cond_2
 
-    .line 2223
     :try_start_5
     invoke-virtual {v10}, Ljava/io/FileReader;->close()V
     :try_end_5
@@ -8103,7 +7280,6 @@
     :cond_2
     move-object v9, v10
 
-    .line 2229
     .end local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v10    # "policyFile":Ljava/io/FileReader;
     .restart local v9    # "policyFile":Ljava/io/FileReader;
@@ -8113,14 +7289,12 @@
 
     goto :goto_1
 
-    .line 2143
     .end local v0    # "cert":Ljava/lang/String;
     .end local v1    # "cnt":I
     .end local v5    # "macPermFiles":[Ljava/io/File;
     :catch_0
     move-exception v2
 
-    .line 2144
     .local v2, "e":Ljava/io/FileNotFoundException;
     :goto_4
     :try_start_6
@@ -8156,7 +7330,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2145
     const-string v14, "SELinuxMMAC"
 
     const-string v15, "MMAC install disabled."
@@ -8165,44 +7338,35 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 2146
     const/4 v14, 0x0
 
-    .line 2149
     if-eqz v9, :cond_4
 
-    .line 2150
     :try_start_7
     invoke-virtual {v9}, Ljava/io/FileReader;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_a
 
-    .line 2297
     .end local v2    # "e":Ljava/io/FileNotFoundException;
     :cond_4
     :goto_5
     return v14
 
-    .line 2148
     :catchall_0
     move-exception v14
 
-    .line 2149
     :goto_6
     if-eqz v9, :cond_5
 
-    .line 2150
     :try_start_8
     invoke-virtual {v9}, Ljava/io/FileReader;->close()V
     :try_end_8
     .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_b
 
-    .line 2154
     :cond_5
     :goto_7
     throw v14
 
-    .line 2178
     .end local v9    # "policyFile":Ljava/io/FileReader;
     .restart local v0    # "cert":Ljava/lang/String;
     .restart local v1    # "cnt":I
@@ -8215,7 +7379,6 @@
 
     move-result-object v13
 
-    .line 2179
     .local v13, "tagName":Ljava/lang/String;
     const-string/jumbo v14, "signer"
 
@@ -8225,7 +7388,6 @@
 
     if-eqz v14, :cond_a
 
-    .line 2180
     const/4 v14, 0x0
 
     const-string/jumbo v15, "signature"
@@ -8234,10 +7396,8 @@
 
     move-result-object v0
 
-    .line 2181
     if-nez v0, :cond_7
 
-    .line 2182
     const-string v14, "SELinuxMMAC"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -8264,7 +7424,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2183
     invoke-static {v6}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_9
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_9 .. :try_end_9} :catch_1
@@ -8274,7 +7433,6 @@
 
     goto/16 :goto_2
 
-    .line 2214
     .end local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v13    # "tagName":Ljava/lang/String;
     :catch_1
@@ -8282,7 +7440,6 @@
 
     move-object v9, v10
 
-    .line 2215
     .end local v10    # "policyFile":Ljava/io/FileReader;
     .local v2, "e":Lorg/xmlpull/v1/XmlPullParserException;
     .restart local v9    # "policyFile":Ljava/io/FileReader;
@@ -8296,10 +7453,8 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 2222
     if-eqz v9, :cond_3
 
-    .line 2223
     :try_start_b
     invoke-virtual {v9}, Ljava/io/FileReader;->close()V
     :try_end_b
@@ -8307,13 +7462,11 @@
 
     goto/16 :goto_3
 
-    .line 2225
     :catch_2
     move-exception v14
 
     goto/16 :goto_3
 
-    .line 2188
     .end local v2    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     .end local v9    # "policyFile":Ljava/io/FileReader;
     .restart local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -8331,11 +7484,9 @@
     .catch Ljava/io/IOException; {:try_start_c .. :try_end_c} :catch_6
     .catchall {:try_start_c .. :try_end_c} :catchall_1
 
-    .line 2194
     .local v12, "signature":Landroid/content/pm/Signature;
     if-nez v12, :cond_8
 
-    .line 2195
     :try_start_d
     const-string v14, "SELinuxMMAC"
 
@@ -8363,7 +7514,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2196
     invoke-static {v6}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_d
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_d .. :try_end_d} :catch_1
@@ -8373,7 +7523,6 @@
 
     goto/16 :goto_2
 
-    .line 2216
     .end local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v12    # "signature":Landroid/content/pm/Signature;
     .end local v13    # "tagName":Ljava/lang/String;
@@ -8382,7 +7531,6 @@
 
     move-object v9, v10
 
-    .line 2217
     .end local v10    # "policyFile":Ljava/io/FileReader;
     .local v2, "e":Ljava/io/FileNotFoundException;
     .restart local v9    # "policyFile":Ljava/io/FileReader;
@@ -8418,10 +7566,8 @@
     :try_end_e
     .catchall {:try_start_e .. :try_end_e} :catchall_2
 
-    .line 2222
     if-eqz v9, :cond_3
 
-    .line 2223
     :try_start_f
     invoke-virtual {v9}, Ljava/io/FileReader;->close()V
     :try_end_f
@@ -8429,13 +7575,11 @@
 
     goto/16 :goto_3
 
-    .line 2225
     :catch_4
     move-exception v14
 
     goto/16 :goto_3
 
-    .line 2189
     .end local v2    # "e":Ljava/io/FileNotFoundException;
     .end local v9    # "policyFile":Ljava/io/FileReader;
     .restart local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -8444,7 +7588,6 @@
     :catch_5
     move-exception v2
 
-    .line 2190
     .local v2, "e":Ljava/lang/IllegalArgumentException;
     :try_start_10
     const-string v14, "SELinuxMMAC"
@@ -8473,7 +7616,6 @@
 
     invoke-static {v14, v15, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 2191
     invoke-static {v6}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_10
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_10 .. :try_end_10} :catch_1
@@ -8483,7 +7625,6 @@
 
     goto/16 :goto_2
 
-    .line 2218
     .end local v2    # "e":Ljava/lang/IllegalArgumentException;
     .end local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v13    # "tagName":Ljava/lang/String;
@@ -8492,7 +7633,6 @@
 
     move-object v9, v10
 
-    .line 2219
     .end local v10    # "policyFile":Ljava/io/FileReader;
     .local v2, "e":Ljava/io/IOException;
     .restart local v9    # "policyFile":Ljava/io/FileReader;
@@ -8506,10 +7646,8 @@
     :try_end_11
     .catchall {:try_start_11 .. :try_end_11} :catchall_2
 
-    .line 2222
     if-eqz v9, :cond_3
 
-    .line 2223
     :try_start_12
     invoke-virtual {v9}, Ljava/io/FileReader;->close()V
     :try_end_12
@@ -8517,13 +7655,11 @@
 
     goto/16 :goto_3
 
-    .line 2225
     :catch_7
     move-exception v14
 
     goto/16 :goto_3
 
-    .line 2199
     .end local v2    # "e":Ljava/io/IOException;
     .end local v9    # "policyFile":Ljava/io/FileReader;
     .restart local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -8536,7 +7672,6 @@
 
     move-result-object v8
 
-    .line 2200
     .local v8, "policy":Lcom/android/server/pm/Policy;
     sget-object v14, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
@@ -8549,7 +7684,6 @@
 
     goto/16 :goto_2
 
-    .line 2221
     .end local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v8    # "policy":Lcom/android/server/pm/Policy;
     .end local v12    # "signature":Landroid/content/pm/Signature;
@@ -8559,24 +7693,20 @@
 
     move-object v9, v10
 
-    .line 2222
     .end local v10    # "policyFile":Ljava/io/FileReader;
     .restart local v9    # "policyFile":Ljava/io/FileReader;
     :goto_b
     if-eqz v9, :cond_9
 
-    .line 2223
     :try_start_14
     invoke-virtual {v9}, Ljava/io/FileReader;->close()V
     :try_end_14
     .catch Ljava/io/IOException; {:try_start_14 .. :try_end_14} :catch_c
 
-    .line 2227
     :cond_9
     :goto_c
     throw v14
 
-    .line 2201
     .end local v9    # "policyFile":Ljava/io/FileReader;
     .restart local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .restart local v10    # "policyFile":Ljava/io/FileReader;
@@ -8591,18 +7721,15 @@
 
     if-eqz v14, :cond_b
 
-    .line 2202
     const/4 v14, 0x0
 
     invoke-static {v6, v14}, Lcom/android/server/pm/SELinuxMMAC;->readPolicyTags(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Lcom/android/server/pm/Policy;
 
     move-result-object v8
 
-    .line 2203
     .restart local v8    # "policy":Lcom/android/server/pm/Policy;
     if-eqz v8, :cond_1
 
-    .line 2207
     sget-object v14, Lcom/android/server/pm/SELinuxMMAC;->SIG_POLICY:Ljava/util/HashMap;
 
     const/4 v15, 0x0
@@ -8611,7 +7738,6 @@
 
     goto/16 :goto_2
 
-    .line 2210
     .end local v8    # "policy":Lcom/android/server/pm/Policy;
     :cond_b
     invoke-static {v6}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
@@ -8623,37 +7749,31 @@
 
     goto/16 :goto_2
 
-    .line 2225
     .end local v13    # "tagName":Ljava/lang/String;
     :catch_8
     move-exception v14
 
     move-object v9, v10
 
-    .line 2228
     .end local v10    # "policyFile":Ljava/io/FileReader;
     .restart local v9    # "policyFile":Ljava/io/FileReader;
     goto/16 :goto_3
 
-    .line 2232
     .end local v6    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     :cond_c
     if-eqz v9, :cond_d
 
-    .line 2233
     :try_start_16
     invoke-virtual {v9}, Ljava/io/FileReader;->close()V
     :try_end_16
     .catch Ljava/io/IOException; {:try_start_16 .. :try_end_16} :catch_d
 
-    .line 2297
     :cond_d
     :goto_d
     const/4 v14, 0x1
 
     goto/16 :goto_5
 
-    .line 2152
     .end local v0    # "cert":Ljava/lang/String;
     .end local v1    # "cnt":I
     .end local v5    # "macPermFiles":[Ljava/io/File;
@@ -8678,7 +7798,6 @@
 
     goto/16 :goto_7
 
-    .line 2225
     .restart local v0    # "cert":Ljava/lang/String;
     .restart local v1    # "cnt":I
     .restart local v5    # "macPermFiles":[Ljava/io/File;
@@ -8687,37 +7806,31 @@
 
     goto :goto_c
 
-    .line 2235
     :catch_d
     move-exception v14
 
     goto :goto_d
 
-    .line 2221
     :catchall_2
     move-exception v14
 
     goto :goto_b
 
-    .line 2218
     :catch_e
     move-exception v2
 
     goto :goto_a
 
-    .line 2216
     :catch_f
     move-exception v2
 
     goto/16 :goto_9
 
-    .line 2214
     :catch_10
     move-exception v2
 
     goto/16 :goto_8
 
-    .line 2148
     .end local v0    # "cert":Ljava/lang/String;
     .end local v1    # "cnt":I
     .end local v5    # "macPermFiles":[Ljava/io/File;
@@ -8732,7 +7845,6 @@
     .restart local v9    # "policyFile":Ljava/io/FileReader;
     goto/16 :goto_6
 
-    .line 2143
     .end local v9    # "policyFile":Ljava/io/FileReader;
     .restart local v10    # "policyFile":Ljava/io/FileReader;
     :catch_11
@@ -8761,19 +7873,16 @@
 
     const/4 v5, 0x0
 
-    .line 2407
     const-string/jumbo v3, "package"
 
     invoke-interface {p0, v6, v5, v3}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 2408
     const-string/jumbo v3, "name"
 
     invoke-interface {p0, v5, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2410
     .local v0, "pkgName":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -8785,19 +7894,16 @@
 
     if-eq v3, v4, :cond_2
 
-    .line 2411
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v3
 
     if-ne v3, v6, :cond_0
 
-    .line 2415
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2416
     .local v2, "tagName":Ljava/lang/String;
     const-string/jumbo v3, "seinfo"
 
@@ -8807,30 +7913,25 @@
 
     if-eqz v3, :cond_1
 
-    .line 2417
     const-string/jumbo v3, "value"
 
     invoke-interface {p0, v5, v3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2418
     .local v1, "seinfo":Ljava/lang/String;
     invoke-virtual {p1, v0, v1}, Lcom/android/server/pm/Policy$PolicyBuilder;->addInnerPackageMapOrThrow(Ljava/lang/String;Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 2419
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->readSeinfo(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 2421
     .end local v1    # "seinfo":Ljava/lang/String;
     :cond_1
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 2424
     .end local v2    # "tagName":Ljava/lang/String;
     :cond_2
     return-void
@@ -8849,18 +7950,15 @@
     .prologue
     const/4 v9, 0x3
 
-    .line 1307
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 1308
     .local v0, "outerDepth":I
     new-instance v2, Lcom/android/server/pm/Policy;
 
     invoke-direct {v2}, Lcom/android/server/pm/Policy;-><init>()V
 
-    .line 1309
     .local v2, "policy":Lcom/android/server/pm/Policy;
     :cond_0
     :goto_0
@@ -8881,7 +7979,6 @@
 
     if-le v6, v0, :cond_6
 
-    .line 1310
     :cond_1
     if-eq v5, v9, :cond_0
 
@@ -8889,12 +7986,10 @@
 
     if-eq v5, v6, :cond_0
 
-    .line 1313
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1314
     .local v4, "tagName":Ljava/lang/String;
     const-string/jumbo v6, "seinfo"
 
@@ -8904,25 +7999,20 @@
 
     if-eqz v6, :cond_3
 
-    .line 1315
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->parseSeinfo(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1316
     .local v3, "seinfo":Ljava/lang/String;
     if-eqz v3, :cond_2
 
-    .line 1317
     invoke-virtual {v2, v3}, Lcom/android/server/pm/Policy;->putSeinfo(Ljava/lang/String;)V
 
-    .line 1319
     :cond_2
     invoke-static {p0}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 1320
     .end local v3    # "seinfo":Ljava/lang/String;
     :cond_3
     const-string/jumbo v6, "package"
@@ -8933,7 +8023,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 1321
     const/4 v6, 0x0
 
     const-string/jumbo v7, "name"
@@ -8942,7 +8031,6 @@
 
     move-result-object v1
 
-    .line 1322
     .local v1, "pkg":Ljava/lang/String;
     invoke-static {v1}, Lcom/android/server/pm/SELinuxMMAC;->validatePackageName(Ljava/lang/String;)Z
 
@@ -8950,7 +8038,6 @@
 
     if-nez v6, :cond_4
 
-    .line 1323
     const-string v6, "SELinuxMMAC"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -8977,27 +8064,22 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1324
     invoke-static {p0}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 1327
     :cond_4
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->readSeinfoTag(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1328
     .restart local v3    # "seinfo":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 1329
     invoke-virtual {v2, v1, v3}, Lcom/android/server/pm/Policy;->putPkg(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1332
     .end local v1    # "pkg":Ljava/lang/String;
     .end local v3    # "seinfo":Ljava/lang/String;
     :cond_5
@@ -9005,7 +8087,6 @@
 
     goto :goto_0
 
-    .line 1335
     .end local v4    # "tagName":Ljava/lang/String;
     :cond_6
     return-object v2
@@ -9023,68 +8104,53 @@
     .end annotation
 
     .prologue
-    .line 1339
     new-instance v49, Ljava/util/HashMap;
 
     invoke-direct/range {v49 .. v49}, Ljava/util/HashMap;-><init>()V
 
-    .line 1341
     .local v49, "pkgPolicy":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lcom/android/server/pm/Policy;>;"
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v45
 
-    .line 1342
     .local v45, "outerDepth":I
     const/16 v56, 0x0
 
-    .line 1343
     .local v56, "seinfo":Ljava/lang/String;
     const/16 v55, -0x1
 
-    .line 1344
     .local v55, "seandroidCategory":I
     const/16 v17, -0x1
 
-    .line 1345
     .local v17, "bbcseandroidCategory":I
     const/16 v54, 0x0
 
-    .line 1346
     .local v54, "seandroidAllowCategory":Ljava/lang/String;
     const/16 v16, 0x0
 
-    .line 1347
     .local v16, "bbcseandroidAllowCategory":Ljava/lang/String;
     const/4 v6, 0x0
 
-    .line 1348
     .local v6, "allowCategoryValue":Ljava/lang/String;
     const/4 v11, 0x0
 
-    .line 1349
     .local v11, "bbcallowCategoryValue":Ljava/lang/String;
     const/16 v36, 0x0
 
-    .line 1350
     .local v36, "isContainerApp":Z
     const/16 v23, 0x0
 
-    .line 1351
     .local v23, "categoryValue":Ljava/lang/String;
     const/4 v13, 0x0
 
-    .line 1352
     .local v13, "bbccategoryValue":Ljava/lang/String;
     new-instance v50, Lcom/android/server/pm/Policy;
 
     invoke-direct/range {v50 .. v50}, Lcom/android/server/pm/Policy;-><init>()V
 
-    .line 1353
     .local v50, "policy":Lcom/android/server/pm/Policy;
     const/4 v10, 0x0
 
-    .line 1354
     .local v10, "bbcFlag":Z
     :cond_0
     :goto_0
@@ -9119,7 +8185,6 @@
 
     if-le v0, v1, :cond_38
 
-    .line 1355
     :cond_1
     const/16 v63, 0x3
 
@@ -9137,12 +8202,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1358
     invoke-interface/range {p0 .. p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v60
 
-    .line 1359
     .local v60, "tagName":Ljava/lang/String;
     const-string/jumbo v63, "seinfo"
 
@@ -9156,7 +8219,6 @@
 
     if-eqz v63, :cond_8
 
-    .line 1360
     const/16 v63, 0x0
 
     const-string/jumbo v64, "value"
@@ -9171,7 +8233,6 @@
 
     move-result-object v57
 
-    .line 1361
     .local v57, "seinfoValue":Ljava/lang/String;
     invoke-static/range {v57 .. v57}, Lcom/android/server/pm/SELinuxMMAC;->validateValue(Ljava/lang/String;)Z
 
@@ -9179,10 +8240,8 @@
 
     if-eqz v63, :cond_3
 
-    .line 1362
     move-object/from16 v56, v57
 
-    .line 1370
     :goto_1
     const/16 v63, 0x0
 
@@ -9198,7 +8257,6 @@
 
     move-result-object v23
 
-    .line 1371
     const/16 v63, 0x0
 
     const-string v64, "allowcategory"
@@ -9213,7 +8271,6 @@
 
     move-result-object v6
 
-    .line 1372
     const/16 v63, 0x0
 
     const-string v64, "bbccategory"
@@ -9228,7 +8285,6 @@
 
     move-result-object v13
 
-    .line 1373
     const/16 v63, 0x0
 
     const-string v64, "bbcallowcategory"
@@ -9243,10 +8299,8 @@
 
     move-result-object v11
 
-    .line 1374
     if-eqz v23, :cond_4
 
-    .line 1376
     :try_start_0
     invoke-static/range {v23 .. v23}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_0
@@ -9254,11 +8308,9 @@
 
     move-result v55
 
-    .line 1386
     :goto_2
     if-eqz v13, :cond_5
 
-    .line 1388
     :try_start_1
     invoke-static {v13}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
     :try_end_1
@@ -9266,60 +8318,49 @@
 
     move-result v17
 
-    .line 1398
     :goto_3
     if-eqz v6, :cond_6
 
-    .line 1399
     move-object/from16 v54, v6
 
-    .line 1413
     :goto_4
     if-eqz v11, :cond_7
 
-    .line 1414
     move-object/from16 v16, v11
 
-    .line 1428
     :goto_5
     if-eqz v56, :cond_2
 
-    .line 1429
     move-object/from16 v0, v56
 
     move-object/from16 v1, v50
 
     iput-object v0, v1, Lcom/android/server/pm/Policy;->mSeinfo:Ljava/lang/String;
 
-    .line 1430
     move/from16 v0, v55
 
     move-object/from16 v1, v50
 
     iput v0, v1, Lcom/android/server/pm/Policy;->category:I
 
-    .line 1431
     move/from16 v0, v17
 
     move-object/from16 v1, v50
 
     iput v0, v1, Lcom/android/server/pm/Policy;->bbccategory:I
 
-    .line 1432
     move-object/from16 v0, v54
 
     move-object/from16 v1, v50
 
     iput-object v0, v1, Lcom/android/server/pm/Policy;->allowCategory:Ljava/lang/String;
 
-    .line 1433
     move-object/from16 v0, v16
 
     move-object/from16 v1, v50
 
     iput-object v0, v1, Lcom/android/server/pm/Policy;->bbcallowCategory:Ljava/lang/String;
 
-    .line 1777
     .end local v57    # "seinfoValue":Ljava/lang/String;
     :cond_2
     :goto_6
@@ -9327,7 +8368,6 @@
 
     goto/16 :goto_0
 
-    .line 1367
     .restart local v57    # "seinfoValue":Ljava/lang/String;
     :cond_3
     const-string v63, "SELinuxMMAC"
@@ -9358,11 +8398,9 @@
 
     goto/16 :goto_1
 
-    .line 1377
     :catch_0
     move-exception v30
 
-    .line 1378
     .local v30, "e":Ljava/lang/NumberFormatException;
     const-string v63, "SELinuxMMAC"
 
@@ -9372,18 +8410,15 @@
 
     goto :goto_2
 
-    .line 1381
     .end local v30    # "e":Ljava/lang/NumberFormatException;
     :cond_4
     const/16 v55, 0x3ff
 
     goto :goto_2
 
-    .line 1389
     :catch_1
     move-exception v30
 
-    .line 1390
     .restart local v30    # "e":Ljava/lang/NumberFormatException;
     const-string v63, "SELinuxMMAC"
 
@@ -9393,26 +8428,22 @@
 
     goto :goto_3
 
-    .line 1393
     .end local v30    # "e":Ljava/lang/NumberFormatException;
     :cond_5
     const/16 v17, 0x3ff
 
     goto :goto_3
 
-    .line 1407
     :cond_6
     const-string v54, "0,701-1023"
 
     goto :goto_4
 
-    .line 1422
     :cond_7
     const-string v16, "0,701-1023"
 
     goto :goto_5
 
-    .line 1435
     .end local v57    # "seinfoValue":Ljava/lang/String;
     :cond_8
     const-string/jumbo v63, "package"
@@ -9427,7 +8458,6 @@
 
     if-eqz v63, :cond_a
 
-    .line 1436
     const/16 v63, 0x0
 
     const-string/jumbo v64, "name"
@@ -9442,7 +8472,6 @@
 
     move-result-object v47
 
-    .line 1437
     .local v47, "pkg":Ljava/lang/String;
     invoke-static/range {v47 .. v47}, Lcom/android/server/pm/SELinuxMMAC;->validatePackageName(Ljava/lang/String;)Z
 
@@ -9450,7 +8479,6 @@
 
     if-nez v63, :cond_9
 
-    .line 1438
     const-string v63, "SELinuxMMAC"
 
     new-instance v64, Ljava/lang/StringBuilder;
@@ -9477,21 +8505,17 @@
 
     invoke-static/range {v63 .. v64}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1439
     invoke-static/range {p0 .. p0}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 1442
     :cond_9
     invoke-static/range {p0 .. p0}, Lcom/android/server/pm/SELinuxMMAC;->readSeinfoTag(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v56
 
-    .line 1443
     if-eqz v56, :cond_2
 
-    .line 1444
     move-object/from16 v0, v50
 
     move-object/from16 v1, v47
@@ -9502,7 +8526,6 @@
 
     goto/16 :goto_6
 
-    .line 1446
     .end local v47    # "pkg":Ljava/lang/String;
     :cond_a
     const-string v63, "container"
@@ -9517,7 +8540,6 @@
 
     if-eqz v63, :cond_b
 
-    .line 1447
     const/16 v63, 0x0
 
     const-string/jumbo v64, "value"
@@ -9532,7 +8554,6 @@
 
     move-result-object v28
 
-    .line 1448
     .local v28, "containerflag":Ljava/lang/String;
     if-eqz v28, :cond_2
 
@@ -9548,7 +8569,6 @@
 
     if-eqz v63, :cond_2
 
-    .line 1449
     const/16 v63, 0x1
 
     move/from16 v0, v63
@@ -9559,7 +8579,6 @@
 
     goto/16 :goto_6
 
-    .line 1451
     .end local v28    # "containerflag":Ljava/lang/String;
     :cond_b
     const-string/jumbo v63, "service"
@@ -9574,44 +8593,34 @@
 
     if-eqz v63, :cond_30
 
-    .line 1452
     new-instance v27, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
     invoke-direct/range {v27 .. v27}, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;-><init>()V
 
-    .line 1453
     .local v27, "containerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     const/16 v22, 0x0
 
-    .line 1454
     .local v22, "category":Ljava/lang/String;
     const/4 v12, 0x0
 
-    .line 1455
     .local v12, "bbccategory":Ljava/lang/String;
     const/16 v35, 0x0
 
-    .line 1456
     .local v35, "innerSeinfo":Ljava/lang/String;
     const/4 v15, 0x0
 
-    .line 1457
     .local v15, "bbcinnerSeinfo":Ljava/lang/String;
     const/16 v34, 0x0
 
-    .line 1458
     .local v34, "innerAllowCategory":Ljava/lang/String;
     const/4 v14, 0x0
 
-    .line 1459
     .local v14, "bbcinnerAllowCategory":Ljava/lang/String;
     const/16 v25, 0x0
 
-    .line 1460
     .local v25, "contAllowCat":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 1461
     .local v5, "agentInfo":Ljava/lang/String;
     const/16 v63, 0x0
 
@@ -9627,7 +8636,6 @@
 
     move-result-object v48
 
-    .line 1462
     .local v48, "pkgName":Ljava/lang/String;
     invoke-static/range {v48 .. v48}, Lcom/android/server/pm/SELinuxMMAC;->validatePackageName(Ljava/lang/String;)Z
 
@@ -9635,7 +8643,6 @@
 
     if-nez v63, :cond_c
 
-    .line 1463
     const-string v63, "android"
 
     move-object/from16 v0, v48
@@ -9648,14 +8655,12 @@
 
     if-eqz v63, :cond_17
 
-    .line 1464
     const-string v63, "SELinuxMMAC"
 
     const-string v64, "<package> is android, don\'t skip"
 
     invoke-static/range {v63 .. v64}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1471
     :cond_c
     const/16 v63, 0x0
 
@@ -9671,7 +8676,6 @@
 
     move-result-object v22
 
-    .line 1472
     const/16 v63, 0x0
 
     const-string v64, "bbccategory"
@@ -9686,7 +8690,6 @@
 
     move-result-object v12
 
-    .line 1473
     const/16 v63, 0x0
 
     const-string/jumbo v64, "seinfo"
@@ -9701,7 +8704,6 @@
 
     move-result-object v35
 
-    .line 1474
     const/16 v63, 0x0
 
     const-string v64, "bbcseinfo"
@@ -9716,7 +8718,6 @@
 
     move-result-object v15
 
-    .line 1475
     const/16 v63, 0x0
 
     const-string v64, "allowcategory"
@@ -9731,7 +8732,6 @@
 
     move-result-object v34
 
-    .line 1476
     const/16 v63, 0x0
 
     const-string v64, "bbcallowcategory"
@@ -9746,7 +8746,6 @@
 
     move-result-object v14
 
-    .line 1477
     const/16 v63, 0x0
 
     const-string v64, "containerallowcategory"
@@ -9761,7 +8760,6 @@
 
     move-result-object v25
 
-    .line 1478
     const/16 v63, 0x0
 
     const-string v64, "agent"
@@ -9776,19 +8774,15 @@
 
     move-result-object v5
 
-    .line 1482
     if-nez v34, :cond_d
 
-    .line 1486
     const-string v34, "0,701-1023"
 
-    .line 1489
     :cond_d
     new-instance v46, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct/range {v46 .. v46}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 1490
     .local v46, "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     move-object/from16 v0, p1
 
@@ -9796,22 +8790,18 @@
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 1491
     move-object/from16 v0, v48
 
     move-object/from16 v1, v46
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 1492
     if-eqz v48, :cond_e
 
     if-eqz p1, :cond_e
 
-    .line 1493
     const/16 v31, 0x0
 
-    .line 1494
     .local v31, "existContAllowCat":Ljava/lang/String;
     move-object/from16 v0, v48
 
@@ -9821,13 +8811,10 @@
 
     move-result-object v31
 
-    .line 1495
     if-eqz v31, :cond_19
 
-    .line 1496
     if-eqz v25, :cond_18
 
-    .line 1497
     new-instance v63, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v63 .. v63}, Ljava/lang/StringBuilder;-><init>()V
@@ -9858,7 +8845,6 @@
 
     move-result-object v44
 
-    .line 1498
     .local v44, "newValue":Ljava/lang/String;
     move-object/from16 v0, v44
 
@@ -9866,7 +8852,6 @@
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowContainerCategory:Ljava/lang/String;
 
-    .line 1510
     .end local v31    # "existContAllowCat":Ljava/lang/String;
     .end local v44    # "newValue":Ljava/lang/String;
     :cond_e
@@ -9880,11 +8865,9 @@
 
     if-eqz v12, :cond_2
 
-    .line 1511
     :cond_10
     if-eqz v22, :cond_11
 
-    .line 1513
     :try_start_2
     invoke-static/range {v22 .. v22}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -9898,12 +8881,10 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 1518
     :cond_11
     :goto_8
     if-eqz v12, :cond_12
 
-    .line 1520
     :try_start_3
     invoke-static {v12}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -9917,41 +8898,34 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 1525
     :cond_12
     :goto_9
     if-eqz v35, :cond_1b
 
-    .line 1526
     move-object/from16 v0, v34
 
     move-object/from16 v1, v27
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowCategory:Ljava/lang/String;
 
-    .line 1527
     move-object/from16 v0, v35
 
     move-object/from16 v1, v27
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->seInfo:Ljava/lang/String;
 
-    .line 1536
     :cond_13
     :goto_a
     if-eqz v15, :cond_1d
 
-    .line 1537
     move-object/from16 v0, v27
 
     iput-object v14, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 1538
     move-object/from16 v0, v27
 
     iput-object v15, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbcseInfo:Ljava/lang/String;
 
-    .line 1547
     :cond_14
     :goto_b
     if-eqz v15, :cond_1f
@@ -9984,10 +8958,8 @@
 
     if-gt v0, v1, :cond_1f
 
-    .line 1548
     const/4 v10, 0x1
 
-    .line 1553
     :goto_c
     const/16 v63, 0x0
 
@@ -10003,7 +8975,6 @@
 
     move-result-object v38
 
-    .line 1554
     .local v38, "issdcardsbaapp":Ljava/lang/String;
     const/16 v63, 0x0
 
@@ -10019,7 +8990,6 @@
 
     move-result-object v37
 
-    .line 1555
     .local v37, "isbluetoothsbaapp":Ljava/lang/String;
     const/16 v63, 0x0
 
@@ -10035,7 +9005,6 @@
 
     move-result-object v52
 
-    .line 1556
     .local v52, "sdcarduserid":Ljava/lang/String;
     const/16 v63, 0x0
 
@@ -10051,7 +9020,6 @@
 
     move-result-object v19
 
-    .line 1557
     .local v19, "bluetoothuserid":Ljava/lang/String;
     const/16 v63, 0x0
 
@@ -10067,7 +9035,6 @@
 
     move-result-object v53
 
-    .line 1558
     .local v53, "sdcarduseridBL":Ljava/lang/String;
     const/16 v63, 0x0
 
@@ -10083,7 +9050,6 @@
 
     move-result-object v20
 
-    .line 1559
     .local v20, "bluetoothuseridBL":Ljava/lang/String;
     if-eqz v38, :cond_15
 
@@ -10099,7 +9065,6 @@
 
     if-eqz v63, :cond_15
 
-    .line 1560
     move-object/from16 v0, v27
 
     iget v0, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->accessInfo:I
@@ -10114,7 +9079,6 @@
 
     iput v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->accessInfo:I
 
-    .line 1561
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->SBALISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->SDCARD_TYPE:I
@@ -10131,7 +9095,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1563
     :cond_15
     if-eqz v37, :cond_16
 
@@ -10147,7 +9110,6 @@
 
     if-eqz v63, :cond_16
 
-    .line 1564
     move-object/from16 v0, v27
 
     iget v0, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->accessInfo:I
@@ -10162,7 +9124,6 @@
 
     iput v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->accessInfo:I
 
-    .line 1565
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->SBALISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->BT_TYPE:I
@@ -10179,18 +9140,15 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1567
     :cond_16
     if-eqz v52, :cond_21
 
-    .line 1568
     move-object/from16 v0, v52
 
     move-object/from16 v1, v27
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->sdcarduserid:Ljava/lang/String;
 
-    .line 1569
     const-string v63, ","
 
     move-object/from16 v0, v52
@@ -10201,11 +9159,9 @@
 
     move-result-object v62
 
-    .line 1570
     .local v62, "users":[Ljava/lang/String;
     const/16 v59, 0x0
 
-    .line 1571
     .local v59, "swlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     move-object/from16 v9, v62
 
@@ -10227,13 +9183,11 @@
 
     aget-object v39, v9, v32
 
-    .line 1572
     .local v39, "item":Ljava/lang/String;
     invoke-static/range {v39 .. v39}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v33
 
-    .line 1573
     .local v33, "id":I
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
@@ -10255,7 +9209,6 @@
 
     if-eqz v63, :cond_20
 
-    .line 1577
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->SDCARD_TYPE:I
@@ -10277,7 +9230,6 @@
     .end local v59    # "swlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     check-cast v59, Ljava/util/HashSet;
 
-    .line 1584
     .restart local v59    # "swlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :goto_e
     move-object/from16 v0, v59
@@ -10286,7 +9238,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1585
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->SDCARD_TYPE:I
@@ -10309,12 +9260,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1571
     add-int/lit8 v32, v32, 0x1
 
     goto :goto_d
 
-    .line 1466
     .end local v9    # "arr$":[Ljava/lang/String;
     .end local v19    # "bluetoothuserid":Ljava/lang/String;
     .end local v20    # "bluetoothuseridBL":Ljava/lang/String;
@@ -10356,12 +9305,10 @@
 
     invoke-static/range {v63 .. v64}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1467
     invoke-static/range {p0 .. p0}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 1500
     .restart local v31    # "existContAllowCat":Ljava/lang/String;
     .restart local v46    # "packageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_18
@@ -10373,11 +9320,9 @@
 
     goto/16 :goto_7
 
-    .line 1503
     :cond_19
     if-eqz v25, :cond_1a
 
-    .line 1504
     move-object/from16 v0, v25
 
     move-object/from16 v1, v27
@@ -10386,7 +9331,6 @@
 
     goto/16 :goto_7
 
-    .line 1506
     :cond_1a
     const/16 v63, 0x0
 
@@ -10398,12 +9342,10 @@
 
     goto/16 :goto_7
 
-    .line 1514
     .end local v31    # "existContAllowCat":Ljava/lang/String;
     :catch_2
     move-exception v30
 
-    .line 1515
     .local v30, "e":Ljava/lang/Exception;
     const-string v63, "SELinuxMMAC"
 
@@ -10433,12 +9375,10 @@
 
     goto/16 :goto_8
 
-    .line 1521
     .end local v30    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v30
 
-    .line 1522
     .restart local v30    # "e":Ljava/lang/Exception;
     const-string v63, "SELinuxMMAC"
 
@@ -10468,20 +9408,16 @@
 
     goto/16 :goto_9
 
-    .line 1528
     .end local v30    # "e":Ljava/lang/Exception;
     :cond_1b
     if-eqz v56, :cond_13
 
-    .line 1529
     if-eqz v6, :cond_1c
 
-    .line 1530
     move-object/from16 v0, v27
 
     iput-object v6, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowCategory:Ljava/lang/String;
 
-    .line 1534
     :goto_f
     move-object/from16 v0, v56
 
@@ -10491,7 +9427,6 @@
 
     goto/16 :goto_a
 
-    .line 1532
     :cond_1c
     move-object/from16 v0, v34
 
@@ -10501,19 +9436,15 @@
 
     goto :goto_f
 
-    .line 1539
     :cond_1d
     if-eqz v56, :cond_14
 
-    .line 1540
     if-eqz v11, :cond_1e
 
-    .line 1541
     move-object/from16 v0, v27
 
     iput-object v11, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbcallowCategory:Ljava/lang/String;
 
-    .line 1545
     :goto_10
     move-object/from16 v0, v56
 
@@ -10523,7 +9454,6 @@
 
     goto/16 :goto_b
 
-    .line 1543
     :cond_1e
     move-object/from16 v0, v27
 
@@ -10531,13 +9461,11 @@
 
     goto :goto_10
 
-    .line 1550
     :cond_1f
     const/4 v10, 0x0
 
     goto/16 :goto_c
 
-    .line 1582
     .restart local v9    # "arr$":[Ljava/lang/String;
     .restart local v19    # "bluetoothuserid":Ljava/lang/String;
     .restart local v20    # "bluetoothuseridBL":Ljava/lang/String;
@@ -10560,7 +9488,6 @@
     .restart local v59    # "swlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     goto/16 :goto_e
 
-    .line 1588
     .end local v9    # "arr$":[Ljava/lang/String;
     .end local v32    # "i$":I
     .end local v33    # "id":I
@@ -10571,14 +9498,12 @@
     :cond_21
     if-eqz v19, :cond_23
 
-    .line 1589
     move-object/from16 v0, v19
 
     move-object/from16 v1, v27
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bluetoothuserid:Ljava/lang/String;
 
-    .line 1590
     const-string v63, ","
 
     move-object/from16 v0, v19
@@ -10589,11 +9514,9 @@
 
     move-result-object v62
 
-    .line 1591
     .restart local v62    # "users":[Ljava/lang/String;
     const/16 v21, 0x0
 
-    .line 1592
     .local v21, "bwlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     move-object/from16 v9, v62
 
@@ -10615,13 +9538,11 @@
 
     aget-object v39, v9, v32
 
-    .line 1593
     .restart local v39    # "item":Ljava/lang/String;
     invoke-static/range {v39 .. v39}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v33
 
-    .line 1594
     .restart local v33    # "id":I
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
@@ -10643,7 +9564,6 @@
 
     if-eqz v63, :cond_22
 
-    .line 1598
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->BT_TYPE:I
@@ -10665,7 +9585,6 @@
     .end local v21    # "bwlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     check-cast v21, Ljava/util/HashSet;
 
-    .line 1605
     .restart local v21    # "bwlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :goto_12
     move-object/from16 v0, v21
@@ -10674,7 +9593,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1606
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->BT_TYPE:I
@@ -10697,12 +9615,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1592
     add-int/lit8 v32, v32, 0x1
 
     goto :goto_11
 
-    .line 1603
     :cond_22
     new-instance v21, Ljava/util/HashSet;
 
@@ -10712,7 +9628,6 @@
     .restart local v21    # "bwlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     goto :goto_12
 
-    .line 1609
     .end local v9    # "arr$":[Ljava/lang/String;
     .end local v21    # "bwlalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     .end local v32    # "i$":I
@@ -10723,14 +9638,12 @@
     :cond_23
     if-eqz v53, :cond_25
 
-    .line 1610
     move-object/from16 v0, v53
 
     move-object/from16 v1, v27
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->sdcarduseridBL:Ljava/lang/String;
 
-    .line 1611
     const-string v63, ","
 
     move-object/from16 v0, v53
@@ -10741,11 +9654,9 @@
 
     move-result-object v62
 
-    .line 1612
     .restart local v62    # "users":[Ljava/lang/String;
     const/16 v51, 0x0
 
-    .line 1613
     .local v51, "sblalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     move-object/from16 v9, v62
 
@@ -10767,13 +9678,11 @@
 
     aget-object v39, v9, v32
 
-    .line 1614
     .restart local v39    # "item":Ljava/lang/String;
     invoke-static/range {v39 .. v39}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v33
 
-    .line 1615
     .restart local v33    # "id":I
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
@@ -10795,7 +9704,6 @@
 
     if-eqz v63, :cond_24
 
-    .line 1619
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->SDCARD_TYPE:I
@@ -10817,7 +9725,6 @@
     .end local v51    # "sblalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     check-cast v51, Ljava/util/HashSet;
 
-    .line 1626
     .restart local v51    # "sblalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :goto_14
     move-object/from16 v0, v51
@@ -10826,7 +9733,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1627
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->SDCARD_TYPE:I
@@ -10849,12 +9755,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1613
     add-int/lit8 v32, v32, 0x1
 
     goto :goto_13
 
-    .line 1624
     :cond_24
     new-instance v51, Ljava/util/HashSet;
 
@@ -10864,7 +9768,6 @@
     .restart local v51    # "sblalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     goto :goto_14
 
-    .line 1630
     .end local v9    # "arr$":[Ljava/lang/String;
     .end local v32    # "i$":I
     .end local v33    # "id":I
@@ -10875,14 +9778,12 @@
     :cond_25
     if-eqz v20, :cond_27
 
-    .line 1631
     move-object/from16 v0, v20
 
     move-object/from16 v1, v27
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bluetoothuseridBL:Ljava/lang/String;
 
-    .line 1632
     const-string v63, ","
 
     move-object/from16 v0, v20
@@ -10893,11 +9794,9 @@
 
     move-result-object v62
 
-    .line 1633
     .restart local v62    # "users":[Ljava/lang/String;
     const/16 v18, 0x0
 
-    .line 1634
     .local v18, "bblalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     move-object/from16 v9, v62
 
@@ -10919,13 +9818,11 @@
 
     aget-object v39, v9, v32
 
-    .line 1635
     .restart local v39    # "item":Ljava/lang/String;
     invoke-static/range {v39 .. v39}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v33
 
-    .line 1636
     .restart local v33    # "id":I
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
@@ -10947,7 +9844,6 @@
 
     if-eqz v63, :cond_26
 
-    .line 1640
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->BT_TYPE:I
@@ -10969,7 +9865,6 @@
     .end local v18    # "bblalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     check-cast v18, Ljava/util/HashSet;
 
-    .line 1647
     .restart local v18    # "bblalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :goto_16
     move-object/from16 v0, v18
@@ -10978,7 +9873,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1648
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
     sget v64, Lcom/android/server/pm/SELinuxMMAC;->BT_TYPE:I
@@ -11001,12 +9895,10 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1634
     add-int/lit8 v32, v32, 0x1
 
     goto :goto_15
 
-    .line 1645
     :cond_26
     new-instance v18, Ljava/util/HashSet;
 
@@ -11016,7 +9908,6 @@
     .restart local v18    # "bblalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     goto :goto_16
 
-    .line 1652
     .end local v9    # "arr$":[Ljava/lang/String;
     .end local v18    # "bblalist":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     .end local v32    # "i$":I
@@ -11033,7 +9924,6 @@
 
     if-eqz v63, :cond_2
 
-    .line 1653
     if-nez v5, :cond_28
 
     const-string/jumbo v63, "generic_mdm"
@@ -11050,17 +9940,14 @@
 
     if-eqz v63, :cond_2e
 
-    .line 1657
     :cond_28
     new-instance v41, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct/range {v41 .. v41}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 1658
     .local v41, "mdmID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/16 v24, 0x0
 
-    .line 1659
     .local v24, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     move-object/from16 v0, p1
 
@@ -11068,14 +9955,12 @@
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 1660
     move-object/from16 v0, v48
 
     move-object/from16 v1, v41
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 1667
     if-eqz v10, :cond_29
 
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
@@ -11090,7 +9975,6 @@
 
     if-eqz v63, :cond_29
 
-    .line 1671
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     move-object/from16 v0, v63
@@ -11104,12 +9988,10 @@
     .end local v24    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     check-cast v24, Ljava/util/HashSet;
 
-    .line 1683
     .restart local v24    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :goto_17
     if-eqz v10, :cond_2b
 
-    .line 1684
     move-object/from16 v0, v27
 
     iget v0, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbccategory:I
@@ -11126,7 +10008,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1685
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     move-object/from16 v0, v63
@@ -11137,7 +10018,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1686
     move-object/from16 v0, v27
 
     iget v0, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->bbccategory:I
@@ -11152,7 +10032,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 1687
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->bbc_containerIDTable:[I
 
     move-object/from16 v0, v27
@@ -11173,7 +10052,6 @@
 
     goto/16 :goto_0
 
-    .line 1672
     :cond_29
     if-nez v10, :cond_2a
 
@@ -11189,7 +10067,6 @@
 
     if-eqz v63, :cond_2a
 
-    .line 1676
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     move-object/from16 v0, v63
@@ -11206,7 +10083,6 @@
     .restart local v24    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     goto :goto_17
 
-    .line 1681
     :cond_2a
     new-instance v24, Ljava/util/HashSet;
 
@@ -11216,7 +10092,6 @@
     .restart local v24    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     goto :goto_17
 
-    .line 1690
     :cond_2b
     move-object/from16 v0, v27
 
@@ -11234,7 +10109,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1691
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     move-object/from16 v0, v63
@@ -11245,7 +10119,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1692
     move-object/from16 v0, v27
 
     iget v0, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
@@ -11260,7 +10133,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 1693
     move-object/from16 v0, v27
 
     iget v0, v0, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
@@ -11275,7 +10147,6 @@
 
     if-ne v0, v1, :cond_2c
 
-    .line 1694
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->irm_containerIDTable:[I
 
     const/16 v64, 0x0
@@ -11286,7 +10157,6 @@
 
     goto/16 :goto_0
 
-    .line 1696
     :cond_2c
     move-object/from16 v0, v27
 
@@ -11302,7 +10172,6 @@
 
     if-ne v0, v1, :cond_2d
 
-    .line 1697
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->ddc_containerIDTable:[I
 
     const/16 v64, 0x0
@@ -11313,7 +10182,6 @@
 
     goto/16 :goto_0
 
-    .line 1699
     :cond_2d
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->generic_containerIDTable:[I
 
@@ -11335,7 +10203,6 @@
 
     goto/16 :goto_0
 
-    .line 1706
     .end local v24    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v41    # "mdmID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_2e
@@ -11369,7 +10236,6 @@
 
     if-gt v0, v1, :cond_2f
 
-    .line 1707
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->BBC_CONTAINER_INFO:Ljava/util/HashMap;
 
     move-object/from16 v0, v63
@@ -11382,7 +10248,6 @@
 
     goto/16 :goto_6
 
-    .line 1709
     :cond_2f
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_CONTAINER_INFO:Ljava/util/HashMap;
 
@@ -11396,7 +10261,6 @@
 
     goto/16 :goto_6
 
-    .line 1714
     .end local v5    # "agentInfo":Ljava/lang/String;
     .end local v12    # "bbccategory":Ljava/lang/String;
     .end local v14    # "bbcinnerAllowCategory":Ljava/lang/String;
@@ -11427,7 +10291,6 @@
 
     if-eqz v63, :cond_2
 
-    .line 1716
     const-string/jumbo v63, "persist.security.ams.enforcing"
 
     const-string v64, "0"
@@ -11436,11 +10299,9 @@
 
     move-result-object v8
 
-    .line 1717
     .local v8, "ams_orig_val":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 1719
     .local v7, "ams_orig_bit":I
     :try_start_4
     invoke-static {v8}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -11449,7 +10310,6 @@
 
     move-result v7
 
-    .line 1724
     :goto_18
     const/16 v63, 0x2
 
@@ -11457,10 +10317,8 @@
 
     if-ge v7, v0, :cond_31
 
-    .line 1725
     const/4 v7, 0x3
 
-    .line 1726
     const-string/jumbo v63, "persist.security.ams.enforcing"
 
     invoke-static {v7}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -11469,7 +10327,6 @@
 
     invoke-static/range {v63 .. v64}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1728
     :cond_31
     const/16 v63, 0x0
 
@@ -11485,7 +10342,6 @@
 
     move-result-object v58
 
-    .line 1729
     .local v58, "srcPkgName":Ljava/lang/String;
     const/16 v63, 0x0
 
@@ -11501,7 +10357,6 @@
 
     move-result-object v29
 
-    .line 1730
     .local v29, "destPkgName":Ljava/lang/String;
     const/16 v63, 0x0
 
@@ -11517,20 +10372,16 @@
 
     move-result-object v35
 
-    .line 1731
     .restart local v35    # "innerSeinfo":Ljava/lang/String;
     if-nez v29, :cond_32
 
-    .line 1732
     const-string v29, "allknoxpackages"
 
-    .line 1735
     :cond_32
     new-instance v26, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct/range {v26 .. v26}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 1736
     .local v26, "containerAllowSrcPackageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     move-object/from16 v0, p1
 
@@ -11538,19 +10389,16 @@
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 1737
     move-object/from16 v0, v58
 
     move-object/from16 v1, v26
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 1739
     if-eqz v58, :cond_2
 
     if-eqz p1, :cond_2
 
-    .line 1741
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
 
     move-object/from16 v0, v63
@@ -11563,7 +10411,6 @@
 
     if-eqz v63, :cond_33
 
-    .line 1742
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
 
     move-object/from16 v0, v63
@@ -11576,7 +10423,6 @@
 
     check-cast v27, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
 
-    .line 1743
     .restart local v27    # "containerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     move-object/from16 v0, v27
 
@@ -11592,7 +10438,6 @@
 
     add-int/lit8 v43, v63, 0x1
 
-    .line 1744
     .local v43, "newSize":I
     move/from16 v0, v43
 
@@ -11600,7 +10445,6 @@
 
     move-object/from16 v42, v0
 
-    .line 1745
     .local v42, "newArray":[Ljava/lang/String;
     move-object/from16 v0, v27
 
@@ -11626,12 +10470,10 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1746
     add-int/lit8 v63, v43, -0x1
 
     aput-object v29, v42, v63
 
-    .line 1747
     move-object/from16 v0, v42
 
     move-object/from16 v1, v27
@@ -11640,7 +10482,6 @@
 
     goto/16 :goto_6
 
-    .line 1720
     .end local v26    # "containerAllowSrcPackageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v27    # "containerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     .end local v29    # "destPkgName":Ljava/lang/String;
@@ -11651,7 +10492,6 @@
     :catch_4
     move-exception v30
 
-    .line 1721
     .restart local v30    # "e":Ljava/lang/Exception;
     const-string v63, "SELinuxMMAC"
 
@@ -11677,12 +10517,10 @@
 
     invoke-static/range {v63 .. v64}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1722
     const/4 v7, 0x1
 
     goto/16 :goto_18
 
-    .line 1749
     .end local v30    # "e":Ljava/lang/Exception;
     .restart local v26    # "containerAllowSrcPackageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .restart local v29    # "destPkgName":Ljava/lang/String;
@@ -11693,7 +10531,6 @@
 
     invoke-direct/range {v27 .. v27}, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;-><init>()V
 
-    .line 1753
     .restart local v27    # "containerInfo":Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;
     const/16 v63, 0x1
 
@@ -11703,55 +10540,45 @@
 
     move-object/from16 v42, v0
 
-    .line 1754
     .restart local v42    # "newArray":[Ljava/lang/String;
     const/16 v63, 0x0
 
     aput-object v29, v42, v63
 
-    .line 1755
     move-object/from16 v0, v42
 
     move-object/from16 v1, v27
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->destPkgName:[Ljava/lang/String;
 
-    .line 1756
     if-eqz v56, :cond_35
 
-    .line 1757
     if-eqz v54, :cond_34
 
-    .line 1758
     move-object/from16 v0, v54
 
     move-object/from16 v1, v27
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->allowCategory:Ljava/lang/String;
 
-    .line 1760
     :cond_34
     if-eqz v23, :cond_35
 
-    .line 1761
     move/from16 v0, v55
 
     move-object/from16 v1, v27
 
     iput v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->category:I
 
-    .line 1764
     :cond_35
     if-eqz v35, :cond_37
 
-    .line 1765
     move-object/from16 v0, v35
 
     move-object/from16 v1, v27
 
     iput-object v0, v1, Lcom/android/server/pm/SELinuxMMAC$ContainerInfo;->seInfo:Ljava/lang/String;
 
-    .line 1769
     :cond_36
     :goto_19
     sget-object v63, Lcom/android/server/pm/SELinuxMMAC;->ACROSS_KNOX_PKG_INFO:Ljava/util/HashMap;
@@ -11766,11 +10593,9 @@
 
     goto/16 :goto_6
 
-    .line 1766
     :cond_37
     if-eqz v56, :cond_36
 
-    .line 1767
     move-object/from16 v0, v56
 
     move-object/from16 v1, v27
@@ -11779,7 +10604,6 @@
 
     goto :goto_19
 
-    .line 1779
     .end local v7    # "ams_orig_bit":I
     .end local v8    # "ams_orig_val":Ljava/lang/String;
     .end local v26    # "containerAllowSrcPackageID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
@@ -11804,7 +10628,6 @@
     .end annotation
 
     .prologue
-    .line 2434
     const/4 v0, 0x2
 
     const/4 v1, 0x0
@@ -11813,10 +10636,8 @@
 
     invoke-interface {p0, v0, v1, v2}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 2435
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->nextTag()I
 
-    .line 2436
     return-void
 .end method
 
@@ -11833,16 +10654,13 @@
     .prologue
     const/4 v5, 0x3
 
-    .line 1944
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v0
 
-    .line 1945
     .local v0, "outerDepth":I
     const/4 v1, 0x0
 
-    .line 1946
     .local v1, "seinfo":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -11863,7 +10681,6 @@
 
     if-le v4, v0, :cond_3
 
-    .line 1947
     :cond_1
     if-eq v3, v5, :cond_0
 
@@ -11871,12 +10688,10 @@
 
     if-eq v3, v4, :cond_0
 
-    .line 1950
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1951
     .local v2, "tagName":Ljava/lang/String;
     const-string/jumbo v4, "seinfo"
 
@@ -11886,18 +10701,15 @@
 
     if-eqz v4, :cond_2
 
-    .line 1952
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->parseSeinfo(Lorg/xmlpull/v1/XmlPullParser;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1954
     :cond_2
     invoke-static {p0}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 1956
     .end local v2    # "tagName":Ljava/lang/String;
     :cond_3
     return-object v1
@@ -11918,17 +10730,14 @@
 
     const/4 v7, 0x0
 
-    .line 2318
     const-string/jumbo v5, "signer"
 
     invoke-interface {p0, v8, v7, v5}, Lorg/xmlpull/v1/XmlPullParser;->require(ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 2319
     new-instance v1, Lcom/android/server/pm/Policy$PolicyBuilder;
 
     invoke-direct {v1}, Lcom/android/server/pm/Policy$PolicyBuilder;-><init>()V
 
-    .line 2323
     .local v1, "pb":Lcom/android/server/pm/Policy$PolicyBuilder;
     const-string/jumbo v5, "signature"
 
@@ -11936,14 +10745,11 @@
 
     move-result-object v0
 
-    .line 2324
     .local v0, "cert":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 2325
     invoke-virtual {v1, v0}, Lcom/android/server/pm/Policy$PolicyBuilder;->addSignature(Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 2328
     :cond_0
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -11954,19 +10760,16 @@
 
     if-eq v5, v6, :cond_4
 
-    .line 2329
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v5
 
     if-ne v5, v8, :cond_0
 
-    .line 2333
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 2334
     .local v4, "tagName":Ljava/lang/String;
     const-string/jumbo v5, "seinfo"
 
@@ -11976,23 +10779,19 @@
 
     if-eqz v5, :cond_1
 
-    .line 2335
     const-string/jumbo v5, "value"
 
     invoke-interface {p0, v7, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2336
     .local v2, "seinfo":Ljava/lang/String;
     invoke-virtual {v1, v2}, Lcom/android/server/pm/Policy$PolicyBuilder;->setGlobalSeinfoOrThrow(Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 2337
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->readSeinfo(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 2338
     .end local v2    # "seinfo":Ljava/lang/String;
     :cond_1
     const-string/jumbo v5, "package"
@@ -12003,12 +10802,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 2339
     invoke-static {p0, v1}, Lcom/android/server/pm/SELinuxMMAC;->readPackageOrThrow(Lorg/xmlpull/v1/XmlPullParser;Lcom/android/server/pm/Policy$PolicyBuilder;)V
 
     goto :goto_0
 
-    .line 2340
     :cond_2
     const-string v5, "cert"
 
@@ -12018,30 +10815,25 @@
 
     if-eqz v5, :cond_3
 
-    .line 2341
     const-string/jumbo v5, "signature"
 
     invoke-interface {p0, v7, v5}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 2342
     .local v3, "sig":Ljava/lang/String;
     invoke-virtual {v1, v3}, Lcom/android/server/pm/Policy$PolicyBuilder;->addSignature(Ljava/lang/String;)Lcom/android/server/pm/Policy$PolicyBuilder;
 
-    .line 2343
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->readCert(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 2345
     .end local v3    # "sig":Ljava/lang/String;
     :cond_3
     invoke-static {p0}, Lcom/android/server/pm/SELinuxMMAC;->skip(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 2349
     .end local v4    # "tagName":Ljava/lang/String;
     :cond_4
     invoke-virtual {v1}, Lcom/android/server/pm/Policy$PolicyBuilder;->build()Lcom/android/server/pm/Policy;
@@ -12060,12 +10852,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1127
     const-string v3, "container"
 
     monitor-enter v3
 
-    .line 1128
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->isContainerCreatedbyCaller(Ljava/lang/String;Ljava/lang/String;I)Z
 
@@ -12073,7 +10863,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 1132
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->bbc_containerIDTable:[I
 
     add-int/lit16 v5, p2, -0x1f5
@@ -12082,23 +10871,18 @@
 
     aput v6, v4, v5
 
-    .line 1133
     new-instance v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v0}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 1134
     .local v0, "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/4 v1, 0x0
 
-    .line 1135
     .local v1, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     iput-object p1, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 1136
     iput-object p0, v0, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 1137
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -12108,7 +10892,6 @@
     .end local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     check-cast v1, Ljava/util/HashSet;
 
-    .line 1138
     .restart local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -12116,29 +10899,24 @@
 
     invoke-virtual {v1, v4}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 1139
     invoke-virtual {v1}, Ljava/util/HashSet;->size()I
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1143
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->BBC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1153
     :goto_0
     monitor-exit v3
 
-    .line 1158
     .end local v0    # "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :goto_1
     return v2
 
-    .line 1148
     .restart local v0    # "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .restart local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :cond_0
@@ -12148,7 +10926,6 @@
 
     goto :goto_0
 
-    .line 1159
     .end local v0    # "bbcMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     .end local v1    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     :catchall_0
@@ -12160,7 +10937,6 @@
 
     throw v2
 
-    .line 1156
     :cond_1
     :try_start_1
     const-string v2, "SEContainer"
@@ -12169,7 +10945,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1158
     const/16 v2, -0xc
 
     monitor-exit v3
@@ -12186,26 +10961,21 @@
     .param p2, "containerID"    # I
 
     .prologue
-    .line 1024
     const/4 v0, 0x0
 
-    .line 1025
     .local v0, "bbcFlag":Z
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 1026
     .local v3, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
 
-    .line 1027
     .local v2, "pid":I
     const/4 v1, 0x0
 
-    .line 1028
     .local v1, "callpkgName":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -12213,37 +10983,30 @@
 
     move-result-object v1
 
-    .line 1029
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->isBBCAgent()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1030
     invoke-static {}, Lcom/android/server/pm/SELinuxMMAC;->getBBCFlag()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1031
     const/4 v0, 0x1
 
-    .line 1034
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 1035
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->removeBBCContainerID(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 1040
     :goto_0
     return v4
 
-    .line 1037
     :cond_1
     const-string v4, "com.samsung.android.irm.service"
 
@@ -12253,14 +11016,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 1038
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->removeIRMContainerID(Ljava/lang/String;Ljava/lang/String;I)I
 
     move-result v4
 
     goto :goto_0
 
-    .line 1040
     :cond_2
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->removeMyContainerID(Ljava/lang/String;Ljava/lang/String;I)I
 
@@ -12278,12 +11039,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1088
     const-string v3, "container"
 
     monitor-enter v3
 
-    .line 1089
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->isContainerCreatedbyCaller(Ljava/lang/String;Ljava/lang/String;I)Z
 
@@ -12291,7 +11050,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 1093
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->irm_containerIDTable:[I
 
     const/4 v5, 0x0
@@ -12300,23 +11058,18 @@
 
     aput v6, v4, v5
 
-    .line 1094
     new-instance v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v1}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 1095
     .local v1, "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/4 v0, 0x0
 
-    .line 1096
     .local v0, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     iput-object p1, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 1097
     iput-object p0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 1098
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -12326,7 +11079,6 @@
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     check-cast v0, Ljava/util/HashSet;
 
-    .line 1099
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -12334,29 +11086,24 @@
 
     invoke-virtual {v0, v4}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 1100
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1104
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1114
     :goto_0
     monitor-exit v3
 
-    .line 1119
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v1    # "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :goto_1
     return v2
 
-    .line 1109
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .restart local v1    # "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_0
@@ -12366,7 +11113,6 @@
 
     goto :goto_0
 
-    .line 1120
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v1    # "irmMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :catchall_0
@@ -12378,7 +11124,6 @@
 
     throw v2
 
-    .line 1117
     :cond_1
     :try_start_1
     const-string v2, "SEContainer"
@@ -12387,7 +11132,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1119
     const/16 v2, -0xc
 
     monitor-exit v3
@@ -12406,12 +11150,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1049
     const-string v3, "container"
 
     monitor-enter v3
 
-    .line 1050
     :try_start_0
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/SELinuxMMAC;->isContainerCreatedbyCaller(Ljava/lang/String;Ljava/lang/String;I)Z
 
@@ -12419,7 +11161,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 1054
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->generic_containerIDTable:[I
 
     add-int/lit16 v5, p2, -0xc9
@@ -12428,23 +11169,18 @@
 
     aput v6, v4, v5
 
-    .line 1055
     new-instance v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;
 
     invoke-direct {v1}, Lcom/android/server/pm/SELinuxMMAC$MDMID;-><init>()V
 
-    .line 1056
     .local v1, "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     const/4 v0, 0x0
 
-    .line 1057
     .local v0, "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     iput-object p1, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->certs:Ljava/lang/String;
 
-    .line 1058
     iput-object p0, v1, Lcom/android/server/pm/SELinuxMMAC$MDMID;->packageName:Ljava/lang/String;
 
-    .line 1059
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -12454,7 +11190,6 @@
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     check-cast v0, Ljava/util/HashSet;
 
-    .line 1060
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -12462,29 +11197,24 @@
 
     invoke-virtual {v0, v4}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 1061
     invoke-virtual {v0}, Ljava/util/HashSet;->size()I
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1065
     sget-object v4, Lcom/android/server/pm/SELinuxMMAC;->GENERIC_MDM_INFO:Ljava/util/HashMap;
 
     invoke-virtual {v4, v1, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1075
     :goto_0
     monitor-exit v3
 
-    .line 1080
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v1    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :goto_1
     return v2
 
-    .line 1070
     .restart local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .restart local v1    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :cond_0
@@ -12494,7 +11224,6 @@
 
     goto :goto_0
 
-    .line 1081
     .end local v0    # "categorys":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/Integer;>;"
     .end local v1    # "genericMDMID":Lcom/android/server/pm/SELinuxMMAC$MDMID;
     :catchall_0
@@ -12506,7 +11235,6 @@
 
     throw v2
 
-    .line 1078
     :cond_1
     :try_start_1
     const-string v2, "SEContainer"
@@ -12515,7 +11243,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1080
     const/16 v2, -0xc
 
     monitor-exit v3
@@ -12535,13 +11262,11 @@
     .end annotation
 
     .prologue
-    .line 2814
     :try_start_0
     invoke-static {p0}, Llibcore/io/IoUtils;->readFileAsByteArray(Ljava/lang/String;)[B
 
     move-result-object v0
 
-    .line 2815
     .local v0, "contents":[B
     const-string v2, "SHA-1"
 
@@ -12557,12 +11282,10 @@
 
     return-object v2
 
-    .line 2816
     .end local v0    # "contents":[B
     :catch_0
     move-exception v1
 
-    .line 2817
     .local v1, "nsae":Ljava/security/NoSuchAlgorithmException;
     new-instance v2, Ljava/lang/RuntimeException;
 
@@ -12576,10 +11299,8 @@
     .param p0, "value"    # Z
 
     .prologue
-    .line 2102
     sput-boolean p0, Lcom/android/server/pm/SELinuxMMAC;->bbc_flag:Z
 
-    .line 2103
     const/4 v0, 0x0
 
     return v0
@@ -12589,12 +11310,10 @@
     .locals 6
 
     .prologue
-    .line 2758
     invoke-static {}, Lcom/android/server/pm/Revision;->selinux_android_load_priority()I
 
     move-result v1
 
-    .line 2760
     .local v1, "index":I
     :try_start_0
     sget-object v3, Lcom/android/server/pm/SELinuxMMAC;->INSTALL_POLICY_PATH:[Ljava/lang/String;
@@ -12607,7 +11326,6 @@
 
     move-result-object v0
 
-    .line 2761
     .local v0, "currentHash":[B
     new-instance v3, Ljava/io/File;
 
@@ -12619,16 +11337,13 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2774
     .end local v0    # "currentHash":[B
     :goto_0
     return-void
 
-    .line 2762
     :catch_0
     move-exception v2
 
-    .line 2763
     .local v2, "ioe":Ljava/io/IOException;
     const-string v3, "SELinuxMMAC"
 
@@ -12661,14 +11376,12 @@
     .locals 3
 
     .prologue
-    .line 271
     const-string v1, "SELinuxMMAC"
 
     const-string v2, "entered setup resource list in selinuxmmac"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 272
     const/4 v0, 0x0
 
     .local v0, "pos":I
@@ -12677,7 +11390,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 273
     sget-object v1, Lcom/android/server/pm/SELinuxMMAC;->WHITELISTS:Ljava/util/ArrayList;
 
     new-instance v2, Ljava/util/HashMap;
@@ -12686,7 +11398,6 @@
 
     invoke-virtual {v1, v0, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 274
     sget-object v1, Lcom/android/server/pm/SELinuxMMAC;->BLACKLISTS:Ljava/util/ArrayList;
 
     new-instance v2, Ljava/util/HashMap;
@@ -12695,7 +11406,6 @@
 
     invoke-virtual {v1, v0, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 275
     sget-object v1, Lcom/android/server/pm/SELinuxMMAC;->SBALISTS:Ljava/util/ArrayList;
 
     new-instance v2, Ljava/util/HashSet;
@@ -12704,12 +11414,10 @@
 
     invoke-virtual {v1, v0, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 272
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 277
     :cond_0
     return-void
 .end method
@@ -12720,16 +11428,13 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2722
     const/4 v0, 0x0
 
-    .line 2725
     .local v0, "currentHash":[B
     invoke-static {}, Lcom/android/server/pm/Revision;->selinux_android_load_priority()I
 
     move-result v1
 
-    .line 2727
     .local v1, "index":I
     :try_start_0
     sget-object v5, Lcom/android/server/pm/SELinuxMMAC;->INSTALL_POLICY_PATH:[Ljava/lang/String;
@@ -12744,10 +11449,8 @@
 
     move-result-object v0
 
-    .line 2743
     const/4 v3, 0x0
 
-    .line 2745
     .local v3, "storedHash":[B
     :try_start_1
     sget-object v5, Lcom/android/server/pm/SELinuxMMAC;->SEAPP_HASH_FILE:Ljava/lang/String;
@@ -12758,7 +11461,6 @@
 
     move-result-object v3
 
-    .line 2750
     :goto_0
     if-eqz v3, :cond_0
 
@@ -12776,11 +11478,9 @@
     :goto_1
     return v4
 
-    .line 2728
     :catch_0
     move-exception v2
 
-    .line 2729
     .local v2, "ioe":Ljava/io/IOException;
     const-string v5, "SELinuxMMAC"
 
@@ -12790,13 +11490,11 @@
 
     goto :goto_1
 
-    .line 2746
     .end local v2    # "ioe":Ljava/io/IOException;
     .restart local v3    # "storedHash":[B
     :catch_1
     move-exception v2
 
-    .line 2747
     .restart local v2    # "ioe":Ljava/io/IOException;
     const-string v5, "SELinuxMMAC"
 
@@ -12842,7 +11540,6 @@
     .end annotation
 
     .prologue
-    .line 2439
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v1
@@ -12851,23 +11548,19 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 2440
     new-instance v1, Ljava/lang/IllegalStateException;
 
     invoke-direct {v1}, Ljava/lang/IllegalStateException;-><init>()V
 
     throw v1
 
-    .line 2442
     :cond_0
     const/4 v0, 0x1
 
-    .line 2443
     .local v0, "depth":I
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 2444
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
@@ -12876,24 +11569,19 @@
 
     goto :goto_0
 
-    .line 2449
     :pswitch_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2446
     :pswitch_1
     add-int/lit8 v0, v0, -0x1
 
-    .line 2447
     goto :goto_0
 
-    .line 2453
     :cond_1
     return-void
 
-    .line 2444
     nop
 
     :pswitch_data_0
@@ -12907,7 +11595,6 @@
     .locals 6
 
     .prologue
-    .line 2823
     :try_start_0
     sget-object v3, Lcom/android/server/pm/SELinuxMMAC;->DATA_VERSION_FILE:Ljava/lang/String;
 
@@ -12915,7 +11602,6 @@
 
     move-result-object v2
 
-    .line 2824
     .local v2, "overrideVersion":Ljava/lang/String;
     const-string v3, "/selinux_version"
 
@@ -12923,7 +11609,6 @@
 
     move-result-object v0
 
-    .line 2825
     .local v0, "baseVersion":Ljava/lang/String;
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -12931,15 +11616,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 2826
     const/4 v3, 0x1
 
-    .line 2835
     .end local v0    # "baseVersion":Ljava/lang/String;
     :goto_0
     return v3
 
-    .line 2828
     .restart local v0    # "baseVersion":Ljava/lang/String;
     :cond_0
     const-string v3, "SELinuxMMAC"
@@ -12989,18 +11671,15 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2835
     .end local v0    # "baseVersion":Ljava/lang/String;
     :goto_1
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 2832
     :catch_0
     move-exception v1
 
-    .line 2833
     .local v1, "ioe":Ljava/io/IOException;
     const-string v3, "SELinuxMMAC"
 
@@ -13010,7 +11689,6 @@
 
     goto :goto_1
 
-    .line 2830
     .end local v1    # "ioe":Ljava/io/IOException;
     :catch_1
     move-exception v3
@@ -13025,31 +11703,25 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1974
     if-nez p0, :cond_1
 
     move v3, v5
 
-    .line 1997
     :cond_0
     :goto_0
     return v3
 
-    .line 1976
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 1977
     .local v0, "N":I
     const/4 v3, 0x0
 
-    .line 1978
     .local v3, "hasSep":Z
     const/4 v2, 0x1
 
-    .line 1979
     .local v2, "front":Z
     const/4 v4, 0x0
 
@@ -13057,12 +11729,10 @@
     :goto_1
     if-ge v4, v0, :cond_0
 
-    .line 1980
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 1981
     .local v1, "c":C
     const/16 v6, 0x61
 
@@ -13081,22 +11751,18 @@
 
     if-gt v1, v6, :cond_5
 
-    .line 1982
     :cond_3
     const/4 v2, 0x0
 
-    .line 1979
     :cond_4
     :goto_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 1985
     :cond_5
     if-nez v2, :cond_7
 
-    .line 1986
     const/16 v6, 0x30
 
     if-lt v1, v6, :cond_6
@@ -13110,25 +11776,20 @@
 
     if-eq v1, v6, :cond_4
 
-    .line 1990
     :cond_7
     const/16 v6, 0x2e
 
     if-ne v1, v6, :cond_8
 
-    .line 1991
     const/4 v3, 0x1
 
-    .line 1992
     const/4 v2, 0x1
 
-    .line 1993
     goto :goto_2
 
     :cond_8
     move v3, v5
 
-    .line 1995
     goto :goto_0
 .end method
 
@@ -13139,37 +11800,30 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 336
     if-nez p0, :cond_1
 
-    .line 349
     :cond_0
     :goto_0
     return v3
 
-    .line 339
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 340
     .local v0, "N":I
     if-eqz v0, :cond_0
 
-    .line 343
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_1
     if-ge v2, v0, :cond_5
 
-    .line 344
     invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 345
     .local v1, "c":C
     const/16 v4, 0x61
 
@@ -13193,13 +11847,11 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 343
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 349
     .end local v1    # "c":C
     :cond_5
     const/4 v3, 0x1

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 139
     iput-object p1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
     iput-object p2, p0, Lcom/android/server/wm/MultiWindowTransition$1;->val$wtoken:Lcom/android/server/wm/AppWindowToken;
@@ -47,7 +46,6 @@
     .prologue
     const/16 v3, 0x67
 
-    .line 150
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
     # getter for: Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -63,7 +61,6 @@
 
     invoke-virtual {v1, v3, v2}, Lcom/android/server/wm/WindowManagerService$H;->removeMessages(ILjava/lang/Object;)V
 
-    .line 152
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
     # getter for: Lcom/android/server/wm/MultiWindowTransition;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -81,7 +78,6 @@
 
     move-result-object v0
 
-    .line 154
     .local v0, "m":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->this$0:Lcom/android/server/wm/MultiWindowTransition;
 
@@ -94,14 +90,12 @@
 
     invoke-virtual {v1, v0}, Lcom/android/server/wm/WindowManagerService$H;->sendMessage(Landroid/os/Message;)Z
 
-    .line 155
     iget-object v1, p0, Lcom/android/server/wm/MultiWindowTransition$1;->val$wtoken:Lcom/android/server/wm/AppWindowToken;
 
     const/4 v2, -0x1
 
     iput v2, v1, Lcom/android/server/wm/AppWindowToken;->mTargetTransit:I
 
-    .line 156
     return-void
 .end method
 
@@ -110,7 +104,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 146
     return-void
 .end method
 
@@ -119,6 +112,5 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 142
     return-void
 .end method

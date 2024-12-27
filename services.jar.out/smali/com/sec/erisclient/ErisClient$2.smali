@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 596
     iput-object p1, p0, Lcom/sec/erisclient/ErisClient$2;->this$0:Lcom/sec/erisclient/ErisClient;
 
     iput-object p2, p0, Lcom/sec/erisclient/ErisClient$2;->val$iListener:Lcom/sec/erisclient/IErisListener;
@@ -52,7 +51,6 @@
     .locals 3
 
     .prologue
-    .line 600
     iget-object v0, p0, Lcom/sec/erisclient/ErisClient$2;->val$iListener:Lcom/sec/erisclient/IErisListener;
 
     iget-object v1, p0, Lcom/sec/erisclient/ErisClient$2;->val$sEvent:Lcom/sec/erisclient/ErisEvent;
@@ -61,6 +59,5 @@
 
     invoke-interface {v0, v1, v2}, Lcom/sec/erisclient/IErisListener;->onConnectionChanged(Lcom/sec/erisclient/ErisEvent;Lcom/sec/erisclient/ErisEventData;)V
 
-    .line 601
     return-void
 .end method

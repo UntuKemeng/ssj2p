@@ -16,7 +16,6 @@
     .locals 1
 
     .prologue
-    .line 26
     const-class v0, Lcom/samsung/android/rlc/util/RMMSSLSocketFactory;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -41,10 +40,8 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-direct {p0, p1}, Lorg/apache/http/conn/ssl/SSLSocketFactory;-><init>(Ljava/security/KeyStore;)V
 
-    .line 25
     const-string v3, "TLS"
 
     invoke-static {v3}, Ljavax/net/ssl/SSLContext;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/SSLContext;
@@ -53,23 +50,19 @@
 
     iput-object v3, p0, Lcom/samsung/android/rlc/util/RMMSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
-    .line 33
     :try_start_0
     invoke-static {}, Ljavax/net/ssl/TrustManagerFactory;->getDefaultAlgorithm()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 34
     .local v2, "tmfAlgorithm":Ljava/lang/String;
     invoke-static {v2}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
 
     move-result-object v1
 
-    .line 35
     .local v1, "tmf":Ljavax/net/ssl/TrustManagerFactory;
     invoke-virtual {v1, p1}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
 
-    .line 37
     iget-object v3, p0, Lcom/samsung/android/rlc/util/RMMSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     const/4 v4, 0x0
@@ -84,17 +77,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 42
     .end local v1    # "tmf":Ljavax/net/ssl/TrustManagerFactory;
     .end local v2    # "tmfAlgorithm":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 38
     :catch_0
     move-exception v0
 
-    .line 40
     .local v0, "ex":Ljava/lang/Exception;
     sget-object v3, Lcom/samsung/android/rlc/util/RMMSSLSocketFactory;->TAG:Ljava/lang/String;
 
@@ -136,7 +126,6 @@
     .end annotation
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/samsung/android/rlc/util/RMMSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;
@@ -164,7 +153,6 @@
     .end annotation
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/samsung/android/rlc/util/RMMSSLSocketFactory;->sslContext:Ljavax/net/ssl/SSLContext;
 
     invoke-virtual {v0}, Ljavax/net/ssl/SSLContext;->getSocketFactory()Ljavax/net/ssl/SSLSocketFactory;

@@ -24,15 +24,12 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 887
     iput-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
-    .line 888
     const/4 v0, 0x0
 
     invoke-direct {p0, p2, v0}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;)V
 
-    .line 889
     return-void
 .end method
 
@@ -47,16 +44,13 @@
 
     const/4 v1, 0x0
 
-    .line 893
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 976
     :goto_0
     return-void
 
-    .line 895
     :pswitch_0
     iget-object v1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -73,7 +67,6 @@
 
     goto :goto_0
 
-    .line 900
     :pswitch_1
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
@@ -92,13 +85,11 @@
 
     goto :goto_0
 
-    .line 901
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 906
     :pswitch_2
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -114,7 +105,6 @@
 
     goto :goto_0
 
-    .line 910
     :pswitch_3
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -123,7 +113,6 @@
 
     goto :goto_0
 
-    .line 914
     :pswitch_4
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -132,7 +121,6 @@
 
     goto :goto_0
 
-    .line 918
     :pswitch_5
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -141,7 +129,6 @@
 
     goto :goto_0
 
-    .line 922
     :pswitch_6
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -150,7 +137,6 @@
 
     goto :goto_0
 
-    .line 926
     :pswitch_7
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -159,7 +145,6 @@
 
     goto :goto_0
 
-    .line 930
     :pswitch_8
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -170,7 +155,6 @@
 
     goto :goto_0
 
-    .line 934
     :pswitch_9
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -181,7 +165,6 @@
 
     goto :goto_0
 
-    .line 938
     :pswitch_a
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -192,7 +175,6 @@
 
     goto :goto_0
 
-    .line 942
     :pswitch_b
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -203,7 +185,6 @@
 
     goto :goto_0
 
-    .line 946
     :pswitch_c
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -212,7 +193,6 @@
 
     goto :goto_0
 
-    .line 950
     :pswitch_d
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -221,7 +201,6 @@
 
     goto :goto_0
 
-    .line 954
     :pswitch_e
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -230,7 +209,6 @@
 
     goto :goto_0
 
-    .line 958
     :pswitch_f
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -239,7 +217,6 @@
 
     goto :goto_0
 
-    .line 962
     :pswitch_10
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -248,7 +225,6 @@
 
     goto/16 :goto_0
 
-    .line 966
     :pswitch_11
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -257,7 +233,6 @@
 
     goto/16 :goto_0
 
-    .line 970
     :pswitch_12
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$ScrControlHandler;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
@@ -266,7 +241,6 @@
 
     goto/16 :goto_0
 
-    .line 893
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

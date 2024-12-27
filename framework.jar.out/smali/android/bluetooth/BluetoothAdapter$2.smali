@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3184
     iput-object p1, p0, Landroid/bluetooth/BluetoothAdapter$2;->this$0:Landroid/bluetooth/BluetoothAdapter;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "up"    # Z
 
     .prologue
-    .line 3186
     const-string v2, "BluetoothAdapter"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -61,10 +59,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3187
     if-nez p1, :cond_6
 
-    .line 3188
     # getter for: Landroid/bluetooth/BluetoothAdapter;->sShouldAllowUseOfLeApi:Z
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->access$800()Z
 
@@ -72,14 +68,12 @@
 
     if-nez v2, :cond_4
 
-    .line 3189
     const-string v2, "BluetoothAdapter"
 
     const-string v3, "Bluetooth is turned off, stop adv"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3190
     # getter for: Landroid/bluetooth/BluetoothAdapter;->sBluetoothLeAdvertiser:Landroid/bluetooth/le/BluetoothLeAdvertiser;
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->access$600()Landroid/bluetooth/le/BluetoothLeAdvertiser;
 
@@ -94,7 +88,6 @@
 
     invoke-virtual {v2}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->stopAllAdvertising()V
 
-    .line 3191
     :cond_0
     # getter for: Landroid/bluetooth/BluetoothAdapter;->sBluetoothLeAdvertiser:Landroid/bluetooth/le/BluetoothLeAdvertiser;
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->access$600()Landroid/bluetooth/le/BluetoothLeAdvertiser;
@@ -110,11 +103,9 @@
 
     invoke-virtual {v2}, Landroid/bluetooth/le/BluetoothLeAdvertiser;->cleanup()V
 
-    .line 3192
     :cond_1
     const/4 v1, 0x0
 
-    .line 3193
     .local v1, "totalBleAppCount":I
     iget-object v2, p0, Landroid/bluetooth/BluetoothAdapter$2;->this$0:Landroid/bluetooth/BluetoothAdapter;
 
@@ -125,7 +116,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 3195
     :try_start_0
     iget-object v2, p0, Landroid/bluetooth/BluetoothAdapter$2;->this$0:Landroid/bluetooth/BluetoothAdapter;
 
@@ -153,18 +143,15 @@
 
     sub-int v1, v2, v3
 
-    .line 3199
     :goto_0
     if-nez v1, :cond_4
 
-    .line 3200
     const-string v2, "BluetoothAdapter"
 
     const-string v3, "There are no active google scan apps, stop scan"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3201
     # getter for: Landroid/bluetooth/BluetoothAdapter;->sBluetoothLeScanner:Landroid/bluetooth/le/BluetoothLeScanner;
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->access$700()Landroid/bluetooth/le/BluetoothLeScanner;
 
@@ -179,7 +166,6 @@
 
     invoke-virtual {v2}, Landroid/bluetooth/le/BluetoothLeScanner;->stopAllScan()V
 
-    .line 3202
     :cond_2
     iget-object v2, p0, Landroid/bluetooth/BluetoothAdapter$2;->this$0:Landroid/bluetooth/BluetoothAdapter;
 
@@ -199,7 +185,6 @@
 
     invoke-interface {v2}, Ljava/util/Map;->clear()V
 
-    .line 3203
     :cond_3
     # getter for: Landroid/bluetooth/BluetoothAdapter;->sBluetoothLeScanner:Landroid/bluetooth/le/BluetoothLeScanner;
     invoke-static {}, Landroid/bluetooth/BluetoothAdapter;->access$700()Landroid/bluetooth/le/BluetoothLeScanner;
@@ -215,18 +200,15 @@
 
     invoke-virtual {v2}, Landroid/bluetooth/le/BluetoothLeScanner;->cleanup()V
 
-    .line 3213
     .end local v1    # "totalBleAppCount":I
     :cond_4
     :goto_1
     return-void
 
-    .line 3196
     .restart local v1    # "totalBleAppCount":I
     :catch_0
     move-exception v0
 
-    .line 3197
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "BluetoothAdapter"
 
@@ -236,7 +218,6 @@
 
     goto :goto_0
 
-    .line 3206
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_5
     const-string v2, "BluetoothAdapter"
@@ -245,7 +226,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3207
     const/4 v2, 0x0
 
     # setter for: Landroid/bluetooth/BluetoothAdapter;->sAdapter:Landroid/bluetooth/BluetoothAdapter;
@@ -253,7 +233,6 @@
 
     goto :goto_1
 
-    .line 3211
     .end local v1    # "totalBleAppCount":I
     :cond_6
     const-string v2, "BluetoothAdapter"

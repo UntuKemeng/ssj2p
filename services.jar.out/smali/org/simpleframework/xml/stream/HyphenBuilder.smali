@@ -20,10 +20,8 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     return-void
 .end method
 
@@ -36,10 +34,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 55
     if-eqz p1, :cond_0
 
-    .line 56
     new-instance v1, Lorg/simpleframework/xml/stream/HyphenBuilder$Parser;
 
     invoke-direct {v1, p0, p1, v0}, Lorg/simpleframework/xml/stream/HyphenBuilder$Parser;-><init>(Lorg/simpleframework/xml/stream/HyphenBuilder;Ljava/lang/String;Lorg/simpleframework/xml/stream/HyphenBuilder$1;)V
@@ -48,7 +44,6 @@
 
     move-result-object v0
 
-    .line 58
     :cond_0
     return-object v0
 .end method
@@ -60,10 +55,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 72
     if-eqz p1, :cond_0
 
-    .line 73
     new-instance v1, Lorg/simpleframework/xml/stream/HyphenBuilder$Parser;
 
     invoke-direct {v1, p0, p1, v0}, Lorg/simpleframework/xml/stream/HyphenBuilder$Parser;-><init>(Lorg/simpleframework/xml/stream/HyphenBuilder;Ljava/lang/String;Lorg/simpleframework/xml/stream/HyphenBuilder$1;)V
@@ -72,7 +65,6 @@
 
     move-result-object v0
 
-    .line 75
     :cond_0
     return-object v0
 .end method

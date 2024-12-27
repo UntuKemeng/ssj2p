@@ -36,10 +36,8 @@
     .locals 0
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     return-void
 .end method
 
@@ -48,10 +46,8 @@
     .param p1, "vaultName"    # Ljava/lang/String;
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     const-string v1, "VaultKeeperService"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -64,14 +60,12 @@
 
     iput-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
-    .line 34
     new-instance v1, Ljava/lang/String;
 
     invoke-direct {v1, p1}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
     iput-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mVaultName:Ljava/lang/String;
 
-    .line 38
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -85,15 +79,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
     :goto_0
     return-void
 
-    .line 40
     :catch_0
     move-exception v0
 
-    .line 42
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -109,10 +100,8 @@
 
     const/4 v1, 0x0
 
-    .line 48
     if-nez p0, :cond_1
 
-    .line 50
     const-string v2, "VaultKeeperManager"
 
     const-string/jumbo v3, "vaultName is null"
@@ -121,12 +110,10 @@
 
     move-object v0, v1
 
-    .line 71
     :cond_0
     :goto_0
     return-object v0
 
-    .line 54
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -140,7 +127,6 @@
 
     if-le v2, v5, :cond_3
 
-    .line 56
     :cond_2
     const-string v2, "VaultKeeperManager"
 
@@ -186,22 +172,18 @@
 
     move-object v0, v1
 
-    .line 58
     goto :goto_0
 
-    .line 61
     :cond_3
     new-instance v0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;-><init>(Ljava/lang/String;)V
 
-    .line 64
     .local v0, "vkm":Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;
     iget-object v2, v0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mClientPkgName:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 70
     const-string v2, "VaultKeeperManager"
 
     const-string v3, "Unauthorized Pkg. Manager can\'t be provided."
@@ -210,7 +192,6 @@
 
     move-object v0, v1
 
-    .line 71
     goto :goto_0
 .end method
 
@@ -221,7 +202,6 @@
     .param p1, "hmac"    # [B
 
     .prologue
-    .line 133
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -235,19 +215,15 @@
 
     move-result v1
 
-    .line 138
     :goto_0
     return v1
 
-    .line 135
     :catch_0
     move-exception v0
 
-    .line 137
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 138
     const/4 v1, -0x3
 
     goto :goto_0
@@ -257,7 +233,6 @@
     .locals 4
 
     .prologue
-    .line 211
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -271,19 +246,15 @@
 
     move-result-object v1
 
-    .line 216
     :goto_0
     return-object v1
 
-    .line 213
     :catch_0
     move-exception v0
 
-    .line 215
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 216
     const/4 v1, 0x0
 
     goto :goto_0
@@ -297,7 +268,6 @@
     .param p4, "sig"    # [B
 
     .prologue
-    .line 107
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -321,19 +291,15 @@
 
     move-result v0
 
-    .line 112
     :goto_0
     return v0
 
-    .line 109
     :catch_0
     move-exception v8
 
-    .line 111
     .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 112
     const/4 v0, -0x3
 
     goto :goto_0
@@ -348,7 +314,6 @@
     .param p5, "sig"    # [B
 
     .prologue
-    .line 120
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -372,19 +337,15 @@
 
     move-result v0
 
-    .line 125
     :goto_0
     return v0
 
-    .line 122
     :catch_0
     move-exception v8
 
-    .line 124
     .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 125
     const/4 v0, -0x3
 
     goto :goto_0
@@ -397,7 +358,6 @@
     .param p3, "sig"    # [B
 
     .prologue
-    .line 93
     :try_start_0
     const-string v0, "VaultKeeperManager"
 
@@ -405,7 +365,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 94
     iget-object v0, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
     iget-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mClientPkgName:Ljava/lang/String;
@@ -428,19 +387,15 @@
 
     move-result v0
 
-    .line 99
     :goto_0
     return v0
 
-    .line 96
     :catch_0
     move-exception v8
 
-    .line 98
     .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 99
     const/4 v0, -0x3
 
     goto :goto_0
@@ -450,7 +405,6 @@
     .locals 4
 
     .prologue
-    .line 80
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -464,19 +418,15 @@
 
     move-result v1
 
-    .line 85
     :goto_0
     return v1
 
-    .line 82
     :catch_0
     move-exception v0
 
-    .line 84
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 85
     const/4 v1, 0x0
 
     goto :goto_0
@@ -486,7 +436,6 @@
     .locals 4
 
     .prologue
-    .line 159
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -500,19 +449,15 @@
 
     move-result-object v1
 
-    .line 164
     :goto_0
     return-object v1
 
-    .line 161
     :catch_0
     move-exception v0
 
-    .line 163
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 164
     const/4 v1, 0x0
 
     goto :goto_0
@@ -522,7 +467,6 @@
     .locals 4
 
     .prologue
-    .line 146
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -536,19 +480,15 @@
 
     move-result-object v1
 
-    .line 151
     :goto_0
     return-object v1
 
-    .line 148
     :catch_0
     move-exception v0
 
-    .line 150
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 151
     const/4 v1, 0x0
 
     goto :goto_0
@@ -559,7 +499,6 @@
     .param p1, "cert"    # [B
 
     .prologue
-    .line 224
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -573,19 +512,15 @@
 
     move-result v1
 
-    .line 229
     :goto_0
     return v1
 
-    .line 226
     :catch_0
     move-exception v0
 
-    .line 228
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 229
     const/4 v1, 0x0
 
     goto :goto_0
@@ -598,7 +533,6 @@
     .param p3, "newData"    # [B
 
     .prologue
-    .line 250
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -618,19 +552,15 @@
 
     move-result v0
 
-    .line 255
     :goto_0
     return v0
 
-    .line 252
     :catch_0
     move-exception v6
 
-    .line 254
     .local v6, "e":Ljava/lang/Exception;
     invoke-virtual {v6}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 255
     const/4 v0, -0x3
 
     goto :goto_0
@@ -641,7 +571,6 @@
     .param p1, "input"    # [B
 
     .prologue
-    .line 237
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -655,19 +584,15 @@
 
     move-result-object v1
 
-    .line 242
     :goto_0
     return-object v1
 
-    .line 239
     :catch_0
     move-exception v0
 
-    .line 241
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 242
     const/4 v1, 0x0
 
     goto :goto_0
@@ -680,7 +605,6 @@
     .param p3, "hmac"    # [B
 
     .prologue
-    .line 172
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -702,19 +626,15 @@
 
     move-result v0
 
-    .line 177
     :goto_0
     return v0
 
-    .line 174
     :catch_0
     move-exception v7
 
-    .line 176
     .local v7, "e":Ljava/lang/Exception;
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 177
     const/4 v0, -0x3
 
     goto :goto_0
@@ -728,7 +648,6 @@
     .param p4, "hmac"    # [B
 
     .prologue
-    .line 198
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -750,19 +669,15 @@
 
     move-result v0
 
-    .line 203
     :goto_0
     return v0
 
-    .line 200
     :catch_0
     move-exception v7
 
-    .line 202
     .local v7, "e":Ljava/lang/Exception;
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 203
     const/4 v0, -0x3
 
     goto :goto_0
@@ -775,7 +690,6 @@
     .param p3, "hmac"    # [B
 
     .prologue
-    .line 185
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;->mService:Lcom/samsung/android/service/vaultkeeper/IVaultKeeperService;
 
@@ -797,19 +711,15 @@
 
     move-result v0
 
-    .line 190
     :goto_0
     return v0
 
-    .line 187
     :catch_0
     move-exception v7
 
-    .line 189
     .local v7, "e":Ljava/lang/Exception;
     invoke-virtual {v7}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 190
     const/4 v0, -0x3
 
     goto :goto_0

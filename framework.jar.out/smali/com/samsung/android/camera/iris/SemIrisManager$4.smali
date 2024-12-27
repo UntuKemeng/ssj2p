@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1948
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$4;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/IIrisServiceReceiver$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p3, "acquireInfo"    # I
 
     .prologue
-    .line 1957
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$4;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
@@ -61,7 +59,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1958
     return-void
 .end method
 
@@ -70,7 +67,6 @@
     .param p1, "deviceId"    # J
 
     .prologue
-    .line 1968
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$4;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
@@ -86,7 +82,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1969
     return-void
 .end method
 
@@ -97,7 +92,6 @@
     .param p4, "fidoResultData"    # [B
 
     .prologue
-    .line 1962
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$4;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
@@ -113,7 +107,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1963
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$4;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
@@ -129,7 +122,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1964
     return-void
 .end method
 
@@ -141,7 +133,6 @@
     .param p5, "remaining"    # I
 
     .prologue
-    .line 1952
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$4;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
@@ -171,7 +162,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1953
     return-void
 .end method
 
@@ -181,7 +171,6 @@
     .param p3, "error"    # I
 
     .prologue
-    .line 1973
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$4;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
@@ -203,7 +192,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1974
     return-void
 .end method
 
@@ -215,7 +203,6 @@
     .param p5, "height"    # I
 
     .prologue
-    .line 1983
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$4;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
@@ -231,7 +218,6 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1984
     return-void
 .end method
 
@@ -242,7 +228,6 @@
     .param p4, "groupId"    # I
 
     .prologue
-    .line 1978
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$4;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
@@ -262,6 +247,5 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1979
     return-void
 .end method

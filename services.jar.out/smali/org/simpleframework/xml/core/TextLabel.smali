@@ -29,51 +29,42 @@
     .param p3, "format"    # Lorg/simpleframework/xml/stream/Format;
 
     .prologue
-    .line 89
     invoke-direct {p0}, Lorg/simpleframework/xml/core/TemplateLabel;-><init>()V
 
-    .line 90
     new-instance v0, Lorg/simpleframework/xml/core/Introspector;
 
     invoke-direct {v0, p1, p0, p3}, Lorg/simpleframework/xml/core/Introspector;-><init>(Lorg/simpleframework/xml/core/Contact;Lorg/simpleframework/xml/core/Label;Lorg/simpleframework/xml/stream/Format;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->detail:Lorg/simpleframework/xml/core/Introspector;
 
-    .line 91
     invoke-interface {p2}, Lorg/simpleframework/xml/Text;->required()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/TextLabel;->required:Z
 
-    .line 92
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Contact;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->type:Ljava/lang/Class;
 
-    .line 93
     invoke-interface {p2}, Lorg/simpleframework/xml/Text;->empty()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->empty:Ljava/lang/String;
 
-    .line 94
     invoke-interface {p2}, Lorg/simpleframework/xml/Text;->data()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/TextLabel;->data:Z
 
-    .line 95
     iput-object p1, p0, Lorg/simpleframework/xml/core/TextLabel;->contact:Lorg/simpleframework/xml/core/Contact;
 
-    .line 96
     iput-object p2, p0, Lorg/simpleframework/xml/core/TextLabel;->label:Lorg/simpleframework/xml/Text;
 
-    .line 97
     return-void
 .end method
 
@@ -83,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 184
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->label:Lorg/simpleframework/xml/Text;
 
     return-object v0
@@ -93,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 197
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->contact:Lorg/simpleframework/xml/core/Contact;
 
     return-object v0
@@ -109,18 +98,15 @@
     .end annotation
 
     .prologue
-    .line 122
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/TextLabel;->getEmpty(Lorg/simpleframework/xml/core/Context;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 123
     .local v0, "ignore":Ljava/lang/String;
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/TextLabel;->getContact()Lorg/simpleframework/xml/core/Contact;
 
     move-result-object v1
 
-    .line 125
     .local v1, "type":Lorg/simpleframework/xml/strategy/Type;
     invoke-interface {p1, v1}, Lorg/simpleframework/xml/core/Context;->isPrimitive(Lorg/simpleframework/xml/strategy/Type;)Z
 
@@ -128,7 +114,6 @@
 
     if-nez v2, :cond_0
 
-    .line 126
     new-instance v2, Lorg/simpleframework/xml/core/TextException;
 
     const-string v3, "Cannot use %s to represent %s"
@@ -151,7 +136,6 @@
 
     throw v2
 
-    .line 128
     :cond_0
     new-instance v2, Lorg/simpleframework/xml/core/Primitive;
 
@@ -169,7 +153,6 @@
     .end annotation
 
     .prologue
-    .line 109
     const/4 v0, 0x0
 
     return-object v0
@@ -185,7 +168,6 @@
     .end annotation
 
     .prologue
-    .line 38
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/TextLabel;->getEmpty(Lorg/simpleframework/xml/core/Context;)Ljava/lang/String;
 
     move-result-object v0
@@ -198,7 +180,6 @@
     .param p1, "context"    # Lorg/simpleframework/xml/core/Context;
 
     .prologue
-    .line 142
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->detail:Lorg/simpleframework/xml/core/Introspector;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/TextLabel;->empty:Ljava/lang/String;
@@ -209,10 +190,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 143
     const/4 v0, 0x0
 
-    .line 145
     :goto_0
     return-object v0
 
@@ -231,12 +210,10 @@
     .end annotation
 
     .prologue
-    .line 169
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->path:Lorg/simpleframework/xml/core/Expression;
 
     if-nez v0, :cond_0
 
-    .line 170
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->detail:Lorg/simpleframework/xml/core/Introspector;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/Introspector;->getExpression()Lorg/simpleframework/xml/core/Expression;
@@ -245,7 +222,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->path:Lorg/simpleframework/xml/core/Expression;
 
-    .line 172
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->path:Lorg/simpleframework/xml/core/Expression;
 
@@ -256,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 210
     const-string v0, ""
 
     return-object v0
@@ -266,7 +241,6 @@
     .locals 1
 
     .prologue
-    .line 223
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->contact:Lorg/simpleframework/xml/core/Contact;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -285,7 +259,6 @@
     .end annotation
 
     .prologue
-    .line 157
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/TextLabel;->getExpression()Lorg/simpleframework/xml/core/Expression;
 
     move-result-object v0
@@ -301,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 237
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->type:Ljava/lang/Class;
 
     return-object v0
@@ -311,7 +283,6 @@
     .locals 1
 
     .prologue
-    .line 263
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/TextLabel;->data:Z
 
     return v0
@@ -321,7 +292,6 @@
     .locals 1
 
     .prologue
-    .line 288
     const/4 v0, 0x1
 
     return v0
@@ -331,7 +301,6 @@
     .locals 1
 
     .prologue
-    .line 250
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/TextLabel;->required:Z
 
     return v0
@@ -341,7 +310,6 @@
     .locals 1
 
     .prologue
-    .line 275
     const/4 v0, 0x1
 
     return v0
@@ -351,7 +319,6 @@
     .locals 1
 
     .prologue
-    .line 301
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextLabel;->detail:Lorg/simpleframework/xml/core/Introspector;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/Introspector;->toString()Ljava/lang/String;

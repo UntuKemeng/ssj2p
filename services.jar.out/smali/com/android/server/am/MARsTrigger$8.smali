@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 672
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$8;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 675
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 676
     .local v0, "action":Ljava/lang/String;
     const-string v4, "MARsTrigger"
 
@@ -68,7 +65,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 678
     const-string v4, "android.intent.action.USER_SWITCHED"
 
     invoke-virtual {v4, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -77,7 +73,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 679
     const-string v4, "android.intent.extra.user_handle"
 
     const/4 v5, 0x0
@@ -86,13 +81,11 @@
 
     move-result v3
 
-    .line 680
     .local v3, "userId":I
     new-instance v1, Landroid/os/UserHandle;
 
     invoke-direct {v1, v3}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 681
     .local v1, "currentUser":Landroid/os/UserHandle;
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$8;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -101,7 +94,6 @@
 
     move-result-object v2
 
-    .line 682
     .local v2, "mContext":Landroid/content/Context;
     const-string v4, "MARsTrigger"
 
@@ -129,14 +121,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 683
     iget-object v4, p0, Lcom/android/server/am/MARsTrigger$8;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v4, v4, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v4, v2}, Lcom/android/server/am/MARsPolicyManager;->switchUser(Landroid/content/Context;)V
 
-    .line 685
     .end local v1    # "currentUser":Landroid/os/UserHandle;
     .end local v2    # "mContext":Landroid/content/Context;
     .end local v3    # "userId":I

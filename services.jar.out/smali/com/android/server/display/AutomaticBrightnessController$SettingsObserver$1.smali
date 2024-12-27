@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 445
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver$1;->this$1:Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 454
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver$1;->this$1:Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;
 
     iget-object v3, v3, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
@@ -56,7 +54,6 @@
 
     move-result-object v2
 
-    .line 455
     .local v2, "resolver":Landroid/content/ContentResolver;
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver$1;->this$1:Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;
 
@@ -67,7 +64,6 @@
 
     move-result v1
 
-    .line 456
     .local v1, "oldScreenBrightnessModeSetting":I
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver$1;->this$1:Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;
 
@@ -84,7 +80,6 @@
     # setter for: Lcom/android/server/display/AutomaticBrightnessController;->mScreenBrightnessModeSetting:I
     invoke-static {v3, v4}, Lcom/android/server/display/AutomaticBrightnessController;->access$102(Lcom/android/server/display/AutomaticBrightnessController;I)I
 
-    .line 459
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver$1;->this$1:Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;
 
     iget-object v3, v3, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
@@ -98,7 +93,6 @@
 
     const/4 v0, 0x1
 
-    .line 460
     .local v0, "modeChanged":Z
     :cond_0
     if-eqz v0, :cond_1
@@ -114,7 +108,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 461
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver$1;->this$1:Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;
 
     iget-object v3, v3, Lcom/android/server/display/AutomaticBrightnessController$SettingsObserver;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
@@ -122,7 +115,6 @@
     # invokes: Lcom/android/server/display/AutomaticBrightnessController;->getAmbientLuxAndCandelaFromSensorHub()V
     invoke-static {v3}, Lcom/android/server/display/AutomaticBrightnessController;->access$300(Lcom/android/server/display/AutomaticBrightnessController;)V
 
-    .line 468
     :cond_1
     return-void
 .end method

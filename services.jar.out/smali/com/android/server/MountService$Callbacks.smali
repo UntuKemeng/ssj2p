@@ -47,17 +47,14 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 4087
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 4083
     new-instance v0, Landroid/os/RemoteCallbackList;
 
     invoke-direct {v0}, Landroid/os/RemoteCallbackList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/MountService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
-    .line 4088
     return-void
 .end method
 
@@ -69,7 +66,6 @@
     .param p3, "x3"    # Ljava/lang/String;
 
     .prologue
-    .line 4075
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/MountService$Callbacks;->notifyStorageStateChanged(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -81,7 +77,6 @@
     .param p1, "x1"    # Landroid/os/storage/DiskInfo;
 
     .prologue
-    .line 4075
     invoke-direct {p0, p1}, Lcom/android/server/MountService$Callbacks;->notifyDiskDestroyed(Landroid/os/storage/DiskInfo;)V
 
     return-void
@@ -94,7 +89,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 4075
     invoke-direct {p0, p1, p2}, Lcom/android/server/MountService$Callbacks;->notifyDiskScanned(Landroid/os/storage/DiskInfo;I)V
 
     return-void
@@ -108,7 +102,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 4075
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/MountService$Callbacks;->notifyVolumeStateChanged(Landroid/os/storage/VolumeInfo;II)V
 
     return-void
@@ -120,7 +113,6 @@
     .param p1, "x1"    # Landroid/os/storage/VolumeRecord;
 
     .prologue
-    .line 4075
     invoke-direct {p0, p1}, Lcom/android/server/MountService$Callbacks;->notifyVolumeRecordChanged(Landroid/os/storage/VolumeRecord;)V
 
     return-void
@@ -132,7 +124,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 4075
     invoke-direct {p0, p1}, Lcom/android/server/MountService$Callbacks;->notifyVolumeForgotten(Ljava/lang/String;)V
 
     return-void
@@ -150,14 +141,11 @@
     .end annotation
 
     .prologue
-    .line 4115
     packed-switch p2, :pswitch_data_0
 
-    .line 4142
     :goto_0
     return-void
 
-    .line 4117
     :pswitch_0
     iget-object v0, p3, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
@@ -175,7 +163,6 @@
 
     goto :goto_0
 
-    .line 4122
     :pswitch_1
     iget-object v0, p3, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
@@ -189,7 +176,6 @@
 
     goto :goto_0
 
-    .line 4126
     :pswitch_2
     iget-object v0, p3, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
@@ -199,7 +185,6 @@
 
     goto :goto_0
 
-    .line 4130
     :pswitch_3
     iget-object v0, p3, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
@@ -209,7 +194,6 @@
 
     goto :goto_0
 
-    .line 4134
     :pswitch_4
     iget-object v0, p3, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
@@ -221,7 +205,6 @@
 
     goto :goto_0
 
-    .line 4138
     :pswitch_5
     iget-object v0, p3, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
@@ -231,7 +214,6 @@
 
     goto :goto_0
 
-    .line 4115
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -248,12 +230,10 @@
     .param p1, "disk"    # Landroid/os/storage/DiskInfo;
 
     .prologue
-    .line 4180
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 4181
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     invoke-virtual {p1}, Landroid/os/storage/DiskInfo;->clone()Landroid/os/storage/DiskInfo;
 
@@ -261,7 +241,6 @@
 
     iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 4182
     const/4 v1, 0x6
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/MountService$Callbacks;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -270,7 +249,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 4183
     return-void
 .end method
 
@@ -280,12 +258,10 @@
     .param p2, "volumeCount"    # I
 
     .prologue
-    .line 4173
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 4174
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     invoke-virtual {p1}, Landroid/os/storage/DiskInfo;->clone()Landroid/os/storage/DiskInfo;
 
@@ -293,10 +269,8 @@
 
     iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 4175
     iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 4176
     const/4 v1, 0x5
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/MountService$Callbacks;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -305,7 +279,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 4177
     return-void
 .end method
 
@@ -316,22 +289,17 @@
     .param p3, "newState"    # Ljava/lang/String;
 
     .prologue
-    .line 4145
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 4146
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 4147
     iput-object p2, v0, Lcom/android/internal/os/SomeArgs;->arg2:Ljava/lang/Object;
 
-    .line 4148
     iput-object p3, v0, Lcom/android/internal/os/SomeArgs;->arg3:Ljava/lang/Object;
 
-    .line 4149
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/MountService$Callbacks;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -340,7 +308,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 4150
     return-void
 .end method
 
@@ -349,16 +316,13 @@
     .param p1, "fsUuid"    # Ljava/lang/String;
 
     .prologue
-    .line 4167
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 4168
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iput-object p1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 4169
     const/4 v1, 0x4
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/MountService$Callbacks;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -367,7 +331,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 4170
     return-void
 .end method
 
@@ -376,12 +339,10 @@
     .param p1, "rec"    # Landroid/os/storage/VolumeRecord;
 
     .prologue
-    .line 4161
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 4162
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     invoke-virtual {p1}, Landroid/os/storage/VolumeRecord;->clone()Landroid/os/storage/VolumeRecord;
 
@@ -389,7 +350,6 @@
 
     iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 4163
     const/4 v1, 0x3
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/MountService$Callbacks;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -398,7 +358,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 4164
     return-void
 .end method
 
@@ -409,12 +368,10 @@
     .param p3, "newState"    # I
 
     .prologue
-    .line 4153
     invoke-static {}, Lcom/android/internal/os/SomeArgs;->obtain()Lcom/android/internal/os/SomeArgs;
 
     move-result-object v0
 
-    .line 4154
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->clone()Landroid/os/storage/VolumeInfo;
 
@@ -422,13 +379,10 @@
 
     iput-object v1, v0, Lcom/android/internal/os/SomeArgs;->arg1:Ljava/lang/Object;
 
-    .line 4155
     iput p2, v0, Lcom/android/internal/os/SomeArgs;->argi2:I
 
-    .line 4156
     iput p3, v0, Lcom/android/internal/os/SomeArgs;->argi3:I
 
-    .line 4157
     const/4 v1, 0x2
 
     invoke-virtual {p0, v1, v0}, Lcom/android/server/MountService$Callbacks;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -437,7 +391,6 @@
 
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 4158
     return-void
 .end method
 
@@ -448,12 +401,10 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 4100
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/android/internal/os/SomeArgs;
 
-    .line 4101
     .local v0, "args":Lcom/android/internal/os/SomeArgs;
     iget-object v4, p0, Lcom/android/server/MountService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
@@ -461,7 +412,6 @@
 
     move-result v3
 
-    .line 4102
     .local v3, "n":I
     const/4 v2, 0x0
 
@@ -469,7 +419,6 @@
     :goto_0
     if-ge v2, v3, :cond_0
 
-    .line 4103
     iget-object v4, p0, Lcom/android/server/MountService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v4, v2}, Landroid/os/RemoteCallbackList;->getBroadcastItem(I)Landroid/os/IInterface;
@@ -478,7 +427,6 @@
 
     check-cast v1, Landroid/os/storage/IMountServiceListener;
 
-    .line 4105
     .local v1, "callback":Landroid/os/storage/IMountServiceListener;
     :try_start_0
     iget v4, p1, Landroid/os/Message;->what:I
@@ -487,26 +435,21 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4102
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 4109
     .end local v1    # "callback":Landroid/os/storage/IMountServiceListener;
     :cond_0
     iget-object v4, p0, Lcom/android/server/MountService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v4}, Landroid/os/RemoteCallbackList;->finishBroadcast()V
 
-    .line 4110
     invoke-virtual {v0}, Lcom/android/internal/os/SomeArgs;->recycle()V
 
-    .line 4111
     return-void
 
-    .line 4106
     .restart local v1    # "callback":Landroid/os/storage/IMountServiceListener;
     :catch_0
     move-exception v4
@@ -519,12 +462,10 @@
     .param p1, "callback"    # Landroid/os/storage/IMountServiceListener;
 
     .prologue
-    .line 4091
     iget-object v0, p0, Lcom/android/server/MountService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->register(Landroid/os/IInterface;)Z
 
-    .line 4092
     return-void
 .end method
 
@@ -533,11 +474,9 @@
     .param p1, "callback"    # Landroid/os/storage/IMountServiceListener;
 
     .prologue
-    .line 4095
     iget-object v0, p0, Lcom/android/server/MountService$Callbacks;->mCallbacks:Landroid/os/RemoteCallbackList;
 
     invoke-virtual {v0, p1}, Landroid/os/RemoteCallbackList;->unregister(Landroid/os/IInterface;)Z
 
-    .line 4096
     return-void
 .end method

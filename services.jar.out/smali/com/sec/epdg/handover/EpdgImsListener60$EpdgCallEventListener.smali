@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 205
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgCallEventListener;->this$0:Lcom/sec/epdg/handover/EpdgImsListener60;
 
     invoke-direct {p0}, Lcom/sec/ims/volte2/ImsCallEventListener;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/sec/epdg/handover/EpdgImsListener60$1;
 
     .prologue
-    .line 205
     invoke-direct {p0, p1}, Lcom/sec/epdg/handover/EpdgImsListener60$EpdgCallEventListener;-><init>(Lcom/sec/epdg/handover/EpdgImsListener60;)V
 
     return-void
@@ -51,14 +49,12 @@
     .param p2, "errorCode"    # I
 
     .prologue
-    .line 235
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onCallEnded: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -72,7 +68,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 237
     return-void
 .end method
 
@@ -81,14 +76,12 @@
     .param p1, "callInfo"    # Lcom/sec/ims/volte2/data/ImsCallInfo;
 
     .prologue
-    .line 218
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onCallEstablish: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 219
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -102,7 +95,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 220
     return-void
 .end method
 
@@ -111,14 +103,12 @@
     .param p1, "callInfo"    # Lcom/sec/ims/volte2/data/ImsCallInfo;
 
     .prologue
-    .line 229
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onCallModified: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 230
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -132,7 +122,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 231
     return-void
 .end method
 
@@ -142,14 +131,12 @@
     .param p2, "callType"    # I
 
     .prologue
-    .line 224
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onCallModifyRequested: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 225
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -163,7 +150,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 226
     return-void
 .end method
 
@@ -172,14 +158,12 @@
     .param p1, "callInfo"    # Lcom/sec/ims/volte2/data/ImsCallInfo;
 
     .prologue
-    .line 208
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onCallStarted: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 209
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -193,7 +177,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 210
     return-void
 .end method
 
@@ -204,7 +187,6 @@
     .param p3, "qci"    # I
 
     .prologue
-    .line 241
     const-string v0, "[EpdgImsListener]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -237,7 +219,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 242
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -251,7 +232,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 243
     return-void
 .end method
 
@@ -261,14 +241,12 @@
     .param p2, "remoteUri"    # Ljava/lang/String;
 
     .prologue
-    .line 213
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onIncomingCall: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 214
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -282,6 +260,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 215
     return-void
 .end method

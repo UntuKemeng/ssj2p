@@ -34,24 +34,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 269
     iput-object p1, p0, Lcom/samsung/cpp/CPPPinning$CustomTrustManager;->this$0:Lcom/samsung/cpp/CPPPinning;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 266
     iput-object v0, p0, Lcom/samsung/cpp/CPPPinning$CustomTrustManager;->endpointUrl:Ljava/lang/String;
 
-    .line 267
     iput-object v0, p0, Lcom/samsung/cpp/CPPPinning$CustomTrustManager;->trustedCertificates:Ljava/lang/String;
 
-    .line 272
     iput-object p2, p0, Lcom/samsung/cpp/CPPPinning$CustomTrustManager;->endpointUrl:Ljava/lang/String;
 
-    .line 273
     iput-object p3, p0, Lcom/samsung/cpp/CPPPinning$CustomTrustManager;->trustedCertificates:Ljava/lang/String;
 
-    .line 274
     return-void
 .end method
 
@@ -68,7 +62,6 @@
     .end annotation
 
     .prologue
-    .line 285
     const-string v0, "CPPPinning"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -99,7 +92,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     return-void
 .end method
 
@@ -114,7 +106,6 @@
     .end annotation
 
     .prologue
-    .line 291
     const-string v14, "CPPPinning"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -149,7 +140,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 292
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/samsung/cpp/CPPPinning$CustomTrustManager;->trustedCertificates:Ljava/lang/String;
@@ -166,7 +156,6 @@
 
     if-eqz v14, :cond_1
 
-    .line 293
     :cond_0
     const-string v14, "CPPPinning"
 
@@ -218,7 +207,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 296
     :try_start_0
     move-object/from16 v0, p0
 
@@ -229,7 +217,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 300
     :goto_0
     new-instance v14, Ljava/security/cert/CertificateException;
 
@@ -261,17 +248,14 @@
 
     throw v14
 
-    .line 297
     :catch_0
     move-exception v4
 
-    .line 298
     .local v4, "e1":Ljava/io/IOException;
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 302
     .end local v4    # "e1":Ljava/io/IOException;
     :cond_1
     move-object/from16 v0, p1
@@ -280,7 +264,6 @@
 
     if-nez v14, :cond_2
 
-    .line 303
     const-string v14, "CPPPinning"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -315,7 +298,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
     new-instance v14, Ljava/lang/IllegalArgumentException;
 
     const-string v15, "cpp pinningThis server does not provide a certificate chain"
@@ -324,7 +306,6 @@
 
     throw v14
 
-    .line 307
     :cond_2
     const-string v14, "CPPPinning"
 
@@ -332,22 +313,18 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 310
     const/4 v8, 0x0
 
-    .line 311
     .local v8, "matched":Z
     const/4 v14, 0x0
 
     aget-object v6, p1, v14
 
-    .line 312
     .local v6, "leafX509":Ljava/security/cert/X509Certificate;
     invoke-virtual {v6}, Ljava/security/cert/X509Certificate;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object v9
 
-    .line 314
     .local v9, "pubkeyOfLeaf":Ljava/security/PublicKey;
     move-object/from16 v0, p0
 
@@ -357,20 +334,16 @@
 
     move-result-object v11
 
-    .line 315
     .local v11, "tempTrustedX509":Ljava/security/cert/X509Certificate;
     const/4 v10, 0x0
 
-    .line 316
     .local v10, "tempTrustedPubKey":Ljava/security/PublicKey;
     if-eqz v11, :cond_3
 
-    .line 317
     invoke-virtual {v11}, Ljava/security/cert/X509Certificate;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object v10
 
-    .line 320
     :cond_3
     if-eqz v10, :cond_4
 
@@ -380,21 +353,17 @@
 
     if-eqz v14, :cond_4
 
-    .line 321
     const-string v14, "CPPPinning"
 
     const-string v15, "@checkServerTrusted matchFound"
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 322
     const/4 v8, 0x1
 
-    .line 325
     :cond_4
     if-eqz v8, :cond_6
 
-    .line 331
     :try_start_1
     const-string v14, "CPPPinning"
 
@@ -436,14 +405,12 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 333
     const-string v14, "X509"
 
     invoke-static {v14}, Ljavax/net/ssl/TrustManagerFactory;->getInstance(Ljava/lang/String;)Ljavax/net/ssl/TrustManagerFactory;
 
     move-result-object v12
 
-    .line 334
     .local v12, "tmf":Ljavax/net/ssl/TrustManagerFactory;
     const/4 v14, 0x0
 
@@ -451,7 +418,6 @@
 
     invoke-virtual {v12, v14}, Ljavax/net/ssl/TrustManagerFactory;->init(Ljava/security/KeyStore;)V
 
-    .line 336
     invoke-virtual {v12}, Ljavax/net/ssl/TrustManagerFactory;->getTrustManagers()[Ljavax/net/ssl/TrustManager;
 
     move-result-object v2
@@ -468,7 +434,6 @@
 
     aget-object v13, v2, v5
 
-    .line 337
     .local v13, "trustManager":Ljavax/net/ssl/TrustManager;
     check-cast v13, Ljavax/net/ssl/X509TrustManager;
 
@@ -481,12 +446,10 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 336
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 341
     .end local v2    # "arr$":[Ljavax/net/ssl/TrustManager;
     .end local v5    # "i$":I
     .end local v7    # "len$":I
@@ -494,7 +457,6 @@
     :catch_1
     move-exception v3
 
-    .line 342
     .local v3, "e":Ljava/lang/Exception;
     const-string v14, "CPPPinning"
 
@@ -544,7 +506,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 344
     const-string v14, "CPPPinning"
 
     new-instance v15, Ljava/lang/StringBuilder;
@@ -585,7 +546,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 347
     :try_start_2
     move-object/from16 v0, p0
 
@@ -596,7 +556,6 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 351
     :goto_2
     new-instance v14, Ljava/security/cert/CertificateException;
 
@@ -606,17 +565,14 @@
 
     throw v14
 
-    .line 348
     :catch_2
     move-exception v4
 
-    .line 349
     .restart local v4    # "e1":Ljava/io/IOException;
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
     goto :goto_2
 
-    .line 353
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v4    # "e1":Ljava/io/IOException;
     .restart local v2    # "arr$":[Ljavax/net/ssl/TrustManager;
@@ -658,10 +614,8 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 364
     return-void
 
-    .line 355
     .end local v2    # "arr$":[Ljavax/net/ssl/TrustManager;
     .end local v5    # "i$":I
     .end local v7    # "len$":I
@@ -701,7 +655,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     :try_start_3
     move-object/from16 v0, p0
 
@@ -712,7 +665,6 @@
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 361
     :goto_3
     new-instance v14, Ljava/security/cert/CertificateException;
 
@@ -722,11 +674,9 @@
 
     throw v14
 
-    .line 358
     :catch_3
     move-exception v3
 
-    .line 359
     .local v3, "e":Ljava/io/IOException;
     invoke-virtual {v3}, Ljava/io/IOException;->printStackTrace()V
 
@@ -737,7 +687,6 @@
     .locals 3
 
     .prologue
-    .line 278
     const-string v0, "CPPPinning"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -768,7 +717,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 279
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/security/cert/X509Certificate;

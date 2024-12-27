@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 836
     iput-object p1, p0, Lcom/android/server/power/Notifier$9;->this$0:Lcom/android/server/power/Notifier;
 
     iput p2, p0, Lcom/android/server/power/Notifier$9;->val$state:I
@@ -54,21 +53,18 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 839
     iget v0, p0, Lcom/android/server/power/Notifier$9;->val$state:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_1
 
-    .line 840
     const-string v0, "PowerManagerNotifier"
 
     const-string/jumbo v1, "sendBroadcast SubScreen On"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 841
     iget-object v0, p0, Lcom/android/server/power/Notifier$9;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mContext:Landroid/content/Context;
@@ -87,7 +83,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 842
     iget-object v0, p0, Lcom/android/server/power/Notifier$9;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mInputManagerInternal:Landroid/hardware/input/InputManagerInternal;
@@ -97,7 +92,6 @@
 
     invoke-virtual {v0, v3}, Landroid/hardware/input/InputManagerInternal;->setSubInteractive(Z)V
 
-    .line 849
     :cond_0
     :goto_0
     iget-object v0, p0, Lcom/android/server/power/Notifier$9;->this$0:Lcom/android/server/power/Notifier;
@@ -113,23 +107,19 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/ActivityManagerInternal;->onScreenStateChanged(II)V
 
-    .line 850
     return-void
 
-    .line 843
     :cond_1
     iget v0, p0, Lcom/android/server/power/Notifier$9;->val$state:I
 
     if-ne v0, v3, :cond_0
 
-    .line 844
     const-string v0, "PowerManagerNotifier"
 
     const-string/jumbo v1, "sendBroadcast SubScreen Off"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 845
     iget-object v0, p0, Lcom/android/server/power/Notifier$9;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mSubScreenOffIntent:Landroid/content/Intent;
@@ -143,7 +133,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 846
     iget-object v0, p0, Lcom/android/server/power/Notifier$9;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mContext:Landroid/content/Context;
@@ -162,7 +151,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 847
     iget-object v0, p0, Lcom/android/server/power/Notifier$9;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mInputManagerInternal:Landroid/hardware/input/InputManagerInternal;

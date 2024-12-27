@@ -30,15 +30,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 25
     sput-boolean v0, Lcom/samsung/android/rlc/util/Log;->DEFAULT_LOGON:Z
 
-    .line 28
     const/4 v1, 0x3
 
     sput v1, Lcom/samsung/android/rlc/util/Log;->DEFAULT_LOGLEVEL:I
 
-    .line 32
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -48,7 +45,6 @@
     :goto_0
     sput-boolean v0, Lcom/samsung/android/rlc/util/Log;->DEFAULT_LOGON:Z
 
-    .line 33
     const-string v0, "RLCCLIENTTRACE_LOG"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -73,7 +69,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 34
     const-string v0, "RLCCLIENTTRACE_LOG"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -98,10 +93,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 35
     return-void
 
-    .line 32
     :cond_0
     const/4 v0, 0x0
 
@@ -112,7 +105,6 @@
     .locals 0
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -124,12 +116,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     const/4 v0, 0x3
 
     invoke-static {p0, p1, v0}, Lcom/samsung/android/rlc/util/Log;->log(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 72
     return-void
 .end method
 
@@ -139,12 +129,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     const/4 v0, 0x6
 
     invoke-static {p0, p1, v0}, Lcom/samsung/android/rlc/util/Log;->log(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 87
     return-void
 .end method
 
@@ -154,12 +142,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 76
     const/4 v0, 0x4
 
     invoke-static {p0, p1, v0}, Lcom/samsung/android/rlc/util/Log;->log(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 77
     return-void
 .end method
 
@@ -170,7 +156,6 @@
     .param p2, "priority"    # I
 
     .prologue
-    .line 39
     sget-boolean v0, Lcom/samsung/android/rlc/util/Log;->DEFAULT_LOGON:Z
 
     if-eqz v0, :cond_0
@@ -181,10 +166,8 @@
 
     if-eqz p1, :cond_0
 
-    .line 42
     packed-switch p2, :pswitch_data_0
 
-    .line 52
     :pswitch_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -206,12 +189,10 @@
 
     invoke-static {v0, p1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 62
     :cond_0
     :goto_0
     return-void
 
-    .line 45
     :pswitch_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -235,7 +216,6 @@
 
     goto :goto_0
 
-    .line 48
     :pswitch_2
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -259,7 +239,6 @@
 
     goto :goto_0
 
-    .line 55
     :pswitch_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -283,7 +262,6 @@
 
     goto :goto_0
 
-    .line 58
     :pswitch_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -307,7 +285,6 @@
 
     goto :goto_0
 
-    .line 42
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_1
@@ -324,12 +301,10 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     const/4 v0, 0x2
 
     invoke-static {p0, p1, v0}, Lcom/samsung/android/rlc/util/Log;->log(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 67
     return-void
 .end method
 
@@ -339,11 +314,9 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 81
     const/4 v0, 0x5
 
     invoke-static {p0, p1, v0}, Lcom/samsung/android/rlc/util/Log;->log(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 82
     return-void
 .end method

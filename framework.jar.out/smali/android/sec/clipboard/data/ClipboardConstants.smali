@@ -96,7 +96,6 @@
     .locals 3
 
     .prologue
-    .line 18
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -107,7 +106,6 @@
 
     sput-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->DEBUG:Z
 
-    .line 19
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -118,7 +116,6 @@
 
     sput-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->INFO_DEBUG:Z
 
-    .line 45
     const-string v0, "1"
 
     const-string/jumbo v1, "ro.config.knox"
@@ -135,7 +132,6 @@
 
     sput-boolean v0, Landroid/sec/clipboard/data/ClipboardConstants;->SUPPORT_KNOX:Z
 
-    .line 46
     const-string/jumbo v0, "ro.config.knox"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -157,7 +153,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

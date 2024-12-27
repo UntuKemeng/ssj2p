@@ -122,7 +122,6 @@
 
     const/4 v1, 0x0
 
-    .line 44
     const-string/jumbo v0, "ro.product.device"
 
     const-string v3, "NONE"
@@ -137,7 +136,6 @@
 
     sput-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
-    .line 45
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "zero"
@@ -204,7 +202,6 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->ZERO_PROJECT:Z
 
-    .line 51
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "tblte"
@@ -215,7 +212,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->T_PROJECT:Z
 
-    .line 52
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "gt5"
@@ -242,7 +238,6 @@
     :goto_1
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->GT_PROJECT:Z
 
-    .line 56
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "gvwifi"
@@ -253,7 +248,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->GALAXY_VIEW_WIFI:Z
 
-    .line 57
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "gvlte"
@@ -264,7 +258,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->GALAXY_VIEW_LTE:Z
 
-    .line 58
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->GALAXY_VIEW_WIFI:Z
 
     if-nez v0, :cond_e
@@ -278,7 +271,6 @@
     :goto_2
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_LOCKZONE:Z
 
-    .line 62
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "gt58"
@@ -305,7 +297,6 @@
     :goto_3
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->GT58_PROJECT:Z
 
-    .line 63
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string v3, "chagalllteatt"
@@ -316,7 +307,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->CHAGALLATT_PROJECT:Z
 
-    .line 64
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string v3, "a8elteskt"
@@ -327,7 +317,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->A8SKT_PROJECT:Z
 
-    .line 65
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "trltetmo"
@@ -374,7 +363,6 @@
     :goto_4
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->T_TMO_PROJECT:Z
 
-    .line 69
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->GT58_PROJECT:Z
 
     if-nez v0, :cond_4
@@ -397,7 +385,6 @@
     :goto_5
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_DIM_BRIGHTNESS_BELOW_BATTERY_LEVEL_1:Z
 
-    .line 74
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "matisse10wifikx"
@@ -408,12 +395,10 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->MATISSE10WIFI_PROJECT:Z
 
-    .line 75
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->MATISSE10WIFI_PROJECT:Z
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_HALF_BRIGHTNESS_LOW_BATTERY:Z
 
-    .line 79
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "novel"
@@ -424,7 +409,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->NOVEL_PROJECT:Z
 
-    .line 80
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "noble"
@@ -435,7 +419,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->NOBLE_PROJECT:Z
 
-    .line 81
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "zen"
@@ -446,7 +429,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->ZERO2_PROJECT:Z
 
-    .line 82
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "hero"
@@ -503,7 +485,6 @@
     :goto_6
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->HERO_PROJECT:Z
 
-    .line 87
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string v3, "a3x"
@@ -550,7 +531,6 @@
     :goto_7
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->AX_PROJECT:Z
 
-    .line 89
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "grace"
@@ -561,12 +541,10 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->GRACE_PROJECT:Z
 
-    .line 96
     const v0, 0x469c4000    # 20000.0f
 
     sput v0, Lcom/android/server/power/PowerManagerUtil;->HBM_LUX:F
 
-    .line 100
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string/jumbo v3, "gts2"
@@ -602,7 +580,6 @@
     :goto_8
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->GTS2_PROJECT:Z
 
-    .line 106
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string v3, "a9xpro"
@@ -613,7 +590,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->A9XPRO_PROJECT:Z
 
-    .line 107
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mProductName:Ljava/lang/String;
 
     const-string v3, "a8x"
@@ -624,7 +600,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->A8X_PROJECT:Z
 
-    .line 111
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->NOBLE_PROJECT:Z
 
     if-nez v0, :cond_7
@@ -639,12 +614,10 @@
     :goto_9
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_MANUALTABLE_1:Z
 
-    .line 112
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->HERO_PROJECT:Z
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_MANUALTABLE_2:Z
 
-    .line 121
     const-string/jumbo v0, "ro.build.scafe"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -653,7 +626,6 @@
 
     sput-object v0, Lcom/android/server/power/PowerManagerUtil;->mSCafeName:Ljava/lang/String;
 
-    .line 122
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mSCafeName:Ljava/lang/String;
 
     const-string/jumbo v3, "mocha"
@@ -664,7 +636,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->mIsMocha:Z
 
-    .line 123
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mSCafeName:Ljava/lang/String;
 
     const-string v3, "americano"
@@ -696,7 +667,6 @@
     :goto_a
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->upgradeLollipop:Z
 
-    .line 124
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->upgradeLollipop:Z
 
     if-eqz v0, :cond_17
@@ -718,7 +688,6 @@
     :goto_b
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->USE_AUTO_BRIGHTNESS_DETAIL:Z
 
-    .line 129
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->upgradeLollipop:Z
 
     if-nez v0, :cond_18
@@ -736,10 +705,8 @@
     :goto_c
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_HBM_AT_MANUAL_MAX:Z
 
-    .line 133
     sput-boolean v1, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_FORCE_ADJUST_MANUAL_BRIGHTNESS_IN_LOW_LUX:Z
 
-    .line 138
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->ZERO_PROJECT:Z
 
     if-nez v0, :cond_a
@@ -758,7 +725,6 @@
     :goto_d
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_ZEROLUX_MINUSSTEP:Z
 
-    .line 142
     const-string v0, "Unknown"
 
     const-string/jumbo v3, "ro.debug_level"
@@ -778,7 +744,6 @@
     :goto_e
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->DEBUG_UNKNOWN:Z
 
-    .line 143
     const-string v0, "0x4f4c"
 
     const-string/jumbo v3, "ro.debug_level"
@@ -798,7 +763,6 @@
     :goto_f
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->DEBUG_LOW:Z
 
-    .line 144
     const-string/jumbo v0, "true"
 
     const-string/jumbo v3, "ro.product_ship"
@@ -819,7 +783,6 @@
 
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SHIP_BUILD:Z
 
-    .line 146
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->DEBUG_UNKNOWN:Z
 
     if-nez v0, :cond_1c
@@ -833,7 +796,6 @@
     :goto_10
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_PMS_LOG:Z
 
-    .line 147
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->DEBUG_UNKNOWN:Z
 
     if-nez v0, :cond_1d
@@ -851,7 +813,6 @@
     :goto_11
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_BATTERY_SIMULATION:Z
 
-    .line 151
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->DEBUG_UNKNOWN:Z
 
     if-nez v0, :cond_1e
@@ -869,7 +830,6 @@
     :goto_12
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_RESTRICTED_DEBUG_LEVEL:Z
 
-    .line 155
     sget-boolean v0, Lcom/android/server/power/PowerManagerUtil;->A9XPRO_PROJECT:Z
 
     if-nez v0, :cond_b
@@ -884,7 +844,6 @@
     :goto_13
     sput-boolean v0, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_USE_GED_SETINTERACTIVE_ORDER:Z
 
-    .line 159
     const-string/jumbo v0, "ro.build.scafe.version"
 
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -893,7 +852,6 @@
 
     sput-object v0, Lcom/android/server/power/PowerManagerUtil;->mSCafeVersion:Ljava/lang/String;
 
-    .line 160
     sget-object v0, Lcom/android/server/power/PowerManagerUtil;->mSCafeVersion:Ljava/lang/String;
 
     const-string v3, "2016B"
@@ -907,7 +865,6 @@
     :goto_14
     sput-boolean v2, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_BATTERY_SAVER_V2:Z
 
-    .line 173
     sput-boolean v1, Lcom/android/server/power/PowerManagerUtil;->SEC_FEATURE_EXTENDED_BRIGHTNESS:Z
 
     return-void
@@ -915,127 +872,106 @@
     :cond_c
     move v0, v1
 
-    .line 45
     goto/16 :goto_0
 
     :cond_d
     move v0, v1
 
-    .line 52
     goto/16 :goto_1
 
     :cond_e
     move v0, v1
 
-    .line 58
     goto/16 :goto_2
 
     :cond_f
     move v0, v1
 
-    .line 62
     goto/16 :goto_3
 
     :cond_10
     move v0, v1
 
-    .line 65
     goto/16 :goto_4
 
     :cond_11
     move v0, v1
 
-    .line 69
     goto/16 :goto_5
 
     :cond_12
     move v0, v1
 
-    .line 82
     goto/16 :goto_6
 
     :cond_13
     move v0, v1
 
-    .line 87
     goto/16 :goto_7
 
     :cond_14
     move v0, v1
 
-    .line 100
     goto/16 :goto_8
 
     :cond_15
     move v0, v1
 
-    .line 111
     goto/16 :goto_9
 
     :cond_16
     move v0, v1
 
-    .line 123
     goto/16 :goto_a
 
     :cond_17
     move v0, v1
 
-    .line 124
     goto/16 :goto_b
 
     :cond_18
     move v0, v1
 
-    .line 129
     goto/16 :goto_c
 
     :cond_19
     move v0, v1
 
-    .line 138
     goto/16 :goto_d
 
     :cond_1a
     move v0, v1
 
-    .line 142
     goto/16 :goto_e
 
     :cond_1b
     move v0, v1
 
-    .line 143
     goto/16 :goto_f
 
     :cond_1c
     move v0, v1
 
-    .line 146
     goto :goto_10
 
     :cond_1d
     move v0, v1
 
-    .line 147
     goto :goto_11
 
     :cond_1e
     move v0, v1
 
-    .line 151
     goto :goto_12
 
     :cond_1f
     move v0, v1
 
-    .line 155
     goto :goto_13
 
     :cond_20
     move v2, v1
 
-    .line 160
     goto :goto_14
 .end method
 
@@ -1043,10 +979,8 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 313
     return-void
 .end method
 
@@ -1055,10 +989,8 @@
     .param p0, "filePath"    # Ljava/lang/String;
 
     .prologue
-    .line 181
     const/4 v1, 0x0
 
-    .line 184
     .local v1, "exist":Z
     :try_start_0
     new-instance v2, Ljava/io/File;
@@ -1071,7 +1003,6 @@
 
     move-result v1
 
-    .line 190
     :goto_0
     const-string v2, "PowerManagerUtil"
 
@@ -1105,14 +1036,11 @@
 
     invoke-static {v2, v3}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     return v1
 
-    .line 186
     :catch_0
     move-exception v0
 
-    .line 187
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -1125,10 +1053,8 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 196
     const/4 v2, 0x0
 
-    .line 197
     .local v2, "out":Ljava/io/FileOutputStream;
     const-string v4, "PowerManagerUtil"
 
@@ -1162,7 +1088,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 200
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
 
@@ -1175,7 +1100,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 204
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .local v3, "out":Ljava/io/FileOutputStream;
     :try_start_1
@@ -1189,37 +1113,31 @@
 
     invoke-virtual {v3, v4}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 205
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
     move-object v2, v3
 
-    .line 214
     .end local v3    # "out":Ljava/io/FileOutputStream;
     .restart local v2    # "out":Ljava/io/FileOutputStream;
     :goto_0
     return-void
 
-    .line 201
     :catch_0
     move-exception v0
 
     .local v0, "e":Ljava/io/FileNotFoundException;
     goto :goto_0
 
-    .line 206
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 207
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 209
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -1227,17 +1145,14 @@
 
     goto :goto_0
 
-    .line 210
     :catch_2
     move-exception v1
 
-    .line 211
     .local v1, "err":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 206
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "err":Ljava/lang/Exception;
     .end local v2    # "out":Ljava/io/FileOutputStream;
@@ -1258,10 +1173,8 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 217
     const/4 v2, 0x0
 
-    .line 218
     .local v2, "out":Ljava/io/FileOutputStream;
     const-string v4, "PowerManagerUtil"
 
@@ -1295,7 +1208,6 @@
 
     invoke-static {v4, v5}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     :try_start_0
     new-instance v3, Ljava/io/FileOutputStream;
 
@@ -1308,7 +1220,6 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 225
     .end local v2    # "out":Ljava/io/FileOutputStream;
     .local v3, "out":Ljava/io/FileOutputStream;
     :try_start_1
@@ -1318,37 +1229,31 @@
 
     invoke-virtual {v3, v4}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 226
     invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
 
     move-object v2, v3
 
-    .line 235
     .end local v3    # "out":Ljava/io/FileOutputStream;
     .restart local v2    # "out":Ljava/io/FileOutputStream;
     :goto_0
     return-void
 
-    .line 222
     :catch_0
     move-exception v0
 
     .local v0, "e":Ljava/io/FileNotFoundException;
     goto :goto_0
 
-    .line 227
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v0
 
-    .line 228
     .local v0, "e":Ljava/io/IOException;
     :goto_1
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 230
     :try_start_2
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -1356,17 +1261,14 @@
 
     goto :goto_0
 
-    .line 231
     :catch_2
     move-exception v1
 
-    .line 232
     .local v1, "err":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 227
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "err":Ljava/lang/Exception;
     .end local v2    # "out":Ljava/io/FileOutputStream;

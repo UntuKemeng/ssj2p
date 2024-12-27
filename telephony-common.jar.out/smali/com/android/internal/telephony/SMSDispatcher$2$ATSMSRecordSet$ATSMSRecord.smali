@@ -35,23 +35,17 @@
     .param p5, "mBody"    # Ljava/lang/String;
 
     .prologue
-    .line 2970
     iput-object p1, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet$ATSMSRecord;->this$2:Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2971
     iput p2, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet$ATSMSRecord;->toa:I
 
-    .line 2972
     iput-object p3, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet$ATSMSRecord;->tpdu:Ljava/lang/String;
 
-    .line 2973
     iput-object p4, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet$ATSMSRecord;->originAddress:Ljava/lang/String;
 
-    .line 2974
     iput-object p5, p0, Lcom/android/internal/telephony/SMSDispatcher$2$ATSMSRecordSet$ATSMSRecord;->msgBody:Ljava/lang/String;
 
-    .line 2975
     return-void
 .end method

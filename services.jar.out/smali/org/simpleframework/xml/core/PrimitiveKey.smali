@@ -28,40 +28,32 @@
     .param p3, "type"    # Lorg/simpleframework/xml/strategy/Type;
 
     .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 91
     new-instance v0, Lorg/simpleframework/xml/core/PrimitiveFactory;
 
     invoke-direct {v0, p1, p3}, Lorg/simpleframework/xml/core/PrimitiveFactory;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->factory:Lorg/simpleframework/xml/core/PrimitiveFactory;
 
-    .line 92
     new-instance v0, Lorg/simpleframework/xml/core/Primitive;
 
     invoke-direct {v0, p1, p3}, Lorg/simpleframework/xml/core/Primitive;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->root:Lorg/simpleframework/xml/core/Primitive;
 
-    .line 93
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Context;->getStyle()Lorg/simpleframework/xml/stream/Style;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->style:Lorg/simpleframework/xml/stream/Style;
 
-    .line 94
     iput-object p1, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->context:Lorg/simpleframework/xml/core/Context;
 
-    .line 95
     iput-object p2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->entry:Lorg/simpleframework/xml/core/Entry;
 
-    .line 96
     iput-object p3, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->type:Lorg/simpleframework/xml/strategy/Type;
 
-    .line 97
     return-void
 .end method
 
@@ -76,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 328
     iget-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->factory:Lorg/simpleframework/xml/core/PrimitiveFactory;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->type:Lorg/simpleframework/xml/strategy/Type;
@@ -99,27 +90,22 @@
     .end annotation
 
     .prologue
-    .line 156
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->style:Lorg/simpleframework/xml/stream/Style;
 
     invoke-interface {v2, p2}, Lorg/simpleframework/xml/stream/Style;->getAttribute(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 157
     .local v1, "name":Ljava/lang/String;
     invoke-interface {p1, v1}, Lorg/simpleframework/xml/stream/InputNode;->getAttribute(Ljava/lang/String;)Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v0
 
-    .line 159
     .local v0, "child":Lorg/simpleframework/xml/stream/InputNode;
     if-nez v0, :cond_0
 
-    .line 160
     const/4 v2, 0x0
 
-    .line 162
     :goto_0
     return-object v2
 
@@ -144,27 +130,22 @@
     .end annotation
 
     .prologue
-    .line 177
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->style:Lorg/simpleframework/xml/stream/Style;
 
     invoke-interface {v2, p2}, Lorg/simpleframework/xml/stream/Style;->getElement(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 178
     .local v1, "name":Ljava/lang/String;
     invoke-interface {p1, v1}, Lorg/simpleframework/xml/stream/InputNode;->getNext(Ljava/lang/String;)Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v0
 
-    .line 180
     .local v0, "child":Lorg/simpleframework/xml/stream/InputNode;
     if-nez v0, :cond_0
 
-    .line 181
     const/4 v2, 0x0
 
-    .line 183
     :goto_0
     return-object v2
 
@@ -189,27 +170,22 @@
     .end annotation
 
     .prologue
-    .line 221
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->style:Lorg/simpleframework/xml/stream/Style;
 
     invoke-interface {v2, p2}, Lorg/simpleframework/xml/stream/Style;->getElement(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 222
     .local v1, "name":Ljava/lang/String;
     invoke-interface {p1, v1}, Lorg/simpleframework/xml/stream/InputNode;->getAttribute(Ljava/lang/String;)Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v0
 
-    .line 224
     .local v0, "child":Lorg/simpleframework/xml/stream/InputNode;
     if-nez v0, :cond_0
 
-    .line 225
     const/4 v2, 0x1
 
-    .line 227
     :goto_0
     return v2
 
@@ -234,27 +210,22 @@
     .end annotation
 
     .prologue
-    .line 242
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->style:Lorg/simpleframework/xml/stream/Style;
 
     invoke-interface {v2, p2}, Lorg/simpleframework/xml/stream/Style;->getElement(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 243
     .local v1, "name":Ljava/lang/String;
     invoke-interface {p1, v1}, Lorg/simpleframework/xml/stream/InputNode;->getNext(Ljava/lang/String;)Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v0
 
-    .line 245
     .local v0, "child":Lorg/simpleframework/xml/stream/InputNode;
     if-nez v0, :cond_0
 
-    .line 246
     const/4 v2, 0x1
 
-    .line 248
     :goto_0
     return v2
 
@@ -279,14 +250,12 @@
     .end annotation
 
     .prologue
-    .line 302
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->type:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-interface {v4}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 303
     .local v0, "expect":Ljava/lang/Class;
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->factory:Lorg/simpleframework/xml/core/PrimitiveFactory;
 
@@ -294,7 +263,6 @@
 
     move-result-object v3
 
-    .line 304
     .local v3, "text":Ljava/lang/String;
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->entry:Lorg/simpleframework/xml/core/Entry;
 
@@ -302,18 +270,15 @@
 
     move-result-object v1
 
-    .line 306
     .local v1, "key":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 307
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->context:Lorg/simpleframework/xml/core/Context;
 
     invoke-interface {v4, v0}, Lorg/simpleframework/xml/core/Context;->getName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 309
     :cond_0
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->style:Lorg/simpleframework/xml/stream/Style;
 
@@ -321,14 +286,11 @@
 
     move-result-object v2
 
-    .line 311
     .local v2, "name":Ljava/lang/String;
     if-eqz v3, :cond_1
 
-    .line 312
     invoke-interface {p1, v2, v3}, Lorg/simpleframework/xml/stream/OutputNode;->setAttribute(Ljava/lang/String;Ljava/lang/String;)Lorg/simpleframework/xml/stream/OutputNode;
 
-    .line 314
     :cond_1
     return-void
 .end method
@@ -344,14 +306,12 @@
     .end annotation
 
     .prologue
-    .line 277
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->type:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-interface {v4}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 278
     .local v1, "expect":Ljava/lang/Class;
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->entry:Lorg/simpleframework/xml/core/Entry;
 
@@ -359,18 +319,15 @@
 
     move-result-object v2
 
-    .line 280
     .local v2, "key":Ljava/lang/String;
     if-nez v2, :cond_0
 
-    .line 281
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->context:Lorg/simpleframework/xml/core/Context;
 
     invoke-interface {v4, v1}, Lorg/simpleframework/xml/core/Context;->getName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 283
     :cond_0
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->style:Lorg/simpleframework/xml/stream/Style;
 
@@ -378,29 +335,24 @@
 
     move-result-object v3
 
-    .line 284
     .local v3, "name":Ljava/lang/String;
     invoke-interface {p1, v3}, Lorg/simpleframework/xml/stream/OutputNode;->getChild(Ljava/lang/String;)Lorg/simpleframework/xml/stream/OutputNode;
 
     move-result-object v0
 
-    .line 286
     .local v0, "child":Lorg/simpleframework/xml/stream/OutputNode;
     if-eqz p2, :cond_1
 
-    .line 287
     invoke-direct {p0, v0, p2}, Lorg/simpleframework/xml/core/PrimitiveKey;->isOverridden(Lorg/simpleframework/xml/stream/OutputNode;Ljava/lang/Object;)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 288
     iget-object v4, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->root:Lorg/simpleframework/xml/core/Primitive;
 
     invoke-virtual {v4, v0, p2}, Lorg/simpleframework/xml/core/Primitive;->write(Lorg/simpleframework/xml/stream/OutputNode;Ljava/lang/Object;)V
 
-    .line 291
     :cond_1
     return-void
 .end method
@@ -417,14 +369,12 @@
     .end annotation
 
     .prologue
-    .line 110
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->type:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-interface {v2}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 111
     .local v0, "expect":Ljava/lang/Class;
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->entry:Lorg/simpleframework/xml/core/Entry;
 
@@ -432,18 +382,15 @@
 
     move-result-object v1
 
-    .line 113
     .local v1, "name":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 114
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->context:Lorg/simpleframework/xml/core/Context;
 
     invoke-interface {v2, v0}, Lorg/simpleframework/xml/core/Context;->getName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 116
     :cond_0
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->entry:Lorg/simpleframework/xml/core/Entry;
 
@@ -453,12 +400,10 @@
 
     if-nez v2, :cond_1
 
-    .line 117
     invoke-direct {p0, p1, v1}, Lorg/simpleframework/xml/core/PrimitiveKey;->readElement(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v2
 
-    .line 119
     :goto_0
     return-object v2
 
@@ -481,18 +426,15 @@
     .end annotation
 
     .prologue
-    .line 136
     iget-object v1, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->type:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-interface {v1}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 138
     .local v0, "expect":Ljava/lang/Class;
     if-eqz p2, :cond_0
 
-    .line 139
     new-instance v1, Lorg/simpleframework/xml/core/PersistenceException;
 
     const-string v2, "Can not read key of %s for %s"
@@ -515,7 +457,6 @@
 
     throw v1
 
-    .line 141
     :cond_0
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/PrimitiveKey;->read(Lorg/simpleframework/xml/stream/InputNode;)Ljava/lang/Object;
 
@@ -534,14 +475,12 @@
     .end annotation
 
     .prologue
-    .line 197
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->type:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-interface {v2}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 198
     .local v0, "expect":Ljava/lang/Class;
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->entry:Lorg/simpleframework/xml/core/Entry;
 
@@ -549,18 +488,15 @@
 
     move-result-object v1
 
-    .line 200
     .local v1, "name":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 201
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->context:Lorg/simpleframework/xml/core/Context;
 
     invoke-interface {v2, v0}, Lorg/simpleframework/xml/core/Context;->getName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 203
     :cond_0
     iget-object v2, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->entry:Lorg/simpleframework/xml/core/Entry;
 
@@ -570,12 +506,10 @@
 
     if-nez v2, :cond_1
 
-    .line 204
     invoke-direct {p0, p1, v1}, Lorg/simpleframework/xml/core/PrimitiveKey;->validateElement(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/String;)Z
 
     move-result v2
 
-    .line 206
     :goto_0
     return v2
 
@@ -598,7 +532,6 @@
     .end annotation
 
     .prologue
-    .line 261
     iget-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveKey;->entry:Lorg/simpleframework/xml/core/Entry;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/Entry;->isAttribute()Z
@@ -607,19 +540,15 @@
 
     if-nez v0, :cond_1
 
-    .line 262
     invoke-direct {p0, p1, p2}, Lorg/simpleframework/xml/core/PrimitiveKey;->writeElement(Lorg/simpleframework/xml/stream/OutputNode;Ljava/lang/Object;)V
 
-    .line 266
     :cond_0
     :goto_0
     return-void
 
-    .line 263
     :cond_1
     if-eqz p2, :cond_0
 
-    .line 264
     invoke-direct {p0, p1, p2}, Lorg/simpleframework/xml/core/PrimitiveKey;->writeAttribute(Lorg/simpleframework/xml/stream/OutputNode;Ljava/lang/Object;)V
 
     goto :goto_0

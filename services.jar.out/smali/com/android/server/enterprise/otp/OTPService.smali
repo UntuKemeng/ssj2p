@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 56
     const-string v0, "1.1.1"
 
     sput-object v0, Lcom/android/server/enterprise/otp/OTPService;->OTP_CURRENT_VERSION:Ljava/lang/String;
@@ -40,15 +39,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Lcom/sec/enterprise/knox/otp/IOTPService$Stub;-><init>()V
 
-    .line 49
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -75,16 +71,12 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
-    .line 61
     invoke-virtual {p0}, Lcom/android/server/enterprise/otp/OTPService;->otpLoadServer()I
 
-    .line 62
     invoke-direct {p0}, Lcom/android/server/enterprise/otp/OTPService;->setupIntentFilter()V
 
-    .line 63
     return-void
 .end method
 
@@ -93,7 +85,6 @@
     .param p1, "version"    # Ljava/lang/String;
 
     .prologue
-    .line 612
     sget-object v0, Lcom/android/server/enterprise/otp/OTPService;->OTP_CURRENT_VERSION:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
@@ -102,10 +93,8 @@
 
     if-gtz v0, :cond_0
 
-    .line 613
     const/4 v0, 0x1
 
-    .line 615
     :goto_0
     return v0
 
@@ -119,17 +108,14 @@
     .locals 2
 
     .prologue
-    .line 619
     const-string/jumbo v1, "getKnoxVersion ENTER"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 620
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxContainerVersion()Landroid/os/PersonaManager$KnoxContainerVersion;
 
     move-result-object v0
 
-    .line 621
     .local v0, "version":Landroid/os/PersonaManager$KnoxContainerVersion;
     return-object v0
 .end method
@@ -138,12 +124,10 @@
     .locals 1
 
     .prologue
-    .line 732
     iget-object v0, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
-    .line 733
     return-void
 .end method
 
@@ -151,7 +135,6 @@
     .locals 2
 
     .prologue
-    .line 625
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -176,7 +159,6 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 649
     return-void
 .end method
 
@@ -186,17 +168,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 717
     const-string v0, "OTPService:: setup intent filter is called"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 718
     new-instance v1, Lcom/android/server/enterprise/otp/PackageRemovalReceiver;
 
     invoke-direct {v1}, Lcom/android/server/enterprise/otp/PackageRemovalReceiver;-><init>()V
 
-    .line 719
     .local v1, "receiver":Lcom/android/server/enterprise/otp/PackageRemovalReceiver;
     new-instance v3, Landroid/content/IntentFilter;
 
@@ -204,13 +183,11 @@
 
     invoke-direct {v3, v0}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 720
     .local v3, "filter":Landroid/content/IntentFilter;
     const-string/jumbo v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 721
     iget-object v0, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -219,24 +196,20 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 723
     new-instance v6, Lcom/android/server/enterprise/otp/OTPTimeChangeLogger;
 
     invoke-direct {v6}, Lcom/android/server/enterprise/otp/OTPTimeChangeLogger;-><init>()V
 
-    .line 724
     .local v6, "timeChangeReceiver":Lcom/android/server/enterprise/otp/OTPTimeChangeLogger;
     new-instance v8, Landroid/content/IntentFilter;
 
     invoke-direct {v8}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 725
     .local v8, "timeChangeFilter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.TIME_SET"
 
     invoke-virtual {v8, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 726
     iget-object v5, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     sget-object v7, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -247,7 +220,6 @@
 
     invoke-virtual/range {v5 .. v10}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 727
     return-void
 .end method
 
@@ -265,27 +237,21 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 67
     const-string v6, "OTPService::createOtpToken: ENTER"
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 68
     invoke-static {p1}, Lcom/android/server/enterprise/otp/engine/common/Print;->printBundle(Landroid/os/Bundle;)V
 
-    .line 70
     if-nez p1, :cond_0
 
-    .line 71
     const-string v6, "OTPService::createOtpToken: Invalid input."
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 137
     :goto_0
     return-object v5
 
-    .line 74
     :cond_0
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -299,14 +265,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 76
     const-string v6, "OTPService::createOtpToken: Skip operation. DB Upgrade active."
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 81
     :cond_1
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -316,14 +280,11 @@
 
     invoke-virtual {v6}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->verifyDbIntegrity()Z
 
-    .line 83
     const/4 v5, 0x0
 
-    .line 84
     .local v5, "vendorTokenId":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 86
     .local v3, "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -339,7 +300,6 @@
 
     if-nez v6, :cond_2
 
-    .line 88
     const-string v6, "OTP_TOKEN_ID"
 
     invoke-virtual {p1, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -348,7 +308,6 @@
 
     goto :goto_0
 
-    .line 91
     :cond_2
     const-string v6, "ENCRYPTION_KEY_TYPE"
 
@@ -360,7 +319,6 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 92
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v6, p1}, Lcom/android/server/enterprise/otp/engine/provision/ProvisionUtil;->validateCertificateHash(Landroid/content/Context;Landroid/os/Bundle;)I
@@ -369,14 +327,12 @@
 
     if-nez v6, :cond_5
 
-    .line 93
     const-string v6, "SECRET_ENCRYPTION_ALGO"
 
     const/16 v7, 0x186
 
     invoke-virtual {p1, v6, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 99
     :cond_3
     const-string v6, "OTP_OATH_PROVISIONING_TYPE"
 
@@ -384,13 +340,11 @@
 
     move-result v4
 
-    .line 100
     .local v4, "type":I
     const/16 v6, 0x120
 
     if-ne v4, v6, :cond_6
 
-    .line 101
     new-instance v3, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
     .end local v3    # "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
@@ -398,16 +352,13 @@
 
     invoke-direct {v3, v6}, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;-><init>(Landroid/content/Context;)V
 
-    .line 108
     .restart local v3    # "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
     :cond_4
     :goto_1
     if-eqz v3, :cond_9
 
-    .line 109
     const/4 v2, 0x0
 
-    .line 110
     .local v2, "internalTokenId":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -423,7 +374,6 @@
 
     move-result-object v0
 
-    .line 112
     .local v0, "callerPackage":Ljava/lang/String;
     new-instance v6, Landroid/app/enterprise/ContextInfo;
 
@@ -435,7 +385,6 @@
 
     iget v1, v6, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 113
     .local v1, "containerId":I
     const-string v6, "OTP_TOKEN_ID"
 
@@ -443,7 +392,6 @@
 
     move-result-object v5
 
-    .line 114
     if-eqz v5, :cond_7
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
@@ -454,12 +402,10 @@
 
     if-le v6, v7, :cond_7
 
-    .line 116
     const-string v6, "OTPService::createOtpToken: The max allowed sixe of Token ID is exceeded"
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 117
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     const/16 v7, 0x410
@@ -468,7 +414,6 @@
 
     goto/16 :goto_0
 
-    .line 95
     .end local v0    # "callerPackage":Ljava/lang/String;
     .end local v1    # "containerId":I
     .end local v2    # "internalTokenId":Ljava/lang/String;
@@ -482,14 +427,12 @@
 
     goto/16 :goto_0
 
-    .line 102
     .restart local v4    # "type":I
     :cond_6
     const/16 v6, 0x121
 
     if-ne v4, v6, :cond_4
 
-    .line 103
     new-instance v3, Lcom/android/server/enterprise/otp/engine/provision/PSKCProvision;
 
     .end local v3    # "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
@@ -500,14 +443,12 @@
     .restart local v3    # "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
     goto :goto_1
 
-    .line 121
     .restart local v0    # "callerPackage":Ljava/lang/String;
     .restart local v1    # "containerId":I
     .restart local v2    # "internalTokenId":Ljava/lang/String;
     :cond_7
     if-eqz v5, :cond_8
 
-    .line 122
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -518,16 +459,13 @@
 
     move-result-object v2
 
-    .line 125
     :cond_8
     if-nez v2, :cond_a
 
-    .line 126
     invoke-interface {v3, p1}, Lcom/android/server/enterprise/otp/engine/provision/IProvision;->doProvision(Landroid/os/Bundle;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 136
     .end local v0    # "callerPackage":Ljava/lang/String;
     .end local v1    # "containerId":I
     .end local v2    # "internalTokenId":Ljava/lang/String;
@@ -560,7 +498,6 @@
 
     goto/16 :goto_0
 
-    .line 128
     .restart local v0    # "callerPackage":Ljava/lang/String;
     .restart local v1    # "containerId":I
     .restart local v2    # "internalTokenId":Ljava/lang/String;
@@ -591,7 +528,6 @@
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 130
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     const/16 v7, 0x403
@@ -617,7 +553,6 @@
     .end annotation
 
     .prologue
-    .line 285
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -644,18 +579,14 @@
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 286
     const/4 v4, 0x0
 
-    .line 287
     .local v4, "ret":I
     const/4 v3, 0x0
 
-    .line 288
     .local v3, "otp":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 291
     .local v2, "internalTokenId":Ljava/lang/String;
     :try_start_0
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
@@ -670,20 +601,16 @@
 
     if-eqz v6, :cond_2
 
-    .line 292
     const-string v6, "OTPService::generateOtp: Skip operation. DB Upgrade active."
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 293
     const/4 v7, 0x0
 
-    .line 345
     if-eqz v2, :cond_0
 
-    .line 346
     invoke-static {}, Lcom/android/server/enterprise/otp/RateCheck;->getInstance()Lcom/android/server/enterprise/otp/RateCheck;
 
     move-result-object v8
@@ -714,17 +641,14 @@
     :cond_0
     move-object v6, v7
 
-    .line 352
     :goto_1
     return-object v6
 
-    .line 346
     :cond_1
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 296
     :cond_2
     :try_start_1
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
@@ -739,7 +663,6 @@
 
     if-nez v6, :cond_4
 
-    .line 297
     new-instance v6, Ljava/lang/IllegalStateException;
 
     const-string v7, "Token is corrupted. Delete the token and try creating it"
@@ -750,7 +673,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 345
     :catchall_0
     move-exception v6
 
@@ -758,7 +680,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 346
     invoke-static {}, Lcom/android/server/enterprise/otp/RateCheck;->getInstance()Lcom/android/server/enterprise/otp/RateCheck;
 
     move-result-object v8
@@ -789,7 +710,6 @@
     :cond_3
     throw v7
 
-    .line 301
     :cond_4
     :try_start_2
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
@@ -802,10 +722,8 @@
 
     move-result-object v2
 
-    .line 302
     if-nez v2, :cond_5
 
-    .line 303
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -826,10 +744,8 @@
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 305
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
-    .line 309
     :cond_5
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -837,7 +753,6 @@
 
     move-result v4
 
-    .line 310
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -858,13 +773,10 @@
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 312
     if-eqz v4, :cond_6
 
-    .line 313
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
-    .line 316
     :cond_6
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -876,38 +788,31 @@
 
     move-result-object v5
 
-    .line 317
     .local v5, "token":Lcom/sec/enterprise/knox/otp/common/OTPToken;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 318
     .local v1, "bundle":Landroid/os/Bundle;
     const-string v6, "OTP_INTERNAL_TOKEN_ID"
 
     invoke-virtual {v1, v6, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 319
     if-eqz v5, :cond_7
 
-    .line 320
     invoke-virtual {v5}, Lcom/sec/enterprise/knox/otp/common/OTPToken;->getAlgorithmType()I
 
     move-result v0
 
-    .line 321
     .local v0, "algo_type":I
     const-string v6, "OTP_OATH_PROTOCOL"
 
     invoke-virtual {v1, v6, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 323
     const/16 v6, 0x102
 
     if-ne v0, v6, :cond_7
 
-    .line 324
     const-string v6, "OTP_PARAM"
 
     invoke-virtual {v5}, Lcom/sec/enterprise/knox/otp/common/OTPToken;->getTimeStep()I
@@ -916,29 +821,24 @@
 
     invoke-virtual {v1, v6, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 325
     const-string v6, "OCRA_PIN"
 
     invoke-virtual {v1, v6, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 326
     const-string v6, "OCRA_SESSION"
 
     invoke-virtual {v1, v6, p4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 327
     const-string v6, "OCRA_CHALLENGE"
 
     invoke-virtual {v1, v6, p3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 328
     const-string v6, "SDK_VERSION_DEFINED"
 
     const-string v7, "1.0.0"
 
     invoke-virtual {v1, v6, v7}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 332
     .end local v0    # "algo_type":I
     :cond_7
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
@@ -951,7 +851,6 @@
 
     move-result v4
 
-    .line 333
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -972,13 +871,10 @@
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 335
     if-eqz v4, :cond_8
 
-    .line 336
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
-    .line 339
     :cond_8
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
@@ -988,10 +884,8 @@
 
     move-result-object v3
 
-    .line 341
     if-eqz v3, :cond_9
 
-    .line 342
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -1004,11 +898,9 @@
 
     move-result v4
 
-    .line 345
     :cond_9
     if-eqz v2, :cond_a
 
-    .line 346
     invoke-static {}, Lcom/android/server/enterprise/otp/RateCheck;->getInstance()Lcom/android/server/enterprise/otp/RateCheck;
 
     move-result-object v7
@@ -1039,10 +931,8 @@
     :cond_a
     move-object v6, v3
 
-    .line 352
     goto/16 :goto_1
 
-    .line 346
     :cond_b
     const/4 v6, 0x1
 
@@ -1076,7 +966,6 @@
 
     const/4 v8, 0x1
 
-    .line 358
     new-instance v10, Ljava/lang/StringBuilder;
 
     invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
@@ -1097,18 +986,14 @@
 
     invoke-static {v10}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 359
     const/4 v5, 0x0
 
-    .line 360
     .local v5, "ret":I
     const/4 v4, 0x0
 
-    .line 361
     .local v4, "otp":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 365
     .local v3, "internalTokenId":Ljava/lang/String;
     :try_start_0
     iget-object v10, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
@@ -1123,17 +1008,14 @@
 
     if-eqz v10, :cond_2
 
-    .line 366
     const-string v10, "OTPService::generateOtpEx: Skip operation. DB Upgrade active."
 
     invoke-static {v10}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 440
     if-eqz v3, :cond_0
 
-    .line 441
     invoke-static {}, Lcom/android/server/enterprise/otp/RateCheck;->getInstance()Lcom/android/server/enterprise/otp/RateCheck;
 
     move-result-object v10
@@ -1160,17 +1042,14 @@
     :cond_0
     move-object v7, v9
 
-    .line 447
     :goto_1
     return-object v7
 
     :cond_1
     move v7, v8
 
-    .line 441
     goto :goto_0
 
-    .line 370
     :cond_2
     :try_start_1
     iget-object v9, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
@@ -1185,7 +1064,6 @@
 
     if-nez v9, :cond_4
 
-    .line 371
     new-instance v9, Ljava/lang/IllegalStateException;
 
     const-string v10, "Token is corrupted. Delete the token and try creating it"
@@ -1196,13 +1074,11 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 440
     :catchall_0
     move-exception v9
 
     if-eqz v3, :cond_3
 
-    .line 441
     invoke-static {}, Lcom/android/server/enterprise/otp/RateCheck;->getInstance()Lcom/android/server/enterprise/otp/RateCheck;
 
     move-result-object v10
@@ -1229,7 +1105,6 @@
     :cond_3
     throw v9
 
-    .line 375
     :cond_4
     :try_start_2
     iget-object v9, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
@@ -1242,10 +1117,8 @@
 
     move-result-object v3
 
-    .line 376
     if-nez v3, :cond_5
 
-    .line 377
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1266,10 +1139,8 @@
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 379
     invoke-static {v5}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
-    .line 383
     :cond_5
     iget-object v9, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -1277,7 +1148,6 @@
 
     move-result v5
 
-    .line 384
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1298,13 +1168,10 @@
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 386
     if-eqz v5, :cond_6
 
-    .line 387
     invoke-static {v5}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
-    .line 390
     :cond_6
     iget-object v9, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -1316,41 +1183,33 @@
 
     move-result-object v6
 
-    .line 391
     .local v6, "token":Lcom/sec/enterprise/knox/otp/common/OTPToken;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 392
     .local v1, "bundle":Landroid/os/Bundle;
     const-string v9, "OTP_INTERNAL_TOKEN_ID"
 
     invoke-virtual {v1, v9, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 393
     if-eqz v6, :cond_8
 
-    .line 394
     invoke-virtual {v6}, Lcom/sec/enterprise/knox/otp/common/OTPToken;->getAlgorithmType()I
 
     move-result v0
 
-    .line 395
     .local v0, "algo_type":I
     const-string v9, "OTP_OATH_PROTOCOL"
 
     invoke-virtual {v1, v9, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 397
     const/16 v9, 0x102
 
     if-ne v0, v9, :cond_8
 
-    .line 398
     if-nez p2, :cond_7
 
-    .line 399
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1371,7 +1230,6 @@
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 401
     new-instance v9, Ljava/lang/IllegalArgumentException;
 
     const-string v10, "Bundle passed is null for OCRA. Please pass a proper bundle"
@@ -1380,7 +1238,6 @@
 
     throw v9
 
-    .line 404
     :cond_7
     const-string v9, "OTP_PARAM"
 
@@ -1390,7 +1247,6 @@
 
     invoke-virtual {v1, v9, v10}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 405
     const-string v9, "OCRA_PIN"
 
     const-string v10, "OCRA_STRING_PIN"
@@ -1403,7 +1259,6 @@
 
     invoke-virtual {v1, v9, v10}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 407
     const-string v9, "OCRA_SESSION"
 
     const-string v10, "OCRA_STRING_SESSION"
@@ -1416,10 +1271,8 @@
 
     invoke-virtual {v1, v9, v10}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 411
     const/4 v2, 0x0
 
-    .line 412
     .local v2, "challenge":Ljava/lang/String;
     const-string v9, "OCRA_HEXSTRING_CHALLENGE"
 
@@ -1429,12 +1282,10 @@
 
     if-eqz v2, :cond_c
 
-    .line 414
     const-string v9, "OCRA_CHALLENGE"
 
     invoke-virtual {v1, v9, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 422
     :goto_3
     const-string v9, "SDK_VERSION_DEFINED"
 
@@ -1442,7 +1293,6 @@
 
     invoke-virtual {v1, v9, v10}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 428
     .end local v0    # "algo_type":I
     .end local v2    # "challenge":Ljava/lang/String;
     :cond_8
@@ -1456,7 +1306,6 @@
 
     move-result v5
 
-    .line 429
     new-instance v9, Ljava/lang/StringBuilder;
 
     invoke-direct {v9}, Ljava/lang/StringBuilder;-><init>()V
@@ -1477,13 +1326,10 @@
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 431
     if-eqz v5, :cond_9
 
-    .line 432
     invoke-static {v5}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
-    .line 435
     :cond_9
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
@@ -1493,10 +1339,8 @@
 
     move-result-object v4
 
-    .line 436
     if-eqz v4, :cond_a
 
-    .line 437
     iget-object v9, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v9}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -1509,11 +1353,9 @@
 
     move-result v5
 
-    .line 440
     :cond_a
     if-eqz v3, :cond_b
 
-    .line 441
     invoke-static {}, Lcom/android/server/enterprise/otp/RateCheck;->getInstance()Lcom/android/server/enterprise/otp/RateCheck;
 
     move-result-object v9
@@ -1540,10 +1382,8 @@
     :cond_b
     move-object v7, v4
 
-    .line 447
     goto/16 :goto_1
 
-    .line 416
     .restart local v0    # "algo_type":I
     .restart local v2    # "challenge":Ljava/lang/String;
     :cond_c
@@ -1571,7 +1411,6 @@
     :cond_d
     move v7, v8
 
-    .line 441
     goto :goto_4
 
     .end local v1    # "bundle":Landroid/os/Bundle;
@@ -1590,22 +1429,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 488
     if-eqz p2, :cond_0
 
     if-nez p1, :cond_1
 
-    .line 489
     :cond_0
     const-string v3, "OTPService::getDerivedKey: Invalid input."
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 511
     :goto_0
     return-object v2
 
-    .line 491
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -1619,14 +1454,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 492
     const-string v3, "OTPService::getDerivedKey: Skip operation. DB Upgrade active."
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 495
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1654,7 +1487,6 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 496
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1681,7 +1513,6 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->s(Ljava/lang/String;)V
 
-    .line 497
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -1692,11 +1523,9 @@
 
     move-result-object v0
 
-    .line 498
     .local v0, "internalTokenId":Ljava/lang/String;
     if-nez v0, :cond_3
 
-    .line 499
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1719,7 +1548,6 @@
 
     goto :goto_0
 
-    .line 504
     :cond_3
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -1735,11 +1563,9 @@
 
     move-result v1
 
-    .line 506
     .local v1, "result":I
     if-nez v1, :cond_4
 
-    .line 507
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
     move-result-object v2
@@ -1750,7 +1576,6 @@
 
     goto/16 :goto_0
 
-    .line 509
     :cond_4
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1790,22 +1615,18 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 462
     if-eqz p1, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 463
     :cond_0
     const-string v3, "OTPService::getHmac: Invalid input."
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 482
     :goto_0
     return-object v2
 
-    .line 465
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -1819,14 +1640,12 @@
 
     if-eqz v3, :cond_2
 
-    .line 466
     const-string v3, "OTPService::getHmac: Skip operation. DB Upgrade active."
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 469
     :cond_2
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1854,7 +1673,6 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 471
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -1865,11 +1683,9 @@
 
     move-result-object v0
 
-    .line 472
     .local v0, "internalTokenId":Ljava/lang/String;
     if-nez v0, :cond_3
 
-    .line 473
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -1892,7 +1708,6 @@
 
     goto :goto_0
 
-    .line 477
     :cond_3
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -1902,11 +1717,9 @@
 
     move-result v1
 
-    .line 478
     .local v1, "result":I
     if-nez v1, :cond_4
 
-    .line 479
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
     move-result-object v2
@@ -1917,7 +1730,6 @@
 
     goto :goto_0
 
-    .line 481
     :cond_4
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1960,12 +1772,10 @@
     .prologue
     const/16 v2, 0x40e
 
-    .line 234
     const-string v1, "OTPService::getOtpCertificate Enter"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 236
     iget-object v1, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;
@@ -1978,26 +1788,21 @@
 
     if-eqz v1, :cond_1
 
-    .line 237
     const-string v1, "OTPService::getOtpCertificate: Skip operation. DB Upgrade active."
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 238
     const/4 v0, 0x0
 
-    .line 253
     :cond_0
     :goto_0
     return-object v0
 
-    .line 241
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/CallerVerification;->verifyProvisionPermission(Landroid/content/Context;)Z
 
-    .line 244
     const-string v1, "1.2.0"
 
     invoke-direct {p0, v1}, Lcom/android/server/enterprise/otp/OTPService;->checkOTPVersion(Ljava/lang/String;)Z
@@ -2006,10 +1811,8 @@
 
     if-nez v1, :cond_2
 
-    .line 245
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
-    .line 248
     :cond_2
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
@@ -2019,16 +1822,13 @@
 
     move-result-object v0
 
-    .line 249
     .local v0, "otpCert":[B
     if-nez v0, :cond_0
 
-    .line 250
     const-string v1, "OTPService::getOtpCertificate returned null : Throwing UnsupportedOperationException"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 251
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
     goto :goto_0
@@ -2038,7 +1838,6 @@
     .locals 3
 
     .prologue
-    .line 452
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2067,7 +1866,6 @@
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 453
     const-string/jumbo v1, "sys.enterprise.otp.version"
 
     const/4 v2, 0x0
@@ -2076,7 +1874,6 @@
 
     move-result-object v0
 
-    .line 454
     .local v0, "otpVersion":Ljava/lang/String;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -2104,7 +1901,6 @@
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 455
     return-object v0
 .end method
 
@@ -2121,12 +1917,10 @@
     .end annotation
 
     .prologue
-    .line 258
     const-string v4, "OTPService::getOtpTokenList Enter"
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 260
     iget-object v4, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;
@@ -2139,19 +1933,15 @@
 
     if-eqz v4, :cond_0
 
-    .line 261
     const-string v4, "OTPService::getOtpTokenList: Skip operation. DB Upgrade active."
 
     invoke-static {v4}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 262
     const/4 v3, 0x0
 
-    .line 278
     :goto_0
     return-object v3
 
-    .line 265
     :cond_0
     iget-object v4, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -2161,10 +1951,8 @@
 
     invoke-virtual {v4}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->verifyDbIntegrity()Z
 
-    .line 267
     const/4 v3, 0x0
 
-    .line 268
     .local v3, "result":Ljava/util/List;, "Ljava/util/List<Lcom/sec/enterprise/knox/otp/common/OTPToken;>;"
     iget-object v4, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -2180,7 +1968,6 @@
 
     move-result-object v0
 
-    .line 269
     .local v0, "callerPackage":Ljava/lang/String;
     new-instance v4, Landroid/app/enterprise/ContextInfo;
 
@@ -2192,7 +1979,6 @@
 
     iget v2, v4, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 270
     .local v2, "containerId":I
     iget-object v4, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -2200,7 +1986,6 @@
 
     move-result-object v1
 
-    .line 273
     .local v1, "callerPkgSign":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -2212,7 +1997,6 @@
 
     move-result-object v3
 
-    .line 276
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -2276,7 +2060,6 @@
     .locals 2
 
     .prologue
-    .line 589
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -2296,7 +2079,6 @@
     .locals 2
 
     .prologue
-    .line 585
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -2316,7 +2098,6 @@
     .locals 2
 
     .prologue
-    .line 597
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -2336,7 +2117,6 @@
     .locals 2
 
     .prologue
-    .line 593
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -2356,7 +2136,6 @@
     .locals 2
 
     .prologue
-    .line 605
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -2376,7 +2155,6 @@
     .locals 2
 
     .prologue
-    .line 601
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -2407,24 +2185,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 521
     const-string v2, "OTPService::keyProvisionClientHello Enter"
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 523
     if-nez p1, :cond_0
 
-    .line 524
     const-string v2, "OTPService::keyProvisionClientHello: Skip operation. DSKPP Key Provision Trigger data is null."
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 543
     :goto_0
     return-object v1
 
-    .line 528
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -2438,20 +2211,17 @@
 
     if-eqz v2, :cond_1
 
-    .line 529
     const-string v2, "OTPService::keyProvisionClientHello: Skip operation. DB Upgrade active."
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 534
     :cond_1
     iget-object v1, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/CallerVerification;->verifyProvisionPermission(Landroid/content/Context;)Z
 
-    .line 537
     invoke-static {}, Lcom/android/server/enterprise/otp/DSKPPSupportInfo;->checkDeviceSupport()Ljava/lang/Boolean;
 
     move-result-object v1
@@ -2462,12 +2232,10 @@
 
     if-nez v1, :cond_2
 
-    .line 538
     const/16 v1, 0x412
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
-    .line 542
     :cond_2
     new-instance v0, Lcom/android/server/enterprise/otp/engine/provision/DSKPPProvision;
 
@@ -2475,7 +2243,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/enterprise/otp/engine/provision/DSKPPProvision;-><init>(Landroid/content/Context;)V
 
-    .line 543
     .local v0, "obj":Lcom/android/server/enterprise/otp/engine/provision/DSKPPProvision;
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/otp/engine/provision/DSKPPProvision;->keyProvClientHello(Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvTrigger;)Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvClientHello;
 
@@ -2499,24 +2266,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 550
     const-string v3, "OTPService::setKeyProvServerFinished Enter"
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 553
     if-nez p1, :cond_0
 
-    .line 554
     const-string v3, "OTPService::keyProvServerFinished: Skip operation. DSKPP Key Provision Server Finished data is null."
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 581
     :goto_0
     return-object v1
 
-    .line 559
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -2530,20 +2292,17 @@
 
     if-eqz v3, :cond_1
 
-    .line 560
     const-string v3, "OTPService::setKeyProvServerFinished: Skip operation. DB Upgrade active."
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 565
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/CallerVerification;->verifyProvisionPermission(Landroid/content/Context;)Z
 
-    .line 568
     invoke-static {}, Lcom/android/server/enterprise/otp/DSKPPSupportInfo;->checkDeviceSupport()Ljava/lang/Boolean;
 
     move-result-object v3
@@ -2554,12 +2313,10 @@
 
     if-nez v3, :cond_2
 
-    .line 569
     const/16 v3, 0x412
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/OTPInternal;->throwExceptionBasedOnError(I)V
 
-    .line 573
     :cond_2
     new-instance v0, Lcom/android/server/enterprise/otp/engine/provision/DSKPPProvision;
 
@@ -2567,33 +2324,27 @@
 
     invoke-direct {v0, v3}, Lcom/android/server/enterprise/otp/engine/provision/DSKPPProvision;-><init>(Landroid/content/Context;)V
 
-    .line 574
     .local v0, "obj":Lcom/android/server/enterprise/otp/engine/provision/DSKPPProvision;
     new-instance v1, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPStatus;
 
     invoke-direct {v1}, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPStatus;-><init>()V
 
-    .line 575
     .local v1, "status":Lcom/sec/enterprise/knox/otp/dskpp/DSKPPStatus;
     invoke-virtual {v0, p1}, Lcom/android/server/enterprise/otp/engine/provision/DSKPPProvision;->keyProvisionServerFinish(Lcom/sec/enterprise/knox/otp/dskpp/DSKPPKeyProvServerFinish;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 576
     .local v2, "tokenId":Ljava/lang/String;
     if-eqz v2, :cond_3
 
-    .line 577
     const/4 v3, 0x0
 
     invoke-virtual {v1, v3}, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPStatus;->setStatusCode(I)V
 
-    .line 578
     invoke-virtual {v1, v2}, Lcom/sec/enterprise/knox/otp/dskpp/DSKPPStatus;->setTokenId(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 580
     :cond_3
     const/16 v3, 0x4ff
 
@@ -2607,7 +2358,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 670
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2634,7 +2384,6 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 672
     return-void
 .end method
 
@@ -2643,7 +2392,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 682
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2670,20 +2418,17 @@
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 683
     iget-object v6, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
 
     move-result-object v0
 
-    .line 684
     .local v0, "dbHandler":Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v5
 
-    .line 685
     .local v5, "userId":I
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2705,30 +2450,24 @@
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 687
     if-nez v5, :cond_1
 
-    .line 688
     const-string v6, "OTPService::onAdminRemoved Ignoring call for containerId 0"
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 714
     :cond_0
     :goto_0
     return-void
 
-    .line 692
     :cond_1
     invoke-virtual {v0, v5}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getOtpTokensInContainer(I)Ljava/util/List;
 
     move-result-object v2
 
-    .line 693
     .local v2, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v2, :cond_4
 
-    .line 694
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -2747,7 +2486,6 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 695
     .local v4, "token":Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
@@ -2757,11 +2495,9 @@
 
     move-result v3
 
-    .line 696
     .local v3, "ret":I
     if-nez v3, :cond_2
 
-    .line 697
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2788,16 +2524,13 @@
 
     invoke-static {v6}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 702
     :goto_2
     invoke-virtual {v0, v4}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->removeOtpToken(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 703
     if-nez v3, :cond_3
 
-    .line 704
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2826,7 +2559,6 @@
 
     goto :goto_1
 
-    .line 699
     :cond_2
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2856,7 +2588,6 @@
 
     goto :goto_2
 
-    .line 707
     :cond_3
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -2880,7 +2611,6 @@
 
     goto/16 :goto_1
 
-    .line 712
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "ret":I
     .end local v4    # "token":Ljava/lang/String;
@@ -2897,7 +2627,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 676
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -2924,7 +2653,6 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 678
     return-void
 .end method
 
@@ -2934,7 +2662,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 736
     monitor-enter p0
 
     :try_start_0
@@ -2942,31 +2669,26 @@
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 739
     const-string v1, "OTP"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 740
     .local v0, "otpBinder":Landroid/os/IBinder;
     if-eqz v0, :cond_0
 
-    .line 741
     const-string v1, "OTPService:: otp_server already loaded"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 749
     :goto_0
     monitor-exit p0
 
     return v3
 
-    .line 747
     :cond_0
     :try_start_1
     const-string/jumbo v1, "persist.security.tlc.otp"
@@ -2975,7 +2697,6 @@
 
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 748
     const-string v1, "OTPService:: Start otp_server for OTP done : setprop"
 
     invoke-static {v1}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
@@ -2984,7 +2705,6 @@
 
     goto :goto_0
 
-    .line 736
     .end local v0    # "otpBinder":Landroid/os/IBinder;
     :catchall_0
     move-exception v1
@@ -3004,7 +2724,6 @@
     .end annotation
 
     .prologue
-    .line 198
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3031,7 +2750,6 @@
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 200
     iget-object v2, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBIntegrity;
@@ -3044,19 +2762,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 201
     const-string v2, "OTPService::removeOtpToken: Skip operation. DB Upgrade active."
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 202
     const/16 v1, 0x4ff
 
-    .line 229
     :goto_0
     return v1
 
-    .line 205
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -3066,10 +2780,8 @@
 
     invoke-virtual {v2}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->verifyDbIntegrity()Z
 
-    .line 207
     const/4 v1, 0x0
 
-    .line 210
     .local v1, "result":I
     iget-object v2, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -3081,31 +2793,25 @@
 
     move-result-object v0
 
-    .line 211
     .local v0, "internalTokenId":Ljava/lang/String;
     if-eqz v0, :cond_3
 
-    .line 212
     iget-object v2, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v2, v0}, Lcom/android/server/enterprise/otp/CallerVerification;->verifyAdminAccess(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v1
 
-    .line 220
     :goto_1
     const/16 v2, 0x40d
 
     if-ne v2, v1, :cond_1
 
-    .line 221
     const/4 v1, 0x0
 
-    .line 223
     :cond_1
     if-nez v1, :cond_2
 
-    .line 224
     invoke-static {}, Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;->getInstance()Lcom/android/server/enterprise/otp/engine/handler/securedata/TlcHandler;
 
     move-result-object v2
@@ -3114,7 +2820,6 @@
 
     move-result v1
 
-    .line 225
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3141,7 +2846,6 @@
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 226
     iget-object v2, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v2}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->getInstance(Landroid/content/Context;)Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;
@@ -3152,7 +2856,6 @@
 
     move-result v1
 
-    .line 228
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3182,11 +2885,9 @@
 
     goto :goto_0
 
-    .line 214
     :cond_3
     const/16 v1, 0x408
 
-    .line 215
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3221,7 +2922,6 @@
     .end annotation
 
     .prologue
-    .line 142
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3248,25 +2948,19 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 143
     invoke-static {p2}, Lcom/android/server/enterprise/otp/engine/common/Print;->printBundle(Landroid/os/Bundle;)V
 
-    .line 145
     if-nez p2, :cond_0
 
-    .line 146
     const-string v3, "OTPService::resyncOtpToken: Invalid input."
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 147
     const/16 v2, 0x401
 
-    .line 193
     :goto_0
     return v2
 
-    .line 149
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -3280,17 +2974,14 @@
 
     if-eqz v3, :cond_1
 
-    .line 151
     const-string v3, "OTPService::resyncOtpToken: Skip operation. DB Upgrade active."
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 152
     const/16 v2, 0x4ff
 
     goto :goto_0
 
-    .line 156
     :cond_1
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -3300,10 +2991,8 @@
 
     invoke-virtual {v3}, Lcom/android/server/enterprise/otp/engine/handler/db/DBHandler;->verifyDbIntegrity()Z
 
-    .line 158
     const/4 v2, 0x0
 
-    .line 159
     .local v2, "result":I
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
@@ -3315,18 +3004,15 @@
 
     move-result-object v0
 
-    .line 162
     .local v0, "internalTokenId":Ljava/lang/String;
     if-eqz v0, :cond_4
 
-    .line 163
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v3, v0}, Lcom/android/server/enterprise/otp/CallerVerification;->verifyAdminAccess(Landroid/content/Context;Ljava/lang/String;)I
 
     move-result v2
 
-    .line 171
     :goto_1
     const-string v3, "ENCRYPTION_KEY_TYPE"
 
@@ -3338,31 +3024,25 @@
 
     if-ne v3, v4, :cond_2
 
-    .line 172
     iget-object v3, p0, Lcom/android/server/enterprise/otp/OTPService;->mContext:Landroid/content/Context;
 
     invoke-static {v3, p2}, Lcom/android/server/enterprise/otp/engine/provision/ProvisionUtil;->validateCertificateHash(Landroid/content/Context;Landroid/os/Bundle;)I
 
     move-result v2
 
-    .line 173
     if-nez v2, :cond_2
 
-    .line 174
     const-string v3, "SECRET_ENCRYPTION_ALGO"
 
     const/16 v4, 0x186
 
     invoke-virtual {p2, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 179
     :cond_2
     if-nez v2, :cond_3
 
-    .line 180
     const/4 v1, 0x0
 
-    .line 181
     .local v1, "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
     const-string v3, "OTP_OATH_PROVISIONING_TYPE"
 
@@ -3374,7 +3054,6 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 182
     new-instance v1, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;
 
     .end local v1    # "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
@@ -3382,17 +3061,14 @@
 
     invoke-direct {v1, v3}, Lcom/android/server/enterprise/otp/engine/provision/DirectDataProvision;-><init>(Landroid/content/Context;)V
 
-    .line 189
     .restart local v1    # "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
     :goto_2
     if-eqz v1, :cond_3
 
-    .line 190
     invoke-interface {v1, v0, p2}, Lcom/android/server/enterprise/otp/engine/provision/IProvision;->doResync(Ljava/lang/String;Landroid/os/Bundle;)I
 
     move-result v2
 
-    .line 192
     .end local v1    # "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
     :cond_3
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3423,11 +3099,9 @@
 
     goto :goto_0
 
-    .line 165
     :cond_4
     const/16 v2, 0x408
 
-    .line 166
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -3450,7 +3124,6 @@
 
     goto :goto_1
 
-    .line 184
     .restart local v1    # "objProvision":Lcom/android/server/enterprise/otp/engine/provision/IProvision;
     :cond_5
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3479,7 +3152,6 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/otp/engine/common/Print;->e(Ljava/lang/String;)V
 
-    .line 186
     const/16 v2, 0x404
 
     goto :goto_2
@@ -3489,12 +3161,10 @@
     .locals 2
 
     .prologue
-    .line 655
     const-string v0, "OTPService::systemReady | Enter"
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->i(Ljava/lang/String;)V
 
-    .line 656
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3519,9 +3189,7 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/otp/engine/common/Print;->d(Ljava/lang/String;)V
 
-    .line 658
     invoke-direct {p0}, Lcom/android/server/enterprise/otp/OTPService;->setOtpVersion()V
 
-    .line 666
     return-void
 .end method

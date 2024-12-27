@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 924
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -40,14 +39,12 @@
     .locals 3
 
     .prologue
-    .line 927
     const-string/jumbo v1, "jobscheduler"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 928
     .local v0, "b":Landroid/os/IBinder;
     new-instance v1, Landroid/app/JobSchedulerImpl;
 
@@ -64,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 924
     invoke-virtual {p0}, Landroid/app/SystemServiceRegistry$73;->createService()Landroid/app/job/JobScheduler;
 
     move-result-object v0

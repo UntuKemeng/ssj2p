@@ -48,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 90
     new-instance v0, Lcom/android/internal/telephony/CallStateBroadcaster$1;
 
     invoke-direct {v0}, Lcom/android/internal/telephony/CallStateBroadcaster$1;-><init>()V
@@ -63,13 +62,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     iput-object p1, p0, Lcom/android/internal/telephony/CallStateBroadcaster;->mContext:Landroid/content/Context;
 
-    .line 113
     return-void
 .end method
 
@@ -79,7 +75,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/CallStateBroadcaster$1;
 
     .prologue
-    .line 37
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/CallStateBroadcaster;-><init>(Landroid/content/Context;)V
 
     return-void
@@ -90,7 +85,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 131
     invoke-static {}, Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->getStatus()Z
 
     move-result v0
@@ -109,7 +103,6 @@
 
     if-nez v0, :cond_0
 
-    .line 132
     iget-object v0, p0, Lcom/android/internal/telephony/CallStateBroadcaster;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/os/Process;->myUserHandle()Landroid/os/UserHandle;
@@ -120,7 +113,6 @@
 
     invoke-virtual {v0, p1, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;)V
 
-    .line 133
     :cond_0
     return-void
 .end method
@@ -131,25 +123,21 @@
     .param p1, "number"    # Ljava/lang/String;
 
     .prologue
-    .line 103
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "diagandroid.phone.detailedCallState"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 104
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "CallState"
 
     invoke-virtual {v0, v1, p0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 105
     const-string v1, "CallNumber"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 106
     return-object v0
 .end method
 
@@ -159,12 +147,10 @@
     .param p1, "cause"    # I
 
     .prologue
-    .line 47
     sget-object v0, Lcom/android/internal/telephony/CallStateBroadcaster;->sInstance:Lcom/android/internal/telephony/CallStateBroadcaster;
 
     if-eqz v0, :cond_0
 
-    .line 48
     sget-object v0, Lcom/android/internal/telephony/CallStateBroadcaster;->sInstance:Lcom/android/internal/telephony/CallStateBroadcaster;
 
     invoke-static {p1}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
@@ -173,7 +159,6 @@
 
     invoke-direct {v0, p0, v1}, Lcom/android/internal/telephony/CallStateBroadcaster;->SendCallDisconnected(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 50
     :cond_0
     return-void
 .end method
@@ -184,26 +169,21 @@
     .param p2, "cause"    # Ljava/lang/String;
 
     .prologue
-    .line 123
     if-eqz p2, :cond_0
 
-    .line 124
     const-string v1, "ENDED"
 
     invoke-static {v1, p1}, Lcom/android/internal/telephony/CallStateBroadcaster;->CreateIntent(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 125
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "CallCode"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 126
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/CallStateBroadcaster;->Broadcast(Landroid/content/Intent;)V
 
-    .line 128
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void
@@ -215,7 +195,6 @@
     .param p1, "status"    # Lcom/android/internal/telephony/Call$State;
 
     .prologue
-    .line 40
     sget-object v1, Lcom/android/internal/telephony/CallStateBroadcaster;->sInstance:Lcom/android/internal/telephony/CallStateBroadcaster;
 
     if-eqz v1, :cond_0
@@ -224,7 +203,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 41
     sget-object v1, Lcom/android/internal/telephony/CallStateBroadcaster;->sStatusCodes:Ljava/util/HashMap;
 
     invoke-virtual {p1}, Lcom/android/internal/telephony/Call$State;->toString()Ljava/lang/String;
@@ -237,13 +215,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 42
     .local v0, "statusCode":Ljava/lang/String;
     sget-object v1, Lcom/android/internal/telephony/CallStateBroadcaster;->sInstance:Lcom/android/internal/telephony/CallStateBroadcaster;
 
     invoke-direct {v1, p0, v0}, Lcom/android/internal/telephony/CallStateBroadcaster;->SendCallStatus(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 44
     .end local v0    # "statusCode":Ljava/lang/String;
     :cond_0
     return-void
@@ -255,19 +231,15 @@
     .param p2, "statusString"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     if-eqz p2, :cond_0
 
-    .line 117
     invoke-static {p2, p1}, Lcom/android/internal/telephony/CallStateBroadcaster;->CreateIntent(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 118
     .local v0, "intent":Landroid/content/Intent;
     invoke-direct {p0, v0}, Lcom/android/internal/telephony/CallStateBroadcaster;->Broadcast(Landroid/content/Intent;)V
 
-    .line 120
     .end local v0    # "intent":Landroid/content/Intent;
     :cond_0
     return-void
@@ -278,7 +250,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/CallStateBroadcaster;
 
     .prologue
-    .line 37
     sput-object p0, Lcom/android/internal/telephony/CallStateBroadcaster;->sInstance:Lcom/android/internal/telephony/CallStateBroadcaster;
 
     return-object p0

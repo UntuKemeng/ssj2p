@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 250
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener60$4;->this$0:Lcom/sec/epdg/handover/EpdgImsListener60;
 
     invoke-direct {p0}, Lcom/sec/ims/IImsRegistrationListener$Stub;-><init>()V
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 260
     const-string v0, "[EpdgImsListener]"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -67,7 +65,6 @@
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 261
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -81,7 +78,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 262
     return-void
 .end method
 
@@ -95,14 +91,12 @@
     .end annotation
 
     .prologue
-    .line 254
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onRegistered()"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 255
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -116,6 +110,5 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 256
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1634
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$10;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1638
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -52,12 +50,10 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 1643
     move-object v0, p1
 
     check-cast v0, Landroid/content/Intent;
 
-    .line 1644
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "[EPDGService]"
 
@@ -85,7 +81,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1645
     # getter for: Lcom/sec/epdg/EpdgService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1700()Landroid/content/Context;
 
@@ -99,23 +94,19 @@
 
     check-cast v1, Landroid/net/wifi/WifiManager;
 
-    .line 1646
     .local v1, "wifiManager":Landroid/net/wifi/WifiManager;
     if-nez v1, :cond_1
 
-    .line 1647
     const-string v2, "[EPDGService]"
 
     const-string v3, "WiFiManager is null"
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1655
     :cond_0
     :goto_0
     return-void
 
-    .line 1651
     :cond_1
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isWiFiScanStart()Z
 
@@ -123,10 +114,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 1652
     invoke-virtual {v1}, Landroid/net/wifi/WifiManager;->startScan()Z
 
-    .line 1653
     invoke-static {}, Lcom/sec/epdg/EpdgPeriodicDpd;->getInstance()Lcom/sec/epdg/EpdgPeriodicDpd;
 
     move-result-object v2

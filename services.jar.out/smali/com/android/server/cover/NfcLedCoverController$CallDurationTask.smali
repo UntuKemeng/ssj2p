@@ -25,12 +25,10 @@
     .locals 1
 
     .prologue
-    .line 1383
     iput-object p1, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
 
-    .line 1384
     const/4 v0, -0x1
 
     iput-byte v0, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->prevSecond:B
@@ -44,7 +42,6 @@
     .param p2, "x1"    # Lcom/android/server/cover/NfcLedCoverController$1;
 
     .prologue
-    .line 1383
     invoke-direct {p0, p1}, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;-><init>(Lcom/android/server/cover/NfcLedCoverController;)V
 
     return-void
@@ -56,7 +53,6 @@
     .locals 3
 
     .prologue
-    .line 1391
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # getter for: Lcom/android/server/cover/NfcLedCoverController;->mCallTimerLock:Ljava/util/concurrent/locks/ReentrantLock;
@@ -66,7 +62,6 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
 
-    .line 1393
     :try_start_0
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
@@ -77,7 +72,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1394
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # invokes: Lcom/android/server/cover/NfcLedCoverController;->getCallDuration()[B
@@ -85,7 +79,6 @@
 
     move-result-object v0
 
-    .line 1395
     .local v0, "data":[B
     const/4 v1, 0x3
 
@@ -95,7 +88,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 1396
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     const/4 v2, 0x3
@@ -103,7 +95,6 @@
     # invokes: Lcom/android/server/cover/NfcLedCoverController;->handleSendDataToNfcLedCover(I[B)V
     invoke-static {v1, v2, v0}, Lcom/android/server/cover/NfcLedCoverController;->access$400(Lcom/android/server/cover/NfcLedCoverController;I[B)V
 
-    .line 1397
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
     # getter for: Lcom/android/server/cover/NfcLedCoverController;->mHandler:Lcom/android/server/cover/NfcLedCoverController$NfcLedCoverControllerHandler;
@@ -119,14 +110,12 @@
 
     if-nez v1, :cond_0
 
-    .line 1398
     const/4 v1, 0x3
 
     aget-byte v1, v0, v1
 
     iput-byte v1, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->prevSecond:B
 
-    .line 1404
     :cond_0
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->this$0:Lcom/android/server/cover/NfcLedCoverController;
 
@@ -135,7 +124,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1408
     .end local v0    # "data":[B
     :cond_1
     iget-object v1, p0, Lcom/android/server/cover/NfcLedCoverController$CallDurationTask;->this$0:Lcom/android/server/cover/NfcLedCoverController;
@@ -147,10 +135,8 @@
 
     invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    .line 1410
     return-void
 
-    .line 1408
     :catchall_0
     move-exception v1
 

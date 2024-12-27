@@ -29,12 +29,10 @@
     .param p2, "label"    # Ljava/lang/Class;
 
     .prologue
-    .line 202
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;-><init>(Ljava/lang/Class;Ljava/lang/Class;Ljava/lang/Class;)V
 
-    .line 203
     return-void
 .end method
 
@@ -45,19 +43,14 @@
     .param p3, "entry"    # Ljava/lang/Class;
 
     .prologue
-    .line 214
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 215
     iput-object p2, p0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;->label:Ljava/lang/Class;
 
-    .line 216
     iput-object p3, p0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;->entry:Ljava/lang/Class;
 
-    .line 217
     iput-object p1, p0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;->type:Ljava/lang/Class;
 
-    .line 218
     return-void
 .end method
 
@@ -71,7 +64,6 @@
     .end annotation
 
     .prologue
-    .line 271
     iget-object v0, p0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;->type:Ljava/lang/Class;
 
     invoke-virtual {v0, p1}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
@@ -92,12 +84,10 @@
     .end annotation
 
     .prologue
-    .line 228
     iget-object v0, p0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;->entry:Ljava/lang/Class;
 
     if-eqz v0, :cond_0
 
-    .line 229
     iget-object v0, p0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;->label:Ljava/lang/Class;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;->entry:Ljava/lang/Class;
@@ -106,7 +96,6 @@
 
     move-result-object v0
 
-    .line 231
     :goto_0
     return-object v0
 
@@ -130,7 +119,6 @@
     .end annotation
 
     .prologue
-    .line 244
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -175,7 +163,6 @@
     .end annotation
 
     .prologue
-    .line 258
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/Class;

@@ -30,31 +30,24 @@
 
     const/4 v1, 0x0
 
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mNetworkType:I
 
-    .line 15
     new-array v0, v2, [I
 
     iput-object v0, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mFeatureMask:[I
 
-    .line 16
     new-array v0, v2, [I
 
     iput-object v0, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mRegState:[I
 
-    .line 17
     iput v1, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mEpdgState:I
 
-    .line 18
     iput v1, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mEcmpStatus:I
 
-    .line 19
     iput v1, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mFeatureTag:I
 
     return-void
@@ -70,7 +63,6 @@
 
     const/4 v3, 0x0
 
-    .line 81
     const-string v0, "ImsRegi"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -125,7 +117,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 82
     const-string v0, "ImsRegi"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -180,7 +171,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 83
     const-string v0, "ImsRegi"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -255,7 +245,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 84
     return-void
 .end method
 
@@ -263,7 +252,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget v0, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mFeatureTag:I
 
     return v0
@@ -274,21 +262,17 @@
     .param p1, "ar"    # Landroid/os/AsyncResult;
 
     .prologue
-    .line 22
     if-nez p1, :cond_0
 
-    .line 23
     const-string v3, "ImsRegi"
 
     const-string v4, "setImsRegistration - AsyncResult is null"
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     :goto_0
     return-void
 
-    .line 27
     :cond_0
     iget-object v3, p1, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
@@ -298,7 +282,6 @@
 
     check-cast v2, [I
 
-    .line 28
     .local v2, "responseArray":[I
     array-length v3, v2
 
@@ -306,7 +289,6 @@
 
     if-ge v3, v4, :cond_1
 
-    .line 29
     const-string v3, "ImsRegi"
 
     const-string v4, "setImsRegistration - result has wrong value"
@@ -315,26 +297,21 @@
 
     goto :goto_0
 
-    .line 33
     :cond_1
     const/4 v0, -0x1
 
-    .line 34
     .local v0, "networkType":I
     const/4 v1, 0x0
 
-    .line 36
     .local v1, "regIndex":I
     const/4 v3, 0x3
 
     aget v0, v2, v3
 
-    .line 37
     invoke-static {v0}, Lcom/android/internal/telephony/LegacyIms;->convertNetworkType(I)I
 
     move-result v1
 
-    .line 38
     iget-object v3, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mRegState:[I
 
     const/4 v4, 0x0
@@ -343,7 +320,6 @@
 
     aput v4, v3, v1
 
-    .line 39
     iget-object v3, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mFeatureMask:[I
 
     const/4 v4, 0x2
@@ -352,28 +328,24 @@
 
     aput v4, v3, v1
 
-    .line 40
     const/4 v3, 0x4
 
     aget v3, v2, v3
 
     iput v3, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mEcmpStatus:I
 
-    .line 41
     const/4 v3, 0x5
 
     aget v3, v2, v3
 
     iput v3, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mEpdgState:I
 
-    .line 42
     const/4 v3, 0x6
 
     aget v3, v2, v3
 
     iput v3, p0, Lcom/android/internal/telephony/ImsRegistrationState;->mFeatureTag:I
 
-    .line 44
     const-string v3, "ImsRegi"
 
     new-instance v4, Ljava/lang/StringBuilder;

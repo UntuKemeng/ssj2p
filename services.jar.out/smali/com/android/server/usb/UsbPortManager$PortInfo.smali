@@ -45,10 +45,8 @@
     .param p2, "supportedModes"    # I
 
     .prologue
-    .line 988
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 989
     const-string v0, "UsbPortManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -85,14 +83,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 990
     new-instance v0, Landroid/hardware/usb/UsbPort;
 
     invoke-direct {v0, p1, p2}, Landroid/hardware/usb/UsbPort;-><init>(Ljava/lang/String;I)V
 
     iput-object v0, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPort:Landroid/hardware/usb/UsbPort;
 
-    .line 991
     return-void
 .end method
 
@@ -109,7 +105,6 @@
     .param p7, "supportedRoleCombinations"    # I
 
     .prologue
-    .line 998
     const-string v0, "UsbPortManager"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -204,16 +199,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1008
     iput-boolean p2, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangeMode:Z
 
-    .line 1009
     iput-boolean p4, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangePowerRole:Z
 
-    .line 1010
     iput-boolean p6, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mCanChangeDataRole:Z
 
-    .line 1011
     iget-object v0, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
     if-eqz v0, :cond_0
@@ -250,7 +241,6 @@
 
     if-eq v0, p7, :cond_1
 
-    .line 1017
     :cond_0
     new-instance v0, Landroid/hardware/usb/UsbPortStatus;
 
@@ -258,10 +248,8 @@
 
     iput-object v0, p0, Lcom/android/server/usb/UsbPortManager$PortInfo;->mUsbPortStatus:Landroid/hardware/usb/UsbPortStatus;
 
-    .line 1019
     const/4 v0, 0x1
 
-    .line 1021
     :goto_0
     return v0
 
@@ -275,7 +263,6 @@
     .locals 2
 
     .prologue
-    .line 1026
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

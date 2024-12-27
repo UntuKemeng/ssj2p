@@ -59,13 +59,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 38
     sput-boolean v0, Lcom/samsung/android/share/SShareShareLink;->mEasySignUpCertificated:Z
 
-    .line 39
     sput-boolean v0, Lcom/samsung/android/share/SShareShareLink;->mSSharingRecentContactExisted:Z
 
-    .line 40
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/samsung/android/share/SShareShareLink;->mShareLinkEnabled:Z
@@ -94,37 +91,27 @@
     .end annotation
 
     .prologue
-    .line 52
     .local p5, "extraIntentList":Ljava/util/List;, "Ljava/util/List<Landroid/content/Intent;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     const/4 v0, 0x2
 
     iput v0, p0, Lcom/samsung/android/share/SShareShareLink;->REMOTE_SHARE_SERVICE_ID:I
 
-    .line 53
     iput-object p1, p0, Lcom/samsung/android/share/SShareShareLink;->mActivity:Landroid/app/Activity;
 
-    .line 54
     iput-object p2, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
-    .line 55
     iput-object p3, p0, Lcom/samsung/android/share/SShareShareLink;->mFeature:Lcom/samsung/android/share/SShareCommon;
 
-    .line 56
     iput-object p4, p0, Lcom/samsung/android/share/SShareShareLink;->mOrigIntent:Landroid/content/Intent;
 
-    .line 57
     iput-object p5, p0, Lcom/samsung/android/share/SShareShareLink;->mExtraIntentList:Ljava/util/List;
 
-    .line 59
     invoke-direct {p0}, Lcom/samsung/android/share/SShareShareLink;->checkEasySignUpCertificated()V
 
-    .line 60
     invoke-direct {p0}, Lcom/samsung/android/share/SShareShareLink;->checkShareLinkEnabled()V
 
-    .line 61
     iget-object v0, p0, Lcom/samsung/android/share/SShareShareLink;->mFeature:Lcom/samsung/android/share/SShareCommon;
 
     invoke-virtual {v0}, Lcom/samsung/android/share/SShareCommon;->getSupportLogging()Z
@@ -135,7 +122,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 62
     new-instance v0, Lcom/samsung/android/share/SShareLogging;
 
     iget-object v1, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
@@ -146,7 +132,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/share/SShareShareLink;->mLogging:Lcom/samsung/android/share/SShareLogging;
 
-    .line 64
     :cond_0
     return-void
 .end method
@@ -155,7 +140,6 @@
     .locals 3
 
     .prologue
-    .line 205
     iget-object v0, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
     const/4 v1, 0x2
@@ -166,7 +150,6 @@
 
     sput-boolean v0, Lcom/samsung/android/share/SShareShareLink;->mEasySignUpCertificated:Z
 
-    .line 206
     const-string v0, "SShareShareLink"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -191,7 +174,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     return-void
 .end method
 
@@ -201,10 +183,8 @@
     .param p2, "baseSize"    # I
 
     .prologue
-    .line 230
     const v1, 0x3f99999a    # 1.2f
 
-    .line 231
     .local v1, "maxScale":F
     iget-object v3, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
@@ -218,18 +198,15 @@
 
     iget v0, v3, Landroid/content/res/Configuration;->fontScale:F
 
-    .line 233
     .local v0, "currentFontScale":F
     cmpl-float v3, v0, v1
 
     if-lez v3, :cond_0
 
-    .line 234
     int-to-float v3, p2
 
     div-float v2, v3, v0
 
-    .line 235
     .local v2, "scaleBase":F
     const/4 v3, 0x0
 
@@ -237,7 +214,6 @@
 
     invoke-virtual {p1, v3, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 237
     .end local v2    # "scaleBase":F
     :cond_0
     return-void
@@ -247,7 +223,6 @@
     .locals 3
 
     .prologue
-    .line 210
     iget-object v0, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/android/coreapps/sdk/easysignup/SimpleSharingManager;->isRecentContactExisted(Landroid/content/Context;)Z
@@ -256,7 +231,6 @@
 
     sput-boolean v0, Lcom/samsung/android/share/SShareShareLink;->mSSharingRecentContactExisted:Z
 
-    .line 211
     const-string v0, "SShareShareLink"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -281,7 +255,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     return-void
 .end method
 
@@ -291,12 +264,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 215
     sget-boolean v1, Lcom/samsung/android/share/SShareShareLink;->mEasySignUpCertificated:Z
 
     if-eqz v1, :cond_1
 
-    .line 217
     iget-object v1, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
     const/4 v2, 0x2
@@ -305,7 +276,6 @@
 
     move-result v0
 
-    .line 218
     .local v0, "retVal":I
     const-string v1, "SShareShareLink"
 
@@ -329,27 +299,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 219
     if-eq v0, v4, :cond_0
 
-    .line 220
     const/4 v1, 0x0
 
     sput-boolean v1, Lcom/samsung/android/share/SShareShareLink;->mShareLinkEnabled:Z
 
-    .line 227
     .end local v0    # "retVal":I
     :goto_0
     return-void
 
-    .line 222
     .restart local v0    # "retVal":I
     :cond_0
     sput-boolean v4, Lcom/samsung/android/share/SShareShareLink;->mShareLinkEnabled:Z
 
     goto :goto_0
 
-    .line 225
     .end local v0    # "retVal":I
     :cond_1
     sput-boolean v4, Lcom/samsung/android/share/SShareShareLink;->mShareLinkEnabled:Z
@@ -363,20 +328,17 @@
     .locals 6
 
     .prologue
-    .line 140
     new-instance v3, Landroid/content/Intent;
 
     iget-object v4, p0, Lcom/samsung/android/share/SShareShareLink;->mOrigIntent:Landroid/content/Intent;
 
     invoke-direct {v3, v4}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
 
-    .line 141
     .local v3, "targetIntent":Landroid/content/Intent;
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 143
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "com.samsung.android.app.simplesharing.action.REQUEST_LINK_SEND"
@@ -385,37 +347,31 @@
 
     iput-object v4, p0, Lcom/samsung/android/share/SShareShareLink;->mIntent:Landroid/content/Intent;
 
-    .line 144
     iget-object v4, p0, Lcom/samsung/android/share/SShareShareLink;->mIntent:Landroid/content/Intent;
 
     const/high16 v5, 0x4000000
 
     invoke-virtual {v4, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 145
     iget-object v4, p0, Lcom/samsung/android/share/SShareShareLink;->mIntent:Landroid/content/Intent;
 
     const-string v5, "android.intent.extra.INTENT"
 
     invoke-virtual {v4, v5, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 147
     iget-object v4, p0, Lcom/samsung/android/share/SShareShareLink;->mExtraIntentList:Ljava/util/List;
 
     if-eqz v4, :cond_1
 
-    .line 149
     iget-object v4, p0, Lcom/samsung/android/share/SShareShareLink;->mExtraIntentList:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 151
     .local v2, "nSize":I
     new-array v1, v2, [Landroid/content/Intent;
 
-    .line 152
     .local v1, "initialIntents":[Landroid/content/Intent;
     const/4 v0, 0x0
 
@@ -423,7 +379,6 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 153
     iget-object v4, p0, Lcom/samsung/android/share/SShareShareLink;->mExtraIntentList:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -434,12 +389,10 @@
 
     aput-object v4, v1, v0
 
-    .line 152
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 155
     :cond_0
     iget-object v4, p0, Lcom/samsung/android/share/SShareShareLink;->mIntent:Landroid/content/Intent;
 
@@ -447,7 +400,6 @@
 
     invoke-virtual {v4, v5, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 158
     .end local v0    # "i":I
     .end local v1    # "initialIntents":[Landroid/content/Intent;
     .end local v2    # "nSize":I
@@ -461,7 +413,6 @@
     .locals 1
 
     .prologue
-    .line 126
     sget-boolean v0, Lcom/samsung/android/share/SShareShareLink;->mEasySignUpCertificated:Z
 
     return v0
@@ -471,7 +422,6 @@
     .locals 1
 
     .prologue
-    .line 133
     sget-boolean v0, Lcom/samsung/android/share/SShareShareLink;->mShareLinkEnabled:Z
 
     return v0
@@ -483,7 +433,6 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 70
     iget-object v9, p0, Lcom/samsung/android/share/SShareShareLink;->mActivity:Landroid/app/Activity;
 
     const v10, 0x102049e
@@ -492,24 +441,20 @@
 
     move-result-object v4
 
-    .line 71
     .local v4, "mShareLinkView":Landroid/view/View;
     if-eqz v4, :cond_0
 
-    .line 72
     new-instance v9, Lcom/samsung/android/share/SShareShareLink$1;
 
     invoke-direct {v9, p0}, Lcom/samsung/android/share/SShareShareLink$1;-><init>(Lcom/samsung/android/share/SShareShareLink;)V
 
     invoke-virtual {v4, v9}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 80
     :cond_0
     new-instance v5, Lcom/samsung/android/share/SShareShareLink$2;
 
     invoke-direct {v5, p0}, Lcom/samsung/android/share/SShareShareLink$2;-><init>(Lcom/samsung/android/share/SShareShareLink;)V
 
-    .line 87
     .local v5, "ocl":Landroid/view/View$OnClickListener;
     iget-object v9, p0, Lcom/samsung/android/share/SShareShareLink;->mActivity:Landroid/app/Activity;
 
@@ -519,14 +464,11 @@
 
     move-result-object v3
 
-    .line 88
     .local v3, "mShareLinkTipBtnWrapper":Landroid/view/View;
     if-eqz v3, :cond_1
 
-    .line 89
     invoke-virtual {v3, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 92
     :cond_1
     iget-object v9, p0, Lcom/samsung/android/share/SShareShareLink;->mActivity:Landroid/app/Activity;
 
@@ -536,14 +478,11 @@
 
     move-result-object v2
 
-    .line 93
     .local v2, "mShareLinkTipBtn":Landroid/view/View;
     if-eqz v2, :cond_2
 
-    .line 94
     invoke-virtual {v2, v5}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 96
     iget-object v9, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -556,7 +495,6 @@
 
     move-result-object v7
 
-    .line 97
     .local v7, "tipsDesc":Ljava/lang/String;
     iget-object v9, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
@@ -570,7 +508,6 @@
 
     move-result-object v6
 
-    .line 98
     .local v6, "shareLinkName":Ljava/lang/String;
     new-array v9, v11, [Ljava/lang/Object;
 
@@ -584,7 +521,6 @@
 
     invoke-virtual {v2, v9}, Landroid/view/View;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 100
     iget-object v9, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
     invoke-virtual {v9}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -597,26 +533,21 @@
 
     move-result v1
 
-    .line 101
     .local v1, "hoverLevel":I
     const/4 v9, 0x2
 
     if-lt v1, v9, :cond_2
 
-    .line 102
     invoke-virtual {v2, v11}, Landroid/view/View;->setHoverPopupType(I)V
 
-    .line 103
     invoke-virtual {v2, v11}, Landroid/view/View;->setLongClickable(Z)V
 
-    .line 107
     .end local v1    # "hoverLevel":I
     .end local v6    # "shareLinkName":Ljava/lang/String;
     .end local v7    # "tipsDesc":Ljava/lang/String;
     :cond_2
     if-eqz v4, :cond_4
 
-    .line 108
     const v9, 0x1020014
 
     invoke-virtual {v4, v9}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -625,7 +556,6 @@
 
     check-cast v8, Landroid/widget/TextView;
 
-    .line 109
     .local v8, "titleText":Landroid/widget/TextView;
     iget-object v9, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
@@ -641,15 +571,12 @@
 
     iput v9, p0, Lcom/samsung/android/share/SShareShareLink;->defaultTextSize:I
 
-    .line 110
     if-eqz v8, :cond_3
 
-    .line 111
     iget v9, p0, Lcom/samsung/android/share/SShareShareLink;->defaultTextSize:I
 
     invoke-direct {p0, v8, v9}, Lcom/samsung/android/share/SShareShareLink;->checkMaxFontScale(Landroid/widget/TextView;I)V
 
-    .line 114
     :cond_3
     const v9, 0x1020015
 
@@ -659,7 +586,6 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 115
     .local v0, "descText":Landroid/widget/TextView;
     iget-object v9, p0, Lcom/samsung/android/share/SShareShareLink;->mContext:Landroid/content/Context;
 
@@ -675,15 +601,12 @@
 
     iput v9, p0, Lcom/samsung/android/share/SShareShareLink;->defaultTextSize:I
 
-    .line 116
     if-eqz v0, :cond_4
 
-    .line 117
     iget v9, p0, Lcom/samsung/android/share/SShareShareLink;->defaultTextSize:I
 
     invoke-direct {p0, v0, v9}, Lcom/samsung/android/share/SShareShareLink;->checkMaxFontScale(Landroid/widget/TextView;I)V
 
-    .line 120
     .end local v0    # "descText":Landroid/widget/TextView;
     .end local v8    # "titleText":Landroid/widget/TextView;
     :cond_4
@@ -696,12 +619,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 166
     iget-object v3, p0, Lcom/samsung/android/share/SShareShareLink;->mLogging:Lcom/samsung/android/share/SShareLogging;
 
     if-eqz v3, :cond_0
 
-    .line 167
     iget-object v3, p0, Lcom/samsung/android/share/SShareShareLink;->mLogging:Lcom/samsung/android/share/SShareLogging;
 
     iget-object v4, p0, Lcom/samsung/android/share/SShareShareLink;->mLogging:Lcom/samsung/android/share/SShareLogging;
@@ -712,7 +633,6 @@
 
     invoke-virtual {v3, v4, v5}, Lcom/samsung/android/share/SShareLogging;->insertLog(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 170
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/share/SShareShareLink;->isEasySignUpCertificated()Z
 
@@ -720,7 +640,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 172
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/share/SShareShareLink;->mActivity:Landroid/app/Activity;
 
@@ -732,21 +651,17 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 176
     :goto_0
     iget-object v3, p0, Lcom/samsung/android/share/SShareShareLink;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v3}, Landroid/app/Activity;->finish()V
 
-    .line 189
     :goto_1
     return-void
 
-    .line 173
     :catch_0
     move-exception v1
 
-    .line 174
     .local v1, "ex":Landroid/content/ActivityNotFoundException;
     const-string v3, "SShareShareLink"
 
@@ -756,7 +671,6 @@
 
     goto :goto_0
 
-    .line 178
     .end local v1    # "ex":Landroid/content/ActivityNotFoundException;
     :cond_1
     new-instance v2, Landroid/content/Intent;
@@ -765,30 +679,25 @@
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 179
     .local v2, "intent":Landroid/content/Intent;
     const/high16 v3, 0x4000000
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 180
     const-string v3, "fromOOBE"
 
     invoke-virtual {v2, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 181
     const-string v3, "agreeMarketing"
 
     invoke-virtual {v2, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 182
     const-string v3, "AuthRequestFrom"
 
     const-string/jumbo v4, "shareVia"
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 184
     :try_start_1
     iget-object v3, p0, Lcom/samsung/android/share/SShareShareLink;->mActivity:Landroid/app/Activity;
 
@@ -800,11 +709,9 @@
 
     goto :goto_1
 
-    .line 185
     :catch_1
     move-exception v0
 
-    .line 186
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v3, "SShareShareLink"
 
@@ -819,20 +726,17 @@
     .locals 4
 
     .prologue
-    .line 195
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "com.samsung.android.app.simplesharing.intent.ACTION_VIEW_TIP_VIEW"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 196
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v2, 0x4000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 198
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/share/SShareShareLink;->mActivity:Landroid/app/Activity;
 
@@ -840,15 +744,12 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 202
     :goto_0
     return-void
 
-    .line 199
     :catch_0
     move-exception v0
 
-    .line 200
     .local v0, "ex":Landroid/content/ActivityNotFoundException;
     const-string v2, "SShareShareLink"
 

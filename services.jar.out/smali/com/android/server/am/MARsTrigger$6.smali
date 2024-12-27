@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 639
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$6;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 642
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 643
     .local v0, "action":Ljava/lang/String;
     const-string v1, "android.intent.action.TIME_SET"
 
@@ -54,18 +51,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 644
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
-    .line 645
     .local v8, "nowRTC":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    .line 647
     .local v6, "nowELAPSED":J
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger$6;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -85,11 +79,9 @@
 
     add-long v4, v10, v12
 
-    .line 650
     .local v4, "expectedClockTime":J
     sub-long v2, v8, v4
 
-    .line 652
     .local v2, "changedTime":J
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger$6;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -97,19 +89,16 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/am/MARsPolicyManager;->updateDBResetTimeForTimeChanged(J)V
 
-    .line 654
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger$6;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # setter for: Lcom/android/server/am/MARsTrigger;->mLastTimeChangeClockTime:J
     invoke-static {v1, v8, v9}, Lcom/android/server/am/MARsTrigger;->access$2002(Lcom/android/server/am/MARsTrigger;J)J
 
-    .line 655
     iget-object v1, p0, Lcom/android/server/am/MARsTrigger$6;->this$0:Lcom/android/server/am/MARsTrigger;
 
     # setter for: Lcom/android/server/am/MARsTrigger;->mLastTimeChangeRealtime:J
     invoke-static {v1, v6, v7}, Lcom/android/server/am/MARsTrigger;->access$2102(Lcom/android/server/am/MARsTrigger;J)J
 
-    .line 657
     .end local v2    # "changedTime":J
     .end local v4    # "expectedClockTime":J
     .end local v6    # "nowELAPSED":J

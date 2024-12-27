@@ -18,23 +18,18 @@
     .param p2, "text"    # Lorg/simpleframework/xml/Text;
 
     .prologue
-    .line 64
     invoke-direct {p0}, Lorg/simpleframework/xml/core/TemplateLabel;-><init>()V
 
-    .line 65
     invoke-interface {p2}, Lorg/simpleframework/xml/Text;->empty()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->empty:Ljava/lang/String;
 
-    .line 66
     iput-object p1, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
-    .line 67
     iput-object p2, p0, Lorg/simpleframework/xml/core/TextListLabel;->text:Lorg/simpleframework/xml/Text;
 
-    .line 68
     return-void
 .end method
 
@@ -44,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 221
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getAnnotation()Ljava/lang/annotation/Annotation;
@@ -58,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 234
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getContact()Lorg/simpleframework/xml/core/Contact;
@@ -78,12 +71,10 @@
     .end annotation
 
     .prologue
-    .line 133
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/TextListLabel;->getContact()Lorg/simpleframework/xml/core/Contact;
 
     move-result-object v0
 
-    .line 135
     .local v0, "type":Lorg/simpleframework/xml/strategy/Type;
     iget-object v1, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
@@ -93,7 +84,6 @@
 
     if-nez v1, :cond_0
 
-    .line 136
     new-instance v1, Lorg/simpleframework/xml/core/TextException;
 
     const-string v2, "Cannot use %s to represent %s"
@@ -116,7 +106,6 @@
 
     throw v1
 
-    .line 138
     :cond_0
     new-instance v1, Lorg/simpleframework/xml/core/TextList;
 
@@ -136,7 +125,6 @@
     .end annotation
 
     .prologue
-    .line 80
     const/4 v0, 0x0
 
     return-object v0
@@ -151,7 +139,6 @@
     .end annotation
 
     .prologue
-    .line 186
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getDependent()Lorg/simpleframework/xml/strategy/Type;
@@ -171,7 +158,6 @@
     .end annotation
 
     .prologue
-    .line 38
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/TextListLabel;->getEmpty(Lorg/simpleframework/xml/core/Context;)Ljava/lang/String;
 
     move-result-object v0
@@ -189,7 +175,6 @@
     .end annotation
 
     .prologue
-    .line 119
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->empty:Ljava/lang/String;
 
     return-object v0
@@ -204,7 +189,6 @@
     .end annotation
 
     .prologue
-    .line 198
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getEntry()Ljava/lang/String;
@@ -223,7 +207,6 @@
     .end annotation
 
     .prologue
-    .line 175
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getExpression()Lorg/simpleframework/xml/core/Expression;
@@ -242,7 +225,6 @@
     .end annotation
 
     .prologue
-    .line 209
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getKey()Ljava/lang/Object;
@@ -261,7 +243,6 @@
     .end annotation
 
     .prologue
-    .line 151
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getName()Ljava/lang/String;
@@ -280,7 +261,6 @@
     .end annotation
 
     .prologue
-    .line 92
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getNames()[Ljava/lang/String;
@@ -294,7 +274,6 @@
     .locals 1
 
     .prologue
-    .line 261
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getOverride()Ljava/lang/String;
@@ -313,7 +292,6 @@
     .end annotation
 
     .prologue
-    .line 163
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getPath()Ljava/lang/String;
@@ -332,7 +310,6 @@
     .end annotation
 
     .prologue
-    .line 105
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getPaths()[Ljava/lang/String;
@@ -346,7 +323,6 @@
     .locals 1
 
     .prologue
-    .line 248
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getType()Ljava/lang/Class;
@@ -360,7 +336,6 @@
     .locals 1
 
     .prologue
-    .line 299
     const/4 v0, 0x1
 
     return v0
@@ -370,7 +345,6 @@
     .locals 1
 
     .prologue
-    .line 273
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->isData()Z
@@ -384,7 +358,6 @@
     .locals 1
 
     .prologue
-    .line 312
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->isInline()Z
@@ -398,7 +371,6 @@
     .locals 1
 
     .prologue
-    .line 286
     iget-object v0, p0, Lorg/simpleframework/xml/core/TextListLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->isRequired()Z
@@ -412,7 +384,6 @@
     .locals 1
 
     .prologue
-    .line 324
     const/4 v0, 0x1
 
     return v0
@@ -422,7 +393,6 @@
     .locals 4
 
     .prologue
-    .line 335
     const-string v0, "%s %s"
 
     const/4 v1, 0x2

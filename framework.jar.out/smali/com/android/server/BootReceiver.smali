@@ -50,7 +50,6 @@
     .locals 2
 
     .prologue
-    .line 64
     const-string/jumbo v0, "ro.debuggable"
 
     const/4 v1, 0x0
@@ -68,7 +67,6 @@
     :goto_0
     sput v0, Lcom/android/server/BootReceiver;->LOG_SIZE:I
 
-    .line 68
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/data/tombstones"
@@ -77,14 +75,12 @@
 
     sput-object v0, Lcom/android/server/BootReceiver;->TOMBSTONE_DIR:Ljava/io/File;
 
-    .line 80
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/BootReceiver;->sTombstoneObserver:Landroid/os/FileObserver;
 
     return-void
 
-    .line 64
     :cond_0
     const/high16 v0, 0x10000
 
@@ -95,15 +91,12 @@
     .locals 1
 
     .prologue
-    .line 59
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 88
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/BootReceiver;->reset:I
 
-    .line 160
     return-void
 .end method
 
@@ -118,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 59
     invoke-direct {p0, p1}, Lcom/android/server/BootReceiver;->logBootEvents(Landroid/content/Context;)V
 
     return-void
@@ -130,7 +122,6 @@
     .param p1, "x1"    # Landroid/content/Context;
 
     .prologue
-    .line 59
     invoke-direct {p0, p1}, Lcom/android/server/BootReceiver;->removeOldUpdatePackages(Landroid/content/Context;)V
 
     return-void
@@ -140,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 59
     sget-object v0, Lcom/android/server/BootReceiver;->TOMBSTONE_DIR:Ljava/io/File;
 
     return-object v0
@@ -150,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 59
     sget v0, Lcom/android/server/BootReceiver;->LOG_SIZE:I
 
     return v0
@@ -171,7 +160,6 @@
     .end annotation
 
     .prologue
-    .line 59
     invoke-static/range {p0 .. p5}, Lcom/android/server/BootReceiver;->addFileToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
     return-void
@@ -191,7 +179,6 @@
     .end annotation
 
     .prologue
-    .line 495
     if-eqz p0, :cond_0
 
     move-object/from16 v0, p0
@@ -204,12 +191,10 @@
 
     if-nez v13, :cond_1
 
-    .line 524
     :cond_0
     :goto_0
     return-void
 
-    .line 496
     :cond_1
     const-string v13, "BootReceiver"
 
@@ -217,20 +202,17 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 498
     new-instance v3, Ljava/io/File;
 
     const-string v13, "/proc/last_kmsg"
 
     invoke-direct {v3, v13}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 499
     .local v3, "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->lastModified()J
 
     move-result-wide v4
 
-    .line 500
     .local v4, "fileTime":J
     const-wide/16 v14, 0x0
 
@@ -238,7 +220,6 @@
 
     if-gtz v13, :cond_2
 
-    .line 501
     new-instance v3, Ljava/io/File;
 
     .end local v3    # "file":Ljava/io/File;
@@ -246,13 +227,11 @@
 
     invoke-direct {v3, v13}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 502
     .restart local v3    # "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->lastModified()J
 
     move-result-wide v4
 
-    .line 505
     :cond_2
     const-wide/16 v14, 0x0
 
@@ -260,10 +239,8 @@
 
     if-lez v13, :cond_0
 
-    .line 507
     if-eqz p1, :cond_3
 
-    .line 508
     const-wide/16 v14, 0x0
 
     move-object/from16 v0, p1
@@ -274,13 +251,11 @@
 
     move-result-wide v8
 
-    .line 509
     .local v8, "lastTime":J
     cmp-long v13, v8, v4
 
     if-eqz v13, :cond_0
 
-    .line 512
     invoke-interface/range {p1 .. p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v13
@@ -293,7 +268,6 @@
 
     invoke-interface {v13}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 515
     .end local v8    # "lastTime":J
     :cond_3
     const-string v13, "[[TRUNCATED]]\n"
@@ -304,13 +278,11 @@
 
     move-result-object v11
 
-    .line 516
     .local v11, "log":Ljava/lang/String;
     new-instance v12, Ljava/lang/StringBuilder;
 
     invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 517
     .local v12, "sb":Ljava/lang/StringBuilder;
     const-string v13, "\n"
 
@@ -330,7 +302,6 @@
 
     aget-object v10, v2, v6
 
-    .line 518
     .local v10, "line":Ljava/lang/String;
     const-string v13, "audit"
 
@@ -340,7 +311,6 @@
 
     if-eqz v13, :cond_4
 
-    .line 519
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -361,13 +331,11 @@
 
     invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 517
     :cond_4
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 522
     .end local v10    # "line":Ljava/lang/String;
     :cond_5
     const-string v13, "BootReceiver"
@@ -406,7 +374,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 523
     new-instance v13, Ljava/lang/StringBuilder;
 
     invoke-direct {v13}, Ljava/lang/StringBuilder;-><init>()V
@@ -453,7 +420,6 @@
     .end annotation
 
     .prologue
-    .line 466
     const-string v3, ""
 
     move-object v0, p0
@@ -470,7 +436,6 @@
 
     invoke-static/range {v0 .. v6}, Lcom/android/server/BootReceiver;->addFileWithFootersToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 468
     return-void
 .end method
 
@@ -492,7 +457,6 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 474
     if-eqz p0, :cond_0
 
     invoke-virtual {p0, p6}, Landroid/os/DropBoxManager;->isTagEnabled(Ljava/lang/String;)Z
@@ -501,18 +465,15 @@
 
     if-nez v1, :cond_1
 
-    .line 491
     :cond_0
     :goto_0
     return-void
 
-    .line 476
     :cond_1
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, p4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 477
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
 
@@ -520,32 +481,26 @@
 
     if-nez v1, :cond_0
 
-    .line 478
     invoke-virtual {v0}, Ljava/io/File;->lastModified()J
 
     move-result-wide v2
 
-    .line 479
     .local v2, "fileTime":J
     cmp-long v1, v2, v6
 
     if-lez v1, :cond_0
 
-    .line 481
     if-eqz p1, :cond_2
 
-    .line 482
     invoke-interface {p1, p4, v6, v7}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v4
 
-    .line 483
     .local v4, "lastTime":J
     cmp-long v1, v4, v2
 
     if-eqz v1, :cond_0
 
-    .line 486
     invoke-interface {p1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
@@ -556,7 +511,6 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 489
     .end local v4    # "lastTime":J
     :cond_2
     const-string v1, "BootReceiver"
@@ -597,7 +551,6 @@
 
     invoke-static {v1, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 490
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -643,10 +596,8 @@
     .end annotation
 
     .prologue
-    .line 528
     const/16 v17, 0x0
 
-    .line 529
     .local v17, "upload_needed":Z
     if-eqz p0, :cond_0
 
@@ -660,12 +611,10 @@
 
     if-nez v2, :cond_1
 
-    .line 551
     :cond_0
     :goto_0
     return-void
 
-    .line 530
     :cond_1
     const-string v2, "BootReceiver"
 
@@ -673,20 +622,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 532
     new-instance v9, Ljava/io/File;
 
     const-string v2, "/dev/fscklogs/log"
 
     invoke-direct {v9, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 533
     .local v9, "file":Ljava/io/File;
     invoke-virtual {v9}, Ljava/io/File;->lastModified()J
 
     move-result-wide v10
 
-    .line 534
     .local v10, "fileTime":J
     const-wide/16 v2, 0x0
 
@@ -694,7 +640,6 @@
 
     if-lez v2, :cond_0
 
-    .line 536
     const-string v2, "[[TRUNCATED]]\n"
 
     move/from16 v0, p3
@@ -703,13 +648,11 @@
 
     move-result-object v15
 
-    .line 537
     .local v15, "log":Ljava/lang/String;
     new-instance v16, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 538
     .local v16, "sb":Ljava/lang/StringBuilder;
     const-string v2, "\n"
 
@@ -729,7 +672,6 @@
 
     aget-object v14, v8, v12
 
-    .line 539
     .local v14, "line":Ljava/lang/String;
     const-string v2, "FILE SYSTEM WAS MODIFIED"
 
@@ -739,15 +681,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 540
     const/16 v17, 0x1
 
-    .line 545
     .end local v14    # "line":Ljava/lang/String;
     :cond_2
     if-eqz v17, :cond_3
 
-    .line 546
     const-string v5, "/dev/fscklogs/log"
 
     move-object/from16 v2, p0
@@ -762,13 +701,11 @@
 
     invoke-static/range {v2 .. v7}, Lcom/android/server/BootReceiver;->addFileToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 550
     :cond_3
     invoke-virtual {v9}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
-    .line 538
     .restart local v14    # "line":Ljava/lang/String;
     :cond_4
     add-int/lit8 v12, v12, 0x1
@@ -786,7 +723,6 @@
     .end annotation
 
     .prologue
-    .line 325
     const-string v6, "dropbox"
 
     move-object/from16 v0, p1
@@ -797,7 +733,6 @@
 
     check-cast v2, Landroid/os/DropBoxManager;
 
-    .line 326
     .local v2, "db":Landroid/os/DropBoxManager;
     const-string v6, "log_files"
 
@@ -809,7 +744,6 @@
 
     move-result-object v3
 
-    .line 327
     .local v3, "prefs":Landroid/content/SharedPreferences;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -947,7 +881,6 @@
 
     move-result-object v4
 
-    .line 337
     .local v4, "headers":Ljava/lang/String;
     const-string/jumbo v6, "ro.boot.bootreason"
 
@@ -957,19 +890,16 @@
 
     move-result-object v13
 
-    .line 339
     .local v13, "bootReason":Ljava/lang/String;
     invoke-static {}, Landroid/os/RecoverySystem;->handleAftermath()Ljava/lang/String;
 
     move-result-object v22
 
-    .line 340
     .local v22, "recovery":Ljava/lang/String;
     if-eqz v22, :cond_0
 
     if-eqz v2, :cond_0
 
-    .line 341
     const-string v6, "SYSTEM_RECOVERY_LOG"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -992,15 +922,12 @@
 
     invoke-virtual {v2, v6, v7}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 344
     :cond_0
     const-string v5, ""
 
-    .line 345
     .local v5, "lastKmsgFooter":Ljava/lang/String;
     if-eqz v13, :cond_1
 
-    .line 346
     new-instance v6, Ljava/lang/StringBuilder;
 
     const/16 v7, 0x200
@@ -1039,7 +966,6 @@
 
     move-result-object v5
 
-    .line 353
     :cond_1
     const-string/jumbo v6, "ro.runtime.firstboot"
 
@@ -1055,14 +981,12 @@
 
     if-nez v6, :cond_9
 
-    .line 354
     const-string/jumbo v6, "sys.reset_reason"
 
     const/4 v7, 0x0
 
     invoke-static {v6, v7}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 356
     const-string v6, "encrypted"
 
     const-string/jumbo v7, "ro.crypto.state"
@@ -1091,20 +1015,16 @@
 
     if-eqz v6, :cond_8
 
-    .line 365
     :goto_0
     if-eqz v2, :cond_2
 
-    .line 366
     const-string v6, "SYSTEM_BOOT"
 
     invoke-virtual {v2, v6, v4}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 369
     :cond_2
     invoke-direct/range {p0 .. p0}, Lcom/android/server/BootReceiver;->logResetReson()V
 
-    .line 377
     const-string v6, "/proc/last_kmsg"
 
     sget v7, Lcom/android/server/BootReceiver;->LOG_SIZE:I
@@ -1115,7 +1035,6 @@
 
     invoke-static/range {v2 .. v8}, Lcom/android/server/BootReceiver;->addFileWithFootersToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 380
     const-string v6, "/sys/fs/pstore/console-ramoops"
 
     sget v7, Lcom/android/server/BootReceiver;->LOG_SIZE:I
@@ -1126,7 +1045,6 @@
 
     invoke-static/range {v2 .. v8}, Lcom/android/server/BootReceiver;->addFileWithFootersToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 383
     const-string v9, "/cache/recovery/log"
 
     sget v6, Lcom/android/server/BootReceiver;->LOG_SIZE:I
@@ -1143,7 +1061,6 @@
 
     invoke-static/range {v6 .. v11}, Lcom/android/server/BootReceiver;->addFileToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 385
     const-string v9, "/cache/recovery/last_kmsg"
 
     sget v6, Lcom/android/server/BootReceiver;->LOG_SIZE:I
@@ -1160,7 +1077,6 @@
 
     invoke-static/range {v6 .. v11}, Lcom/android/server/BootReceiver;->addFileToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 387
     sget v6, Lcom/android/server/BootReceiver;->LOG_SIZE:I
 
     neg-int v6, v6
@@ -1169,7 +1085,6 @@
 
     invoke-static {v2, v3, v4, v6, v7}, Lcom/android/server/BootReceiver;->addAuditErrorsToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 388
     sget v6, Lcom/android/server/BootReceiver;->LOG_SIZE:I
 
     neg-int v6, v6
@@ -1178,13 +1093,11 @@
 
     invoke-static {v2, v3, v4, v6, v7}, Lcom/android/server/BootReceiver;->addFsckErrorsToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 394
     :goto_1
     new-instance v24, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v24 .. v24}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 395
     .local v24, "reset_reason_sb":Ljava/lang/StringBuilder;
     const-string/jumbo v6, "sys.reset_reason"
 
@@ -1194,11 +1107,9 @@
 
     move-result-object v23
 
-    .line 397
     .local v23, "reset_reason":Ljava/lang/String;
     if-eqz v23, :cond_6
 
-    .line 398
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1229,7 +1140,6 @@
 
     invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 400
     move-object/from16 v0, p0
 
     iget v6, v0, Lcom/android/server/BootReceiver;->reset:I
@@ -1238,10 +1148,8 @@
 
     if-eq v6, v7, :cond_5
 
-    .line 401
     const-string v17, ""
 
-    .line 403
     .local v17, "file_name":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1251,23 +1159,18 @@
 
     if-ne v6, v7, :cond_b
 
-    .line 404
     const-string v17, "/proc/reset_reason_extra_info"
 
-    .line 409
     :cond_3
     :goto_2
     const/4 v14, 0x0
 
-    .line 410
     .local v14, "br":Ljava/io/BufferedReader;
     const/16 v18, 0x0
 
-    .line 411
     .local v18, "fr":Ljava/io/FileReader;
     const-string v25, ""
 
-    .line 414
     .local v25, "str":Ljava/lang/String;
     :try_start_0
     new-instance v19, Ljava/io/FileReader;
@@ -1281,7 +1184,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 415
     .end local v18    # "fr":Ljava/io/FileReader;
     .local v19, "fr":Ljava/io/FileReader;
     :try_start_1
@@ -1294,7 +1196,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 417
     .end local v14    # "br":Ljava/io/BufferedReader;
     .local v15, "br":Ljava/io/BufferedReader;
     :goto_3
@@ -1305,7 +1206,6 @@
 
     if-eqz v25, :cond_c
 
-    .line 418
     invoke-virtual/range {v24 .. v25}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
@@ -1313,7 +1213,6 @@
 
     goto :goto_3
 
-    .line 420
     :catch_0
     move-exception v16
 
@@ -1323,7 +1222,6 @@
     .restart local v18    # "fr":Ljava/io/FileReader;
     move-object v14, v15
 
-    .line 421
     .end local v15    # "br":Ljava/io/BufferedReader;
     .restart local v14    # "br":Ljava/io/BufferedReader;
     .local v16, "e":Ljava/lang/Exception;
@@ -1333,20 +1231,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 423
     if-eqz v14, :cond_4
 
-    .line 424
     invoke-virtual {v14}, Ljava/io/BufferedReader;->close()V
 
-    .line 427
     :cond_4
     if-eqz v18, :cond_5
 
-    .line 428
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileReader;->close()V
 
-    .line 432
     .end local v14    # "br":Ljava/io/BufferedReader;
     .end local v16    # "e":Ljava/lang/Exception;
     .end local v17    # "file_name":Ljava/lang/String;
@@ -1364,7 +1257,6 @@
 
     invoke-direct {v0, v1, v6}, Lcom/android/server/BootReceiver;->sendResetLog(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 436
     :cond_6
     sget-object v6, Lcom/android/server/BootReceiver;->TOMBSTONE_DIR:Ljava/io/File;
 
@@ -1372,7 +1264,6 @@
 
     move-result-object v26
 
-    .line 437
     .local v26, "tombstoneFiles":[Ljava/io/File;
     const/16 v20, 0x0
 
@@ -1388,7 +1279,6 @@
 
     if-ge v0, v6, :cond_10
 
-    .line 438
     aget-object v6, v26, v20
 
     invoke-virtual {v6}, Ljava/io/File;->isFile()Z
@@ -1397,7 +1287,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 439
     aget-object v6, v26, v20
 
     invoke-virtual {v6}, Ljava/io/File;->getPath()Ljava/lang/String;
@@ -1416,13 +1305,11 @@
 
     invoke-static/range {v6 .. v11}, Lcom/android/server/BootReceiver;->addFileToDropBox(Landroid/os/DropBoxManager;Landroid/content/SharedPreferences;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 437
     :cond_7
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_6
 
-    .line 362
     .end local v20    # "i":I
     .end local v23    # "reset_reason":Ljava/lang/String;
     .end local v24    # "reset_reason_sb":Ljava/lang/StringBuilder;
@@ -1436,7 +1323,6 @@
 
     move-result-object v21
 
-    .line 363
     .local v21, "now":Ljava/lang/String;
     const-string/jumbo v6, "ro.runtime.firstboot"
 
@@ -1446,7 +1332,6 @@
 
     goto/16 :goto_0
 
-    .line 390
     .end local v21    # "now":Ljava/lang/String;
     :cond_9
     if-eqz v2, :cond_a
@@ -1455,7 +1340,6 @@
 
     invoke-virtual {v2, v6, v4}, Landroid/os/DropBoxManager;->addText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 391
     :cond_a
     const/4 v6, 0x2
 
@@ -1465,7 +1349,6 @@
 
     goto/16 :goto_1
 
-    .line 405
     .restart local v17    # "file_name":Ljava/lang/String;
     .restart local v23    # "reset_reason":Ljava/lang/String;
     .restart local v24    # "reset_reason_sb":Ljava/lang/StringBuilder;
@@ -1478,31 +1361,25 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 406
     const-string v17, "/data/log/pf_reset_reason.txt"
 
     goto/16 :goto_2
 
-    .line 423
     .restart local v15    # "br":Ljava/io/BufferedReader;
     .restart local v19    # "fr":Ljava/io/FileReader;
     .restart local v25    # "str":Ljava/lang/String;
     :cond_c
     if-eqz v15, :cond_d
 
-    .line 424
     invoke-virtual {v15}, Ljava/io/BufferedReader;->close()V
 
-    .line 427
     :cond_d
     if-eqz v19, :cond_5
 
-    .line 428
     invoke-virtual/range {v19 .. v19}, Ljava/io/FileReader;->close()V
 
     goto :goto_5
 
-    .line 423
     .end local v15    # "br":Ljava/io/BufferedReader;
     .end local v19    # "fr":Ljava/io/FileReader;
     .restart local v14    # "br":Ljava/io/BufferedReader;
@@ -1513,20 +1390,16 @@
     :goto_7
     if-eqz v14, :cond_e
 
-    .line 424
     invoke-virtual {v14}, Ljava/io/BufferedReader;->close()V
 
-    .line 427
     :cond_e
     if-eqz v18, :cond_f
 
-    .line 428
     invoke-virtual/range {v18 .. v18}, Ljava/io/FileReader;->close()V
 
     :cond_f
     throw v6
 
-    .line 446
     .end local v14    # "br":Ljava/io/BufferedReader;
     .end local v17    # "file_name":Ljava/lang/String;
     .end local v18    # "fr":Ljava/io/FileReader;
@@ -1556,15 +1429,12 @@
 
     sput-object v6, Lcom/android/server/BootReceiver;->sTombstoneObserver:Landroid/os/FileObserver;
 
-    .line 460
     sget-object v6, Lcom/android/server/BootReceiver;->sTombstoneObserver:Landroid/os/FileObserver;
 
     invoke-virtual {v6}, Landroid/os/FileObserver;->startWatching()V
 
-    .line 461
     return-void
 
-    .line 423
     .end local v20    # "i":I
     .end local v26    # "tombstoneFiles":[Ljava/io/File;
     .restart local v14    # "br":Ljava/io/BufferedReader;
@@ -1597,7 +1467,6 @@
     .restart local v14    # "br":Ljava/io/BufferedReader;
     goto :goto_7
 
-    .line 420
     :catch_1
     move-exception v16
 
@@ -1621,14 +1490,12 @@
     .prologue
     const/4 v7, 0x2
 
-    .line 130
     new-instance v2, Ljava/io/File;
 
     const-string v4, "/proc/reset_reason"
 
     invoke-direct {v2, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 132
     .local v2, "file":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->isFile()Z
 
@@ -1636,15 +1503,12 @@
 
     if-nez v4, :cond_0
 
-    .line 158
     :goto_0
     return-void
 
-    .line 134
     :cond_0
     const/4 v3, 0x0
 
-    .line 136
     .local v3, "resetString":Ljava/lang/String;
     const/16 v4, 0x400
 
@@ -1657,7 +1521,6 @@
 
     move-result-object v3
 
-    .line 140
     :goto_1
     const-string v4, "Reset_Reason"
 
@@ -1681,7 +1544,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     if-eqz v3, :cond_1
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -1690,19 +1552,16 @@
 
     if-lt v4, v7, :cond_1
 
-    .line 143
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 144
     const-string v4, "RR"
 
     invoke-static {v3, v4}, Landroid/os/Debug;->dumpResetReason(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
     :cond_1
     const-string v4, "KP"
 
@@ -1736,7 +1595,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 148
     :cond_2
     const-string/jumbo v4, "sys.reset_reason"
 
@@ -1760,15 +1618,12 @@
 
     invoke-static {v4, v5}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
     const/4 v4, 0x1
 
     iput v4, p0, Lcom/android/server/BootReceiver;->reset:I
 
-    .line 151
     const/4 v0, 0x0
 
-    .line 152
     .local v0, "SaveLastkmsg":Ljava/lang/Thread;
     new-instance v0, Lcom/android/server/BootReceiver$SaveLastkmsg;
 
@@ -1777,18 +1632,15 @@
 
     invoke-direct {v0, v4}, Lcom/android/server/BootReceiver$SaveLastkmsg;-><init>(Lcom/android/server/BootReceiver$1;)V
 
-    .line 153
     .restart local v0    # "SaveLastkmsg":Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     goto :goto_0
 
-    .line 137
     .end local v0    # "SaveLastkmsg":Ljava/lang/Thread;
     :catch_0
     move-exception v1
 
-    .line 138
     .local v1, "e":Ljava/io/IOException;
     const-string v4, "Reset_Reason"
 
@@ -1814,7 +1666,6 @@
 
     goto/16 :goto_1
 
-    .line 155
     .end local v1    # "e":Ljava/io/IOException;
     :cond_3
     const-string/jumbo v4, "sys.reset_reason"
@@ -1839,7 +1690,6 @@
 
     invoke-static {v4, v5}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 156
     const/4 v4, 0x3
 
     iput v4, p0, Lcom/android/server/BootReceiver;->reset:I
@@ -1852,14 +1702,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 302
     const-string v0, "com.google.android.systemupdater"
 
     const-string v1, "com.google.android.systemupdater.SystemUpdateReceiver"
 
     invoke-static {p1, v0, v1}, Landroid/provider/Downloads;->removeAllDownloadsByPackage(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
     return-void
 .end method
 
@@ -1869,7 +1717,6 @@
     .param p2, "reset_reason"    # Ljava/lang/String;
 
     .prologue
-    .line 307
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v2
@@ -1882,12 +1729,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 308
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 309
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v2, "app_id"
 
@@ -1895,40 +1740,33 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 310
     const-string v2, "feature"
 
     const-string v3, "REST"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 311
     const-string v2, "extra"
 
     invoke-virtual {v1, v2, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 313
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 315
     .local v0, "broadcastIntent":Landroid/content/Intent;
     const-string v2, "com.samsung.android.providers.context.log.action.USE_APP_FEATURE_SURVEY"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 316
     const-string v2, "data"
 
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 317
     const-string v2, "com.samsung.android.providers.context"
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 319
     const-string v2, "BootReceiver"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1951,10 +1789,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     invoke-virtual {p1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 322
     .end local v0    # "broadcastIntent":Landroid/content/Intent;
     .end local v1    # "cv":Landroid/content/ContentValues;
     :cond_0
@@ -1969,7 +1805,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 94
     :try_start_0
     const-string v2, "from_quickboot"
 
@@ -1981,20 +1816,16 @@
 
     move-result v1
 
-    .line 95
     .local v1, "fromQuickBoot":Z
     if-eqz v1, :cond_0
 
-    .line 126
     .end local v1    # "fromQuickBoot":Z
     :goto_0
     return-void
 
-    .line 97
     :catch_0
     move-exception v0
 
-    .line 99
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "BootReceiver"
 
@@ -2002,7 +1833,6 @@
 
     invoke-static {v2, v3, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 102
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     new-instance v2, Lcom/android/server/BootReceiver$1;

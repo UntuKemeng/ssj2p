@@ -32,16 +32,12 @@
     .end annotation
 
     .prologue
-    .line 147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 148
     iput-object p2, p0, Lorg/simpleframework/xml/core/KeyBuilder$Key;->value:Ljava/lang/String;
 
-    .line 149
     iput-object p1, p0, Lorg/simpleframework/xml/core/KeyBuilder$Key;->type:Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
-    .line 150
     return-void
 .end method
 
@@ -52,23 +48,19 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 162
     instance-of v1, p1, Lorg/simpleframework/xml/core/KeyBuilder$Key;
 
     if-eqz v1, :cond_0
 
     move-object v0, p1
 
-    .line 163
     check-cast v0, Lorg/simpleframework/xml/core/KeyBuilder$Key;
 
-    .line 164
     .local v0, "key":Lorg/simpleframework/xml/core/KeyBuilder$Key;
     invoke-virtual {p0, v0}, Lorg/simpleframework/xml/core/KeyBuilder$Key;->equals(Lorg/simpleframework/xml/core/KeyBuilder$Key;)Z
 
     move-result v1
 
-    .line 166
     .end local v0    # "key":Lorg/simpleframework/xml/core/KeyBuilder$Key;
     :goto_0
     return v1
@@ -84,14 +76,12 @@
     .param p1, "key"    # Lorg/simpleframework/xml/core/KeyBuilder$Key;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lorg/simpleframework/xml/core/KeyBuilder$Key;->type:Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
     iget-object v1, p1, Lorg/simpleframework/xml/core/KeyBuilder$Key;->type:Lorg/simpleframework/xml/core/KeyBuilder$KeyType;
 
     if-ne v0, v1, :cond_0
 
-    .line 180
     iget-object v0, p1, Lorg/simpleframework/xml/core/KeyBuilder$Key;->value:Ljava/lang/String;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/KeyBuilder$Key;->value:Ljava/lang/String;
@@ -100,7 +90,6 @@
 
     move-result v0
 
-    .line 182
     :goto_0
     return v0
 
@@ -114,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget-object v0, p0, Lorg/simpleframework/xml/core/KeyBuilder$Key;->value:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
@@ -128,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 203
     iget-object v0, p0, Lorg/simpleframework/xml/core/KeyBuilder$Key;->value:Ljava/lang/String;
 
     return-object v0

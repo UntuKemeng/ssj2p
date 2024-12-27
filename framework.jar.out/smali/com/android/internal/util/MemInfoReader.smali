@@ -20,24 +20,20 @@
     .locals 1
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     const/16 v0, 0xd
 
     new-array v0, v0, [J
 
     iput-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
-    .line 42
     const/16 v0, 0x200
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mbuffer:[B
 
-    .line 45
     const/16 v0, 0x8
 
     new-array v0, v0, [J
@@ -57,7 +53,6 @@
 
     const/16 v4, 0x30
 
-    .line 174
     :goto_0
     array-length v2, p1
 
@@ -69,7 +64,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 175
     aget-byte v2, p1, p2
 
     if-lt v2, v4, :cond_1
@@ -78,14 +72,11 @@
 
     if-gt v2, v5, :cond_1
 
-    .line 176
     move v0, p2
 
-    .line 177
     .local v0, "start":I
     add-int/lit8 p2, p2, 0x1
 
-    .line 179
     :goto_1
     array-length v2, p1
 
@@ -99,12 +90,10 @@
 
     if-gt v2, v5, :cond_0
 
-    .line 180
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_1
 
-    .line 182
     :cond_0
     new-instance v1, Ljava/lang/String;
 
@@ -114,7 +103,6 @@
 
     invoke-direct {v1, p1, v2, v0, v3}, Ljava/lang/String;-><init>([BIII)V
 
-    .line 183
     .local v1, "str":Ljava/lang/String;
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -126,19 +114,16 @@
 
     mul-long/2addr v2, v4
 
-    .line 187
     .end local v0    # "start":I
     .end local v1    # "str":Ljava/lang/String;
     :goto_2
     return-wide v2
 
-    .line 185
     :cond_1
     add-int/lit8 p2, p2, 0x1
 
     goto :goto_0
 
-    .line 187
     :cond_2
     const-wide/16 v2, 0x0
 
@@ -153,12 +138,10 @@
     .param p4, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     invoke-virtual {p4}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 162
     .local v0, "N":I
     const/4 v3, 0x0
 
@@ -166,7 +149,6 @@
 
     move-result v1
 
-    .line 163
     .local v1, "cFirst":C
     move v2, p2
 
@@ -174,32 +156,26 @@
     :goto_0
     if-ge v2, p3, :cond_1
 
-    .line 164
     aget-byte v3, p1, v2
 
     if-ne v3, v1, :cond_0
 
-    .line 165
     invoke-direct {p0, p1, v2, p4}, Lcom/android/internal/util/MemInfoReader;->matchText([BILjava/lang/String;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 166
     add-int v3, v2, v0
 
-    .line 170
     :goto_1
     return v3
 
-    .line 163
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 170
     :cond_1
     const/4 v3, -0x1
 
@@ -215,12 +191,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 148
     invoke-virtual {p3}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    .line 149
     .local v0, "N":I
     add-int v3, p2, v0
 
@@ -228,12 +202,10 @@
 
     if-lt v3, v4, :cond_1
 
-    .line 157
     :cond_0
     :goto_0
     return v2
 
-    .line 152
     :cond_1
     const/4 v1, 0x0
 
@@ -241,7 +213,6 @@
     :goto_1
     if-ge v1, v0, :cond_2
 
-    .line 153
     add-int v3, p2, v1
 
     aget-byte v3, p1, v3
@@ -252,12 +223,10 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 152
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 157
     :cond_2
     const/4 v2, 0x1
 
@@ -270,7 +239,6 @@
     .locals 4
 
     .prologue
-    .line 79
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->getCachedSizeKb()J
 
     move-result-wide v0
@@ -286,7 +254,6 @@
     .locals 4
 
     .prologue
-    .line 117
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x2
@@ -316,7 +283,6 @@
     .locals 4
 
     .prologue
-    .line 87
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x3
@@ -334,7 +300,6 @@
     .locals 4
 
     .prologue
-    .line 71
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x1
@@ -352,7 +317,6 @@
     .locals 2
 
     .prologue
-    .line 109
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x1
@@ -366,7 +330,6 @@
     .locals 4
 
     .prologue
-    .line 95
     invoke-virtual {p0}, Lcom/android/internal/util/MemInfoReader;->getKernelUsedSizeKb()J
 
     move-result-wide v0
@@ -382,7 +345,6 @@
     .locals 4
 
     .prologue
-    .line 125
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x4
@@ -428,7 +390,6 @@
     .locals 1
 
     .prologue
-    .line 143
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     return-object v0
@@ -438,7 +399,6 @@
     .locals 2
 
     .prologue
-    .line 135
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x7
@@ -452,7 +412,6 @@
     .locals 2
 
     .prologue
-    .line 131
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x6
@@ -466,7 +425,6 @@
     .locals 4
 
     .prologue
-    .line 64
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x0
@@ -484,7 +442,6 @@
     .locals 2
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/4 v1, 0x0
@@ -499,18 +456,14 @@
     .param p1, "pid"    # I
 
     .prologue
-    .line 191
     const-wide/16 v6, 0x0
 
-    .line 192
     .local v6, "resident":J
     const-wide/16 v8, 0x0
 
-    .line 193
     .local v8, "shared":J
     const-wide/16 v12, 0x0
 
-    .line 195
     .local v12, "uss":J
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -538,17 +491,14 @@
 
     move-result-object v4
 
-    .line 197
     .local v4, "path":Ljava/lang/String;
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v5
 
-    .line 198
     .local v5, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     const/4 v2, 0x0
 
-    .line 200
     .local v2, "is":Ljava/io/FileInputStream;
     :try_start_0
     new-instance v3, Ljava/io/FileInputStream;
@@ -558,7 +508,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 201
     .end local v2    # "is":Ljava/io/FileInputStream;
     .local v3, "is":Ljava/io/FileInputStream;
     :try_start_1
@@ -574,10 +523,8 @@
 
     invoke-virtual {v3, v14, v15, v0}, Ljava/io/FileInputStream;->read([BII)I
 
-    .line 202
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
 
-    .line 204
     new-instance v10, Ljava/lang/String;
 
     move-object/from16 v0, p0
@@ -586,7 +533,6 @@
 
     invoke-direct {v10, v14}, Ljava/lang/String;-><init>([B)V
 
-    .line 205
     .local v10, "str":Ljava/lang/String;
     const-string v14, " "
 
@@ -594,7 +540,6 @@
 
     move-result-object v11
 
-    .line 207
     .local v11, "subs":[Ljava/lang/String;
     const/4 v14, 0x1
 
@@ -608,7 +553,6 @@
 
     mul-long v6, v14, v16
 
-    .line 208
     const/4 v14, 0x2
 
     aget-object v14, v11, v14
@@ -624,26 +568,21 @@
 
     mul-long v8, v14, v16
 
-    .line 209
     sub-long v12, v6, v8
 
-    .line 213
     if-eqz v3, :cond_0
 
-    .line 215
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 219
     :cond_0
     :goto_0
     invoke-static {v5}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     move-object v2, v3
 
-    .line 221
     .end local v3    # "is":Ljava/io/FileInputStream;
     .end local v10    # "str":Ljava/lang/String;
     .end local v11    # "subs":[Ljava/lang/String;
@@ -651,48 +590,40 @@
     :goto_1
     return-wide v12
 
-    .line 211
     :catch_0
     move-exception v14
 
-    .line 213
     :goto_2
     if-eqz v2, :cond_1
 
-    .line 215
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 219
     :cond_1
     :goto_3
     invoke-static {v5}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     goto :goto_1
 
-    .line 213
     :catchall_0
     move-exception v14
 
     :goto_4
     if-eqz v2, :cond_2
 
-    .line 215
     :try_start_4
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    .line 219
     :cond_2
     :goto_5
     invoke-static {v5}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     throw v14
 
-    .line 216
     .end local v2    # "is":Ljava/io/FileInputStream;
     .restart local v3    # "is":Ljava/io/FileInputStream;
     .restart local v10    # "str":Ljava/lang/String;
@@ -716,7 +647,6 @@
 
     goto :goto_5
 
-    .line 213
     .end local v2    # "is":Ljava/io/FileInputStream;
     .restart local v3    # "is":Ljava/io/FileInputStream;
     :catchall_1
@@ -728,7 +658,6 @@
     .restart local v2    # "is":Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 211
     .end local v2    # "is":Ljava/io/FileInputStream;
     .restart local v3    # "is":Ljava/io/FileInputStream;
     :catch_4
@@ -747,27 +676,22 @@
     .prologue
     const-wide/16 v10, 0x4
 
-    .line 225
     const-wide/16 v6, 0x0
 
-    .line 229
     .local v6, "watermark":J
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v4
 
-    .line 230
     .local v4, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     const/4 v2, 0x0
 
-    .line 232
     .local v2, "is":Ljava/io/FileInputStream;
     const/16 v5, 0x800
 
     :try_start_0
     new-array v0, v5, [B
 
-    .line 233
     .local v0, "buffer":[B
     new-instance v3, Ljava/io/FileInputStream;
 
@@ -779,7 +703,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 234
     .end local v2    # "is":Ljava/io/FileInputStream;
     .local v3, "is":Ljava/io/FileInputStream;
     const/4 v5, 0x0
@@ -789,13 +712,10 @@
     :try_start_1
     invoke-virtual {v3, v0, v5, v8}, Ljava/io/FileInputStream;->read([BII)I
 
-    .line 235
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
 
-    .line 237
     const/4 v1, 0x0
 
-    .line 239
     .local v1, "i":I
     const/16 v5, 0x800
 
@@ -807,7 +727,6 @@
 
     if-lez v1, :cond_0
 
-    .line 240
     const/16 v5, 0x800
 
     const-string v8, "Normal"
@@ -818,7 +737,6 @@
 
     if-lez v1, :cond_0
 
-    .line 242
     const/16 v5, 0x800
 
     const-string/jumbo v8, "pages"
@@ -829,7 +747,6 @@
 
     if-lez v1, :cond_0
 
-    .line 243
     const/16 v5, 0x800
 
     const-string v8, "low"
@@ -840,7 +757,6 @@
 
     if-lez v1, :cond_0
 
-    .line 244
     invoke-direct {p0, v0, v1}, Lcom/android/internal/util/MemInfoReader;->extractMemValue([BI)J
 
     move-result-wide v8
@@ -849,11 +765,9 @@
 
     add-long/2addr v6, v8
 
-    .line 250
     :cond_0
     const/4 v1, 0x0
 
-    .line 251
     const/16 v5, 0x800
 
     const-string/jumbo v8, "zone"
@@ -864,7 +778,6 @@
 
     if-lez v1, :cond_1
 
-    .line 252
     const/16 v5, 0x800
 
     const-string v8, "HighMem"
@@ -875,7 +788,6 @@
 
     if-lez v1, :cond_1
 
-    .line 254
     const/16 v5, 0x800
 
     const-string/jumbo v8, "pages"
@@ -886,7 +798,6 @@
 
     if-lez v1, :cond_1
 
-    .line 255
     const/16 v5, 0x800
 
     const-string v8, "low"
@@ -897,7 +808,6 @@
 
     if-lez v1, :cond_1
 
-    .line 256
     invoke-direct {p0, v0, v1}, Lcom/android/internal/util/MemInfoReader;->extractMemValue([BI)J
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_7
@@ -910,24 +820,20 @@
 
     add-long/2addr v6, v8
 
-    .line 265
     :cond_1
     if-eqz v3, :cond_2
 
-    .line 267
     :try_start_2
     invoke-virtual {v3}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 271
     :cond_2
     :goto_0
     invoke-static {v4}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     move-object v2, v3
 
-    .line 273
     .end local v0    # "buffer":[B
     .end local v1    # "i":I
     .end local v3    # "is":Ljava/io/FileInputStream;
@@ -935,69 +841,57 @@
     :goto_1
     return-wide v6
 
-    .line 262
     :catch_0
     move-exception v5
 
-    .line 265
     :goto_2
     if-eqz v2, :cond_3
 
-    .line 267
     :try_start_3
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 271
     :cond_3
     :goto_3
     invoke-static {v4}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     goto :goto_1
 
-    .line 263
     :catch_1
     move-exception v5
 
-    .line 265
     :goto_4
     if-eqz v2, :cond_4
 
-    .line 267
     :try_start_4
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 271
     :cond_4
     :goto_5
     invoke-static {v4}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     goto :goto_1
 
-    .line 265
     :catchall_0
     move-exception v5
 
     :goto_6
     if-eqz v2, :cond_5
 
-    .line 267
     :try_start_5
     invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 271
     :cond_5
     :goto_7
     invoke-static {v4}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
     throw v5
 
-    .line 268
     .end local v2    # "is":Ljava/io/FileInputStream;
     .restart local v0    # "buffer":[B
     .restart local v1    # "i":I
@@ -1026,7 +920,6 @@
 
     goto :goto_7
 
-    .line 265
     .end local v2    # "is":Ljava/io/FileInputStream;
     .restart local v0    # "buffer":[B
     .restart local v3    # "is":Ljava/io/FileInputStream;
@@ -1039,7 +932,6 @@
     .restart local v2    # "is":Ljava/io/FileInputStream;
     goto :goto_6
 
-    .line 263
     .end local v2    # "is":Ljava/io/FileInputStream;
     .restart local v3    # "is":Ljava/io/FileInputStream;
     :catch_6
@@ -1051,7 +943,6 @@
     .restart local v2    # "is":Ljava/io/FileInputStream;
     goto :goto_4
 
-    .line 262
     .end local v2    # "is":Ljava/io/FileInputStream;
     .restart local v3    # "is":Ljava/io/FileInputStream;
     :catch_7
@@ -1068,7 +959,6 @@
     .locals 2
 
     .prologue
-    .line 139
     iget-object v0, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
 
     const/16 v1, 0x8
@@ -1082,19 +972,16 @@
     .locals 6
 
     .prologue
-    .line 50
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v1
 
-    .line 52
     .local v1, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/util/MemInfoReader;->mLightInfos:[J
 
     invoke-static {v2}, Landroid/os/Debug;->getMemInfo([J)V
 
-    .line 53
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1117,14 +1004,11 @@
 
     goto :goto_0
 
-    .line 55
     :cond_0
     invoke-static {v1}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 57
     return-void
 
-    .line 55
     .end local v0    # "i":I
     :catchall_0
     move-exception v2
@@ -1138,12 +1022,10 @@
     .locals 2
 
     .prologue
-    .line 33
     invoke-static {}, Landroid/os/StrictMode;->allowThreadDiskReads()Landroid/os/StrictMode$ThreadPolicy;
 
     move-result-object v0
 
-    .line 35
     .local v0, "savedPolicy":Landroid/os/StrictMode$ThreadPolicy;
     :try_start_0
     iget-object v1, p0, Lcom/android/internal/util/MemInfoReader;->mInfos:[J
@@ -1152,13 +1034,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 37
     invoke-static {v0}, Landroid/os/StrictMode;->setThreadPolicy(Landroid/os/StrictMode$ThreadPolicy;)V
 
-    .line 39
     return-void
 
-    .line 37
     :catchall_0
     move-exception v1
 

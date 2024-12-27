@@ -54,16 +54,12 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 300
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 301
     iput-object p2, p0, Lcom/samsung/cpp/CPPSrvCommunicator;->mHandler:Landroid/os/Handler;
 
-    .line 302
     iput-object p1, p0, Lcom/samsung/cpp/CPPSrvCommunicator;->mContext:Landroid/content/Context;
 
-    .line 303
     iget-object v0, p0, Lcom/samsung/cpp/CPPSrvCommunicator;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Lcom/samsung/cpp/CPPPinning;->getInstance(Landroid/content/Context;)Lcom/samsung/cpp/CPPPinning;
@@ -72,7 +68,6 @@
 
     iput-object v0, p0, Lcom/samsung/cpp/CPPSrvCommunicator;->pin:Lcom/samsung/cpp/CPPPinning;
 
-    .line 304
     return-void
 .end method
 
@@ -81,7 +76,6 @@
     .param p0, "x0"    # Lcom/samsung/cpp/CPPSrvCommunicator;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/samsung/cpp/CPPSrvCommunicator;->pin:Lcom/samsung/cpp/CPPPinning;
 
     return-object v0
@@ -100,7 +94,6 @@
     .param p9, "x8"    # I
 
     .prologue
-    .line 40
     invoke-direct/range {p0 .. p9}, Lcom/samsung/cpp/CPPSrvCommunicator;->executeRequest(Ljava/lang/String;Ljava/lang/String;IJIIII)V
 
     return-void
@@ -111,7 +104,6 @@
     .param p0, "x0"    # Lcom/samsung/cpp/CPPSrvCommunicator;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lcom/samsung/cpp/CPPSrvCommunicator;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -129,7 +121,6 @@
     .param p9, "dbType"    # I
 
     .prologue
-    .line 93
     new-instance v11, Ljava/lang/Thread;
 
     new-instance v0, Lcom/samsung/cpp/CPPSrvCommunicator$1;
@@ -156,11 +147,9 @@
 
     invoke-direct {v11, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 297
     .local v11, "thread":Ljava/lang/Thread;
     invoke-virtual {v11}, Ljava/lang/Thread;->start()V
 
-    .line 298
     return-void
 .end method
 
@@ -170,12 +159,10 @@
     .param p2, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     invoke-static {p1}, Lcom/samsung/cpp/CPPPolicyHandler;->getPolicyServerURL(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 77
     .local v0, "fullUrl":Ljava/lang/String;
     if-eqz p2, :cond_0
 
@@ -191,7 +178,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 78
     const-string v1, "&mcc=460"
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -200,17 +186,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 79
     const-string v0, "https://cn-prod-celltw.secb2b.com.cn/"
 
-    .line 80
     const-string v1, "CPPSrvCommunicator"
 
     const-string v2, "getUrlInfo() chn default"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 88
     :cond_0
     :goto_0
     const-string v1, "CPPSrvCommunicator"
@@ -235,14 +218,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     return-object v0
 
-    .line 83
     :cond_1
     const-string v0, "https://prod-celltw.secb2b.com/"
 
-    .line 84
     const-string v1, "CPPSrvCommunicator"
 
     const-string v2, "getUrlInfo() : default"
@@ -264,7 +244,6 @@
     .param p7, "dbType"    # I
 
     .prologue
-    .line 307
     const-string v2, "CPPSrvCommunicator"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -325,12 +304,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     invoke-direct/range {p0 .. p2}, Lcom/samsung/cpp/CPPSrvCommunicator;->getUrlInfo(ILjava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 310
     .local v4, "url":Ljava/lang/String;
     const-string v2, ""
 
@@ -340,25 +317,21 @@
 
     if-eqz v2, :cond_0
 
-    .line 311
     const-string v2, "CPPSrvCommunicator"
 
     const-string v3, "sendToSrv() NO URL"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 313
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v12
 
-    .line 314
     .local v12, "msg":Landroid/os/Message;
     new-instance v13, Landroid/os/Bundle;
 
     invoke-direct {v13}, Landroid/os/Bundle;-><init>()V
 
-    .line 316
     .local v13, "result":Landroid/os/Bundle;
     const-string v2, "result_code"
 
@@ -366,50 +339,41 @@
 
     invoke-virtual {v13, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 317
     const-string v2, "result_msg"
 
     const-string v3, "NO URL"
 
     invoke-virtual {v13, v2, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 318
     const-string v2, "req_id"
 
     move-wide/from16 v0, p3
 
     invoke-virtual {v13, v2, v0, v1}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 320
     const/4 v2, 0x6
 
     iput v2, v12, Landroid/os/Message;->what:I
 
-    .line 321
     move/from16 v0, p1
 
     iput v0, v12, Landroid/os/Message;->arg1:I
 
-    .line 322
     move/from16 v0, p5
 
     iput v0, v12, Landroid/os/Message;->arg2:I
 
-    .line 323
     invoke-virtual {v12, v13}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 325
     iget-object v2, p0, Lcom/samsung/cpp/CPPSrvCommunicator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v12}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 329
     .end local v12    # "msg":Landroid/os/Message;
     .end local v13    # "result":Landroid/os/Bundle;
     :goto_0
     return-void
 
-    .line 327
     :cond_0
     const/4 v10, 0x0
 
@@ -443,10 +407,8 @@
 
     const/4 v6, 0x0
 
-    .line 332
     const-string v2, "http://54.191.12.98:8080/api/v1/wifis?_method=POST"
 
-    .line 333
     .local v2, "url":Ljava/lang/String;
     const-string v0, ""
 
@@ -456,55 +418,45 @@
 
     if-eqz v0, :cond_0
 
-    .line 334
     const-string v0, "CPPSrvCommunicator"
 
     const-string v1, "sendToSrvForLoc() NO URL"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 336
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v10
 
-    .line 337
     .local v10, "msg":Landroid/os/Message;
     new-instance v11, Landroid/os/Bundle;
 
     invoke-direct {v11}, Landroid/os/Bundle;-><init>()V
 
-    .line 339
     .local v11, "result":Landroid/os/Bundle;
     const-string v0, "result_code"
 
     invoke-virtual {v11, v0, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 340
     const-string v0, "result_msg"
 
     const-string v1, "NO URL"
 
     invoke-virtual {v11, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 342
     iput v3, v10, Landroid/os/Message;->what:I
 
-    .line 343
     invoke-virtual {v10, v11}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
 
-    .line 344
     iget-object v0, p0, Lcom/samsung/cpp/CPPSrvCommunicator;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v10}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 349
     .end local v10    # "msg":Landroid/os/Message;
     .end local v11    # "result":Landroid/os/Bundle;
     :goto_0
     return-void
 
-    .line 347
     :cond_0
     const/16 v3, 0x7530
 

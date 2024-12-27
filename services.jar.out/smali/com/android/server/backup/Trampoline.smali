@@ -29,13 +29,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 55
     invoke-direct {p0}, Landroid/app/backup/IBackupManager$Stub;-><init>()V
 
-    .line 56
     iput-object p1, p0, Lcom/android/server/backup/Trampoline;->mContext:Landroid/content/Context;
 
-    .line 57
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Landroid/os/Environment;->getSecureDataDirectory()Ljava/io/File;
@@ -46,11 +43,9 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 58
     .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 59
     new-instance v1, Ljava/io/File;
 
     const-string v2, "backup-suppress"
@@ -59,7 +54,6 @@
 
     iput-object v1, p0, Lcom/android/server/backup/Trampoline;->mSuppressFile:Ljava/io/File;
 
-    .line 60
     const-string/jumbo v1, "ro.backup.disable"
 
     const/4 v2, 0x0
@@ -70,7 +64,6 @@
 
     iput-boolean v1, p0, Lcom/android/server/backup/Trampoline;->mGlobalDisable:Z
 
-    .line 61
     return-void
 .end method
 
@@ -90,10 +83,8 @@
     .end annotation
 
     .prologue
-    .line 331
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 332
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -107,10 +98,8 @@
 
     move-object v5, p5
 
-    .line 333
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/backup/BackupManagerService;->acknowledgeFullBackupOrRestore(IZLjava/lang/String;Ljava/lang/String;Landroid/app/backup/IFullBackupRestoreObserver;)V
 
-    .line 336
     :cond_0
     return-void
 .end method
@@ -126,17 +115,13 @@
     .end annotation
 
     .prologue
-    .line 152
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 153
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 154
     invoke-virtual {v0, p1, p2}, Lcom/android/server/backup/BackupManagerService;->agentConnected(Ljava/lang/String;Landroid/os/IBinder;)V
 
-    .line 156
     :cond_0
     return-void
 .end method
@@ -151,17 +136,13 @@
     .end annotation
 
     .prologue
-    .line 160
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 161
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 162
     invoke-virtual {v0, p1}, Lcom/android/server/backup/BackupManagerService;->agentDisconnected(Ljava/lang/String;)V
 
-    .line 164
     :cond_0
     return-void
 .end method
@@ -175,17 +156,13 @@
     .end annotation
 
     .prologue
-    .line 218
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 219
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 220
     invoke-virtual {v0}, Lcom/android/server/backup/BackupManagerService;->backupNow()V
 
-    .line 222
     :cond_0
     return-void
 .end method
@@ -195,10 +172,8 @@
     .param p1, "scheduledJob"    # Lcom/android/server/backup/FullBackupJob;
 
     .prologue
-    .line 428
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 429
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -226,10 +201,8 @@
     .end annotation
 
     .prologue
-    .line 383
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 384
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -257,17 +230,13 @@
     .end annotation
 
     .prologue
-    .line 144
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 145
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 146
     invoke-virtual {v0, p1, p2}, Lcom/android/server/backup/BackupManagerService;->clearBackupData(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 148
     :cond_0
     return-void
 .end method
@@ -282,17 +251,13 @@
     .end annotation
 
     .prologue
-    .line 135
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 136
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 137
     invoke-virtual {v0, p1}, Lcom/android/server/backup/BackupManagerService;->dataChanged(Ljava/lang/String;)V
 
-    .line 139
     :cond_0
     return-void
 .end method
@@ -304,7 +269,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 415
     iget-object v1, p0, Lcom/android/server/backup/Trampoline;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.DUMP"
@@ -313,21 +277,16 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 417
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 418
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 419
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/backup/BackupManagerService;->dump(Ljava/io/FileDescriptor;Ljava/io/PrintWriter;[Ljava/lang/String;)V
 
-    .line 423
     :goto_0
     return-void
 
-    .line 421
     :cond_0
     const-string v1, "Inactive"
 
@@ -340,17 +299,13 @@
     .locals 1
 
     .prologue
-    .line 433
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 434
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 435
     invoke-virtual {v0}, Lcom/android/server/backup/BackupManagerService;->endFullBackup()V
 
-    .line 437
     :cond_0
     return-void
 .end method
@@ -373,10 +328,8 @@
     .end annotation
 
     .prologue
-    .line 244
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 245
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -398,10 +351,8 @@
 
     move-object/from16 v9, p9
 
-    .line 246
     invoke-virtual/range {v0 .. v9}, Lcom/android/server/backup/BackupManagerService;->fullBackup(Landroid/os/ParcelFileDescriptor;ZZZZZZZ[Ljava/lang/String;)V
 
-    .line 249
     :cond_0
     return-void
 .end method
@@ -425,10 +376,8 @@
     .end annotation
 
     .prologue
-    .line 229
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 231
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -452,22 +401,18 @@
 
     move/from16 v10, p10
 
-    .line 232
     :try_start_0
     invoke-virtual/range {v0 .. v10}, Lcom/android/server/backup/BackupManagerService;->fullBackupCustomized(Ljava/lang/String;ZZZZZZZ[Ljava/lang/String;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 237
     :cond_0
     :goto_0
     return-void
 
-    .line 234
     :catch_0
     move-exception v11
 
-    .line 235
     .local v11, "e":Ljava/lang/Exception;
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -503,19 +448,15 @@
     .end annotation
 
     .prologue
-    .line 272
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 273
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 274
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/android/server/backup/BackupManagerService;->fullBackupEx(Landroid/os/ParcelFileDescriptor;[Ljava/lang/String;Ljava/lang/String;I)Ljava/util/Map;
 
     move-result-object v1
 
-    .line 277
     :goto_0
     return-object v1
 
@@ -535,17 +476,13 @@
     .end annotation
 
     .prologue
-    .line 302
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 303
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 304
     invoke-virtual {v0, p1}, Lcom/android/server/backup/BackupManagerService;->fullRestore(Landroid/os/ParcelFileDescriptor;)V
 
-    .line 306
     :cond_0
     return-void
 .end method
@@ -561,29 +498,23 @@
     .end annotation
 
     .prologue
-    .line 290
     iget-object v1, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 292
     .local v1, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v1, :cond_0
 
-    .line 293
     :try_start_0
     invoke-virtual {v1, p1, p2}, Lcom/android/server/backup/BackupManagerService;->fullRestoreCustomized(Ljava/lang/String;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 298
     :cond_0
     :goto_0
     return-void
 
-    .line 295
     :catch_0
     move-exception v0
 
-    .line 296
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -601,17 +532,13 @@
     .end annotation
 
     .prologue
-    .line 321
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 322
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 323
     invoke-virtual {v0, p1, p2}, Lcom/android/server/backup/BackupManagerService;->fullRestoreEx(Landroid/os/ParcelFileDescriptor;Ljava/lang/String;)V
 
-    .line 325
     :cond_0
     return-void
 .end method
@@ -626,17 +553,13 @@
     .end annotation
 
     .prologue
-    .line 282
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 283
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 284
     invoke-virtual {v0, p1}, Lcom/android/server/backup/BackupManagerService;->fullTransportBackup([Ljava/lang/String;)V
 
-    .line 286
     :cond_0
     return-void
 .end method
@@ -646,10 +569,8 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 409
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 410
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -676,10 +597,8 @@
     .end annotation
 
     .prologue
-    .line 358
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 359
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -705,10 +624,8 @@
     .end annotation
 
     .prologue
-    .line 340
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 341
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -735,10 +652,8 @@
     .end annotation
 
     .prologue
-    .line 370
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 371
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -765,10 +680,8 @@
     .end annotation
 
     .prologue
-    .line 376
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 377
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -795,10 +708,8 @@
     .end annotation
 
     .prologue
-    .line 364
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 365
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -824,10 +735,8 @@
     .end annotation
 
     .prologue
-    .line 212
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 213
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -849,31 +758,25 @@
     .param p1, "whichUser"    # I
 
     .prologue
-    .line 66
     if-nez p1, :cond_0
 
-    .line 68
     iget-boolean v0, p0, Lcom/android/server/backup/Trampoline;->mGlobalDisable:Z
 
     if-eqz v0, :cond_1
 
-    .line 69
     const-string v0, "BackupManagerService"
 
     const-string v1, "Backup/restore not supported"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     :cond_0
     :goto_0
     return-void
 
-    .line 73
     :cond_1
     monitor-enter p0
 
-    .line 74
     :try_start_0
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mSuppressFile:Ljava/io/File;
 
@@ -883,7 +786,6 @@
 
     if-nez v0, :cond_2
 
-    .line 75
     new-instance v0, Lcom/android/server/backup/BackupManagerService;
 
     iget-object v1, p0, Lcom/android/server/backup/Trampoline;->mContext:Landroid/content/Context;
@@ -892,7 +794,6 @@
 
     iput-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 79
     :goto_1
     monitor-exit p0
 
@@ -907,7 +808,6 @@
 
     throw v0
 
-    .line 77
     :cond_2
     :try_start_1
     const-string v0, "BackupManagerService"
@@ -946,10 +846,8 @@
     .end annotation
 
     .prologue
-    .line 200
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 201
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -973,13 +871,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 124
     if-nez p1, :cond_1
 
-    .line 125
     monitor-enter p0
 
-    .line 126
     :try_start_0
     iget-object v1, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
@@ -990,11 +885,9 @@
     :cond_0
     monitor-exit p0
 
-    .line 129
     :cond_1
     return v0
 
-    .line 127
     :catchall_0
     move-exception v0
 
@@ -1014,10 +907,8 @@
     .end annotation
 
     .prologue
-    .line 346
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 347
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -1045,17 +936,13 @@
     .end annotation
 
     .prologue
-    .line 389
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 390
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 391
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/backup/BackupManagerService;->opComplete(IJ)V
 
-    .line 393
     :cond_0
     return-void
 .end method
@@ -1071,17 +958,13 @@
     .end annotation
 
     .prologue
-    .line 168
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 169
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 170
     invoke-virtual {v0, p1, p2}, Lcom/android/server/backup/BackupManagerService;->restoreAtInstall(Ljava/lang/String;I)V
 
-    .line 172
     :cond_0
     return-void
 .end method
@@ -1096,10 +979,8 @@
     .end annotation
 
     .prologue
-    .line 352
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 353
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -1126,17 +1007,13 @@
     .end annotation
 
     .prologue
-    .line 184
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 185
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 186
     invoke-virtual {v0, p1}, Lcom/android/server/backup/BackupManagerService;->setAutoRestore(Z)V
 
-    .line 188
     :cond_0
     return-void
 .end method
@@ -1151,17 +1028,13 @@
     .end annotation
 
     .prologue
-    .line 176
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 177
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 178
     invoke-virtual {v0, p1}, Lcom/android/server/backup/BackupManagerService;->setBackupEnabled(Z)V
 
-    .line 180
     :cond_0
     return-void
 .end method
@@ -1177,10 +1050,8 @@
     .end annotation
 
     .prologue
-    .line 206
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 207
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
@@ -1207,17 +1078,13 @@
     .end annotation
 
     .prologue
-    .line 192
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 193
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 
-    .line 194
     invoke-virtual {v0, p1}, Lcom/android/server/backup/BackupManagerService;->setBackupProvisioned(Z)V
 
-    .line 196
     :cond_0
     return-void
 .end method
@@ -1228,12 +1095,10 @@
     .param p2, "makeActive"    # Z
 
     .prologue
-    .line 85
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 86
     .local v0, "caller":I
     const/16 v2, 0x3e8
 
@@ -1241,7 +1106,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 88
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "No permission to configure backup activity"
@@ -1250,32 +1114,26 @@
 
     throw v2
 
-    .line 91
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/backup/Trampoline;->mGlobalDisable:Z
 
     if-eqz v2, :cond_2
 
-    .line 92
     const-string v2, "BackupManagerService"
 
     const-string v3, "Backup/restore not supported"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     :cond_1
     :goto_0
     return-void
 
-    .line 96
     :cond_2
     if-nez p1, :cond_1
 
-    .line 97
     monitor-enter p0
 
-    .line 98
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/backup/Trampoline;->isBackupServiceActive(I)Z
 
@@ -1283,7 +1141,6 @@
 
     if-eq p2, v2, :cond_3
 
-    .line 99
     const-string v3, "BackupManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1321,10 +1178,8 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     if-eqz p2, :cond_5
 
-    .line 102
     new-instance v2, Lcom/android/server/backup/BackupManagerService;
 
     iget-object v3, p0, Lcom/android/server/backup/Trampoline;->mContext:Landroid/content/Context;
@@ -1333,12 +1188,10 @@
 
     iput-object v2, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 103
     iget-object v2, p0, Lcom/android/server/backup/Trampoline;->mSuppressFile:Ljava/io/File;
 
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 113
     :cond_3
     :goto_2
     monitor-exit p0
@@ -1354,14 +1207,12 @@
 
     throw v2
 
-    .line 99
     :cond_4
     :try_start_1
     const-string/jumbo v2, "in"
 
     goto :goto_1
 
-    .line 105
     :cond_5
     const/4 v2, 0x0
 
@@ -1369,7 +1220,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 107
     :try_start_2
     iget-object v2, p0, Lcom/android/server/backup/Trampoline;->mSuppressFile:Ljava/io/File;
 
@@ -1380,11 +1230,9 @@
 
     goto :goto_2
 
-    .line 108
     :catch_0
     move-exception v1
 
-    .line 109
     .local v1, "e":Ljava/io/IOException;
     :try_start_3
     const-string v2, "BackupManagerService"
@@ -1405,10 +1253,8 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 402
     iget-object v0, p0, Lcom/android/server/backup/Trampoline;->mService:Lcom/android/server/backup/BackupManagerService;
 
-    .line 403
     .local v0, "svc":Lcom/android/server/backup/BackupManagerService;
     if-eqz v0, :cond_0
 

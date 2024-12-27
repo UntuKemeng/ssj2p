@@ -42,12 +42,10 @@
     .locals 1
 
     .prologue
-    .line 41
     const/4 v0, -0x1
 
     sput v0, Lcom/android/server/enterprise/utils/PackageDownloader;->UNSPECIFIED:I
 
-    .line 48
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/utils/PackageDownloader;->mPackageDownloader:Lcom/android/server/enterprise/utils/PackageDownloader;
@@ -62,66 +60,53 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
-    .line 42
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDialog:Landroid/app/AlertDialog$Builder;
 
-    .line 43
     iput-boolean v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mIsUserAcceptDataNetwork:Z
 
-    .line 46
     iput-boolean v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->DEBUG:Z
 
-    .line 67
     new-instance v1, Lcom/android/server/enterprise/utils/PackageDownloader$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/enterprise/utils/PackageDownloader$1;-><init>(Lcom/android/server/enterprise/utils/PackageDownloader;)V
 
     iput-object v1, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 51
     iput-object p1, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
-    .line 52
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 53
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.net.conn.CONNECTIVITY_CHANGE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 54
     const-string v1, "edm.intent.action.sec.CHECK_REENROLLMENT"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 55
     const-string v1, "android.intent.action.DOWNLOAD_COMPLETE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 56
     iget-object v1, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     iget-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 57
     return-void
 .end method
 
@@ -130,7 +115,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/utils/PackageDownloader;
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     return-object v0
@@ -141,7 +125,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/utils/PackageDownloader;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/PackageDownloader;->handleNetworkState()V
 
     return-void
@@ -154,7 +137,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/utils/PackageDownloader;->handleDownloadProcess(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -165,7 +147,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/utils/PackageDownloader;
 
     .prologue
-    .line 37
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/PackageDownloader;->handleDownloadComplete()V
 
     return-void
@@ -176,7 +157,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/utils/PackageDownloader;
 
     .prologue
-    .line 37
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -188,7 +168,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 37
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/utils/PackageDownloader;->postDownload(Ljava/lang/String;)V
 
     return-void
@@ -198,7 +177,6 @@
     .locals 10
 
     .prologue
-    .line 328
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     if-eqz v8, :cond_3
@@ -211,21 +189,17 @@
 
     if-nez v8, :cond_3
 
-    .line 329
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v8}, Ljava/util/HashMap;->size()I
 
     move-result v7
 
-    .line 330
     .local v7, "size":I
     if-lez v7, :cond_3
 
-    .line 331
     new-array v6, v7, [Ljava/lang/String;
 
-    .line 332
     .local v6, "pkgs":[Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
@@ -237,11 +211,9 @@
 
     move-result-object v1
 
-    .line 334
     .local v1, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 335
     .local v0, "i":I
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -250,7 +222,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 336
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
@@ -259,22 +230,18 @@
 
     aput-object v8, v6, v0
 
-    .line 337
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 340
     :cond_0
     const-string v5, ""
 
-    .line 341
     .local v5, "pkg":Ljava/lang/String;
     sget v8, Lcom/android/server/enterprise/utils/PackageDownloader;->UNSPECIFIED:I
 
     int-to-long v2, v8
 
-    .line 343
     .local v2, "id":J
     const/4 v4, 0x0
 
@@ -282,10 +249,8 @@
     :goto_1
     if-ge v4, v7, :cond_2
 
-    .line 344
     aget-object v5, v6, v4
 
-    .line 345
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v8, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -298,7 +263,6 @@
 
     move-result-wide v2
 
-    .line 347
     sget v8, Lcom/android/server/enterprise/utils/PackageDownloader;->UNSPECIFIED:I
 
     int-to-long v8, v8
@@ -307,27 +271,22 @@
 
     if-eqz v8, :cond_1
 
-    .line 348
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/utils/PackageDownloader;->postDownload(Ljava/lang/String;)V
 
-    .line 349
     :cond_1
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v8, v5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 343
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 351
     :cond_2
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v8}, Ljava/util/HashMap;->clear()V
 
-    .line 354
     .end local v0    # "i":I
     .end local v1    # "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v2    # "id":J
@@ -344,22 +303,17 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 221
     const/4 v11, 0x0
 
-    .line 222
     .local v11, "ret":Z
     const/4 v10, 0x0
 
-    .line 224
     .local v10, "real_pkg":Ljava/lang/String;
     const/4 v13, 0x1
 
-    .line 225
     .local v13, "status":I
     const/4 v5, 0x0
 
-    .line 226
     .local v5, "filename":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -377,7 +331,6 @@
 
     move-result-wide v8
 
-    .line 227
     .local v8, "queueId":J
     move-object/from16 v0, p0
 
@@ -407,7 +360,6 @@
 
     move-result-object v2
 
-    .line 229
     .local v2, "c":Landroid/database/Cursor;
     if-eqz v2, :cond_0
 
@@ -418,7 +370,6 @@
 
     if-eqz v14, :cond_0
 
-    .line 230
     const-string/jumbo v14, "status"
 
     invoke-interface {v2, v14}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -429,7 +380,6 @@
 
     move-result v13
 
-    .line 231
     const-string/jumbo v14, "local_filename"
 
     invoke-interface {v2, v14}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -442,26 +392,21 @@
 
     move-result-object v5
 
-    .line 234
     :cond_0
     if-nez v5, :cond_2
 
-    .line 287
     if-eqz v2, :cond_1
 
-    .line 288
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     :cond_1
     move v12, v11
 
-    .line 294
     .end local v11    # "ret":Z
     .local v12, "ret":I
     :goto_0
     return v12
 
-    .line 240
     .end local v12    # "ret":I
     .restart local v11    # "ret":Z
     :cond_2
@@ -470,11 +415,9 @@
 
     invoke-direct {v4, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 241
     .local v4, "f":Ljava/io/File;
     const/4 v7, 0x0
 
-    .line 242
     .local v7, "pi":Landroid/content/pm/PackageInfo;
     move-object/from16 v0, p0
 
@@ -482,7 +425,6 @@
 
     if-eqz v14, :cond_3
 
-    .line 243
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
@@ -501,7 +443,6 @@
 
     move-result-object v7
 
-    .line 244
     :cond_3
     if-eqz v7, :cond_4
 
@@ -509,24 +450,19 @@
 
     if-eqz v14, :cond_4
 
-    .line 245
     iget-object v10, v7, Landroid/content/pm/PackageInfo;->packageName:Ljava/lang/String;
 
-    .line 248
     :cond_4
     if-nez v10, :cond_8
 
-    .line 249
     const/4 v11, 0x0
 
-    .line 250
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     if-eqz v14, :cond_5
 
-    .line 251
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
@@ -541,29 +477,23 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 287
     :cond_5
     :goto_1
     if-eqz v2, :cond_6
 
-    .line 288
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 291
     :cond_6
     if-nez v11, :cond_7
 
-    .line 292
     invoke-direct/range {p0 .. p1}, Lcom/android/server/enterprise/utils/PackageDownloader;->postDownload(Ljava/lang/String;)V
 
     :cond_7
     move v12, v11
 
-    .line 294
     .restart local v12    # "ret":I
     goto :goto_0
 
-    .line 253
     .end local v12    # "ret":I
     :cond_8
     :try_start_2
@@ -575,7 +505,6 @@
 
     move-result-object v6
 
-    .line 254
     .local v6, "mConstrained":Lcom/android/server/enterprise/utils/ConstrainedState;
     invoke-static {v4}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
 
@@ -591,7 +520,6 @@
 
     if-ne v14, v15, :cond_a
 
-    .line 256
     move-object/from16 v0, p1
 
     invoke-virtual {v10, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -600,7 +528,6 @@
 
     if-nez v14, :cond_9
 
-    .line 257
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
@@ -609,7 +536,6 @@
 
     invoke-virtual {v14, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 258
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
@@ -622,7 +548,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 261
     :cond_9
     const/16 v14, 0x8
 
@@ -630,7 +555,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 263
     :try_start_3
     move-object/from16 v0, p0
 
@@ -639,27 +563,21 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 264
     const/4 v11, 0x1
 
     goto :goto_1
 
-    .line 265
     :catch_0
     move-exception v3
 
-    .line 266
     .local v3, "e":Ljava/lang/Exception;
     :try_start_4
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 267
     const/4 v11, 0x0
 
-    .line 268
     goto :goto_1
 
-    .line 270
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_a
     invoke-static {v4}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
@@ -676,7 +594,6 @@
 
     if-ne v14, v15, :cond_b
 
-    .line 271
     move-object/from16 v0, p1
 
     invoke-virtual {v10, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -687,14 +604,12 @@
 
     if-eqz v14, :cond_5
 
-    .line 272
     const/16 v14, 0x8
 
     if-ne v13, v14, :cond_5
 
     if-eqz v5, :cond_5
 
-    .line 274
     :try_start_5
     move-object/from16 v0, p0
 
@@ -703,36 +618,29 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 275
     const/4 v11, 0x1
 
     goto :goto_1
 
-    .line 276
     :catch_1
     move-exception v3
 
-    .line 277
     .restart local v3    # "e":Ljava/lang/Exception;
     :try_start_6
     invoke-virtual {v3}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 278
     const/4 v11, 0x0
 
-    .line 279
     goto :goto_1
 
-    .line 283
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_b
     const/4 v11, 0x0
 
     goto :goto_1
 
-    .line 287
     .end local v4    # "f":Ljava/io/File;
     .end local v6    # "mConstrained":Lcom/android/server/enterprise/utils/ConstrainedState;
     .end local v7    # "pi":Landroid/content/pm/PackageInfo;
@@ -741,7 +649,6 @@
 
     if-eqz v2, :cond_c
 
-    .line 288
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     :cond_c
@@ -754,18 +661,15 @@
     .param p2, "pkgUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 196
     if-eqz p1, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 198
     :try_start_0
     invoke-static {p2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
 
-    .line 199
     .local v4, "uri":Landroid/net/Uri;
     iget-object v5, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
@@ -775,14 +679,12 @@
 
     iput-object v5, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadManager:Landroid/app/DownloadManager;
 
-    .line 200
     iget-object v5, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadManager:Landroid/app/DownloadManager;
 
     if-eqz v5, :cond_0
 
     if-eqz v4, :cond_0
 
-    .line 201
     iget-object v5, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v5}, Ljava/util/HashMap;->isEmpty()Z
@@ -791,7 +693,6 @@
 
     if-nez v5, :cond_0
 
-    .line 202
     iget-object v5, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v5, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -812,23 +713,19 @@
 
     if-nez v5, :cond_0
 
-    .line 203
     new-instance v1, Landroid/app/DownloadManager$Request;
 
     invoke-direct {v1, v4}, Landroid/app/DownloadManager$Request;-><init>(Landroid/net/Uri;)V
 
-    .line 204
     .local v1, "request":Landroid/app/DownloadManager$Request;
     invoke-virtual {v1}, Landroid/app/DownloadManager$Request;->setDestinationToSystemCache()Landroid/app/DownloadManager$Request;
 
-    .line 205
     iget-object v5, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadManager:Landroid/app/DownloadManager;
 
     invoke-virtual {v5, v1}, Landroid/app/DownloadManager;->enqueue(Landroid/app/DownloadManager$Request;)J
 
     move-result-wide v2
 
-    .line 206
     .local v2, "queueId":J
     iget-object v5, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
@@ -840,7 +737,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 214
     .end local v1    # "request":Landroid/app/DownloadManager$Request;
     .end local v2    # "queueId":J
     .end local v4    # "uri":Landroid/net/Uri;
@@ -848,11 +744,9 @@
     :goto_0
     return-void
 
-    .line 210
     :catch_0
     move-exception v0
 
-    .line 211
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -864,7 +758,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 217
     const-string v0, "download"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -881,19 +774,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 60
     sget-object v0, Lcom/android/server/enterprise/utils/PackageDownloader;->mPackageDownloader:Lcom/android/server/enterprise/utils/PackageDownloader;
 
     if-nez v0, :cond_0
 
-    .line 61
     new-instance v0, Lcom/android/server/enterprise/utils/PackageDownloader;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/utils/PackageDownloader;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/utils/PackageDownloader;->mPackageDownloader:Lcom/android/server/enterprise/utils/PackageDownloader;
 
-    .line 64
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/utils/PackageDownloader;->mPackageDownloader:Lcom/android/server/enterprise/utils/PackageDownloader;
 
@@ -904,7 +794,6 @@
     .locals 10
 
     .prologue
-    .line 125
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     if-eqz v8, :cond_2
@@ -917,21 +806,17 @@
 
     if-nez v8, :cond_2
 
-    .line 126
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v8}, Ljava/util/HashMap;->size()I
 
     move-result v7
 
-    .line 128
     .local v7, "size":I
     if-lez v7, :cond_2
 
-    .line 129
     new-array v6, v7, [Ljava/lang/String;
 
-    .line 130
     .local v6, "pkgs":[Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
@@ -943,11 +828,9 @@
 
     move-result-object v1
 
-    .line 132
     .local v1, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
-    .line 133
     .local v0, "i":I
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -956,7 +839,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 134
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v8
@@ -965,22 +847,18 @@
 
     aput-object v8, v6, v0
 
-    .line 135
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 138
     :cond_0
     const-string v5, ""
 
-    .line 139
     .local v5, "pkg":Ljava/lang/String;
     sget v8, Lcom/android/server/enterprise/utils/PackageDownloader;->UNSPECIFIED:I
 
     int-to-long v2, v8
 
-    .line 141
     .local v2, "id":J
     const/4 v4, 0x0
 
@@ -988,10 +866,8 @@
     :goto_1
     if-ge v4, v7, :cond_2
 
-    .line 142
     aget-object v5, v6, v4
 
-    .line 143
     iget-object v8, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v8, v5}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1004,7 +880,6 @@
 
     move-result-wide v2
 
-    .line 144
     sget v8, Lcom/android/server/enterprise/utils/PackageDownloader;->UNSPECIFIED:I
 
     int-to-long v8, v8
@@ -1013,16 +888,13 @@
 
     if-eqz v8, :cond_1
 
-    .line 145
     invoke-direct {p0, v5}, Lcom/android/server/enterprise/utils/PackageDownloader;->checkPackage(Ljava/lang/String;)Z
 
-    .line 141
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 149
     .end local v0    # "i":I
     .end local v1    # "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v2    # "id":J
@@ -1040,10 +912,8 @@
     .param p2, "pkgUrl"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     if-eqz p1, :cond_1
 
-    .line 100
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/PackageDownloader;->isNetworkConnectionAvailable()Z
 
     move-result v0
@@ -1054,7 +924,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 101
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
@@ -1071,7 +940,6 @@
 
     if-nez v0, :cond_1
 
-    .line 102
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
@@ -1085,10 +953,8 @@
 
     invoke-virtual {v0, p1, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 103
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/utils/PackageDownloader;->download(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 114
     :cond_1
     return-void
 .end method
@@ -1097,19 +963,16 @@
     .locals 2
 
     .prologue
-    .line 117
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/PackageDownloader;->isNetworkConnectionAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 118
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
-    .line 119
     iget-object v0, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     const v1, 0x1040be0
@@ -1120,11 +983,9 @@
 
     invoke-static {v0}, Lcom/android/server/enterprise/RestrictionToastManager;->show(Ljava/lang/String;)V
 
-    .line 120
     :cond_0
     invoke-direct {p0}, Lcom/android/server/enterprise/utils/PackageDownloader;->cancelAllDownload()V
 
-    .line 122
     :cond_1
     return-void
 .end method
@@ -1134,18 +995,15 @@
     .param p1, "filePath"    # Ljava/lang/String;
 
     .prologue
-    .line 298
     new-instance v0, Lcom/android/server/enterprise/utils/PackageDownloader$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/utils/PackageDownloader$2;-><init>(Lcom/android/server/enterprise/utils/PackageDownloader;)V
 
-    .line 318
     .local v0, "packageInstallObserver":Landroid/content/pm/IPackageInstallObserver;
     iget-object v1, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     if-eqz v1, :cond_0
 
-    .line 319
     iget-object v1, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1170,7 +1028,6 @@
 
     invoke-virtual {v1, v2, v0, v3, v4}, Landroid/content/pm/PackageManager;->installPackage(Landroid/net/Uri;Landroid/content/pm/IPackageInstallObserver;ILjava/lang/String;)V
 
-    .line 325
     :cond_0
     return-void
 .end method
@@ -1182,7 +1039,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 185
     iget-object v4, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -1193,7 +1049,6 @@
 
     move-result-object v1
 
-    .line 186
     .local v1, "appInfos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ApplicationInfo;>;"
     const/4 v2, 0x0
 
@@ -1205,14 +1060,12 @@
 
     if-ge v2, v4, :cond_1
 
-    .line 187
     invoke-interface {v1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/content/pm/ApplicationInfo;
 
-    .line 188
     .local v0, "aInfo":Landroid/content/pm/ApplicationInfo;
     iget-object v4, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
 
@@ -1222,19 +1075,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 192
     .end local v0    # "aInfo":Landroid/content/pm/ApplicationInfo;
     :goto_1
     return v3
 
-    .line 186
     .restart local v0    # "aInfo":Landroid/content/pm/ApplicationInfo;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 192
     .end local v0    # "aInfo":Landroid/content/pm/ApplicationInfo;
     :cond_1
     const/4 v3, 0x0
@@ -1247,20 +1097,16 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 172
     const/4 v1, 0x0
 
-    .line 174
     .local v1, "result":Z
     const/4 v0, 0x0
 
-    .line 175
     .local v0, "cm":Landroid/net/ConnectivityManager;
     iget-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     if-eqz v2, :cond_0
 
-    .line 176
     iget-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     const-string v3, "connectivity"
@@ -1272,7 +1118,6 @@
     .end local v0    # "cm":Landroid/net/ConnectivityManager;
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 178
     .restart local v0    # "cm":Landroid/net/ConnectivityManager;
     :cond_0
     if-eqz v0, :cond_1
@@ -1285,7 +1130,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 179
     invoke-virtual {v0, p1}, Landroid/net/ConnectivityManager;->getNetworkInfo(I)Landroid/net/NetworkInfo;
 
     move-result-object v2
@@ -1294,7 +1138,6 @@
 
     move-result v1
 
-    .line 181
     :cond_1
     return v1
 .end method
@@ -1307,22 +1150,18 @@
 
     const/4 v3, 0x0
 
-    .line 152
     const/4 v2, 0x1
 
-    .line 153
     .local v2, "result":Z
     invoke-direct {p0, v4}, Lcom/android/server/enterprise/utils/PackageDownloader;->isConnectionAvailable(I)Z
 
     move-result v1
 
-    .line 154
     .local v1, "isWifi":Z
     invoke-direct {p0, v3}, Lcom/android/server/enterprise/utils/PackageDownloader;->isConnectionAvailable(I)Z
 
     move-result v0
 
-    .line 155
     .local v0, "isMobile":Z
     if-nez v1, :cond_0
 
@@ -1331,16 +1170,13 @@
     :cond_0
     move v2, v4
 
-    .line 157
     :goto_0
     if-nez v2, :cond_1
 
-    .line 158
     iget-object v3, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     if-eqz v3, :cond_1
 
-    .line 159
     iget-object v3, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     const v4, 0x1040be3
@@ -1351,17 +1187,14 @@
 
     invoke-static {v3}, Lcom/android/server/enterprise/RestrictionToastManager;->show(Ljava/lang/String;)V
 
-    .line 160
     const/4 v2, 0x0
 
-    .line 168
     :cond_1
     return v2
 
     :cond_2
     move v2, v3
 
-    .line 155
     goto :goto_0
 .end method
 
@@ -1370,12 +1203,10 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 360
     sget v2, Lcom/android/server/enterprise/utils/PackageDownloader;->UNSPECIFIED:I
 
     int-to-long v0, v2
 
-    .line 386
     .local v0, "id":J
     iget-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
@@ -1389,7 +1220,6 @@
 
     if-lez v2, :cond_1
 
-    .line 387
     iget-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1398,7 +1228,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 388
     iget-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1411,7 +1240,6 @@
 
     move-result-wide v0
 
-    .line 390
     if-eqz p1, :cond_0
 
     sget v2, Lcom/android/server/enterprise/utils/PackageDownloader;->UNSPECIFIED:I
@@ -1422,7 +1250,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 391
     iget-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v2}, Lcom/android/server/enterprise/utils/PackageDownloader;->getDownloadManager(Landroid/content/Context;)Landroid/app/DownloadManager;
@@ -1431,7 +1258,6 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadManager:Landroid/app/DownloadManager;
 
-    .line 392
     iget-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadManager:Landroid/app/DownloadManager;
 
     const/4 v3, 0x1
@@ -1444,18 +1270,15 @@
 
     invoke-virtual {v2, v3}, Landroid/app/DownloadManager;->remove([J)I
 
-    .line 396
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/utils/PackageDownloader;->mDownloadQueueIdMap:Ljava/util/HashMap;
 
     invoke-virtual {v2, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 401
     :cond_1
     :goto_0
     return-void
 
-    .line 398
     :cond_2
     const-string v2, "PackageDownloader"
 

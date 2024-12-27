@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1954
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$13;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 1957
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsMiniCoverOpened:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$300()Z
 
@@ -49,20 +47,17 @@
 
     if-nez v0, :cond_0
 
-    .line 1958
     const/4 v0, 0x0
 
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsMiniDialogMode:Z
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->access$4802(Z)Z
 
-    .line 1959
     const-string v0, "GlobalActions"
 
     const-string/jumbo v1, "onCancel(), set mIsMiniDialogMode as false."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1961
     :cond_0
     return-void
 .end method

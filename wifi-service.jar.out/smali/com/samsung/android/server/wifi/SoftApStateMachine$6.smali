@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 704
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$6;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "networktype"    # I
 
     .prologue
-    .line 706
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$800()Z
 
@@ -47,7 +45,6 @@
 
     if-eqz v16, :cond_0
 
-    .line 707
     const-string v16, "SoftApStateMachine"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -88,7 +85,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 708
     :cond_0
     const/16 v16, 0x2
 
@@ -98,7 +94,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 709
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mIface:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1000()Ljava/lang/String;
 
@@ -111,7 +106,6 @@
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mTempMobileTxBytes:J
     invoke-static/range {v16 .. v17}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$902(J)J
 
-    .line 710
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mIface:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1000()Ljava/lang/String;
 
@@ -124,7 +118,6 @@
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mTempMobileRxBytes:J
     invoke-static/range {v16 .. v17}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1102(J)J
 
-    .line 711
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v16
@@ -132,28 +125,23 @@
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mStartTimeOfMobileData:J
     invoke-static/range {v16 .. v17}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1202(J)J
 
-    .line 712
     const/16 v16, 0x1
 
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->bUseMobileData:Z
     invoke-static/range {v16 .. v16}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1302(Z)Z
 
-    .line 713
     const/16 v16, 0x1
 
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->bIsFirstCall:Z
     invoke-static/range {v16 .. v16}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1402(Z)Z
 
-    .line 730
     :cond_1
     :goto_0
     return-void
 
-    .line 714
     :cond_2
     if-nez p1, :cond_1
 
-    .line 715
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->bIsFirstCall:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1400()Z
 
@@ -161,27 +149,23 @@
 
     if-eqz v16, :cond_1
 
-    .line 716
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mAmountTimeOfMobileData:J
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1500()J
 
     move-result-wide v10
 
-    .line 717
     .local v10, "tempAmountTimeOfMobileData":J
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mAmountMobileTxBytes:J
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1600()J
 
     move-result-wide v12
 
-    .line 718
     .local v12, "tempAmountTx":J
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mAmountMobileRxBytes:J
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1700()J
 
     move-result-wide v8
 
-    .line 719
     .local v8, "tempAmountRx":J
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mIface:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1000()Ljava/lang/String;
@@ -199,7 +183,6 @@
 
     sub-long v6, v16, v18
 
-    .line 720
     .local v6, "mEndTempMobileTxBytes":J
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mIface:Ljava/lang/String;
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1000()Ljava/lang/String;
@@ -217,25 +200,21 @@
 
     sub-long v4, v16, v18
 
-    .line 721
     .local v4, "mEndTempMobileRxBytes":J
     add-long v16, v12, v6
 
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mAmountMobileTxBytes:J
     invoke-static/range {v16 .. v17}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1602(J)J
 
-    .line 722
     add-long v16, v8, v4
 
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mAmountMobileRxBytes:J
     invoke-static/range {v16 .. v17}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1702(J)J
 
-    .line 723
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 724
     .local v2, "endTimeOfMobileData":J
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mStartTimeOfMobileData:J
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1200()J
@@ -248,20 +227,17 @@
 
     div-long v14, v16, v18
 
-    .line 725
     .local v14, "usedTimeOfMobileData":J
     add-long v16, v10, v14
 
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->mAmountTimeOfMobileData:J
     invoke-static/range {v16 .. v17}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1502(J)J
 
-    .line 726
     const/16 v16, 0x0
 
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->bUseMobileData:Z
     invoke-static/range {v16 .. v16}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$1302(Z)Z
 
-    .line 727
     const/16 v16, 0x0
 
     # setter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->bIsFirstCall:Z

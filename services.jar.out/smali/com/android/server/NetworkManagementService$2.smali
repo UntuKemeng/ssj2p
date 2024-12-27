@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 412
     iput-object p1, p0, Lcom/android/server/NetworkManagementService$2;->this$0:Lcom/android/server/NetworkManagementService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 6
 
     .prologue
-    .line 416
     :try_start_0
     iget-object v1, p0, Lcom/android/server/NetworkManagementService$2;->this$0:Lcom/android/server/NetworkManagementService;
 
@@ -63,7 +61,6 @@
 
     invoke-virtual {v1, v2, v3}, Lcom/android/server/NativeDaemonConnector;->execute(Ljava/lang/String;[Ljava/lang/Object;)Lcom/android/server/NativeDaemonEvent;
 
-    .line 417
     iget-object v1, p0, Lcom/android/server/NetworkManagementService$2;->this$0:Lcom/android/server/NetworkManagementService;
 
     const/4 v2, 0x1
@@ -73,7 +70,6 @@
     :try_end_0
     .catch Lcom/android/server/NativeDaemonConnectorException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 421
     :goto_0
     # getter for: Lcom/android/server/NetworkManagementService;->DBG:Z
     invoke-static {}, Lcom/android/server/NetworkManagementService;->access$100()Z
@@ -88,15 +84,12 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 422
     :cond_0
     return-void
 
-    .line 418
     :catch_0
     move-exception v0
 
-    .line 419
     .local v0, "e":Lcom/android/server/NativeDaemonConnectorException;
     const-string v1, "NetworkManagement"
 

@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 901
     iput-object p1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -39,7 +38,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 904
     const-string v0, "Magnifier.Border"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -64,12 +62,10 @@
 
     invoke-static {v0, v1}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 905
     iget v0, p1, Landroid/os/Message;->what:I
 
     if-nez v0, :cond_3
 
-    .line 907
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -79,7 +75,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 908
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewMagnifierPad:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$2600()Landroid/widget/ImageView;
 
@@ -91,7 +86,6 @@
 
     if-nez v0, :cond_0
 
-    .line 909
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -111,7 +105,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 910
     :cond_0
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewClose:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$2800()Landroid/widget/ImageView;
@@ -124,7 +117,6 @@
 
     if-nez v0, :cond_1
 
-    .line 911
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -144,7 +136,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 912
     :cond_1
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewHandle:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$3000()Landroid/widget/ImageView;
@@ -157,7 +148,6 @@
 
     if-nez v0, :cond_2
 
-    .line 913
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -177,12 +167,10 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 951
     :cond_2
     :goto_0
     return-void
 
-    .line 917
     :cond_3
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -190,7 +178,6 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 919
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -200,7 +187,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 920
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewClose:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$2800()Landroid/widget/ImageView;
 
@@ -219,7 +205,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 921
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -234,7 +219,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 922
     :cond_4
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewMagnifierPad:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$2600()Landroid/widget/ImageView;
@@ -254,7 +238,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 923
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -269,7 +252,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
 
-    .line 924
     :cond_5
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewScreenChange:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$3200()Landroid/widget/ImageView;
@@ -289,7 +271,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 925
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -306,7 +287,6 @@
 
     goto :goto_0
 
-    .line 927
     :cond_6
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -314,7 +294,6 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 929
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -324,7 +303,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 930
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewMagnifierPad:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$2600()Landroid/widget/ImageView;
 
@@ -336,7 +314,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 931
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -356,7 +333,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 932
     :cond_7
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewClose:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$2800()Landroid/widget/ImageView;
@@ -369,7 +345,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 933
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -389,7 +364,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 934
     :cond_8
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewHandle:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$3000()Landroid/widget/ImageView;
@@ -402,7 +376,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 935
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mWindowManager:Landroid/view/WindowManager;
@@ -424,7 +397,6 @@
 
     goto/16 :goto_0
 
-    .line 939
     :cond_9
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -432,7 +404,6 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 941
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewMagnifierPad:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$2600()Landroid/widget/ImageView;
 
@@ -444,7 +415,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 942
     # getter for: Lcom/android/server/display/MagnifierSurfaceControl$Border;->mImageViewClose:Landroid/widget/ImageView;
     invoke-static {}, Lcom/android/server/display/MagnifierSurfaceControl$Border;->access$2800()Landroid/widget/ImageView;
 
@@ -458,7 +428,6 @@
 
     goto/16 :goto_0
 
-    .line 945
     :cond_a
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -466,7 +435,6 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 946
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     new-instance v1, Landroid/view/GestureDetector;
@@ -493,7 +461,6 @@
 
     goto/16 :goto_0
 
-    .line 947
     :cond_b
     iget v0, p1, Landroid/os/Message;->what:I
 
@@ -501,7 +468,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 948
     iget-object v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$1;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     # invokes: Lcom/android/server/display/MagnifierSurfaceControl$Border;->handleTimeout()V

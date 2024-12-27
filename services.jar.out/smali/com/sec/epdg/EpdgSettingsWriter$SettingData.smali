@@ -27,15 +27,11 @@
     .param p2, "val"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 71
     iput-object p1, p0, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;->key:Ljava/lang/String;
 
-    .line 72
     iput-object p2, p0, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;->val:Ljava/lang/String;
 
-    .line 73
     return-void
 .end method

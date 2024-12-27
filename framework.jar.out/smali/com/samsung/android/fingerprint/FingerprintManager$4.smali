@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1287
     iput-object p1, p0, Lcom/samsung/android/fingerprint/FingerprintManager$4;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     invoke-direct {p0}, Lcom/samsung/android/fingerprint/IFingerprintClient$Stub;-><init>()V
@@ -43,10 +42,8 @@
     .end annotation
 
     .prologue
-    .line 1291
     move-object v1, p1
 
-    .line 1292
     .local v1, "mEvent":Lcom/samsung/android/fingerprint/FingerprintEvent;
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/fingerprint/FingerprintManager$4;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
@@ -58,7 +55,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1293
     iget-object v2, p0, Lcom/samsung/android/fingerprint/FingerprintManager$4;->this$0:Lcom/samsung/android/fingerprint/FingerprintManager;
 
     # getter for: Lcom/samsung/android/fingerprint/FingerprintManager;->mHandler:Landroid/os/Handler;
@@ -74,16 +70,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1329
     :cond_0
     :goto_0
     return-void
 
-    .line 1326
     :catch_0
     move-exception v0
 
-    .line 1327
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "FPMS_FingerprintManager"
 

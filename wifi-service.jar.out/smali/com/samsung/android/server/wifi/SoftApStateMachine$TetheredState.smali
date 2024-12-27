@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1179
     iput-object p1, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetheredState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -42,7 +41,6 @@
 
     const/4 v2, 0x0
 
-    .line 1183
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->DBG:Z
     invoke-static {}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$800()Z
 
@@ -84,7 +82,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1184
     :cond_0
     iget v3, p1, Landroid/os/Message;->what:I
 
@@ -92,18 +89,15 @@
 
     move v1, v2
 
-    .line 1206
     :cond_1
     :goto_0
     return v1
 
-    .line 1186
     :sswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetherStateChange;
 
-    .line 1187
     .local v0, "stateChange":Lcom/samsung/android/server/wifi/SoftApStateMachine$TetherStateChange;
     const-string v3, "SoftApStateMachine"
 
@@ -111,7 +105,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1188
     iget-object v3, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetheredState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     iget-object v4, v0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetherStateChange;->active:Ljava/util/ArrayList;
@@ -123,7 +116,6 @@
 
     if-nez v3, :cond_1
 
-    .line 1189
     iget-object v3, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetheredState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const-string v4, "Tethering reports wifi as untethered!, shut down soft Ap"
@@ -131,7 +123,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->loge(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$5900(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 1190
     iget-object v3, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetheredState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     const/4 v4, 0x0
@@ -140,7 +131,6 @@
 
     goto :goto_0
 
-    .line 1195
     .end local v0    # "stateChange":Lcom/samsung/android/server/wifi/SoftApStateMachine$TetherStateChange;
     :sswitch_1
     # getter for: Lcom/samsung/android/server/wifi/SoftApStateMachine;->DBG:Z
@@ -157,7 +147,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->log(Ljava/lang/String;)V
     invoke-static {v3, v4}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$6000(Lcom/samsung/android/server/wifi/SoftApStateMachine;Ljava/lang/String;)V
 
-    .line 1196
     :cond_2
     iget-object v3, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetheredState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
@@ -165,20 +154,17 @@
 
     invoke-virtual {v3, v4, v2}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->setWifiApState(II)V
 
-    .line 1197
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetheredState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->stopTethering()V
     invoke-static {v2}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$6100(Lcom/samsung/android/server/wifi/SoftApStateMachine;)V
 
-    .line 1198
     const-string v2, "SoftApStateMachine"
 
     const-string v3, "TetheredState enter and msg is CMD_STOP_AP and transition to unTetheringState"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1199
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetheredState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     iget-object v3, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetheredState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
@@ -191,7 +177,6 @@
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/samsung/android/server/wifi/SoftApStateMachine;->access$6300(Lcom/samsung/android/server/wifi/SoftApStateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1201
     iget-object v2, p0, Lcom/samsung/android/server/wifi/SoftApStateMachine$TetheredState;->this$0:Lcom/samsung/android/server/wifi/SoftApStateMachine;
 
     # invokes: Lcom/samsung/android/server/wifi/SoftApStateMachine;->deferMessage(Landroid/os/Message;)V
@@ -199,7 +184,6 @@
 
     goto :goto_0
 
-    .line 1184
     nop
 
     :sswitch_data_0

@@ -37,65 +37,54 @@
     .param p3, "format"    # Lorg/simpleframework/xml/stream/Format;
 
     .prologue
-    .line 110
     invoke-direct {p0}, Lorg/simpleframework/xml/core/TemplateLabel;-><init>()V
 
-    .line 111
     new-instance v0, Lorg/simpleframework/xml/core/Introspector;
 
     invoke-direct {v0, p1, p0, p3}, Lorg/simpleframework/xml/core/Introspector;-><init>(Lorg/simpleframework/xml/core/Contact;Lorg/simpleframework/xml/core/Label;Lorg/simpleframework/xml/stream/Format;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->detail:Lorg/simpleframework/xml/core/Introspector;
 
-    .line 112
     new-instance v0, Lorg/simpleframework/xml/core/Qualifier;
 
     invoke-direct {v0, p1}, Lorg/simpleframework/xml/core/Qualifier;-><init>(Lorg/simpleframework/xml/core/Contact;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->decorator:Lorg/simpleframework/xml/core/Decorator;
 
-    .line 113
     invoke-interface {p2}, Lorg/simpleframework/xml/Element;->required()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->required:Z
 
-    .line 114
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Contact;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->type:Ljava/lang/Class;
 
-    .line 115
     invoke-interface {p2}, Lorg/simpleframework/xml/Element;->name()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->override:Ljava/lang/String;
 
-    .line 116
     invoke-interface {p2}, Lorg/simpleframework/xml/Element;->type()Ljava/lang/Class;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->expect:Ljava/lang/Class;
 
-    .line 117
     invoke-interface {p2}, Lorg/simpleframework/xml/Element;->data()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->data:Z
 
-    .line 118
     iput-object p3, p0, Lorg/simpleframework/xml/core/ElementLabel;->format:Lorg/simpleframework/xml/stream/Format;
 
-    .line 119
     iput-object p2, p0, Lorg/simpleframework/xml/core/ElementLabel;->label:Lorg/simpleframework/xml/Element;
 
-    .line 120
     return-void
 .end method
 
@@ -105,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 250
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->label:Lorg/simpleframework/xml/Element;
 
     return-object v0
@@ -115,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 263
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->detail:Lorg/simpleframework/xml/core/Introspector;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/Introspector;->getContact()Lorg/simpleframework/xml/core/Contact;
@@ -135,12 +122,10 @@
     .end annotation
 
     .prologue
-    .line 164
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ElementLabel;->getContact()Lorg/simpleframework/xml/core/Contact;
 
     move-result-object v0
 
-    .line 166
     .local v0, "type":Lorg/simpleframework/xml/strategy/Type;
     invoke-interface {p1, v0}, Lorg/simpleframework/xml/core/Context;->isPrimitive(Lorg/simpleframework/xml/strategy/Type;)Z
 
@@ -148,16 +133,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 167
     new-instance v1, Lorg/simpleframework/xml/core/Primitive;
 
     invoke-direct {v1, p1, v0}, Lorg/simpleframework/xml/core/Primitive;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;)V
 
-    .line 172
     :goto_0
     return-object v1
 
-    .line 169
     :cond_0
     iget-object v1, p0, Lorg/simpleframework/xml/core/ElementLabel;->expect:Ljava/lang/Class;
 
@@ -165,14 +147,12 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 170
     new-instance v1, Lorg/simpleframework/xml/core/Composite;
 
     invoke-direct {v1, p1, v0}, Lorg/simpleframework/xml/core/Composite;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;)V
 
     goto :goto_0
 
-    .line 172
     :cond_1
     new-instance v1, Lorg/simpleframework/xml/core/Composite;
 
@@ -192,7 +172,6 @@
     .end annotation
 
     .prologue
-    .line 132
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->decorator:Lorg/simpleframework/xml/core/Decorator;
 
     return-object v0
@@ -203,7 +182,6 @@
     .param p1, "context"    # Lorg/simpleframework/xml/core/Context;
 
     .prologue
-    .line 186
     const/4 v0, 0x0
 
     return-object v0
@@ -218,12 +196,10 @@
     .end annotation
 
     .prologue
-    .line 235
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->cache:Lorg/simpleframework/xml/core/Expression;
 
     if-nez v0, :cond_0
 
-    .line 236
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->detail:Lorg/simpleframework/xml/core/Introspector;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/Introspector;->getExpression()Lorg/simpleframework/xml/core/Expression;
@@ -232,7 +208,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->cache:Lorg/simpleframework/xml/core/Expression;
 
-    .line 238
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->cache:Lorg/simpleframework/xml/core/Expression;
 
@@ -248,19 +223,16 @@
     .end annotation
 
     .prologue
-    .line 199
     iget-object v2, p0, Lorg/simpleframework/xml/core/ElementLabel;->name:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 200
     iget-object v2, p0, Lorg/simpleframework/xml/core/ElementLabel;->format:Lorg/simpleframework/xml/stream/Format;
 
     invoke-virtual {v2}, Lorg/simpleframework/xml/stream/Format;->getStyle()Lorg/simpleframework/xml/stream/Style;
 
     move-result-object v0
 
-    .line 201
     .local v0, "style":Lorg/simpleframework/xml/stream/Style;
     iget-object v2, p0, Lorg/simpleframework/xml/core/ElementLabel;->detail:Lorg/simpleframework/xml/core/Introspector;
 
@@ -268,7 +240,6 @@
 
     move-result-object v1
 
-    .line 203
     .local v1, "value":Ljava/lang/String;
     invoke-interface {v0, v1}, Lorg/simpleframework/xml/stream/Style;->getElement(Ljava/lang/String;)Ljava/lang/String;
 
@@ -276,7 +247,6 @@
 
     iput-object v2, p0, Lorg/simpleframework/xml/core/ElementLabel;->name:Ljava/lang/String;
 
-    .line 205
     .end local v0    # "style":Lorg/simpleframework/xml/stream/Style;
     .end local v1    # "value":Ljava/lang/String;
     :cond_0
@@ -289,7 +259,6 @@
     .locals 1
 
     .prologue
-    .line 276
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->override:Ljava/lang/String;
 
     return-object v0
@@ -304,23 +273,19 @@
     .end annotation
 
     .prologue
-    .line 217
     iget-object v2, p0, Lorg/simpleframework/xml/core/ElementLabel;->path:Ljava/lang/String;
 
     if-nez v2, :cond_0
 
-    .line 218
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ElementLabel;->getExpression()Lorg/simpleframework/xml/core/Expression;
 
     move-result-object v0
 
-    .line 219
     .local v0, "expression":Lorg/simpleframework/xml/core/Expression;
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ElementLabel;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 221
     .local v1, "name":Ljava/lang/String;
     invoke-interface {v0, v1}, Lorg/simpleframework/xml/core/Expression;->getElement(Ljava/lang/String;)Ljava/lang/String;
 
@@ -328,7 +293,6 @@
 
     iput-object v2, p0, Lorg/simpleframework/xml/core/ElementLabel;->path:Ljava/lang/String;
 
-    .line 223
     .end local v0    # "expression":Lorg/simpleframework/xml/core/Expression;
     .end local v1    # "name":Ljava/lang/String;
     :cond_0
@@ -341,17 +305,14 @@
     .locals 2
 
     .prologue
-    .line 290
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->expect:Ljava/lang/Class;
 
     sget-object v1, Ljava/lang/Void;->TYPE:Ljava/lang/Class;
 
     if-ne v0, v1, :cond_0
 
-    .line 291
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->type:Ljava/lang/Class;
 
-    .line 293
     :goto_0
     return-object v0
 
@@ -366,12 +327,10 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 146
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ElementLabel;->getContact()Lorg/simpleframework/xml/core/Contact;
 
     move-result-object v0
 
-    .line 148
     .local v0, "contact":Lorg/simpleframework/xml/strategy/Type;
     iget-object v1, p0, Lorg/simpleframework/xml/core/ElementLabel;->expect:Ljava/lang/Class;
 
@@ -379,7 +338,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 151
     .end local v0    # "contact":Lorg/simpleframework/xml/strategy/Type;
     :goto_0
     return-object v0
@@ -401,7 +359,6 @@
     .locals 1
 
     .prologue
-    .line 318
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->data:Z
 
     return v0
@@ -411,7 +368,6 @@
     .locals 1
 
     .prologue
-    .line 306
     iget-boolean v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->required:Z
 
     return v0
@@ -421,7 +377,6 @@
     .locals 1
 
     .prologue
-    .line 331
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementLabel;->detail:Lorg/simpleframework/xml/core/Introspector;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/Introspector;->toString()Ljava/lang/String;

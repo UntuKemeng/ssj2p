@@ -59,40 +59,30 @@
 
     const/4 v0, 0x0
 
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 69
     iput-object v1, p0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 70
     iput-object v1, p0, Lcom/android/server/am/VRApplicationPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
-    .line 73
     iput-boolean v0, p0, Lcom/android/server/am/VRApplicationPolicy;->mHMTconnected:Z
 
-    .line 74
     iput-boolean v0, p0, Lcom/android/server/am/VRApplicationPolicy;->mVRDevelopMode:Z
 
-    .line 77
     new-instance v0, Lcom/android/server/am/VRApplicationPolicy$H;
 
     invoke-direct {v0, p0}, Lcom/android/server/am/VRApplicationPolicy$H;-><init>(Lcom/android/server/am/VRApplicationPolicy;)V
 
     iput-object v0, p0, Lcom/android/server/am/VRApplicationPolicy;->mHandler:Lcom/android/server/am/VRApplicationPolicy$H;
 
-    .line 80
     iput-object p1, p0, Lcom/android/server/am/VRApplicationPolicy;->mContext:Landroid/content/Context;
 
-    .line 81
     iput-object p2, p0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 82
     iget-object v0, p2, Lcom/android/server/am/ActivityManagerService;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     iput-object v0, p0, Lcom/android/server/am/VRApplicationPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
-    .line 83
     return-void
 .end method
 
@@ -102,7 +92,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 54
     iput-boolean p1, p0, Lcom/android/server/am/VRApplicationPolicy;->mHMTconnected:Z
 
     return p1
@@ -113,7 +102,6 @@
     .param p0, "x0"    # Lcom/android/server/am/VRApplicationPolicy;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/am/VRApplicationPolicy;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -124,7 +112,6 @@
     .param p0, "x0"    # Lcom/android/server/am/VRApplicationPolicy;
 
     .prologue
-    .line 54
     iget-object v0, p0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
 
     return-object v0
@@ -135,7 +122,6 @@
     .param p0, "x0"    # Lcom/android/server/am/VRApplicationPolicy;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Lcom/android/server/am/VRApplicationPolicy;->comeOutOfVRmodeLocked()V
 
     return-void
@@ -147,7 +133,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 54
     invoke-direct {p0, p1}, Lcom/android/server/am/VRApplicationPolicy;->setVRFlingerStatus(Z)V
 
     return-void
@@ -157,14 +142,12 @@
     .locals 2
 
     .prologue
-    .line 225
     const-string v0, "VRApplicationPolicy"
 
     const-string v1, "comeOutOfVRmode"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
     return-void
 .end method
 
@@ -173,10 +156,8 @@
     .param p1, "r"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 179
     const/4 v0, 0x0
 
-    .line 180
     .local v0, "reason":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -196,7 +177,6 @@
 
     if-nez v1, :cond_2
 
-    .line 181
     if-eqz p1, :cond_0
 
     iget-object v1, p1, Lcom/android/server/am/ActivityRecord;->packageName:Ljava/lang/String;
@@ -239,15 +219,12 @@
 
     if-nez v1, :cond_0
 
-    .line 186
     const-string/jumbo v0, "setup_wizard"
 
-    .line 191
     :cond_0
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 192
     const-string v1, "VRApplicationPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -270,11 +247,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 194
     :cond_1
     return-object v0
 
-    .line 188
     :cond_2
     invoke-virtual {p0}, Lcom/android/server/am/VRApplicationPolicy;->isHMTconnected()Z
 
@@ -282,7 +257,6 @@
 
     if-nez v1, :cond_0
 
-    .line 189
     const-string/jumbo v0, "hmt"
 
     goto :goto_0
@@ -293,12 +267,10 @@
     .param p1, "flag"    # Z
 
     .prologue
-    .line 230
     iget-object v0, p0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v0, p1}, Lcom/android/server/am/ActivityManagerService;->setVRFlingerMode(Z)V
 
-    .line 231
     return-void
 .end method
 
@@ -312,22 +284,18 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 235
     iget-object v4, p0, Lcom/android/server/am/VRApplicationPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-virtual {v4, v6}, Lcom/android/server/am/ActivityStackSupervisor;->getVRStack(I)Lcom/android/server/am/ActivityStack;
 
     move-result-object v2
 
-    .line 236
     .local v2, "stack":Lcom/android/server/am/ActivityStack;
     const-string/jumbo v1, "vr"
 
-    .line 238
     .local v1, "reason":Ljava/lang/String;
     if-nez v2, :cond_1
 
-    .line 239
     iget-object v4, p0, Lcom/android/server/am/VRApplicationPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v5, p0, Lcom/android/server/am/VRApplicationPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
@@ -340,37 +308,31 @@
 
     move-result-object v0
 
-    .line 240
     .local v0, "as":Lcom/android/server/am/ActivityStack;
     if-nez v0, :cond_0
 
-    .line 241
     const-string v4, "VRApplicationPolicy"
 
     const-string v5, "adjustStackFocus: Can\'t create vr stack because there is no default display"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
     iget-object v4, p0, Lcom/android/server/am/VRApplicationPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-virtual {v4}, Lcom/android/server/am/ActivityStackSupervisor;->getHomeStack()Lcom/android/server/am/ActivityStack;
 
     move-result-object v4
 
-    .line 255
     .end local v0    # "as":Lcom/android/server/am/ActivityStack;
     :goto_0
     return-object v4
 
-    .line 244
     .restart local v0    # "as":Lcom/android/server/am/ActivityStack;
     :cond_0
     invoke-virtual {v0}, Lcom/android/server/am/ActivityStack;->getStackId()I
 
     move-result v3
 
-    .line 248
     .local v3, "stackId":I
     iget-object v4, p0, Lcom/android/server/am/VRApplicationPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -378,22 +340,18 @@
 
     move-result-object v2
 
-    .line 249
     const/4 v4, 0x1
 
     iput-boolean v4, v2, Lcom/android/server/am/ActivityStack;->mVRStack:Z
 
-    .line 250
     iget-object v4, p0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v4, v4, Lcom/android/server/am/ActivityManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
 
     invoke-virtual {v4, v3}, Lcom/android/server/wm/WindowManagerService;->setToVRStack(I)V
 
-    .line 251
     const-string v1, "create vr"
 
-    .line 254
     .end local v0    # "as":Lcom/android/server/am/ActivityStack;
     .end local v3    # "stackId":I
     :cond_1
@@ -403,7 +361,6 @@
 
     move-object v4, v2
 
-    .line 255
     goto :goto_0
 .end method
 
@@ -411,14 +368,12 @@
     .locals 2
 
     .prologue
-    .line 259
     iget-object v1, p0, Lcom/android/server/am/VRApplicationPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     invoke-virtual {v1}, Lcom/android/server/am/ActivityStackSupervisor;->topRunningActivityLocked()Lcom/android/server/am/ActivityRecord;
 
     move-result-object v0
 
-    .line 260
     .local v0, "top":Lcom/android/server/am/ActivityRecord;
     if-eqz v0, :cond_0
 
@@ -434,10 +389,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 261
     const/4 v1, 0x1
 
-    .line 263
     :goto_0
     return v1
 
@@ -451,7 +404,6 @@
     .locals 2
 
     .prologue
-    .line 175
     const-string/jumbo v0, "sys.hmt.connected"
 
     const/4 v1, 0x0
@@ -469,17 +421,14 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 198
     const-string v0, "com.samsung.android.hmt.vrsvc"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 199
     const/high16 v0, 0x10000000
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 201
     const-string v0, "VRApplicationPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -502,7 +451,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 203
     iget-object v0, p0, Lcom/android/server/am/VRApplicationPolicy;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/os/UserHandle;
@@ -511,7 +459,6 @@
 
     invoke-virtual {v0, p1, v1}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 204
     return-void
 .end method
 
@@ -523,23 +470,19 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 207
     invoke-direct {p0, p1}, Lcom/android/server/am/VRApplicationPolicy;->getReasonForCancelingVRActivityLocked(Lcom/android/server/am/ActivityRecord;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 208
     .local v7, "reason":Ljava/lang/String;
     if-eqz v7, :cond_0
 
-    .line 209
     new-instance v8, Landroid/content/Intent;
 
     const-string v0, "com.samsung.intent.action.HMT_PENDING_LAUNCH"
 
     invoke-direct {v8, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 210
     .local v8, "restartIntent":Landroid/content/Intent;
     iget-object v0, p0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
 
@@ -561,23 +504,19 @@
 
     move-result-object v6
 
-    .line 213
     .local v6, "pendingIntent":Landroid/app/PendingIntent;
     const-string/jumbo v0, "reason"
 
     invoke-virtual {v8, v0, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 214
     const-string/jumbo v0, "restart_intent"
 
     invoke-virtual {v8, v0, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 216
     iget v0, p1, Lcom/android/server/am/ActivityRecord;->userId:I
 
     invoke-virtual {p0, v8, v0}, Lcom/android/server/am/VRApplicationPolicy;->notifyToVRServiceLocked(Landroid/content/Intent;I)V
 
-    .line 218
     const-string v0, "VRApplicationPolicy"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -600,7 +539,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 221
     .end local v6    # "pendingIntent":Landroid/app/PendingIntent;
     .end local v8    # "restartIntent":Landroid/content/Intent;
     :goto_0
@@ -617,14 +555,12 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 151
     const-string v1, "VRApplicationPolicy"
 
     const-string/jumbo v3, "start VR Home"
 
     invoke-static {v1, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 152
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/VRApplicationPolicy;->mContext:Landroid/content/Context;
@@ -639,33 +575,27 @@
 
     move-result-object v26
 
-    .line 153
     .local v26, "vrHomeName":Ljava/lang/String;
     if-eqz v26, :cond_1
 
-    .line 154
     invoke-static/range {v26 .. v26}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v25
 
-    .line 155
     .local v25, "vrHome":Landroid/content/ComponentName;
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 156
     .local v2, "intent":Landroid/content/Intent;
     move-object/from16 v0, v25
 
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 157
     const/high16 v1, 0x10000000
 
     invoke-virtual {v2, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 159
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -684,11 +614,9 @@
 
     move-result-object v7
 
-    .line 160
     .local v7, "aInfo":Landroid/content/pm/ActivityInfo;
     if-eqz v7, :cond_0
 
-    .line 161
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -703,7 +631,6 @@
 
     iput-object v1, v7, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 162
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -752,17 +679,14 @@
 
     invoke-virtual/range {v3 .. v24}, Lcom/android/server/am/ActivityStackSupervisor;->startActivityLocked(Landroid/app/IApplicationThread;Landroid/content/Intent;Ljava/lang/String;Landroid/content/pm/ActivityInfo;Landroid/service/voice/IVoiceInteractionSession;Lcom/android/internal/app/IVoiceInteractor;Landroid/os/IBinder;Ljava/lang/String;IIILjava/lang/String;IIILandroid/os/Bundle;ZZ[Lcom/android/server/am/ActivityRecord;Lcom/android/server/am/ActivityStackSupervisor$ActivityContainer;Lcom/android/server/am/TaskRecord;)I
 
-    .line 164
     const/4 v1, 0x1
 
-    .line 171
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v7    # "aInfo":Landroid/content/pm/ActivityInfo;
     .end local v25    # "vrHome":Landroid/content/ComponentName;
     :goto_0
     return v1
 
-    .line 166
     .restart local v2    # "intent":Landroid/content/Intent;
     .restart local v7    # "aInfo":Landroid/content/pm/ActivityInfo;
     .restart local v25    # "vrHome":Landroid/content/ComponentName;
@@ -791,7 +715,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v7    # "aInfo":Landroid/content/pm/ActivityInfo;
     .end local v25    # "vrHome":Landroid/content/ComponentName;
@@ -800,7 +723,6 @@
 
     goto :goto_0
 
-    .line 169
     :cond_1
     const-string v1, "VRApplicationPolicy"
 
@@ -817,23 +739,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 86
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 87
     .local v0, "dockFilter":Landroid/content/IntentFilter;
     const-string v4, "com.samsung.intent.action.HMT_CONNECTED"
 
     invoke-virtual {v0, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 88
     const-string v4, "com.samsung.intent.action.HMT_DISCONNECTED"
 
     invoke-virtual {v0, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 89
     iget-object v4, p0, Lcom/android/server/am/VRApplicationPolicy;->mContext:Landroid/content/Context;
 
     new-instance v5, Lcom/android/server/am/VRApplicationPolicy$1;
@@ -842,10 +760,8 @@
 
     invoke-virtual {v4, v5, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 103
     const/4 v2, 0x0
 
-    .line 104
     .local v2, "vrDevelopMode":Z
     iget-object v4, p0, Lcom/android/server/am/VRApplicationPolicy;->mContext:Landroid/content/Context;
 
@@ -853,7 +769,6 @@
 
     move-result-object v1
 
-    .line 106
     .local v1, "resolver":Landroid/content/ContentResolver;
     const-string/jumbo v4, "vrmode_developer_mode"
 
@@ -865,7 +780,6 @@
 
     const/4 v2, 0x1
 
-    .line 107
     :goto_0
     new-instance v4, Lcom/android/server/am/VRApplicationPolicy$VRSettingsObserver;
 
@@ -873,7 +787,6 @@
 
     iput-object v4, p0, Lcom/android/server/am/VRApplicationPolicy;->mVRSettingsObserver:Lcom/android/server/am/VRApplicationPolicy$VRSettingsObserver;
 
-    .line 108
     const-string/jumbo v4, "vrmode_developer_mode"
 
     invoke-static {v4}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -884,28 +797,22 @@
 
     invoke-virtual {v1, v4, v3, v5}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 111
     iget-object v4, p0, Lcom/android/server/am/VRApplicationPolicy;->mService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v4
 
-    .line 112
     :try_start_0
     iput-boolean v2, p0, Lcom/android/server/am/VRApplicationPolicy;->mVRDevelopMode:Z
 
-    .line 113
     monitor-exit v4
 
-    .line 114
     return-void
 
     :cond_0
     move v2, v3
 
-    .line 106
     goto :goto_0
 
-    .line 113
     :catchall_0
     move-exception v3
 

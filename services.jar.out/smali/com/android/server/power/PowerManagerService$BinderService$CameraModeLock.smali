@@ -29,16 +29,12 @@
     .param p2, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 6789
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$BinderService$CameraModeLock;->this$1:Lcom/android/server/power/PowerManagerService$BinderService;
 
-    .line 6790
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 6791
     iput-object p2, p0, Lcom/android/server/power/PowerManagerService$BinderService$CameraModeLock;->binder:Landroid/os/IBinder;
 
-    .line 6793
     const/4 v1, 0x0
 
     :try_start_0
@@ -46,15 +42,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6797
     :goto_0
     return-void
 
-    .line 6794
     :catch_0
     move-exception v0
 
-    .line 6795
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {p0}, Lcom/android/server/power/PowerManagerService$BinderService$CameraModeLock;->binderDied()V
 
@@ -67,7 +60,6 @@
     .locals 3
 
     .prologue
-    .line 6799
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$BinderService$CameraModeLock;->this$1:Lcom/android/server/power/PowerManagerService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/power/PowerManagerService$BinderService;->this$0:Lcom/android/server/power/PowerManagerService;
@@ -79,7 +71,6 @@
 
     monitor-enter v1
 
-    .line 6800
     :try_start_0
     const-string v0, "PowerManagerService"
 
@@ -87,7 +78,6 @@
 
     invoke-static {v0, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6801
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$BinderService$CameraModeLock;->this$1:Lcom/android/server/power/PowerManagerService$BinderService;
 
     const/4 v2, 0x0
@@ -95,7 +85,6 @@
     # setter for: Lcom/android/server/power/PowerManagerService$BinderService;->mCameraModeLock:Lcom/android/server/power/PowerManagerService$BinderService$CameraModeLock;
     invoke-static {v0, v2}, Lcom/android/server/power/PowerManagerService$BinderService;->access$13402(Lcom/android/server/power/PowerManagerService$BinderService;Lcom/android/server/power/PowerManagerService$BinderService$CameraModeLock;)Lcom/android/server/power/PowerManagerService$BinderService$CameraModeLock;
 
-    .line 6802
     iget-object v0, p0, Lcom/android/server/power/PowerManagerService$BinderService$CameraModeLock;->this$1:Lcom/android/server/power/PowerManagerService$BinderService;
 
     iget-object v0, v0, Lcom/android/server/power/PowerManagerService$BinderService;->this$0:Lcom/android/server/power/PowerManagerService;
@@ -109,13 +98,10 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/lights/LightsManager;->setCameraRearMode(Z)V
 
-    .line 6803
     monitor-exit v1
 
-    .line 6804
     return-void
 
-    .line 6803
     :catchall_0
     move-exception v0
 

@@ -31,10 +31,8 @@
     .locals 0
 
     .prologue
-    .line 145
     .local p0, "this":Lorg/simpleframework/xml/util/Dictionary$Table;, "Lorg/simpleframework/xml/util/Dictionary$Table<TT;>;"
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 146
     return-void
 .end method

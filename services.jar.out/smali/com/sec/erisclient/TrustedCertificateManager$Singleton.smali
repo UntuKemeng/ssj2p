@@ -23,7 +23,6 @@
     .locals 2
 
     .prologue
-    .line 66
     new-instance v0, Lcom/sec/erisclient/TrustedCertificateManager;
 
     const/4 v1, 0x0
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

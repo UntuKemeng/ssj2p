@@ -189,7 +189,6 @@
     .locals 2
 
     .prologue
-    .line 89
     const-string v0, "GpsLocationProvider_ex"
 
     const/4 v1, 0x2
@@ -215,171 +214,132 @@
 
     const/4 v1, 0x0
 
-    .line 197
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->SERVER_PORT:I
 
-    .line 100
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->socket:Ljava/net/DatagramSocket;
 
-    .line 101
     iput-boolean v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isUDPListen:Z
 
-    .line 104
     iput-boolean v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsSKAF:Z
 
-    .line 105
     iput-boolean v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsKtGps:Z
 
-    .line 108
     iput v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->ktPositionMode:I
 
-    .line 109
     const-string/jumbo v0, "wpde.nate.com"
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->sktSuplAddr:Ljava/lang/String;
 
-    .line 110
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->sktSuplPort:I
 
-    .line 111
     const-string/jumbo v0, "supl.google.com"
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->googleSuplAddr:Ljava/lang/String;
 
-    .line 112
     const/16 v0, 0x1c6c
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->googleSuplPort:I
 
-    .line 115
     const/16 v0, 0x12e
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mccTLS:I
 
-    .line 116
     const/16 v0, 0xdc
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mncTLS1:I
 
-    .line 117
     const/16 v0, 0xdd
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mncTLS2:I
 
-    .line 120
     iput-boolean v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsSetAutoSuplServer:Z
 
-    .line 122
     const-string v0, "MSBASED"
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mPositionModeFromCSC:Ljava/lang/String;
 
-    .line 123
     const-string/jumbo v0, "supl.google.com"
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplAddress:Ljava/lang/String;
 
-    .line 124
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplPort:I
 
-    .line 125
     const/4 v0, 0x3
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplType:I
 
-    .line 126
     iput v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplSslMode:I
 
-    .line 127
     iput v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplSslType:I
 
-    .line 128
     iput v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplServerFromCSC:I
 
-    .line 130
     iput v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mCurrentMobileType:I
 
-    .line 166
     iput-boolean v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
-    .line 175
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
 
-    .line 183
     new-array v0, v2, [J
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->exerciseTimestamp:[J
 
-    .line 184
     new-array v0, v2, [D
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->exerciseLatitude:[D
 
-    .line 185
     new-array v0, v2, [D
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->exerciseLongtitude:[D
 
-    .line 186
     new-array v0, v2, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->exerciseAltitude:[F
 
-    .line 187
     new-array v0, v2, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->exercisePressure:[F
 
-    .line 188
     new-array v0, v2, [F
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->exerciseSpeed:[F
 
-    .line 189
     new-array v0, v2, [D
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->exercisePedoDistance:[D
 
-    .line 190
     new-array v0, v2, [D
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->exercisePedoSpeed:[D
 
-    .line 191
     new-array v0, v2, [J
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->exercisePedoStepCount:[J
 
-    .line 194
     const-string v0, "Jio 4G"
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->RJILALPHA:Ljava/lang/String;
 
-    .line 195
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->prevLppMask:I
 
-    .line 2137
     new-instance v0, Lcom/android/server/location/GpsLocationProvider_samsung$2;
 
     invoke-direct {v0, p0}, Lcom/android/server/location/GpsLocationProvider_samsung$2;-><init>(Lcom/android/server/location/GpsLocationProvider_samsung;)V
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationProvider:Landroid/location/IExerciseLocationProvider;
 
-    .line 198
     iput-boolean v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseStarted:Z
 
-    .line 199
     return-void
 .end method
 
@@ -388,7 +348,6 @@
     .param p0, "x0"    # Lcom/android/server/location/GpsLocationProvider_samsung;
 
     .prologue
-    .line 84
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isUDPListen:Z
 
     return v0
@@ -399,7 +358,6 @@
     .param p0, "x0"    # Lcom/android/server/location/GpsLocationProvider_samsung;
 
     .prologue
-    .line 84
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
 
     return-object v0
@@ -409,14 +367,12 @@
     .locals 3
 
     .prologue
-    .line 1879
     const-string v1, "GpsLocationProvider_ex"
 
     const-string/jumbo v2, "start UDP socket"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1880
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/location/GpsLocationProvider_samsung$1;
@@ -425,11 +381,9 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 1912
     .local v0, "thread":Ljava/lang/Thread;
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 1913
     return-void
 .end method
 
@@ -437,14 +391,12 @@
     .locals 4
 
     .prologue
-    .line 1634
     const-string v2, "GpsLocationProvider_ex"
 
     const-string v3, "deleteSecGpsConf"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1637
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -452,7 +404,6 @@
 
     invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1638
     .local v1, "file":Ljava/io/File;
     if-eqz v1, :cond_0
 
@@ -462,10 +413,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 1639
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 1640
     const-string v2, "GpsLocationProvider_ex"
 
     const-string/jumbo v3, "secgps.conf deleted"
@@ -474,17 +423,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1645
     .end local v1    # "file":Ljava/io/File;
     :cond_0
     :goto_0
     return-void
 
-    .line 1642
     :catch_0
     move-exception v0
 
-    .line 1643
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "GpsLocationProvider_ex"
 
@@ -499,17 +445,14 @@
     .locals 5
 
     .prologue
-    .line 518
     const-string v3, "GpsLocationProvider_ex"
 
     const-string v4, "extChnSelectPositionMode() start"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 519
     const/4 v1, 0x0
 
-    .line 521
     .local v1, "chnPositionMode":I
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -519,7 +462,6 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 522
     iget-object v3, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     const-string/jumbo v4, "phone"
@@ -530,13 +472,11 @@
 
     check-cast v2, Landroid/telephony/TelephonyManager;
 
-    .line 523
     .local v2, "phone":Landroid/telephony/TelephonyManager;
     invoke-virtual {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->extension_CMCCxtraDownloadRequest()Z
 
     move-result v0
 
-    .line 525
     .local v0, "agpsSwitchOff":Z
     invoke-virtual {v2}, Landroid/telephony/TelephonyManager;->getNetworkType()I
 
@@ -548,7 +488,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 526
     :cond_0
     const-string v3, "GpsLocationProvider_ex"
 
@@ -556,10 +495,8 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 527
     const/4 v1, 0x0
 
-    .line 534
     .end local v0    # "agpsSwitchOff":Z
     .end local v2    # "phone":Landroid/telephony/TelephonyManager;
     :cond_1
@@ -588,22 +525,18 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 535
     :cond_2
     const/4 v1, 0x0
 
-    .line 536
     const-string v3, "GpsLocationProvider_ex"
 
     const-string v4, "extChnSelectPositionMode, set with STANDALONE for CU and OPEN"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 539
     :cond_3
     return v1
 
-    .line 529
     .restart local v0    # "agpsSwitchOff":Z
     .restart local v2    # "phone":Landroid/telephony/TelephonyManager;
     :cond_4
@@ -613,7 +546,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 530
     const/4 v1, 0x1
 
     goto :goto_0
@@ -628,10 +560,8 @@
 
     const/4 v4, 0x0
 
-    .line 493
     move v12, p1
 
-    .line 494
     .local v12, "mPositionMode":I
     const-string v0, "GpsLocationProvider_ex"
 
@@ -639,44 +569,36 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 495
     const/4 v12, 0x1
 
-    .line 496
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->getSKAFEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 498
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, " SKT GPS mode : SUPL 2.0"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 499
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSktSuplVer()V
 
-    .line 508
     :goto_0
     return v12
 
-    .line 500
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsKtGps:Z
 
     if-eqz v0, :cond_1
 
-    .line 501
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, " KT GPS mode : SUPL2.0"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 502
     const/4 v1, 0x3
 
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mKTSuplServerHost:Ljava/lang/String;
@@ -693,7 +615,6 @@
 
     goto :goto_0
 
-    .line 504
     :cond_1
     const-string v0, "GpsLocationProvider_ex"
 
@@ -701,10 +622,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 505
     invoke-direct {p0, v9}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_agps_xtra_set(I)V
 
-    .line 506
     const/4 v6, 0x4
 
     iget-object v7, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplAddress:Ljava/lang/String;
@@ -728,7 +647,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1508
     const-string/jumbo v2, "ril.product_code"
 
     const-string/jumbo v3, "none"
@@ -737,11 +655,9 @@
 
     move-result-object v0
 
-    .line 1509
     .local v0, "productCode":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 1510
     const-string v2, "ECO"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -774,12 +690,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 1531
     :cond_0
     :goto_0
     return v1
 
-    .line 1521
     :cond_1
     const-string v2, "COB"
 
@@ -797,7 +711,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1531
     :cond_2
     const/4 v1, 0x0
 
@@ -812,34 +725,28 @@
 
     const/4 v5, 0x0
 
-    .line 774
     const/4 v4, -0x1
 
-    .line 775
     .local v4, "ret":I
     invoke-static {v5}, Lcom/samsung/android/telephony/MultiSimManager;->getSimOperatorName(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 776
     .local v0, "op1":Ljava/lang/String;
     invoke-static {v5}, Lcom/samsung/android/telephony/MultiSimManager;->getSimOperator(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 777
     .local v1, "op1_mnc":Ljava/lang/String;
     invoke-static {v6}, Lcom/samsung/android/telephony/MultiSimManager;->getSimOperatorName(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 778
     .local v2, "op2":Ljava/lang/String;
     invoke-static {v6}, Lcom/samsung/android/telephony/MultiSimManager;->getSimOperator(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 780
     .local v3, "op2_mnc":Ljava/lang/String;
     const-string v5, "GpsLocationProvider_ex"
 
@@ -873,7 +780,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 781
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -906,7 +812,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 783
     const-string v5, "Jio 4G"
 
     invoke-virtual {v0, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
@@ -923,7 +828,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 784
     :cond_0
     const-string v5, "GpsLocationProvider_ex"
 
@@ -931,15 +835,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 785
     const/4 v4, 0x7
 
-    .line 800
     :cond_1
     :goto_0
     return v4
 
-    .line 786
     :cond_2
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -949,14 +850,12 @@
 
     if-ne v5, v6, :cond_6
 
-    .line 787
     const-string v5, "GpsLocationProvider_ex"
 
     const-string/jumbo v6, "getVendor: TUR"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 788
     const-string v5, "28601"
 
     invoke-virtual {v5, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -973,7 +872,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 789
     :cond_3
     const-string v5, "GpsLocationProvider_ex"
 
@@ -981,12 +879,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 790
     const/4 v4, 0x7
 
     goto :goto_0
 
-    .line 792
     :cond_4
     const-string v5, "28602"
 
@@ -1004,7 +900,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 793
     :cond_5
     const-string v5, "GpsLocationProvider_ex"
 
@@ -1012,12 +907,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 794
     const/4 v4, 0x7
 
     goto :goto_0
 
-    .line 796
     :cond_6
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -1027,14 +920,12 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 797
     const-string v5, "GpsLocationProvider_ex"
 
     const-string v6, "No Operator LPP Disable"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 798
     const/4 v4, 0x0
 
     goto :goto_0
@@ -1044,7 +935,6 @@
     .locals 3
 
     .prologue
-    .line 449
     const-string v0, "GpsLocationProvider_ex"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1069,7 +959,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 450
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsSKAF:Z
 
     return v0
@@ -1081,17 +970,14 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 1100
     const-string v8, "GpsLocationProvider_ex"
 
     const-string/jumbo v9, "getSuplServerFromCSC"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1101
     iput v11, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplServerFromCSC:I
 
-    .line 1104
     :try_start_0
     new-instance v5, Ljava/io/File;
 
@@ -1099,7 +985,6 @@
 
     invoke-direct {v5, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1105
     .local v5, "file":Ljava/io/File;
     if-eqz v5, :cond_1
 
@@ -1109,7 +994,6 @@
 
     if-nez v8, :cond_1
 
-    .line 1106
     const-string v8, "GpsLocationProvider_ex"
 
     const-string v9, " file doesn\'t exist : /data/system/gps/cscgps.conf"
@@ -1118,17 +1002,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1164
     .end local v5    # "file":Ljava/io/File;
     :cond_0
     :goto_0
     return-void
 
-    .line 1109
     :catch_0
     move-exception v4
 
-    .line 1110
     .local v4, "e":Ljava/lang/Exception;
     const-string v8, "GpsLocationProvider_ex"
 
@@ -1136,14 +1017,12 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1113
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_1
     new-instance v6, Ljava/util/Properties;
 
     invoke-direct {v6}, Ljava/util/Properties;-><init>()V
 
-    .line 1115
     .local v6, "mProperties_cscgps":Ljava/util/Properties;
     :try_start_1
     new-instance v5, Ljava/io/File;
@@ -1152,7 +1031,6 @@
 
     invoke-direct {v5, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1116
     .restart local v5    # "file":Ljava/io/File;
     new-instance v7, Ljava/io/FileInputStream;
 
@@ -1160,7 +1038,6 @@
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 1118
     .local v7, "stream":Ljava/io/FileInputStream;
     :try_start_2
     invoke-virtual {v6, v7}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
@@ -1168,17 +1045,14 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1124
     if-eqz v7, :cond_2
 
-    .line 1125
     :try_start_3
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 1134
     .end local v5    # "file":Ljava/io/File;
     .end local v7    # "stream":Ljava/io/FileInputStream;
     :cond_2
@@ -1189,7 +1063,6 @@
 
     move-result-object v1
 
-    .line 1135
     .local v1, "SuplServerFromCSC_s":Ljava/lang/String;
     if-eqz v1, :cond_3
 
@@ -1199,7 +1072,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 1137
     :try_start_4
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1209,7 +1081,6 @@
     :try_end_4
     .catch Ljava/lang/NumberFormatException; {:try_start_4 .. :try_end_4} :catch_6
 
-    .line 1144
     :cond_3
     :goto_2
     iget v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplServerFromCSC:I
@@ -1218,7 +1089,6 @@
 
     if-ne v8, v9, :cond_4
 
-    .line 1145
     const-string v8, "CSC_SUPL_OPMODE"
 
     invoke-virtual {v6, v8}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
@@ -1227,7 +1097,6 @@
 
     iput-object v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mPositionModeFromCSC:Ljava/lang/String;
 
-    .line 1146
     const-string v8, "CSC_SUPL_HOST"
 
     invoke-virtual {v6, v8}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
@@ -1236,7 +1105,6 @@
 
     iput-object v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplAddress:Ljava/lang/String;
 
-    .line 1148
     const-string v8, "CSC_SUPL_VER"
 
     const-string v9, "1"
@@ -1245,7 +1113,6 @@
 
     move-result-object v3
 
-    .line 1149
     .local v3, "SuplType_s":Ljava/lang/String;
     const-string v8, "CSC_SUPL_PORT"
 
@@ -1255,7 +1122,6 @@
 
     move-result-object v0
 
-    .line 1150
     .local v0, "SuplPort_s":Ljava/lang/String;
     const-string v8, "CSC_SUPL_SSL"
 
@@ -1265,7 +1131,6 @@
 
     move-result-object v2
 
-    .line 1153
     .local v2, "SuplSslMode_s":Ljava/lang/String;
     :try_start_5
     invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -1274,14 +1139,12 @@
 
     iput v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplType:I
 
-    .line 1154
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v8
 
     iput v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplPort:I
 
-    .line 1155
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v8
@@ -1290,7 +1153,6 @@
     :try_end_5
     .catch Ljava/lang/NumberFormatException; {:try_start_5 .. :try_end_5} :catch_7
 
-    .line 1163
     .end local v0    # "SuplPort_s":Ljava/lang/String;
     .end local v2    # "SuplSslMode_s":Ljava/lang/String;
     .end local v3    # "SuplType_s":Ljava/lang/String;
@@ -1322,14 +1184,12 @@
 
     goto/16 :goto_0
 
-    .line 1126
     .end local v1    # "SuplServerFromCSC_s":Ljava/lang/String;
     .restart local v5    # "file":Ljava/io/File;
     .restart local v7    # "stream":Ljava/io/FileInputStream;
     :catch_1
     move-exception v4
 
-    .line 1127
     .restart local v4    # "e":Ljava/lang/Exception;
     :try_start_6
     const-string v8, "GpsLocationProvider_ex"
@@ -1342,14 +1202,12 @@
 
     goto :goto_1
 
-    .line 1130
     .end local v4    # "e":Ljava/lang/Exception;
     .end local v5    # "file":Ljava/io/File;
     .end local v7    # "stream":Ljava/io/FileInputStream;
     :catch_2
     move-exception v4
 
-    .line 1131
     .local v4, "e":Ljava/io/IOException;
     const-string v8, "GpsLocationProvider_ex"
 
@@ -1359,14 +1217,12 @@
 
     goto :goto_1
 
-    .line 1119
     .end local v4    # "e":Ljava/io/IOException;
     .restart local v5    # "file":Ljava/io/File;
     .restart local v7    # "stream":Ljava/io/FileInputStream;
     :catch_3
     move-exception v4
 
-    .line 1120
     .local v4, "e":Ljava/lang/Exception;
     :try_start_7
     const-string v8, "GpsLocationProvider_ex"
@@ -1377,10 +1233,8 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 1124
     if-eqz v7, :cond_0
 
-    .line 1125
     :try_start_8
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
     :try_end_8
@@ -1389,11 +1243,9 @@
 
     goto/16 :goto_0
 
-    .line 1126
     :catch_4
     move-exception v4
 
-    .line 1127
     :try_start_9
     const-string v8, "GpsLocationProvider_ex"
 
@@ -1405,32 +1257,26 @@
 
     goto/16 :goto_0
 
-    .line 1123
     .end local v4    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v8
 
-    .line 1124
     if-eqz v7, :cond_5
 
-    .line 1125
     :try_start_a
     invoke-virtual {v7}, Ljava/io/FileInputStream;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_5
     .catch Ljava/io/IOException; {:try_start_a .. :try_end_a} :catch_2
 
-    .line 1128
     :cond_5
     :goto_4
     :try_start_b
     throw v8
 
-    .line 1126
     :catch_5
     move-exception v4
 
-    .line 1127
     .restart local v4    # "e":Ljava/lang/Exception;
     const-string v9, "GpsLocationProvider_ex"
 
@@ -1442,7 +1288,6 @@
 
     goto :goto_4
 
-    .line 1138
     .end local v4    # "e":Ljava/lang/Exception;
     .end local v5    # "file":Ljava/io/File;
     .end local v7    # "stream":Ljava/io/FileInputStream;
@@ -1450,11 +1295,9 @@
     :catch_6
     move-exception v4
 
-    .line 1139
     .local v4, "e":Ljava/lang/NumberFormatException;
     iput v11, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplServerFromCSC:I
 
-    .line 1140
     const-string v8, "GpsLocationProvider_ex"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1481,7 +1324,6 @@
 
     goto/16 :goto_2
 
-    .line 1157
     .end local v4    # "e":Ljava/lang/NumberFormatException;
     .restart local v0    # "SuplPort_s":Ljava/lang/String;
     .restart local v2    # "SuplSslMode_s":Ljava/lang/String;
@@ -1489,11 +1331,9 @@
     :catch_7
     move-exception v4
 
-    .line 1158
     .restart local v4    # "e":Ljava/lang/NumberFormatException;
     iput v11, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplServerFromCSC:I
 
-    .line 1159
     const-string v8, "GpsLocationProvider_ex"
 
     const-string v9, "[NumberFormatException] failed to convert supl information"
@@ -1507,14 +1347,12 @@
     .locals 3
 
     .prologue
-    .line 316
     const-string/jumbo v2, "ro.csc.sales_code"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 317
     .local v0, "code":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -1524,7 +1362,6 @@
 
     if-nez v2, :cond_1
 
-    .line 318
     :cond_0
     const-string/jumbo v2, "ril.sales_code"
 
@@ -1532,11 +1369,9 @@
 
     move-result-object v0
 
-    .line 320
     :cond_1
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->NO_OPERATOR:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
-    .line 322
     .local v1, "vendor":Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
     const-string v2, "TMB"
 
@@ -1546,15 +1381,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 323
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->USA_TMO:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
-    .line 365
     :cond_2
     :goto_0
     return-object v1
 
-    .line 324
     :cond_3
     const-string v2, "ATT"
 
@@ -1564,12 +1396,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 325
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->USA_ATT:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto :goto_0
 
-    .line 326
     :cond_4
     const-string v2, "DCM"
 
@@ -1579,12 +1409,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 327
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->JPN_DCM:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto :goto_0
 
-    .line 328
     :cond_5
     const-string v2, "KDI"
 
@@ -1594,12 +1422,10 @@
 
     if-eqz v2, :cond_6
 
-    .line 329
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->JPN_KDI:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto :goto_0
 
-    .line 330
     :cond_6
     const-string v2, "TLS"
 
@@ -1633,13 +1459,11 @@
 
     if-eqz v2, :cond_8
 
-    .line 331
     :cond_7
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->CAD_TLS:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto :goto_0
 
-    .line 332
     :cond_8
     const-string v2, "BMC"
 
@@ -1681,13 +1505,11 @@
 
     if-eqz v2, :cond_a
 
-    .line 333
     :cond_9
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->CAD_BMC:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto :goto_0
 
-    .line 334
     :cond_a
     const-string v2, "RWC"
 
@@ -1737,13 +1559,11 @@
 
     if-eqz v2, :cond_c
 
-    .line 335
     :cond_b
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->CAD_RWC:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 336
     :cond_c
     const-string v2, "XAC"
 
@@ -1753,12 +1573,10 @@
 
     if-eqz v2, :cond_d
 
-    .line 337
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->CAD_XAC:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 338
     :cond_d
     const-string v2, "SKT"
 
@@ -1784,13 +1602,11 @@
 
     if-eqz v2, :cond_f
 
-    .line 339
     :cond_e
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->KOR_SKT:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 340
     :cond_f
     const-string v2, "LGT"
 
@@ -1816,13 +1632,11 @@
 
     if-eqz v2, :cond_11
 
-    .line 341
     :cond_10
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->KOR_LGT:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 342
     :cond_11
     const-string v2, "KTT"
 
@@ -1848,13 +1662,11 @@
 
     if-eqz v2, :cond_13
 
-    .line 343
     :cond_12
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->KOR_KT:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 344
     :cond_13
     const-string v2, "CHM"
 
@@ -1864,12 +1676,10 @@
 
     if-eqz v2, :cond_14
 
-    .line 345
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->CHN_CMC:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 346
     :cond_14
     const-string v2, "CTC"
 
@@ -1879,12 +1689,10 @@
 
     if-eqz v2, :cond_15
 
-    .line 347
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->CHN_CTC:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 348
     :cond_15
     const-string v2, "CHU"
 
@@ -1894,12 +1702,10 @@
 
     if-eqz v2, :cond_16
 
-    .line 349
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->CHN_CHU:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 350
     :cond_16
     const-string v2, "CHN"
 
@@ -1909,7 +1715,6 @@
 
     if-nez v2, :cond_2
 
-    .line 355
     const-string v2, "CHC"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1918,12 +1723,10 @@
 
     if-eqz v2, :cond_17
 
-    .line 356
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->CHN_CHC:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 357
     :cond_17
     const-string v2, "MNX"
 
@@ -1933,12 +1736,10 @@
 
     if-eqz v2, :cond_18
 
-    .line 358
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->MEX_MNX:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 359
     :cond_18
     const-string v2, "IUS"
 
@@ -1948,12 +1749,10 @@
 
     if-eqz v2, :cond_19
 
-    .line 360
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->MEX_IUS:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 361
     :cond_19
     const-string v2, "SWC"
 
@@ -1963,12 +1762,10 @@
 
     if-eqz v2, :cond_1a
 
-    .line 362
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->SUI_SWC:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
 
-    .line 363
     :cond_1a
     const-string v2, "TUR"
 
@@ -1978,7 +1775,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 364
     sget-object v1, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->TUR_TUR:Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     goto/16 :goto_0
@@ -1988,10 +1784,8 @@
     .locals 5
 
     .prologue
-    .line 369
     const/4 v1, 0x0
 
-    .line 370
     .local v1, "rc":Z
     const-string/jumbo v2, "ro.csc.sales_code"
 
@@ -1999,7 +1793,6 @@
 
     move-result-object v0
 
-    .line 371
     .local v0, "code":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -2009,7 +1802,6 @@
 
     if-nez v2, :cond_1
 
-    .line 372
     :cond_0
     const-string/jumbo v2, "ril.sales_code"
 
@@ -2017,7 +1809,6 @@
 
     move-result-object v0
 
-    .line 374
     :cond_1
     const-string v2, "GpsLocationProvider_ex"
 
@@ -2041,7 +1832,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 376
     const-string v2, "TMB"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2050,10 +1840,8 @@
 
     if-eqz v2, :cond_2
 
-    .line 377
     const/4 v1, 0x1
 
-    .line 392
     :goto_0
     const-string v2, "GpsLocationProvider_ex"
 
@@ -2077,10 +1865,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 393
     return v1
 
-    .line 378
     :cond_2
     const-string v2, "ATT"
 
@@ -2090,12 +1876,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 379
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 380
     :cond_3
     const-string v2, "TLS"
 
@@ -2105,12 +1889,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 381
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 382
     :cond_4
     const-string v2, "BMC"
 
@@ -2120,12 +1902,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 383
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 384
     :cond_5
     const-string v2, "RWC"
 
@@ -2135,12 +1915,10 @@
 
     if-eqz v2, :cond_6
 
-    .line 385
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 386
     :cond_6
     const-string v2, "XAR"
 
@@ -2150,12 +1928,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 387
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 388
     :cond_7
     const-string v2, "XAC"
 
@@ -2165,12 +1941,10 @@
 
     if-eqz v2, :cond_8
 
-    .line 389
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 391
     :cond_8
     const/4 v1, 0x0
 
@@ -2181,10 +1955,8 @@
     .locals 5
 
     .prologue
-    .line 404
     const/4 v1, 0x0
 
-    .line 405
     .local v1, "rc":Z
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -2196,7 +1968,6 @@
 
     move-result-object v0
 
-    .line 407
     .local v0, "code":Ljava/lang/String;
     const-string v2, "VZW"
 
@@ -2206,10 +1977,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 408
     const/4 v1, 0x1
 
-    .line 427
     :goto_0
     const-string v2, "GpsLocationProvider_ex"
 
@@ -2233,10 +2002,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
     return v1
 
-    .line 409
     :cond_0
     const-string v2, "SPR"
 
@@ -2246,12 +2013,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 410
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 411
     :cond_1
     const-string v2, "USC"
 
@@ -2261,12 +2026,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 412
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 413
     :cond_2
     const-string v2, "BST"
 
@@ -2276,12 +2039,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 414
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 415
     :cond_3
     const-string v2, "VMU"
 
@@ -2291,12 +2052,10 @@
 
     if-eqz v2, :cond_4
 
-    .line 416
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 417
     :cond_4
     const-string v2, "XAS"
 
@@ -2306,12 +2065,10 @@
 
     if-eqz v2, :cond_5
 
-    .line 418
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 419
     :cond_5
     const-string v2, "LRA"
 
@@ -2321,12 +2078,10 @@
 
     if-eqz v2, :cond_6
 
-    .line 420
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 421
     :cond_6
     const-string v2, "TFNVZW"
 
@@ -2336,12 +2091,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 422
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 423
     :cond_7
     const-string v2, "ACG"
 
@@ -2351,12 +2104,10 @@
 
     if-eqz v2, :cond_8
 
-    .line 424
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 426
     :cond_8
     const/4 v1, 0x0
 
@@ -2373,12 +2124,10 @@
 
     const/4 v9, 0x0
 
-    .line 254
     new-instance v3, Ljava/lang/StringBuffer;
 
     invoke-direct {v3}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 255
     .local v3, "szUrl":Ljava/lang/StringBuffer;
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
@@ -2390,13 +2139,11 @@
 
     check-cast v4, Landroid/telephony/TelephonyManager;
 
-    .line 256
     .local v4, "tel":Landroid/telephony/TelephonyManager;
     invoke-virtual {v4}, Landroid/telephony/TelephonyManager;->getSimOperator()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 258
     .local v0, "SimOperator":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -2406,7 +2153,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 259
     invoke-virtual {v0, v9, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
@@ -2415,7 +2161,6 @@
 
     move-result v1
 
-    .line 260
     .local v1, "mcc":I
     invoke-virtual {v0, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -2425,7 +2170,6 @@
 
     move-result v2
 
-    .line 261
     .local v2, "mnc":I
     const-string/jumbo v5, "h-slp.mnc"
 
@@ -2479,7 +2223,6 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 262
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2506,12 +2249,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 263
     invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 266
     .end local v1    # "mcc":I
     .end local v2    # "mnc":I
     :goto_0
@@ -2572,18 +2313,14 @@
     .locals 9
 
     .prologue
-    .line 1542
     const/4 v1, 0x0
 
-    .line 1543
     .local v1, "reader":Ljava/io/BufferedReader;
     const/4 v5, 0x0
 
-    .line 1544
     .local v5, "str":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 1547
     .local v3, "result":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/io/BufferedReader;
@@ -2599,7 +2336,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1548
     .end local v1    # "reader":Ljava/io/BufferedReader;
     .local v2, "reader":Ljava/io/BufferedReader;
     :try_start_1
@@ -2607,14 +2343,12 @@
 
     move-result-object v5
 
-    .line 1550
     const-string v6, ","
 
     invoke-virtual {v5, v6}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1551
     .local v4, "split":[Ljava/lang/String;
     const/4 v6, 0x0
 
@@ -2623,10 +2357,8 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_4
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 1556
     if-eqz v2, :cond_2
 
-    .line 1558
     :try_start_2
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
     :try_end_2
@@ -2634,7 +2366,6 @@
 
     move-object v1, v2
 
-    .line 1565
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .end local v4    # "split":[Ljava/lang/String;
     .restart local v1    # "reader":Ljava/io/BufferedReader;
@@ -2662,17 +2393,14 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1566
     return-object v3
 
-    .line 1559
     .end local v1    # "reader":Ljava/io/BufferedReader;
     .restart local v2    # "reader":Ljava/io/BufferedReader;
     .restart local v4    # "split":[Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 1560
     .local v0, "e":Ljava/io/IOException;
     const-string v6, "GpsLocationProvider_ex"
 
@@ -2682,18 +2410,15 @@
 
     move-object v1, v2
 
-    .line 1561
     .end local v2    # "reader":Ljava/io/BufferedReader;
     .restart local v1    # "reader":Ljava/io/BufferedReader;
     goto :goto_0
 
-    .line 1553
     .end local v0    # "e":Ljava/io/IOException;
     .end local v4    # "split":[Ljava/lang/String;
     :catch_1
     move-exception v0
 
-    .line 1554
     .restart local v0    # "e":Ljava/io/IOException;
     :goto_1
     :try_start_3
@@ -2705,10 +2430,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1556
     if-eqz v1, :cond_0
 
-    .line 1558
     :try_start_4
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_4
@@ -2716,11 +2439,9 @@
 
     goto :goto_0
 
-    .line 1559
     :catch_2
     move-exception v0
 
-    .line 1560
     const-string v6, "GpsLocationProvider_ex"
 
     const-string v7, "could not close file /data/system/gps/chip.info"
@@ -2729,7 +2450,6 @@
 
     goto :goto_0
 
-    .line 1556
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v6
@@ -2737,22 +2457,18 @@
     :goto_2
     if-eqz v1, :cond_1
 
-    .line 1558
     :try_start_5
     invoke-virtual {v1}, Ljava/io/BufferedReader;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 1561
     :cond_1
     :goto_3
     throw v6
 
-    .line 1559
     :catch_3
     move-exception v0
 
-    .line 1560
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v7, "GpsLocationProvider_ex"
 
@@ -2762,7 +2478,6 @@
 
     goto :goto_3
 
-    .line 1556
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "reader":Ljava/io/BufferedReader;
     .restart local v2    # "reader":Ljava/io/BufferedReader;
@@ -2775,7 +2490,6 @@
     .restart local v1    # "reader":Ljava/io/BufferedReader;
     goto :goto_2
 
-    .line 1553
     .end local v1    # "reader":Ljava/io/BufferedReader;
     .restart local v2    # "reader":Ljava/io/BufferedReader;
     :catch_4
@@ -2804,26 +2518,21 @@
     .param p2, "mEnabled"    # Z
 
     .prologue
-    .line 599
     const-string v1, "GpsLocationProvider_ex"
 
     const-string/jumbo v2, "setCscParameters"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 601
     if-nez p1, :cond_1
 
-    .line 699
     :cond_0
     :goto_0
     return-void
 
-    .line 604
     :cond_1
     const/4 v13, 0x0
 
-    .line 606
     .local v13, "isDeleted":Z
     :try_start_0
     new-instance v12, Ljava/io/File;
@@ -2832,7 +2541,6 @@
 
     invoke-direct {v12, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 607
     .local v12, "file":Ljava/io/File;
     if-eqz v12, :cond_3
 
@@ -2842,17 +2550,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 608
     invoke-virtual {v12}, Ljava/io/File;->delete()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 609
     const/4 v13, 0x1
 
-    .line 611
     :cond_2
     const-string v1, "GpsLocationProvider_ex"
 
@@ -2878,7 +2583,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 617
     .end local v12    # "file":Ljava/io/File;
     :cond_3
     :goto_1
@@ -2892,49 +2596,42 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 618
     const-string v1, "MSBASED"
 
     move-object/from16 v0, p0
 
     iput-object v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mPositionModeFromCSC:Ljava/lang/String;
 
-    .line 619
     const/4 v1, 0x3
 
     move-object/from16 v0, p0
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplType:I
 
-    .line 620
     const-string/jumbo v1, "supl.google.com"
 
     move-object/from16 v0, p0
 
     iput-object v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplAddress:Ljava/lang/String;
 
-    .line 621
     const/16 v1, 0x1c6b
 
     move-object/from16 v0, p0
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplPort:I
 
-    .line 622
     const/4 v1, 0x1
 
     move-object/from16 v0, p0
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplSslMode:I
 
-    .line 623
     const/4 v1, 0x0
 
     move-object/from16 v0, p0
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplSslType:I
 
-    .line 624
     const-string v1, "GpsLocationProvider_ex"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3015,10 +2712,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 625
     if-eqz p2, :cond_4
 
-    .line 626
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplType:I
@@ -3045,7 +2740,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_agps_server_extension(ILjava/lang/String;IIII)V
 
-    .line 630
     :cond_4
     const/4 v1, 0x0
 
@@ -3053,10 +2747,8 @@
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplServerFromCSC:I
 
-    .line 631
     const-string v8, "TRUE"
 
-    .line 632
     .local v8, "CscParamIsEmpty":Ljava/lang/String;
     const-string/jumbo v1, "is_empty"
 
@@ -3066,7 +2758,6 @@
 
     move-result-object v8
 
-    .line 633
     const-string v1, "GpsLocationProvider_ex"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3089,7 +2780,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 635
     const-string v1, "TRUE"
 
     invoke-virtual {v1, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -3098,7 +2788,6 @@
 
     if-nez v1, :cond_0
 
-    .line 639
     const-string/jumbo v1, "operation_mode"
 
     move-object/from16 v0, p0
@@ -3115,7 +2804,6 @@
 
     iput-object v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mPositionModeFromCSC:Ljava/lang/String;
 
-    .line 640
     const-string/jumbo v1, "hslp_addr"
 
     move-object/from16 v0, p0
@@ -3132,7 +2820,6 @@
 
     iput-object v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplAddress:Ljava/lang/String;
 
-    .line 641
     const-string/jumbo v1, "hslp_port"
 
     move-object/from16 v0, p0
@@ -3149,7 +2836,6 @@
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplPort:I
 
-    .line 642
     const-string/jumbo v1, "ssl"
 
     move-object/from16 v0, p0
@@ -3166,7 +2852,6 @@
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplSslMode:I
 
-    .line 643
     const-string/jumbo v1, "ssl_cert"
 
     move-object/from16 v0, p0
@@ -3183,7 +2868,6 @@
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplSslType:I
 
-    .line 644
     const-string/jumbo v1, "supl_ver"
 
     const/4 v2, 0x2
@@ -3194,24 +2878,20 @@
 
     move-result v9
 
-    .line 646
     .local v9, "SuplVer":I
     packed-switch v9, :pswitch_data_0
 
-    .line 652
     const/4 v1, 0x3
 
     move-object/from16 v0, p0
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplType:I
 
-    .line 655
     :goto_2
     new-instance v14, Ljava/util/Properties;
 
     invoke-direct {v14}, Ljava/util/Properties;-><init>()V
 
-    .line 656
     .local v14, "mProperties_cscgps":Ljava/util/Properties;
     const-string v1, "MSBASED"
 
@@ -3225,7 +2905,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 657
     const-string v1, "GpsLocationProvider_ex"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3294,10 +2973,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 659
     if-eqz p2, :cond_5
 
-    .line 660
     move-object/from16 v0, p0
 
     iget v2, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplType:I
@@ -3324,7 +3001,6 @@
 
     invoke-direct/range {v1 .. v7}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_agps_server_extension(ILjava/lang/String;IIII)V
 
-    .line 662
     :cond_5
     const/4 v1, 0x1
 
@@ -3332,7 +3008,6 @@
 
     iput v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplServerFromCSC:I
 
-    .line 664
     const-string v1, "CSC_SUPL_OPMODE"
 
     move-object/from16 v0, p0
@@ -3341,7 +3016,6 @@
 
     invoke-virtual {v14, v1, v2}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 665
     const-string v1, "CSC_SUPL_HOST"
 
     move-object/from16 v0, p0
@@ -3350,7 +3024,6 @@
 
     invoke-virtual {v14, v1, v2}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 666
     const-string v1, "CSC_SUPL_VER"
 
     move-object/from16 v0, p0
@@ -3363,7 +3036,6 @@
 
     invoke-virtual {v14, v1, v2}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 667
     const-string v1, "CSC_SUPL_PORT"
 
     move-object/from16 v0, p0
@@ -3376,7 +3048,6 @@
 
     invoke-virtual {v14, v1, v2}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 668
     const-string v1, "CSC_SUPL_SSL"
 
     move-object/from16 v0, p0
@@ -3389,7 +3060,6 @@
 
     invoke-virtual {v14, v1, v2}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 671
     :cond_6
     const-string v1, "CSC_SUPL_SUPLSERVERFROMCSC"
 
@@ -3403,7 +3073,6 @@
 
     invoke-virtual {v14, v1, v2}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 674
     :try_start_1
     new-instance v10, Ljava/io/File;
 
@@ -3411,7 +3080,6 @@
 
     invoke-direct {v10, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 675
     .local v10, "dir":Ljava/io/File;
     invoke-virtual {v10}, Ljava/io/File;->exists()Z
 
@@ -3419,10 +3087,8 @@
 
     if-nez v1, :cond_7
 
-    .line 676
     invoke-virtual {v10}, Ljava/io/File;->mkdirs()Z
 
-    .line 678
     :cond_7
     new-instance v12, Ljava/io/File;
 
@@ -3430,7 +3096,6 @@
 
     invoke-direct {v12, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 679
     .restart local v12    # "file":Ljava/io/File;
     if-eqz v12, :cond_8
 
@@ -3440,10 +3105,8 @@
 
     if-nez v1, :cond_8
 
-    .line 680
     invoke-virtual {v12}, Ljava/io/File;->createNewFile()Z
 
-    .line 682
     :cond_8
     new-instance v15, Ljava/io/FileOutputStream;
 
@@ -3451,14 +3114,12 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 684
     .local v15, "stream":Ljava/io/FileOutputStream;
     :try_start_2
     const-string v1, "Saved CSC GPS Information"
 
     invoke-virtual {v14, v15, v1}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 685
     const-string v1, "GpsLocationProvider_ex"
 
     const-string v2, "Saved: /data/system/gps/cscgps.conf"
@@ -3468,10 +3129,8 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 690
     if-eqz v15, :cond_0
 
-    .line 691
     :try_start_3
     invoke-virtual {v15}, Ljava/io/FileOutputStream;->close()V
     :try_end_3
@@ -3479,11 +3138,9 @@
 
     goto/16 :goto_0
 
-    .line 692
     :catch_0
     move-exception v11
 
-    .line 693
     .local v11, "e":Ljava/lang/Exception;
     :try_start_4
     const-string v1, "GpsLocationProvider_ex"
@@ -3496,7 +3153,6 @@
 
     goto/16 :goto_0
 
-    .line 696
     .end local v10    # "dir":Ljava/io/File;
     .end local v11    # "e":Ljava/lang/Exception;
     .end local v12    # "file":Ljava/io/File;
@@ -3504,7 +3160,6 @@
     :catch_1
     move-exception v11
 
-    .line 697
     .restart local v11    # "e":Ljava/lang/Exception;
     const-string v1, "GpsLocationProvider_ex"
 
@@ -3514,7 +3169,6 @@
 
     goto/16 :goto_0
 
-    .line 613
     .end local v8    # "CscParamIsEmpty":Ljava/lang/String;
     .end local v9    # "SuplVer":I
     .end local v11    # "e":Ljava/lang/Exception;
@@ -3522,7 +3176,6 @@
     :catch_2
     move-exception v11
 
-    .line 614
     .restart local v11    # "e":Ljava/lang/Exception;
     const-string v1, "GpsLocationProvider_ex"
 
@@ -3532,7 +3185,6 @@
 
     goto/16 :goto_1
 
-    .line 647
     .end local v11    # "e":Ljava/lang/Exception;
     .restart local v8    # "CscParamIsEmpty":Ljava/lang/String;
     .restart local v9    # "SuplVer":I
@@ -3545,7 +3197,6 @@
 
     goto/16 :goto_2
 
-    .line 649
     :pswitch_1
     const/4 v1, 0x3
 
@@ -3555,7 +3206,6 @@
 
     goto/16 :goto_2
 
-    .line 686
     .restart local v10    # "dir":Ljava/io/File;
     .restart local v12    # "file":Ljava/io/File;
     .restart local v14    # "mProperties_cscgps":Ljava/util/Properties;
@@ -3563,7 +3213,6 @@
     :catch_3
     move-exception v11
 
-    .line 687
     .restart local v11    # "e":Ljava/lang/Exception;
     :try_start_5
     const-string v1, "GpsLocationProvider_ex"
@@ -3574,10 +3223,8 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 690
     if-eqz v15, :cond_0
 
-    .line 691
     :try_start_6
     invoke-virtual {v15}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
@@ -3585,11 +3232,9 @@
 
     goto/16 :goto_0
 
-    .line 692
     :catch_4
     move-exception v11
 
-    .line 693
     :try_start_7
     const-string v1, "GpsLocationProvider_ex"
 
@@ -3601,31 +3246,25 @@
 
     goto/16 :goto_0
 
-    .line 689
     .end local v11    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
 
-    .line 690
     if-eqz v15, :cond_9
 
-    .line 691
     :try_start_8
     invoke-virtual {v15}, Ljava/io/FileOutputStream;->close()V
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_5
 
-    .line 694
     :cond_9
     :goto_3
     :try_start_9
     throw v1
 
-    .line 692
     :catch_5
     move-exception v11
 
-    .line 693
     .restart local v11    # "e":Ljava/lang/Exception;
     const-string v2, "GpsLocationProvider_ex"
 
@@ -3637,7 +3276,6 @@
 
     goto :goto_3
 
-    .line 646
     nop
 
     :pswitch_data_0
@@ -3654,10 +3292,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 478
     if-eqz p1, :cond_0
 
-    .line 479
     const-string v0, "GpsLocationProvider_ex"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3686,7 +3322,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     const/4 v1, 0x4
 
     const-string v2, "dcm-supl.com"
@@ -3701,11 +3336,9 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_agps_server_extension(ILjava/lang/String;IIII)V
 
-    .line 484
     :goto_0
     return-void
 
-    .line 482
     :cond_0
     const-string v0, "GpsLocationProvider_ex"
 
@@ -3738,7 +3371,6 @@
     .param p2, "bitmask"    # I
 
     .prologue
-    .line 810
     const-string v1, "GpsLocationProvider_ex"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -3767,46 +3399,37 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 817
     move v0, p1
 
-    .line 818
     .local v0, "enabled":Z
     if-nez p1, :cond_0
 
-    .line 819
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_init_extention()Z
 
     move-result v0
 
-    .line 820
     const-string v1, "GpsLocationProvider_ex"
 
     const-string/jumbo v2, "native_init_extention "
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 822
     :cond_0
     if-eqz v0, :cond_1
 
     invoke-direct {p0, p2}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_lpp_support(I)V
 
-    .line 824
     :cond_1
     if-nez p1, :cond_2
 
-    .line 825
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_cleanup_extention()V
 
-    .line 826
     const-string v1, "GpsLocationProvider_ex"
 
     const-string/jumbo v2, "native_cleanup "
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 828
     :cond_2
     return-void
 .end method
@@ -3816,10 +3439,8 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 438
     iput-boolean p1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsSKAF:Z
 
-    .line 439
     const-string v0, "GpsLocationProvider_ex"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3844,7 +3465,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 440
     return-void
 .end method
 
@@ -3853,21 +3473,17 @@
     .param p1, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1578
     if-nez p1, :cond_1
 
-    .line 1623
     :cond_0
     :goto_0
     return-void
 
-    .line 1580
     :cond_1
     invoke-virtual {p1}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v6
 
-    .line 1581
     .local v6, "keySet":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v6}, Ljava/util/Set;->size()I
 
@@ -3875,11 +3491,9 @@
 
     new-array v5, v8, [Ljava/lang/String;
 
-    .line 1583
     .local v5, "keyArray":[Ljava/lang/String;
     invoke-interface {v6, v5}, Ljava/util/Set;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 1584
     const/4 v4, 0x0
 
     .local v4, "i":I
@@ -3888,12 +3502,10 @@
 
     if-ge v4, v8, :cond_3
 
-    .line 1585
     aget-object v8, v5, v4
 
     if-eqz v8, :cond_2
 
-    .line 1586
     iget-object v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mProperties_secgps:Ljava/util/Properties;
 
     aget-object v9, v5, v4
@@ -3906,13 +3518,11 @@
 
     invoke-virtual {v8, v9, v10}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1584
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 1591
     :cond_3
     :try_start_0
     new-instance v1, Ljava/io/File;
@@ -3921,7 +3531,6 @@
 
     invoke-direct {v1, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1592
     .local v1, "dir":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -3929,10 +3538,8 @@
 
     if-nez v8, :cond_4
 
-    .line 1593
     invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
 
-    .line 1595
     :cond_4
     new-instance v3, Ljava/io/File;
 
@@ -3940,7 +3547,6 @@
 
     invoke-direct {v3, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1596
     .local v3, "file":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -3948,10 +3554,8 @@
 
     if-nez v8, :cond_5
 
-    .line 1597
     invoke-virtual {v3}, Ljava/io/File;->createNewFile()Z
 
-    .line 1599
     :cond_5
     new-instance v0, Ljava/io/File;
 
@@ -3959,7 +3563,6 @@
 
     invoke-direct {v0, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 1600
     .local v0, "ChipInfo":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -3967,7 +3570,6 @@
 
     if-eqz v8, :cond_6
 
-    .line 1602
     const-string v8, "MediaTek"
 
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->readChipInfo()Ljava/lang/String;
@@ -3980,14 +3582,12 @@
 
     if-eqz v8, :cond_6
 
-    .line 1603
     const/4 v8, 0x1
 
     const/4 v9, 0x0
 
     invoke-virtual {v3, v8, v9}, Ljava/io/File;->setReadable(ZZ)Z
 
-    .line 1606
     :cond_6
     new-instance v7, Ljava/io/FileOutputStream;
 
@@ -3995,7 +3595,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1608
     .local v7, "stream":Ljava/io/FileOutputStream;
     :try_start_1
     iget-object v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mProperties_secgps:Ljava/util/Properties;
@@ -4004,7 +3603,6 @@
 
     invoke-virtual {v8, v7, v9}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 1609
     const-string v8, "GpsLocationProvider_ex"
 
     const-string v9, "Saved: /data/system/gps/secgps.conf"
@@ -4014,10 +3612,8 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1614
     if-eqz v7, :cond_0
 
-    .line 1615
     :try_start_2
     invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -4025,11 +3621,9 @@
 
     goto :goto_0
 
-    .line 1616
     :catch_0
     move-exception v2
 
-    .line 1617
     .local v2, "e":Ljava/lang/Exception;
     :try_start_3
     const-string v8, "GpsLocationProvider_ex"
@@ -4042,7 +3636,6 @@
 
     goto/16 :goto_0
 
-    .line 1620
     .end local v0    # "ChipInfo":Ljava/io/File;
     .end local v1    # "dir":Ljava/io/File;
     .end local v2    # "e":Ljava/lang/Exception;
@@ -4051,7 +3644,6 @@
     :catch_1
     move-exception v2
 
-    .line 1621
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string v8, "GpsLocationProvider_ex"
 
@@ -4061,7 +3653,6 @@
 
     goto/16 :goto_0
 
-    .line 1610
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "ChipInfo":Ljava/io/File;
     .restart local v1    # "dir":Ljava/io/File;
@@ -4070,7 +3661,6 @@
     :catch_2
     move-exception v2
 
-    .line 1611
     .restart local v2    # "e":Ljava/lang/Exception;
     :try_start_4
     const-string v8, "GpsLocationProvider_ex"
@@ -4081,10 +3671,8 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 1614
     if-eqz v7, :cond_0
 
-    .line 1615
     :try_start_5
     invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -4092,11 +3680,9 @@
 
     goto/16 :goto_0
 
-    .line 1616
     :catch_3
     move-exception v2
 
-    .line 1617
     :try_start_6
     const-string v8, "GpsLocationProvider_ex"
 
@@ -4108,31 +3694,25 @@
 
     goto/16 :goto_0
 
-    .line 1613
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v8
 
-    .line 1614
     if-eqz v7, :cond_7
 
-    .line 1615
     :try_start_7
     invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
     :try_end_7
     .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_4
 
-    .line 1618
     :cond_7
     :goto_2
     :try_start_8
     throw v8
 
-    .line 1616
     :catch_4
     move-exception v2
 
-    .line 1617
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string v9, "GpsLocationProvider_ex"
 
@@ -4150,21 +3730,17 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 220
     const-string v5, "GpsLocationProvider_ex"
 
     const-string/jumbo v6, "setServer"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     const-string v2, ""
 
-    .line 223
     .local v2, "mServerAddr":Ljava/lang/String;
     const-string v3, ""
 
-    .line 225
     .local v3, "mServerPort":Ljava/lang/String;
     const-string v5, "ServerAddr"
 
@@ -4172,14 +3748,12 @@
 
     move-result-object v2
 
-    .line 226
     const-string v5, "ServerPort"
 
     invoke-virtual {p1, v5}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 227
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -4212,14 +3786,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 228
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mProperties:Ljava/util/Properties;
 
     const-string v6, "SUPL_HOST"
 
     invoke-virtual {v5, v6, v2}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 229
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mProperties:Ljava/util/Properties;
 
     const-string v6, "SUPL_PORT"
@@ -4230,7 +3802,6 @@
 
     invoke-virtual {v5, v6, v7}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 231
     :try_start_0
     new-instance v1, Ljava/io/File;
 
@@ -4238,7 +3809,6 @@
 
     invoke-direct {v1, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 232
     .local v1, "file":Ljava/io/File;
     new-instance v4, Ljava/io/FileOutputStream;
 
@@ -4246,7 +3816,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 234
     .local v4, "stream":Ljava/io/FileOutputStream;
     :try_start_1
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mProperties:Ljava/util/Properties;
@@ -4257,17 +3826,14 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 236
     :try_start_2
     invoke-virtual {v4}, Ljava/io/FileOutputStream;->close()V
 
-    .line 241
     .end local v1    # "file":Ljava/io/File;
     .end local v4    # "stream":Ljava/io/FileOutputStream;
     :goto_0
     return-void
 
-    .line 236
     .restart local v1    # "file":Ljava/io/File;
     .restart local v4    # "stream":Ljava/io/FileOutputStream;
     :catchall_0
@@ -4279,13 +3845,11 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 238
     .end local v1    # "file":Ljava/io/File;
     .end local v4    # "stream":Ljava/io/FileOutputStream;
     :catch_0
     move-exception v0
 
-    .line 239
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "GpsLocationProvider_ex"
 
@@ -4302,7 +3866,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 460
     const-string v0, "GpsLocationProvider_ex"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4331,14 +3894,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 462
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, "AGPS_TYPE_SUPL_2_0_1_AGNSS"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 463
     const/4 v1, 0x5
 
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->sktSuplAddr:Ljava/lang/String;
@@ -4353,7 +3914,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_agps_server_extension(ILjava/lang/String;IIII)V
 
-    .line 469
     return-void
 .end method
 
@@ -4363,10 +3923,8 @@
     .prologue
     const/4 v7, 0x3
 
-    .line 273
     const/4 v3, 0x0
 
-    .line 274
     .local v3, "suplServerAutoConfig":Ljava/lang/String;
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
@@ -4378,13 +3936,11 @@
 
     check-cast v4, Landroid/telephony/TelephonyManager;
 
-    .line 275
     .local v4, "tel":Landroid/telephony/TelephonyManager;
     invoke-virtual {v4}, Landroid/telephony/TelephonyManager;->getSimOperator()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 276
     .local v2, "simOperator":Ljava/lang/String;
     if-eqz v2, :cond_2
 
@@ -4394,7 +3950,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 277
     const/4 v5, 0x0
 
     invoke-virtual {v2, v5, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -4405,7 +3960,6 @@
 
     move-result v0
 
-    .line 278
     .local v0, "mcc":I
     invoke-virtual {v2, v7}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
@@ -4415,7 +3969,6 @@
 
     move-result v1
 
-    .line 279
     .local v1, "mnc":I
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -4437,11 +3990,9 @@
 
     if-ne v1, v5, :cond_1
 
-    .line 281
     :cond_0
     const-string/jumbo v3, "supl.telusmobility.com"
 
-    .line 282
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -4464,18 +4015,15 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 289
     .end local v0    # "mcc":I
     .end local v1    # "mnc":I
     :cond_1
     :goto_0
     return-object v3
 
-    .line 286
     :cond_2
     const-string/jumbo v3, "supl.google.com"
 
-    .line 287
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -4511,7 +4059,6 @@
 
     const/4 v7, 0x1
 
-    .line 549
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     move-result-object v4
@@ -4522,11 +4069,9 @@
 
     move v2, v3
 
-    .line 588
     :goto_0
     return v2
 
-    .line 552
     :cond_0
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
@@ -4540,11 +4085,9 @@
 
     move-result v1
 
-    .line 554
     .local v1, "isAgpsSwitchMode":I
     const/4 v2, 0x0
 
-    .line 555
     .local v2, "result":Z
     const-string v4, "GpsLocationProvider_ex"
 
@@ -4568,42 +4111,34 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 557
     packed-switch v1, :pswitch_data_0
 
-    .line 578
     const/4 v2, 0x1
 
-    .line 579
     const-string v4, "GpsLocationProvider_ex"
 
     const-string v5, "extension_CMCCxtraDownloadRequest, AGPS setting : AGPS OFF"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 582
     :goto_1
     if-ne v2, v7, :cond_3
 
-    .line 583
     invoke-direct {p0, v3}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_agps_xtra_set(I)V
 
     goto :goto_0
 
-    .line 559
     :pswitch_0
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mConnMgr:Landroid/net/ConnectivityManager;
 
     if-eqz v4, :cond_2
 
-    .line 560
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mConnMgr:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v4}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v0
 
-    .line 561
     .local v0, "info":Landroid/net/NetworkInfo;
     if-eqz v0, :cond_1
 
@@ -4613,10 +4148,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 562
     const/4 v2, 0x1
 
-    .line 563
     const-string v4, "GpsLocationProvider_ex"
 
     const-string v5, "extension_CMCCxtraDownloadRequest : AGPS setting : Home network, info.isRoaming() == true"
@@ -4625,11 +4158,9 @@
 
     goto :goto_1
 
-    .line 565
     :cond_1
     const/4 v2, 0x0
 
-    .line 566
     const-string v4, "GpsLocationProvider_ex"
 
     const-string v5, "extension_CMCCxtraDownloadRequest : AGPS setting : Home network, info.isRoaming() == false"
@@ -4638,12 +4169,10 @@
 
     goto :goto_1
 
-    .line 569
     .end local v0    # "info":Landroid/net/NetworkInfo;
     :cond_2
     const/4 v2, 0x1
 
-    .line 570
     const-string v4, "GpsLocationProvider_ex"
 
     const-string v5, "extension_CMCCxtraDownloadRequest : AGPS setting : Home network, PS error"
@@ -4652,11 +4181,9 @@
 
     goto :goto_1
 
-    .line 574
     :pswitch_1
     const/4 v2, 0x0
 
-    .line 575
     const-string v4, "GpsLocationProvider_ex"
 
     const-string v5, "extension_CMCCxtraDownloadRequest, AGPS setting : All Network"
@@ -4665,13 +4192,11 @@
 
     goto :goto_1
 
-    .line 585
     :cond_3
     invoke-direct {p0, v7}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_agps_xtra_set(I)V
 
     goto :goto_0
 
-    .line 557
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -4685,10 +4210,8 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 2027
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_agps_ni_message_for_emergency_supl([BI)V
 
-    .line 2028
     return-void
 .end method
 
@@ -4699,10 +4222,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 928
     const/4 v0, 0x0
 
-    .line 929
     .local v0, "result":I
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -4720,7 +4241,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 931
     :cond_0
     const-string v1, "GpsLocationProvider_ex"
 
@@ -4728,7 +4248,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 933
     :cond_1
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -4738,17 +4257,14 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 934
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSktSuplVer()V
 
-    .line 936
     const-string v1, "GpsLocationProvider_ex"
 
     const-string v2, "Change SLP address for SUPL_INIT in SMS"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 938
     :cond_2
     if-nez p1, :cond_4
 
@@ -4768,19 +4284,15 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 940
     :cond_3
     iget-boolean v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
     if-nez v1, :cond_4
 
-    .line 942
     or-int/lit8 v0, v0, 0x1
 
-    .line 943
     iput-boolean v3, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
-    .line 946
     :cond_4
     if-nez p1, :cond_5
 
@@ -4801,19 +4313,15 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 948
     :cond_6
     iget-boolean v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
     if-nez v1, :cond_7
 
-    .line 950
     or-int/lit8 v0, v0, 0x2
 
-    .line 951
     iput-boolean v3, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
-    .line 954
     :cond_7
     if-nez p1, :cond_8
 
@@ -4834,22 +4342,17 @@
 
     if-ne v1, v2, :cond_a
 
-    .line 956
     :cond_9
     invoke-virtual {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->extension_set_supl_server()V
 
-    .line 957
     iget-boolean v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
     if-nez v1, :cond_a
 
-    .line 959
     or-int/lit8 v0, v0, 0x8
 
-    .line 960
     iput-boolean v3, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
-    .line 964
     :cond_a
     if-nez p1, :cond_b
 
@@ -4863,7 +4366,6 @@
 
     or-int/lit8 v0, v0, 0x4
 
-    .line 966
     :cond_b
     return v0
 .end method
@@ -4873,7 +4375,6 @@
     .param p1, "mEnabled"    # Z
 
     .prologue
-    .line 837
     const-string v0, "GpsLocationProvider_ex"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -4896,7 +4397,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 838
     if-nez p1, :cond_0
 
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
@@ -4947,11 +4447,9 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 842
     :cond_0
     const/4 v0, 0x1
 
-    .line 844
     :goto_0
     return v0
 
@@ -4967,10 +4465,8 @@
     .param p2, "mConnMgr"    # Landroid/net/ConnectivityManager;
 
     .prologue
-    .line 976
     const/4 v10, 0x0
 
-    .line 977
     .local v10, "result":I
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -4988,7 +4484,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 979
     :cond_0
     const-string v0, "GpsLocationProvider_ex"
 
@@ -4996,7 +4491,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 981
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -5011,7 +4505,6 @@
 
     move-result v8
 
-    .line 982
     .local v8, "isAgpsSwitchMode":I
     const-string v0, "GpsLocationProvider_ex"
 
@@ -5035,14 +4528,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 984
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, "++checkWapSuplInit : New NI notification LCD on"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 985
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "power"
@@ -5053,7 +4544,6 @@
 
     check-cast v9, Landroid/os/PowerManager;
 
-    .line 986
     .local v9, "pm":Landroid/os/PowerManager;
     const v0, 0x1000001a
 
@@ -5063,7 +4553,6 @@
 
     move-result-object v12
 
-    .line 988
     .local v12, "wl":Landroid/os/PowerManager$WakeLock;
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -5073,32 +4562,26 @@
 
     invoke-virtual {v9, v0, v1, v2}, Landroid/os/PowerManager;->userActivity(JZ)V
 
-    .line 989
     const-wide/16 v0, 0x1388
 
     invoke-virtual {v12, v0, v1}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 990
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, "--checkWapSuplInit : New NI notification LCD on"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 992
     const/4 v0, 0x1
 
     if-ne v8, v0, :cond_2
 
-    .line 993
     if-eqz p2, :cond_1
 
-    .line 994
     invoke-virtual {p2}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v7
 
-    .line 995
     .local v7, "info":Landroid/net/NetworkInfo;
     if-eqz v7, :cond_3
 
@@ -5108,7 +4591,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 996
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, "checkWapSuplInit NI : agps on only for hom network info.isRoaming() == true "
@@ -5117,7 +4599,6 @@
 
     move v11, v10
 
-    .line 1050
     .end local v7    # "info":Landroid/net/NetworkInfo;
     .end local v8    # "isAgpsSwitchMode":I
     .end local v9    # "pm":Landroid/os/PowerManager;
@@ -5127,7 +4608,6 @@
     :goto_0
     return v11
 
-    .line 1000
     .end local v11    # "result":I
     .restart local v8    # "isAgpsSwitchMode":I
     .restart local v9    # "pm":Landroid/os/PowerManager;
@@ -5142,12 +4622,10 @@
 
     move v11, v10
 
-    .line 1001
     .end local v10    # "result":I
     .restart local v11    # "result":I
     goto :goto_0
 
-    .line 1003
     .end local v11    # "result":I
     .restart local v10    # "result":I
     :cond_2
@@ -5155,14 +4633,12 @@
 
     if-ne v8, v0, :cond_f
 
-    .line 1004
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, "checkWapSuplInit NI :: agps on for all network. launch NI session"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1011
     .end local v8    # "isAgpsSwitchMode":I
     .end local v9    # "pm":Landroid/os/PowerManager;
     .end local v12    # "wl":Landroid/os/PowerManager$WakeLock;
@@ -5175,17 +4651,14 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 1013
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSktSuplVer()V
 
-    .line 1014
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, "Change SLP address for SUPL_INIT in WAP"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1017
     :cond_4
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -5195,7 +4668,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 1018
     const/4 v1, 0x3
 
     const-string v2, "221.148.242.107"
@@ -5212,14 +4684,12 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_agps_server_extension(ILjava/lang/String;IIII)V
 
-    .line 1019
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, "Change SLP address for SUPL_INIT in WAP"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1022
     :cond_5
     if-nez p1, :cond_7
 
@@ -5239,21 +4709,17 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 1024
     :cond_6
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
     if-nez v0, :cond_7
 
-    .line 1026
     or-int/lit8 v10, v10, 0x1
 
-    .line 1027
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
-    .line 1030
     :cond_7
     if-nez p1, :cond_8
 
@@ -5274,21 +4740,17 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 1032
     :cond_9
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
     if-nez v0, :cond_a
 
-    .line 1034
     or-int/lit8 v10, v10, 0x2
 
-    .line 1035
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
-    .line 1038
     :cond_a
     if-nez p1, :cond_b
 
@@ -5309,24 +4771,19 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 1040
     :cond_c
     invoke-virtual {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->extension_set_supl_server()V
 
-    .line 1041
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
     if-nez v0, :cond_d
 
-    .line 1043
     or-int/lit8 v10, v10, 0x8
 
-    .line 1044
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
-    .line 1048
     :cond_d
     if-nez p1, :cond_e
 
@@ -5343,12 +4800,10 @@
     :cond_e
     move v11, v10
 
-    .line 1050
     .end local v10    # "result":I
     .restart local v11    # "result":I
     goto/16 :goto_0
 
-    .line 1006
     .end local v11    # "result":I
     .restart local v8    # "isAgpsSwitchMode":I
     .restart local v9    # "pm":Landroid/os/PowerManager;
@@ -5379,7 +4834,6 @@
 
     move v11, v10
 
-    .line 1007
     .end local v10    # "result":I
     .restart local v11    # "result":I
     goto/16 :goto_0
@@ -5394,14 +4848,12 @@
 
     const/4 v8, 0x0
 
-    .line 2038
     const-string v10, "GpsLocationProvider_ex"
 
     const-string v11, "extension_getCellInfoMnc"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2039
     iget-object v10, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     const-string/jumbo v11, "phone"
@@ -5412,26 +4864,21 @@
 
     check-cast v7, Landroid/telephony/TelephonyManager;
 
-    .line 2040
     .local v7, "phone":Landroid/telephony/TelephonyManager;
     invoke-virtual {v7}, Landroid/telephony/TelephonyManager;->getAllCellInfo()Ljava/util/List;
 
     move-result-object v3
 
-    .line 2042
     .local v3, "info":Ljava/util/List;, "Ljava/util/List<Landroid/telephony/CellInfo;>;"
     if-nez v3, :cond_1
 
-    .line 2073
     :cond_0
     :goto_0
     return v8
 
-    .line 2043
     :cond_1
     const/4 v6, 0x0
 
-    .line 2045
     .local v6, "numRegisteredCellInfo":I
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -5451,7 +4898,6 @@
 
     check-cast v1, Landroid/telephony/CellInfo;
 
-    .line 2046
     .local v1, "cellInfo":Landroid/telephony/CellInfo;
     invoke-virtual {v1}, Landroid/telephony/CellInfo;->isRegistered()Z
 
@@ -5459,13 +4905,10 @@
 
     if-eqz v10, :cond_2
 
-    .line 2047
     add-int/lit8 v6, v6, 0x1
 
-    .line 2048
     if-le v6, v9, :cond_3
 
-    .line 2049
     const-string v9, "GpsLocationProvider_ex"
 
     const-string/jumbo v10, "more than one registered CellInfo.  Can\'t tell which is active."
@@ -5474,20 +4917,17 @@
 
     goto :goto_0
 
-    .line 2052
     :cond_3
     const/4 v4, 0x0
 
     .local v4, "mcc":I
     const/4 v5, 0x0
 
-    .line 2053
     .local v5, "mnc":I
     instance-of v10, v1, Landroid/telephony/CellInfoGsm;
 
     if-eqz v10, :cond_5
 
-    .line 2054
     check-cast v1, Landroid/telephony/CellInfoGsm;
 
     .end local v1    # "cellInfo":Landroid/telephony/CellInfo;
@@ -5495,18 +4935,15 @@
 
     move-result-object v0
 
-    .line 2055
     .local v0, "cellId":Landroid/telephony/CellIdentityGsm;
     invoke-virtual {v0}, Landroid/telephony/CellIdentityGsm;->getMcc()I
 
     move-result v4
 
-    .line 2056
     invoke-virtual {v0}, Landroid/telephony/CellIdentityGsm;->getMnc()I
 
     move-result v5
 
-    .line 2066
     .end local v0    # "cellId":Landroid/telephony/CellIdentityGsm;
     :cond_4
     :goto_1
@@ -5542,25 +4979,20 @@
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2067
     aput v4, p1, v8
 
-    .line 2068
     aput v5, p1, v9
 
     move v8, v9
 
-    .line 2069
     goto :goto_0
 
-    .line 2057
     .restart local v1    # "cellInfo":Landroid/telephony/CellInfo;
     :cond_5
     instance-of v10, v1, Landroid/telephony/CellInfoLte;
 
     if-eqz v10, :cond_6
 
-    .line 2058
     check-cast v1, Landroid/telephony/CellInfoLte;
 
     .end local v1    # "cellInfo":Landroid/telephony/CellInfo;
@@ -5568,18 +5000,15 @@
 
     move-result-object v0
 
-    .line 2059
     .local v0, "cellId":Landroid/telephony/CellIdentityLte;
     invoke-virtual {v0}, Landroid/telephony/CellIdentityLte;->getMcc()I
 
     move-result v4
 
-    .line 2060
     invoke-virtual {v0}, Landroid/telephony/CellIdentityLte;->getMnc()I
 
     move-result v5
 
-    .line 2061
     goto :goto_1
 
     .end local v0    # "cellId":Landroid/telephony/CellIdentityLte;
@@ -5589,7 +5018,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 2062
     check-cast v1, Landroid/telephony/CellInfoWcdma;
 
     .end local v1    # "cellInfo":Landroid/telephony/CellInfo;
@@ -5597,13 +5025,11 @@
 
     move-result-object v0
 
-    .line 2063
     .local v0, "cellId":Landroid/telephony/CellIdentityWcdma;
     invoke-virtual {v0}, Landroid/telephony/CellIdentityWcdma;->getMcc()I
 
     move-result v4
 
-    .line 2064
     invoke-virtual {v0}, Landroid/telephony/CellIdentityWcdma;->getMnc()I
 
     move-result v5
@@ -5615,12 +5041,10 @@
     .locals 6
 
     .prologue
-    .line 1346
     new-instance v2, Ljava/util/Properties;
 
     invoke-direct {v2}, Ljava/util/Properties;-><init>()V
 
-    .line 1386
     .local v2, "extraConfigProperty":Ljava/util/Properties;
     sget-object v4, Lcom/android/server/location/GpsLocationProvider_samsung$3;->$SwitchMap$com$android$server$location$GpsLocationProvider_samsung$Vendor:[I
 
@@ -5636,7 +5060,6 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 1485
     :goto_0
     :pswitch_0
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->getCpAgpsProfile()I
@@ -5645,18 +5068,15 @@
 
     if-lez v4, :cond_0
 
-    .line 1486
     const-string v4, "CP_AGPS_ENABLE_PROFILE"
 
     const-string v5, "1"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1489
     :cond_0
     const-string v3, ""
 
-    .line 1491
     .local v3, "mStringExtraConfigProperty":Ljava/lang/String;
     :try_start_0
     new-instance v0, Ljava/io/ByteArrayOutputStream;
@@ -5665,25 +5085,21 @@
 
     invoke-direct {v0, v4}, Ljava/io/ByteArrayOutputStream;-><init>(I)V
 
-    .line 1492
     .local v0, "baos":Ljava/io/ByteArrayOutputStream;
     const-string v4, "Extra Configuration"
 
     invoke-virtual {v2, v0, v4}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 1493
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toString()Ljava/lang/String;
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v3
 
-    .line 1497
     .end local v0    # "baos":Ljava/io/ByteArrayOutputStream;
     :goto_1
     return-object v3
 
-    .line 1388
     .end local v3    # "mStringExtraConfigProperty":Ljava/lang/String;
     :pswitch_1
     const-string v4, "CP_LPP_GUARD_TIME_SEC"
@@ -5692,105 +5108,90 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1389
     const-string v4, "REAIDING_INTERVAL_SEC"
 
     const-string v5, "7200"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1390
     const-string v4, "AUTO_SUPL_VERSION_FOR_NI"
 
     const-string v5, "FALSE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1391
     const-string v4, "SUPL_SSL_METHOD"
 
     const-string v5, "SSLv23"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1392
     const-string v4, "SUPL_USE_APN"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1393
     const-string v4, "SUPL_USE_FW_DNS"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1394
     const-string v4, "SUPL_HMAC_HASH"
 
     const-string v5, "SHA256"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1395
     const-string v4, "SUPL_ECID_CAPABLE"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1396
     const-string v4, "SUPL_LPP_CAPABLE"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1397
     const-string v4, "SUPL_OTDOA_CAPABLE"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1398
     const-string v4, "VENDOR_LBS_SERVER_ENABLE"
 
     const-string v5, "FLASE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1399
     const-string v4, "RTI_ENABLE"
 
     const-string v5, "FLASE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1400
     const-string v4, "EE_SYNC_THRESHOLD_DAYS"
 
     const-string v5, "3"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1401
     const-string v4, "WARM_STANDBY2"
 
     const-string v5, "23"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1402
     const-string v4, "ENABLE_BEIDOU"
 
     const-string v5, "FALSE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1403
     const-string v4, "ENABLE_GALILEO"
 
     const-string v5, "FALSE"
@@ -5799,7 +5200,6 @@
 
     goto/16 :goto_0
 
-    .line 1406
     :pswitch_2
     const-string v4, "CP_LPP_GUARD_TIME_SEC"
 
@@ -5807,70 +5207,60 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1407
     const-string v4, "REAIDING_INTERVAL_SEC"
 
     const-string v5, "7200"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1408
     const-string v4, "AUTO_SUPL_VERSION_FOR_NI"
 
     const-string v5, "FALSE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1409
     const-string v4, "SUPL_USE_APN"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1410
     const-string v4, "SUPL_USE_FW_DNS"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1411
     const-string v4, "SUPL_HMAC_HASH"
 
     const-string v5, "SHA256"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1412
     const-string v4, "SUPL_ECID_CAPABLE"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1413
     const-string v4, "VENDOR_LBS_SERVER_ENABLE"
 
     const-string v5, "FLASE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1414
     const-string v4, "WARM_STANDBY2"
 
     const-string v5, "23"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1415
     const-string v4, "ENABLE_BEIDOU"
 
     const-string v5, "FALSE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1416
     const-string v4, "ENABLE_GALILEO"
 
     const-string v5, "FALSE"
@@ -5879,7 +5269,6 @@
 
     goto/16 :goto_0
 
-    .line 1419
     :pswitch_3
     const-string v4, "CP_LPP_GUARD_TIME_SEC"
 
@@ -5887,98 +5276,84 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1420
     const-string v4, "REAIDING_INTERVAL_SEC"
 
     const-string v5, "7200"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1421
     const-string v4, "AUTO_SUPL_VERSION_FOR_NI"
 
     const-string v5, "FALSE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1422
     const-string v4, "SUPL_SSL_METHOD"
 
     const-string v5, "SSLv23"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1423
     const-string v4, "SUPL_USE_APN"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1424
     const-string v4, "SUPL_USE_FW_DNS"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1425
     const-string v4, "SUPL_HMAC_HASH"
 
     const-string v5, "SHA256"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1426
     const-string v4, "SUPL_ECID_CAPABLE"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1427
     const-string v4, "LPP_UP_ECID_CAPABLE"
 
     const-string v5, "FALSE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1428
     const-string v4, "VENDOR_LBS_SERVER_ENABLE"
 
     const-string v5, "FLASE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1429
     const-string v4, "RTI_ENABLE"
 
     const-string v5, "FLASE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1430
     const-string v4, "EE_SYNC_THRESHOLD_DAYS"
 
     const-string v5, "3"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1431
     const-string v4, "WARM_STANDBY2"
 
     const-string v5, "23"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1432
     const-string v4, "ENABLE_BEIDOU"
 
     const-string v5, "FALSE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1433
     const-string v4, "ENABLE_GALILEO"
 
     const-string v5, "FALSE"
@@ -5987,7 +5362,6 @@
 
     goto/16 :goto_0
 
-    .line 1436
     :pswitch_4
     const-string v4, "SUPL_SSL_METHOD"
 
@@ -5995,14 +5369,12 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1437
     const-string v4, "SUPL_USE_APN"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1438
     const-string v4, "SUPL_USE_FW_DNS"
 
     const-string v5, "TRUE"
@@ -6011,7 +5383,6 @@
 
     goto/16 :goto_0
 
-    .line 1442
     :pswitch_5
     const-string v4, "SUPL_USE_APN"
 
@@ -6019,7 +5390,6 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1443
     const-string v4, "SUPL_USE_FW_DNS"
 
     const-string v5, "TRUE"
@@ -6028,7 +5398,6 @@
 
     goto/16 :goto_0
 
-    .line 1446
     :pswitch_6
     const-string v4, "USE_NI_SLP_ADDRESS"
 
@@ -6036,14 +5405,12 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1447
     const-string v4, "SUPL_USE_APN"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1448
     const-string v4, "SUPL_USE_FW_DNS"
 
     const-string v5, "TRUE"
@@ -6052,7 +5419,6 @@
 
     goto/16 :goto_0
 
-    .line 1451
     :pswitch_7
     const-string v4, "SUPL_USE_APN"
 
@@ -6060,7 +5426,6 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1452
     const-string v4, "SUPL_USE_FW_DNS"
 
     const-string v5, "TRUE"
@@ -6069,7 +5434,6 @@
 
     goto/16 :goto_0
 
-    .line 1455
     :pswitch_8
     const-string v4, "USE_NI_SLP_ADDRESS"
 
@@ -6077,21 +5441,18 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1456
     const-string v4, "SUPL_USE_APN"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1457
     const-string v4, "SUPL_USE_FW_DNS"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1458
     const-string v4, "SUPL_ECID_CAPABLE"
 
     const-string v5, "TRUE"
@@ -6100,7 +5461,6 @@
 
     goto/16 :goto_0
 
-    .line 1461
     :pswitch_9
     const-string v4, "REAIDING_INTERVAL_SEC"
 
@@ -6108,35 +5468,30 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1462
     const-string v4, "SUPL_LOG_ENABLE"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1463
     const-string v4, "SUPL_LOG_PATH"
 
     const-string v5, "/data/AGPSLog.txt"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1464
     const-string v4, "SUPL_NI_GPS_ICON"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1465
     const-string v4, "NO_DATA_STANDALONE"
 
     const-string v5, "TRUE"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1466
     const-string v4, "VENDOR_LBS_XTRA_SET_WITH_EE_IGNORE"
 
     const-string v5, "TRUE"
@@ -6145,7 +5500,6 @@
 
     goto/16 :goto_0
 
-    .line 1469
     :pswitch_a
     const-string v4, "SUPL_UT1_SEC"
 
@@ -6153,28 +5507,24 @@
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1470
     const-string v4, "SUPL_UT2_SEC"
 
     const-string v5, "10"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1471
     const-string v4, "SUPL_UT3_SEC"
 
     const-string v5, "10"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1472
     const-string v4, "TCP_CONNECTION_TIMEOUT"
 
     const-string v5, "30"
 
     invoke-virtual {v2, v4, v5}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1473
     const-string v4, "SUPL_NTT_DOCOMO"
 
     const-string v5, "TRUE"
@@ -6183,7 +5533,6 @@
 
     goto/16 :goto_0
 
-    .line 1476
     :pswitch_b
     const-string v4, "SUPL_LPP_CAPABLE"
 
@@ -6193,18 +5542,15 @@
 
     goto/16 :goto_0
 
-    .line 1494
     .restart local v3    # "mStringExtraConfigProperty":Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 1495
     .local v1, "e":Ljava/io/IOException;
     invoke-virtual {v1}, Ljava/io/IOException;->printStackTrace()V
 
     goto/16 :goto_1
 
-    .line 1386
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_2
@@ -6234,7 +5580,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 855
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     move-result-object v1
@@ -6251,41 +5596,34 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 856
     :cond_0
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 857
     .local v0, "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.AGPS_SET_PROFILE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 858
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, p1, v0, v3, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 859
     new-instance v0, Landroid/content/IntentFilter;
 
     .end local v0    # "intentFilter":Landroid/content/IntentFilter;
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 860
     .restart local v0    # "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.AGPS_GET_PROFILE"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 861
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, p1, v0, v3, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 866
     .end local v0    # "intentFilter":Landroid/content/IntentFilter;
     :cond_1
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
@@ -6296,65 +5634,54 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 867
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 868
     .restart local v0    # "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "com.sec.rcs.epdn.action.ACTION_SET_EMERGENCY_PDN_INFO"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 869
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, p1, v0, v3, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 870
     new-instance v0, Landroid/content/IntentFilter;
 
     .end local v0    # "intentFilter":Landroid/content/IntentFilter;
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 871
     .restart local v0    # "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "com.sec.rcs.epdn.action.ACTION_DEREGISTER_EMERGENCY"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 872
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, p1, v0, v3, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 873
     const-string v1, "GpsLocationProvider_ex"
 
     const-string v2, "extension_listenForBroadcasts : register EMERGENCY"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 877
     .end local v0    # "intentFilter":Landroid/content/IntentFilter;
     :cond_2
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 878
     .restart local v0    # "intentFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.AGPS_UDP_RECEIVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 879
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, p1, v0, v3, p2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 880
     return-void
 .end method
 
@@ -6368,22 +5695,18 @@
 
     const/4 v11, 0x0
 
-    .line 709
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 710
     .local v0, "action":Ljava/lang/String;
     new-instance v5, Landroid/os/Bundle;
 
     invoke-direct {v5}, Landroid/os/Bundle;-><init>()V
 
-    .line 711
     .local v5, "result":Landroid/os/Bundle;
     const/4 v6, 0x0
 
-    .line 713
     .local v6, "result_mask":I
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -6401,7 +5724,6 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 714
     :cond_0
     const-string v8, "android.intent.action.AGPS_SET_PROFILE"
 
@@ -6411,10 +5733,8 @@
 
     if-eqz v8, :cond_a
 
-    .line 715
     invoke-direct {p0, p1}, Lcom/android/server/location/GpsLocationProvider_samsung;->setServer(Landroid/content/Intent;)V
 
-    .line 725
     :cond_1
     :goto_0
     const-string v8, "android.intent.action.AGPS_UDP_RECEIVED"
@@ -6425,10 +5745,8 @@
 
     if-eqz v8, :cond_2
 
-    .line 726
     or-int/lit8 v6, v6, 0x1
 
-    .line 727
     const-string/jumbo v8, "packet_data"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -6443,7 +5761,6 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 728
     const-string/jumbo v8, "packet_length"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
@@ -6458,7 +5775,6 @@
 
     invoke-virtual {v5, v8, v9}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 730
     :cond_2
     const-string v8, "android.intent.action.SCREEN_ON"
 
@@ -6474,11 +5790,9 @@
 
     if-eqz v8, :cond_4
 
-    .line 731
     :cond_3
     invoke-direct {p0, v12}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_lcd_mode(I)I
 
-    .line 733
     :cond_4
     const-string v8, "android.intent.action.SCREEN_OFF"
 
@@ -6494,11 +5808,9 @@
 
     if-eqz v8, :cond_6
 
-    .line 734
     :cond_5
     invoke-direct {p0, v11}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_lcd_mode(I)I
 
-    .line 736
     :cond_6
     const-string v8, "android.intent.action.SIM_STATE_CHANGED"
 
@@ -6508,14 +5820,12 @@
 
     if-eqz v8, :cond_7
 
-    .line 737
     const-string/jumbo v8, "ss"
 
     invoke-virtual {p1, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 738
     .local v7, "simState":Ljava/lang/String;
     const-string v8, "GpsLocationProvider_ex"
 
@@ -6539,7 +5849,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 739
     const-string v8, "LOADED"
 
     invoke-virtual {v8, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6548,24 +5857,19 @@
 
     if-eqz v8, :cond_7
 
-    .line 740
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->getLppBitmask()I
 
     move-result v3
 
-    .line 741
     .local v3, "mask":I
     iget v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->prevLppMask:I
 
     if-eq v3, v8, :cond_7
 
-    .line 742
     iput v3, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->prevLppMask:I
 
-    .line 743
     invoke-direct {p0, p2, v3}, Lcom/android/server/location/GpsLocationProvider_samsung;->setLppSupport(ZI)V
 
-    .line 747
     .end local v3    # "mask":I
     .end local v7    # "simState":Ljava/lang/String;
     :cond_7
@@ -6577,7 +5881,6 @@
 
     if-ne v8, v9, :cond_9
 
-    .line 748
     const-string v8, "com.sec.rcs.epdn.action.ACTION_SET_EMERGENCY_PDN_INFO"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -6586,35 +5889,28 @@
 
     if-eqz v8, :cond_8
 
-    .line 749
     const-string v8, "GpsLocationProvider_ex"
 
     const-string v9, "ACTION_SET_EMERGENCY_PDN_INFO : "
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 750
     iget-boolean v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isUDPListen:Z
 
     if-nez v8, :cond_8
 
-    .line 751
     iput-boolean v12, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isUDPListen:Z
 
-    .line 752
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_init_extention()Z
 
-    .line 753
     const-string v8, "GpsLocationProvider_ex"
 
     const-string/jumbo v9, "native_init_extention"
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 754
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->checkUDPSuplInit()V
 
-    .line 757
     :cond_8
     const-string v8, "com.sec.rcs.epdn.action.ACTION_DEREGISTER_EMERGENCY"
 
@@ -6624,26 +5920,21 @@
 
     if-eqz v8, :cond_9
 
-    .line 758
     const-string v8, "GpsLocationProvider_ex"
 
     const-string v9, "ACTION_DEREGISTER_EMERGENCY : "
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 759
     iput-boolean v11, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isUDPListen:Z
 
-    .line 762
     :cond_9
     const-string/jumbo v8, "result_mask"
 
     invoke-virtual {v5, v8, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 763
     return-object v5
 
-    .line 716
     :cond_a
     const-string v8, "android.intent.action.AGPS_GET_PROFILE"
 
@@ -6653,7 +5944,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 717
     iget-object v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mProperties:Ljava/util/Properties;
 
     const-string v9, "SUPL_HOST"
@@ -6662,7 +5952,6 @@
 
     move-result-object v2
 
-    .line 718
     .local v2, "mSuplServerHost":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mProperties:Ljava/util/Properties;
 
@@ -6672,7 +5961,6 @@
 
     move-result-object v4
 
-    .line 719
     .local v4, "portString":Ljava/lang/String;
     new-instance v1, Landroid/content/Intent;
 
@@ -6680,18 +5968,15 @@
 
     invoke-direct {v1, v8}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 720
     .local v1, "getAgpsProfile":Landroid/content/Intent;
     const-string v8, "ServerAddr"
 
     invoke-virtual {v1, v8, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 721
     const-string v8, "ServerPort"
 
     invoke-virtual {v1, v8, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 722
     iget-object v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
@@ -6709,29 +5994,24 @@
     .prologue
     const/4 v10, 0x5
 
-    .line 889
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 890
     .local v3, "inViewList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 892
     .local v1, "inUsedList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
     if-eqz p4, :cond_6
 
-    .line 893
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, p4, :cond_1
 
-    .line 894
     aget v7, p3, v0
 
     float-to-int v7, v7
@@ -6742,7 +6022,6 @@
 
     invoke-interface {v3, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 895
     const/4 v7, 0x2
 
     aget v7, p2, v7
@@ -6769,13 +6048,11 @@
 
     invoke-interface {v1, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 893
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 897
     :cond_1
     invoke-static {}, Ljava/util/Collections;->reverseOrder()Ljava/util/Comparator;
 
@@ -6783,33 +6060,27 @@
 
     invoke-static {v1, v7}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 898
     invoke-static {}, Ljava/util/Collections;->reverseOrder()Ljava/util/Comparator;
 
     move-result-object v7
 
     invoke-static {v3, v7}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 900
     new-instance v6, Ljava/lang/StringBuffer;
 
     invoke-direct {v6}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 901
     .local v6, "sbInView":Ljava/lang/StringBuffer;
     new-instance v5, Ljava/lang/StringBuffer;
 
     invoke-direct {v5}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 903
     .local v5, "sbInUsed":Ljava/lang/StringBuffer;
     const/4 v4, 0x5
 
-    .line 904
     .local v4, "inViewSize":I
     const/4 v2, 0x5
 
-    .line 905
     .local v2, "inUsedSize":I
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -6821,7 +6092,6 @@
 
     move-result v4
 
-    .line 906
     :cond_2
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -6833,14 +6103,12 @@
 
     move-result v2
 
-    .line 908
     :cond_3
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v4, :cond_4
 
-    .line 909
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -6853,19 +6121,16 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 908
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 910
     :cond_4
     const/4 v0, 0x0
 
     :goto_2
     if-ge v0, v2, :cond_5
 
-    .line 911
     invoke-interface {v1, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v7
@@ -6878,12 +6143,10 @@
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 910
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 913
     :cond_5
     const-string v7, "GpsLocationProvider_ex"
 
@@ -6955,7 +6218,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 915
     .end local v0    # "i":I
     .end local v2    # "inUsedSize":I
     .end local v4    # "inViewSize":I
@@ -6976,7 +6238,6 @@
 
     const/4 v5, 0x0
 
-    .line 1079
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     move-result-object v0
@@ -6985,23 +6246,19 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1080
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsSetAutoSuplServer:Z
 
     if-nez v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 1081
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->makeAutoSuplUrl()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1082
     .local v2, "suplServerAutoConfig":Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 1083
     const/4 v1, 0x4
 
     move-object v0, p0
@@ -7010,16 +6267,13 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_agps_server_extension(ILjava/lang/String;IIII)V
 
-    .line 1084
     iput-boolean v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsSetAutoSuplServer:Z
 
-    .line 1096
     .end local v2    # "suplServerAutoConfig":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 1087
     :cond_1
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -7029,23 +6283,19 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1088
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsSetAutoSuplServer:Z
 
     if-nez v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 1089
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSuplByNw()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1090
     .restart local v2    # "suplServerAutoConfig":Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 1091
     const/4 v1, 0x3
 
     move-object v0, p0
@@ -7054,7 +6304,6 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_agps_server_extension(ILjava/lang/String;IIII)V
 
-    .line 1092
     iput-boolean v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsSetAutoSuplServer:Z
 
     goto :goto_0
@@ -7064,12 +6313,10 @@
     .locals 1
 
     .prologue
-    .line 2019
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mResolveAddrs:[Ljava/net/InetAddress;
 
-    .line 2020
     return-void
 .end method
 
@@ -7079,7 +6326,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 1784
     const-string/jumbo v2, "sec_location"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -7090,26 +6336,21 @@
 
     move-result-object v1
 
-    .line 1786
     .local v1, "mLocService":Lcom/samsung/location/ISLocationManager;
     if-eqz v1, :cond_0
 
-    .line 1789
     :try_start_0
     invoke-interface {v1, p1, p2}, Lcom/samsung/location/ISLocationManager;->reportGpsGeofenceAddStatus(II)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1794
     :cond_0
     :goto_0
     return-void
 
-    .line 1790
     :catch_0
     move-exception v0
 
-    .line 1791
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GpsLocationProvider_ex"
 
@@ -7128,7 +6369,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 1822
     const-string/jumbo v2, "sec_location"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -7139,26 +6379,21 @@
 
     move-result-object v1
 
-    .line 1824
     .local v1, "mLocService":Lcom/samsung/location/ISLocationManager;
     if-eqz v1, :cond_0
 
-    .line 1827
     :try_start_0
     invoke-interface {v1, p1, p2}, Lcom/samsung/location/ISLocationManager;->reportGpsGeofencePauseStatus(II)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1832
     :cond_0
     :goto_0
     return-void
 
-    .line 1828
     :catch_0
     move-exception v0
 
-    .line 1829
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GpsLocationProvider_ex"
 
@@ -7177,7 +6412,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 1803
     const-string/jumbo v2, "sec_location"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -7188,26 +6422,21 @@
 
     move-result-object v1
 
-    .line 1805
     .local v1, "mLocService":Lcom/samsung/location/ISLocationManager;
     if-eqz v1, :cond_0
 
-    .line 1808
     :try_start_0
     invoke-interface {v1, p1, p2}, Lcom/samsung/location/ISLocationManager;->reportGpsGeofenceRemoveStatus(II)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1813
     :cond_0
     :goto_0
     return-void
 
-    .line 1809
     :catch_0
     move-exception v0
 
-    .line 1810
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GpsLocationProvider_ex"
 
@@ -7226,7 +6455,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 1841
     const-string/jumbo v2, "sec_location"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -7237,26 +6465,21 @@
 
     move-result-object v1
 
-    .line 1843
     .local v1, "mLocService":Lcom/samsung/location/ISLocationManager;
     if-eqz v1, :cond_0
 
-    .line 1846
     :try_start_0
     invoke-interface {v1, p1, p2}, Lcom/samsung/location/ISLocationManager;->reportGpsGeofenceResumeStatus(II)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1851
     :cond_0
     :goto_0
     return-void
 
-    .line 1847
     :catch_0
     move-exception v0
 
-    .line 1848
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GpsLocationProvider_ex"
 
@@ -7282,7 +6505,6 @@
     .param p12, "timestamp"    # J
 
     .prologue
-    .line 1765
     const-string/jumbo v2, "sec_location"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -7293,7 +6515,6 @@
 
     move-result-object v1
 
-    .line 1767
     .local v1, "mLocService":Lcom/samsung/location/ISLocationManager;
     if-eqz v1, :cond_0
 
@@ -7315,22 +6536,18 @@
 
     move-wide/from16 v13, p12
 
-    .line 1770
     :try_start_0
     invoke-interface/range {v1 .. v14}, Lcom/samsung/location/ISLocationManager;->reportGpsGeofenceStatus(IIDDDFFFJ)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1775
     :cond_0
     :goto_0
     return-void
 
-    .line 1771
     :catch_0
     move-exception v0
 
-    .line 1772
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "GpsLocationProvider_ex"
 
@@ -7358,7 +6575,6 @@
     .param p15, "transitionTimestamp"    # J
 
     .prologue
-    .line 1743
     const-string/jumbo v4, "sec_location"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -7369,7 +6585,6 @@
 
     move-result-object v3
 
-    .line 1745
     .local v3, "mLocService":Lcom/samsung/location/ISLocationManager;
     if-eqz v3, :cond_0
 
@@ -7401,22 +6616,18 @@
 
     move-wide/from16 v18, p15
 
-    .line 1748
     :try_start_0
     invoke-interface/range {v3 .. v19}, Lcom/samsung/location/ISLocationManager;->reportGpsGeofenceTransition(IIDDDFFFJIJ)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1754
     :cond_0
     :goto_0
     return-void
 
-    .line 1750
     :catch_0
     move-exception v2
 
-    .line 1751
     .local v2, "e":Landroid/os/RemoteException;
     const-string v4, "GpsLocationProvider_ex"
 
@@ -7442,10 +6653,8 @@
 
     const/4 v8, 0x1
 
-    .line 1242
     const/4 v4, 0x0
 
-    .line 1243
     .local v4, "result":Z
     const-string/jumbo v5, "set_csc_parameters"
 
@@ -7455,21 +6664,17 @@
 
     if-eqz v5, :cond_1
 
-    .line 1244
     invoke-direct {p0, p2, p3}, Lcom/android/server/location/GpsLocationProvider_samsung;->setCscParameters(Landroid/os/Bundle;Z)V
 
-    .line 1245
     const/4 v4, 0x1
 
     :cond_0
     :goto_0
     move v5, v4
 
-    .line 1336
     :goto_1
     return v5
 
-    .line 1246
     :cond_1
     const-string v5, "com.skt.intent.action.AGPS"
 
@@ -7479,14 +6684,12 @@
 
     if-eqz v5, :cond_5
 
-    .line 1247
     const-string/jumbo v5, "opType"
 
     invoke-virtual {p2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1248
     .local v3, "opType":Ljava/lang/String;
     const-string v5, "cmdType"
 
@@ -7494,7 +6697,6 @@
 
     move-result-object v0
 
-    .line 1250
     .local v0, "cmdType":Ljava/lang/String;
     const-string/jumbo v5, "on"
 
@@ -7504,7 +6706,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 1251
     const-string/jumbo v5, "msAssisted"
 
     invoke-virtual {v5, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -7521,19 +6722,15 @@
 
     if-eqz v5, :cond_3
 
-    .line 1252
     :cond_2
     invoke-direct {p0, v8}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSKAFEnable(Z)V
 
-    .line 1260
     :cond_3
     :goto_2
     const/4 v4, 0x1
 
-    .line 1261
     goto :goto_0
 
-    .line 1255
     :cond_4
     const-string/jumbo v5, "off"
 
@@ -7543,10 +6740,8 @@
 
     if-eqz v5, :cond_3
 
-    .line 1256
     invoke-direct {p0, v9}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSKAFEnable(Z)V
 
-    .line 1257
     const-string/jumbo v5, "sys.sktgps"
 
     const-string v6, "0"
@@ -7555,7 +6750,6 @@
 
     goto :goto_2
 
-    .line 1261
     .end local v0    # "cmdType":Ljava/lang/String;
     .end local v3    # "opType":Ljava/lang/String;
     :cond_5
@@ -7567,14 +6761,12 @@
 
     if-eqz v5, :cond_6
 
-    .line 1262
     const-string/jumbo v5, "host"
 
     invoke-virtual {p2, v5}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1263
     .local v2, "hostURL":Ljava/lang/String;
     const-string/jumbo v5, "port"
 
@@ -7582,17 +6774,13 @@
 
     move-result v1
 
-    .line 1264
     .local v1, "hostPort":I
     iput-boolean v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsKtGps:Z
 
-    .line 1265
     iput-object v2, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mKTSuplServerHost:Ljava/lang/String;
 
-    .line 1266
     iput v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mKTSuplServerPort:I
 
-    .line 1267
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -7629,10 +6817,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1268
     const/4 v4, 0x1
 
-    .line 1269
     goto/16 :goto_0
 
     .end local v1    # "hostPort":I
@@ -7646,22 +6832,18 @@
 
     if-eqz v5, :cond_7
 
-    .line 1270
     const-string v5, "GpsLocationProvider_ex"
 
     const-string/jumbo v6, "setNativeServer"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1271
     iput-boolean v9, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsKtGps:Z
 
-    .line 1272
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1273
     :cond_7
     const-string v5, "activateGPS"
 
@@ -7671,21 +6853,18 @@
 
     if-eqz v5, :cond_8
 
-    .line 1274
     const-string v5, "GpsLocationProvider_ex"
 
     const-string v6, "activateGPS"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1275
     const-string v5, "GpsLocationProvider_ex"
 
     const-string v6, "Current user id : -2"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1276
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7696,12 +6875,10 @@
 
     invoke-static {v5, v6, v8, v7}, Landroid/provider/Settings$Secure;->setLocationProviderEnabledForUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
 
-    .line 1278
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1279
     :cond_8
     const-string v5, "deactivateGPS"
 
@@ -7711,14 +6888,12 @@
 
     if-eqz v5, :cond_9
 
-    .line 1280
     const-string v5, "GpsLocationProvider_ex"
 
     const-string v6, "deactivateGPS"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1281
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7729,12 +6904,10 @@
 
     invoke-static {v5, v6, v9, v7}, Landroid/provider/Settings$Secure;->setLocationProviderEnabledForUser(Landroid/content/ContentResolver;Ljava/lang/String;ZI)Z
 
-    .line 1283
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1284
     :cond_9
     const-string v5, "activateNLP"
 
@@ -7744,14 +6917,12 @@
 
     if-eqz v5, :cond_a
 
-    .line 1285
     const-string v5, "GpsLocationProvider_ex"
 
     const-string v6, "activateNLP"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1286
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7762,12 +6933,10 @@
 
     invoke-static {v5, v6, v8}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 1287
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1288
     :cond_a
     const-string v5, "deactivateNLP"
 
@@ -7777,14 +6946,12 @@
 
     if-eqz v5, :cond_b
 
-    .line 1289
     const-string v5, "GpsLocationProvider_ex"
 
     const-string v6, "deactivateNLP"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1290
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7795,12 +6962,10 @@
 
     invoke-static {v5, v6, v9}, Landroid/provider/Settings$Secure;->setLocationProviderEnabled(Landroid/content/ContentResolver;Ljava/lang/String;Z)V
 
-    .line 1291
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1292
     :cond_b
     const-string v5, "activateAGPS"
 
@@ -7810,14 +6975,12 @@
 
     if-eqz v5, :cond_c
 
-    .line 1293
     const-string v5, "GpsLocationProvider_ex"
 
     const-string v6, "activateAGPS"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1294
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7828,12 +6991,10 @@
 
     invoke-static {v5, v6, v8}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1295
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1296
     :cond_c
     const-string v5, "deactivateAGPS"
 
@@ -7843,14 +7004,12 @@
 
     if-eqz v5, :cond_d
 
-    .line 1297
     const-string v5, "GpsLocationProvider_ex"
 
     const-string v6, "deactivateAGPS"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1298
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -7861,12 +7020,10 @@
 
     invoke-static {v5, v6, v9}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 1299
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1300
     :cond_d
     const-string/jumbo v5, "setMode"
 
@@ -7876,7 +7033,6 @@
 
     if-eqz v5, :cond_e
 
-    .line 1301
     const-string/jumbo v5, "mode"
 
     invoke-virtual {p2, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -7885,7 +7041,6 @@
 
     iput v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->ktPositionMode:I
 
-    .line 1302
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -7910,12 +7065,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1303
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1304
     :cond_e
     const-string/jumbo v5, "getMode"
 
@@ -7925,7 +7078,6 @@
 
     if-eqz v5, :cond_f
 
-    .line 1305
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -7950,19 +7102,16 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1306
     const-string/jumbo v5, "mode"
 
     iget v6, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->ktPositionMode:I
 
     invoke-virtual {p2, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1307
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1308
     :cond_f
     const-string/jumbo v5, "set_use_udp"
 
@@ -7972,7 +7121,6 @@
 
     if-eqz v5, :cond_12
 
-    .line 1309
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -8001,7 +7149,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1310
     const-string/jumbo v5, "use_udp"
 
     invoke-virtual {p2, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -8010,31 +7157,25 @@
 
     if-ne v5, v8, :cond_11
 
-    .line 1311
     iget-boolean v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isUDPListen:Z
 
     if-nez v5, :cond_10
 
-    .line 1312
     iput-boolean v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isUDPListen:Z
 
-    .line 1313
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->checkUDPSuplInit()V
 
-    .line 1318
     :cond_10
     :goto_3
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1316
     :cond_11
     iput-boolean v9, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isUDPListen:Z
 
     goto :goto_3
 
-    .line 1319
     :cond_12
     const-string/jumbo v5, "set_dcm_iot"
 
@@ -8044,7 +7185,6 @@
 
     if-eqz v5, :cond_13
 
-    .line 1320
     const-string v5, "GpsLocationProvider_ex"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -8073,7 +7213,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1321
     const-string v5, "dcm_iot"
 
     invoke-virtual {p2, v5}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
@@ -8082,12 +7221,10 @@
 
     invoke-direct {p0, v5}, Lcom/android/server/location/GpsLocationProvider_samsung;->setDcmSuplIot(Z)V
 
-    .line 1322
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1323
     :cond_13
     const-string/jumbo v5, "request_running"
 
@@ -8097,12 +7234,10 @@
 
     if-eqz v5, :cond_14
 
-    .line 1324
     iget-boolean v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mStarted:Z
 
     goto/16 :goto_1
 
-    .line 1325
     :cond_14
     const-string/jumbo v5, "set_lpp_support"
 
@@ -8112,7 +7247,6 @@
 
     if-eqz v5, :cond_15
 
-    .line 1326
     const-string/jumbo v5, "set_lpp"
 
     invoke-virtual {p2, v5}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -8123,7 +7257,6 @@
 
     goto/16 :goto_0
 
-    .line 1327
     :cond_15
     const-string/jumbo v5, "setSecGpsConf"
 
@@ -8133,22 +7266,18 @@
 
     if-eqz v5, :cond_16
 
-    .line 1328
     const-string v5, "GpsLocationProvider_ex"
 
     const-string/jumbo v6, "setSecGpsConf"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1329
     invoke-direct {p0, p2}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSecGpsConf(Landroid/os/Bundle;)V
 
-    .line 1330
     const/4 v4, 0x1
 
     goto/16 :goto_0
 
-    .line 1331
     :cond_16
     const-string v5, "deleteSecGpsConf"
 
@@ -8158,17 +7287,14 @@
 
     if-eqz v5, :cond_0
 
-    .line 1332
     const-string v5, "GpsLocationProvider_ex"
 
     const-string v6, "deleteSecGpsConf"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1333
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->deleteSecGpsConf()V
 
-    .line 1334
     const/4 v4, 0x1
 
     goto/16 :goto_0
@@ -8180,7 +7306,6 @@
     .param p3, "timestamp"    # J
 
     .prologue
-    .line 1732
     return-void
 .end method
 
@@ -8193,7 +7318,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1655
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     move-result-object v0
@@ -8218,13 +7342,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1656
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/location/GpsLocationProvider_samsung;->extSelectUseGooglePositionMode(I)I
 
     move-result p1
 
-    .line 1660
     :cond_1
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -8258,13 +7380,11 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 1661
     :cond_2
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->extChnSelectPositionMode()I
 
     move-result p1
 
-    .line 1662
     const-string v0, "GpsLocationProvider_ex"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -8287,7 +7407,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1665
     :cond_3
     invoke-virtual {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->getWifiOnlyModel()Z
 
@@ -8295,17 +7414,14 @@
 
     if-ne v0, v3, :cond_4
 
-    .line 1666
     const-string v0, "GpsLocationProvider_ex"
 
     const-string/jumbo v1, "mPositionMode set to GPS_POSITION_MODE_STANDALONE because of WiFi only model."
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1667
     const/4 p1, 0x0
 
-    .line 1670
     :cond_4
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->isUSAMarket()Z
 
@@ -8313,12 +7429,10 @@
 
     if-ne v0, v3, :cond_5
 
-    .line 1671
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_gnss_control(I)V
 
-    .line 1675
     :cond_5
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->getSKAFEnable()Z
 
@@ -8326,14 +7440,12 @@
 
     if-eqz v0, :cond_6
 
-    .line 1676
     const-string/jumbo v0, "sys.sktgps"
 
     const-string v1, "1"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1680
     :cond_6
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
@@ -8351,14 +7463,11 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 1681
     :cond_7
     if-eqz p3, :cond_8
 
-    .line 1682
     const/4 p1, 0x2
 
-    .line 1683
     const-string v0, "GpsLocationProvider_ex"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -8381,7 +7490,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1687
     :cond_8
     return p1
 .end method
@@ -8390,17 +7498,14 @@
     .locals 13
 
     .prologue
-    .line 1173
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->getSuplServerFromCSC()V
 
-    .line 1175
     iget v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplServerFromCSC:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
-    .line 1176
     iget v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplType:I
 
     iget-object v2, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplAddress:Ljava/lang/String;
@@ -8417,12 +7522,10 @@
 
     invoke-direct/range {v0 .. v6}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_agps_server_extension(ILjava/lang/String;IIII)V
 
-    .line 1233
     :cond_0
     :goto_0
     return-void
 
-    .line 1178
     :cond_1
     sget-object v0, Lcom/android/server/location/GpsLocationProvider_samsung$3;->$SwitchMap$com$android$server$location$GpsLocationProvider_samsung$Vendor:[I
 
@@ -8438,7 +7541,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1229
     const/4 v7, 0x4
 
     iget-object v8, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mSuplAddress:Ljava/lang/String;
@@ -8457,7 +7559,6 @@
 
     goto :goto_0
 
-    .line 1180
     :pswitch_0
     const/4 v1, 0x3
 
@@ -8477,20 +7578,16 @@
 
     goto :goto_0
 
-    .line 1183
     :pswitch_1
     const/4 v2, 0x0
 
-    .line 1184
     .local v2, "suplServerAutoConfig":Ljava/lang/String;
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->makeAutoSuplUrl()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1185
     if-eqz v2, :cond_0
 
-    .line 1186
     const/4 v1, 0x4
 
     const/16 v3, 0x1c6b
@@ -8507,7 +7604,6 @@
 
     goto :goto_0
 
-    .line 1193
     .end local v2    # "suplServerAutoConfig":Ljava/lang/String;
     :pswitch_2
     const/4 v4, 0x4
@@ -8528,7 +7624,6 @@
 
     goto :goto_0
 
-    .line 1197
     :pswitch_3
     const/4 v4, 0x3
 
@@ -8548,7 +7643,6 @@
 
     goto :goto_0
 
-    .line 1200
     :pswitch_4
     const/4 v4, 0x3
 
@@ -8568,7 +7662,6 @@
 
     goto :goto_0
 
-    .line 1204
     :pswitch_5
     const/4 v4, 0x3
 
@@ -8588,20 +7681,16 @@
 
     goto :goto_0
 
-    .line 1207
     :pswitch_6
     const/4 v5, 0x0
 
-    .line 1208
     .local v5, "suplServerNwConfig":Ljava/lang/String;
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSuplByNw()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 1209
     if-eqz v5, :cond_2
 
-    .line 1210
     const/4 v4, 0x3
 
     const/16 v6, 0x1c6b
@@ -8618,7 +7707,6 @@
 
     goto/16 :goto_0
 
-    .line 1213
     :cond_2
     const/4 v7, 0x3
 
@@ -8638,14 +7726,12 @@
 
     goto/16 :goto_0
 
-    .line 1217
     .end local v5    # "suplServerNwConfig":Ljava/lang/String;
     :pswitch_7
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSktSuplVer()V
 
     goto/16 :goto_0
 
-    .line 1221
     :pswitch_8
     const/4 v7, 0x1
 
@@ -8665,7 +7751,6 @@
 
     goto/16 :goto_0
 
-    .line 1225
     :pswitch_9
     const/4 v7, 0x3
 
@@ -8685,7 +7770,6 @@
 
     goto/16 :goto_0
 
-    .line 1178
     nop
 
     :pswitch_data_0
@@ -8710,7 +7794,6 @@
     .locals 5
 
     .prologue
-    .line 1060
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung;->getVendor()Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     move-result-object v1
@@ -8735,13 +7818,11 @@
 
     if-ne v1, v4, :cond_1
 
-    .line 1063
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 1064
     .local v2, "timestamp":J
     const-string/jumbo v1, "persist.sys.xtra_time"
 
@@ -8751,20 +7832,17 @@
 
     invoke-static {v1, v4}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1065
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.android.angryGps.XtraSettings"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1066
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1068
     .end local v0    # "intent":Landroid/content/Intent;
     .end local v2    # "timestamp":J
     :cond_1
@@ -8777,47 +7855,39 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1697
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->getSKAFEnable()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 1698
     invoke-direct {p0, v2}, Lcom/android/server/location/GpsLocationProvider_samsung;->setSKAFEnable(Z)V
 
-    .line 1699
     const-string v0, "GpsLocationProvider_ex"
 
     const-string/jumbo v1, "stopNavigating : isSKAF changed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1700
     const-string/jumbo v0, "sys.sktgps"
 
     const-string v1, "0"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1702
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsKtGps:Z
 
     if-eqz v0, :cond_1
 
-    .line 1703
     iput-boolean v2, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mIsKtGps:Z
 
-    .line 1704
     const-string v0, "GpsLocationProvider_ex"
 
     const-string/jumbo v1, "mIsKtGps is changed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1706
     :cond_1
     return-void
 .end method
@@ -8826,10 +7896,8 @@
     .locals 0
 
     .prologue
-    .line 2251
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_exercise_fulsh()I
 
-    .line 2252
     return-void
 .end method
 
@@ -8837,7 +7905,6 @@
     .locals 1
 
     .prologue
-    .line 2192
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationProvider:Landroid/location/IExerciseLocationProvider;
 
     return-object v0
@@ -8847,7 +7914,6 @@
     .locals 1
 
     .prologue
-    .line 1869
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->isNativeInitCalled:Z
 
     return v0
@@ -8859,7 +7925,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1860
     iget-object v1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mConnMgr:Landroid/net/ConnectivityManager;
 
     invoke-virtual {v1, v0}, Landroid/net/ConnectivityManager;->isNetworkSupported(I)Z
@@ -8880,20 +7945,16 @@
     .param p2, "mProperties"    # Ljava/util/Properties;
 
     .prologue
-    .line 202
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
-    .line 203
     iput-object p2, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mProperties:Ljava/util/Properties;
 
-    .line 204
     new-instance v0, Ljava/util/Properties;
 
     invoke-direct {v0}, Ljava/util/Properties;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mProperties_secgps:Ljava/util/Properties;
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     const-string v1, "connectivity"
@@ -8906,7 +7967,6 @@
 
     iput-object v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mConnMgr:Landroid/net/ConnectivityManager;
 
-    .line 206
     return-void
 .end method
 
@@ -8914,7 +7974,6 @@
     .locals 1
 
     .prologue
-    .line 210
     const/4 v0, 0x0
 
     return v0
@@ -8925,10 +7984,8 @@
     .param p1, "fqdn"    # Ljava/lang/String;
 
     .prologue
-    .line 1922
     const/4 v9, 0x0
 
-    .line 1923
     .local v9, "isEmergency":Z
     move-object/from16 v0, p1
 
@@ -8936,7 +7993,6 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider_samsung;->suplFqdn:Ljava/lang/String;
 
-    .line 1924
     const-string v16, "GpsLocationProvider_ex"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -8963,7 +8019,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1926
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->suplFqdn:Ljava/lang/String;
@@ -8986,7 +8041,6 @@
 
     if-nez v16, :cond_1
 
-    .line 1927
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mConnMgr:Landroid/net/ConnectivityManager;
@@ -8997,15 +8051,12 @@
 
     move-result-object v2
 
-    .line 1928
     .local v2, "allNetwork":[Landroid/net/Network;
     const/4 v11, 0x0
 
-    .line 1929
     .local v11, "mActiveNetwork":Landroid/net/Network;
     if-eqz v2, :cond_0
 
-    .line 1930
     move-object v3, v2
 
     .local v3, "arr$":[Landroid/net/Network;
@@ -9020,7 +8071,6 @@
 
     aget-object v13, v3, v8
 
-    .line 1931
     .local v13, "network":Landroid/net/Network;
     move-object/from16 v0, p0
 
@@ -9034,7 +8084,6 @@
 
     move-result-object v12
 
-    .line 1932
     .local v12, "netInfo":Landroid/net/NetworkInfo;
     if-eqz v12, :cond_2
 
@@ -9056,13 +8105,10 @@
 
     if-eqz v16, :cond_2
 
-    .line 1933
     move-object v11, v13
 
-    .line 1934
     const/4 v9, 0x1
 
-    .line 1945
     .end local v3    # "arr$":[Landroid/net/Network;
     .end local v8    # "i$":I
     .end local v10    # "len$":I
@@ -9071,21 +8117,18 @@
     :cond_0
     if-nez v11, :cond_4
 
-    .line 1946
     const-string v16, "GpsLocationProvider_ex"
 
     const-string v17, "No default network is currently active."
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2016
     .end local v2    # "allNetwork":[Landroid/net/Network;
     .end local v11    # "mActiveNetwork":Landroid/net/Network;
     :cond_1
     :goto_1
     return-void
 
-    .line 1938
     .restart local v2    # "allNetwork":[Landroid/net/Network;
     .restart local v3    # "arr$":[Landroid/net/Network;
     .restart local v8    # "i$":I
@@ -9108,16 +8151,13 @@
 
     if-eqz v16, :cond_3
 
-    .line 1939
     move-object v11, v13
 
-    .line 1930
     :cond_3
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 1949
     .end local v3    # "arr$":[Landroid/net/Network;
     .end local v8    # "i$":I
     .end local v10    # "len$":I
@@ -9143,7 +8183,6 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider_samsung;->mResolveAddrs:[Ljava/net/InetAddress;
 
-    .line 1951
     const/16 v16, 0x2
 
     move/from16 v0, v16
@@ -9158,13 +8197,11 @@
 
     iput-object v0, v1, Lcom/android/server/location/GpsLocationProvider_samsung;->retAddr:[Ljava/net/InetAddress;
 
-    .line 1952
     const/4 v6, 0x0
 
     .local v6, "flag_v4_set":Z
     const/4 v7, 0x0
 
-    .line 1954
     .local v7, "flag_v6_set":Z
     const/4 v4, 0x0
 
@@ -9186,7 +8223,6 @@
 
     if-ge v4, v0, :cond_6
 
-    .line 1955
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mResolveAddrs:[Ljava/net/InetAddress;
@@ -9203,13 +8239,10 @@
 
     if-eqz v16, :cond_7
 
-    .line 1956
     if-nez v7, :cond_5
 
-    .line 1957
     const/4 v7, 0x1
 
-    .line 1958
     const-string v16, "GpsLocationProvider_ex"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -9240,7 +8273,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1959
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->retAddr:[Ljava/net/InetAddress;
@@ -9259,25 +8291,20 @@
 
     aput-object v18, v16, v17
 
-    .line 1966
     :cond_5
     :goto_3
     if-eqz v6, :cond_8
 
     if-eqz v7, :cond_8
 
-    .line 1970
     :cond_6
     const/4 v14, 0x0
 
-    .line 1972
     .local v14, "resInetAddress":Ljava/net/InetAddress;
     if-eqz v9, :cond_a
 
-    .line 1973
     if-eqz v7, :cond_1
 
-    .line 1974
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->retAddr:[Ljava/net/InetAddress;
@@ -9288,7 +8315,6 @@
 
     aget-object v14, v16, v17
 
-    .line 1975
     const-string v16, "GpsLocationProvider_ex"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -9315,7 +8341,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1976
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mConnMgr:Landroid/net/ConnectivityManager;
@@ -9332,11 +8357,9 @@
 
     move-result v15
 
-    .line 1979
     .local v15, "result":Z
     if-nez v15, :cond_9
 
-    .line 1980
     const-string v16, "GpsLocationProvider_ex"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -9363,7 +8386,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1984
     :goto_4
     invoke-virtual {v14}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -9379,7 +8401,6 @@
 
     goto/16 :goto_1
 
-    .line 2010
     .end local v4    # "count":I
     .end local v6    # "flag_v4_set":Z
     .end local v7    # "flag_v6_set":Z
@@ -9388,7 +8409,6 @@
     :catch_0
     move-exception v5
 
-    .line 2011
     .local v5, "e":Ljava/net/UnknownHostException;
     const-string v16, "GpsLocationProvider_ex"
 
@@ -9396,12 +8416,10 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2012
     invoke-virtual {v5}, Ljava/net/UnknownHostException;->printStackTrace()V
 
     goto/16 :goto_1
 
-    .line 1961
     .end local v5    # "e":Ljava/net/UnknownHostException;
     .restart local v4    # "count":I
     .restart local v6    # "flag_v4_set":Z
@@ -9409,10 +8427,8 @@
     :cond_7
     if-nez v6, :cond_5
 
-    .line 1962
     const/4 v6, 0x1
 
-    .line 1963
     :try_start_1
     const-string v16, "GpsLocationProvider_ex"
 
@@ -9444,7 +8460,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1964
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->retAddr:[Ljava/net/InetAddress;
@@ -9465,13 +8480,11 @@
 
     goto/16 :goto_3
 
-    .line 1954
     :cond_8
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_2
 
-    .line 1982
     .restart local v14    # "resInetAddress":Ljava/net/InetAddress;
     .restart local v15    # "result":Z
     :cond_9
@@ -9503,12 +8516,10 @@
 
     goto :goto_4
 
-    .line 1987
     .end local v15    # "result":Z
     :cond_a
     if-eqz v6, :cond_c
 
-    .line 1988
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->retAddr:[Ljava/net/InetAddress;
@@ -9519,7 +8530,6 @@
 
     aget-object v14, v16, v17
 
-    .line 1989
     const-string v16, "GpsLocationProvider_ex"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -9546,13 +8556,11 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1998
     :goto_5
     if-nez v6, :cond_b
 
     if-eqz v7, :cond_1
 
-    .line 1999
     :cond_b
     move-object/from16 v0, p0
 
@@ -9570,11 +8578,9 @@
 
     move-result v15
 
-    .line 2002
     .restart local v15    # "result":Z
     if-nez v15, :cond_e
 
-    .line 2003
     const-string v16, "GpsLocationProvider_ex"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -9601,7 +8607,6 @@
 
     invoke-static/range {v16 .. v17}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2007
     :goto_6
     invoke-virtual {v14}, Ljava/net/InetAddress;->getHostAddress()Ljava/lang/String;
 
@@ -9615,12 +8620,10 @@
 
     goto/16 :goto_1
 
-    .line 1991
     .end local v15    # "result":Z
     :cond_c
     if-eqz v7, :cond_d
 
-    .line 1992
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->retAddr:[Ljava/net/InetAddress;
@@ -9631,7 +8634,6 @@
 
     aget-object v14, v16, v17
 
-    .line 1993
     const-string v16, "GpsLocationProvider_ex"
 
     new-instance v17, Ljava/lang/StringBuilder;
@@ -9660,7 +8662,6 @@
 
     goto :goto_5
 
-    .line 1996
     :cond_d
     const-string v16, "GpsLocationProvider_ex"
 
@@ -9670,7 +8671,6 @@
 
     goto :goto_5
 
-    .line 2005
     .restart local v15    # "result":Z
     :cond_e
     const-string v16, "GpsLocationProvider_ex"
@@ -9708,15 +8708,12 @@
     .locals 1
 
     .prologue
-    .line 2104
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseStarted:Z
 
-    .line 2105
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_exercise_stop()I
 
-    .line 2106
     return-void
 .end method
 
@@ -9725,14 +8722,12 @@
     .param p1, "numOfBatch"    # I
 
     .prologue
-    .line 2196
     const-string v1, "GpsLocationProvider_ex"
 
     const-string/jumbo v2, "reportExerciseData"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2197
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->exerciseTimestamp:[J
@@ -9775,7 +8770,6 @@
 
     invoke-direct/range {v1 .. v11}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_readExerciseData([J[D[D[F[F[F[D[D[JI)I
 
-    .line 2201
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
@@ -9784,7 +8778,6 @@
 
     monitor-enter v16
 
-    .line 2202
     :try_start_0
     move-object/from16 v0, p0
 
@@ -9794,7 +8787,6 @@
 
     move-result v15
 
-    .line 2203
     .local v15, "size":I
     const/4 v13, 0x0
 
@@ -9802,7 +8794,6 @@
     :goto_0
     if-ge v13, v15, :cond_0
 
-    .line 2204
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
@@ -9815,7 +8806,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2206
     .local v14, "listener":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     :try_start_1
     iget-object v1, v14, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->mListener:Landroid/location/IExerciseLocationListener;
@@ -9863,17 +8853,14 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2203
     :goto_1
     add-int/lit8 v13, v13, 0x1
 
     goto :goto_0
 
-    .line 2209
     :catch_0
     move-exception v12
 
-    .line 2210
     .local v12, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v1, "GpsLocationProvider_ex"
@@ -9882,28 +8869,23 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2211
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v14}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2213
     add-int/lit8 v15, v15, -0x1
 
     goto :goto_1
 
-    .line 2216
     .end local v12    # "e":Landroid/os/RemoteException;
     .end local v14    # "listener":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     :cond_0
     monitor-exit v16
 
-    .line 2217
     return-void
 
-    .line 2216
     .end local v13    # "i":I
     .end local v15    # "size":I
     :catchall_0
@@ -9921,19 +8903,16 @@
     .param p1, "exercise_status"    # I
 
     .prologue
-    .line 2226
     const-string v4, "GpsLocationProvider_ex"
 
     const-string/jumbo v5, "reportExerciseStatus"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2228
     iget-object v5, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
 
     monitor-enter v5
 
-    .line 2229
     :try_start_0
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
 
@@ -9941,7 +8920,6 @@
 
     move-result v3
 
-    .line 2230
     .local v3, "size":I
     const/4 v1, 0x0
 
@@ -9949,7 +8927,6 @@
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 2231
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -9960,7 +8937,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2233
     .local v2, "listener":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     :try_start_1
     iget-object v4, v2, Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;->mListener:Landroid/location/IExerciseLocationListener;
@@ -9970,17 +8946,14 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2230
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 2234
     :catch_0
     move-exception v0
 
-    .line 2235
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v4, "GpsLocationProvider_ex"
@@ -9989,26 +8962,21 @@
 
     invoke-static {v4, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2236
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseLocationListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2238
     add-int/lit8 v3, v3, -0x1
 
     goto :goto_1
 
-    .line 2241
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v2    # "listener":Lcom/android/server/location/GpsLocationProvider_samsung$ExerciseListener;
     :cond_0
     monitor-exit v5
 
-    .line 2242
     return-void
 
-    .line 2241
     .end local v1    # "i":I
     .end local v3    # "size":I
     :catchall_0
@@ -10027,44 +8995,35 @@
     .param p2, "updateRateMs"    # I
 
     .prologue
-    .line 2085
     invoke-virtual {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->isEnabled()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 2086
     const-string v0, "GpsLocationProvider_ex"
 
     const-string v1, "GPS is not enabled. native_exercise_init() will be called by exercise."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2087
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_init_extention()Z
 
-    .line 2088
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_cleanup_extention()V
 
-    .line 2090
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseStarted:Z
 
     if-nez v0, :cond_1
 
-    .line 2091
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/location/GpsLocationProvider_samsung;->mExerciseStarted:Z
 
-    .line 2092
     invoke-direct {p0, p1, p2}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_set_exercise_mode(II)I
 
-    .line 2093
     invoke-direct {p0}, Lcom/android/server/location/GpsLocationProvider_samsung;->native_exercise_start()I
 
-    .line 2095
     :cond_1
     return-void
 .end method

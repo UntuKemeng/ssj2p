@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 135
     iput-object p1, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
-    .line 136
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 137
     return-void
 .end method
 
@@ -49,18 +46,15 @@
 
     const/4 v2, 0x0
 
-    .line 141
     iget v3, p1, Landroid/os/Message;->what:I
 
     packed-switch v3, :pswitch_data_0
 
-    .line 186
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 143
     :pswitch_1
     iget-object v2, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
@@ -69,14 +63,12 @@
 
     goto :goto_0
 
-    .line 146
     :pswitch_2
     iget-object v2, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
     # invokes: Lcom/android/server/cover/GracefulNfcLedCoverController;->clearRetryCountDelayedMsg()V
     invoke-static {v2}, Lcom/android/server/cover/GracefulNfcLedCoverController;->access$100(Lcom/android/server/cover/GracefulNfcLedCoverController;)V
 
-    .line 148
     :pswitch_3
     iget-object v3, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
@@ -91,7 +83,6 @@
     # invokes: Lcom/android/server/cover/GracefulNfcLedCoverController;->handleSendDataToNfcLedCover(I[B)V
     invoke-static {v3, v4, v2}, Lcom/android/server/cover/GracefulNfcLedCoverController;->access$200(Lcom/android/server/cover/GracefulNfcLedCoverController;I[B)V
 
-    .line 150
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
@@ -136,7 +127,6 @@
 
     if-nez v2, :cond_0
 
-    .line 153
     iget-object v2, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
     # getter for: Lcom/android/server/cover/GracefulNfcLedCoverController;->mSendLedDataWakeLock:Landroid/os/PowerManager$WakeLock;
@@ -150,17 +140,14 @@
 
     goto :goto_0
 
-    .line 155
     :catch_0
     move-exception v1
 
-    .line 156
     .local v1, "e":Ljava/lang/IllegalStateException;
     invoke-virtual {v1}, Ljava/lang/IllegalStateException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 160
     .end local v1    # "e":Ljava/lang/IllegalStateException;
     :pswitch_4
     iget-object v2, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
@@ -172,7 +159,6 @@
 
     goto :goto_0
 
-    .line 163
     :pswitch_5
     iget-object v2, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
@@ -185,18 +171,15 @@
 
     goto :goto_0
 
-    .line 166
     :pswitch_6
     iget v3, p1, Landroid/os/Message;->arg1:I
 
     if-ne v3, v0, :cond_1
 
-    .line 167
     .local v0, "attach":Z
     :goto_1
     if-nez v0, :cond_0
 
-    .line 168
     iget-object v2, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
     # invokes: Lcom/android/server/cover/GracefulNfcLedCoverController;->handleCoverDetachedLocked()V
@@ -208,10 +191,8 @@
     :cond_1
     move v0, v2
 
-    .line 166
     goto :goto_1
 
-    .line 172
     :pswitch_7
     iget-object v3, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
@@ -224,7 +205,6 @@
 
     goto :goto_0
 
-    .line 175
     :pswitch_8
     iget-object v3, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
@@ -237,7 +217,6 @@
 
     goto/16 :goto_0
 
-    .line 178
     :pswitch_9
     iget-object v2, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
@@ -246,7 +225,6 @@
 
     goto/16 :goto_0
 
-    .line 181
     :pswitch_a
     iget-object v3, p0, Lcom/android/server/cover/GracefulNfcLedCoverController$NfcLedCoverControllerHandler;->this$0:Lcom/android/server/cover/GracefulNfcLedCoverController;
 
@@ -259,7 +237,6 @@
 
     goto/16 :goto_0
 
-    .line 141
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2

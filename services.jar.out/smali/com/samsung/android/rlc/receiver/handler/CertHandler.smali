@@ -16,7 +16,6 @@
     .locals 1
 
     .prologue
-    .line 23
     const-class v0, Lcom/samsung/android/rlc/receiver/handler/CertHandler;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -32,10 +31,8 @@
     .locals 1
 
     .prologue
-    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->response:Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
@@ -52,7 +49,6 @@
 
     const/4 v7, 0x1
 
-    .line 69
     invoke-static {p0}, Lcom/samsung/android/rlc/util/RLCUtil;->getInstance(Landroid/content/Context;)Lcom/samsung/android/rlc/util/RLCUtil;
 
     move-result-object v5
@@ -61,11 +57,9 @@
 
     move-result-object v1
 
-    .line 70
     .local v1, "rlcID":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 71
     .local v4, "useDvcID":Z
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -73,27 +67,22 @@
 
     if-eqz v5, :cond_0
 
-    .line 72
     const/4 v4, 0x1
 
-    .line 75
     :cond_0
     new-instance v0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
 
     invoke-direct {v0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;-><init>()V
 
-    .line 77
     .local v0, "dvceVo":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     if-eqz v4, :cond_3
 
-    .line 78
     sget-object v5, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->TAG:Ljava/lang/String;
 
     const-string v6, "Use device id instead of RLC"
 
     invoke-static {v5, v6}, Lcom/samsung/android/rlc/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     const-string v5, "phone"
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -102,13 +91,11 @@
 
     check-cast v3, Landroid/telephony/TelephonyManager;
 
-    .line 80
     .local v3, "telephonyManager":Landroid/telephony/TelephonyManager;
     invoke-static {p0}, Lcom/samsung/android/rlc/util/DeviceUtil;->getDualSIMDeviceID(Landroid/content/Context;)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 82
     .local v2, "sndImei":[Ljava/lang/String;
     if-eqz v2, :cond_1
 
@@ -116,12 +103,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 83
     aget-object v5, v2, v8
 
     invoke-virtual {v0, v5}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setImei(Ljava/lang/String;)V
 
-    .line 85
     :cond_1
     if-eqz v2, :cond_2
 
@@ -133,19 +118,16 @@
 
     if-eqz v5, :cond_2
 
-    .line 86
     aget-object v5, v2, v7
 
     invoke-virtual {v0, v5}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setImei2(Ljava/lang/String;)V
 
-    .line 92
     .end local v2    # "sndImei":[Ljava/lang/String;
     .end local v3    # "telephonyManager":Landroid/telephony/TelephonyManager;
     :cond_2
     :goto_0
     return-object v0
 
-    .line 89
     :cond_3
     sget-object v5, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->TAG:Ljava/lang/String;
 
@@ -153,7 +135,6 @@
 
     invoke-static {v5, v6}, Lcom/samsung/android/rlc/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 90
     invoke-virtual {v0, v1}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setRlcId(Ljava/lang/String;)V
 
     goto :goto_0
@@ -167,19 +148,16 @@
     .param p2, "dvcVO"    # Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
 
     .prologue
-    .line 36
     sget-object v5, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->TAG:Ljava/lang/String;
 
     const-string v6, "[getEncrytedData]"
 
     invoke-static {v5, v6}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 38
     invoke-static {p1}, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->getCertBody(Landroid/content/Context;)Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
 
     move-result-object v1
 
-    .line 39
     .local v1, "certRequest":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     const-string v5, "https://%s/dm/v1/dev/getCert"
 
@@ -187,7 +165,6 @@
 
     move-result-object v4
 
-    .line 41
     .local v4, "uri":Ljava/lang/String;
     invoke-static {p1, v1, v4}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler;->httpRequest(Landroid/content/Context;Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;Ljava/lang/String;)Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
@@ -195,7 +172,6 @@
 
     iput-object v5, p0, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->response:Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
-    .line 43
     iget-object v5, p0, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->response:Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
     if-eqz v5, :cond_1
@@ -210,14 +186,12 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 44
     sget-object v5, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->TAG:Ljava/lang/String;
 
     const-string v6, "To receive cert data success"
 
     invoke-static {v5, v6}, Lcom/samsung/android/rlc/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
     iget-object v5, p0, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->response:Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
     invoke-virtual {v5}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;->getResponseBean()Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;
@@ -228,7 +202,6 @@
 
     move-result-object v0
 
-    .line 49
     .local v0, "bytes":[B
     :try_start_0
     invoke-static {p1}, Lcom/samsung/android/rlc/util/RLCUtil;->getInstance(Landroid/content/Context;)Lcom/samsung/android/rlc/util/RLCUtil;
@@ -247,14 +220,11 @@
 
     move-result-object v3
 
-    .line 50
     .local v3, "encData":[B
     if-eqz v3, :cond_1
 
-    .line 51
     invoke-virtual {p2, v3}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setDataByte([B)V
 
-    .line 53
     iget-object v5, p0, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->response:Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
     invoke-virtual {v5}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;->getResponseBean()Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;
@@ -271,7 +241,6 @@
 
     if-nez v5, :cond_0
 
-    .line 54
     iget-object v5, p0, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->response:Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
     invoke-virtual {v5}, Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;->getResponseBean()Lcom/samsung/android/rlc/vo/DeviceApiResponseVO;
@@ -284,7 +253,6 @@
 
     invoke-virtual {p2, v5}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setImei(Ljava/lang/String;)V
 
-    .line 55
     invoke-static {p1}, Lcom/samsung/android/rlc/util/RLCUtil;->getInstance(Landroid/content/Context;)Lcom/samsung/android/rlc/util/RLCUtil;
 
     move-result-object v5
@@ -321,12 +289,10 @@
 
     move-result-object v3
 
-    .line 56
     invoke-virtual {p2, v3}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->setDataByte([B)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 65
     .end local v0    # "bytes":[B
     .end local v3    # "encData":[B
     .end local p2    # "dvcVO":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
@@ -334,17 +300,14 @@
     :goto_0
     return-object p2
 
-    .line 61
     .restart local v0    # "bytes":[B
     .restart local p2    # "dvcVO":Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;
     :catch_0
     move-exception v2
 
-    .line 62
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 65
     .end local v0    # "bytes":[B
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
@@ -357,7 +320,6 @@
     .locals 1
 
     .prologue
-    .line 28
     iget-object v0, p0, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->response:Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
     return-object v0
@@ -368,9 +330,7 @@
     .param p1, "response"    # Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
     .prologue
-    .line 32
     iput-object p1, p0, Lcom/samsung/android/rlc/receiver/handler/CertHandler;->response:Lcom/samsung/android/rlc/receiver/handler/HttpRequestHandler$RESPONSE;
 
-    .line 33
     return-void
 .end method

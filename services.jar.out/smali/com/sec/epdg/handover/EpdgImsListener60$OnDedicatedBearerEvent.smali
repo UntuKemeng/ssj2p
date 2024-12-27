@@ -30,19 +30,14 @@
     .param p4, "qci"    # I
 
     .prologue
-    .line 284
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener60$OnDedicatedBearerEvent;->this$0:Lcom/sec/epdg/handover/EpdgImsListener60;
 
-    .line 285
     invoke-direct {p0, p1, p2}, Lcom/sec/epdg/handover/EpdgImsListener60$ImsCallRunnable;-><init>(Lcom/sec/epdg/handover/EpdgImsListener60;Lcom/sec/ims/volte2/data/ImsCallInfo;)V
 
-    .line 286
     iput p3, p0, Lcom/sec/epdg/handover/EpdgImsListener60$OnDedicatedBearerEvent;->mBearerState:I
 
-    .line 287
     iput p4, p0, Lcom/sec/epdg/handover/EpdgImsListener60$OnDedicatedBearerEvent;->mQci:I
 
-    .line 288
     return-void
 .end method
 
@@ -52,14 +47,12 @@
     .locals 4
 
     .prologue
-    .line 291
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onDedicatedBearerEvent: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 292
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mEpdgImsCallStatus:Lcom/sec/epdg/handover/EpdgImsCallStatus;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$900()Lcom/sec/epdg/handover/EpdgImsCallStatus;
 
@@ -73,6 +66,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/sec/epdg/handover/EpdgImsCallStatus;->onDedicatedBearerEvent(Lcom/sec/ims/volte2/data/ImsCallInfo;II)V
 
-    .line 294
     return-void
 .end method

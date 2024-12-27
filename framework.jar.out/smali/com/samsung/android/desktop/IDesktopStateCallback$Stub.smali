@@ -36,15 +36,12 @@
     .locals 1
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 16
     const-string v0, "com.samsung.android.desktop.IDesktopStateCallback"
 
     invoke-virtual {p0, p0, v0}, Lcom/samsung/android/desktop/IDesktopStateCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 17
     return-void
 .end method
 
@@ -53,17 +50,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 24
     if-nez p0, :cond_0
 
-    .line 25
     const/4 v0, 0x0
 
-    .line 31
     :goto_0
     return-object v0
 
-    .line 27
     :cond_0
     const-string v1, "com.samsung.android.desktop.IDesktopStateCallback"
 
@@ -71,7 +64,6 @@
 
     move-result-object v0
 
-    .line 28
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -79,12 +71,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 29
     check-cast v0, Lcom/samsung/android/desktop/IDesktopStateCallback;
 
     goto :goto_0
 
-    .line 31
     :cond_1
     new-instance v0, Lcom/samsung/android/desktop/IDesktopStateCallback$Stub$Proxy;
 
@@ -100,7 +90,6 @@
     .locals 0
 
     .prologue
-    .line 35
     return-object p0
 .end method
 
@@ -121,10 +110,8 @@
 
     const/4 v1, 0x1
 
-    .line 39
     sparse-switch p1, :sswitch_data_0
 
-    .line 63
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v1
@@ -132,7 +119,6 @@
     :goto_0
     return v1
 
-    .line 43
     :sswitch_0
     const-string v2, "com.samsung.android.desktop.IDesktopStateCallback"
 
@@ -140,13 +126,11 @@
 
     goto :goto_0
 
-    .line 48
     :sswitch_1
     const-string v2, "com.samsung.android.desktop.IDesktopStateCallback"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 50
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -155,21 +139,18 @@
 
     move v0, v1
 
-    .line 51
     .local v0, "_arg0":Z
     :cond_0
     invoke-virtual {p0, v0}, Lcom/samsung/android/desktop/IDesktopStateCallback$Stub;->onDesktopDockState(Z)V
 
     goto :goto_0
 
-    .line 56
     .end local v0    # "_arg0":Z
     :sswitch_2
     const-string v2, "com.samsung.android.desktop.IDesktopStateCallback"
 
     invoke-virtual {p2, v2}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 58
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -178,14 +159,12 @@
 
     move v0, v1
 
-    .line 59
     .restart local v0    # "_arg0":Z
     :cond_1
     invoke-virtual {p0, v0}, Lcom/samsung/android/desktop/IDesktopStateCallback$Stub;->onDesktopModeState(Z)V
 
     goto :goto_0
 
-    .line 39
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

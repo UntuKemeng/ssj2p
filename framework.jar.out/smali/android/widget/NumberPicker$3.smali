@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 740
     iput-object p1, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,24 +41,19 @@
     .param p2, "hasFocus"    # Z
 
     .prologue
-    .line 743
     if-eqz p2, :cond_1
 
-    .line 744
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 745
     .local v0, "inputMethodManager":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_1
 
-    .line 748
     invoke-virtual {v0}, Landroid/view/inputmethod/InputMethodManager;->isAccessoryKeyboardState()I
 
     move-result v1
 
-    .line 749
     .local v1, "mKeyboard":I
     and-int/lit8 v2, v1, 0x1
 
@@ -73,7 +67,6 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 751
     :cond_0
     iget-object v2, p0, Landroid/widget/NumberPicker$3;->this$0:Landroid/widget/NumberPicker;
 
@@ -85,7 +78,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 755
     .end local v0    # "inputMethodManager":Landroid/view/inputmethod/InputMethodManager;
     .end local v1    # "mKeyboard":I
     :cond_1

@@ -24,26 +24,20 @@
     .param p3, "node"    # Lorg/simpleframework/xml/stream/EventNode;
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     new-instance v0, Lorg/simpleframework/xml/stream/InputNodeMap;
 
     invoke-direct {v0, p0, p3}, Lorg/simpleframework/xml/stream/InputNodeMap;-><init>(Lorg/simpleframework/xml/stream/InputNode;Lorg/simpleframework/xml/stream/EventNode;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->map:Lorg/simpleframework/xml/stream/InputNodeMap;
 
-    .line 66
     iput-object p2, p0, Lorg/simpleframework/xml/stream/InputElement;->reader:Lorg/simpleframework/xml/stream/NodeReader;
 
-    .line 67
     iput-object p1, p0, Lorg/simpleframework/xml/stream/InputElement;->parent:Lorg/simpleframework/xml/stream/InputNode;
 
-    .line 68
     iput-object p3, p0, Lorg/simpleframework/xml/stream/InputElement;->node:Lorg/simpleframework/xml/stream/EventNode;
 
-    .line 69
     return-void
 .end method
 
@@ -54,7 +48,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 179
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->map:Lorg/simpleframework/xml/stream/InputNodeMap;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/stream/InputNodeMap;->get(Ljava/lang/String;)Lorg/simpleframework/xml/stream/InputNode;
@@ -77,7 +70,6 @@
     .end annotation
 
     .prologue
-    .line 190
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->map:Lorg/simpleframework/xml/stream/InputNodeMap;
 
     return-object v0
@@ -87,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 115
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->node:Lorg/simpleframework/xml/stream/EventNode;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/stream/EventNode;->getName()Ljava/lang/String;
@@ -106,7 +97,6 @@
     .end annotation
 
     .prologue
-    .line 216
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->reader:Lorg/simpleframework/xml/stream/NodeReader;
 
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/stream/NodeReader;->readElement(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/stream/InputNode;
@@ -126,7 +116,6 @@
     .end annotation
 
     .prologue
-    .line 233
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->reader:Lorg/simpleframework/xml/stream/NodeReader;
 
     invoke-virtual {v0, p0, p1}, Lorg/simpleframework/xml/stream/NodeReader;->readElement(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/String;)Lorg/simpleframework/xml/stream/InputNode;
@@ -140,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->parent:Lorg/simpleframework/xml/stream/InputNode;
 
     return-object v0
@@ -150,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 32
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/InputElement;->getParent()Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v0
@@ -162,7 +149,6 @@
     .locals 2
 
     .prologue
-    .line 104
     new-instance v0, Lorg/simpleframework/xml/stream/InputPosition;
 
     iget-object v1, p0, Lorg/simpleframework/xml/stream/InputElement;->node:Lorg/simpleframework/xml/stream/EventNode;
@@ -176,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->node:Lorg/simpleframework/xml/stream/EventNode;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/stream/EventNode;->getPrefix()Ljava/lang/String;
@@ -190,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 141
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->node:Lorg/simpleframework/xml/stream/EventNode;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/stream/EventNode;->getReference()Ljava/lang/String;
@@ -204,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 80
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->node:Lorg/simpleframework/xml/stream/EventNode;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/stream/EventNode;->getSource()Ljava/lang/Object;
@@ -223,7 +206,6 @@
     .end annotation
 
     .prologue
-    .line 201
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->reader:Lorg/simpleframework/xml/stream/NodeReader;
 
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/stream/NodeReader;->readValue(Lorg/simpleframework/xml/stream/InputNode;)Ljava/lang/String;
@@ -237,7 +219,6 @@
     .locals 1
 
     .prologue
-    .line 166
     const/4 v0, 0x1
 
     return v0
@@ -252,7 +233,6 @@
     .end annotation
 
     .prologue
-    .line 259
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->map:Lorg/simpleframework/xml/stream/InputNodeMap;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/stream/InputNodeMap;->isEmpty()Z
@@ -261,10 +241,8 @@
 
     if-nez v0, :cond_0
 
-    .line 260
     const/4 v0, 0x0
 
-    .line 262
     :goto_0
     return v0
 
@@ -282,7 +260,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->reader:Lorg/simpleframework/xml/stream/NodeReader;
 
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/stream/NodeReader;->isRoot(Lorg/simpleframework/xml/stream/InputNode;)Z
@@ -301,12 +278,10 @@
     .end annotation
 
     .prologue
-    .line 245
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputElement;->reader:Lorg/simpleframework/xml/stream/NodeReader;
 
     invoke-virtual {v0, p0}, Lorg/simpleframework/xml/stream/NodeReader;->skipElement(Lorg/simpleframework/xml/stream/InputNode;)V
 
-    .line 246
     return-void
 .end method
 
@@ -314,7 +289,6 @@
     .locals 4
 
     .prologue
-    .line 273
     const-string v0, "element %s"
 
     const/4 v1, 0x1

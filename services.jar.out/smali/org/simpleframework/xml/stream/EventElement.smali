@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 45
     const/4 v0, -0x1
 
     return v0
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/4 v0, 0x0
 
     return-object v0
@@ -55,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     return v0
@@ -65,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 81
     const/4 v0, 0x1
 
     return v0
@@ -75,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
     return v0

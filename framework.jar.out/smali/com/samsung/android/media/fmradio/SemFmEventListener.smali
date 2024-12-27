@@ -52,24 +52,20 @@
     .locals 1
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 222
     new-instance v0, Lcom/samsung/android/media/fmradio/SemFmEventListener$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/media/fmradio/SemFmEventListener$1;-><init>(Lcom/samsung/android/media/fmradio/SemFmEventListener;)V
 
     iput-object v0, p0, Lcom/samsung/android/media/fmradio/SemFmEventListener;->callback:Lcom/samsung/android/media/fmradio/internal/IFMEventListener;
 
-    .line 319
     new-instance v0, Lcom/samsung/android/media/fmradio/SemFmEventListener$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/media/fmradio/SemFmEventListener$2;-><init>(Lcom/samsung/android/media/fmradio/SemFmEventListener;)V
 
     iput-object v0, p0, Lcom/samsung/android/media/fmradio/SemFmEventListener;->mHandler:Landroid/os/Handler;
 
-    .line 36
     return-void
 .end method
 
@@ -80,7 +76,6 @@
     .param p1, "freq"    # J
 
     .prologue
-    .line 198
     return-void
 .end method
 
@@ -88,7 +83,6 @@
     .locals 0
 
     .prologue
-    .line 188
     return-void
 .end method
 
@@ -97,7 +91,6 @@
     .param p1, "frequency"    # J
 
     .prologue
-    .line 46
     return-void
 .end method
 
@@ -105,7 +98,6 @@
     .locals 0
 
     .prologue
-    .line 113
     return-void
 .end method
 
@@ -113,7 +105,6 @@
     .locals 0
 
     .prologue
-    .line 122
     return-void
 .end method
 
@@ -123,7 +114,6 @@
     .param p2, "ecc"    # I
 
     .prologue
-    .line 161
     return-void
 .end method
 
@@ -131,7 +121,6 @@
     .locals 0
 
     .prologue
-    .line 179
     return-void
 .end method
 
@@ -139,7 +128,6 @@
     .locals 0
 
     .prologue
-    .line 170
     return-void
 .end method
 
@@ -150,7 +138,6 @@
     .param p4, "radioText"    # Ljava/lang/String;
 
     .prologue
-    .line 136
     return-void
 .end method
 
@@ -159,7 +146,6 @@
     .param p1, "reasonCode"    # I
 
     .prologue
-    .line 94
     return-void
 .end method
 
@@ -167,7 +153,6 @@
     .locals 0
 
     .prologue
-    .line 84
     return-void
 .end method
 
@@ -181,7 +166,6 @@
     .param p6, "additionalLen2"    # I
 
     .prologue
-    .line 151
     return-void
 .end method
 
@@ -189,7 +173,6 @@
     .locals 0
 
     .prologue
-    .line 216
     return-void
 .end method
 
@@ -198,7 +181,6 @@
     .param p1, "frequency"    # [J
 
     .prologue
-    .line 75
     return-void
 .end method
 
@@ -206,7 +188,6 @@
     .locals 0
 
     .prologue
-    .line 55
     return-void
 .end method
 
@@ -215,7 +196,6 @@
     .param p1, "frequency"    # [J
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -224,7 +204,6 @@
     .param p1, "frequency"    # J
 
     .prologue
-    .line 104
     return-void
 .end method
 
@@ -232,6 +211,5 @@
     .locals 0
 
     .prologue
-    .line 207
     return-void
 .end method

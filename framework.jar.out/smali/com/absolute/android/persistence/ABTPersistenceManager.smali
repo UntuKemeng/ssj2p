@@ -13,9 +13,7 @@
     .param p1, "service"    # Lcom/absolute/android/persistence/IABTPersistence;
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     return-void
 .end method

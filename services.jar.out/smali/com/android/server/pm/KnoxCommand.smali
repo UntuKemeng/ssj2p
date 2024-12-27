@@ -43,7 +43,6 @@
 
     const/4 v3, 0x0
 
-    .line 22
     new-instance v0, Lcom/android/server/pm/KnoxCommand;
 
     const-string v1, "COPY_APP_DATA"
@@ -54,7 +53,6 @@
 
     sput-object v0, Lcom/android/server/pm/KnoxCommand;->COPY_APP_DATA:Lcom/android/server/pm/KnoxCommand;
 
-    .line 23
     new-instance v0, Lcom/android/server/pm/KnoxCommand;
 
     const-string v1, "SYNC_PACKAGE_DIR"
@@ -65,7 +63,6 @@
 
     sput-object v0, Lcom/android/server/pm/KnoxCommand;->SYNC_PACKAGE_DIR:Lcom/android/server/pm/KnoxCommand;
 
-    .line 24
     new-instance v0, Lcom/android/server/pm/KnoxCommand;
 
     const-string v1, "REMOVE_APP_DATA"
@@ -76,7 +73,6 @@
 
     sput-object v0, Lcom/android/server/pm/KnoxCommand;->REMOVE_APP_DATA:Lcom/android/server/pm/KnoxCommand;
 
-    .line 25
     new-instance v0, Lcom/android/server/pm/KnoxCommand;
 
     const-string v1, "RECONCILE_PACKAGES"
@@ -87,7 +83,6 @@
 
     sput-object v0, Lcom/android/server/pm/KnoxCommand;->RECONCILE_PACKAGES:Lcom/android/server/pm/KnoxCommand;
 
-    .line 21
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/android/server/pm/KnoxCommand;
@@ -125,7 +120,6 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     iput-object p3, p0, Lcom/android/server/pm/KnoxCommand;->name:Ljava/lang/String;
@@ -138,7 +132,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 21
     const-class v0, Lcom/android/server/pm/KnoxCommand;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -154,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 21
     sget-object v0, Lcom/android/server/pm/KnoxCommand;->$VALUES:[Lcom/android/server/pm/KnoxCommand;
 
     invoke-virtual {v0}, [Lcom/android/server/pm/KnoxCommand;->clone()Ljava/lang/Object;
@@ -172,7 +164,6 @@
     .locals 1
 
     .prologue
-    .line 32
     iget-object v0, p0, Lcom/android/server/pm/KnoxCommand;->name:Ljava/lang/String;
 
     return-object v0

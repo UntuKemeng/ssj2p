@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 471
     iput-object p1, p0, Lcom/android/server/BatteryService$2$5;->this$1:Lcom/android/server/BatteryService$2;
 
     iput-boolean p2, p0, Lcom/android/server/BatteryService$2$5;->val$wirelessPowerSharingEnable:Z
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 474
     iget-object v0, p0, Lcom/android/server/BatteryService$2$5;->this$1:Lcom/android/server/BatteryService$2;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 475
     iget-object v0, p0, Lcom/android/server/BatteryService$2$5;->this$1:Lcom/android/server/BatteryService$2;
 
     iget-object v0, v0, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
@@ -67,7 +64,6 @@
     # invokes: Lcom/android/server/BatteryService;->sendWirelessPowerSharingIntentLocked(Z)V
     invoke-static {v0, v1}, Lcom/android/server/BatteryService;->access$1300(Lcom/android/server/BatteryService;Z)V
 
-    .line 476
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$1000()Ljava/lang/String;
 
@@ -95,11 +91,9 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 480
     :goto_0
     return-void
 
-    .line 478
     :cond_0
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$1000()Ljava/lang/String;

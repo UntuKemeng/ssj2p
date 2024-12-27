@@ -77,41 +77,32 @@
 
     const/4 v4, 0x0
 
-    .line 64
     sput-object v4, Lcom/android/server/ServiceKeeper;->serviceKeeper:Lcom/android/server/ServiceKeeper;
 
-    .line 65
     sput-object v4, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
-    .line 67
     sput-object v4, Lcom/android/server/ServiceKeeper;->openMethodCache:Ljava/util/HashSet;
 
-    .line 68
     const-string v0, "ServiceKeeper"
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->TAG:Ljava/lang/String;
 
-    .line 69
     const-string v0, "_open"
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->OPEN_METHODS_IDENTIFIER:Ljava/lang/String;
 
-    .line 70
     const-string v0, "_container"
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->CONTAINER_CALLER_IDENTIFIER:Ljava/lang/String;
 
-    .line 71
     sput-boolean v5, Lcom/android/server/ServiceKeeper;->isActive:Z
 
-    .line 72
     invoke-static {}, Lcom/android/server/SKLogger;->getLogger()Lcom/android/server/SKLogger;
 
     move-result-object v0
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
-    .line 78
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -136,7 +127,6 @@
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->permissionsLocation:Ljava/lang/String;
 
-    .line 82
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/io/File;
@@ -181,7 +171,6 @@
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->AUTHORIZE_POLICY_FILE:[Ljava/io/File;
 
-    .line 86
     new-array v0, v8, [Ljava/lang/String;
 
     const-string/jumbo v1, "queryPhoneLookupEnterpriseForKnox"
@@ -198,7 +187,6 @@
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->FILTERED_API:[Ljava/lang/String;
 
-    .line 89
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
@@ -212,10 +200,8 @@
     .locals 0
 
     .prologue
-    .line 91
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
-    .line 92
     return-void
 .end method
 
@@ -223,12 +209,10 @@
     .locals 3
 
     .prologue
-    .line 164
     sget-object v1, Lcom/android/server/ServiceKeeper;->loadFilesLockObject:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 166
     :try_start_0
     invoke-static {}, Lcom/android/server/ServiceKeeper;->isTableActive()Z
 
@@ -236,7 +220,6 @@
 
     if-nez v0, :cond_0
 
-    .line 167
     sget-object v0, Lcom/android/server/ServiceKeeper;->AUTHORIZE_POLICY_FILE:[Ljava/io/File;
 
     const/4 v2, 0x2
@@ -253,7 +236,6 @@
 
     monitor-exit v1
 
-    .line 169
     :goto_0
     return v0
 
@@ -264,7 +246,6 @@
 
     goto :goto_0
 
-    .line 170
     :catchall_0
     move-exception v0
 
@@ -286,12 +267,10 @@
     .param p6, "agentType"    # I
 
     .prologue
-    .line 468
     sget-object v9, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
     if-nez v9, :cond_0
 
-    .line 469
     sget-object v9, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
     sget-object v10, Lcom/android/server/ServiceKeeper;->TAG:Ljava/lang/String;
@@ -364,14 +343,11 @@
 
     invoke-virtual {v9, v10, v11}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 471
     const/4 v9, 0x0
 
-    .line 561
     :goto_0
     return v9
 
-    .line 473
     :cond_0
     sget-object v9, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
@@ -381,12 +357,10 @@
 
     if-nez v9, :cond_1
 
-    .line 479
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 481
     :cond_1
     sget-object v9, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
@@ -396,22 +370,18 @@
 
     check-cast v8, Lcom/android/server/ServiceObject;
 
-    .line 482
     .local v8, "serviceObject":Lcom/android/server/ServiceObject;
     iget-boolean v9, v8, Lcom/android/server/ServiceObject;->isSterileService:Z
 
     if-eqz v9, :cond_2
 
-    .line 488
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 490
     :cond_2
     iget-object v4, v8, Lcom/android/server/ServiceObject;->serviceMethods:Ljava/util/Hashtable;
 
-    .line 491
     .local v4, "methodsTable":Ljava/util/Hashtable;, "Ljava/util/Hashtable<Ljava/lang/String;Lcom/android/server/MethodPermissionPackage;>;"
     move-object/from16 v0, p5
 
@@ -421,12 +391,10 @@
 
     if-nez v9, :cond_3
 
-    .line 497
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 499
     :cond_3
     move-object/from16 v0, p5
 
@@ -436,18 +404,15 @@
 
     check-cast v3, Lcom/android/server/MethodPermissionPackage;
 
-    .line 500
     .local v3, "methodPermissionPackage":Lcom/android/server/MethodPermissionPackage;
     iget-boolean v9, v3, Lcom/android/server/MethodPermissionPackage;->isSterileMethod:Z
 
     if-eqz v9, :cond_4
 
-    .line 506
     const/4 v9, 0x0
 
     goto :goto_0
 
-    .line 509
     :cond_4
     iget-object v9, v3, Lcom/android/server/MethodPermissionPackage;->seinfos:Ljava/util/HashSet;
 
@@ -459,12 +424,10 @@
 
     if-eqz v9, :cond_5
 
-    .line 514
     const/4 v9, 0x1
 
     goto :goto_0
 
-    .line 517
     :cond_5
     iget-object v9, v3, Lcom/android/server/MethodPermissionPackage;->seinfos:Ljava/util/HashSet;
 
@@ -476,19 +439,16 @@
 
     if-eqz v9, :cond_6
 
-    .line 521
     invoke-static {p0, p1}, Lcom/android/server/ServiceKeeper;->isContainerApp(Landroid/content/Context;I)Z
 
     move-result v9
 
     if-eqz v9, :cond_6
 
-    .line 522
     const/4 v9, 0x1
 
     goto :goto_0
 
-    .line 526
     :cond_6
     iget-object v9, v3, Lcom/android/server/MethodPermissionPackage;->seinfos:Ljava/util/HashSet;
 
@@ -500,12 +460,10 @@
 
     if-eqz v9, :cond_7
 
-    .line 536
     const/4 v9, 0x1
 
     goto :goto_0
 
-    .line 538
     :cond_7
     and-int/lit8 v9, p6, 0x2
 
@@ -523,7 +481,6 @@
 
     if-eqz v9, :cond_a
 
-    .line 539
     :cond_8
     iget-object v9, v3, Lcom/android/server/MethodPermissionPackage;->agentTypes:Ljava/util/HashSet;
 
@@ -545,24 +502,20 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 540
     .local v7, "permittedTypeString":Ljava/lang/String;
     invoke-static {v7}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v6
 
-    .line 541
     .local v6, "permittedType":I
     and-int v9, p6, v6
 
     if-eqz v9, :cond_9
 
-    .line 544
     const/4 v9, 0x1
 
     goto/16 :goto_0
 
-    .line 548
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v6    # "permittedType":I
     .end local v7    # "permittedTypeString":Ljava/lang/String;
@@ -573,7 +526,6 @@
 
     move-result-object v2
 
-    .line 549
     .local v2, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/PackageObject;>;"
     :cond_b
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
@@ -582,14 +534,12 @@
 
     if-eqz v9, :cond_c
 
-    .line 550
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Lcom/android/server/PackageObject;
 
-    .line 551
     .local v5, "packageObject":Lcom/android/server/PackageObject;
     iget-object v9, v5, Lcom/android/server/PackageObject;->packageName:Ljava/lang/String;
 
@@ -611,12 +561,10 @@
 
     if-eqz v9, :cond_b
 
-    .line 556
     const/4 v9, 0x1
 
     goto/16 :goto_0
 
-    .line 561
     .end local v5    # "packageObject":Lcom/android/server/PackageObject;
     :cond_c
     const/4 v9, 0x0
@@ -636,17 +584,14 @@
 
     const/4 v6, 0x0
 
-    .line 565
     sget-object v8, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
     if-nez v8, :cond_1
 
-    .line 615
     :cond_0
     :goto_0
     return v6
 
-    .line 575
     :cond_1
     sget-object v8, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
@@ -656,7 +601,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 587
     sget-object v8, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
     invoke-virtual {v8, p0}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -665,13 +609,11 @@
 
     check-cast v5, Lcom/android/server/ServiceObject;
 
-    .line 588
     .local v5, "serviceObject":Lcom/android/server/ServiceObject;
     iget-boolean v8, v5, Lcom/android/server/ServiceObject;->isSterileService:Z
 
     if-nez v8, :cond_0
 
-    .line 593
     iget-object v8, v5, Lcom/android/server/ServiceObject;->servicePermissions:Lcom/android/server/PermissionPackage;
 
     iget-object v8, v8, Lcom/android/server/PermissionPackage;->seinfos:Ljava/util/HashSet;
@@ -684,10 +626,8 @@
 
     move v6, v7
 
-    .line 596
     goto :goto_0
 
-    .line 598
     :cond_2
     and-int/lit8 v8, p3, 0x2
 
@@ -705,7 +645,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 599
     :cond_3
     iget-object v8, v5, Lcom/android/server/ServiceObject;->servicePermissions:Lcom/android/server/PermissionPackage;
 
@@ -729,13 +668,11 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 600
     .local v4, "permittedTypeString":Ljava/lang/String;
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 601
     .local v3, "permittedType":I
     and-int v8, p3, v3
 
@@ -743,10 +680,8 @@
 
     move v6, v7
 
-    .line 602
     goto :goto_0
 
-    .line 605
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v3    # "permittedType":I
     .end local v4    # "permittedTypeString":Ljava/lang/String;
@@ -759,7 +694,6 @@
 
     move-result-object v1
 
-    .line 606
     .local v1, "it":Ljava/util/Iterator;, "Ljava/util/Iterator<Lcom/android/server/PackageObject;>;"
     :cond_6
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
@@ -768,14 +702,12 @@
 
     if-eqz v8, :cond_0
 
-    .line 607
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/server/PackageObject;
 
-    .line 608
     .local v2, "packageObject":Lcom/android/server/PackageObject;
     iget-object v8, v2, Lcom/android/server/PackageObject;->packageName:Ljava/lang/String;
 
@@ -795,7 +727,6 @@
 
     move v6, v7
 
-    .line 611
     goto :goto_0
 .end method
 
@@ -808,14 +739,12 @@
 
     const/4 v10, 0x0
 
-    .line 208
     const-string/jumbo v12, "service"
 
     invoke-interface {p0, v12}, Lorg/w3c/dom/Element;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 
     move-result-object v8
 
-    .line 209
     .local v8, "servicesList":Lorg/w3c/dom/NodeList;
     invoke-static {}, Lcom/android/server/ServiceKeeper;->getServiceTable()Ljava/util/Hashtable;
 
@@ -823,21 +752,18 @@
 
     sput-object v12, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
-    .line 210
     invoke-static {}, Lcom/android/server/ServiceKeeper;->getOpenMethodCache()Ljava/util/HashSet;
 
     move-result-object v12
 
     sput-object v12, Lcom/android/server/ServiceKeeper;->openMethodCache:Ljava/util/HashSet;
 
-    .line 212
     invoke-interface {v8}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v12
 
     if-lez v12, :cond_8
 
-    .line 213
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -848,10 +774,8 @@
 
     if-ge v0, v12, :cond_8
 
-    .line 214
     const/4 v9, 0x0
 
-    .line 215
     .local v9, "singleServiceElement":Lorg/w3c/dom/Element;
     invoke-interface {v8, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
@@ -860,13 +784,11 @@
     .end local v9    # "singleServiceElement":Lorg/w3c/dom/Element;
     check-cast v9, Lorg/w3c/dom/Element;
 
-    .line 217
     .restart local v9    # "singleServiceElement":Lorg/w3c/dom/Element;
     new-instance v7, Lcom/android/server/ServiceObject;
 
     invoke-direct {v7}, Lcom/android/server/ServiceObject;-><init>()V
 
-    .line 218
     .local v7, "serviceObject":Lcom/android/server/ServiceObject;
     invoke-interface {v9}, Lorg/w3c/dom/Element;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
@@ -882,7 +804,6 @@
 
     move-result-object v6
 
-    .line 220
     .local v6, "serviceName":Ljava/lang/String;
     const-string/jumbo v12, "seinfo"
 
@@ -890,7 +811,6 @@
 
     move-result-object v1
 
-    .line 222
     .local v1, "itemsWithinService":Lorg/w3c/dom/NodeList;
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -898,10 +818,8 @@
 
     if-lez v12, :cond_1
 
-    .line 223
     iput-boolean v10, v7, Lcom/android/server/ServiceObject;->isSterileService:Z
 
-    .line 224
     const/4 v2, 0x0
 
     .local v2, "j":I
@@ -912,7 +830,6 @@
 
     if-ge v2, v12, :cond_1
 
-    .line 225
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v12
@@ -937,7 +854,6 @@
 
     if-eqz v12, :cond_0
 
-    .line 226
     iget-object v12, v7, Lcom/android/server/ServiceObject;->servicePermissions:Lcom/android/server/PermissionPackage;
 
     iget-object v12, v12, Lcom/android/server/PermissionPackage;->seinfos:Ljava/util/HashSet;
@@ -962,13 +878,11 @@
 
     invoke-virtual {v12, v13}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 224
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 229
     .end local v2    # "j":I
     :cond_1
     const-string/jumbo v12, "package"
@@ -977,17 +891,14 @@
 
     move-result-object v1
 
-    .line 231
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v12
 
     if-lez v12, :cond_3
 
-    .line 232
     iput-boolean v10, v7, Lcom/android/server/ServiceObject;->isSterileService:Z
 
-    .line 233
     const/4 v2, 0x0
 
     .restart local v2    # "j":I
@@ -998,7 +909,6 @@
 
     if-ge v2, v12, :cond_3
 
-    .line 234
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v12
@@ -1023,7 +933,6 @@
 
     if-eqz v12, :cond_2
 
-    .line 236
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v12
@@ -1042,7 +951,6 @@
 
     move-result-object v3
 
-    .line 237
     .local v3, "packageName":Ljava/lang/String;
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
@@ -1062,13 +970,11 @@
 
     move-result-object v5
 
-    .line 238
     .local v5, "packageSeinfo":Ljava/lang/String;
     new-instance v4, Lcom/android/server/PackageObject;
 
     invoke-direct {v4, v3, v5}, Lcom/android/server/PackageObject;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
     .local v4, "packageObject":Lcom/android/server/PackageObject;
     iget-object v12, v7, Lcom/android/server/ServiceObject;->servicePermissions:Lcom/android/server/PermissionPackage;
 
@@ -1076,7 +982,6 @@
 
     invoke-virtual {v12, v4}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 233
     .end local v3    # "packageName":Ljava/lang/String;
     .end local v4    # "packageObject":Lcom/android/server/PackageObject;
     .end local v5    # "packageSeinfo":Ljava/lang/String;
@@ -1085,7 +990,6 @@
 
     goto :goto_2
 
-    .line 243
     .end local v2    # "j":I
     :cond_3
     const-string v12, "agentType"
@@ -1094,17 +998,14 @@
 
     move-result-object v1
 
-    .line 245
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v12
 
     if-lez v12, :cond_5
 
-    .line 246
     iput-boolean v10, v7, Lcom/android/server/ServiceObject;->isSterileService:Z
 
-    .line 247
     const/4 v2, 0x0
 
     .restart local v2    # "j":I
@@ -1115,7 +1016,6 @@
 
     if-ge v2, v12, :cond_5
 
-    .line 248
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v12
@@ -1140,7 +1040,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 249
     iget-object v12, v7, Lcom/android/server/ServiceObject;->servicePermissions:Lcom/android/server/PermissionPackage;
 
     iget-object v12, v12, Lcom/android/server/PermissionPackage;->agentTypes:Ljava/util/HashSet;
@@ -1165,13 +1064,11 @@
 
     invoke-virtual {v12, v13}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 247
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 252
     .end local v2    # "j":I
     :cond_5
     const-string/jumbo v12, "method"
@@ -1180,20 +1077,16 @@
 
     move-result-object v1
 
-    .line 254
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v12
 
     if-lez v12, :cond_6
 
-    .line 255
     iput-boolean v10, v7, Lcom/android/server/ServiceObject;->isSterileService:Z
 
-    .line 256
     invoke-static {v1, v7, v6}, Lcom/android/server/ServiceKeeper;->processMethodsUnderService(Lorg/w3c/dom/NodeList;Lcom/android/server/ServiceObject;Ljava/lang/String;)Z
 
-    .line 259
     :cond_6
     sget-object v12, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
@@ -1203,7 +1096,6 @@
 
     if-eqz v12, :cond_7
 
-    .line 268
     .end local v0    # "i":I
     .end local v1    # "itemsWithinService":Lorg/w3c/dom/NodeList;
     .end local v6    # "serviceName":Ljava/lang/String;
@@ -1212,7 +1104,6 @@
     :goto_4
     return v10
 
-    .line 265
     .restart local v0    # "i":I
     .restart local v1    # "itemsWithinService":Lorg/w3c/dom/NodeList;
     .restart local v6    # "serviceName":Ljava/lang/String;
@@ -1223,7 +1114,6 @@
 
     invoke-virtual {v12, v6, v7}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 213
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_0
@@ -1236,7 +1126,6 @@
     :cond_8
     move v10, v11
 
-    .line 268
     goto :goto_4
 .end method
 
@@ -1245,7 +1134,6 @@
     .param p0, "method"    # Ljava/lang/String;
 
     .prologue
-    .line 451
     const/4 v0, 0x0
 
     .local v0, "index":I
@@ -1256,7 +1144,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 452
     sget-object v1, Lcom/android/server/ServiceKeeper;->FILTERED_API:[Ljava/lang/String;
 
     aget-object v1, v1, v0
@@ -1267,20 +1154,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 453
     const/4 v1, 0x1
 
-    .line 456
     :goto_1
     return v1
 
-    .line 451
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 456
     :cond_1
     const/4 v1, 0x0
 
@@ -1295,39 +1178,32 @@
     .param p3, "uid"    # I
 
     .prologue
-    .line 630
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v4
 
     if-ne p2, v4, :cond_1
 
-    .line 632
     const/4 v0, 0x0
 
-    .line 652
     :cond_0
     :goto_0
     return-object v0
 
-    .line 634
     :cond_1
     const/4 v0, 0x0
 
-    .line 636
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     :try_start_0
     invoke-static {p3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    .line 637
     .local v3, "userId":I
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v2
 
-    .line 638
     .local v2, "pm":Landroid/content/pm/IPackageManager;
     const/16 v4, 0x80
 
@@ -1335,15 +1211,12 @@
 
     move-result-object v0
 
-    .line 639
     if-nez v0, :cond_0
 
-    .line 641
     invoke-static {p0, p2, p3}, Lcom/android/server/ServiceKeeper;->getPackageName(Landroid/content/Context;II)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 642
     const/16 v4, 0x80
 
     invoke-interface {v2, p1, v4, v3}, Landroid/content/pm/IPackageManager;->getApplicationInfo(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
@@ -1352,18 +1225,15 @@
 
     move-result-object v0
 
-    .line 643
     if-nez v0, :cond_0
 
     goto :goto_0
 
-    .line 648
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     .end local v3    # "userId":I
     :catch_0
     move-exception v1
 
-    .line 649
     .local v1, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1373,7 +1243,6 @@
 
     invoke-virtual {v4, v5, v6, v1}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 650
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
     sget-object v5, Lcom/android/server/ServiceKeeper;->TAG:Ljava/lang/String;
@@ -1428,28 +1297,22 @@
     .prologue
     const/4 v10, 0x2
 
-    .line 121
     const/4 v0, 0x0
 
-    .line 122
     .local v0, "authorizeFile":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 123
     .local v4, "policyFile":Ljava/io/FileReader;
     const/4 v2, 0x0
 
-    .line 124
     .local v2, "i":I
     invoke-static {}, Lcom/android/server/pm/Revision;->selinux_android_load_priority()I
 
     move-result v3
 
-    .line 125
     .local v3, "index":I
     packed-switch v3, :pswitch_data_0
 
-    .line 160
     :cond_0
     :goto_0
     const/4 v6, 0x0
@@ -1457,11 +1320,9 @@
     :goto_1
     return-object v6
 
-    .line 132
     :catch_0
     move-exception v1
 
-    .line 133
     .local v1, "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1493,10 +1354,8 @@
 
     invoke-virtual {v6, v7, v8, v1}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 135
     add-int/lit8 v2, v2, 0x1
 
-    .line 127
     .end local v1    # "e":Ljava/lang/Exception;
     :pswitch_0
     if-nez v0, :cond_0
@@ -1507,7 +1366,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 129
     :try_start_0
     aget-object v6, p0, v2
 
@@ -1519,10 +1377,8 @@
 
     move-object v6, v0
 
-    .line 131
     goto :goto_1
 
-    .line 143
     :pswitch_1
     add-int/lit8 v6, v3, -0x1
 
@@ -1533,7 +1389,6 @@
 
     move-result-object v0
 
-    .line 144
     new-instance v5, Ljava/io/FileReader;
 
     add-int/lit8 v6, v3, -0x1
@@ -1544,12 +1399,10 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 146
     .end local v4    # "policyFile":Ljava/io/FileReader;
     .local v5, "policyFile":Ljava/io/FileReader;
     if-eqz v5, :cond_1
 
-    .line 147
     :try_start_2
     invoke-virtual {v5}, Ljava/io/FileReader;->close()V
     :try_end_2
@@ -1561,7 +1414,6 @@
     .restart local v4    # "policyFile":Ljava/io/FileReader;
     move-object v6, v0
 
-    .line 148
     goto :goto_1
 
     .end local v4    # "policyFile":Ljava/io/FileReader;
@@ -1569,7 +1421,6 @@
     :cond_1
     move-object v4, v5
 
-    .line 154
     .end local v5    # "policyFile":Ljava/io/FileReader;
     .restart local v4    # "policyFile":Ljava/io/FileReader;
     :goto_2
@@ -1586,14 +1437,11 @@
 
     move-object v6, v0
 
-    .line 155
     goto :goto_1
 
-    .line 150
     :catch_1
     move-exception v1
 
-    .line 151
     .restart local v1    # "e":Ljava/lang/Exception;
     :goto_3
     sget-object v6, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
@@ -1630,12 +1478,10 @@
 
     goto :goto_2
 
-    .line 156
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v1
 
-    .line 157
     .restart local v1    # "e":Ljava/lang/Exception;
     sget-object v6, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1669,7 +1515,6 @@
 
     goto/16 :goto_0
 
-    .line 150
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v4    # "policyFile":Ljava/io/FileReader;
     .restart local v5    # "policyFile":Ljava/io/FileReader;
@@ -1682,7 +1527,6 @@
     .restart local v4    # "policyFile":Ljava/io/FileReader;
     goto :goto_3
 
-    .line 125
     nop
 
     :pswitch_data_0
@@ -1707,7 +1551,6 @@
     .end annotation
 
     .prologue
-    .line 109
     const-class v1, Lcom/android/server/ServiceKeeper;
 
     monitor-enter v1
@@ -1717,14 +1560,12 @@
 
     if-nez v0, :cond_0
 
-    .line 110
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->openMethodCache:Ljava/util/HashSet;
 
-    .line 111
     :cond_0
     sget-object v0, Lcom/android/server/ServiceKeeper;->openMethodCache:Ljava/util/HashSet;
     :try_end_0
@@ -1734,7 +1575,6 @@
 
     return-object v0
 
-    .line 109
     :catchall_0
     move-exception v0
 
@@ -1750,25 +1590,20 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 669
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v2
 
     if-ne p1, v2, :cond_0
 
-    .line 671
     const-string v1, "android"
 
-    .line 685
     :goto_0
     return-object v1
 
-    .line 674
     :cond_0
     const/4 v1, 0x0
 
-    .line 680
     .local v1, "packageName":Ljava/lang/String;
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -1783,11 +1618,9 @@
 
     goto :goto_0
 
-    .line 681
     :catch_0
     move-exception v0
 
-    .line 682
     .local v0, "e":Ljava/lang/Exception;
     sget-object v2, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1805,7 +1638,6 @@
     .param p0, "seinfo"    # Ljava/lang/String;
 
     .prologue
-    .line 619
     const-string/jumbo v0, "gsd"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1822,15 +1654,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 620
     :cond_0
     const/4 v0, 0x1
 
-    .line 625
     :goto_0
     return v0
 
-    .line 621
     :cond_1
     const-string/jumbo v0, "mycontainer"
 
@@ -1840,12 +1669,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 622
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 625
     :cond_2
     const/4 v0, 0x0
 
@@ -1856,7 +1683,6 @@
     .locals 2
 
     .prologue
-    .line 95
     const-class v1, Lcom/android/server/ServiceKeeper;
 
     monitor-enter v1
@@ -1866,14 +1692,12 @@
 
     if-nez v0, :cond_0
 
-    .line 96
     new-instance v0, Lcom/android/server/ServiceKeeper;
 
     invoke-direct {v0}, Lcom/android/server/ServiceKeeper;-><init>()V
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->serviceKeeper:Lcom/android/server/ServiceKeeper;
 
-    .line 97
     :cond_0
     sget-object v0, Lcom/android/server/ServiceKeeper;->serviceKeeper:Lcom/android/server/ServiceKeeper;
     :try_end_0
@@ -1883,7 +1707,6 @@
 
     return-object v0
 
-    .line 95
     :catchall_0
     move-exception v0
 
@@ -1906,7 +1729,6 @@
     .end annotation
 
     .prologue
-    .line 115
     const-class v1, Lcom/android/server/ServiceKeeper;
 
     monitor-enter v1
@@ -1916,14 +1738,12 @@
 
     if-nez v0, :cond_0
 
-    .line 116
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     sput-object v0, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
 
-    .line 117
     :cond_0
     sget-object v0, Lcom/android/server/ServiceKeeper;->serviceTable:Ljava/util/Hashtable;
     :try_end_0
@@ -1933,7 +1753,6 @@
 
     return-object v0
 
-    .line 115
     :catchall_0
     move-exception v0
 
@@ -1951,23 +1770,19 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 656
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v1
 
     if-ne p1, v1, :cond_1
 
-    .line 665
     :cond_0
     :goto_0
     return v0
 
-    .line 660
     :cond_1
     if-eqz p0, :cond_0
 
-    .line 665
     iget v0, p0, Landroid/content/pm/ApplicationInfo;->agentType:I
 
     goto :goto_0
@@ -1982,12 +1797,10 @@
     .param p4, "method"    # Ljava/lang/String;
 
     .prologue
-    .line 336
     if-eqz p4, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 337
     :cond_0
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -1997,14 +1810,11 @@
 
     invoke-virtual {v4, v9, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 338
     const/4 v5, -0x1
 
-    .line 447
     :goto_0
     return v5
 
-    .line 341
     :cond_1
     :try_start_0
     invoke-static {}, Landroid/os/Process;->myPid()I
@@ -2015,12 +1825,10 @@
 
     if-ne v0, v4, :cond_2
 
-    .line 342
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 344
     :cond_2
     sget-object v4, Lcom/android/server/ServiceKeeper;->openMethodCache:Ljava/util/HashSet;
 
@@ -2056,7 +1864,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 346
     const-string v4, "_open"
 
     invoke-static {v4}, Lcom/android/server/ServiceKeeper;->getRelevantContainerType(Ljava/lang/String;)I
@@ -2067,11 +1874,9 @@
 
     goto :goto_0
 
-    .line 348
     :catch_0
     move-exception v20
 
-    .line 349
     .local v20, "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2103,7 +1908,6 @@
 
     invoke-virtual {v4, v9, v10, v0}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 353
     .end local v20    # "e":Ljava/lang/Exception;
     :cond_3
     :try_start_1
@@ -2111,7 +1915,6 @@
 
     move-result v19
 
-    .line 354
     .local v19, "bootCompleted":Z
     if-nez v19, :cond_4
 
@@ -2125,17 +1928,14 @@
 
     if-ne v0, v4, :cond_4
 
-    .line 356
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 358
     .end local v19    # "bootCompleted":Z
     :catch_1
     move-exception v20
 
-    .line 359
     .restart local v20    # "e":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2167,46 +1967,36 @@
 
     invoke-virtual {v4, v9, v10, v0}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 361
     .end local v20    # "e":Ljava/lang/Exception;
     :cond_4
     const/16 v18, 0x0
 
-    .line 362
     .local v18, "appInfo":Landroid/content/pm/ApplicationInfo;
     const/4 v6, 0x0
 
-    .line 363
     .local v6, "seInfo":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 364
     .local v7, "pkgName":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 365
     .local v8, "agentType":I
     const/16 v22, 0x0
 
-    .line 366
     .local v22, "isNoAudit":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v24
 
-    .line 387
     .local v24, "origId":J
     invoke-static/range {p0 .. p2}, Lcom/android/server/ServiceKeeper;->getPackageName(Landroid/content/Context;II)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 388
     if-nez v7, :cond_5
 
-    .line 389
     invoke-static/range {v24 .. v25}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 390
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
     sget-object v9, Lcom/android/server/ServiceKeeper;->TAG:Ljava/lang/String;
@@ -2269,12 +2059,10 @@
 
     invoke-virtual {v4, v9, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 392
     const/4 v5, 0x0
 
     goto/16 :goto_0
 
-    .line 396
     :cond_5
     move-object/from16 v0, p0
 
@@ -2286,14 +2074,12 @@
 
     move-result-object v18
 
-    .line 397
     if-eqz v18, :cond_8
 
     move-object/from16 v0, v18
 
     iget-object v6, v0, Landroid/content/pm/ApplicationInfo;->seinfo:Ljava/lang/String;
 
-    .line 398
     :goto_1
     move-object/from16 v0, v18
 
@@ -2305,10 +2091,8 @@
 
     move-result v8
 
-    .line 399
     invoke-static/range {v24 .. v25}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 401
     :try_start_2
     move-object/from16 v0, p3
 
@@ -2318,17 +2102,14 @@
 
     if-eqz v4, :cond_9
 
-    .line 402
     if-eqz v6, :cond_6
 
-    .line 403
     invoke-static {v6}, Lcom/android/server/ServiceKeeper;->getRelevantContainerType(Ljava/lang/String;)I
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
     move-result v5
 
-    .line 408
     .local v5, "retContainerType":I
     :try_start_3
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
@@ -2348,11 +2129,9 @@
 
     goto/16 :goto_0
 
-    .line 409
     :catch_2
     move-exception v20
 
-    .line 410
     .local v20, "e":Ljava/lang/NullPointerException;
     :try_start_4
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
@@ -2365,7 +2144,6 @@
 
     invoke-virtual {v4, v9, v10, v0}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 411
     invoke-static {}, Lcom/android/server/SKLogger;->getLogger()Lcom/android/server/SKLogger;
 
     move-result-object v4
@@ -2376,13 +2154,11 @@
 
     goto/16 :goto_0
 
-    .line 434
     .end local v5    # "retContainerType":I
     .end local v20    # "e":Ljava/lang/NullPointerException;
     :catch_3
     move-exception v21
 
-    .line 435
     .local v21, "e1":Ljava/lang/Exception;
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2394,7 +2170,6 @@
 
     invoke-virtual {v4, v9, v10, v0}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 438
     .end local v21    # "e1":Ljava/lang/Exception;
     :cond_6
     :try_start_5
@@ -2420,7 +2195,6 @@
     :try_end_5
     .catch Ljava/lang/NullPointerException; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 443
     :goto_2
     invoke-static/range {p4 .. p4}, Lcom/android/server/ServiceKeeper;->filterAPI(Ljava/lang/String;)Z
 
@@ -2428,7 +2202,6 @@
 
     if-nez v4, :cond_7
 
-    .line 444
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
     sget-object v9, Lcom/android/server/ServiceKeeper;->TAG:Ljava/lang/String;
@@ -2501,13 +2274,11 @@
 
     invoke-virtual {v4, v9, v10}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 447
     :cond_7
     const/4 v5, -0x1
 
     goto/16 :goto_0
 
-    .line 397
     :cond_8
     const/4 v6, 0x0
 
@@ -2528,7 +2299,6 @@
 
     move v15, v8
 
-    .line 415
     :try_start_6
     invoke-static/range {v9 .. v15}, Lcom/android/server/ServiceKeeper;->checkForMethodAuthorization(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)Z
 
@@ -2536,17 +2306,14 @@
 
     if-eqz v4, :cond_6
 
-    .line 416
     if-eqz v6, :cond_6
 
-    .line 417
     invoke-static {v6}, Lcom/android/server/ServiceKeeper;->getRelevantContainerType(Ljava/lang/String;)I
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
     move-result v5
 
-    .line 426
     .restart local v5    # "retContainerType":I
     :try_start_7
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
@@ -2566,11 +2333,9 @@
 
     goto/16 :goto_0
 
-    .line 427
     :catch_4
     move-exception v20
 
-    .line 428
     .restart local v20    # "e":Ljava/lang/NullPointerException;
     :try_start_8
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
@@ -2583,7 +2348,6 @@
 
     invoke-virtual {v4, v9, v10, v0}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 429
     invoke-static {}, Lcom/android/server/SKLogger;->getLogger()Lcom/android/server/SKLogger;
 
     move-result-object v4
@@ -2594,13 +2358,11 @@
 
     goto/16 :goto_0
 
-    .line 439
     .end local v5    # "retContainerType":I
     .end local v20    # "e":Ljava/lang/NullPointerException;
     :catch_5
     move-exception v20
 
-    .line 440
     .restart local v20    # "e":Ljava/lang/NullPointerException;
     sget-object v4, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2612,7 +2374,6 @@
 
     invoke-virtual {v4, v9, v10, v0}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 441
     invoke-static {}, Lcom/android/server/SKLogger;->getLogger()Lcom/android/server/SKLogger;
 
     move-result-object v4
@@ -2628,13 +2389,11 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 321
     :try_start_0
     invoke-static {p1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v2
 
-    .line 322
     .local v2, "userId":I
     const-string/jumbo v3, "persona"
 
@@ -2644,7 +2403,6 @@
 
     check-cast v1, Lcom/android/server/pm/PersonaManagerService;
 
-    .line 323
     .local v1, "pms":Lcom/android/server/pm/PersonaManagerService;
     if-eqz v1, :cond_0
 
@@ -2656,20 +2414,16 @@
 
     if-eqz v3, :cond_0
 
-    .line 324
     const/4 v3, 0x1
 
-    .line 329
     .end local v1    # "pms":Lcom/android/server/pm/PersonaManagerService;
     .end local v2    # "userId":I
     :goto_0
     return v3
 
-    .line 326
     :catch_0
     move-exception v0
 
-    .line 327
     .local v0, "e":Ljava/lang/Exception;
     sget-object v3, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2699,7 +2453,6 @@
 
     invoke-virtual {v3, v4, v5, v0}, Lcom/android/server/SKLogger;->logAll(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 329
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const/4 v3, 0x0
@@ -2711,15 +2464,12 @@
     .locals 1
 
     .prologue
-    .line 460
     sget-boolean v0, Lcom/android/server/ServiceKeeper;->isActive:Z
 
     if-nez v0, :cond_0
 
-    .line 462
     const/4 v0, 0x0
 
-    .line 464
     :goto_0
     return v0
 
@@ -2738,7 +2488,6 @@
 
     const/4 v9, 0x0
 
-    .line 174
     if-eqz p0, :cond_0
 
     new-instance v11, Ljava/io/File;
@@ -2751,37 +2500,31 @@
 
     if-nez v11, :cond_1
 
-    .line 204
     :cond_0
     :goto_0
     return v9
 
-    .line 177
     :cond_1
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v1
 
-    .line 180
     .local v1, "dbFactory":Ljavax/xml/parsers/DocumentBuilderFactory;
     new-instance v8, Ljava/io/File;
 
     invoke-direct {v8, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 182
     .local v8, "xmlFile":Ljava/io/File;
     :try_start_0
     invoke-virtual {v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v0
 
-    .line 183
     .local v0, "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     invoke-virtual {v0, v8}, Ljavax/xml/parsers/DocumentBuilder;->parse(Ljava/io/File;)Lorg/w3c/dom/Document;
 
     move-result-object v2
 
-    .line 184
     .local v2, "doc":Lorg/w3c/dom/Document;
     invoke-interface {v2}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
 
@@ -2789,18 +2532,15 @@
 
     invoke-interface {v11}, Lorg/w3c/dom/Element;->normalize()V
 
-    .line 186
     const-string/jumbo v11, "policy"
 
     invoke-interface {v2, v11}, Lorg/w3c/dom/Document;->getElementsByTagName(Ljava/lang/String;)Lorg/w3c/dom/NodeList;
 
     move-result-object v7
 
-    .line 187
     .local v7, "policyNodeList":Lorg/w3c/dom/NodeList;
     const/4 v6, 0x0
 
-    .line 188
     .local v6, "policyElement":Lorg/w3c/dom/Element;
     const/4 v11, 0x0
 
@@ -2811,7 +2551,6 @@
     .end local v6    # "policyElement":Lorg/w3c/dom/Element;
     check-cast v6, Lorg/w3c/dom/Element;
 
-    .line 190
     .restart local v6    # "policyElement":Lorg/w3c/dom/Element;
     invoke-static {v6}, Lcom/android/server/ServiceKeeper;->createAuthorizationTables(Lorg/w3c/dom/Element;)Z
     :try_end_0
@@ -2823,15 +2562,12 @@
 
     if-eqz v11, :cond_0
 
-    .line 203
     sput-boolean v10, Lcom/android/server/ServiceKeeper;->isActive:Z
 
     move v9, v10
 
-    .line 204
     goto :goto_0
 
-    .line 193
     .end local v0    # "dBuilder":Ljavax/xml/parsers/DocumentBuilder;
     .end local v2    # "doc":Lorg/w3c/dom/Document;
     .end local v6    # "policyElement":Lorg/w3c/dom/Element;
@@ -2839,7 +2575,6 @@
     :catch_0
     move-exception v3
 
-    .line 194
     .local v3, "e1":Lorg/xml/sax/SAXException;
     sget-object v10, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2851,12 +2586,10 @@
 
     goto :goto_0
 
-    .line 196
     .end local v3    # "e1":Lorg/xml/sax/SAXException;
     :catch_1
     move-exception v4
 
-    .line 197
     .local v4, "e2":Ljavax/xml/parsers/ParserConfigurationException;
     sget-object v10, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2868,12 +2601,10 @@
 
     goto :goto_0
 
-    .line 199
     .end local v4    # "e2":Ljavax/xml/parsers/ParserConfigurationException;
     :catch_2
     move-exception v5
 
-    .line 200
     .local v5, "e3":Ljava/io/IOException;
     sget-object v10, Lcom/android/server/ServiceKeeper;->mSKLog:Lcom/android/server/SKLogger;
 
@@ -2895,7 +2626,6 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 273
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -2906,10 +2636,8 @@
 
     if-ge v0, v10, :cond_5
 
-    .line 274
     const/4 v8, 0x0
 
-    .line 275
     .local v8, "singleMethodElement":Lorg/w3c/dom/Element;
     invoke-interface {p0, v0}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
@@ -2918,13 +2646,11 @@
     .end local v8    # "singleMethodElement":Lorg/w3c/dom/Element;
     check-cast v8, Lorg/w3c/dom/Element;
 
-    .line 277
     .restart local v8    # "singleMethodElement":Lorg/w3c/dom/Element;
     new-instance v7, Lcom/android/server/MethodPermissionPackage;
 
     invoke-direct {v7}, Lcom/android/server/MethodPermissionPackage;-><init>()V
 
-    .line 278
     .local v7, "permissionPackage":Lcom/android/server/MethodPermissionPackage;
     invoke-interface {v8}, Lorg/w3c/dom/Element;->getAttributes()Lorg/w3c/dom/NamedNodeMap;
 
@@ -2940,7 +2666,6 @@
 
     move-result-object v3
 
-    .line 280
     .local v3, "methodName":Ljava/lang/String;
     const-string/jumbo v10, "seinfo"
 
@@ -2948,7 +2673,6 @@
 
     move-result-object v1
 
-    .line 281
     .local v1, "itemsWithinMethod":Lorg/w3c/dom/NodeList;
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
@@ -2956,10 +2680,8 @@
 
     if-lez v10, :cond_1
 
-    .line 282
     iput-boolean v9, v7, Lcom/android/server/MethodPermissionPackage;->isSterileMethod:Z
 
-    .line 283
     const/4 v2, 0x0
 
     .local v2, "j":I
@@ -2970,7 +2692,6 @@
 
     if-ge v2, v10, :cond_1
 
-    .line 284
     iget-object v10, v7, Lcom/android/server/MethodPermissionPackage;->seinfos:Ljava/util/HashSet;
 
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -2993,7 +2714,6 @@
 
     invoke-virtual {v10, v11}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 285
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v10
@@ -3020,7 +2740,6 @@
 
     if-eqz v10, :cond_0
 
-    .line 287
     sget-object v10, Lcom/android/server/ServiceKeeper;->openMethodCache:Ljava/util/HashSet;
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -3047,13 +2766,11 @@
 
     invoke-virtual {v10, v11}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 283
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 291
     .end local v2    # "j":I
     :cond_1
     const-string/jumbo v10, "package"
@@ -3062,17 +2779,14 @@
 
     move-result-object v1
 
-    .line 292
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v10
 
     if-lez v10, :cond_2
 
-    .line 293
     iput-boolean v9, v7, Lcom/android/server/MethodPermissionPackage;->isSterileMethod:Z
 
-    .line 294
     const/4 v2, 0x0
 
     .restart local v2    # "j":I
@@ -3083,7 +2797,6 @@
 
     if-ge v2, v10, :cond_2
 
-    .line 295
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v10
@@ -3102,7 +2815,6 @@
 
     move-result-object v4
 
-    .line 296
     .local v4, "packageName":Ljava/lang/String;
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
@@ -3122,24 +2834,20 @@
 
     move-result-object v6
 
-    .line 297
     .local v6, "packageSeinfo":Ljava/lang/String;
     new-instance v5, Lcom/android/server/PackageObject;
 
     invoke-direct {v5, v4, v6}, Lcom/android/server/PackageObject;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 298
     .local v5, "packageObject":Lcom/android/server/PackageObject;
     iget-object v10, v7, Lcom/android/server/MethodPermissionPackage;->packages:Ljava/util/HashSet;
 
     invoke-virtual {v10, v5}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 294
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 301
     .end local v2    # "j":I
     .end local v4    # "packageName":Ljava/lang/String;
     .end local v5    # "packageObject":Lcom/android/server/PackageObject;
@@ -3151,17 +2859,14 @@
 
     move-result-object v1
 
-    .line 302
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v10
 
     if-lez v10, :cond_3
 
-    .line 303
     iput-boolean v9, v7, Lcom/android/server/MethodPermissionPackage;->isSterileMethod:Z
 
-    .line 304
     const/4 v2, 0x0
 
     .restart local v2    # "j":I
@@ -3172,7 +2877,6 @@
 
     if-ge v2, v10, :cond_3
 
-    .line 305
     iget-object v10, v7, Lcom/android/server/MethodPermissionPackage;->agentTypes:Ljava/util/HashSet;
 
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
@@ -3195,12 +2899,10 @@
 
     invoke-virtual {v10, v11}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 304
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 308
     .end local v2    # "j":I
     :cond_3
     iget-object v10, p1, Lcom/android/server/ServiceObject;->serviceMethods:Ljava/util/Hashtable;
@@ -3211,7 +2913,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 316
     .end local v1    # "itemsWithinMethod":Lorg/w3c/dom/NodeList;
     .end local v3    # "methodName":Ljava/lang/String;
     .end local v7    # "permissionPackage":Lcom/android/server/MethodPermissionPackage;
@@ -3219,7 +2920,6 @@
     :goto_4
     return v9
 
-    .line 314
     .restart local v1    # "itemsWithinMethod":Lorg/w3c/dom/NodeList;
     .restart local v3    # "methodName":Ljava/lang/String;
     .restart local v7    # "permissionPackage":Lcom/android/server/MethodPermissionPackage;
@@ -3229,12 +2929,10 @@
 
     invoke-virtual {v10, v3, v7}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 273
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_0
 
-    .line 316
     .end local v1    # "itemsWithinMethod":Lorg/w3c/dom/NodeList;
     .end local v3    # "methodName":Ljava/lang/String;
     .end local v7    # "permissionPackage":Lcom/android/server/MethodPermissionPackage;

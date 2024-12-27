@@ -48,12 +48,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 30917
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30908
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "yyyy/MM/dd HH:mm:ss.SSS zzz"
@@ -62,14 +60,12 @@
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mDateFormat:Ljava/text/SimpleDateFormat;
 
-    .line 30909
     new-instance v0, Ljava/util/Date;
 
     invoke-direct {v0}, Ljava/util/Date;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mDate:Ljava/util/Date;
 
-    .line 30911
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x5
@@ -78,13 +74,10 @@
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mLocaleChangedHistory:Ljava/util/ArrayList;
 
-    .line 30913
     iput v2, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mStoredCallingPid:I
 
-    .line 30915
     iput v2, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mCountPointer:I
 
-    .line 30917
     return-void
 .end method
 
@@ -94,12 +87,10 @@
     .locals 1
 
     .prologue
-    .line 30942
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mStoredCallingPid:I
 
-    .line 30943
     return-void
 .end method
 
@@ -109,26 +100,21 @@
     .param p2, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 30946
     const-string v3, "ACTIVITY MANAGER LOCALE CHANGED HISTORY"
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 30948
     iget v3, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mCountPointer:I
 
     if-nez v3, :cond_1
 
-    .line 30949
     const-string v3, " (nothing) "
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 30971
     :cond_0
     return-void
 
-    .line 30951
     :cond_1
     const/4 v0, 0x0
 
@@ -138,7 +124,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 30952
     iget v3, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mCountPointer:I
 
     add-int/lit8 v3, v3, -0x1
@@ -147,7 +132,6 @@
 
     rem-int/lit8 v1, v3, 0x5
 
-    .line 30953
     .local v1, "idx":I
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mLocaleChangedHistory:Ljava/util/ArrayList;
 
@@ -159,7 +143,6 @@
 
     iget-object v2, v3, Lcom/android/server/am/ActivityManagerService$LocaleChangeDumpData;->mMsg:Ljava/lang/String;
 
-    .line 30955
     .local v2, "msg":Ljava/lang/String;
     const-string v3, "# %d "
 
@@ -187,7 +170,6 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 30957
     iget-object v4, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mDateFormat:Ljava/text/SimpleDateFormat;
 
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mLocaleChangedHistory:Ljava/util/ArrayList;
@@ -202,7 +184,6 @@
 
     invoke-virtual {v4, v3}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 30958
     iget-object v4, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mDate:Ljava/util/Date;
 
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mLocaleChangedHistory:Ljava/util/ArrayList;
@@ -217,7 +198,6 @@
 
     invoke-virtual {v4, v6, v7}, Ljava/util/Date;->setTime(J)V
 
-    .line 30959
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mDateFormat:Ljava/text/SimpleDateFormat;
 
     iget-object v4, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mDate:Ljava/util/Date;
@@ -228,10 +208,8 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 30960
     invoke-virtual {p2, v2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 30961
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -262,7 +240,6 @@
 
     invoke-virtual {p2, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 30963
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mLocaleChangedHistory:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -275,15 +252,12 @@
 
     invoke-virtual {v3, p2}, Ljava/lang/RuntimeException;->printStackTrace(Ljava/io/PrintWriter;)V
 
-    .line 30964
     invoke-virtual {p2}, Ljava/io/PrintWriter;->println()V
 
-    .line 30966
     const/4 v3, 0x4
 
     if-ge v0, v3, :cond_0
 
-    .line 30951
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_0
@@ -295,7 +269,6 @@
     .param p2, "to"    # Ljava/lang/String;
 
     .prologue
-    .line 30920
     const-string v2, "Locale is changed. (%s)->(%s) callingPid:%d\n"
 
     const/4 v3, 0x3
@@ -324,11 +297,9 @@
 
     move-result-object v6
 
-    .line 30922
     .local v6, "msg":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 30924
     .local v8, "r":Lcom/android/server/am/ProcessRecord;
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -336,7 +307,6 @@
 
     monitor-enter v3
 
-    .line 30925
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->this$0:Lcom/android/server/am/ActivityManagerService;
 
@@ -354,17 +324,14 @@
 
     move-object v8, v0
 
-    .line 30926
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 30927
     if-nez v8, :cond_0
 
     const-string v7, "EMPTY_PROC"
 
-    .line 30929
     .local v7, "proc_str":Ljava/lang/String;
     :goto_0
     iget v2, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mCountPointer:I
@@ -373,7 +340,6 @@
 
     if-ge v2, v3, :cond_1
 
-    .line 30930
     iget-object v9, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mLocaleChangedHistory:Ljava/util/ArrayList;
 
     iget v10, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mCountPointer:I
@@ -390,7 +356,6 @@
 
     invoke-virtual {v9, v10, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 30934
     :goto_1
     iget v2, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mCountPointer:I
 
@@ -398,10 +363,8 @@
 
     iput v2, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mCountPointer:I
 
-    .line 30935
     return-void
 
-    .line 30926
     .end local v7    # "proc_str":Ljava/lang/String;
     :catchall_0
     move-exception v2
@@ -413,7 +376,6 @@
 
     throw v2
 
-    .line 30927
     :cond_0
     invoke-virtual {v8}, Lcom/android/server/am/ProcessRecord;->toString()Ljava/lang/String;
 
@@ -421,7 +383,6 @@
 
     goto :goto_0
 
-    .line 30932
     .restart local v7    # "proc_str":Ljava/lang/String;
     :cond_1
     iget-object v2, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mLocaleChangedHistory:Ljava/util/ArrayList;
@@ -450,9 +411,7 @@
     .param p1, "pid"    # I
 
     .prologue
-    .line 30938
     iput p1, p0, Lcom/android/server/am/ActivityManagerService$LocaleChangeDump;->mStoredCallingPid:I
 
-    .line 30939
     return-void
 .end method

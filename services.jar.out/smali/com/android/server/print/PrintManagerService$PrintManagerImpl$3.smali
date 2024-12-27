@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 633
     iput-object p1, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$3;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
     iput p2, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$3;->val$userId:I
@@ -44,7 +43,6 @@
     .locals 5
 
     .prologue
-    .line 637
     iget-object v2, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$3;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
     # getter for: Lcom/android/server/print/PrintManagerService$PrintManagerImpl;->mUserManager:Landroid/os/UserManager;
@@ -58,7 +56,6 @@
 
     move-result-object v0
 
-    .line 638
     .local v0, "currentUser":Landroid/content/pm/UserInfo;
     invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isKnoxWorkspace()Z
 
@@ -66,11 +63,9 @@
 
     if-eqz v2, :cond_0
 
-    .line 648
     :goto_0
     return-void
 
-    .line 640
     :cond_0
     iget-object v2, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$3;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
@@ -81,7 +76,6 @@
 
     monitor-enter v3
 
-    .line 641
     :try_start_0
     iget-object v2, p0, Lcom/android/server/print/PrintManagerService$PrintManagerImpl$3;->this$1:Lcom/android/server/print/PrintManagerService$PrintManagerImpl;
 
@@ -92,21 +86,17 @@
 
     move-result-object v1
 
-    .line 642
     .local v1, "userState":Lcom/android/server/print/UserState;
     invoke-virtual {v1}, Lcom/android/server/print/UserState;->updateIfNeededLocked()V
 
-    .line 643
     monitor-exit v3
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 647
     invoke-virtual {v1}, Lcom/android/server/print/UserState;->removeObsoletePrintJobs()V
 
     goto :goto_0
 
-    .line 643
     .end local v1    # "userState":Lcom/android/server/print/UserState;
     :catchall_0
     move-exception v2

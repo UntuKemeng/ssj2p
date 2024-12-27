@@ -60,7 +60,6 @@
     .locals 2
 
     .prologue
-    .line 27
     new-instance v0, Ljava/util/TreeMap;
 
     sget-object v1, Ljava/lang/String;->CASE_INSENSITIVE_ORDER:Ljava/util/Comparator;
@@ -69,7 +68,6 @@
 
     sput-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
-    .line 31
     new-instance v0, Ljava/util/TreeMap;
 
     sget-object v1, Ljava/lang/String;->CASE_INSENSITIVE_ORDER:Ljava/util/Comparator;
@@ -85,10 +83,8 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 269
     return-void
 .end method
 
@@ -104,7 +100,6 @@
 
     const/4 v3, 0x1
 
-    .line 37
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CredentialPriority"
@@ -115,7 +110,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "URI"
@@ -126,7 +120,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CertURL"
@@ -137,7 +130,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 40
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CertSHA256Fingerprint"
@@ -148,7 +140,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 41
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "MaximumBSSLoadValue"
@@ -159,7 +150,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 42
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CreationDate"
@@ -170,7 +160,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "ExpirationDate"
@@ -181,7 +170,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 44
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "TypeOfSubscription"
@@ -192,7 +180,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "StartDate"
@@ -203,7 +190,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "DataLimit"
@@ -214,7 +200,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 47
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "TimeLimit"
@@ -225,7 +210,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 48
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "UsageInterval"
@@ -236,7 +220,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 49
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "FriendlyName"
@@ -247,7 +230,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 50
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "IconURL"
@@ -258,7 +240,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "FQDN"
@@ -269,7 +250,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Extension"
@@ -280,7 +260,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "SSID"
@@ -291,7 +270,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 54
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "RoamingConsortiumOI"
@@ -302,7 +280,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 56
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "PerProviderSubscription"
@@ -313,7 +290,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 57
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "PreferredRoamingPartnerList"
@@ -324,7 +300,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 58
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "RequiredProtoPortTuple"
@@ -335,7 +310,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 59
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "AAAServerTrustRoot"
@@ -346,7 +320,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 60
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "NetworkID"
@@ -357,7 +330,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 61
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "HomeOIList"
@@ -368,7 +340,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 62
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "MinBackhaulThreshold"
@@ -379,7 +350,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 63
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Wi-Fi"
@@ -390,7 +360,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 64
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Policy"
@@ -401,7 +370,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 65
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "PolicyUpdate"
@@ -412,7 +380,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 66
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "UsernamePassword"
@@ -423,7 +390,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 67
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "TrustRoot"
@@ -434,7 +400,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 68
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "SPExclusionList"
@@ -445,7 +410,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 69
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "SubscriptionUpdate"
@@ -456,7 +420,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 70
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "HomeSP"
@@ -467,7 +430,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 71
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "OtherHomePartners"
@@ -478,7 +440,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 72
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "UsageLimits"
@@ -489,7 +450,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 73
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Credential"
@@ -500,7 +460,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 74
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "EAPMethod"
@@ -511,7 +470,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 75
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "DigitalCertificate"
@@ -522,7 +480,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 76
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "SIM"
@@ -533,7 +490,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "UpdateInterval"
@@ -544,7 +500,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 79
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "UpdateMethod"
@@ -555,7 +510,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 80
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Restriction"
@@ -566,7 +520,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 82
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Other"
@@ -577,7 +530,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CertURL"
@@ -588,7 +540,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 84
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CertSHA256Fingerprint"
@@ -599,7 +550,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 86
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "FQDN_Match"
@@ -610,7 +560,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 87
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Priority"
@@ -621,7 +570,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 88
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Country"
@@ -632,7 +580,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 90
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "NetworkType"
@@ -643,7 +590,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "DLBandwidth"
@@ -654,7 +600,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 92
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "ULBandwidth"
@@ -665,7 +610,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "IPProtocol"
@@ -676,7 +620,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 95
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "PortNumber"
@@ -687,7 +630,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 97
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "HESSID"
@@ -698,7 +640,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "HOMESP_SSID"
@@ -709,7 +650,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CreationDate"
@@ -720,7 +660,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 101
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "ExpirationDate"
@@ -731,7 +670,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Username"
@@ -742,7 +680,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 103
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Password"
@@ -755,7 +692,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 104
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Password"
@@ -768,7 +704,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 105
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "MachineManaged"
@@ -779,7 +714,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "SoftTokenApp"
@@ -790,7 +724,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 107
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "AbleToShare"
@@ -801,7 +734,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 108
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "EAPType"
@@ -812,7 +744,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "VendorID"
@@ -823,7 +754,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "VendorType"
@@ -834,7 +764,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 111
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "InnerEAPType"
@@ -845,7 +774,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 112
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "InnerVendorID"
@@ -856,7 +784,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 113
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "InnerVendorType"
@@ -867,7 +794,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 114
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "InnerMethod"
@@ -878,7 +804,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 115
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CertificateType"
@@ -889,7 +814,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 116
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Realm"
@@ -900,7 +824,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 117
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "IMSI"
@@ -911,7 +834,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 118
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "SIM_EAPType"
@@ -922,7 +844,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 119
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "checkAAAServerCertStatus"
@@ -933,7 +854,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 121
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "HomeOI"
@@ -944,7 +864,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 122
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "HomeOIRequired"
@@ -955,7 +874,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 124
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "UpdateIdentifier"
@@ -966,7 +884,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 126
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CertificateIssuerName"
@@ -977,7 +894,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "ManufacturingCertificate"
@@ -988,7 +904,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "DefaulBrowserPath"
@@ -999,7 +914,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 129
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CertEnrollAppPath"
@@ -1010,7 +924,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "IMEI_MEID"
@@ -1021,7 +934,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Wi-FiMACAddress"
@@ -1032,7 +944,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "launchBrowserToURI"
@@ -1043,7 +954,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "negotiateClientCertTLS"
@@ -1054,7 +964,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "getClientCertificate"
@@ -1065,7 +974,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "CertEnrollAppPath"
@@ -1076,7 +984,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "InnerMethod"
@@ -1087,7 +994,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "Wi-FiMACAddress"
@@ -1098,7 +1004,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "ClientTriggerRedirectURI"
@@ -1109,7 +1014,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->formatMap:Ljava/util/Map;
 
     const-string v1, "getCertificate"
@@ -1120,7 +1024,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 141
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CredentialPriority"
@@ -1129,7 +1032,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 143
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "URI"
@@ -1138,7 +1040,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 144
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CertURL"
@@ -1147,7 +1048,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 145
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CertSHA256Fingerprint"
@@ -1156,7 +1056,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 147
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "MaximumBSSLoadValue"
@@ -1165,7 +1064,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 149
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CreationDate"
@@ -1174,7 +1072,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 150
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "ExpirationDate"
@@ -1183,7 +1080,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 152
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "TypeOfSubscription"
@@ -1192,7 +1088,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 154
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "StartDate"
@@ -1201,7 +1096,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 155
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "DataLimit"
@@ -1210,7 +1104,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 156
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "TimeLimit"
@@ -1219,7 +1112,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 157
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "UsageInterval"
@@ -1228,7 +1120,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "FriendlyName"
@@ -1237,7 +1128,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "IconURL"
@@ -1246,7 +1136,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 160
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "FQDN"
@@ -1255,7 +1144,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 161
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Extension"
@@ -1264,7 +1152,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "SSID"
@@ -1273,7 +1160,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 163
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "RoamingConsortiumOI"
@@ -1282,7 +1168,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 165
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "UpdateInterval"
@@ -1291,7 +1176,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "UpdateMethod"
@@ -1300,7 +1184,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 169
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Restriction"
@@ -1309,7 +1192,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 171
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Other"
@@ -1318,7 +1200,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 172
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CertURL"
@@ -1327,7 +1208,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CertSHA256Fingerprint"
@@ -1336,7 +1216,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "FQDN_Match"
@@ -1345,7 +1224,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Priority"
@@ -1354,7 +1232,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 181
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Country"
@@ -1363,7 +1240,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 184
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "NetworkType"
@@ -1372,7 +1248,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 186
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "DLBandwidth"
@@ -1381,7 +1256,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 188
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "ULBandwidth"
@@ -1390,7 +1264,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 191
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "IPProtocol"
@@ -1399,7 +1272,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 192
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "PortNumber"
@@ -1408,7 +1280,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 194
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "HESSID"
@@ -1417,7 +1288,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 195
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "HOMESP_SSID"
@@ -1426,7 +1296,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 196
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CreationDate"
@@ -1435,7 +1304,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "ExpirationDate"
@@ -1444,7 +1312,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Username"
@@ -1453,7 +1320,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 201
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Password"
@@ -1462,7 +1328,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 202
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "MachineManaged"
@@ -1471,7 +1336,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 204
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "SoftTokenApp"
@@ -1480,7 +1344,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "AbleToShare"
@@ -1489,7 +1352,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 207
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "EAPType"
@@ -1498,7 +1360,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 208
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "VendorID"
@@ -1507,7 +1368,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "VendorType"
@@ -1516,7 +1376,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 210
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "InnerEAPType"
@@ -1525,7 +1384,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 212
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "InnerVendorID"
@@ -1534,7 +1392,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 214
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "InnerVendorType"
@@ -1543,7 +1400,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 218
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CertificateType"
@@ -1552,7 +1408,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 220
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Realm"
@@ -1561,7 +1416,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 221
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "IMSI"
@@ -1570,7 +1424,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 222
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "SIM_EAPType"
@@ -1579,7 +1432,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 223
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "checkAAAServerCertStatus"
@@ -1588,7 +1440,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 226
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "HomeOI"
@@ -1597,7 +1448,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "HomeOIRequired"
@@ -1606,7 +1456,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 228
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "PerProviderSubscription"
@@ -1615,7 +1464,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 230
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "PreferredRoamingPartnerList"
@@ -1624,7 +1472,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 232
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "RequiredProtoPortTuple"
@@ -1633,7 +1480,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "AAAServerTrustRoot"
@@ -1642,7 +1488,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "NetworkID"
@@ -1651,7 +1496,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "HomeOIList"
@@ -1660,7 +1504,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 240
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "MinBackhaulThreshold"
@@ -1669,7 +1512,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Wi-Fi"
@@ -1678,7 +1520,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 243
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "UpdateIdentifier"
@@ -1687,7 +1528,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 246
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CertificateIssuerName"
@@ -1696,7 +1536,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "ManufacturingCertificate"
@@ -1705,7 +1544,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 252
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "CertEnrollAppPath"
@@ -1714,7 +1552,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 254
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "IMEI_MEID"
@@ -1723,7 +1560,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 255
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "Wi-FiMACAddress"
@@ -1732,7 +1568,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 257
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "launchBrowserToURI"
@@ -1741,7 +1576,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "negotiateClientCertTLS"
@@ -1750,7 +1584,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 261
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "InnerMethod"
@@ -1759,7 +1592,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 263
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "ClientTriggerRedirectURI"
@@ -1768,7 +1600,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 265
     sget-object v0, Lcom/android/server/wifi/hs20/WifiHs20Helper;->dbFieldMap:Ljava/util/Map;
 
     const-string v1, "getCertificate"
@@ -1777,6 +1608,5 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 267
     return-void
 .end method

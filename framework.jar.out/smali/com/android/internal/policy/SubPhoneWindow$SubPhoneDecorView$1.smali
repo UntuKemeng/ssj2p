@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 282
     iput-object p1, p0, Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView$1;->this$1:Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 286
     invoke-static {}, Landroid/hardware/display/DisplayManagerGlobal;->getInstance()Landroid/hardware/display/DisplayManagerGlobal;
 
     move-result-object v1
@@ -54,18 +52,15 @@
 
     if-nez v1, :cond_0
 
-    .line 287
     const-string v1, "SubPhoneWindow"
 
     const-string v2, "Could not get display information from display manager."
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 299
     :goto_0
     return-void
 
-    .line 291
     :cond_0
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
@@ -99,7 +94,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 293
     :cond_1
     new-instance v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -114,11 +108,9 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;-><init>(Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 294
     .local v0, "tempStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     invoke-virtual {v0, v3}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setType(I)V
 
-    .line 295
     iget-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView$1;->this$1:Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView;
 
     iget-object v1, v1, Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView;->this$0:Lcom/android/internal/policy/SubPhoneWindow;
@@ -141,7 +133,6 @@
 
     goto :goto_0
 
-    .line 297
     .end local v0    # "tempStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView$1;->this$1:Lcom/android/internal/policy/SubPhoneWindow$SubPhoneDecorView;

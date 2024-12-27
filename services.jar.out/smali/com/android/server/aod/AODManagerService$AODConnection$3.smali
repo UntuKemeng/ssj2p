@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 640
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$AODConnection$3;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 643
     # getter for: Lcom/android/server/aod/AODManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->access$100()Ljava/lang/String;
 
@@ -50,13 +48,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 644
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$AODConnection$3;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
 
     iget-object v0, v0, Lcom/android/server/aod/AODManagerService$AODConnection;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/aod/AODManagerService;->stopConnection()V
 
-    .line 645
     return-void
 .end method

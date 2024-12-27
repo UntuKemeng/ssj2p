@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 5689
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 5691
     # invokes: Lcom/android/internal/policy/PhoneWindow$PanelFeatureState$SavedState;->readFromParcel(Landroid/os/Parcel;)Lcom/android/internal/policy/PhoneWindow$PanelFeatureState$SavedState;
     invoke-static {p1}, Lcom/android/internal/policy/PhoneWindow$PanelFeatureState$SavedState;->access$4200(Landroid/os/Parcel;)Lcom/android/internal/policy/PhoneWindow$PanelFeatureState$SavedState;
 
@@ -59,7 +57,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 5689
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/PhoneWindow$PanelFeatureState$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lcom/android/internal/policy/PhoneWindow$PanelFeatureState$SavedState;
 
     move-result-object v0
@@ -72,7 +69,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 5695
     new-array v0, p1, [Lcom/android/internal/policy/PhoneWindow$PanelFeatureState$SavedState;
 
     return-object v0
@@ -83,7 +79,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 5689
     invoke-virtual {p0, p1}, Lcom/android/internal/policy/PhoneWindow$PanelFeatureState$SavedState$1;->newArray(I)[Lcom/android/internal/policy/PhoneWindow$PanelFeatureState$SavedState;
 
     move-result-object v0

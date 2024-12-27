@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 66
     iput-object p1, p0, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardHandler;->this$0:Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$1;
 
     .prologue
-    .line 66
     invoke-direct {p0, p1}, Lcom/android/server/policy/keyguard/KeyguardServiceDelegate$KeyguardHandler;-><init>(Lcom/android/server/policy/keyguard/KeyguardServiceDelegate;)V
 
     return-void
@@ -50,16 +48,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 69
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 81
     :goto_0
     return-void
 
-    .line 71
     :pswitch_0
     new-instance v0, Ljava/lang/Thread;
 
@@ -73,7 +68,6 @@
 
     goto :goto_0
 
-    .line 69
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

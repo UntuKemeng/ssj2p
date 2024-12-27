@@ -43,24 +43,18 @@
 
     const/4 v2, 0x0
 
-    .line 778
     iput-object p1, p0, Lcom/android/server/LockSettingsService$CredentialInfo;->this$0:Lcom/android/server/LockSettingsService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 779
     iput p2, p0, Lcom/android/server/LockSettingsService$CredentialInfo;->userId:I
 
-    .line 780
     iput p3, p0, Lcom/android/server/LockSettingsService$CredentialInfo;->lockType:I
 
-    .line 781
     iput p4, p0, Lcom/android/server/LockSettingsService$CredentialInfo;->verifType:I
 
-    .line 782
     iput-object p5, p0, Lcom/android/server/LockSettingsService$CredentialInfo;->credential:Ljava/lang/String;
 
-    .line 783
     and-int/lit8 v0, p4, 0x3
 
     if-lez v0, :cond_0
@@ -70,7 +64,6 @@
     :goto_0
     iput-boolean v0, p0, Lcom/android/server/LockSettingsService$CredentialInfo;->isSdpEnabled:Z
 
-    .line 785
     and-int/lit8 v0, p4, 0x5
 
     if-lez v0, :cond_1
@@ -78,19 +71,16 @@
     :goto_1
     iput-boolean v1, p0, Lcom/android/server/LockSettingsService$CredentialInfo;->isMdfppEnabled:Z
 
-    .line 787
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 783
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 785
     goto :goto_1
 .end method
 
@@ -100,7 +90,6 @@
     .locals 2
 
     .prologue
-    .line 789
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

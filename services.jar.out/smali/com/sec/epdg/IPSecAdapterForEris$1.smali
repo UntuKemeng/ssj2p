@@ -25,7 +25,6 @@
     .locals 3
 
     .prologue
-    .line 639
     invoke-static {}, Lcom/sec/erisclient/ErisError;->values()[Lcom/sec/erisclient/ErisError;
 
     move-result-object v0
@@ -707,7 +706,6 @@
     :try_end_29
     .catch Ljava/lang/NoSuchFieldError; {:try_start_29 .. :try_end_29} :catch_6
 
-    .line 620
     :goto_29
     invoke-static {}, Lcom/sec/erisclient/ErisEvent;->values()[Lcom/sec/erisclient/ErisEvent;
 
@@ -847,7 +845,6 @@
 
     goto :goto_2a
 
-    .line 639
     :catch_6
     move-exception v0
 

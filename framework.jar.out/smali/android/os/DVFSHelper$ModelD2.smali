@@ -23,16 +23,13 @@
     .locals 1
 
     .prologue
-    .line 2659
     iput-object p1, p0, Landroid/os/DVFSHelper$ModelD2;->this$0:Landroid/os/DVFSHelper;
 
     invoke-direct {p0, p1}, Landroid/os/DVFSHelper$ModelJBP;-><init>(Landroid/os/DVFSHelper;)V
 
-    .line 2660
     const/4 v0, 0x2
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelD2;->AMS_RESUME_CPU_CORE:I
 
-    .line 2661
     return-void
 .end method

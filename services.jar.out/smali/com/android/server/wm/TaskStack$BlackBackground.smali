@@ -50,10 +50,8 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 2147
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2148
     new-instance v0, Lcom/android/server/wm/DimLayer;
 
     const-string v1, "BlackBackground"
@@ -62,40 +60,32 @@
 
     iput-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
-    .line 2149
     iput v2, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mLayer:I
 
-    .line 2150
     iput v2, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBottomLayer:I
 
-    .line 2151
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
-    .line 2152
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBounds:Landroid/graphics/Rect;
 
-    .line 2153
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mShown:Z
 
-    .line 2154
     iput-object p1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mService:Lcom/android/server/wm/WindowManagerService;
 
-    .line 2156
     invoke-virtual {p3}, Lcom/android/server/wm/DisplayContent;->getDisplayId()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mDisplayId:I
 
-    .line 2158
     return-void
 .end method
 
@@ -105,7 +95,6 @@
     .locals 28
 
     .prologue
-    .line 2199
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
@@ -114,12 +103,10 @@
 
     if-nez v22, :cond_1
 
-    .line 2287
     :cond_0
     :goto_0
     return-void
 
-    .line 2202
     :cond_1
     move-object/from16 v0, p0
 
@@ -129,12 +116,10 @@
 
     if-nez v22, :cond_2
 
-    .line 2203
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/TaskStack$BlackBackground;->hide()V
 
     goto :goto_0
 
-    .line 2207
     :cond_2
     move-object/from16 v0, p0
 
@@ -146,7 +131,6 @@
 
     move-result v16
 
-    .line 2208
     .local v16, "isVisible":Z
     move-object/from16 v0, p0
 
@@ -176,7 +160,6 @@
 
     const/4 v13, 0x1
 
-    .line 2209
     .local v13, "isOpaqueWin":Z
     :goto_1
     move-object/from16 v0, p0
@@ -195,7 +178,6 @@
 
     move-result v11
 
-    .line 2210
     .local v11, "isMinimized":Z
     move-object/from16 v0, p0
 
@@ -229,7 +211,6 @@
 
     const/4 v8, 0x1
 
-    .line 2211
     .local v8, "isAnimating":Z
     :goto_2
     move-object/from16 v0, p0
@@ -262,12 +243,10 @@
 
     const/4 v14, 0x1
 
-    .line 2212
     .local v14, "isRotation":Z
     :goto_3
     const/4 v15, 0x0
 
-    .line 2213
     .local v15, "isTransparent":Z
     move-object/from16 v0, p0
 
@@ -283,7 +262,6 @@
 
     const/4 v10, 0x1
 
-    .line 2214
     .local v10, "isDrawing":Z
     :goto_4
     move-object/from16 v0, p0
@@ -322,7 +300,6 @@
 
     const/16 v17, 0x1
 
-    .line 2215
     .local v17, "isWaitingForMaximizeAnim":Z
     :goto_5
     move-object/from16 v0, p0
@@ -377,7 +354,6 @@
 
     const/4 v12, 0x1
 
-    .line 2216
     .local v12, "isNormal":Z
     :goto_6
     move-object/from16 v0, p0
@@ -416,7 +392,6 @@
 
     const/4 v9, 0x1
 
-    .line 2217
     .local v9, "isCameraRotation":Z
     :goto_7
     if-eqz v16, :cond_3
@@ -467,13 +442,11 @@
 
     if-eqz v9, :cond_b
 
-    .line 2229
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wm/TaskStack$BlackBackground;->hide()V
 
     goto/16 :goto_0
 
-    .line 2208
     .end local v8    # "isAnimating":Z
     .end local v9    # "isCameraRotation":Z
     .end local v10    # "isDrawing":Z
@@ -488,7 +461,6 @@
 
     goto/16 :goto_1
 
-    .line 2210
     .restart local v11    # "isMinimized":Z
     .restart local v13    # "isOpaqueWin":Z
     :cond_5
@@ -496,14 +468,12 @@
 
     goto/16 :goto_2
 
-    .line 2211
     .restart local v8    # "isAnimating":Z
     :cond_6
     const/4 v14, 0x0
 
     goto/16 :goto_3
 
-    .line 2213
     .restart local v14    # "isRotation":Z
     .restart local v15    # "isTransparent":Z
     :cond_7
@@ -511,28 +481,24 @@
 
     goto/16 :goto_4
 
-    .line 2214
     .restart local v10    # "isDrawing":Z
     :cond_8
     const/16 v17, 0x0
 
     goto/16 :goto_5
 
-    .line 2215
     .restart local v17    # "isWaitingForMaximizeAnim":Z
     :cond_9
     const/4 v12, 0x0
 
     goto :goto_6
 
-    .line 2216
     .restart local v12    # "isNormal":Z
     :cond_a
     const/4 v9, 0x0
 
     goto :goto_7
 
-    .line 2231
     .restart local v9    # "isCameraRotation":Z
     :cond_b
     move-object/from16 v0, p0
@@ -549,7 +515,6 @@
 
     if-eqz v22, :cond_e
 
-    .line 2232
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
@@ -587,7 +552,6 @@
 
     check-cast v21, Lcom/android/server/wm/WindowState;
 
-    .line 2233
     .local v21, "w":Lcom/android/server/wm/WindowState;
     move-object/from16 v0, p0
 
@@ -629,7 +593,6 @@
 
     if-le v0, v1, :cond_c
 
-    .line 2238
     :cond_d
     move-object/from16 v0, v21
 
@@ -645,7 +608,6 @@
 
     goto :goto_8
 
-    .line 2243
     .end local v7    # "i$":Ljava/util/Iterator;
     .end local v21    # "w":Lcom/android/server/wm/WindowState;
     :cond_e
@@ -657,7 +619,6 @@
 
     add-int/lit8 v6, v22, -0x1
 
-    .line 2246
     .local v6, "dimlayer":I
     move-object/from16 v0, p0
 
@@ -671,7 +632,6 @@
 
     move-object/from16 v19, v0
 
-    .line 2247
     .local v19, "tmpFloats":[F
     move-object/from16 v0, p0
 
@@ -685,7 +645,6 @@
 
     move-object/from16 v20, v0
 
-    .line 2249
     .local v20, "tmpMatrix":Landroid/graphics/Matrix;
     move-object/from16 v0, v20
 
@@ -693,7 +652,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 2251
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/wm/TaskStack$BlackBackground;->mApplyMagnifiSpec:Z
@@ -702,10 +660,8 @@
 
     if-nez v22, :cond_12
 
-    .line 2252
     const/16 v18, 0x0
 
-    .line 2260
     .local v18, "spec":Landroid/view/MagnificationSpec;
     move-object/from16 v0, p0
 
@@ -721,7 +677,6 @@
 
     if-eqz v22, :cond_f
 
-    .line 2261
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/TaskStack$BlackBackground;->mService:Lcom/android/server/wm/WindowManagerService;
@@ -744,7 +699,6 @@
 
     move-result-object v18
 
-    .line 2267
     :cond_f
     if-eqz v18, :cond_10
 
@@ -760,7 +714,6 @@
 
     if-eqz v22, :cond_10
 
-    .line 2268
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBounds:Landroid/graphics/Rect;
@@ -775,7 +728,6 @@
 
     invoke-virtual/range {v22 .. v23}, Landroid/graphics/Rect;->scale(F)V
 
-    .line 2269
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBounds:Landroid/graphics/Rect;
@@ -808,7 +760,6 @@
 
     invoke-virtual/range {v22 .. v24}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 2275
     .end local v18    # "spec":Landroid/view/MagnificationSpec;
     :cond_10
     :goto_9
@@ -826,7 +777,6 @@
 
     invoke-virtual/range {v22 .. v23}, Lcom/android/server/wm/DimLayer;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 2276
     move-object/from16 v0, p0
 
     iget v0, v0, Lcom/android/server/wm/TaskStack$BlackBackground;->mLayer:I
@@ -845,13 +795,11 @@
 
     if-nez v22, :cond_0
 
-    .line 2282
     :cond_11
     move-object/from16 v0, p0
 
     iput v6, v0, Lcom/android/server/wm/TaskStack$BlackBackground;->mLayer:I
 
-    .line 2283
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
@@ -878,7 +826,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/server/wm/DimLayer;->show(IFJ)V
 
-    .line 2284
     const/16 v22, 0x1
 
     move/from16 v0, v22
@@ -889,7 +836,6 @@
 
     goto/16 :goto_0
 
-    .line 2272
     :cond_12
     const/16 v22, 0x0
 
@@ -906,17 +852,14 @@
     .locals 1
 
     .prologue
-    .line 2176
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DimLayer;->destroySurface()V
 
-    .line 2177
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
-    .line 2178
     return-void
 .end method
 
@@ -924,7 +867,6 @@
     .locals 1
 
     .prologue
-    .line 2181
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     if-eqz v0, :cond_0
@@ -933,17 +875,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 2183
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBlackSurface:Lcom/android/server/wm/DimLayer;
 
     invoke-virtual {v0}, Lcom/android/server/wm/DimLayer;->hide()V
 
-    .line 2184
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mShown:Z
 
-    .line 2186
     :cond_0
     return-void
 .end method
@@ -953,25 +892,20 @@
     .param p1, "win"    # Lcom/android/server/wm/WindowState;
 
     .prologue
-    .line 2161
     if-nez p1, :cond_1
 
-    .line 2163
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
-    .line 2164
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBottomLayer:I
 
-    .line 2172
     :cond_0
     :goto_0
     return-void
 
-    .line 2168
     :cond_1
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
@@ -985,7 +919,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 2170
     :cond_2
     iput-object p1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBaseWindow:Lcom/android/server/wm/WindowState;
 
@@ -998,10 +931,8 @@
     .param p2, "applyMagnifiSpec"    # Z
 
     .prologue
-    .line 2189
     iput-boolean p2, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mApplyMagnifiSpec:Z
 
-    .line 2191
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->equals(Ljava/lang/Object;)Z
@@ -1010,12 +941,10 @@
 
     if-nez v0, :cond_0
 
-    .line 2193
     iget-object v0, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Rect;->set(Landroid/graphics/Rect;)V
 
-    .line 2195
     :cond_0
     return-void
 .end method
@@ -1024,14 +953,12 @@
     .locals 3
 
     .prologue
-    .line 2291
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 2292
     .local v0, "sb":Ljava/lang/StringBuilder;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1059,32 +986,26 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2293
     const-string v1, " bounds="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2294
     iget-object v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 2295
     const-string v1, " layer="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2296
     iget v1, p0, Lcom/android/server/wm/TaskStack$BlackBackground;->mLayer:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2297
     const-string v1, " }"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2298
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

@@ -53,48 +53,38 @@
 
     const/4 v1, -0x1
 
-    .line 461
     iput-object p1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
-    .line 462
     const-string v0, "PhotonicModulator"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 447
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mLock:Ljava/lang/Object;
 
-    .line 449
     iput v2, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingState:I
 
-    .line 450
     iput v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingBacklight:I
 
-    .line 451
     iput v2, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mActualState:I
 
-    .line 452
     iput v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mActualBacklight:I
 
-    .line 458
     new-instance v0, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-direct {v0}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPhotonicModulatorTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
-    .line 614
     new-instance v0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/display/DisplayPowerState$PhotonicModulator$1;-><init>(Lcom/android/server/display/DisplayPowerState$PhotonicModulator;)V
 
     iput-object v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mRequestDisplayStateDoneListener:Ljava/lang/Runnable;
 
-    .line 464
     # getter for: Lcom/android/server/display/DisplayPowerState;->mBlanker:Lcom/android/server/display/DisplayBlanker;
     invoke-static {p1}, Lcom/android/server/display/DisplayPowerState;->access$1300(Lcom/android/server/display/DisplayPowerState;)Lcom/android/server/display/DisplayBlanker;
 
@@ -109,7 +99,6 @@
 
     invoke-interface {v0, v1, v2}, Lcom/android/server/display/DisplayBlanker;->registerRequestDisplayStateDoneListener(ILjava/lang/Runnable;)V
 
-    .line 465
     return-void
 .end method
 
@@ -118,7 +107,6 @@
     .param p0, "x0"    # Lcom/android/server/display/DisplayPowerState$PhotonicModulator;
 
     .prologue
-    .line 443
     iget-object v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mLock:Ljava/lang/Object;
 
     return-object v0
@@ -130,7 +118,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 443
     iput-boolean p1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingRequestDisplayState:Z
 
     return p1
@@ -143,26 +130,22 @@
     .prologue
     const/16 v1, 0xff
 
-    .line 594
     iget-object v2, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     iget v2, v2, Lcom/android/server/display/DisplayPowerState;->mFinalBrightnessDiff:I
 
     sub-int v0, p1, v2
 
-    .line 596
     .local v0, "finalMarkerPosition":I
     if-gtz v0, :cond_1
 
     const/4 v0, 0x0
 
-    .line 598
     .end local v0    # "finalMarkerPosition":I
     :cond_0
     :goto_0
     return v0
 
-    .line 597
     .restart local v0    # "finalMarkerPosition":I
     :cond_1
     if-lt v0, v1, :cond_0
@@ -177,7 +160,6 @@
     .param p1, "backlight"    # I
 
     .prologue
-    .line 605
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
@@ -188,7 +170,6 @@
 
     invoke-virtual {v1, p1}, Lcom/android/server/lights/Light;->setBrightness(I)V
 
-    .line 606
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # setter for: Lcom/android/server/display/DisplayPowerState;->mLastScreenBrightness:I
@@ -196,15 +177,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 610
     :goto_0
     return-void
 
-    .line 607
     :catch_0
     move-exception v0
 
-    .line 608
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "DisplayPowerState"
 
@@ -222,21 +200,17 @@
     .param p1, "pw"    # Ljava/io/PrintWriter;
 
     .prologue
-    .line 503
     iget-object v1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 504
     :try_start_0
     invoke-virtual {p1}, Ljava/io/PrintWriter;->println()V
 
-    .line 505
     const-string v0, "Photonic Modulator State:"
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 506
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -263,7 +237,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 507
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -286,7 +259,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 508
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -313,7 +285,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 509
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -336,7 +307,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 510
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -359,7 +329,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 511
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,13 +351,10 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 512
     monitor-exit v1
 
-    .line 513
     return-void
 
-    .line 512
     :catchall_0
     move-exception v0
 
@@ -407,7 +373,6 @@
 
     const/4 v5, 0x0
 
-    .line 518
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPhotonicModulatorTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     const-string v7, "LCD_Task is start"
@@ -416,18 +381,15 @@
 
     invoke-virtual {v6, v7, v8, v9}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->printTotalTime(Ljava/lang/String;J)V
 
-    .line 526
     :cond_0
     :goto_0
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 527
     :try_start_0
     iget v2, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingState:I
 
-    .line 528
     .local v2, "state":I
     iget v7, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mActualState:I
 
@@ -435,12 +397,10 @@
 
     move v3, v4
 
-    .line 529
     .local v3, "stateChanged":Z
     :goto_1
     iget v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingBacklight:I
 
-    .line 530
     .local v0, "backlight":I
     iget v7, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mActualBacklight:I
 
@@ -448,40 +408,33 @@
 
     move v1, v4
 
-    .line 531
     .local v1, "backlightChanged":Z
     :goto_2
     if-nez v3, :cond_1
 
-    .line 533
     iget-object v7, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # invokes: Lcom/android/server/display/DisplayPowerState;->postScreenUpdateThreadSafe()V
     invoke-static {v7}, Lcom/android/server/display/DisplayPowerState;->access$1500(Lcom/android/server/display/DisplayPowerState;)V
 
-    .line 534
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mStateChangeInProgress:Z
 
-    .line 536
     :cond_1
     if-nez v1, :cond_2
 
-    .line 537
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mBacklightChangeInProgress:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 539
     :cond_2
     if-nez v3, :cond_5
 
     if-nez v1, :cond_5
 
-    .line 541
     :try_start_1
     iget-object v7, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mLock:Ljava/lang/Object;
 
@@ -490,14 +443,12 @@
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 543
     :goto_3
     :try_start_2
     monitor-exit v6
 
     goto :goto_0
 
-    .line 552
     .end local v0    # "backlight":I
     .end local v1    # "backlightChanged":Z
     .end local v2    # "state":I
@@ -515,7 +466,6 @@
     :cond_3
     move v3, v5
 
-    .line 528
     goto :goto_1
 
     .restart local v0    # "backlight":I
@@ -523,33 +473,26 @@
     :cond_4
     move v1, v5
 
-    .line 530
     goto :goto_2
 
-    .line 546
     .restart local v1    # "backlightChanged":Z
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 547
     const/4 v7, 0x1
 
     :try_start_3
     iput-boolean v7, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingRequestDisplayState:Z
 
-    .line 550
     :cond_6
     iput v2, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mActualState:I
 
-    .line 551
     iput v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mActualBacklight:I
 
-    .line 552
     monitor-exit v6
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 555
     # getter for: Lcom/android/server/display/DisplayPowerState;->DEBUG:Z
     invoke-static {}, Lcom/android/server/display/DisplayPowerState;->access$500()Z
 
@@ -557,7 +500,6 @@
 
     if-eqz v6, :cond_9
 
-    .line 556
     const-string v6, "DisplayPowerState"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -594,15 +536,12 @@
 
     invoke-static {v6, v7}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 568
     :cond_7
     :goto_4
     if-eqz v1, :cond_8
 
-    .line 569
     invoke-direct {p0, v0}, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->setBrightness(I)V
 
-    .line 574
     :cond_8
     # getter for: Lcom/android/server/display/DisplayPowerState;->mGlobalScreenStateHint:I
     invoke-static {}, Lcom/android/server/display/DisplayPowerState;->access$1600()I
@@ -611,7 +550,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 575
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # getter for: Lcom/android/server/display/DisplayPowerState;->mBlanker:Lcom/android/server/display/DisplayBlanker;
@@ -621,7 +559,6 @@
 
     invoke-interface {v6, v2, v0}, Lcom/android/server/display/DisplayBlanker;->requestDisplayState(II)V
 
-    .line 583
     :goto_5
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
@@ -629,7 +566,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 584
     const-string v6, "DisplayPowerState"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -656,7 +592,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 585
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # getter for: Lcom/android/server/display/DisplayPowerState;->mContext:Landroid/content/Context;
@@ -680,7 +615,6 @@
 
     goto/16 :goto_0
 
-    .line 561
     :cond_9
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
@@ -691,7 +625,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 562
     const-string v6, "DisplayPowerState"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -745,7 +678,6 @@
 
     invoke-static {v6, v7}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 564
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
     # setter for: Lcom/android/server/display/DisplayPowerState;->mBrightByColorFadeExit:Z
@@ -753,7 +685,6 @@
 
     goto/16 :goto_4
 
-    .line 577
     :cond_a
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
 
@@ -773,7 +704,6 @@
 
     goto/16 :goto_5
 
-    .line 542
     :catch_0
     move-exception v7
 
@@ -790,12 +720,10 @@
 
     const/4 v4, 0x0
 
-    .line 468
     iget-object v5, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mLock:Ljava/lang/Object;
 
     monitor-enter v5
 
-    .line 469
     :try_start_0
     iget v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingState:I
 
@@ -803,7 +731,6 @@
 
     move v2, v3
 
-    .line 470
     .local v2, "stateChanged":Z
     :goto_0
     iget v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingBacklight:I
@@ -812,14 +739,12 @@
 
     move v0, v3
 
-    .line 471
     .local v0, "backlightChanged":Z
     :goto_1
     if-nez v2, :cond_0
 
     if-eqz v0, :cond_3
 
-    .line 472
     :cond_0
     # getter for: Lcom/android/server/display/DisplayPowerState;->DEBUG:Z
     invoke-static {}, Lcom/android/server/display/DisplayPowerState;->access$500()Z
@@ -828,7 +753,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 473
     const-string v6, "DisplayPowerState"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -865,15 +789,12 @@
 
     invoke-static {v6, v7}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 483
     :cond_1
     :goto_2
     iput p1, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingState:I
 
-    .line 484
     iput p2, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPendingBacklight:I
 
-    .line 486
     iget-boolean v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mStateChangeInProgress:Z
 
     if-nez v6, :cond_2
@@ -885,28 +806,22 @@
     :cond_2
     move v1, v3
 
-    .line 487
     .local v1, "changeInProgress":Z
     :goto_3
     iput-boolean v2, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mStateChangeInProgress:Z
 
-    .line 488
     iput-boolean v0, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mBacklightChangeInProgress:Z
 
-    .line 490
     if-nez v1, :cond_3
 
-    .line 492
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mPhotonicModulatorTimeMeasurement:Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;
 
     invoke-virtual {v6}, Lcom/android/server/power/PowerManagerUtil$TimeMeasurement;->resetTime()V
 
-    .line 494
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mLock:Ljava/lang/Object;
 
     invoke-virtual {v6}, Ljava/lang/Object;->notifyAll()V
 
-    .line 497
     .end local v1    # "changeInProgress":Z
     :cond_3
     iget-boolean v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->mStateChangeInProgress:Z
@@ -927,17 +842,14 @@
     :cond_4
     move v2, v4
 
-    .line 469
     goto :goto_0
 
     .restart local v2    # "stateChanged":Z
     :cond_5
     move v0, v4
 
-    .line 470
     goto :goto_1
 
-    .line 477
     .restart local v0    # "backlightChanged":Z
     :cond_6
     iget-object v6, p0, Lcom/android/server/display/DisplayPowerState$PhotonicModulator;->this$0:Lcom/android/server/display/DisplayPowerState;
@@ -949,7 +861,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 478
     const-string v6, "DisplayPowerState"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1005,7 +916,6 @@
 
     goto :goto_2
 
-    .line 499
     .end local v0    # "backlightChanged":Z
     .end local v2    # "stateChanged":Z
     :catchall_0
@@ -1022,12 +932,10 @@
     :cond_7
     move v1, v4
 
-    .line 486
     goto :goto_3
 
     :cond_8
     move v3, v4
 
-    .line 497
     goto :goto_4
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 713
     iput-object p1, p0, Lcom/android/server/usb/UsbHostRestrictor$5;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     invoke-direct {p0}, Landroid/os/UEventObserver;-><init>()V
@@ -40,7 +39,6 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 717
     const-string v6, "UsbHostRestrictor"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -67,14 +65,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 719
     const-string v6, "ACTION"
 
     invoke-virtual {p1, v6}, Landroid/os/UEventObserver$UEvent;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 720
     .local v0, "action":Ljava/lang/String;
     const-string v6, "DEVPATH"
 
@@ -82,7 +78,6 @@
 
     move-result-object v1
 
-    .line 721
     .local v1, "devPath":Ljava/lang/String;
     const-string v6, "STATE"
 
@@ -90,7 +85,6 @@
 
     move-result-object v4
 
-    .line 722
     .local v4, "state":Ljava/lang/String;
     const-string v6, "SWITCH_NAME"
 
@@ -98,7 +92,6 @@
 
     move-result-object v3
 
-    .line 723
     .local v3, "name":Ljava/lang/String;
     const-string v6, "SWITCH_STATE"
 
@@ -106,20 +99,17 @@
 
     move-result-object v5
 
-    .line 725
     .local v5, "switchState":Ljava/lang/String;
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$5;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->getPowerManager()V
     invoke-static {v6}, Lcom/android/server/usb/UsbHostRestrictor;->access$1000(Lcom/android/server/usb/UsbHostRestrictor;)V
 
-    .line 726
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$5;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->turnOnLcd()V
     invoke-static {v6}, Lcom/android/server/usb/UsbHostRestrictor;->access$1100(Lcom/android/server/usb/UsbHostRestrictor;)V
 
-    .line 728
     const-string v6, "change"
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -138,7 +128,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 730
     :try_start_0
     const-string v6, "BLOCK"
 
@@ -148,7 +137,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 732
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$5;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # getter for: Lcom/android/server/usb/UsbHostRestrictor;->mContext:Landroid/content/Context;
@@ -170,19 +158,16 @@
 
     if-eq v6, v9, :cond_1
 
-    .line 733
     const-string v6, "UsbHostRestrictor"
 
     const-string v7, "UEventObserver SETUP WIZARD SCREEN. So skip about showing USB BLOCK Popup"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 759
     :cond_0
     :goto_0
     return-void
 
-    .line 735
     :cond_1
     # getter for: Lcom/android/server/usb/UsbHostRestrictor;->mCurrentSysNodeValue:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/usb/UsbHostRestrictor;->access$1200()Ljava/lang/String;
@@ -197,7 +182,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 737
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$5;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->showAlertDialog()V
@@ -207,11 +191,9 @@
 
     goto :goto_0
 
-    .line 755
     :catch_0
     move-exception v2
 
-    .line 756
     .local v2, "e":Ljava/lang/NumberFormatException;
     const-string v6, "UsbHostRestrictor"
 
@@ -237,7 +219,6 @@
 
     goto :goto_0
 
-    .line 738
     .end local v2    # "e":Ljava/lang/NumberFormatException;
     :cond_2
     :try_start_1
@@ -254,7 +235,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 740
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$5;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->showToast()V
@@ -262,7 +242,6 @@
 
     goto :goto_0
 
-    .line 741
     :cond_3
     # getter for: Lcom/android/server/usb/UsbHostRestrictor;->mCurrentSysNodeValue:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/usb/UsbHostRestrictor;->access$1200()Ljava/lang/String;
@@ -277,13 +256,11 @@
 
     if-eqz v6, :cond_4
 
-    .line 743
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$5;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->showAlertDialog()V
     invoke-static {v6}, Lcom/android/server/usb/UsbHostRestrictor;->access$1300(Lcom/android/server/usb/UsbHostRestrictor;)V
 
-    .line 744
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$5;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->showToast()V
@@ -291,7 +268,6 @@
 
     goto :goto_0
 
-    .line 745
     :cond_4
     # getter for: Lcom/android/server/usb/UsbHostRestrictor;->mCurrentSysNodeValue:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/usb/UsbHostRestrictor;->access$1200()Ljava/lang/String;
@@ -306,7 +282,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 747
     iget-object v6, p0, Lcom/android/server/usb/UsbHostRestrictor$5;->this$0:Lcom/android/server/usb/UsbHostRestrictor;
 
     # invokes: Lcom/android/server/usb/UsbHostRestrictor;->showMDMToast()V
@@ -314,7 +289,6 @@
 
     goto :goto_0
 
-    .line 749
     :cond_5
     const-string v6, "UsbHostRestrictor"
 

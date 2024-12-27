@@ -63,27 +63,22 @@
     .param p4, "filter"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 124
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 111
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Landroid/net/NetworkFactory;->mNetworkRequests:Landroid/util/SparseArray;
 
-    .line 117
     const/4 v0, 0x0
 
     iput v0, p0, Landroid/net/NetworkFactory;->mRefCount:I
 
-    .line 118
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/NetworkFactory;->mMessenger:Landroid/os/Messenger;
 
-    .line 120
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -96,16 +91,12 @@
 
     iput-object v0, p0, Landroid/net/NetworkFactory;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
-    .line 125
     iput-object p3, p0, Landroid/net/NetworkFactory;->LOG_TAG:Ljava/lang/String;
 
-    .line 126
     iput-object p2, p0, Landroid/net/NetworkFactory;->mContext:Landroid/content/Context;
 
-    .line 127
     iput-object p4, p0, Landroid/net/NetworkFactory;->mCapabilityFilter:Landroid/net/NetworkCapabilities;
 
-    .line 128
     return-void
 .end method
 
@@ -118,7 +109,6 @@
 
     const/4 v2, 0x1
 
-    .line 255
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -153,12 +143,10 @@
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 256
     const-string v0, "evalRequest"
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 257
     iget-object v0, p0, Landroid/net/NetworkFactory;->mConfigNetworkTypeCapability:Ljava/lang/String;
 
     if-eqz v0, :cond_5
@@ -179,7 +167,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 258
     iget-boolean v0, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
     if-nez v0, :cond_2
@@ -222,7 +209,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 260
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -245,26 +231,21 @@
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 261
     const-string v0, "  needNetworkFor"
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 262
     iget-object v0, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     iget v1, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->score:I
 
     invoke-virtual {p0, v0, v1}, Landroid/net/NetworkFactory;->needNetworkFor(Landroid/net/NetworkRequest;I)V
 
-    .line 263
     iput-boolean v2, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
-    .line 291
     :goto_0
     return-void
 
-    .line 264
     :cond_2
     iget-boolean v0, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
@@ -298,7 +279,6 @@
 
     if-nez v0, :cond_4
 
-    .line 267
     :cond_3
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -322,22 +302,18 @@
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 268
     const-string v0, "  releaseNetworkFor"
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 269
     iget-object v0, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->releaseNetworkFor(Landroid/net/NetworkRequest;)V
 
-    .line 270
     iput-boolean v3, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
     goto :goto_0
 
-    .line 272
     :cond_4
     const-string v0, "  done"
 
@@ -345,7 +321,6 @@
 
     goto :goto_0
 
-    .line 276
     :cond_5
     iget-boolean v0, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
@@ -379,24 +354,20 @@
 
     if-eqz v0, :cond_6
 
-    .line 278
     const-string v0, "  needNetworkFor"
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 279
     iget-object v0, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     iget v1, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->score:I
 
     invoke-virtual {p0, v0, v1}, Landroid/net/NetworkFactory;->needNetworkFor(Landroid/net/NetworkRequest;I)V
 
-    .line 280
     iput-boolean v2, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
     goto :goto_0
 
-    .line 281
     :cond_6
     iget-boolean v0, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
@@ -430,23 +401,19 @@
 
     if-nez v0, :cond_8
 
-    .line 284
     :cond_7
     const-string v0, "  releaseNetworkFor"
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 285
     iget-object v0, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->request:Landroid/net/NetworkRequest;
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->releaseNetworkFor(Landroid/net/NetworkRequest;)V
 
-    .line 286
     iput-boolean v3, p1, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
     goto/16 :goto_0
 
-    .line 288
     :cond_8
     const-string v0, "  done"
 
@@ -459,7 +426,6 @@
     .locals 3
 
     .prologue
-    .line 294
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -472,7 +438,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 295
     iget-object v2, p0, Landroid/net/NetworkFactory;->mNetworkRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -481,16 +446,13 @@
 
     check-cast v1, Landroid/net/NetworkFactory$NetworkRequestInfo;
 
-    .line 297
     .local v1, "n":Landroid/net/NetworkFactory$NetworkRequestInfo;
     invoke-direct {p0, v1}, Landroid/net/NetworkFactory;->evalRequest(Landroid/net/NetworkFactory$NetworkRequestInfo;)V
 
-    .line 294
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 299
     .end local v1    # "n":Landroid/net/NetworkFactory$NetworkRequestInfo;
     :cond_0
     return-void
@@ -501,13 +463,10 @@
     .param p1, "netCap"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 216
     iput-object p1, p0, Landroid/net/NetworkFactory;->mCapabilityFilter:Landroid/net/NetworkCapabilities;
 
-    .line 217
     invoke-direct {p0}, Landroid/net/NetworkFactory;->evalRequests()V
 
-    .line 218
     return-void
 .end method
 
@@ -516,13 +475,10 @@
     .param p1, "score"    # I
 
     .prologue
-    .line 211
     iput p1, p0, Landroid/net/NetworkFactory;->mScore:I
 
-    .line 212
     invoke-direct {p0}, Landroid/net/NetworkFactory;->evalRequests()V
 
-    .line 213
     return-void
 .end method
 
@@ -530,7 +486,6 @@
     .locals 3
 
     .prologue
-    .line 244
     const-string/jumbo v1, "gsm.network.type"
 
     const-string v2, ""
@@ -539,7 +494,6 @@
 
     move-result-object v0
 
-    .line 245
     .local v0, "networktype":Ljava/lang/String;
     const-string v1, "CDMA-IS95A"
 
@@ -589,11 +543,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 247
     :cond_0
     const/4 v1, 0x1
 
-    .line 250
     :goto_0
     return v1
 
@@ -611,7 +563,6 @@
     .param p2, "score"    # I
 
     .prologue
-    .line 240
     const/4 v0, 0x1
 
     return v0
@@ -623,7 +574,6 @@
     .param p2, "score"    # I
 
     .prologue
-    .line 316
     const v0, 0x83000
 
     new-instance v1, Landroid/net/NetworkFactory$NetworkRequestInfo;
@@ -636,7 +586,6 @@
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->sendMessage(Landroid/os/Message;)Z
 
-    .line 318
     return-void
 .end method
 
@@ -647,14 +596,12 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 342
     new-instance v1, Lcom/android/internal/util/IndentingPrintWriter;
 
     const-string v2, "  "
 
     invoke-direct {v1, p2, v2}, Lcom/android/internal/util/IndentingPrintWriter;-><init>(Ljava/io/Writer;Ljava/lang/String;)V
 
-    .line 343
     .local v1, "pw":Lcom/android/internal/util/IndentingPrintWriter;
     invoke-virtual {p0}, Landroid/net/NetworkFactory;->toString()Ljava/lang/String;
 
@@ -662,10 +609,8 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/String;)V
 
-    .line 344
     invoke-virtual {v1}, Lcom/android/internal/util/IndentingPrintWriter;->increaseIndent()V
 
-    .line 345
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -678,7 +623,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 346
     iget-object v2, p0, Landroid/net/NetworkFactory;->mNetworkRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -687,16 +631,13 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/util/IndentingPrintWriter;->println(Ljava/lang/Object;)V
 
-    .line 345
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 348
     :cond_0
     invoke-virtual {v1}, Lcom/android/internal/util/IndentingPrintWriter;->decreaseIndent()V
 
-    .line 349
     return-void
 .end method
 
@@ -704,7 +645,6 @@
     .locals 1
 
     .prologue
-    .line 334
     iget-object v0, p0, Landroid/net/NetworkFactory;->mNetworkRequests:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
@@ -720,7 +660,6 @@
     .param p2, "score"    # I
 
     .prologue
-    .line 187
     iget-object v1, p0, Landroid/net/NetworkFactory;->mNetworkRequests:Landroid/util/SparseArray;
 
     iget v2, p1, Landroid/net/NetworkRequest;->requestId:I
@@ -731,11 +670,9 @@
 
     check-cast v0, Landroid/net/NetworkFactory$NetworkRequestInfo;
 
-    .line 188
     .local v0, "n":Landroid/net/NetworkFactory$NetworkRequestInfo;
     if-nez v0, :cond_0
 
-    .line 189
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -766,13 +703,11 @@
 
     invoke-virtual {p0, v1}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 190
     new-instance v0, Landroid/net/NetworkFactory$NetworkRequestInfo;
 
     .end local v0    # "n":Landroid/net/NetworkFactory$NetworkRequestInfo;
     invoke-direct {v0, p0, p1, p2}, Landroid/net/NetworkFactory$NetworkRequestInfo;-><init>(Landroid/net/NetworkFactory;Landroid/net/NetworkRequest;I)V
 
-    .line 191
     .restart local v0    # "n":Landroid/net/NetworkFactory$NetworkRequestInfo;
     iget-object v1, p0, Landroid/net/NetworkFactory;->mNetworkRequests:Landroid/util/SparseArray;
 
@@ -782,7 +717,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 196
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -818,13 +752,10 @@
 
     invoke-virtual {p0, v1}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 198
     invoke-direct {p0, v0}, Landroid/net/NetworkFactory;->evalRequest(Landroid/net/NetworkFactory$NetworkRequestInfo;)V
 
-    .line 199
     return-void
 
-    .line 193
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -856,7 +787,6 @@
 
     invoke-virtual {p0, v1}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 194
     iput p2, v0, Landroid/net/NetworkFactory$NetworkRequestInfo;->score:I
 
     goto :goto_0
@@ -867,16 +797,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 148
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 166
     :goto_0
     return-void
 
-    .line 150
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -888,7 +815,6 @@
 
     goto :goto_0
 
-    .line 154
     :pswitch_1
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -898,7 +824,6 @@
 
     goto :goto_0
 
-    .line 158
     :pswitch_2
     iget v0, p1, Landroid/os/Message;->arg1:I
 
@@ -906,7 +831,6 @@
 
     goto :goto_0
 
-    .line 162
     :pswitch_3
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -916,7 +840,6 @@
 
     goto :goto_0
 
-    .line 148
     :pswitch_data_0
     .packed-switch 0x83000
         :pswitch_0
@@ -931,7 +854,6 @@
     .param p1, "request"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 203
     iget-object v1, p0, Landroid/net/NetworkFactory;->mNetworkRequests:Landroid/util/SparseArray;
 
     iget v2, p1, Landroid/net/NetworkRequest;->requestId:I
@@ -942,18 +864,15 @@
 
     check-cast v0, Landroid/net/NetworkFactory$NetworkRequestInfo;
 
-    .line 204
     .local v0, "n":Landroid/net/NetworkFactory$NetworkRequestInfo;
     if-eqz v0, :cond_0
 
-    .line 205
     iget-object v1, p0, Landroid/net/NetworkFactory;->mNetworkRequests:Landroid/util/SparseArray;
 
     iget v2, p1, Landroid/net/NetworkRequest;->requestId:I
 
     invoke-virtual {v1, v2}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 206
     iget-boolean v1, v0, Landroid/net/NetworkFactory$NetworkRequestInfo;->requested:Z
 
     if-eqz v1, :cond_0
@@ -962,7 +881,6 @@
 
     invoke-virtual {p0, v1}, Landroid/net/NetworkFactory;->releaseNetworkFor(Landroid/net/NetworkRequest;)V
 
-    .line 208
     :cond_0
     return-void
 .end method
@@ -972,12 +890,10 @@
     .param p1, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 338
     iget-object v0, p0, Landroid/net/NetworkFactory;->LOG_TAG:Ljava/lang/String;
 
     invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     return-void
 .end method
 
@@ -987,7 +903,6 @@
     .param p2, "score"    # I
 
     .prologue
-    .line 307
     iget v0, p0, Landroid/net/NetworkFactory;->mRefCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -1000,7 +915,6 @@
 
     invoke-virtual {p0}, Landroid/net/NetworkFactory;->startNetwork()V
 
-    .line 308
     :cond_0
     return-void
 .end method
@@ -1009,24 +923,20 @@
     .locals 3
 
     .prologue
-    .line 131
     const-string v0, "Registering NetworkFactory"
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 132
     iget-object v0, p0, Landroid/net/NetworkFactory;->mMessenger:Landroid/os/Messenger;
 
     if-nez v0, :cond_0
 
-    .line 133
     new-instance v0, Landroid/os/Messenger;
 
     invoke-direct {v0, p0}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
 
     iput-object v0, p0, Landroid/net/NetworkFactory;->mMessenger:Landroid/os/Messenger;
 
-    .line 134
     iget-object v0, p0, Landroid/net/NetworkFactory;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/net/ConnectivityManager;->from(Landroid/content/Context;)Landroid/net/ConnectivityManager;
@@ -1039,7 +949,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/net/ConnectivityManager;->registerNetworkFactory(Landroid/os/Messenger;Ljava/lang/String;)V
 
-    .line 136
     :cond_0
     return-void
 .end method
@@ -1049,7 +958,6 @@
     .param p1, "networkRequest"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 311
     iget v0, p0, Landroid/net/NetworkFactory;->mRefCount:I
 
     add-int/lit8 v0, v0, -0x1
@@ -1060,7 +968,6 @@
 
     invoke-virtual {p0}, Landroid/net/NetworkFactory;->stopNetwork()V
 
-    .line 312
     :cond_0
     return-void
 .end method
@@ -1070,7 +977,6 @@
     .param p1, "networkRequest"    # Landroid/net/NetworkRequest;
 
     .prologue
-    .line 321
     const v0, 0x83001
 
     invoke-virtual {p0, v0, p1}, Landroid/net/NetworkFactory;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
@@ -1079,7 +985,6 @@
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->sendMessage(Landroid/os/Message;)Z
 
-    .line 322
     return-void
 .end method
 
@@ -1088,7 +993,6 @@
     .param p1, "netCap"    # Landroid/net/NetworkCapabilities;
 
     .prologue
-    .line 329
     const v0, 0x83003
 
     new-instance v1, Landroid/net/NetworkCapabilities;
@@ -1101,7 +1005,6 @@
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->sendMessage(Landroid/os/Message;)Z
 
-    .line 330
     return-void
 .end method
 
@@ -1110,7 +1013,6 @@
     .param p1, "score"    # I
 
     .prologue
-    .line 325
     const v0, 0x83002
 
     const/4 v1, 0x0
@@ -1121,7 +1023,6 @@
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->sendMessage(Landroid/os/Message;)Z
 
-    .line 326
     return-void
 .end method
 
@@ -1129,7 +1030,6 @@
     .locals 0
 
     .prologue
-    .line 302
     return-void
 .end method
 
@@ -1137,7 +1037,6 @@
     .locals 0
 
     .prologue
-    .line 303
     return-void
 .end method
 
@@ -1145,7 +1044,6 @@
     .locals 3
 
     .prologue
-    .line 353
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "{"
@@ -1216,7 +1114,6 @@
 
     move-result-object v0
 
-    .line 357
     .local v0, "sb":Ljava/lang/StringBuilder;
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1229,17 +1126,14 @@
     .locals 2
 
     .prologue
-    .line 139
     const-string v0, "Unregistering NetworkFactory"
 
     invoke-virtual {p0, v0}, Landroid/net/NetworkFactory;->log(Ljava/lang/String;)V
 
-    .line 140
     iget-object v0, p0, Landroid/net/NetworkFactory;->mMessenger:Landroid/os/Messenger;
 
     if-eqz v0, :cond_0
 
-    .line 141
     iget-object v0, p0, Landroid/net/NetworkFactory;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/net/ConnectivityManager;->from(Landroid/content/Context;)Landroid/net/ConnectivityManager;
@@ -1250,12 +1144,10 @@
 
     invoke-virtual {v0, v1}, Landroid/net/ConnectivityManager;->unregisterNetworkFactory(Landroid/os/Messenger;)V
 
-    .line 142
     const/4 v0, 0x0
 
     iput-object v0, p0, Landroid/net/NetworkFactory;->mMessenger:Landroid/os/Messenger;
 
-    .line 144
     :cond_0
     return-void
 .end method

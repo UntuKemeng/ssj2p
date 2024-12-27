@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 1598
     iput-object p1, p0, Lcom/android/server/power/ShutdownThread$13;->this$0:Lcom/android/server/power/ShutdownThread;
 
     iput-object p2, p0, Lcom/android/server/power/ShutdownThread$13;->val$done:[Z
@@ -41,7 +40,6 @@
     .locals 15
 
     .prologue
-    .line 1602
     new-instance v8, Ljava/io/File;
 
     const-string v9, "/cache/recovery/uncrypt_status"
@@ -50,7 +48,6 @@
 
     invoke-virtual {v8}, Ljava/io/File;->delete()Z
 
-    .line 1604
     :try_start_0
     const-string v8, "/cache/recovery/uncrypt_status"
 
@@ -60,7 +57,6 @@
     :try_end_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1610
     :goto_0
     const-string v8, "ctl.start"
 
@@ -68,7 +64,6 @@
 
     invoke-static {v8, v9}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1613
     :try_start_1
     new-instance v3, Ljava/io/BufferedReader;
 
@@ -85,10 +80,8 @@
     .local v3, "reader":Ljava/io/BufferedReader;
     const/4 v9, 0x0
 
-    .line 1616
     const/high16 v1, -0x80000000
 
-    .line 1618
     .local v1, "lastStatus":I
     :cond_0
     :goto_1
@@ -100,14 +93,12 @@
 
     move-result-object v5
 
-    .line 1620
     .local v5, "str":Ljava/lang/String;
     :try_start_3
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 1623
     .local v4, "status":I
     if-ne v4, v1, :cond_1
 
@@ -115,18 +106,15 @@
 
     if-ne v1, v8, :cond_0
 
-    .line 1626
     :cond_1
     move v1, v4
 
-    .line 1628
     if-ltz v4, :cond_3
 
     const/16 v8, 0x64
 
     if-ge v4, v8, :cond_3
 
-    .line 1630
     const-string v8, "ShutdownThread"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -149,7 +137,6 @@
 
     invoke-static {v8, v10}, Lcom/android/server/power/ShutdownThread$Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1632
     int-to-double v10, v4
 
     const-wide/high16 v12, 0x4054000000000000L    # 80.0
@@ -162,10 +149,8 @@
 
     double-to-int v4, v10
 
-    .line 1633
     add-int/lit8 v4, v4, 0x14
 
-    .line 1634
     iget-object v8, p0, Lcom/android/server/power/ShutdownThread$13;->this$0:Lcom/android/server/power/ShutdownThread;
 
     # getter for: Lcom/android/server/power/ShutdownThread;->mContext:Landroid/content/Context;
@@ -179,7 +164,6 @@
 
     move-result-object v2
 
-    .line 1636
     .local v2, "msg":Ljava/lang/CharSequence;
     # getter for: Lcom/android/server/power/ShutdownThread;->sInstance:Lcom/android/server/power/ShutdownThread;
     invoke-static {}, Lcom/android/server/power/ShutdownThread;->access$1000()Lcom/android/server/power/ShutdownThread;
@@ -195,13 +179,11 @@
 
     goto :goto_1
 
-    .line 1646
     .end local v2    # "msg":Ljava/lang/CharSequence;
     .end local v4    # "status":I
     :catch_0
     move-exception v6
 
-    .line 1647
     .local v6, "unused":Ljava/lang/NumberFormatException;
     :try_start_4
     const-string v8, "ShutdownThread"
@@ -229,7 +211,6 @@
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_2
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 1651
     .end local v6    # "unused":Ljava/lang/NumberFormatException;
     :goto_2
     if-eqz v3, :cond_2
@@ -242,7 +223,6 @@
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_4
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 1654
     .end local v1    # "lastStatus":I
     .end local v3    # "reader":Ljava/io/BufferedReader;
     .end local v5    # "str":Ljava/lang/String;
@@ -256,14 +236,11 @@
 
     aput-boolean v10, v8, v9
 
-    .line 1655
     return-void
 
-    .line 1605
     :catch_1
     move-exception v0
 
-    .line 1606
     .local v0, "e":Landroid/system/ErrnoException;
     const-string v8, "ShutdownThread"
 
@@ -293,7 +270,6 @@
 
     goto/16 :goto_0
 
-    .line 1637
     .end local v0    # "e":Landroid/system/ErrnoException;
     .restart local v1    # "lastStatus":I
     .restart local v3    # "reader":Ljava/io/BufferedReader;
@@ -304,7 +280,6 @@
 
     if-ne v4, v8, :cond_5
 
-    .line 1638
     :try_start_6
     const-string v8, "ShutdownThread"
 
@@ -318,7 +293,6 @@
 
     goto :goto_2
 
-    .line 1613
     .end local v4    # "status":I
     .end local v5    # "str":Ljava/lang/String;
     :catch_2
@@ -329,7 +303,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 1651
     :catchall_0
     move-exception v9
 
@@ -362,7 +335,6 @@
     :catch_3
     move-exception v6
 
-    .line 1652
     .local v6, "unused":Ljava/io/IOException;
     const-string v8, "ShutdownThread"
 
@@ -372,7 +344,6 @@
 
     goto :goto_3
 
-    .line 1643
     .end local v6    # "unused":Ljava/io/IOException;
     .restart local v1    # "lastStatus":I
     .restart local v3    # "reader":Ljava/io/BufferedReader;
@@ -408,7 +379,6 @@
 
     goto :goto_2
 
-    .line 1651
     .end local v4    # "status":I
     .end local v5    # "str":Ljava/lang/String;
     :catchall_1

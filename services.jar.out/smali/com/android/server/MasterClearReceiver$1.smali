@@ -32,7 +32,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     iput-object p1, p0, Lcom/android/server/MasterClearReceiver$1;->this$0:Lcom/android/server/MasterClearReceiver;
 
     iput-object p3, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
@@ -54,7 +53,6 @@
     .locals 7
 
     .prologue
-    .line 61
     :try_start_0
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
 
@@ -66,20 +64,17 @@
 
     if-eqz v4, :cond_0
 
-    .line 62
     const-string v4, "MasterClear"
 
     const-string v5, "!@FactoryResetByATCommand"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 63
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->this$0:Lcom/android/server/MasterClearReceiver;
 
     # invokes: Lcom/android/server/MasterClearReceiver;->removeVZWResetDate()V
     invoke-static {v4}, Lcom/android/server/MasterClearReceiver;->access$000(Lcom/android/server/MasterClearReceiver;)V
 
-    .line 67
     :cond_0
     new-instance v3, Ljava/io/File;
 
@@ -87,7 +82,6 @@
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 68
     .local v3, "omrDir":Ljava/io/File;
     invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
@@ -95,14 +89,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 69
     const-string v4, "MasterClear"
 
     const-string v5, "!@ OMC resource delete !!!"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 70
     # invokes: Lcom/android/server/MasterClearReceiver;->deleteDir(Ljava/io/File;)Z
     invoke-static {v3}, Lcom/android/server/MasterClearReceiver;->access$100(Ljava/io/File;)Z
 
@@ -110,14 +102,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 71
     new-instance v2, Ljava/io/File;
 
     const-string v4, "/efs/imei/omc.txt"
 
     invoke-direct {v2, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 72
     .local v2, "omcCheck":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -125,17 +115,14 @@
 
     if-eqz v4, :cond_1
 
-    .line 73
     const-string v4, "MasterClear"
 
     const-string v5, "!@ OMC check delete !!!"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 74
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
-    .line 79
     .end local v2    # "omcCheck":Ljava/io/File;
     :cond_1
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
@@ -148,21 +135,18 @@
 
     if-eqz v4, :cond_3
 
-    .line 80
     const-string v4, "MasterClear"
 
     const-string v5, "!!! call wipe customer !!!"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     new-instance v0, Ljava/lang/String;
 
     const-string v4, ""
 
     invoke-direct {v0, v4}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
 
-    .line 83
     .local v0, "args":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
 
@@ -174,7 +158,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 84
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,10 +190,8 @@
 
     move-result-object v0
 
-    .line 85
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
-    .line 88
     :cond_2
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -242,12 +223,10 @@
 
     move-result-object v0
 
-    .line 89
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
     invoke-static {v4, v0}, Landroid/os/RecoverySystem;->rebootWipeCustomerPartition(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 106
     .end local v0    # "args":Ljava/lang/String;
     :goto_0
     const-string v4, "MasterClear"
@@ -256,12 +235,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->wtf(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     .end local v3    # "omrDir":Ljava/io/File;
     :goto_1
     return-void
 
-    .line 90
     .restart local v3    # "omrDir":Ljava/io/File;
     :cond_3
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
@@ -274,14 +251,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 91
     const-string v4, "MasterClear"
 
     const-string v5, "!!!WipeData and WipeCustomerPartiotion !!!"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 92
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -317,12 +292,10 @@
 
     goto :goto_0
 
-    .line 107
     .end local v3    # "omrDir":Ljava/io/File;
     :catch_0
     move-exception v1
 
-    .line 108
     .local v1, "e":Ljava/io/IOException;
     const-string v4, "MasterClear"
 
@@ -332,7 +305,6 @@
 
     goto :goto_1
 
-    .line 93
     .end local v1    # "e":Ljava/io/IOException;
     .restart local v3    # "omrDir":Ljava/io/File;
     :cond_4
@@ -347,14 +319,12 @@
 
     if-eqz v4, :cond_5
 
-    .line 94
     const-string v4, "MasterClear"
 
     const-string v5, "!!!Just Exit (For Bypass Factory Reset)!!!"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -388,12 +358,10 @@
 
     goto :goto_0
 
-    .line 109
     .end local v3    # "omrDir":Ljava/io/File;
     :catch_1
     move-exception v1
 
-    .line 110
     .local v1, "e":Ljava/lang/SecurityException;
     const-string v4, "MasterClear"
 
@@ -403,7 +371,6 @@
 
     goto :goto_1
 
-    .line 96
     .end local v1    # "e":Ljava/lang/SecurityException;
     .restart local v3    # "omrDir":Ljava/io/File;
     :cond_5
@@ -418,14 +385,12 @@
 
     if-eqz v4, :cond_6
 
-    .line 97
     const-string v4, "MasterClear"
 
     const-string v5, "!!!Enter the Download Mode for Factory Routine!!!"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
     const-string v5, ""
@@ -434,7 +399,6 @@
 
     goto/16 :goto_0
 
-    .line 99
     :cond_6
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$intent:Landroid/content/Intent;
 
@@ -446,14 +410,12 @@
 
     if-eqz v4, :cond_7
 
-    .line 100
     const-string v4, "MasterClear"
 
     const-string v5, "!!!Enter the SwitchSalesCode Mode!!!"
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -484,7 +446,6 @@
 
     goto/16 :goto_0
 
-    .line 103
     :cond_7
     const-string v4, "MasterClear"
 
@@ -492,7 +453,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     iget-object v4, p0, Lcom/android/server/MasterClearReceiver$1;->val$context:Landroid/content/Context;
 
     iget-boolean v5, p0, Lcom/android/server/MasterClearReceiver$1;->val$shutdown:Z

@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1702
     iput-object p1, p0, Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
-    .line 1703
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 1704
     return-void
 .end method
 
@@ -45,18 +42,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1708
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 1752
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 1710
     :pswitch_1
     iget-object v6, p0, Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
 
@@ -65,11 +59,9 @@
 
     goto :goto_0
 
-    .line 1715
     :pswitch_2
     const/4 v5, 0x0
 
-    .line 1717
     .local v5, "version":F
     :try_start_0
     iget-object v6, p0, Lcom/android/server/display/WifiDisplayAdapter$WifiDisplayHandler;->this$0:Lcom/android/server/display/WifiDisplayAdapter;
@@ -90,22 +82,18 @@
 
     move-result-object v0
 
-    .line 1718
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 1719
     .local v1, "bundle":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
-    .line 1720
     const-string v6, "SPDE.env.version"
 
     invoke-virtual {v1, v6}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1721
     .local v3, "env_version":Ljava/lang/String;
     const-string v6, "\\/"
 
@@ -113,7 +101,6 @@
 
     move-result-object v4
 
-    .line 1722
     .local v4, "strArr":[Ljava/lang/String;
     const-string v6, "WifiDisplayAdapter"
 
@@ -149,14 +136,12 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1723
     array-length v6, v4
 
     const/4 v7, 0x3
 
     if-lt v6, v7, :cond_0
 
-    .line 1724
     const/4 v6, 0x2
 
     aget-object v6, v4, v6
@@ -177,7 +162,6 @@
 
     goto :goto_0
 
-    .line 1727
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v1    # "bundle":Landroid/os/Bundle;
     .end local v3    # "env_version":Ljava/lang/String;
@@ -185,7 +169,6 @@
     :catch_0
     move-exception v2
 
-    .line 1728
     .local v2, "e":Ljava/lang/Exception;
     const-string v6, "WifiDisplayAdapter"
 
@@ -211,7 +194,6 @@
 
     goto :goto_0
 
-    .line 1708
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

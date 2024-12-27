@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 4551
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$7;->this$1:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
 
     iput-object p2, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$7;->val$info:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
@@ -56,14 +55,12 @@
     .locals 5
 
     .prologue
-    .line 4554
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$7;->val$info:Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;
 
     iget-object v1, v2, Lcom/android/server/notification/ManagedServices$ManagedServiceInfo;->service:Landroid/os/IInterface;
 
     check-cast v1, Landroid/service/notification/INotificationListener;
 
-    .line 4556
     .local v1, "listener":Landroid/service/notification/INotificationListener;
     :try_start_0
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$7;->val$pkg:Ljava/lang/String;
@@ -76,15 +73,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4560
     :goto_0
     return-void
 
-    .line 4557
     :catch_0
     move-exception v0
 
-    .line 4558
     .local v0, "ex":Landroid/os/RemoteException;
     iget-object v2, p0, Lcom/android/server/notification/NotificationManagerService$NotificationListeners$7;->this$1:Lcom/android/server/notification/NotificationManagerService$NotificationListeners;
 

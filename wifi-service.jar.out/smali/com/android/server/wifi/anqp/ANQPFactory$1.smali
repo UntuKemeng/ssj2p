@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 180
     invoke-static {}, Lcom/android/server/wifi/anqp/Constants$ANQPElementType;->values()[Lcom/android/server/wifi/anqp/Constants$ANQPElementType;
 
     move-result-object v0

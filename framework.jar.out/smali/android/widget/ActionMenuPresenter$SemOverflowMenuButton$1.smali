@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1215
     iput-object p1, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1224
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;
 
     const/4 v1, 0x0
@@ -49,7 +47,6 @@
     # setter for: Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mPerformedBadgeAnimation:Z
     invoke-static {v0, v1}, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->access$1302(Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;Z)Z
 
-    .line 1225
     return-void
 .end method
 
@@ -58,7 +55,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1229
     return-void
 .end method
 
@@ -67,7 +63,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1219
     iget-object v0, p0, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton$1;->this$1:Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;
 
     const/4 v1, 0x1
@@ -75,6 +70,5 @@
     # setter for: Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->mPerformedBadgeAnimation:Z
     invoke-static {v0, v1}, Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;->access$1302(Landroid/widget/ActionMenuPresenter$SemOverflowMenuButton;Z)Z
 
-    .line 1220
     return-void
 .end method

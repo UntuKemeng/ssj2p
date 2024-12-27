@@ -50,7 +50,6 @@
     .locals 2
 
     .prologue
-    .line 6048
     sget-object v0, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "emails"
@@ -61,7 +60,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
-    .line 6066
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "lookup"
@@ -72,7 +70,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_LOOKUP_URI:Landroid/net/Uri;
 
-    .line 6113
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
     const-string/jumbo v1, "lookup_enterprise"
@@ -83,7 +80,6 @@
 
     sput-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->ENTERPRISE_CONTENT_LOOKUP_URI:Landroid/net/Uri;
 
-    .line 6133
     sget-object v0, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
     const-string v1, "filter"
@@ -101,7 +97,6 @@
     .locals 0
 
     .prologue
-    .line 6033
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -114,7 +109,6 @@
     .param p2, "label"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 6174
     if-nez p1, :cond_0
 
     invoke-static {p2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -123,19 +117,16 @@
 
     if-nez v1, :cond_0
 
-    .line 6178
     .end local p2    # "label":Ljava/lang/CharSequence;
     :goto_0
     return-object p2
 
-    .line 6177
     .restart local p2    # "label":Ljava/lang/CharSequence;
     :cond_0
     invoke-static {p1}, Landroid/provider/ContactsContract$CommonDataKinds$Email;->getTypeLabelResource(I)I
 
     move-result v0
 
-    .line 6178
     .local v0, "labelRes":I
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getText(I)Ljava/lang/CharSequence;
 
@@ -149,40 +140,33 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 6158
     packed-switch p0, :pswitch_data_0
 
-    .line 6163
     const v0, 0x1040242
 
     :goto_0
     return v0
 
-    .line 6159
     :pswitch_0
     const v0, 0x1040243
 
     goto :goto_0
 
-    .line 6160
     :pswitch_1
     const v0, 0x1040244
 
     goto :goto_0
 
-    .line 6161
     :pswitch_2
     const v0, 0x1040245
 
     goto :goto_0
 
-    .line 6162
     :pswitch_3
     const v0, 0x1040246
 
     goto :goto_0
 
-    .line 6158
     nop
 
     :pswitch_data_0

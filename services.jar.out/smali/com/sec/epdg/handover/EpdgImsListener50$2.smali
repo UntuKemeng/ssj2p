@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/sec/epdg/handover/EpdgImsListener50$2;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,14 +39,12 @@
     .locals 2
 
     .prologue
-    .line 108
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onConnected mImsManager"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 109
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsListener50$2;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener50;->mImsManager:Lcom/sec/ims/ImsManager;
@@ -61,7 +58,6 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/ims/ImsManager;->registerImSessionListener(Lcom/sec/ims/im/IImSessionListener;)V
 
-    .line 110
     return-void
 .end method
 
@@ -69,14 +65,12 @@
     .locals 2
 
     .prologue
-    .line 102
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onDisconnected mImsManager"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 103
     iget-object v0, p0, Lcom/sec/epdg/handover/EpdgImsListener50$2;->this$0:Lcom/sec/epdg/handover/EpdgImsListener50;
 
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener50;->mImsManager:Lcom/sec/ims/ImsManager;
@@ -90,6 +84,5 @@
 
     invoke-virtual {v0, v1}, Lcom/sec/ims/ImsManager;->unregisterImSessionListener(Lcom/sec/ims/im/IImSessionListener;)V
 
-    .line 104
     return-void
 .end method

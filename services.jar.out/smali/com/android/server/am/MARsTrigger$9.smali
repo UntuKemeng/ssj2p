@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 688
     iput-object p1, p0, Lcom/android/server/am/MARsTrigger$9;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 691
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -48,18 +46,15 @@
 
     if-nez v2, :cond_1
 
-    .line 707
     :cond_0
     :goto_0
     return-void
 
-    .line 694
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 696
     .local v0, "action":Ljava/lang/String;
     const-string v2, "com.samsung.intent.action.EMERGENCY_STATE_CHANGED"
 
@@ -69,7 +64,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 697
     const-string/jumbo v2, "reason"
 
     const/4 v3, 0x0
@@ -78,20 +72,17 @@
 
     move-result v1
 
-    .line 699
     .local v1, "reason":I
     const/4 v2, 0x5
 
     if-ne v1, v2, :cond_0
 
-    .line 700
     const-string v2, "MARsTrigger"
 
     const-string v3, "disable ultra power saving mode"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 701
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger$9;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v2, v2, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;
@@ -100,12 +91,10 @@
 
     if-nez v2, :cond_0
 
-    .line 702
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger$9;->this$0:Lcom/android/server/am/MARsTrigger;
 
     invoke-virtual {v2}, Lcom/android/server/am/MARsTrigger;->unregisterEmStateReceiver()V
 
-    .line 703
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger$9;->this$0:Lcom/android/server/am/MARsTrigger;
 
     iget-object v2, v2, Lcom/android/server/am/MARsTrigger;->mPolicyManager:Lcom/android/server/am/MARsPolicyManager;

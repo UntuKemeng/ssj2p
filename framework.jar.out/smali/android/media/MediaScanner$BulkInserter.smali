@@ -40,26 +40,22 @@
     .param p6, "fileBufferSize"    # I
 
     .prologue
-    .line 2656
     iput-object p1, p0, Landroid/media/MediaScanner$BulkInserter;->this$0:Landroid/media/MediaScanner;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2657
     invoke-static {p4}, Landroid/provider/MediaStore$Files;->getContentUri(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mFilesUri:Landroid/net/Uri;
 
-    .line 2658
     new-instance v0, Landroid/media/MediaInserter;
 
     invoke-direct {v0, p2, p3, p5}, Landroid/media/MediaInserter;-><init>(Landroid/content/IContentProvider;Ljava/lang/String;I)V
 
     iput-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mMediaInserter:Landroid/media/MediaInserter;
 
-    .line 2659
     new-instance v0, Landroid/media/MediaScanner$BulkInserter$FileInserter;
 
     iget-object v4, p0, Landroid/media/MediaScanner$BulkInserter;->mFilesUri:Landroid/net/Uri;
@@ -76,7 +72,6 @@
 
     iput-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mFileInserter:Landroid/media/MediaScanner$BulkInserter$FileInserter;
 
-    .line 2660
     return-void
 .end method
 
@@ -85,7 +80,6 @@
     .param p0, "x0"    # Landroid/media/MediaScanner$BulkInserter;
 
     .prologue
-    .line 2651
     iget-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mMediaInserter:Landroid/media/MediaInserter;
 
     return-object v0
@@ -97,12 +91,10 @@
     .locals 1
 
     .prologue
-    .line 2680
     iget-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mMediaInserter:Landroid/media/MediaInserter;
 
     invoke-virtual {v0}, Landroid/media/MediaInserter;->clear()V
 
-    .line 2681
     return-void
 .end method
 
@@ -115,17 +107,14 @@
     .end annotation
 
     .prologue
-    .line 2671
     iget-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mMediaInserter:Landroid/media/MediaInserter;
 
     invoke-virtual {v0}, Landroid/media/MediaInserter;->flushAll()V
 
-    .line 2672
     iget-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mFileInserter:Landroid/media/MediaScanner$BulkInserter$FileInserter;
 
     invoke-virtual {v0}, Landroid/media/MediaScanner$BulkInserter$FileInserter;->flushAll()V
 
-    .line 2673
     return-void
 .end method
 
@@ -140,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 2663
     iget-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mFilesUri:Landroid/net/Uri;
 
     invoke-virtual {p1, v0}, Landroid/net/Uri;->equals(Ljava/lang/Object;)Z
@@ -149,16 +137,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 2664
     iget-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mFileInserter:Landroid/media/MediaScanner$BulkInserter$FileInserter;
 
     invoke-virtual {v0, p2}, Landroid/media/MediaScanner$BulkInserter$FileInserter;->insert(Landroid/content/ContentValues;)V
 
-    .line 2668
     :goto_0
     return-void
 
-    .line 2666
     :cond_0
     iget-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mMediaInserter:Landroid/media/MediaInserter;
 
@@ -178,11 +163,9 @@
     .end annotation
 
     .prologue
-    .line 2676
     iget-object v0, p0, Landroid/media/MediaScanner$BulkInserter;->mMediaInserter:Landroid/media/MediaInserter;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaInserter;->insertwithPriority(Landroid/net/Uri;Landroid/content/ContentValues;)V
 
-    .line 2677
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2069
     iput-object p1, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 8
 
     .prologue
-    .line 2072
     iget-object v2, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mLockBatteryInfoBackUp:Ljava/lang/Object;
@@ -50,7 +48,6 @@
 
     monitor-enter v3
 
-    .line 2073
     :try_start_0
     iget-object v2, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
@@ -61,7 +58,6 @@
 
     move-result-wide v0
 
-    .line 2074
     .local v0, "currentAsoc":J
     const-wide/16 v4, 0x0
 
@@ -69,7 +65,6 @@
 
     if-gez v2, :cond_0
 
-    .line 2075
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$1000()Ljava/lang/String;
 
@@ -79,7 +74,6 @@
 
     invoke-static {v2, v4}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2076
     iget-object v2, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
     const-string v4, "/efs/FactoryApp/asoc"
@@ -89,14 +83,11 @@
     # invokes: Lcom/android/server/BatteryService;->saveBatteryInfo(Ljava/lang/String;J)I
     invoke-static {v2, v4, v6, v7}, Lcom/android/server/BatteryService;->access$4100(Lcom/android/server/BatteryService;Ljava/lang/String;J)I
 
-    .line 2077
     monitor-exit v3
 
-    .line 2088
     :goto_0
     return-void
 
-    .line 2079
     :cond_0
     iget-object v2, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
@@ -110,7 +101,6 @@
     # setter for: Lcom/android/server/BatteryService;->mSavedBatteryAsoc:J
     invoke-static {v2, v4, v5}, Lcom/android/server/BatteryService;->access$3602(Lcom/android/server/BatteryService;J)J
 
-    .line 2080
     iget-object v2, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
     # getter for: Lcom/android/server/BatteryService;->mSavedBatteryAsoc:J
@@ -122,7 +112,6 @@
 
     if-gez v2, :cond_2
 
-    .line 2081
     iget-object v2, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
     const-wide/16 v4, 0x1
@@ -130,7 +119,6 @@
     # -= operator for: Lcom/android/server/BatteryService;->mSavedBatteryAsoc:J
     invoke-static {v2, v4, v5}, Lcom/android/server/BatteryService;->access$3622(Lcom/android/server/BatteryService;J)J
 
-    .line 2082
     iget-object v2, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
     const-string v4, "/efs/FactoryApp/asoc"
@@ -145,7 +133,6 @@
     # invokes: Lcom/android/server/BatteryService;->saveBatteryInfo(Ljava/lang/String;J)I
     invoke-static {v2, v4, v6, v7}, Lcom/android/server/BatteryService;->access$4100(Lcom/android/server/BatteryService;Ljava/lang/String;J)I
 
-    .line 2087
     :cond_1
     :goto_1
     monitor-exit v3
@@ -162,7 +149,6 @@
 
     throw v2
 
-    .line 2083
     .restart local v0    # "currentAsoc":J
     :cond_2
     :try_start_1
@@ -177,7 +163,6 @@
 
     if-lez v2, :cond_1
 
-    .line 2084
     iget-object v2, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
     const-wide/16 v4, 0x1
@@ -185,7 +170,6 @@
     # += operator for: Lcom/android/server/BatteryService;->mSavedBatteryAsoc:J
     invoke-static {v2, v4, v5}, Lcom/android/server/BatteryService;->access$3614(Lcom/android/server/BatteryService;J)J
 
-    .line 2085
     iget-object v2, p0, Lcom/android/server/BatteryService$21;->this$0:Lcom/android/server/BatteryService;
 
     const-string v4, "/efs/FactoryApp/asoc"

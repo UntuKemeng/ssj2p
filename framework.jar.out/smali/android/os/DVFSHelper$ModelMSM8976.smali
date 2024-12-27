@@ -33,66 +33,49 @@
 
     const/4 v1, 0x4
 
-    .line 2804
     iput-object p1, p0, Landroid/os/DVFSHelper$ModelMSM8976;->this$0:Landroid/os/DVFSHelper;
 
     invoke-direct {p0, p1}, Landroid/os/DVFSHelper$ModelJBP;-><init>(Landroid/os/DVFSHelper;)V
 
-    .line 2805
     iput v4, p0, Landroid/os/DVFSHelper$ModelMSM8976;->LAUNCHER_TOUCH_ARM_FREQ:I
 
-    .line 2806
     const/16 v0, 0x3e8
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelMSM8976;->LAUNCHER_TOUCH_BOOST_TIMEOUT:I
 
-    .line 2807
     iput v4, p0, Landroid/os/DVFSHelper$ModelMSM8976;->GALLERY_TOUCH_ARM_FREQ:I
 
-    .line 2808
     const/16 v0, 0x1f4
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelMSM8976;->GALLERY_TOUCH_BOOST_TIMEOUT:I
 
-    .line 2809
     const v0, 0xd7a00
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelMSM8976;->LIST_SCROLL_ARM_FREQ:I
 
-    .line 2810
     iput v3, p0, Landroid/os/DVFSHelper$ModelMSM8976;->AMS_RESUME_ARM_FREQ:I
 
-    .line 2811
     iput v2, p0, Landroid/os/DVFSHelper$ModelMSM8976;->AMS_RESUME_BUS_FREQ:I
 
-    .line 2812
     iput v1, p0, Landroid/os/DVFSHelper$ModelMSM8976;->AMS_RESUME_CPU_CORE:I
 
-    .line 2813
     const/16 v0, 0x258
 
     sput v0, Landroid/os/DVFSHelper;->AMS_RESUME_TAIL_BOOST_TIMEOUT:I
 
-    .line 2814
     iput v5, p0, Landroid/os/DVFSHelper$ModelMSM8976;->ROTATION_ARM_FREQ:I
 
-    .line 2815
     const/16 v0, 0x7d0
 
     sput v0, Landroid/os/DVFSHelper;->PWM_ROTATION_BOOST_TIMEOUT:I
 
-    .line 2816
     iput v5, p0, Landroid/os/DVFSHelper$ModelMSM8976;->APP_LAUNCH_ARM_FREQ:I
 
-    .line 2817
     iput v2, p0, Landroid/os/DVFSHelper$ModelMSM8976;->APP_LAUNCH_BUS_FREQ:I
 
-    .line 2818
     iput v1, p0, Landroid/os/DVFSHelper$ModelMSM8976;->APP_LAUNCH_CPU_CORE:I
 
-    .line 2819
     iput v3, p0, Landroid/os/DVFSHelper$ModelMSM8976;->DEVICE_WAKEUP_ARM_FREQ:I
 
-    .line 2821
     return-void
 .end method

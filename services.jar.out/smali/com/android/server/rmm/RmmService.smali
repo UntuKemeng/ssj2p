@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 15
     const-class v0, Lcom/android/server/rmm/RmmService;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -31,20 +30,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Lcom/android/server/rmm/aidl/IRmm$Stub;-><init>()V
 
-    .line 24
     sget-object v0, Lcom/android/server/rmm/RmmService;->TAG:Ljava/lang/String;
 
     const-string v1, "Rmm Service Started"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 25
     sput-object p1, Lcom/android/server/rmm/RmmService;->context:Landroid/content/Context;
 
-    .line 26
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const/4 v0, 0x0
 
     return-object v0
@@ -64,14 +58,12 @@
     .locals 3
 
     .prologue
-    .line 30
     sget-object v0, Lcom/android/server/rmm/RmmService;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "startRmm"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 31
     sget-object v0, Lcom/android/server/rmm/RmmService;->context:Landroid/content/Context;
 
     const/4 v1, 0x0
@@ -80,6 +72,5 @@
 
     invoke-static {v0, v1, v2}, Lcom/samsung/android/rlc/service/RmmTask;->startTask(Landroid/content/Context;Landroid/os/Bundle;I)V
 
-    .line 32
     return-void
 .end method

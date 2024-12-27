@@ -28,7 +28,6 @@
     .param p6, "x4"    # I
 
     .prologue
-    .line 1070
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     move-object v0, p0
@@ -55,7 +54,6 @@
     .param p1, "buttonOn"    # Z
 
     .prologue
-    .line 1200
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mHasTelephony:Z
@@ -65,12 +63,10 @@
 
     if-nez v0, :cond_1
 
-    .line 1208
     :cond_0
     :goto_0
     return-void
 
-    .line 1203
     :cond_1
     const-string/jumbo v0, "ril.cdma.inecmmode"
 
@@ -84,7 +80,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1205
     if-eqz p1, :cond_2
 
     sget-object v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->TurningOn:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
@@ -92,7 +87,6 @@
     :goto_1
     iput-object v0, p0, Lcom/android/server/policy/GlobalActions$3;->mState:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
-    .line 1206
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$3;->mState:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
@@ -102,7 +96,6 @@
 
     goto :goto_0
 
-    .line 1205
     :cond_2
     sget-object v0, Lcom/android/server/policy/GlobalActions$ToggleAction$State;->TurningOff:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
@@ -113,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 1233
     invoke-super {p0}, Lcom/android/server/policy/GlobalActions$ToggleAction;->isEnabled()Z
 
     move-result v0
@@ -131,14 +123,12 @@
 
     const/4 v6, 0x1
 
-    .line 1076
     const-string v5, "GlobalActions"
 
     const-string/jumbo v8, "in onPress of AirplaneMode"
 
     invoke-static {v5, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1077
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v8, "com.android.service.GlobalAction"
@@ -149,7 +139,6 @@
 
     invoke-virtual {v5, v8, v9, v10}, Lcom/android/server/policy/GlobalActions;->insertLog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1078
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->isTSafeLock()Z
@@ -168,7 +157,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 1079
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -189,11 +177,9 @@
 
     invoke-virtual {v5}, Landroid/widget/Toast;->show()V
 
-    .line 1176
     :goto_0
     return-void
 
-    .line 1083
     :cond_0
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -201,7 +187,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 1084
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -224,7 +209,6 @@
 
     goto :goto_0
 
-    .line 1089
     :cond_1
     const-string v5, "CTC"
 
@@ -248,7 +232,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 1090
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -268,14 +251,12 @@
 
     if-ne v5, v6, :cond_2
 
-    .line 1091
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-virtual {v5, v11}, Lcom/android/server/policy/GlobalActions;->showErrorMessage(I)V
 
     goto :goto_0
 
-    .line 1093
     :cond_2
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -296,14 +277,12 @@
 
     if-ne v5, v6, :cond_3
 
-    .line 1094
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-virtual {v5, v11}, Lcom/android/server/policy/GlobalActions;->showErrorMessage(I)V
 
     goto :goto_0
 
-    .line 1099
     :cond_3
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -321,7 +300,6 @@
     # setter for: Lcom/android/server/policy/GlobalActions;->isVZWOperatorAirplaneModeONReasonUSB3:Z
     invoke-static {v5, v8}, Lcom/android/server/policy/GlobalActions;->access$1802(Lcom/android/server/policy/GlobalActions;Z)Z
 
-    .line 1100
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->isVZWOperatorAirplaneModeONReasonUSB3:Z
@@ -331,7 +309,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 1101
     iget-object v8, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -352,7 +329,6 @@
     # setter for: Lcom/android/server/policy/GlobalActions;->mUsbManager:Landroid/hardware/usb/UsbManager;
     invoke-static {v8, v5}, Lcom/android/server/policy/GlobalActions;->access$1902(Lcom/android/server/policy/GlobalActions;Landroid/hardware/usb/UsbManager;)Landroid/hardware/usb/UsbManager;
 
-    .line 1102
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mUsbManager:Landroid/hardware/usb/UsbManager;
@@ -362,7 +338,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 1104
     iget-object v8, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -406,7 +381,6 @@
     # setter for: Lcom/android/server/policy/GlobalActions;->isVZWOperatorAirplaneModeONReasonUSB3:Z
     invoke-static {v8, v5}, Lcom/android/server/policy/GlobalActions;->access$1802(Lcom/android/server/policy/GlobalActions;Z)Z
 
-    .line 1108
     :cond_4
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -423,11 +397,9 @@
 
     check-cast v0, Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 1110
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v0, :cond_7
 
-    .line 1111
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceManager;->getRestrictionPolicy()Landroid/app/enterprise/RestrictionPolicy;
 
     move-result-object v5
@@ -448,7 +420,6 @@
 
     if-nez v5, :cond_7
 
-    .line 1114
     :cond_5
     const-string v5, "GlobalActions"
 
@@ -462,10 +433,8 @@
     :cond_6
     move v5, v7
 
-    .line 1104
     goto :goto_1
 
-    .line 1120
     .restart local v0    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :cond_7
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -483,11 +452,9 @@
 
     check-cast v4, Landroid/telephony/TelephonyManager;
 
-    .line 1123
     .local v4, "telephony":Landroid/telephony/TelephonyManager;
     const/4 v3, -0x1
 
-    .line 1124
     .local v3, "resTitleId":I
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$ToggleAction;->mState:Lcom/android/server/policy/GlobalActions$ToggleAction$State;
 
@@ -495,10 +462,8 @@
 
     if-ne v5, v7, :cond_d
 
-    .line 1125
     const v3, 0x10409ad
 
-    .line 1126
     const-string v5, "VZW"
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mSalesCode:Ljava/lang/String;
@@ -512,15 +477,12 @@
 
     if-eqz v5, :cond_8
 
-    .line 1127
     const v3, 0x1040a70
 
-    .line 1138
     :cond_8
     :goto_2
     const/4 v2, -0x1
 
-    .line 1140
     .local v2, "resOnMessageId":I
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -534,10 +496,8 @@
 
     if-eqz v5, :cond_f
 
-    .line 1141
     const v2, 0x10409b0
 
-    .line 1153
     :goto_3
     const-string v5, "VZW"
 
@@ -552,20 +512,16 @@
 
     if-eqz v5, :cond_9
 
-    .line 1157
     const v2, 0x1040a71
 
-    .line 1159
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsSetAirplaneOnMessageVZW:Z
     invoke-static {v5, v6}, Lcom/android/server/policy/GlobalActions;->access$2302(Lcom/android/server/policy/GlobalActions;Z)Z
 
-    .line 1163
     :cond_9
     const/4 v1, -0x1
 
-    .line 1164
     .local v1, "resOffMessageId":I
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -576,10 +532,8 @@
 
     if-eqz v5, :cond_12
 
-    .line 1165
     const v1, 0x10409b2
 
-    .line 1170
     :goto_4
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -638,7 +592,6 @@
 
     if-eqz v5, :cond_13
 
-    .line 1172
     :cond_c
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -647,7 +600,6 @@
 
     goto/16 :goto_0
 
-    .line 1130
     .end local v1    # "resOffMessageId":I
     .end local v2    # "resOnMessageId":I
     :cond_d
@@ -660,18 +612,15 @@
 
     if-eqz v5, :cond_e
 
-    .line 1131
     const v3, 0x10409ae
 
     goto :goto_2
 
-    .line 1133
     :cond_e
     const v3, 0x1040129
 
     goto :goto_2
 
-    .line 1142
     .restart local v2    # "resOnMessageId":I
     :cond_f
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -683,12 +632,10 @@
 
     if-nez v5, :cond_10
 
-    .line 1143
     const v2, 0x10409b4
 
     goto :goto_3
 
-    .line 1145
     :cond_10
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -699,10 +646,8 @@
 
     if-eqz v5, :cond_11
 
-    .line 1146
     const v2, 0x1040a73
 
-    .line 1147
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsSetAirplaneOnMessageCHINA:Z
@@ -710,20 +655,17 @@
 
     goto/16 :goto_3
 
-    .line 1149
     :cond_11
     const v2, 0x10409af
 
     goto/16 :goto_3
 
-    .line 1167
     .restart local v1    # "resOffMessageId":I
     :cond_12
     const v1, 0x10409b1
 
     goto :goto_4
 
-    .line 1174
     :cond_13
     iget-object v5, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -737,7 +679,6 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 1180
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mHasTelephony:Z
@@ -759,7 +700,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1182
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const/4 v3, 0x1
@@ -767,7 +707,6 @@
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsWaitingForEcmExit:Z
     invoke-static {v2, v3}, Lcom/android/server/policy/GlobalActions;->access$2802(Lcom/android/server/policy/GlobalActions;Z)Z
 
-    .line 1184
     new-instance v1, Landroid/content/Intent;
 
     const-string v2, "android.intent.action.ACTION_SHOW_NOTICE_ECM_BLOCK_OTHERS"
@@ -776,13 +715,11 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 1186
     .local v1, "ecmDialogIntent":Landroid/content/Intent;
     const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1188
     :try_start_0
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -795,17 +732,14 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1196
     .end local v1    # "ecmDialogIntent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 1189
     .restart local v1    # "ecmDialogIntent":Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 1190
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v2, "GlobalActions"
 
@@ -815,7 +749,6 @@
 
     goto :goto_0
 
-    .line 1193
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     .end local v1    # "ecmDialogIntent":Landroid/content/Intent;
     :cond_0
@@ -841,7 +774,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1194
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->changeAirplaneModeSystemSetting(Z)V
@@ -854,7 +786,6 @@
     .locals 1
 
     .prologue
-    .line 1215
     const/4 v0, 0x0
 
     return v0
@@ -866,7 +797,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1220
     const-string/jumbo v1, "lock"
 
     iget-object v2, p0, Lcom/android/server/policy/GlobalActions$3;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -892,12 +822,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1227
     :cond_0
     :goto_0
     return v0
 
-    .line 1224
     :cond_1
     # getter for: Lcom/android/server/policy/GlobalActions;->mNewFeatureForM:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$700()Z
@@ -906,7 +834,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1227
     const/4 v0, 0x1
 
     goto :goto_0
@@ -916,7 +843,6 @@
     .locals 1
 
     .prologue
-    .line 1211
     const/4 v0, 0x1
 
     return v0

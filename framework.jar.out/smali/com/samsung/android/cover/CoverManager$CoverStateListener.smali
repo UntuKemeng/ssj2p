@@ -19,10 +19,8 @@
     .locals 0
 
     .prologue
-    .line 570
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 571
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .param p1, "attached"    # Z
 
     .prologue
-    .line 589
     return-void
 .end method
 
@@ -42,6 +39,5 @@
     .param p1, "switchState"    # Z
 
     .prologue
-    .line 580
     return-void
 .end method

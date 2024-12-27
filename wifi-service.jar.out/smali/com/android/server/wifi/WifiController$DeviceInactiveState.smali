@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1632
     iput-object p1, p0, Lcom/android/server/wifi/WifiController$DeviceInactiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -40,40 +39,33 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1635
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$DeviceInactiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     # invokes: Lcom/android/server/wifi/WifiController;->logStateAndMessage(Landroid/os/Message;Lcom/android/internal/util/State;)V
     invoke-static {v1, p1, p0}, Lcom/android/server/wifi/WifiController;->access$1000(Lcom/android/server/wifi/WifiController;Landroid/os/Message;Lcom/android/internal/util/State;)V
 
-    .line 1636
     iget v1, p1, Landroid/os/Message;->what:I
 
     sparse-switch v1, :sswitch_data_0
 
-    .line 1646
     :goto_0
     return v0
 
-    .line 1638
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$DeviceInactiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     # invokes: Lcom/android/server/wifi/WifiController;->checkLocksAndTransitionWhenDeviceIdle()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiController;->access$3600(Lcom/android/server/wifi/WifiController;)V
 
-    .line 1639
     iget-object v0, p0, Lcom/android/server/wifi/WifiController$DeviceInactiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
     # invokes: Lcom/android/server/wifi/WifiController;->updateBatteryWorkSource()V
     invoke-static {v0}, Lcom/android/server/wifi/WifiController;->access$1500(Lcom/android/server/wifi/WifiController;)V
 
-    .line 1640
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1642
     :sswitch_1
     iget-object v1, p0, Lcom/android/server/wifi/WifiController$DeviceInactiveState;->this$0:Lcom/android/server/wifi/WifiController;
 
@@ -89,7 +81,6 @@
 
     goto :goto_0
 
-    .line 1636
     :sswitch_data_0
     .sparse-switch
         0x26002 -> :sswitch_1

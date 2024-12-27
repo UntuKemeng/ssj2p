@@ -33,19 +33,14 @@
     .param p3, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 445
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 446
     iput-object p1, p0, Lorg/simpleframework/xml/core/Variable$Adapter;->reader:Lorg/simpleframework/xml/core/Converter;
 
-    .line 447
     iput-object p3, p0, Lorg/simpleframework/xml/core/Variable$Adapter;->value:Ljava/lang/Object;
 
-    .line 448
     iput-object p2, p0, Lorg/simpleframework/xml/core/Variable$Adapter;->label:Lorg/simpleframework/xml/core/Label;
 
-    .line 449
     return-void
 .end method
 
@@ -61,7 +56,6 @@
     .end annotation
 
     .prologue
-    .line 462
     iget-object v0, p0, Lorg/simpleframework/xml/core/Variable$Adapter;->value:Ljava/lang/Object;
 
     invoke-virtual {p0, p1, v0}, Lorg/simpleframework/xml/core/Variable$Adapter;->read(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/Object;)Ljava/lang/Object;
@@ -82,18 +76,15 @@
     .end annotation
 
     .prologue
-    .line 476
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getPosition()Lorg/simpleframework/xml/stream/Position;
 
     move-result-object v0
 
-    .line 477
     .local v0, "line":Lorg/simpleframework/xml/stream/Position;
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 479
     .local v1, "name":Ljava/lang/String;
     iget-object v3, p0, Lorg/simpleframework/xml/core/Variable$Adapter;->reader:Lorg/simpleframework/xml/core/Converter;
 
@@ -101,12 +92,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 480
     iget-object v2, p0, Lorg/simpleframework/xml/core/Variable$Adapter;->reader:Lorg/simpleframework/xml/core/Converter;
 
     check-cast v2, Lorg/simpleframework/xml/core/Repeater;
 
-    .line 482
     .local v2, "repeat":Lorg/simpleframework/xml/core/Repeater;
     invoke-interface {v2, p1, p2}, Lorg/simpleframework/xml/core/Repeater;->read(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -114,7 +103,6 @@
 
     return-object v3
 
-    .line 484
     .end local v2    # "repeat":Lorg/simpleframework/xml/core/Repeater;
     :cond_0
     new-instance v3, Lorg/simpleframework/xml/core/PersistenceException;
@@ -154,18 +142,15 @@
     .end annotation
 
     .prologue
-    .line 498
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getPosition()Lorg/simpleframework/xml/stream/Position;
 
     move-result-object v0
 
-    .line 499
     .local v0, "line":Lorg/simpleframework/xml/stream/Position;
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 501
     .local v1, "name":Ljava/lang/String;
     iget-object v3, p0, Lorg/simpleframework/xml/core/Variable$Adapter;->reader:Lorg/simpleframework/xml/core/Converter;
 
@@ -173,12 +158,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 502
     iget-object v2, p0, Lorg/simpleframework/xml/core/Variable$Adapter;->reader:Lorg/simpleframework/xml/core/Converter;
 
     check-cast v2, Lorg/simpleframework/xml/core/Repeater;
 
-    .line 504
     .local v2, "repeat":Lorg/simpleframework/xml/core/Repeater;
     invoke-interface {v2, p1}, Lorg/simpleframework/xml/core/Repeater;->validate(Lorg/simpleframework/xml/stream/InputNode;)Z
 
@@ -186,7 +169,6 @@
 
     return v3
 
-    .line 506
     .end local v2    # "repeat":Lorg/simpleframework/xml/core/Repeater;
     :cond_0
     new-instance v3, Lorg/simpleframework/xml/core/PersistenceException;
@@ -221,9 +203,7 @@
     .end annotation
 
     .prologue
-    .line 519
     invoke-virtual {p0, p1, p2}, Lorg/simpleframework/xml/core/Variable$Adapter;->write(Lorg/simpleframework/xml/stream/OutputNode;Ljava/lang/Object;)V
 
-    .line 520
     return-void
 .end method

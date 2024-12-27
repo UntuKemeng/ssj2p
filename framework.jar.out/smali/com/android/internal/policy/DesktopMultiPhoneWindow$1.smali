@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 143
     iput-object p1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 146
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -51,7 +49,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->performHapticFeedback(I)Z
 
-    .line 147
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->getState()I
@@ -72,17 +69,14 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 148
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->dismissGuide()V
 
-    .line 165
     :goto_0
     return-void
 
-    .line 150
     :cond_1
     sget-boolean v1, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->DEBUG:Z
 
@@ -114,7 +108,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 151
     :cond_2
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -122,14 +115,12 @@
 
     if-eqz v1, :cond_3
 
-    .line 152
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->dismissGuide()V
 
     goto :goto_0
 
-    .line 154
     :cond_3
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -139,7 +130,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 155
     new-instance v0, Landroid/graphics/Rect;
 
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -148,7 +138,6 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 156
     .local v0, "tempBoundForDesktop":Landroid/graphics/Rect;
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -156,7 +145,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 157
     iget v1, v0, Landroid/graphics/Rect;->top:I
 
     iget-object v2, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -171,7 +159,6 @@
 
     iput v1, v0, Landroid/graphics/Rect;->top:I
 
-    .line 159
     :cond_4
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -181,7 +168,6 @@
 
     goto :goto_0
 
-    .line 161
     .end local v0    # "tempBoundForDesktop":Landroid/graphics/Rect;
     :cond_5
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$1;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;

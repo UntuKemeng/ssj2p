@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 8386
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 8389
     invoke-virtual/range {p2 .. p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 8391
     .local v1, "action":Ljava/lang/String;
     const-string v13, "android.intent.action.USER_SWITCHED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v13, :cond_3
 
-    .line 8392
     const-string v13, "android.intent.extra.user_handle"
 
     const/4 v14, 0x0
@@ -65,7 +61,6 @@
 
     move-result v2
 
-    .line 8393
     .local v2, "currentUserId":I
     move-object/from16 v0, p0
 
@@ -77,21 +72,18 @@
 
     if-nez v13, :cond_0
 
-    .line 8394
     const-string/jumbo v13, "sys.knox.store"
 
     const-string v14, "0"
 
     invoke-static {v13, v14}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8395
     const-string v13, "PersonaManagerService"
 
     const-string/jumbo v14, "onReceive USER_SWITCHED it is not knox container"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8400
     :goto_0
     const-string v13, "PersonaManagerService"
 
@@ -115,7 +107,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8402
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -128,7 +119,6 @@
 
     if-nez v2, :cond_1
 
-    .line 8404
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -137,7 +127,6 @@
 
     move-result-object v10
 
-    .line 8405
     .local v10, "personaIds":[I
     if-eqz v10, :cond_1
 
@@ -145,7 +134,6 @@
 
     if-lez v13, :cond_1
 
-    .line 8406
     const/4 v4, 0x0
 
     .local v4, "i":I
@@ -167,7 +155,6 @@
 
     goto :goto_1
 
-    .line 8397
     .end local v4    # "i":I
     .end local v10    # "personaIds":[I
     :cond_0
@@ -179,7 +166,6 @@
 
     invoke-static {v13, v14}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8398
     const-string v13, "PersonaManagerService"
 
     const-string/jumbo v14, "onReceive USER_SWITCHED it is knox container"
@@ -188,7 +174,6 @@
 
     goto :goto_0
 
-    .line 8409
     :cond_1
     move-object/from16 v0, p0
 
@@ -199,13 +184,11 @@
     # invokes: Lcom/android/server/pm/PersonaManagerService;->setKnoxAppsComponentSetting(Landroid/content/Context;I)V
     invoke-static {v13, v0, v2}, Lcom/android/server/pm/PersonaManagerService;->access$600(Lcom/android/server/pm/PersonaManagerService;Landroid/content/Context;I)V
 
-    .line 8507
     .end local v2    # "currentUserId":I
     :cond_2
     :goto_2
     return-void
 
-    .line 8411
     :cond_3
     const-string v13, "android.intent.action.USER_ADDED"
 
@@ -215,7 +198,6 @@
 
     if-eqz v13, :cond_6
 
-    .line 8412
     const-string v13, "android.intent.extra.user_handle"
 
     move-object/from16 v0, p2
@@ -230,7 +212,6 @@
 
     move-result v12
 
-    .line 8413
     .local v12, "userId":I
     const-string v13, "PersonaManagerService"
 
@@ -254,7 +235,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8414
     const/16 v13, 0x64
 
     if-lt v12, v13, :cond_4
@@ -263,7 +243,6 @@
 
     if-le v12, v13, :cond_2
 
-    .line 8415
     :cond_4
     const-string v13, "PersonaManagerService"
 
@@ -293,7 +272,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8416
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -309,7 +287,6 @@
 
     invoke-virtual {v13, v14, v15, v12}, Lcom/android/server/pm/PackageManagerService;->setPackageSettingInstalled(Ljava/lang/String;ZI)Z
 
-    .line 8417
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -325,7 +302,6 @@
 
     invoke-virtual {v13, v14, v15, v12}, Lcom/android/server/pm/PackageManagerService;->setPackageSettingInstalled(Ljava/lang/String;ZI)Z
 
-    .line 8418
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -341,7 +317,6 @@
 
     invoke-virtual {v13, v14, v15, v12}, Lcom/android/server/pm/PackageManagerService;->setPackageSettingInstalled(Ljava/lang/String;ZI)Z
 
-    .line 8420
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -357,7 +332,6 @@
 
     invoke-virtual {v13, v14, v15, v12}, Lcom/android/server/pm/PackageManagerService;->setPackageSettingInstalled(Ljava/lang/String;ZI)Z
 
-    .line 8422
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -373,7 +347,6 @@
 
     invoke-virtual {v13, v14, v15, v12}, Lcom/android/server/pm/PackageManagerService;->setPackageSettingInstalled(Ljava/lang/String;ZI)Z
 
-    .line 8425
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -385,7 +358,6 @@
 
     if-eqz v13, :cond_5
 
-    .line 8426
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -401,7 +373,6 @@
 
     invoke-virtual {v13, v14, v15, v12}, Lcom/android/server/pm/PackageManagerService;->setPackageSettingInstalled(Ljava/lang/String;ZI)Z
 
-    .line 8431
     :cond_5
     move-object/from16 v0, p0
 
@@ -418,7 +389,6 @@
 
     invoke-virtual {v13, v14, v15, v12}, Lcom/android/server/pm/PackageManagerService;->setPackageSettingInstalled(Ljava/lang/String;ZI)Z
 
-    .line 8435
     :try_start_0
     move-object/from16 v0, p0
 
@@ -439,11 +409,9 @@
 
     goto/16 :goto_2
 
-    .line 8436
     :catch_0
     move-exception v3
 
-    .line 8437
     .local v3, "e":Ljava/lang/Exception;
     const-string v13, "PersonaManagerService"
 
@@ -453,7 +421,6 @@
 
     goto/16 :goto_2
 
-    .line 8440
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v12    # "userId":I
     :cond_6
@@ -465,14 +432,12 @@
 
     if-eqz v13, :cond_7
 
-    .line 8441
     const-string v13, "PersonaManagerService"
 
     const-string v14, "INTENT_ACTION_PASSWORD_TIMEOUT_NOTIFICATION onReceive"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8442
     const-string/jumbo v13, "personaid"
 
     const/4 v14, 0x0
@@ -483,7 +448,6 @@
 
     move-result v9
 
-    .line 8443
     .local v9, "personaId":I
     move-object/from16 v0, p0
 
@@ -500,11 +464,9 @@
 
     move-result-object v7
 
-    .line 8444
     .local v7, "msg":Landroid/os/Message;
     iput v9, v7, Landroid/os/Message;->arg1:I
 
-    .line 8445
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -518,7 +480,6 @@
 
     goto/16 :goto_2
 
-    .line 8446
     .end local v7    # "msg":Landroid/os/Message;
     .end local v9    # "personaId":I
     :cond_7
@@ -530,14 +491,12 @@
 
     if-eqz v13, :cond_8
 
-    .line 8447
     const-string v13, "PersonaManagerService"
 
     const-string v14, "ACTION_SCREEN_ON onReceive"
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8448
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -553,7 +512,6 @@
 
     move-result-object v7
 
-    .line 8449
     .restart local v7    # "msg":Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -568,7 +526,6 @@
 
     goto/16 :goto_2
 
-    .line 8451
     .end local v7    # "msg":Landroid/os/Message;
     :cond_8
     const-string v13, "com.samsung.android.intent.action.IRIS_ADDED"
@@ -595,7 +552,6 @@
 
     if-eqz v13, :cond_b
 
-    .line 8452
     :cond_9
     move-object/from16 v0, p0
 
@@ -607,7 +563,6 @@
 
     move-result-object v11
 
-    .line 8453
     .local v11, "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -628,11 +583,9 @@
 
     check-cast v8, Landroid/content/pm/PersonaInfo;
 
-    .line 8454
     .local v8, "pInfo":Landroid/content/pm/PersonaInfo;
     if-eqz v8, :cond_a
 
-    .line 8456
     :try_start_1
     move-object/from16 v0, p0
 
@@ -655,7 +608,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 8460
     :goto_4
     const-string v13, "com.samsung.android.intent.action.IRIS_ADDED"
 
@@ -678,7 +630,6 @@
 
     if-eqz v13, :cond_a
 
-    .line 8461
     const-string v13, "PersonaManagerService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -703,18 +654,15 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8462
     const/4 v13, 0x1
 
     invoke-virtual {v8, v13}, Landroid/content/pm/PersonaInfo;->setIsIrisReset(Z)V
 
     goto :goto_3
 
-    .line 8457
     :catch_1
     move-exception v3
 
-    .line 8458
     .restart local v3    # "e":Ljava/lang/Exception;
     const-string v13, "PersonaManagerService"
 
@@ -740,7 +688,6 @@
 
     goto :goto_4
 
-    .line 8466
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v8    # "pInfo":Landroid/content/pm/PersonaInfo;
@@ -778,7 +725,6 @@
 
     if-eqz v13, :cond_e
 
-    .line 8467
     :cond_c
     move-object/from16 v0, p0
 
@@ -790,7 +736,6 @@
 
     move-result-object v11
 
-    .line 8468
     .restart local v11    # "personas":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/PersonaInfo;>;"
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -811,11 +756,9 @@
 
     check-cast v8, Landroid/content/pm/PersonaInfo;
 
-    .line 8469
     .restart local v8    # "pInfo":Landroid/content/pm/PersonaInfo;
     if-eqz v8, :cond_d
 
-    .line 8471
     :try_start_2
     move-object/from16 v0, p0
 
@@ -838,7 +781,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 8475
     :goto_6
     move-object/from16 v0, p0
 
@@ -852,7 +794,6 @@
 
     if-eqz v13, :cond_d
 
-    .line 8476
     const-string v13, "PersonaManagerService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -877,18 +818,15 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8477
     const/4 v13, 0x1
 
     invoke-virtual {v8, v13}, Landroid/content/pm/PersonaInfo;->setIsFingerReset(Z)V
 
     goto :goto_5
 
-    .line 8472
     :catch_2
     move-exception v3
 
-    .line 8473
     .restart local v3    # "e":Ljava/lang/Exception;
     const-string v13, "PersonaManagerService"
 
@@ -914,7 +852,6 @@
 
     goto :goto_6
 
-    .line 8481
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v8    # "pInfo":Landroid/content/pm/PersonaInfo;
@@ -928,7 +865,6 @@
 
     if-eqz v13, :cond_10
 
-    .line 8483
     const-string/jumbo v13, "personaid"
 
     const/4 v14, 0x0
@@ -939,7 +875,6 @@
 
     move-result v9
 
-    .line 8484
     .restart local v9    # "personaId":I
     const-string v13, "PersonaManagerService"
 
@@ -963,7 +898,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8485
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -972,7 +906,6 @@
 
     move-result-object v6
 
-    .line 8486
     .local v6, "info":Landroid/content/pm/PersonaInfo;
     if-eqz v6, :cond_f
 
@@ -988,7 +921,6 @@
 
     if-eqz v13, :cond_f
 
-    .line 8487
     const-string v13, "PersonaManagerService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -1037,7 +969,6 @@
 
     goto/16 :goto_2
 
-    .line 8491
     :cond_f
     move-object/from16 v0, p0
 
@@ -1054,11 +985,9 @@
 
     move-result-object v7
 
-    .line 8492
     .restart local v7    # "msg":Landroid/os/Message;
     iput v9, v7, Landroid/os/Message;->arg1:I
 
-    .line 8493
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -1072,7 +1001,6 @@
 
     goto/16 :goto_2
 
-    .line 8494
     .end local v6    # "info":Landroid/content/pm/PersonaInfo;
     .end local v7    # "msg":Landroid/os/Message;
     .end local v9    # "personaId":I
@@ -1085,7 +1013,6 @@
 
     if-eqz v13, :cond_11
 
-    .line 8496
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -1101,7 +1028,6 @@
 
     move-result-object v7
 
-    .line 8497
     .restart local v7    # "msg":Landroid/os/Message;
     const-string/jumbo v13, "personaid"
 
@@ -1115,7 +1041,6 @@
 
     iput v13, v7, Landroid/os/Message;->arg1:I
 
-    .line 8498
     const-string v13, "PersonaManagerService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -1140,7 +1065,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8499
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -1154,7 +1078,6 @@
 
     goto/16 :goto_2
 
-    .line 8500
     .end local v7    # "msg":Landroid/os/Message;
     :cond_11
     const-string v13, "com.sec.knox.container.INTENT_ACTION_RESET_PWD_TIMEOUT"
@@ -1165,7 +1088,6 @@
 
     if-eqz v13, :cond_2
 
-    .line 8502
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -1181,7 +1103,6 @@
 
     move-result-object v7
 
-    .line 8503
     .restart local v7    # "msg":Landroid/os/Message;
     const-string/jumbo v13, "personaid"
 
@@ -1195,7 +1116,6 @@
 
     iput v13, v7, Landroid/os/Message;->arg1:I
 
-    .line 8504
     const-string v13, "PersonaManagerService"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -1220,7 +1140,6 @@
 
     invoke-static {v13, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8505
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/pm/PersonaManagerService$9;->this$0:Lcom/android/server/pm/PersonaManagerService;

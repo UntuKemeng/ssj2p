@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 291
     iput-object p1, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$ClearUserDataObserver;->this$0:Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDataObserver$Stub;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$1;
 
     .prologue
-    .line 291
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$ClearUserDataObserver;-><init>(Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter;)V
 
     return-void
@@ -57,31 +55,23 @@
     .param p2, "succeeded"    # Z
 
     .prologue
-    .line 297
     monitor-enter p0
 
-    .line 298
     const/4 v0, 0x1
 
     :try_start_0
     iput-boolean v0, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$ClearUserDataObserver;->finished:Z
 
-    .line 299
     iput-object p1, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$ClearUserDataObserver;->packageName:Ljava/lang/String;
 
-    .line 300
     iput-boolean p2, p0, Lcom/android/server/enterprise/adapterlayer/PackageManagerAdapter$ClearUserDataObserver;->success:Z
 
-    .line 301
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 302
     monitor-exit p0
 
-    .line 303
     return-void
 
-    .line 302
     :catchall_0
     move-exception v0
 

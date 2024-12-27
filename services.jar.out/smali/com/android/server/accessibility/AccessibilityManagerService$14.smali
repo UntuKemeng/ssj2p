@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 6324
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$14;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 6328
     :try_start_0
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->cfmsService:Landroid/os/ICustomFrequencyManager;
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8200()Landroid/os/ICustomFrequencyManager;
@@ -53,7 +51,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/ICustomFrequencyManager;->sendCommandToSSRM(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6329
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->cfmsService:Landroid/os/ICustomFrequencyManager;
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8200()Landroid/os/ICustomFrequencyManager;
 
@@ -65,7 +62,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/ICustomFrequencyManager;->sendCommandToSSRM(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6330
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->NOTIFLASH_LENGTH_ON:I
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8300()I
 
@@ -75,7 +71,6 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 6331
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->cfmsService:Landroid/os/ICustomFrequencyManager;
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8200()Landroid/os/ICustomFrequencyManager;
 
@@ -87,7 +82,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/ICustomFrequencyManager;->sendCommandToSSRM(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6332
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->NOTIFLASH_LENGTH_OFF:I
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8400()I
 
@@ -97,7 +91,6 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 6333
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->cfmsService:Landroid/os/ICustomFrequencyManager;
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8200()Landroid/os/ICustomFrequencyManager;
 
@@ -109,7 +102,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/ICustomFrequencyManager;->sendCommandToSSRM(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6334
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->NOTIFLASH_LENGTH_ON:I
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8300()I
 
@@ -119,7 +111,6 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 6335
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->cfmsService:Landroid/os/ICustomFrequencyManager;
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8200()Landroid/os/ICustomFrequencyManager;
 
@@ -131,7 +122,6 @@
 
     invoke-interface {v1, v2, v3}, Landroid/os/ICustomFrequencyManager;->sendCommandToSSRM(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6336
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->NOTIFLASH_LENGTH_OFF:I
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8400()I
 
@@ -141,13 +131,11 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemClock;->sleep(J)V
 
-    .line 6337
     const/4 v1, 0x0
 
     # setter for: Lcom/android/server/accessibility/AccessibilityManagerService;->bIsRunning:Z
     invoke-static {v1}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$8502(Z)Z
 
-    .line 6338
     const-string v1, "AccessibilityManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -177,15 +165,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6342
     :goto_0
     return-void
 
-    .line 6339
     :catch_0
     move-exception v0
 
-    .line 6340
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "AccessibilityManagerService"
 

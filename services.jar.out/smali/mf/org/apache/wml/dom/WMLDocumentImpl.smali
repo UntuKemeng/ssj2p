@@ -19,7 +19,6 @@
     .locals 3
 
     .prologue
-    .line 41
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/Class;
@@ -36,17 +35,14 @@
 
     aput-object v2, v0, v1
 
-    .line 40
     sput-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elemClassSigWML:[Ljava/lang/Class;
 
-    .line 79
     new-instance v0, Ljava/util/Hashtable;
 
     invoke-direct {v0}, Ljava/util/Hashtable;-><init>()V
 
     sput-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
-    .line 80
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "b"
@@ -55,7 +51,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 81
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "noop"
@@ -64,7 +59,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 82
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "a"
@@ -73,7 +67,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 83
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "setvar"
@@ -82,7 +75,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 84
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "access"
@@ -91,7 +83,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "strong"
@@ -100,7 +91,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 86
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "postfield"
@@ -109,7 +99,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 87
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "do"
@@ -118,7 +107,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 88
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "wml"
@@ -127,7 +115,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 89
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "tr"
@@ -136,7 +123,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 90
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "go"
@@ -145,7 +131,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "big"
@@ -154,7 +139,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 92
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "anchor"
@@ -163,7 +147,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 93
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "timer"
@@ -172,7 +155,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 94
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "small"
@@ -181,7 +163,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 95
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "optgroup"
@@ -190,7 +171,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 96
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "head"
@@ -199,7 +179,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 97
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "td"
@@ -208,7 +187,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 98
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "fieldset"
@@ -217,7 +195,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 99
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "img"
@@ -226,7 +203,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 100
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "refresh"
@@ -235,7 +211,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 101
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "onevent"
@@ -244,7 +219,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 102
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "input"
@@ -253,7 +227,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 103
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "prev"
@@ -262,7 +235,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 104
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "table"
@@ -271,7 +243,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 105
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "meta"
@@ -280,7 +251,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "template"
@@ -289,7 +259,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 107
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "br"
@@ -298,7 +267,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 108
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "option"
@@ -307,7 +275,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 109
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "u"
@@ -316,7 +283,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 110
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "p"
@@ -325,7 +291,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 111
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "select"
@@ -334,7 +299,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 112
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "em"
@@ -343,7 +307,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 113
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "i"
@@ -352,7 +315,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 114
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     const-string v1, "card"
@@ -361,7 +323,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/Hashtable;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 115
     return-void
 .end method
 
@@ -370,12 +331,10 @@
     .param p1, "doctype"    # Lmf/org/w3c/dom/DocumentType;
 
     .prologue
-    .line 119
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lmf/org/apache/xerces/dom/DocumentImpl;-><init>(Lmf/org/w3c/dom/DocumentType;Z)V
 
-    .line 120
     return-void
 .end method
 
@@ -388,7 +347,6 @@
     .param p3, "el"    # Lmf/org/apache/xerces/dom/ElementImpl;
 
     .prologue
-    .line 75
     sget-object v0, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     invoke-virtual {v0, p2}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -428,7 +386,6 @@
     .end annotation
 
     .prologue
-    .line 48
     sget-object v4, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elementTypesWML:Ljava/util/Hashtable;
 
     invoke-virtual {v4, p1}, Ljava/util/Hashtable;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -437,11 +394,9 @@
 
     check-cast v1, Ljava/lang/Class;
 
-    .line 49
     .local v1, "elemClass":Ljava/lang/Class;
     if-eqz v1, :cond_1
 
-    .line 51
     :try_start_0
     sget-object v4, Lmf/org/apache/wml/dom/WMLDocumentImpl;->_elemClassSigWML:[Ljava/lang/Class;
 
@@ -449,7 +404,6 @@
 
     move-result-object v0
 
-    .line 52
     .local v0, "cnst":Ljava/lang/reflect/Constructor;
     const/4 v4, 0x2
 
@@ -471,22 +425,18 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
     .end local v0    # "cnst":Ljava/lang/reflect/Constructor;
     :goto_0
     return-object v4
 
-    .line 53
     :catch_0
     move-exception v2
 
-    .line 56
     .local v2, "except":Ljava/lang/Exception;
     instance-of v4, v2, Ljava/lang/reflect/InvocationTargetException;
 
     if-eqz v4, :cond_0
 
-    .line 57
     check-cast v2, Ljava/lang/reflect/InvocationTargetException;
 
     .end local v2    # "except":Ljava/lang/Exception;
@@ -494,7 +444,6 @@
 
     move-result-object v3
 
-    .line 61
     .local v3, "thrw":Ljava/lang/Throwable;
     :goto_1
     sget-object v4, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -523,7 +472,6 @@
 
     invoke-virtual {v4, v5}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 62
     sget-object v4, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v3}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
@@ -532,7 +480,6 @@
 
     invoke-virtual {v4, v5}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 64
     new-instance v4, Ljava/lang/IllegalStateException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -559,7 +506,6 @@
 
     throw v4
 
-    .line 59
     .end local v3    # "thrw":Ljava/lang/Throwable;
     .restart local v2    # "except":Ljava/lang/Exception;
     :cond_0
@@ -568,7 +514,6 @@
     .restart local v3    # "thrw":Ljava/lang/Throwable;
     goto :goto_1
 
-    .line 67
     .end local v2    # "except":Ljava/lang/Exception;
     .end local v3    # "thrw":Ljava/lang/Throwable;
     :cond_1

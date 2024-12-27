@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 894
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -44,28 +43,23 @@
 
     const/4 v6, 0x0
 
-    .line 898
     if-eqz p3, :cond_1
 
-    .line 899
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # invokes: Lcom/android/server/connectivity/NetworkMonitor;->removeMessages(I)V
     invoke-static {v3, v7}, Lcom/android/server/connectivity/NetworkMonitor;->access$5000(Lcom/android/server/connectivity/NetworkMonitor;I)V
 
-    .line 901
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mCurrentUid:I
     invoke-static {v3, p2}, Lcom/android/server/connectivity/NetworkMonitor;->access$5102(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 902
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mInitialUid:I
     invoke-static {v3, v6}, Lcom/android/server/connectivity/NetworkMonitor;->access$5202(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 903
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-static {p2}, Landroid/net/TrafficStats;->getUidTxBytes(I)J
@@ -75,7 +69,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mCurrentTxByteUid:J
     invoke-static {v3, v4, v5}, Lcom/android/server/connectivity/NetworkMonitor;->access$5302(Lcom/android/server/connectivity/NetworkMonitor;J)J
 
-    .line 904
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -91,11 +84,9 @@
 
     move-result-object v2
 
-    .line 905
     .local v2, "pkgs":[Ljava/lang/String;
     aget-object v1, v2, v6
 
-    .line 907
     .local v1, "packageName":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -106,7 +97,6 @@
 
     if-nez v3, :cond_0
 
-    .line 908
     iget-object v4, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
@@ -127,7 +117,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mConnectivityManager:Landroid/net/ConnectivityManager;
     invoke-static {v4, v3}, Lcom/android/server/connectivity/NetworkMonitor;->access$4302(Lcom/android/server/connectivity/NetworkMonitor;Landroid/net/ConnectivityManager;)Landroid/net/ConnectivityManager;
 
-    .line 910
     :cond_0
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -140,7 +129,6 @@
 
     move-result-object v0
 
-    .line 911
     .local v0, "mobileInfo":Landroid/net/NetworkInfo;
     const-string v3, "NetworkMonitor"
 
@@ -201,7 +189,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 915
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mSmartDetectionAvailable:Z
@@ -211,14 +198,12 @@
 
     if-nez v3, :cond_2
 
-    .line 916
     const-string v3, "NetworkMonitor"
 
     const-string/jumbo v4, "onForegroundActivitiesChanged: calling state"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 946
     .end local v0    # "mobileInfo":Landroid/net/NetworkInfo;
     .end local v1    # "packageName":Ljava/lang/String;
     .end local v2    # "pkgs":[Ljava/lang/String;
@@ -226,7 +211,6 @@
     :goto_0
     return-void
 
-    .line 917
     .restart local v0    # "mobileInfo":Landroid/net/NetworkInfo;
     .restart local v1    # "packageName":Ljava/lang/String;
     .restart local v2    # "pkgs":[Ljava/lang/String;
@@ -239,7 +223,6 @@
 
     if-nez v3, :cond_3
 
-    .line 918
     const-string v3, "NetworkMonitor"
 
     const-string/jumbo v4, "onForegroundActivitiesChanged: mobile data not connected"
@@ -248,13 +231,11 @@
 
     goto :goto_0
 
-    .line 920
     :cond_3
     const/16 v3, 0x3e8
 
     if-ne v3, p2, :cond_4
 
-    .line 921
     const-string v3, "NetworkMonitor"
 
     const-string/jumbo v4, "onForegroundActivitiesChanged: skip system uid"
@@ -263,7 +244,6 @@
 
     goto :goto_0
 
-    .line 923
     :cond_4
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -274,14 +254,12 @@
 
     if-eqz v3, :cond_5
 
-    .line 924
     const-string v3, "NetworkMonitor"
 
     const-string/jumbo v4, "onForegroundActivitiesChanged: DO NOT check after captiveportallogin"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 925
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalLoginActivity:Z
@@ -289,7 +267,6 @@
 
     goto :goto_0
 
-    .line 927
     :cond_5
     const-string v3, "com.android.captiveportallogin"
 
@@ -299,7 +276,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 928
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const/4 v4, 0x1
@@ -307,7 +283,6 @@
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mIsCaptivePortalLoginActivity:Z
     invoke-static {v3, v4}, Lcom/android/server/connectivity/NetworkMonitor;->access$5502(Lcom/android/server/connectivity/NetworkMonitor;Z)Z
 
-    .line 931
     :cond_6
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -327,13 +302,11 @@
 
     if-nez v3, :cond_1
 
-    .line 941
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # setter for: Lcom/android/server/connectivity/NetworkMonitor;->mCaptivePortalTxCheckSec:I
     invoke-static {v3, v6}, Lcom/android/server/connectivity/NetworkMonitor;->access$5702(Lcom/android/server/connectivity/NetworkMonitor;I)I
 
-    .line 942
     iget-object v3, p0, Lcom/android/server/connectivity/NetworkMonitor$3;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     const-wide/16 v4, 0x3e8
@@ -349,7 +322,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 957
     return-void
 .end method
 
@@ -360,6 +332,5 @@
     .param p3, "procState"    # I
 
     .prologue
-    .line 952
     return-void
 .end method

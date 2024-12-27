@@ -28,19 +28,14 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     iput-object p1, p0, Lorg/simpleframework/xml/stream/InputAttribute;->parent:Lorg/simpleframework/xml/stream/InputNode;
 
-    .line 74
     iput-object p3, p0, Lorg/simpleframework/xml/stream/InputAttribute;->value:Ljava/lang/String;
 
-    .line 75
     iput-object p2, p0, Lorg/simpleframework/xml/stream/InputAttribute;->name:Ljava/lang/String;
 
-    .line 76
     return-void
 .end method
 
@@ -50,48 +45,40 @@
     .param p2, "attribute"    # Lorg/simpleframework/xml/stream/Attribute;
 
     .prologue
-    .line 86
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 87
     invoke-interface {p2}, Lorg/simpleframework/xml/stream/Attribute;->getReference()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->reference:Ljava/lang/String;
 
-    .line 88
     invoke-interface {p2}, Lorg/simpleframework/xml/stream/Attribute;->getPrefix()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->prefix:Ljava/lang/String;
 
-    .line 89
     invoke-interface {p2}, Lorg/simpleframework/xml/stream/Attribute;->getSource()Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->source:Ljava/lang/Object;
 
-    .line 90
     invoke-interface {p2}, Lorg/simpleframework/xml/stream/Attribute;->getValue()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->value:Ljava/lang/String;
 
-    .line 91
     invoke-interface {p2}, Lorg/simpleframework/xml/stream/Attribute;->getName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->name:Ljava/lang/String;
 
-    .line 92
     iput-object p1, p0, Lorg/simpleframework/xml/stream/InputAttribute;->parent:Lorg/simpleframework/xml/stream/InputNode;
 
-    .line 93
     return-void
 .end method
 
@@ -102,7 +89,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 208
     const/4 v0, 0x0
 
     return-object v0
@@ -121,7 +107,6 @@
     .end annotation
 
     .prologue
-    .line 219
     new-instance v0, Lorg/simpleframework/xml/stream/InputNodeMap;
 
     invoke-direct {v0, p0}, Lorg/simpleframework/xml/stream/InputNodeMap;-><init>(Lorg/simpleframework/xml/stream/InputNode;)V
@@ -133,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 138
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->name:Ljava/lang/String;
 
     return-object v0
@@ -143,7 +127,6 @@
     .locals 1
 
     .prologue
-    .line 230
     const/4 v0, 0x0
 
     return-object v0
@@ -154,7 +137,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 243
     const/4 v0, 0x0
 
     return-object v0
@@ -164,7 +146,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->parent:Lorg/simpleframework/xml/stream/InputNode;
 
     return-object v0
@@ -174,7 +155,6 @@
     .locals 1
 
     .prologue
-    .line 31
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/InputAttribute;->getParent()Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v0
@@ -186,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->parent:Lorg/simpleframework/xml/stream/InputNode;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/stream/InputNode;->getPosition()Lorg/simpleframework/xml/stream/Position;
@@ -200,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->prefix:Ljava/lang/String;
 
     return-object v0
@@ -210,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 164
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->reference:Ljava/lang/String;
 
     return-object v0
@@ -220,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 104
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->source:Ljava/lang/Object;
 
     return-object v0
@@ -230,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 174
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputAttribute;->value:Ljava/lang/String;
 
     return-object v0
@@ -240,7 +215,6 @@
     .locals 1
 
     .prologue
-    .line 197
     const/4 v0, 0x0
 
     return v0
@@ -250,7 +224,6 @@
     .locals 1
 
     .prologue
-    .line 265
     const/4 v0, 0x0
 
     return v0
@@ -260,7 +233,6 @@
     .locals 1
 
     .prologue
-    .line 185
     const/4 v0, 0x0
 
     return v0
@@ -270,7 +242,6 @@
     .locals 0
 
     .prologue
-    .line 253
     return-void
 .end method
 
@@ -278,7 +249,6 @@
     .locals 4
 
     .prologue
-    .line 276
     const-string v0, "attribute %s=\'%s\'"
 
     const/4 v1, 0x2

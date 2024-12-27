@@ -26,7 +26,6 @@
     .param p4, "x2"    # Z
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternView$1;->this$0:Lcom/android/internal/widget/LockPatternView;
 
     invoke-direct {p0, p2, p3, p4}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
@@ -41,16 +40,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 94
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 99
     :goto_0
     return-void
 
-    .line 96
     :pswitch_0
     iget-object v1, p0, Lcom/android/internal/widget/LockPatternView$1;->this$0:Lcom/android/internal/widget/LockPatternView;
 
@@ -63,7 +59,6 @@
 
     goto :goto_0
 
-    .line 94
     :pswitch_data_0
     .packed-switch 0xa
         :pswitch_0

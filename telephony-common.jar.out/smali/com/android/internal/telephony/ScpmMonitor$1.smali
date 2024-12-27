@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 100
     iput-object p1, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 103
     const-string v0, "sec.app.policy.UPDATE.mccbanddb2"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 104
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     const-string v1, "MCCBAND - sec.app.policy.UPDATE.mccbanddb"
@@ -62,7 +59,6 @@
     # invokes: Lcom/android/internal/telephony/ScpmMonitor;->logd(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/internal/telephony/ScpmMonitor;->access$000(Lcom/android/internal/telephony/ScpmMonitor;Ljava/lang/String;)V
 
-    .line 106
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     # getter for: Lcom/android/internal/telephony/ScpmMonitor;->mNeedCpDbUpdate:Z
@@ -72,24 +68,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 107
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     # setter for: Lcom/android/internal/telephony/ScpmMonitor;->mNeedCpDbUpdate:Z
     invoke-static {v0, v2}, Lcom/android/internal/telephony/ScpmMonitor;->access$102(Lcom/android/internal/telephony/ScpmMonitor;Z)Z
 
-    .line 108
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     # invokes: Lcom/android/internal/telephony/ScpmMonitor;->updateItems()V
     invoke-static {v0}, Lcom/android/internal/telephony/ScpmMonitor;->access$200(Lcom/android/internal/telephony/ScpmMonitor;)V
 
-    .line 125
     :cond_0
     :goto_0
     return-void
 
-    .line 110
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
@@ -100,7 +92,6 @@
 
     goto :goto_0
 
-    .line 112
     :cond_2
     const-string v0, "sec.app.policy.UPDATE.rel11nw2"
 
@@ -114,7 +105,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 113
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     const-string v1, "REL11NW - sec.app.policy.UPDATE.rel11nw"
@@ -122,7 +112,6 @@
     # invokes: Lcom/android/internal/telephony/ScpmMonitor;->logd(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/internal/telephony/ScpmMonitor;->access$000(Lcom/android/internal/telephony/ScpmMonitor;Ljava/lang/String;)V
 
-    .line 115
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     # getter for: Lcom/android/internal/telephony/ScpmMonitor;->mNeedCpDbUpdate:Z
@@ -132,13 +121,11 @@
 
     if-eqz v0, :cond_3
 
-    .line 116
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     # setter for: Lcom/android/internal/telephony/ScpmMonitor;->mNeedCpDbUpdate:Z
     invoke-static {v0, v2}, Lcom/android/internal/telephony/ScpmMonitor;->access$102(Lcom/android/internal/telephony/ScpmMonitor;Z)Z
 
-    .line 117
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     # invokes: Lcom/android/internal/telephony/ScpmMonitor;->updateItems()V
@@ -146,7 +133,6 @@
 
     goto :goto_0
 
-    .line 119
     :cond_3
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
@@ -157,7 +143,6 @@
 
     goto :goto_0
 
-    .line 121
     :cond_4
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
@@ -171,7 +156,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 122
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     const-string v1, "ACTION_BOOT_COMPLETED"
@@ -179,7 +163,6 @@
     # invokes: Lcom/android/internal/telephony/ScpmMonitor;->logd(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/internal/telephony/ScpmMonitor;->access$000(Lcom/android/internal/telephony/ScpmMonitor;Ljava/lang/String;)V
 
-    .line 123
     iget-object v0, p0, Lcom/android/internal/telephony/ScpmMonitor$1;->this$0:Lcom/android/internal/telephony/ScpmMonitor;
 
     # invokes: Lcom/android/internal/telephony/ScpmMonitor;->updateItems()V

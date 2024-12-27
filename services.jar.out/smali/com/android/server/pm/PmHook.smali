@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .param p1, "userIdentifier"    # I
 
     .prologue
-    .line 117
     const/4 v0, 0x3
 
     const/4 v1, 0x5
@@ -67,7 +65,6 @@
 
     invoke-static/range {v0 .. v6}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 121
     return-void
 .end method
 
@@ -81,7 +78,6 @@
 
     const/4 v2, 0x1
 
-    .line 41
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v3
@@ -114,7 +110,6 @@
 
     invoke-static/range {v0 .. v6}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 47
     return-void
 .end method
 
@@ -127,7 +122,6 @@
 
     const/4 v10, 0x0
 
-    .line 138
     invoke-virtual {p0}, Landroid/content/pm/PackageParser$Package;->isSystemApp()Z
 
     move-result v11
@@ -140,7 +134,6 @@
 
     if-nez v11, :cond_2
 
-    .line 139
     const/4 v11, 0x2
 
     new-array v1, v11, [Ljava/io/File;
@@ -201,7 +194,6 @@
 
     aput-object v11, v1, v9
 
-    .line 141
     .local v1, "armPaths":[Ljava/io/File;
     move-object v2, v1
 
@@ -223,7 +215,6 @@
 
     aget-object v0, v2, v5
 
-    .line 142
     .local v0, "armPath":Ljava/io/File;
     if-eqz v0, :cond_1
 
@@ -233,7 +224,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 143
     invoke-virtual {v0}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v3
@@ -251,7 +241,6 @@
 
     aget-object v8, v3, v4
 
-    .line 144
     .local v8, "path":Ljava/lang/String;
     if-eqz v8, :cond_0
 
@@ -263,7 +252,6 @@
 
     if-eqz v11, :cond_0
 
-    .line 151
     .end local v0    # "armPath":Ljava/io/File;
     .end local v1    # "armPaths":[Ljava/io/File;
     .end local v3    # "arr$":[Ljava/lang/String;
@@ -273,7 +261,6 @@
     :goto_2
     return v9
 
-    .line 143
     .restart local v0    # "armPath":Ljava/io/File;
     .restart local v1    # "armPaths":[Ljava/io/File;
     .restart local v3    # "arr$":[Ljava/lang/String;
@@ -285,7 +272,6 @@
 
     goto :goto_1
 
-    .line 141
     .end local v3    # "arr$":[Ljava/lang/String;
     .end local v4    # "i$":I
     .end local v7    # "len$":I
@@ -306,7 +292,6 @@
     :cond_2
     move v9, v10
 
-    .line 151
     goto :goto_2
 .end method
 
@@ -318,15 +303,12 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 72
     iget-object v0, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
 
     invoke-static {v0, p3}, Lcom/android/server/pm/PmHook;->auditLogInstallFail(Ljava/lang/String;I)V
 
-    .line 73
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/PmHook;->sendInstallFailLogToContextware(Landroid/content/Context;Landroid/content/pm/PackageInfoLite;Ljava/lang/String;)V
 
-    .line 74
     return-void
 .end method
 
@@ -338,15 +320,12 @@
     .param p3, "userId"    # I
 
     .prologue
-    .line 77
     iget-object v0, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
     invoke-static {v0, p3}, Lcom/android/server/pm/PmHook;->auditLogInstallFail(Ljava/lang/String;I)V
 
-    .line 78
     invoke-static {p0, p1, p2}, Lcom/android/server/pm/PmHook;->sendInstallFailLogToContextware(Landroid/content/Context;Landroid/content/pm/PackageParser$Package;Ljava/lang/String;)V
 
-    .line 79
     return-void
 .end method
 
@@ -358,7 +337,6 @@
     .prologue
     const/4 v0, 0x5
 
-    .line 62
     const/4 v2, 0x1
 
     invoke-static {}, Landroid/os/Process;->myPid()I
@@ -397,7 +375,6 @@
 
     invoke-static/range {v0 .. v6}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 69
     return-void
 .end method
 
@@ -418,7 +395,6 @@
     .end annotation
 
     .prologue
-    .line 125
     .local p0, "sortedPkgs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/PackageParser$Package;>;"
     .local p1, "pkgs":Landroid/util/ArraySet;, "Landroid/util/ArraySet<Landroid/content/pm/PackageParser$Package;>;"
     const/4 v4, 0x1
@@ -431,13 +407,11 @@
 
     aput-object v5, v0, v4
 
-    .line 126
     .local v0, "forceDexoptPkgNames":[Ljava/lang/String;
     invoke-static {v0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v1
 
-    .line 127
     .local v1, "forcePkgNamesList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-virtual {p1}, Landroid/util/ArraySet;->iterator()Ljava/util/Iterator;
 
@@ -452,14 +426,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 128
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Landroid/content/pm/PackageParser$Package;
 
-    .line 129
     .local v3, "pkg":Landroid/content/pm/PackageParser$Package;
     iget-object v4, v3, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
 
@@ -469,7 +441,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 130
     const-string v4, "PM_HOOK"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -508,15 +479,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 131
     invoke-virtual {p0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 132
     invoke-interface {v2}, Ljava/util/Iterator;->remove()V
 
     goto :goto_0
 
-    .line 135
     .end local v3    # "pkg":Landroid/content/pm/PackageParser$Package;
     :cond_1
     return-void
@@ -529,7 +497,6 @@
     .param p2, "installer"    # Ljava/lang/String;
 
     .prologue
-    .line 82
     const-string v1, "android.intent.action.PACKAGE_INSTALL_FAILED"
 
     iget-object v2, p1, Landroid/content/pm/PackageInfoLite;->packageName:Ljava/lang/String;
@@ -544,7 +511,6 @@
 
     invoke-static/range {v0 .. v5}, Lcom/android/server/pm/PmHook;->sendLogToContextware(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 85
     return-void
 .end method
 
@@ -555,7 +521,6 @@
     .param p2, "installer"    # Ljava/lang/String;
 
     .prologue
-    .line 88
     const-string v1, "android.intent.action.PACKAGE_INSTALL_FAILED"
 
     iget-object v2, p1, Landroid/content/pm/PackageParser$Package;->packageName:Ljava/lang/String;
@@ -570,7 +535,6 @@
 
     invoke-static/range {v0 .. v5}, Lcom/android/server/pm/PmHook;->sendLogToContextware(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
 
-    .line 91
     return-void
 .end method
 
@@ -584,7 +548,6 @@
     .param p5, "installer"    # Ljava/lang/String;
 
     .prologue
-    .line 113
     return-void
 .end method
 
@@ -595,7 +558,6 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 30
     const/4 v0, 0x3
 
     const/4 v1, 0x5
@@ -652,7 +614,6 @@
 
     invoke-static/range {v0 .. v6}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 37
     return-void
 .end method
 
@@ -665,7 +626,6 @@
     .prologue
     const/4 v0, 0x5
 
-    .line 51
     const/4 v2, 0x1
 
     invoke-static {}, Landroid/os/Process;->myPid()I
@@ -707,10 +667,8 @@
 
     invoke-static/range {v0 .. v6}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 58
     return-void
 
-    .line 51
     :cond_0
     const-string v1, " failed"
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 10514
     iput-object p1, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$5;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,15 +39,12 @@
     .locals 3
 
     .prologue
-    .line 10517
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 10518
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 10519
     .local v0, "token2":J
     iget-object v2, p0, Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService$5;->this$0:Lcom/sec/server/enterprise/knoxcustom/KnoxCustomManagerService;
 
@@ -59,12 +55,9 @@
 
     invoke-static {v2}, Lcom/android/server/power/ShutdownThread;->systemShutdown(Landroid/content/Context;)V
 
-    .line 10520
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 10521
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 10522
     return-void
 .end method

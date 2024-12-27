@@ -18,7 +18,6 @@
     .locals 2
 
     .prologue
-    .line 30
     const-wide/16 v0, -0x1
 
     sput-wide v0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->RETURN_ERROR:J
@@ -31,24 +30,19 @@
     .param p1, "service"    # Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     if-nez p1, :cond_0
 
-    .line 38
     const-string v0, "DisplaySolutionManager"
 
     const-string v1, "In Constructor Stub-Service(IDisplaySolutionManager) is null"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 39
     :cond_0
     iput-object p1, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
-    .line 40
     return-void
 .end method
 
@@ -57,14 +51,12 @@
     .param p1, "e"    # Ljava/lang/Exception;
 
     .prologue
-    .line 142
     const-string v0, "DisplaySolutionManager"
 
     const-string v1, "Error DisplaySolutionManager"
 
     invoke-static {v0, v1, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 143
     return-void
 .end method
 
@@ -76,16 +68,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 61
     iget-object v2, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
     if-nez v2, :cond_0
 
-    .line 68
     :goto_0
     return v1
 
-    .line 66
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
@@ -98,11 +87,9 @@
 
     goto :goto_0
 
-    .line 67
     :catch_0
     move-exception v0
 
-    .line 68
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -113,16 +100,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 77
     iget-object v2, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
     if-nez v2, :cond_0
 
-    .line 84
     :goto_0
     return v1
 
-    .line 82
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
@@ -135,11 +119,9 @@
 
     goto :goto_0
 
-    .line 83
     :catch_0
     move-exception v0
 
-    .line 84
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -150,16 +132,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 46
     iget-object v2, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
     if-nez v2, :cond_0
 
-    .line 53
     :goto_0
     return v1
 
-    .line 51
     :cond_0
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
@@ -172,11 +151,9 @@
 
     goto :goto_0
 
-    .line 52
     :catch_0
     move-exception v0
 
-    .line 53
     .local v0, "e":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -186,7 +163,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 104
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
@@ -194,15 +170,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 108
     :goto_0
     return-void
 
-    .line 105
     :catch_0
     move-exception v0
 
-    .line 106
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->onError(Ljava/lang/Exception;)V
 
@@ -214,7 +187,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 116
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
@@ -222,15 +194,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 120
     :goto_0
     return-void
 
-    .line 117
     :catch_0
     move-exception v0
 
-    .line 118
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->onError(Ljava/lang/Exception;)V
 
@@ -242,7 +211,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 135
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
@@ -250,15 +218,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 139
     :goto_0
     return-void
 
-    .line 136
     :catch_0
     move-exception v0
 
-    .line 137
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->onError(Ljava/lang/Exception;)V
 
@@ -270,7 +235,6 @@
     .param p1, "settingValue"    # I
 
     .prologue
-    .line 124
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
@@ -278,15 +242,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 128
     :goto_0
     return-void
 
-    .line 125
     :catch_0
     move-exception v0
 
-    .line 126
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->onError(Ljava/lang/Exception;)V
 
@@ -298,7 +259,6 @@
     .param p1, "enable"    # Z
 
     .prologue
-    .line 93
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->mService:Lcom/samsung/android/displaysolution/IDisplaySolutionManager;
 
@@ -306,15 +266,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 97
     :goto_0
     return-void
 
-    .line 94
     :catch_0
     move-exception v0
 
-    .line 95
     .local v0, "e":Landroid/os/RemoteException;
     invoke-direct {p0, v0}, Lcom/samsung/android/displaysolution/DisplaySolutionManager;->onError(Ljava/lang/Exception;)V
 

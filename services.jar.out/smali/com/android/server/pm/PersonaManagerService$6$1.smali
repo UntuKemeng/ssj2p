@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6976
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$6$1;->this$1:Lcom/android/server/pm/PersonaManagerService$6;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
@@ -37,7 +36,6 @@
     .locals 3
 
     .prologue
-    .line 6978
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$6$1;->this$1:Lcom/android/server/pm/PersonaManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -49,7 +47,6 @@
     # invokes: Lcom/android/server/pm/PersonaManagerService;->removeUserStateExternal(I)V
     invoke-static {v0, v1}, Lcom/android/server/pm/PersonaManagerService;->access$8800(Lcom/android/server/pm/PersonaManagerService;I)V
 
-    .line 6979
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$6$1;->this$1:Lcom/android/server/pm/PersonaManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -61,7 +58,6 @@
 
     monitor-enter v1
 
-    .line 6980
     :try_start_0
     const-string v0, "PersonaManagerService"
 
@@ -69,7 +65,6 @@
 
     invoke-static {v0, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6981
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$6$1;->this$1:Lcom/android/server/pm/PersonaManagerService$6;
 
     iget-object v0, v0, Lcom/android/server/pm/PersonaManagerService$6;->this$0:Lcom/android/server/pm/PersonaManagerService;
@@ -81,13 +76,10 @@
     # invokes: Lcom/android/server/pm/PersonaManagerService;->removeUserStateLocked(I)V
     invoke-static {v0, v2}, Lcom/android/server/pm/PersonaManagerService;->access$8900(Lcom/android/server/pm/PersonaManagerService;I)V
 
-    .line 6982
     monitor-exit v1
 
-    .line 6983
     return-void
 
-    .line 6982
     :catchall_0
     move-exception v0
 

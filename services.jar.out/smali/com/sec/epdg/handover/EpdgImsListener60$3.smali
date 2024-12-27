@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 194
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,14 +33,12 @@
     .locals 3
 
     .prologue
-    .line 196
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onConnected: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 197
     # getter for: Lcom/sec/epdg/handover/EpdgImsListener60;->mePdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/handover/EpdgImsListener60;->access$600()Landroid/os/Handler;
 
@@ -55,7 +52,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 198
     return-void
 .end method
 
@@ -63,13 +59,11 @@
     .locals 2
 
     .prologue
-    .line 201
     const-string v0, "[EpdgImsListener]"
 
     const-string v1, "onDisconnected: "
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 202
     return-void
 .end method

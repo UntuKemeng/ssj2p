@@ -26,15 +26,12 @@
     .param p2, "urlToRead"    # Ljava/lang/String;
 
     .prologue
-    .line 295
     iput-object p1, p0, Lcom/android/server/DcmNextiPlayReadyService$MainThread;->this$0:Lcom/android/server/DcmNextiPlayReadyService;
 
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 296
     iput-object p2, p0, Lcom/android/server/DcmNextiPlayReadyService$MainThread;->urlToRead:Ljava/lang/String;
 
-    .line 297
     return-void
 .end method
 
@@ -44,13 +41,10 @@
     .locals 30
 
     .prologue
-    .line 300
     invoke-super/range {p0 .. p0}, Ljava/lang/Thread;->run()V
 
-    .line 302
     const/16 v23, 0x0
 
-    .line 304
     .local v23, "urlConnection":Ljavax/net/ssl/HttpsURLConnection;
     :try_start_0
     new-instance v22, Ljava/net/URL;
@@ -67,7 +61,6 @@
 
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 307
     .local v22, "url":Ljava/net/URL;
     invoke-virtual/range {v22 .. v22}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
@@ -79,7 +72,6 @@
 
     move-object/from16 v23, v0
 
-    .line 309
     invoke-static {}, Ljava/security/KeyStore;->getDefaultType()Ljava/lang/String;
 
     move-result-object v25
@@ -88,7 +80,6 @@
 
     move-result-object v19
 
-    .line 310
     .local v19, "trustStore":Ljava/security/KeyStore;
     const/16 v25, 0x0
 
@@ -102,7 +93,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/security/KeyStore;->load(Ljava/io/InputStream;[C)V
 
-    .line 311
     new-instance v18, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;
 
     move-object/from16 v0, p0
@@ -119,7 +109,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/DcmNextiPlayReadyService$SFSSLSocketFactory;-><init>(Lcom/android/server/DcmNextiPlayReadyService;Ljava/security/KeyStore;)V
 
-    .line 312
     .local v18, "sf":Ljavax/net/ssl/SSLSocketFactory;
     move-object/from16 v0, v23
 
@@ -127,12 +116,10 @@
 
     invoke-virtual {v0, v1}, Ljavax/net/ssl/HttpsURLConnection;->setSSLSocketFactory(Ljavax/net/ssl/SSLSocketFactory;)V
 
-    .line 314
     invoke-virtual/range {v23 .. v23}, Ljavax/net/ssl/HttpsURLConnection;->getHeaderFields()Ljava/util/Map;
 
     move-result-object v16
 
-    .line 315
     .local v16, "responseHeader":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     invoke-interface/range {v16 .. v16}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -156,7 +143,6 @@
 
     check-cast v11, Ljava/util/Map$Entry;
 
-    .line 317
     .local v11, "item":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     const-string v25, "Date"
 
@@ -170,12 +156,10 @@
 
     if-eqz v25, :cond_0
 
-    .line 319
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 320
     .local v17, "s":Ljava/lang/StringBuilder;
     invoke-interface {v11}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -183,7 +167,6 @@
 
     check-cast v7, Ljava/util/List;
 
-    .line 321
     .local v7, "headerValues":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -202,7 +185,6 @@
 
     check-cast v24, Ljava/lang/String;
 
-    .line 322
     .local v24, "value":Ljava/lang/String;
     const-string v25, "DcmNextiPlayReadyService"
 
@@ -230,7 +212,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 323
     move-object/from16 v0, v17
 
     move-object/from16 v1, v24
@@ -246,7 +227,6 @@
 
     goto :goto_0
 
-    .line 348
     .end local v7    # "headerValues":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v10    # "i$":Ljava/util/Iterator;
     .end local v11    # "item":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
@@ -259,7 +239,6 @@
     :catch_0
     move-exception v5
 
-    .line 349
     .local v5, "e":Ljava/lang/SecurityException;
     :try_start_1
     const-string v25, "DcmNextiPlayReadyService"
@@ -268,7 +247,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 350
     const-string v25, "DcmNextiPlayReadyService"
 
     invoke-virtual {v5}, Ljava/lang/SecurityException;->getLocalizedMessage()Ljava/lang/String;
@@ -277,36 +255,29 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 351
     invoke-virtual {v5}, Ljava/lang/SecurityException;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 368
     const-string v25, "DcmNextiPlayReadyService"
 
     const-string/jumbo v26, "resetting flag for later threads"
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     const/16 v25, 0x1
 
     sput v25, Lcom/android/server/DcmNextiPlayReadyService;->THREAD_EXECUTING:I
 
-    .line 371
     if-eqz v23, :cond_1
 
-    .line 373
     invoke-virtual/range {v23 .. v23}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
-    .line 376
     .end local v5    # "e":Ljava/lang/SecurityException;
     :cond_1
     :goto_1
     return-void
 
-    .line 326
     .restart local v7    # "headerValues":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v10    # "i$":Ljava/util/Iterator;
     .restart local v11    # "item":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
@@ -321,7 +292,6 @@
 
     invoke-direct {v6}, Ljava/util/Date;-><init>()V
 
-    .line 328
     .local v6, "epochTime":Ljava/util/Date;
     new-instance v4, Ljava/text/SimpleDateFormat;
 
@@ -335,7 +305,6 @@
 
     invoke-direct {v4, v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 330
     .local v4, "dateFormat":Ljava/text/DateFormat;
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -347,16 +316,13 @@
 
     move-result-object v6
 
-    .line 332
     const-wide/16 v8, 0x0
 
-    .line 333
     .local v8, "epoch_time_long":J
     invoke-virtual {v6}, Ljava/util/Date;->getTime()J
 
     move-result-wide v8
 
-    .line 334
     const-string v25, "DcmNextiPlayReadyService"
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -381,19 +347,16 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 335
     const-wide/16 v26, 0x0
 
     cmp-long v25, v8, v26
 
     if-eqz v25, :cond_4
 
-    .line 336
     const-wide/16 v26, 0x3e8
 
     div-long v12, v8, v26
 
-    .line 337
     .local v12, "networktime":J
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -403,7 +366,6 @@
 
     div-long v14, v26, v28
 
-    .line 338
     .local v14, "recvElapsedTime":J
     const-string v25, "DcmNextiPlayReadyService"
 
@@ -441,7 +403,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 339
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/DcmNextiPlayReadyService$MainThread;->this$0:Lcom/android/server/DcmNextiPlayReadyService;
@@ -459,7 +420,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_4
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 368
     .end local v4    # "dateFormat":Ljava/text/DateFormat;
     .end local v6    # "epochTime":Ljava/util/Date;
     .end local v7    # "headerValues":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -476,20 +436,16 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     const/16 v25, 0x1
 
     sput v25, Lcom/android/server/DcmNextiPlayReadyService;->THREAD_EXECUTING:I
 
-    .line 371
     if-eqz v23, :cond_1
 
-    .line 373
     invoke-virtual/range {v23 .. v23}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
     goto/16 :goto_1
 
-    .line 342
     .restart local v4    # "dateFormat":Ljava/text/DateFormat;
     .restart local v6    # "epochTime":Ljava/util/Date;
     .restart local v7    # "headerValues":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -506,7 +462,6 @@
 
     div-long v20, v26, v28
 
-    .line 343
     .local v20, "systime":J
     const-string v25, "DcmNextiPlayReadyService"
 
@@ -543,7 +498,6 @@
 
     goto :goto_2
 
-    .line 352
     .end local v4    # "dateFormat":Ljava/text/DateFormat;
     .end local v6    # "epochTime":Ljava/util/Date;
     .end local v7    # "headerValues":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -559,7 +513,6 @@
     :catch_1
     move-exception v5
 
-    .line 353
     .local v5, "e":Ljava/text/ParseException;
     :try_start_4
     const-string v25, "DcmNextiPlayReadyService"
@@ -568,7 +521,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     const-string v25, "DcmNextiPlayReadyService"
 
     invoke-virtual {v5}, Ljava/text/ParseException;->getLocalizedMessage()Ljava/lang/String;
@@ -579,32 +531,26 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 368
     const-string v25, "DcmNextiPlayReadyService"
 
     const-string/jumbo v26, "resetting flag for later threads"
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     const/16 v25, 0x1
 
     sput v25, Lcom/android/server/DcmNextiPlayReadyService;->THREAD_EXECUTING:I
 
-    .line 371
     if-eqz v23, :cond_1
 
-    .line 373
     invoke-virtual/range {v23 .. v23}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
     goto/16 :goto_1
 
-    .line 355
     .end local v5    # "e":Ljava/text/ParseException;
     :catch_2
     move-exception v5
 
-    .line 356
     .local v5, "e":Ljava/lang/IllegalArgumentException;
     :try_start_5
     const-string v25, "DcmNextiPlayReadyService"
@@ -613,7 +559,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 357
     const-string v25, "DcmNextiPlayReadyService"
 
     invoke-virtual {v5}, Ljava/lang/IllegalArgumentException;->getLocalizedMessage()Ljava/lang/String;
@@ -622,37 +567,30 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 358
     invoke-virtual {v5}, Ljava/lang/IllegalArgumentException;->printStackTrace()V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 368
     const-string v25, "DcmNextiPlayReadyService"
 
     const-string/jumbo v26, "resetting flag for later threads"
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     const/16 v25, 0x1
 
     sput v25, Lcom/android/server/DcmNextiPlayReadyService;->THREAD_EXECUTING:I
 
-    .line 371
     if-eqz v23, :cond_1
 
-    .line 373
     invoke-virtual/range {v23 .. v23}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
     goto/16 :goto_1
 
-    .line 359
     .end local v5    # "e":Ljava/lang/IllegalArgumentException;
     :catch_3
     move-exception v5
 
-    .line 360
     .local v5, "e":Ljava/io/IOException;
     :try_start_6
     const-string v25, "DcmNextiPlayReadyService"
@@ -661,7 +599,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     const-string v25, "DcmNextiPlayReadyService"
 
     invoke-virtual {v5}, Ljava/io/IOException;->getLocalizedMessage()Ljava/lang/String;
@@ -670,37 +607,30 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 362
     invoke-virtual {v5}, Ljava/io/IOException;->printStackTrace()V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 368
     const-string v25, "DcmNextiPlayReadyService"
 
     const-string/jumbo v26, "resetting flag for later threads"
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     const/16 v25, 0x1
 
     sput v25, Lcom/android/server/DcmNextiPlayReadyService;->THREAD_EXECUTING:I
 
-    .line 371
     if-eqz v23, :cond_1
 
-    .line 373
     invoke-virtual/range {v23 .. v23}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
     goto/16 :goto_1
 
-    .line 363
     .end local v5    # "e":Ljava/io/IOException;
     :catch_4
     move-exception v5
 
-    .line 364
     .local v5, "e":Ljava/lang/Exception;
     :try_start_7
     const-string v25, "DcmNextiPlayReadyService"
@@ -709,7 +639,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 365
     const-string v25, "DcmNextiPlayReadyService"
 
     invoke-virtual {v5}, Ljava/lang/Exception;->getLocalizedMessage()Ljava/lang/String;
@@ -718,32 +647,26 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 366
     invoke-virtual {v5}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 368
     const-string v25, "DcmNextiPlayReadyService"
 
     const-string/jumbo v26, "resetting flag for later threads"
 
     invoke-static/range {v25 .. v26}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     const/16 v25, 0x1
 
     sput v25, Lcom/android/server/DcmNextiPlayReadyService;->THREAD_EXECUTING:I
 
-    .line 371
     if-eqz v23, :cond_1
 
-    .line 373
     invoke-virtual/range {v23 .. v23}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
     goto/16 :goto_1
 
-    .line 368
     .end local v5    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v25
@@ -754,15 +677,12 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 369
     const/16 v26, 0x1
 
     sput v26, Lcom/android/server/DcmNextiPlayReadyService;->THREAD_EXECUTING:I
 
-    .line 371
     if-eqz v23, :cond_5
 
-    .line 373
     invoke-virtual/range {v23 .. v23}, Ljavax/net/ssl/HttpsURLConnection;->disconnect()V
 
     :cond_5

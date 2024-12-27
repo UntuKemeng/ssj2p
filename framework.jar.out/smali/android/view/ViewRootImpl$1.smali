@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1265
     iput-object p1, p0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1299
     if-ne p1, v0, :cond_0
 
     const/4 v0, 0x0
@@ -57,7 +55,6 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1296
     return-void
 .end method
 
@@ -68,7 +65,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 1268
     iget-object v4, p0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v4, v4, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
@@ -85,14 +81,12 @@
 
     if-ne v4, p1, :cond_1
 
-    .line 1269
     iget-object v4, p0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v4, v4, Landroid/view/ViewRootImpl;->mAttachInfo:Landroid/view/View$AttachInfo;
 
     iget v2, v4, Landroid/view/View$AttachInfo;->mDisplayState:I
 
-    .line 1270
     .local v2, "oldDisplayState":I
     iget-object v4, p0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
@@ -102,62 +96,50 @@
 
     move-result v0
 
-    .line 1271
     .local v0, "newDisplayState":I
     if-eq v2, v0, :cond_1
 
-    .line 1272
     iget-object v4, p0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v4, v4, Landroid/view/ViewRootImpl;->mAttachInfo:Landroid/view/View$AttachInfo;
 
     iput v0, v4, Landroid/view/View$AttachInfo;->mDisplayState:I
 
-    .line 1273
     iget-object v4, p0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-virtual {v4}, Landroid/view/ViewRootImpl;->pokeDrawLockIfNeeded()V
 
-    .line 1274
     if-eqz v2, :cond_1
 
-    .line 1275
     invoke-direct {p0, v2}, Landroid/view/ViewRootImpl$1;->toViewScreenState(I)I
 
     move-result v3
 
-    .line 1276
     .local v3, "oldScreenState":I
     invoke-direct {p0, v0}, Landroid/view/ViewRootImpl$1;->toViewScreenState(I)I
 
     move-result v1
 
-    .line 1277
     .local v1, "newScreenState":I
     if-eq v3, v1, :cond_0
 
-    .line 1278
     iget-object v4, p0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
     iget-object v4, v4, Landroid/view/ViewRootImpl;->mView:Landroid/view/View;
 
     invoke-virtual {v4, v1}, Landroid/view/View;->dispatchScreenStateChanged(I)V
 
-    .line 1280
     :cond_0
     if-ne v2, v5, :cond_1
 
-    .line 1282
     iget-object v4, p0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
     iput-boolean v5, v4, Landroid/view/ViewRootImpl;->mFullRedrawNeeded:Z
 
-    .line 1283
     iget-object v4, p0, Landroid/view/ViewRootImpl$1;->this$0:Landroid/view/ViewRootImpl;
 
     invoke-virtual {v4}, Landroid/view/ViewRootImpl;->scheduleTraversals()V
 
-    .line 1288
     .end local v0    # "newDisplayState":I
     .end local v1    # "newScreenState":I
     .end local v2    # "oldDisplayState":I
@@ -171,6 +153,5 @@
     .param p1, "displayId"    # I
 
     .prologue
-    .line 1292
     return-void
 .end method

@@ -15,17 +15,14 @@
     .locals 1
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     invoke-static {}, Ljavax/xml/stream/XMLInputFactory;->newInstance()Ljavax/xml/stream/XMLInputFactory;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/StreamProvider;->factory:Ljavax/xml/stream/XMLInputFactory;
 
-    .line 53
     return-void
 .end method
 
@@ -39,7 +36,6 @@
     .end annotation
 
     .prologue
-    .line 92
     new-instance v0, Lorg/simpleframework/xml/stream/StreamReader;
 
     invoke-direct {v0, p1}, Lorg/simpleframework/xml/stream/StreamReader;-><init>(Ljavax/xml/stream/XMLEventReader;)V
@@ -59,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/simpleframework/xml/stream/StreamProvider;->factory:Ljavax/xml/stream/XMLInputFactory;
 
     invoke-virtual {v0, p1}, Ljavax/xml/stream/XMLInputFactory;->createXMLEventReader(Ljava/io/InputStream;)Ljavax/xml/stream/XMLEventReader;
@@ -83,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 79
     iget-object v0, p0, Lorg/simpleframework/xml/stream/StreamProvider;->factory:Ljavax/xml/stream/XMLInputFactory;
 
     invoke-virtual {v0, p1}, Ljavax/xml/stream/XMLInputFactory;->createXMLEventReader(Ljava/io/Reader;)Ljavax/xml/stream/XMLEventReader;

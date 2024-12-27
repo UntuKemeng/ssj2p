@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 523
     invoke-direct {p0}, Lorg/simpleframework/xml/stream/EventToken;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Lorg/simpleframework/xml/stream/DocumentReader$1;
 
     .prologue
-    .line 523
     invoke-direct {p0}, Lorg/simpleframework/xml/stream/DocumentReader$End;-><init>()V
 
     return-void
@@ -42,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 534
     const/4 v0, 0x1
 
     return v0

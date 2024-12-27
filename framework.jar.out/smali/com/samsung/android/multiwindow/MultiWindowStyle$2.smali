@@ -20,7 +20,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 1231
     invoke-direct {p0, p1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;-><init>(I)V
 
     return-void
@@ -34,7 +33,6 @@
     .param p2, "mask"    # I
 
     .prologue
-    .line 1241
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -48,7 +46,6 @@
     .param p2, "value"    # Z
 
     .prologue
-    .line 1245
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -62,7 +59,6 @@
     .param p2, "includeUniqueOptions"    # Z
 
     .prologue
-    .line 1249
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -75,7 +71,6 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 1233
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V
@@ -88,7 +83,6 @@
     .param p1, "zone"    # I
 
     .prologue
-    .line 1237
     new-instance v0, Ljava/lang/IllegalAccessError;
 
     invoke-direct {v0}, Ljava/lang/IllegalAccessError;-><init>()V

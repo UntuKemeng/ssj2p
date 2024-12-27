@@ -24,17 +24,14 @@
     .param p2, "inputChannel"    # Landroid/view/InputChannel;
 
     .prologue
-    .line 185
     iput-object p1, p0, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->this$0:Landroid/os/MacroModeManager;
 
-    .line 186
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
     invoke-direct {p0, p2, v0}, Landroid/view/InputEventReceiver;-><init>(Landroid/view/InputChannel;Landroid/os/Looper;)V
 
-    .line 187
     return-void
 .end method
 
@@ -42,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 99
     :try_start_0
     iget-object v1, p0, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->this$0:Landroid/os/MacroModeManager;
 
@@ -53,7 +49,6 @@
     # setter for: Landroid/os/MacroModeManager;->mMacroJSON:Lorg/json/JSONObject;
     invoke-static {v1, v2}, Landroid/os/MacroModeManager;->access$002(Landroid/os/MacroModeManager;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
-    .line 100
     iget-object v1, p0, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->this$0:Landroid/os/MacroModeManager;
 
     new-instance v2, Lorg/json/JSONObject;
@@ -63,7 +58,6 @@
     # setter for: Landroid/os/MacroModeManager;->mSpecificEvent:Lorg/json/JSONObject;
     invoke-static {v1, v2}, Landroid/os/MacroModeManager;->access$102(Landroid/os/MacroModeManager;Lorg/json/JSONObject;)Lorg/json/JSONObject;
 
-    .line 101
     iget-object v1, p0, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->this$0:Landroid/os/MacroModeManager;
 
     # getter for: Landroid/os/MacroModeManager;->mMacroJSON:Lorg/json/JSONObject;
@@ -84,15 +78,12 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 106
     :goto_0
     return-void
 
-    .line 103
     :catch_0
     move-exception v0
 
-    .line 104
     .local v0, "e":Lorg/json/JSONException;
     invoke-virtual {v0}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -104,25 +95,21 @@
     .param p1, "motionEvent"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 114
     :try_start_0
     new-instance v9, Lorg/json/JSONObject;
 
     invoke-direct {v9}, Lorg/json/JSONObject;-><init>()V
 
-    .line 115
     .local v9, "specificPointer":Lorg/json/JSONObject;
     new-instance v6, Lorg/json/JSONObject;
 
     invoke-direct {v6}, Lorg/json/JSONObject;-><init>()V
 
-    .line 116
     .local v6, "pointerObject":Lorg/json/JSONObject;
     new-instance v8, Lorg/json/JSONObject;
 
     invoke-direct {v8}, Lorg/json/JSONObject;-><init>()V
 
-    .line 117
     .local v8, "specificAction":Lorg/json/JSONObject;
     iget-object v10, p0, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->this$0:Landroid/os/MacroModeManager;
 
@@ -144,7 +131,6 @@
 
     invoke-virtual {v10, v11, v8}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 118
     const-string v10, "action"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -153,7 +139,6 @@
 
     invoke-virtual {v8, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 119
     const-string v10, "actionButton"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionButton()I
@@ -162,7 +147,6 @@
 
     invoke-virtual {v8, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 120
     const-string v10, "buttonState"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getButtonState()I
@@ -171,7 +155,6 @@
 
     invoke-virtual {v8, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 121
     const-string v10, "deviceId"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getDeviceId()I
@@ -180,7 +163,6 @@
 
     invoke-virtual {v8, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 122
     const-string v10, "downTime"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getDownTime()J
@@ -189,7 +171,6 @@
 
     invoke-virtual {v8, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 123
     const-string v10, "edgeFlags"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEdgeFlags()I
@@ -198,7 +179,6 @@
 
     invoke-virtual {v8, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 124
     const-string v10, "eventTime"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
@@ -207,7 +187,6 @@
 
     invoke-virtual {v8, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
 
-    .line 125
     const-string v10, "flags"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getFlags()I
@@ -216,7 +195,6 @@
 
     invoke-virtual {v8, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 126
     const-string/jumbo v10, "metaState"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getMetaState()I
@@ -225,7 +203,6 @@
 
     invoke-virtual {v8, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 127
     const-string/jumbo v10, "source"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getSource()I
@@ -234,7 +211,6 @@
 
     invoke-virtual {v8, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 128
     const-string/jumbo v10, "xPrecision"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getXPrecision()F
@@ -245,7 +221,6 @@
 
     invoke-virtual {v8, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 129
     const-string/jumbo v10, "yPrecision"
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getYPrecision()F
@@ -256,12 +231,10 @@
 
     invoke-virtual {v8, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 130
     const-string/jumbo v10, "pointer"
 
     invoke-virtual {v8, v10, v6}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 131
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v10
@@ -270,7 +243,6 @@
 
     move-result-object v5
 
-    .line 132
     .local v5, "n":Ljava/lang/Integer;
     const/4 v10, 0x0
 
@@ -290,12 +262,10 @@
 
     if-ge v10, v11, :cond_2
 
-    .line 133
     new-instance v1, Lorg/json/JSONObject;
 
     invoke-direct {v1}, Lorg/json/JSONObject;-><init>()V
 
-    .line 134
     .local v1, "currentPointer":Lorg/json/JSONObject;
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
@@ -303,7 +273,6 @@
 
     new-array v0, v10, [Landroid/view/MotionEvent$PointerCoords;
 
-    .line 135
     .local v0, "coord":[Landroid/view/MotionEvent$PointerCoords;
     const/4 v4, 0x0
 
@@ -315,24 +284,20 @@
 
     if-ge v4, v10, :cond_0
 
-    .line 136
     new-instance v10, Landroid/view/MotionEvent$PointerCoords;
 
     invoke-direct {v10}, Landroid/view/MotionEvent$PointerCoords;-><init>()V
 
     aput-object v10, v0, v4
 
-    .line 137
     aget-object v10, v0, v4
 
     invoke-virtual {p1, v4, v10}, Landroid/view/MotionEvent;->getPointerCoords(ILandroid/view/MotionEvent$PointerCoords;)V
 
-    .line 135
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 139
     :cond_0
     invoke-virtual {v5}, Ljava/lang/Integer;->intValue()I
 
@@ -340,7 +305,6 @@
 
     new-array v7, v10, [Landroid/view/MotionEvent$PointerProperties;
 
-    .line 140
     .local v7, "properties":[Landroid/view/MotionEvent$PointerProperties;
     const/4 v4, 0x0
 
@@ -351,24 +315,20 @@
 
     if-ge v4, v10, :cond_1
 
-    .line 141
     new-instance v10, Landroid/view/MotionEvent$PointerProperties;
 
     invoke-direct {v10}, Landroid/view/MotionEvent$PointerProperties;-><init>()V
 
     aput-object v10, v7, v4
 
-    .line 142
     aget-object v10, v7, v4
 
     invoke-virtual {p1, v4, v10}, Landroid/view/MotionEvent;->getPointerProperties(ILandroid/view/MotionEvent$PointerProperties;)V
 
-    .line 140
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 144
     :cond_1
     invoke-virtual {v3}, Ljava/lang/Integer;->toString()Ljava/lang/String;
 
@@ -376,7 +336,6 @@
 
     invoke-virtual {v6, v10, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
 
-    .line 145
     const-string v10, "AXIS_PRESSURE"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -391,7 +350,6 @@
 
     invoke-virtual {v1, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 146
     const-string v10, "AXIS_SIZE"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -406,7 +364,6 @@
 
     invoke-virtual {v1, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 147
     const-string v10, "AXIS_X"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -421,7 +378,6 @@
 
     invoke-virtual {v1, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 148
     const-string v10, "AXIS_Y"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -436,7 +392,6 @@
 
     invoke-virtual {v1, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 149
     const-string v10, "ORIENTATION"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -451,7 +406,6 @@
 
     invoke-virtual {v1, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 150
     const-string v10, "TOOL_MAJOR"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -466,7 +420,6 @@
 
     invoke-virtual {v1, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 151
     const-string v10, "TOOL_MINOR"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -481,7 +434,6 @@
 
     invoke-virtual {v1, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 152
     const-string v10, "TOUCH_MAJOR"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -496,7 +448,6 @@
 
     invoke-virtual {v1, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 153
     const-string v10, "TOUCH_MINOR"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -511,7 +462,6 @@
 
     invoke-virtual {v1, v10, v12, v13}, Lorg/json/JSONObject;->put(Ljava/lang/String;D)Lorg/json/JSONObject;
 
-    .line 154
     const-string/jumbo v10, "id"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -524,7 +474,6 @@
 
     invoke-virtual {v1, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 155
     const-string/jumbo v10, "toolType"
 
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
@@ -537,7 +486,6 @@
 
     invoke-virtual {v1, v10, v11}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
 
-    .line 132
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v10
@@ -550,7 +498,6 @@
 
     goto/16 :goto_0
 
-    .line 157
     .end local v0    # "coord":[Landroid/view/MotionEvent$PointerCoords;
     .end local v1    # "currentPointer":Lorg/json/JSONObject;
     .end local v4    # "j":I
@@ -585,7 +532,6 @@
     :try_end_0
     .catch Lorg/json/JSONException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 162
     .end local v3    # "i":Ljava/lang/Integer;
     .end local v5    # "n":Ljava/lang/Integer;
     .end local v6    # "pointerObject":Lorg/json/JSONObject;
@@ -594,11 +540,9 @@
     :goto_3
     return-void
 
-    .line 159
     :catch_0
     move-exception v2
 
-    .line 160
     .local v2, "e":Lorg/json/JSONException;
     invoke-virtual {v2}, Lorg/json/JSONException;->printStackTrace()V
 
@@ -610,7 +554,6 @@
     .param p1, "motionEvent"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 169
     iget-object v0, p0, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->this$0:Landroid/os/MacroModeManager;
 
     # getter for: Landroid/os/MacroModeManager;->mMacroJSON:Lorg/json/JSONObject;
@@ -629,12 +572,10 @@
 
     if-nez v0, :cond_1
 
-    .line 179
     :cond_0
     :goto_0
     return-void
 
-    .line 171
     :cond_1
     iget-object v0, p0, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->this$0:Landroid/os/MacroModeManager;
 
@@ -651,16 +592,13 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 172
     invoke-direct {p0, p1}, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->recordEvent(Landroid/view/MotionEvent;)V
 
     goto :goto_0
 
-    .line 175
     :cond_2
     invoke-direct {p0, p1}, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->recordEvent(Landroid/view/MotionEvent;)V
 
-    .line 176
     iget-object v0, p0, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->this$0:Landroid/os/MacroModeManager;
 
     const/4 v1, 0x0
@@ -668,7 +606,6 @@
     # invokes: Landroid/os/MacroModeManager;->flushRecording(Z)V
     invoke-static {v0, v1}, Landroid/os/MacroModeManager;->access$300(Landroid/os/MacroModeManager;Z)V
 
-    .line 177
     invoke-direct {p0}, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->initialize()V
 
     goto :goto_0
@@ -681,10 +618,8 @@
     .param p1, "event"    # Landroid/view/InputEvent;
 
     .prologue
-    .line 195
     const/4 v1, 0x0
 
-    .line 197
     .local v1, "handled":Z
     :try_start_0
     instance-of v3, p1, Landroid/view/MotionEvent;
@@ -700,31 +635,25 @@
 
     if-eqz v3, :cond_0
 
-    .line 198
     move-object v0, p1
 
     check-cast v0, Landroid/view/MotionEvent;
 
     move-object v2, v0
 
-    .line 199
     .local v2, "motionEvent":Landroid/view/MotionEvent;
     invoke-direct {p0, v2}, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->recordJSONMotionEvent(Landroid/view/MotionEvent;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 201
     .end local v2    # "motionEvent":Landroid/view/MotionEvent;
     :cond_0
     const/4 v1, 0x1
 
-    .line 204
     invoke-virtual {p0, p1, v1}, Landroid/os/MacroModeManager$MacroModeInputEventReceiver;->finishInputEvent(Landroid/view/InputEvent;Z)V
 
-    .line 206
     return-void
 
-    .line 204
     :catchall_0
     move-exception v3
 

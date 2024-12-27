@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 564
     iput-object p1, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,12 +42,10 @@
 
     const/4 v11, 0x1
 
-    .line 567
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 569
     .local v0, "action":Ljava/lang/String;
     const-string v8, "android.intent.action.LOCALE_CHANGED"
 
@@ -58,7 +55,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 570
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mKeyboardLayoutNotificationShown:Z
@@ -68,7 +64,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 571
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mCurrentMissingKeyboardLayoutDevice:Landroid/view/InputDevice;
@@ -76,26 +71,22 @@
 
     move-result-object v6
 
-    .line 572
     .local v6, "tempMissingKeyboardLayoutDevice":Landroid/view/InputDevice;
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->hideMissingKeyboardLayoutNotification()V
     invoke-static {v8}, Lcom/android/server/input/InputManagerService;->access$200(Lcom/android/server/input/InputManagerService;)V
 
-    .line 573
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # invokes: Lcom/android/server/input/InputManagerService;->showMissingKeyboardLayoutNotification(Landroid/view/InputDevice;)V
     invoke-static {v8, v6}, Lcom/android/server/input/InputManagerService;->access$300(Lcom/android/server/input/InputManagerService;Landroid/view/InputDevice;)V
 
-    .line 637
     .end local v6    # "tempMissingKeyboardLayoutDevice":Landroid/view/InputDevice;
     :cond_0
     :goto_0
     return-void
 
-    .line 577
     :cond_1
     const-string v8, "com.samsung.android.theme.themecenter.THEME_APPLY"
 
@@ -105,7 +96,6 @@
 
     if-eqz v8, :cond_2
 
-    .line 579
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mContext:Landroid/content/Context;
@@ -123,18 +113,15 @@
 
     move-result v7
 
-    .line 581
     .local v7, "uspLevel":I
     const/16 v8, 0xa
 
     if-lt v7, v8, :cond_0
 
-    .line 582
     sput-boolean v11, Landroid/view/PointerIcon;->mThemeApplied:Z
 
     goto :goto_0
 
-    .line 586
     .end local v7    # "uspLevel":I
     :cond_2
     sget-object v8, Landroid/app/UiModeManager;->ACTION_ENTER_KNOXDESKTOP_MODE:Ljava/lang/String;
@@ -153,7 +140,6 @@
 
     if-nez v8, :cond_0
 
-    .line 601
     const-string v8, "com.sec.intent.action.SARDEVICE_CP"
 
     invoke-virtual {v0, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -162,14 +148,12 @@
 
     if-eqz v8, :cond_5
 
-    .line 602
     const-string v8, "cmd"
 
     invoke-virtual {p2, v8}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 603
     .local v1, "callAction":Ljava/lang/String;
     const-string v8, "device"
 
@@ -181,7 +165,6 @@
 
     move-result v2
 
-    .line 604
     .local v2, "deviceID":I
     const-string v8, "InputManager"
 
@@ -232,7 +215,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 606
     and-int/lit8 v8, v2, 0x1
 
     if-nez v8, :cond_3
@@ -241,7 +223,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 607
     :cond_3
     const-string/jumbo v8, "on"
 
@@ -251,34 +232,29 @@
 
     if-eqz v8, :cond_4
 
-    .line 608
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # setter for: Lcom/android/server/input/InputManagerService;->mIsValidIntentForSAR:Z
     invoke-static {v8, v11}, Lcom/android/server/input/InputManagerService;->access$602(Lcom/android/server/input/InputManagerService;Z)Z
 
-    .line 609
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {v8, v2, v11}, Lcom/android/server/input/InputManagerService;->enableDeviceForBackOff(IZ)I
 
     goto/16 :goto_0
 
-    .line 612
     :cond_4
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # setter for: Lcom/android/server/input/InputManagerService;->mIsValidIntentForSAR:Z
     invoke-static {v8, v12}, Lcom/android/server/input/InputManagerService;->access$602(Lcom/android/server/input/InputManagerService;Z)Z
 
-    .line 613
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     invoke-virtual {v8, v2, v12}, Lcom/android/server/input/InputManagerService;->enableDeviceForBackOff(IZ)I
 
     goto/16 :goto_0
 
-    .line 618
     .end local v1    # "callAction":Ljava/lang/String;
     .end local v2    # "deviceID":I
     :cond_5
@@ -290,7 +266,6 @@
 
     if-eqz v8, :cond_6
 
-    .line 619
     const-string v8, ""
 
     invoke-virtual {v8}, Ljava/lang/String;->isEmpty()Z
@@ -299,7 +274,6 @@
 
     if-nez v8, :cond_0
 
-    .line 620
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     # getter for: Lcom/android/server/input/InputManagerService;->mContext:Landroid/content/Context;
@@ -317,7 +291,6 @@
 
     iget v5, v8, Landroid/content/res/Configuration;->densityDpi:I
 
-    .line 621
     .local v5, "newDensity":I
     sget v8, Landroid/view/PointerIcon;->mCurrentDensity:I
 
@@ -329,18 +302,14 @@
 
     if-eq v8, v5, :cond_0
 
-    .line 622
     sput v5, Landroid/view/PointerIcon;->mCurrentDensity:I
 
-    .line 623
     sput-boolean v11, Landroid/view/PointerIcon;->mResolutionChangedForSpenIcon:Z
 
-    .line 624
     sput-boolean v11, Landroid/view/PointerIcon;->mResolutionChangedForMouseIcon:Z
 
     goto/16 :goto_0
 
-    .line 629
     .end local v5    # "newDensity":I
     :cond_6
     const-string v8, "com.samsung.android.intent.action.SET_INWATER_TOUCH"
@@ -351,14 +320,12 @@
 
     if-eqz v8, :cond_0
 
-    .line 630
     const-string/jumbo v8, "set"
 
     invoke-virtual {p2, v8, v12}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v4
 
-    .line 631
     .local v4, "isSet":Z
     const-string/jumbo v8, "force"
 
@@ -366,7 +333,6 @@
 
     move-result v3
 
-    .line 633
     .local v3, "isForce":Z
     const-string v8, "InputManager"
 
@@ -400,7 +366,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 634
     iget-object v8, p0, Lcom/android/server/input/InputManagerService$1;->this$0:Lcom/android/server/input/InputManagerService;
 
     const/4 v9, 0x3

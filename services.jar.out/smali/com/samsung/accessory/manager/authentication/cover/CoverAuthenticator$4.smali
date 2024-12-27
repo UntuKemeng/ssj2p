@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 434
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$4;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 438
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$4;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     # invokes: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->getCoverSwitchState()I
@@ -52,14 +50,12 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 439
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$4;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     iget-object v0, v0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->mRestrictionPolicyOberver:Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->showFelicaNotification()V
 
-    .line 440
     :cond_0
     return-void
 .end method

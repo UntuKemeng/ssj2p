@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 208
     iput-object p1, p0, Landroid/bluetooth/BluetoothInputDevice$1;->this$0:Landroid/bluetooth/BluetoothInputDevice;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "up"    # Z
 
     .prologue
-    .line 210
     # getter for: Landroid/bluetooth/BluetoothInputDevice;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothInputDevice;->access$000()Z
 
@@ -68,11 +66,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
     :cond_0
     if-nez p1, :cond_2
 
-    .line 212
     # getter for: Landroid/bluetooth/BluetoothInputDevice;->VDBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothInputDevice;->access$100()Z
 
@@ -86,7 +82,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 213
     :cond_1
     iget-object v1, p0, Landroid/bluetooth/BluetoothInputDevice$1;->this$0:Landroid/bluetooth/BluetoothInputDevice;
 
@@ -97,7 +92,6 @@
 
     monitor-enter v2
 
-    .line 215
     :try_start_0
     iget-object v1, p0, Landroid/bluetooth/BluetoothInputDevice$1;->this$0:Landroid/bluetooth/BluetoothInputDevice;
 
@@ -106,7 +100,6 @@
     # setter for: Landroid/bluetooth/BluetoothInputDevice;->mService:Landroid/bluetooth/IBluetoothInputDevice;
     invoke-static {v1, v3}, Landroid/bluetooth/BluetoothInputDevice;->access$302(Landroid/bluetooth/BluetoothInputDevice;Landroid/bluetooth/IBluetoothInputDevice;)Landroid/bluetooth/IBluetoothInputDevice;
 
-    .line 216
     iget-object v1, p0, Landroid/bluetooth/BluetoothInputDevice$1;->this$0:Landroid/bluetooth/BluetoothInputDevice;
 
     # getter for: Landroid/bluetooth/BluetoothInputDevice;->mContext:Landroid/content/Context;
@@ -126,20 +119,16 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 220
     :goto_0
     :try_start_1
     monitor-exit v2
 
-    .line 233
     :goto_1
     return-void
 
-    .line 217
     :catch_0
     move-exception v0
 
-    .line 218
     .local v0, "re":Ljava/lang/Exception;
     const-string v1, "BluetoothInputDevice"
 
@@ -149,7 +138,6 @@
 
     goto :goto_0
 
-    .line 220
     .end local v0    # "re":Ljava/lang/Exception;
     :catchall_0
     move-exception v1
@@ -160,7 +148,6 @@
 
     throw v1
 
-    .line 222
     :cond_2
     iget-object v1, p0, Landroid/bluetooth/BluetoothInputDevice$1;->this$0:Landroid/bluetooth/BluetoothInputDevice;
 
@@ -171,7 +158,6 @@
 
     monitor-enter v2
 
-    .line 224
     :try_start_2
     iget-object v1, p0, Landroid/bluetooth/BluetoothInputDevice$1;->this$0:Landroid/bluetooth/BluetoothInputDevice;
 
@@ -182,7 +168,6 @@
 
     if-nez v1, :cond_4
 
-    .line 225
     # getter for: Landroid/bluetooth/BluetoothInputDevice;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothInputDevice;->access$000()Z
 
@@ -196,7 +181,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 226
     :cond_3
     iget-object v1, p0, Landroid/bluetooth/BluetoothInputDevice$1;->this$0:Landroid/bluetooth/BluetoothInputDevice;
 
@@ -205,7 +189,6 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 231
     :cond_4
     :goto_2
     :try_start_3
@@ -222,11 +205,9 @@
 
     throw v1
 
-    .line 228
     :catch_1
     move-exception v0
 
-    .line 229
     .restart local v0    # "re":Ljava/lang/Exception;
     :try_start_4
     const-string v1, "BluetoothInputDevice"

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1351
     iput-object p1, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver$ScheduleReInitializationOfDaemonCache;->this$1:Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/firewall/DomainFilter$1;
 
     .prologue
-    .line 1351
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver$ScheduleReInitializationOfDaemonCache;-><init>(Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 1
 
     .prologue
-    .line 1354
     iget-object v0, p0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver$ScheduleReInitializationOfDaemonCache;->this$1:Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;
 
     iget-object v0, v0, Lcom/android/server/enterprise/firewall/DomainFilter$NetdCallbackReceiver;->this$0:Lcom/android/server/enterprise/firewall/DomainFilter;
@@ -57,6 +54,5 @@
     # invokes: Lcom/android/server/enterprise/firewall/DomainFilter;->initDaemonCache()V
     invoke-static {v0}, Lcom/android/server/enterprise/firewall/DomainFilter;->access$900(Lcom/android/server/enterprise/firewall/DomainFilter;)V
 
-    .line 1355
     return-void
 .end method

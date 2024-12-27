@@ -31,22 +31,18 @@
     .param p2, "value"    # Lorg/simpleframework/xml/strategy/Value;
 
     .prologue
-    .line 129
     iput-object p1, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->this$0:Lorg/simpleframework/xml/core/InstanceFactory;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 130
     invoke-interface {p2}, Lorg/simpleframework/xml/strategy/Value;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->type:Ljava/lang/Class;
 
-    .line 131
     iput-object p2, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->value:Lorg/simpleframework/xml/strategy/Value;
 
-    .line 132
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .end annotation
 
     .prologue
-    .line 142
     iget-object v1, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->value:Lorg/simpleframework/xml/strategy/Value;
 
     invoke-interface {v1}, Lorg/simpleframework/xml/strategy/Value;->isReference()Z
@@ -70,19 +65,16 @@
 
     if-eqz v1, :cond_1
 
-    .line 143
     iget-object v1, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->value:Lorg/simpleframework/xml/strategy/Value;
 
     invoke-interface {v1}, Lorg/simpleframework/xml/strategy/Value;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 150
     :cond_0
     :goto_0
     return-object v0
 
-    .line 145
     :cond_1
     iget-object v1, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->this$0:Lorg/simpleframework/xml/core/InstanceFactory;
 
@@ -92,13 +84,11 @@
 
     move-result-object v0
 
-    .line 147
     .local v0, "object":Ljava/lang/Object;
     iget-object v1, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->value:Lorg/simpleframework/xml/strategy/Value;
 
     if-eqz v1, :cond_0
 
-    .line 148
     iget-object v1, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->value:Lorg/simpleframework/xml/strategy/Value;
 
     invoke-interface {v1, v0}, Lorg/simpleframework/xml/strategy/Value;->setValue(Ljava/lang/Object;)V
@@ -110,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 190
     iget-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->type:Ljava/lang/Class;
 
     return-object v0
@@ -120,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 179
     iget-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->value:Lorg/simpleframework/xml/strategy/Value;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/strategy/Value;->isReference()Z
@@ -135,17 +123,14 @@
     .param p1, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 164
     iget-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->value:Lorg/simpleframework/xml/strategy/Value;
 
     if-eqz v0, :cond_0
 
-    .line 165
     iget-object v0, p0, Lorg/simpleframework/xml/core/InstanceFactory$ValueInstance;->value:Lorg/simpleframework/xml/strategy/Value;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/strategy/Value;->setValue(Ljava/lang/Object;)V
 
-    .line 167
     :cond_0
     return-object p1
 .end method

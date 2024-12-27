@@ -26,13 +26,10 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 3634
     iput-object p1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
-    .line 3635
     invoke-direct {p0, p2, p3, p4}, Landroid/content/pm/AbstractPersonaObserver;-><init>(Landroid/content/Context;II)V
 
-    .line 3636
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 3679
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 3640
     return-void
 .end method
 
@@ -65,7 +60,6 @@
 
     const/4 v4, 0x1
 
-    .line 3645
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$100()Z
 
@@ -73,7 +67,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3646
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
@@ -121,7 +114,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3651
     :cond_0
     sget-object v1, Landroid/content/pm/PersonaState;->CREATING:Landroid/content/pm/PersonaState;
 
@@ -139,7 +131,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 3652
     iget-object v1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->mPersonaMgr:Landroid/os/PersonaManager;
@@ -155,7 +146,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 3654
     iget-object v1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     iget v2, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->containerId:I
@@ -165,7 +155,6 @@
 
     move-result v0
 
-    .line 3655
     .local v0, "isCCMDefaultStore":Z
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$100()Z
@@ -174,7 +163,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 3656
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
@@ -200,11 +188,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3657
     :cond_1
     if-nez v0, :cond_4
 
-    .line 3658
     iget-object v1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     iget v2, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->containerId:I
@@ -216,7 +202,6 @@
 
     if-nez v1, :cond_3
 
-    .line 3659
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->DBG:Z
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$100()Z
 
@@ -224,7 +209,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 3660
     # getter for: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$200()Ljava/lang/String;
 
@@ -234,13 +218,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3674
     .end local v0    # "isCCMDefaultStore":Z
     :cond_2
     :goto_0
     return-void
 
-    .line 3663
     .restart local v0    # "isCCMDefaultStore":Z
     :cond_3
     iget-object v1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
@@ -250,7 +232,6 @@
     # invokes: Lcom/android/server/enterprise/ccm/ClientCertificateManager;->setCCMAsDefaultCertStore(IZ)Z
     invoke-static {v1, v2, v4}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->access$1500(Lcom/android/server/enterprise/ccm/ClientCertificateManager;IZ)Z
 
-    .line 3668
     .end local v0    # "isCCMDefaultStore":Z
     :cond_4
     iget-object v1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
@@ -295,7 +276,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 3670
     :cond_5
     iget-object v1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
@@ -306,7 +286,6 @@
 
     goto :goto_0
 
-    .line 3671
     :cond_6
     iget-object v1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
@@ -329,7 +308,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 3672
     iget-object v1, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->this$0:Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
     iget v2, p0, Lcom/android/server/enterprise/ccm/ClientCertificateManager$PersonaObserver;->containerId:I

@@ -75,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 354
     const/high16 v0, 0x40800000    # 4.0f
 
     sput v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->BORDER_SIZE_DP:F
@@ -96,132 +95,106 @@
 
     const/4 v10, 0x0
 
-    .line 380
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 366
     new-array v7, v11, [I
 
     fill-array-data v7, :array_0
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
-    .line 367
     new-array v7, v11, [I
 
     fill-array-data v7, :array_1
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
-    .line 368
     iput v9, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowSize:I
 
-    .line 369
     iput v9, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mScale:I
 
-    .line 370
     iput-boolean v10, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mIsMovingMode:Z
 
-    .line 371
     iput v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMovingStarted_X:F
 
-    .line 372
     iput v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMovingStarted_Y:F
 
-    .line 373
     iput-boolean v10, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mIsCloseMode:Z
 
-    .line 374
     iput v9, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mOrientation:I
 
-    .line 375
     iput v10, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mBorderSize:I
 
-    .line 376
     iput v10, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mFrameWidthHeight:I
 
-    .line 377
     const/4 v7, 0x0
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplaySizeValue:Ljava/lang/String;
 
-    .line 381
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mContext:Landroid/content/Context;
 
-    .line 382
     new-instance v7, Landroid/util/DisplayMetrics;
 
     invoke-direct {v7}, Landroid/util/DisplayMetrics;-><init>()V
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
-    .line 383
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7, v10, v10, v10, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mOriginalScreenBoundOnScreen:Landroid/graphics/Rect;
 
-    .line 384
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7, v10, v10, v10, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreen:Landroid/graphics/Rect;
 
-    .line 385
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7, v10, v10, v10, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreenWithoutBorder:Landroid/graphics/Rect;
 
-    .line 386
     invoke-static {}, Landroid/view/MagnificationSpec;->obtain()Landroid/view/MagnificationSpec;
 
     move-result-object v7
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
-    .line 387
     iget-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iput v8, v7, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 388
     iget-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iput v8, v7, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 389
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7, v10, v10, v10, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseBoundOnScreen:Landroid/graphics/Rect;
 
-    .line 390
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7, v10, v10, v10, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mUpperSideTouchOnFrame:Landroid/graphics/Rect;
 
-    .line 391
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7, v10, v10, v10, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mLowerSideTouchOnFrame:Landroid/graphics/Rect;
 
-    .line 392
     new-instance v7, Landroid/graphics/Rect;
 
     invoke-direct {v7, v10, v10, v10, v10}, Landroid/graphics/Rect;-><init>(IIII)V
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mHandleBoundOnScreen:Landroid/graphics/Rect;
 
-    .line 394
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
@@ -232,7 +205,6 @@
 
     move-result v1
 
-    .line 395
     .local v1, "closeMarginTop":I
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -244,7 +216,6 @@
 
     move-result v0
 
-    .line 396
     .local v0, "closeMarginRight":I
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -256,7 +227,6 @@
 
     move-result v2
 
-    .line 398
     .local v2, "closeSize":I
     new-instance v7, Landroid/graphics/Rect;
 
@@ -268,7 +238,6 @@
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseSize:Landroid/graphics/Rect;
 
-    .line 399
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v7
@@ -281,7 +250,6 @@
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplaySizeValue:Ljava/lang/String;
 
-    .line 402
     const-string/jumbo v7, "window"
 
     invoke-virtual {p1, v7}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -290,7 +258,6 @@
 
     check-cast v6, Landroid/view/WindowManager;
 
-    .line 403
     .local v6, "windowmanager":Landroid/view/WindowManager;
     invoke-interface {v6}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -300,12 +267,10 @@
 
     invoke-virtual {v7, v8}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 405
     iget-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
     iget v5, v7, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 406
     .local v5, "screenWidth":I
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -319,7 +284,6 @@
 
     float-to-int v4, v7
 
-    .line 407
     .local v4, "handleWidth":I
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -333,7 +297,6 @@
 
     float-to-int v3, v7
 
-    .line 408
     .local v3, "handleHeight":I
     new-instance v7, Landroid/graphics/Rect;
 
@@ -341,7 +304,6 @@
 
     iput-object v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mHandleSize:Landroid/graphics/Rect;
 
-    .line 410
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v7
@@ -356,13 +318,10 @@
 
     iput v7, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mFrameWidthHeight:I
 
-    .line 412
     invoke-virtual {p0, p1}, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->init(Landroid/content/Context;)Z
 
-    .line 413
     return-void
 
-    .line 366
     :array_0
     .array-data 4
         0x0
@@ -372,7 +331,6 @@
         0x0
     .end array-data
 
-    .line 367
     :array_1
     .array-data 4
         0x0
@@ -388,7 +346,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 742
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -401,7 +358,6 @@
 
     and-int/lit16 v0, v1, 0xc0
 
-    .line 743
     .local v0, "layout_dir":I
     const/16 v1, 0x80
 
@@ -422,7 +378,6 @@
     .locals 2
 
     .prologue
-    .line 733
     sget-object v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDeviceType:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -435,7 +390,6 @@
 
     if-lez v0, :cond_0
 
-    .line 734
     sget-object v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDeviceType:Ljava/lang/String;
 
     const-string/jumbo v1, "tablet"
@@ -444,11 +398,9 @@
 
     move-result v0
 
-    .line 738
     :goto_0
     return v0
 
-    .line 737
     :cond_0
     const-string/jumbo v0, "ro.build.characteristics"
 
@@ -458,7 +410,6 @@
 
     sput-object v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDeviceType:Ljava/lang/String;
 
-    .line 738
     sget-object v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDeviceType:Ljava/lang/String;
 
     if-eqz v0, :cond_1
@@ -489,7 +440,6 @@
     .locals 1
 
     .prologue
-    .line 491
     iget v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mBorderSize:I
 
     return v0
@@ -499,7 +449,6 @@
     .locals 1
 
     .prologue
-    .line 495
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
     return-object v0
@@ -509,7 +458,6 @@
     .locals 1
 
     .prologue
-    .line 589
     iget v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMovingStarted_X:F
 
     return v0
@@ -519,7 +467,6 @@
     .locals 1
 
     .prologue
-    .line 593
     iget v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMovingStarted_Y:F
 
     return v0
@@ -529,7 +476,6 @@
     .locals 1
 
     .prologue
-    .line 575
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mOriginalScreenBoundOnScreen:Landroid/graphics/Rect;
 
     return-object v0
@@ -539,7 +485,6 @@
     .locals 1
 
     .prologue
-    .line 538
     iget v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mScale:I
 
     return v0
@@ -549,7 +494,6 @@
     .locals 1
 
     .prologue
-    .line 571
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreen:Landroid/graphics/Rect;
 
     return-object v0
@@ -559,14 +503,12 @@
     .locals 4
 
     .prologue
-    .line 521
     iget v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowSize:I
 
     const/4 v1, -0x1
 
     if-le v0, v1, :cond_0
 
-    .line 522
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -598,14 +540,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 523
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     iget v1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowSize:I
 
     aget v0, v0, v1
 
-    .line 525
     :goto_0
     return v0
 
@@ -619,14 +559,12 @@
     .locals 4
 
     .prologue
-    .line 513
     iget v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowSize:I
 
     const/4 v1, -0x1
 
     if-le v0, v1, :cond_0
 
-    .line 514
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -658,14 +596,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 515
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     iget v1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowSize:I
 
     aget v0, v0, v1
 
-    .line 517
     :goto_0
     return v0
 
@@ -680,7 +616,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 417
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
@@ -689,11 +624,9 @@
 
     move-result-object v0
 
-    .line 419
     .local v0, "config":Landroid/content/res/Configuration;
     const/4 v3, 0x0
 
-    .line 420
     .local v3, "isChangedResolution":Z
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -705,7 +638,6 @@
 
     move-result-object v1
 
-    .line 421
     .local v1, "currentDisplaySizeValue":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -717,10 +649,8 @@
 
     if-nez v8, :cond_0
 
-    .line 422
     const/4 v3, 0x1
 
-    .line 424
     :cond_0
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
@@ -747,10 +677,8 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
     iput-object v1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplaySizeValue:Ljava/lang/String;
 
-    .line 427
     iget v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mOrientation:I
 
     iget v9, v0, Landroid/content/res/Configuration;->orientation:I
@@ -759,7 +687,6 @@
 
     if-nez v3, :cond_1
 
-    .line 429
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -769,14 +696,11 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 430
     const/4 v8, 0x0
 
-    .line 486
     :goto_0
     return v8
 
-    .line 432
     :cond_1
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
@@ -805,12 +729,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 434
     iget v8, v0, Landroid/content/res/Configuration;->orientation:I
 
     iput v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mOrientation:I
 
-    .line 436
     const-string/jumbo v8, "window"
 
     invoke-virtual {p1, v8}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -819,7 +741,6 @@
 
     check-cast v7, Landroid/view/WindowManager;
 
-    .line 437
     .local v7, "windowmanager":Landroid/view/WindowManager;
     invoke-interface {v7}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -829,7 +750,6 @@
 
     invoke-virtual {v8, v9}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 438
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -861,7 +781,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 439
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
     iget v8, v8, Landroid/util/DisplayMetrics;->density:F
@@ -874,14 +793,12 @@
 
     iput v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mBorderSize:I
 
-    .line 441
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
     iget v8, v8, Landroid/util/DisplayMetrics;->widthPixels:I
 
     int-to-float v6, v8
 
-    .line 442
     .local v6, "widthPixels":F
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
@@ -889,7 +806,6 @@
 
     int-to-float v2, v8
 
-    .line 444
     .local v2, "heightPixels":F
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -907,12 +823,10 @@
 
     const/4 v4, 0x1
 
-    .line 445
     .local v4, "isMobileKeyboardOn":Z
     :goto_1
     if-eqz v4, :cond_2
 
-    .line 446
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v8
@@ -923,13 +837,11 @@
 
     move-result v5
 
-    .line 447
     .local v5, "mobileKeyboardHeight":I
     int-to-float v8, v5
 
     add-float/2addr v2, v8
 
-    .line 450
     .end local v5    # "mobileKeyboardHeight":I
     :cond_2
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->isTablet()Z
@@ -938,7 +850,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 451
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x0
@@ -953,7 +864,6 @@
 
     aput v10, v8, v9
 
-    .line 452
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x1
@@ -968,7 +878,6 @@
 
     aput v10, v8, v9
 
-    .line 453
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x2
@@ -983,7 +892,6 @@
 
     aput v10, v8, v9
 
-    .line 454
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x3
@@ -998,7 +906,6 @@
 
     aput v10, v8, v9
 
-    .line 455
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x4
@@ -1007,7 +914,6 @@
 
     aput v10, v8, v9
 
-    .line 457
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x0
@@ -1022,7 +928,6 @@
 
     aput v10, v8, v9
 
-    .line 458
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x1
@@ -1037,7 +942,6 @@
 
     aput v10, v8, v9
 
-    .line 459
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x2
@@ -1052,7 +956,6 @@
 
     aput v10, v8, v9
 
-    .line 460
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x3
@@ -1067,7 +970,6 @@
 
     aput v10, v8, v9
 
-    .line 461
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x4
@@ -1082,7 +984,6 @@
 
     aput v10, v8, v9
 
-    .line 480
     :goto_2
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
@@ -1104,7 +1005,6 @@
 
     if-gez v8, :cond_7
 
-    .line 481
     :cond_3
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
@@ -1128,20 +1028,17 @@
 
     invoke-virtual {p0, v8, v9}, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->updateMagnificationSpec(FF)V
 
-    .line 486
     :goto_3
     const/4 v8, 0x1
 
     goto/16 :goto_0
 
-    .line 444
     .end local v4    # "isMobileKeyboardOn":Z
     :cond_4
     const/4 v4, 0x0
 
     goto/16 :goto_1
 
-    .line 462
     .restart local v4    # "isMobileKeyboardOn":Z
     :cond_5
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->isTablet()Z
@@ -1156,7 +1053,6 @@
 
     if-ne v8, v9, :cond_6
 
-    .line 463
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x0
@@ -1171,7 +1067,6 @@
 
     aput v10, v8, v9
 
-    .line 464
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x1
@@ -1186,7 +1081,6 @@
 
     aput v10, v8, v9
 
-    .line 465
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x2
@@ -1201,7 +1095,6 @@
 
     aput v10, v8, v9
 
-    .line 467
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x0
@@ -1216,7 +1109,6 @@
 
     aput v10, v8, v9
 
-    .line 468
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x1
@@ -1231,7 +1123,6 @@
 
     aput v10, v8, v9
 
-    .line 469
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x2
@@ -1248,7 +1139,6 @@
 
     goto/16 :goto_2
 
-    .line 471
     :cond_6
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
@@ -1264,7 +1154,6 @@
 
     aput v10, v8, v9
 
-    .line 472
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x1
@@ -1279,7 +1168,6 @@
 
     aput v10, v8, v9
 
-    .line 473
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_WIDTH:[I
 
     const/4 v9, 0x2
@@ -1288,7 +1176,6 @@
 
     aput v10, v8, v9
 
-    .line 475
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x0
@@ -1303,7 +1190,6 @@
 
     aput v10, v8, v9
 
-    .line 476
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x1
@@ -1318,7 +1204,6 @@
 
     aput v10, v8, v9
 
-    .line 477
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->WINDOW_SIZE_TABLE_HEIGHT:[I
 
     const/4 v9, 0x2
@@ -1335,7 +1220,6 @@
 
     goto/16 :goto_2
 
-    .line 483
     :cond_7
     iget-object v8, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
@@ -1354,7 +1238,6 @@
     .locals 1
 
     .prologue
-    .line 601
     iget-boolean v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mIsCloseMode:Z
 
     return v0
@@ -1364,7 +1247,6 @@
     .locals 1
 
     .prologue
-    .line 585
     iget-boolean v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mIsMovingMode:Z
 
     return v0
@@ -1375,7 +1257,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 551
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseBoundOnScreen:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -1402,7 +1283,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 554
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mHandleBoundOnScreen:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -1429,7 +1309,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 560
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mLowerSideTouchOnFrame:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -1456,7 +1335,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 563
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreen:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -1483,7 +1361,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 567
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreenWithoutBorder:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -1510,7 +1387,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 557
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mUpperSideTouchOnFrame:Landroid/graphics/Rect;
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
@@ -1537,10 +1413,8 @@
     .param p1, "mode"    # Z
 
     .prologue
-    .line 597
     iput-boolean p1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mIsCloseMode:Z
 
-    .line 598
     return-void
 .end method
 
@@ -1551,16 +1425,12 @@
     .param p3, "start_y"    # F
 
     .prologue
-    .line 579
     iput-boolean p1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mIsMovingMode:Z
 
-    .line 580
     iput p2, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMovingStarted_X:F
 
-    .line 581
     iput p3, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMovingStarted_Y:F
 
-    .line 582
     return-void
 .end method
 
@@ -1569,18 +1439,14 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 543
     iget v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mScale:I
 
     if-eq p1, v0, :cond_0
 
-    .line 544
     iput p1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mScale:I
 
-    .line 545
     const/4 v0, 0x1
 
-    .line 547
     :goto_0
     return v0
 
@@ -1595,18 +1461,14 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 530
     iget v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowSize:I
 
     if-eq p1, v0, :cond_0
 
-    .line 531
     iput p1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowSize:I
 
-    .line 532
     const/4 v0, 0x1
 
-    .line 534
     :goto_0
     return v0
 
@@ -1620,22 +1482,17 @@
     .locals 20
 
     .prologue
-    .line 605
     const/4 v10, 0x0
 
-    .line 606
     .local v10, "left":I
     const/4 v14, 0x0
 
-    .line 607
     .local v14, "top":I
     const/4 v12, 0x0
 
-    .line 608
     .local v12, "right":I
     const/4 v3, 0x0
 
-    .line 610
     .local v3, "bottom":I
     sget v17, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->BORDER_SIZE_DP:F
 
@@ -1643,7 +1500,6 @@
 
     float-to-int v2, v0
 
-    .line 611
     .local v2, "borderFrameSize":I
     move-object/from16 v0, p0
 
@@ -1653,7 +1509,6 @@
 
     mul-int/lit8 v16, v17, 0x5
 
-    .line 613
     .local v16, "touchArea_out_of_border":I
     move-object/from16 v0, p0
 
@@ -1665,7 +1520,6 @@
 
     iget v6, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    .line 614
     .local v6, "display_width":I
     move-object/from16 v0, p0
 
@@ -1677,7 +1531,6 @@
 
     iget v5, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    .line 617
     .local v5, "display_height":I
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->getWindowSizeWidth()I
 
@@ -1685,7 +1538,6 @@
 
     div-int/lit8 v8, v17, 0x2
 
-    .line 618
     .local v8, "half_width":I
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->getWindowSizeHeight()I
 
@@ -1693,7 +1545,6 @@
 
     div-int/lit8 v7, v17, 0x2
 
-    .line 620
     .local v7, "half_height":I
     move-object/from16 v0, p0
 
@@ -1715,7 +1566,6 @@
 
     sub-int v11, v17, v8
 
-    .line 621
     .local v11, "left_via_spec":I
     move-object/from16 v0, p0
 
@@ -1737,7 +1587,6 @@
 
     add-int v13, v17, v8
 
-    .line 622
     .local v13, "right_via_spec":I
     move-object/from16 v0, p0
 
@@ -1759,7 +1608,6 @@
 
     sub-int v15, v17, v7
 
-    .line 623
     .local v15, "top_via_spec":I
     move-object/from16 v0, p0
 
@@ -1781,27 +1629,20 @@
 
     add-int v4, v17, v7
 
-    .line 626
     .local v4, "bottom_via_spec":I
     if-gez v11, :cond_0
 
-    .line 627
     const/4 v10, 0x0
 
-    .line 628
     sub-int v12, v13, v11
 
-    .line 637
     :goto_0
     if-gez v15, :cond_2
 
-    .line 638
     const/4 v14, 0x0
 
-    .line 639
     sub-int v3, v4, v15
 
-    .line 648
     :goto_1
     move-object/from16 v0, p0
 
@@ -1817,7 +1658,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 649
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreen:Landroid/graphics/Rect;
@@ -1832,7 +1672,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 650
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreen:Landroid/graphics/Rect;
@@ -1847,7 +1686,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->right:I
 
-    .line 651
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreen:Landroid/graphics/Rect;
@@ -1862,7 +1700,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 653
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreenWithoutBorder:Landroid/graphics/Rect;
@@ -1877,7 +1714,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 654
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreenWithoutBorder:Landroid/graphics/Rect;
@@ -1892,7 +1728,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 655
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreenWithoutBorder:Landroid/graphics/Rect;
@@ -1907,7 +1742,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->right:I
 
-    .line 656
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mWindowBoundOnScreenWithoutBorder:Landroid/graphics/Rect;
@@ -1922,7 +1756,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 658
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mContext:Landroid/content/Context;
@@ -1935,7 +1768,6 @@
 
     if-eqz v17, :cond_4
 
-    .line 659
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseBoundOnScreen:Landroid/graphics/Rect;
@@ -1946,7 +1778,6 @@
 
     iput v10, v0, Landroid/graphics/Rect;->left:I
 
-    .line 660
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseBoundOnScreen:Landroid/graphics/Rect;
@@ -1957,7 +1788,6 @@
 
     iput v14, v0, Landroid/graphics/Rect;->top:I
 
-    .line 661
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseBoundOnScreen:Landroid/graphics/Rect;
@@ -1984,7 +1814,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->right:I
 
-    .line 662
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseBoundOnScreen:Landroid/graphics/Rect;
@@ -2011,7 +1840,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 671
     :goto_2
     move-object/from16 v0, p0
 
@@ -2023,7 +1851,6 @@
 
     iput v10, v0, Landroid/graphics/Rect;->left:I
 
-    .line 672
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mUpperSideTouchOnFrame:Landroid/graphics/Rect;
@@ -2038,7 +1865,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 673
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mUpperSideTouchOnFrame:Landroid/graphics/Rect;
@@ -2049,7 +1875,6 @@
 
     iput v12, v0, Landroid/graphics/Rect;->right:I
 
-    .line 674
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mUpperSideTouchOnFrame:Landroid/graphics/Rect;
@@ -2070,7 +1895,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 676
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mLowerSideTouchOnFrame:Landroid/graphics/Rect;
@@ -2081,7 +1905,6 @@
 
     iput v10, v0, Landroid/graphics/Rect;->left:I
 
-    .line 677
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mLowerSideTouchOnFrame:Landroid/graphics/Rect;
@@ -2102,7 +1925,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 678
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mLowerSideTouchOnFrame:Landroid/graphics/Rect;
@@ -2113,7 +1935,6 @@
 
     iput v12, v0, Landroid/graphics/Rect;->right:I
 
-    .line 679
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mLowerSideTouchOnFrame:Landroid/graphics/Rect;
@@ -2128,12 +1949,10 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 681
     add-int v17, v10, v12
 
     div-int/lit8 v9, v17, 0x2
 
-    .line 682
     .local v9, "horizental_center":I
     move-object/from16 v0, p0
 
@@ -2163,7 +1982,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 683
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mHandleBoundOnScreen:Landroid/graphics/Rect;
@@ -2196,7 +2014,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 684
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mHandleBoundOnScreen:Landroid/graphics/Rect;
@@ -2225,7 +2042,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->right:I
 
-    .line 685
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mHandleBoundOnScreen:Landroid/graphics/Rect;
@@ -2258,7 +2074,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 688
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->getWindowSizeWidth()I
 
     move-result v17
@@ -2273,7 +2088,6 @@
 
     div-int v8, v17, v18
 
-    .line 689
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->getWindowSizeHeight()I
 
     move-result v17
@@ -2288,7 +2102,6 @@
 
     div-int v7, v17, v18
 
-    .line 691
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
@@ -2309,7 +2122,6 @@
 
     sub-int v11, v17, v8
 
-    .line 692
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
@@ -2330,7 +2142,6 @@
 
     add-int v13, v17, v8
 
-    .line 693
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
@@ -2351,7 +2162,6 @@
 
     sub-int v15, v17, v7
 
-    .line 694
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
@@ -2372,26 +2182,19 @@
 
     add-int v4, v17, v7
 
-    .line 696
     if-gez v11, :cond_5
 
-    .line 697
     const/4 v10, 0x0
 
-    .line 698
     sub-int v12, v13, v11
 
-    .line 707
     :goto_3
     if-gez v15, :cond_7
 
-    .line 708
     const/4 v14, 0x0
 
-    .line 709
     sub-int v3, v4, v15
 
-    .line 718
     :goto_4
     move-object/from16 v0, p0
 
@@ -2403,7 +2206,6 @@
 
     iput v10, v0, Landroid/graphics/Rect;->left:I
 
-    .line 719
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mOriginalScreenBoundOnScreen:Landroid/graphics/Rect;
@@ -2414,7 +2216,6 @@
 
     iput v14, v0, Landroid/graphics/Rect;->top:I
 
-    .line 720
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mOriginalScreenBoundOnScreen:Landroid/graphics/Rect;
@@ -2425,7 +2226,6 @@
 
     iput v12, v0, Landroid/graphics/Rect;->right:I
 
-    .line 721
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mOriginalScreenBoundOnScreen:Landroid/graphics/Rect;
@@ -2436,7 +2236,6 @@
 
     iput v3, v0, Landroid/graphics/Rect;->bottom:I
 
-    .line 723
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -2472,7 +2271,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 724
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -2508,7 +2306,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 725
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -2544,7 +2341,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 726
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -2580,7 +2376,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 727
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -2616,7 +2411,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 728
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -2652,7 +2446,6 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 729
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -2688,57 +2481,45 @@
 
     invoke-static/range {v17 .. v18}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 730
     return-void
 
-    .line 629
     .end local v9    # "horizental_center":I
     :cond_0
     if-le v13, v6, :cond_1
 
-    .line 630
     move v12, v6
 
-    .line 631
     sub-int v17, v13, v6
 
     sub-int v10, v11, v17
 
     goto/16 :goto_0
 
-    .line 633
     :cond_1
     move v10, v11
 
-    .line 634
     move v12, v13
 
     goto/16 :goto_0
 
-    .line 640
     :cond_2
     if-le v4, v5, :cond_3
 
-    .line 641
     move v3, v5
 
-    .line 642
     sub-int v17, v4, v5
 
     sub-int v14, v15, v17
 
     goto/16 :goto_1
 
-    .line 644
     :cond_3
     move v14, v15
 
-    .line 645
     move v3, v4
 
     goto/16 :goto_1
 
-    .line 665
     :cond_4
     move-object/from16 v0, p0
 
@@ -2766,7 +2547,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 666
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseBoundOnScreen:Landroid/graphics/Rect;
@@ -2777,7 +2557,6 @@
 
     iput v14, v0, Landroid/graphics/Rect;->top:I
 
-    .line 667
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseBoundOnScreen:Landroid/graphics/Rect;
@@ -2788,7 +2567,6 @@
 
     iput v12, v0, Landroid/graphics/Rect;->right:I
 
-    .line 668
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mCloseBoundOnScreen:Landroid/graphics/Rect;
@@ -2817,49 +2595,39 @@
 
     goto/16 :goto_2
 
-    .line 699
     .restart local v9    # "horizental_center":I
     :cond_5
     if-le v13, v6, :cond_6
 
-    .line 700
     move v12, v6
 
-    .line 701
     sub-int v17, v13, v6
 
     sub-int v10, v11, v17
 
     goto/16 :goto_3
 
-    .line 703
     :cond_6
     move v10, v11
 
-    .line 704
     move v12, v13
 
     goto/16 :goto_3
 
-    .line 710
     :cond_7
     if-le v4, v5, :cond_8
 
-    .line 711
     move v3, v5
 
-    .line 712
     sub-int v17, v4, v5
 
     sub-int v14, v15, v17
 
     goto/16 :goto_4
 
-    .line 714
     :cond_8
     move v14, v15
 
-    .line 715
     move v3, v4
 
     goto/16 :goto_4
@@ -2871,7 +2639,6 @@
     .param p2, "offset_y"    # F
 
     .prologue
-    .line 499
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -2882,7 +2649,6 @@
 
     if-lez v0, :cond_0
 
-    .line 500
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
@@ -2893,7 +2659,6 @@
 
     iput v1, v0, Landroid/view/MagnificationSpec;->offsetX:F
 
-    .line 504
     :goto_0
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
 
@@ -2905,7 +2670,6 @@
 
     if-lez v0, :cond_1
 
-    .line 505
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
     iget-object v1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mDisplayMetrics:Landroid/util/DisplayMetrics;
@@ -2916,14 +2680,11 @@
 
     iput v1, v0, Landroid/view/MagnificationSpec;->offsetY:F
 
-    .line 509
     :goto_1
     invoke-virtual {p0}, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->updateBoundOnScreen()V
 
-    .line 510
     return-void
 
-    .line 502
     :cond_0
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 
@@ -2931,7 +2692,6 @@
 
     goto :goto_0
 
-    .line 507
     :cond_1
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$MagnifierWindowPolicy;->mMagnificationSpec:Landroid/view/MagnificationSpec;
 

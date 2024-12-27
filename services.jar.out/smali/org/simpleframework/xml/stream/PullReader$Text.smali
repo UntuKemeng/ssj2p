@@ -26,20 +26,16 @@
     .param p1, "source"    # Lorg/xmlpull/v1/XmlPullParser;
 
     .prologue
-    .line 463
     invoke-direct {p0}, Lorg/simpleframework/xml/stream/EventToken;-><init>()V
 
-    .line 464
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Text;->text:Ljava/lang/String;
 
-    .line 465
     iput-object p1, p0, Lorg/simpleframework/xml/stream/PullReader$Text;->source:Lorg/xmlpull/v1/XmlPullParser;
 
-    .line 466
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 498
     iget-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Text;->source:Lorg/xmlpull/v1/XmlPullParser;
 
     return-object v0
@@ -59,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 487
     iget-object v0, p0, Lorg/simpleframework/xml/stream/PullReader$Text;->text:Ljava/lang/String;
 
     return-object v0
@@ -69,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 476
     const/4 v0, 0x1
 
     return v0

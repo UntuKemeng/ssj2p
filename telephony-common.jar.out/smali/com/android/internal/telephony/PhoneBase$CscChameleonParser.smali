@@ -39,25 +39,20 @@
     .locals 3
 
     .prologue
-    .line 3704
     iput-object p1, p0, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->this$0:Lcom/android/internal/telephony/PhoneBase;
 
-    .line 3705
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3702
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->isFileExist:Z
 
-    .line 3707
     const-string v1, "PhoneBase"
 
     const-string v2, "[CscChameleonParser] init"
 
     invoke-static {v1, v2}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3710
     :try_start_0
     const-string v1, "/carrier/chameleon.xml"
 
@@ -65,15 +60,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3715
     :goto_0
     return-void
 
-    .line 3712
     :catch_0
     move-exception v0
 
-    .line 3713
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -85,7 +77,6 @@
     .param p0, "x0"    # Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;
 
     .prologue
-    .line 3692
     invoke-direct {p0}, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->isFileExists()Z
 
     move-result v0
@@ -97,7 +88,6 @@
     .locals 3
 
     .prologue
-    .line 3718
     const-string v0, "PhoneBase"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -122,7 +112,6 @@
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3719
     iget-boolean v0, p0, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->isFileExist:Z
 
     return v0
@@ -140,24 +129,20 @@
     .end annotation
 
     .prologue
-    .line 3723
     invoke-static {}, Ljavax/xml/parsers/DocumentBuilderFactory;->newInstance()Ljavax/xml/parsers/DocumentBuilderFactory;
 
     move-result-object v1
 
-    .line 3724
     .local v1, "factory":Ljavax/xml/parsers/DocumentBuilderFactory;
     invoke-virtual {v1}, Ljavax/xml/parsers/DocumentBuilderFactory;->newDocumentBuilder()Ljavax/xml/parsers/DocumentBuilder;
 
     move-result-object v0
 
-    .line 3726
     .local v0, "builder":Ljavax/xml/parsers/DocumentBuilder;
     new-instance v2, Ljava/io/File;
 
     invoke-direct {v2, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 3728
     .local v2, "fe":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->exists()Z
 
@@ -165,14 +150,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 3729
     const-string v3, "PhoneBase"
 
     const-string v4, "[CscChameleonParser] Update"
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3730
     new-instance v3, Ljava/io/File;
 
     invoke-direct {v3, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
@@ -183,7 +166,6 @@
 
     iput-object v3, p0, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->mDoc:Lorg/w3c/dom/Document;
 
-    .line 3731
     iget-object v3, p0, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->mDoc:Lorg/w3c/dom/Document;
 
     invoke-interface {v3}, Lorg/w3c/dom/Document;->getDocumentElement()Lorg/w3c/dom/Element;
@@ -192,16 +174,13 @@
 
     iput-object v3, p0, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->mRoot:Lorg/w3c/dom/Node;
 
-    .line 3732
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->isFileExist:Z
 
-    .line 3737
     :goto_0
     return-void
 
-    .line 3734
     :cond_0
     const-string v3, "PhoneBase"
 
@@ -209,7 +188,6 @@
 
     invoke-static {v3, v4}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3735
     const/4 v3, 0x0
 
     iput-boolean v3, p0, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->isFileExist:Z
@@ -224,16 +202,13 @@
     .param p1, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 3752
     invoke-virtual {p0, p1}, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->search(Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
-    .line 3754
     .local v0, "node":Lorg/w3c/dom/Node;
     if-eqz v0, :cond_0
 
-    .line 3755
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getFirstChild()Lorg/w3c/dom/Node;
 
     move-result-object v1
@@ -242,7 +217,6 @@
 
     move-result-object v1
 
-    .line 3758
     :goto_0
     return-object v1
 
@@ -256,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 3740
     const-string v0, "Operators.BrandAlpha"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -270,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 3744
     const-string v0, "Operators.AndroidOperatorNetworkCode"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -284,7 +256,6 @@
     .locals 1
 
     .prologue
-    .line 3748
     const-string v0, "Operators.SubscriberCarrierId"
 
     invoke-virtual {p0, v0}, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->get(Ljava/lang/String;)Ljava/lang/String;
@@ -301,21 +272,17 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3762
     if-nez p1, :cond_1
 
     move-object v0, v3
 
-    .line 3777
     :cond_0
     :goto_0
     return-object v0
 
-    .line 3765
     :cond_1
     iget-object v0, p0, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->mRoot:Lorg/w3c/dom/Node;
 
-    .line 3766
     .local v0, "node":Lorg/w3c/dom/Node;
     new-instance v2, Ljava/util/StringTokenizer;
 
@@ -323,7 +290,6 @@
 
     invoke-direct {v2, p1, v4}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3768
     .local v2, "tokenizer":Ljava/util/StringTokenizer;
     :goto_1
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
@@ -332,27 +298,22 @@
 
     if-eqz v4, :cond_0
 
-    .line 3769
     invoke-virtual {v2}, Ljava/util/StringTokenizer;->nextToken()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 3771
     .local v1, "token":Ljava/lang/String;
     if-nez v0, :cond_2
 
     move-object v0, v3
 
-    .line 3772
     goto :goto_0
 
-    .line 3774
     :cond_2
     invoke-virtual {p0, v0, v1}, Lcom/android/internal/telephony/PhoneBase$CscChameleonParser;->search(Lorg/w3c/dom/Node;Ljava/lang/String;)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
-    .line 3775
     goto :goto_1
 .end method
 
@@ -364,32 +325,26 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3781
     if-nez p1, :cond_1
 
     move-object v0, v4
 
-    .line 3799
     :cond_0
     :goto_0
     return-object v0
 
-    .line 3785
     :cond_1
     invoke-interface {p1}, Lorg/w3c/dom/Node;->getChildNodes()Lorg/w3c/dom/NodeList;
 
     move-result-object v1
 
-    .line 3787
     .local v1, "children":Lorg/w3c/dom/NodeList;
     if-eqz v1, :cond_2
 
-    .line 3788
     invoke-interface {v1}, Lorg/w3c/dom/NodeList;->getLength()I
 
     move-result v3
 
-    .line 3790
     .local v3, "n":I
     const/4 v2, 0x0
 
@@ -397,12 +352,10 @@
     :goto_1
     if-ge v2, v3, :cond_2
 
-    .line 3791
     invoke-interface {v1, v2}, Lorg/w3c/dom/NodeList;->item(I)Lorg/w3c/dom/Node;
 
     move-result-object v0
 
-    .line 3793
     .local v0, "child":Lorg/w3c/dom/Node;
     invoke-interface {v0}, Lorg/w3c/dom/Node;->getNodeName()Ljava/lang/String;
 
@@ -414,7 +367,6 @@
 
     if-nez v5, :cond_0
 
-    .line 3790
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
@@ -425,6 +377,5 @@
     :cond_2
     move-object v0, v4
 
-    .line 3799
     goto :goto_0
 .end method

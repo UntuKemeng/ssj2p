@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 10525
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$33;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 10528
     const-string v0, "com.samsung.intent.action.AUTOROTATION"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 10530
     :try_start_0
     iget-object v0, p0, Lcom/android/server/policy/PhoneWindowManager$33;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
@@ -72,12 +69,10 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10534
     :cond_0
     :goto_0
     return-void
 
-    .line 10531
     :catch_0
     move-exception v0
 

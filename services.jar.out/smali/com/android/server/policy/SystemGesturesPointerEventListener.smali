@@ -121,33 +121,26 @@
 
     const/16 v2, 0x20
 
-    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
     new-array v1, v2, [I
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownPointerId:[I
 
-    .line 95
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownX:[F
 
-    .line 96
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownY:[F
 
-    .line 97
     new-array v1, v2, [J
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownTime:[J
 
-    .line 129
     iput-object p1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mContext:Landroid/content/Context;
 
-    .line 130
     const-string v1, "callbacks"
 
     invoke-static {v1, p2}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->checkNull(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -158,7 +151,6 @@
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
-    .line 131
     const-string v1, "context"
 
     invoke-static {v1, p1}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->checkNull(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -179,12 +171,10 @@
 
     iput v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
 
-    .line 133
     iget v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
 
     iput v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
 
-    .line 149
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -195,11 +185,9 @@
 
     iget v0, v1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 150
     .local v0, "density":F
     iput v3, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCurrentRotation:I
 
-    .line 151
     const/high16 v1, 0x40a00000    # 5.0f
 
     mul-float/2addr v1, v0
@@ -212,10 +200,8 @@
 
     iput v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCocktailExtent:I
 
-    .line 155
     iput v3, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDisplayId:I
 
-    .line 157
     return-void
 .end method
 
@@ -228,33 +214,26 @@
     .prologue
     const/16 v2, 0x20
 
-    .line 160
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
     new-array v1, v2, [I
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownPointerId:[I
 
-    .line 95
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownX:[F
 
-    .line 96
     new-array v1, v2, [F
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownY:[F
 
-    .line 97
     new-array v1, v2, [J
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownTime:[J
 
-    .line 161
     iput-object p1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mContext:Landroid/content/Context;
 
-    .line 162
     const-string v1, "callbacks"
 
     invoke-static {v1, p2}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->checkNull(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -265,7 +244,6 @@
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
-    .line 163
     const-string v1, "context"
 
     invoke-static {v1, p1}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->checkNull(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -286,12 +264,10 @@
 
     iput v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
 
-    .line 165
     iget v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
 
     iput v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeDistanceThreshold:I
 
-    .line 181
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -302,13 +278,11 @@
 
     iget v0, v1, Landroid/util/DisplayMetrics;->density:F
 
-    .line 182
     .local v0, "density":F
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCurrentRotation:I
 
-    .line 183
     const/high16 v1, 0x40a00000    # 5.0f
 
     mul-float/2addr v1, v0
@@ -321,10 +295,8 @@
 
     iput v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCocktailExtent:I
 
-    .line 186
     iput p3, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDisplayId:I
 
-    .line 187
     return-void
 .end method
 
@@ -333,7 +305,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/SystemGesturesPointerEventListener;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mOverscroller:Landroid/widget/OverScroller;
 
     return-object v0
@@ -344,7 +315,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/SystemGesturesPointerEventListener;
 
     .prologue
-    .line 58
     iget-wide v0, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mLastFlingTime:J
 
     return-wide v0
@@ -356,7 +326,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 58
     iput-wide p1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mLastFlingTime:J
 
     return-wide p1
@@ -367,7 +336,6 @@
     .param p0, "x0"    # Lcom/android/server/policy/SystemGesturesPointerEventListener;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
     return-object v0
@@ -379,24 +347,20 @@
     .param p2, "pointerIndex"    # I
 
     .prologue
-    .line 372
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getPointerId(I)I
 
     move-result v1
 
-    .line 373
     .local v1, "pointerId":I
     invoke-direct {p0, v1}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->findIndex(I)I
 
     move-result v0
 
-    .line 376
     .local v0, "i":I
     const/4 v2, -0x1
 
     if-eq v0, v2, :cond_0
 
-    .line 377
     iget-object v2, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownX:[F
 
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getX(I)F
@@ -405,7 +369,6 @@
 
     aput v3, v2, v0
 
-    .line 378
     iget-object v2, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownY:[F
 
     invoke-virtual {p1, p2}, Landroid/view/MotionEvent;->getY(I)F
@@ -414,7 +377,6 @@
 
     aput v3, v2, v0
 
-    .line 379
     iget-object v2, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownTime:[J
 
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
@@ -423,7 +385,6 @@
 
     aput-wide v4, v2, v0
 
-    .line 383
     :cond_0
     return-void
 .end method
@@ -442,11 +403,9 @@
     .end annotation
 
     .prologue
-    .line 191
     .local p1, "arg":Ljava/lang/Object;, "TT;"
     if-nez p1, :cond_0
 
-    .line 192
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -471,7 +430,6 @@
 
     throw v0
 
-    .line 194
     :cond_0
     return-object p1
 .end method
@@ -483,12 +441,10 @@
     .prologue
     const/4 v10, 0x3
 
-    .line 541
     iget v9, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->screenWidth:I
 
     div-int/lit8 v4, v9, 0x3
 
-    .line 543
     .local v4, "triggerDistance":I
     iget v11, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->screenWidth:I
 
@@ -503,7 +459,6 @@
     :goto_0
     div-int v3, v11, v9
 
-    .line 544
     .local v3, "startPosX":I
     iget v9, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->screenWidth:I
 
@@ -516,7 +471,6 @@
     :goto_1
     div-int v2, v9, v10
 
-    .line 545
     .local v2, "endPosX":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -524,7 +478,6 @@
 
     float-to-int v5, v9
 
-    .line 546
     .local v5, "upX":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -532,7 +485,6 @@
 
     float-to-int v8, v9
 
-    .line 549
     .local v8, "upY":I
     const-string v9, "SystemGestures"
 
@@ -718,7 +670,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 558
     iget v9, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMaxX:I
 
     iget v10, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMinX:I
@@ -745,7 +696,6 @@
 
     if-ltz v9, :cond_3
 
-    .line 559
     iget v9, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mFirstDownX:I
 
     sub-int v9, v5, v9
@@ -754,7 +704,6 @@
 
     move-result v0
 
-    .line 560
     .local v0, "diffX":I
     iget v9, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mFirstDownY:I
 
@@ -764,13 +713,11 @@
 
     move-result v1
 
-    .line 561
     .local v1, "diffY":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v6
 
-    .line 563
     .local v6, "upTime":J
     iget v9, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->screenWidth:I
 
@@ -794,14 +741,12 @@
 
     if-gez v9, :cond_3
 
-    .line 564
     iget v9, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mFirstDownX:I
 
     if-ge v9, v3, :cond_2
 
     if-ge v5, v2, :cond_2
 
-    .line 565
     const-string v9, "SystemGestures"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -828,17 +773,14 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 566
     const/16 v9, 0x65
 
-    .line 576
     .end local v0    # "diffX":I
     .end local v1    # "diffY":I
     .end local v6    # "upTime":J
     :goto_2
     return v9
 
-    .line 543
     .end local v2    # "endPosX":I
     .end local v3    # "startPosX":I
     .end local v5    # "upX":I
@@ -848,14 +790,12 @@
 
     goto/16 :goto_0
 
-    .line 544
     .restart local v3    # "startPosX":I
     :cond_1
     const/4 v10, 0x4
 
     goto/16 :goto_1
 
-    .line 568
     .restart local v0    # "diffX":I
     .restart local v1    # "diffY":I
     .restart local v2    # "endPosX":I
@@ -877,7 +817,6 @@
 
     if-le v5, v9, :cond_3
 
-    .line 569
     const-string v9, "SystemGestures"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -904,12 +843,10 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 570
     const/16 v9, 0x64
 
     goto :goto_2
 
-    .line 576
     .end local v0    # "diffX":I
     .end local v1    # "diffY":I
     .end local v6    # "upTime":J
@@ -929,18 +866,15 @@
     .prologue
     const-wide/16 v8, 0x1f4
 
-    .line 424
     iget-object v5, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownX:[F
 
     aget v2, v5, p1
 
-    .line 425
     .local v2, "fromX":F
     iget-object v5, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownY:[F
 
     aget v3, v5, p1
 
-    .line 426
     .local v3, "fromY":F
     iget-object v5, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownTime:[J
 
@@ -948,11 +882,9 @@
 
     sub-long v0, p2, v6
 
-    .line 431
     .local v0, "elapsed":J
     iget v4, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeStartThreshold:I
 
-    .line 439
     .local v4, "swipeStartThreshold":I
     int-to-float v5, v4
 
@@ -974,14 +906,11 @@
 
     if-gez v5, :cond_0
 
-    .line 454
     const/4 v5, 0x1
 
-    .line 506
     :goto_0
     return v5
 
-    .line 457
     :cond_0
     iget v5, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->screenHeight:I
 
@@ -1009,12 +938,10 @@
 
     if-gez v5, :cond_1
 
-    .line 472
     const/4 v5, 0x2
 
     goto :goto_0
 
-    .line 475
     :cond_1
     iget v5, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->screenWidth:I
 
@@ -1042,12 +969,10 @@
 
     if-gez v5, :cond_2
 
-    .line 490
     const/4 v5, 0x3
 
     goto :goto_0
 
-    .line 506
     :cond_2
     const/4 v5, 0x0
 
@@ -1059,18 +984,15 @@
     .param p1, "move"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 399
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getHistorySize()I
 
     move-result v15
 
-    .line 400
     .local v15, "historySize":I
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v17
 
-    .line 401
     .local v17, "pointerCount":I
     const/16 v16, 0x0
 
@@ -1082,7 +1004,6 @@
 
     if-ge v0, v1, :cond_4
 
-    .line 402
     move-object/from16 v0, p1
 
     move/from16 v1, v16
@@ -1091,7 +1012,6 @@
 
     move-result v18
 
-    .line 403
     .local v18, "pointerId":I
     move-object/from16 v0, p0
 
@@ -1101,27 +1021,23 @@
 
     move-result v3
 
-    .line 404
     .local v3, "i":I
     const/4 v2, -0x1
 
     if-eq v3, v2, :cond_3
 
-    .line 405
     const/4 v14, 0x0
 
     .local v14, "h":I
     :goto_1
     if-ge v14, v15, :cond_2
 
-    .line 406
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v14}, Landroid/view/MotionEvent;->getHistoricalEventTime(I)J
 
     move-result-wide v4
 
-    .line 407
     .local v4, "time":J
     move-object/from16 v0, p1
 
@@ -1131,7 +1047,6 @@
 
     move-result v6
 
-    .line 408
     .local v6, "x":F
     move-object/from16 v0, p1
 
@@ -1144,16 +1059,13 @@
     .local v7, "y":F
     move-object/from16 v2, p0
 
-    .line 409
     invoke-direct/range {v2 .. v7}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->detectSwipe(IJFF)I
 
     move-result v19
 
-    .line 410
     .local v19, "swipe":I
     if-eqz v19, :cond_1
 
-    .line 420
     .end local v3    # "i":I
     .end local v4    # "time":J
     .end local v6    # "x":F
@@ -1165,7 +1077,6 @@
     :goto_2
     return v19
 
-    .line 405
     .restart local v3    # "i":I
     .restart local v4    # "time":J
     .restart local v6    # "x":F
@@ -1178,7 +1089,6 @@
 
     goto :goto_1
 
-    .line 414
     .end local v4    # "time":J
     .end local v6    # "x":F
     .end local v7    # "y":F
@@ -1212,11 +1122,9 @@
 
     move-result v19
 
-    .line 415
     .restart local v19    # "swipe":I
     if-nez v19, :cond_0
 
-    .line 401
     .end local v14    # "h":I
     .end local v19    # "swipe":I
     :cond_3
@@ -1224,7 +1132,6 @@
 
     goto :goto_0
 
-    .line 420
     .end local v3    # "i":I
     .end local v18    # "pointerId":I
     :cond_4
@@ -1240,7 +1147,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 386
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -1249,26 +1155,22 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 387
     iget-object v2, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownPointerId:[I
 
     aget v2, v2, v0
 
     if-ne v2, p1, :cond_0
 
-    .line 395
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 386
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 391
     :cond_1
     iget v2, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownPointers:I
 
@@ -1281,10 +1183,8 @@
     :cond_2
     move v0, v1
 
-    .line 392
     goto :goto_1
 
-    .line 394
     :cond_3
     iget-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownPointerId:[I
 
@@ -1296,7 +1196,6 @@
 
     aput p1, v1, v2
 
-    .line 395
     iget v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownPointers:I
 
     add-int/lit8 v0, v1, -0x1
@@ -1308,12 +1207,10 @@
     .locals 1
 
     .prologue
-    .line 582
     iget-object v0, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mIwm:Landroid/view/IWindowManager;
 
     if-nez v0, :cond_0
 
-    .line 583
     const-string/jumbo v0, "window"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1326,7 +1223,6 @@
 
     iput-object v0, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mIwm:Landroid/view/IWindowManager;
 
-    .line 585
     :cond_0
     iget-object v0, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mIwm:Landroid/view/IWindowManager;
 
@@ -1337,7 +1233,6 @@
     .locals 1
 
     .prologue
-    .line 590
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->getWindowManager()Landroid/view/IWindowManager;
 
@@ -1351,11 +1246,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 593
     :goto_0
     return-void
 
-    .line 591
     :catch_0
     move-exception v0
 
@@ -1379,17 +1272,14 @@
 
     const/4 v8, 0x0
 
-    .line 205
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mGestureDetector:Landroid/view/GestureDetector;
 
     if-eqz v6, :cond_0
 
-    .line 206
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mGestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v6, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 224
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
@@ -1397,13 +1287,11 @@
 
     packed-switch v6, :pswitch_data_0
 
-    .line 369
     :cond_1
     :goto_0
     :pswitch_0
     return-void
 
-    .line 228
     :pswitch_1
     invoke-static {}, Lcom/android/server/policy/sec/SamsungPolicyProperties;->isEasyOneHandEnabled()Z
 
@@ -1425,12 +1313,10 @@
 
     if-eq v6, v9, :cond_5
 
-    .line 232
     invoke-static {}, Lcom/android/server/policy/sec/SamsungPolicyProperties;->isEasyOneHandRunning()Z
 
     move-result v0
 
-    .line 233
     .local v0, "eohRunning":Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
@@ -1440,7 +1326,6 @@
 
     iput v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mFirstDownX:I
 
-    .line 234
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v6
@@ -1449,10 +1334,8 @@
 
     iput v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mFirstDownY:I
 
-    .line 235
     if-eqz v0, :cond_6
 
-    .line 237
     .local v4, "sideMargin":I
     :goto_1
     if-nez v0, :cond_2
@@ -1509,32 +1392,27 @@
 
     if-le v6, v9, :cond_5
 
-    .line 239
     :cond_4
     iput-boolean v7, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCanStartEasyOneHand:Z
 
-    .line 240
     iget v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mFirstDownX:I
 
     iput v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMaxX:I
 
     iput v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMinX:I
 
-    .line 241
     iget v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mFirstDownY:I
 
     iput v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMaxY:I
 
     iput v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMinY:I
 
-    .line 242
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getEventTime()J
 
     move-result-wide v10
 
     iput-wide v10, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mFirstDownTime:J
 
-    .line 243
     iget v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mFirstDownX:I
 
     iget v9, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->screenWidth:I
@@ -1548,29 +1426,23 @@
     :goto_2
     iput-boolean v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mStartFromLeft:Z
 
-    .line 254
     .end local v0    # "eohRunning":Z
     .end local v4    # "sideMargin":I
     :cond_5
     iput-boolean v7, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeFireable:Z
 
-    .line 255
     iput-boolean v7, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDebugFireable:Z
 
-    .line 256
     iput v8, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDownPointers:I
 
-    .line 257
     invoke-direct {p0, p1, v8}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->captureDown(Landroid/view/MotionEvent;I)V
 
-    .line 258
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
     invoke-interface {v6}, Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;->onDown()V
 
     goto/16 :goto_0
 
-    .line 235
     .restart local v0    # "eohRunning":Z
     :cond_6
     const/16 v4, 0x8
@@ -1581,10 +1453,8 @@
     :cond_7
     move v6, v8
 
-    .line 243
     goto :goto_2
 
-    .line 268
     .end local v0    # "eohRunning":Z
     .end local v4    # "sideMargin":I
     :pswitch_2
@@ -1594,12 +1464,10 @@
 
     invoke-direct {p0, p1, v6}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->captureDown(Landroid/view/MotionEvent;I)V
 
-    .line 269
     iget-boolean v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDebugFireable:Z
 
     if-eqz v6, :cond_1
 
-    .line 270
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v6
@@ -1611,12 +1479,10 @@
     :goto_3
     iput-boolean v7, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDebugFireable:Z
 
-    .line 271
     iget-boolean v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDebugFireable:Z
 
     if-nez v6, :cond_1
 
-    .line 273
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
     invoke-interface {v6}, Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;->onDebug()V
@@ -1626,23 +1492,19 @@
     :cond_8
     move v7, v8
 
-    .line 270
     goto :goto_3
 
-    .line 280
     :pswitch_3
     iget-boolean v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCanStartEasyOneHand:Z
 
     if-eqz v6, :cond_b
 
-    .line 281
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v6
 
     float-to-int v2, v6
 
-    .line 282
     .local v2, "pointX":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
@@ -1650,7 +1512,6 @@
 
     float-to-int v3, v6
 
-    .line 284
     .local v3, "pointY":I
     iget v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMinX:I
 
@@ -1661,7 +1522,6 @@
     :goto_4
     iput v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMinX:I
 
-    .line 285
     iget v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMaxX:I
 
     if-le v6, v2, :cond_9
@@ -1672,7 +1532,6 @@
     :cond_9
     iput v2, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMaxX:I
 
-    .line 286
     iget v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMinY:I
 
     if-le v6, v3, :cond_e
@@ -1682,7 +1541,6 @@
     :goto_5
     iput v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMinY:I
 
-    .line 287
     iget v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMaxY:I
 
     if-le v6, v3, :cond_a
@@ -1693,18 +1551,15 @@
     :cond_a
     iput v3, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMaxY:I
 
-    .line 292
     :cond_b
     iget-boolean v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeFireable:Z
 
     if-eqz v6, :cond_1
 
-    .line 293
     invoke-direct {p0, p1}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->detectSwipe(Landroid/view/MotionEvent;)I
 
     move-result v5
 
-    .line 294
     .local v5, "swipe":I
     if-nez v5, :cond_c
 
@@ -1713,17 +1568,14 @@
     :cond_c
     iput-boolean v8, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeFireable:Z
 
-    .line 295
     if-ne v5, v7, :cond_f
 
-    .line 302
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
     invoke-interface {v6}, Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;->onSwipeFromTop()V
 
     goto/16 :goto_0
 
-    .line 284
     .end local v5    # "swipe":I
     .restart local v2    # "pointX":I
     .restart local v3    # "pointY":I
@@ -1732,100 +1584,83 @@
 
     goto :goto_4
 
-    .line 286
     .end local v2    # "pointX":I
     :cond_e
     iget v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mMinY:I
 
     goto :goto_5
 
-    .line 304
     .end local v3    # "pointY":I
     .restart local v5    # "swipe":I
     :cond_f
     if-ne v5, v9, :cond_10
 
-    .line 306
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
     invoke-interface {v6}, Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;->onSwipeFromBottom()V
 
     goto/16 :goto_0
 
-    .line 307
     :cond_10
     if-ne v5, v10, :cond_11
 
-    .line 309
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
     invoke-interface {v6}, Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;->onSwipeFromRight()V
 
     goto/16 :goto_0
 
-    .line 312
     :cond_11
     if-ne v5, v4, :cond_1
 
     goto/16 :goto_0
 
-    .line 329
     .end local v5    # "swipe":I
     :pswitch_4
     iget-boolean v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCanStartEasyOneHand:Z
 
     if-eqz v6, :cond_12
 
-    .line 330
     invoke-direct {p0, p1}, Lcom/android/server/policy/SystemGesturesPointerEventListener;->detectEasyOneHandGesture(Landroid/view/MotionEvent;)I
 
     move-result v1
 
-    .line 331
     .local v1, "gesture":I
     const/16 v6, 0x65
 
     if-ne v1, v6, :cond_13
 
-    .line 333
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
     invoke-interface {v6}, Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;->onSwipeLeftCenterLeft()V
 
-    .line 339
     .end local v1    # "gesture":I
     :cond_12
     :goto_6
     iput-boolean v8, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCanStartEasyOneHand:Z
 
-    .line 343
     iput-boolean v8, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mSwipeFireable:Z
 
-    .line 344
     iput-boolean v8, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mDebugFireable:Z
 
-    .line 345
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
     invoke-interface {v6}, Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;->onUpOrCancel()V
 
     goto/16 :goto_0
 
-    .line 334
     .restart local v1    # "gesture":I
     :cond_13
     const/16 v6, 0x64
 
     if-ne v1, v6, :cond_12
 
-    .line 336
     iget-object v6, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mCallbacks:Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;
 
     invoke-interface {v6}, Lcom/android/server/policy/SystemGesturesPointerEventListener$Callbacks;->onSwipeRightCenterRight()V
 
     goto :goto_6
 
-    .line 224
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1843,7 +1678,6 @@
     .locals 5
 
     .prologue
-    .line 198
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
@@ -1852,7 +1686,6 @@
 
     invoke-direct {v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 199
     .local v0, "h":Landroid/os/Handler;
     new-instance v1, Landroid/view/GestureDetector;
 
@@ -1868,7 +1701,6 @@
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mGestureDetector:Landroid/view/GestureDetector;
 
-    .line 200
     new-instance v1, Landroid/widget/OverScroller;
 
     iget-object v2, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mContext:Landroid/content/Context;
@@ -1877,6 +1709,5 @@
 
     iput-object v1, p0, Lcom/android/server/policy/SystemGesturesPointerEventListener;->mOverscroller:Landroid/widget/OverScroller;
 
-    .line 201
     return-void
 .end method

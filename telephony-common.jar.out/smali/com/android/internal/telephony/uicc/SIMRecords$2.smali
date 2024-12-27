@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 5279
     invoke-static {}, Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;->values()[Lcom/android/internal/telephony/uicc/SIMRecords$GetSpnFsmState;
 
     move-result-object v0

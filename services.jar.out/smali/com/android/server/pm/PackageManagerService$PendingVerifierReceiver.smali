@@ -32,21 +32,16 @@
     .param p4, "sufficientVerifierTimeout"    # Z
 
     .prologue
-    .line 16999
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 17000
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mState:Lcom/android/server/pm/PackageVerificationState;
 
-    .line 17001
     iput p3, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mUid:I
 
-    .line 17002
     iput-boolean p4, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mSufficientVerifierTimeout:Z
 
-    .line 17003
     return-void
 .end method
 
@@ -58,7 +53,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 17007
     const-string v2, "PackageManager"
 
     const-string v3, "VERIFY"
@@ -93,12 +87,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17008
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mState:Lcom/android/server/pm/PackageVerificationState;
 
     monitor-enter v3
 
-    .line 17009
     :try_start_0
     new-instance v1, Lcom/android/server/pm/PackageVerificationResponse;
 
@@ -113,7 +105,6 @@
 
     invoke-direct {v1, v2, v4}, Lcom/android/server/pm/PackageVerificationResponse;-><init>(II)V
 
-    .line 17012
     .local v1, "response":Lcom/android/server/pm/PackageVerificationResponse;
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mState:Lcom/android/server/pm/PackageVerificationState;
 
@@ -133,14 +124,12 @@
 
     if-nez v2, :cond_0
 
-    .line 17013
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mState:Lcom/android/server/pm/PackageVerificationState;
 
     const/16 v4, 0x10
 
     invoke-virtual {v2, v4, v1}, Lcom/android/server/pm/PackageVerificationState;->addHandlerMessage(ILjava/lang/Object;)V
 
-    .line 17014
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
@@ -151,7 +140,6 @@
 
     move-result-object v0
 
-    .line 17015
     .local v0, "msg":Landroid/os/Message;
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mState:Lcom/android/server/pm/PackageVerificationState;
 
@@ -161,10 +149,8 @@
 
     iput v2, v0, Landroid/os/Message;->arg1:I
 
-    .line 17016
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 17017
     const-string v2, "PackageManager"
 
     const-string v4, "VERIFY"
@@ -222,7 +208,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17019
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
@@ -236,7 +221,6 @@
 
     invoke-virtual {v2, v0, v4, v5}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 17022
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     iget-boolean v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mSufficientVerifierTimeout:Z
@@ -251,14 +235,12 @@
 
     if-nez v2, :cond_1
 
-    .line 17023
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mState:Lcom/android/server/pm/PackageVerificationState;
 
     const/16 v4, 0x15
 
     invoke-virtual {v2, v4, v1}, Lcom/android/server/pm/PackageVerificationState;->addHandlerMessage(ILjava/lang/Object;)V
 
-    .line 17024
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
@@ -269,7 +251,6 @@
 
     move-result-object v0
 
-    .line 17025
     .restart local v0    # "msg":Landroid/os/Message;
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->mState:Lcom/android/server/pm/PackageVerificationState;
 
@@ -279,10 +260,8 @@
 
     iput v2, v0, Landroid/os/Message;->arg1:I
 
-    .line 17026
     iput-object v1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 17027
     const-string v2, "PackageManager"
 
     const-string v4, "VERIFY"
@@ -340,7 +319,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17029
     iget-object v2, p0, Lcom/android/server/pm/PackageManagerService$PendingVerifierReceiver;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v2, v2, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
@@ -354,15 +332,12 @@
 
     invoke-virtual {v2, v0, v4, v5}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 17031
     .end local v0    # "msg":Landroid/os/Message;
     :cond_1
     monitor-exit v3
 
-    .line 17032
     return-void
 
-    .line 17031
     .end local v1    # "response":Lcom/android/server/pm/PackageVerificationResponse;
     :catchall_0
     move-exception v2

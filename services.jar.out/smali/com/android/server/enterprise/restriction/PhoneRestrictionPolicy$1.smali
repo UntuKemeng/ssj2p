@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2502
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 2506
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2508
     .local v0, "action":Ljava/lang/String;
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 2510
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
     # getter for: Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;->mSmsMmsDeliveryHandler:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler;
@@ -68,7 +64,6 @@
 
     move-result-object v1
 
-    .line 2511
     .local v1, "msg":Landroid/os/Message;
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
@@ -79,13 +74,11 @@
 
     invoke-virtual {v2, v1}, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$SmsMmsDeliveryHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 2521
     .end local v1    # "msg":Landroid/os/Message;
     :cond_0
     :goto_0
     return-void
 
-    .line 2512
     :cond_1
     const-string v2, "android.intent.action.ACTION_SHUTDOWN"
 
@@ -103,7 +96,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 2515
     :cond_2
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
@@ -114,7 +106,6 @@
 
     goto :goto_0
 
-    .line 2517
     :cond_3
     const-string v2, "edm.intent.action.PHONE_READY"
 
@@ -124,7 +115,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 2518
     iget-object v2, p0, Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy$1;->this$0:Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;
 
     # getter for: Lcom/android/server/enterprise/restriction/PhoneRestrictionPolicy;->mSimPinHandler:Landroid/os/Handler;

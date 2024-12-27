@@ -98,10 +98,8 @@
     .locals 0
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1995
     return-void
 .end method
 
@@ -110,7 +108,6 @@
     .param p0, "volumeName"    # Ljava/lang/String;
 
     .prologue
-    .line 2326
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -147,7 +144,6 @@
     .param p0, "volumeName"    # Ljava/lang/String;
 
     .prologue
-    .line 2294
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -183,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 2287
     const-string v0, "content://media/none/media_scanner"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -198,7 +193,6 @@
     .param p0, "volumeName"    # Ljava/lang/String;
 
     .prologue
-    .line 2310
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -235,7 +229,6 @@
     .param p0, "volumeName"    # Ljava/lang/String;
 
     .prologue
-    .line 2302
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -272,7 +265,6 @@
     .param p0, "volumeName"    # Ljava/lang/String;
 
     .prologue
-    .line 2318
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -311,7 +303,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2352
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -332,11 +323,9 @@
 
     move-result-object v6
 
-    .line 2355
     .local v6, "c":Landroid/database/Cursor;
     if-eqz v6, :cond_0
 
-    .line 2357
     :try_start_0
     invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
 
@@ -344,7 +333,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2358
     const/4 v0, 0x0
 
     invoke-interface {v6, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -353,15 +341,12 @@
 
     move-result-object v2
 
-    .line 2361
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 2364
     :cond_0
     :goto_0
     return-object v2
 
-    .line 2361
     :cond_1
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 

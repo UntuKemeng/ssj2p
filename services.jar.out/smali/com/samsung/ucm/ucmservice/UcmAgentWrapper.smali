@@ -48,7 +48,6 @@
     .locals 2
 
     .prologue
-    .line 38
     const-string v0, "eng"
 
     const-string v1, "ro.build.type"
@@ -73,43 +72,34 @@
     .param p3, "comp"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const-wide/16 v0, 0x1388
 
     iput-wide v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->RESTART_TIMEOUT_MILLIS:J
 
-    .line 43
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mBound:Z
 
-    .line 48
     new-instance v0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$1;-><init>(Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;)V
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mHandler:Landroid/os/Handler;
 
-    .line 133
     new-instance v0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$2;
 
     invoke-direct {v0, p0}, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$2;-><init>(Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;)V
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mConnection:Landroid/content/ServiceConnection;
 
-    .line 77
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mContext:Landroid/content/Context;
 
-    .line 78
     iput-object p2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mService:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
-    .line 79
     iput-object p3, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
-    .line 80
     return-void
 .end method
 
@@ -118,7 +108,6 @@
     .param p0, "x0"    # Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mService:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     return-object v0
@@ -129,7 +118,6 @@
     .param p0, "x0"    # Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
 
     .prologue
-    .line 33
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -141,7 +129,6 @@
     .param p1, "x1"    # Lcom/sec/enterprise/knox/ucm/plugin/agent/IUcmAgentService;
 
     .prologue
-    .line 33
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mUcsAgentService:Lcom/sec/enterprise/knox/ucm/plugin/agent/IUcmAgentService;
 
     return-object p1
@@ -152,7 +139,6 @@
     .param p0, "x0"    # Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
 
     .prologue
-    .line 33
     iget-boolean v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mBound:Z
 
     return v0
@@ -163,7 +149,6 @@
     .param p0, "x0"    # Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->scheduleRestart()V
 
     return-void
@@ -175,25 +160,20 @@
     .param p1, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 169
     if-nez p1, :cond_1
 
-    .line 170
     const-string v23, "UcmAgentWrapper"
 
     const-string v24, "Context is null"
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 171
     const/4 v4, 0x0
 
-    .line 347
     :cond_0
     :goto_0
     return-object v4
 
-    .line 174
     :cond_1
     if-eqz p0, :cond_2
 
@@ -219,7 +199,6 @@
 
     if-nez v23, :cond_3
 
-    .line 176
     :cond_2
     const-string v23, "UcmAgentWrapper"
 
@@ -227,36 +206,29 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 177
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 179
     :cond_3
     const/4 v8, 0x0
 
-    .line 180
     .local v8, "cn":Ljava/lang/String;
     new-instance v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
     invoke-direct {v4}, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;-><init>()V
 
-    .line 181
     .local v4, "agentInfo":Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v17
 
-    .line 182
     .local v17, "pm":Landroid/content/pm/PackageManager;
     const/4 v14, 0x0
 
-    .line 183
     .local v14, "parser":Landroid/content/res/XmlResourceParser;
     const/4 v7, 0x0
 
-    .line 185
     .local v7, "caughtException":Ljava/lang/Exception;
     :try_start_0
     move-object/from16 v0, p0
@@ -277,10 +249,8 @@
 
     move-result-object v14
 
-    .line 186
     if-nez v14, :cond_4
 
-    .line 187
     const-string v23, "UcmAgentWrapper"
 
     const-string v24, "Can\'t find com.samsung.ucm.agent meta-data"
@@ -292,19 +262,15 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_2
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 188
     const/4 v4, 0x0
 
-    .line 339
     .end local v4    # "agentInfo":Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
     if-eqz v14, :cond_0
 
-    .line 340
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_0
 
-    .line 190
     .restart local v4    # "agentInfo":Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
     :cond_4
     :try_start_1
@@ -328,7 +294,6 @@
 
     move-result-object v21
 
-    .line 194
     .local v21, "res":Landroid/content/res/Resources;
     :cond_5
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->next()I
@@ -352,13 +317,11 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 196
     :cond_6
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->getName()Ljava/lang/String;
 
     move-result-object v13
 
-    .line 197
     .local v13, "nodeName":Ljava/lang/String;
     const-string v23, "cred-agent"
 
@@ -370,7 +333,6 @@
 
     if-nez v23, :cond_7
 
-    .line 198
     const-string v23, "UcmAgentWrapper"
 
     const-string v24, "Meta-data does not start with tag cred-agent"
@@ -382,19 +344,15 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 199
     const/4 v4, 0x0
 
-    .line 339
     .end local v4    # "agentInfo":Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
     if-eqz v14, :cond_0
 
-    .line 340
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
 
-    .line 202
     .restart local v4    # "agentInfo":Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
     :cond_7
     const/16 v23, 0x0
@@ -414,14 +372,12 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->agentId:Ljava/lang/String;
 
-    .line 203
     iget-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->agentId:Ljava/lang/String;
 
     move-object/from16 v23, v0
 
     if-eqz v23, :cond_c
 
-    .line 205
     new-instance v23, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
@@ -464,7 +420,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->id:Ljava/lang/String;
 
-    .line 210
     const/16 v23, 0x0
 
     const-string v24, "summary"
@@ -481,7 +436,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->summary:Ljava/lang/String;
 
-    .line 211
     const/16 v23, 0x0
 
     const-string v24, "title"
@@ -498,7 +452,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->title:Ljava/lang/String;
 
-    .line 212
     const/16 v23, 0x0
 
     const-string v24, "vendorId"
@@ -515,7 +468,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->vendorId:Ljava/lang/String;
 
-    .line 213
     const-string v23, "true"
 
     const/16 v24, 0x0
@@ -538,7 +490,6 @@
 
     iput-boolean v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->isDetachable:Z
 
-    .line 214
     const-string v23, "true"
 
     const/16 v24, 0x0
@@ -561,7 +512,6 @@
 
     iput-boolean v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->reqUserVerification:Z
 
-    .line 215
     const-string v23, "true"
 
     const/16 v24, 0x0
@@ -584,7 +534,6 @@
 
     iput-boolean v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->isHardwareBacked:Z
 
-    .line 216
     const-string v23, "true"
 
     const/16 v24, 0x0
@@ -607,7 +556,6 @@
 
     iput-boolean v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->isReadOnly:Z
 
-    .line 218
     sget-boolean v23, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->DEBUG:Z
 
     if-eqz v23, :cond_8
@@ -734,7 +682,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     :cond_8
     const/16 v23, 0x0
 
@@ -752,7 +699,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->configuratorList:Ljava/lang/String;
 
-    .line 223
     const/16 v23, 0x0
 
     const-string v24, "isManageable"
@@ -765,7 +711,6 @@
 
     move-result-object v11
 
-    .line 224
     .local v11, "isManageable":Ljava/lang/String;
     if-eqz v11, :cond_d
 
@@ -785,14 +730,12 @@
 
     if-eqz v23, :cond_d
 
-    .line 225
     const/16 v23, 0x0
 
     move/from16 v0, v23
 
     iput-boolean v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->isManageable:Z
 
-    .line 229
     :goto_1
     const-string v23, "true"
 
@@ -816,7 +759,6 @@
 
     iput-boolean v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->enforceManagement:Z
 
-    .line 230
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -831,7 +773,6 @@
 
     if-eqz v23, :cond_9
 
-    .line 231
     move-object/from16 v0, p0
 
     iget-object v0, v0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
@@ -854,7 +795,6 @@
 
     iput v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->serviceUid:I
 
-    .line 233
     :cond_9
     move-object/from16 v0, p0
 
@@ -872,7 +812,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->packageName:Ljava/lang/String;
 
-    .line 235
     const/16 v23, 0x0
 
     const-string v24, "pinMinimum"
@@ -885,11 +824,9 @@
 
     move-result-object v16
 
-    .line 236
     .local v16, "pinMinLength":Ljava/lang/String;
     if-eqz v16, :cond_e
 
-    .line 237
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v23
@@ -898,7 +835,6 @@
 
     iput v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->pinMinLength:I
 
-    .line 243
     :goto_2
     const/16 v23, 0x0
 
@@ -912,11 +848,9 @@
 
     move-result-object v15
 
-    .line 244
     .local v15, "pinMaxLength":Ljava/lang/String;
     if-eqz v15, :cond_f
 
-    .line 245
     invoke-static {v15}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v23
@@ -925,7 +859,6 @@
 
     iput v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->pinMaxLength:I
 
-    .line 251
     :goto_3
     const/16 v23, 0x0
 
@@ -939,11 +872,9 @@
 
     move-result-object v20
 
-    .line 252
     .local v20, "pukMinLength":Ljava/lang/String;
     if-eqz v20, :cond_10
 
-    .line 253
     invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v23
@@ -952,7 +883,6 @@
 
     iput v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->pukMinLength:I
 
-    .line 259
     :goto_4
     const/16 v23, 0x0
 
@@ -966,11 +896,9 @@
 
     move-result-object v19
 
-    .line 260
     .local v19, "pukMaxLength":Ljava/lang/String;
     if-eqz v19, :cond_12
 
-    .line 261
     invoke-static/range {v19 .. v19}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v23
@@ -979,7 +907,6 @@
 
     iput v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->pukMaxLength:I
 
-    .line 267
     :goto_5
     const/16 v23, 0x0
 
@@ -993,11 +920,9 @@
 
     move-result-object v5
 
-    .line 268
     .local v5, "authMaxCnt":Ljava/lang/String;
     if-eqz v5, :cond_13
 
-    .line 269
     invoke-static {v5}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v23
@@ -1006,7 +931,6 @@
 
     iput v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->authMaxCnt:I
 
-    .line 275
     :goto_6
     const/16 v23, 0x0
 
@@ -1020,11 +944,9 @@
 
     move-result-object v6
 
-    .line 276
     .local v6, "authMode":Ljava/lang/String;
     if-eqz v6, :cond_14
 
-    .line 277
     invoke-static {v6}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v23
@@ -1033,7 +955,6 @@
 
     iput v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->authMode:I
 
-    .line 283
     :goto_7
     const-string v23, "true"
 
@@ -1057,7 +978,6 @@
 
     iput-boolean v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->isGeneratePasswordAvailable:Z
 
-    .line 286
     const-string v23, "true"
 
     const/16 v24, 0x0
@@ -1080,7 +1000,6 @@
 
     iput-boolean v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->isODESupport:Z
 
-    .line 289
     const/16 v23, 0x0
 
     const-string v24, "settingsActivity"
@@ -1093,7 +1012,6 @@
 
     move-result-object v8
 
-    .line 290
     if-eqz v8, :cond_a
 
     const/16 v23, 0x2f
@@ -1106,7 +1024,6 @@
 
     if-gez v23, :cond_a
 
-    .line 291
     new-instance v23, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
@@ -1143,7 +1060,6 @@
 
     move-result-object v8
 
-    .line 293
     :cond_a
     if-nez v8, :cond_15
 
@@ -1154,7 +1070,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->settingsComponentName:Landroid/content/ComponentName;
 
-    .line 297
     const/16 v23, 0x0
 
     const-string v24, "storageType"
@@ -1171,7 +1086,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->storageType:Ljava/lang/String;
 
-    .line 300
     const/16 v23, 0x0
 
     const-string v24, "enabledSCP"
@@ -1188,7 +1102,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->enabledSCP:Ljava/lang/String;
 
-    .line 303
     const/16 v23, 0x0
 
     const-string v24, "enabledWrap"
@@ -1201,11 +1114,9 @@
 
     move-result-object v10
 
-    .line 304
     .local v10, "enabledWrap":Ljava/lang/String;
     if-eqz v10, :cond_16
 
-    .line 305
     invoke-static {v10}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v23
@@ -1214,13 +1125,11 @@
 
     iput v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->enabledWrap:I
 
-    .line 312
     :goto_9
     invoke-virtual {v4}, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->toString()Ljava/lang/String;
 
     move-result-object v18
 
-    .line 313
     .local v18, "print":Ljava/lang/String;
     const-string v23, "UcmAgentWrapper"
 
@@ -1230,7 +1139,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     const/16 v23, 0x0
 
     const-string v24, "AID"
@@ -1243,7 +1151,6 @@
 
     move-result-object v3
 
-    .line 317
     .local v3, "AID":Ljava/lang/String;
     if-eqz v3, :cond_17
 
@@ -1259,7 +1166,6 @@
 
     if-eq v0, v1, :cond_17
 
-    .line 318
     invoke-static {v3}, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->hexStringToByteArray(Ljava/lang/String;)[B
 
     move-result-object v23
@@ -1268,7 +1174,6 @@
 
     iput-object v0, v4, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->AID:[B
 
-    .line 325
     :goto_a
     const/16 v23, 0x0
 
@@ -1282,7 +1187,6 @@
 
     move-result-object v12
 
-    .line 326
     .local v12, "isPUKSupported":Ljava/lang/String;
     if-eqz v12, :cond_18
 
@@ -1302,7 +1206,6 @@
 
     if-eqz v23, :cond_18
 
-    .line 327
     const/16 v23, 0x0
 
     move/from16 v0, v23
@@ -1314,14 +1217,11 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 339
     :goto_b
     if-eqz v14, :cond_b
 
-    .line 340
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->close()V
 
-    .line 342
     .end local v3    # "AID":Ljava/lang/String;
     .end local v5    # "authMaxCnt":Ljava/lang/String;
     .end local v6    # "authMode":Ljava/lang/String;
@@ -1340,7 +1240,6 @@
     :goto_c
     if-eqz v7, :cond_19
 
-    .line 343
     const-string v23, "UcmAgentWrapper"
 
     new-instance v24, Ljava/lang/StringBuilder;
@@ -1379,12 +1278,10 @@
 
     invoke-static {v0, v1, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 344
     const/4 v4, 0x0
 
     goto/16 :goto_0
 
-    .line 207
     .restart local v13    # "nodeName":Ljava/lang/String;
     .restart local v21    # "res":Landroid/content/res/Resources;
     .restart local v22    # "type":I
@@ -1401,19 +1298,15 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_3 .. :try_end_3} :catch_2
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 208
     const/4 v4, 0x0
 
-    .line 339
     .end local v4    # "agentInfo":Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
     if-eqz v14, :cond_0
 
-    .line 340
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto/16 :goto_0
 
-    .line 227
     .restart local v4    # "agentInfo":Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
     .restart local v11    # "isManageable":Ljava/lang/String;
     :cond_d
@@ -1431,7 +1324,6 @@
 
     goto/16 :goto_1
 
-    .line 332
     .end local v11    # "isManageable":Ljava/lang/String;
     .end local v13    # "nodeName":Ljava/lang/String;
     .end local v21    # "res":Landroid/content/res/Resources;
@@ -1439,19 +1331,15 @@
     :catch_0
     move-exception v9
 
-    .line 333
     .local v9, "e":Ljava/io/IOException;
     move-object v7, v9
 
-    .line 339
     if-eqz v14, :cond_b
 
-    .line 340
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_c
 
-    .line 239
     .end local v9    # "e":Ljava/io/IOException;
     .restart local v11    # "isManageable":Ljava/lang/String;
     .restart local v13    # "nodeName":Ljava/lang/String;
@@ -1466,7 +1354,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 241
     const/16 v23, 0x4
 
     move/from16 v0, v23
@@ -1480,7 +1367,6 @@
 
     goto/16 :goto_2
 
-    .line 334
     .end local v11    # "isManageable":Ljava/lang/String;
     .end local v13    # "nodeName":Ljava/lang/String;
     .end local v16    # "pinMinLength":Ljava/lang/String;
@@ -1489,19 +1375,15 @@
     :catch_1
     move-exception v9
 
-    .line 335
     .local v9, "e":Lorg/xmlpull/v1/XmlPullParserException;
     move-object v7, v9
 
-    .line 339
     if-eqz v14, :cond_b
 
-    .line 340
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_c
 
-    .line 247
     .end local v9    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     .restart local v11    # "isManageable":Ljava/lang/String;
     .restart local v13    # "nodeName":Ljava/lang/String;
@@ -1517,7 +1399,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     const/16 v23, 0x6
 
     move/from16 v0, v23
@@ -1531,7 +1412,6 @@
 
     goto/16 :goto_3
 
-    .line 336
     .end local v11    # "isManageable":Ljava/lang/String;
     .end local v13    # "nodeName":Ljava/lang/String;
     .end local v15    # "pinMaxLength":Ljava/lang/String;
@@ -1541,19 +1421,15 @@
     :catch_2
     move-exception v9
 
-    .line 337
     .local v9, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     move-object v7, v9
 
-    .line 339
     if-eqz v14, :cond_b
 
-    .line 340
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->close()V
 
     goto :goto_c
 
-    .line 255
     .end local v9    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v11    # "isManageable":Ljava/lang/String;
     .restart local v13    # "nodeName":Ljava/lang/String;
@@ -1570,7 +1446,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 257
     const/16 v23, 0x8
 
     move/from16 v0, v23
@@ -1584,7 +1459,6 @@
 
     goto/16 :goto_4
 
-    .line 339
     .end local v11    # "isManageable":Ljava/lang/String;
     .end local v13    # "nodeName":Ljava/lang/String;
     .end local v15    # "pinMaxLength":Ljava/lang/String;
@@ -1597,13 +1471,11 @@
 
     if-eqz v14, :cond_11
 
-    .line 340
     invoke-interface {v14}, Landroid/content/res/XmlResourceParser;->close()V
 
     :cond_11
     throw v23
 
-    .line 263
     .restart local v11    # "isManageable":Ljava/lang/String;
     .restart local v13    # "nodeName":Ljava/lang/String;
     .restart local v15    # "pinMaxLength":Ljava/lang/String;
@@ -1620,7 +1492,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     const/16 v23, 0x14
 
     move/from16 v0, v23
@@ -1629,7 +1500,6 @@
 
     goto/16 :goto_5
 
-    .line 271
     .restart local v5    # "authMaxCnt":Ljava/lang/String;
     :cond_13
     const-string v23, "UcmAgentWrapper"
@@ -1638,7 +1508,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 273
     const/16 v23, 0x5
 
     move/from16 v0, v23
@@ -1647,7 +1516,6 @@
 
     goto/16 :goto_6
 
-    .line 279
     .restart local v6    # "authMode":Ljava/lang/String;
     :cond_14
     const-string v23, "UcmAgentWrapper"
@@ -1656,7 +1524,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     const/16 v23, 0x0
 
     move/from16 v0, v23
@@ -1665,7 +1532,6 @@
 
     goto/16 :goto_7
 
-    .line 293
     :cond_15
     invoke-static {v8}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
@@ -1673,7 +1539,6 @@
 
     goto/16 :goto_8
 
-    .line 307
     .restart local v10    # "enabledWrap":Ljava/lang/String;
     :cond_16
     const-string v23, "UcmAgentWrapper"
@@ -1682,7 +1547,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 309
     const/16 v23, 0x0
 
     move/from16 v0, v23
@@ -1691,7 +1555,6 @@
 
     goto/16 :goto_9
 
-    .line 320
     .restart local v3    # "AID":Ljava/lang/String;
     .restart local v18    # "print":Ljava/lang/String;
     :cond_17
@@ -1701,7 +1564,6 @@
 
     invoke-static/range {v23 .. v24}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 322
     const/16 v23, 0x0
 
     move-object/from16 v0, v23
@@ -1710,7 +1572,6 @@
 
     goto/16 :goto_a
 
-    .line 329
     .restart local v12    # "isPUKSupported":Ljava/lang/String;
     :cond_18
     const/16 v23, 0x1
@@ -1726,7 +1587,6 @@
 
     goto/16 :goto_b
 
-    .line 346
     .end local v3    # "AID":Ljava/lang/String;
     .end local v5    # "authMaxCnt":Ljava/lang/String;
     .end local v6    # "authMode":Ljava/lang/String;
@@ -1776,18 +1636,15 @@
     .param p0, "resolveInfo"    # Landroid/content/pm/ResolveInfo;
 
     .prologue
-    .line 128
     if-eqz p0, :cond_0
 
     iget-object v0, p0, Landroid/content/pm/ResolveInfo;->serviceInfo:Landroid/content/pm/ServiceInfo;
 
     if-nez v0, :cond_1
 
-    .line 129
     :cond_0
     const/4 v0, 0x0
 
-    .line 130
     :goto_0
     return-object v0
 
@@ -1814,7 +1671,6 @@
     .prologue
     const/16 v6, 0x10
 
-    .line 352
     sget-boolean v3, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->DEBUG:Z
 
     if-eqz v3, :cond_0
@@ -1841,7 +1697,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 353
     :cond_0
     if-eqz p0, :cond_1
 
@@ -1853,7 +1708,6 @@
 
     if-ne v3, v4, :cond_3
 
-    .line 354
     :cond_1
     const-string v3, "UcmAgentWrapper"
 
@@ -1861,26 +1715,21 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 355
     const/4 v0, 0x0
 
-    .line 363
     :cond_2
     return-object v0
 
-    .line 357
     :cond_3
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
-    .line 358
     .local v2, "len":I
     div-int/lit8 v3, v2, 0x2
 
     new-array v0, v3, [B
 
-    .line 359
     .local v0, "data":[B
     const/4 v1, 0x0
 
@@ -1888,7 +1737,6 @@
     :goto_0
     if-ge v1, v2, :cond_2
 
-    .line 360
     div-int/lit8 v3, v1, 0x2
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->charAt(I)C
@@ -1917,7 +1765,6 @@
 
     aput-byte v4, v0, v3
 
-    .line 359
     add-int/lit8 v1, v1, 0x2
 
     goto :goto_0
@@ -1929,26 +1776,22 @@
     .prologue
     const/4 v4, 0x4
 
-    .line 155
     const-string v0, "UcmAgentWrapper"
 
     const-string v1, "scheduleRestart"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, v4}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 157
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mHandler:Landroid/os/Handler;
 
     iget-wide v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->RESTART_TIMEOUT_MILLIS:J
 
     invoke-virtual {v0, v4, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 158
     return-void
 .end method
 
@@ -1959,25 +1802,20 @@
     .param p1, "other"    # Ljava/lang/Object;
 
     .prologue
-    .line 64
     instance-of v1, p1, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
 
     if-nez v1, :cond_0
 
-    .line 65
     const/4 v1, 0x0
 
-    .line 68
     :goto_0
     return v1
 
     :cond_0
     move-object v0, p1
 
-    .line 67
     check-cast v0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
 
-    .line 68
     .local v0, "o":Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
@@ -1994,7 +1832,6 @@
     .locals 1
 
     .prologue
-    .line 162
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mUcsAgentService:Lcom/sec/enterprise/knox/ucm/plugin/agent/IUcmAgentService;
 
     return-object v0
@@ -2004,7 +1841,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->componentName:Landroid/content/ComponentName;
 
     invoke-virtual {v0}, Landroid/content/ComponentName;->hashCode()I
@@ -2024,12 +1860,10 @@
     .prologue
     const-wide/32 v6, 0x1d4c0
 
-    .line 87
     invoke-static {p1}, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->getComponentName(Landroid/content/pm/ResolveInfo;)Landroid/content/ComponentName;
 
     move-result-object v1
 
-    .line 88
     .local v1, "name":Landroid/content/ComponentName;
     const-string v2, "UcmAgentWrapper"
 
@@ -2063,7 +1897,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 89
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mContext:Landroid/content/Context;
 
     invoke-static {p1, v2}, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->getAgentInfo(Landroid/content/pm/ResolveInfo;Landroid/content/Context;)Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
@@ -2072,16 +1905,13 @@
 
     iput-object v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->info:Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
-    .line 90
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 91
     .local v0, "intent":Landroid/content/Intent;
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 93
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->info:Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
     if-eqz v2, :cond_1
@@ -2092,7 +1922,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 94
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->info:Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
     iget-object v2, v2, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;->id:Ljava/lang/String;
@@ -2105,10 +1934,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 95
     iput-wide v6, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->RESTART_TIMEOUT_MILLIS:J
 
-    .line 98
     :cond_0
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->info:Lcom/samsung/ucm/ucmservice/UcmAgentWrapper$AgentInfo;
 
@@ -2122,19 +1949,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 99
     iput-wide v6, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->RESTART_TIMEOUT_MILLIS:J
 
-    .line 103
     :cond_1
     invoke-direct {p0}, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->scheduleRestart()V
 
-    .line 104
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mContext:Landroid/content/Context;
 
     if-eqz v2, :cond_2
 
-    .line 105
     iget-object v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mConnection:Landroid/content/ServiceConnection;
@@ -2147,13 +1970,11 @@
 
     iput-boolean v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mBound:Z
 
-    .line 107
     :cond_2
     iget-boolean v2, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mBound:Z
 
     if-nez v2, :cond_3
 
-    .line 108
     const-string v2, "UcmAgentWrapper"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2176,7 +1997,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 110
     :cond_3
     return-void
 .end method
@@ -2185,23 +2005,19 @@
     .locals 2
 
     .prologue
-    .line 116
     iget-boolean v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mBound:Z
 
     if-nez v0, :cond_0
 
-    .line 117
     const-string v0, "UcmAgentWrapper"
 
     const-string v1, "it is not bound anymore"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 125
     :goto_0
     return-void
 
-    .line 120
     :cond_0
     const-string v0, "UcmAgentWrapper"
 
@@ -2209,19 +2025,16 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 121
     iget-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mContext:Landroid/content/Context;
 
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mConnection:Landroid/content/ServiceConnection;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 122
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mBound:Z
 
-    .line 123
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/ucm/ucmservice/UcmAgentWrapper;->mUcsAgentService:Lcom/sec/enterprise/knox/ucm/plugin/agent/IUcmAgentService;

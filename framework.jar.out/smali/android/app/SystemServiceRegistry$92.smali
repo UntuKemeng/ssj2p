@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1127
     invoke-direct {p0}, Landroid/app/SystemServiceRegistry$StaticServiceFetcher;-><init>()V
 
     return-void
@@ -40,20 +39,17 @@
     .locals 3
 
     .prologue
-    .line 1130
     const-string v2, "epdg"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1131
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Lcom/sec/epdg/IEpdgManager$Stub;->asInterface(Landroid/os/IBinder;)Lcom/sec/epdg/IEpdgManager;
 
     move-result-object v1
 
-    .line 1132
     .local v1, "service":Lcom/sec/epdg/IEpdgManager;
     new-instance v2, Lcom/sec/epdg/EpdgManager;
 
@@ -66,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 1127
     invoke-virtual {p0}, Landroid/app/SystemServiceRegistry$92;->createService()Lcom/sec/epdg/EpdgManager;
 
     move-result-object v0

@@ -44,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 91
     new-instance v0, Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     const-string v1, "AODCONNECTION_STARTAOD"
@@ -53,7 +52,6 @@
 
     sput-object v0, Lcom/android/server/aod/AODManagerService$AODConnectionCause;->AODCONNECTION_STARTAOD:Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
-    .line 92
     new-instance v0, Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     const-string v1, "AODCONNECTION_STOPAOD"
@@ -62,7 +60,6 @@
 
     sput-object v0, Lcom/android/server/aod/AODManagerService$AODConnectionCause;->AODCONNECTION_STOPAOD:Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
-    .line 93
     new-instance v0, Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     const-string v1, "AODCONNECTION_UPDATE_NOTIFICATION_KEYS"
@@ -71,7 +68,6 @@
 
     sput-object v0, Lcom/android/server/aod/AODManagerService$AODConnectionCause;->AODCONNECTION_UPDATE_NOTIFICATION_KEYS:Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
-    .line 90
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/android/server/aod/AODManagerService$AODConnectionCause;
@@ -102,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 90
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -113,12 +108,10 @@
     .param p0, "connectionCause"    # Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     .prologue
-    .line 96
     invoke-static {}, Lcom/android/server/aod/AODManagerService$AODConnectionCause;->values()[Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     move-result-object v0
 
-    .line 97
     .local v0, "types":[Lcom/android/server/aod/AODManagerService$AODConnectionCause;
     invoke-virtual {p0}, Lcom/android/server/aod/AODManagerService$AODConnectionCause;->ordinal()I
 
@@ -134,7 +127,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     const-class v0, Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -150,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 90
     sget-object v0, Lcom/android/server/aod/AODManagerService$AODConnectionCause;->$VALUES:[Lcom/android/server/aod/AODManagerService$AODConnectionCause;
 
     invoke-virtual {v0}, [Lcom/android/server/aod/AODManagerService$AODConnectionCause;->clone()Ljava/lang/Object;

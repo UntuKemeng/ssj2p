@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 111
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$2;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 114
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$2;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # getter for: Lcom/android/server/aod/AODManagerService;->mAODConnection:Lcom/android/server/aod/AODManagerService$AODConnection;
@@ -61,7 +59,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 115
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$2;->this$0:Lcom/android/server/aod/AODManagerService;
 
     # getter for: Lcom/android/server/aod/AODManagerService;->mAODConnection:Lcom/android/server/aod/AODManagerService$AODConnection;
@@ -73,7 +70,6 @@
 
     if-nez v0, :cond_1
 
-    .line 116
     # getter for: Lcom/android/server/aod/AODManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->access$100()Ljava/lang/String;
 
@@ -83,17 +79,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     iget-object v0, p0, Lcom/android/server/aod/AODManagerService$2;->this$0:Lcom/android/server/aod/AODManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/aod/AODManagerService;->stopConnection()V
 
-    .line 122
     :cond_0
     :goto_0
     return-void
 
-    .line 119
     :cond_1
     # getter for: Lcom/android/server/aod/AODManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->access$100()Ljava/lang/String;

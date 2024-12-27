@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1098
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$RangeModeChangeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -43,7 +42,6 @@
 
     const/4 v1, 0x1
 
-    .line 1101
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -56,24 +54,20 @@
 
     if-eqz v3, :cond_0
 
-    .line 1102
     const-string v3, "com.sec.android.extra.ARRAGE_MODE"
 
     invoke-virtual {p2, v3, v1}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 1104
     .local v0, "mode":I
     const/16 v3, 0x8
 
     if-ne v0, v3, :cond_2
 
-    .line 1106
     # setter for: Lcom/android/server/InputMethodManagerService;->mFloatingForMultiWindow:Z
     invoke-static {v1}, Lcom/android/server/InputMethodManagerService;->access$902(Z)Z
 
-    .line 1115
     .end local v0    # "mode":I
     :cond_0
     :goto_0
@@ -97,7 +91,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 1116
     iget-object v3, p0, Lcom/android/server/InputMethodManagerService$RangeModeChangeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
 
     iget-object v4, p0, Lcom/android/server/InputMethodManagerService$RangeModeChangeReceiver;->this$0:Lcom/android/server/InputMethodManagerService;
@@ -128,11 +121,9 @@
 
     invoke-virtual {v3, v4, v1}, Lcom/android/server/InputMethodManagerService;->executeOrSendMessage(Landroid/os/IInterface;Landroid/os/Message;)V
 
-    .line 1119
     :cond_1
     return-void
 
-    .line 1109
     .restart local v0    # "mode":I
     :cond_2
     # setter for: Lcom/android/server/InputMethodManagerService;->mFloatingForMultiWindow:Z
@@ -144,6 +135,5 @@
     :cond_3
     move v1, v2
 
-    .line 1116
     goto :goto_1
 .end method

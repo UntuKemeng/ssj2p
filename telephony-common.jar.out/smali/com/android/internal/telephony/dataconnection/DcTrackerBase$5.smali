@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1185
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$5;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     invoke-direct {p0}, Landroid/net/INetworkPolicyListener$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "meteredIfaces"    # [Ljava/lang/String;
 
     .prologue
-    .line 1192
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$5;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mMeteredIfaces:Ljava/util/HashSet;
@@ -48,7 +46,6 @@
 
     monitor-enter v5
 
-    .line 1193
     :try_start_0
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$5;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
@@ -59,7 +56,6 @@
 
     invoke-virtual {v4}, Ljava/util/HashSet;->clear()V
 
-    .line 1194
     move-object v0, p1
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -74,7 +70,6 @@
 
     aget-object v2, v0, v1
 
-    .line 1195
     .local v2, "iface":Ljava/lang/String;
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$5;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
@@ -108,7 +103,6 @@
 
     invoke-virtual {v4, v6}, Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->log(Ljava/lang/String;)V
 
-    .line 1196
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcTrackerBase$5;->this$0:Lcom/android/internal/telephony/dataconnection/DcTrackerBase;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DcTrackerBase;->mMeteredIfaces:Ljava/util/HashSet;
@@ -118,20 +112,16 @@
 
     invoke-virtual {v4, v2}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
-    .line 1194
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 1198
     .end local v2    # "iface":Ljava/lang/String;
     :cond_0
     monitor-exit v5
 
-    .line 1199
     return-void
 
-    .line 1198
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "i$":I
     .end local v3    # "len$":I
@@ -150,7 +140,6 @@
     .param p1, "restrictBackground"    # Z
 
     .prologue
-    .line 1203
     return-void
 .end method
 
@@ -160,6 +149,5 @@
     .param p2, "uidRules"    # I
 
     .prologue
-    .line 1188
     return-void
 .end method

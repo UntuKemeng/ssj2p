@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$3;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -43,7 +42,6 @@
 
     const/4 v1, 0x0
 
-    .line 91
     iget-object v2, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$3;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     iget-object v3, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$3;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
@@ -69,7 +67,6 @@
     # setter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mDataLimited:Z
     invoke-static {v2, v0}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$1102(Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;Z)Z
 
-    .line 92
     const-string v0, "HotspotMobileDataLimit"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -99,12 +96,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 93
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 91
     goto :goto_0
 .end method

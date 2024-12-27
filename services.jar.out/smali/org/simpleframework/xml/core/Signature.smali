@@ -32,14 +32,12 @@
     .param p1, "factory"    # Ljava/lang/reflect/Constructor;
 
     .prologue
-    .line 73
     invoke-virtual {p1}, Ljava/lang/reflect/Constructor;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v0
 
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/core/Signature;-><init>(Ljava/lang/reflect/Constructor;Ljava/lang/Class;)V
 
-    .line 74
     return-void
 .end method
 
@@ -49,23 +47,18 @@
     .param p2, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 85
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 86
     new-instance v0, Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/core/ParameterMap;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
-    .line 87
     iput-object p1, p0, Lorg/simpleframework/xml/core/Signature;->factory:Ljava/lang/reflect/Constructor;
 
-    .line 88
     iput-object p2, p0, Lorg/simpleframework/xml/core/Signature;->type:Ljava/lang/Class;
 
-    .line 89
     return-void
 .end method
 
@@ -74,14 +67,12 @@
     .param p1, "signature"    # Lorg/simpleframework/xml/core/Signature;
 
     .prologue
-    .line 61
     iget-object v0, p1, Lorg/simpleframework/xml/core/Signature;->factory:Ljava/lang/reflect/Constructor;
 
     iget-object v1, p1, Lorg/simpleframework/xml/core/Signature;->type:Ljava/lang/Class;
 
     invoke-direct {p0, v0, v1}, Lorg/simpleframework/xml/core/Signature;-><init>(Ljava/lang/reflect/Constructor;Ljava/lang/Class;)V
 
-    .line 62
     return-void
 .end method
 
@@ -92,21 +83,17 @@
     .param p1, "parameter"    # Lorg/simpleframework/xml/core/Parameter;
 
     .prologue
-    .line 196
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Parameter;->getKey()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 198
     .local v0, "key":Ljava/lang/Object;
     if-eqz v0, :cond_0
 
-    .line 199
     iget-object v1, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v1, v0, p1}, Lorg/simpleframework/xml/core/ParameterMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 201
     :cond_0
     return-void
 .end method
@@ -116,7 +103,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 123
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/ParameterMap;->containsKey(Ljava/lang/Object;)Z
@@ -135,12 +121,10 @@
     .end annotation
 
     .prologue
-    .line 257
     new-instance v2, Lorg/simpleframework/xml/core/Signature;
 
     invoke-direct {v2, p0}, Lorg/simpleframework/xml/core/Signature;-><init>(Lorg/simpleframework/xml/core/Signature;)V
 
-    .line 259
     .local v2, "signature":Lorg/simpleframework/xml/core/Signature;
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/Signature;->iterator()Ljava/util/Iterator;
 
@@ -160,13 +144,11 @@
 
     check-cast v1, Lorg/simpleframework/xml/core/Parameter;
 
-    .line 260
     .local v1, "parameter":Lorg/simpleframework/xml/core/Parameter;
     invoke-virtual {v2, v1}, Lorg/simpleframework/xml/core/Signature;->add(Lorg/simpleframework/xml/core/Parameter;)V
 
     goto :goto_0
 
-    .line 262
     .end local v1    # "parameter":Lorg/simpleframework/xml/core/Parameter;
     :cond_0
     return-object v2
@@ -181,7 +163,6 @@
     .end annotation
 
     .prologue
-    .line 225
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->factory:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->isAccessible()Z
@@ -190,14 +171,12 @@
 
     if-nez v0, :cond_0
 
-    .line 226
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->factory:Ljava/lang/reflect/Constructor;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 228
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->factory:Ljava/lang/reflect/Constructor;
 
@@ -222,7 +201,6 @@
     .end annotation
 
     .prologue
-    .line 242
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->factory:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->isAccessible()Z
@@ -231,14 +209,12 @@
 
     if-nez v0, :cond_0
 
-    .line 243
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->factory:Ljava/lang/reflect/Constructor;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 245
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->factory:Ljava/lang/reflect/Constructor;
 
@@ -254,7 +230,6 @@
     .param p1, "ordinal"    # I
 
     .prologue
-    .line 160
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/ParameterMap;->get(I)Lorg/simpleframework/xml/core/Parameter;
@@ -269,7 +244,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 173
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/ParameterMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -294,7 +268,6 @@
     .end annotation
 
     .prologue
-    .line 185
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/ParameterMap;->getAll()Ljava/util/List;
@@ -308,7 +281,6 @@
     .locals 1
 
     .prologue
-    .line 272
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->type:Ljava/lang/Class;
 
     return-object v0
@@ -318,7 +290,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/ParameterMap;->isEmpty()Z
@@ -341,7 +312,6 @@
     .end annotation
 
     .prologue
-    .line 134
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/ParameterMap;->iterator()Ljava/util/Iterator;
@@ -356,7 +326,6 @@
     .param p1, "key"    # Ljava/lang/Object;
 
     .prologue
-    .line 147
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v0, p1}, Lorg/simpleframework/xml/core/ParameterMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
@@ -374,12 +343,10 @@
     .param p2, "parameter"    # Lorg/simpleframework/xml/core/Parameter;
 
     .prologue
-    .line 214
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v0, p1, p2}, Lorg/simpleframework/xml/core/ParameterMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 215
     return-void
 .end method
 
@@ -387,7 +354,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->parameters:Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/ParameterMap;->size()I
@@ -401,7 +367,6 @@
     .locals 1
 
     .prologue
-    .line 283
     iget-object v0, p0, Lorg/simpleframework/xml/core/Signature;->factory:Ljava/lang/reflect/Constructor;
 
     invoke-virtual {v0}, Ljava/lang/reflect/Constructor;->toString()Ljava/lang/String;

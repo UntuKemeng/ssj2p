@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 21476
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$25;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PackageManagerService$25;->val$packageName:Ljava/lang/String;
@@ -52,7 +51,6 @@
     .locals 11
 
     .prologue
-    .line 21478
     const-string v7, "PackageManager"
 
     const-string v8, "MSG"
@@ -65,21 +63,18 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21479
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$25;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v7, v7, Lcom/android/server/pm/PackageManagerService;->mHandler:Lcom/android/server/pm/PackageManagerService$PackageHandler;
 
     invoke-virtual {v7, p0}, Lcom/android/server/pm/PackageManagerService$PackageHandler;->removeCallbacks(Ljava/lang/Runnable;)V
 
-    .line 21481
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$25;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v8, v7, Lcom/android/server/pm/PackageManagerService;->mInstallLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 21482
     :try_start_0
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$25;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -92,13 +87,11 @@
 
     move-result v6
 
-    .line 21483
     .local v6, "succeded":Z
     monitor-exit v8
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 21484
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$25;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v8, p0, Lcom/android/server/pm/PackageManagerService$25;->val$packageName:Ljava/lang/String;
@@ -110,7 +103,6 @@
     # invokes: Lcom/android/server/pm/PackageManagerService;->clearExternalStorageDataSync(Ljava/lang/String;IZ)V
     invoke-static {v7, v8, v9, v10}, Lcom/android/server/pm/PackageManagerService;->access$6900(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;IZ)V
 
-    .line 21487
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$25;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v8, p0, Lcom/android/server/pm/PackageManagerService$25;->val$packageName:Ljava/lang/String;
@@ -123,7 +115,6 @@
 
     move-result-object v3
 
-    .line 21488
     .local v3, "sdpAppInfo":Landroid/content/pm/ApplicationInfo;
     if-eqz v3, :cond_0
 
@@ -131,10 +122,8 @@
 
     if-eqz v7, :cond_0
 
-    .line 21489
     iget-object v1, v3, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
-    .line 21490
     .local v1, "infoBundle":Landroid/os/Bundle;
     if-eqz v1, :cond_0
 
@@ -146,14 +135,12 @@
 
     if-eqz v7, :cond_0
 
-    .line 21491
     const-string/jumbo v7, "sdp"
 
     invoke-virtual {v1, v7}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 21492
     .local v4, "sdpMetadata":Ljava/lang/String;
     const-string v7, "enabled"
 
@@ -163,7 +150,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 21494
     :try_start_1
     const-string/jumbo v7, "sdp"
 
@@ -175,7 +161,6 @@
 
     move-result-object v5
 
-    .line 21496
     .local v5, "sdpService":Lcom/sec/sdp/ISdpManagerService;
     iget v7, p0, Lcom/android/server/pm/PackageManagerService$25;->val$userId:I
 
@@ -187,7 +172,6 @@
 
     if-nez v7, :cond_0
 
-    .line 21497
     const-string v7, "PackageManager"
 
     const-string v8, "Failed to clear cache for enc pkg.."
@@ -196,7 +180,6 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 21507
     .end local v1    # "infoBundle":Landroid/os/Bundle;
     .end local v4    # "sdpMetadata":Ljava/lang/String;
     .end local v5    # "sdpService":Lcom/sec/sdp/ISdpManagerService;
@@ -206,7 +189,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 21509
     :try_start_2
     const-string v7, "PackageManager"
 
@@ -252,7 +234,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 21511
     iget-object v7, p0, Lcom/android/server/pm/PackageManagerService$25;->val$observer:Landroid/content/pm/IPackageDataObserver;
 
     iget-object v8, p0, Lcom/android/server/pm/PackageManagerService$25;->val$packageName:Ljava/lang/String;
@@ -261,12 +242,10 @@
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 21516
     :cond_1
     :goto_1
     return-void
 
-    .line 21483
     .end local v3    # "sdpAppInfo":Landroid/content/pm/ApplicationInfo;
     .end local v6    # "succeded":Z
     :catchall_0
@@ -279,7 +258,6 @@
 
     throw v7
 
-    .line 21499
     .restart local v1    # "infoBundle":Landroid/os/Bundle;
     .restart local v3    # "sdpAppInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v4    # "sdpMetadata":Ljava/lang/String;
@@ -287,7 +265,6 @@
     :catch_0
     move-exception v2
 
-    .line 21500
     .local v2, "re":Landroid/os/RemoteException;
     const-string v7, "PackageManager"
 
@@ -297,14 +274,12 @@
 
     goto :goto_0
 
-    .line 21512
     .end local v1    # "infoBundle":Landroid/os/Bundle;
     .end local v2    # "re":Landroid/os/RemoteException;
     .end local v4    # "sdpMetadata":Ljava/lang/String;
     :catch_1
     move-exception v0
 
-    .line 21513
     .local v0, "e":Landroid/os/RemoteException;
     const-string v7, "PackageManager"
 

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 409
     iput-object p1, p0, Lcom/android/server/DrmEventService$3;->this$0:Lcom/android/server/DrmEventService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 411
     sget-boolean v0, Lcom/android/server/DrmEventService;->isLogEnabled:Z
 
     if-eqz v0, :cond_0
@@ -70,13 +68,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 413
     :cond_0
     iget-object v0, p0, Lcom/android/server/DrmEventService$3;->this$0:Lcom/android/server/DrmEventService;
 
     # invokes: Lcom/android/server/DrmEventService;->userUpdateHandler(Landroid/content/Intent;)V
     invoke-static {v0, p2}, Lcom/android/server/DrmEventService;->access$200(Lcom/android/server/DrmEventService;Landroid/content/Intent;)V
 
-    .line 414
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5960
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$34;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,12 +39,10 @@
     .locals 1
 
     .prologue
-    .line 5963
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$34;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->onNetworkStatusChanged()V
     invoke-static {v0}, Lcom/sec/epdg/EpdgService;->access$12200(Lcom/sec/epdg/EpdgService;)V
 
-    .line 5964
     return-void
 .end method

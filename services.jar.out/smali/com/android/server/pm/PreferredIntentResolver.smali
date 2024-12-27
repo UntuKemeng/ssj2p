@@ -26,10 +26,8 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lcom/android/server/IntentResolver;-><init>()V
 
-    .line 75
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .param p3, "x2"    # Landroid/content/IntentFilter;
 
     .prologue
-    .line 33
     check-cast p3, Lcom/android/server/pm/PreferredActivity;
 
     .end local p3    # "x2":Landroid/content/IntentFilter;
@@ -58,12 +55,10 @@
     .param p3, "filter"    # Lcom/android/server/pm/PreferredActivity;
 
     .prologue
-    .line 48
     iget-object v0, p3, Lcom/android/server/pm/PreferredActivity;->mPref:Lcom/android/server/pm/PreferredComponent;
 
     invoke-virtual {v0, p1, p2, p3}, Lcom/android/server/pm/PreferredComponent;->dump(Ljava/io/PrintWriter;Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 49
     return-void
 .end method
 
@@ -73,7 +68,6 @@
     .param p2, "x1"    # Landroid/content/IntentFilter;
 
     .prologue
-    .line 33
     check-cast p2, Lcom/android/server/pm/PreferredActivity;
 
     .end local p2    # "x1":Landroid/content/IntentFilter;
@@ -90,7 +84,6 @@
     .param p2, "filter"    # Lcom/android/server/pm/PreferredActivity;
 
     .prologue
-    .line 42
     iget-object v0, p2, Lcom/android/server/pm/PreferredActivity;->mPref:Lcom/android/server/pm/PreferredComponent;
 
     iget-object v0, v0, Lcom/android/server/pm/PreferredComponent;->mComponent:Landroid/content/ComponentName;
@@ -115,7 +108,6 @@
     .prologue
     const/16 v8, 0xa
 
-    .line 53
     const-string v6, "android.intent.action.MAIN"
 
     invoke-virtual {p1, v6}, Lcom/android/server/pm/PreferredActivity;->hasAction(Ljava/lang/String;)Z
@@ -140,12 +132,10 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 56
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 57
     .local v3, "sb":Ljava/lang/StringBuilder;
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -175,27 +165,21 @@
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 58
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 59
     iget-object v6, p1, Lcom/android/server/pm/PreferredActivity;->mPref:Lcom/android/server/pm/PreferredComponent;
 
     iget-object v4, v6, Lcom/android/server/pm/PreferredComponent;->mSetComponents:[Ljava/lang/String;
 
-    .line 60
     .local v4, "setComponents":[Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 61
     const-string v6, "    Selected from:"
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 62
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 63
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -204,7 +188,6 @@
 
     if-ge v0, v6, :cond_0
 
-    .line 64
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -227,28 +210,23 @@
 
     invoke-virtual {v3, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 65
     invoke-virtual {v3, v8}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 63
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 68
     .end local v0    # "i":I
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v5
 
-    .line 69
     .local v5, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
 
-    .line 70
     .local v1, "pid":I
     new-instance v2, Lcom/android/server/pm/PreferredIntentResolver$LogRunnable;
 
@@ -258,13 +236,11 @@
 
     invoke-direct {v2, p0, v6, v5, v1}, Lcom/android/server/pm/PreferredIntentResolver$LogRunnable;-><init>(Lcom/android/server/pm/PreferredIntentResolver;Ljava/lang/String;II)V
 
-    .line 71
     .local v2, "runnable":Lcom/android/server/pm/PreferredIntentResolver$LogRunnable;
     const-wide/16 v6, 0x3e8
 
     invoke-virtual {p2, v2, v6, v7}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 73
     .end local v1    # "pid":I
     .end local v2    # "runnable":Lcom/android/server/pm/PreferredIntentResolver$LogRunnable;
     .end local v3    # "sb":Ljava/lang/StringBuilder;
@@ -279,7 +255,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 33
     invoke-virtual {p0, p1}, Lcom/android/server/pm/PreferredIntentResolver;->newArray(I)[Lcom/android/server/pm/PreferredActivity;
 
     move-result-object v0
@@ -292,7 +267,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 37
     new-array v0, p1, [Lcom/android/server/pm/PreferredActivity;
 
     return-object v0

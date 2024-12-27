@@ -24,13 +24,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 365
     iput-object p1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
-    .line 366
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 367
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 2
 
     .prologue
-    .line 371
     iget-object v1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     iget-object v1, v1, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -49,13 +45,11 @@
 
     move-result-object v0
 
-    .line 414
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     invoke-virtual {v1}, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->updateSettings()V
 
-    .line 415
     return-void
 .end method
 
@@ -64,11 +58,9 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 418
     iget-object v0, p0, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager$SettingsObserver;->this$0:Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/multiwindow/MultiPhoneWindowManager;->updateSettings()V
 
-    .line 419
     return-void
 .end method

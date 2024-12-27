@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,42 +36,34 @@
     .end annotation
 
     .prologue
-    .line 67
     if-eqz p1, :cond_0
 
-    .line 68
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 69
     .local v1, "sb":Ljava/lang/StringBuilder;
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMAuthenticator;->getNTLMType3String(Ljava/lang/String;Ljava/net/Socket;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 70
     .local v0, "NTLMType3String":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 71
     const-string v2, "Proxy-Authorization: NTLM "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 72
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 73
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 76
     .end local v0    # "NTLMType3String":Ljava/lang/String;
     .end local v1    # "sb":Ljava/lang/StringBuilder;
     :goto_0
@@ -94,53 +85,43 @@
     .end annotation
 
     .prologue
-    .line 52
     new-instance v0, Ljava/lang/StringBuffer;
 
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 53
     .local v0, "buffer":Ljava/lang/StringBuffer;
     invoke-virtual {p1}, Ljava/io/InputStream;->read()I
 
     move-result v1
 
-    .line 54
     .local v1, "byteBuffer":I
     if-gez v1, :cond_0
 
-    .line 55
     const-string v2, ""
 
-    .line 62
     :goto_0
     return-object v2
 
-    .line 57
     :cond_0
     const/16 v2, 0xd
 
     if-eq v1, v2, :cond_1
 
-    .line 58
     int-to-char v2, v1
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 60
     :cond_1
     invoke-virtual {p1}, Ljava/io/InputStream;->read()I
 
     move-result v1
 
-    .line 61
     const/16 v2, 0xa
 
     if-eq v1, v2, :cond_2
 
     if-gez v1, :cond_0
 
-    .line 62
     :cond_2
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
@@ -165,17 +146,14 @@
 
     const/4 v7, 0x1
 
-    .line 81
     if-eqz p2, :cond_0
 
     if-nez p3, :cond_1
 
-    .line 105
     :cond_0
     :goto_0
     return-object v1
 
-    .line 84
     :cond_1
     invoke-virtual {p2}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
@@ -185,24 +163,19 @@
 
     move-result-object v9
 
-    .line 87
     .local v9, "type1Message":Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMAuthenticator;->receiveType2Message(Ljava/net/Socket;)Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;
 
     move-result-object v10
 
-    .line 89
     .local v10, "type2Message":Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;
     if-eqz v10, :cond_0
 
-    .line 90
     const/4 v5, 0x0
 
-    .line 91
     .local v5, "domainFromType2":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 92
     .local v2, "finalFlagsForType3":I
     const/high16 v1, 0x10000
 
@@ -212,12 +185,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 93
     invoke-virtual {v10}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;->getTargetName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 95
     :cond_2
     invoke-virtual {v9}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;->getFlags()I
 
@@ -229,14 +200,12 @@
 
     and-int v2, v1, v3
 
-    .line 97
     const-string v1, ":"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v8
 
-    .line 98
     .local v8, "credentials":[Ljava/lang/String;
     new-instance v0, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;
 
@@ -264,7 +233,6 @@
 
     invoke-direct/range {v0 .. v7}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;-><init>([BILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 103
     .local v0, "type3Message":Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;
     invoke-virtual {v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;->createMessageString()Ljava/lang/String;
 
@@ -272,7 +240,6 @@
 
     goto :goto_0
 
-    .line 98
     .end local v0    # "type3Message":Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType3Message;
     :cond_3
     const-string v3, ""
@@ -295,21 +262,17 @@
     .end annotation
 
     .prologue
-    .line 139
     const/4 v1, 0x0
 
-    .line 140
     .local v1, "type2Response":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 142
     .local v0, "line":Ljava/lang/String;
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMAuthenticator;->getLine(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 143
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -324,12 +287,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 144
     invoke-direct {p0, v0}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMAuthenticator;->processResponseFromeServer(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 148
     :cond_1
     :goto_0
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMAuthenticator;->getLine(Ljava/io/InputStream;)Ljava/lang/String;
@@ -342,10 +303,8 @@
 
     if-gtz v2, :cond_1
 
-    .line 150
     return-object v1
 
-    .line 147
     :cond_2
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -365,14 +324,12 @@
 
     const/4 v4, 0x2
 
-    .line 154
     const-string v2, " "
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 155
     .local v0, "array":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -398,7 +355,6 @@
 
     if-nez v2, :cond_1
 
-    .line 158
     :cond_0
     :goto_0
     return-object v1
@@ -423,10 +379,8 @@
     .end annotation
 
     .prologue
-    .line 109
     const/4 v3, 0x0
 
-    .line 110
     .local v3, "type2Response":Ljava/lang/String;
     invoke-virtual {p1}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
 
@@ -436,7 +390,6 @@
 
     move-result-object v1
 
-    .line 111
     .local v1, "response":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -446,14 +399,12 @@
 
     if-lez v4, :cond_0
 
-    .line 112
     const-string v4, " "
 
     invoke-virtual {v1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 113
     .local v0, "lineTokens":[Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -461,7 +412,6 @@
 
     if-lez v4, :cond_0
 
-    .line 114
     const/4 v4, 0x1
 
     aget-object v4, v0, v4
@@ -474,7 +424,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 115
     invoke-virtual {p1}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v4
@@ -483,22 +432,18 @@
 
     move-result-object v3
 
-    .line 118
     .end local v0    # "lineTokens":[Ljava/lang/String;
     :cond_0
     const/4 v2, 0x0
 
-    .line 119
     .local v2, "type2Message":Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;
     if-eqz v3, :cond_1
 
-    .line 120
     new-instance v2, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;
 
     .end local v2    # "type2Message":Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;
     invoke-direct {v2, v3}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;-><init>(Ljava/lang/String;)V
 
-    .line 122
     .restart local v2    # "type2Message":Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType2Message;
     :cond_1
     return-object v2
@@ -515,24 +460,20 @@
     .end annotation
 
     .prologue
-    .line 127
     new-instance v1, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;
 
     invoke-direct {v1}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;-><init>()V
 
-    .line 128
     .local v1, "type1Message":Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMType1Message;
     invoke-static {p2}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->buildHeadRequest([Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 129
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-string v2, "Proxy-Authorization: NTLM "
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 130
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -557,12 +498,10 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 131
     const-string v2, "\r\n"
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 133
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v2
@@ -573,10 +512,8 @@
 
     invoke-virtual {p1, v2}, Ljava/io/OutputStream;->write([B)V
 
-    .line 134
     invoke-virtual {p1}, Ljava/io/OutputStream;->flush()V
 
-    .line 135
     return-object v1
 .end method
 
@@ -589,26 +526,21 @@
     .param p3, "requestLine"    # [Ljava/lang/String;
 
     .prologue
-    .line 165
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 166
     .local v2, "sb":Ljava/lang/StringBuilder;
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMAuthenticator;->getCredentialKeyValue(Ljava/lang/String;Ljava/net/Socket;[Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 168
     .local v1, "processedHeaderCred":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 169
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 172
     :cond_0
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
     :try_end_0
@@ -616,17 +548,14 @@
 
     move-result-object v3
 
-    .line 174
     .end local v1    # "processedHeaderCred":Ljava/lang/String;
     .end local v2    # "sb":Ljava/lang/StringBuilder;
     :goto_0
     return-object v3
 
-    .line 173
     :catch_0
     move-exception v0
 
-    .line 174
     .local v0, "e":Ljava/io/IOException;
     const/4 v3, 0x0
 
@@ -637,7 +566,6 @@
     .locals 1
 
     .prologue
-    .line 48
     const-string v0, "NTLM"
 
     return-object v0
@@ -647,7 +575,6 @@
     .locals 1
 
     .prologue
-    .line 219
     const/4 v0, 0x1
 
     return v0
@@ -660,10 +587,8 @@
     .param p3, "requestLine"    # [Ljava/lang/String;
 
     .prologue
-    .line 181
     const/4 v9, 0x0
 
-    .line 182
     .local v9, "retStatus":Z
     invoke-virtual/range {p2 .. p2}, Ljava/net/Proxy;->address()Ljava/net/SocketAddress;
 
@@ -671,7 +596,6 @@
 
     check-cast v5, Ljava/net/InetSocketAddress;
 
-    .line 183
     .local v5, "inetSocketAddress":Ljava/net/InetSocketAddress;
     :try_start_0
     new-instance v3, Ljava/net/Socket;
@@ -691,13 +615,11 @@
     .local v3, "destination":Ljava/net/Socket;
     const/4 v13, 0x0
 
-    .line 185
     :try_start_1
     invoke-static/range {p3 .. p3}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->buildHeadRequest([Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v10
 
-    .line 186
     .local v10, "sb":Ljava/lang/StringBuilder;
     move-object/from16 v0, p0
 
@@ -709,20 +631,16 @@
 
     move-result-object v8
 
-    .line 188
     .local v8, "processedHeaderCred":Ljava/lang/String;
     if-eqz v8, :cond_0
 
-    .line 189
     invoke-virtual {v10, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 191
     :cond_0
     const-string v12, "\r\n"
 
     invoke-virtual {v10, v12}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 193
     const-string v12, "NTLMAuthenticator"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -745,7 +663,6 @@
 
     invoke-static {v12, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     const-string v12, "NTLMAuthenticator"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -772,23 +689,19 @@
 
     invoke-static {v12, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 198
     invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v12
 
     invoke-static {v3, v12}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sendLine(Ljava/net/Socket;Ljava/lang/String;)V
 
-    .line 199
     invoke-virtual {v3}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v6
 
-    .line 200
     .local v6, "is":Ljava/io/InputStream;
     const/4 v7, 0x0
 
-    .line 202
     .local v7, "line":Ljava/lang/String;
     :cond_1
     move-object/from16 v0, p0
@@ -797,7 +710,6 @@
 
     move-result-object v7
 
-    .line 203
     const-string v12, "NTLMAuthenticator"
 
     new-instance v14, Ljava/lang/StringBuilder;
@@ -820,7 +732,6 @@
 
     invoke-static {v12, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     invoke-virtual {v7}, Ljava/lang/String;->length()I
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_2
@@ -830,7 +741,6 @@
 
     if-gtz v12, :cond_3
 
-    .line 211
     :goto_0
     if-eqz v3, :cond_2
 
@@ -842,7 +752,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 214
     .end local v3    # "destination":Ljava/net/Socket;
     .end local v6    # "is":Ljava/io/InputStream;
     .end local v7    # "line":Ljava/lang/String;
@@ -857,7 +766,6 @@
     :goto_2
     return v12
 
-    .line 206
     .restart local v3    # "destination":Ljava/net/Socket;
     .restart local v6    # "is":Ljava/io/InputStream;
     .restart local v7    # "line":Ljava/lang/String;
@@ -873,7 +781,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 207
     const-string v12, " "
 
     invoke-virtual {v7, v12}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -894,7 +801,6 @@
 
     const/4 v9, 0x1
 
-    .line 209
     :cond_4
     :goto_3
     invoke-virtual {v7}, Ljava/lang/String;->length()I
@@ -908,13 +814,11 @@
 
     goto :goto_0
 
-    .line 207
     :cond_5
     const/4 v9, 0x0
 
     goto :goto_3
 
-    .line 211
     :catch_0
     move-exception v11
 
@@ -935,7 +839,6 @@
     :catch_1
     move-exception v4
 
-    .line 212
     .local v4, "e":Ljava/io/IOException;
     const-string v12, "NTLMAuthenticator"
 
@@ -947,7 +850,6 @@
 
     goto :goto_1
 
-    .line 211
     .end local v4    # "e":Ljava/io/IOException;
     .restart local v3    # "destination":Ljava/net/Socket;
     .restart local v6    # "is":Ljava/io/InputStream;
@@ -962,7 +864,6 @@
 
     goto :goto_1
 
-    .line 183
     .end local v6    # "is":Ljava/io/InputStream;
     .end local v7    # "line":Ljava/lang/String;
     .end local v8    # "processedHeaderCred":Ljava/lang/String;
@@ -975,7 +876,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 211
     :catchall_0
     move-exception v13
 
@@ -1017,14 +917,12 @@
 
     goto :goto_5
 
-    .line 214
     .end local v3    # "destination":Ljava/net/Socket;
     :cond_9
     const/4 v12, -0x1
 
     goto :goto_2
 
-    .line 211
     .restart local v3    # "destination":Ljava/net/Socket;
     :catchall_1
     move-exception v12

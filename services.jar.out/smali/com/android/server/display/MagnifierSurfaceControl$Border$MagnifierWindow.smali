@@ -44,36 +44,26 @@
     .param p6, "mHandleHeight"    # I
 
     .prologue
-    .line 1124
     iput-object p1, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->this$0:Lcom/android/server/display/MagnifierSurfaceControl$Border;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1125
     iput p2, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mPadWidth:I
 
-    .line 1126
     iput p3, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mPadHeight:I
 
-    .line 1127
     iput p4, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mCloseWidth:I
 
-    .line 1128
     iput p4, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mCloseHeight:I
 
-    .line 1129
     iput p4, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mChangeWidth:I
 
-    .line 1130
     iput p4, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mChangeHeight:I
 
-    .line 1131
     iput p5, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mHandleWidth:I
 
-    .line 1132
     iput p6, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mHandleHeight:I
 
-    .line 1133
     return-void
 .end method
 
@@ -82,7 +72,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;
 
     .prologue
-    .line 1115
     iget v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mPadWidth:I
 
     return v0
@@ -93,7 +82,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;
 
     .prologue
-    .line 1115
     iget v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mPadHeight:I
 
     return v0
@@ -104,7 +92,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;
 
     .prologue
-    .line 1115
     iget v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mCloseWidth:I
 
     return v0
@@ -115,7 +102,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;
 
     .prologue
-    .line 1115
     iget v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mCloseHeight:I
 
     return v0
@@ -126,7 +112,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;
 
     .prologue
-    .line 1115
     iget v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mHandleWidth:I
 
     return v0
@@ -137,7 +122,6 @@
     .param p0, "x0"    # Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;
 
     .prologue
-    .line 1115
     iget v0, p0, Lcom/android/server/display/MagnifierSurfaceControl$Border$MagnifierWindow;->mHandleHeight:I
 
     return v0

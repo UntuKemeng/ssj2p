@@ -35,15 +35,12 @@
     .locals 1
 
     .prologue
-    .line 861
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 856
     const/4 v0, -0x1
 
     iput v0, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mRank:I
 
-    .line 861
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p5, "x5"    # I
 
     .prologue
-    .line 850
     invoke-direct/range {p0 .. p5}, Landroid/service/notification/NotificationListenerService$Ranking;->populate(Ljava/lang/String;IZZI)V
 
     return-void
@@ -72,22 +68,16 @@
     .param p5, "visibilityOverride"    # I
 
     .prologue
-    .line 913
     iput-object p1, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mKey:Ljava/lang/String;
 
-    .line 914
     iput p2, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mRank:I
 
-    .line 915
     iput-boolean p3, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mIsAmbient:Z
 
-    .line 916
     iput-boolean p4, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mMatchesInterruptionFilter:Z
 
-    .line 917
     iput p5, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mVisibilityOverride:I
 
-    .line 918
     return-void
 .end method
 
@@ -97,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 867
     iget-object v0, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mKey:Ljava/lang/String;
 
     return-object v0
@@ -107,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 877
     iget v0, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mRank:I
 
     return v0
@@ -117,7 +105,6 @@
     .locals 1
 
     .prologue
-    .line 896
     iget v0, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mVisibilityOverride:I
 
     return v0
@@ -127,7 +114,6 @@
     .locals 1
 
     .prologue
-    .line 885
     iget-boolean v0, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mIsAmbient:Z
 
     return v0
@@ -137,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 908
     iget-boolean v0, p0, Landroid/service/notification/NotificationListenerService$Ranking;->mMatchesInterruptionFilter:Z
 
     return v0

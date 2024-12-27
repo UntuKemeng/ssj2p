@@ -24,17 +24,14 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 1781
     iput-object p1, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
-    .line 1782
     const/4 v0, 0x0
 
     const/4 v1, 0x1
 
     invoke-direct {p0, p2, v0, v1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;Landroid/os/Handler$Callback;Z)V
 
-    .line 1783
     return-void
 .end method
 
@@ -45,16 +42,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1787
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 1823
     :goto_0
     return-void
 
-    .line 1789
     :pswitch_0
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -63,7 +57,6 @@
 
     goto :goto_0
 
-    .line 1793
     :pswitch_1
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -72,7 +65,6 @@
 
     goto :goto_0
 
-    .line 1797
     :pswitch_2
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -85,7 +77,6 @@
 
     goto :goto_0
 
-    .line 1801
     :pswitch_3
     iget-object v5, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -98,7 +89,6 @@
 
     goto :goto_0
 
-    .line 1805
     :pswitch_4
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -111,7 +101,6 @@
 
     goto :goto_0
 
-    .line 1809
     :pswitch_5
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -122,7 +111,6 @@
 
     monitor-enter v5
 
-    .line 1810
     :try_start_0
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -135,7 +123,6 @@
 
     move-result v0
 
-    .line 1811
     .local v0, "count":I
     const/4 v2, 0x0
 
@@ -143,7 +130,6 @@
     :goto_1
     if-ge v2, v0, :cond_0
 
-    .line 1812
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mDefaultViewports:Ljava/util/ArrayList;
@@ -157,7 +143,6 @@
 
     check-cast v1, Landroid/hardware/display/DisplayViewport;
 
-    .line 1813
     .local v1, "defaultViewport":Landroid/hardware/display/DisplayViewport;
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
@@ -172,16 +157,13 @@
 
     check-cast v3, Landroid/hardware/display/DisplayViewport;
 
-    .line 1814
     .local v3, "tempDefaultViewport":Landroid/hardware/display/DisplayViewport;
     invoke-virtual {v3, v1}, Landroid/hardware/display/DisplayViewport;->copyFrom(Landroid/hardware/display/DisplayViewport;)V
 
-    .line 1811
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1816
     .end local v1    # "defaultViewport":Landroid/hardware/display/DisplayViewport;
     .end local v3    # "tempDefaultViewport":Landroid/hardware/display/DisplayViewport;
     :cond_0
@@ -201,12 +183,10 @@
 
     invoke-virtual {v4, v6}, Landroid/hardware/display/DisplayViewport;->copyFrom(Landroid/hardware/display/DisplayViewport;)V
 
-    .line 1817
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1818
     iget-object v4, p0, Lcom/android/server/display/DisplayManagerService$DisplayManagerHandler;->this$0:Lcom/android/server/display/DisplayManagerService;
 
     # getter for: Lcom/android/server/display/DisplayManagerService;->mInputManagerInternal:Landroid/hardware/input/InputManagerInternal;
@@ -232,7 +212,6 @@
 
     goto/16 :goto_0
 
-    .line 1817
     .end local v0    # "count":I
     .end local v2    # "i":I
     :catchall_0
@@ -245,7 +224,6 @@
 
     throw v4
 
-    .line 1787
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

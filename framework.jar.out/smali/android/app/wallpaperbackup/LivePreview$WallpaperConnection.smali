@@ -33,13 +33,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 148
     invoke-direct {p0}, Landroid/service/wallpaper/IWallpaperConnection$Stub;-><init>()V
 
-    .line 149
     iput-object p1, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mIntent:Landroid/content/Intent;
 
-    .line 150
     return-void
 .end method
 
@@ -50,21 +47,17 @@
     .param p1, "engine"    # Landroid/service/wallpaper/IWallpaperEngine;
 
     .prologue
-    .line 213
     monitor-enter p0
 
-    .line 214
     :try_start_0
     iget-boolean v0, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mConnected:Z
 
     if-eqz v0, :cond_0
 
-    .line 215
     iput-object p1, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mEngine:Landroid/service/wallpaper/IWallpaperEngine;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 217
     const/4 v0, 0x1
 
     :try_start_1
@@ -73,17 +66,14 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 228
     :goto_0
     :try_start_2
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 229
     return-void
 
-    .line 223
     :cond_0
     :try_start_3
     invoke-interface {p1}, Landroid/service/wallpaper/IWallpaperEngine;->destroy()V
@@ -93,13 +83,11 @@
 
     goto :goto_0
 
-    .line 224
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 228
     :catchall_0
     move-exception v0
 
@@ -110,7 +98,6 @@
 
     throw v0
 
-    .line 218
     :catch_1
     move-exception v0
 
@@ -123,10 +110,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 153
     monitor-enter p0
 
-    .line 154
     :try_start_0
     # getter for: Landroid/app/wallpaperbackup/LivePreview;->mContext:Landroid/content/Context;
     invoke-static {}, Landroid/app/wallpaperbackup/LivePreview;->access$000()Landroid/content/Context;
@@ -143,27 +128,22 @@
 
     if-nez v1, :cond_0
 
-    .line 155
     const/4 v0, 0x0
 
     monitor-exit p0
 
-    .line 159
     :goto_0
     return v0
 
-    .line 158
     :cond_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mConnected:Z
 
-    .line 159
     monitor-exit p0
 
     goto :goto_0
 
-    .line 160
     :catchall_0
     move-exception v0
 
@@ -178,23 +158,19 @@
     .locals 1
 
     .prologue
-    .line 164
     monitor-enter p0
 
-    .line 165
     const/4 v0, 0x0
 
     :try_start_0
     iput-boolean v0, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mConnected:Z
 
-    .line 166
     iget-object v0, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mEngine:Landroid/service/wallpaper/IWallpaperEngine;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v0, :cond_0
 
-    .line 168
     :try_start_1
     iget-object v0, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mEngine:Landroid/service/wallpaper/IWallpaperEngine;
 
@@ -203,7 +179,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 172
     :goto_0
     const/4 v0, 0x0
 
@@ -212,7 +187,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 175
     :cond_0
     :try_start_3
     # getter for: Landroid/app/wallpaperbackup/LivePreview;->mContext:Landroid/content/Context;
@@ -225,20 +199,16 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 179
     :goto_1
     const/4 v0, 0x0
 
     :try_start_4
     iput-object v0, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mService:Landroid/service/wallpaper/IWallpaperService;
 
-    .line 180
     monitor-exit p0
 
-    .line 181
     return-void
 
-    .line 180
     :catchall_0
     move-exception v0
 
@@ -248,13 +218,11 @@
 
     throw v0
 
-    .line 176
     :catch_0
     move-exception v0
 
     goto :goto_1
 
-    .line 169
     :catch_1
     move-exception v0
 
@@ -266,7 +234,6 @@
     .param p1, "engine"    # Landroid/service/wallpaper/IWallpaperEngine;
 
     .prologue
-    .line 237
     return-void
 .end method
 
@@ -276,7 +243,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 184
     # getter for: Landroid/app/wallpaperbackup/LivePreview;->mWallpaperConnection:Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
     invoke-static {}, Landroid/app/wallpaperbackup/LivePreview;->access$100()Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
 
@@ -284,27 +250,23 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 185
     invoke-static {p2}, Landroid/service/wallpaper/IWallpaperService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/service/wallpaper/IWallpaperService;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mService:Landroid/service/wallpaper/IWallpaperService;
 
-    .line 187
     :try_start_0
     # getter for: Landroid/app/wallpaperbackup/LivePreview;->mView:Landroid/view/View;
     invoke-static {}, Landroid/app/wallpaperbackup/LivePreview;->access$200()Landroid/view/View;
 
     move-result-object v10
 
-    .line 188
     .local v10, "view":Landroid/view/View;
     invoke-virtual {v10}, Landroid/view/View;->getRootView()Landroid/view/View;
 
     move-result-object v9
 
-    .line 189
     .local v9, "root":Landroid/view/View;
     new-instance v7, Landroid/graphics/Rect;
 
@@ -326,7 +288,6 @@
 
     invoke-direct {v7, v0, v1, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 191
     .local v7, "rect":Landroid/graphics/Rect;
     iget-object v0, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mService:Landroid/service/wallpaper/IWallpaperService;
 
@@ -352,7 +313,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 200
     .end local v7    # "rect":Landroid/graphics/Rect;
     .end local v9    # "root":Landroid/view/View;
     .end local v10    # "view":Landroid/view/View;
@@ -360,17 +320,14 @@
     :goto_0
     return-void
 
-    .line 194
     :catch_0
     move-exception v8
 
-    .line 195
     .local v8, "e":Landroid/os/RemoteException;
     sget-boolean v0, Landroid/app/wallpaperbackup/LivePreview;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 196
     const-string v0, "LiveWallpaperPreview"
 
     const-string v1, "Failed attaching wallpaper; clearing"
@@ -387,13 +344,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 203
     iput-object v0, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mService:Landroid/service/wallpaper/IWallpaperService;
 
-    .line 204
     iput-object v0, p0, Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;->mEngine:Landroid/service/wallpaper/IWallpaperEngine;
 
-    .line 205
     # getter for: Landroid/app/wallpaperbackup/LivePreview;->mWallpaperConnection:Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
     invoke-static {}, Landroid/app/wallpaperbackup/LivePreview;->access$100()Landroid/app/wallpaperbackup/LivePreview$WallpaperConnection;
 
@@ -401,12 +355,10 @@
 
     if-ne v0, p0, :cond_0
 
-    .line 206
     sget-boolean v0, Landroid/app/wallpaperbackup/LivePreview;->DEBUG:Z
 
     if-eqz v0, :cond_0
 
-    .line 207
     const-string v0, "LiveWallpaperPreview"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -429,7 +381,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 210
     :cond_0
     return-void
 .end method
@@ -439,7 +390,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 232
     const/4 v0, 0x0
 
     return-object v0

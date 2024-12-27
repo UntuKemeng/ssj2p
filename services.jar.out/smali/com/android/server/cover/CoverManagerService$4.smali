@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 170
     iput-object p1, p0, Lcom/android/server/cover/CoverManagerService$4;->this$0:Lcom/android/server/cover/CoverManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 181
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 173
     const-string v2, "CoverManager"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -80,12 +77,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 174
     iget-object v2, p1, Landroid/hardware/SensorEvent;->values:[F
 
     aget v0, v2, v1
 
-    .line 175
     .local v0, "distance":F
     iget-object v2, p0, Lcom/android/server/cover/CoverManagerService$4;->this$0:Lcom/android/server/cover/CoverManagerService;
 
@@ -112,6 +107,5 @@
     # setter for: Lcom/android/server/cover/CoverManagerService;->mProximityPositive:Z
     invoke-static {v2, v1}, Lcom/android/server/cover/CoverManagerService;->access$502(Lcom/android/server/cover/CoverManagerService;Z)Z
 
-    .line 176
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 148
     iput-object p1, p0, Landroid/bluetooth/BluetoothHidDevice$1;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothStateChangeCallback$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "up"    # Z
 
     .prologue
-    .line 151
     # getter for: Landroid/bluetooth/BluetoothHidDevice;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/bluetooth/BluetoothHidDevice;->access$000()Ljava/lang/String;
 
@@ -64,7 +62,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     iget-object v1, p0, Landroid/bluetooth/BluetoothHidDevice$1;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     # getter for: Landroid/bluetooth/BluetoothHidDevice;->mConnection:Landroid/content/ServiceConnection;
@@ -74,10 +71,8 @@
 
     monitor-enter v2
 
-    .line 154
     if-nez p1, :cond_1
 
-    .line 155
     :try_start_0
     # getter for: Landroid/bluetooth/BluetoothHidDevice;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/bluetooth/BluetoothHidDevice;->access$000()Ljava/lang/String;
@@ -88,7 +83,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
     iget-object v1, p0, Landroid/bluetooth/BluetoothHidDevice$1;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     # getter for: Landroid/bluetooth/BluetoothHidDevice;->mService:Landroid/bluetooth/IBluetoothHidDevice;
@@ -98,7 +92,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 157
     iget-object v1, p0, Landroid/bluetooth/BluetoothHidDevice$1;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     const/4 v3, 0x0
@@ -108,7 +101,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 159
     :try_start_1
     iget-object v1, p0, Landroid/bluetooth/BluetoothHidDevice$1;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
@@ -129,20 +121,16 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 176
     :cond_0
     :goto_0
     :try_start_2
     monitor-exit v2
 
-    .line 177
     return-void
 
-    .line 160
     :catch_0
     move-exception v0
 
-    .line 161
     .local v0, "e":Ljava/lang/IllegalArgumentException;
     # getter for: Landroid/bluetooth/BluetoothHidDevice;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/bluetooth/BluetoothHidDevice;->access$000()Ljava/lang/String;
@@ -155,7 +143,6 @@
 
     goto :goto_0
 
-    .line 176
     .end local v0    # "e":Ljava/lang/IllegalArgumentException;
     :catchall_0
     move-exception v1
@@ -166,7 +153,6 @@
 
     throw v1
 
-    .line 166
     :cond_1
     :try_start_3
     iget-object v1, p0, Landroid/bluetooth/BluetoothHidDevice$1;->this$0:Landroid/bluetooth/BluetoothHidDevice;
@@ -178,7 +164,6 @@
 
     if-nez v1, :cond_0
 
-    .line 167
     # getter for: Landroid/bluetooth/BluetoothHidDevice;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/bluetooth/BluetoothHidDevice;->access$000()Ljava/lang/String;
 
@@ -188,7 +173,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
     iget-object v1, p0, Landroid/bluetooth/BluetoothHidDevice$1;->this$0:Landroid/bluetooth/BluetoothHidDevice;
 
     invoke-virtual {v1}, Landroid/bluetooth/BluetoothHidDevice;->doBind()Z
@@ -199,11 +183,9 @@
 
     goto :goto_0
 
-    .line 170
     :catch_1
     move-exception v0
 
-    .line 171
     .local v0, "e":Ljava/lang/IllegalStateException;
     :try_start_4
     # getter for: Landroid/bluetooth/BluetoothHidDevice;->TAG:Ljava/lang/String;
@@ -217,12 +199,10 @@
 
     goto :goto_0
 
-    .line 172
     .end local v0    # "e":Ljava/lang/IllegalStateException;
     :catch_2
     move-exception v0
 
-    .line 173
     .local v0, "e":Ljava/lang/SecurityException;
     # getter for: Landroid/bluetooth/BluetoothHidDevice;->TAG:Ljava/lang/String;
     invoke-static {}, Landroid/bluetooth/BluetoothHidDevice;->access$000()Ljava/lang/String;

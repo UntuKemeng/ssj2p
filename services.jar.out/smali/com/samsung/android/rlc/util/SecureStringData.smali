@@ -126,7 +126,6 @@
 
     const/4 v1, 0x5
 
-    .line 22
     const/16 v0, 0x16
 
     new-array v0, v0, [B
@@ -135,7 +134,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->PREFERENCE:[B
 
-    .line 26
     const/16 v0, 0x1c
 
     new-array v0, v0, [B
@@ -144,7 +142,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->ACTION_EXTERNAL_ACCESSTOKEN:[B
 
-    .line 30
     const/16 v0, 0x1c
 
     new-array v0, v0, [B
@@ -153,7 +150,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->ACTION_ACCESSTOKEN_RESPONSE:[B
 
-    .line 33
     const/16 v0, 0x18
 
     new-array v0, v0, [B
@@ -162,35 +158,30 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->ACTION_ACCESSTOKEN_RESPONSE_FAIL:[B
 
-    .line 38
     new-array v0, v1, [B
 
     fill-array-data v0, :array_4
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_APP_ID:[B
 
-    .line 42
     new-array v0, v5, [B
 
     fill-array-data v0, :array_5
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_APP_SECRET:[B
 
-    .line 47
     new-array v0, v1, [B
 
     fill-array-data v0, :array_6
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->COLUMN_OAUTH_APP_ID:[B
 
-    .line 51
     new-array v0, v2, [B
 
     fill-array-data v0, :array_7
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->COLUMN_OAUTH_TOKEN:[B
 
-    .line 55
     const/16 v0, 0x10
 
     new-array v0, v0, [B
@@ -199,28 +190,24 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->COLUMN_OAUTH_TOKEN_SECRET:[B
 
-    .line 59
     new-array v0, v4, [B
 
     fill-array-data v0, :array_9
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->COLUMN_OAUTH_USER_ID:[B
 
-    .line 63
     new-array v0, v1, [B
 
     fill-array-data v0, :array_a
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->COLUMN_OAUTH_VALUE:[B
 
-    .line 67
     new-array v0, v3, [B
 
     fill-array-data v0, :array_b
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->COLUMN_OAUTH_KEY:[B
 
-    .line 71
     const/16 v0, 0x3f
 
     new-array v0, v0, [B
@@ -229,7 +216,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->TOKEN_URI_S:[B
 
-    .line 75
     const/16 v0, 0x3d
 
     new-array v0, v0, [B
@@ -238,7 +224,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->USERID_URI_S:[B
 
-    .line 78
     const/16 v0, 0x12
 
     new-array v0, v0, [B
@@ -247,35 +232,30 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->SAMSUNG_ACCOUNT_TYPE:[B
 
-    .line 81
     new-array v0, v1, [B
 
     fill-array-data v0, :array_f
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->PREF_KEY_TOKEN:[B
 
-    .line 83
     new-array v0, v4, [B
 
     fill-array-data v0, :array_10
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->PREF_KEY_SECRET:[B
 
-    .line 85
     new-array v0, v4, [B
 
     fill-array-data v0, :array_11
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->PREF_KEY_USERID:[B
 
-    .line 87
     new-array v0, v2, [B
 
     fill-array-data v0, :array_12
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->PREF_KEY_SERVERURL:[B
 
-    .line 98
     const/16 v0, 0x26
 
     new-array v0, v0, [B
@@ -284,7 +264,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->ACTION_ACCESSTOKEN_V02_REQUEST:[B
 
-    .line 102
     const/16 v0, 0x27
 
     new-array v0, v0, [B
@@ -293,14 +272,12 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->ACTION_ACCESSTOKEN_V02_RESPONSE:[B
 
-    .line 106
     new-array v0, v5, [B
 
     fill-array-data v0, :array_15
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_CLIENT_ID:[B
 
-    .line 108
     const/16 v0, 0xd
 
     new-array v0, v0, [B
@@ -309,7 +286,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_CLIENT_SECRET:[B
 
-    .line 110
     const/4 v0, 0x7
 
     new-array v0, v0, [B
@@ -318,14 +294,12 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_OSP_VER:[B
 
-    .line 112
     new-array v0, v5, [B
 
     fill-array-data v0, :array_18
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_MYPACKAGE:[B
 
-    .line 114
     const/4 v0, 0x4
 
     new-array v0, v0, [B
@@ -334,14 +308,12 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_MODE:[B
 
-    .line 116
     new-array v0, v2, [B
 
     fill-array-data v0, :array_1a
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_ADDITIONAL:[B
 
-    .line 118
     const/16 v0, 0x14
 
     new-array v0, v0, [B
@@ -350,14 +322,12 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_EXPIRED_ACCESS_TOKEN:[B
 
-    .line 120
     new-array v0, v4, [B
 
     fill-array-data v0, :array_1c
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_VALUE_OSP_02:[B
 
-    .line 122
     const/16 v0, 0x1d
 
     new-array v0, v0, [B
@@ -366,7 +336,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_VALUE_HIDE_NOTIFICATION:[B
 
-    .line 126
     const/16 v0, 0xb
 
     new-array v0, v0, [B
@@ -375,7 +344,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_RESULT_CODE:[B
 
-    .line 128
     const/16 v0, 0xc
 
     new-array v0, v0, [B
@@ -384,7 +352,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_ACCESSTOKEN:[B
 
-    .line 130
     const/4 v0, 0x7
 
     new-array v0, v0, [B
@@ -393,7 +360,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_USER_ID:[B
 
-    .line 132
     const/16 v0, 0x8
 
     new-array v0, v0, [B
@@ -402,7 +368,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_BIRTHDAY:[B
 
-    .line 134
     const/16 v0, 0x8
 
     new-array v0, v0, [B
@@ -411,21 +376,18 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_EMAIL_ID:[B
 
-    .line 136
     new-array v0, v3, [B
 
     fill-array-data v0, :array_23
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_MCC:[B
 
-    .line 138
     new-array v0, v2, [B
 
     fill-array-data v0, :array_24
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_SERVER_URL:[B
 
-    .line 140
     const/16 v0, 0xe
 
     new-array v0, v0, [B
@@ -434,7 +396,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_API_SERVER_URL:[B
 
-    .line 142
     const/16 v0, 0xf
 
     new-array v0, v0, [B
@@ -443,7 +404,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_AUTH_SERVER_URL:[B
 
-    .line 144
     const/4 v0, 0x2
 
     new-array v0, v0, [B
@@ -452,7 +412,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_CC:[B
 
-    .line 146
     const/16 v0, 0x1c
 
     new-array v0, v0, [B
@@ -461,7 +420,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_DEVICE_PHYSICAL_ADDRESS:[B
 
-    .line 148
     const/16 v0, 0xd
 
     new-array v0, v0, [B
@@ -470,7 +428,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->EXTRA_KEY_ERROR_MESSAGE:[B
 
-    .line 151
     const/16 v0, 0xd
 
     new-array v0, v0, [B
@@ -479,21 +436,18 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->PREF_KEY_ACCOUNTEMAIL:[B
 
-    .line 153
     new-array v0, v2, [B
 
     fill-array-data v0, :array_2b
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->PREF_KEY_SERVERURL2:[B
 
-    .line 155
     new-array v0, v3, [B
 
     fill-array-data v0, :array_2c
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->PREF_KEY_DEVICE_PHYSICAL_ADDRESS:[B
 
-    .line 165
     const/16 v0, 0x1d
 
     new-array v0, v0, [B
@@ -502,14 +456,12 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->CONTENT_ENCRYPT_KEY_SEED_TEXT:[B
 
-    .line 168
     new-array v0, v1, [B
 
     fill-array-data v0, :array_2e
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->PHONE:[B
 
-    .line 171
     const/16 v0, 0x22
 
     new-array v0, v0, [B
@@ -518,7 +470,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->TELEPHONY_MGR:[B
 
-    .line 174
     const/16 v0, 0x17
 
     new-array v0, v0, [B
@@ -527,7 +478,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->CONTEXT:[B
 
-    .line 177
     const/16 v0, 0x10
 
     new-array v0, v0, [B
@@ -536,14 +486,12 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->STRING:[B
 
-    .line 180
     new-array v0, v3, [B
 
     fill-array-data v0, :array_32
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->MD5:[B
 
-    .line 183
     const/16 v0, 0x10
 
     new-array v0, v0, [B
@@ -552,7 +500,6 @@
 
     sput-object v0, Lcom/samsung/android/rlc/util/SecureStringData;->GET_SYSTEM_SERVICE:[B
 
-    .line 186
     const/16 v0, 0xb
 
     new-array v0, v0, [B
@@ -563,7 +510,6 @@
 
     return-void
 
-    .line 22
     nop
 
     :array_0
@@ -592,7 +538,6 @@
         0x5t
     .end array-data
 
-    .line 26
     nop
 
     :array_1
@@ -627,7 +572,6 @@
         0x61t
     .end array-data
 
-    .line 30
     :array_2
     .array-data 1
         0x7ft
@@ -660,7 +604,6 @@
         0x7ft
     .end array-data
 
-    .line 33
     :array_3
     .array-data 1
         0x7bt
@@ -689,7 +632,6 @@
         0x7et
     .end array-data
 
-    .line 38
     :array_4
     .array-data 1
         0x44t
@@ -699,7 +641,6 @@
         0x49t
     .end array-data
 
-    .line 42
     nop
 
     :array_5
@@ -715,7 +656,6 @@
         0x5et
     .end array-data
 
-    .line 47
     nop
 
     :array_6
@@ -727,7 +667,6 @@
         0x69t
     .end array-data
 
-    .line 51
     nop
 
     :array_7
@@ -744,7 +683,6 @@
         0x3dt
     .end array-data
 
-    .line 55
     nop
 
     :array_8
@@ -767,7 +705,6 @@
         0xat
     .end array-data
 
-    .line 59
     :array_9
     .array-data 1
         0x53t
@@ -778,7 +715,6 @@
         0x3dt
     .end array-data
 
-    .line 63
     nop
 
     :array_a
@@ -790,7 +726,6 @@
         0x4et
     .end array-data
 
-    .line 67
     nop
 
     :array_b
@@ -800,7 +735,6 @@
         0x55t
     .end array-data
 
-    .line 71
     :array_c
     .array-data 1
         0x5ct
@@ -868,7 +802,6 @@
         0x6t
     .end array-data
 
-    .line 75
     :array_d
     .array-data 1
         0x5et
@@ -934,7 +867,6 @@
         0x18t
     .end array-data
 
-    .line 78
     nop
 
     :array_e
@@ -959,7 +891,6 @@
         0x57t
     .end array-data
 
-    .line 81
     nop
 
     :array_f
@@ -971,7 +902,6 @@
         0x7et
     .end array-data
 
-    .line 83
     nop
 
     :array_10
@@ -984,7 +914,6 @@
         0x17t
     .end array-data
 
-    .line 85
     nop
 
     :array_11
@@ -997,7 +926,6 @@
         0x1dt
     .end array-data
 
-    .line 87
     nop
 
     :array_12
@@ -1014,7 +942,6 @@
         0x30t
     .end array-data
 
-    .line 98
     nop
 
     :array_13
@@ -1059,7 +986,6 @@
         0x77t
     .end array-data
 
-    .line 102
     nop
 
     :array_14
@@ -1105,7 +1031,6 @@
         0x2t
     .end array-data
 
-    .line 106
     :array_15
     .array-data 1
         0x6at
@@ -1119,7 +1044,6 @@
         0x42t
     .end array-data
 
-    .line 108
     nop
 
     :array_16
@@ -1139,7 +1063,6 @@
         0x5dt
     .end array-data
 
-    .line 110
     nop
 
     :array_17
@@ -1153,7 +1076,6 @@
         0x54t
     .end array-data
 
-    .line 112
     :array_18
     .array-data 1
         0x64t
@@ -1167,7 +1089,6 @@
         0x67t
     .end array-data
 
-    .line 114
     nop
 
     :array_19
@@ -1178,7 +1099,6 @@
         0x3t
     .end array-data
 
-    .line 116
     :array_1a
     .array-data 1
         0x6bt
@@ -1193,7 +1113,6 @@
         0x18t
     .end array-data
 
-    .line 118
     nop
 
     :array_1b
@@ -1220,7 +1139,6 @@
         0x8t
     .end array-data
 
-    .line 120
     :array_1c
     .array-data 1
         0x49t
@@ -1231,7 +1149,6 @@
         0x10t
     .end array-data
 
-    .line 122
     nop
 
     :array_1d
@@ -1267,7 +1184,6 @@
         0x44t
     .end array-data
 
-    .line 126
     nop
 
     :array_1e
@@ -1285,7 +1201,6 @@
         0x51t
     .end array-data
 
-    .line 128
     :array_1f
     .array-data 1
         0x6dt
@@ -1302,7 +1217,6 @@
         0x20t
     .end array-data
 
-    .line 130
     :array_20
     .array-data 1
         0x72t
@@ -1314,7 +1228,6 @@
         0x45t
     .end array-data
 
-    .line 132
     :array_21
     .array-data 1
         0x6at
@@ -1327,7 +1240,6 @@
         0x19t
     .end array-data
 
-    .line 134
     :array_22
     .array-data 1
         0x6dt
@@ -1340,7 +1252,6 @@
         0x3et
     .end array-data
 
-    .line 136
     :array_23
     .array-data 1
         0x6et
@@ -1348,7 +1259,6 @@
         0x6ft
     .end array-data
 
-    .line 138
     :array_24
     .array-data 1
         0x79t
@@ -1363,7 +1273,6 @@
         0x30t
     .end array-data
 
-    .line 140
     nop
 
     :array_25
@@ -1384,7 +1293,6 @@
         0x17t
     .end array-data
 
-    .line 142
     nop
 
     :array_26
@@ -1406,14 +1314,12 @@
         0x68t
     .end array-data
 
-    .line 144
     :array_27
     .array-data 1
         0x61t
         0x1t
     .end array-data
 
-    .line 146
     nop
 
     :array_28
@@ -1448,7 +1354,6 @@
         0x39t
     .end array-data
 
-    .line 148
     :array_29
     .array-data 1
         0x68t
@@ -1466,7 +1371,6 @@
         0x41t
     .end array-data
 
-    .line 151
     nop
 
     :array_2a
@@ -1486,7 +1390,6 @@
         0x5ft
     .end array-data
 
-    .line 153
     nop
 
     :array_2b
@@ -1503,7 +1406,6 @@
         0x30t
     .end array-data
 
-    .line 155
     nop
 
     :array_2c
@@ -1513,7 +1415,6 @@
         0x57t
     .end array-data
 
-    .line 165
     :array_2d
     .array-data 1
         0x5et
@@ -1547,7 +1448,6 @@
         0x4et
     .end array-data
 
-    .line 168
     nop
 
     :array_2e
@@ -1559,7 +1459,6 @@
         0x79t
     .end array-data
 
-    .line 171
     nop
 
     :array_2f
@@ -1600,7 +1499,6 @@
         0x9t
     .end array-data
 
-    .line 174
     nop
 
     :array_30
@@ -1630,7 +1528,6 @@
         0x5bt
     .end array-data
 
-    .line 177
     :array_31
     .array-data 1
         0x7at
@@ -1651,7 +1548,6 @@
         0x2dt
     .end array-data
 
-    .line 180
     :array_32
     .array-data 1
         0x4et
@@ -1659,7 +1555,6 @@
         0x3et
     .end array-data
 
-    .line 183
     :array_33
     .array-data 1
         0x77t
@@ -1680,7 +1575,6 @@
         0xet
     .end array-data
 
-    .line 186
     :array_34
     .array-data 1
         0x6ct
@@ -1701,7 +1595,6 @@
     .locals 0
 
     .prologue
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -1712,12 +1605,10 @@
     .param p0, "msg"    # [B
 
     .prologue
-    .line 217
     array-length v6, p0
 
     new-array v0, v6, [B
 
-    .line 219
     .local v0, "data":[B
     const/4 v1, 0x0
 
@@ -1738,7 +1629,6 @@
     :goto_0
     if-ge v1, v2, :cond_0
 
-    .line 220
     aget-byte v6, p0, v1
 
     xor-int/2addr v6, v3
@@ -1747,7 +1637,6 @@
 
     aput-byte v6, v0, v1
 
-    .line 221
     aget-byte v6, v0, v1
 
     add-int/lit8 v4, v5, 0x1
@@ -1762,10 +1651,8 @@
 
     aput-byte v6, v0, v1
 
-    .line 222
     aget-byte v3, p0, v1
 
-    .line 219
     add-int/lit8 v1, v1, 0x1
 
     move v5, v4
@@ -1774,7 +1661,6 @@
     .restart local v5    # "xor":I
     goto :goto_0
 
-    .line 225
     :cond_0
     new-instance v6, Ljava/lang/String;
 

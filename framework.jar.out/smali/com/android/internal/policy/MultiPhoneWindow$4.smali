@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1156
     iput-object p1, p0, Lcom/android/internal/policy/MultiPhoneWindow$4;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/ValueAnimator;
 
     .prologue
-    .line 1159
     iget-object v0, p0, Lcom/android/internal/policy/MultiPhoneWindow$4;->this$0:Lcom/android/internal/policy/MultiPhoneWindow;
 
     iget-object v0, v0, Lcom/android/internal/policy/MultiPhoneWindow;->mPenWindowController:Lcom/android/internal/policy/MultiPhoneWindow$PenWindowController;
@@ -60,6 +58,5 @@
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setAlpha(F)V
 
-    .line 1160
     return-void
 .end method

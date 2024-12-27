@@ -73,7 +73,6 @@
     .locals 1
 
     .prologue
-    .line 44
     sget-boolean v0, Lcom/samsung/android/multidisplay/common/ContextRelationManager;->DEBUG:Z
 
     sput-boolean v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
@@ -85,35 +84,29 @@
     .locals 2
 
     .prologue
-    .line 56
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mEdges:Ljava/util/ArrayList;
 
-    .line 49
     const-wide/16 v0, 0x1
 
     iput-wide v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mNextVertexId:J
 
-    .line 50
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mNextEdgeId:J
 
-    .line 57
     return-void
 .end method
 
@@ -131,49 +124,40 @@
     .end annotation
 
     .prologue
-    .line 61
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "cls":Ljava/lang/Class;, "Ljava/lang/Class<TE;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
-    .line 47
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mEdges:Ljava/util/ArrayList;
 
-    .line 49
     const-wide/16 v0, 0x1
 
     iput-wide v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mNextVertexId:J
 
-    .line 50
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mNextEdgeId:J
 
-    .line 62
     iput-object p1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mGraphType:Ljava/lang/Class;
 
-    .line 63
     iput-object p2, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mGraphName:Ljava/lang/String;
 
-    .line 64
     new-instance v0, Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;-><init>(Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;)V
 
     iput-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mDfs:Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;
 
-    .line 65
     return-void
 .end method
 
@@ -192,7 +176,6 @@
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     const/4 v2, 0x0
 
-    .line 298
     const-wide/16 v4, 0x0
 
     cmp-long v3, p1, v4
@@ -201,11 +184,9 @@
 
     move-object v0, v2
 
-    .line 306
     :goto_0
     return-object v0
 
-    .line 301
     :cond_0
     iget-object v3, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mEdges:Ljava/util/ArrayList;
 
@@ -227,7 +208,6 @@
 
     check-cast v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
-    .line 302
     .local v0, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     iget-wide v4, v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->id:J
 
@@ -241,7 +221,6 @@
     :cond_2
     move-object v0, v2
 
-    .line 306
     goto :goto_0
 .end method
 
@@ -253,12 +232,10 @@
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     const/4 v6, 0x0
 
-    .line 220
     sget-boolean v3, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 221
     const-string v3, "Graph"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -281,34 +258,27 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 222
     :cond_0
     invoke-direct {p0, p1, p2}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->idToEdge(J)Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
     move-result-object v0
 
-    .line 223
     .local v0, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     if-nez v0, :cond_1
 
-    .line 234
     :goto_0
     return v6
 
-    .line 227
     :cond_1
     iget-object v3, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mEdges:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 229
     iget-object v2, v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->startVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 230
     .local v2, "startVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     iget-object v1, v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->endVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 231
     .local v1, "endVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {p0, v2}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
@@ -316,7 +286,6 @@
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 232
     invoke-virtual {p0, v1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
     move-result-object v3
@@ -343,14 +312,12 @@
     .end annotation
 
     .prologue
-    .line 114
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 115
     .local v0, "adjVertices":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;>;"
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
@@ -374,7 +341,6 @@
 
     check-cast v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
-    .line 116
     .local v1, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     iget-object v3, v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->startVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
@@ -388,14 +354,12 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 117
     iget-object v3, v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->endVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 119
     :cond_0
     iget-object v3, v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->startVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
@@ -403,7 +367,6 @@
 
     goto :goto_0
 
-    .line 121
     .end local v1    # "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     :cond_1
     return-object v0
@@ -424,12 +387,10 @@
     .end annotation
 
     .prologue
-    .line 375
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-nez p1, :cond_0
 
-    .line 376
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string/jumbo v3, "v is null"
@@ -438,34 +399,28 @@
 
     throw v2
 
-    .line 377
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 378
     .local v0, "ancestor":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;>;"
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->parentVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v1
 
-    .line 380
     .local v1, "parent":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 381
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 382
     invoke-virtual {p0, v1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->parentVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v1
 
     goto :goto_0
 
-    .line 384
     :cond_1
     return-object v0
 .end method
@@ -483,7 +438,6 @@
     .end annotation
 
     .prologue
-    .line 470
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "candidateParentItem":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     .local p2, "childItem":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
@@ -491,7 +445,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 471
     const-string v7, "Graph"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -524,25 +477,21 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 473
     :cond_0
     invoke-virtual {p0, p2}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->itemToVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v1
 
-    .line 475
     .local v1, "childVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->itemToVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v0
 
-    .line 476
     .local v0, "candidateParentVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-eqz v1, :cond_1
 
     if-nez v0, :cond_2
 
-    .line 477
     :cond_1
     new-instance v7, Ljava/lang/NullPointerException;
 
@@ -552,30 +501,24 @@
 
     throw v7
 
-    .line 481
     :cond_2
     invoke-virtual {p0, v1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->getRootVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v5
 
-    .line 482
     .local v5, "rootVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-nez v5, :cond_3
 
-    .line 483
     move-object v5, v1
 
-    .line 485
     :cond_3
     invoke-virtual {p0, v5}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->descendantVertices(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
     move-result-object v2
 
-    .line 486
     .local v2, "descendantVertices":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;>;"
     invoke-virtual {v2, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 487
     sget-boolean v7, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v7, :cond_4
@@ -612,7 +555,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 488
     :cond_4
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -632,7 +574,6 @@
 
     check-cast v6, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 489
     .local v6, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {v6}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->getElement()Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
@@ -644,28 +585,23 @@
 
     if-eqz v7, :cond_5
 
-    .line 491
     const-string v7, "Graph"
 
     const-string v8, "Tried to add in same subgraph"
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 492
     const/4 v7, 0x0
 
-    .line 505
     .end local v6    # "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :goto_0
     return v7
 
-    .line 497
     :cond_6
     invoke-virtual {p0, p2}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->detachSubGraph(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v3
 
-    .line 500
     .local v3, "detachedSubGraphRootVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {v0}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->getElement()Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
@@ -677,19 +613,16 @@
 
     invoke-virtual {p0, v7, v8}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->insertEdge(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Z
 
-    .line 502
     iget-boolean v7, v3, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->dummy:Z
 
     if-eqz v7, :cond_7
 
-    .line 503
     invoke-virtual {v3}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->getElement()Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
     move-result-object v7
 
     invoke-virtual {p0, v7}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->removeVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Z
 
-    .line 505
     :cond_7
     const/4 v7, 0x1
 
@@ -711,12 +644,10 @@
     .end annotation
 
     .prologue
-    .line 363
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-nez p1, :cond_0
 
-    .line 364
     new-instance v3, Ljava/lang/NullPointerException;
 
     const-string/jumbo v4, "v is null"
@@ -725,13 +656,11 @@
 
     throw v3
 
-    .line 365
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 366
     .local v0, "descendants":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;>;"
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
@@ -756,7 +685,6 @@
 
     check-cast v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
-    .line 367
     .local v1, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     invoke-virtual {p0, v1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->origin(Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
@@ -764,7 +692,6 @@
 
     if-ne v3, p1, :cond_1
 
-    .line 368
     invoke-virtual {p0, v1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->destination(Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v3
@@ -773,7 +700,6 @@
 
     goto :goto_0
 
-    .line 371
     .end local v1    # "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     :cond_2
     return-object v0
@@ -786,7 +712,6 @@
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     const/4 v4, 0x0
 
-    .line 76
     invoke-virtual {p0}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->vertices()Ljava/util/ArrayList;
 
     move-result-object v3
@@ -809,18 +734,15 @@
 
     check-cast v2, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 77
     .local v2, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     iget-object v3, v2, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->incidenceList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 78
     invoke-virtual {v2, v4}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->setElement(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)V
 
     goto :goto_0
 
-    .line 81
     .end local v2    # "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->edges()Ljava/util/ArrayList;
@@ -844,16 +766,13 @@
 
     check-cast v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
-    .line 82
     .local v0, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     iput-object v4, v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->startVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 83
     iput-object v4, v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->endVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     goto :goto_1
 
-    .line 85
     .end local v0    # "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     :cond_1
     return-void
@@ -870,7 +789,6 @@
     .end annotation
 
     .prologue
-    .line 109
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
@@ -899,12 +817,10 @@
     .end annotation
 
     .prologue
-    .line 388
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-nez p1, :cond_0
 
-    .line 389
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string/jumbo v2, "v is null"
@@ -913,19 +829,16 @@
 
     throw v1
 
-    .line 390
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 391
     .local v0, "descendants":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;>;"
     iget-object v1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mDfs:Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;
 
     invoke-virtual {v1, p1, v0}, Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;->getDescendantsOf(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;Ljava/util/ArrayList;)V
 
-    .line 392
     return-object v0
 .end method
 
@@ -942,7 +855,6 @@
     .end annotation
 
     .prologue
-    .line 141
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     iget-object v0, p1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->endVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
@@ -963,14 +875,12 @@
     .end annotation
 
     .prologue
-    .line 423
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "itemWrapper":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     sget-boolean v4, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v4, :cond_0
 
-    .line 424
     const-string v4, "Graph"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -993,23 +903,19 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 425
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->itemToVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v3
 
-    .line 426
     .local v3, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {p0, v3}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->parentVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v2
 
-    .line 427
     .local v2, "parentVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-nez v3, :cond_1
 
-    .line 428
     new-instance v4, Ljava/lang/NullPointerException;
 
     const-string/jumbo v5, "v is null"
@@ -1018,7 +924,6 @@
 
     throw v4
 
-    .line 429
     :cond_1
     if-eqz v2, :cond_2
 
@@ -1026,13 +931,11 @@
 
     if-eqz v4, :cond_4
 
-    .line 430
     :cond_2
     sget-boolean v4, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v4, :cond_3
 
-    .line 431
     const-string v4, "Graph"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1059,12 +962,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 445
     :cond_3
     :goto_0
     return-object v3
 
-    .line 439
     :cond_4
     invoke-virtual {p0, v3}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
@@ -1088,7 +989,6 @@
 
     check-cast v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
-    .line 440
     .local v0, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     invoke-virtual {p0, v0}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->destination(Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
@@ -1096,7 +996,6 @@
 
     if-ne v4, v3, :cond_5
 
-    .line 441
     iget-wide v4, v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->id:J
 
     invoke-direct {p0, v4, v5}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->removeEdge(J)Z
@@ -1117,7 +1016,6 @@
     .end annotation
 
     .prologue
-    .line 400
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     iget-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mDfs:Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;
 
@@ -1135,7 +1033,6 @@
     .param p3, "dumpAll"    # Z
 
     .prologue
-    .line 534
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1155,16 +1052,13 @@
 
     move-result-object v1
 
-    .line 535
     .local v1, "innerPrefix":Ljava/lang/String;
     invoke-virtual {p1, p2}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 536
     const-string v3, "Context relation graph : "
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 537
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v3, "mGraphName="
@@ -1175,7 +1069,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 539
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "Vertex size="
@@ -1190,7 +1083,6 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 540
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string v3, "Edge size="
@@ -1205,14 +1097,12 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 542
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v3, "rootVertices= {"
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 543
     iget-object v3, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mDfs:Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;
 
     invoke-virtual {v3}, Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;->getRootVertices()Ljava/util/ArrayList;
@@ -1237,7 +1127,6 @@
 
     check-cast v2, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 544
     .local v2, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1263,25 +1152,20 @@
 
     goto :goto_0
 
-    .line 546
     .end local v2    # "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :cond_0
     const-string v3, " }"
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 548
     if-eqz p3, :cond_2
 
-    .line 549
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 550
     const-string v3, "DFS Traversed Vertices= {"
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 551
     iget-object v3, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mDfs:Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;
 
     invoke-virtual {v3}, Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;->doDfsForAllVertices()Ljava/util/ArrayList;
@@ -1305,7 +1189,6 @@
 
     check-cast v2, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 552
     .restart local v2    # "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -1327,22 +1210,18 @@
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 553
     invoke-virtual {p1, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 555
     .end local v2    # "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :cond_1
     invoke-virtual {p1, v1}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 556
     const-string/jumbo v3, "}"
 
     invoke-virtual {p1, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 558
     :cond_2
     return-void
 .end method
@@ -1360,7 +1239,6 @@
     .end annotation
 
     .prologue
-    .line 104
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     iget-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mEdges:Ljava/util/ArrayList;
 
@@ -1371,7 +1249,6 @@
     .locals 1
 
     .prologue
-    .line 88
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     iget-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mGraphName:Ljava/lang/String;
 
@@ -1391,14 +1268,12 @@
     .end annotation
 
     .prologue
-    .line 509
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "item":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     sget-boolean v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 510
     const-string v1, "Graph"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1421,24 +1296,20 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 511
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->itemToVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v0
 
-    .line 512
     .local v0, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-eqz v0, :cond_1
 
-    .line 513
     iget-object v1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mDfs:Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;->getLeaf(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v1
 
-    .line 515
     :goto_0
     return-object v1
 
@@ -1461,14 +1332,12 @@
     .end annotation
 
     .prologue
-    .line 352
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "item":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     sget-boolean v2, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v2, :cond_0
 
-    .line 353
     const-string v2, "Graph"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1491,26 +1360,21 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->itemToVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v1
 
-    .line 355
     .local v1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-eqz v1, :cond_2
 
-    .line 356
     invoke-virtual {p0, v1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->getRootVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v0
 
-    .line 357
     .local v0, "progenitorVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-eqz v0, :cond_1
 
-    .line 359
     .end local v0    # "progenitorVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :goto_0
     return-object v0
@@ -1519,10 +1383,8 @@
     :cond_1
     move-object v0, v1
 
-    .line 357
     goto :goto_0
 
-    .line 359
     .end local v0    # "progenitorVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :cond_2
     const/4 v0, 0x0
@@ -1543,12 +1405,10 @@
     .end annotation
 
     .prologue
-    .line 340
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-nez p1, :cond_0
 
-    .line 341
     new-instance v1, Ljava/lang/NullPointerException;
 
     const-string/jumbo v2, "v is null"
@@ -1557,25 +1417,21 @@
 
     throw v1
 
-    .line 342
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->parentVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v0
 
-    .line 344
     .local v0, "progenitor":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 345
     invoke-virtual {p0, v0}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->parentVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 348
     :cond_1
     return-object v0
 .end method
@@ -1593,7 +1449,6 @@
     .end annotation
 
     .prologue
-    .line 396
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     iget-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mDfs:Lcom/samsung/android/multidisplay/common/datastructure/DepthFirstSearch;
 
@@ -1615,7 +1470,6 @@
     .end annotation
 
     .prologue
-    .line 68
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     iget-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mGraphType:Ljava/lang/Class;
 
@@ -1637,7 +1491,6 @@
     .end annotation
 
     .prologue
-    .line 126
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     iget-object v0, p1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->incidenceList:Ljava/util/ArrayList;
@@ -1659,14 +1512,12 @@
     .end annotation
 
     .prologue
-    .line 314
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "itemWrapper":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     sget-boolean v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v1, :cond_0
 
-    .line 315
     const-string v1, "Graph"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1689,7 +1540,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     :cond_0
     new-instance v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
@@ -1703,18 +1553,15 @@
 
     invoke-direct {v0, v2, v3, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;-><init>(JLcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)V
 
-    .line 317
     .local v0, "vertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->dummy:Z
 
-    .line 318
     sget-boolean v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v1, :cond_1
 
-    .line 319
     const-string v1, "Graph"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1737,11 +1584,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 320
     :cond_1
     if-nez v0, :cond_2
 
-    .line 321
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string v2, "creating instance fail"
@@ -1750,13 +1595,11 @@
 
     throw v1
 
-    .line 323
     :cond_2
     iget-object v1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 324
     return-object v0
 .end method
 
@@ -1773,7 +1616,6 @@
     .end annotation
 
     .prologue
-    .line 190
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "parentItem":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     .local p2, "childItem":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
@@ -1781,7 +1623,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 191
     const-string v5, "Graph"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1814,15 +1655,12 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     :cond_0
     const/4 v3, 0x0
 
-    .line 194
     .local v3, "parentVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     const/4 v0, 0x0
 
-    .line 195
     .local v0, "childVertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     iget-object v5, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
@@ -1845,7 +1683,6 @@
 
     check-cast v4, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 196
     .local v4, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {v4}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->getElement()Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
@@ -1857,12 +1694,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 197
     move-object v3, v4
 
     goto :goto_0
 
-    .line 198
     :cond_2
     invoke-virtual {v4}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->getElement()Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
@@ -1874,19 +1709,16 @@
 
     if-eqz v5, :cond_1
 
-    .line 199
     move-object v0, v4
 
     goto :goto_0
 
-    .line 203
     .end local v4    # "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :cond_3
     if-eqz v3, :cond_5
 
     if-eqz v0, :cond_5
 
-    .line 204
     new-instance v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
     iget-wide v6, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mNextEdgeId:J
@@ -1899,13 +1731,11 @@
 
     invoke-direct {v1, v6, v7, v3, v0}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;-><init>(JLcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)V
 
-    .line 205
     .local v1, "edge":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     sget-boolean v5, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v5, :cond_4
 
-    .line 206
     const-string v5, "Graph"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1928,30 +1758,25 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 207
     :cond_4
     iget-object v5, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mEdges:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 208
     invoke-virtual {p0, v3}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
     move-result-object v5
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 209
     invoke-virtual {p0, v0}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
     move-result-object v5
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 210
     const/4 v5, 0x1
 
-    .line 212
     .end local v1    # "edge":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     :goto_1
     return v5
@@ -1973,7 +1798,6 @@
     .end annotation
 
     .prologue
-    .line 146
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "rootItem":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     :try_start_0
@@ -1983,7 +1807,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 147
     iget-object v1, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -2018,7 +1841,6 @@
 
     if-nez v1, :cond_1
 
-    .line 151
     new-instance v1, Ljava/lang/ClassCastException;
 
     invoke-direct {v1}, Ljava/lang/ClassCastException;-><init>()V
@@ -2028,22 +1850,18 @@
     .catch Ljava/lang/ClassCastException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 155
     :catch_0
     move-exception v0
 
-    .line 156
     .local v0, "e":Ljava/lang/ClassCastException;
     invoke-virtual {v0}, Ljava/lang/ClassCastException;->printStackTrace()V
 
-    .line 157
     new-instance v1, Ljava/lang/ClassCastException;
 
     invoke-direct {v1}, Ljava/lang/ClassCastException;-><init>()V
 
     throw v1
 
-    .line 153
     .end local v0    # "e":Ljava/lang/ClassCastException;
     :cond_0
     :try_start_1
@@ -2056,22 +1874,18 @@
     .catch Ljava/lang/ClassCastException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 158
     :catch_1
     move-exception v0
 
-    .line 159
     .local v0, "e":Ljava/lang/NullPointerException;
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    .line 160
     new-instance v1, Ljava/lang/NullPointerException;
 
     invoke-direct {v1}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v1
 
-    .line 162
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :cond_1
     const/4 v1, 0x0
@@ -2096,7 +1910,6 @@
     .end annotation
 
     .prologue
-    .line 167
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "parentItem":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     .local p2, "childItem":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
@@ -2104,7 +1917,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 168
     const-string v3, "Graph"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2127,7 +1939,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 169
     :cond_0
     iget-object v3, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
@@ -2149,11 +1960,9 @@
 
     check-cast v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 170
     .local v1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-eqz v1, :cond_1
 
-    .line 173
     invoke-virtual {v1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->getElement()Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
     move-result-object v3
@@ -2170,15 +1979,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 174
     const/4 v3, 0x0
 
-    .line 186
     .end local v1    # "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :goto_0
     return v3
 
-    .line 176
     :cond_2
     new-instance v2, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
@@ -2192,13 +1998,11 @@
 
     invoke-direct {v2, v4, v5, p2}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;-><init>(JLcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)V
 
-    .line 177
     .local v2, "vertex":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     sget-boolean v3, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v3, :cond_3
 
-    .line 178
     const-string v3, "Graph"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2221,11 +2025,9 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 179
     :cond_3
     if-nez v2, :cond_4
 
-    .line 180
     new-instance v3, Ljava/lang/RuntimeException;
 
     const-string v4, "creating instance fail"
@@ -2234,19 +2036,15 @@
 
     throw v3
 
-    .line 182
     :cond_4
     iget-object v3, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 183
     if-eqz p1, :cond_5
 
-    .line 184
     invoke-virtual {p0, p1, p2}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->insertEdge(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Z
 
-    .line 186
     :cond_5
     const/4 v3, 0x1
 
@@ -2266,12 +2064,10 @@
     .end annotation
 
     .prologue
-    .line 286
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "item":Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper<TE;>;"
     if-nez p1, :cond_0
 
-    .line 287
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string v3, "item is null"
@@ -2280,7 +2076,6 @@
 
     throw v2
 
-    .line 289
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
@@ -2302,7 +2097,6 @@
 
     check-cast v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 290
     .local v1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {v1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->getElement()Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
@@ -2314,7 +2108,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 294
     .end local v1    # "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     :goto_0
     return-object v1
@@ -2329,7 +2122,6 @@
     .locals 1
 
     .prologue
-    .line 96
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     iget-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mEdges:Ljava/util/ArrayList;
 
@@ -2344,7 +2136,6 @@
     .locals 1
 
     .prologue
-    .line 92
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     iget-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
@@ -2370,7 +2161,6 @@
     .end annotation
 
     .prologue
-    .line 130
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     .local p2, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
@@ -2378,10 +2168,8 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 131
     iget-object v0, p2, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->endVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 133
     :goto_0
     return-object v0
 
@@ -2404,7 +2192,6 @@
     .end annotation
 
     .prologue
-    .line 137
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     iget-object v0, p1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->startVertex:Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
@@ -2425,12 +2212,10 @@
     .end annotation
 
     .prologue
-    .line 328
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-nez p1, :cond_0
 
-    .line 329
     new-instance v2, Ljava/lang/NullPointerException;
 
     const-string/jumbo v3, "v is null"
@@ -2439,7 +2224,6 @@
 
     throw v2
 
-    .line 331
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
@@ -2463,7 +2247,6 @@
 
     check-cast v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
-    .line 332
     .local v0, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     invoke-virtual {p0, v0}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->destination(Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
@@ -2471,12 +2254,10 @@
 
     if-ne v2, p1, :cond_1
 
-    .line 333
     invoke-virtual {p0, v0}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->origin(Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v2
 
-    .line 336
     .end local v0    # "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     :goto_0
     return-object v2
@@ -2498,7 +2279,6 @@
     .end annotation
 
     .prologue
-    .line 216
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     .local p1, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     iget-wide v0, p1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->id:J
@@ -2527,12 +2307,10 @@
 
     const/4 v7, 0x0
 
-    .line 238
     sget-boolean v9, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->DEBUG:Z
 
     if-eqz v9, :cond_0
 
-    .line 239
     const-string v9, "Graph"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -2555,37 +2333,30 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 240
     :cond_0
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->itemToVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v5
 
-    .line 241
     .local v5, "v":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     if-nez v5, :cond_1
 
-    .line 282
     :goto_0
     return v7
 
-    .line 244
     :cond_1
     invoke-virtual {p0, v5}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->parentVertex(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
     move-result-object v4
 
-    .line 246
     .local v4, "parent":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {p0, v5}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->childVertices(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
     move-result-object v6
 
-    .line 247
     .local v6, "vChildVertices":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;>;"
     if-nez v4, :cond_3
 
-    .line 252
     invoke-virtual {p0, v5}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
     move-result-object v9
@@ -2596,12 +2367,10 @@
 
     if-eqz v9, :cond_3
 
-    .line 253
     iget-boolean v9, v5, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->dummy:Z
 
     if-eqz v9, :cond_2
 
-    .line 254
     const-string v8, "Graph"
 
     const-string/jumbo v9, "removeVertex() : cannot remove dummy vertex which does not have ancestor."
@@ -2610,7 +2379,6 @@
 
     goto :goto_0
 
-    .line 258
     :cond_2
     new-instance v9, Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
@@ -2628,34 +2396,28 @@
 
     move-result-object v4
 
-    .line 259
     const-string v9, "Graph"
 
     const-string/jumbo v10, "removeVertex() : insertDummyVertex, because there is no ancestor."
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 264
     :cond_3
     iget-object v9, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v5}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 266
     if-nez v4, :cond_4
 
     move v7, v8
 
-    .line 269
     goto :goto_0
 
-    .line 272
     :cond_4
     invoke-virtual {p0, v5}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->incidentEdges(Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;)Ljava/util/ArrayList;
 
     move-result-object v3
 
-    .line 273
     .local v3, "incidenceList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;>;"
     :goto_1
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
@@ -2664,14 +2426,12 @@
 
     if-eqz v9, :cond_5
 
-    .line 274
     invoke-virtual {v3, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;
 
-    .line 275
     .local v1, "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     iget-wide v10, v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;->id:J
 
@@ -2679,7 +2439,6 @@
 
     goto :goto_1
 
-    .line 278
     .end local v1    # "e":Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Edge<TE;>;"
     :cond_5
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -2700,7 +2459,6 @@
 
     check-cast v0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;
 
-    .line 279
     .local v0, "child":Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex<TE;>;"
     invoke-virtual {v4}, Lcom/samsung/android/multidisplay/common/datastructure/graph/Vertex;->getElement()Lcom/samsung/android/multidisplay/common/datastructure/graph/ItemWrapper;
 
@@ -2718,7 +2476,6 @@
     :cond_6
     move v7, v8
 
-    .line 282
     goto :goto_0
 .end method
 
@@ -2726,7 +2483,6 @@
     .locals 3
 
     .prologue
-    .line 521
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2734,7 +2490,6 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 522
     .local v0, "sb":Ljava/lang/StringBuilder;
     const-class v1, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;
 
@@ -2744,12 +2499,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 523
     const-string v1, " {"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 524
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2772,7 +2525,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 525
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2799,7 +2551,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 526
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2826,7 +2577,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 527
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2853,7 +2603,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 528
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2880,12 +2629,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 529
     const-string v1, " } "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 530
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -2906,7 +2653,6 @@
     .end annotation
 
     .prologue
-    .line 100
     .local p0, "this":Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;, "Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph<TE;>;"
     iget-object v0, p0, Lcom/samsung/android/multidisplay/common/datastructure/graph/Graph;->mVertices:Ljava/util/ArrayList;
 

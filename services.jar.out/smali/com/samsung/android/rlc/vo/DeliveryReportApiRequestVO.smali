@@ -95,28 +95,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->messageId:Ljava/lang/String;
 
-    .line 22
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->rlcId:Ljava/lang/String;
 
-    .line 26
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->deviceType:Ljava/lang/String;
 
-    .line 30
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->pushType:Ljava/lang/String;
 
-    .line 34
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->errorCode:Ljava/lang/String;
 
-    .line 38
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->errorDescription:Ljava/lang/String;
 
-    .line 42
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->rlcStsCode:Ljava/lang/String;
 
     return-void
@@ -128,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->deviceType:Ljava/lang/String;
 
     return-object v0
@@ -138,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->errorCode:Ljava/lang/String;
 
     return-object v0
@@ -148,7 +138,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->errorDescription:Ljava/lang/String;
 
     return-object v0
@@ -158,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->messageId:Ljava/lang/String;
 
     return-object v0
@@ -168,7 +156,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->pushType:Ljava/lang/String;
 
     return-object v0
@@ -178,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->rlcId:Ljava/lang/String;
 
     return-object v0
@@ -188,7 +174,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->rlcStsCode:Ljava/lang/String;
 
     return-object v0
@@ -199,10 +184,8 @@
     .param p1, "deviceType"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->deviceType:Ljava/lang/String;
 
-    .line 72
     return-void
 .end method
 
@@ -211,10 +194,8 @@
     .param p1, "errorCode"    # Ljava/lang/String;
 
     .prologue
-    .line 79
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->errorCode:Ljava/lang/String;
 
-    .line 80
     return-void
 .end method
 
@@ -223,10 +204,8 @@
     .param p1, "errorDescription"    # Ljava/lang/String;
 
     .prologue
-    .line 84
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->errorDescription:Ljava/lang/String;
 
-    .line 85
     return-void
 .end method
 
@@ -235,10 +214,8 @@
     .param p1, "messageId"    # Ljava/lang/String;
 
     .prologue
-    .line 67
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->messageId:Ljava/lang/String;
 
-    .line 68
     return-void
 .end method
 
@@ -247,10 +224,8 @@
     .param p1, "pushType"    # Ljava/lang/String;
 
     .prologue
-    .line 75
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->pushType:Ljava/lang/String;
 
-    .line 76
     return-void
 .end method
 
@@ -259,10 +234,8 @@
     .param p1, "rlcId"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->rlcId:Ljava/lang/String;
 
-    .line 93
     return-void
 .end method
 
@@ -271,10 +244,8 @@
     .param p1, "rlcStsCode"    # Ljava/lang/String;
 
     .prologue
-    .line 101
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->rlcStsCode:Ljava/lang/String;
 
-    .line 102
     return-void
 .end method
 
@@ -282,18 +253,15 @@
     .locals 3
 
     .prologue
-    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 106
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v1, "<DeliveryReportVO>"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 107
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->getMessageId()Ljava/lang/String;
 
     move-result-object v1
@@ -322,7 +290,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 108
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->getRlcId()Ljava/lang/String;
 
@@ -352,7 +319,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 109
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->getDeviceType()Ljava/lang/String;
 
@@ -382,7 +348,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 110
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->getPushType()Ljava/lang/String;
 
@@ -412,7 +377,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 111
     :cond_3
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->getErrorCode()Ljava/lang/String;
 
@@ -442,7 +406,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 112
     :cond_4
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeliveryReportApiRequestVO;->getErrorDescription()Ljava/lang/String;
 
@@ -472,13 +435,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 113
     :cond_5
     const-string v1, "</DeliveryReportVO>"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 114
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

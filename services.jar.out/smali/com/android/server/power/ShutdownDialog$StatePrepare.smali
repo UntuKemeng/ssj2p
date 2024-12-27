@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 283
     iput-object p1, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p2, "x1"    # Lcom/android/server/power/ShutdownDialog$1;
 
     .prologue
-    .line 283
     invoke-direct {p0, p1}, Lcom/android/server/power/ShutdownDialog$StatePrepare;-><init>(Lcom/android/server/power/ShutdownDialog;)V
 
     return-void
@@ -55,7 +53,6 @@
     .param p0, "x0"    # Lcom/android/server/power/ShutdownDialog$StatePrepare;
 
     .prologue
-    .line 283
     iget-boolean v0, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->hasSound:Z
 
     return v0
@@ -67,12 +64,10 @@
     .param p2, "targetStr"    # Ljava/lang/String;
 
     .prologue
-    .line 338
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 339
     .local v1, "f":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -80,23 +75,19 @@
 
     if-eqz v7, :cond_1
 
-    .line 340
     const/4 v5, 0x0
 
-    .line 342
     .local v5, "reader":Ljava/io/BufferedReader;
     :try_start_0
     new-instance v2, Ljava/io/FileInputStream;
 
     invoke-direct {v2, v1}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 343
     .local v2, "fis":Ljava/io/InputStream;
     new-instance v4, Ljava/io/InputStreamReader;
 
     invoke-direct {v4, v2}, Ljava/io/InputStreamReader;-><init>(Ljava/io/InputStream;)V
 
-    .line 344
     .local v4, "r":Ljava/io/InputStreamReader;
     new-instance v6, Ljava/io/BufferedReader;
 
@@ -106,7 +97,6 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_3
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 345
     .end local v5    # "reader":Ljava/io/BufferedReader;
     .local v6, "reader":Ljava/io/BufferedReader;
     :try_start_1
@@ -114,7 +104,6 @@
 
     move-result-object v3
 
-    .line 346
     .local v3, "line":Ljava/lang/String;
     invoke-virtual {p2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
     :try_end_1
@@ -124,16 +113,13 @@
 
     move-result v7
 
-    .line 352
     if-eqz v6, :cond_0
 
-    .line 354
     :try_start_2
     invoke-virtual {v6}, Ljava/io/BufferedReader;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 361
     .end local v2    # "fis":Ljava/io/InputStream;
     .end local v3    # "line":Ljava/lang/String;
     .end local v4    # "r":Ljava/io/InputStreamReader;
@@ -142,7 +128,6 @@
     :goto_0
     return v7
 
-    .line 355
     .restart local v2    # "fis":Ljava/io/InputStream;
     .restart local v3    # "line":Ljava/lang/String;
     .restart local v4    # "r":Ljava/io/InputStreamReader;
@@ -150,7 +135,6 @@
     :catch_0
     move-exception v0
 
-    .line 356
     .local v0, "e":Ljava/io/IOException;
     const-string v8, "ShutdownDialog"
 
@@ -160,7 +144,6 @@
 
     goto :goto_0
 
-    .line 347
     .end local v0    # "e":Ljava/io/IOException;
     .end local v2    # "fis":Ljava/io/InputStream;
     .end local v3    # "line":Ljava/lang/String;
@@ -170,7 +153,6 @@
     :catch_1
     move-exception v0
 
-    .line 348
     .local v0, "e":Ljava/io/FileNotFoundException;
     :goto_1
     :try_start_3
@@ -182,16 +164,13 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 352
     if-eqz v5, :cond_1
 
-    .line 354
     :try_start_4
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
     :try_end_4
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 361
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     .end local v5    # "reader":Ljava/io/BufferedReader;
     :cond_1
@@ -200,13 +179,11 @@
 
     goto :goto_0
 
-    .line 355
     .restart local v0    # "e":Ljava/io/FileNotFoundException;
     .restart local v5    # "reader":Ljava/io/BufferedReader;
     :catch_2
     move-exception v0
 
-    .line 356
     .local v0, "e":Ljava/io/IOException;
     const-string v7, "ShutdownDialog"
 
@@ -216,12 +193,10 @@
 
     goto :goto_2
 
-    .line 349
     .end local v0    # "e":Ljava/io/IOException;
     :catch_3
     move-exception v0
 
-    .line 350
     .restart local v0    # "e":Ljava/io/IOException;
     :goto_3
     :try_start_5
@@ -233,10 +208,8 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 352
     if-eqz v5, :cond_1
 
-    .line 354
     :try_start_6
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
     :try_end_6
@@ -244,11 +217,9 @@
 
     goto :goto_2
 
-    .line 355
     :catch_4
     move-exception v0
 
-    .line 356
     const-string v7, "ShutdownDialog"
 
     const-string v8, "File close error"
@@ -257,7 +228,6 @@
 
     goto :goto_2
 
-    .line 352
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v7
@@ -265,22 +235,18 @@
     :goto_4
     if-eqz v5, :cond_2
 
-    .line 354
     :try_start_7
     invoke-virtual {v5}, Ljava/io/BufferedReader;->close()V
     :try_end_7
     .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_5
 
-    .line 357
     :cond_2
     :goto_5
     throw v7
 
-    .line 355
     :catch_5
     move-exception v0
 
-    .line 356
     .restart local v0    # "e":Ljava/io/IOException;
     const-string v8, "ShutdownDialog"
 
@@ -290,7 +256,6 @@
 
     goto :goto_5
 
-    .line 352
     .end local v0    # "e":Ljava/io/IOException;
     .end local v5    # "reader":Ljava/io/BufferedReader;
     .restart local v2    # "fis":Ljava/io/InputStream;
@@ -305,7 +270,6 @@
     .restart local v5    # "reader":Ljava/io/BufferedReader;
     goto :goto_4
 
-    .line 349
     .end local v5    # "reader":Ljava/io/BufferedReader;
     .restart local v6    # "reader":Ljava/io/BufferedReader;
     :catch_6
@@ -317,7 +281,6 @@
     .restart local v5    # "reader":Ljava/io/BufferedReader;
     goto :goto_3
 
-    .line 347
     .end local v5    # "reader":Ljava/io/BufferedReader;
     .restart local v6    # "reader":Ljava/io/BufferedReader;
     :catch_7
@@ -336,7 +299,6 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 386
     iget-object v2, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     invoke-virtual {v2}, Lcom/android/server/power/ShutdownDialog;->getWindow()Landroid/view/Window;
@@ -347,25 +309,20 @@
 
     move-result-object v0
 
-    .line 387
     .local v0, "l":Landroid/view/WindowManager$LayoutParams;
     new-instance v1, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v1}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 388
     .local v1, "nl":Landroid/view/WindowManager$LayoutParams;
     invoke-virtual {v1, v0}, Landroid/view/WindowManager$LayoutParams;->copyFrom(Landroid/view/WindowManager$LayoutParams;)I
 
-    .line 389
     if-le p1, p2, :cond_0
 
-    .line 390
     const/4 v2, 0x0
 
     iput v2, v1, Landroid/view/WindowManager$LayoutParams;->screenOrientation:I
 
-    .line 394
     :goto_0
     iget-object v2, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -375,10 +332,8 @@
 
     invoke-virtual {v2, v1}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 395
     return-void
 
-    .line 392
     :cond_0
     const/4 v2, 0x1
 
@@ -393,7 +348,6 @@
     .locals 2
 
     .prologue
-    .line 365
     const-string v0, "/efs/sec_efs/auto_reboot/autoinstall.status"
 
     const-string v1, "AUTO_INSTALL"
@@ -409,7 +363,6 @@
     .locals 1
 
     .prologue
-    .line 379
     iget-boolean v0, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->hasSound:Z
 
     if-nez v0, :cond_0
@@ -418,11 +371,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 380
     :cond_0
     const/4 v0, 0x1
 
-    .line 382
     :goto_0
     return v0
 
@@ -436,7 +387,6 @@
     .locals 1
 
     .prologue
-    .line 375
     const/4 v0, 0x0
 
     return v0
@@ -448,14 +398,12 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 288
     const-string v8, "ShutdownDialog"
 
     const-string/jumbo v9, "prepare shutdown dialog image and sound"
 
     invoke-static {v8, v9}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     iget-object v8, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->qmgList:Ljava/util/List;
@@ -469,7 +417,6 @@
 
     if-lez v8, :cond_1
 
-    .line 292
     iget-object v8, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->qmgList:Ljava/util/List;
@@ -483,7 +430,6 @@
 
     check-cast v2, Lcom/android/server/power/LibQmg;
 
-    .line 293
     .local v2, "qmg":Lcom/android/server/power/LibQmg;
     const-string v8, "ShutdownDialog"
 
@@ -493,22 +439,18 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
     invoke-virtual {v2}, Lcom/android/server/power/LibQmg;->getWidth()I
 
     move-result v6
 
-    .line 295
     .local v6, "width":I
     invoke-virtual {v2}, Lcom/android/server/power/LibQmg;->getHeight()I
 
     move-result v0
 
-    .line 297
     .local v0, "height":I
     invoke-direct {p0, v6, v0}, Lcom/android/server/power/ShutdownDialog$StatePrepare;->disableWindowRotation(II)V
 
-    .line 298
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -517,7 +459,6 @@
 
     if-ge v1, v8, :cond_2
 
-    .line 299
     iget-object v8, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->bitmapQ:[Landroid/graphics/Bitmap;
@@ -529,7 +470,6 @@
 
     if-nez v8, :cond_0
 
-    .line 300
     iget-object v8, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->bitmapQ:[Landroid/graphics/Bitmap;
@@ -545,13 +485,11 @@
 
     aput-object v9, v8, v1
 
-    .line 298
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 304
     .end local v0    # "height":I
     .end local v1    # "i":I
     .end local v2    # "qmg":Lcom/android/server/power/LibQmg;
@@ -563,7 +501,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 308
     :cond_2
     iget-object v8, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -572,7 +509,6 @@
 
     move-result v5
 
-    .line 309
     .local v5, "systemVolume":I
     iget-object v8, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -588,7 +524,6 @@
 
     move-result-object v3
 
-    .line 310
     .local v3, "soundPathConfirmed":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -614,18 +549,15 @@
     :cond_3
     iput-boolean v7, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->hasSound:Z
 
-    .line 312
     iget-boolean v7, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->hasSound:Z
 
     if-eqz v7, :cond_4
 
-    .line 313
     iget-object v7, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # invokes: Lcom/android/server/power/ShutdownDialog;->prepareSound(Ljava/lang/String;)V
     invoke-static {v7, v3}, Lcom/android/server/power/ShutdownDialog;->access$1000(Lcom/android/server/power/ShutdownDialog;Ljava/lang/String;)V
 
-    .line 333
     :goto_1
     new-instance v4, Landroid/content/Intent;
 
@@ -633,7 +565,6 @@
 
     invoke-direct {v4, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 334
     .local v4, "startAnimation":Landroid/content/Intent;
     iget-object v7, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
@@ -644,22 +575,18 @@
 
     invoke-virtual {v7, v4}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 335
     return-void
 
-    .line 314
     .end local v4    # "startAnimation":Landroid/content/Intent;
     :cond_4
     if-nez v5, :cond_5
 
-    .line 316
     const-string/jumbo v7, "poweroff_sound=suspend"
 
     invoke-static {v7}, Landroid/media/AudioSystem;->setParameters(Ljava/lang/String;)I
 
     goto :goto_1
 
-    .line 319
     :cond_5
     new-instance v7, Lcom/android/server/power/ShutdownDialog$StatePrepare$1;
 
@@ -674,14 +601,12 @@
     .locals 2
 
     .prologue
-    .line 369
     const-string v0, "ShutdownDialog"
 
     const-string/jumbo v1, "start draw"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     # getter for: Lcom/android/server/power/ShutdownDialog;->mStateDrawing:Lcom/android/server/power/ShutdownDialog$StateDrawing;
@@ -691,7 +616,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/power/ShutdownDialog$StateDrawing;->start()V
 
-    .line 371
     iget-object v0, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
 
     iget-object v1, p0, Lcom/android/server/power/ShutdownDialog$StatePrepare;->this$0:Lcom/android/server/power/ShutdownDialog;
@@ -704,6 +628,5 @@
     # setter for: Lcom/android/server/power/ShutdownDialog;->mState:Lcom/android/server/power/ShutdownDialog$DrawState;
     invoke-static {v0, v1}, Lcom/android/server/power/ShutdownDialog;->access$1302(Lcom/android/server/power/ShutdownDialog;Lcom/android/server/power/ShutdownDialog$DrawState;)Lcom/android/server/power/ShutdownDialog$DrawState;
 
-    .line 372
     return-void
 .end method

@@ -92,7 +92,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 154
     new-instance v0, Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     const-string v1, "YEARS"
@@ -103,7 +102,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->YEARS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
-    .line 159
     new-instance v0, Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     const-string v1, "MONTHS"
@@ -114,7 +112,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->MONTHS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
-    .line 164
     new-instance v0, Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     const-string v1, "DAYS"
@@ -125,7 +122,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->DAYS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
-    .line 169
     new-instance v0, Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     const-string v1, "HOURS"
@@ -136,7 +132,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->HOURS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
-    .line 174
     new-instance v0, Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     const-string v1, "MINUTES"
@@ -147,7 +142,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->MINUTES:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
-    .line 179
     new-instance v0, Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
     const-string v1, "SECONDS"
@@ -158,7 +152,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->SECONDS:Lmf/javax/xml/datatype/DatatypeConstants$Field;
 
-    .line 232
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
@@ -169,7 +162,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->DATETIME:Lmf/javax/xml/namespace/QName;
 
-    .line 237
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
@@ -180,7 +172,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->TIME:Lmf/javax/xml/namespace/QName;
 
-    .line 242
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
@@ -191,7 +182,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->DATE:Lmf/javax/xml/namespace/QName;
 
-    .line 247
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
@@ -202,7 +192,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->GYEARMONTH:Lmf/javax/xml/namespace/QName;
 
-    .line 252
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
@@ -213,7 +202,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->GMONTHDAY:Lmf/javax/xml/namespace/QName;
 
-    .line 257
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
@@ -224,7 +212,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->GYEAR:Lmf/javax/xml/namespace/QName;
 
-    .line 262
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
@@ -235,7 +222,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->GMONTH:Lmf/javax/xml/namespace/QName;
 
-    .line 267
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
@@ -246,7 +232,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->GDAY:Lmf/javax/xml/namespace/QName;
 
-    .line 272
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2001/XMLSchema"
@@ -257,7 +242,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->DURATION:Lmf/javax/xml/namespace/QName;
 
-    .line 277
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2003/11/xpath-datatypes"
@@ -268,7 +252,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->DURATION_DAYTIME:Lmf/javax/xml/namespace/QName;
 
-    .line 282
     new-instance v0, Lmf/javax/xml/namespace/QName;
 
     const-string v1, "http://www.w3.org/2003/11/xpath-datatypes"
@@ -279,7 +262,6 @@
 
     sput-object v0, Lmf/javax/xml/datatype/DatatypeConstants;->DURATION_YEARMONTH:Lmf/javax/xml/namespace/QName;
 
-    .line 292
     return-void
 .end method
 
@@ -287,9 +269,7 @@
     .locals 0
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     return-void
 .end method

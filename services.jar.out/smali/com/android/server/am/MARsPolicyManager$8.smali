@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3249
     iput-object p1, p0, Lcom/android/server/am/MARsPolicyManager$8;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     iput-object p2, p0, Lcom/android/server/am/MARsPolicyManager$8;->val$pkgName:Ljava/lang/String;
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 3252
     iget-object v0, p0, Lcom/android/server/am/MARsPolicyManager$8;->this$0:Lcom/android/server/am/MARsPolicyManager;
 
     iget-object v1, p0, Lcom/android/server/am/MARsPolicyManager$8;->val$pkgName:Ljava/lang/String;
@@ -52,6 +50,5 @@
     # invokes: Lcom/android/server/am/MARsPolicyManager;->updatePackagesScore(Ljava/lang/String;)V
     invoke-static {v0, v1}, Lcom/android/server/am/MARsPolicyManager;->access$1100(Lcom/android/server/am/MARsPolicyManager;Ljava/lang/String;)V
 
-    .line 3253
     return-void
 .end method

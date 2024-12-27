@@ -38,20 +38,16 @@
     .param p1, "scanner"    # Lorg/simpleframework/xml/core/Scanner;
 
     .prologue
-    .line 369
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 370
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveScanner$EmptySection;->list:Ljava/util/List;
 
-    .line 371
     iput-object p1, p0, Lorg/simpleframework/xml/core/PrimitiveScanner$EmptySection;->scanner:Lorg/simpleframework/xml/core/Scanner;
 
-    .line 372
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 500
     const/4 v0, 0x0
 
     return-object v0
@@ -72,7 +67,6 @@
     .locals 2
 
     .prologue
-    .line 444
     new-instance v0, Lorg/simpleframework/xml/core/LabelMap;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/PrimitiveScanner$EmptySection;->scanner:Lorg/simpleframework/xml/core/Scanner;
@@ -87,7 +81,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 458
     const/4 v0, 0x0
 
     return-object v0
@@ -97,7 +90,6 @@
     .locals 2
 
     .prologue
-    .line 431
     new-instance v0, Lorg/simpleframework/xml/core/LabelMap;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/PrimitiveScanner$EmptySection;->scanner:Lorg/simpleframework/xml/core/Scanner;
@@ -111,7 +103,6 @@
     .locals 1
 
     .prologue
-    .line 393
     const/4 v0, 0x0
 
     return-object v0
@@ -122,7 +113,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 486
     const/4 v0, 0x0
 
     return-object v0
@@ -132,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 405
     const/4 v0, 0x0
 
     return-object v0
@@ -143,7 +132,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 472
     const/4 v0, 0x0
 
     return-object v0
@@ -153,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 418
     const/4 v0, 0x0
 
     return-object v0
@@ -164,7 +151,6 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 514
     const/4 v0, 0x0
 
     return v0
@@ -183,7 +169,6 @@
     .end annotation
 
     .prologue
-    .line 382
     iget-object v0, p0, Lorg/simpleframework/xml/core/PrimitiveScanner$EmptySection;->list:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;

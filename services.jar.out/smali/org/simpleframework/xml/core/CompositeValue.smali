@@ -31,33 +31,26 @@
     .end annotation
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     new-instance v0, Lorg/simpleframework/xml/core/Traverser;
 
     invoke-direct {v0, p1}, Lorg/simpleframework/xml/core/Traverser;-><init>(Lorg/simpleframework/xml/core/Context;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CompositeValue;->root:Lorg/simpleframework/xml/core/Traverser;
 
-    .line 76
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Context;->getStyle()Lorg/simpleframework/xml/stream/Style;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CompositeValue;->style:Lorg/simpleframework/xml/stream/Style;
 
-    .line 77
     iput-object p1, p0, Lorg/simpleframework/xml/core/CompositeValue;->context:Lorg/simpleframework/xml/core/Context;
 
-    .line 78
     iput-object p2, p0, Lorg/simpleframework/xml/core/CompositeValue;->entry:Lorg/simpleframework/xml/core/Entry;
 
-    .line 79
     iput-object p3, p0, Lorg/simpleframework/xml/core/CompositeValue;->type:Lorg/simpleframework/xml/strategy/Type;
 
-    .line 80
     return-void
 .end method
 
@@ -74,20 +67,17 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 159
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeValue;->style:Lorg/simpleframework/xml/stream/Style;
 
     invoke-interface {v4, p2}, Lorg/simpleframework/xml/stream/Style;->getElement(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 160
     .local v1, "name":Ljava/lang/String;
     invoke-interface {p1, v1}, Lorg/simpleframework/xml/stream/InputNode;->getNext(Ljava/lang/String;)Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v2
 
-    .line 161
     .local v2, "next":Lorg/simpleframework/xml/stream/InputNode;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeValue;->type:Lorg/simpleframework/xml/strategy/Type;
 
@@ -95,16 +85,13 @@
 
     move-result-object v0
 
-    .line 163
     .local v0, "expect":Ljava/lang/Class;
     if-nez v2, :cond_1
 
-    .line 169
     :cond_0
     :goto_0
     return v3
 
-    .line 166
     :cond_1
     invoke-interface {v2}, Lorg/simpleframework/xml/stream/InputNode;->isEmpty()Z
 
@@ -112,7 +99,6 @@
 
     if-nez v4, :cond_0
 
-    .line 169
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeValue;->root:Lorg/simpleframework/xml/core/Traverser;
 
     invoke-virtual {v3, v2, v0}, Lorg/simpleframework/xml/core/Traverser;->validate(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/Class;)Z
@@ -136,12 +122,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 93
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getNext()Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v1
 
-    .line 94
     .local v1, "next":Lorg/simpleframework/xml/stream/InputNode;
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeValue;->type:Lorg/simpleframework/xml/strategy/Type;
 
@@ -149,16 +133,13 @@
 
     move-result-object v0
 
-    .line 96
     .local v0, "expect":Ljava/lang/Class;
     if-nez v1, :cond_1
 
-    .line 102
     :cond_0
     :goto_0
     return-object v2
 
-    .line 99
     :cond_1
     invoke-interface {v1}, Lorg/simpleframework/xml/stream/InputNode;->isEmpty()Z
 
@@ -166,7 +147,6 @@
 
     if-nez v3, :cond_0
 
-    .line 102
     iget-object v2, p0, Lorg/simpleframework/xml/core/CompositeValue;->root:Lorg/simpleframework/xml/core/Traverser;
 
     invoke-virtual {v2, v1, v0}, Lorg/simpleframework/xml/core/Traverser;->read(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/Class;)Ljava/lang/Object;
@@ -187,18 +167,15 @@
     .end annotation
 
     .prologue
-    .line 119
     iget-object v1, p0, Lorg/simpleframework/xml/core/CompositeValue;->type:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-interface {v1}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 121
     .local v0, "expect":Ljava/lang/Class;
     if-eqz p2, :cond_0
 
-    .line 122
     new-instance v1, Lorg/simpleframework/xml/core/PersistenceException;
 
     const-string v2, "Can not read value of %s for %s"
@@ -221,7 +198,6 @@
 
     throw v1
 
-    .line 124
     :cond_0
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/CompositeValue;->read(Lorg/simpleframework/xml/stream/InputNode;)Ljava/lang/Object;
 
@@ -240,14 +216,12 @@
     .end annotation
 
     .prologue
-    .line 138
     iget-object v2, p0, Lorg/simpleframework/xml/core/CompositeValue;->type:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-interface {v2}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 139
     .local v0, "expect":Ljava/lang/Class;
     iget-object v2, p0, Lorg/simpleframework/xml/core/CompositeValue;->entry:Lorg/simpleframework/xml/core/Entry;
 
@@ -255,18 +229,15 @@
 
     move-result-object v1
 
-    .line 141
     .local v1, "name":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 142
     iget-object v2, p0, Lorg/simpleframework/xml/core/CompositeValue;->context:Lorg/simpleframework/xml/core/Context;
 
     invoke-interface {v2, v0}, Lorg/simpleframework/xml/core/Context;->getName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 144
     :cond_0
     invoke-direct {p0, p1, v1}, Lorg/simpleframework/xml/core/CompositeValue;->validate(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/String;)Z
 
@@ -286,14 +257,12 @@
     .end annotation
 
     .prologue
-    .line 181
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeValue;->type:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-interface {v3}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 182
     .local v0, "expect":Ljava/lang/Class;
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeValue;->entry:Lorg/simpleframework/xml/core/Entry;
 
@@ -301,18 +270,15 @@
 
     move-result-object v1
 
-    .line 184
     .local v1, "key":Ljava/lang/String;
     if-nez v1, :cond_0
 
-    .line 185
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeValue;->context:Lorg/simpleframework/xml/core/Context;
 
     invoke-interface {v3, v0}, Lorg/simpleframework/xml/core/Context;->getName(Ljava/lang/Class;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 187
     :cond_0
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeValue;->style:Lorg/simpleframework/xml/stream/Style;
 
@@ -320,12 +286,10 @@
 
     move-result-object v2
 
-    .line 189
     .local v2, "name":Ljava/lang/String;
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeValue;->root:Lorg/simpleframework/xml/core/Traverser;
 
     invoke-virtual {v3, p1, p2, v0, v2}, Lorg/simpleframework/xml/core/Traverser;->write(Lorg/simpleframework/xml/stream/OutputNode;Ljava/lang/Object;Ljava/lang/Class;Ljava/lang/String;)V
 
-    .line 190
     return-void
 .end method

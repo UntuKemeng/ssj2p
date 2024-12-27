@@ -10,10 +10,8 @@
     .param p2, "type"    # Lorg/simpleframework/xml/strategy/Type;
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2}, Lorg/simpleframework/xml/core/Factory;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;)V
 
-    .line 50
     return-void
 .end method
 
@@ -26,12 +24,10 @@
     .end annotation
 
     .prologue
-    .line 121
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ArrayFactory;->getType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 123
     .local v0, "expect":Ljava/lang/Class;
     invoke-virtual {v0}, Ljava/lang/Class;->isArray()Z
 
@@ -39,7 +35,6 @@
 
     if-nez v1, :cond_0
 
-    .line 124
     new-instance v1, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v2, "The %s not an array for %s"
@@ -62,7 +57,6 @@
 
     throw v1
 
-    .line 126
     :cond_0
     invoke-virtual {v0}, Ljava/lang/Class;->getComponentType()Ljava/lang/Class;
 
@@ -82,12 +76,10 @@
     .end annotation
 
     .prologue
-    .line 104
     invoke-direct {p0}, Lorg/simpleframework/xml/core/ArrayFactory;->getComponentType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 106
     .local v0, "expect":Ljava/lang/Class;
     invoke-virtual {v0, p2}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -95,7 +87,6 @@
 
     if-nez v1, :cond_0
 
-    .line 107
     new-instance v1, Lorg/simpleframework/xml/core/InstantiationException;
 
     const-string v2, "Array of type %s cannot hold %s for %s"
@@ -122,7 +113,6 @@
 
     throw v1
 
-    .line 109
     :cond_0
     new-instance v1, Lorg/simpleframework/xml/core/ArrayInstance;
 
@@ -142,23 +132,19 @@
     .end annotation
 
     .prologue
-    .line 62
     invoke-direct {p0}, Lorg/simpleframework/xml/core/ArrayFactory;->getComponentType()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 64
     .local v0, "type":Ljava/lang/Class;
     if-eqz v0, :cond_0
 
-    .line 65
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 67
     :goto_0
     return-object v1
 
@@ -178,22 +164,18 @@
     .end annotation
 
     .prologue
-    .line 81
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getPosition()Lorg/simpleframework/xml/stream/Position;
 
     move-result-object v0
 
-    .line 82
     .local v0, "line":Lorg/simpleframework/xml/stream/Position;
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/ArrayFactory;->getOverride(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/strategy/Value;
 
     move-result-object v2
 
-    .line 84
     .local v2, "value":Lorg/simpleframework/xml/strategy/Value;
     if-nez v2, :cond_0
 
-    .line 85
     new-instance v3, Lorg/simpleframework/xml/core/ElementException;
 
     const-string v4, "Array length required for %s at %s"
@@ -216,13 +198,11 @@
 
     throw v3
 
-    .line 87
     :cond_0
     invoke-interface {v2}, Lorg/simpleframework/xml/strategy/Value;->getType()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 89
     .local v1, "type":Ljava/lang/Class;
     invoke-direct {p0, v2, v1}, Lorg/simpleframework/xml/core/ArrayFactory;->getInstance(Lorg/simpleframework/xml/strategy/Value;Ljava/lang/Class;)Lorg/simpleframework/xml/core/Instance;
 

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5939
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$33;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,20 +41,17 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 5943
     const-string v1, "[EPDGService]"
 
     const-string v2, "mWifiCallingOff"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5944
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$33;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->startTimersIfNeeded()V
     invoke-static {v1}, Lcom/sec/epdg/EpdgService;->access$12000(Lcom/sec/epdg/EpdgService;)V
 
-    .line 5945
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$33;->this$0:Lcom/sec/epdg/EpdgService;
 
     # getter for: Lcom/sec/epdg/EpdgService;->mRilAdapter:Lcom/sec/epdg/EpdgRilInterface;
@@ -65,29 +61,24 @@
 
     invoke-interface {v1, v4}, Lcom/sec/epdg/EpdgRilInterface;->updateEpdgAvailability(Z)V
 
-    .line 5946
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$33;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->updateCpEpdgHoThreshold(Z)V
     invoke-static {v1, v4}, Lcom/sec/epdg/EpdgService;->access$10600(Lcom/sec/epdg/EpdgService;Z)V
 
-    .line 5947
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 5948
     .local v0, "wifiIntent":Landroid/content/Intent;
     const-string v1, "com.sec.epdg.EPDG_NOTAVAILABLE"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5949
     const-string v1, "EPDG_NOTAVAILABLE"
 
     invoke-static {v1}, Lcom/sec/epdg/EpdgDumpState;->dumpLastEpdgState(Ljava/lang/String;)V
 
-    .line 5950
     const-string v1, "EXTRA_WEAK_WIFI"
 
     iget-object v2, p0, Lcom/sec/epdg/EpdgService$33;->this$0:Lcom/sec/epdg/EpdgService;
@@ -99,7 +90,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 5951
     const-string v1, "[EPDGService]"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -129,7 +119,6 @@
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5953
     # getter for: Lcom/sec/epdg/EpdgService;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1700()Landroid/content/Context;
 
@@ -137,12 +126,10 @@
 
     invoke-static {v1, v0}, Lcom/sec/epdg/EpdgUtils;->sendStickyBroadcast(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 5955
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$33;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->sendWifiStatusChangedNotification(Z)V
     invoke-static {v1, v4}, Lcom/sec/epdg/EpdgService;->access$12100(Lcom/sec/epdg/EpdgService;Z)V
 
-    .line 5957
     return-void
 .end method

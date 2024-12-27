@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1877
     iput-object p1, p0, Lcom/android/server/InputMethodManagerService$6;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1889
     iget-object v0, p0, Lcom/android/server/InputMethodManagerService$6;->this$0:Lcom/android/server/InputMethodManagerService;
 
     invoke-virtual {v0}, Lcom/android/server/InputMethodManagerService;->hideInputMethodMenu()V
 
-    .line 1890
     return-void
 .end method
 
@@ -52,7 +49,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1880
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1894
     return-void
 .end method
 
@@ -70,7 +65,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 1898
     return-void
 .end method
 
@@ -81,6 +75,5 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 1902
     return-void
 .end method

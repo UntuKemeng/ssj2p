@@ -43,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 49
     .local p0, "this":Lorg/simpleframework/xml/transform/DateFactory;, "Lorg/simpleframework/xml/transform/DateFactory<TT;>;"
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     const/4 v0, 0x1
@@ -58,7 +57,6 @@
 
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/transform/DateFactory;-><init>(Ljava/lang/Class;[Ljava/lang/Class;)V
 
-    .line 50
     return-void
 .end method
 
@@ -82,19 +80,16 @@
     .end annotation
 
     .prologue
-    .line 60
     .local p0, "this":Lorg/simpleframework/xml/transform/DateFactory;, "Lorg/simpleframework/xml/transform/DateFactory<TT;>;"
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 61
     invoke-virtual {p1, p2}, Ljava/lang/Class;->getDeclaredConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/transform/DateFactory;->factory:Ljava/lang/reflect/Constructor;
 
-    .line 62
     return-void
 .end method
 
@@ -118,7 +113,6 @@
     .end annotation
 
     .prologue
-    .line 74
     .local p0, "this":Lorg/simpleframework/xml/transform/DateFactory;, "Lorg/simpleframework/xml/transform/DateFactory<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/transform/DateFactory;->factory:Ljava/lang/reflect/Constructor;
 

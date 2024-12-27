@@ -32,26 +32,20 @@
     .param p4, "_args"    # [Ljava/lang/String;
 
     .prologue
-    .line 21182
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$1TransferPipeThread;->this$0:Lcom/android/server/am/ActivityManagerService;
 
-    .line 21183
     const-string v0, "TransferPipeWrite"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 21179
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/am/ActivityManagerService$1TransferPipeThread;->pFd:Landroid/os/ParcelFileDescriptor;
 
-    .line 21184
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$1TransferPipeThread;->thread:Landroid/app/IApplicationThread;
 
-    .line 21185
     iput-object p4, p0, Lcom/android/server/am/ActivityManagerService$1TransferPipeThread;->args:[Ljava/lang/String;
 
-    .line 21187
     :try_start_0
     invoke-static {p3}, Landroid/os/ParcelFileDescriptor;->dup(Ljava/io/FileDescriptor;)Landroid/os/ParcelFileDescriptor;
 
@@ -61,11 +55,9 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 21190
     :goto_0
     return-void
 
-    .line 21188
     :catch_0
     move-exception v0
 
@@ -78,13 +70,11 @@
     .locals 3
 
     .prologue
-    .line 21193
     :try_start_0
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$1TransferPipeThread;->pFd:Landroid/os/ParcelFileDescriptor;
 
     if-eqz v0, :cond_0
 
-    .line 21194
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$1TransferPipeThread;->thread:Landroid/app/IApplicationThread;
 
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$1TransferPipeThread;->pFd:Landroid/os/ParcelFileDescriptor;
@@ -97,7 +87,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/app/IApplicationThread;->dumpDbInfo(Ljava/io/FileDescriptor;[Ljava/lang/String;)V
 
-    .line 21195
     iget-object v0, p0, Lcom/android/server/am/ActivityManagerService$1TransferPipeThread;->pFd:Landroid/os/ParcelFileDescriptor;
 
     invoke-virtual {v0}, Landroid/os/ParcelFileDescriptor;->close()V
@@ -105,18 +94,15 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 21200
     :cond_0
     :goto_0
     return-void
 
-    .line 21198
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 21197
     :catch_1
     move-exception v0
 

@@ -27,10 +27,8 @@
     .locals 1
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     const-string v0, "_"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -39,7 +37,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/transform/LocaleTransform;->pattern:Ljava/util/regex/Pattern;
 
-    .line 60
     return-void
 .end method
 
@@ -59,7 +56,6 @@
 
     const/4 v3, 0x0
 
-    .line 92
     const/4 v2, 0x3
 
     new-array v1, v2, [Ljava/lang/String;
@@ -76,7 +72,6 @@
 
     aput-object v2, v1, v5
 
-    .line 94
     .local v1, "list":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -86,23 +81,19 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 95
     array-length v2, p1
 
     if-ge v0, v2, :cond_0
 
-    .line 96
     aget-object v2, p1, v0
 
     aput-object v2, v1, v0
 
-    .line 94
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 99
     :cond_1
     new-instance v2, Ljava/util/Locale;
 
@@ -129,7 +120,6 @@
     .end annotation
 
     .prologue
-    .line 45
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/LocaleTransform;->read(Ljava/lang/String;)Ljava/util/Locale;
 
     move-result-object v0
@@ -149,20 +139,17 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 73
     iget-object v1, p0, Lorg/simpleframework/xml/transform/LocaleTransform;->pattern:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->split(Ljava/lang/CharSequence;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 75
     .local v0, "list":[Ljava/lang/String;
     array-length v1, v0
 
     if-ge v1, v3, :cond_0
 
-    .line 76
     new-instance v1, Lorg/simpleframework/xml/transform/InvalidFormatException;
 
     const-string v2, "Invalid locale %s"
@@ -177,7 +164,6 @@
 
     throw v1
 
-    .line 78
     :cond_0
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/transform/LocaleTransform;->read([Ljava/lang/String;)Ljava/util/Locale;
 
@@ -196,7 +182,6 @@
     .end annotation
 
     .prologue
-    .line 45
     check-cast p1, Ljava/util/Locale;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -212,7 +197,6 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 113
     invoke-virtual {p1}, Ljava/util/Locale;->toString()Ljava/lang/String;
 
     move-result-object v0

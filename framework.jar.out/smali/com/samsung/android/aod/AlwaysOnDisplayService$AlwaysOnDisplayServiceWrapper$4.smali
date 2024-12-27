@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 82
     iput-object p1, p0, Lcom/samsung/android/aod/AlwaysOnDisplayService$AlwaysOnDisplayServiceWrapper$4;->this$1:Lcom/samsung/android/aod/AlwaysOnDisplayService$AlwaysOnDisplayServiceWrapper;
 
     iput p2, p0, Lcom/samsung/android/aod/AlwaysOnDisplayService$AlwaysOnDisplayServiceWrapper$4;->val$notiCount:I
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 85
     iget-object v0, p0, Lcom/samsung/android/aod/AlwaysOnDisplayService$AlwaysOnDisplayServiceWrapper$4;->this$1:Lcom/samsung/android/aod/AlwaysOnDisplayService$AlwaysOnDisplayServiceWrapper;
 
     iget-object v0, v0, Lcom/samsung/android/aod/AlwaysOnDisplayService$AlwaysOnDisplayServiceWrapper;->this$0:Lcom/samsung/android/aod/AlwaysOnDisplayService;
@@ -59,6 +57,5 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/aod/AlwaysOnDisplayService;->updateNotificationKeys(ILjava/util/List;)V
 
-    .line 86
     return-void
 .end method

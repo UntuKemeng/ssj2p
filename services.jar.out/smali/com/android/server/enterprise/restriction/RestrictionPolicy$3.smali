@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 530
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,19 +38,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 534
     const-string v3, "RestrictionPolicy"
 
     const-string v4, "FOTAReceiver: onReceive"
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 536
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 537
     .local v0, "action":Ljava/lang/String;
     const-string/jumbo v3, "sec.fota.intent.MDM_REGISTER_RESULT"
 
@@ -61,10 +57,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 538
     const/4 v2, 0x0
 
-    .line 539
     .local v2, "result":I
     const-string/jumbo v3, "result"
 
@@ -74,7 +68,6 @@
 
     move-result v1
 
-    .line 544
     .local v1, "extra":I
     if-eqz v1, :cond_1
 
@@ -82,10 +75,8 @@
 
     if-eq v1, v3, :cond_1
 
-    .line 545
     const/4 v2, 0x1
 
-    .line 546
     const-string v3, "RestrictionPolicy"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -114,26 +105,22 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # invokes: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->clearSelectiveFota()Z
     invoke-static {v3}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->access$400(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)Z
 
-    .line 552
     :goto_0
     iget-object v3, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$3;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # invokes: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->sendSeletiveFotaResult(I)V
     invoke-static {v3, v2}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->access$500(Lcom/android/server/enterprise/restriction/RestrictionPolicy;I)V
 
-    .line 554
     .end local v1    # "extra":I
     .end local v2    # "result":I
     :cond_0
     return-void
 
-    .line 550
     .restart local v1    # "extra":I
     .restart local v2    # "result":I
     :cond_1

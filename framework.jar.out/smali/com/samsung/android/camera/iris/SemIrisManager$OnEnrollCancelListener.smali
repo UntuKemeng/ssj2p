@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 483
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$OnEnrollCancelListener;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lcom/samsung/android/camera/iris/SemIrisManager$1;
 
     .prologue
-    .line 483
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/iris/SemIrisManager$OnEnrollCancelListener;-><init>(Lcom/samsung/android/camera/iris/SemIrisManager;)V
 
     return-void
@@ -52,12 +50,10 @@
     .locals 1
 
     .prologue
-    .line 487
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$OnEnrollCancelListener;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # invokes: Lcom/samsung/android/camera/iris/SemIrisManager;->cancelEnrollment()V
     invoke-static {v0}, Lcom/samsung/android/camera/iris/SemIrisManager;->access$000(Lcom/samsung/android/camera/iris/SemIrisManager;)V
 
-    .line 488
     return-void
 .end method

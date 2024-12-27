@@ -27,33 +27,26 @@
     .param p4, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     new-instance v0, Lorg/simpleframework/xml/core/CollectionFactory;
 
     invoke-direct {v0, p1, p2}, Lorg/simpleframework/xml/core/CollectionFactory;-><init>(Lorg/simpleframework/xml/core/Context;Lorg/simpleframework/xml/strategy/Type;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CompositeList;->factory:Lorg/simpleframework/xml/core/CollectionFactory;
 
-    .line 98
     new-instance v0, Lorg/simpleframework/xml/core/Traverser;
 
     invoke-direct {v0, p1}, Lorg/simpleframework/xml/core/Traverser;-><init>(Lorg/simpleframework/xml/core/Context;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CompositeList;->root:Lorg/simpleframework/xml/core/Traverser;
 
-    .line 99
     iput-object p3, p0, Lorg/simpleframework/xml/core/CompositeList;->entry:Lorg/simpleframework/xml/strategy/Type;
 
-    .line 100
     iput-object p2, p0, Lorg/simpleframework/xml/core/CompositeList;->type:Lorg/simpleframework/xml/strategy/Type;
 
-    .line 101
     iput-object p4, p0, Lorg/simpleframework/xml/core/CompositeList;->name:Ljava/lang/String;
 
-    .line 102
     return-void
 .end method
 
@@ -68,19 +61,16 @@
     .end annotation
 
     .prologue
-    .line 166
     move-object v1, p2
 
     check-cast v1, Ljava/util/Collection;
 
-    .line 169
     .local v1, "list":Ljava/util/Collection;
     :goto_0
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getNext()Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v2
 
-    .line 170
     .local v2, "next":Lorg/simpleframework/xml/stream/InputNode;
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeList;->entry:Lorg/simpleframework/xml/strategy/Type;
 
@@ -88,14 +78,11 @@
 
     move-result-object v0
 
-    .line 172
     .local v0, "expect":Ljava/lang/Class;
     if-nez v2, :cond_0
 
-    .line 173
     return-object v1
 
-    .line 175
     :cond_0
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeList;->root:Lorg/simpleframework/xml/core/Traverser;
 
@@ -119,13 +106,11 @@
     .end annotation
 
     .prologue
-    .line 216
     :goto_0
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getNext()Lorg/simpleframework/xml/stream/InputNode;
 
     move-result-object v1
 
-    .line 217
     .local v1, "next":Lorg/simpleframework/xml/stream/InputNode;
     iget-object v2, p0, Lorg/simpleframework/xml/core/CompositeList;->entry:Lorg/simpleframework/xml/strategy/Type;
 
@@ -133,16 +118,13 @@
 
     move-result-object v0
 
-    .line 219
     .local v0, "expect":Ljava/lang/Class;
     if-nez v1, :cond_0
 
-    .line 220
     const/4 v2, 0x1
 
     return v2
 
-    .line 222
     :cond_0
     iget-object v2, p0, Lorg/simpleframework/xml/core/CompositeList;->root:Lorg/simpleframework/xml/core/Traverser;
 
@@ -163,20 +145,17 @@
     .end annotation
 
     .prologue
-    .line 116
     iget-object v2, p0, Lorg/simpleframework/xml/core/CompositeList;->factory:Lorg/simpleframework/xml/core/CollectionFactory;
 
     invoke-virtual {v2, p1}, Lorg/simpleframework/xml/core/CollectionFactory;->getInstance(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/core/Instance;
 
     move-result-object v1
 
-    .line 117
     .local v1, "type":Lorg/simpleframework/xml/core/Instance;
     invoke-interface {v1}, Lorg/simpleframework/xml/core/Instance;->getInstance()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 119
     .local v0, "list":Ljava/lang/Object;
     invoke-interface {v1}, Lorg/simpleframework/xml/core/Instance;->isReference()Z
 
@@ -184,12 +163,10 @@
 
     if-nez v2, :cond_0
 
-    .line 120
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/core/CompositeList;->populate(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 122
     .end local v0    # "list":Ljava/lang/Object;
     :cond_0
     return-object v0
@@ -206,14 +183,12 @@
     .end annotation
 
     .prologue
-    .line 140
     iget-object v1, p0, Lorg/simpleframework/xml/core/CompositeList;->factory:Lorg/simpleframework/xml/core/CollectionFactory;
 
     invoke-virtual {v1, p1}, Lorg/simpleframework/xml/core/CollectionFactory;->getInstance(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/core/Instance;
 
     move-result-object v0
 
-    .line 142
     .local v0, "type":Lorg/simpleframework/xml/core/Instance;
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Instance;->isReference()Z
 
@@ -221,26 +196,21 @@
 
     if-eqz v1, :cond_1
 
-    .line 143
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Instance;->getInstance()Ljava/lang/Object;
 
     move-result-object p2
 
-    .line 150
     .end local p2    # "result":Ljava/lang/Object;
     :cond_0
     :goto_0
     return-object p2
 
-    .line 145
     .restart local p2    # "result":Ljava/lang/Object;
     :cond_1
     invoke-interface {v0, p2}, Lorg/simpleframework/xml/core/Instance;->setInstance(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 147
     if-eqz p2, :cond_0
 
-    .line 148
     invoke-direct {p0, p1, p2}, Lorg/simpleframework/xml/core/CompositeList;->populate(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object p2
@@ -258,14 +228,12 @@
     .end annotation
 
     .prologue
-    .line 191
     iget-object v3, p0, Lorg/simpleframework/xml/core/CompositeList;->factory:Lorg/simpleframework/xml/core/CollectionFactory;
 
     invoke-virtual {v3, p1}, Lorg/simpleframework/xml/core/CollectionFactory;->getInstance(Lorg/simpleframework/xml/stream/InputNode;)Lorg/simpleframework/xml/core/Instance;
 
     move-result-object v2
 
-    .line 193
     .local v2, "value":Lorg/simpleframework/xml/core/Instance;
     invoke-interface {v2}, Lorg/simpleframework/xml/core/Instance;->isReference()Z
 
@@ -273,26 +241,22 @@
 
     if-nez v3, :cond_0
 
-    .line 194
     const/4 v3, 0x0
 
     invoke-interface {v2, v3}, Lorg/simpleframework/xml/core/Instance;->setInstance(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 195
     .local v0, "result":Ljava/lang/Object;
     invoke-interface {v2}, Lorg/simpleframework/xml/core/Instance;->getType()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 197
     .local v1, "type":Ljava/lang/Class;
     invoke-direct {p0, p1, v1}, Lorg/simpleframework/xml/core/CompositeList;->validate(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/Class;)Z
 
     move-result v3
 
-    .line 199
     .end local v0    # "result":Ljava/lang/Object;
     .end local v1    # "type":Ljava/lang/Class;
     :goto_0
@@ -315,12 +279,10 @@
     .end annotation
 
     .prologue
-    .line 238
     move-object v4, p2
 
     check-cast v4, Ljava/util/Collection;
 
-    .line 240
     .local v4, "list":Ljava/util/Collection;
     invoke-interface {v4}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
@@ -339,24 +301,20 @@
 
     move-result-object v3
 
-    .line 241
     .local v3, "item":Ljava/lang/Object;
     if-eqz v3, :cond_0
 
-    .line 242
     iget-object v5, p0, Lorg/simpleframework/xml/core/CompositeList;->entry:Lorg/simpleframework/xml/strategy/Type;
 
     invoke-interface {v5}, Lorg/simpleframework/xml/strategy/Type;->getType()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 243
     .local v1, "expect":Ljava/lang/Class;
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 245
     .local v0, "actual":Ljava/lang/Class;
     invoke-virtual {v1, v0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
 
@@ -364,7 +322,6 @@
 
     if-nez v5, :cond_1
 
-    .line 246
     new-instance v5, Lorg/simpleframework/xml/core/PersistenceException;
 
     const-string v6, "Entry %s does not match %s for %s"
@@ -393,7 +350,6 @@
 
     throw v5
 
-    .line 248
     :cond_1
     iget-object v5, p0, Lorg/simpleframework/xml/core/CompositeList;->root:Lorg/simpleframework/xml/core/Traverser;
 
@@ -403,7 +359,6 @@
 
     goto :goto_0
 
-    .line 251
     .end local v0    # "actual":Ljava/lang/Class;
     .end local v1    # "expect":Ljava/lang/Class;
     .end local v3    # "item":Ljava/lang/Object;

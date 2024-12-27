@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1538
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$6;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1547
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -52,7 +50,6 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 1541
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1900()Landroid/os/Handler;
 
@@ -64,7 +61,6 @@
 
     move-result-object v0
 
-    .line 1542
     .local v0, "msg":Landroid/os/Message;
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1900()Landroid/os/Handler;
@@ -75,6 +71,5 @@
 
     invoke-virtual {v1, v0, v2, v3}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 1543
     return-void
 .end method

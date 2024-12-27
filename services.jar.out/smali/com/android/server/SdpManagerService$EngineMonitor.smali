@@ -49,42 +49,35 @@
     .locals 3
 
     .prologue
-    .line 4128
     iput-object p1, p0, Lcom/android/server/SdpManagerService$EngineMonitor;->this$0:Lcom/android/server/SdpManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4066
     new-instance v1, Ljava/lang/Object;
 
     invoke-direct {v1}, Ljava/lang/Object;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/SdpManagerService$EngineMonitor;->mTimerLock:Ljava/lang/Object;
 
-    .line 4092
     new-instance v1, Lcom/android/server/SdpManagerService$EngineMonitor$1;
 
     invoke-direct {v1, p0}, Lcom/android/server/SdpManagerService$EngineMonitor$1;-><init>(Lcom/android/server/SdpManagerService$EngineMonitor;)V
 
     iput-object v1, p0, Lcom/android/server/SdpManagerService$EngineMonitor;->receiver:Landroid/content/BroadcastReceiver;
 
-    .line 4129
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 4131
     .local v0, "filter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.USER_PRESENT"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 4132
     const-string v1, "com.sec.knox.ENGINE_UNLOCK_TIMEOUT"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 4133
     # getter for: Lcom/android/server/SdpManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/SdpManagerService;->access$2900()Landroid/content/Context;
 
@@ -94,7 +87,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 4135
     return-void
 .end method
 
@@ -104,7 +96,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 4064
     invoke-direct {p0, p1}, Lcom/android/server/SdpManagerService$EngineMonitor;->schedule(I)V
 
     return-void
@@ -117,7 +108,6 @@
     .param p2, "x2"    # Ljava/lang/String;
 
     .prologue
-    .line 4064
     invoke-direct {p0, p1, p2}, Lcom/android/server/SdpManagerService$EngineMonitor;->notifyUser(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
@@ -128,12 +118,10 @@
     .param p1, "userid"    # I
 
     .prologue
-    .line 4157
     iget-object v6, p0, Lcom/android/server/SdpManagerService$EngineMonitor;->mTimerLock:Ljava/lang/Object;
 
     monitor-enter v6
 
-    .line 4158
     :try_start_0
     const-string v3, "SdpManagerService.monitor"
 
@@ -157,12 +145,10 @@
 
     invoke-static {v3, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4159
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 4160
     .local v4, "token":J
     # getter for: Lcom/android/server/SdpManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/SdpManagerService;->access$2900()Landroid/content/Context;
@@ -177,7 +163,6 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 4161
     .local v0, "am":Landroid/app/AlarmManager;
     new-instance v1, Landroid/content/Intent;
 
@@ -185,13 +170,11 @@
 
     invoke-direct {v1, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4162
     .local v1, "i":Landroid/content/Intent;
     const-string/jumbo v3, "userid"
 
     invoke-virtual {v1, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 4163
     # getter for: Lcom/android/server/SdpManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/SdpManagerService;->access$2900()Landroid/content/Context;
 
@@ -203,20 +186,15 @@
 
     move-result-object v2
 
-    .line 4165
     .local v2, "pi":Landroid/app/PendingIntent;
     invoke-virtual {v0, v2}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 4166
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4167
     monitor-exit v6
 
-    .line 4168
     return-void
 
-    .line 4167
     .end local v0    # "am":Landroid/app/AlarmManager;
     .end local v1    # "i":Landroid/content/Intent;
     .end local v2    # "pi":Landroid/app/PendingIntent;
@@ -237,14 +215,12 @@
     .param p2, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 4081
     new-instance v0, Landroid/content/Intent;
 
     const-string v1, "com.sec.sdp.SDP_NOTIFY_USER"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4083
     .local v0, "i":Landroid/content/Intent;
     const-string v1, "SdpManagerService.monitor"
 
@@ -274,32 +250,26 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4084
     const-string/jumbo v1, "title"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4085
     const-string/jumbo v1, "msg"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4086
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 4087
     const/high16 v1, 0x4000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 4088
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 4089
     # getter for: Lcom/android/server/SdpManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/SdpManagerService;->access$2900()Landroid/content/Context;
 
@@ -309,7 +279,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 4090
     return-void
 .end method
 
@@ -320,12 +289,10 @@
     .prologue
     const-wide/16 v12, 0x1388
 
-    .line 4138
     iget-object v8, p0, Lcom/android/server/SdpManagerService$EngineMonitor;->mTimerLock:Ljava/lang/Object;
 
     monitor-enter v8
 
-    .line 4139
     :try_start_0
     const-string v5, "SdpManagerService.monitor"
 
@@ -361,12 +328,10 @@
 
     invoke-static {v5, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4140
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 4141
     .local v6, "token":J
     # getter for: Lcom/android/server/SdpManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/SdpManagerService;->access$2900()Landroid/content/Context;
@@ -381,7 +346,6 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 4142
     .local v0, "am":Landroid/app/AlarmManager;
     new-instance v1, Landroid/content/Intent;
 
@@ -389,13 +353,11 @@
 
     invoke-direct {v1, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4143
     .local v1, "i":Landroid/content/Intent;
     const-string/jumbo v5, "userid"
 
     invoke-virtual {v1, v5, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 4145
     # getter for: Lcom/android/server/SdpManagerService;->sContext:Landroid/content/Context;
     invoke-static {}, Lcom/android/server/SdpManagerService;->access$2900()Landroid/content/Context;
 
@@ -407,16 +369,13 @@
 
     move-result-object v4
 
-    .line 4147
     .local v4, "pi":Landroid/app/PendingIntent;
     invoke-virtual {v0, v4}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 4149
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 4150
     .local v2, "now":J
     const/4 v5, 0x2
 
@@ -424,16 +383,12 @@
 
     invoke-virtual {v0, v5, v10, v11, v4}, Landroid/app/AlarmManager;->setExact(IJLandroid/app/PendingIntent;)V
 
-    .line 4152
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4153
     monitor-exit v8
 
-    .line 4154
     return-void
 
-    .line 4153
     .end local v0    # "am":Landroid/app/AlarmManager;
     .end local v1    # "i":Landroid/content/Intent;
     .end local v2    # "now":J

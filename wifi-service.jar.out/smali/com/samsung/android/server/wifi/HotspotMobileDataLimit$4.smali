@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 96
     iput-object p1, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$4;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,7 +38,6 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 99
     iget-object v1, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$4;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     # getter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mContext:Landroid/content/Context;
@@ -57,7 +55,6 @@
 
     move-result-object v0
 
-    .line 100
     .local v0, "limit":Ljava/lang/String;
     const-string v1, "HotspotMobileDataLimit"
 
@@ -81,10 +78,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 101
     if-eqz v0, :cond_0
 
-    .line 102
     iget-object v1, p0, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit$4;->this$0:Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;
 
     new-instance v2, Ljava/math/BigDecimal;
@@ -94,7 +89,6 @@
     # setter for: Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->mLimitData:Ljava/math/BigDecimal;
     invoke-static {v1, v2}, Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;->access$1202(Lcom/samsung/android/server/wifi/HotspotMobileDataLimit;Ljava/math/BigDecimal;)Ljava/math/BigDecimal;
 
-    .line 103
     :cond_0
     return-void
 .end method

@@ -34,22 +34,18 @@
     .param p2, "listener"    # Lcom/samsung/location/SLocationListener;
 
     .prologue
-    .line 352
     iput-object p1, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport;->this$0:Lcom/samsung/location/SLocationManager;
 
     invoke-direct {p0}, Lcom/samsung/location/ISLocationListener$Stub;-><init>()V
 
-    .line 353
     iput-object p2, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport;->mListener:Lcom/samsung/location/SLocationListener;
 
-    .line 355
     new-instance v0, Lcom/samsung/location/SLocationManager$LocListenerTransport$1;
 
     invoke-direct {v0, p0, p1}, Lcom/samsung/location/SLocationManager$LocListenerTransport$1;-><init>(Lcom/samsung/location/SLocationManager$LocListenerTransport;Lcom/samsung/location/SLocationManager;)V
 
     iput-object v0, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
-    .line 361
     return-void
 .end method
 
@@ -58,16 +54,13 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 390
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 402
     :goto_0
     return-void
 
-    .line 392
     :pswitch_0
     iget-object v5, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport;->mListener:Lcom/samsung/location/SLocationListener;
 
@@ -81,19 +74,16 @@
 
     goto :goto_0
 
-    .line 395
     :pswitch_1
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Landroid/location/Location;
 
-    .line 396
     .local v2, "loc":Landroid/location/Location;
     invoke-virtual {v2}, Landroid/location/Location;->getExtras()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 397
     .local v1, "extras":Landroid/os/Bundle;
     const-string v4, "currentlocationaddress"
 
@@ -103,7 +93,6 @@
 
     check-cast v0, Landroid/location/Address;
 
-    .line 398
     .local v0, "address":Landroid/location/Address;
     const-string v4, "currentlocationpoi"
 
@@ -111,7 +100,6 @@
 
     move-result-object v3
 
-    .line 399
     .local v3, "poi":[Ljava/lang/String;
     iget-object v5, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport;->mListener:Lcom/samsung/location/SLocationListener;
 
@@ -123,7 +111,6 @@
 
     goto :goto_0
 
-    .line 390
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -137,7 +124,6 @@
     .param p1, "x1"    # Landroid/os/Message;
 
     .prologue
-    .line 345
     invoke-direct {p0, p1}, Lcom/samsung/location/SLocationManager$LocListenerTransport;->_handleMessage(Landroid/os/Message;)V
 
     return-void
@@ -150,26 +136,21 @@
     .param p1, "locations"    # [Landroid/location/Location;
 
     .prologue
-    .line 364
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 365
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x1
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 366
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 367
     iget-object v1, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
     invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 368
     return-void
 .end method
 
@@ -180,55 +161,44 @@
     .param p3, "poi"    # [Ljava/lang/String;
 
     .prologue
-    .line 371
     if-nez p1, :cond_0
 
-    .line 372
     const-string v2, "SLocationManager"
 
     const-string v3, "onLocationChanged location is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 383
     :goto_0
     return-void
 
-    .line 375
     :cond_0
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v1
 
-    .line 376
     .local v1, "msg":Landroid/os/Message;
     const/4 v2, 0x2
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 377
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 378
     .local v0, "extras":Landroid/os/Bundle;
     const-string v2, "currentlocationaddress"
 
     invoke-virtual {v0, v2, p2}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
-    .line 379
     const-string v2, "currentlocationpoi"
 
     invoke-virtual {v0, v2, p3}, Landroid/os/Bundle;->putStringArray(Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 380
     invoke-virtual {p1, v0}, Landroid/location/Location;->setExtras(Landroid/os/Bundle;)V
 
-    .line 381
     iput-object p1, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 382
     iget-object v2, p0, Lcom/samsung/location/SLocationManager$LocListenerTransport;->mListenerHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
@@ -243,6 +213,5 @@
     .param p3, "poi"    # [Ljava/lang/String;
 
     .prologue
-    .line 387
     return-void
 .end method

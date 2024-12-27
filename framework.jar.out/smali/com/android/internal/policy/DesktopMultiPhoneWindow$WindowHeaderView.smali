@@ -24,13 +24,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1907
     iput-object p1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
-    .line 1908
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1909
     return-void
 .end method
 
@@ -41,10 +38,8 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1996
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchHoverEvent(Landroid/view/MotionEvent;)Z
 
-    .line 1998
     iget-object v1, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v1}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -53,7 +48,6 @@
 
     check-cast v0, Lcom/android/internal/policy/PhoneWindow$DecorView;
 
-    .line 1999
     .local v0, "decor":Lcom/android/internal/policy/PhoneWindow$DecorView;
     check-cast v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;
 
@@ -80,12 +74,10 @@
 
     const/4 v8, 0x1
 
-    .line 1913
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v3
 
-    .line 1915
     .local v3, "result":Z
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -97,7 +89,6 @@
 
     if-nez v5, :cond_1
 
-    .line 1916
     sget-boolean v5, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->DEBUG:Z
 
     if-eqz v5, :cond_0
@@ -111,13 +102,11 @@
     :cond_0
     move v4, v3
 
-    .line 1991
     .end local v3    # "result":Z
     .local v4, "result":Z
     :goto_0
     return v4
 
-    .line 1920
     .end local v4    # "result":Z
     .restart local v3    # "result":Z
     :cond_1
@@ -125,7 +114,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 1921
     const-string v5, "DesktopMultiPhoneWindow"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -172,11 +160,9 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1924
     :cond_2
     const/4 v1, 0x1
 
-    .line 1926
     .local v1, "dispatchEventToHeader":Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -184,7 +170,6 @@
 
     packed-switch v5, :pswitch_data_0
 
-    .line 1983
     :cond_3
     :goto_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -197,17 +182,14 @@
 
     if-eq v5, v6, :cond_4
 
-    .line 1984
     if-eqz v1, :cond_4
 
-    .line 1985
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v5, v5, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
 
     if-eqz v5, :cond_4
 
-    .line 1986
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v5, v5, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -219,12 +201,10 @@
     :cond_4
     move v4, v3
 
-    .line 1991
     .end local v3    # "result":Z
     .restart local v4    # "result":Z
     goto :goto_0
 
-    .line 1928
     .end local v4    # "result":Z
     .restart local v3    # "result":Z
     :pswitch_0
@@ -238,7 +218,6 @@
 
     if-nez v5, :cond_3
 
-    .line 1929
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v5}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -247,7 +226,6 @@
 
     check-cast v0, Lcom/android/internal/policy/PhoneWindow$DecorView;
 
-    .line 1930
     .local v0, "decor":Lcom/android/internal/policy/PhoneWindow$DecorView;
     check-cast v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;
 
@@ -256,7 +234,6 @@
 
     move-result v3
 
-    .line 1932
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v5, v5, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -267,12 +244,10 @@
 
     if-eqz v5, :cond_3
 
-    .line 1933
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 1940
     :pswitch_1
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -282,7 +257,6 @@
 
     move-result v2
 
-    .line 1942
     .local v2, "guideViewType":I
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -300,7 +274,6 @@
 
     if-eq v2, v12, :cond_3
 
-    .line 1947
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v5}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -309,7 +282,6 @@
 
     check-cast v0, Lcom/android/internal/policy/PhoneWindow$DecorView;
 
-    .line 1948
     .restart local v0    # "decor":Lcom/android/internal/policy/PhoneWindow$DecorView;
     check-cast v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;
 
@@ -318,7 +290,6 @@
 
     move-result v3
 
-    .line 1950
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v5, v5, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -329,12 +300,10 @@
 
     if-eqz v5, :cond_3
 
-    .line 1951
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 1959
     .end local v2    # "guideViewType":I
     :pswitch_2
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
@@ -345,7 +314,6 @@
 
     move-result v2
 
-    .line 1961
     .restart local v2    # "guideViewType":I
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -363,7 +331,6 @@
 
     if-eq v2, v12, :cond_5
 
-    .line 1966
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     invoke-virtual {v5}, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->getDecorView()Landroid/view/View;
@@ -372,7 +339,6 @@
 
     check-cast v0, Lcom/android/internal/policy/PhoneWindow$DecorView;
 
-    .line 1967
     .restart local v0    # "decor":Lcom/android/internal/policy/PhoneWindow$DecorView;
     check-cast v0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopMultiDecorView;
 
@@ -381,7 +347,6 @@
 
     move-result v3
 
-    .line 1969
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v5, v5, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mGuideView:Lcom/samsung/android/multiwindow/ui/GuideView;
@@ -392,12 +357,10 @@
 
     if-nez v5, :cond_3
 
-    .line 1970
     const/4 v1, 0x0
 
     goto/16 :goto_1
 
-    .line 1972
     :cond_5
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
@@ -409,7 +372,6 @@
 
     if-nez v5, :cond_3
 
-    .line 1973
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v5, v5, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -428,7 +390,6 @@
 
     if-gez v5, :cond_3
 
-    .line 1976
     iget-object v5, p0, Lcom/android/internal/policy/DesktopMultiPhoneWindow$WindowHeaderView;->this$0:Lcom/android/internal/policy/DesktopMultiPhoneWindow;
 
     iget-object v5, v5, Lcom/android/internal/policy/DesktopMultiPhoneWindow;->mDesktopPopupWindowHeader:Lcom/android/internal/policy/DesktopMultiPhoneWindow$DesktopWindowHeader;
@@ -437,7 +398,6 @@
 
     goto/16 :goto_1
 
-    .line 1926
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

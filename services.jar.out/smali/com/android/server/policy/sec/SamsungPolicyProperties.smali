@@ -54,57 +54,40 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 38
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSPenFeature:Z
 
-    .line 39
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSPenFeatureChecked:Z
 
-    .line 41
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mUseVibetonz:Z
 
-    .line 42
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mUserVibetonzChecked:Z
 
-    .line 44
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasQwertyKeyboard:Z
 
-    .line 45
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasQwertyKeyboardChecked:Z
 
-    .line 47
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasNumericKeyboard:Z
 
-    .line 48
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasNumericKeyboardChecked:Z
 
-    .line 50
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mScreenShotChordEnabled:Z
 
-    .line 51
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mScreenShotChordEnableChecked:Z
 
-    .line 53
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mEasyOneHandEnabled:Z
 
-    .line 54
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mEasyOneHandRunning:Z
 
-    .line 55
     const/4 v0, -0x1
 
     sput v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mEasyOneHandPkgVersion:I
 
-    .line 57
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSideKeyPanelFeature:Z
 
-    .line 58
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSideKeyPanelFeatureChecked:Z
 
-    .line 60
     sput v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mFolderTypeFeature:I
 
-    .line 61
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mFolderTypeFeatureChecked:Z
 
     return-void
@@ -114,7 +97,6 @@
     .locals 0
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -127,12 +109,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 280
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mFolderTypeFeatureChecked:Z
 
     if-nez v0, :cond_0
 
-    .line 281
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -145,7 +125,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 282
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -158,28 +137,23 @@
 
     if-eqz v0, :cond_1
 
-    .line 283
     const/4 v0, 0x2
 
     sput v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mFolderTypeFeature:I
 
-    .line 291
     :goto_0
     sput-boolean v2, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mFolderTypeFeatureChecked:Z
 
-    .line 293
     :cond_0
     sget v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mFolderTypeFeature:I
 
     return v0
 
-    .line 286
     :cond_1
     sput v2, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mFolderTypeFeature:I
 
     goto :goto_0
 
-    .line 289
     :cond_2
     const/4 v0, 0x0
 
@@ -196,7 +170,6 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 298
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "isCameraSpecialized="
@@ -209,7 +182,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 299
     const-string v0, " isUseVibetonz="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -220,7 +192,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 300
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "hasSPenFeature="
@@ -233,7 +204,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 301
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "hasQwertyKeyboard="
@@ -246,7 +216,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 302
     const-string v0, " hasNumericKeyboard="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -257,7 +226,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 303
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "isScreenShotChordEnabled="
@@ -270,7 +238,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 304
     const-string v0, " isOneTouchReportChordEnabled="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -281,7 +248,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 305
     invoke-virtual {p1, p0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
     const-string/jumbo v0, "isSupportDMBAntennaDetach="
@@ -294,7 +260,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Z)V
 
-    .line 306
     const-string v0, " isMultiSIMDevice="
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -305,7 +270,6 @@
 
     invoke-virtual {p1, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 307
     return-void
 .end method
 
@@ -314,7 +278,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 253
     sget v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mEasyOneHandPkgVersion:I
 
     const/4 v2, -0x1
@@ -323,7 +286,6 @@
 
     if-eqz p0, :cond_0
 
-    .line 255
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -337,7 +299,6 @@
 
     move-result-object v0
 
-    .line 256
     .local v0, "pkgInfo":Landroid/content/pm/PackageInfo;
     iget v1, v0, Landroid/content/pm/PackageInfo;->versionCode:I
 
@@ -345,7 +306,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 261
     .end local v0    # "pkgInfo":Landroid/content/pm/PackageInfo;
     :cond_0
     :goto_0
@@ -353,7 +313,6 @@
 
     return v1
 
-    .line 257
     :catch_0
     move-exception v1
 
@@ -367,12 +326,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 103
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasNumericKeyboardChecked:Z
 
     if-nez v0, :cond_0
 
-    .line 104
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -392,16 +349,13 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasNumericKeyboard:Z
 
-    .line 106
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasNumericKeyboardChecked:Z
 
-    .line 108
     :cond_0
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasNumericKeyboard:Z
 
     return v0
 
-    .line 104
     :cond_1
     const/4 v0, 0x0
 
@@ -415,12 +369,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 94
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasQwertyKeyboardChecked:Z
 
     if-nez v0, :cond_0
 
-    .line 95
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -440,16 +392,13 @@
     :goto_0
     sput-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasQwertyKeyboard:Z
 
-    .line 97
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasQwertyKeyboardChecked:Z
 
-    .line 99
     :cond_0
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasQwertyKeyboard:Z
 
     return v0
 
-    .line 95
     :cond_1
     const/4 v0, 0x0
 
@@ -461,12 +410,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 78
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSPenFeatureChecked:Z
 
     if-nez v0, :cond_0
 
-    .line 79
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -479,12 +426,10 @@
 
     sput-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSPenFeature:Z
 
-    .line 80
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSPenFeatureChecked:Z
 
-    .line 82
     :cond_0
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSPenFeature:Z
 
@@ -496,12 +441,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 269
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSideKeyPanelFeatureChecked:Z
 
     if-nez v0, :cond_0
 
-    .line 270
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -514,12 +457,10 @@
 
     sput-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSideKeyPanelFeature:Z
 
-    .line 271
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSideKeyPanelFeatureChecked:Z
 
-    .line 274
     :cond_0
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mHasSideKeyPanelFeature:Z
 
@@ -533,14 +474,12 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 142
     const-string/jumbo v2, "ro.csc.sales_code"
 
     invoke-static {v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 143
     .local v0, "SalesCode":Ljava/lang/String;
     const-string v2, "LGT"
 
@@ -566,7 +505,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 144
     :cond_0
     const-string/jumbo v2, "true"
 
@@ -596,12 +534,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 155
     :cond_1
     :goto_0
     return v1
 
-    .line 149
     :cond_2
     const-string/jumbo v2, "lock"
 
@@ -621,7 +557,6 @@
 
     if-nez v2, :cond_1
 
-    .line 155
     :cond_3
     const/4 v1, 0x0
 
@@ -633,7 +568,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 173
     invoke-static {}, Lcom/android/server/policy/sec/SamsungPolicyProperties;->isMirrorLessCameraSpecialized()Z
 
     move-result v0
@@ -646,11 +580,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 174
     :cond_0
     const/4 v0, 0x1
 
-    .line 176
     :goto_0
     return v0
 
@@ -664,7 +596,6 @@
     .locals 1
 
     .prologue
-    .line 70
     const/4 v0, 0x0
 
     return v0
@@ -674,7 +605,6 @@
     .locals 2
 
     .prologue
-    .line 159
     const-string/jumbo v0, "true"
 
     const-string/jumbo v1, "ril.domesticOtaStart"
@@ -689,10 +619,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 160
     const/4 v0, 0x1
 
-    .line 162
     :goto_0
     return v0
 
@@ -706,7 +634,6 @@
     .locals 1
 
     .prologue
-    .line 236
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mEasyOneHandEnabled:Z
 
     return v0
@@ -716,7 +643,6 @@
     .locals 1
 
     .prologue
-    .line 248
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mEasyOneHandRunning:Z
 
     return v0
@@ -726,7 +652,6 @@
     .locals 1
 
     .prologue
-    .line 74
     const/4 v0, 0x0
 
     return v0
@@ -736,7 +661,6 @@
     .locals 1
 
     .prologue
-    .line 227
     const/4 v0, 0x0
 
     return v0
@@ -747,7 +671,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 127
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -765,7 +688,6 @@
     .locals 1
 
     .prologue
-    .line 231
     const/4 v0, 0x0
 
     return v0
@@ -776,12 +698,10 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 112
     sget-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mScreenShotChordEnableChecked:Z
 
     if-nez v1, :cond_0
 
-    .line 114
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -797,23 +717,19 @@
     :try_end_0
     .catch Landroid/content/res/Resources$NotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 120
     :goto_0
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mScreenShotChordEnableChecked:Z
 
-    .line 122
     :cond_0
     sget-boolean v1, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mScreenShotChordEnabled:Z
 
     return v1
 
-    .line 116
     :catch_0
     move-exception v0
 
-    .line 118
     .local v0, "e":Landroid/content/res/Resources$NotFoundException;
     const/4 v1, 0x0
 
@@ -826,7 +742,6 @@
     .locals 3
 
     .prologue
-    .line 166
     const-string/jumbo v0, "tphone"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -845,10 +760,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 167
     const/4 v0, 0x1
 
-    .line 169
     :goto_0
     return v0
 
@@ -862,7 +775,6 @@
     .locals 1
 
     .prologue
-    .line 210
     const/4 v0, 0x0
 
     return v0
@@ -872,7 +784,6 @@
     .locals 1
 
     .prologue
-    .line 132
     const/4 v0, 0x0
 
     return v0
@@ -882,7 +793,6 @@
     .locals 1
 
     .prologue
-    .line 137
     const/4 v0, 0x0
 
     return v0
@@ -892,7 +802,6 @@
     .locals 1
 
     .prologue
-    .line 206
     const/4 v0, 0x0
 
     return v0
@@ -902,12 +811,10 @@
     .locals 2
 
     .prologue
-    .line 86
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mUserVibetonzChecked:Z
 
     if-nez v0, :cond_0
 
-    .line 87
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
     move-result-object v0
@@ -920,12 +827,10 @@
 
     sput-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mUseVibetonz:Z
 
-    .line 88
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mUserVibetonzChecked:Z
 
-    .line 90
     :cond_0
     sget-boolean v0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mUseVibetonz:Z
 
@@ -936,7 +841,6 @@
     .locals 4
 
     .prologue
-    .line 184
     const-string v1, "VZW"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -955,14 +859,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 185
     const-string/jumbo v1, "persist.sys.setupwizard"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 186
     .local v0, "vzwSetupRunning":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -974,10 +876,8 @@
 
     if-nez v1, :cond_0
 
-    .line 187
     const/4 v1, 0x1
 
-    .line 190
     :goto_0
     return v1
 
@@ -992,7 +892,6 @@
     .param p0, "isDeviceProvisioned"    # Z
 
     .prologue
-    .line 194
     const-string v1, "VZW"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -1011,14 +910,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 195
     const-string/jumbo v1, "persist.sys.vzw_setup_running"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 196
     .local v0, "vzwSetupRunning":Ljava/lang/String;
     if-nez p0, :cond_0
 
@@ -1032,10 +929,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 198
     const/4 v1, 0x1
 
-    .line 201
     .end local v0    # "vzwSetupRunning":Ljava/lang/String;
     :goto_0
     return v1
@@ -1051,10 +946,8 @@
     .param p0, "enabled"    # Z
 
     .prologue
-    .line 240
     sput-boolean p0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mEasyOneHandEnabled:Z
 
-    .line 241
     return-void
 .end method
 
@@ -1063,9 +956,7 @@
     .param p0, "running"    # Z
 
     .prologue
-    .line 244
     sput-boolean p0, Lcom/android/server/policy/sec/SamsungPolicyProperties;->mEasyOneHandRunning:Z
 
-    .line 245
     return-void
 .end method

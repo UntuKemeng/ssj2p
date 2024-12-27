@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 546
     iput-object p1, p0, Lcom/android/server/cover/CoverManagerService$7;->this$0:Lcom/android/server/cover/CoverManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 549
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService$7;->this$0:Lcom/android/server/cover/CoverManagerService;
 
     # getter for: Lcom/android/server/cover/CoverManagerService;->mCoverHideAnimator:Lcom/android/server/cover/CoverHideAnimator;
@@ -57,7 +55,6 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/cover/CoverHideAnimator;->playCoverHideAnimation(Ljava/lang/Runnable;)V
 
-    .line 550
     iget-object v0, p0, Lcom/android/server/cover/CoverManagerService$7;->this$0:Lcom/android/server/cover/CoverManagerService;
 
     # getter for: Lcom/android/server/cover/CoverManagerService;->mStateNotifier:Lcom/android/server/cover/StateNotifier;
@@ -74,6 +71,5 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/cover/StateNotifier;->updatePowerStateLocked(Lcom/samsung/android/cover/CoverState;)V
 
-    .line 551
     return-void
 .end method

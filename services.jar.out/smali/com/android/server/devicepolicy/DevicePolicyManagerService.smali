@@ -204,285 +204,244 @@
     .locals 2
 
     .prologue
-    .line 278
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    .line 297
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
-    .line 298
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_usb_file_transfer"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 299
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_config_tethering"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 300
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_network_reset"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 301
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_factory_reset"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 302
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_add_user"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 303
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_config_cell_broadcasts"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 304
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_config_mobile_networks"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 305
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_physical_media"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 306
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_unmute_microphone"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 307
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_adjust_volume"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 308
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_sms"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 309
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_fun"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 310
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_safe_boot"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 311
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->DEVICE_OWNER_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_create_windows"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 318
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->IMMUTABLE_USER_RESTRICTIONS:Ljava/util/Set;
 
-    .line 319
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->IMMUTABLE_USER_RESTRICTIONS:Ljava/util/Set;
 
     const-string/jumbo v1, "no_wallpaper"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 327
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_WHITELIST:Ljava/util/Set;
 
-    .line 328
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string v1, "default_input_method"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 329
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string/jumbo v1, "skip_first_use_hints"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 330
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string/jumbo v1, "install_non_market_apps"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 332
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_DEVICEOWNER_WHITELIST:Ljava/util/Set;
 
-    .line 333
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_DEVICEOWNER_WHITELIST:Ljava/util/Set;
 
     sget-object v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_WHITELIST:Ljava/util/Set;
 
     invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 334
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_DEVICEOWNER_WHITELIST:Ljava/util/Set;
 
     const-string/jumbo v1, "location_mode"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 336
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
-    .line 337
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string v1, "adb_enabled"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 338
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string v1, "auto_time"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 339
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string v1, "auto_time_zone"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 340
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string v1, "data_roaming"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 341
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string/jumbo v1, "usb_mass_storage_enabled"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 342
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string/jumbo v1, "wifi_sleep_policy"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 343
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string/jumbo v1, "stay_on_while_plugged_in"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 344
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
     const-string/jumbo v1, "wifi_device_owner_configs_lockdown"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 346
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     sput-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_DEPRECATED:Ljava/util/Set;
 
-    .line 347
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_DEPRECATED:Ljava/util/Set;
 
     const-string v1, "bluetooth_on"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 348
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_DEPRECATED:Ljava/util/Set;
 
     const-string v1, "development_settings_enabled"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 349
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_DEPRECATED:Ljava/util/Set;
 
     const-string/jumbo v1, "mode_ringer"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 350
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_DEPRECATED:Ljava/util/Set;
 
     const-string/jumbo v1, "network_preference"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 351
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_DEPRECATED:Ljava/util/Set;
 
     const-string/jumbo v1, "wifi_on"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 367
     const/4 v0, 0x1
 
     sput-boolean v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNeedToGetAlternativePasswdForODE:Z
@@ -499,62 +458,50 @@
 
     const/4 v4, 0x0
 
-    .line 1365
     invoke-direct {p0}, Landroid/app/admin/IDevicePolicyManager$Stub;-><init>()V
 
-    .line 275
     iput-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNotifyChanges:Z
 
-    .line 276
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mCheckLoadSettingsLocked:Z
 
-    .line 279
     iput-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->oldAllowWifi:Z
 
-    .line 385
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mToken:Landroid/os/Binder;
 
-    .line 470
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserData:Landroid/util/SparseArray;
 
-    .line 472
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHandler:Landroid/os/Handler;
 
-    .line 474
     new-instance v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;
 
     invoke-direct {v0, p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;-><init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;)V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 8228
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->allowLock:Ljava/lang/Object;
 
-    .line 11012
     iput-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 1366
     iput-object p1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
-    .line 1367
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {v0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
@@ -563,7 +510,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
-    .line 1368
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
@@ -576,7 +522,6 @@
 
     iput-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
-    .line 1370
     const-string/jumbo v0, "power"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -587,7 +532,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 1371
     const-class v0, Landroid/os/PowerManagerInternal;
 
     invoke-static {v0}, Lcom/android/server/LocalServices;->getService(Ljava/lang/Class;)Ljava/lang/Object;
@@ -598,7 +542,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
-    .line 1372
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mPowerManager:Landroid/os/PowerManager;
 
     const-string v1, "DPM"
@@ -609,60 +552,49 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
-    .line 1373
     new-instance v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;
 
     invoke-direct {v0, p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;-><init>(Lcom/android/server/devicepolicy/DevicePolicyManagerService;Lcom/android/server/devicepolicy/DevicePolicyManagerService$1;)V
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mLocalService:Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;
 
-    .line 1374
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 1398
     :goto_0
     return-void
 
-    .line 1378
     :cond_0
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1379
     .local v3, "filter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1380
     const-string v0, "com.android.server.ACTION_EXPIRED_PASSWORD_NOTIFICATION"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1381
     const-string v0, "android.intent.action.USER_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1382
     const-string v0, "android.intent.action.USER_STARTED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1383
     const-string v0, "android.security.STORAGE_CHANGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1384
     const/16 v0, 0x3e8
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->setPriority(I)V
 
-    .line 1385
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -673,39 +605,32 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 1386
     new-instance v3, Landroid/content/IntentFilter;
 
     .end local v3    # "filter":Landroid/content/IntentFilter;
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1387
     .restart local v3    # "filter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.PACKAGE_CHANGED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1388
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1389
     const-string v0, "android.intent.action.EXTERNAL_APPLICATIONS_UNAVAILABLE"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1390
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1391
     const-string/jumbo v0, "package"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 1392
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -716,19 +641,16 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 1393
     new-instance v3, Landroid/content/IntentFilter;
 
     .end local v3    # "filter":Landroid/content/IntentFilter;
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 1394
     .restart local v3    # "filter":Landroid/content/IntentFilter;
     const-string v0, "android.intent.action.MANAGED_PROFILE_ADDED"
 
     invoke-virtual {v3, v0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 1395
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mReceiver:Landroid/content/BroadcastReceiver;
 
     sget-object v2, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
@@ -739,7 +661,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/Context;->registerReceiverAsUser(Landroid/content/BroadcastReceiver;Landroid/os/UserHandle;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 1397
     const-class v0, Landroid/app/admin/DevicePolicyManagerInternal;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mLocalService:Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;
@@ -755,7 +676,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 236
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->handlePasswordExpirationNotification(I)V
 
     return-void
@@ -766,7 +686,6 @@
     .param p0, "x0"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     .prologue
-    .line 236
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getNotificationManager()Landroid/app/NotificationManager;
 
     move-result-object v0
@@ -780,7 +699,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 236
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isManagedProfile(I)Z
 
     move-result v0
@@ -795,7 +713,6 @@
     .param p2, "x2"    # Landroid/os/IBinder;
 
     .prologue
-    .line 236
     invoke-direct {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendPrivateKeyAliasResponse(Ljava/lang/String;Landroid/os/IBinder;)V
 
     return-void
@@ -806,7 +723,6 @@
     .param p0, "x0"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     .prologue
-    .line 236
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendWipeProfileNotification()V
 
     return-void
@@ -817,7 +733,6 @@
     .param p0, "x0"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     .prologue
-    .line 236
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     return-object v0
@@ -832,7 +747,6 @@
     .param p4, "x4"    # I
 
     .prologue
-    .line 236
     invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminWithPolicyForUidLocked(Landroid/content/ComponentName;III)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
@@ -847,7 +761,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 236
     invoke-direct {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->handlePackagesChanged(Ljava/lang/String;I)V
 
     return-void
@@ -858,7 +771,6 @@
     .param p0, "x0"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     .prologue
-    .line 236
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->clearWipeProfileNotification()V
 
     return-void
@@ -869,7 +781,6 @@
     .param p0, "x0"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService;
 
     .prologue
-    .line 236
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDMService()Landroid/app/enterprise/IEnterpriseDeviceManager;
 
     move-result-object v0
@@ -883,7 +794,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 236
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isEmailAdminPkg(Ljava/lang/String;)Z
 
     move-result v0
@@ -897,7 +807,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 236
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->resetAppPolicies(I)V
 
     return-void
@@ -909,7 +818,6 @@
     .param p1, "x1"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     .prologue
-    .line 236
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->resetGlobalProxyLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
     return-void
@@ -923,7 +831,6 @@
     .param p3, "x3"    # Z
 
     .prologue
-    .line 236
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
     return-void
@@ -934,34 +841,28 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 10302
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->hasUserSetupCompleted(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 10316
     :cond_0
     :goto_0
     return-void
 
-    .line 10306
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getDeviceInitializer()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 10307
     .local v0, "deviceInitializerPackage":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 10311
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getLockTaskPackagesLocked(I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 10312
     .local v1, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v1, v0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -969,10 +870,8 @@
 
     if-nez v2, :cond_0
 
-    .line 10313
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 10314
     invoke-direct {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setLockTaskPackagesLocked(ILjava/util/List;)V
 
     goto :goto_0
@@ -984,18 +883,15 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 9257
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 9258
     .local v1, "callingUserId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 9261
     .local v4, "token":J
     :try_start_0
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -1006,7 +902,6 @@
 
     move-result-object v0
 
-    .line 9263
     .local v0, "callingUser":Landroid/content/pm/UserInfo;
     :try_start_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -1020,7 +915,6 @@
 
     move-result-object v2
 
-    .line 9269
     .local v2, "currentUser":Landroid/content/pm/UserInfo;
     :try_start_2
     invoke-virtual {v0}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
@@ -1035,7 +929,6 @@
 
     if-eq v7, v8, :cond_0
 
-    .line 9270
     const-string v7, "DevicePolicyManagerService"
 
     const-string v8, "Cannot set permitted input methods for managed profile of a user that isn\'t the foreground user."
@@ -1044,19 +937,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 9280
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 9282
     .end local v2    # "currentUser":Landroid/content/pm/UserInfo;
     :goto_0
     return v6
 
-    .line 9264
     :catch_0
     move-exception v3
 
-    .line 9265
     .local v3, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v7, "DevicePolicyManagerService"
@@ -1067,12 +956,10 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 9280
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 9274
     .end local v3    # "e":Landroid/os/RemoteException;
     .restart local v2    # "currentUser":Landroid/content/pm/UserInfo;
     :cond_0
@@ -1087,7 +974,6 @@
 
     if-eq v1, v7, :cond_1
 
-    .line 9275
     const-string v7, "DevicePolicyManagerService"
 
     const-string v8, "Cannot set permitted input methods of a user that isn\'t the foreground user."
@@ -1096,7 +982,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 9280
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -1104,12 +989,10 @@
     :cond_1
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 9282
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 9280
     .end local v0    # "callingUser":Landroid/content/pm/UserInfo;
     .end local v2    # "currentUser":Landroid/content/pm/UserInfo;
     :catchall_0
@@ -1125,10 +1008,8 @@
     .param p1, "methodName"    # Ljava/lang/String;
 
     .prologue
-    .line 6910
     const-string v1, "DevicePolicyManagerService"
 
-    .line 6911
     .local v1, "serviceName":Ljava/lang/String;
     const-string v2, "DevicePolicyManagerService"
 
@@ -1158,7 +1039,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6912
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -1175,7 +1055,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6913
     new-instance v0, Ljava/lang/SecurityException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1242,14 +1121,11 @@
 
     invoke-direct {v0, v2}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
-    .line 6915
     .local v0, "e":Ljava/lang/SecurityException;
     invoke-virtual {v0}, Ljava/lang/SecurityException;->printStackTrace()V
 
-    .line 6917
     throw v0
 
-    .line 6919
     .end local v0    # "e":Ljava/lang/SecurityException;
     :cond_0
     const/4 v2, 0x0
@@ -1274,20 +1150,17 @@
     .end annotation
 
     .prologue
-    .line 9095
     .local p1, "enabledPackages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local p2, "permittedList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v9
 
-    .line 9096
     .local v9, "userIdToCheck":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 9100
     .local v4, "id":J
     :try_start_0
     iget-object v10, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -1296,7 +1169,6 @@
 
     move-result-object v8
 
-    .line 9101
     .local v8, "user":Landroid/content/pm/UserInfo;
     invoke-virtual {v8}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
@@ -1304,16 +1176,13 @@
 
     if-eqz v10, :cond_0
 
-    .line 9102
     iget v9, v8, Landroid/content/pm/UserInfo;->profileGroupId:I
 
-    .line 9105
     :cond_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v6
 
-    .line 9106
     .local v6, "pm":Landroid/content/pm/IPackageManager;
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1335,11 +1204,9 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9107
     .local v2, "enabledPackage":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 9109
     .local v7, "systemService":Z
     const/16 v10, 0x2000
 
@@ -1348,7 +1215,6 @@
 
     move-result-object v0
 
-    .line 9111
     .local v0, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     iget v10, v0, Landroid/content/pm/ApplicationInfo;->flags:I
     :try_end_1
@@ -1361,7 +1227,6 @@
 
     const/4 v7, 0x1
 
-    .line 9115
     .end local v0    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     :goto_0
     if-nez v7, :cond_1
@@ -1375,19 +1240,15 @@
 
     if-nez v10, :cond_1
 
-    .line 9116
     const/4 v10, 0x0
 
-    .line 9120
     invoke-static {v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9122
     .end local v2    # "enabledPackage":Ljava/lang/String;
     .end local v7    # "systemService":Z
     :goto_1
     return v10
 
-    .line 9111
     .restart local v0    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v2    # "enabledPackage":Ljava/lang/String;
     .restart local v7    # "systemService":Z
@@ -1396,12 +1257,10 @@
 
     goto :goto_0
 
-    .line 9112
     .end local v0    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     :catch_0
     move-exception v1
 
-    .line 9113
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v10, "DevicePolicyManagerService"
@@ -1414,7 +1273,6 @@
 
     goto :goto_0
 
-    .line 9120
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "enabledPackage":Ljava/lang/String;
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -1434,7 +1292,6 @@
     :cond_3
     invoke-static {v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9122
     const/4 v10, 0x1
 
     goto :goto_1
@@ -1444,10 +1301,8 @@
     .locals 9
 
     .prologue
-    .line 2467
     monitor-enter p0
 
-    .line 2468
     :try_start_0
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -1459,14 +1314,12 @@
 
     move-result-object v7
 
-    .line 2470
     .local v7, "usersWithProfileOwners":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     :goto_0
     new-instance v6, Ljava/util/HashSet;
 
     invoke-direct {v6}, Ljava/util/HashSet;-><init>()V
 
-    .line 2471
     .local v6, "usersWithData":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     const/4 v2, 0x0
 
@@ -1480,7 +1333,6 @@
 
     if-ge v2, v8, :cond_1
 
-    .line 2472
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserData:Landroid/util/SparseArray;
 
     invoke-virtual {v8, v2}, Landroid/util/SparseArray;->keyAt(I)I
@@ -1493,12 +1345,10 @@
 
     invoke-interface {v6, v8}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 2471
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 2468
     .end local v2    # "i":I
     .end local v6    # "usersWithData":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     .end local v7    # "usersWithProfileOwners":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
@@ -1509,7 +1359,6 @@
 
     goto :goto_0
 
-    .line 2474
     :catchall_0
     move-exception v8
 
@@ -1528,27 +1377,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2475
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v8}, Landroid/os/UserManager;->getUsers()Ljava/util/List;
 
     move-result-object v0
 
-    .line 2477
     .local v0, "allUsers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     new-instance v1, Ljava/util/HashSet;
 
     invoke-direct {v1}, Ljava/util/HashSet;-><init>()V
 
-    .line 2478
     .local v1, "deletedUsers":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/Integer;>;"
     invoke-interface {v1, v7}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 2479
     invoke-interface {v1, v6}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 2480
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -1567,7 +1411,6 @@
 
     check-cast v5, Landroid/content/pm/UserInfo;
 
-    .line 2481
     .local v5, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v5, Landroid/content/pm/UserInfo;->id:I
 
@@ -1579,7 +1422,6 @@
 
     goto :goto_2
 
-    .line 2483
     .end local v5    # "userInfo":Landroid/content/pm/UserInfo;
     :cond_2
     invoke-interface {v1}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
@@ -1599,7 +1441,6 @@
 
     check-cast v4, Ljava/lang/Integer;
 
-    .line 2484
     .local v4, "userId":Ljava/lang/Integer;
     invoke-virtual {v4}, Ljava/lang/Integer;->intValue()I
 
@@ -1609,7 +1450,6 @@
 
     goto :goto_3
 
-    .line 2486
     .end local v4    # "userId":Ljava/lang/Integer;
     :cond_3
     return-void
@@ -1622,43 +1462,34 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 6764
     invoke-virtual {p1}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v3
 
-    .line 6766
     .local v3, "userId":I
     invoke-virtual {p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 6767
     .local v2, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iput v5, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPermissionPolicy:I
 
-    .line 6768
     const/4 v4, 0x0
 
     iput-object v4, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mDelegatedCertInstallerPackage:Ljava/lang/String;
 
-    .line 6769
     iput-boolean v5, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mStatusBarDisabled:Z
 
-    .line 6770
     invoke-direct {p0, v3, v5, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 6772
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 6774
     .local v0, "ident":J
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->clearUserRestrictions(Landroid/os/UserHandle;)V
 
-    .line 6775
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v4
@@ -1676,18 +1507,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6780
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6782
     :goto_0
     return-void
 
-    .line 6778
     :catch_0
     move-exception v4
 
-    .line 6780
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -1705,14 +1532,12 @@
     .param p1, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 6786
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v2}, Landroid/os/UserManager;->getUserRestrictions()Landroid/os/Bundle;
 
     move-result-object v1
 
-    .line 6787
     .local v1, "userRestrictions":Landroid/os/Bundle;
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
@@ -1722,7 +1547,6 @@
 
     invoke-virtual {v2, v3, p1}, Landroid/os/UserManager;->setUserRestrictions(Landroid/os/Bundle;Landroid/os/UserHandle;)V
 
-    .line 6788
     const-string v2, "audio"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -1733,7 +1557,6 @@
 
     move-result-object v0
 
-    .line 6790
     .local v0, "iAudioService":Landroid/media/IAudioService;
     const-string/jumbo v2, "no_adjust_volume"
 
@@ -1743,7 +1566,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6792
     const/4 v2, 0x1
 
     const/4 v3, 0x0
@@ -1763,7 +1585,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 6798
     :cond_0
     :goto_0
     const-string/jumbo v2, "no_unmute_microphone"
@@ -1774,7 +1595,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 6800
     const/4 v2, 0x1
 
     :try_start_1
@@ -1792,18 +1612,15 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 6806
     :cond_1
     :goto_1
     return-void
 
-    .line 6802
     :catch_0
     move-exception v2
 
     goto :goto_1
 
-    .line 6794
     :catch_1
     move-exception v2
 
@@ -1814,7 +1631,6 @@
     .locals 2
 
     .prologue
-    .line 5407
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getNotificationManager()Landroid/app/NotificationManager;
 
     move-result-object v0
@@ -1823,7 +1639,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/NotificationManager;->cancel(I)V
 
-    .line 5408
     return-void
 .end method
 
@@ -1832,7 +1647,6 @@
     .param p1, "userhandle"    # I
 
     .prologue
-    .line 8059
     if-eqz p1, :cond_0
 
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isManagedProfile(I)Z
@@ -1841,11 +1655,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 8060
     :cond_0
     const/4 p1, 0x0
 
-    .line 8062
     .end local p1    # "userhandle":I
     :cond_1
     return p1
@@ -1857,13 +1669,11 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 7290
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 7291
     .local v0, "ipm":Landroid/content/pm/IPackageManager;
     const v1, 0x8000
 
@@ -1871,18 +1681,15 @@
 
     move-result-object v6
 
-    .line 7296
     .local v6, "ai":Landroid/content/pm/ApplicationInfo;
     if-nez v6, :cond_1
 
-    .line 7309
     .end local v0    # "ipm":Landroid/content/pm/IPackageManager;
     .end local v6    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_0
     :goto_0
     return-void
 
-    .line 7301
     .restart local v0    # "ipm":Landroid/content/pm/IPackageManager;
     .restart local v6    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_1
@@ -1892,7 +1699,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 7303
     const/4 v2, 0x0
 
     const/4 v3, 0x1
@@ -1909,7 +1715,6 @@
 
     goto :goto_0
 
-    .line 7307
     .end local v0    # "ipm":Landroid/content/pm/IPackageManager;
     .end local v6    # "ai":Landroid/content/pm/ApplicationInfo;
     :catch_0
@@ -1923,10 +1728,8 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 6634
     if-nez p1, :cond_0
 
-    .line 6635
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.MANAGE_DEVICE_ADMINS"
@@ -1935,7 +1738,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6637
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->hasUserSetupCompleted(I)Z
@@ -1944,7 +1746,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 6638
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string v1, "Trying to set device initializer but device is already provisioned."
@@ -1953,13 +1754,11 @@
 
     throw v0
 
-    .line 6642
     :cond_0
     const/4 v0, -0x2
 
     invoke-virtual {p0, p1, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 6644
     :cond_1
     return-void
 .end method
@@ -1970,7 +1769,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 7218
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-eqz v1, :cond_0
@@ -1983,7 +1781,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 7219
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Trying to set the device owner, but device owner is already set."
@@ -1992,13 +1789,11 @@
 
     throw v1
 
-    .line 7222
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 7223
     .local v0, "callingUid":I
     const/16 v1, 0x7d0
 
@@ -2006,7 +1801,6 @@
 
     if-nez v0, :cond_5
 
-    .line 7224
     :cond_1
     invoke-direct {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->hasUserSetupCompleted(I)Z
 
@@ -2014,11 +1808,9 @@
 
     if-nez v1, :cond_3
 
-    .line 7243
     :cond_2
     return-void
 
-    .line 7227
     :cond_3
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
@@ -2030,7 +1822,6 @@
 
     if-le v1, v2, :cond_4
 
-    .line 7228
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Not allowed to set the device owner because there are already several users on the device"
@@ -2039,7 +1830,6 @@
 
     throw v1
 
-    .line 7231
     :cond_4
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -2055,7 +1845,6 @@
 
     if-lez v1, :cond_2
 
-    .line 7232
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Not allowed to set the device owner because there are already some accounts on the device"
@@ -2064,7 +1853,6 @@
 
     throw v1
 
-    .line 7237
     :cond_5
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -2074,14 +1862,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7239
     invoke-direct {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->hasUserSetupCompleted(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 7240
     new-instance v1, Ljava/lang/IllegalStateException;
 
     const-string v2, "Cannot set the device owner if the device is already set-up"
@@ -2096,18 +1882,15 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 7180
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v2, p1}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
     move-result-object v1
 
-    .line 7181
     .local v1, "info":Landroid/content/pm/UserInfo;
     if-nez v1, :cond_0
 
-    .line 7183
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2132,7 +1915,6 @@
 
     throw v2
 
-    .line 7186
     :cond_0
     invoke-virtual {v1}, Landroid/content/pm/UserInfo;->isGuest()Z
 
@@ -2140,7 +1922,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 7187
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Cannot set a profile owner on a guest"
@@ -2149,7 +1930,6 @@
 
     throw v2
 
-    .line 7189
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfileOwner(I)Landroid/content/ComponentName;
 
@@ -2157,7 +1937,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 7190
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Trying to set the profile owner, but profile owner is already set."
@@ -2166,13 +1945,11 @@
 
     throw v2
 
-    .line 7193
     :cond_2
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 7194
     .local v0, "callingUid":I
     const/16 v2, 0x7d0
 
@@ -2180,7 +1957,6 @@
 
     if-nez v0, :cond_4
 
-    .line 7195
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->hasUserSetupCompleted(I)Z
 
@@ -2202,7 +1978,6 @@
 
     if-lez v2, :cond_5
 
-    .line 7197
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Not allowed to set the profile owner because there are already some accounts on the profile"
@@ -2211,7 +1986,6 @@
 
     throw v2
 
-    .line 7202
     :cond_4
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -2221,7 +1995,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7204
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->hasUserSetupCompleted(I)Z
 
     move-result v2
@@ -2236,7 +2009,6 @@
 
     if-eq v2, v3, :cond_5
 
-    .line 7206
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Cannot set the profile owner on a user which is already set-up"
@@ -2245,7 +2017,6 @@
 
     throw v2
 
-    .line 7209
     :cond_5
     return-void
 .end method
@@ -2255,10 +2026,8 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 7246
     if-gez p1, :cond_0
 
-    .line 7247
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -2283,13 +2052,11 @@
 
     throw v1
 
-    .line 7249
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 7250
     .local v0, "callingUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -2297,12 +2064,10 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 7256
     :cond_1
     :goto_0
     return-void
 
-    .line 7251
     :cond_2
     const/16 v1, 0x3e8
 
@@ -2310,7 +2075,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 7252
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.INTERACT_ACROSS_USERS_FULL"
@@ -2328,14 +2092,12 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 7265
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isManagedProfile(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 7266
     new-instance v0, Ljava/lang/SecurityException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2366,7 +2128,6 @@
 
     throw v0
 
-    .line 7268
     :cond_0
     return-void
 .end method
@@ -2376,7 +2137,6 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 7259
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -2385,14 +2145,12 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 7260
     new-instance v0, Ljava/lang/SecurityException;
 
     invoke-direct {v0, p1}, Ljava/lang/SecurityException;-><init>(Ljava/lang/String;)V
 
     throw v0
 
-    .line 7262
     :cond_0
     return-void
 .end method
@@ -2401,16 +2159,13 @@
     .locals 6
 
     .prologue
-    .line 5022
     const/4 v0, 0x0
 
-    .line 5023
     .local v0, "hasSD":Z
     sget-object v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
     if-nez v4, :cond_0
 
-    .line 5024
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v5, "storage"
@@ -2423,24 +2178,20 @@
 
     sput-object v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    .line 5026
     :cond_0
     sget-object v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
     if-eqz v4, :cond_2
 
-    .line 5027
     sget-object v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v4}, Landroid/os/storage/StorageManager;->getVolumeList()[Landroid/os/storage/StorageVolume;
 
     move-result-object v3
 
-    .line 5028
     .local v3, "storageVolumes":[Landroid/os/storage/StorageVolume;
     array-length v2, v3
 
-    .line 5029
     .local v2, "length":I
     const/4 v1, 0x0
 
@@ -2448,7 +2199,6 @@
     :goto_0
     if-ge v1, v2, :cond_2
 
-    .line 5030
     aget-object v4, v3, v1
 
     invoke-virtual {v4}, Landroid/os/storage/StorageVolume;->isRemovable()Z
@@ -2471,16 +2221,13 @@
 
     if-eqz v4, :cond_1
 
-    .line 5031
     const/4 v0, 0x1
 
-    .line 5029
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 5035
     .end local v1    # "i":I
     .end local v2    # "length":I
     .end local v3    # "storageVolumes":[Landroid/os/storage/StorageVolume;
@@ -2492,14 +2239,12 @@
     .locals 8
 
     .prologue
-    .line 5240
     const-string v5, "DevicePolicyManagerService"
 
     const-string/jumbo v6, "formatExternSdCard() called"
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5241
     sget-object v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
     invoke-virtual {v5}, Landroid/os/storage/StorageManager;->getVolumeList()[Landroid/os/storage/StorageVolume;
@@ -2518,7 +2263,6 @@
 
     aget-object v4, v0, v1
 
-    .line 5242
     .local v4, "volume":Landroid/os/storage/StorageVolume;
     invoke-virtual {v4}, Landroid/os/storage/StorageVolume;->getPath()Ljava/lang/String;
 
@@ -2532,7 +2276,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 5243
     const-string v5, "DevicePolicyManagerService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -2559,45 +2302,38 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5244
     new-instance v2, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.MASTER_CLEAR"
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5245
     .local v2, "intent":Landroid/content/Intent;
     const/high16 v5, 0x10000000
 
     invoke-virtual {v2, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 5246
     const-string v5, "android.intent.extra.REASON"
 
     const-string v6, "MasterClearConfirm_DevicePolicyManagerService"
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5247
     const-string v5, "android.intent.extra.WIPE_EXTERNAL_STORAGE"
 
     const/4 v6, 0x1
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 5248
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 5252
     .end local v2    # "intent":Landroid/content/Intent;
     .end local v4    # "volume":Landroid/os/storage/StorageVolume;
     :cond_0
     return-void
 
-    .line 5241
     .restart local v4    # "volume":Landroid/os/storage/StorageVolume;
     :cond_1
     add-int/lit8 v1, v1, 0x1
@@ -2610,20 +2346,17 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 9129
     const-string v2, "accessibility"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 9130
     .local v0, "iBinder":Landroid/os/IBinder;
     if-nez v0, :cond_0
 
     const/4 v1, 0x0
 
-    .line 9132
     .local v1, "service":Landroid/view/accessibility/IAccessibilityManager;
     :goto_0
     new-instance v2, Landroid/view/accessibility/AccessibilityManager;
@@ -2634,7 +2367,6 @@
 
     return-object v2
 
-    .line 9130
     .end local v1    # "service":Landroid/view/accessibility/IAccessibilityManager;
     :cond_0
     invoke-static {v0}, Landroid/view/accessibility/IAccessibilityManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/view/accessibility/IAccessibilityManager;
@@ -2654,29 +2386,23 @@
     .prologue
     const/16 v5, 0x3e8
 
-    .line 1595
     invoke-static {p3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v3
 
-    .line 1596
     .local v3, "userId":I
     if-ne p3, v5, :cond_0
 
-    .line 1597
     move v3, p4
 
-    .line 1599
     :cond_0
     invoke-virtual {p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 1600
     .local v2, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     if-eqz p1, :cond_6
 
-    .line 1601
     iget-object v4, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2685,11 +2411,9 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 1602
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-nez v0, :cond_1
 
-    .line 1603
     new-instance v4, Ljava/lang/SecurityException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2714,24 +2438,20 @@
 
     throw v4
 
-    .line 1606
     :cond_1
     if-ne p3, v5, :cond_3
 
-    .line 1607
     invoke-direct {p0, v0, p2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isActiveAdminWithPolicyForUserLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;II)Z
 
     move-result v4
 
     if-eqz v4, :cond_4
 
-    .line 1643
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     :goto_0
     return-object v0
 
-    .line 1610
     .restart local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->getUid()I
@@ -2740,7 +2460,6 @@
 
     if-eq v4, p3, :cond_4
 
-    .line 1611
     new-instance v4, Ljava/lang/SecurityException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2779,7 +2498,6 @@
 
     throw v4
 
-    .line 1614
     :cond_4
     invoke-direct {p0, v0, p2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isActiveAdminWithPolicyForUserLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;II)Z
 
@@ -2787,14 +2505,12 @@
 
     if-nez v4, :cond_2
 
-    .line 1643
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_5
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1627
     :cond_6
     iget-object v4, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -2816,7 +2532,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 1629
     .restart local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne p3, v5, :cond_8
 
@@ -2826,7 +2541,6 @@
 
     if-nez v4, :cond_2
 
-    .line 1632
     :cond_8
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->getUid()I
 
@@ -2848,20 +2562,16 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 4203
     const/4 v1, 0x0
 
-    .line 4204
     .local v1, "count":I
     const/4 v6, 0x0
 
-    .line 4208
     .local v6, "strictestAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v5
 
-    .line 4212
     .local v5, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -2880,7 +2590,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 4214
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -2888,7 +2597,6 @@
 
     move-result-object v4
 
-    .line 4215
     .local v4, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -2911,13 +2619,11 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4216
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v8, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
 
     if-eqz v8, :cond_1
 
-    .line 4222
     if-eqz v1, :cond_2
 
     iget v8, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
@@ -2934,16 +2640,13 @@
 
     if-lt v1, v8, :cond_1
 
-    .line 4225
     :cond_2
     iget v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
 
-    .line 4226
     move-object v6, v0
 
     goto :goto_0
 
-    .line 4230
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v4    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -2960,19 +2663,16 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 7149
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 7153
     .local v6, "token":J
     :try_start_0
     new-instance v1, Landroid/os/UserHandle;
 
     invoke-direct {v1, p2}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 7154
     .local v1, "handle":Landroid/os/UserHandle;
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -2985,33 +2685,27 @@
 
     move-result-object v5
 
-    .line 7159
     .local v5, "userContext":Landroid/content/Context;
     :try_start_1
     invoke-virtual {v5}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
-    .line 7160
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     const/4 v4, 0x0
 
-    .line 7161
     .local v4, "result":Ljava/lang/CharSequence;
     if-eqz v0, :cond_0
 
-    .line 7162
     invoke-virtual {v5}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 7163
     .local v3, "pm":Landroid/content/pm/PackageManager;
     invoke-virtual {v3, v0}, Landroid/content/pm/PackageManager;->getApplicationLabel(Landroid/content/pm/ApplicationInfo;)Ljava/lang/CharSequence;
 
     move-result-object v4
 
-    .line 7165
     .end local v3    # "pm":Landroid/content/pm/PackageManager;
     :cond_0
     if-eqz v4, :cond_1
@@ -3022,7 +2716,6 @@
 
     move-result-object v8
 
-    .line 7167
     :cond_1
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -3033,11 +2726,9 @@
     :goto_0
     return-object v8
 
-    .line 7155
     :catch_0
     move-exception v2
 
-    .line 7156
     .local v2, "nnfe":Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_2
     const-string v9, "DevicePolicyManagerService"
@@ -3068,7 +2759,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 7167
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -3088,23 +2778,19 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 6548
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getDeviceOwner()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 6549
     .local v1, "deviceOwnerPackageName":Ljava/lang/String;
     if-nez v1, :cond_1
 
     move-object v0, v5
 
-    .line 6561
     :cond_0
     :goto_0
     return-object v0
 
-    .line 6553
     :cond_1
     const/4 v6, 0x0
 
@@ -3112,7 +2798,6 @@
 
     move-result-object v4
 
-    .line 6554
     .local v4, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -3120,7 +2805,6 @@
 
     move-result v3
 
-    .line 6555
     .local v3, "n":I
     const/4 v2, 0x0
 
@@ -3128,7 +2812,6 @@
     :goto_1
     if-ge v2, v3, :cond_2
 
-    .line 6556
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3137,7 +2820,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 6557
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v6, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -3151,7 +2833,6 @@
 
     if-nez v6, :cond_0
 
-    .line 6555
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
@@ -3160,7 +2841,6 @@
     :cond_2
     move-object v0, v5
 
-    .line 6561
     goto :goto_0
 .end method
 
@@ -3168,12 +2848,10 @@
     .locals 2
 
     .prologue
-    .line 11014
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 11015
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -3186,7 +2864,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 11018
     :cond_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -3197,7 +2874,6 @@
     .locals 1
 
     .prologue
-    .line 11008
     const-string v0, "enterprise_policy"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -3215,7 +2891,6 @@
     .locals 5
 
     .prologue
-    .line 6045
     const-string/jumbo v1, "ro.crypto.state"
 
     const-string/jumbo v4, "unsupported"
@@ -3224,7 +2899,6 @@
 
     move-result-object v0
 
-    .line 6046
     .local v0, "status":Ljava/lang/String;
     const-string v1, "encrypted"
 
@@ -3234,12 +2908,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 6047
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 6049
     .local v2, "token":J
     :try_start_0
     invoke-static {}, Lcom/android/internal/widget/LockPatternUtils;->isDeviceEncrypted()Z
@@ -3252,23 +2924,19 @@
 
     const/4 v1, 0x3
 
-    .line 6053
     :goto_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6058
     .end local v2    # "token":J
     :goto_1
     return v1
 
-    .line 6049
     .restart local v2    # "token":J
     :cond_0
     const/4 v1, 0x4
 
     goto :goto_0
 
-    .line 6053
     :catchall_0
     move-exception v1
 
@@ -3276,7 +2944,6 @@
 
     throw v1
 
-    .line 6055
     .end local v2    # "token":J
     :cond_1
     const-string/jumbo v1, "unencrypted"
@@ -3287,12 +2954,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 6056
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 6058
     :cond_2
     const/4 v1, 0x0
 
@@ -3303,13 +2968,10 @@
     .locals 8
 
     .prologue
-    .line 5002
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->initializeStorageManager()V
 
-    .line 5003
     const/4 v0, 0x0
 
-    .line 5004
     .local v0, "extStorageVolume":Landroid/os/storage/StorageVolume;
     sget-object v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
@@ -3317,11 +2979,9 @@
 
     move-result-object v5
 
-    .line 5005
     .local v5, "storageVolumes":[Landroid/os/storage/StorageVolume;
     array-length v3, v5
 
-    .line 5007
     .local v3, "length":I
     const/4 v1, 0x0
 
@@ -3332,20 +2992,16 @@
     :goto_0
     if-ge v1, v3, :cond_0
 
-    .line 5008
     aget-object v4, v5, v1
 
-    .line 5009
     .local v4, "storageVolume":Landroid/os/storage/StorageVolume;
     const/4 v6, 0x0
 
-    .line 5010
     .local v6, "subsystem":Ljava/lang/String;
     invoke-virtual {v4}, Landroid/os/storage/StorageVolume;->getSubSystem()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 5012
     invoke-virtual {v4}, Landroid/os/storage/StorageVolume;->isRemovable()Z
 
     move-result v7
@@ -3360,16 +3016,13 @@
 
     if-eqz v7, :cond_1
 
-    .line 5014
     move-object v0, v4
 
-    .line 5018
     .end local v4    # "storageVolume":Landroid/os/storage/StorageVolume;
     .end local v6    # "subsystem":Ljava/lang/String;
     :cond_0
     return-object v0
 
-    .line 5007
     .restart local v4    # "storageVolume":Landroid/os/storage/StorageVolume;
     .restart local v6    # "subsystem":Ljava/lang/String;
     :cond_1
@@ -3382,19 +3035,16 @@
     .locals 2
 
     .prologue
-    .line 8667
     sget-object v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHM:Landroid/content/IHarmonyEAS;
 
     if-nez v1, :cond_0
 
-    .line 8668
     const-string/jumbo v1, "harmony_eas_service"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 8669
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/content/IHarmonyEAS$Stub;->asInterface(Landroid/os/IBinder;)Landroid/content/IHarmonyEAS;
 
@@ -3402,7 +3052,6 @@
 
     sput-object v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHM:Landroid/content/IHarmonyEAS;
 
-    .line 8671
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     sget-object v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHM:Landroid/content/IHarmonyEAS;
@@ -3414,19 +3063,16 @@
     .locals 2
 
     .prologue
-    .line 11064
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mIPowerManager:Landroid/os/IPowerManager;
 
     if-nez v1, :cond_0
 
-    .line 11065
     const-string/jumbo v1, "power"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 11066
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/os/IPowerManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/IPowerManager;
 
@@ -3434,7 +3080,6 @@
 
     iput-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mIPowerManager:Landroid/os/IPowerManager;
 
-    .line 11068
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mIPowerManager:Landroid/os/IPowerManager;
@@ -3448,16 +3093,13 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 11133
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
 
-    .line 11134
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v0, :cond_0
 
-    .line 11135
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceManager;->getPasswordPolicy()Landroid/app/enterprise/PasswordPolicy;
 
     move-result-object v1
@@ -3466,7 +3108,6 @@
 
     move-result v1
 
-    .line 11137
     :goto_0
     return v1
 
@@ -3490,12 +3131,10 @@
     .end annotation
 
     .prologue
-    .line 10041
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
-    .line 10042
     .local v0, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mLockTaskPackages:Ljava/util/List;
 
@@ -3506,12 +3145,10 @@
     .locals 2
 
     .prologue
-    .line 1534
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNotificationManager:Landroid/app/NotificationManager;
 
     if-nez v0, :cond_0
 
-    .line 1535
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "notification"
@@ -3524,7 +3161,6 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNotificationManager:Landroid/app/NotificationManager;
 
-    .line 1538
     :cond_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNotificationManager:Landroid/app/NotificationManager;
 
@@ -3537,25 +3173,20 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3339
     const-wide/16 v8, 0x0
 
-    .line 3341
     .local v8, "timeout":J
     if-eqz p1, :cond_1
 
-    .line 3342
     invoke-virtual/range {p0 .. p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v3
 
-    .line 3343
     .local v3, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v3, :cond_0
 
     iget-wide v12, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationDate:J
 
-    .line 3365
     .end local v3    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_0
     return-wide v12
@@ -3564,10 +3195,8 @@
     :cond_0
     move-wide v12, v8
 
-    .line 3343
     goto :goto_0
 
-    .line 3349
     .end local v3    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     move-object/from16 v0, p0
@@ -3578,7 +3207,6 @@
 
     move-result-object v7
 
-    .line 3354
     .local v7, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -3598,7 +3226,6 @@
 
     check-cast v10, Landroid/content/pm/UserInfo;
 
-    .line 3355
     .local v10, "userInfo":Landroid/content/pm/UserInfo;
     iget v11, v10, Landroid/content/pm/UserInfo;->id:I
 
@@ -3608,7 +3235,6 @@
 
     move-result-object v6
 
-    .line 3356
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v11, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -3616,7 +3242,6 @@
 
     move-result v2
 
-    .line 3357
     .local v2, "N":I
     const/4 v4, 0x0
 
@@ -3624,7 +3249,6 @@
     :goto_1
     if-ge v4, v2, :cond_2
 
-    .line 3358
     iget-object v11, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -3633,7 +3257,6 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3359
     .restart local v3    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const-wide/16 v12, 0x0
 
@@ -3655,11 +3278,9 @@
 
     if-lez v11, :cond_4
 
-    .line 3361
     :cond_3
     iget-wide v8, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationDate:J
 
-    .line 3357
     :cond_4
     add-int/lit8 v4, v4, 0x1
 
@@ -3673,7 +3294,6 @@
     :cond_5
     move-wide v12, v8
 
-    .line 3365
     goto :goto_0
 .end method
 
@@ -3682,7 +3302,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 6923
     const-string v26, "DevicePolicyManagerService"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -3709,7 +3328,6 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6924
     new-instance v12, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     move-object/from16 v0, p0
@@ -3722,7 +3340,6 @@
 
     invoke-direct {v12, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
-    .line 6926
     .local v12, "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     const/16 v26, 0x3
 
@@ -3748,15 +3365,12 @@
 
     aput-object v27, v7, v26
 
-    .line 6927
     .local v7, "columns":[Ljava/lang/String;
     const/16 v20, 0x0
 
-    .line 6928
     .local v20, "proxyComponent":Landroid/content/ComponentName;
     const/16 v24, 0x0
 
-    .line 6930
     .local v24, "status":Z
     :try_start_0
     move/from16 v0, p1
@@ -3765,7 +3379,6 @@
 
     move-result v17
 
-    .line 6931
     .local v17, "ownerUid":I
     invoke-static/range {v17 .. v17}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -3779,12 +3392,10 @@
 
     const/16 v16, 0x1
 
-    .line 6933
     .local v16, "isByod":Z
     :goto_0
     if-eqz v16, :cond_3
 
-    .line 6934
     new-instance v26, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v26 .. v26}, Ljava/lang/StringBuilder;-><init>()V
@@ -3807,20 +3418,16 @@
 
     move-result-object v8
 
-    .line 6939
     .local v8, "combinedUid":Ljava/lang/String;
     :goto_1
     const/16 v21, 0x0
 
-    .line 6940
     .local v21, "proxyPackageName":Ljava/lang/String;
     const/16 v23, 0x0
 
-    .line 6941
     .local v23, "signature":Ljava/lang/String;
     const/4 v13, 0x0
 
-    .line 6943
     .local v13, "flags":I
     const-string v26, "PlayForWorkProxy"
 
@@ -3832,7 +3439,6 @@
 
     move-result-object v19
 
-    .line 6945
     .local v19, "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v19, :cond_1
 
@@ -3842,7 +3448,6 @@
 
     if-lez v26, :cond_1
 
-    .line 6946
     invoke-interface/range {v19 .. v19}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v15
@@ -3861,7 +3466,6 @@
 
     check-cast v25, Landroid/content/ContentValues;
 
-    .line 6947
     .local v25, "values":Landroid/content/ContentValues;
     const-string/jumbo v26, "packageName"
 
@@ -3869,14 +3473,12 @@
 
     move-result-object v21
 
-    .line 6948
     const-string/jumbo v26, "signature"
 
     invoke-virtual/range {v25 .. v26}, Landroid/content/ContentValues;->getAsString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v23
 
-    .line 6949
     const-string/jumbo v26, "flags"
 
     invoke-virtual/range {v25 .. v26}, Landroid/content/ContentValues;->getAsInteger(Ljava/lang/String;)Ljava/lang/Integer;
@@ -3887,10 +3489,8 @@
 
     move-result v13
 
-    .line 6950
     if-eqz v21, :cond_0
 
-    .line 6956
     .end local v15    # "i$":Ljava/util/Iterator;
     .end local v25    # "values":Landroid/content/ContentValues;
     :cond_1
@@ -3918,7 +3518,6 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6957
     and-int/lit8 v26, v13, 0x1
 
     const/16 v27, 0x1
@@ -3929,7 +3528,6 @@
 
     if-eq v0, v1, :cond_4
 
-    .line 6958
     const-string v26, "DevicePolicyManagerService"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -3960,10 +3558,8 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6959
     const/16 v26, 0x0
 
-    .line 6997
     .end local v8    # "combinedUid":Ljava/lang/String;
     .end local v13    # "flags":I
     .end local v16    # "isByod":Z
@@ -3974,14 +3570,12 @@
     :goto_2
     return-object v26
 
-    .line 6931
     .restart local v17    # "ownerUid":I
     :cond_2
     const/16 v16, 0x0
 
     goto/16 :goto_0
 
-    .line 6936
     .restart local v16    # "isByod":Z
     :cond_3
     new-instance v26, Ljava/lang/StringBuilder;
@@ -4017,7 +3611,6 @@
     .restart local v8    # "combinedUid":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 6962
     .restart local v13    # "flags":I
     .restart local v19    # "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     .restart local v21    # "proxyPackageName":Ljava/lang/String;
@@ -4053,11 +3646,9 @@
 
     move-result-object v6
 
-    .line 6966
     .local v6, "avail":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-nez v6, :cond_5
 
-    .line 6967
     const-string v26, "DevicePolicyManagerService"
 
     new-instance v27, Ljava/lang/StringBuilder;
@@ -4084,7 +3675,6 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6970
     :cond_5
     const/4 v14, 0x0
 
@@ -4097,41 +3687,34 @@
     :goto_3
     if-ge v14, v9, :cond_9
 
-    .line 6971
     invoke-interface {v6, v14}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v22
 
     check-cast v22, Landroid/content/pm/ResolveInfo;
 
-    .line 6972
     .local v22, "ri":Landroid/content/pm/ResolveInfo;
     move-object/from16 v0, v22
 
     iget-object v4, v0, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 6973
     .local v4, "ai":Landroid/content/pm/ActivityInfo;
     iget-object v0, v4, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     move-object/from16 v18, v0
 
-    .line 6974
     .local v18, "packageName":Ljava/lang/String;
     iget-object v5, v4, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 6976
     .local v5, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-nez v18, :cond_7
 
-    .line 6970
     :cond_6
     :goto_4
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_3
 
-    .line 6980
     :cond_7
     move-object/from16 v0, v18
 
@@ -4145,7 +3728,6 @@
 
     if-eqz v26, :cond_6
 
-    .line 6982
     :try_start_1
     new-instance v10, Landroid/app/admin/DeviceAdminInfo;
 
@@ -4161,7 +3743,6 @@
 
     invoke-direct {v10, v0, v1}, Landroid/app/admin/DeviceAdminInfo;-><init>(Landroid/content/Context;Landroid/content/pm/ResolveInfo;)V
 
-    .line 6983
     .local v10, "dpi":Landroid/app/admin/DeviceAdminInfo;
     new-instance v26, Lcom/sec/enterprise/AppIdentity;
 
@@ -4185,12 +3766,10 @@
 
     if-eqz v26, :cond_8
 
-    .line 6984
     invoke-virtual {v10}, Landroid/app/admin/DeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v20
 
-    .line 6986
     :cond_8
     const-string v26, "DevicePolicyManagerService"
 
@@ -4228,10 +3807,8 @@
     :cond_9
     move-object/from16 v26, v20
 
-    .line 6997
     goto/16 :goto_2
 
-    .line 6988
     .restart local v4    # "ai":Landroid/content/pm/ActivityInfo;
     .restart local v5    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .restart local v18    # "packageName":Ljava/lang/String;
@@ -4239,7 +3816,6 @@
     :catch_0
     move-exception v11
 
-    .line 6989
     .local v11, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v26, "DevicePolicyManagerService"
@@ -4252,7 +3828,6 @@
 
     goto :goto_4
 
-    .line 6993
     .end local v4    # "ai":Landroid/content/pm/ActivityInfo;
     .end local v5    # "appInfo":Landroid/content/pm/ApplicationInfo;
     .end local v6    # "avail":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
@@ -4271,7 +3846,6 @@
     :catch_1
     move-exception v11
 
-    .line 6994
     .restart local v11    # "e":Ljava/lang/Exception;
     const-string v26, "DevicePolicyManagerService"
 
@@ -4297,7 +3871,6 @@
 
     invoke-static/range {v26 .. v27}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6995
     const/16 v26, 0x0
 
     goto/16 :goto_2
@@ -4310,7 +3883,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 7116
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-eqz v6, :cond_1
@@ -4321,14 +3893,12 @@
 
     move-result-object v4
 
-    .line 7118
     .local v4, "profileOwner":Landroid/content/ComponentName;
     :goto_0
     if-nez v4, :cond_2
 
     move-object v0, v5
 
-    .line 7129
     :cond_0
     :goto_1
     return-object v0
@@ -4337,17 +3907,14 @@
     :cond_1
     move-object v4, v5
 
-    .line 7116
     goto :goto_0
 
-    .line 7121
     .restart local v4    # "profileOwner":Landroid/content/ComponentName;
     :cond_2
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 7122
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v6, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -4355,7 +3922,6 @@
 
     move-result v2
 
-    .line 7123
     .local v2, "n":I
     const/4 v1, 0x0
 
@@ -4363,7 +3929,6 @@
     :goto_2
     if-ge v1, v2, :cond_3
 
-    .line 7124
     iget-object v6, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4372,7 +3937,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7125
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v6, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -4386,7 +3950,6 @@
 
     if-nez v6, :cond_0
 
-    .line 7123
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
@@ -4395,7 +3958,6 @@
     :cond_3
     move-object v0, v5
 
-    .line 7129
     goto :goto_1
 .end method
 
@@ -4404,12 +3966,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 7271
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 7273
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -4420,7 +3980,6 @@
 
     move-result-object v2
 
-    .line 7275
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v2
@@ -4447,12 +4006,10 @@
     .end annotation
 
     .prologue
-    .line 11085
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 11089
     .local v2, "ident":J
     :try_start_0
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -4461,7 +4018,6 @@
 
     move-result-object v5
 
-    .line 11090
     .local v5, "userInfo":Landroid/content/pm/UserInfo;
     invoke-virtual {v5}, Landroid/content/pm/UserInfo;->isKnoxWorkspace()Z
 
@@ -4469,30 +4025,25 @@
 
     if-eqz v6, :cond_0
 
-    .line 11091
     new-instance v4, Ljava/util/ArrayList;
 
     const/4 v6, 0x1
 
     invoke-direct {v4, v6}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 11092
     .local v4, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v4, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 11111
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 11114
     .end local v4    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     .end local v5    # "userInfo":Landroid/content/pm/UserInfo;
     :goto_0
     return-object v4
 
-    .line 11097
     .restart local v5    # "userInfo":Landroid/content/pm/UserInfo;
     :cond_0
     :try_start_1
@@ -4502,13 +4053,11 @@
 
     move-result-object v4
 
-    .line 11098
     .restart local v4    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
 
-    .line 11099
     .local v1, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/UserInfo;>;"
     :cond_1
     :goto_1
@@ -4518,7 +4067,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 11100
     invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v6
@@ -4531,7 +4079,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 11101
     invoke-interface {v1}, Ljava/util/Iterator;->remove()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -4539,14 +4086,12 @@
 
     goto :goto_1
 
-    .line 11107
     .end local v1    # "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/UserInfo;>;"
     .end local v4    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     .end local v5    # "userInfo":Landroid/content/pm/UserInfo;
     :catch_0
     move-exception v0
 
-    .line 11108
     .local v0, "e":Ljava/lang/Exception;
     :try_start_2
     const-string v6, "DevicePolicyManagerService"
@@ -4573,10 +4118,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 11111
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 11114
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v6, p1}, Landroid/os/UserManager;->getProfiles(I)Ljava/util/List;
@@ -4585,7 +4128,6 @@
 
     goto :goto_0
 
-    .line 11111
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/UserInfo;>;"
     .restart local v4    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
@@ -4610,19 +4152,16 @@
     .locals 2
 
     .prologue
-    .line 1526
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mIWindowManager:Landroid/view/IWindowManager;
 
     if-nez v1, :cond_0
 
-    .line 1527
     const-string/jumbo v1, "window"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 1528
     .local v0, "b":Landroid/os/IBinder;
     invoke-static {v0}, Landroid/view/IWindowManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/view/IWindowManager;
 
@@ -4630,7 +4169,6 @@
 
     iput-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mIWindowManager:Landroid/view/IWindowManager;
 
-    .line 1530
     .end local v0    # "b":Landroid/os/IBinder;
     :cond_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mIWindowManager:Landroid/view/IWindowManager;
@@ -4644,26 +4182,21 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1301
     const/4 v5, 0x0
 
-    .line 1303
     .local v5, "removed":Z
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v4
 
-    .line 1304
     .local v4, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v3
 
-    .line 1305
     .local v3, "pm":Landroid/content/pm/IPackageManager;
     monitor-enter p0
 
-    .line 1306
     :try_start_0
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -4677,7 +4210,6 @@
     :goto_0
     if-ltz v2, :cond_4
 
-    .line 1307
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4688,7 +4220,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1311
     .local v0, "aa":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_1
 
@@ -4701,14 +4232,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 1306
     :cond_0
     :goto_1
     add-int/lit8 v2, v2, -0x1
 
     goto :goto_0
 
-    .line 1319
     :cond_1
     iget-object v6, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -4716,7 +4245,6 @@
 
     move-result-object v1
 
-    .line 1320
     .local v1, "adminPackage":Ljava/lang/String;
     if-eqz p1, :cond_2
 
@@ -4726,7 +4254,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 1321
     :cond_2
     const/4 v6, 0x0
 
@@ -4750,16 +4277,13 @@
 
     if-nez v6, :cond_0
 
-    .line 1324
     :cond_3
     const/4 v5, 0x1
 
-    .line 1325
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1326
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminMap:Ljava/util/HashMap;
 
     iget-object v7, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
@@ -4770,10 +4294,8 @@
 
     invoke-virtual {v6, v7}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1329
     invoke-virtual {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->validatePasswordOwnerLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 1330
     iget v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserHandle:I
 
     const/4 v7, 0x0
@@ -4787,26 +4309,21 @@
 
     goto :goto_1
 
-    .line 1335
     .end local v1    # "adminPackage":Ljava/lang/String;
     :catch_0
     move-exception v6
 
     goto :goto_1
 
-    .line 1339
     .end local v0    # "aa":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_4
     if-eqz v5, :cond_5
 
-    .line 1340
     :try_start_2
     invoke-virtual {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->validatePasswordOwnerLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 1341
     invoke-virtual {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 1342
     iget v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserHandle:I
 
     const/4 v7, 0x0
@@ -4815,7 +4332,6 @@
 
     invoke-direct {p0, v6, v7, v8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 1345
     :cond_5
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mDelegatedCertInstallerPackage:Ljava/lang/String;
 
@@ -4833,7 +4349,6 @@
 
     if-eqz v6, :cond_7
 
-    .line 1350
     :cond_6
     :try_start_3
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mDelegatedCertInstallerPackage:Ljava/lang/String;
@@ -4846,12 +4361,10 @@
 
     if-nez v6, :cond_7
 
-    .line 1352
     const/4 v6, 0x0
 
     iput-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mDelegatedCertInstallerPackage:Ljava/lang/String;
 
-    .line 1353
     iget v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserHandle:I
 
     const/4 v7, 0x0
@@ -4863,16 +4376,13 @@
     .catch Landroid/os/RemoteException; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1359
     :cond_7
     :goto_2
     :try_start_4
     monitor-exit p0
 
-    .line 1360
     return-void
 
-    .line 1359
     .end local v2    # "i":I
     :catchall_0
     move-exception v6
@@ -4883,7 +4393,6 @@
 
     throw v6
 
-    .line 1355
     .restart local v2    # "i":I
     :catch_1
     move-exception v6
@@ -4896,22 +4405,18 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 2489
     monitor-enter p0
 
-    .line 2490
     :try_start_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
-    .line 2495
     .local v8, "now":J
     invoke-direct/range {p0 .. p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v11
 
-    .line 2500
     .local v11, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v11}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -4931,11 +4436,9 @@
 
     check-cast v12, Landroid/content/pm/UserInfo;
 
-    .line 2501
     .local v12, "ui":Landroid/content/pm/UserInfo;
     iget v10, v12, Landroid/content/pm/UserInfo;->id:I
 
-    .line 2502
     .local v10, "profileUserHandle":I
     move-object/from16 v0, p0
 
@@ -4943,7 +4446,6 @@
 
     move-result-object v7
 
-    .line 2503
     .local v7, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v13, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -4951,18 +4453,15 @@
 
     move-result v3
 
-    .line 2504
     .local v3, "count":I
     if-lez v3, :cond_0
 
-    .line 2505
     const/4 v4, 0x0
 
     .local v4, "i":I
     :goto_0
     if-ge v4, v3, :cond_0
 
-    .line 2506
     iget-object v13, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v13, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -4971,7 +4470,6 @@
 
     check-cast v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2507
     .local v2, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v13, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -5009,14 +4507,12 @@
 
     if-lez v13, :cond_1
 
-    .line 2511
     const-string v13, "android.app.action.ACTION_PASSWORD_EXPIRING"
 
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v2, v13}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendAdminCommandLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;Ljava/lang/String;)V
 
-    .line 2515
     iget-object v13, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v13}, Landroid/app/admin/DeviceAdminInfo;->getPackageName()Ljava/lang/String;
@@ -5031,14 +4527,12 @@
 
     if-nez v13, :cond_1
 
-    .line 2516
     new-instance v6, Landroid/content/Intent;
 
     const-string v13, "edm.intent.action.internal.NOTIFICATION_PASSWORD_EXPIRED"
 
     invoke-direct {v6, v13}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2517
     .local v6, "intent":Landroid/content/Intent;
     const-string/jumbo v13, "pkgName"
 
@@ -5050,14 +4544,12 @@
 
     invoke-virtual {v6, v13, v14}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 2518
     const-string v13, "expiration"
 
     iget-wide v14, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationDate:J
 
     invoke-virtual {v6, v13, v14, v15}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 2519
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -5070,7 +4562,6 @@
 
     invoke-virtual {v13, v6, v14}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 2528
     .end local v6    # "intent":Landroid/content/Intent;
     :cond_1
     invoke-virtual {v12}, Landroid/content/pm/UserInfo;->isKnoxWorkspace()Z
@@ -5079,7 +4570,6 @@
 
     if-eqz v13, :cond_2
 
-    .line 2529
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -5094,13 +4584,11 @@
 
     invoke-virtual {v0, v13, v14}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setExpirationAlarmCheckLocked(Landroid/content/Context;Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 2505
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_0
 
-    .line 2536
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v3    # "count":I
     .end local v4    # "i":I
@@ -5120,13 +4608,10 @@
 
     invoke-virtual {v0, v13, v14}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setExpirationAlarmCheckLocked(Landroid/content/Context;Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 2537
     monitor-exit p0
 
-    .line 2538
     return-void
 
-    .line 2537
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v8    # "now":J
     .end local v11    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
@@ -5147,23 +4632,19 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 6814
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_1
 
-    .line 6819
     :cond_0
     :goto_0
     return v1
 
-    .line 6817
     :cond_1
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
-    .line 6819
     .local v0, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     if-eqz v0, :cond_0
 
@@ -5180,14 +4661,12 @@
     .locals 4
 
     .prologue
-    .line 5227
     const-string v1, "DevicePolicyManagerService"
 
     const-string/jumbo v2, "ifExternalSdPresent() called"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5228
     invoke-static {}, Landroid/os/Environment;->getExternalStorageDirectory()Ljava/io/File;
 
     move-result-object v1
@@ -5198,7 +4677,6 @@
 
     sput-object v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->EXTERNAL_STORAGE_PATH:Ljava/lang/String;
 
-    .line 5229
     sget-object v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
     sget-object v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->EXTERNAL_STORAGE_PATH:Ljava/lang/String;
@@ -5207,7 +4685,6 @@
 
     move-result-object v0
 
-    .line 5230
     .local v0, "status":Ljava/lang/String;
     const-string v1, "DevicePolicyManagerService"
 
@@ -5231,7 +4708,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5232
     const-string/jumbo v1, "mounted"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -5248,11 +4724,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 5234
     :cond_0
     const/4 v1, 0x1
 
-    .line 5236
     :goto_0
     return v1
 
@@ -5266,12 +4740,10 @@
     .locals 2
 
     .prologue
-    .line 5222
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
     if-nez v0, :cond_0
 
-    .line 5223
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "storage"
@@ -5284,7 +4756,6 @@
 
     sput-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    .line 5224
     :cond_0
     return-void
 .end method
@@ -5293,12 +4764,10 @@
     .locals 2
 
     .prologue
-    .line 4997
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
     if-nez v0, :cond_0
 
-    .line 4998
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "storage"
@@ -5311,7 +4780,6 @@
 
     sput-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mStorageManager:Landroid/os/storage/StorageManager;
 
-    .line 4999
     :cond_0
     return-void
 .end method
@@ -5327,7 +4795,6 @@
 
     const/4 v3, 0x1
 
-    .line 1648
     iget-object v5, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v5}, Landroid/app/admin/DeviceAdminInfo;->getPackageName()Ljava/lang/String;
@@ -5338,7 +4805,6 @@
 
     move-result v0
 
-    .line 1649
     .local v0, "ownsDevice":Z
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfileOwner(I)Landroid/content/ComponentName;
 
@@ -5368,7 +4834,6 @@
 
     move v2, v3
 
-    .line 1652
     .local v2, "ownsProfile":Z
     :goto_0
     iget-object v5, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
@@ -5391,14 +4856,12 @@
 
     move v1, v3
 
-    .line 1655
     .local v1, "ownsInitialization":Z
     :goto_1
     const/4 v5, -0x2
 
     if-ne p2, v5, :cond_4
 
-    .line 1656
     if-nez p3, :cond_0
 
     if-nez v0, :cond_1
@@ -5410,7 +4873,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 1686
     :cond_1
     :goto_2
     return v3
@@ -5420,24 +4882,20 @@
     :cond_2
     move v2, v4
 
-    .line 1649
     goto :goto_0
 
     .restart local v2    # "ownsProfile":Z
     :cond_3
     move v1, v4
 
-    .line 1652
     goto :goto_1
 
-    .line 1660
     .restart local v1    # "ownsInitialization":Z
     :cond_4
     const/4 v5, -0x1
 
     if-ne p2, v5, :cond_7
 
-    .line 1661
     if-nez p3, :cond_5
 
     if-nez v0, :cond_1
@@ -5450,10 +4908,8 @@
     :cond_6
     move v3, v4
 
-    .line 1686
     goto :goto_2
 
-    .line 1681
     :cond_7
     iget-object v5, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -5472,43 +4928,35 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 4854
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 4855
     .local v0, "callingUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
-    .line 4856
     .local v4, "userHandle":I
     monitor-enter p0
 
-    .line 4857
     :try_start_0
     invoke-virtual {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 4858
     .local v2, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v6, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mDelegatedCertInstallerPackage:Ljava/lang/String;
 
     if-nez v6, :cond_0
 
-    .line 4859
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4867
     :goto_0
     return v5
 
-    .line 4863
     :cond_0
     :try_start_1
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -5526,7 +4974,6 @@
 
     move-result v3
 
-    .line 4865
     .local v3, "uid":I
     if-ne v3, v0, :cond_1
 
@@ -5538,7 +4985,6 @@
 
     goto :goto_0
 
-    .line 4869
     .end local v2    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     .end local v3    # "uid":I
     :catchall_0
@@ -5550,12 +4996,10 @@
 
     throw v5
 
-    .line 4866
     .restart local v2    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catch_0
     move-exception v1
 
-    .line 4867
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_3
     monitor-exit p0
@@ -5570,7 +5014,6 @@
     .param p1, "callerUid"    # I
 
     .prologue
-    .line 10460
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v5}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -5581,7 +5024,6 @@
 
     move-result-object v4
 
-    .line 10461
     .local v4, "pkgs":[Ljava/lang/String;
     move-object v0, v4
 
@@ -5597,7 +5039,6 @@
 
     aget-object v3, v0, v1
 
-    .line 10462
     .local v3, "pkg":Ljava/lang/String;
     invoke-virtual {p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isDeviceOwner(Ljava/lang/String;)Z
 
@@ -5611,23 +5052,19 @@
 
     if-eqz v5, :cond_1
 
-    .line 10463
     :cond_0
     const/4 v5, 0x1
 
-    .line 10466
     .end local v3    # "pkg":Ljava/lang/String;
     :goto_1
     return v5
 
-    .line 10461
     .restart local v3    # "pkg":Ljava/lang/String;
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 10466
     .end local v3    # "pkg":Ljava/lang/String;
     :cond_2
     const/4 v5, 0x0
@@ -5640,10 +5077,8 @@
     .param p1, "cls"    # Ljava/lang/String;
 
     .prologue
-    .line 8797
     const/4 v0, 0x0
 
-    .line 8799
     .local v0, "result":Z
     const-string v1, "com.android.email.SecurityPolicy$PolicyAdmin"
 
@@ -5661,11 +5096,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 8801
     :cond_0
     const/4 v0, 0x1
 
-    .line 8803
     :cond_1
     return v0
 .end method
@@ -5675,10 +5108,8 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 8788
     const/4 v0, 0x0
 
-    .line 8790
     .local v0, "result":Z
     const-string v1, "com.android.email"
 
@@ -5696,11 +5127,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 8791
     :cond_0
     const/4 v0, 0x1
 
-    .line 8793
     :cond_1
     return v0
 .end method
@@ -5709,7 +5138,6 @@
     .locals 1
 
     .prologue
-    .line 6034
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEncryptionStatus()I
 
     move-result v0
@@ -5731,14 +5159,12 @@
     .locals 2
 
     .prologue
-    .line 4836
     const-string/jumbo v1, "vold.decrypt"
 
     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 4837
     .local v0, "state":Ljava/lang/String;
     const-string v1, ""
 
@@ -5764,12 +5190,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 11076
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 11078
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -5784,7 +5208,6 @@
 
     move-result v2
 
-    .line 11080
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -5805,12 +5228,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 10416
     iget v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
     if-ge v1, p1, :cond_0
 
-    .line 10419
     :goto_0
     return v0
 
@@ -5829,21 +5250,17 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 11045
     const/4 v2, 0x0
 
-    .line 11048
     .local v2, "ret":Z
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v1
 
-    .line 11049
     .local v1, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v1, :cond_0
 
-    .line 11050
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->getPasswordPolicy()Landroid/app/enterprise/PasswordPolicy;
 
     move-result-object v3
@@ -5852,12 +5269,10 @@
 
     move-result v2
 
-    .line 11058
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :goto_0
     return v2
 
-    .line 11052
     .restart local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :cond_0
     const-string v3, "DevicePolicyManagerService"
@@ -5870,12 +5285,10 @@
 
     goto :goto_0
 
-    .line 11054
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :catch_0
     move-exception v0
 
-    .line 11055
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "DevicePolicyManagerService"
 
@@ -5891,12 +5304,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 7280
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 7282
     .local v0, "ident":J
     :try_start_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -5911,7 +5322,6 @@
 
     move-result v2
 
-    .line 7284
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return v2
@@ -5929,14 +5339,11 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 7021
     const-string v1, "com.sec.enterprise.knox.cloudmdm.smdms.agent.global.myknox"
 
-    .line 7022
     .local v1, "MY_KNOX_MANAGER_PACKAGE_NAME_GLOBAL":Ljava/lang/String;
     const-string v0, "com.sec.enterprise.knox.cloudmdm.smdms.agent.myknox"
 
-    .line 7023
     .local v0, "MY_KNOX_MANAGER_PACKAGE_NAME_CHINA":Ljava/lang/String;
     const-string v2, "com.sec.enterprise.knox.cloudmdm.smdms.agent.global.myknox"
 
@@ -5954,11 +5361,9 @@
 
     if-eqz v2, :cond_1
 
-    .line 7025
     :cond_0
     const/4 v2, 0x1
 
-    .line 7028
     :goto_0
     return v2
 
@@ -5974,18 +5379,14 @@
     .param p2, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 8807
     const-string v0, "com.samsung.android.permission.SAMSUNG_OVERLAY_THEME"
 
-    .line 8808
     .local v0, "masterPkg":Ljava/lang/String;
     const-string v1, "com.samsung.android.permission.SAMSUNG_OVERLAY_COMPONENT"
 
-    .line 8809
     .local v1, "overlayPkg":Ljava/lang/String;
     const/4 v2, 0x0
 
-    .line 8811
     .local v2, "result":Z
     const/4 v3, 0x0
 
@@ -5996,15 +5397,12 @@
 
     if-nez v3, :cond_1
 
-    .line 8812
     const/4 v2, 0x1
 
-    .line 8817
     :cond_0
     :goto_0
     return v2
 
-    .line 8813
     :cond_1
     const/4 v3, 0x0
 
@@ -6016,12 +5414,10 @@
 
     if-nez v3, :cond_0
 
-    .line 8814
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 8815
     :catch_0
     move-exception v3
 
@@ -6033,21 +5429,17 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 11025
     const/4 v2, 0x1
 
-    .line 11028
     .local v2, "ret":Z
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v1
 
-    .line 11029
     .local v1, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v1, :cond_0
 
-    .line 11030
     invoke-virtual {v1}, Landroid/app/enterprise/EnterpriseDeviceManager;->getPasswordPolicy()Landroid/app/enterprise/PasswordPolicy;
 
     move-result-object v3
@@ -6058,12 +5450,10 @@
 
     move-result v2
 
-    .line 11041
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :goto_0
     return v2
 
-    .line 11032
     .restart local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :cond_0
     const-string v3, "DevicePolicyManagerService"
@@ -6076,12 +5466,10 @@
 
     goto :goto_0
 
-    .line 11034
     .end local v1    # "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     :catch_0
     move-exception v0
 
-    .line 11035
     .local v0, "e":Ljava/lang/Exception;
     const-string v3, "DevicePolicyManagerService"
 
@@ -6104,18 +5492,15 @@
     .end annotation
 
     .prologue
-    .line 9769
     const/16 v1, 0x2000
 
     invoke-interface {p1, p2, v1, p3}, Landroid/content/pm/IPackageManager;->getApplicationInfo(Ljava/lang/String;II)Landroid/content/pm/ApplicationInfo;
 
     move-result-object v0
 
-    .line 9771
     .local v0, "appInfo":Landroid/content/pm/ApplicationInfo;
     if-nez v0, :cond_0
 
-    .line 9772
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -6146,7 +5531,6 @@
 
     throw v1
 
-    .line 9775
     :cond_0
     iget v1, v0, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -6171,26 +5555,21 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 2086
     const/16 v18, 0x1
 
-    .line 2088
     .local v18, "result":Z
     invoke-static/range {p2 .. p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->makeJournaledFile(I)Lcom/android/internal/util/JournaledFile;
 
     move-result-object v9
 
-    .line 2089
     .local v9, "journal":Lcom/android/internal/util/JournaledFile;
     const/16 v19, 0x0
 
-    .line 2090
     .local v19, "stream":Ljava/io/FileInputStream;
     invoke-virtual {v9}, Lcom/android/internal/util/JournaledFile;->chooseForRead()Ljava/io/File;
 
     move-result-object v7
 
-    .line 2092
     .local v7, "file":Ljava/io/File;
     :try_start_0
     new-instance v20, Ljava/io/FileInputStream;
@@ -6207,7 +5586,6 @@
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_9
     .catchall {:try_start_0 .. :try_end_0} :catchall_2
 
-    .line 2093
     .end local v19    # "stream":Ljava/io/FileInputStream;
     .local v20, "stream":Ljava/io/FileInputStream;
     :try_start_1
@@ -6215,7 +5593,6 @@
 
     move-result-object v14
 
-    .line 2094
     .local v14, "parser":Lorg/xmlpull/v1/XmlPullParser;
     sget-object v25, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -6229,7 +5606,6 @@
 
     invoke-interface {v14, v0, v1}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 2098
     :cond_0
     invoke-interface {v14}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
@@ -6252,13 +5628,11 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2100
     :cond_1
     invoke-interface {v14}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v21
 
-    .line 2101
     .local v21, "tag":Ljava/lang/String;
     const-string/jumbo v25, "policies"
 
@@ -6280,10 +5654,8 @@
 
     if-nez v25, :cond_3
 
-    .line 2103
     if-eqz v20, :cond_2
 
-    .line 2104
     :try_start_2
     invoke-virtual/range {v20 .. v20}, Ljava/io/FileInputStream;->close()V
     :try_end_2
@@ -6295,7 +5667,6 @@
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_2 .. :try_end_2} :catch_6
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 2107
     :cond_2
     :goto_0
     :try_start_3
@@ -6335,7 +5706,6 @@
     .catch Ljava/lang/IndexOutOfBoundsException; {:try_start_3 .. :try_end_3} :catch_6
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2260
     .end local v14    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v21    # "tag":Ljava/lang/String;
     .end local v22    # "type":I
@@ -6344,14 +5714,12 @@
 
     move-object/from16 v19, v20
 
-    .line 2261
     .end local v20    # "stream":Ljava/io/FileInputStream;
     .local v6, "e":Ljava/lang/NullPointerException;
     .restart local v19    # "stream":Ljava/io/FileInputStream;
     :goto_1
     const/16 v18, 0x0
 
-    .line 2262
     :try_start_4
     const-string v25, "DevicePolicyManagerService"
 
@@ -6391,7 +5759,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 2278
     if-nez v18, :cond_26
 
     move-object/from16 v0, p0
@@ -6402,7 +5769,6 @@
 
     if-nez v25, :cond_26
 
-    .line 2279
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -6419,7 +5785,6 @@
     :goto_2
     if-ltz v8, :cond_26
 
-    .line 2280
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -6434,7 +5799,6 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2281
     .local v4, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, p1
 
@@ -6452,7 +5816,6 @@
 
     invoke-virtual/range {v25 .. v26}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2282
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -6463,12 +5826,10 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2279
     add-int/lit8 v8, v8, -0x1
 
     goto :goto_2
 
-    .line 2112
     .end local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v6    # "e":Ljava/lang/NullPointerException;
     .end local v8    # "i":I
@@ -6491,11 +5852,9 @@
 
     move-result-object v16
 
-    .line 2113
     .local v16, "permissionProvider":Ljava/lang/String;
     if-eqz v16, :cond_4
 
-    .line 2114
     invoke-static/range {v16 .. v16}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
 
     move-result-object v25
@@ -6506,7 +5865,6 @@
 
     iput-object v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mRestrictionsProvider:Landroid/content/ComponentName;
 
-    .line 2116
     :cond_4
     const/16 v25, 0x0
 
@@ -6520,7 +5878,6 @@
 
     move-result-object v23
 
-    .line 2117
     .local v23, "userSetupComplete":Ljava/lang/String;
     if-eqz v23, :cond_5
 
@@ -6540,7 +5897,6 @@
 
     if-eqz v25, :cond_5
 
-    .line 2118
     const/16 v25, 0x1
 
     move/from16 v0, v25
@@ -6549,7 +5905,6 @@
 
     iput-boolean v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserSetupComplete:Z
 
-    .line 2120
     :cond_5
     const/16 v25, 0x0
 
@@ -6563,7 +5918,6 @@
 
     move-result-object v15
 
-    .line 2121
     .local v15, "permissionPolicy":Ljava/lang/String;
     invoke-static {v15}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -6571,7 +5925,6 @@
 
     if-nez v25, :cond_6
 
-    .line 2122
     invoke-static {v15}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v25
@@ -6582,7 +5935,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPermissionPolicy:I
 
-    .line 2124
     :cond_6
     const/16 v25, 0x0
 
@@ -6602,17 +5954,14 @@
 
     iput-object v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mDelegatedCertInstallerPackage:Ljava/lang/String;
 
-    .line 2127
     invoke-interface {v14}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v22
 
-    .line 2128
     invoke-interface {v14}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v13
 
-    .line 2129
     .local v13, "outerDepth":I
     move-object/from16 v0, p1
 
@@ -6622,7 +5971,6 @@
 
     invoke-interface/range {v25 .. v25}, Ljava/util/List;->clear()V
 
-    .line 2130
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -6631,7 +5979,6 @@
 
     invoke-virtual/range {v25 .. v25}, Ljava/util/ArrayList;->clear()V
 
-    .line 2131
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminMap:Ljava/util/HashMap;
@@ -6640,7 +5987,6 @@
 
     invoke-virtual/range {v25 .. v25}, Ljava/util/HashMap;->clear()V
 
-    .line 2133
     :cond_7
     :goto_3
     invoke-interface {v14}, Lorg/xmlpull/v1/XmlPullParser;->next()I
@@ -6671,7 +6017,6 @@
 
     if-le v0, v13, :cond_24
 
-    .line 2134
     :cond_8
     const/16 v25, 0x3
 
@@ -6689,12 +6034,10 @@
 
     if-eq v0, v1, :cond_7
 
-    .line 2137
     invoke-interface {v14}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v21
 
-    .line 2138
     const-string v25, "admin"
 
     move-object/from16 v0, v25
@@ -6707,7 +6050,6 @@
 
     if-eqz v25, :cond_9
 
-    .line 2139
     const/16 v25, 0x0
 
     const-string/jumbo v26, "name"
@@ -6728,7 +6070,6 @@
 
     move-result-object v12
 
-    .line 2141
     .local v12, "name":Ljava/lang/String;
     :try_start_6
     invoke-static {v12}, Landroid/content/ComponentName;->unflattenFromString(Ljava/lang/String;)Landroid/content/ComponentName;
@@ -6745,20 +6086,16 @@
 
     move-result-object v5
 
-    .line 2149
     .local v5, "dai":Landroid/app/admin/DeviceAdminInfo;
     if-eqz v5, :cond_7
 
-    .line 2150
     new-instance v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     invoke-direct {v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;-><init>(Landroid/app/admin/DeviceAdminInfo;)V
 
-    .line 2151
     .restart local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     invoke-virtual {v4, v14}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->readFromXml(Lorg/xmlpull/v1/XmlPullParser;)V
 
-    .line 2152
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminMap:Ljava/util/HashMap;
@@ -6790,13 +6127,11 @@
 
     goto :goto_3
 
-    .line 2154
     .end local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v5    # "dai":Landroid/app/admin/DeviceAdminInfo;
     :catch_1
     move-exception v6
 
-    .line 2155
     .local v6, "e":Ljava/lang/RuntimeException;
     :try_start_7
     const-string v25, "DevicePolicyManagerService"
@@ -6837,7 +6172,6 @@
 
     goto/16 :goto_3
 
-    .line 2263
     .end local v6    # "e":Ljava/lang/RuntimeException;
     .end local v12    # "name":Ljava/lang/String;
     .end local v13    # "outerDepth":I
@@ -6852,14 +6186,12 @@
 
     move-object/from16 v19, v20
 
-    .line 2264
     .end local v20    # "stream":Ljava/io/FileInputStream;
     .local v6, "e":Ljava/lang/NumberFormatException;
     .restart local v19    # "stream":Ljava/io/FileInputStream;
     :goto_4
     const/16 v18, 0x0
 
-    .line 2265
     :try_start_8
     const-string v25, "DevicePolicyManagerService"
 
@@ -6899,7 +6231,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 2278
     if-nez v18, :cond_26
 
     move-object/from16 v0, p0
@@ -6910,7 +6241,6 @@
 
     if-nez v25, :cond_26
 
-    .line 2279
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -6927,7 +6257,6 @@
     :goto_5
     if-ltz v8, :cond_26
 
-    .line 2280
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -6942,7 +6271,6 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2281
     .restart local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, p1
 
@@ -6960,7 +6288,6 @@
 
     invoke-virtual/range {v25 .. v26}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2282
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -6971,12 +6298,10 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2279
     add-int/lit8 v8, v8, -0x1
 
     goto :goto_5
 
-    .line 2157
     .end local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     .end local v8    # "i":I
@@ -7003,7 +6328,6 @@
 
     if-eqz v25, :cond_b
 
-    .line 2158
     const/16 v25, 0x0
 
     const-string/jumbo v26, "value"
@@ -7018,7 +6342,6 @@
 
     if-eqz v25, :cond_a
 
-    .line 2159
     const/16 v25, 0x0
 
     const-string/jumbo v26, "value"
@@ -7041,7 +6364,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mFailedPasswordAttempts:I
 
-    .line 2162
     :cond_a
     invoke-static {v14}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_9
@@ -7055,7 +6377,6 @@
 
     goto/16 :goto_3
 
-    .line 2266
     .end local v13    # "outerDepth":I
     .end local v14    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v15    # "permissionPolicy":Ljava/lang/String;
@@ -7068,14 +6389,12 @@
 
     move-object/from16 v19, v20
 
-    .line 2267
     .end local v20    # "stream":Ljava/io/FileInputStream;
     .local v6, "e":Lorg/xmlpull/v1/XmlPullParserException;
     .restart local v19    # "stream":Ljava/io/FileInputStream;
     :goto_6
     const/16 v18, 0x0
 
-    .line 2268
     :try_start_a
     const-string v25, "DevicePolicyManagerService"
 
@@ -7115,7 +6434,6 @@
     :try_end_a
     .catchall {:try_start_a .. :try_end_a} :catchall_2
 
-    .line 2278
     if-nez v18, :cond_26
 
     move-object/from16 v0, p0
@@ -7126,7 +6444,6 @@
 
     if-nez v25, :cond_26
 
-    .line 2279
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -7143,7 +6460,6 @@
     :goto_7
     if-ltz v8, :cond_26
 
-    .line 2280
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -7158,7 +6474,6 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2281
     .restart local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, p1
 
@@ -7176,7 +6491,6 @@
 
     invoke-virtual/range {v25 .. v26}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2282
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -7187,12 +6501,10 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2279
     add-int/lit8 v8, v8, -0x1
 
     goto :goto_7
 
-    .line 2163
     .end local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v6    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     .end local v8    # "i":I
@@ -7219,7 +6531,6 @@
 
     if-eqz v25, :cond_d
 
-    .line 2164
     const/16 v25, 0x0
 
     const-string/jumbo v26, "value"
@@ -7234,7 +6545,6 @@
 
     if-eqz v25, :cond_c
 
-    .line 2165
     const/16 v25, 0x0
 
     const-string/jumbo v26, "value"
@@ -7257,7 +6567,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPasswordOwner:I
 
-    .line 2168
     :cond_c
     invoke-static {v14}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_b
@@ -7271,7 +6580,6 @@
 
     goto/16 :goto_3
 
-    .line 2269
     .end local v13    # "outerDepth":I
     .end local v14    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v15    # "permissionPolicy":Ljava/lang/String;
@@ -7284,7 +6592,6 @@
 
     move-object/from16 v19, v20
 
-    .line 2278
     .end local v20    # "stream":Ljava/io/FileInputStream;
     .restart local v19    # "stream":Ljava/io/FileInputStream;
     :goto_8
@@ -7298,7 +6605,6 @@
 
     if-nez v25, :cond_26
 
-    .line 2279
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -7315,7 +6621,6 @@
     :goto_9
     if-ltz v8, :cond_26
 
-    .line 2280
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -7330,7 +6635,6 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2281
     .restart local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, p1
 
@@ -7348,7 +6652,6 @@
 
     invoke-virtual/range {v25 .. v26}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2282
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -7359,12 +6662,10 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2279
     add-int/lit8 v8, v8, -0x1
 
     goto :goto_9
 
-    .line 2169
     .end local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v8    # "i":I
     .end local v19    # "stream":Ljava/io/FileInputStream;
@@ -7390,7 +6691,6 @@
 
     if-eqz v25, :cond_17
 
-    .line 2170
     const/16 v25, 0x0
 
     const-string/jumbo v26, "quality"
@@ -7405,7 +6705,6 @@
 
     if-eqz v25, :cond_e
 
-    .line 2171
     const/16 v25, 0x0
 
     const-string/jumbo v26, "quality"
@@ -7428,7 +6727,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
 
-    .line 2174
     :cond_e
     const/16 v25, 0x0
 
@@ -7444,7 +6742,6 @@
 
     if-eqz v25, :cond_f
 
-    .line 2175
     const/16 v25, 0x0
 
     const-string/jumbo v26, "length"
@@ -7467,7 +6764,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLength:I
 
-    .line 2178
     :cond_f
     const/16 v25, 0x0
 
@@ -7483,7 +6779,6 @@
 
     if-eqz v25, :cond_10
 
-    .line 2179
     const/16 v25, 0x0
 
     const-string/jumbo v26, "uppercase"
@@ -7506,7 +6801,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordUpperCase:I
 
-    .line 2182
     :cond_10
     const/16 v25, 0x0
 
@@ -7522,7 +6816,6 @@
 
     if-eqz v25, :cond_11
 
-    .line 2183
     const/16 v25, 0x0
 
     const-string/jumbo v26, "lowercase"
@@ -7545,7 +6838,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLowerCase:I
 
-    .line 2186
     :cond_11
     const/16 v25, 0x0
 
@@ -7561,7 +6853,6 @@
 
     if-eqz v25, :cond_12
 
-    .line 2187
     const/16 v25, 0x0
 
     const-string/jumbo v26, "letters"
@@ -7584,7 +6875,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLetters:I
 
-    .line 2190
     :cond_12
     const/16 v25, 0x0
 
@@ -7600,7 +6890,6 @@
 
     if-eqz v25, :cond_13
 
-    .line 2191
     const/16 v25, 0x0
 
     const-string/jumbo v26, "numeric"
@@ -7623,7 +6912,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNumeric:I
 
-    .line 2194
     :cond_13
     const/16 v25, 0x0
 
@@ -7639,7 +6927,6 @@
 
     if-eqz v25, :cond_14
 
-    .line 2195
     const/16 v25, 0x0
 
     const-string/jumbo v26, "symbols"
@@ -7662,7 +6949,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordSymbols:I
 
-    .line 2198
     :cond_14
     const/16 v25, 0x0
 
@@ -7678,7 +6964,6 @@
 
     if-eqz v25, :cond_15
 
-    .line 2199
     const/16 v25, 0x0
 
     const-string/jumbo v26, "nonletter"
@@ -7701,7 +6986,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNonLetter:I
 
-    .line 2203
     :cond_15
     const/16 v25, 0x0
 
@@ -7717,7 +7001,6 @@
 
     if-eqz v25, :cond_16
 
-    .line 2204
     const/16 v25, 0x0
 
     const-string/jumbo v26, "recoverable"
@@ -7740,7 +7023,6 @@
 
     iput-boolean v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordRecoverable:Z
 
-    .line 2208
     :cond_16
     invoke-static {v14}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_c
@@ -7754,7 +7036,6 @@
 
     goto/16 :goto_3
 
-    .line 2271
     .end local v13    # "outerDepth":I
     .end local v14    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v15    # "permissionPolicy":Ljava/lang/String;
@@ -7767,14 +7048,12 @@
 
     move-object/from16 v19, v20
 
-    .line 2272
     .end local v20    # "stream":Ljava/io/FileInputStream;
     .local v6, "e":Ljava/io/IOException;
     .restart local v19    # "stream":Ljava/io/FileInputStream;
     :goto_a
     const/16 v18, 0x0
 
-    .line 2273
     :try_start_d
     const-string v25, "DevicePolicyManagerService"
 
@@ -7814,7 +7093,6 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_2
 
-    .line 2278
     if-nez v18, :cond_26
 
     move-object/from16 v0, p0
@@ -7825,7 +7103,6 @@
 
     if-nez v25, :cond_26
 
-    .line 2279
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -7842,7 +7119,6 @@
     :goto_b
     if-ltz v8, :cond_26
 
-    .line 2280
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -7857,7 +7133,6 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2281
     .restart local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, p1
 
@@ -7875,7 +7150,6 @@
 
     invoke-virtual/range {v25 .. v26}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2282
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -7886,12 +7160,10 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2279
     add-int/lit8 v8, v8, -0x1
 
     goto :goto_b
 
-    .line 2212
     .end local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v6    # "e":Ljava/io/IOException;
     .end local v8    # "i":I
@@ -7928,7 +7200,6 @@
 
     if-eqz v25, :cond_20
 
-    .line 2213
     const/16 v25, 0x0
 
     const-string/jumbo v26, "quality"
@@ -7943,7 +7214,6 @@
 
     if-eqz v25, :cond_18
 
-    .line 2214
     const/16 v25, 0x0
 
     const-string/jumbo v26, "quality"
@@ -7966,7 +7236,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordQuality:I
 
-    .line 2217
     :cond_18
     const/16 v25, 0x0
 
@@ -7982,7 +7251,6 @@
 
     if-eqz v25, :cond_19
 
-    .line 2218
     const/16 v25, 0x0
 
     const-string/jumbo v26, "length"
@@ -8005,7 +7273,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLength:I
 
-    .line 2221
     :cond_19
     const/16 v25, 0x0
 
@@ -8021,7 +7288,6 @@
 
     if-eqz v25, :cond_1a
 
-    .line 2222
     const/16 v25, 0x0
 
     const-string/jumbo v26, "uppercase"
@@ -8044,7 +7310,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordUpperCase:I
 
-    .line 2225
     :cond_1a
     const/16 v25, 0x0
 
@@ -8060,7 +7325,6 @@
 
     if-eqz v25, :cond_1b
 
-    .line 2226
     const/16 v25, 0x0
 
     const-string/jumbo v26, "lowercase"
@@ -8083,7 +7347,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLowerCase:I
 
-    .line 2229
     :cond_1b
     const/16 v25, 0x0
 
@@ -8099,7 +7362,6 @@
 
     if-eqz v25, :cond_1c
 
-    .line 2230
     const/16 v25, 0x0
 
     const-string/jumbo v26, "letters"
@@ -8122,7 +7384,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLetters:I
 
-    .line 2233
     :cond_1c
     const/16 v25, 0x0
 
@@ -8138,7 +7399,6 @@
 
     if-eqz v25, :cond_1d
 
-    .line 2234
     const/16 v25, 0x0
 
     const-string/jumbo v26, "numeric"
@@ -8161,7 +7421,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordNumeric:I
 
-    .line 2237
     :cond_1d
     const/16 v25, 0x0
 
@@ -8177,7 +7436,6 @@
 
     if-eqz v25, :cond_1e
 
-    .line 2238
     const/16 v25, 0x0
 
     const-string/jumbo v26, "symbols"
@@ -8200,7 +7458,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordSymbols:I
 
-    .line 2241
     :cond_1e
     const/16 v25, 0x0
 
@@ -8216,7 +7473,6 @@
 
     if-eqz v25, :cond_1f
 
-    .line 2242
     const/16 v25, 0x0
 
     const-string/jumbo v26, "nonletter"
@@ -8239,7 +7495,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordNonLetter:I
 
-    .line 2245
     :cond_1f
     invoke-static {v14}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_e
@@ -8253,7 +7508,6 @@
 
     goto/16 :goto_3
 
-    .line 2274
     .end local v13    # "outerDepth":I
     .end local v14    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v15    # "permissionPolicy":Ljava/lang/String;
@@ -8266,14 +7520,12 @@
 
     move-object/from16 v19, v20
 
-    .line 2275
     .end local v20    # "stream":Ljava/io/FileInputStream;
     .local v6, "e":Ljava/lang/IndexOutOfBoundsException;
     .restart local v19    # "stream":Ljava/io/FileInputStream;
     :goto_c
     const/16 v18, 0x0
 
-    .line 2276
     :try_start_f
     const-string v25, "DevicePolicyManagerService"
 
@@ -8313,7 +7565,6 @@
     :try_end_f
     .catchall {:try_start_f .. :try_end_f} :catchall_2
 
-    .line 2278
     if-nez v18, :cond_26
 
     move-object/from16 v0, p0
@@ -8324,7 +7575,6 @@
 
     if-nez v25, :cond_26
 
-    .line 2279
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -8341,7 +7591,6 @@
     :goto_d
     if-ltz v8, :cond_26
 
-    .line 2280
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -8356,7 +7605,6 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2281
     .restart local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, p1
 
@@ -8374,7 +7622,6 @@
 
     invoke-virtual/range {v25 .. v26}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2282
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -8385,12 +7632,10 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2279
     add-int/lit8 v8, v8, -0x1
 
     goto :goto_d
 
-    .line 2248
     .end local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v6    # "e":Ljava/lang/IndexOutOfBoundsException;
     .end local v8    # "i":I
@@ -8417,7 +7662,6 @@
 
     if-eqz v25, :cond_21
 
-    .line 2249
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mLockTaskPackages:Ljava/util/List;
@@ -8448,7 +7692,6 @@
 
     goto/16 :goto_3
 
-    .line 2278
     .end local v13    # "outerDepth":I
     .end local v14    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v15    # "permissionPolicy":Ljava/lang/String;
@@ -8474,7 +7717,6 @@
 
     if-nez v26, :cond_2a
 
-    .line 2279
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -8491,7 +7733,6 @@
     :goto_f
     if-ltz v8, :cond_2a
 
-    .line 2280
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -8506,7 +7747,6 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2281
     .restart local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, p1
 
@@ -8524,7 +7764,6 @@
 
     invoke-virtual/range {v26 .. v27}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2282
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -8535,12 +7774,10 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2279
     add-int/lit8 v8, v8, -0x1
 
     goto :goto_f
 
-    .line 2250
     .end local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v8    # "i":I
     .end local v19    # "stream":Ljava/io/FileInputStream;
@@ -8566,7 +7803,6 @@
 
     if-eqz v25, :cond_22
 
-    .line 2251
     const/16 v25, 0x0
 
     const-string v26, "disabled"
@@ -8591,7 +7827,6 @@
 
     goto/16 :goto_3
 
-    .line 2253
     :cond_22
     const-string v25, "do-not-ask-credentials-on-boot"
 
@@ -8605,7 +7840,6 @@
 
     if-eqz v25, :cond_23
 
-    .line 2254
     const/16 v25, 0x1
 
     move/from16 v0, v25
@@ -8616,7 +7850,6 @@
 
     goto/16 :goto_3
 
-    .line 2256
     :cond_23
     const-string v25, "DevicePolicyManagerService"
 
@@ -8644,7 +7877,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2257
     invoke-static {v14}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
     :try_end_11
     .catch Ljava/lang/NullPointerException; {:try_start_11 .. :try_end_11} :catch_0
@@ -8657,7 +7889,6 @@
 
     goto/16 :goto_3
 
-    .line 2278
     :cond_24
     if-nez v18, :cond_2b
 
@@ -8669,7 +7900,6 @@
 
     if-nez v25, :cond_2b
 
-    .line 2279
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -8686,7 +7916,6 @@
     :goto_10
     if-ltz v8, :cond_25
 
-    .line 2280
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -8701,7 +7930,6 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2281
     .restart local v4    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, p1
 
@@ -8719,7 +7947,6 @@
 
     invoke-virtual/range {v25 .. v26}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2282
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -8730,7 +7957,6 @@
 
     invoke-virtual {v0, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2279
     add-int/lit8 v8, v8, -0x1
 
     goto :goto_10
@@ -8739,7 +7965,6 @@
     :cond_25
     move-object/from16 v19, v20
 
-    .line 2287
     .end local v8    # "i":I
     .end local v13    # "outerDepth":I
     .end local v14    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -8754,13 +7979,11 @@
     :goto_11
     if-eqz v19, :cond_27
 
-    .line 2288
     :try_start_12
     invoke-virtual/range {v19 .. v19}, Ljava/io/FileInputStream;->close()V
     :try_end_12
     .catch Ljava/io/IOException; {:try_start_12 .. :try_end_12} :catch_8
 
-    .line 2295
     :cond_27
     :goto_12
     move-object/from16 v0, p1
@@ -8781,12 +8004,10 @@
 
     invoke-virtual/range {v25 .. v26}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 2301
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 2303
     .local v10, "identity":J
     :try_start_13
     new-instance v24, Lcom/android/internal/widget/LockPatternUtils;
@@ -8799,7 +8020,6 @@
 
     invoke-direct/range {v24 .. v25}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 2304
     .local v24, "utils":Lcom/android/internal/widget/LockPatternUtils;
     move-object/from16 v0, v24
 
@@ -8821,7 +8041,6 @@
 
     if-ge v0, v1, :cond_28
 
-    .line 2305
     const-string v25, "DevicePolicyManagerService"
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -8876,7 +8095,6 @@
 
     invoke-static/range {v25 .. v26}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2310
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -8891,7 +8109,6 @@
 
     check-cast v17, Landroid/os/PersonaManager;
 
-    .line 2311
     .local v17, "persona":Landroid/os/PersonaManager;
     move-object/from16 v0, v17
 
@@ -8903,7 +8120,6 @@
 
     if-nez v25, :cond_28
 
-    .line 2313
     const/16 v25, 0x0
 
     move/from16 v0, v25
@@ -8912,7 +8128,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
 
-    .line 2314
     const/16 v25, 0x0
 
     move/from16 v0, v25
@@ -8921,7 +8136,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLength:I
 
-    .line 2315
     const/16 v25, 0x0
 
     move/from16 v0, v25
@@ -8930,7 +8144,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordUpperCase:I
 
-    .line 2316
     const/16 v25, 0x0
 
     move/from16 v0, v25
@@ -8939,7 +8152,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLowerCase:I
 
-    .line 2317
     const/16 v25, 0x0
 
     move/from16 v0, v25
@@ -8948,7 +8160,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLetters:I
 
-    .line 2318
     const/16 v25, 0x0
 
     move/from16 v0, v25
@@ -8957,7 +8168,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNumeric:I
 
-    .line 2319
     const/16 v25, 0x0
 
     move/from16 v0, v25
@@ -8966,7 +8176,6 @@
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordSymbols:I
 
-    .line 2320
     const/16 v25, 0x0
 
     move/from16 v0, v25
@@ -8977,28 +8186,22 @@
     :try_end_13
     .catchall {:try_start_13 .. :try_end_13} :catchall_1
 
-    .line 2324
     .end local v17    # "persona":Landroid/os/PersonaManager;
     :cond_28
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2327
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->validatePasswordOwnerLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 2328
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 2329
     invoke-virtual/range {p0 .. p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateMaximumTimeToLockLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 2330
     move-object/from16 v0, p0
 
     move/from16 v1, p2
 
     invoke-direct {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->addDeviceInitializerToLockTaskPackagesLocked(I)V
 
-    .line 2331
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mLockTaskPackages:Ljava/util/List;
@@ -9013,7 +8216,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateLockTaskPackagesLocked(Ljava/util/List;I)V
 
-    .line 2332
     move-object/from16 v0, p1
 
     iget-boolean v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mStatusBarDisabled:Z
@@ -9022,7 +8224,6 @@
 
     if-eqz v25, :cond_29
 
-    .line 2333
     move-object/from16 v0, p1
 
     iget-boolean v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mStatusBarDisabled:Z
@@ -9037,7 +8238,6 @@
 
     invoke-direct {v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setStatusBarDisabledInternal(ZI)Z
 
-    .line 2337
     :cond_29
     move-object/from16 v0, p0
 
@@ -9047,16 +8247,13 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->initiateTempList(ILcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 2340
     return v18
 
-    .line 2279
     .end local v10    # "identity":J
     .end local v24    # "utils":Lcom/android/internal/widget/LockPatternUtils;
     :cond_2a
     throw v25
 
-    .line 2324
     .restart local v10    # "identity":J
     :catchall_1
     move-exception v25
@@ -9065,7 +8262,6 @@
 
     throw v25
 
-    .line 2106
     .end local v10    # "identity":J
     .end local v19    # "stream":Ljava/io/FileInputStream;
     .restart local v14    # "parser":Lorg/xmlpull/v1/XmlPullParser;
@@ -9077,7 +8273,6 @@
 
     goto/16 :goto_0
 
-    .line 2290
     .end local v14    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     .end local v20    # "stream":Ljava/io/FileInputStream;
     .end local v21    # "tag":Ljava/lang/String;
@@ -9088,43 +8283,36 @@
 
     goto/16 :goto_12
 
-    .line 2278
     :catchall_2
     move-exception v25
 
     goto/16 :goto_e
 
-    .line 2274
     :catch_9
     move-exception v6
 
     goto/16 :goto_c
 
-    .line 2271
     :catch_a
     move-exception v6
 
     goto/16 :goto_a
 
-    .line 2269
     :catch_b
     move-exception v25
 
     goto/16 :goto_8
 
-    .line 2266
     :catch_c
     move-exception v6
 
     goto/16 :goto_6
 
-    .line 2263
     :catch_d
     move-exception v6
 
     goto/16 :goto_4
 
-    .line 2260
     :catch_e
     move-exception v6
 
@@ -9151,18 +8339,15 @@
     .locals 10
 
     .prologue
-    .line 4813
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v7
 
-    .line 4814
     .local v7, "callerId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 4817
     .local v8, "ident":J
     :try_start_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mPowerManager:Landroid/os/PowerManager;
@@ -9177,7 +8362,6 @@
 
     invoke-virtual {v0, v2, v3, v1, v4}, Landroid/os/PowerManager;->goToSleep(JII)V
 
-    .line 4820
     new-instance v0, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -9190,7 +8374,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/internal/widget/LockPatternUtils;->requireStrongAuth(II)V
 
-    .line 4822
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getWindowManager()Landroid/view/IWindowManager;
 
     move-result-object v0
@@ -9199,7 +8382,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/IWindowManager;->lockNow(Landroid/os/Bundle;)V
 
-    .line 4824
     const/4 v0, 0x5
 
     const/4 v1, 0x1
@@ -9245,18 +8427,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4831
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4833
     :goto_0
     return-void
 
-    .line 4829
     :catch_0
     move-exception v0
 
-    .line 4831
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -9274,12 +8452,10 @@
     .param p0, "userHandle"    # I
 
     .prologue
-    .line 1904
     if-nez p0, :cond_0
 
     const-string v0, "/data/system/device_policies.xml"
 
-    .line 1908
     .local v0, "base":Ljava/lang/String;
     :goto_0
     new-instance v1, Lcom/android/internal/util/JournaledFile;
@@ -9314,7 +8490,6 @@
 
     return-object v1
 
-    .line 1904
     .end local v0    # "base":Ljava/lang/String;
     :cond_0
     new-instance v1, Ljava/io/File;
@@ -9341,10 +8516,8 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 8759
     const/4 v3, 0x1
 
-    .line 8761
     .local v3, "result":Z
     if-nez p2, :cond_2
 
@@ -9366,7 +8539,6 @@
 
     move-result-object v0
 
-    .line 8766
     .local v0, "base_source":Ljava/lang/String;
     :goto_0
     if-nez p2, :cond_3
@@ -9389,7 +8561,6 @@
 
     move-result-object v1
 
-    .line 8772
     .local v1, "base_target":Ljava/lang/String;
     :goto_1
     :try_start_0
@@ -9397,13 +8568,11 @@
 
     invoke-direct {v4, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8773
     .local v4, "sourceFile":Ljava/io/File;
     new-instance v5, Ljava/io/File;
 
     invoke-direct {v5, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8775
     .local v5, "targetFile":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -9411,7 +8580,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 8776
     invoke-virtual {v5}, Ljava/io/File;->exists()Z
 
     move-result v6
@@ -9420,20 +8588,17 @@
 
     invoke-virtual {v5}, Ljava/io/File;->delete()Z
 
-    .line 8777
     :cond_0
     invoke-virtual {v4, v5}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8784
     .end local v4    # "sourceFile":Ljava/io/File;
     .end local v5    # "targetFile":Ljava/io/File;
     :cond_1
     :goto_2
     return v3
 
-    .line 8761
     .end local v0    # "base_source":Ljava/lang/String;
     .end local v1    # "base_target":Ljava/lang/String;
     :cond_2
@@ -9451,7 +8616,6 @@
 
     goto :goto_0
 
-    .line 8766
     .restart local v0    # "base_source":Ljava/lang/String;
     :cond_3
     new-instance v6, Ljava/io/File;
@@ -9468,16 +8632,13 @@
 
     goto :goto_1
 
-    .line 8779
     .restart local v1    # "base_target":Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 8780
     .local v2, "e":Ljava/lang/Exception;
     const/4 v3, 0x0
 
-    .line 8781
     const-string v6, "DevicePolicyManagerService"
 
     const-string/jumbo v7, "moveFile() : Cannot move file"
@@ -9497,14 +8658,12 @@
     .end annotation
 
     .prologue
-    .line 4910
     const-string v1, "X.509"
 
     invoke-static {v1}, Ljava/security/cert/CertificateFactory;->getInstance(Ljava/lang/String;)Ljava/security/cert/CertificateFactory;
 
     move-result-object v0
 
-    .line 4911
     .local v0, "certFactory":Ljava/security/cert/CertificateFactory;
     new-instance v1, Ljava/io/ByteArrayInputStream;
 
@@ -9524,27 +8683,22 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 10319
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getDeviceInitializer()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 10320
     .local v0, "deviceInitializerPackage":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 10328
     :cond_0
     :goto_0
     return-void
 
-    .line 10324
     :cond_1
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getLockTaskPackagesLocked(I)Ljava/util/List;
 
     move-result-object v1
 
-    .line 10325
     .local v1, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v1, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
@@ -9552,7 +8706,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 10326
     invoke-direct {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setLockTaskPackagesLocked(ILjava/util/List;)V
 
     goto :goto_0
@@ -9563,10 +8716,8 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 8736
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getHarmonyEAS()Landroid/content/IHarmonyEAS;
 
-    .line 8738
     :try_start_0
     sget-object v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHM:Landroid/content/IHarmonyEAS;
 
@@ -9576,11 +8727,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8741
     :goto_0
     return-void
 
-    .line 8739
     :catch_0
     move-exception v0
 
@@ -9592,18 +8741,14 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 8729
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->manageBlockedApplications(I)V
 
-    .line 8730
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->manageAllowThirdPartyApps(I)V
 
-    .line 8731
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->handleAllowUnsignedApp(ZI)V
 
-    .line 8732
     return-void
 .end method
 
@@ -9614,14 +8759,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 5876
     iget-object v3, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 5877
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -9629,7 +8772,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 5878
     iget-object v3, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -9638,32 +8780,27 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 5879
     .local v1, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v3, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->specifiesGlobalProxy:Z
 
     if-eqz v3, :cond_0
 
-    .line 5880
     iget-object v3, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxySpec:Ljava/lang/String;
 
     iget-object v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxyExclusionList:Ljava/lang/String;
 
     invoke-direct {p0, v3, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveGlobalProxyLocked(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5886
     .end local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return-void
 
-    .line 5877
     .restart local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 5885
     .end local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-direct {p0, v4, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveGlobalProxyLocked(Ljava/lang/String;Ljava/lang/String;)V
@@ -9681,43 +8818,34 @@
 
     const/4 v5, 0x0
 
-    .line 5889
     if-nez p2, :cond_0
 
-    .line 5890
     const-string p2, ""
 
-    .line 5892
     :cond_0
     if-nez p1, :cond_1
 
-    .line 5893
     const-string p1, ""
 
-    .line 5896
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 5897
     const-string v4, ":"
 
     invoke-virtual {p1, v4}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 5898
     .local v0, "data":[Ljava/lang/String;
     const/16 v1, 0x1f90
 
-    .line 5899
     .local v1, "proxyPort":I
     array-length v4, v0
 
     if-le v4, v6, :cond_2
 
-    .line 5901
     const/4 v4, 0x1
 
     :try_start_0
@@ -9729,21 +8857,18 @@
 
     move-result v1
 
-    .line 5904
     :cond_2
     :goto_0
     invoke-virtual {p2}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p2
 
-    .line 5905
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v3
 
-    .line 5907
     .local v3, "res":Landroid/content/ContentResolver;
     new-instance v2, Landroid/net/ProxyInfo;
 
@@ -9751,7 +8876,6 @@
 
     invoke-direct {v2, v4, v1, p2}, Landroid/net/ProxyInfo;-><init>(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 5908
     .local v2, "proxyProperties":Landroid/net/ProxyInfo;
     invoke-virtual {v2}, Landroid/net/ProxyInfo;->isValid()Z
 
@@ -9759,7 +8883,6 @@
 
     if-nez v4, :cond_3
 
-    .line 5909
     const-string v4, "DevicePolicyManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -9786,11 +8909,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5916
     :goto_1
     return-void
 
-    .line 5912
     :cond_3
     const-string/jumbo v4, "global_http_proxy_host"
 
@@ -9798,19 +8919,16 @@
 
     invoke-static {v3, v4, v5}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 5913
     const-string/jumbo v4, "global_http_proxy_port"
 
     invoke-static {v3, v4, v1}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 5914
     const-string/jumbo v4, "global_http_proxy_exclusion_list"
 
     invoke-static {v3, v4, p2}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
     goto :goto_1
 
-    .line 5902
     .end local v2    # "proxyProperties":Landroid/net/ProxyInfo;
     .end local v3    # "res":Landroid/content/ContentResolver;
     :catch_0
@@ -9826,22 +8944,18 @@
     .param p3, "isWifiChanged"    # Z
 
     .prologue
-    .line 1912
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v8
 
-    .line 1913
     .local v8, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->makeJournaledFile(I)Lcom/android/internal/util/JournaledFile;
 
     move-result-object v5
 
-    .line 1914
     .local v5, "journal":Lcom/android/internal/util/JournaledFile;
     const/4 v9, 0x0
 
-    .line 1916
     .local v9, "stream":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v10, Ljava/io/FileOutputStream;
@@ -9856,7 +8970,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1917
     .end local v9    # "stream":Ljava/io/FileOutputStream;
     .local v10, "stream":Ljava/io/FileOutputStream;
     :try_start_1
@@ -9864,7 +8977,6 @@
 
     invoke-direct {v7}, Lcom/android/internal/util/FastXmlSerializer;-><init>()V
 
-    .line 1918
     .local v7, "out":Lorg/xmlpull/v1/XmlSerializer;
     sget-object v11, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -9874,7 +8986,6 @@
 
     invoke-interface {v7, v10, v11}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 1919
     const/4 v11, 0x0
 
     const/4 v12, 0x1
@@ -9885,19 +8996,16 @@
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 1921
     const/4 v11, 0x0
 
     const-string/jumbo v12, "policies"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1922
     iget-object v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mRestrictionsProvider:Landroid/content/ComponentName;
 
     if-eqz v11, :cond_0
 
-    .line 1923
     const/4 v11, 0x0
 
     const-string/jumbo v12, "permission-provider"
@@ -9910,13 +9018,11 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1926
     :cond_0
     iget-boolean v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserSetupComplete:Z
 
     if-eqz v11, :cond_1
 
-    .line 1927
     const/4 v11, 0x0
 
     const-string/jumbo v12, "setup-complete"
@@ -9929,13 +9035,11 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1930
     :cond_1
     iget v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPermissionPolicy:I
 
     if-eqz v11, :cond_2
 
-    .line 1931
     const/4 v11, 0x0
 
     const-string/jumbo v12, "permission-policy"
@@ -9948,13 +9052,11 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1934
     :cond_2
     iget-object v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mDelegatedCertInstallerPackage:Ljava/lang/String;
 
     if-eqz v11, :cond_3
 
-    .line 1935
     const/4 v11, 0x0
 
     const-string v12, "delegated-cert-installer"
@@ -9963,7 +9065,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1939
     :cond_3
     iget-object v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -9971,7 +9072,6 @@
 
     move-result v0
 
-    .line 1940
     .local v0, "N":I
     const/4 v4, 0x0
 
@@ -9979,7 +9079,6 @@
     :goto_0
     if-ge v4, v0, :cond_5
 
-    .line 1941
     iget-object v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -9988,18 +9087,15 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 1942
     .local v1, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_4
 
-    .line 1943
     const/4 v11, 0x0
 
     const-string v12, "admin"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1944
     const/4 v11, 0x0
 
     const-string/jumbo v12, "name"
@@ -10016,37 +9112,31 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1945
     invoke-virtual {v1, v7}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->writeToXml(Lorg/xmlpull/v1/XmlSerializer;)V
 
-    .line 1946
     const/4 v11, 0x0
 
     const-string v12, "admin"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1940
     :cond_4
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 1950
     .end local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_5
     iget v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPasswordOwner:I
 
     if-ltz v11, :cond_6
 
-    .line 1951
     const/4 v11, 0x0
 
     const-string/jumbo v12, "password-owner"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1952
     const/4 v11, 0x0
 
     const-string/jumbo v12, "value"
@@ -10059,27 +9149,23 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1953
     const/4 v11, 0x0
 
     const-string/jumbo v12, "password-owner"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1956
     :cond_6
     iget v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mFailedPasswordAttempts:I
 
     if-eqz v11, :cond_7
 
-    .line 1957
     const/4 v11, 0x0
 
     const-string/jumbo v12, "failed-password-attempts"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1958
     const/4 v11, 0x0
 
     const-string/jumbo v12, "value"
@@ -10092,14 +9178,12 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1959
     const/4 v11, 0x0
 
     const-string/jumbo v12, "failed-password-attempts"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1962
     :cond_7
     if-eqz p1, :cond_8
 
@@ -10109,7 +9193,6 @@
 
     if-eqz v11, :cond_9
 
-    .line 1963
     :cond_8
     const/4 v11, 0x0
 
@@ -10117,7 +9200,6 @@
 
     move-result v6
 
-    .line 1964
     .local v6, "maxFailedAllowed":I
     const/4 v11, 0x0
 
@@ -10129,7 +9211,6 @@
 
     invoke-virtual {p0, v11, v12, v13, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setPropertyIntoFooter(Landroid/content/ComponentName;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 1967
     .end local v6    # "maxFailedAllowed":I
     :cond_9
     iget v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
@@ -10168,7 +9249,6 @@
 
     if-eqz v11, :cond_b
 
-    .line 1975
     :cond_a
     const/4 v11, 0x0
 
@@ -10176,7 +9256,6 @@
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1976
     const/4 v11, 0x0
 
     const-string/jumbo v12, "quality"
@@ -10189,7 +9268,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1977
     const/4 v11, 0x0
 
     const-string/jumbo v12, "length"
@@ -10202,7 +9280,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1978
     const/4 v11, 0x0
 
     const-string/jumbo v12, "uppercase"
@@ -10215,7 +9292,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1979
     const/4 v11, 0x0
 
     const-string/jumbo v12, "lowercase"
@@ -10228,7 +9304,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1980
     const/4 v11, 0x0
 
     const-string/jumbo v12, "letters"
@@ -10241,7 +9316,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1981
     const/4 v11, 0x0
 
     const-string/jumbo v12, "numeric"
@@ -10254,7 +9328,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1983
     const/4 v11, 0x0
 
     const-string/jumbo v12, "symbols"
@@ -10267,7 +9340,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1984
     const/4 v11, 0x0
 
     const-string/jumbo v12, "nonletter"
@@ -10280,7 +9352,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1986
     const/4 v11, 0x0
 
     const-string/jumbo v12, "recoverable"
@@ -10293,14 +9364,12 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1988
     const/4 v11, 0x0
 
     const-string v12, "active-password"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1992
     :cond_b
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isSupportFP(I)Z
 
@@ -10308,7 +9377,6 @@
 
     if-eqz v11, :cond_d
 
-    .line 1993
     iget v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordQuality:I
 
     if-nez v11, :cond_c
@@ -10341,7 +9409,6 @@
 
     if-eqz v11, :cond_d
 
-    .line 1997
     :cond_c
     const/4 v11, 0x0
 
@@ -10349,7 +9416,6 @@
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1998
     const/4 v11, 0x0
 
     const-string/jumbo v12, "quality"
@@ -10362,7 +9428,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 1999
     const/4 v11, 0x0
 
     const-string/jumbo v12, "length"
@@ -10375,7 +9440,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2000
     const/4 v11, 0x0
 
     const-string/jumbo v12, "uppercase"
@@ -10388,7 +9452,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2001
     const/4 v11, 0x0
 
     const-string/jumbo v12, "lowercase"
@@ -10401,7 +9464,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2002
     const/4 v11, 0x0
 
     const-string/jumbo v12, "letters"
@@ -10414,7 +9476,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2003
     const/4 v11, 0x0
 
     const-string/jumbo v12, "numeric"
@@ -10427,7 +9488,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2004
     const/4 v11, 0x0
 
     const-string/jumbo v12, "symbols"
@@ -10440,7 +9500,6 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2005
     const/4 v11, 0x0
 
     const-string/jumbo v12, "nonletter"
@@ -10453,14 +9512,12 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2006
     const/4 v11, 0x0
 
     const-string v12, "alternative-password"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2011
     :cond_d
     const/4 v4, 0x0
 
@@ -10473,7 +9530,6 @@
 
     if-ge v4, v11, :cond_e
 
-    .line 2012
     iget-object v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mLockTaskPackages:Ljava/util/List;
 
     invoke-interface {v11, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -10482,7 +9538,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 2013
     .local v2, "component":Ljava/lang/String;
     const/4 v11, 0x0
 
@@ -10490,40 +9545,34 @@
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2014
     const/4 v11, 0x0
 
     const-string/jumbo v12, "name"
 
     invoke-interface {v7, v11, v12, v2}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2015
     const/4 v11, 0x0
 
     const-string/jumbo v12, "lock-task-component"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2011
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_1
 
-    .line 2018
     .end local v2    # "component":Ljava/lang/String;
     :cond_e
     iget-boolean v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mStatusBarDisabled:Z
 
     if-eqz v11, :cond_f
 
-    .line 2019
     const/4 v11, 0x0
 
     const-string/jumbo v12, "statusbar"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2020
     const/4 v11, 0x0
 
     const-string v12, "disabled"
@@ -10536,34 +9585,29 @@
 
     invoke-interface {v7, v11, v12, v13}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2021
     const/4 v11, 0x0
 
     const-string/jumbo v12, "statusbar"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2024
     :cond_f
     iget-boolean v11, v8, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->doNotAskCredentialsOnBoot:Z
 
     if-eqz v11, :cond_10
 
-    .line 2025
     const/4 v11, 0x0
 
     const-string v12, "do-not-ask-credentials-on-boot"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2026
     const/4 v11, 0x0
 
     const-string v12, "do-not-ask-credentials-on-boot"
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2029
     :cond_10
     const/4 v11, 0x0
 
@@ -10571,29 +9615,22 @@
 
     invoke-interface {v7, v11, v12}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 2031
     invoke-interface {v7}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 2032
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 2033
     invoke-static {v10}, Landroid/os/FileUtils;->sync(Ljava/io/FileOutputStream;)Z
 
-    .line 2034
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->close()V
 
-    .line 2035
     invoke-virtual {v5}, Lcom/android/internal/util/JournaledFile;->commit()V
 
-    .line 2037
     invoke-direct/range {p0 .. p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendChangedNotification(IZZ)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
 
     move-object v9, v10
 
-    .line 2048
     .end local v0    # "N":I
     .end local v4    # "i":I
     .end local v7    # "out":Lorg/xmlpull/v1/XmlSerializer;
@@ -10602,35 +9639,29 @@
     :goto_2
     return-void
 
-    .line 2038
     :catch_0
     move-exception v3
 
-    .line 2040
     .local v3, "e":Ljava/io/IOException;
     :goto_3
     if-eqz v9, :cond_11
 
-    .line 2041
     :try_start_2
     invoke-virtual {v9}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 2046
     :cond_11
     :goto_4
     invoke-virtual {v5}, Lcom/android/internal/util/JournaledFile;->rollback()V
 
     goto :goto_2
 
-    .line 2043
     :catch_1
     move-exception v11
 
     goto :goto_4
 
-    .line 2038
     .end local v3    # "e":Ljava/io/IOException;
     .end local v9    # "stream":Ljava/io/FileOutputStream;
     .restart local v10    # "stream":Ljava/io/FileOutputStream;
@@ -10651,14 +9682,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 1777
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v4, p3}, Landroid/os/UserManager;->getProfiles(I)Ljava/util/List;
 
     move-result-object v2
 
-    .line 1778
     .local v2, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -10678,17 +9707,14 @@
 
     check-cast v3, Landroid/content/pm/UserInfo;
 
-    .line 1779
     .local v3, "ui":Landroid/content/pm/UserInfo;
     iget v1, v3, Landroid/content/pm/UserInfo;->id:I
 
-    .line 1780
     .local v1, "id":I
     invoke-virtual {p0, p1, p2, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendAdminCommandLocked(Ljava/lang/String;II)V
 
     goto :goto_0
 
-    .line 1782
     .end local v1    # "id":I
     .end local v3    # "ui":Landroid/content/pm/UserInfo;
     :cond_0
@@ -10700,7 +9726,6 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 11121
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -10708,20 +9733,17 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 11122
     .local v1, "intent":Landroid/content/Intent;
     const-string/jumbo v2, "packageName"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 11123
     const-string/jumbo v2, "type"
 
     const-string v3, "dpm"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 11124
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v3, "com.sec.knox.permission.KLMS_AGENT"
@@ -10730,16 +9752,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11128
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 11125
     :catch_0
     move-exception v0
 
-    .line 11126
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "DevicePolicyManagerService"
 
@@ -10773,16 +9792,13 @@
     .param p3, "isWifiChanged"    # Z
 
     .prologue
-    .line 2056
     iget-boolean v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNotifyChanges:Z
 
     if-nez v3, :cond_0
 
-    .line 2082
     :goto_0
     return-void
 
-    .line 2060
     :cond_0
     new-instance v2, Landroid/content/Intent;
 
@@ -10790,18 +9806,15 @@
 
     invoke-direct {v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 2061
     .local v2, "intent":Landroid/content/Intent;
     const/high16 v3, 0x40000000    # 2.0f
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 2064
     const-string/jumbo v3, "userhandle"
 
     invoke-virtual {v2, v3, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 2068
     const-string v3, "DevicePolicyManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -10834,30 +9847,24 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2071
     if-eqz p2, :cond_1
 
-    .line 2072
     const-string/jumbo v3, "isBTChanged"
 
     invoke-virtual {v2, v3, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2073
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 2074
     const-string/jumbo v3, "isWifiChanged"
 
     invoke-virtual {v2, v3, p3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 2076
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 2078
     .local v0, "ident":J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -10866,7 +9873,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2080
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -10885,12 +9891,10 @@
     .param p2, "responseBinder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 5083
     invoke-static {p2}, Landroid/security/IKeyChainAliasCallback$Stub;->asInterface(Landroid/os/IBinder;)Landroid/security/IKeyChainAliasCallback;
 
     move-result-object v0
 
-    .line 5085
     .local v0, "keyChainAliasResponse":Landroid/security/IKeyChainAliasCallback;
     new-instance v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$4;
 
@@ -10902,7 +9906,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$4;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 5098
     return-void
 .end method
 
@@ -10910,7 +9913,6 @@
     .locals 5
 
     .prologue
-    .line 5395
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const v3, 0x1040101
@@ -10919,7 +9921,6 @@
 
     move-result-object v0
 
-    .line 5396
     .local v0, "contentText":Ljava/lang/String;
     new-instance v2, Landroid/app/Notification$Builder;
 
@@ -10977,7 +9978,6 @@
 
     move-result-object v1
 
-    .line 5403
     .local v1, "notification":Landroid/app/Notification;
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getNotificationManager()Landroid/app/NotificationManager;
 
@@ -10987,7 +9987,6 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/app/NotificationManager;->notify(ILandroid/app/Notification;)V
 
-    .line 5404
     return-void
 .end method
 
@@ -10999,7 +9998,6 @@
     .param p4, "onEnableData"    # Landroid/os/Bundle;
 
     .prologue
-    .line 2660
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -11010,14 +10008,12 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2662
     move-object/from16 v0, p0
 
     move/from16 v1, p3
 
     invoke-direct {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 2664
     move-object/from16 v0, p0
 
     move/from16 v1, p3
@@ -11026,7 +10022,6 @@
 
     move-result-object v19
 
-    .line 2665
     .local v19, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     move-object/from16 v0, p0
 
@@ -11038,11 +10033,9 @@
 
     move-result-object v16
 
-    .line 2666
     .local v16, "info":Landroid/app/admin/DeviceAdminInfo;
     if-nez v16, :cond_0
 
-    .line 2667
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -11069,7 +10062,6 @@
 
     throw v4
 
-    .line 2672
     :cond_0
     const-string/jumbo v4, "restriction_policy"
 
@@ -11079,7 +10071,6 @@
 
     check-cast v21, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 2674
     .local v21, "restrictionService":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v21, :cond_1
 
@@ -11097,7 +10088,6 @@
 
     if-nez v4, :cond_1
 
-    .line 2677
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "Admin cannot be activated"
@@ -11106,11 +10096,9 @@
 
     throw v4
 
-    .line 2682
     :cond_1
     monitor-enter p0
 
-    .line 2683
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -11118,7 +10106,6 @@
 
     move-result-wide v14
 
-    .line 2685
     .local v14, "ident":J
     if-nez p2, :cond_2
 
@@ -11135,7 +10122,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 2687
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     const-string v5, "Admin is already added"
@@ -11146,7 +10132,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2721
     :catchall_0
     move-exception v4
 
@@ -11155,7 +10140,6 @@
 
     throw v4
 
-    .line 2723
     .end local v14    # "ident":J
     :catchall_1
     move-exception v4
@@ -11166,7 +10150,6 @@
 
     throw v4
 
-    .line 2689
     .restart local v14    # "ident":J
     :cond_2
     :try_start_3
@@ -11178,7 +10161,6 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;-><init>(Landroid/app/admin/DeviceAdminInfo;)V
 
-    .line 2690
     .local v17, "newAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, v19
 
@@ -11190,10 +10172,8 @@
 
     invoke-virtual {v4, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2691
     const/16 v20, -0x1
 
-    .line 2692
     .local v20, "replaceIndex":I
     move-object/from16 v0, v19
 
@@ -11203,7 +10183,6 @@
 
     move-result v11
 
-    .line 2693
     .local v11, "N":I
     const/4 v13, 0x0
 
@@ -11211,7 +10190,6 @@
     :goto_0
     if-ge v13, v11, :cond_3
 
-    .line 2694
     move-object/from16 v0, v19
 
     iget-object v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -11222,7 +10200,6 @@
 
     check-cast v18, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2695
     .local v18, "oldAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     move-object/from16 v0, v18
 
@@ -11240,10 +10217,8 @@
 
     if-eqz v4, :cond_4
 
-    .line 2696
     move/from16 v20, v13
 
-    .line 2700
     .end local v18    # "oldAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     const/4 v4, -0x1
@@ -11252,7 +10227,6 @@
 
     if-ne v0, v4, :cond_5
 
-    .line 2701
     move-object/from16 v0, v19
 
     iget-object v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
@@ -11261,7 +10235,6 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2702
     invoke-virtual/range {v16 .. v16}, Landroid/app/admin/DeviceAdminInfo;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -11272,7 +10245,6 @@
 
     invoke-direct {v0, v4, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enableIfNecessary(Ljava/lang/String;I)V
 
-    .line 2706
     :goto_1
     move-object/from16 v0, v17
 
@@ -11282,7 +10254,6 @@
 
     iput-boolean v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->oldAllowWifi:Z
 
-    .line 2707
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -11293,7 +10264,6 @@
 
     invoke-direct {v0, v1, v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 2708
     const-string v4, "android.app.action.DEVICE_ADMIN_ENABLED"
 
     const/4 v5, 0x0
@@ -11306,7 +10276,6 @@
 
     invoke-virtual {v0, v1, v4, v2, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendAdminCommandLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;Ljava/lang/String;Landroid/os/Bundle;Landroid/content/BroadcastReceiver;)V
 
-    .line 2712
     const-string v4, "enterprise_policy"
 
     invoke-static {v4}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -11315,7 +10284,6 @@
 
     check-cast v12, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
-    .line 2714
     .local v12, "edms":Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
     move-object/from16 v0, p1
 
@@ -11323,7 +10291,6 @@
 
     invoke-virtual {v12, v0, v1}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->reconcileAdmin(Landroid/content/ComponentName;I)V
 
-    .line 2715
     const/4 v4, 0x5
 
     const/4 v5, 0x2
@@ -11368,7 +10335,6 @@
 
     invoke-static/range {v4 .. v10}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 2719
     invoke-virtual/range {p1 .. p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v4
@@ -11379,19 +10345,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 2721
     :try_start_4
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2723
     monitor-exit p0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 2724
     return-void
 
-    .line 2693
     .end local v12    # "edms":Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
     .restart local v18    # "oldAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_4
@@ -11399,7 +10361,6 @@
 
     goto/16 :goto_0
 
-    .line 2704
     .end local v18    # "oldAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_5
     :try_start_5
@@ -11422,10 +10383,8 @@
     .locals 4
 
     .prologue
-    .line 4596
     monitor-enter p0
 
-    .line 4597
     const/4 v1, 0x0
 
     :try_start_0
@@ -11433,18 +10392,15 @@
 
     move-result-object v0
 
-    .line 4598
     .local v0, "policyData":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->doNotAskCredentialsOnBoot:Z
 
     if-nez v1, :cond_0
 
-    .line 4599
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->doNotAskCredentialsOnBoot:Z
 
-    .line 4600
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -11453,14 +10409,11 @@
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 4602
     :cond_0
     monitor-exit p0
 
-    .line 4603
     return-void
 
-    .line 4602
     .end local v0    # "policyData":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v1
@@ -11477,7 +10430,6 @@
     .param p1, "encrypt"    # Z
 
     .prologue
-    .line 6066
     return-void
 .end method
 
@@ -11488,27 +10440,22 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 11141
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
 
-    .line 11142
     .local v0, "edm":Landroid/app/enterprise/EnterpriseDeviceManager;
     if-eqz v0, :cond_0
 
-    .line 11143
     invoke-virtual {v0}, Landroid/app/enterprise/EnterpriseDeviceManager;->getPasswordPolicy()Landroid/app/enterprise/PasswordPolicy;
 
     move-result-object v1
 
     invoke-virtual {v1, p1, p2, p3}, Landroid/app/enterprise/PasswordPolicy;->setKeyguardDisabledFeaturesInternal(Landroid/content/ComponentName;II)V
 
-    .line 11147
     :goto_0
     return-void
 
-    .line 11145
     :cond_0
     const-string v1, "DevicePolicyManagerService"
 
@@ -11526,7 +10473,6 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 11153
     const-string v1, "DevicePolicyManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -11559,27 +10505,22 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11154
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 11189
     :goto_0
     return-void
 
-    .line 11158
     :cond_0
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 11161
     invoke-direct {p0, p1, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getKeyguardDisabledFeaturesInternal(Landroid/content/ComponentName;I)I
 
     move-result v1
 
     if-lez v1, :cond_1
 
-    .line 11163
     const-string v1, "DevicePolicyManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -11604,7 +10545,6 @@
 
     goto :goto_0
 
-    .line 11168
     :cond_1
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isKnoxWorkspace(I)Z
 
@@ -11612,21 +10552,17 @@
 
     if-eqz v1, :cond_2
 
-    .line 11169
     const-string v1, "DevicePolicyManagerService"
 
     const-string v2, "It is KnoxWorkspace skip enforceNotManagedProfile: disable keyguard features"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 11175
     :goto_1
     monitor-enter p0
 
-    .line 11176
     if-nez p1, :cond_3
 
-    .line 11177
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -11636,7 +10572,6 @@
 
     throw v1
 
-    .line 11188
     :catchall_0
     move-exception v1
 
@@ -11646,7 +10581,6 @@
 
     throw v1
 
-    .line 11171
     :cond_2
     const-string v1, "disable keyguard features"
 
@@ -11654,30 +10588,25 @@
 
     goto :goto_1
 
-    .line 11181
     :cond_3
     :try_start_1
     invoke-virtual {p0, p1, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 11183
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
     if-eq v1, p2, :cond_4
 
-    .line 11184
     iput p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
-    .line 11185
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
     invoke-direct {p0, p3, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 11187
     :cond_4
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
@@ -11685,7 +10614,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 11188
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -11710,22 +10638,17 @@
     .local p2, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
-    .line 10018
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
-    .line 10019
     .local v0, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iput-object p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mLockTaskPackages:Ljava/util/List;
 
-    .line 10022
     invoke-direct {p0, p1, v1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 10023
     invoke-direct {p0, p2, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateLockTaskPackagesLocked(Ljava/util/List;I)V
 
-    .line 10024
     return-void
 .end method
 
@@ -11739,12 +10662,10 @@
 
     const/4 v7, 0x0
 
-    .line 10248
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 10250
     .local v4, "ident":J
     :try_start_0
     const-string/jumbo v8, "statusbar"
@@ -11757,23 +10678,19 @@
 
     move-result-object v3
 
-    .line 10252
     .local v3, "statusBarService":Lcom/android/internal/statusbar/IStatusBarService;
     if-eqz v3, :cond_2
 
-    .line 10253
     if-eqz p1, :cond_0
 
     const/high16 v1, 0x2070000
 
-    .line 10254
     .local v1, "flags1":I
     :goto_0
     if-eqz p1, :cond_1
 
     move v2, v6
 
-    .line 10255
     .local v2, "flags2":I
     :goto_1
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mToken:Landroid/os/Binder;
@@ -11786,7 +10703,6 @@
 
     invoke-interface {v3, v1, v8, v9, p2}, Lcom/android/internal/statusbar/IStatusBarService;->disableForUser(ILandroid/os/IBinder;Ljava/lang/String;I)V
 
-    .line 10256
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mToken:Landroid/os/Binder;
 
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -11800,10 +10716,8 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10262
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 10264
     .end local v1    # "flags1":I
     .end local v2    # "flags2":I
     .end local v3    # "statusBarService":Lcom/android/internal/statusbar/IStatusBarService;
@@ -11814,17 +10728,14 @@
     :cond_0
     move v1, v7
 
-    .line 10253
     goto :goto_0
 
     .restart local v1    # "flags1":I
     :cond_1
     move v2, v7
 
-    .line 10254
     goto :goto_1
 
-    .line 10262
     .end local v1    # "flags1":I
     :cond_2
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
@@ -11833,14 +10744,11 @@
     :goto_3
     move v6, v7
 
-    .line 10264
     goto :goto_2
 
-    .line 10259
     :catch_0
     move-exception v0
 
-    .line 10260
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_1
     const-string v6, "DevicePolicyManagerService"
@@ -11851,7 +10759,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 10262
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_3
@@ -11869,18 +10776,15 @@
     .locals 4
 
     .prologue
-    .line 2356
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 2357
     .local v0, "am":Landroid/app/IActivityManager;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2359
     .local v2, "ident":J
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getDeviceOwner()Ljava/lang/String;
@@ -11892,18 +10796,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2363
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2365
     :goto_0
     return-void
 
-    .line 2360
     :catch_0
     move-exception v1
 
-    .line 2363
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -11930,19 +10830,16 @@
     .end annotation
 
     .prologue
-    .line 2344
     .local p1, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 2345
     .local v0, "am":Landroid/app/IActivityManager;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 2347
     .local v2, "ident":J
     :try_start_0
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -11962,18 +10859,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2351
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2353
     :goto_0
     return-void
 
-    .line 2348
     :catch_0
     move-exception v1
 
-    .line 2351
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -11991,14 +10884,12 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 5679
     iget-object v12, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v12, p1}, Landroid/os/UserManager;->getProfiles(I)Ljava/util/List;
 
     move-result-object v8
 
-    .line 5680
     .local v8, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -12018,17 +10909,14 @@
 
     check-cast v9, Landroid/content/pm/UserInfo;
 
-    .line 5681
     .local v9, "userInfo":Landroid/content/pm/UserInfo;
     iget v7, v9, Landroid/content/pm/UserInfo;->id:I
 
-    .line 5682
     .local v7, "profileId":I
     invoke-virtual {p0, v7}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserDataUnchecked(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v6
 
-    .line 5683
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v12, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -12036,18 +10924,15 @@
 
     move-result v0
 
-    .line 5684
     .local v0, "N":I
     if-lez v0, :cond_2
 
-    .line 5685
     const/4 v4, 0x0
 
     .local v4, "i":I
     :goto_1
     if-ge v4, v0, :cond_2
 
-    .line 5686
     iget-object v12, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v12, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -12056,7 +10941,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 5687
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v12, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -12068,10 +10952,8 @@
 
     if-eqz v12, :cond_0
 
-    .line 5688
     iget-wide v10, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationTimeout:J
 
-    .line 5689
     .local v10, "timeout":J
     const-wide/16 v12, 0x0
 
@@ -12085,12 +10967,10 @@
 
     add-long v2, v10, v12
 
-    .line 5690
     .local v2, "expiration":J
     :goto_2
     iput-wide v2, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationDate:J
 
-    .line 5685
     .end local v2    # "expiration":J
     .end local v10    # "timeout":J
     :cond_0
@@ -12098,14 +10978,12 @@
 
     goto :goto_1
 
-    .line 5689
     .restart local v10    # "timeout":J
     :cond_1
     const-wide/16 v2, 0x0
 
     goto :goto_2
 
-    .line 5694
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v4    # "i":I
     .end local v10    # "timeout":J
@@ -12118,7 +10996,6 @@
 
     goto :goto_0
 
-    .line 5696
     .end local v0    # "N":I
     .end local v6    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     .end local v7    # "profileId":I
@@ -12133,12 +11010,10 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 6128
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 6130
     .local v2, "ident":J
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getWindowManager()Landroid/view/IWindowManager;
@@ -12150,18 +11025,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6134
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6136
     :goto_0
     return-void
 
-    .line 6131
     :catch_0
     move-exception v0
 
-    .line 6132
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_1
     const-string v1, "DevicePolicyManagerService"
@@ -12172,7 +11043,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6134
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -12192,7 +11062,6 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 7001
     const-string/jumbo v7, "package"
 
     invoke-static {v7}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -12201,11 +11070,9 @@
 
     check-cast v4, Lcom/android/server/pm/PackageManagerService;
 
-    .line 7002
     .local v4, "pms":Lcom/android/server/pm/PackageManagerService;
     const/4 v3, 0x0
 
-    .line 7004
     .local v3, "pi":Landroid/content/pm/PackageInfo;
     invoke-virtual {p1}, Lcom/sec/enterprise/AppIdentity;->getPackageName()Ljava/lang/String;
 
@@ -12217,17 +11084,14 @@
 
     move-result-object v3
 
-    .line 7006
     if-eqz v3, :cond_1
 
     iget-object v7, v3, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
     if-eqz v7, :cond_1
 
-    .line 7007
     iget-object v6, v3, Landroid/content/pm/PackageInfo;->signatures:[Landroid/content/pm/Signature;
 
-    .line 7008
     .local v6, "sigs":[Landroid/content/pm/Signature;
     move-object v0, v6
 
@@ -12243,11 +11107,9 @@
 
     aget-object v5, v0, v1
 
-    .line 7009
     .local v5, "sig":Landroid/content/pm/Signature;
     if-eqz v5, :cond_0
 
-    .line 7010
     invoke-virtual {p1}, Lcom/sec/enterprise/AppIdentity;->getSignature()Ljava/lang/String;
 
     move-result-object v7
@@ -12262,17 +11124,14 @@
 
     if-eqz v7, :cond_0
 
-    .line 7011
     const-string v7, "DevicePolicyManagerService"
 
     const-string v8, "PfW validatePfWProxySig() ** SIG MATCH **"
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7012
     const/4 v7, 0x1
 
-    .line 7017
     .end local v0    # "arr$":[Landroid/content/pm/Signature;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -12281,7 +11140,6 @@
     :goto_1
     return v7
 
-    .line 7008
     .restart local v0    # "arr$":[Landroid/content/pm/Signature;
     .restart local v1    # "i$":I
     .restart local v2    # "len$":I
@@ -12292,7 +11150,6 @@
 
     goto :goto_0
 
-    .line 7017
     .end local v0    # "arr$":[Landroid/content/pm/Signature;
     .end local v1    # "i$":I
     .end local v2    # "len$":I
@@ -12309,10 +11166,8 @@
     .param p0, "quality"    # I
 
     .prologue
-    .line 2368
     sparse-switch p0, :sswitch_data_0
 
-    .line 2385
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -12341,11 +11196,9 @@
 
     throw v0
 
-    .line 2383
     :sswitch_0
     return-void
 
-    .line 2368
     nop
 
     :sswitch_data_0
@@ -12373,7 +11226,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 5126
     invoke-static {}, Landroid/os/Environment;->isExternalStorageRemovable()Z
 
     move-result v5
@@ -12388,14 +11240,12 @@
 
     move v1, v4
 
-    .line 5130
     .local v1, "forceExtWipe":Z
     :goto_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->findSDCard()Z
 
     move-result v3
 
-    .line 5135
     .local v3, "isExtSDSupported":Z
     if-eqz v3, :cond_2
 
@@ -12403,7 +11253,6 @@
 
     if-eqz p1, :cond_2
 
-    .line 5144
     :cond_0
     new-instance v2, Landroid/content/Intent;
 
@@ -12411,40 +11260,33 @@
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5145
     .local v2, "intent":Landroid/content/Intent;
     const-string v5, "android.intent.extra.REASON"
 
     invoke-virtual {v2, v5, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5146
     const/high16 v5, 0x10000000
 
     invoke-virtual {v2, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 5147
     const-string v5, "android.intent.extra.WIPE_EXTERNAL_STORAGE"
 
     invoke-virtual {v2, v5, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 5148
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const-wide/16 v6, 0x2710
 
     invoke-virtual {v4, v6, v7}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 5149
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 5157
     .end local v2    # "intent":Landroid/content/Intent;
     :goto_1
     return-void
 
-    .line 5126
     .end local v1    # "forceExtWipe":Z
     .end local v3    # "isExtSDSupported":Z
     :cond_1
@@ -12452,7 +11294,6 @@
 
     goto :goto_0
 
-    .line 5152
     .restart local v1    # "forceExtWipe":Z
     .restart local v3    # "isExtSDSupported":Z
     :cond_2
@@ -12466,11 +11307,9 @@
 
     goto :goto_1
 
-    .line 5153
     :catch_0
     move-exception v0
 
-    .line 5154
     .local v0, "e":Ljava/lang/Exception;
     :goto_2
     const-string v4, "DevicePolicyManagerService"
@@ -12481,7 +11320,6 @@
 
     goto :goto_1
 
-    .line 5153
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
@@ -12496,7 +11334,6 @@
     .param p3, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 5309
     if-eqz p2, :cond_0
 
     invoke-static {p2}, Landroid/os/PersonaManager;->isBBCContainer(I)Z
@@ -12505,15 +11342,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 5310
     :cond_0
     invoke-direct {p0, p1, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->wipeDataLocked(ZLjava/lang/String;)V
 
-    .line 5346
     :goto_0
     return-void
 
-    .line 5312
     :cond_1
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHandler:Landroid/os/Handler;
 
@@ -12534,17 +11368,14 @@
     .param p4, "admin"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     .prologue
-    .line 5350
     const-string v0, "DevicePolicyManagerService"
 
     const-string v1, "Overloaded wipeDeviceOrUserLocked called"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5351
     if-nez p2, :cond_2
 
-    .line 5356
     const-string v0, "DevicePolicyManagerService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -12583,7 +11414,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5358
     iget-object v0, p4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v0}, Landroid/app/admin/DeviceAdminInfo;->getPackageName()Ljava/lang/String;
@@ -12626,7 +11456,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5359
     :cond_0
     invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -12634,17 +11463,14 @@
 
     invoke-virtual {p0, v0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->wipeDataLockedFor3LM(Ljava/lang/Boolean;Ljava/lang/String;)V
 
-    .line 5391
     :goto_0
     return-void
 
-    .line 5361
     :cond_1
     invoke-direct {p0, p1, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->wipeDataLocked(ZLjava/lang/String;)V
 
     goto :goto_0
 
-    .line 5363
     :cond_2
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHandler:Landroid/os/Handler;
 
@@ -12666,32 +11492,26 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 8993
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8994
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v3
 
-    .line 8995
     .local v3, "callingUserId":I
     monitor-enter p0
 
-    .line 8996
     const/4 v1, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8998
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 8999
     .local v0, "pm":Landroid/content/pm/IPackageManager;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -12699,13 +11519,11 @@
 
     move-result-wide v10
 
-    .line 9001
     .local v10, "id":J
     and-int/lit8 v1, p3, 0x1
 
     if-eqz v1, :cond_0
 
-    .line 9002
     :try_start_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -12719,13 +11537,11 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/content/pm/IPackageManager;->addCrossProfileIntentFilter(Landroid/content/IntentFilter;Ljava/lang/String;III)V
 
-    .line 9005
     :cond_0
     and-int/lit8 v1, p3, 0x2
 
     if-eqz v1, :cond_1
 
-    .line 9006
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
@@ -12745,28 +11561,22 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 9012
     :cond_1
     :try_start_2
     invoke-static {v10, v11}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9014
     :goto_0
     monitor-exit p0
 
-    .line 9015
     return-void
 
-    .line 9009
     :catch_0
     move-exception v1
 
-    .line 9012
     invoke-static {v10, v11}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 9014
     .end local v0    # "pm":Landroid/content/pm/IPackageManager;
     .end local v10    # "id":J
     :catchall_0
@@ -12778,7 +11588,6 @@
 
     throw v1
 
-    .line 9012
     .restart local v0    # "pm":Landroid/content/pm/IPackageManager;
     .restart local v10    # "id":J
     :catchall_1
@@ -12800,12 +11609,10 @@
     .param p4, "userHandle"    # I
 
     .prologue
-    .line 9019
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9020
     new-instance v6, Landroid/app/enterprise/ContextInfo;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -12814,7 +11621,6 @@
 
     invoke-direct {v6, v1, p4}, Landroid/app/enterprise/ContextInfo;-><init>(II)V
 
-    .line 9021
     .local v6, "cxtInfo":Landroid/app/enterprise/ContextInfo;
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -12822,7 +11628,6 @@
 
     invoke-virtual {v1, v6, p1}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceComponentCheck(Landroid/app/enterprise/ContextInfo;Landroid/content/ComponentName;)V
 
-    .line 9022
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v1
@@ -12831,24 +11636,20 @@
 
     invoke-virtual {v1, v6, v2}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermissionByContext(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 9023
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 9024
     .local v0, "pm":Landroid/content/pm/IPackageManager;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v8
 
-    .line 9026
     .local v8, "id":J
     and-int/lit8 v1, p3, 0x1
 
     if-eqz v1, :cond_0
 
-    .line 9027
     :try_start_0
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
@@ -12864,13 +11665,11 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/content/pm/IPackageManager;->addCrossProfileIntentFilter(Landroid/content/IntentFilter;Ljava/lang/String;III)V
 
-    .line 9030
     :cond_0
     and-int/lit8 v1, p3, 0x2
 
     if-eqz v1, :cond_1
 
-    .line 9031
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -12888,19 +11687,15 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9037
     :cond_1
     invoke-static {v8, v9}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9039
     :goto_0
     return-void
 
-    .line 9034
     :catch_0
     move-exception v1
 
-    .line 9037
     invoke-static {v8, v9}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -12921,20 +11716,16 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 3266
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 3267
     .local v4, "userId":I
     const/4 v1, 0x0
 
-    .line 3269
     .local v1, "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     monitor-enter p0
 
-    .line 3270
     const/4 v6, -0x1
 
     :try_start_0
@@ -12942,24 +11733,20 @@
 
     move-result-object v0
 
-    .line 3272
     .local v0, "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v6, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
 
     if-nez v6, :cond_0
 
-    .line 3273
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
 
-    .line 3275
     :cond_0
     iget-object v3, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
 
-    .line 3276
     .local v3, "providers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v3, p2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
@@ -12967,17 +11754,14 @@
 
     if-nez v6, :cond_1
 
-    .line 3277
     invoke-interface {v3, p2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 3278
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3279
     .end local v1    # "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local v2, "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v6, 0x0
@@ -12991,7 +11775,6 @@
 
     move-object v1, v2
 
-    .line 3281
     .end local v2    # "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v1    # "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_1
@@ -13000,23 +11783,18 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3283
     if-eqz v1, :cond_2
 
-    .line 3284
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mLocalService:Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;
 
     # invokes: Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;->notifyCrossProfileProvidersChanged(ILjava/util/List;)V
     invoke-static {v5, v4, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;->access$1200(Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;ILjava/util/List;)V
 
-    .line 3285
     const/4 v5, 0x1
 
-    .line 3288
     :cond_2
     return v5
 
-    .line 3281
     .end local v0    # "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v3    # "providers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :catchall_0
@@ -13051,32 +11829,26 @@
     .param p3, "activity"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 8823
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8824
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v3
 
-    .line 8825
     .local v3, "userHandle":I
     monitor-enter p0
 
-    .line 8826
     const/4 v4, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8828
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v2
 
-    .line 8829
     .local v2, "pm":Landroid/content/pm/IPackageManager;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -13084,7 +11856,6 @@
 
     move-result-wide v0
 
-    .line 8831
     .local v0, "id":J
     :try_start_1
     invoke-interface {v2, p2, p3, v3}, Landroid/content/pm/IPackageManager;->addPersistentPreferredActivity(Landroid/content/IntentFilter;Landroid/content/ComponentName;I)V
@@ -13092,27 +11863,21 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 8835
     :try_start_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 8837
     :goto_0
     monitor-exit p0
 
-    .line 8838
     return-void
 
-    .line 8832
     :catch_0
     move-exception v4
 
-    .line 8835
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 8837
     .end local v0    # "id":J
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     :catchall_0
@@ -13124,7 +11889,6 @@
 
     throw v4
 
-    .line 8835
     .restart local v0    # "id":J
     .restart local v2    # "pm":Landroid/content/pm/IPackageManager;
     :catchall_1
@@ -13145,13 +11909,10 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7931
     monitor-enter p0
 
-    .line 7932
     if-nez p1, :cond_0
 
-    .line 7933
     :try_start_0
     new-instance v6, Ljava/lang/NullPointerException;
 
@@ -13161,7 +11922,6 @@
 
     throw v6
 
-    .line 7951
     :catchall_0
     move-exception v6
 
@@ -13171,7 +11931,6 @@
 
     throw v6
 
-    .line 7935
     :cond_0
     const/16 v6, 0xa
 
@@ -13180,7 +11939,6 @@
 
     move-result-object v0
 
-    .line 7938
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -13188,27 +11946,23 @@
 
     move-result-wide v2
 
-    .line 7940
     .local v2, "ident":J
     :try_start_2
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->convertUserHandleForRecovery(I)I
 
     move-result p3
 
-    .line 7941
     new-instance v4, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {v4, v6}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 7942
     .local v4, "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
     invoke-virtual {v4, p3}, Lcom/android/internal/widget/LockPatternUtils;->getRecoveryPassword(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 7944
     .local v5, "mRecoveryPassword":Ljava/lang/String;
     invoke-virtual {v4, v5, p3}, Lcom/android/internal/widget/LockPatternUtils;->checkPassword(Ljava/lang/String;I)Z
     :try_end_2
@@ -13217,7 +11971,6 @@
 
     move-result v6
 
-    .line 7949
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -13230,21 +11983,17 @@
     :goto_0
     return v6
 
-    .line 7945
     :catch_0
     move-exception v1
 
-    .line 7946
     .local v1, "e":Ljava/lang/Exception;
     :try_start_4
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 7947
     const/4 v6, 0x0
 
-    .line 7949
     :try_start_5
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -13271,7 +12020,6 @@
     .param p4, "response"    # Landroid/os/IBinder;
 
     .prologue
-    .line 5043
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v2
@@ -13284,17 +12032,14 @@
 
     if-eq v2, v5, :cond_0
 
-    .line 5080
     :goto_0
     return-void
 
-    .line 5047
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v4
 
-    .line 5049
     .local v4, "caller":Landroid/os/UserHandle;
     invoke-virtual {v4}, Landroid/os/UserHandle;->getIdentifier()I
 
@@ -13306,7 +12051,6 @@
 
     move-result-object v11
 
-    .line 5050
     .local v11, "aliasChooser":Landroid/content/ComponentName;
     if-nez v11, :cond_1
 
@@ -13316,28 +12060,23 @@
 
     if-eqz v2, :cond_1
 
-    .line 5051
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getDeviceOwnerAdmin()Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v12
 
-    .line 5052
     .local v12, "deviceOwnerAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v12, :cond_1
 
-    .line 5053
     iget-object v2, v12, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v2}, Landroid/app/admin/DeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
 
     move-result-object v11
 
-    .line 5056
     .end local v12    # "deviceOwnerAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     if-nez v11, :cond_2
 
-    .line 5057
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -13348,7 +12087,6 @@
 
     goto :goto_0
 
-    .line 5061
     :cond_2
     new-instance v3, Landroid/content/Intent;
 
@@ -13356,44 +12094,37 @@
 
     invoke-direct {v3, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5062
     .local v3, "intent":Landroid/content/Intent;
     invoke-virtual {v3, v11}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 5063
     const-string v2, "android.app.extra.CHOOSE_PRIVATE_KEY_SENDER_UID"
 
     move/from16 v0, p1
 
     invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 5064
     const-string v2, "android.app.extra.CHOOSE_PRIVATE_KEY_URI"
 
     move-object/from16 v0, p2
 
     invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 5065
     const-string v2, "android.app.extra.CHOOSE_PRIVATE_KEY_ALIAS"
 
     move-object/from16 v0, p3
 
     invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5066
     const-string v2, "android.app.extra.CHOOSE_PRIVATE_KEY_RESPONSE"
 
     move-object/from16 v0, p4
 
     invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/IBinder;)Landroid/content/Intent;
 
-    .line 5068
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 5070
     .local v14, "id":J
     :try_start_0
     move-object/from16 v0, p0
@@ -13422,7 +12153,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5078
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -13440,32 +12170,26 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 9044
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9045
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 9046
     .local v0, "callingUserId":I
     monitor-enter p0
 
-    .line 9047
     const/4 v4, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9048
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 9049
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -13473,7 +12197,6 @@
 
     move-result-wide v2
 
-    .line 9052
     .local v2, "id":J
     :try_start_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -13482,7 +12205,6 @@
 
     invoke-interface {v1, v0, v4}, Landroid/content/pm/IPackageManager;->clearCrossProfileIntentFilters(ILjava/lang/String;)V
 
-    .line 9056
     const/4 v4, 0x0
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -13494,27 +12216,21 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 9060
     :try_start_2
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9062
     :goto_0
     monitor-exit p0
 
-    .line 9063
     return-void
 
-    .line 9057
     :catch_0
     move-exception v4
 
-    .line 9060
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 9062
     .end local v1    # "pm":Landroid/content/pm/IPackageManager;
     .end local v2    # "id":J
     :catchall_0
@@ -13526,7 +12242,6 @@
 
     throw v4
 
-    .line 9060
     .restart local v1    # "pm":Landroid/content/pm/IPackageManager;
     .restart local v2    # "id":J
     :catchall_1
@@ -13546,12 +12261,10 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 9067
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9068
     new-instance v0, Landroid/app/enterprise/ContextInfo;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -13560,7 +12273,6 @@
 
     invoke-direct {v0, v4, p2}, Landroid/app/enterprise/ContextInfo;-><init>(II)V
 
-    .line 9069
     .local v0, "cxtInfo":Landroid/app/enterprise/ContextInfo;
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -13568,7 +12280,6 @@
 
     invoke-virtual {v4, v0, p1}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceComponentCheck(Landroid/app/enterprise/ContextInfo;Landroid/content/ComponentName;)V
 
-    .line 9070
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v4
@@ -13577,18 +12288,15 @@
 
     invoke-virtual {v4, v0, v5}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermissionByContext(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 9072
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 9073
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 9076
     .local v2, "id":J
     :try_start_0
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -13597,7 +12305,6 @@
 
     invoke-interface {v1, p2, v4}, Landroid/content/pm/IPackageManager;->clearCrossProfileIntentFilters(ILjava/lang/String;)V
 
-    .line 9080
     const/4 v4, 0x0
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -13609,18 +12316,14 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 9084
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9086
     :goto_0
     return-void
 
-    .line 9081
     :catch_0
     move-exception v4
 
-    .line 9084
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
@@ -13638,22 +12341,18 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 6686
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 6714
     :goto_0
     return-void
 
-    .line 6689
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6691
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
@@ -13662,7 +12361,6 @@
 
     move-result-object v0
 
-    .line 6693
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->getUid()I
 
@@ -13674,7 +12372,6 @@
 
     if-eq v1, v4, :cond_1
 
-    .line 6694
     new-instance v1, Ljava/lang/SecurityException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -13713,7 +12410,6 @@
 
     throw v1
 
-    .line 6698
     :cond_1
     iget-object v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -13739,7 +12435,6 @@
 
     if-nez v1, :cond_2
 
-    .line 6700
     new-instance v1, Ljava/lang/SecurityException;
 
     const-string v4, "clearDeviceInitializer can only be called by the device initializer/owner"
@@ -13748,11 +12443,9 @@
 
     throw v1
 
-    .line 6703
     :cond_2
     monitor-enter p0
 
-    .line 6704
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -13760,31 +12453,26 @@
 
     move-result-wide v2
 
-    .line 6706
     .local v2, "ident":J
     :try_start_1
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-eqz v1, :cond_3
 
-    .line 6707
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v1}, Lcom/android/server/devicepolicy/DeviceOwner;->clearDeviceInitializer()V
 
-    .line 6708
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v1}, Lcom/android/server/devicepolicy/DeviceOwner;->writeOwnerFile()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 6711
     :cond_3
     :try_start_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6713
     monitor-exit p0
 
     goto :goto_0
@@ -13799,7 +12487,6 @@
 
     throw v1
 
-    .line 6711
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -13817,12 +12504,10 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 6566
     const-string/jumbo v2, "packageName is null"
 
     invoke-static {p1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6568
     :try_start_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -13836,7 +12521,6 @@
 
     move-result v1
 
-    .line 6569
     .local v1, "uid":I
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -13844,7 +12528,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 6570
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "Invalid packageName"
@@ -13855,12 +12538,10 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 6572
     .end local v1    # "uid":I
     :catch_0
     move-exception v0
 
-    .line 6573
     .local v0, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     new-instance v2, Ljava/lang/SecurityException;
 
@@ -13868,7 +12549,6 @@
 
     throw v2
 
-    .line 6575
     .end local v0    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v1    # "uid":I
     :cond_0
@@ -13878,7 +12558,6 @@
 
     if-nez v2, :cond_1
 
-    .line 6576
     new-instance v2, Ljava/lang/SecurityException;
 
     const-string v3, "clearDeviceOwner can only be called by the device owner"
@@ -13887,11 +12566,9 @@
 
     throw v2
 
-    .line 6578
     :cond_1
     monitor-enter p0
 
-    .line 6579
     :try_start_1
     new-instance v2, Landroid/os/UserHandle;
 
@@ -13901,39 +12578,31 @@
 
     invoke-direct {p0, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->clearUserPoliciesLocked(Landroid/os/UserHandle;)V
 
-    .line 6580
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-eqz v2, :cond_2
 
-    .line 6581
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v2}, Lcom/android/server/devicepolicy/DeviceOwner;->clearDeviceOwner()V
 
-    .line 6582
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v2}, Lcom/android/server/devicepolicy/DeviceOwner;->writeOwnerFile()V
 
-    .line 6583
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateDeviceOwnerLocked()V
 
-    .line 6585
     const-string/jumbo v2, "security.knox_afw_mode"
 
     const-string/jumbo v3, "false"
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6587
     :cond_2
     monitor-exit p0
 
-    .line 6588
     return-void
 
-    .line 6587
     :catchall_0
     move-exception v2
 
@@ -13950,32 +12619,26 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 8842
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8843
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v3
 
-    .line 8844
     .local v3, "userHandle":I
     monitor-enter p0
 
-    .line 8845
     const/4 v4, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8847
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v2
 
-    .line 8848
     .local v2, "pm":Landroid/content/pm/IPackageManager;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -13983,7 +12646,6 @@
 
     move-result-wide v0
 
-    .line 8850
     .local v0, "id":J
     :try_start_1
     invoke-interface {v2, p2, v3}, Landroid/content/pm/IPackageManager;->clearPackagePersistentPreferredActivities(Ljava/lang/String;I)V
@@ -13991,27 +12653,21 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 8854
     :try_start_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 8856
     :goto_0
     monitor-exit p0
 
-    .line 8857
     return-void
 
-    .line 8851
     :catch_0
     move-exception v4
 
-    .line 8854
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 8856
     .end local v0    # "id":J
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     :catchall_0
@@ -14023,7 +12679,6 @@
 
     throw v4
 
-    .line 8854
     .restart local v0    # "id":J
     .restart local v2    # "pm":Landroid/content/pm/IPackageManager;
     :catchall_1
@@ -14042,40 +12697,32 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 6746
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 6761
     :goto_0
     return-void
 
-    .line 6749
     :cond_0
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v0
 
-    .line 6751
     .local v0, "callingUser":Landroid/os/UserHandle;
     const/4 v1, -0x1
 
     invoke-virtual {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 6752
     monitor-enter p0
 
-    .line 6753
     :try_start_0
     invoke-direct {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->clearUserPoliciesLocked(Landroid/os/UserHandle;)V
 
-    .line 6754
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-eqz v1, :cond_1
 
-    .line 6755
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v0}, Landroid/os/UserHandle;->getIdentifier()I
@@ -14084,19 +12731,16 @@
 
     invoke-virtual {v1, v2}, Lcom/android/server/devicepolicy/DeviceOwner;->removeProfileOwner(I)V
 
-    .line 6756
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v1}, Lcom/android/server/devicepolicy/DeviceOwner;->writeOwnerFile()V
 
-    .line 6758
     const-string/jumbo v1, "security.knox_afw_mode"
 
     const-string/jumbo v2, "false"
 
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6760
     :cond_1
     monitor-exit p0
 
@@ -14117,22 +12761,18 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 5447
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isSupportFP(I)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 5473
     :goto_0
     return-void
 
-    .line 5448
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5449
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.BIND_DEVICE_ADMIN"
@@ -14141,16 +12781,13 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5451
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 5452
     .local v2, "p":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     monitor-enter p0
 
-    .line 5453
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -14158,56 +12795,46 @@
 
     move-result-wide v0
 
-    .line 5455
     .local v0, "ident":J
     :try_start_1
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordQuality:I
 
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
 
-    .line 5456
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLength:I
 
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLength:I
 
-    .line 5457
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLetters:I
 
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLetters:I
 
-    .line 5458
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordUpperCase:I
 
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordUpperCase:I
 
-    .line 5459
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLowerCase:I
 
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLowerCase:I
 
-    .line 5460
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordNumeric:I
 
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNumeric:I
 
-    .line 5461
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordSymbols:I
 
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordSymbols:I
 
-    .line 5462
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordNonLetter:I
 
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNonLetter:I
 
-    .line 5464
     const-string v3, "android.app.action.ACTION_PASSWORD_CHANGED"
 
     const/4 v4, 0x0
 
     invoke-direct {p0, v3, v4, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendAdminCommandToSelfAndProfilesLocked(Ljava/lang/String;II)V
 
-    .line 5468
     const/4 v3, 0x0
 
     const/4 v4, 0x0
@@ -14216,11 +12843,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 5470
     :try_start_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5472
     monitor-exit p0
 
     goto :goto_0
@@ -14235,7 +12860,6 @@
 
     throw v3
 
-    .line 5470
     .restart local v0    # "ident":J
     :catchall_1
     move-exception v3
@@ -14257,50 +12881,41 @@
     .param p5, "adminExtras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 9426
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->createUser(Landroid/content/ComponentName;Ljava/lang/String;)Landroid/os/UserHandle;
 
     move-result-object v6
 
-    .line 9427
     .local v6, "user":Landroid/os/UserHandle;
     if-nez v6, :cond_0
 
-    .line 9428
     const/4 v6, 0x0
 
-    .line 9453
     .end local v6    # "user":Landroid/os/UserHandle;
     :goto_0
     return-object v6
 
-    .line 9430
     .restart local v6    # "user":Landroid/os/UserHandle;
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 9432
     .local v2, "id":J
     :try_start_0
     invoke-virtual {p4}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 9433
     .local v5, "profileOwnerPkg":Ljava/lang/String;
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v4
 
-    .line 9434
     .local v4, "ipm":Landroid/content/pm/IPackageManager;
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
     move-result-object v0
 
-    .line 9436
     .local v0, "activityManager":Landroid/app/IActivityManager;
     invoke-virtual {v6}, Landroid/os/UserHandle;->getIdentifier()I
     :try_end_0
@@ -14308,7 +12923,6 @@
 
     move-result v7
 
-    .line 9439
     .local v7, "userHandle":I
     :try_start_1
     invoke-interface {v4, v5, v7}, Landroid/content/pm/IPackageManager;->isPackageAvailable(Ljava/lang/String;I)Z
@@ -14317,38 +12931,31 @@
 
     if-nez v8, :cond_1
 
-    .line 9440
     invoke-interface {v4, v5, v7}, Landroid/content/pm/IPackageManager;->installExistingPackageAsUser(Ljava/lang/String;I)I
 
-    .line 9444
     :cond_1
     invoke-interface {v0, v7}, Landroid/app/IActivityManager;->startUserInBackground(I)Z
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 9449
     :goto_1
     const/4 v8, 0x1
 
     :try_start_2
     invoke-direct {p0, p4, v8, v7, p5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setActiveAdmin(Landroid/content/ComponentName;ZILandroid/os/Bundle;)V
 
-    .line 9450
     invoke-virtual {p0, p4, p3, v7}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setProfileOwner(Landroid/content/ComponentName;Ljava/lang/String;I)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 9453
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 9445
     :catch_0
     move-exception v1
 
-    .line 9446
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v8, "DevicePolicyManagerService"
@@ -14361,7 +12968,6 @@
 
     goto :goto_1
 
-    .line 9453
     .end local v0    # "activityManager":Landroid/app/IActivityManager;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v4    # "ipm":Landroid/content/pm/IPackageManager;
@@ -14381,28 +12987,23 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 9406
     const-string v3, "ComponentName is null"
 
     invoke-static {p1, v3}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9407
     monitor-enter p0
 
-    .line 9408
     const/4 v3, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9410
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v0
 
-    .line 9412
     .local v0, "id":J
     :try_start_1
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -14413,18 +13014,15 @@
 
     move-result-object v2
 
-    .line 9413
     .local v2, "userInfo":Landroid/content/pm/UserInfo;
     if-eqz v2, :cond_0
 
-    .line 9414
     invoke-virtual {v2}, Landroid/content/pm/UserInfo;->getUserHandle()Landroid/os/UserHandle;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
     move-result-object v3
 
-    .line 9418
     :try_start_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -14433,18 +13031,15 @@
     :goto_0
     return-object v3
 
-    .line 9416
     :cond_0
     const/4 v3, 0x0
 
-    .line 9418
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 9420
     .end local v0    # "id":J
     .end local v2    # "userInfo":Landroid/content/pm/UserInfo;
     :catchall_0
@@ -14456,7 +13051,6 @@
 
     throw v3
 
-    .line 9418
     .restart local v0    # "id":J
     :catchall_1
     move-exception v3
@@ -14475,7 +13069,6 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 8745
     if-nez p2, :cond_1
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -14496,7 +13089,6 @@
 
     move-result-object v0
 
-    .line 8750
     .local v0, "base_target":Ljava/lang/String;
     :goto_0
     :try_start_0
@@ -14504,7 +13096,6 @@
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 8751
     .local v1, "targetFile":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
@@ -14512,18 +13103,15 @@
 
     if-eqz v2, :cond_0
 
-    .line 8752
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8756
     .end local v1    # "targetFile":Ljava/io/File;
     :cond_0
     :goto_1
     return-void
 
-    .line 8745
     .end local v0    # "base_target":Ljava/lang/String;
     :cond_1
     new-instance v2, Ljava/io/File;
@@ -14540,7 +13128,6 @@
 
     goto :goto_0
 
-    .line 8753
     .restart local v0    # "base_target":Ljava/lang/String;
     :catch_0
     move-exception v2
@@ -14554,29 +13141,24 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 8283
     move/from16 v0, p2
 
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v12
 
-    .line 8285
     .local v12, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v14, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->allowLock:Ljava/lang/Object;
 
     monitor-enter v14
 
-    .line 8286
     if-eqz p1, :cond_2
 
-    .line 8289
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 8290
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     # getter for: Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAllowListRecord:Ljava/util/HashSet;
     invoke-static {v12}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->access$1500(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)Ljava/util/HashSet;
@@ -14587,7 +13169,6 @@
 
     move-result-object v11
 
-    .line 8291
     .local v11, "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :goto_0
     invoke-interface {v11}, Ljava/util/Iterator;->hasNext()Z
@@ -14596,14 +13177,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 8292
     invoke-interface {v11}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Ljava/lang/String;
 
-    .line 8293
     .local v2, "s":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
     :try_end_0
@@ -14614,7 +13193,6 @@
 
     if-nez v3, :cond_0
 
-    .line 8296
     :try_start_1
     invoke-direct {p0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isOpenThemePkg(Landroid/content/pm/IPackageManager;Ljava/lang/String;)Z
 
@@ -14622,7 +13200,6 @@
 
     if-nez v3, :cond_0
 
-    .line 8297
     const/4 v3, 0x2
 
     const/4 v4, 0x0
@@ -14637,7 +13214,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8304
     :cond_0
     :goto_1
     :try_start_2
@@ -14648,14 +13224,12 @@
 
     goto :goto_0
 
-    .line 8306
     .end local v1    # "pm":Landroid/content/pm/IPackageManager;
     .end local v2    # "s":Ljava/lang/String;
     .end local v11    # "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :catch_0
     move-exception v9
 
-    .line 8307
     .local v9, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v3, "DevicePolicyManagerService"
@@ -14682,7 +13256,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8332
     .end local v9    # "e":Landroid/os/RemoteException;
     :cond_1
     :goto_2
@@ -14690,17 +13263,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 8333
     return-void
 
-    .line 8299
     .restart local v1    # "pm":Landroid/content/pm/IPackageManager;
     .restart local v2    # "s":Ljava/lang/String;
     .restart local v11    # "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :catch_1
     move-exception v9
 
-    .line 8300
     .local v9, "e":Ljava/lang/IllegalArgumentException;
     :try_start_4
     invoke-direct {p0, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removePackageFromHarmonyEAS(Ljava/lang/String;)V
@@ -14710,7 +13280,6 @@
 
     goto :goto_1
 
-    .line 8332
     .end local v1    # "pm":Landroid/content/pm/IPackageManager;
     .end local v2    # "s":Ljava/lang/String;
     .end local v9    # "e":Ljava/lang/IllegalArgumentException;
@@ -14725,23 +13294,19 @@
 
     throw v3
 
-    .line 8311
     :cond_2
     :try_start_6
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getHarmonyEAS()Landroid/content/IHarmonyEAS;
 
-    .line 8312
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 8313
     .restart local v1    # "pm":Landroid/content/pm/IPackageManager;
     sget-object v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHM:Landroid/content/IHarmonyEAS;
 
     if-eqz v3, :cond_1
 
-    .line 8314
     sget-object v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHM:Landroid/content/IHarmonyEAS;
 
     move/from16 v0, p2
@@ -14752,7 +13317,6 @@
 
     check-cast v13, Ljava/util/ArrayList;
 
-    .line 8316
     .local v13, "thirdPartyList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v13}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -14776,7 +13340,6 @@
     .catch Landroid/os/RemoteException; {:try_start_6 .. :try_end_6} :catch_3
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 8319
     .local v4, "app":Ljava/lang/String;
     :try_start_7
     invoke-direct {p0, v1, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isOpenThemePkg(Landroid/content/pm/IPackageManager;Ljava/lang/String;)Z
@@ -14785,7 +13348,6 @@
 
     if-nez v3, :cond_3
 
-    .line 8320
     const/4 v5, 0x2
 
     const/4 v6, 0x0
@@ -14804,11 +13366,9 @@
 
     goto :goto_3
 
-    .line 8322
     :catch_2
     move-exception v9
 
-    .line 8323
     .restart local v9    # "e":Ljava/lang/IllegalArgumentException;
     :try_start_8
     invoke-direct {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removePackageFromHarmonyEAS(Ljava/lang/String;)V
@@ -14818,7 +13378,6 @@
 
     goto :goto_3
 
-    .line 8328
     .end local v1    # "pm":Landroid/content/pm/IPackageManager;
     .end local v4    # "app":Ljava/lang/String;
     .end local v9    # "e":Ljava/lang/IllegalArgumentException;
@@ -14827,7 +13386,6 @@
     :catch_3
     move-exception v9
 
-    .line 8329
     .local v9, "e":Landroid/os/RemoteException;
     :try_start_9
     const-string v3, "DevicePolicyManagerService"
@@ -14866,7 +13424,6 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 7313
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v8, "android.permission.DUMP"
@@ -14877,7 +13434,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 7316
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -14916,39 +13472,32 @@
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7352
     :goto_0
     return-void
 
-    .line 7322
     :cond_0
     new-instance v3, Landroid/util/PrintWriterPrinter;
 
     invoke-direct {v3, p2}, Landroid/util/PrintWriterPrinter;-><init>(Ljava/io/PrintWriter;)V
 
-    .line 7324
     .local v3, "p":Landroid/util/Printer;
     monitor-enter p0
 
-    .line 7325
     :try_start_0
     const-string v7, "Current Device Policy Manager state:"
 
     invoke-interface {v3, v7}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 7326
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-eqz v7, :cond_1
 
-    .line 7327
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     const-string v8, "  "
 
     invoke-virtual {v7, v8, p2}, Lcom/android/server/devicepolicy/DeviceOwner;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 7329
     :cond_1
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserData:Landroid/util/SparseArray;
 
@@ -14956,7 +13505,6 @@
 
     move-result v6
 
-    .line 7330
     .local v6, "userCount":I
     const/4 v5, 0x0
 
@@ -14964,7 +13512,6 @@
     :goto_1
     if-ge v5, v6, :cond_5
 
-    .line 7331
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserData:Landroid/util/SparseArray;
 
     invoke-virtual {v7, v5}, Landroid/util/SparseArray;->keyAt(I)I
@@ -14975,7 +13522,6 @@
 
     move-result-object v4
 
-    .line 7332
     .local v4, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -15005,14 +13551,12 @@
 
     invoke-interface {v3, v7}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 7333
     iget-object v7, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 7334
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -15020,7 +13564,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 7335
     iget-object v7, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -15029,11 +13572,9 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7336
     .local v1, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_2
 
-    .line 7337
     const-string v7, "  "
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -15050,23 +13591,19 @@
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 7338
     const-string v7, ":"
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7339
     const-string v7, "    "
 
     invoke-virtual {v1, v7, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->dump(Ljava/lang/String;Ljava/io/PrintWriter;)V
 
-    .line 7334
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 7342
     .end local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     iget-object v7, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mRemovingAdmins:Ljava/util/ArrayList;
@@ -15077,7 +13614,6 @@
 
     if-nez v7, :cond_4
 
-    .line 7343
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -15112,13 +13648,11 @@
 
     invoke-interface {v3, v7}, Landroid/util/Printer;->println(Ljava/lang/String;)V
 
-    .line 7347
     :cond_4
     const-string v7, " "
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 7348
     const-string v7, "  mActivePasswordQuality="
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -15127,7 +13661,6 @@
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 7349
     const-string v7, "  mPasswordOwner="
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
@@ -15136,12 +13669,10 @@
 
     invoke-virtual {p2, v7}, Ljava/io/PrintWriter;->println(I)V
 
-    .line 7330
     add-int/lit8 v5, v5, 0x1
 
     goto/16 :goto_1
 
-    .line 7351
     .end local v0    # "N":I
     .end local v2    # "i":I
     .end local v4    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -15167,12 +13698,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 8477
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v8
 
-    .line 8479
     .local v8, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     # getter for: Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mBlockListRecordInRom:Ljava/util/HashSet;
     invoke-static {v8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->access$1600(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)Ljava/util/HashSet;
@@ -15183,13 +13712,11 @@
 
     move-result-object v7
 
-    .line 8481
     .local v7, "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 8483
     .local v0, "pm":Landroid/content/pm/IPackageManager;
     :goto_0
     :try_start_0
@@ -15199,7 +13726,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 8484
     invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
@@ -15208,7 +13734,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8487
     .local v1, "s":Ljava/lang/String;
     :try_start_1
     invoke-interface {v0, v1, p1}, Landroid/content/pm/IPackageManager;->getApplicationEnabledSetting(Ljava/lang/String;I)I
@@ -15219,14 +13744,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 8488
     invoke-direct {p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isOpenThemePkg(Landroid/content/pm/IPackageManager;Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 8489
     const/4 v2, 0x1
 
     const/4 v3, 0x0
@@ -15240,7 +13763,6 @@
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 8495
     :cond_0
     :goto_1
     :try_start_2
@@ -15250,12 +13772,10 @@
 
     goto :goto_0
 
-    .line 8497
     .end local v1    # "s":Ljava/lang/String;
     :catch_0
     move-exception v6
 
-    .line 8498
     .local v6, "e":Landroid/os/RemoteException;
     const-string v2, "DevicePolicyManagerService"
 
@@ -15279,12 +13799,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8500
     .end local v6    # "e":Landroid/os/RemoteException;
     :cond_1
     return-void
 
-    .line 8492
     .restart local v1    # "s":Ljava/lang/String;
     :catch_1
     move-exception v2
@@ -15301,26 +13819,21 @@
 
     const/4 v6, 0x1
 
-    .line 8336
     iget-object v12, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->allowLock:Ljava/lang/Object;
 
     monitor-enter v12
 
-    .line 8338
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getHarmonyEAS()Landroid/content/IHarmonyEAS;
 
-    .line 8339
     sget-object v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHM:Landroid/content/IHarmonyEAS;
 
     if-eqz v2, :cond_1
 
-    .line 8341
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 8343
     .local v0, "pm":Landroid/content/pm/IPackageManager;
     sget-object v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHM:Landroid/content/IHarmonyEAS;
 
@@ -15330,7 +13843,6 @@
 
     check-cast v10, Ljava/util/ArrayList;
 
-    .line 8345
     .local v10, "thirdPartyList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
@@ -15340,7 +13852,6 @@
 
     if-nez v2, :cond_3
 
-    .line 8346
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getHarmonyEAS()Landroid/content/IHarmonyEAS;
 
     move-result-object v2
@@ -15351,7 +13862,6 @@
 
     check-cast v11, Ljava/util/ArrayList;
 
-    .line 8347
     .local v11, "unknownList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v11}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -15375,7 +13885,6 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8349
     .local v1, "unknown":Ljava/lang/String;
     :try_start_1
     invoke-interface {v0, v1, p1}, Landroid/content/pm/IPackageManager;->getApplicationEnabledSetting(Ljava/lang/String;I)I
@@ -15384,14 +13893,12 @@
 
     if-ne v2, v6, :cond_0
 
-    .line 8350
     invoke-direct {p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isOpenThemePkg(Landroid/content/pm/IPackageManager;Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 8351
     const/4 v2, 0x2
 
     const/4 v3, 0x0
@@ -15408,11 +13915,9 @@
 
     goto :goto_0
 
-    .line 8354
     :catch_0
     move-exception v8
 
-    .line 8355
     .local v8, "e":Ljava/lang/IllegalArgumentException;
     :try_start_2
     invoke-direct {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removePackageFromHarmonyEAS(Ljava/lang/String;)V
@@ -15422,7 +13927,6 @@
 
     goto :goto_0
 
-    .line 8374
     .end local v0    # "pm":Landroid/content/pm/IPackageManager;
     .end local v1    # "unknown":Ljava/lang/String;
     .end local v8    # "e":Ljava/lang/IllegalArgumentException;
@@ -15432,7 +13936,6 @@
     :catch_1
     move-exception v8
 
-    .line 8375
     .local v8, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v2, "DevicePolicyManagerService"
@@ -15457,17 +13960,14 @@
 
     invoke-static {v2, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8377
     .end local v8    # "e":Landroid/os/RemoteException;
     :cond_1
     monitor-exit v12
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 8378
     return-void
 
-    .line 8358
     .restart local v0    # "pm":Landroid/content/pm/IPackageManager;
     .restart local v9    # "i$":Ljava/util/Iterator;
     .restart local v10    # "thirdPartyList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
@@ -15476,7 +13976,6 @@
     :try_start_4
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
-    .line 8360
     .end local v9    # "i$":Ljava/util/Iterator;
     .end local v11    # "unknownList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     :cond_3
@@ -15502,7 +14001,6 @@
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 8363
     .local v3, "app":Ljava/lang/String;
     :try_start_5
     invoke-interface {v0, v3, p1}, Landroid/content/pm/IPackageManager;->getApplicationEnabledSetting(Ljava/lang/String;I)I
@@ -15511,14 +14009,12 @@
 
     if-ne v2, v13, :cond_4
 
-    .line 8364
     invoke-direct {p0, v0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isOpenThemePkg(Landroid/content/pm/IPackageManager;Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_4
 
-    .line 8365
     const/4 v4, 0x1
 
     const/4 v5, 0x0
@@ -15537,11 +14033,9 @@
 
     goto :goto_1
 
-    .line 8368
     :catch_2
     move-exception v8
 
-    .line 8369
     .local v8, "e":Ljava/lang/IllegalArgumentException;
     :try_start_6
     invoke-direct {p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removePackageFromHarmonyEAS(Ljava/lang/String;)V
@@ -15551,7 +14045,6 @@
 
     goto :goto_1
 
-    .line 8377
     .end local v0    # "pm":Landroid/content/pm/IPackageManager;
     .end local v3    # "app":Ljava/lang/String;
     .end local v8    # "e":Ljava/lang/IllegalArgumentException;
@@ -15574,26 +14067,21 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 9674
     const-string v7, "ComponentName is null"
 
     invoke-static {p1, v7}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9675
     monitor-enter p0
 
-    .line 9678
     const/4 v7, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v7}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9680
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v6
 
-    .line 9681
     .local v6, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -15601,7 +14089,6 @@
 
     move-result-wide v0
 
-    .line 9689
     .local v0, "id":J
     :try_start_1
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -15610,28 +14097,23 @@
 
     move-result-object v5
 
-    .line 9690
     .local v5, "um":Landroid/os/UserManager;
     invoke-virtual {v5, v6}, Landroid/os/UserManager;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v3
 
-    .line 9693
     .local v3, "primaryUser":Landroid/content/pm/UserInfo;
     if-nez v3, :cond_0
 
-    .line 9694
     invoke-virtual {v5, v6}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
     move-result-object v3
 
-    .line 9697
     :cond_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v2
 
-    .line 9698
     .local v2, "pm":Landroid/content/pm/IPackageManager;
     iget v7, v3, Landroid/content/pm/UserInfo;->id:I
 
@@ -15641,7 +14123,6 @@
 
     if-nez v7, :cond_1
 
-    .line 9699
     new-instance v7, Ljava/lang/IllegalArgumentException;
 
     const-string v8, "Only system apps can be enabled this way."
@@ -15653,14 +14134,12 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 9705
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     .end local v3    # "primaryUser":Landroid/content/pm/UserInfo;
     .end local v5    # "um":Landroid/os/UserManager;
     :catch_0
     move-exception v4
 
-    .line 9707
     .local v4, "re":Landroid/os/RemoteException;
     :try_start_2
     const-string v7, "DevicePolicyManagerService"
@@ -15687,21 +14166,17 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 9709
     :try_start_3
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9711
     .end local v4    # "re":Landroid/os/RemoteException;
     :goto_0
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 9712
     return-void
 
-    .line 9703
     .restart local v2    # "pm":Landroid/content/pm/IPackageManager;
     .restart local v3    # "primaryUser":Landroid/content/pm/UserInfo;
     .restart local v5    # "um":Landroid/os/UserManager;
@@ -15712,13 +14187,11 @@
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 9709
     :try_start_5
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 9711
     .end local v0    # "id":J
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     .end local v3    # "primaryUser":Landroid/content/pm/UserInfo;
@@ -15733,7 +14206,6 @@
 
     throw v7
 
-    .line 9709
     .restart local v0    # "id":J
     .restart local v6    # "userId":I
     :catchall_1
@@ -15753,17 +14225,14 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 9716
     const-string v14, "ComponentName is null"
 
     move-object/from16 v0, p1
 
     invoke-static {v0, v14}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9717
     monitor-enter p0
 
-    .line 9720
     const/4 v14, -0x1
 
     :try_start_0
@@ -15773,12 +14242,10 @@
 
     invoke-virtual {v0, v1, v14}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9722
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v13
 
-    .line 9723
     .local v13, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -15786,7 +14253,6 @@
 
     move-result-wide v6
 
-    .line 9726
     .local v6, "id":J
     :try_start_1
     move-object/from16 v0, p0
@@ -15797,28 +14263,23 @@
 
     move-result-object v12
 
-    .line 9727
     .local v12, "um":Landroid/os/UserManager;
     invoke-virtual {v12, v13}, Landroid/os/UserManager;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v11
 
-    .line 9730
     .local v11, "primaryUser":Landroid/content/pm/UserInfo;
     if-nez v11, :cond_0
 
-    .line 9731
     invoke-virtual {v12, v13}, Landroid/os/UserManager;->getUserInfo(I)Landroid/content/pm/UserInfo;
 
     move-result-object v11
 
-    .line 9734
     :cond_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v10
 
-    .line 9735
     .local v10, "pm":Landroid/content/pm/IPackageManager;
     move-object/from16 v0, p0
 
@@ -15848,15 +14309,12 @@
 
     move-result-object v2
 
-    .line 9741
     .local v2, "activitiesToEnable":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     const/4 v8, 0x0
 
-    .line 9742
     .local v8, "numberOfAppsInstalled":I
     if-eqz v2, :cond_3
 
-    .line 9743
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -15876,18 +14334,15 @@
 
     check-cast v5, Landroid/content/pm/ResolveInfo;
 
-    .line 9744
     .local v5, "info":Landroid/content/pm/ResolveInfo;
     iget-object v14, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     if-eqz v14, :cond_1
 
-    .line 9745
     iget-object v14, v5, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v9, v14, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 9746
     .local v9, "packageName":Ljava/lang/String;
     iget v14, v11, Landroid/content/pm/UserInfo;->id:I
 
@@ -15899,10 +14354,8 @@
 
     if-eqz v14, :cond_2
 
-    .line 9747
     add-int/lit8 v8, v8, 0x1
 
-    .line 9748
     invoke-interface {v10, v9, v13}, Landroid/content/pm/IPackageManager;->installExistingPackageAsUser(Ljava/lang/String;I)I
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
@@ -15910,7 +14363,6 @@
 
     goto :goto_0
 
-    .line 9757
     .end local v2    # "activitiesToEnable":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v5    # "info":Landroid/content/pm/ResolveInfo;
@@ -15922,7 +14374,6 @@
     :catch_0
     move-exception v3
 
-    .line 9759
     .local v3, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v14, "DevicePolicyManagerService"
@@ -15951,10 +14402,8 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 9760
     const/4 v8, 0x0
 
-    .line 9762
     :try_start_3
     invoke-static {v6, v7}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -15966,7 +14415,6 @@
     :goto_1
     return v8
 
-    .line 9750
     .restart local v2    # "activitiesToEnable":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .restart local v4    # "i$":Ljava/util/Iterator;
     .restart local v5    # "info":Landroid/content/pm/ResolveInfo;
@@ -16016,7 +14464,6 @@
 
     goto :goto_0
 
-    .line 9762
     .end local v2    # "activitiesToEnable":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .end local v4    # "i$":Ljava/util/Iterator;
     .end local v5    # "info":Landroid/content/pm/ResolveInfo;
@@ -16033,7 +14480,6 @@
 
     throw v14
 
-    .line 9764
     .end local v6    # "id":J
     .end local v13    # "userId":I
     :catchall_1
@@ -16045,7 +14491,6 @@
 
     throw v14
 
-    .line 9762
     .restart local v2    # "activitiesToEnable":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .restart local v6    # "id":J
     .restart local v8    # "numberOfAppsInstalled":I
@@ -16069,17 +14514,14 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 4842
     if-nez p1, :cond_1
 
-    .line 4843
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isCallerDelegatedCertInstaller()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 4844
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v1, "android.permission.MANAGE_CA_CERTIFICATES"
@@ -16088,22 +14530,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4851
     :cond_0
     :goto_0
     return-void
 
-    .line 4847
     :cond_1
     monitor-enter p0
 
-    .line 4848
     const/4 v0, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4849
     monitor-exit p0
 
     goto :goto_0
@@ -16126,31 +14564,25 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 1851
     iget-boolean v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v7, :cond_0
 
     move-object v7, v8
 
-    .line 1899
     :goto_0
     return-object v7
 
-    .line 1854
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 1855
     new-instance v6, Landroid/content/Intent;
 
     invoke-direct {v6}, Landroid/content/Intent;-><init>()V
 
-    .line 1856
     .local v6, "resolveIntent":Landroid/content/Intent;
     invoke-virtual {v6, p1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1857
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v7}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -16163,7 +14595,6 @@
 
     move-result-object v2
 
-    .line 1861
     .local v2, "infos":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v2, :cond_1
 
@@ -16173,7 +14604,6 @@
 
     if-gtz v7, :cond_4
 
-    .line 1866
     :cond_1
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDMService()Landroid/app/enterprise/IEnterpriseDeviceManager;
@@ -16184,7 +14614,6 @@
 
     move-result-object v4
 
-    .line 1867
     .local v4, "proxyAdmins":Ljava/util/List;, "Ljava/util/List<Landroid/app/admin/ProxyDeviceAdminInfo;>;"
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -16204,7 +14633,6 @@
 
     check-cast v3, Landroid/app/admin/ProxyDeviceAdminInfo;
 
-    .line 1868
     .local v3, "proxy":Landroid/app/admin/ProxyDeviceAdminInfo;
     invoke-virtual {v3}, Landroid/app/admin/ProxyDeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
 
@@ -16218,7 +14646,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 1870
     :try_start_1
     new-instance v7, Landroid/app/admin/DeviceAdminInfo;
 
@@ -16232,11 +14659,9 @@
 
     goto :goto_0
 
-    .line 1871
     :catch_0
     move-exception v0
 
-    .line 1872
     .local v0, "e":Lorg/xmlpull/v1/XmlPullParserException;
     :try_start_2
     const-string v7, "DevicePolicyManagerService"
@@ -16273,15 +14698,12 @@
 
     move-object v7, v8
 
-    .line 1874
     goto :goto_0
 
-    .line 1875
     .end local v0    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_1
     move-exception v0
 
-    .line 1876
     .local v0, "e":Ljava/io/IOException;
     const-string v7, "DevicePolicyManagerService"
 
@@ -16319,10 +14741,8 @@
 
     move-object v7, v8
 
-    .line 1878
     goto/16 :goto_0
 
-    .line 1882
     .end local v0    # "e":Ljava/io/IOException;
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "proxy":Landroid/app/admin/ProxyDeviceAdminInfo;
@@ -16330,7 +14750,6 @@
     :catch_2
     move-exception v5
 
-    .line 1883
     .local v5, "re":Landroid/os/RemoteException;
     const-string v7, "DevicePolicyManagerService"
 
@@ -16364,7 +14783,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1887
     .end local v5    # "re":Landroid/os/RemoteException;
     :cond_3
     new-instance v7, Ljava/lang/IllegalArgumentException;
@@ -16391,7 +14809,6 @@
 
     throw v7
 
-    .line 1891
     :cond_4
     :try_start_3
     new-instance v9, Landroid/app/admin/DeviceAdminInfo;
@@ -16415,11 +14832,9 @@
 
     goto/16 :goto_0
 
-    .line 1892
     :catch_3
     move-exception v0
 
-    .line 1893
     .local v0, "e":Lorg/xmlpull/v1/XmlPullParserException;
     const-string v7, "DevicePolicyManagerService"
 
@@ -16455,15 +14870,12 @@
 
     move-object v7, v8
 
-    .line 1895
     goto/16 :goto_0
 
-    .line 1896
     .end local v0    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     :catch_4
     move-exception v0
 
-    .line 1897
     .local v0, "e":Ljava/io/IOException;
     const-string v7, "DevicePolicyManagerService"
 
@@ -16499,7 +14911,6 @@
 
     move-object v7, v8
 
-    .line 1899
     goto/16 :goto_0
 .end method
 
@@ -16507,7 +14918,6 @@
     .locals 1
 
     .prologue
-    .line 9799
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
@@ -16524,32 +14934,25 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 9804
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 9805
     iget-boolean v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v5, :cond_0
 
-    .line 9806
     const/4 v5, 0x0
 
-    .line 9816
     :goto_0
     return-object v5
 
-    .line 9808
     :cond_0
     monitor-enter p0
 
-    .line 9809
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 9810
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -16557,13 +14960,11 @@
 
     move-result v0
 
-    .line 9811
     .local v0, "N":I
     new-instance v4, Ljava/util/HashSet;
 
     invoke-direct {v4}, Ljava/util/HashSet;-><init>()V
 
-    .line 9812
     .local v4, "resultSet":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
@@ -16571,7 +14972,6 @@
     :goto_1
     if-ge v2, v0, :cond_1
 
-    .line 9813
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -16580,18 +14980,15 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9814
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v5, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->accountTypesWithManagementDisabled:Ljava/util/Set;
 
     invoke-virtual {v4, v5}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 9812
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 9816
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-virtual {v4}, Ljava/util/HashSet;->size()I
@@ -16610,7 +15007,6 @@
 
     goto :goto_0
 
-    .line 9817
     .end local v0    # "N":I
     .end local v2    # "i":I
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -16636,18 +15032,15 @@
     .end annotation
 
     .prologue
-    .line 1553
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 1554
     .local v0, "callingUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v1
 
-    .line 1556
     .local v1, "userHandle":I
     invoke-virtual {p0, p1, p2, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;II)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
@@ -16668,45 +15061,36 @@
     .end annotation
 
     .prologue
-    .line 1561
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v1
 
-    .line 1563
     .local v1, "callingUid":I
     const/16 v4, 0x3e8
 
     if-eq v1, v4, :cond_0
 
-    .line 1564
     invoke-static {v1}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result p3
 
-    .line 1567
     :cond_0
     invoke-direct {p0, p1, p2, v1, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminWithPolicyForUidLocked(Landroid/content/ComponentName;III)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v3
 
-    .line 1568
     .local v3, "result":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v3, :cond_1
 
-    .line 1569
     return-object v3
 
-    .line 1572
     :cond_1
     if-eqz p1, :cond_4
 
-    .line 1573
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 1574
     .local v2, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v4, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminMap:Ljava/util/HashMap;
 
@@ -16716,13 +15100,11 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 1575
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v4, -0x2
 
     if-ne p2, v4, :cond_2
 
-    .line 1576
     new-instance v4, Ljava/lang/SecurityException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -16759,13 +15141,11 @@
 
     throw v4
 
-    .line 1579
     :cond_2
     const/4 v4, -0x1
 
     if-ne p2, v4, :cond_3
 
-    .line 1580
     new-instance v4, Ljava/lang/SecurityException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -16802,7 +15182,6 @@
 
     throw v4
 
-    .line 1583
     :cond_3
     new-instance v4, Ljava/lang/SecurityException;
 
@@ -16850,7 +15229,6 @@
 
     throw v4
 
-    .line 1587
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :cond_4
@@ -16899,7 +15277,6 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1542
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v1
@@ -16912,7 +15289,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 1543
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_0
 
@@ -16952,7 +15328,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1548
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_0
     return-object v0
@@ -16978,32 +15353,25 @@
     .end annotation
 
     .prologue
-    .line 2767
     iget-boolean v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v4, :cond_0
 
-    .line 2768
     sget-object v3, Ljava/util/Collections;->EMPTY_LIST:Ljava/util/List;
 
-    .line 2782
     :goto_0
     return-object v3
 
-    .line 2771
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 2772
     monitor-enter p0
 
-    .line 2773
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 2774
     .local v2, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v4, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -17011,18 +15379,15 @@
 
     move-result v0
 
-    .line 2775
     .local v0, "N":I
     if-gtz v0, :cond_1
 
-    .line 2776
     const/4 v3, 0x0
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 2783
     .end local v0    # "N":I
     .end local v2    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
@@ -17034,7 +15399,6 @@
 
     throw v4
 
-    .line 2778
     .restart local v0    # "N":I
     .restart local v2    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :cond_1
@@ -17043,7 +15407,6 @@
 
     invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 2779
     .local v3, "res":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/ComponentName;>;"
     const/4 v1, 0x0
 
@@ -17051,7 +15414,6 @@
     :goto_1
     if-ge v1, v0, :cond_2
 
-    .line 2780
     iget-object v4, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -17068,12 +15430,10 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2779
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 2782
     :cond_2
     monitor-exit p0
     :try_end_1
@@ -17088,7 +15448,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6514
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
@@ -17099,14 +15458,12 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 6515
     const-string v0, "DevicePolicyManagerService"
 
     const-string v1, "Only System Process can call this API"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6516
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Caller should be System Process"
@@ -17115,21 +15472,17 @@
 
     throw v0
 
-    .line 6519
     :cond_0
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_1
 
-    .line 6527
     :goto_0
     return-object v0
 
-    .line 6522
     :cond_1
     monitor-enter p0
 
-    .line 6523
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -17143,7 +15496,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 6524
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DeviceOwner;->getDeviceOwnerPackageName()Ljava/lang/String;
@@ -17154,7 +15506,6 @@
 
     goto :goto_0
 
-    .line 6526
     :catchall_0
     move-exception v0
 
@@ -17179,26 +15530,21 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 8177
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v6
 
-    .line 8179
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 8180
     .local v3, "allowList":Ljava/lang/StringBuilder;
     const/4 v5, 0x0
 
-    .line 8181
     .local v5, "multipleAdmin":Z
     monitor-enter p0
 
-    .line 8182
     :try_start_0
     iget-object v7, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -17206,20 +15552,16 @@
 
     move-result v0
 
-    .line 8183
     .local v0, "N":I
     iget-object v2, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
-    .line 8185
     .local v2, "adminList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;>;"
     const/4 v7, 0x1
 
     if-le v0, v7, :cond_0
 
-    .line 8186
     const/4 v5, 0x1
 
-    .line 8188
     :cond_0
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -17239,7 +15581,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8189
     .local v1, "a":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -17272,7 +15613,6 @@
 
     goto :goto_0
 
-    .line 8191
     .end local v0    # "N":I
     .end local v1    # "a":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "adminList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;>;"
@@ -17286,7 +15626,6 @@
 
     throw v7
 
-    .line 8189
     .restart local v0    # "N":I
     .restart local v1    # "a":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v2    # "adminList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;>;"
@@ -17297,14 +15636,12 @@
 
     goto :goto_1
 
-    .line 8191
     .end local v1    # "a":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8192
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -17320,27 +15657,21 @@
     .prologue
     const/4 v11, 0x2
 
-    .line 7797
     monitor-enter p0
 
-    .line 7798
     const/4 v8, 0x2
 
-    .line 7799
     .local v8, "value":I
     const/4 v9, 0x2
 
-    .line 7801
     .local v9, "value_root":I
     if-eqz p1, :cond_1
 
-    .line 7802
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v2
 
-    .line 7803
     .local v2, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v2, :cond_0
 
@@ -17349,7 +15680,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7830
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v10
@@ -17358,10 +15688,8 @@
     :cond_0
     move v10, v8
 
-    .line 7803
     goto :goto_0
 
-    .line 7806
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     const/4 v10, 0x0
@@ -17370,7 +15698,6 @@
 
     move-result-object v7
 
-    .line 7807
     .local v7, "policy_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -17378,7 +15705,6 @@
 
     move-result v1
 
-    .line 7808
     .local v1, "N_ROOT":I
     const/4 v5, 0x0
 
@@ -17386,7 +15712,6 @@
     :goto_2
     if-ge v5, v1, :cond_3
 
-    .line 7809
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -17395,25 +15720,20 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7810
     .local v3, "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v9, v11, :cond_2
 
-    .line 7811
     iget v9, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowBluetoothMode:I
 
-    .line 7808
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 7815
     .end local v3    # "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     if-eq v9, v11, :cond_4
 
-    .line 7816
     const-string v10, "DevicePolicyManagerService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -17436,20 +15756,17 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7817
     monitor-exit p0
 
     move v10, v9
 
     goto :goto_1
 
-    .line 7820
     :cond_4
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v6
 
-    .line 7821
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -17457,7 +15774,6 @@
 
     move-result v0
 
-    .line 7822
     .local v0, "N":I
     const/4 v4, 0x0
 
@@ -17465,7 +15781,6 @@
     :goto_3
     if-ge v4, v0, :cond_6
 
-    .line 7823
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -17474,20 +15789,16 @@
 
     check-cast v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7824
     .restart local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v8, v11, :cond_5
 
-    .line 7825
     iget v8, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowBluetoothMode:I
 
-    .line 7822
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 7829
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_6
     const-string v10, "DevicePolicyManagerService"
@@ -17512,14 +15823,12 @@
 
     invoke-static {v10, v11}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7830
     monitor-exit p0
 
     move v10, v8
 
     goto :goto_1
 
-    .line 7831
     .end local v0    # "N":I
     .end local v1    # "N_ROOT":I
     .end local v4    # "i":I
@@ -17542,23 +15851,18 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 7697
     monitor-enter p0
 
-    .line 7698
     const/4 v4, 0x1
 
-    .line 7700
     .local v4, "value":Z
     if-eqz p1, :cond_1
 
-    .line 7701
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 7702
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_0
 
@@ -17567,7 +15871,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7713
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v5
@@ -17576,17 +15879,14 @@
     :cond_0
     move v5, v4
 
-    .line 7702
     goto :goto_0
 
-    .line 7705
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 7706
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -17594,7 +15894,6 @@
 
     move-result v0
 
-    .line 7707
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -17602,7 +15901,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 7708
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -17611,22 +15909,18 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7709
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v5, 0x1
 
     if-ne v4, v5, :cond_2
 
-    .line 7710
     iget-boolean v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowBrowser:Z
 
-    .line 7707
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 7713
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     monitor-exit p0
@@ -17635,7 +15929,6 @@
 
     goto :goto_1
 
-    .line 7714
     .end local v0    # "N":I
     .end local v2    # "i":I
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -17655,7 +15948,6 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 7530
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getCameraDisabled(Landroid/content/ComponentName;I)Z
 
     move-result v0
@@ -17681,27 +15973,21 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 7855
     monitor-enter p0
 
-    .line 7856
     const/4 v8, 0x1
 
-    .line 7857
     .local v8, "value":Z
     const/4 v9, 0x1
 
-    .line 7859
     .local v9, "value_root":Z
     if-eqz p1, :cond_1
 
-    .line 7860
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v2
 
-    .line 7861
     .local v2, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v2, :cond_0
 
@@ -17710,7 +15996,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7884
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v10
@@ -17719,10 +16004,8 @@
     :cond_0
     move v10, v8
 
-    .line 7861
     goto :goto_0
 
-    .line 7864
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     const/4 v10, 0x0
@@ -17731,7 +16014,6 @@
 
     move-result-object v7
 
-    .line 7865
     .local v7, "policy_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -17739,7 +16021,6 @@
 
     move-result v0
 
-    .line 7866
     .local v0, "M":I
     const/4 v5, 0x0
 
@@ -17747,7 +16028,6 @@
     :goto_2
     if-ge v5, v0, :cond_3
 
-    .line 7867
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -17756,38 +16036,31 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7868
     .local v3, "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v9, v11, :cond_2
 
-    .line 7869
     iget-boolean v9, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowDesktopSync:Z
 
-    .line 7866
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 7873
     .end local v3    # "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     if-nez v9, :cond_4
 
-    .line 7874
     monitor-exit p0
 
     move v10, v9
 
     goto :goto_1
 
-    .line 7876
     :cond_4
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v6
 
-    .line 7877
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -17795,7 +16068,6 @@
 
     move-result v1
 
-    .line 7878
     .local v1, "N":I
     const/4 v4, 0x0
 
@@ -17803,7 +16075,6 @@
     :goto_3
     if-ge v4, v1, :cond_6
 
-    .line 7879
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -17812,20 +16083,16 @@
 
     check-cast v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7880
     .restart local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v8, v11, :cond_5
 
-    .line 7881
     iget-boolean v8, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowDesktopSync:Z
 
-    .line 7878
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 7884
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_6
     monitor-exit p0
@@ -17834,7 +16101,6 @@
 
     goto :goto_1
 
-    .line 7885
     .end local v0    # "M":I
     .end local v1    # "N":I
     .end local v4    # "i":I
@@ -17859,27 +16125,21 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 7739
     monitor-enter p0
 
-    .line 7740
     const/4 v8, 0x1
 
-    .line 7741
     .local v8, "value":Z
     const/4 v9, 0x1
 
-    .line 7743
     .local v9, "value_root":Z
     if-eqz p1, :cond_1
 
-    .line 7744
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v2
 
-    .line 7745
     .local v2, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v2, :cond_0
 
@@ -17888,7 +16148,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7768
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v10
@@ -17897,10 +16156,8 @@
     :cond_0
     move v10, v8
 
-    .line 7745
     goto :goto_0
 
-    .line 7748
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     const/4 v10, 0x0
@@ -17909,7 +16166,6 @@
 
     move-result-object v7
 
-    .line 7749
     .local v7, "policy_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -17917,7 +16173,6 @@
 
     move-result v0
 
-    .line 7750
     .local v0, "M":I
     const/4 v5, 0x0
 
@@ -17925,7 +16180,6 @@
     :goto_2
     if-ge v5, v0, :cond_3
 
-    .line 7751
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -17934,38 +16188,31 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7752
     .local v3, "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v9, v11, :cond_2
 
-    .line 7753
     iget-boolean v9, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowInternetSharing:Z
 
-    .line 7750
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 7757
     .end local v3    # "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     if-nez v9, :cond_4
 
-    .line 7758
     monitor-exit p0
 
     move v10, v9
 
     goto :goto_1
 
-    .line 7760
     :cond_4
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v6
 
-    .line 7761
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -17973,7 +16220,6 @@
 
     move-result v1
 
-    .line 7762
     .local v1, "N":I
     const/4 v4, 0x0
 
@@ -17981,7 +16227,6 @@
     :goto_3
     if-ge v4, v1, :cond_6
 
-    .line 7763
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -17990,20 +16235,16 @@
 
     check-cast v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7764
     .restart local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v8, v11, :cond_5
 
-    .line 7765
     iget-boolean v8, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowInternetSharing:Z
 
-    .line 7762
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 7768
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_6
     monitor-exit p0
@@ -18012,7 +16253,6 @@
 
     goto :goto_1
 
-    .line 7769
     .end local v0    # "M":I
     .end local v1    # "N":I
     .end local v4    # "i":I
@@ -18035,23 +16275,18 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 7910
     monitor-enter p0
 
-    .line 7911
     const/4 v4, 0x1
 
-    .line 7913
     .local v4, "value":Z
     if-eqz p1, :cond_1
 
-    .line 7914
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 7915
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_0
 
@@ -18060,7 +16295,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7926
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v5
@@ -18069,17 +16303,14 @@
     :cond_0
     move v5, v4
 
-    .line 7915
     goto :goto_0
 
-    .line 7918
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 7919
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -18087,7 +16318,6 @@
 
     move-result v0
 
-    .line 7920
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -18095,7 +16325,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 7921
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -18104,22 +16333,18 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7922
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v5, 0x1
 
     if-ne v4, v5, :cond_2
 
-    .line 7923
     iget-boolean v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowIrDA:Z
 
-    .line 7920
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 7926
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     monitor-exit p0
@@ -18128,7 +16353,6 @@
 
     goto :goto_1
 
-    .line 7927
     .end local v0    # "N":I
     .end local v2    # "i":I
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -18148,23 +16372,18 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 7655
     monitor-enter p0
 
-    .line 7656
     const/4 v4, 0x1
 
-    .line 7658
     .local v4, "value":Z
     if-eqz p1, :cond_1
 
-    .line 7659
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 7660
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_0
 
@@ -18173,7 +16392,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7671
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v5
@@ -18182,17 +16400,14 @@
     :cond_0
     move v5, v4
 
-    .line 7660
     goto :goto_0
 
-    .line 7663
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 7664
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -18200,7 +16415,6 @@
 
     move-result v0
 
-    .line 7665
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -18208,7 +16422,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 7666
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -18217,22 +16430,18 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7667
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v5, 0x1
 
     if-ne v4, v5, :cond_2
 
-    .line 7668
     iget-boolean v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowPOPIMAPEmail:Z
 
-    .line 7665
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 7671
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     monitor-exit p0
@@ -18241,7 +16450,6 @@
 
     goto :goto_1
 
-    .line 7672
     .end local v0    # "N":I
     .end local v2    # "i":I
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -18263,27 +16471,21 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 7441
     monitor-enter p0
 
-    .line 7442
     const/4 v8, 0x1
 
-    .line 7443
     .local v8, "value":Z
     const/4 v9, 0x1
 
-    .line 7445
     .local v9, "value_root":Z
     if-eqz p1, :cond_1
 
-    .line 7446
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v2
 
-    .line 7447
     .local v2, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v2, :cond_0
 
@@ -18292,7 +16494,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7470
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v10
@@ -18301,10 +16502,8 @@
     :cond_0
     move v10, v8
 
-    .line 7447
     goto :goto_0
 
-    .line 7450
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     const/4 v10, 0x0
@@ -18313,7 +16512,6 @@
 
     move-result-object v7
 
-    .line 7451
     .local v7, "policy_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -18321,7 +16519,6 @@
 
     move-result v0
 
-    .line 7452
     .local v0, "M":I
     const/4 v5, 0x0
 
@@ -18329,7 +16526,6 @@
     :goto_2
     if-ge v5, v0, :cond_3
 
-    .line 7453
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -18338,38 +16534,31 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7454
     .local v3, "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v9, v11, :cond_2
 
-    .line 7455
     iget-boolean v9, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowStorageCard:Z
 
-    .line 7452
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 7459
     .end local v3    # "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     if-nez v9, :cond_4
 
-    .line 7460
     monitor-exit p0
 
     move v10, v9
 
     goto :goto_1
 
-    .line 7462
     :cond_4
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v6
 
-    .line 7463
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -18377,7 +16566,6 @@
 
     move-result v1
 
-    .line 7464
     .local v1, "N":I
     const/4 v4, 0x0
 
@@ -18385,7 +16573,6 @@
     :goto_3
     if-ge v4, v1, :cond_6
 
-    .line 7465
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -18394,20 +16581,16 @@
 
     check-cast v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7466
     .restart local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v8, v11, :cond_5
 
-    .line 7467
     iget-boolean v8, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowStorageCard:Z
 
-    .line 7464
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 7470
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_6
     monitor-exit p0
@@ -18416,7 +16599,6 @@
 
     goto :goto_1
 
-    .line 7471
     .end local v0    # "M":I
     .end local v1    # "N":I
     .end local v4    # "i":I
@@ -18439,23 +16621,18 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 7613
     monitor-enter p0
 
-    .line 7614
     const/4 v4, 0x1
 
-    .line 7616
     .local v4, "value":Z
     if-eqz p1, :cond_1
 
-    .line 7617
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 7618
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_0
 
@@ -18464,7 +16641,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7629
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v5
@@ -18473,17 +16649,14 @@
     :cond_0
     move v5, v4
 
-    .line 7618
     goto :goto_0
 
-    .line 7621
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 7622
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -18491,7 +16664,6 @@
 
     move-result v0
 
-    .line 7623
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -18499,7 +16671,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 7624
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -18508,22 +16679,18 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7625
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v5, 0x1
 
     if-ne v4, v5, :cond_2
 
-    .line 7626
     iget-boolean v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowTextMessaging:Z
 
-    .line 7623
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 7629
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     monitor-exit p0
@@ -18532,7 +16699,6 @@
 
     goto :goto_1
 
-    .line 7630
     .end local v0    # "N":I
     .end local v2    # "i":I
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -18552,33 +16718,26 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 8594
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 8596
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v1, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
-    .line 8598
     .local v1, "adminList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;>;"
     monitor-enter p0
 
-    .line 8599
     const/4 v4, 0x1
 
-    .line 8600
     .local v4, "value":Z
     if-eqz p1, :cond_1
 
-    .line 8601
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 8602
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_0
 
@@ -18587,7 +16746,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 8610
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v5
@@ -18596,10 +16754,8 @@
     :cond_0
     move v5, v4
 
-    .line 8602
     goto :goto_0
 
-    .line 8605
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -18621,18 +16777,15 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8606
     .restart local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v5, 0x1
 
     if-ne v4, v5, :cond_2
 
-    .line 8607
     iget-boolean v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowUnsginedApp:Z
 
     goto :goto_2
 
-    .line 8610
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     monitor-exit p0
@@ -18641,7 +16794,6 @@
 
     goto :goto_1
 
-    .line 8611
     .end local v2    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v5
@@ -18659,33 +16811,26 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 8646
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 8647
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v1, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
-    .line 8649
     .local v1, "adminList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;>;"
     monitor-enter p0
 
-    .line 8650
     const/4 v4, 0x1
 
-    .line 8652
     .local v4, "value":Z
     if-eqz p1, :cond_1
 
-    .line 8653
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 8654
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_0
 
@@ -18694,7 +16839,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 8662
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v5
@@ -18703,10 +16847,8 @@
     :cond_0
     move v5, v4
 
-    .line 8654
     goto :goto_0
 
-    .line 8657
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -18728,18 +16870,15 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8658
     .restart local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v5, 0x1
 
     if-ne v4, v5, :cond_2
 
-    .line 8659
     iget-boolean v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowUnsignedInstallationPkg:Z
 
     goto :goto_2
 
-    .line 8662
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     monitor-exit p0
@@ -18748,7 +16887,6 @@
 
     goto :goto_1
 
-    .line 8663
     .end local v2    # "i$":Ljava/util/Iterator;
     :catchall_0
     move-exception v5
@@ -18768,27 +16906,21 @@
     .prologue
     const/4 v11, 0x1
 
-    .line 7557
     monitor-enter p0
 
-    .line 7558
     const/4 v8, 0x1
 
-    .line 7559
     .local v8, "value":Z
     const/4 v9, 0x1
 
-    .line 7561
     .local v9, "value_root":Z
     if-eqz p1, :cond_1
 
-    .line 7562
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v2
 
-    .line 7563
     .local v2, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v2, :cond_0
 
@@ -18797,7 +16929,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7587
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v10
@@ -18806,10 +16937,8 @@
     :cond_0
     move v10, v8
 
-    .line 7563
     goto :goto_0
 
-    .line 7567
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     const/4 v10, 0x0
@@ -18818,7 +16947,6 @@
 
     move-result-object v7
 
-    .line 7568
     .local v7, "policy_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -18826,7 +16954,6 @@
 
     move-result v0
 
-    .line 7569
     .local v0, "M":I
     const/4 v5, 0x0
 
@@ -18834,7 +16961,6 @@
     :goto_2
     if-ge v5, v0, :cond_3
 
-    .line 7570
     iget-object v10, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v5}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -18843,38 +16969,31 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7571
     .local v3, "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v9, v11, :cond_2
 
-    .line 7572
     iget-boolean v9, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowWifi:Z
 
-    .line 7569
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 7576
     .end local v3    # "admin_root":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     if-nez v9, :cond_4
 
-    .line 7577
     monitor-exit p0
 
     move v10, v9
 
     goto :goto_1
 
-    .line 7579
     :cond_4
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v6
 
-    .line 7580
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -18882,7 +17001,6 @@
 
     move-result v1
 
-    .line 7581
     .local v1, "N":I
     const/4 v4, 0x0
 
@@ -18890,7 +17008,6 @@
     :goto_3
     if-ge v4, v1, :cond_6
 
-    .line 7582
     iget-object v10, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -18899,20 +17016,16 @@
 
     check-cast v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7583
     .restart local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-ne v8, v11, :cond_5
 
-    .line 7584
     iget-boolean v8, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowWifi:Z
 
-    .line 7581
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 7587
     .end local v2    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_6
     monitor-exit p0
@@ -18921,7 +17034,6 @@
 
     goto :goto_1
 
-    .line 7588
     .end local v0    # "M":I
     .end local v1    # "N":I
     .end local v4    # "i":I
@@ -18944,12 +17056,10 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 9496
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9497
     new-instance v1, Landroid/os/UserHandle;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -18958,24 +17068,20 @@
 
     invoke-direct {v1, v4}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 9499
     .local v1, "userHandle":Landroid/os/UserHandle;
     monitor-enter p0
 
-    .line 9500
     const/4 v4, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9502
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v2
 
-    .line 9504
     .local v2, "id":J
     :try_start_1
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -18986,11 +17092,9 @@
 
     move-result-object v0
 
-    .line 9507
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 9509
     .end local v0    # "bundle":Landroid/os/Bundle;
     :goto_0
     :try_start_2
@@ -19002,7 +17106,6 @@
 
     return-object v0
 
-    .line 9507
     .restart local v0    # "bundle":Landroid/os/Bundle;
     :cond_0
     :try_start_3
@@ -19012,7 +17115,6 @@
 
     goto :goto_0
 
-    .line 9509
     .end local v0    # "bundle":Landroid/os/Bundle;
     :catchall_0
     move-exception v4
@@ -19022,7 +17124,6 @@
 
     throw v4
 
-    .line 9511
     .end local v2    # "id":J
     :catchall_1
     move-exception v4
@@ -19041,12 +17142,10 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 9516
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9517
     new-instance v1, Landroid/app/enterprise/ContextInfo;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -19055,7 +17154,6 @@
 
     invoke-direct {v1, v4, p3}, Landroid/app/enterprise/ContextInfo;-><init>(II)V
 
-    .line 9518
     .local v1, "cxtInfo":Landroid/app/enterprise/ContextInfo;
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -19063,7 +17161,6 @@
 
     invoke-virtual {v4, v1, p1}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceComponentCheck(Landroid/app/enterprise/ContextInfo;Landroid/content/ComponentName;)V
 
-    .line 9519
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v4
@@ -19072,12 +17169,10 @@
 
     invoke-virtual {v4, v1, v5}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermissionByContext(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 9520
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 9522
     .local v2, "id":J
     :try_start_0
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -19092,18 +17187,15 @@
 
     move-result-object v0
 
-    .line 9525
     .local v0, "bundle":Landroid/os/Bundle;
     if-eqz v0, :cond_0
 
-    .line 9527
     .end local v0    # "bundle":Landroid/os/Bundle;
     :goto_0
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     return-object v0
 
-    .line 9525
     .restart local v0    # "bundle":Landroid/os/Bundle;
     :cond_0
     :try_start_1
@@ -19113,7 +17205,6 @@
 
     goto :goto_0
 
-    .line 9527
     .end local v0    # "bundle":Landroid/os/Bundle;
     :catchall_0
     move-exception v4
@@ -19129,26 +17220,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 6174
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 6179
     :goto_0
     return v1
 
-    .line 6177
     :cond_0
     monitor-enter p0
 
-    .line 6178
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getDeviceOwnerAdmin()Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 6179
     .local v0, "deviceOwner":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_1
 
@@ -19159,7 +17245,6 @@
 
     goto :goto_0
 
-    .line 6180
     .end local v0    # "deviceOwner":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -19177,45 +17262,36 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 8382
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v6
 
-    .line 8384
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v2, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
-    .line 8386
     .local v2, "adminList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;>;"
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 8387
     .local v3, "blockList":Ljava/lang/StringBuilder;
     const/4 v5, 0x0
 
-    .line 8388
     .local v5, "multipleAdmin":Z
     monitor-enter p0
 
-    .line 8389
     :try_start_0
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 8390
     .local v0, "N":I
     const/4 v7, 0x1
 
     if-le v0, v7, :cond_0
 
-    .line 8391
     const/4 v5, 0x1
 
-    .line 8393
     :cond_0
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -19235,7 +17311,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8394
     .local v1, "a":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -19268,7 +17343,6 @@
 
     goto :goto_0
 
-    .line 8396
     .end local v0    # "N":I
     .end local v1    # "a":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v4    # "i$":Ljava/util/Iterator;
@@ -19281,7 +17355,6 @@
 
     throw v7
 
-    .line 8394
     .restart local v0    # "N":I
     .restart local v1    # "a":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v4    # "i$":Ljava/util/Iterator;
@@ -19291,14 +17364,12 @@
 
     goto :goto_1
 
-    .line 8396
     .end local v1    # "a":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8397
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v7
@@ -19311,28 +17382,22 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 9977
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 9978
     const/4 v1, 0x0
 
-    .line 9984
     :goto_0
     return v1
 
-    .line 9980
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9981
     monitor-enter p0
 
-    .line 9982
     const/4 v1, -0x1
 
     :try_start_0
@@ -19340,7 +17405,6 @@
 
     move-result-object v0
 
-    .line 9984
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableBluetoothContactSharing:Z
 
@@ -19348,7 +17412,6 @@
 
     goto :goto_0
 
-    .line 9985
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -19365,16 +17428,13 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 9993
     monitor-enter p0
 
-    .line 9994
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfileOwnerAdmin(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 9995
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_0
 
@@ -19390,7 +17450,6 @@
 
     goto :goto_0
 
-    .line 9996
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -19410,29 +17469,23 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 6219
     iget-boolean v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v5, :cond_0
 
-    .line 6249
     :goto_0
     return v4
 
-    .line 6222
     :cond_0
     monitor-enter p0
 
-    .line 6223
     if-eqz p1, :cond_2
 
-    .line 6224
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 6225
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -19443,7 +17496,6 @@
 
     goto :goto_0
 
-    .line 6250
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v4
@@ -19454,14 +17506,12 @@
 
     throw v4
 
-    .line 6240
     :cond_2
     :try_start_1
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 6242
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -19469,7 +17519,6 @@
 
     move-result v0
 
-    .line 6243
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -19477,7 +17526,6 @@
     :goto_1
     if-ge v2, v0, :cond_4
 
-    .line 6244
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -19486,26 +17534,22 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 6245
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v5, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCamera:Z
 
     if-eqz v5, :cond_3
 
-    .line 6246
     const/4 v4, 0x1
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 6243
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 6249
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_4
     monitor-exit p0
@@ -19525,27 +17569,22 @@
     .end annotation
 
     .prologue
-    .line 5114
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 5115
     .local v1, "userHandle":I
     monitor-enter p0
 
-    .line 5116
     const/4 v2, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 5117
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
-    .line 5118
     .local v0, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mDelegatedCertInstallerPackage:Ljava/lang/String;
 
@@ -19553,7 +17592,6 @@
 
     return-object v2
 
-    .line 5119
     .end local v0    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v2
@@ -19570,28 +17608,22 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 9885
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 9886
     const/4 v1, 0x0
 
-    .line 9892
     :goto_0
     return v1
 
-    .line 9888
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9889
     monitor-enter p0
 
-    .line 9890
     const/4 v1, -0x1
 
     :try_start_0
@@ -19599,7 +17631,6 @@
 
     move-result-object v0
 
-    .line 9892
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCallerId:Z
 
@@ -19607,7 +17638,6 @@
 
     goto :goto_0
 
-    .line 9893
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -19624,16 +17654,13 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 9900
     monitor-enter p0
 
-    .line 9901
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfileOwnerAdmin(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 9902
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_0
 
@@ -19649,7 +17676,6 @@
 
     goto :goto_0
 
-    .line 9903
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -19677,10 +17703,8 @@
     .end annotation
 
     .prologue
-    .line 3319
     monitor-enter p0
 
-    .line 3320
     const/4 v1, -0x1
 
     :try_start_0
@@ -19688,7 +17712,6 @@
 
     move-result-object v0
 
-    .line 3322
     .local v0, "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
 
@@ -19702,17 +17725,14 @@
 
     if-eqz v1, :cond_1
 
-    .line 3324
     :cond_0
     const/4 v1, 0x0
 
     monitor-exit p0
 
-    .line 3329
     :goto_0
     return-object v1
 
-    .line 3326
     :cond_1
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -19724,7 +17744,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 3327
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
@@ -19735,7 +17754,6 @@
 
     goto :goto_0
 
-    .line 3331
     .end local v0    # "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -19746,7 +17764,6 @@
 
     throw v1
 
-    .line 3329
     .restart local v0    # "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     :try_start_1
@@ -19764,10 +17781,8 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 4067
     monitor-enter p0
 
-    .line 4075
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isKnoxWorkspace(I)Z
 
@@ -19775,7 +17790,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 4076
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
@@ -19784,30 +17798,25 @@
 
     monitor-exit p0
 
-    .line 4085
     :goto_0
     return v3
 
-    .line 4081
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v1
 
-    .line 4082
     .local v1, "parent":Landroid/content/pm/UserInfo;
     if-nez v1, :cond_1
 
     move v0, p1
 
-    .line 4083
     .local v0, "id":I
     :goto_1
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserDataUnchecked(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 4085
     .local v2, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mFailedPasswordAttempts:I
 
@@ -19815,7 +17824,6 @@
 
     goto :goto_0
 
-    .line 4086
     .end local v0    # "id":I
     .end local v1    # "parent":Landroid/content/pm/UserInfo;
     .end local v2    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -19828,7 +17836,6 @@
 
     throw v3
 
-    .line 4082
     .restart local v1    # "parent":Landroid/content/pm/UserInfo;
     :cond_1
     :try_start_1
@@ -19845,20 +17852,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6660
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 6668
     :goto_0
     return-object v0
 
-    .line 6663
     :cond_0
     monitor-enter p0
 
-    .line 6664
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -19872,7 +17875,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 6665
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DeviceOwner;->getDeviceInitializerPackageName()Ljava/lang/String;
@@ -19883,7 +17885,6 @@
 
     goto :goto_0
 
-    .line 6667
     :catchall_0
     move-exception v0
 
@@ -19908,20 +17909,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6673
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 6681
     :goto_0
     return-object v0
 
-    .line 6676
     :cond_0
     monitor-enter p0
 
-    .line 6677
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -19935,7 +17932,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 6678
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DeviceOwner;->getDeviceInitializerComponent()Landroid/content/ComponentName;
@@ -19946,7 +17942,6 @@
 
     goto :goto_0
 
-    .line 6680
     :catchall_0
     move-exception v0
 
@@ -19971,20 +17966,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 6471
     iget-boolean v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v5, :cond_0
 
-    .line 6508
     :goto_0
     return-object v4
 
-    .line 6474
     :cond_0
     monitor-enter p0
 
-    .line 6475
     :try_start_0
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -19998,7 +17989,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 6476
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v4}, Lcom/android/server/devicepolicy/DeviceOwner;->getDeviceOwnerPackageName()Ljava/lang/String;
@@ -20009,7 +17999,6 @@
 
     goto :goto_0
 
-    .line 6507
     :catchall_0
     move-exception v4
 
@@ -20019,7 +18008,6 @@
 
     throw v4
 
-    .line 6480
     :cond_1
     const/16 v5, 0x10e
 
@@ -20032,7 +18020,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 6483
     :try_start_2
     const-string/jumbo v5, "getProfileOwner"
 
@@ -20041,7 +18028,6 @@
     .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 6490
     :try_start_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_3
@@ -20049,7 +18035,6 @@
 
     move-result-wide v0
 
-    .line 6493
     .local v0, "callingId":J
     const/4 v5, 0x0
 
@@ -20058,11 +18043,9 @@
 
     move-result-object v3
 
-    .line 6494
     .local v3, "proxyComponent":Landroid/content/ComponentName;
     if-eqz v3, :cond_2
 
-    .line 6495
     const-string v5, "DevicePolicyManagerService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -20089,7 +18072,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6497
     invoke-virtual {v3}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
@@ -20097,7 +18079,6 @@
 
     move-result-object v4
 
-    .line 6503
     :try_start_5
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -20105,13 +18086,11 @@
 
     goto :goto_0
 
-    .line 6484
     .end local v0    # "callingId":J
     .end local v3    # "proxyComponent":Landroid/content/ComponentName;
     :catch_0
     move-exception v2
 
-    .line 6485
     .local v2, "e":Ljava/lang/SecurityException;
     const-string v5, "DevicePolicyManagerService"
 
@@ -20119,19 +18098,16 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6487
     monitor-exit p0
 
     goto :goto_0
 
-    .line 6503
     .end local v2    # "e":Ljava/lang/SecurityException;
     .restart local v0    # "callingId":J
     .restart local v3    # "proxyComponent":Landroid/content/ComponentName;
     :cond_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 6507
     .end local v0    # "callingId":J
     .end local v3    # "proxyComponent":Landroid/content/ComponentName;
     :cond_3
@@ -20142,17 +18118,14 @@
 
     goto :goto_0
 
-    .line 6499
     .restart local v0    # "callingId":J
     :catch_1
     move-exception v2
 
-    .line 6500
     .local v2, "e":Ljava/lang/Exception;
     :try_start_6
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 6501
     const-string v5, "DevicePolicyManagerService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -20181,7 +18154,6 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 6503
     :try_start_7
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -20204,16 +18176,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 6533
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 6542
     :goto_0
     return-object v1
 
-    .line 6536
     :cond_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -20221,10 +18190,8 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6537
     monitor-enter p0
 
-    .line 6538
     :try_start_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -20238,13 +18205,11 @@
 
     if-nez v2, :cond_2
 
-    .line 6539
     :cond_1
     monitor-exit p0
 
     goto :goto_0
 
-    .line 6543
     :catchall_0
     move-exception v1
 
@@ -20254,7 +18219,6 @@
 
     throw v1
 
-    .line 6541
     :cond_2
     :try_start_1
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
@@ -20263,7 +18227,6 @@
 
     move-result-object v0
 
-    .line 6542
     .local v0, "deviceOwnerPackage":Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -20282,7 +18245,6 @@
     .locals 4
 
     .prologue
-    .line 4607
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.QUERY_DO_NOT_ASK_CREDENTIALS_ON_BOOT"
@@ -20291,10 +18253,8 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4609
     monitor-enter p0
 
-    .line 4610
     const/4 v1, 0x0
 
     :try_start_0
@@ -20302,7 +18262,6 @@
 
     move-result-object v0
 
-    .line 4611
     .local v0, "policyData":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->doNotAskCredentialsOnBoot:Z
 
@@ -20310,7 +18269,6 @@
 
     return v1
 
-    .line 4612
     .end local v0    # "policyData":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v1
@@ -20329,23 +18287,18 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 5829
     iget-boolean v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v5, :cond_0
 
-    .line 5848
     :goto_0
     return-object v4
 
-    .line 5832
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5833
     monitor-enter p0
 
-    .line 5834
     const/4 v5, 0x0
 
     :try_start_0
@@ -20353,7 +18306,6 @@
 
     move-result-object v3
 
-    .line 5837
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -20361,7 +18313,6 @@
 
     move-result v0
 
-    .line 5838
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -20369,7 +18320,6 @@
     :goto_1
     if-ge v2, v0, :cond_2
 
-    .line 5839
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -20378,13 +18328,11 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 5840
     .local v1, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v5, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->specifiesGlobalProxy:Z
 
     if-eqz v5, :cond_1
 
-    .line 5843
     iget-object v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v4}, Landroid/app/admin/DeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
@@ -20395,7 +18343,6 @@
 
     goto :goto_0
 
-    .line 5846
     .end local v0    # "N":I
     .end local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -20409,7 +18356,6 @@
 
     throw v4
 
-    .line 5838
     .restart local v0    # "N":I
     .restart local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v2    # "i":I
@@ -20419,7 +18365,6 @@
 
     goto :goto_1
 
-    .line 5846
     .end local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     :try_start_1
@@ -20438,41 +18383,33 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 6336
     iget-boolean v12, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v12, :cond_0
 
-    .line 6395
     :goto_0
     return v11
 
-    .line 6339
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 6340
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 6342
     .local v4, "ident":J
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 6343
     if-eqz p1, :cond_2
 
-    .line 6344
     :try_start_1
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 6345
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -20483,12 +18420,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 6395
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 6348
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     :try_start_2
@@ -20498,7 +18433,6 @@
 
     move-result-object v9
 
-    .line 6350
     .local v9, "user":Landroid/content/pm/UserInfo;
     invoke-virtual {v9}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
@@ -20506,22 +18440,18 @@
 
     if-eqz v12, :cond_6
 
-    .line 6353
     new-instance v8, Ljava/util/ArrayList;
 
     const/4 v12, 0x1
 
     invoke-direct {v8, v12}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 6354
     .local v8, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v8, v9}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 6374
     :cond_3
     const/4 v11, 0x0
 
-    .line 6375
     .local v11, "which":I
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -20541,7 +18471,6 @@
 
     check-cast v10, Landroid/content/pm/UserInfo;
 
-    .line 6376
     .local v10, "userInfo":Landroid/content/pm/UserInfo;
     iget v12, v10, Landroid/content/pm/UserInfo;->id:I
 
@@ -20549,7 +18478,6 @@
 
     move-result-object v7
 
-    .line 6377
     .local v7, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v12, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -20557,7 +18485,6 @@
 
     move-result v0
 
-    .line 6378
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -20565,7 +18492,6 @@
     :goto_1
     if-ge v2, v0, :cond_4
 
-    .line 6379
     iget-object v12, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v12, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -20574,7 +18500,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 6380
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v12, v10, Landroid/content/pm/UserInfo;->id:I
 
@@ -20586,19 +18511,16 @@
 
     if-nez v12, :cond_8
 
-    .line 6383
     :cond_5
     iget v12, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
     or-int/2addr v11, v12
 
-    .line 6378
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 6358
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -20614,13 +18536,11 @@
 
     move-result-object v8
 
-    .line 6363
     .restart local v8    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v6
 
-    .line 6364
     .local v6, "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/UserInfo;>;"
     :cond_7
     :goto_3
@@ -20630,7 +18550,6 @@
 
     if-eqz v12, :cond_3
 
-    .line 6365
     invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v12
@@ -20643,12 +18562,10 @@
 
     if-eqz v12, :cond_7
 
-    .line 6366
     invoke-interface {v6}, Ljava/util/Iterator;->remove()V
 
     goto :goto_3
 
-    .line 6393
     .end local v6    # "iterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Landroid/content/pm/UserInfo;>;"
     .end local v8    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     .end local v9    # "user":Landroid/content/pm/UserInfo;
@@ -20664,7 +18581,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 6395
     :catchall_1
     move-exception v12
 
@@ -20672,7 +18588,6 @@
 
     throw v12
 
-    .line 6387
     .restart local v0    # "N":I
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v2    # "i":I
@@ -20692,7 +18607,6 @@
 
     goto :goto_2
 
-    .line 6392
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -20703,7 +18617,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 6395
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
@@ -20714,21 +18627,17 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 10031
     const-string v2, "ComponentName is null"
 
     invoke-static {p1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10032
     monitor-enter p0
 
-    .line 10033
     const/4 v2, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10034
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v2
@@ -20737,13 +18646,11 @@
 
     move-result v1
 
-    .line 10035
     .local v1, "userHandle":I
     invoke-direct {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getLockTaskPackagesLocked(I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 10036
     .local v0, "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -20761,7 +18668,6 @@
 
     return-object v2
 
-    .line 10037
     .end local v0    # "packages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v1    # "userHandle":I
     :catchall_0
@@ -20779,7 +18685,6 @@
     .param p1, "callingUserId"    # I
 
     .prologue
-    .line 9944
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v2, p1}, Landroid/os/UserManager;->getProfiles(I)Ljava/util/List;
@@ -20804,7 +18709,6 @@
 
     check-cast v1, Landroid/content/pm/UserInfo;
 
-    .line 9945
     .local v1, "ui":Landroid/content/pm/UserInfo;
     iget v2, v1, Landroid/content/pm/UserInfo;->id:I
 
@@ -20816,10 +18720,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 9951
     iget v2, v1, Landroid/content/pm/UserInfo;->id:I
 
-    .line 9956
     .end local v1    # "ui":Landroid/content/pm/UserInfo;
     :goto_0
     return v2
@@ -20838,23 +18740,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 4173
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 4180
     :goto_0
     return v1
 
-    .line 4176
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 4177
     monitor-enter p0
 
-    .line 4178
     if-eqz p1, :cond_2
 
     :try_start_0
@@ -20862,7 +18759,6 @@
 
     move-result-object v0
 
-    .line 4180
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     if-eqz v0, :cond_1
@@ -20874,7 +18770,6 @@
 
     goto :goto_0
 
-    .line 4181
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -20885,7 +18780,6 @@
 
     throw v1
 
-    .line 4178
     :cond_2
     :try_start_1
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getAdminWithMinimumFailedPasswordsForWipeLocked(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
@@ -20903,21 +18797,17 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 4760
     move-object/from16 v0, p0
 
     iget-boolean v11, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v11, :cond_0
 
-    .line 4761
     const-wide/16 v8, 0x0
 
-    .line 4794
     :goto_0
     return-wide v8
 
-    .line 4763
     :cond_0
     move-object/from16 v0, p0
 
@@ -20925,23 +18815,18 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 4764
     monitor-enter p0
 
-    .line 4765
     const-wide/16 v8, 0x0
 
-    .line 4767
     .local v8, "time":J
     if-eqz p1, :cond_2
 
-    .line 4768
     :try_start_0
     invoke-virtual/range {p0 .. p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v3
 
-    .line 4769
     .local v3, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v3, :cond_1
 
@@ -20959,7 +18844,6 @@
 
     goto :goto_1
 
-    .line 4776
     .end local v3    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     move-object/from16 v0, p0
@@ -20970,7 +18854,6 @@
 
     move-result-object v7
 
-    .line 4781
     .local v7, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -20990,7 +18873,6 @@
 
     check-cast v10, Landroid/content/pm/UserInfo;
 
-    .line 4782
     .local v10, "userInfo":Landroid/content/pm/UserInfo;
     iget v11, v10, Landroid/content/pm/UserInfo;->id:I
 
@@ -21000,7 +18882,6 @@
 
     move-result-object v6
 
-    .line 4783
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v11, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -21008,7 +18889,6 @@
 
     move-result v2
 
-    .line 4784
     .local v2, "N":I
     const/4 v4, 0x0
 
@@ -21016,7 +18896,6 @@
     :goto_2
     if-ge v4, v2, :cond_3
 
-    .line 4785
     iget-object v11, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -21025,7 +18904,6 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4786
     .restart local v3    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const-wide/16 v12, 0x0
 
@@ -21033,17 +18911,14 @@
 
     if-nez v11, :cond_5
 
-    .line 4787
     iget-wide v8, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
-    .line 4784
     :cond_4
     :goto_3
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 4788
     :cond_5
     iget-wide v12, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
@@ -21059,12 +18934,10 @@
 
     if-lez v11, :cond_4
 
-    .line 4790
     iget-wide v8, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
     goto :goto_3
 
-    .line 4794
     .end local v2    # "N":I
     .end local v3    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v4    # "i":I
@@ -21075,7 +18948,6 @@
 
     goto :goto_0
 
-    .line 4795
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v7    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -21094,23 +18966,18 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 10930
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 10931
     const/4 v0, 0x0
 
-    .line 10934
     :goto_0
     return v0
 
-    .line 10933
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10934
     sget-boolean v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNeedToGetAlternativePasswdForODE:Z
 
     goto :goto_0
@@ -21121,7 +18988,6 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 11004
     const-string v0, ""
 
     return-object v0
@@ -21133,26 +18999,20 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3370
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3371
     const-wide/16 v0, 0x0
 
-    .line 3375
     :goto_0
     return-wide v0
 
-    .line 3373
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3374
     monitor-enter p0
 
-    .line 3375
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getPasswordExpirationLocked(Landroid/content/ComponentName;I)J
 
@@ -21162,7 +19022,6 @@
 
     goto :goto_0
 
-    .line 3376
     :catchall_0
     move-exception v0
 
@@ -21179,21 +19038,17 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3229
     move-object/from16 v0, p0
 
     iget-boolean v11, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v11, :cond_0
 
-    .line 3230
     const-wide/16 v8, 0x0
 
-    .line 3260
     :goto_0
     return-wide v8
 
-    .line 3232
     :cond_0
     move-object/from16 v0, p0
 
@@ -21201,23 +19056,18 @@
 
     invoke-direct {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3233
     monitor-enter p0
 
-    .line 3234
     const-wide/16 v8, 0x0
 
-    .line 3236
     .local v8, "timeout":J
     if-eqz p1, :cond_2
 
-    .line 3237
     :try_start_0
     invoke-virtual/range {p0 .. p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v3
 
-    .line 3238
     .local v3, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v3, :cond_1
 
@@ -21235,7 +19085,6 @@
 
     goto :goto_1
 
-    .line 3244
     .end local v3    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     move-object/from16 v0, p0
@@ -21246,7 +19095,6 @@
 
     move-result-object v7
 
-    .line 3249
     .local v7, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -21266,7 +19114,6 @@
 
     check-cast v10, Landroid/content/pm/UserInfo;
 
-    .line 3250
     .local v10, "userInfo":Landroid/content/pm/UserInfo;
     iget v11, v10, Landroid/content/pm/UserInfo;->id:I
 
@@ -21276,7 +19123,6 @@
 
     move-result-object v6
 
-    .line 3251
     .local v6, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v11, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -21284,7 +19130,6 @@
 
     move-result v2
 
-    .line 3252
     .local v2, "N":I
     const/4 v4, 0x0
 
@@ -21292,7 +19137,6 @@
     :goto_2
     if-ge v4, v2, :cond_3
 
-    .line 3253
     iget-object v11, v6, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -21301,7 +19145,6 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3254
     .restart local v3    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const-wide/16 v12, 0x0
 
@@ -21323,17 +19166,14 @@
 
     if-lez v11, :cond_5
 
-    .line 3256
     :cond_4
     iget-wide v8, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationTimeout:J
 
-    .line 3252
     :cond_5
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 3260
     .end local v2    # "N":I
     .end local v3    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v4    # "i":I
@@ -21344,7 +19184,6 @@
 
     goto :goto_0
 
-    .line 3261
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v7    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -21363,39 +19202,30 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3101
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 3102
     const/4 v4, 0x0
 
-    .line 3132
     :goto_0
     return v4
 
-    .line 3104
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3105
     monitor-enter p0
 
-    .line 3106
     const/4 v4, 0x0
 
-    .line 3108
     .local v4, "length":I
     if-eqz p1, :cond_2
 
-    .line 3109
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 3110
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -21413,14 +19243,12 @@
 
     goto :goto_1
 
-    .line 3117
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 3122
     .local v6, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -21440,7 +19268,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 3123
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -21448,7 +19275,6 @@
 
     move-result-object v5
 
-    .line 3124
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -21456,7 +19282,6 @@
 
     move-result v0
 
-    .line 3125
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -21464,7 +19289,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 3126
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -21473,22 +19297,18 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3127
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v8, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordHistoryLength:I
 
     if-ge v4, v8, :cond_4
 
-    .line 3128
     iget v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordHistoryLength:I
 
-    .line 3125
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3132
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -21499,7 +19319,6 @@
 
     goto :goto_0
 
-    .line 3133
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -21518,39 +19337,30 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3018
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 3019
     const/4 v4, 0x0
 
-    .line 3049
     :goto_0
     return v4
 
-    .line 3021
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3022
     monitor-enter p0
 
-    .line 3023
     const/4 v4, 0x0
 
-    .line 3025
     .local v4, "length":I
     if-eqz p1, :cond_2
 
-    .line 3026
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 3027
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -21568,14 +19378,12 @@
 
     goto :goto_1
 
-    .line 3034
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 3039
     .local v6, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -21595,7 +19403,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 3040
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -21603,7 +19410,6 @@
 
     move-result-object v5
 
-    .line 3041
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -21611,7 +19417,6 @@
 
     move-result v0
 
-    .line 3042
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -21619,7 +19424,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 3043
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -21628,22 +19432,18 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3044
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v8, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLength:I
 
     if-ge v4, v8, :cond_4
 
-    .line 3045
     iget v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLength:I
 
-    .line 3042
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3049
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -21654,7 +19454,6 @@
 
     goto :goto_0
 
-    .line 3050
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -21673,39 +19472,30 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3628
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 3629
     const/4 v4, 0x0
 
-    .line 3662
     :goto_0
     return v4
 
-    .line 3631
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3632
     monitor-enter p0
 
-    .line 3633
     const/4 v4, 0x0
 
-    .line 3635
     .local v4, "length":I
     if-eqz p1, :cond_2
 
-    .line 3636
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 3637
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -21723,14 +19513,12 @@
 
     goto :goto_1
 
-    .line 3644
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 3649
     .local v6, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -21750,7 +19538,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 3650
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -21758,7 +19545,6 @@
 
     move-result-object v5
 
-    .line 3651
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -21766,7 +19552,6 @@
 
     move-result v0
 
-    .line 3652
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -21774,7 +19559,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 3653
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -21783,7 +19567,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3654
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/high16 v8, 0x60000
 
@@ -21793,25 +19576,21 @@
 
     if-nez v8, :cond_5
 
-    .line 3652
     :cond_4
     :goto_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3657
     :cond_5
     iget v8, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLetters:I
 
     if-ge v4, v8, :cond_4
 
-    .line 3658
     iget v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLetters:I
 
     goto :goto_3
 
-    .line 3662
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -21822,7 +19601,6 @@
 
     goto :goto_0
 
-    .line 3663
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -21841,39 +19619,30 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3531
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 3532
     const/4 v4, 0x0
 
-    .line 3562
     :goto_0
     return v4
 
-    .line 3534
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3535
     monitor-enter p0
 
-    .line 3536
     const/4 v4, 0x0
 
-    .line 3538
     .local v4, "length":I
     if-eqz p1, :cond_2
 
-    .line 3539
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 3540
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -21891,14 +19660,12 @@
 
     goto :goto_1
 
-    .line 3547
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 3552
     .local v6, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -21918,7 +19685,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 3553
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -21926,7 +19692,6 @@
 
     move-result-object v5
 
-    .line 3554
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -21934,7 +19699,6 @@
 
     move-result v0
 
-    .line 3555
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -21942,7 +19706,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 3556
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -21951,22 +19714,18 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3557
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v8, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLowerCase:I
 
     if-ge v4, v8, :cond_4
 
-    .line 3558
     iget v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLowerCase:I
 
-    .line 3555
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3562
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -21977,7 +19736,6 @@
 
     goto :goto_0
 
-    .line 3563
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -21996,39 +19754,30 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3927
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 3928
     const/4 v4, 0x0
 
-    .line 3961
     :goto_0
     return v4
 
-    .line 3930
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3931
     monitor-enter p0
 
-    .line 3932
     const/4 v4, 0x0
 
-    .line 3934
     .local v4, "length":I
     if-eqz p1, :cond_2
 
-    .line 3935
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 3936
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -22046,14 +19795,12 @@
 
     goto :goto_1
 
-    .line 3943
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 3948
     .local v6, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -22073,7 +19820,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 3949
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -22081,7 +19827,6 @@
 
     move-result-object v5
 
-    .line 3950
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -22089,7 +19834,6 @@
 
     move-result v0
 
-    .line 3951
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -22097,7 +19841,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 3952
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -22106,7 +19849,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3953
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/high16 v8, 0x60000
 
@@ -22116,25 +19858,21 @@
 
     if-nez v8, :cond_5
 
-    .line 3951
     :cond_4
     :goto_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3956
     :cond_5
     iget v8, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNonLetter:I
 
     if-ge v4, v8, :cond_4
 
-    .line 3957
     iget v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNonLetter:I
 
     goto :goto_3
 
-    .line 3961
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -22145,7 +19883,6 @@
 
     goto :goto_0
 
-    .line 3962
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -22164,39 +19901,30 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3728
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 3729
     const/4 v4, 0x0
 
-    .line 3762
     :goto_0
     return v4
 
-    .line 3731
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3732
     monitor-enter p0
 
-    .line 3733
     const/4 v4, 0x0
 
-    .line 3735
     .local v4, "length":I
     if-eqz p1, :cond_2
 
-    .line 3736
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 3737
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -22214,14 +19942,12 @@
 
     goto :goto_1
 
-    .line 3744
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 3749
     .local v6, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -22241,7 +19967,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 3750
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -22249,7 +19974,6 @@
 
     move-result-object v5
 
-    .line 3751
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -22257,7 +19981,6 @@
 
     move-result v0
 
-    .line 3752
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -22265,7 +19988,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 3753
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -22274,7 +19996,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3754
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/high16 v8, 0x60000
 
@@ -22284,25 +20005,21 @@
 
     if-nez v8, :cond_5
 
-    .line 3752
     :cond_4
     :goto_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3757
     :cond_5
     iget v8, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNumeric:I
 
     if-ge v4, v8, :cond_4
 
-    .line 3758
     iget v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNumeric:I
 
     goto :goto_3
 
-    .line 3762
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -22313,7 +20030,6 @@
 
     goto :goto_0
 
-    .line 3763
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -22332,39 +20048,30 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3828
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 3829
     const/4 v4, 0x0
 
-    .line 3862
     :goto_0
     return v4
 
-    .line 3831
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3832
     monitor-enter p0
 
-    .line 3833
     const/4 v4, 0x0
 
-    .line 3835
     .local v4, "length":I
     if-eqz p1, :cond_2
 
-    .line 3836
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 3837
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -22382,14 +20089,12 @@
 
     goto :goto_1
 
-    .line 3844
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 3849
     .local v6, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -22409,7 +20114,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 3850
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -22417,7 +20121,6 @@
 
     move-result-object v5
 
-    .line 3851
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -22425,7 +20128,6 @@
 
     move-result v0
 
-    .line 3852
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -22433,7 +20135,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 3853
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -22442,7 +20143,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3854
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/high16 v8, 0x60000
 
@@ -22452,25 +20152,21 @@
 
     if-nez v8, :cond_5
 
-    .line 3852
     :cond_4
     :goto_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3857
     :cond_5
     iget v8, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordSymbols:I
 
     if-ge v4, v8, :cond_4
 
-    .line 3858
     iget v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordSymbols:I
 
     goto :goto_3
 
-    .line 3862
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -22481,7 +20177,6 @@
 
     goto :goto_0
 
-    .line 3863
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -22500,39 +20195,30 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 3440
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 3441
     const/4 v4, 0x0
 
-    .line 3471
     :goto_0
     return v4
 
-    .line 3443
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3444
     monitor-enter p0
 
-    .line 3445
     const/4 v4, 0x0
 
-    .line 3447
     .local v4, "length":I
     if-eqz p1, :cond_2
 
-    .line 3448
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 3449
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -22550,14 +20236,12 @@
 
     goto :goto_1
 
-    .line 3456
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 3461
     .local v6, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -22577,7 +20261,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 3462
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -22585,7 +20268,6 @@
 
     move-result-object v5
 
-    .line 3463
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -22593,7 +20275,6 @@
 
     move-result v0
 
-    .line 3464
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -22601,7 +20282,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 3465
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -22610,22 +20290,18 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 3466
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v8, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordUpperCase:I
 
     if-ge v4, v8, :cond_4
 
-    .line 3467
     iget v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordUpperCase:I
 
-    .line 3464
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 3471
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -22636,7 +20312,6 @@
 
     goto :goto_0
 
-    .line 3472
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -22655,39 +20330,30 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 2921
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 2922
     const/4 v4, 0x0
 
-    .line 2952
     :goto_0
     return v4
 
-    .line 2924
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 2925
     monitor-enter p0
 
-    .line 2926
     const/4 v4, 0x0
 
-    .line 2928
     .local v4, "mode":I
     if-eqz p1, :cond_2
 
-    .line 2929
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 2930
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -22705,14 +20371,12 @@
 
     goto :goto_1
 
-    .line 2937
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 2942
     .local v6, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -22732,7 +20396,6 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 2943
     .local v7, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v7, Landroid/content/pm/UserInfo;->id:I
 
@@ -22740,7 +20403,6 @@
 
     move-result-object v5
 
-    .line 2944
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -22748,7 +20410,6 @@
 
     move-result v0
 
-    .line 2945
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -22756,7 +20417,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 2946
     iget-object v8, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -22765,22 +20425,18 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 2947
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v8, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
     if-ge v4, v8, :cond_4
 
-    .line 2948
     iget v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
-    .line 2945
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 2952
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -22791,7 +20447,6 @@
 
     goto :goto_0
 
-    .line 2953
     .end local v3    # "i$":Ljava/util/Iterator;
     .end local v6    # "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     :catchall_0
@@ -22810,23 +20465,18 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 7399
     monitor-enter p0
 
-    .line 7400
     const/4 v4, 0x0
 
-    .line 7402
     .local v4, "value":Z
     if-eqz p1, :cond_1
 
-    .line 7403
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 7404
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_0
 
@@ -22835,7 +20485,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7415
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v5
@@ -22844,17 +20493,14 @@
     :cond_0
     move v5, v4
 
-    .line 7404
     goto :goto_0
 
-    .line 7407
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 7408
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -22862,7 +20508,6 @@
 
     move-result v0
 
-    .line 7409
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -22870,7 +20515,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 7410
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -22879,20 +20523,16 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7411
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-nez v4, :cond_2
 
-    .line 7412
     iget-boolean v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordRecoverable:Z
 
-    .line 7409
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 7415
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     monitor-exit p0
@@ -22901,7 +20541,6 @@
 
     goto :goto_1
 
-    .line 7416
     .end local v0    # "N":I
     .end local v2    # "i":I
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -22927,37 +20566,31 @@
     .end annotation
 
     .prologue
-    .line 10583
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 10585
     .local v1, "packageManager":Landroid/content/pm/PackageManager;
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v5
 
-    .line 10586
     .local v5, "user":Landroid/os/UserHandle;
     monitor-enter p0
 
-    .line 10587
     const/4 v6, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v6}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10588
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 10590
     .local v2, "ident":J
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -22972,7 +20605,6 @@
 
     move-result v0
 
-    .line 10592
     .local v0, "granted":I
     invoke-virtual {v1, p3, p2, v5}, Landroid/content/pm/PackageManager;->getPermissionFlags(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)I
     :try_end_1
@@ -22980,7 +20612,6 @@
 
     move-result v4
 
-    .line 10593
     .local v4, "permFlags":I
     and-int/lit8 v6, v4, 0x4
 
@@ -22988,10 +20619,8 @@
 
     if-eq v6, v7, :cond_0
 
-    .line 10596
     const/4 v6, 0x0
 
-    .line 10604
     :try_start_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -23000,13 +20629,11 @@
     :goto_0
     return v6
 
-    .line 10599
     :cond_0
     if-nez v0, :cond_1
 
     const/4 v6, 0x1
 
-    .line 10604
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -23014,7 +20641,6 @@
 
     goto :goto_0
 
-    .line 10606
     .end local v0    # "granted":I
     .end local v2    # "ident":J
     .end local v4    # "permFlags":I
@@ -23027,7 +20653,6 @@
 
     throw v6
 
-    .line 10599
     .restart local v0    # "granted":I
     .restart local v2    # "ident":J
     .restart local v4    # "permFlags":I
@@ -23036,7 +20661,6 @@
 
     goto :goto_1
 
-    .line 10604
     .end local v0    # "granted":I
     .end local v4    # "permFlags":I
     :catchall_1
@@ -23060,22 +20684,18 @@
     .end annotation
 
     .prologue
-    .line 10528
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 10529
     .local v0, "userId":I
     monitor-enter p0
 
-    .line 10530
     :try_start_0
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v1
 
-    .line 10531
     .local v1, "userPolicy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget v2, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPermissionPolicy:I
 
@@ -23083,7 +20703,6 @@
 
     return v2
 
-    .line 10532
     .end local v1    # "userPolicy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v2
@@ -23100,28 +20719,22 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 9182
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 9183
     const/4 v1, 0x0
 
-    .line 9190
     :goto_0
     return-object v1
 
-    .line 9185
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9187
     monitor-enter p0
 
-    .line 9188
     const/4 v1, -0x1
 
     :try_start_0
@@ -23129,7 +20742,6 @@
 
     move-result-object v0
 
-    .line 9190
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedAccessiblityServices:Ljava/util/List;
 
@@ -23137,7 +20749,6 @@
 
     goto :goto_0
 
-    .line 9191
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -23154,7 +20765,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 9196
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
@@ -23163,21 +20773,16 @@
 
     if-nez v22, :cond_0
 
-    .line 9197
     const/16 v17, 0x0
 
-    .line 9252
     :goto_0
     return-object v17
 
-    .line 9199
     :cond_0
     monitor-enter p0
 
-    .line 9200
     const/16 v17, 0x0
 
-    .line 9204
     .local v17, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_0
     move-object/from16 v0, p0
@@ -23194,13 +20799,11 @@
 
     move-result-object v16
 
-    .line 9205
     .local v16, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface/range {v16 .. v16}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 9206
     .local v3, "PROFILES_SIZE":I
     const/4 v8, 0x0
 
@@ -23208,7 +20811,6 @@
     :goto_1
     if-ge v8, v3, :cond_4
 
-    .line 9209
     move-object/from16 v0, v16
 
     invoke-interface {v0, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -23231,7 +20833,6 @@
 
     move-result-object v15
 
-    .line 9210
     .local v15, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v0, v15, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -23243,7 +20844,6 @@
 
     move-result v2
 
-    .line 9211
     .local v2, "N":I
     const/4 v13, 0x0
 
@@ -23255,7 +20855,6 @@
     :goto_2
     if-ge v13, v2, :cond_3
 
-    .line 9212
     :try_start_1
     iget-object v0, v15, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -23269,25 +20868,20 @@
 
     check-cast v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9213
     .local v5, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v7, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedAccessiblityServices:Ljava/util/List;
 
-    .line 9214
     .local v7, "fromAdmin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v7, :cond_2
 
-    .line 9215
     if-nez v18, :cond_1
 
-    .line 9216
     new-instance v17, Ljava/util/ArrayList;
 
     move-object/from16 v0, v17
 
     invoke-direct {v0, v7}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 9211
     .end local v18    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v17    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_3
@@ -23299,7 +20893,6 @@
     .restart local v18    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_2
 
-    .line 9218
     :cond_1
     move-object/from16 v0, v18
 
@@ -23314,7 +20907,6 @@
     .restart local v17    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_3
 
-    .line 9206
     .end local v5    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v7    # "fromAdmin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v17    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -23328,14 +20920,12 @@
     .restart local v17    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_1
 
-    .line 9225
     .end local v2    # "N":I
     .end local v13    # "j":I
     .end local v15    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :cond_4
     if-eqz v17, :cond_8
 
-    .line 9226
     :try_start_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_2
@@ -23343,7 +20933,6 @@
 
     move-result-wide v10
 
-    .line 9228
     .local v10, "id":J
     :try_start_3
     move-object/from16 v0, p0
@@ -23360,7 +20949,6 @@
 
     move-result-object v21
 
-    .line 9229
     .local v21, "user":Landroid/content/pm/UserInfo;
     invoke-virtual/range {v21 .. v21}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
@@ -23368,36 +20956,30 @@
 
     if-eqz v22, :cond_5
 
-    .line 9230
     move-object/from16 v0, v21
 
     iget v0, v0, Landroid/content/pm/UserInfo;->profileGroupId:I
 
     move/from16 p1, v0
 
-    .line 9232
     :cond_5
     invoke-direct/range {p0 .. p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getAccessibilityManagerForUser(I)Landroid/view/accessibility/AccessibilityManager;
 
     move-result-object v4
 
-    .line 9234
     .local v4, "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     invoke-virtual {v4}, Landroid/view/accessibility/AccessibilityManager;->getInstalledAccessibilityServiceList()Ljava/util/List;
 
     move-result-object v12
 
-    .line 9237
     .local v12, "installedServices":Ljava/util/List;, "Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;"
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v14
 
-    .line 9238
     .local v14, "pm":Landroid/content/pm/IPackageManager;
     if-eqz v12, :cond_7
 
-    .line 9239
     invoke-interface {v12}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
@@ -23417,7 +20999,6 @@
 
     check-cast v19, Landroid/accessibilityservice/AccessibilityServiceInfo;
 
-    .line 9240
     .local v19, "service":Landroid/accessibilityservice/AccessibilityServiceInfo;
     invoke-virtual/range {v19 .. v19}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
@@ -23429,13 +21010,11 @@
 
     move-object/from16 v20, v0
 
-    .line 9241
     .local v20, "serviceInfo":Landroid/content/pm/ServiceInfo;
     move-object/from16 v0, v20
 
     iget-object v6, v0, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 9242
     .local v6, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     iget v0, v6, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -23445,7 +21024,6 @@
 
     if-eqz v22, :cond_6
 
-    .line 9243
     move-object/from16 v0, v20
 
     iget-object v0, v0, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
@@ -23462,7 +21040,6 @@
 
     goto :goto_4
 
-    .line 9248
     .end local v4    # "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     .end local v6    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     .end local v9    # "i$":Ljava/util/Iterator;
@@ -23479,7 +21056,6 @@
 
     throw v22
 
-    .line 9253
     .end local v3    # "PROFILES_SIZE":I
     .end local v8    # "i":I
     .end local v10    # "id":J
@@ -23494,7 +21070,6 @@
 
     throw v22
 
-    .line 9248
     .restart local v3    # "PROFILES_SIZE":I
     .restart local v4    # "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     .restart local v8    # "i":I
@@ -23507,7 +21082,6 @@
     :try_start_5
     invoke-static {v10, v11}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9252
     .end local v4    # "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     .end local v10    # "id":J
     .end local v12    # "installedServices":Ljava/util/List;, "Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;"
@@ -23520,7 +21094,6 @@
 
     goto/16 :goto_0
 
-    .line 9253
     .end local v17    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v2    # "N":I
     .restart local v13    # "j":I
@@ -23541,28 +21114,22 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 9330
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 9331
     const/4 v1, 0x0
 
-    .line 9338
     :goto_0
     return-object v1
 
-    .line 9333
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9335
     monitor-enter p0
 
-    .line 9336
     const/4 v1, -0x1
 
     :try_start_0
@@ -23570,7 +21137,6 @@
 
     move-result-object v0
 
-    .line 9338
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedInputMethods:Ljava/util/List;
 
@@ -23578,7 +21144,6 @@
 
     goto :goto_0
 
-    .line 9339
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -23594,7 +21159,6 @@
     .locals 26
 
     .prologue
-    .line 9346
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -23606,20 +21170,16 @@
 
     move-result-object v6
 
-    .line 9353
     .local v6, "currentUser":Landroid/content/pm/UserInfo;
     iget v0, v6, Landroid/content/pm/UserInfo;->id:I
 
     move/from16 v23, v0
 
-    .line 9354
     .local v23, "userId":I
     monitor-enter p0
 
-    .line 9355
     const/16 v20, 0x0
 
-    .line 9359
     .local v20, "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :try_start_1
     move-object/from16 v0, p0
@@ -23636,13 +21196,11 @@
 
     move-result-object v19
 
-    .line 9360
     .local v19, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface/range {v19 .. v19}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 9361
     .local v3, "PROFILES_SIZE":I
     const/4 v9, 0x0
 
@@ -23650,7 +21208,6 @@
     :goto_0
     if-ge v9, v3, :cond_3
 
-    .line 9364
     move-object/from16 v0, v19
 
     invoke-interface {v0, v9}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -23673,7 +21230,6 @@
 
     move-result-object v18
 
-    .line 9365
     .local v18, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     move-object/from16 v0, v18
 
@@ -23687,7 +21243,6 @@
 
     move-result v2
 
-    .line 9366
     .local v2, "N":I
     const/16 v16, 0x0
 
@@ -23701,7 +21256,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 9367
     :try_start_2
     move-object/from16 v0, v18
 
@@ -23719,18 +21273,14 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9368
     .local v4, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v8, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedInputMethods:Ljava/util/List;
 
-    .line 9369
     .local v8, "fromAdmin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     if-eqz v8, :cond_1
 
-    .line 9370
     if-nez v21, :cond_0
 
-    .line 9371
     new-instance v20, Ljava/util/ArrayList;
 
     move-object/from16 v0, v20
@@ -23739,7 +21289,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 9366
     .end local v21    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v20    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :goto_2
@@ -23751,7 +21300,6 @@
     .restart local v21    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_1
 
-    .line 9347
     .end local v2    # "N":I
     .end local v3    # "PROFILES_SIZE":I
     .end local v4    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
@@ -23766,7 +21314,6 @@
     :catch_0
     move-exception v7
 
-    .line 9348
     .local v7, "e":Landroid/os/RemoteException;
     const-string v24, "DevicePolicyManagerService"
 
@@ -23778,15 +21325,12 @@
 
     invoke-static {v0, v1, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 9350
     const/16 v20, 0x0
 
-    .line 9400
     .end local v7    # "e":Landroid/os/RemoteException;
     :goto_3
     return-object v20
 
-    .line 9373
     .restart local v2    # "N":I
     .restart local v3    # "PROFILES_SIZE":I
     .restart local v4    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
@@ -23813,7 +21357,6 @@
     .restart local v20    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_2
 
-    .line 9361
     .end local v4    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v8    # "fromAdmin":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v20    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
@@ -23827,14 +21370,12 @@
     .restart local v20    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     goto :goto_0
 
-    .line 9380
     .end local v2    # "N":I
     .end local v16    # "j":I
     .end local v18    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :cond_3
     if-eqz v20, :cond_6
 
-    .line 9381
     :try_start_4
     move-object/from16 v0, p0
 
@@ -23850,13 +21391,11 @@
 
     check-cast v15, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 9383
     .local v15, "inputMethodManager":Landroid/view/inputmethod/InputMethodManager;
     invoke-virtual {v15}, Landroid/view/inputmethod/InputMethodManager;->getInputMethodList()Ljava/util/List;
 
     move-result-object v14
 
-    .line 9384
     .local v14, "imes":Ljava/util/List;, "Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;"
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_4
@@ -23864,18 +21403,15 @@
 
     move-result-wide v12
 
-    .line 9386
     .local v12, "id":J
     :try_start_5
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v17
 
-    .line 9387
     .local v17, "pm":Landroid/content/pm/IPackageManager;
     if-eqz v14, :cond_5
 
-    .line 9388
     invoke-interface {v14}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v10
@@ -23895,19 +21431,16 @@
 
     check-cast v11, Landroid/view/inputmethod/InputMethodInfo;
 
-    .line 9389
     .local v11, "ime":Landroid/view/inputmethod/InputMethodInfo;
     invoke-virtual {v11}, Landroid/view/inputmethod/InputMethodInfo;->getServiceInfo()Landroid/content/pm/ServiceInfo;
 
     move-result-object v22
 
-    .line 9390
     .local v22, "serviceInfo":Landroid/content/pm/ServiceInfo;
     move-object/from16 v0, v22
 
     iget-object v5, v0, Landroid/content/pm/ServiceInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
-    .line 9391
     .local v5, "applicationInfo":Landroid/content/pm/ApplicationInfo;
     iget v0, v5, Landroid/content/pm/ApplicationInfo;->flags:I
 
@@ -23917,7 +21450,6 @@
 
     if-eqz v24, :cond_4
 
-    .line 9392
     move-object/from16 v0, v22
 
     iget-object v0, v0, Landroid/content/pm/ServiceInfo;->packageName:Ljava/lang/String;
@@ -23934,7 +21466,6 @@
 
     goto :goto_4
 
-    .line 9397
     .end local v5    # "applicationInfo":Landroid/content/pm/ApplicationInfo;
     .end local v10    # "i$":Ljava/util/Iterator;
     .end local v11    # "ime":Landroid/view/inputmethod/InputMethodInfo;
@@ -23948,7 +21479,6 @@
 
     throw v24
 
-    .line 9401
     .end local v3    # "PROFILES_SIZE":I
     .end local v9    # "i":I
     .end local v12    # "id":J
@@ -23965,7 +21495,6 @@
 
     throw v24
 
-    .line 9397
     .restart local v3    # "PROFILES_SIZE":I
     .restart local v9    # "i":I
     .restart local v12    # "id":J
@@ -23977,7 +21506,6 @@
     :try_start_7
     invoke-static {v12, v13}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9400
     .end local v12    # "id":J
     .end local v14    # "imes":Ljava/util/List;, "Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;"
     .end local v15    # "inputMethodManager":Landroid/view/inputmethod/InputMethodManager;
@@ -23989,7 +21517,6 @@
 
     goto :goto_3
 
-    .line 9401
     .end local v20    # "result":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v2    # "N":I
     .restart local v16    # "j":I
@@ -24010,7 +21537,6 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 7034
     const/16 v18, 0x104
 
     invoke-static/range {v18 .. v18}, Landroid/os/PersonaManager;->isKnoxVersionSupported(I)Z
@@ -24019,7 +21545,6 @@
 
     if-eqz v18, :cond_5
 
-    .line 7035
     const/16 v18, 0x64
 
     move/from16 v0, p1
@@ -24036,7 +21561,6 @@
 
     if-gt v0, v1, :cond_5
 
-    .line 7038
     :try_start_0
     const-string/jumbo v18, "getProfileOwner"
 
@@ -24048,12 +21572,10 @@
     :try_end_0
     .catch Ljava/lang/SecurityException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7043
     invoke-static {}, Lcom/sec/enterprise/knox/EnterpriseKnoxManager;->getInstance()Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
 
     move-result-object v10
 
-    .line 7044
     .local v10, "ekm":Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
     move-object/from16 v0, p0
 
@@ -24069,7 +21591,6 @@
 
     move-result-object v6
 
-    .line 7046
     .local v6, "containerMgr":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     const-string/jumbo v18, "persona"
 
@@ -24079,22 +21600,18 @@
 
     check-cast v15, Lcom/android/server/pm/PersonaManagerService;
 
-    .line 7048
     .local v15, "personaService":Lcom/android/server/pm/PersonaManagerService;
     const/4 v12, 0x0
 
-    .line 7050
     .local v12, "isPfWEnabled":Z
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 7053
     .local v4, "callingId":J
     :try_start_1
     const-string v16, "com.android.vending"
 
-    .line 7055
     .local v16, "playStorePackageName":Ljava/lang/String;
     const-string v18, "enterprise_policy"
 
@@ -24104,7 +21621,6 @@
 
     check-cast v9, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
 
-    .line 7056
     .local v9, "edms":Lcom/android/server/enterprise/EnterpriseDeviceManagerService;
     const-string v18, "application_policy"
 
@@ -24114,7 +21630,6 @@
 
     check-cast v3, Lcom/android/server/enterprise/application/ApplicationPolicy;
 
-    .line 7059
     .local v3, "appPolicyService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     move-object/from16 v0, v16
 
@@ -24126,17 +21641,13 @@
 
     move-result v14
 
-    .line 7061
     .local v14, "isVendingInstalled":Z
     if-nez v14, :cond_0
 
-    .line 7062
     const/16 v17, 0x0
 
-    .line 7091
     invoke-static {v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 7110
     .end local v3    # "appPolicyService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     .end local v4    # "callingId":J
     .end local v6    # "containerMgr":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
@@ -24149,17 +21660,14 @@
     :goto_0
     return-object v17
 
-    .line 7039
     :catch_0
     move-exception v7
 
-    .line 7040
     .local v7, "e":Ljava/lang/SecurityException;
     const/16 v17, 0x0
 
     goto :goto_0
 
-    .line 7064
     .end local v7    # "e":Ljava/lang/SecurityException;
     .restart local v3    # "appPolicyService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     .restart local v4    # "callingId":J
@@ -24210,7 +21718,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7067
     new-instance v8, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     move-object/from16 v0, p0
@@ -24223,7 +21730,6 @@
 
     invoke-direct {v8, v0}, Lcom/android/server/enterprise/storage/EdmStorageProvider;-><init>(Landroid/content/Context;)V
 
-    .line 7068
     .local v8, "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
     move/from16 v0, p1
 
@@ -24231,30 +21737,24 @@
 
     move-result-object v2
 
-    .line 7070
     .local v2, "adminComponent":Landroid/content/ComponentName;
     const/4 v13, 0x0
 
-    .line 7071
     .local v13, "isProxyInstalled":Z
     invoke-direct/range {p0 .. p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getPlayForWorkProxy(I)Landroid/content/ComponentName;
 
     move-result-object v17
 
-    .line 7072
     .local v17, "proxyComponent":Landroid/content/ComponentName;
     if-eqz v17, :cond_1
 
-    .line 7073
     const/4 v13, 0x1
 
-    .line 7076
     :cond_1
     if-eqz v14, :cond_2
 
     if-eqz v13, :cond_2
 
-    .line 7077
     const-string v18, "DevicePolicyManagerService"
 
     const-string v19, "PfW getProfileOwner() returning proxyComponent"
@@ -24263,16 +21763,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 7091
     invoke-static {v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 7081
     :cond_2
     const/4 v11, 0x0
 
-    .line 7082
     .local v11, "isMDMInstalled":Z
     if-eqz v2, :cond_3
 
@@ -24291,7 +21788,6 @@
 
     if-nez v18, :cond_3
 
-    .line 7083
     invoke-virtual {v2}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v18
@@ -24304,13 +21800,11 @@
 
     move-result v11
 
-    .line 7086
     :cond_3
     if-eqz v14, :cond_4
 
     if-eqz v11, :cond_4
 
-    .line 7087
     const-string v18, "DevicePolicyManagerService"
 
     const-string v19, "PfW getProfileOwner() returning adminComponent"
@@ -24319,7 +21813,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 7091
     invoke-static {v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     move-object/from16 v17, v2
@@ -24329,19 +21822,16 @@
     :cond_4
     invoke-static {v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 7095
     const-string v18, "DevicePolicyManagerService"
 
     const-string v19, "PfW getProfileOwner() return null for Container"
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 7096
     const/16 v17, 0x0
 
     goto/16 :goto_0
 
-    .line 7091
     .end local v2    # "adminComponent":Landroid/content/ComponentName;
     .end local v3    # "appPolicyService":Lcom/android/server/enterprise/application/ApplicationPolicy;
     .end local v8    # "edmStorageProvider":Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -24358,7 +21848,6 @@
 
     throw v18
 
-    .line 7101
     .end local v4    # "callingId":J
     .end local v6    # "containerMgr":Lcom/sec/enterprise/knox/container/KnoxContainerManager;
     .end local v10    # "ekm":Lcom/sec/enterprise/knox/EnterpriseKnoxManager;
@@ -24373,16 +21862,13 @@
 
     if-nez v18, :cond_6
 
-    .line 7102
     const/16 v17, 0x0
 
     goto/16 :goto_0
 
-    .line 7105
     :cond_6
     monitor-enter p0
 
-    .line 7106
     :try_start_4
     move-object/from16 v0, p0
 
@@ -24392,7 +21878,6 @@
 
     if-eqz v18, :cond_7
 
-    .line 7107
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
@@ -24411,7 +21896,6 @@
 
     goto/16 :goto_0
 
-    .line 7109
     :catchall_1
     move-exception v18
 
@@ -24427,7 +21911,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 7110
     const/16 v17, 0x0
 
     goto/16 :goto_0
@@ -24440,17 +21923,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 7134
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_1
 
-    .line 7142
     :cond_0
     :goto_0
     return-object v1
 
-    .line 7137
     :cond_1
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -24458,16 +21938,13 @@
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 7138
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfileOwner(I)Landroid/content/ComponentName;
 
     move-result-object v0
 
-    .line 7139
     .local v0, "profileOwner":Landroid/content/ComponentName;
     if-eqz v0, :cond_0
 
-    .line 7142
     invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -24486,29 +21963,23 @@
     .prologue
     const/16 v1, -0x2710
 
-    .line 4186
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 4192
     :goto_0
     return v1
 
-    .line 4189
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 4190
     monitor-enter p0
 
-    .line 4191
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getAdminWithMinimumFailedPasswordsForWipeLocked(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 4192
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_1
 
@@ -24525,7 +21996,6 @@
 
     goto :goto_0
 
-    .line 4193
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -24546,23 +22016,18 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 10872
     iget-boolean v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v4, :cond_0
 
-    .line 10896
     :goto_0
     return-object v3
 
-    .line 10875
     :cond_0
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10876
     const/4 v1, 0x0
 
-    .line 10878
     .local v1, "mountService":Landroid/os/storage/IMountService;
     const-string/jumbo v4, "mount"
 
@@ -24570,19 +22035,15 @@
 
     move-result-object v2
 
-    .line 10879
     .local v2, "service":Landroid/os/IBinder;
     if-eqz v2, :cond_1
 
-    .line 10880
     invoke-static {v2}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
     move-result-object v1
 
-    .line 10881
     if-nez v1, :cond_2
 
-    .line 10882
     const-string v4, "DevicePolicyManagerService"
 
     const-string v5, "Can\'t get mount interface"
@@ -24591,7 +22052,6 @@
 
     goto :goto_0
 
-    .line 10886
     :cond_1
     const-string v4, "DevicePolicyManagerService"
 
@@ -24601,7 +22061,6 @@
 
     goto :goto_0
 
-    .line 10891
     :cond_2
     :try_start_0
     invoke-interface {v1, p2}, Landroid/os/storage/IMountService;->getPropertyFromFooter(Ljava/lang/String;)Ljava/lang/String;
@@ -24612,11 +22071,9 @@
 
     goto :goto_0
 
-    .line 10892
     :catch_0
     move-exception v0
 
-    .line 10893
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "DevicePolicyManagerService"
 
@@ -24636,30 +22093,24 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 5412
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 5442
     :goto_0
     return-void
 
-    .line 5415
     :cond_0
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5416
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "android.permission.BIND_DEVICE_ADMIN"
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5419
     monitor-enter p0
 
-    .line 5420
     :try_start_0
     invoke-virtual {p0, p1, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :try_end_0
@@ -24667,11 +22118,9 @@
 
     move-result-object v9
 
-    .line 5421
     .local v9, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-nez v9, :cond_1
 
-    .line 5423
     const/4 v0, 0x0
 
     :try_start_1
@@ -24680,14 +22129,12 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5426
     :goto_1
     :try_start_2
     monitor-exit p0
 
     goto :goto_0
 
-    .line 5441
     .end local v9    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v0
@@ -24698,7 +22145,6 @@
 
     throw v0
 
-    .line 5428
     .restart local v9    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     :try_start_3
@@ -24708,13 +22154,11 @@
 
     invoke-direct {v1, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5429
     .local v1, "intent":Landroid/content/Intent;
     const/high16 v0, 0x10000000
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 5430
     iget-object v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
     invoke-virtual {v0}, Landroid/app/admin/DeviceAdminInfo;->getComponent()Landroid/content/ComponentName;
@@ -24723,7 +22167,6 @@
 
     invoke-virtual {v1, v0}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 5431
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     new-instance v2, Landroid/os/UserHandle;
@@ -24746,14 +22189,12 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/content/Context;->sendOrderedBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;Ljava/lang/String;Landroid/content/BroadcastReceiver;Landroid/os/Handler;ILjava/lang/String;Landroid/os/Bundle;)V
 
-    .line 5441
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_0
 
-    .line 5424
     .end local v1    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v0
@@ -24767,23 +22208,18 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 8037
     monitor-enter p0
 
-    .line 8038
     const/4 v4, 0x0
 
-    .line 8040
     .local v4, "value":Z
     if-eqz p1, :cond_1
 
-    .line 8041
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 8042
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_0
 
@@ -24792,7 +22228,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 8053
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v5
@@ -24801,17 +22236,14 @@
     :cond_0
     move v5, v4
 
-    .line 8042
     goto :goto_0
 
-    .line 8045
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 8046
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -24819,7 +22251,6 @@
 
     move-result v0
 
-    .line 8047
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -24827,7 +22258,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 8048
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -24836,20 +22266,16 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8049
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-nez v4, :cond_2
 
-    .line 8050
     iget-boolean v4, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->requireStorageCardEncryption:Z
 
-    .line 8047
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 8053
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     monitor-exit p0
@@ -24858,7 +22284,6 @@
 
     goto :goto_1
 
-    .line 8054
     .end local v0    # "N":I
     .end local v2    # "i":I
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -24877,10 +22302,8 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 8982
     monitor-enter p0
 
-    .line 8983
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
@@ -24890,7 +22313,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 8984
     new-instance v1, Ljava/lang/SecurityException;
 
     const-string v2, "Only the system can query the permission provider"
@@ -24899,7 +22321,6 @@
 
     throw v1
 
-    .line 8988
     :catchall_0
     move-exception v1
 
@@ -24909,14 +22330,12 @@
 
     throw v1
 
-    .line 8986
     :cond_0
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
-    .line 8987
     .local v0, "userData":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     if-eqz v0, :cond_1
 
@@ -24945,44 +22364,36 @@
 
     const/4 v2, 0x0
 
-    .line 10654
     iget-boolean v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v3, :cond_1
 
-    .line 10676
     :cond_0
     :goto_0
     return v2
 
-    .line 10658
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10659
     new-instance v0, Landroid/dirEncryption/DirEncryptionManager;
 
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v3}, Landroid/dirEncryption/DirEncryptionManager;-><init>(Landroid/content/Context;)V
 
-    .line 10660
     .local v0, "dem":Landroid/dirEncryption/DirEncryptionManager;
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionManager;->getSDCardEncryptionPrefs()Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     move-result-object v1
 
-    .line 10662
     .local v1, "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     if-nez v1, :cond_2
 
-    .line 10663
     new-instance v1, Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     .end local v1    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     invoke-direct {v1}, Landroid/dirEncryption/SDCardEncryptionPolicies;-><init>()V
 
-    .line 10666
     .restart local v1    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     :cond_2
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionManager;->getCurrentUserID()I
@@ -24991,7 +22402,6 @@
 
     if-nez v3, :cond_0
 
-    .line 10668
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getRequireStorageCardEncryption(Landroid/content/ComponentName;I)Z
 
     move-result v3
@@ -25022,7 +22432,6 @@
 
     if-ne v3, v5, :cond_0
 
-    .line 10673
     :cond_3
     const/4 v2, 0x1
 
@@ -25035,38 +22444,29 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 10715
     iget-boolean v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v9, :cond_0
 
-    .line 10716
     const/4 v9, -0x1
 
-    .line 10787
     :goto_0
     return v9
 
-    .line 10718
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10720
     const/4 v4, -0x1
 
-    .line 10721
     .local v4, "internalStorage":I
     const/4 v2, -0x1
 
-    .line 10722
     .local v2, "externalStorage":I
     const/4 v6, -0x1
 
-    .line 10724
     .local v6, "passwordType":I
     const/4 v5, 0x0
 
-    .line 10728
     .local v5, "mountService":Landroid/os/storage/IMountService;
     const-string/jumbo v9, "mount"
 
@@ -25074,31 +22474,25 @@
 
     move-result-object v8
 
-    .line 10729
     .local v8, "service":Landroid/os/IBinder;
     if-eqz v8, :cond_1
 
-    .line 10730
     invoke-static {v8}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
     move-result-object v5
 
-    .line 10731
     if-nez v5, :cond_2
 
-    .line 10732
     const-string v9, "DevicePolicyManagerService"
 
     const-string v10, "Can\'t get mount interface"
 
     invoke-static {v9, v10}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10733
     const/4 v9, -0x1
 
     goto :goto_0
 
-    .line 10736
     :cond_1
     const-string v9, "DevicePolicyManagerService"
 
@@ -25106,12 +22500,10 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10737
     const/4 v9, -0x1
 
     goto :goto_0
 
-    .line 10741
     :cond_2
     :try_start_0
     invoke-interface {v5}, Landroid/os/storage/IMountService;->isStorageFullyEncrypted()I
@@ -25120,7 +22512,6 @@
 
     move-result v4
 
-    .line 10748
     :goto_1
     new-instance v0, Landroid/dirEncryption/DirEncryptionManager;
 
@@ -25128,23 +22519,19 @@
 
     invoke-direct {v0, v9}, Landroid/dirEncryption/DirEncryptionManager;-><init>(Landroid/content/Context;)V
 
-    .line 10749
     .local v0, "dem":Landroid/dirEncryption/DirEncryptionManager;
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionManager;->getSDCardEncryptionPrefs()Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     move-result-object v7
 
-    .line 10751
     .local v7, "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     if-nez v7, :cond_3
 
-    .line 10752
     new-instance v7, Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     .end local v7    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     invoke-direct {v7}, Landroid/dirEncryption/SDCardEncryptionPolicies;-><init>()V
 
-    .line 10755
     .restart local v7    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     :cond_3
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionManager;->getCurrentUserID()I
@@ -25153,10 +22540,8 @@
 
     if-eqz v9, :cond_6
 
-    .line 10756
     const/4 v2, -0x1
 
-    .line 10766
     :goto_2
     const-string/jumbo v9, "ro.vold.forceencryption"
 
@@ -25164,7 +22549,6 @@
 
     move-result-object v3
 
-    .line 10767
     .local v3, "forceenProperty":Ljava/lang/String;
     const-string v9, "1"
 
@@ -25174,10 +22558,8 @@
 
     if-eqz v9, :cond_4
 
-    .line 10768
     const/4 v4, 0x1
 
-    .line 10770
     :cond_4
     :try_start_1
     invoke-interface {v5}, Landroid/os/storage/IMountService;->getPasswordType()I
@@ -25186,7 +22568,6 @@
 
     move-result v6
 
-    .line 10775
     :goto_3
     const/4 v9, -0x1
 
@@ -25196,20 +22577,17 @@
 
     if-ne v2, v9, :cond_a
 
-    .line 10776
     :cond_5
     const/4 v9, -0x1
 
     goto :goto_0
 
-    .line 10742
     .end local v0    # "dem":Landroid/dirEncryption/DirEncryptionManager;
     .end local v3    # "forceenProperty":Ljava/lang/String;
     .end local v7    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     :catch_0
     move-exception v1
 
-    .line 10743
     .local v1, "e":Ljava/lang/Exception;
     const-string v9, "DevicePolicyManagerService"
 
@@ -25219,7 +22597,6 @@
 
     goto :goto_1
 
-    .line 10757
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "dem":Landroid/dirEncryption/DirEncryptionManager;
     .restart local v7    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
@@ -25230,12 +22607,10 @@
 
     if-ne v9, v10, :cond_7
 
-    .line 10758
     const/4 v2, 0x0
 
     goto :goto_2
 
-    .line 10759
     :cond_7
     const/4 v9, 0x5
 
@@ -25243,12 +22618,10 @@
 
     if-ne v9, v10, :cond_8
 
-    .line 10760
     const/4 v2, 0x2
 
     goto :goto_2
 
-    .line 10761
     :cond_8
     const/4 v9, 0x6
 
@@ -25256,23 +22629,19 @@
 
     if-ne v9, v10, :cond_9
 
-    .line 10762
     const/4 v2, 0x2
 
     goto :goto_2
 
-    .line 10764
     :cond_9
     const/4 v2, 0x1
 
     goto :goto_2
 
-    .line 10771
     .restart local v3    # "forceenProperty":Ljava/lang/String;
     :catch_1
     move-exception v1
 
-    .line 10772
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v9, "DevicePolicyManagerService"
 
@@ -25282,19 +22651,16 @@
 
     goto :goto_3
 
-    .line 10777
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_a
     const/4 v9, 0x1
 
     if-eq v4, v9, :cond_b
 
-    .line 10778
     const/4 v9, 0x0
 
     goto/16 :goto_0
 
-    .line 10779
     :cond_b
     const/4 v9, 0x1
 
@@ -25304,12 +22670,10 @@
 
     if-ne v6, v9, :cond_c
 
-    .line 10780
     const/4 v9, 0x3
 
     goto/16 :goto_0
 
-    .line 10781
     :cond_c
     const/4 v9, 0x1
 
@@ -25321,12 +22685,10 @@
 
     if-nez v6, :cond_d
 
-    .line 10782
     const/4 v9, 0x2
 
     goto/16 :goto_0
 
-    .line 10783
     :cond_d
     const/4 v9, 0x1
 
@@ -25338,12 +22700,10 @@
 
     if-nez v6, :cond_e
 
-    .line 10784
     const/4 v9, 0x1
 
     goto/16 :goto_0
 
-    .line 10787
     :cond_e
     const/4 v9, -0x1
 
@@ -25358,44 +22718,36 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 10684
     iget-boolean v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v3, :cond_1
 
-    .line 10704
     :cond_0
     :goto_0
     return v2
 
-    .line 10688
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10689
     new-instance v0, Landroid/dirEncryption/DirEncryptionManager;
 
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v3}, Landroid/dirEncryption/DirEncryptionManager;-><init>(Landroid/content/Context;)V
 
-    .line 10690
     .local v0, "dem":Landroid/dirEncryption/DirEncryptionManager;
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionManager;->getSDCardEncryptionPrefs()Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     move-result-object v1
 
-    .line 10692
     .local v1, "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     if-nez v1, :cond_2
 
-    .line 10693
     new-instance v1, Landroid/dirEncryption/SDCardEncryptionPolicies;
 
     .end local v1    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     invoke-direct {v1}, Landroid/dirEncryption/SDCardEncryptionPolicies;-><init>()V
 
-    .line 10696
     .restart local v1    # "sdPolicies":Landroid/dirEncryption/SDCardEncryptionPolicies;
     :cond_2
     invoke-virtual {v0}, Landroid/dirEncryption/DirEncryptionManager;->getCurrentUserID()I
@@ -25404,7 +22756,6 @@
 
     if-nez v3, :cond_0
 
-    .line 10698
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getRequireStorageCardEncryption(Landroid/content/ComponentName;I)Z
 
     move-result v3
@@ -25425,7 +22776,6 @@
 
     if-ne v3, v4, :cond_0
 
-    .line 10701
     :cond_3
     const/4 v2, 0x1
 
@@ -25442,20 +22792,16 @@
 
     const/4 v5, 0x0
 
-    .line 6096
     iget-boolean v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v7, :cond_0
 
-    .line 6123
     :goto_0
     return v5
 
-    .line 6099
     :cond_0
     if-nez p1, :cond_1
 
-    .line 6100
     const-string/jumbo v7, "restriction_policy"
 
     invoke-static {v7}, Lcom/android/server/enterprise/EnterpriseDeviceManagerService;->getPolicyService(Ljava/lang/String;)Ljava/lang/Object;
@@ -25464,7 +22810,6 @@
 
     check-cast v4, Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
-    .line 6102
     .local v4, "restrictionService":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     if-eqz v4, :cond_1
 
@@ -25474,7 +22819,6 @@
 
     if-nez v7, :cond_1
 
-    .line 6104
     const-string v5, "DevicePolicyManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -25499,24 +22843,19 @@
 
     move v5, v6
 
-    .line 6105
     goto :goto_0
 
-    .line 6109
     .end local v4    # "restrictionService":Lcom/android/server/enterprise/restriction/RestrictionPolicy;
     :cond_1
     monitor-enter p0
 
-    .line 6110
     if-eqz p1, :cond_3
 
-    .line 6111
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 6112
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_2
 
@@ -25527,7 +22866,6 @@
 
     goto :goto_0
 
-    .line 6124
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v5
@@ -25538,14 +22876,12 @@
 
     throw v5
 
-    .line 6115
     :cond_3
     :try_start_1
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 6116
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v7, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -25553,7 +22889,6 @@
 
     move-result v0
 
-    .line 6117
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -25561,7 +22896,6 @@
     :goto_1
     if-ge v2, v0, :cond_5
 
-    .line 6118
     iget-object v7, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -25570,26 +22904,22 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 6119
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v7, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableScreenCapture:Z
 
     if-eqz v7, :cond_4
 
-    .line 6120
     monitor-exit p0
 
     move v5, v6
 
     goto :goto_0
 
-    .line 6117
     :cond_4
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 6123
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_5
     monitor-exit p0
@@ -25605,23 +22935,18 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 7496
     monitor-enter p0
 
-    .line 7497
     const/4 v7, 0x1
 
-    .line 7499
     .local v7, "value":Z
     if-eqz p1, :cond_1
 
-    .line 7500
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 7501
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_0
 
@@ -25630,7 +22955,6 @@
     :goto_0
     monitor-exit p0
 
-    .line 7520
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :goto_1
     return v8
@@ -25639,10 +22963,8 @@
     :cond_0
     move v8, v7
 
-    .line 7501
     goto :goto_0
 
-    .line 7505
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -25651,7 +22973,6 @@
 
     move-result-object v5
 
-    .line 7507
     .local v5, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v5}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -25671,7 +22992,6 @@
 
     check-cast v6, Landroid/content/pm/UserInfo;
 
-    .line 7508
     .local v6, "userInfo":Landroid/content/pm/UserInfo;
     iget v8, v6, Landroid/content/pm/UserInfo;->id:I
 
@@ -25679,7 +22999,6 @@
 
     move-result-object v4
 
-    .line 7509
     .local v4, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v8, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -25687,7 +23006,6 @@
 
     move-result v0
 
-    .line 7510
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -25695,7 +23013,6 @@
     :goto_2
     if-ge v2, v0, :cond_3
 
-    .line 7511
     iget-object v8, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -25704,7 +23021,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 7512
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v7, :cond_5
 
@@ -25712,15 +23028,12 @@
 
     if-nez v8, :cond_5
 
-    .line 7513
     const/4 v7, 0x0
 
-    .line 7517
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     if-nez v7, :cond_2
 
-    .line 7520
     .end local v0    # "N":I
     .end local v2    # "i":I
     .end local v4    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -25732,7 +23045,6 @@
 
     goto :goto_1
 
-    .line 7510
     .restart local v0    # "N":I
     .restart local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v2    # "i":I
@@ -25743,7 +23055,6 @@
 
     goto :goto_2
 
-    .line 7521
     .end local v0    # "N":I
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
@@ -25769,34 +23080,27 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 5989
     iget-boolean v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v4, :cond_0
 
     move v4, v5
 
-    .line 6010
     :goto_0
     return v4
 
-    .line 5992
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5993
     monitor-enter p0
 
-    .line 5995
     if-eqz p1, :cond_2
 
-    .line 5997
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v1
 
-    .line 5998
     .local v1, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v1, :cond_1
 
@@ -25807,7 +23111,6 @@
 
     goto :goto_0
 
-    .line 6011
     .end local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v4
@@ -25822,10 +23125,8 @@
     :cond_1
     move v4, v5
 
-    .line 5998
     goto :goto_1
 
-    .line 6003
     .end local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     :try_start_1
@@ -25833,7 +23134,6 @@
 
     move-result-object v3
 
-    .line 6004
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v4, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -25841,7 +23141,6 @@
 
     move-result v0
 
-    .line 6005
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -25849,7 +23148,6 @@
     :goto_2
     if-ge v2, v0, :cond_4
 
-    .line 6006
     iget-object v4, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -25862,20 +23160,17 @@
 
     if-eqz v4, :cond_3
 
-    .line 6007
     const/4 v4, 0x1
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 6005
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 6010
     :cond_4
     monitor-exit p0
     :try_end_1
@@ -25891,16 +23186,13 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 6019
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 6022
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 6023
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEncryptionStatus()I
 
     move-result v0
@@ -25912,10 +23204,8 @@
     .locals 3
 
     .prologue
-    .line 10443
     monitor-enter p0
 
-    .line 10444
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -25923,7 +23213,6 @@
 
     move-result-object v0
 
-    .line 10445
     .local v0, "policy":Landroid/app/admin/SystemUpdatePolicy;
     if-eqz v0, :cond_0
 
@@ -25933,19 +23222,16 @@
 
     if-nez v1, :cond_0
 
-    .line 10446
     const-string v1, "DevicePolicyManagerService"
 
     const-string v2, "Stored system update policy is invalid, return null instead."
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10447
     const/4 v0, 0x0
 
     monitor-exit p0
 
-    .line 10449
     .end local v0    # "policy":Landroid/app/admin/SystemUpdatePolicy;
     :goto_0
     return-object v0
@@ -25956,7 +23242,6 @@
 
     goto :goto_0
 
-    .line 10450
     .end local v0    # "policy":Landroid/app/admin/SystemUpdatePolicy;
     :catchall_0
     move-exception v1
@@ -25987,7 +23272,6 @@
     .end annotation
 
     .prologue
-    .line 8912
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
@@ -25996,14 +23280,11 @@
 
     if-nez v17, :cond_0
 
-    .line 8913
     const/4 v14, 0x0
 
-    .line 8963
     :goto_0
     return-object v14
 
-    .line 8915
     :cond_0
     const-string v17, "agent null"
 
@@ -26013,27 +23294,22 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8916
     move-object/from16 v0, p0
 
     move/from16 v1, p3
 
     invoke-direct {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 8918
     monitor-enter p0
 
-    .line 8919
     :try_start_0
     invoke-virtual/range {p2 .. p2}, Landroid/content/ComponentName;->flattenToString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 8920
     .local v7, "componentName":Ljava/lang/String;
     if-eqz p1, :cond_4
 
-    .line 8921
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -26044,7 +23320,6 @@
 
     move-result-object v6
 
-    .line 8922
     .local v6, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-nez v6, :cond_1
 
@@ -26054,7 +23329,6 @@
 
     goto :goto_0
 
-    .line 8964
     .end local v6    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v7    # "componentName":Ljava/lang/String;
     :catchall_0
@@ -26066,7 +23340,6 @@
 
     throw v17
 
-    .line 8923
     .restart local v6    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v7    # "componentName":Ljava/lang/String;
     :cond_1
@@ -26083,7 +23356,6 @@
 
     check-cast v15, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin$TrustAgentInfo;
 
-    .line 8924
     .local v15, "trustAgentInfo":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin$TrustAgentInfo;
     if-eqz v15, :cond_2
 
@@ -26100,13 +23372,11 @@
 
     goto :goto_0
 
-    .line 8925
     :cond_3
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8926
     .local v14, "result":Ljava/util/List;, "Ljava/util/List<Landroid/os/PersistableBundle;>;"
     iget-object v0, v15, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin$TrustAgentInfo;->options:Landroid/os/PersistableBundle;
 
@@ -26116,12 +23386,10 @@
 
     invoke-interface {v14, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8927
     monitor-exit p0
 
     goto :goto_0
 
-    .line 8931
     .end local v6    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v14    # "result":Ljava/util/List;, "Ljava/util/List<Landroid/os/PersistableBundle;>;"
     .end local v15    # "trustAgentInfo":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin$TrustAgentInfo;
@@ -26140,15 +23408,12 @@
 
     move-result-object v13
 
-    .line 8932
     .local v13, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     const/4 v14, 0x0
 
-    .line 8937
     .restart local v14    # "result":Ljava/util/List;, "Ljava/util/List<Landroid/os/PersistableBundle;>;"
     const/4 v5, 0x1
 
-    .line 8938
     .local v5, "allAdminsHaveOptions":Z
     invoke-interface {v13}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -26169,7 +23434,6 @@
 
     check-cast v16, Landroid/content/pm/UserInfo;
 
-    .line 8939
     .local v16, "userInfo":Landroid/content/pm/UserInfo;
     move-object/from16 v0, v16
 
@@ -26185,7 +23449,6 @@
 
     move-result-object v12
 
-    .line 8940
     .local v12, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v0, v12, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -26195,7 +23458,6 @@
 
     move-result v3
 
-    .line 8941
     .local v3, "N":I
     const/4 v9, 0x0
 
@@ -26203,7 +23465,6 @@
     :goto_2
     if-ge v9, v3, :cond_5
 
-    .line 8942
     iget-object v0, v12, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     move-object/from16 v17, v0
@@ -26216,7 +23477,6 @@
 
     check-cast v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8943
     .local v4, "active":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
@@ -26228,7 +23488,6 @@
 
     const/4 v8, 0x1
 
-    .line 8945
     .local v8, "disablesTrust":Z
     :goto_3
     iget-object v0, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->trustAgentInfos:Ljava/util/HashMap;
@@ -26243,7 +23502,6 @@
 
     check-cast v11, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin$TrustAgentInfo;
 
-    .line 8946
     .local v11, "info":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin$TrustAgentInfo;
     if-eqz v11, :cond_a
 
@@ -26263,19 +23521,15 @@
 
     if-nez v17, :cond_a
 
-    .line 8947
     if-eqz v8, :cond_9
 
-    .line 8948
     if-nez v14, :cond_6
 
-    .line 8949
     new-instance v14, Ljava/util/ArrayList;
 
     .end local v14    # "result":Ljava/util/List;, "Ljava/util/List<Landroid/os/PersistableBundle;>;"
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8951
     .restart local v14    # "result":Ljava/util/List;, "Ljava/util/List<Landroid/os/PersistableBundle;>;"
     :cond_6
     iget-object v0, v11, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin$TrustAgentInfo;->options:Landroid/os/PersistableBundle;
@@ -26286,14 +23540,12 @@
 
     invoke-interface {v14, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 8941
     :cond_7
     :goto_4
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
 
-    .line 8943
     .end local v8    # "disablesTrust":Z
     .end local v11    # "info":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin$TrustAgentInfo;
     :cond_8
@@ -26301,7 +23553,6 @@
 
     goto :goto_3
 
-    .line 8953
     .restart local v8    # "disablesTrust":Z
     .restart local v11    # "info":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin$TrustAgentInfo;
     :cond_9
@@ -26345,17 +23596,13 @@
 
     goto :goto_4
 
-    .line 8957
     :cond_a
     if-eqz v8, :cond_7
 
-    .line 8958
     const/4 v5, 0x0
 
-    .line 8959
     goto/16 :goto_1
 
-    .line 8963
     .end local v3    # "N":I
     .end local v4    # "active":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v8    # "disablesTrust":Z
@@ -26386,10 +23633,8 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 1406
     monitor-enter p0
 
-    .line 1407
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserData:Landroid/util/SparseArray;
 
@@ -26399,32 +23644,26 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
-    .line 1408
     .local v0, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     if-nez v0, :cond_0
 
-    .line 1409
     new-instance v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     .end local v0    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     invoke-direct {v0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;-><init>(I)V
 
-    .line 1410
     .restart local v0    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserData:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 1411
     invoke-direct {p0, v0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->loadSettingsLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;I)Z
 
-    .line 1413
     :cond_0
     monitor-exit p0
 
     return-object v0
 
-    .line 1414
     .end local v0    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v1
@@ -26441,12 +23680,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 1428
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 1430
     .local v0, "ident":J
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -26455,7 +23692,6 @@
 
     move-result-object v2
 
-    .line 1432
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     return-object v2
@@ -26474,26 +23710,22 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 8539
     move/from16 v0, p2
 
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v13
 
-    .line 8541
     .local v13, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 8542
     .local v14, "unsignedList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v10
 
-    .line 8544
     .local v10, "ident":J
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getHarmonyEAS()Landroid/content/IHarmonyEAS;
@@ -26512,10 +23744,8 @@
 
     move-object v14, v0
 
-    .line 8545
     if-eqz p1, :cond_1
 
-    .line 8546
     # getter for: Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAllowListRecord:Ljava/util/HashSet;
     invoke-static {v13}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->access$1500(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)Ljava/util/HashSet;
 
@@ -26523,25 +23753,21 @@
 
     invoke-virtual {v14, v4}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
-    .line 8547
     invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
 
     move-result v4
 
     if-lez v4, :cond_3
 
-    .line 8548
     invoke-virtual {v14}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v9
 
-    .line 8549
     .local v9, "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v2
 
-    .line 8550
     .local v2, "pm":Landroid/content/pm/IPackageManager;
     :cond_0
     :goto_0
@@ -26551,7 +23777,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 8551
     invoke-interface {v9}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -26561,7 +23786,6 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8555
     .local v3, "pkgName":Ljava/lang/String;
     :try_start_1
     invoke-direct {p0, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isOpenThemePkg(Landroid/content/pm/IPackageManager;Ljava/lang/String;)Z
@@ -26570,7 +23794,6 @@
 
     if-nez v4, :cond_0
 
-    .line 8556
     const/4 v4, 0x2
 
     const/4 v5, 0x0
@@ -26587,11 +23810,9 @@
 
     goto :goto_0
 
-    .line 8558
     :catch_0
     move-exception v8
 
-    .line 8559
     .local v8, "e":Ljava/lang/IllegalArgumentException;
     :try_start_2
     invoke-direct {p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removePackageFromHarmonyEAS(Ljava/lang/String;)V
@@ -26601,7 +23822,6 @@
 
     goto :goto_0
 
-    .line 8584
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     .end local v3    # "pkgName":Ljava/lang/String;
     .end local v8    # "e":Ljava/lang/IllegalArgumentException;
@@ -26609,7 +23829,6 @@
     :catch_1
     move-exception v8
 
-    .line 8585
     .local v8, "e":Ljava/lang/Exception;
     :try_start_3
     sget-object v4, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -26636,15 +23855,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 8587
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8590
     .end local v8    # "e":Ljava/lang/Exception;
     :goto_1
     return-void
 
-    .line 8564
     :cond_1
     :try_start_4
     # getter for: Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAllowListRecord:Ljava/util/HashSet;
@@ -26658,18 +23874,15 @@
 
     if-eqz v4, :cond_3
 
-    .line 8566
     invoke-virtual {v14}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
     move-result-object v12
 
-    .line 8567
     .local v12, "itr2":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v2
 
-    .line 8568
     .restart local v2    # "pm":Landroid/content/pm/IPackageManager;
     :goto_2
     invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
@@ -26678,7 +23891,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 8569
     invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v3
@@ -26688,7 +23900,6 @@
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 8572
     .restart local v3    # "pkgName":Ljava/lang/String;
     :try_start_5
     move/from16 v0, p2
@@ -26701,14 +23912,12 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 8573
     invoke-direct {p0, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isOpenThemePkg(Landroid/content/pm/IPackageManager;Ljava/lang/String;)Z
 
     move-result v4
 
     if-nez v4, :cond_2
 
-    .line 8574
     const/4 v4, 0x1
 
     const/4 v5, 0x0
@@ -26723,7 +23932,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 8581
     :cond_2
     :goto_3
     :try_start_6
@@ -26734,7 +23942,6 @@
 
     goto :goto_2
 
-    .line 8587
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     .end local v3    # "pkgName":Ljava/lang/String;
     .end local v12    # "itr2":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
@@ -26745,14 +23952,12 @@
 
     throw v4
 
-    .line 8577
     .restart local v2    # "pm":Landroid/content/pm/IPackageManager;
     .restart local v3    # "pkgName":Ljava/lang/String;
     .restart local v12    # "itr2":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :catch_2
     move-exception v8
 
-    .line 8578
     .local v8, "e":Ljava/lang/IllegalArgumentException;
     :try_start_7
     invoke-direct {p0, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removePackageFromHarmonyEAS(Ljava/lang/String;)V
@@ -26762,7 +23967,6 @@
 
     goto :goto_3
 
-    .line 8587
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     .end local v3    # "pkgName":Ljava/lang/String;
     .end local v8    # "e":Ljava/lang/IllegalArgumentException;
@@ -26780,36 +23984,28 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 2751
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 2752
     const/4 v1, 0x0
 
-    .line 2760
     :goto_0
     return v1
 
-    .line 2754
     :cond_0
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 2755
     monitor-enter p0
 
-    .line 2756
     :try_start_0
     invoke-virtual {p0, p1, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 2757
     .local v0, "administrator":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-nez v0, :cond_1
 
-    .line 2758
     new-instance v1, Ljava/lang/SecurityException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -26834,7 +24030,6 @@
 
     throw v1
 
-    .line 2761
     .end local v0    # "administrator":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -26845,7 +24040,6 @@
 
     throw v1
 
-    .line 2760
     .restart local v0    # "administrator":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     :try_start_1
@@ -26866,7 +24060,6 @@
     .locals 1
 
     .prologue
-    .line 6810
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
@@ -26884,36 +24077,29 @@
     .param p2, "policy"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     .prologue
-    .line 8676
     iget-object v1, p2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
-    .line 8677
     .local v1, "adminList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;>;"
     # getter for: Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAllowListRecord:Ljava/util/HashSet;
     invoke-static {p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->access$1500(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)Ljava/util/HashSet;
 
     move-result-object v6
 
-    .line 8678
     .local v6, "mAllowListRecord":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     # getter for: Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mBlockListRecordInRom:Ljava/util/HashSet;
     invoke-static {p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->access$1600(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)Ljava/util/HashSet;
 
     move-result-object v7
 
-    .line 8681
     .local v7, "mBlockListRecordInRom":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-virtual {v6}, Ljava/util/HashSet;->clear()V
 
-    .line 8682
     invoke-virtual {v7}, Ljava/util/HashSet;->clear()V
 
-    .line 8685
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v8
 
-    .line 8688
     .local v8, "pm":Landroid/content/pm/IPackageManager;
     :try_start_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -26934,7 +24120,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8691
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v9, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -26952,14 +24137,12 @@
 
     if-eqz v9, :cond_0
 
-    .line 8693
     iget-object v9, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowListRecord:Ljava/util/HashSet;
 
     invoke-virtual {v9}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    .line 8694
     .local v5, "iter":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     new-instance v2, Ljava/util/HashSet;
 
@@ -26973,7 +24156,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 8697
     .local v2, "allowListRecordWithPkgName":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     :goto_0
     :try_start_1
@@ -26983,7 +24165,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 8698
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getHarmonyEAS()Landroid/content/IHarmonyEAS;
 
     move-result-object v10
@@ -27004,11 +24185,9 @@
 
     goto :goto_0
 
-    .line 8700
     :catch_0
     move-exception v3
 
-    .line 8701
     .local v3, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v9, "DevicePolicyManagerService"
@@ -27033,27 +24212,22 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8703
     .end local v3    # "e":Landroid/os/RemoteException;
     :cond_1
     const-string v9, ""
 
     invoke-virtual {v2, v9}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 8705
     invoke-virtual {v6, v2}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 8706
     iget-object v9, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->blockListRecordInRom:Ljava/util/HashSet;
 
     invoke-virtual {v7, v9}, Ljava/util/HashSet;->addAll(Ljava/util/Collection;)Z
 
-    .line 8709
     invoke-virtual {v7}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v5
 
-    .line 8710
     :goto_1
     invoke-interface {v5}, Ljava/util/Iterator;->hasNext()Z
     :try_end_2
@@ -27063,7 +24237,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 8713
     :try_start_3
     invoke-interface {v5}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -27078,11 +24251,9 @@
 
     goto :goto_1
 
-    .line 8714
     :catch_1
     move-exception v3
 
-    .line 8716
     .local v3, "e":Ljava/lang/IllegalArgumentException;
     :try_start_4
     invoke-interface {v5}, Ljava/util/Iterator;->remove()V
@@ -27091,7 +24262,6 @@
 
     goto :goto_1
 
-    .line 8722
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "allowListRecordWithPkgName":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     .end local v3    # "e":Ljava/lang/IllegalArgumentException;
@@ -27100,7 +24270,6 @@
     :catch_2
     move-exception v3
 
-    .line 8723
     .local v3, "e":Landroid/os/RemoteException;
     const-string v9, "DevicePolicyManagerService"
 
@@ -27124,7 +24293,6 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8725
     .end local v3    # "e":Landroid/os/RemoteException;
     :cond_2
     return-void
@@ -27141,16 +24309,13 @@
     .end annotation
 
     .prologue
-    .line 4874
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCanManageCaCerts(Landroid/content/ComponentName;)V
 
-    .line 4878
     :try_start_0
     invoke-static {p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->parseCert([B)Ljava/security/cert/X509Certificate;
 
     move-result-object v1
 
-    .line 4879
     .local v1, "cert":Ljava/security/cert/X509Certificate;
     const/4 v10, 0x1
 
@@ -27167,7 +24332,6 @@
 
     move-result-object v8
 
-    .line 4888
     .local v8, "pemCert":[B
     new-instance v9, Landroid/os/UserHandle;
 
@@ -27177,13 +24341,11 @@
 
     invoke-direct {v9, v10}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 4889
     .local v9, "userHandle":Landroid/os/UserHandle;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v4
 
-    .line 4891
     .local v4, "id":J
     :try_start_1
     iget-object v10, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -27195,7 +24357,6 @@
 
     move-result-object v7
 
-    .line 4893
     .local v7, "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :try_start_2
     invoke-virtual {v7}, Landroid/security/KeyChain$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
@@ -27207,20 +24368,16 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 4894
     const/4 v10, 0x1
 
-    .line 4898
     :try_start_3
     invoke-virtual {v7}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_3
     .catch Ljava/lang/InterruptedException; {:try_start_3 .. :try_end_3} :catch_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 4904
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4906
     .end local v1    # "cert":Ljava/security/cert/X509Certificate;
     .end local v4    # "id":J
     .end local v7    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
@@ -27229,11 +24386,9 @@
     :goto_0
     return v10
 
-    .line 4880
     :catch_0
     move-exception v0
 
-    .line 4881
     .local v0, "ce":Ljava/security/cert/CertificateException;
     const-string v10, "DevicePolicyManagerService"
 
@@ -27241,17 +24396,14 @@
 
     invoke-static {v10, v11, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4882
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 4883
     .end local v0    # "ce":Ljava/security/cert/CertificateException;
     :catch_1
     move-exception v6
 
-    .line 4884
     .local v6, "ioe":Ljava/io/IOException;
     const-string v10, "DevicePolicyManagerService"
 
@@ -27259,12 +24411,10 @@
 
     invoke-static {v10, v11, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4885
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 4895
     .end local v6    # "ioe":Ljava/io/IOException;
     .restart local v1    # "cert":Ljava/security/cert/X509Certificate;
     .restart local v4    # "id":J
@@ -27274,7 +24424,6 @@
     :catch_2
     move-exception v2
 
-    .line 4896
     .local v2, "e":Landroid/os/RemoteException;
     :try_start_4
     const-string v10, "DevicePolicyManagerService"
@@ -27285,17 +24434,14 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 4898
     :try_start_5
     invoke-virtual {v7}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_5
     .catch Ljava/lang/InterruptedException; {:try_start_5 .. :try_end_5} :catch_3
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 4904
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4906
     .end local v2    # "e":Landroid/os/RemoteException;
     .end local v7    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :goto_1
@@ -27303,7 +24449,6 @@
 
     goto :goto_0
 
-    .line 4898
     .restart local v7    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catchall_0
     move-exception v10
@@ -27316,12 +24461,10 @@
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_3
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 4900
     .end local v7    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catch_3
     move-exception v3
 
-    .line 4901
     .local v3, "e1":Ljava/lang/InterruptedException;
     :try_start_7
     const-string v10, "DevicePolicyManagerService"
@@ -27330,7 +24473,6 @@
 
     invoke-static {v10, v11, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4902
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v10
@@ -27339,7 +24481,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
-    .line 4904
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -27361,17 +24502,14 @@
     .param p4, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 4942
     if-nez p1, :cond_0
 
-    .line 4943
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isCallerDelegatedCertInstaller()Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 4944
     new-instance v6, Ljava/lang/SecurityException;
 
     const-string/jumbo v7, "who == null, but caller is not cert installer"
@@ -27380,11 +24518,9 @@
 
     throw v6
 
-    .line 4947
     :cond_0
     monitor-enter p0
 
-    .line 4948
     const/4 v6, -0x1
 
     :try_start_0
@@ -27394,12 +24530,10 @@
 
     invoke-virtual {v0, v1, v6}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4949
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4951
     :cond_1
     new-instance v17, Landroid/os/UserHandle;
 
@@ -27411,7 +24545,6 @@
 
     invoke-direct {v0, v6}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 4955
     .local v17, "userHandle":Landroid/os/UserHandle;
     const/16 v6, 0x104
 
@@ -27421,31 +24554,25 @@
 
     if-eqz v6, :cond_3
 
-    .line 4957
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v10
 
-    .line 4958
     .local v10, "callingUserId":I
     const/4 v9, 0x0
 
-    .line 4959
     .local v9, "packageName":Ljava/lang/String;
     if-eqz p1, :cond_2
 
-    .line 4960
     invoke-virtual/range {p1 .. p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 4962
     :cond_2
     const/16 v6, 0x64
 
     if-ge v10, v6, :cond_3
 
-    .line 4963
     new-instance v5, Landroid/app/enterprise/ContextInfo;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -27454,7 +24581,6 @@
 
     invoke-direct {v5, v6, v10}, Landroid/app/enterprise/ContextInfo;-><init>(II)V
 
-    .line 4965
     .local v5, "cxtInfo":Landroid/app/enterprise/ContextInfo;
     const-string/jumbo v6, "knox_ccm_policy"
 
@@ -27464,7 +24590,6 @@
 
     check-cast v4, Lcom/android/server/enterprise/ccm/ClientCertificateManager;
 
-    .line 4966
     .local v4, "ccmService":Lcom/android/server/enterprise/ccm/ClientCertificateManager;
     if-eqz v4, :cond_3
 
@@ -27474,18 +24599,15 @@
 
     move-object/from16 v8, p4
 
-    .line 4967
     invoke-virtual/range {v4 .. v9}, Lcom/android/server/enterprise/ccm/ClientCertificateManager;->installKeyPair(Landroid/app/enterprise/ContextInfo;[B[BLjava/lang/String;Ljava/lang/String;)Z
 
     move-result v11
 
-    .line 4968
     .local v11, "ccmInstallSuccess":Z
     if-eqz v11, :cond_3
 
     const/4 v6, 0x1
 
-    .line 4992
     .end local v4    # "ccmService":Lcom/android/server/enterprise/ccm/ClientCertificateManager;
     .end local v5    # "cxtInfo":Landroid/app/enterprise/ContextInfo;
     .end local v9    # "packageName":Ljava/lang/String;
@@ -27494,7 +24616,6 @@
     :goto_0
     return v6
 
-    .line 4949
     .end local v17    # "userHandle":Landroid/os/UserHandle;
     :catchall_0
     move-exception v6
@@ -27506,14 +24627,12 @@
 
     throw v6
 
-    .line 4975
     .restart local v17    # "userHandle":Landroid/os/UserHandle;
     :cond_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v14
 
-    .line 4977
     .local v14, "id":J
     :try_start_2
     move-object/from16 v0, p0
@@ -27529,14 +24648,12 @@
 
     move-result-object v16
 
-    .line 4979
     .local v16, "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :try_start_3
     invoke-virtual/range {v16 .. v16}, Landroid/security/KeyChain$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
 
     move-result-object v13
 
-    .line 4980
     .local v13, "keyChain":Landroid/security/IKeyChainService;
     move-object/from16 v0, p2
 
@@ -27551,24 +24668,20 @@
 
     move-result v6
 
-    .line 4984
     :try_start_4
     invoke-virtual/range {v16 .. v16}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_4
     .catch Ljava/lang/InterruptedException; {:try_start_4 .. :try_end_4} :catch_1
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 4990
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 4981
     .end local v13    # "keyChain":Landroid/security/IKeyChainService;
     :catch_0
     move-exception v12
 
-    .line 4982
     .local v12, "e":Landroid/os/RemoteException;
     :try_start_5
     const-string v6, "DevicePolicyManagerService"
@@ -27579,17 +24692,14 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 4984
     :try_start_6
     invoke-virtual/range {v16 .. v16}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_6
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_2
 
-    .line 4990
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4992
     .end local v12    # "e":Landroid/os/RemoteException;
     .end local v16    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :goto_1
@@ -27597,7 +24707,6 @@
 
     goto :goto_0
 
-    .line 4984
     .restart local v16    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catchall_1
     move-exception v6
@@ -27610,12 +24719,10 @@
     .catch Ljava/lang/InterruptedException; {:try_start_7 .. :try_end_7} :catch_1
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 4986
     .end local v16    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catch_1
     move-exception v12
 
-    .line 4987
     .local v12, "e":Ljava/lang/InterruptedException;
     :try_start_8
     const-string v6, "DevicePolicyManagerService"
@@ -27624,7 +24731,6 @@
 
     invoke-static {v6, v7, v12}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4988
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v6
@@ -27633,7 +24739,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_2
 
-    .line 4990
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -27656,35 +24761,28 @@
 
     const/4 v5, 0x1
 
-    .line 3967
     iget-boolean v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v7, :cond_0
 
-    .line 4056
     :goto_0
     return v5
 
-    .line 3970
     :cond_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 3972
     monitor-enter p0
 
-    .line 3977
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfileParent(I)Landroid/content/pm/UserInfo;
 
     move-result-object v2
 
-    .line 3978
     .local v2, "parent":Landroid/content/pm/UserInfo;
     if-nez v2, :cond_3
 
     move v0, p1
 
-    .line 3980
     .local v0, "id":I
     :goto_1
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isKnoxWorkspace(I)Z
@@ -27693,7 +24791,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 3982
     const-string v7, "DevicePolicyManagerService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -27716,16 +24813,13 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3983
     move v0, p1
 
-    .line 3987
     :cond_1
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserDataUnchecked(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 3993
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     const/4 v7, 0x0
 
@@ -27733,7 +24827,6 @@
 
     invoke-virtual {p0, v7, v8, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;II)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4000
     iget v7, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
 
     const/4 v8, 0x0
@@ -27754,7 +24847,6 @@
 
     if-ge v7, v8, :cond_4
 
-    .line 4002
     :cond_2
     monitor-exit p0
 
@@ -27762,7 +24854,6 @@
 
     goto :goto_0
 
-    .line 3978
     .end local v0    # "id":I
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :cond_3
@@ -27770,7 +24861,6 @@
 
     goto :goto_1
 
-    .line 4005
     .restart local v0    # "id":I
     .restart local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :cond_4
@@ -27782,19 +24872,16 @@
 
     if-nez v7, :cond_6
 
-    .line 4006
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     if-eqz v7, :cond_5
 
-    .line 4007
     new-instance v1, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v7}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 4008
     .local v1, "mLockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
     invoke-virtual {v1, p1}, Lcom/android/internal/widget/LockPatternUtils;->isDevicePasswordSimple(I)Z
 
@@ -27802,21 +24889,18 @@
 
     if-eqz v7, :cond_6
 
-    .line 4009
     const-string v5, "DevicePolicyManagerService"
 
     const-string/jumbo v7, "isActivePasswordSufficient() : simple password is not allowed"
 
     invoke-static {v5, v7}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4010
     monitor-exit p0
 
     move v5, v6
 
     goto :goto_0
 
-    .line 4013
     .end local v1    # "mLockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
     :cond_5
     const-string v7, "DevicePolicyManagerService"
@@ -27825,7 +24909,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4019
     :cond_6
     iget v7, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
 
@@ -27833,23 +24916,19 @@
 
     if-ne v7, v8, :cond_8
 
-    .line 4020
     const/4 v7, 0x0
 
     invoke-virtual {p0, v7, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getPasswordQuality(Landroid/content/ComponentName;I)I
 
     move-result v4
 
-    .line 4021
     .local v4, "pwQuality":I
     if-nez v4, :cond_7
 
-    .line 4024
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4062
     .end local v0    # "id":I
     .end local v2    # "parent":Landroid/content/pm/UserInfo;
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -27863,7 +24942,6 @@
 
     throw v5
 
-    .line 4026
     .restart local v0    # "id":I
     .restart local v2    # "parent":Landroid/content/pm/UserInfo;
     .restart local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -27876,10 +24954,8 @@
 
     if-eqz v7, :cond_a
 
-    .line 4027
     sparse-switch v4, :sswitch_data_0
 
-    .line 4053
     .end local v4    # "pwQuality":I
     :cond_8
     const/4 v7, 0x0
@@ -27892,19 +24968,16 @@
 
     if-ge v7, v8, :cond_d
 
-    .line 4054
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4029
     .restart local v4    # "pwQuality":I
     :sswitch_0
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4031
     :sswitch_1
     iget v7, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNumeric:I
 
@@ -27914,7 +24987,6 @@
 
     goto/16 :goto_0
 
-    .line 4032
     :cond_9
     monitor-exit p0
 
@@ -27922,7 +24994,6 @@
 
     goto/16 :goto_0
 
-    .line 4035
     :cond_a
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isMDMDisabledFP(I)Z
 
@@ -27930,25 +25001,21 @@
 
     if-eqz v7, :cond_b
 
-    .line 4039
     monitor-exit p0
 
     move v5, v6
 
     goto/16 :goto_0
 
-    .line 4041
     :cond_b
     const/high16 v7, 0x10000
 
     if-gt v4, v7, :cond_c
 
-    .line 4045
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4049
     :cond_c
     monitor-exit p0
 
@@ -27956,7 +25023,6 @@
 
     goto/16 :goto_0
 
-    .line 4056
     .end local v4    # "pwQuality":I
     :cond_d
     iget v7, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordUpperCase:I
@@ -28031,7 +25097,6 @@
 
     goto :goto_2
 
-    .line 4027
     nop
 
     :sswitch_data_0
@@ -28049,23 +25114,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2728
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 2733
     :goto_0
     return v0
 
-    .line 2731
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 2732
     monitor-enter p0
 
-    .line 2733
     :try_start_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
@@ -28080,7 +25140,6 @@
 
     goto :goto_0
 
-    .line 2734
     :catchall_0
     move-exception v0
 
@@ -28097,41 +25156,34 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 9653
     const-string v5, "ComponentName is null"
 
     invoke-static {p1, v5}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9654
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 9655
     .local v0, "callingUserId":I
     monitor-enter p0
 
-    .line 9656
     const/4 v5, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9658
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 9660
     .local v2, "id":J
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 9661
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     invoke-interface {v1, p2, v0}, Landroid/content/pm/IPackageManager;->getApplicationHiddenSettingAsUser(Ljava/lang/String;I)Z
     :try_end_1
@@ -28140,7 +25192,6 @@
 
     move-result v5
 
-    .line 9666
     :try_start_2
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -28148,16 +25199,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 9668
     .end local v1    # "pm":Landroid/content/pm/IPackageManager;
     :goto_0
     return v5
 
-    .line 9662
     :catch_0
     move-exception v4
 
-    .line 9664
     .local v4, "re":Landroid/os/RemoteException;
     :try_start_3
     const-string v5, "DevicePolicyManagerService"
@@ -28168,18 +25216,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 9666
     :try_start_4
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9668
     const/4 v5, 0x0
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 9669
     .end local v2    # "id":J
     .end local v4    # "re":Landroid/os/RemoteException;
     :catchall_0
@@ -28191,7 +25236,6 @@
 
     throw v5
 
-    .line 9666
     .restart local v2    # "id":J
     :catchall_1
     move-exception v5
@@ -28211,20 +25255,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 6648
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 6652
     :goto_0
     return v0
 
-    .line 6651
     :cond_0
     monitor-enter p0
 
-    .line 6652
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -28257,7 +25297,6 @@
 
     goto :goto_0
 
-    .line 6655
     :catchall_0
     move-exception v0
 
@@ -28275,20 +25314,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 6450
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 6464
     :goto_0
     return v1
 
-    .line 6453
     :cond_0
     monitor-enter p0
 
-    .line 6456
     :try_start_0
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -28302,17 +25337,14 @@
 
     if-nez v2, :cond_2
 
-    .line 6457
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getDeviceOwner()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 6458
     .local v0, "deviceOwner":Ljava/lang/String;
     if-eqz v0, :cond_2
 
-    .line 6459
     const-string v1, "DevicePolicyManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -28335,7 +25367,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6460
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -28344,7 +25375,6 @@
 
     goto :goto_0
 
-    .line 6466
     .end local v0    # "deviceOwner":Ljava/lang/String;
     :catchall_0
     move-exception v1
@@ -28355,7 +25385,6 @@
 
     throw v1
 
-    .line 6464
     :cond_2
     :try_start_1
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
@@ -28402,24 +25431,19 @@
 
     const/4 v4, 0x0
 
-    .line 10938
     iget-boolean v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v6, :cond_1
 
-    .line 10967
     :cond_0
     :goto_0
     return v4
 
-    .line 10941
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10942
     const/4 v1, 0x0
 
-    .line 10944
     .local v1, "mountService":Landroid/os/storage/IMountService;
     const-string/jumbo v6, "mount"
 
@@ -28427,19 +25451,15 @@
 
     move-result-object v3
 
-    .line 10945
     .local v3, "service":Landroid/os/IBinder;
     if-eqz v3, :cond_2
 
-    .line 10946
     invoke-static {v3}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
     move-result-object v1
 
-    .line 10947
     if-nez v1, :cond_3
 
-    .line 10948
     const-string v5, "DevicePolicyManagerService"
 
     const-string v6, "Can\'t get mount interface"
@@ -28448,7 +25468,6 @@
 
     goto :goto_0
 
-    .line 10952
     :cond_2
     const-string v5, "DevicePolicyManagerService"
 
@@ -28458,7 +25477,6 @@
 
     goto :goto_0
 
-    .line 10957
     :cond_3
     :try_start_0
     invoke-interface {v1}, Landroid/os/storage/IMountService;->isEncryptedWithForceEncrypt()I
@@ -28467,21 +25485,17 @@
 
     move-result v2
 
-    .line 10958
     .local v2, "ret":I
     if-ne v2, v5, :cond_0
 
     move v4, v5
 
-    .line 10959
     goto :goto_0
 
-    .line 10963
     .end local v2    # "ret":I
     :catch_0
     move-exception v0
 
-    .line 10964
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "DevicePolicyManagerService"
 
@@ -28497,28 +25511,23 @@
     .param p1, "pkg"    # Ljava/lang/String;
 
     .prologue
-    .line 10053
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v3
 
-    .line 10054
     .local v3, "uid":I
     invoke-static {v3}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
-    .line 10055
     .local v4, "userHandle":I
     invoke-virtual {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 10056
     .local v2, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     monitor-enter p0
 
-    .line 10057
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -28532,7 +25541,6 @@
 
     if-ge v0, v5, :cond_1
 
-    .line 10058
     iget-object v5, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mLockTaskPackages:Ljava/util/List;
 
     invoke-interface {v5, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -28541,7 +25549,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 10062
     .local v1, "lockTaskPackage":Ljava/lang/String;
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -28549,34 +25556,28 @@
 
     if-eqz v5, :cond_0
 
-    .line 10063
     const/4 v5, 0x1
 
     monitor-exit p0
 
-    .line 10067
     .end local v1    # "lockTaskPackage":Ljava/lang/String;
     :goto_1
     return v5
 
-    .line 10057
     .restart local v1    # "lockTaskPackage":Ljava/lang/String;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 10066
     .end local v1    # "lockTaskPackage":Ljava/lang/String;
     :cond_1
     monitor-exit p0
 
-    .line 10067
     const/4 v5, 0x0
 
     goto :goto_1
 
-    .line 10066
     :catchall_0
     move-exception v5
 
@@ -28592,21 +25593,17 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 10182
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10183
     monitor-enter p0
 
-    .line 10184
     const/4 v1, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10186
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v2, "audio"
@@ -28617,7 +25614,6 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 10188
     .local v0, "audioManager":Landroid/media/AudioManager;
     invoke-virtual {v0}, Landroid/media/AudioManager;->isMasterMute()Z
 
@@ -28627,7 +25623,6 @@
 
     return v1
 
-    .line 10189
     .end local v0    # "audioManager":Landroid/media/AudioManager;
     :catchall_0
     move-exception v1
@@ -28645,32 +25640,25 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 2739
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 2740
     const/4 v1, 0x0
 
-    .line 2745
     :goto_0
     return v1
 
-    .line 2742
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 2743
     monitor-enter p0
 
-    .line 2744
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
-    .line 2745
     .local v0, "policyData":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mRemovingAdmins:Ljava/util/ArrayList;
 
@@ -28682,7 +25670,6 @@
 
     goto :goto_0
 
-    .line 2746
     .end local v0    # "policyData":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v1
@@ -28702,34 +25689,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 10900
     iget-boolean v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v3, :cond_1
 
-    .line 10917
     :cond_0
     :goto_0
     return v2
 
-    .line 10903
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10905
     const/4 v0, 0x0
 
-    .line 10907
     .local v0, "existAdmin":Z
     monitor-enter p0
 
-    .line 10908
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v1
 
-    .line 10909
     .local v1, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v3, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -28739,28 +25719,23 @@
 
     if-lez v3, :cond_2
 
-    .line 10910
     const/4 v0, 0x1
 
-    .line 10911
     :cond_2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10914
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isSupportFP(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 10915
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 10911
     .end local v1    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v2
@@ -28781,21 +25756,17 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 10795
     iget-boolean v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v4, :cond_1
 
-    .line 10808
     :cond_0
     :goto_0
     return v3
 
-    .line 10798
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10800
     const-string/jumbo v4, "ro.securestorage.support"
 
     const-string/jumbo v5, "false"
@@ -28804,7 +25775,6 @@
 
     move-result-object v2
 
-    .line 10801
     .local v2, "ssStatus":Ljava/lang/String;
     const-string/jumbo v4, "ro.securestorage.knox"
 
@@ -28814,7 +25784,6 @@
 
     move-result-object v1
 
-    .line 10802
     .local v1, "ssKnoxStatus":Ljava/lang/String;
     const-string/jumbo v4, "security.mdpp"
 
@@ -28824,7 +25793,6 @@
 
     move-result-object v0
 
-    .line 10804
     .local v0, "mdppStatus":Ljava/lang/String;
     const-string/jumbo v4, "true"
 
@@ -28866,7 +25834,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 10806
     :cond_2
     const/4 v3, 0x1
 
@@ -28881,21 +25848,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 10817
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_1
 
-    .line 10827
     :cond_0
     :goto_0
     return v1
 
-    .line 10820
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10822
     const-string/jumbo v2, "security.mdpp"
 
     const-string v3, "None"
@@ -28904,7 +25867,6 @@
 
     move-result-object v0
 
-    .line 10824
     .local v0, "mdppStatus":Ljava/lang/String;
     const-string v2, "Enabled"
 
@@ -28930,7 +25892,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 10825
     :cond_2
     const/4 v1, 0x1
 
@@ -28943,25 +25904,20 @@
     .param p2, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 9846
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 9848
     .local v4, "userId":I
     monitor-enter p0
 
-    .line 9849
     if-eqz p1, :cond_0
 
-    .line 9850
     const/4 v5, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9853
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -28969,14 +25925,12 @@
 
     move-result-wide v0
 
-    .line 9855
     .local v0, "id":J
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v2
 
-    .line 9856
     .local v2, "pm":Landroid/content/pm/IPackageManager;
     invoke-interface {v2, p2, v4}, Landroid/content/pm/IPackageManager;->getBlockUninstallForUser(Ljava/lang/String;I)Z
     :try_end_1
@@ -28985,7 +25939,6 @@
 
     move-result v5
 
-    .line 9861
     :try_start_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -28993,16 +25946,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 9864
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     :goto_0
     return v5
 
-    .line 9857
     :catch_0
     move-exception v3
 
-    .line 9859
     .local v3, "re":Landroid/os/RemoteException;
     :try_start_3
     const-string v5, "DevicePolicyManagerService"
@@ -29013,19 +25963,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 9861
     :try_start_4
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9863
     monitor-exit p0
 
-    .line 9864
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 9861
     .end local v3    # "re":Landroid/os/RemoteException;
     :catchall_0
     move-exception v5
@@ -29034,7 +25980,6 @@
 
     throw v5
 
-    .line 9863
     .end local v0    # "id":J
     :catchall_1
     move-exception v5
@@ -29050,10 +25995,8 @@
     .locals 1
 
     .prologue
-    .line 1478
     monitor-enter p0
 
-    .line 1479
     :try_start_0
     invoke-static {}, Lcom/android/server/devicepolicy/DeviceOwner;->load()Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -29061,16 +26004,12 @@
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
-    .line 1480
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateDeviceOwnerLocked()V
 
-    .line 1481
     monitor-exit p0
 
-    .line 1482
     return-void
 
-    .line 1481
     :catchall_0
     move-exception v0
 
@@ -29085,20 +26024,16 @@
     .locals 2
 
     .prologue
-    .line 4800
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 4810
     :goto_0
     return-void
 
-    .line 4803
     :cond_0
     monitor-enter p0
 
-    .line 4806
     const/4 v0, 0x0
 
     const/4 v1, 0x3
@@ -29106,10 +26041,8 @@
     :try_start_0
     invoke-virtual {p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4808
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->lockNowUnchecked()V
 
-    .line 4809
     monitor-exit p0
 
     goto :goto_0
@@ -29133,19 +26066,16 @@
 
     const/4 v4, 0x0
 
-    .line 8232
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v11
 
-    .line 8233
     .local v11, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     # getter for: Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAllowListRecord:Ljava/util/HashSet;
     invoke-static {v11}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->access$1500(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)Ljava/util/HashSet;
 
     move-result-object v7
 
-    .line 8235
     .local v7, "allowListRecord":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     const/4 v2, 0x0
 
@@ -29153,7 +26083,6 @@
 
     move-result-object v6
 
-    .line 8237
     .local v6, "allowList":Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -29165,25 +26094,20 @@
 
     move-result-object v8
 
-    .line 8238
     .local v8, "arr":[Ljava/lang/String;
     new-instance v12, Ljava/util/HashSet;
 
     invoke-direct {v12}, Ljava/util/HashSet;-><init>()V
 
-    .line 8239
     .local v12, "thirdPartyList":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-static {v12, v8}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 8240
     const-string v2, ""
 
     invoke-virtual {v12, v2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 8242
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getHarmonyEAS()Landroid/content/IHarmonyEAS;
 
-    .line 8244
     invoke-virtual {v7}, Ljava/util/HashSet;->size()I
 
     move-result v2
@@ -29196,23 +26120,19 @@
 
     if-nez v2, :cond_2
 
-    .line 8245
     invoke-virtual {p0, v5, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->disableThirdPartyApps(ZI)V
 
-    .line 8254
     :goto_0
     invoke-virtual {v12}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v10
 
-    .line 8257
     .local v10, "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 8258
     .local v0, "pm":Landroid/content/pm/IPackageManager;
     :cond_0
     :goto_1
@@ -29222,14 +26142,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 8259
     invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 8260
     .local v1, "s":Ljava/lang/String;
     sget-object v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHM:Landroid/content/IHarmonyEAS;
 
@@ -29237,7 +26155,6 @@
 
     move-result-object v1
 
-    .line 8261
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
@@ -29246,7 +26163,6 @@
 
     if-nez v2, :cond_0
 
-    .line 8264
     :try_start_1
     invoke-interface {v0, v1, p1}, Landroid/content/pm/IPackageManager;->getApplicationEnabledSetting(Ljava/lang/String;I)I
 
@@ -29256,14 +26172,12 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 8265
     invoke-direct {p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isOpenThemePkg(Landroid/content/pm/IPackageManager;Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 8266
     const/4 v2, 0x1
 
     const/4 v3, 0x0
@@ -29274,7 +26188,6 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/content/pm/IPackageManager;->setApplicationEnabledSetting(Ljava/lang/String;IIILjava/lang/String;)V
 
-    .line 8267
     invoke-virtual {v7, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
@@ -29282,11 +26195,9 @@
 
     goto :goto_1
 
-    .line 8270
     :catch_0
     move-exception v9
 
-    .line 8271
     .local v9, "e":Ljava/lang/IllegalArgumentException;
     :try_start_2
     invoke-direct {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removePackageFromHarmonyEAS(Ljava/lang/String;)V
@@ -29295,14 +26206,12 @@
 
     goto :goto_1
 
-    .line 8276
     .end local v0    # "pm":Landroid/content/pm/IPackageManager;
     .end local v1    # "s":Ljava/lang/String;
     .end local v9    # "e":Ljava/lang/IllegalArgumentException;
     :catch_1
     move-exception v9
 
-    .line 8277
     .local v9, "e":Landroid/os/RemoteException;
     const-string v2, "DevicePolicyManagerService"
 
@@ -29326,14 +26235,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8279
     .end local v9    # "e":Landroid/os/RemoteException;
     .end local v10    # "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :cond_1
     :goto_2
     return-void
 
-    .line 8246
     :cond_2
     invoke-virtual {v12}, Ljava/util/HashSet;->isEmpty()Z
 
@@ -29341,16 +26248,13 @@
 
     if-nez v2, :cond_3
 
-    .line 8247
     invoke-virtual {p0, v4, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->disableThirdPartyApps(ZI)V
 
     goto :goto_0
 
-    .line 8249
     :cond_3
     invoke-virtual {v7}, Ljava/util/HashSet;->clear()V
 
-    .line 8250
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enableAllThirdPartyApps(I)V
 
     goto :goto_2
@@ -29361,27 +26265,23 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 8433
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getBlockListInRom(Landroid/content/ComponentName;I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 8434
     .local v8, "blockedList":Ljava/lang/String;
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v12
 
-    .line 8435
     .local v12, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     # getter for: Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mBlockListRecordInRom:Ljava/util/HashSet;
     invoke-static {v12}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->access$1600(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)Ljava/util/HashSet;
 
     move-result-object v7
 
-    .line 8438
     .local v7, "blockListInROM":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-virtual {v7}, Ljava/util/HashSet;->size()I
 
@@ -29389,10 +26289,8 @@
 
     if-lez v2, :cond_0
 
-    .line 8439
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enableAllBlockedListApps(I)V
 
-    .line 8441
     :cond_0
     const-string v2, ","
 
@@ -29400,50 +26298,41 @@
 
     move-result-object v6
 
-    .line 8443
     .local v6, "arr":[Ljava/lang/String;
     new-instance v11, Ljava/util/HashSet;
 
     invoke-direct {v11}, Ljava/util/HashSet;-><init>()V
 
-    .line 8444
     .local v11, "list":Ljava/util/HashSet;, "Ljava/util/HashSet<Ljava/lang/String;>;"
     invoke-static {v11, v6}, Ljava/util/Collections;->addAll(Ljava/util/Collection;[Ljava/lang/Object;)Z
 
-    .line 8445
     const-string v2, ""
 
     invoke-virtual {v11, v2}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
-    .line 8447
     invoke-virtual {v11}, Ljava/util/HashSet;->isEmpty()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 8448
     invoke-virtual {v7}, Ljava/util/HashSet;->clear()V
 
-    .line 8473
     :cond_1
     :goto_0
     return-void
 
-    .line 8454
     :cond_2
     :try_start_0
     invoke-virtual {v11}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
     move-result-object v10
 
-    .line 8455
     .local v10, "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v0
 
-    .line 8456
     .local v0, "pm":Landroid/content/pm/IPackageManager;
     :cond_3
     :goto_1
@@ -29453,14 +26342,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 8457
     invoke-interface {v10}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 8458
     .local v1, "s":Ljava/lang/String;
     if-eqz v1, :cond_3
 
@@ -29472,7 +26359,6 @@
 
     if-nez v2, :cond_3
 
-    .line 8460
     :try_start_1
     invoke-direct {p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isOpenThemePkg(Landroid/content/pm/IPackageManager;Ljava/lang/String;)Z
 
@@ -29480,7 +26366,6 @@
 
     if-nez v2, :cond_3
 
-    .line 8461
     const/4 v2, 0x2
 
     const/4 v3, 0x0
@@ -29491,7 +26376,6 @@
 
     invoke-interface/range {v0 .. v5}, Landroid/content/pm/IPackageManager;->setApplicationEnabledSetting(Ljava/lang/String;IIILjava/lang/String;)V
 
-    .line 8462
     invoke-virtual {v7, v1}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_0
@@ -29499,20 +26383,17 @@
 
     goto :goto_1
 
-    .line 8464
     :catch_0
     move-exception v2
 
     goto :goto_1
 
-    .line 8470
     .end local v0    # "pm":Landroid/content/pm/IPackageManager;
     .end local v1    # "s":Ljava/lang/String;
     .end local v10    # "itr":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     :catch_1
     move-exception v9
 
-    .line 8471
     .local v9, "e":Landroid/os/RemoteException;
     const-string v2, "DevicePolicyManagerService"
 
@@ -29548,19 +26429,15 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 8148
     const/4 v2, 0x0
 
-    .line 8150
     .local v2, "enforceNotification":Z
     if-nez p1, :cond_1
 
-    .line 8174
     :cond_0
     :goto_0
     return-void
 
-    .line 8154
     :cond_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
@@ -29572,7 +26449,6 @@
 
     if-nez v5, :cond_2
 
-    .line 8155
     const-string v4, "DevicePolicyManagerService"
 
     const-string/jumbo v5, "notifyChanges(): Not Email Admin not proceeding."
@@ -29581,41 +26457,33 @@
 
     goto :goto_0
 
-    .line 8159
     :cond_2
     invoke-virtual {p0, p1, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 8160
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_0
 
-    .line 8163
     if-eqz p2, :cond_3
 
     iget-boolean v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNotifyChanges:Z
 
     if-nez v5, :cond_3
 
-    .line 8164
     const/4 v2, 0x1
 
-    .line 8166
     :cond_3
     iput-boolean p2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNotifyChanges:Z
 
-    .line 8167
     if-eqz v2, :cond_0
 
-    .line 8168
     const/4 v5, 0x0
 
     invoke-virtual {p0, v5, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getAllowWifi(Landroid/content/ComponentName;I)Z
 
     move-result v1
 
-    .line 8169
     .local v1, "curAllowWifi":Z
     const-string v5, "DevicePolicyManagerService"
 
@@ -29651,19 +26519,16 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8170
     iget-boolean v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->oldAllowWifi:Z
 
     if-eq v5, v1, :cond_4
 
     const/4 v3, 0x1
 
-    .line 8171
     .local v3, "isWifiChanged":Z
     :goto_1
     invoke-direct {p0, p3, v4, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendChangedNotification(IZZ)V
 
-    .line 8172
     iput-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->oldAllowWifi:Z
 
     goto :goto_0
@@ -29672,7 +26537,6 @@
     :cond_4
     move v3, v4
 
-    .line 8170
     goto :goto_1
 .end method
 
@@ -29683,7 +26547,6 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 10072
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v6
@@ -29692,7 +26555,6 @@
 
     if-eq v6, v7, :cond_0
 
-    .line 10073
     new-instance v6, Ljava/lang/SecurityException;
 
     const-string/jumbo v7, "notifyLockTaskModeChanged can only be called by system"
@@ -29701,29 +26563,24 @@
 
     throw v6
 
-    .line 10075
     :cond_0
     monitor-enter p0
 
-    .line 10076
     :try_start_0
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v5
 
-    .line 10077
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 10078
     .local v1, "adminExtras":Landroid/os/Bundle;
     const-string v6, "android.app.extra.LOCK_TASK_PACKAGE"
 
     invoke-virtual {v1, v6, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10079
     iget-object v6, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -29745,7 +26602,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10080
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v6, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -29757,7 +26613,6 @@
 
     move-result v3
 
-    .line 10081
     .local v3, "ownsDevice":Z
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfileOwner(I)Landroid/content/ComponentName;
 
@@ -29783,18 +26638,15 @@
 
     const/4 v4, 0x1
 
-    .line 10083
     .local v4, "ownsProfile":Z
     :goto_1
     if-nez v3, :cond_2
 
     if-eqz v4, :cond_1
 
-    .line 10084
     :cond_2
     if-eqz p1, :cond_4
 
-    .line 10085
     const-string v6, "android.app.action.LOCK_TASK_ENTERING"
 
     const/4 v7, 0x0
@@ -29803,7 +26655,6 @@
 
     goto :goto_0
 
-    .line 10092
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v1    # "adminExtras":Landroid/os/Bundle;
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -29819,7 +26670,6 @@
 
     throw v6
 
-    .line 10081
     .restart local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v1    # "adminExtras":Landroid/os/Bundle;
     .restart local v2    # "i$":Ljava/util/Iterator;
@@ -29830,7 +26680,6 @@
 
     goto :goto_1
 
-    .line 10088
     .restart local v4    # "ownsProfile":Z
     :cond_4
     :try_start_1
@@ -29840,7 +26689,6 @@
 
     goto :goto_0
 
-    .line 10092
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v3    # "ownsDevice":Z
     .end local v4    # "ownsProfile":Z
@@ -29849,7 +26697,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 10093
     return-void
 .end method
 
@@ -29858,7 +26705,6 @@
     .param p1, "updateReceivedTime"    # J
 
     .prologue
-    .line 10471
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v8, "android.permission.NOTIFY_PENDING_SYSTEM_UPDATE"
@@ -29867,25 +26713,21 @@
 
     invoke-virtual {v7, v8, v9}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10474
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 10475
     const-string v7, "DevicePolicyManagerService"
 
     const-string v8, "Only the system update service in the primary usercan broadcast update information."
 
     invoke-static {v7, v8}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10511
     :goto_0
     return-void
 
-    .line 10479
     :cond_0
     new-instance v3, Landroid/content/Intent;
 
@@ -29893,31 +26735,25 @@
 
     invoke-direct {v3, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 10480
     .local v3, "intent":Landroid/content/Intent;
     const-string v7, "android.app.extra.SYSTEM_UPDATE_RECEIVED_TIME"
 
     invoke-virtual {v3, v7, p1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 10483
     monitor-enter p0
 
-    .line 10484
     :try_start_0
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getDeviceOwner()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 10485
     .local v0, "deviceOwnerPackage":Ljava/lang/String;
     if-nez v0, :cond_1
 
-    .line 10486
     monitor-exit p0
 
     goto :goto_0
 
-    .line 10510
     .end local v0    # "deviceOwnerPackage":Ljava/lang/String;
     :catchall_0
     move-exception v7
@@ -29928,12 +26764,10 @@
 
     throw v7
 
-    .line 10489
     .restart local v0    # "deviceOwnerPackage":Ljava/lang/String;
     :cond_1
     const/4 v6, 0x0
 
-    .line 10491
     .local v6, "receivers":[Landroid/content/pm/ActivityInfo;
     :try_start_1
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -29953,11 +26787,9 @@
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 10496
     :goto_1
     if-eqz v6, :cond_4
 
-    .line 10497
     :try_start_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_2
@@ -29965,7 +26797,6 @@
 
     move-result-wide v4
 
-    .line 10499
     .local v4, "ident":J
     const/4 v2, 0x0
 
@@ -29976,7 +26807,6 @@
 
     if-ge v2, v7, :cond_3
 
-    .line 10500
     const-string v7, "android.permission.BIND_DEVICE_ADMIN"
 
     aget-object v8, v6, v2
@@ -29989,7 +26819,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 10501
     new-instance v7, Landroid/content/ComponentName;
 
     aget-object v8, v6, v2
@@ -30000,7 +26829,6 @@
 
     invoke-virtual {v3, v7}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 10503
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     sget-object v8, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
@@ -30009,19 +26837,16 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 10499
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 10493
     .end local v2    # "i":I
     .end local v4    # "ident":J
     :catch_0
     move-exception v1
 
-    .line 10494
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     :try_start_4
     const-string v7, "DevicePolicyManagerService"
@@ -30032,14 +26857,12 @@
 
     goto :goto_1
 
-    .line 10507
     .end local v1    # "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     .restart local v2    # "i":I
     .restart local v4    # "ident":J
     :cond_3
     invoke-static {v4, v5}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 10510
     .end local v2    # "i":I
     .end local v4    # "ident":J
     :cond_4
@@ -30047,7 +26870,6 @@
 
     goto :goto_0
 
-    .line 10507
     .restart local v2    # "i":I
     .restart local v4    # "ident":J
     :catchall_1
@@ -30068,31 +26890,25 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2788
     iget-boolean v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v3, :cond_0
 
     move v3, v4
 
-    .line 2800
     :goto_0
     return v3
 
-    .line 2791
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 2792
     monitor-enter p0
 
-    .line 2793
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 2794
     .local v2, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -30100,7 +26916,6 @@
 
     move-result v0
 
-    .line 2795
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -30108,7 +26923,6 @@
     :goto_1
     if-ge v1, v0, :cond_2
 
-    .line 2796
     iget-object v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -30129,14 +26943,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 2797
     const/4 v3, 0x1
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 2801
     .end local v0    # "N":I
     .end local v1    # "i":I
     .end local v2    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -30149,7 +26961,6 @@
 
     throw v3
 
-    .line 2795
     .restart local v0    # "N":I
     .restart local v1    # "i":I
     .restart local v2    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -30158,7 +26969,6 @@
 
     goto :goto_1
 
-    .line 2800
     :cond_2
     :try_start_1
     monitor-exit p0
@@ -30175,7 +26985,6 @@
     .param p1, "reason"    # Ljava/lang/String;
 
     .prologue
-    .line 10974
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v5, "android.permission.sec.MDM_SECURITY"
@@ -30184,14 +26993,12 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 10976
     new-instance v1, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {v1, v4}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;-><init>(Landroid/content/Context;)V
 
-    .line 10978
     .local v1, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     :try_start_0
     const-string v4, "Password"
@@ -30204,27 +27011,23 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10983
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 10986
     .local v2, "ident":J
     const v4, 0x1040bdb
 
     :try_start_1
     invoke-static {v4}, Lcom/android/server/enterprise/RestrictionToastManager;->show(I)V
 
-    .line 10989
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getIPowerManager()Landroid/os/IPowerManager;
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
-    .line 10990
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mIPowerManager:Landroid/os/IPowerManager;
 
     const/4 v5, 0x0
@@ -30236,32 +27039,26 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 10994
     :cond_0
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 10997
     :goto_1
     return-void
 
-    .line 10979
     .end local v2    # "ident":J
     :catch_0
     move-exception v0
 
-    .line 10980
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 10991
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v2    # "ident":J
     :catch_1
     move-exception v0
 
-    .line 10992
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v4, "DevicePolicyManagerService"
@@ -30272,7 +27069,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 10994
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -30293,17 +27089,14 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 8066
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v9, "android.permission.BIND_DEVICE_ADMIN"
 
     invoke-virtual {v8, v9, v10}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 8069
     monitor-enter p0
 
-    .line 8070
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -30311,33 +27104,28 @@
 
     move-result-wide v2
 
-    .line 8072
     .local v2, "ident":J
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->convertUserHandleForRecovery(I)I
 
     move-result p1
 
-    .line 8073
     new-instance v4, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {v4, v8}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 8074
     .local v4, "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
     invoke-virtual {v4, p1}, Lcom/android/internal/widget/LockPatternUtils;->getRecoveryPassword(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 8077
     .local v5, "mRecoveryPassword":Ljava/lang/String;
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v1
 
-    .line 8078
     .local v1, "ks":Landroid/security/KeyStore;
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
@@ -30349,12 +27137,10 @@
 
     if-eqz v8, :cond_0
 
-    .line 8079
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v7
 
-    .line 8081
     .local v7, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v7}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -30374,13 +27160,11 @@
 
     check-cast v6, Landroid/content/pm/UserInfo;
 
-    .line 8082
     .local v6, "pi":Landroid/content/pm/UserInfo;
     iget v8, v6, Landroid/content/pm/UserInfo;->id:I
 
     invoke-virtual {v1, v8}, Landroid/security/KeyStore;->resetMDFPP(I)Z
 
-    .line 8083
     const-string v8, "DevicePolicyManagerService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -30409,7 +27193,6 @@
 
     goto :goto_0
 
-    .line 8092
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "ks":Landroid/security/KeyStore;
     .end local v4    # "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
@@ -30424,7 +27207,6 @@
 
     throw v8
 
-    .line 8094
     .end local v2    # "ident":J
     :catchall_1
     move-exception v8
@@ -30435,7 +27217,6 @@
 
     throw v8
 
-    .line 8088
     .restart local v1    # "ks":Landroid/security/KeyStore;
     .restart local v2    # "ident":J
     .restart local v4    # "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
@@ -30450,16 +27231,13 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 8092
     :try_start_4
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8094
     monitor-exit p0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 8095
     return-void
 .end method
 
@@ -30469,21 +27247,17 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 2806
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_1
 
-    .line 2842
     :cond_0
     :goto_0
     return-void
 
-    .line 2809
     :cond_1
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 2814
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDMService()Landroid/app/enterprise/IEnterpriseDeviceManager;
 
@@ -30497,26 +27271,21 @@
 
     if-eqz v1, :cond_0
 
-    .line 2822
     :goto_1
     monitor-enter p0
 
-    .line 2823
     :try_start_1
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 2824
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-nez v0, :cond_2
 
-    .line 2825
     monitor-exit p0
 
     goto :goto_0
 
-    .line 2841
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v1
@@ -30527,7 +27296,6 @@
 
     throw v1
 
-    .line 2827
     .restart local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     :try_start_2
@@ -30541,7 +27309,6 @@
 
     if-eq v1, v4, :cond_4
 
-    .line 2829
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -30552,12 +27319,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 2830
     monitor-exit p0
 
     goto :goto_0
 
-    .line 2832
     :cond_3
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -30567,7 +27332,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2835
     :cond_4
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_2
@@ -30575,23 +27339,19 @@
 
     move-result-wide v2
 
-    .line 2837
     .local v2, "ident":J
     :try_start_3
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removeActiveAdminLocked(Landroid/content/ComponentName;I)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 2839
     :try_start_4
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2841
     monitor-exit p0
 
     goto :goto_0
 
-    .line 2839
     :catchall_1
     move-exception v1
 
@@ -30601,7 +27361,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 2817
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "ident":J
     :catch_0
@@ -30616,19 +27375,15 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 1785
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 1786
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz v0, :cond_0
 
-    .line 1787
     monitor-enter p0
 
-    .line 1788
     :try_start_0
     invoke-virtual {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
@@ -30638,12 +27393,10 @@
 
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1789
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1790
     const-string v1, "android.app.action.DEVICE_ADMIN_DISABLED"
 
     new-instance v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$2;
@@ -30652,11 +27405,9 @@
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendAdminCommandLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;Ljava/lang/String;Landroid/content/BroadcastReceiver;)V
 
-    .line 1848
     :cond_0
     return-void
 
-    .line 1789
     :catchall_0
     move-exception v1
 
@@ -30676,20 +27427,16 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 3293
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 3294
     .local v4, "userId":I
     const/4 v1, 0x0
 
-    .line 3296
     .local v1, "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     monitor-enter p0
 
-    .line 3297
     const/4 v6, -0x1
 
     :try_start_0
@@ -30697,25 +27444,20 @@
 
     move-result-object v0
 
-    .line 3299
     .local v0, "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v6, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
 
     if-nez v6, :cond_1
 
-    .line 3300
     monitor-exit p0
 
-    .line 3314
     :cond_0
     :goto_0
     return v5
 
-    .line 3302
     :cond_1
     iget-object v3, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->crossProfileWidgetProviders:Ljava/util/List;
 
-    .line 3303
     .local v3, "providers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v3, p2}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
@@ -30723,14 +27465,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 3304
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2, v3}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3305
     .end local v1    # "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .local v2, "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v6, 0x0
@@ -30744,7 +27484,6 @@
 
     move-object v1, v2
 
-    .line 3307
     .end local v2    # "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v1    # "changedProviders":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_2
@@ -30753,21 +27492,17 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 3309
     if-eqz v1, :cond_0
 
-    .line 3310
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mLocalService:Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;
 
     # invokes: Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;->notifyCrossProfileProvidersChanged(ILjava/util/List;)V
     invoke-static {v5, v4, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;->access$1200(Lcom/android/server/devicepolicy/DevicePolicyManagerService$LocalService;ILjava/util/List;)V
 
-    .line 3311
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 3307
     .end local v0    # "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v3    # "providers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :catchall_0
@@ -30801,28 +27536,23 @@
     .param p2, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 9459
     const-string v2, "ComponentName is null"
 
     invoke-static {p1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9460
     monitor-enter p0
 
-    .line 9461
     const/4 v2, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9463
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v0
 
-    .line 9465
     .local v0, "id":J
     :try_start_1
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -30837,7 +27567,6 @@
 
     move-result v2
 
-    .line 9467
     :try_start_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -30852,7 +27581,6 @@
 
     throw v2
 
-    .line 9469
     .end local v0    # "id":J
     :catchall_1
     move-exception v2
@@ -30869,13 +27597,10 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 1437
     monitor-enter p0
 
-    .line 1438
     if-nez p1, :cond_0
 
-    .line 1439
     :try_start_0
     const-string v5, "DevicePolicyManagerService"
 
@@ -30883,37 +27608,30 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1440
     monitor-exit p0
 
-    .line 1475
     :goto_0
     return-void
 
-    .line 1442
     :cond_0
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-eqz v5, :cond_1
 
-    .line 1443
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v5, p1}, Lcom/android/server/devicepolicy/DeviceOwner;->removeProfileOwner(I)V
 
-    .line 1444
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v5}, Lcom/android/server/devicepolicy/DeviceOwner;->writeOwnerFile()V
 
-    .line 1446
     const-string/jumbo v5, "security.knox_afw_mode"
 
     const-string/jumbo v6, "false"
 
     invoke-static {v5, v6}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1449
     :cond_1
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserData:Landroid/util/SparseArray;
 
@@ -30923,16 +27641,13 @@
 
     check-cast v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
-    .line 1450
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     if-eqz v3, :cond_3
 
-    .line 1453
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     if-eqz v5, :cond_2
 
-    .line 1454
     iget-object v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -30955,7 +27670,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1456
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :try_start_1
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDMService()Landroid/app/enterprise/IEnterpriseDeviceManager;
@@ -30975,11 +27689,9 @@
 
     goto :goto_1
 
-    .line 1458
     :catch_0
     move-exception v1
 
-    .line 1459
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_2
     const-string v5, "DevicePolicyManagerService"
@@ -31010,7 +27722,6 @@
 
     goto :goto_1
 
-    .line 1473
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v2    # "i$":Ljava/util/Iterator;
@@ -31024,7 +27735,6 @@
 
     throw v5
 
-    .line 1467
     .restart local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :cond_2
     :try_start_3
@@ -31032,7 +27742,6 @@
 
     invoke-virtual {v5, p1}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 1469
     :cond_3
     new-instance v4, Ljava/io/File;
 
@@ -31044,11 +27753,9 @@
 
     invoke-direct {v4, v5, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 1471
     .local v4, "policyFile":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 1472
     const-string v5, "DevicePolicyManagerService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -31075,12 +27782,10 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1473
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 1474
     const/4 v5, 0x0
 
     invoke-direct {p0, p1, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateScreenCaptureDisabledInWindowManager(IZ)V
@@ -31093,24 +27798,20 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 5700
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5702
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isKnoxWorkspace(I)Z
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    .line 5703
     const-string v5, "DevicePolicyManagerService"
 
     const-string v6, "It is KnoxWorkspace skip enforceNotManagedProfile: reportFailedPasswordAttempt"
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5707
     :goto_0
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -31120,33 +27821,27 @@
 
     invoke-virtual {v5, v6, v7}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5710
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 5712
     .local v0, "ident":J
     const/4 v4, 0x0
 
-    .line 5713
     .local v4, "wipeData":Z
     const/4 v2, 0x0
 
-    .line 5714
     .local v2, "identifier":I
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 5715
     :try_start_1
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 5716
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mFailedPasswordAttempts:I
 
@@ -31154,35 +27849,29 @@
 
     iput v5, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mFailedPasswordAttempts:I
 
-    .line 5717
     const/4 v5, 0x0
 
     const/4 v6, 0x0
 
     invoke-direct {p0, p1, v5, v6}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 5718
     iget-boolean v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-eqz v5, :cond_0
 
-    .line 5731
     const-string v5, "android.app.action.ACTION_PASSWORD_FAILED"
 
     const/4 v6, 0x1
 
     invoke-direct {p0, v5, v6, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendAdminCommandToSelfAndProfilesLocked(Ljava/lang/String;II)V
 
-    .line 5735
     :cond_0
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5736
     if-eqz v4, :cond_1
 
-    .line 5738
     const/4 v5, 0x0
 
     :try_start_2
@@ -31192,14 +27881,11 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 5742
     :cond_1
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5744
     return-void
 
-    .line 5705
     .end local v0    # "ident":J
     .end local v2    # "identifier":I
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -31211,7 +27897,6 @@
 
     goto :goto_0
 
-    .line 5735
     .restart local v0    # "ident":J
     .restart local v2    # "identifier":I
     .restart local v4    # "wipeData":Z
@@ -31228,7 +27913,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 5742
     :catchall_1
     move-exception v5
 
@@ -31242,10 +27926,8 @@
     .param p1, "userHandle"    # I
 
     .prologue
-    .line 5748
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5749
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.BIND_DEVICE_ADMIN"
@@ -31254,16 +27936,13 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5752
     monitor-enter p0
 
-    .line 5753
     :try_start_0
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 5754
     .local v2, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mFailedPasswordAttempts:I
 
@@ -31273,7 +27952,6 @@
 
     if-ltz v3, :cond_2
 
-    .line 5755
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -31281,31 +27959,26 @@
 
     move-result-wide v0
 
-    .line 5757
     .local v0, "ident":J
     const/4 v3, 0x0
 
     :try_start_1
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mFailedPasswordAttempts:I
 
-    .line 5758
     const/4 v3, -0x1
 
     iput v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPasswordOwner:I
 
-    .line 5759
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
     invoke-direct {p0, p1, v3, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 5760
     iget-boolean v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-eqz v3, :cond_1
 
-    .line 5761
     const-string v3, "android.app.action.ACTION_PASSWORD_SUCCEEDED"
 
     const/4 v4, 0x1
@@ -31314,20 +27987,16 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5766
     :cond_1
     :try_start_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5769
     .end local v0    # "ident":J
     :cond_2
     monitor-exit p0
 
-    .line 5770
     return-void
 
-    .line 5766
     .restart local v0    # "ident":J
     :catchall_0
     move-exception v3
@@ -31336,7 +28005,6 @@
 
     throw v3
 
-    .line 5769
     .end local v0    # "ident":J
     .end local v2    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_1
@@ -31355,7 +28023,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 4410
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
@@ -31364,30 +28031,24 @@
 
     if-nez v43, :cond_0
 
-    .line 4411
     const/16 v43, 0x0
 
-    .line 4592
     :goto_0
     return v43
 
-    .line 4413
     :cond_0
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v40
 
-    .line 4417
     .local v40, "userHandle":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v38
 
-    .line 4418
     .local v38, "token":J
     move/from16 v41, v40
 
-    .line 4419
     .local v41, "userId":I
     new-instance v43, Lcom/android/internal/widget/LockPatternUtils;
 
@@ -31407,7 +28068,6 @@
 
     move-result v32
 
-    .line 4420
     .local v32, "pwdQuality":I
     const-string v43, "DevicePolicyManagerService"
 
@@ -31435,7 +28095,6 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4421
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -31474,7 +28133,6 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4423
     const/high16 v43, 0x70000
 
     move/from16 v0, v32
@@ -31483,7 +28141,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 4424
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -31510,19 +28167,15 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4425
     invoke-static/range {v38 .. v39}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4426
     const/16 v43, 0x0
 
     goto/16 :goto_0
 
-    .line 4428
     :cond_1
     invoke-static/range {v38 .. v39}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4433
     move-object/from16 v0, p0
 
     move/from16 v1, v40
@@ -31533,25 +28186,21 @@
 
     if-eqz v43, :cond_2
 
-    .line 4434
     const-string v43, "DevicePolicyManagerService"
 
     const-string v44, "It is KnoxWorkspace skip enforceNotManagedProfile: resetPassword"
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4439
     :goto_1
     if-eqz p1, :cond_3
 
     move-object/from16 v28, p1
 
-    .line 4442
     .local v28, "password":Ljava/lang/String;
     :goto_2
     monitor-enter p0
 
-    .line 4445
     const/16 v43, 0x0
 
     const/16 v44, 0x2
@@ -31565,7 +28214,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4447
     const/16 v43, 0x0
 
     move-object/from16 v0, p0
@@ -31578,16 +28226,13 @@
 
     move-result v33
 
-    .line 4448
     .local v33, "quality":I
     if-eqz v33, :cond_5
 
-    .line 4449
     invoke-static/range {v28 .. v28}, Lcom/android/internal/widget/LockPatternUtils;->computePasswordQuality(Ljava/lang/String;)I
 
     move-result v34
 
-    .line 4450
     .local v34, "realQuality":I
     move/from16 v0, v34
 
@@ -31603,7 +28248,6 @@
 
     if-eq v0, v1, :cond_4
 
-    .line 4452
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -31644,14 +28288,12 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4456
     const/16 v43, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4531
     .end local v33    # "quality":I
     .end local v34    # "realQuality":I
     :catchall_0
@@ -31663,7 +28305,6 @@
 
     throw v43
 
-    .line 4436
     .end local v28    # "password":Ljava/lang/String;
     :cond_2
     const-string/jumbo v43, "reset the password"
@@ -31678,13 +28319,11 @@
 
     goto :goto_1
 
-    .line 4439
     :cond_3
     const-string v28, ""
 
     goto :goto_2
 
-    .line 4458
     .restart local v28    # "password":Ljava/lang/String;
     .restart local v33    # "quality":I
     .restart local v34    # "realQuality":I
@@ -31698,7 +28337,6 @@
 
     move-result v33
 
-    .line 4461
     .end local v34    # "realQuality":I
     :cond_5
     const/16 v43, 0x0
@@ -31713,7 +28351,6 @@
 
     move-result v16
 
-    .line 4462
     .local v16, "length":I
     invoke-virtual/range {v28 .. v28}, Ljava/lang/String;->length()I
 
@@ -31725,7 +28362,6 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 4463
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -31766,14 +28402,12 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4465
     const/16 v43, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4467
     :cond_6
     const/high16 v43, 0x60000
 
@@ -31783,30 +28417,23 @@
 
     if-ne v0, v1, :cond_10
 
-    .line 4468
     const/16 v17, 0x0
 
-    .line 4469
     .local v17, "letters":I
     const/16 v37, 0x0
 
-    .line 4470
     .local v37, "uppercase":I
     const/16 v18, 0x0
 
-    .line 4471
     .local v18, "lowercase":I
     const/16 v27, 0x0
 
-    .line 4472
     .local v27, "numbers":I
     const/16 v36, 0x0
 
-    .line 4473
     .local v36, "symbols":I
     const/16 v26, 0x0
 
-    .line 4474
     .local v26, "nonletter":I
     const/4 v10, 0x0
 
@@ -31820,14 +28447,12 @@
 
     if-ge v10, v0, :cond_a
 
-    .line 4475
     move-object/from16 v0, v28
 
     invoke-virtual {v0, v10}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
 
-    .line 4476
     .local v6, "c":C
     const/16 v43, 0x41
 
@@ -31841,19 +28466,15 @@
 
     if-gt v6, v0, :cond_7
 
-    .line 4477
     add-int/lit8 v17, v17, 0x1
 
-    .line 4478
     add-int/lit8 v37, v37, 0x1
 
-    .line 4474
     :goto_4
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_3
 
-    .line 4479
     :cond_7
     const/16 v43, 0x61
 
@@ -31867,15 +28488,12 @@
 
     if-gt v6, v0, :cond_8
 
-    .line 4480
     add-int/lit8 v17, v17, 0x1
 
-    .line 4481
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_4
 
-    .line 4482
     :cond_8
     const/16 v43, 0x30
 
@@ -31889,24 +28507,19 @@
 
     if-gt v6, v0, :cond_9
 
-    .line 4483
     add-int/lit8 v27, v27, 0x1
 
-    .line 4484
     add-int/lit8 v26, v26, 0x1
 
     goto :goto_4
 
-    .line 4486
     :cond_9
     add-int/lit8 v36, v36, 0x1
 
-    .line 4487
     add-int/lit8 v26, v26, 0x1
 
     goto :goto_4
 
-    .line 4490
     .end local v6    # "c":C
     :cond_a
     const/16 v43, 0x0
@@ -31921,7 +28534,6 @@
 
     move-result v19
 
-    .line 4491
     .local v19, "neededLetters":I
     move/from16 v0, v17
 
@@ -31929,7 +28541,6 @@
 
     if-ge v0, v1, :cond_b
 
-    .line 4492
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -31970,14 +28581,12 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4494
     const/16 v43, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4496
     :cond_b
     const/16 v43, 0x0
 
@@ -31991,7 +28600,6 @@
 
     move-result v22
 
-    .line 4497
     .local v22, "neededNumbers":I
     move/from16 v0, v27
 
@@ -31999,7 +28607,6 @@
 
     if-ge v0, v1, :cond_c
 
-    .line 4498
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -32040,14 +28647,12 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4501
     const/16 v43, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4503
     :cond_c
     const/16 v43, 0x0
 
@@ -32061,7 +28666,6 @@
 
     move-result v20
 
-    .line 4504
     .local v20, "neededLowerCase":I
     move/from16 v0, v18
 
@@ -32069,7 +28673,6 @@
 
     if-ge v0, v1, :cond_d
 
-    .line 4505
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -32110,14 +28713,12 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4508
     const/16 v43, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4510
     :cond_d
     const/16 v43, 0x0
 
@@ -32131,7 +28732,6 @@
 
     move-result v24
 
-    .line 4511
     .local v24, "neededUpperCase":I
     move/from16 v0, v37
 
@@ -32139,7 +28739,6 @@
 
     if-ge v0, v1, :cond_e
 
-    .line 4512
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -32180,14 +28779,12 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4515
     const/16 v43, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4517
     :cond_e
     const/16 v43, 0x0
 
@@ -32201,7 +28798,6 @@
 
     move-result v23
 
-    .line 4518
     .local v23, "neededSymbols":I
     move/from16 v0, v36
 
@@ -32209,7 +28805,6 @@
 
     if-ge v0, v1, :cond_f
 
-    .line 4519
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -32250,14 +28845,12 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4521
     const/16 v43, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4523
     :cond_f
     const/16 v43, 0x0
 
@@ -32271,7 +28864,6 @@
 
     move-result v21
 
-    .line 4524
     .local v21, "neededNonLetter":I
     move/from16 v0, v26
 
@@ -32279,7 +28871,6 @@
 
     if-ge v0, v1, :cond_10
 
-    .line 4525
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -32320,14 +28911,12 @@
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4528
     const/16 v43, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4531
     .end local v10    # "i":I
     .end local v17    # "letters":I
     .end local v18    # "lowercase":I
@@ -32346,12 +28935,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4533
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 4534
     .local v8, "callingUid":I
     move-object/from16 v0, p0
 
@@ -32361,7 +28948,6 @@
 
     move-result-object v30
 
-    .line 4535
     .local v30, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     move-object/from16 v0, v30
 
@@ -32381,19 +28967,16 @@
 
     if-eq v0, v8, :cond_11
 
-    .line 4536
     const-string v43, "DevicePolicyManagerService"
 
     const-string/jumbo v44, "resetPassword: already set by another uid and not entered by user"
 
     invoke-static/range {v43 .. v44}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4537
     const/16 v43, 0x0
 
     goto/16 :goto_0
 
-    .line 4540
     :cond_11
     move-object/from16 v0, p0
 
@@ -32401,7 +28984,6 @@
 
     move-result v7
 
-    .line 4541
     .local v7, "callerIsDeviceOwnerAdmin":Z
     and-int/lit8 v43, p2, 0x2
 
@@ -32409,30 +28991,25 @@
 
     const/4 v9, 0x1
 
-    .line 4543
     .local v9, "doNotAskCredentialsOnBoot":Z
     :goto_5
     if-eqz v7, :cond_12
 
     if-eqz v9, :cond_12
 
-    .line 4544
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setDoNotAskCredentialsOnBoot()V
 
-    .line 4549
     :cond_12
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 4552
     .local v12, "ident":J
     :try_start_2
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v15
 
-    .line 4553
     .local v15, "ks":Landroid/security/KeyStore;
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
@@ -32448,7 +29025,6 @@
 
     if-eqz v43, :cond_14
 
-    .line 4554
     move-object/from16 v0, p0
 
     move/from16 v1, v40
@@ -32457,7 +29033,6 @@
 
     move-result-object v31
 
-    .line 4556
     .local v31, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface/range {v31 .. v31}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -32477,7 +29052,6 @@
 
     check-cast v29, Landroid/content/pm/UserInfo;
 
-    .line 4557
     .local v29, "pi":Landroid/content/pm/UserInfo;
     move-object/from16 v0, v29
 
@@ -32489,7 +29063,6 @@
 
     invoke-virtual {v15, v0}, Landroid/security/KeyStore;->resetMDFPP(I)Z
 
-    .line 4558
     const-string v43, "DevicePolicyManagerService"
 
     new-instance v44, Ljava/lang/StringBuilder;
@@ -32522,7 +29095,6 @@
 
     goto :goto_6
 
-    .line 4589
     .end local v11    # "i$":Ljava/util/Iterator;
     .end local v15    # "ks":Landroid/security/KeyStore;
     .end local v29    # "pi":Landroid/content/pm/UserInfo;
@@ -32534,7 +29106,6 @@
 
     throw v43
 
-    .line 4541
     .end local v9    # "doNotAskCredentialsOnBoot":Z
     .end local v12    # "ident":J
     :cond_13
@@ -32542,7 +29113,6 @@
 
     goto :goto_5
 
-    .line 4563
     .restart local v9    # "doNotAskCredentialsOnBoot":Z
     .restart local v12    # "ident":J
     .restart local v15    # "ks":Landroid/security/KeyStore;
@@ -32558,7 +29128,6 @@
 
     invoke-direct/range {v42 .. v43}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 4564
     .local v42, "utils":Lcom/android/internal/widget/LockPatternUtils;
     invoke-static/range {v28 .. v28}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -32566,7 +29135,6 @@
 
     if-nez v43, :cond_17
 
-    .line 4565
     const/16 v43, 0x0
 
     move-object/from16 v0, v42
@@ -32581,7 +29149,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/internal/widget/LockPatternUtils;->saveLockPassword(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 4569
     :goto_7
     and-int/lit8 v43, p2, 0x1
 
@@ -32589,30 +29156,25 @@
 
     const/16 v35, 0x1
 
-    .line 4570
     .local v35, "requireEntry":Z
     :goto_8
     if-eqz v35, :cond_15
 
-    .line 4571
     const/16 v43, 0x2
 
     const/16 v44, -0x1
 
     invoke-virtual/range {v42 .. v44}, Lcom/android/internal/widget/LockPatternUtils;->requireStrongAuth(II)V
 
-    .line 4574
     :cond_15
     monitor-enter p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 4575
     if-eqz v35, :cond_19
 
     move/from16 v25, v8
 
-    .line 4576
     .local v25, "newOwner":I
     :goto_9
     :try_start_4
@@ -32628,14 +29190,12 @@
 
     if-eq v0, v1, :cond_16
 
-    .line 4577
     move/from16 v0, v25
 
     move-object/from16 v1, v30
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPasswordOwner:I
 
-    .line 4578
     const/16 v43, 0x0
 
     const/16 v44, 0x0
@@ -32650,13 +29210,11 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 4580
     :cond_16
     monitor-exit p0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 4583
     :try_start_5
     new-instance v14, Landroid/content/Intent;
 
@@ -32666,7 +29224,6 @@
 
     invoke-direct {v14, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4584
     .local v14, "intent":Landroid/content/Intent;
     const/high16 v43, 0x40000000    # 2.0f
 
@@ -32674,7 +29231,6 @@
 
     invoke-virtual {v14, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 4585
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -32697,15 +29253,12 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 4589
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4592
     const/16 v43, 0x1
 
     goto/16 :goto_0
 
-    .line 4567
     .end local v14    # "intent":Landroid/content/Intent;
     .end local v25    # "newOwner":I
     .end local v35    # "requireEntry":Z
@@ -32721,20 +29274,17 @@
 
     goto :goto_7
 
-    .line 4569
     :cond_18
     const/16 v35, 0x0
 
     goto :goto_8
 
-    .line 4575
     .restart local v35    # "requireEntry":Z
     :cond_19
     const/16 v25, -0x1
 
     goto :goto_9
 
-    .line 4580
     .restart local v25    # "newOwner":I
     :catchall_2
     move-exception v43
@@ -32757,7 +29307,6 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 4235
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
@@ -32766,14 +29315,11 @@
 
     if-nez v38, :cond_0
 
-    .line 4236
     const/16 v38, 0x0
 
-    .line 4404
     :goto_0
     return v38
 
-    .line 4240
     :cond_0
     move-object/from16 v0, p0
 
@@ -32785,25 +29331,21 @@
 
     if-eqz v38, :cond_1
 
-    .line 4241
     const-string v38, "DevicePolicyManagerService"
 
     const-string v39, "It is KnoxWorkspace skip enforceNotManagedProfile: resetPassword"
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4246
     :goto_1
     if-eqz p1, :cond_2
 
     move-object/from16 v28, p1
 
-    .line 4249
     .local v28, "password":Ljava/lang/String;
     :goto_2
     monitor-enter p0
 
-    .line 4252
     const/16 v38, 0x0
 
     const/16 v39, 0x2
@@ -32819,7 +29361,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;II)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4254
     const/16 v38, 0x0
 
     move-object/from16 v0, p0
@@ -32832,16 +29373,13 @@
 
     move-result v32
 
-    .line 4255
     .local v32, "quality":I
     if-eqz v32, :cond_4
 
-    .line 4256
     invoke-static/range {v28 .. v28}, Lcom/android/internal/widget/LockPatternUtils;->computePasswordQuality(Ljava/lang/String;)I
 
     move-result v33
 
-    .line 4257
     .local v33, "realQuality":I
     move/from16 v0, v33
 
@@ -32857,7 +29395,6 @@
 
     if-eq v0, v1, :cond_3
 
-    .line 4259
     const-string v38, "DevicePolicyManagerService"
 
     new-instance v39, Ljava/lang/StringBuilder;
@@ -32898,14 +29435,12 @@
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4263
     const/16 v38, 0x0
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 4344
     .end local v32    # "quality":I
     .end local v33    # "realQuality":I
     :catchall_0
@@ -32917,7 +29452,6 @@
 
     throw v38
 
-    .line 4243
     .end local v28    # "password":Ljava/lang/String;
     :cond_1
     const-string/jumbo v38, "reset the password"
@@ -32932,13 +29466,11 @@
 
     goto :goto_1
 
-    .line 4246
     :cond_2
     const-string v28, ""
 
     goto :goto_2
 
-    .line 4265
     .restart local v28    # "password":Ljava/lang/String;
     .restart local v32    # "quality":I
     .restart local v33    # "realQuality":I
@@ -32952,7 +29484,6 @@
 
     move-result v32
 
-    .line 4269
     .end local v33    # "realQuality":I
     :cond_4
     const/high16 v38, 0x70000
@@ -32963,21 +29494,18 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 4270
     const-string v38, "DevicePolicyManagerService"
 
     const-string/jumbo v39, "resetPassword: current password quality is smartcard numeric and can\'t set reset password"
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4271
     const/16 v38, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4274
     :cond_5
     const/16 v38, 0x0
 
@@ -32991,7 +29519,6 @@
 
     move-result v16
 
-    .line 4275
     .local v16, "length":I
     invoke-virtual/range {v28 .. v28}, Ljava/lang/String;->length()I
 
@@ -33003,7 +29530,6 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 4276
     const-string v38, "DevicePolicyManagerService"
 
     new-instance v39, Ljava/lang/StringBuilder;
@@ -33044,14 +29570,12 @@
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4278
     const/16 v38, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4280
     :cond_6
     const/high16 v38, 0x60000
 
@@ -33061,30 +29585,23 @@
 
     if-ne v0, v1, :cond_10
 
-    .line 4281
     const/16 v17, 0x0
 
-    .line 4282
     .local v17, "letters":I
     const/16 v36, 0x0
 
-    .line 4283
     .local v36, "uppercase":I
     const/16 v18, 0x0
 
-    .line 4284
     .local v18, "lowercase":I
     const/16 v27, 0x0
 
-    .line 4285
     .local v27, "numbers":I
     const/16 v35, 0x0
 
-    .line 4286
     .local v35, "symbols":I
     const/16 v26, 0x0
 
-    .line 4287
     .local v26, "nonletter":I
     const/4 v10, 0x0
 
@@ -33098,14 +29615,12 @@
 
     if-ge v10, v0, :cond_a
 
-    .line 4288
     move-object/from16 v0, v28
 
     invoke-virtual {v0, v10}, Ljava/lang/String;->charAt(I)C
 
     move-result v6
 
-    .line 4289
     .local v6, "c":C
     const/16 v38, 0x41
 
@@ -33119,19 +29634,15 @@
 
     if-gt v6, v0, :cond_7
 
-    .line 4290
     add-int/lit8 v17, v17, 0x1
 
-    .line 4291
     add-int/lit8 v36, v36, 0x1
 
-    .line 4287
     :goto_4
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_3
 
-    .line 4292
     :cond_7
     const/16 v38, 0x61
 
@@ -33145,15 +29656,12 @@
 
     if-gt v6, v0, :cond_8
 
-    .line 4293
     add-int/lit8 v17, v17, 0x1
 
-    .line 4294
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_4
 
-    .line 4295
     :cond_8
     const/16 v38, 0x30
 
@@ -33167,24 +29675,19 @@
 
     if-gt v6, v0, :cond_9
 
-    .line 4296
     add-int/lit8 v27, v27, 0x1
 
-    .line 4297
     add-int/lit8 v26, v26, 0x1
 
     goto :goto_4
 
-    .line 4299
     :cond_9
     add-int/lit8 v35, v35, 0x1
 
-    .line 4300
     add-int/lit8 v26, v26, 0x1
 
     goto :goto_4
 
-    .line 4303
     .end local v6    # "c":C
     :cond_a
     const/16 v38, 0x0
@@ -33199,7 +29702,6 @@
 
     move-result v19
 
-    .line 4304
     .local v19, "neededLetters":I
     move/from16 v0, v17
 
@@ -33207,7 +29709,6 @@
 
     if-ge v0, v1, :cond_b
 
-    .line 4305
     const-string v38, "DevicePolicyManagerService"
 
     new-instance v39, Ljava/lang/StringBuilder;
@@ -33248,14 +29749,12 @@
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4307
     const/16 v38, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4309
     :cond_b
     const/16 v38, 0x0
 
@@ -33269,7 +29768,6 @@
 
     move-result v22
 
-    .line 4310
     .local v22, "neededNumbers":I
     move/from16 v0, v27
 
@@ -33277,7 +29775,6 @@
 
     if-ge v0, v1, :cond_c
 
-    .line 4311
     const-string v38, "DevicePolicyManagerService"
 
     new-instance v39, Ljava/lang/StringBuilder;
@@ -33318,14 +29815,12 @@
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4314
     const/16 v38, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4316
     :cond_c
     const/16 v38, 0x0
 
@@ -33339,7 +29834,6 @@
 
     move-result v20
 
-    .line 4317
     .local v20, "neededLowerCase":I
     move/from16 v0, v18
 
@@ -33347,7 +29841,6 @@
 
     if-ge v0, v1, :cond_d
 
-    .line 4318
     const-string v38, "DevicePolicyManagerService"
 
     new-instance v39, Ljava/lang/StringBuilder;
@@ -33388,14 +29881,12 @@
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4321
     const/16 v38, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4323
     :cond_d
     const/16 v38, 0x0
 
@@ -33409,7 +29900,6 @@
 
     move-result v24
 
-    .line 4324
     .local v24, "neededUpperCase":I
     move/from16 v0, v36
 
@@ -33417,7 +29907,6 @@
 
     if-ge v0, v1, :cond_e
 
-    .line 4325
     const-string v38, "DevicePolicyManagerService"
 
     new-instance v39, Ljava/lang/StringBuilder;
@@ -33458,14 +29947,12 @@
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4328
     const/16 v38, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4330
     :cond_e
     const/16 v38, 0x0
 
@@ -33479,7 +29966,6 @@
 
     move-result v23
 
-    .line 4331
     .local v23, "neededSymbols":I
     move/from16 v0, v35
 
@@ -33487,7 +29973,6 @@
 
     if-ge v0, v1, :cond_f
 
-    .line 4332
     const-string v38, "DevicePolicyManagerService"
 
     new-instance v39, Ljava/lang/StringBuilder;
@@ -33528,14 +30013,12 @@
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4334
     const/16 v38, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4336
     :cond_f
     const/16 v38, 0x0
 
@@ -33549,7 +30032,6 @@
 
     move-result v21
 
-    .line 4337
     .local v21, "neededNonLetter":I
     move/from16 v0, v26
 
@@ -33557,7 +30039,6 @@
 
     if-ge v0, v1, :cond_10
 
-    .line 4338
     const-string v38, "DevicePolicyManagerService"
 
     new-instance v39, Ljava/lang/StringBuilder;
@@ -33598,14 +30079,12 @@
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4341
     const/16 v38, 0x0
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 4344
     .end local v10    # "i":I
     .end local v17    # "letters":I
     .end local v18    # "lowercase":I
@@ -33624,12 +30103,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4346
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v8
 
-    .line 4347
     .local v8, "callingUid":I
     move-object/from16 v0, p0
 
@@ -33639,7 +30116,6 @@
 
     move-result-object v30
 
-    .line 4348
     .local v30, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     move-object/from16 v0, v30
 
@@ -33659,19 +30135,16 @@
 
     if-eq v0, v8, :cond_11
 
-    .line 4349
     const-string v38, "DevicePolicyManagerService"
 
     const-string/jumbo v39, "resetPassword: already set by another uid and not entered by user"
 
     invoke-static/range {v38 .. v39}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4350
     const/16 v38, 0x0
 
     goto/16 :goto_0
 
-    .line 4353
     :cond_11
     move-object/from16 v0, p0
 
@@ -33679,7 +30152,6 @@
 
     move-result v7
 
-    .line 4354
     .local v7, "callerIsDeviceOwnerAdmin":Z
     and-int/lit8 v38, p2, 0x2
 
@@ -33687,30 +30159,25 @@
 
     const/4 v9, 0x1
 
-    .line 4356
     .local v9, "doNotAskCredentialsOnBoot":Z
     :goto_5
     if-eqz v7, :cond_12
 
     if-eqz v9, :cond_12
 
-    .line 4357
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setDoNotAskCredentialsOnBoot()V
 
-    .line 4362
     :cond_12
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v12
 
-    .line 4365
     .local v12, "ident":J
     :try_start_2
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v15
 
-    .line 4366
     .local v15, "ks":Landroid/security/KeyStore;
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
@@ -33726,7 +30193,6 @@
 
     if-eqz v38, :cond_14
 
-    .line 4367
     move-object/from16 v0, p0
 
     move/from16 v1, p3
@@ -33735,7 +30201,6 @@
 
     move-result-object v31
 
-    .line 4369
     .local v31, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface/range {v31 .. v31}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -33755,7 +30220,6 @@
 
     check-cast v29, Landroid/content/pm/UserInfo;
 
-    .line 4370
     .local v29, "pi":Landroid/content/pm/UserInfo;
     move-object/from16 v0, v29
 
@@ -33767,7 +30231,6 @@
 
     invoke-virtual {v15, v0}, Landroid/security/KeyStore;->resetMDFPP(I)Z
 
-    .line 4371
     const-string v38, "DevicePolicyManagerService"
 
     new-instance v39, Ljava/lang/StringBuilder;
@@ -33800,7 +30263,6 @@
 
     goto :goto_6
 
-    .line 4401
     .end local v11    # "i$":Ljava/util/Iterator;
     .end local v15    # "ks":Landroid/security/KeyStore;
     .end local v29    # "pi":Landroid/content/pm/UserInfo;
@@ -33812,7 +30274,6 @@
 
     throw v38
 
-    .line 4354
     .end local v9    # "doNotAskCredentialsOnBoot":Z
     .end local v12    # "ident":J
     :cond_13
@@ -33820,7 +30281,6 @@
 
     goto :goto_5
 
-    .line 4376
     .restart local v9    # "doNotAskCredentialsOnBoot":Z
     .restart local v12    # "ident":J
     .restart local v15    # "ks":Landroid/security/KeyStore;
@@ -33836,7 +30296,6 @@
 
     invoke-direct/range {v37 .. v38}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 4377
     .local v37, "utils":Lcom/android/internal/widget/LockPatternUtils;
     invoke-static/range {v28 .. v28}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -33844,7 +30303,6 @@
 
     if-nez v38, :cond_17
 
-    .line 4378
     const/16 v38, 0x0
 
     move-object/from16 v0, v37
@@ -33859,7 +30317,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/android/internal/widget/LockPatternUtils;->saveLockPassword(Ljava/lang/String;Ljava/lang/String;II)V
 
-    .line 4382
     :goto_7
     and-int/lit8 v38, p2, 0x1
 
@@ -33867,28 +30324,23 @@
 
     const/16 v34, 0x1
 
-    .line 4383
     .local v34, "requireEntry":Z
     :goto_8
     if-eqz v34, :cond_15
 
-    .line 4384
     const/16 v38, -0x1
 
     invoke-virtual/range {v37 .. v38}, Lcom/android/internal/widget/LockPatternUtils;->requireCredentialEntry(I)V
 
-    .line 4386
     :cond_15
     monitor-enter p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 4387
     if-eqz v34, :cond_19
 
     move/from16 v25, v8
 
-    .line 4388
     .local v25, "newOwner":I
     :goto_9
     :try_start_4
@@ -33904,14 +30356,12 @@
 
     if-eq v0, v1, :cond_16
 
-    .line 4389
     move/from16 v0, v25
 
     move-object/from16 v1, v30
 
     iput v0, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPasswordOwner:I
 
-    .line 4390
     const/16 v38, 0x0
 
     const/16 v39, 0x0
@@ -33926,13 +30376,11 @@
 
     invoke-direct {v0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 4392
     :cond_16
     monitor-exit p0
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 4395
     :try_start_5
     new-instance v14, Landroid/content/Intent;
 
@@ -33942,7 +30390,6 @@
 
     invoke-direct {v14, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4396
     .local v14, "intent":Landroid/content/Intent;
     const/high16 v38, 0x40000000    # 2.0f
 
@@ -33950,7 +30397,6 @@
 
     invoke-virtual {v14, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 4397
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -33973,15 +30419,12 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 4401
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4404
     const/16 v38, 0x1
 
     goto/16 :goto_0
 
-    .line 4380
     .end local v14    # "intent":Landroid/content/Intent;
     .end local v25    # "newOwner":I
     .end local v34    # "requireEntry":Z
@@ -33997,20 +30440,17 @@
 
     goto :goto_7
 
-    .line 4382
     :cond_18
     const/16 v34, 0x0
 
     goto :goto_8
 
-    .line 4387
     .restart local v34    # "requireEntry":Z
     :cond_19
     const/16 v25, -0x1
 
     goto :goto_9
 
-    .line 4392
     .restart local v25    # "newOwner":I
     :catchall_2
     move-exception v38
@@ -34033,37 +30473,29 @@
     .prologue
     const/4 v8, 0x4
 
-    .line 10612
     iget-boolean v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v6, :cond_0
 
-    .line 10613
     const/4 v5, 0x0
 
-    .line 10645
     :goto_0
     return v5
 
-    .line 10616
     :cond_0
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v4
 
-    .line 10617
     .local v4, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     const/4 v3, 0x0
 
-    .line 10618
     .local v3, "mode":I
     const/4 v5, 0x0
 
-    .line 10620
     .local v5, "ret":Z
     monitor-enter p0
 
-    .line 10621
     :try_start_0
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -34071,7 +30503,6 @@
 
     move-result v0
 
-    .line 10622
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -34079,7 +30510,6 @@
     :goto_1
     if-ge v2, v0, :cond_2
 
-    .line 10623
     iget-object v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -34088,37 +30518,30 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10624
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v6, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
     if-ge v3, v6, :cond_1
 
-    .line 10625
     iget v3, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
-    .line 10622
     :cond_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 10629
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     const/high16 v6, 0x20000
 
     if-lt v3, v6, :cond_4
 
-    .line 10630
     iget v6, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
 
     if-lt v6, v3, :cond_3
 
-    .line 10631
     const/4 v5, 0x1
 
-    .line 10644
     :cond_3
     :goto_2
     monitor-exit p0
@@ -34136,7 +30559,6 @@
 
     throw v6
 
-    .line 10633
     .restart local v0    # "N":I
     .restart local v2    # "i":I
     :cond_4
@@ -34149,12 +30571,10 @@
 
     if-lt v6, v8, :cond_5
 
-    .line 10635
     const/4 v5, 0x1
 
     goto :goto_2
 
-    .line 10638
     :cond_5
     const/4 v6, 0x0
 
@@ -34176,7 +30596,6 @@
 
     if-lt v6, v8, :cond_3
 
-    .line 10641
     const/4 v5, 0x1
 
     goto :goto_2
@@ -34188,12 +30607,10 @@
     .param p2, "action"    # Ljava/lang/String;
 
     .prologue
-    .line 1690
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendAdminCommandLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;Ljava/lang/String;Landroid/content/BroadcastReceiver;)V
 
-    .line 1691
     return-void
 .end method
 
@@ -34204,12 +30621,10 @@
     .param p3, "result"    # Landroid/content/BroadcastReceiver;
 
     .prologue
-    .line 1694
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendAdminCommandLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;Ljava/lang/String;Landroid/os/Bundle;Landroid/content/BroadcastReceiver;)V
 
-    .line 1695
     return-void
 .end method
 
@@ -34221,14 +30636,12 @@
     .param p4, "result"    # Landroid/content/BroadcastReceiver;
 
     .prologue
-    .line 1702
     new-instance v3, Landroid/content/Intent;
 
     move-object/from16 v0, p2
 
     invoke-direct {v3, v0}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1703
     .local v3, "intent":Landroid/content/Intent;
     move-object/from16 v0, p1
 
@@ -34240,7 +30653,6 @@
 
     invoke-virtual {v3, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 1704
     const-string v2, "android.app.action.ACTION_PASSWORD_EXPIRING"
 
     move-object/from16 v0, p2
@@ -34251,7 +30663,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1705
     const-string v2, "expiration"
 
     move-object/from16 v0, p1
@@ -34260,20 +30671,16 @@
 
     invoke-virtual {v3, v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 1707
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 1708
     move-object/from16 v0, p3
 
     invoke-virtual {v3, v0}, Landroid/content/Intent;->putExtras(Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 1710
     :cond_1
     if-eqz p4, :cond_4
 
-    .line 1712
     invoke-virtual/range {p1 .. p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->getUserHandle()Landroid/os/UserHandle;
 
     move-result-object v2
@@ -34282,7 +30689,6 @@
 
     move-result v12
 
-    .line 1713
     .local v12, "identifier":I
     const/16 v2, 0x64
 
@@ -34292,12 +30698,10 @@
 
     if-gt v12, v2, :cond_3
 
-    .line 1714
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 1716
     .local v16, "token":J
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
@@ -34318,7 +30722,6 @@
 
     move-result v13
 
-    .line 1717
     .local v13, "isUserRunning":Z
     const-string v2, "DevicePolicyManagerService"
 
@@ -34342,17 +30745,14 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1718
     if-nez v13, :cond_2
 
-    .line 1719
     const-string v2, "DevicePolicyManagerService"
 
     const-string/jumbo v4, "result.onReceive called"
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1720
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -34364,24 +30764,20 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1726
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1753
     .end local v12    # "identifier":I
     .end local v13    # "isUserRunning":Z
     .end local v16    # "token":J
     :goto_0
     return-void
 
-    .line 1726
     .restart local v12    # "identifier":I
     .restart local v13    # "isUserRunning":Z
     .restart local v16    # "token":J
     :cond_2
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1730
     .end local v13    # "isUserRunning":Z
     .end local v16    # "token":J
     :cond_3
@@ -34412,12 +30808,10 @@
 
     goto :goto_0
 
-    .line 1723
     .restart local v16    # "token":J
     :catch_0
     move-exception v11
 
-    .line 1724
     .local v11, "e":Landroid/os/RemoteException;
     :try_start_1
     const-string v2, "DevicePolicyManagerService"
@@ -34448,7 +30842,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1726
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_1
@@ -34461,7 +30854,6 @@
 
     throw v2
 
-    .line 1735
     .end local v12    # "identifier":I
     .end local v16    # "token":J
     :cond_4
@@ -34469,7 +30861,6 @@
 
     move-result-object v15
 
-    .line 1737
     .local v15, "userHandle":Landroid/os/UserHandle;
     move-object/from16 v0, p0
 
@@ -34483,7 +30874,6 @@
 
     check-cast v14, Landroid/os/PersonaManager;
 
-    .line 1738
     .local v14, "persona":Landroid/os/PersonaManager;
     invoke-virtual {v15}, Landroid/os/UserHandle;->getIdentifier()I
 
@@ -34495,7 +30885,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 1740
     :try_start_2
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -34511,7 +30900,6 @@
 
     move-result v13
 
-    .line 1741
     .restart local v13    # "isUserRunning":Z
     const-string v2, "DevicePolicyManagerService"
 
@@ -34535,15 +30923,12 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1742
     if-nez v13, :cond_5
 
-    .line 1743
     sget-object v15, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
     :try_end_2
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1750
     .end local v13    # "isUserRunning":Z
     :cond_5
     :goto_2
@@ -34573,7 +30958,6 @@
 
     invoke-static {v2, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1751
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -34586,11 +30970,9 @@
 
     goto/16 :goto_0
 
-    .line 1745
     :catch_1
     move-exception v11
 
-    .line 1746
     .restart local v11    # "e":Landroid/os/RemoteException;
     const-string v2, "DevicePolicyManagerService"
 
@@ -34628,12 +31010,10 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 1759
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 1760
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-object v4, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -34641,18 +31021,15 @@
 
     move-result v1
 
-    .line 1761
     .local v1, "count":I
     if-lez v1, :cond_1
 
-    .line 1762
     const/4 v2, 0x0
 
     .local v2, "i":I
     :goto_0
     if-ge v2, v1, :cond_1
 
-    .line 1763
     iget-object v4, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -34661,7 +31038,6 @@
 
     check-cast v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 1764
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -34671,16 +31047,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 1765
     invoke-virtual {p0, v0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendAdminCommandLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;Ljava/lang/String;)V
 
-    .line 1762
     :cond_0
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 1769
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "i":I
     :cond_1
@@ -34694,25 +31067,20 @@
     .param p3, "disabled"    # Z
 
     .prologue
-    .line 9781
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 9795
     :goto_0
     return-void
 
-    .line 9784
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9785
     monitor-enter p0
 
-    .line 9786
     const/4 v1, -0x1
 
     :try_start_0
@@ -34720,16 +31088,13 @@
 
     move-result-object v0
 
-    .line 9788
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-eqz p3, :cond_1
 
-    .line 9789
     iget-object v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->accountTypesWithManagementDisabled:Ljava/util/Set;
 
     invoke-interface {v1, p2}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 9793
     :goto_1
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
@@ -34741,7 +31106,6 @@
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 9794
     monitor-exit p0
 
     goto :goto_0
@@ -34756,7 +31120,6 @@
 
     throw v1
 
-    .line 9791
     .restart local v0    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_1
     :try_start_1
@@ -34776,16 +31139,13 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 2652
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 2656
     :goto_0
     return-void
 
-    .line 2655
     :cond_0
     const/4 v0, 0x0
 
@@ -34807,22 +31167,18 @@
     .param p9, "userHandle"    # I
 
     .prologue
-    .line 5543
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 5604
     :goto_0
     return-void
 
-    .line 5546
     :cond_0
     move/from16 v0, p9
 
     invoke-direct {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5548
     move/from16 v0, p9
 
     invoke-direct {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isKnoxWorkspace(I)Z
@@ -34831,14 +31187,12 @@
 
     if-eqz v2, :cond_5
 
-    .line 5549
     const-string v2, "DevicePolicyManagerService"
 
     const-string v3, "It is KnoxWorkspace skip enforceNotManagedProfile: setActivePasswordState"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5554
     :goto_1
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -34848,21 +31202,17 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5556
     move/from16 v0, p9
 
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v9
 
-    .line 5557
     .local v9, "p":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->validateQualityConstant(I)V
 
-    .line 5559
     monitor-enter p0
 
-    .line 5560
     :try_start_0
     iget v2, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
 
@@ -34910,7 +31260,6 @@
 
     if-eq v2, v0, :cond_4
 
-    .line 5567
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -34918,7 +31267,6 @@
 
     move-result-wide v10
 
-    .line 5570
     .local v10, "ident":J
     const v2, 0x61000
 
@@ -34933,25 +31281,18 @@
 
     if-nez v2, :cond_2
 
-    .line 5571
     const/4 p2, 0x0
 
-    .line 5572
     const/4 p3, 0x0
 
-    .line 5573
     const/16 p5, 0x0
 
-    .line 5574
     const/16 p4, 0x0
 
-    .line 5575
     const/16 p6, 0x0
 
-    .line 5576
     const/16 p8, 0x0
 
-    .line 5579
     :cond_2
     const/16 v2, 0x64
 
@@ -34959,7 +31300,6 @@
 
     if-lt v0, v2, :cond_3
 
-    .line 5580
     const/4 v2, 0x5
 
     const/4 v3, 0x1
@@ -34998,47 +31338,37 @@
 
     invoke-static/range {v2 .. v8}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 5584
     :cond_3
     iput p1, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
 
-    .line 5585
     iput p2, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLength:I
 
-    .line 5586
     iput p3, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLetters:I
 
-    .line 5587
     move/from16 v0, p5
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLowerCase:I
 
-    .line 5588
     move/from16 v0, p4
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordUpperCase:I
 
-    .line 5589
     move/from16 v0, p6
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNumeric:I
 
-    .line 5590
     move/from16 v0, p7
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordSymbols:I
 
-    .line 5591
     move/from16 v0, p8
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNonLetter:I
 
-    .line 5592
     const/4 v2, 0x0
 
     iput v2, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mFailedPasswordAttempts:I
 
-    .line 5593
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -35047,17 +31377,14 @@
 
     invoke-direct {p0, v0, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 5594
     move/from16 v0, p9
 
     invoke-direct {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updatePasswordExpirationsLocked(I)V
 
-    .line 5595
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v2, v9}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setExpirationAlarmCheckLocked(Landroid/content/Context;Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 5596
     const-string v2, "android.app.action.ACTION_PASSWORD_CHANGED"
 
     const/4 v3, 0x0
@@ -35068,11 +31395,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 5600
     :try_start_2
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5603
     .end local v10    # "ident":J
     :cond_4
     monitor-exit p0
@@ -35088,7 +31413,6 @@
 
     throw v2
 
-    .line 5551
     .end local v9    # "p":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :cond_5
     const-string/jumbo v2, "set the active password"
@@ -35099,7 +31423,6 @@
 
     goto/16 :goto_1
 
-    .line 5600
     .restart local v9    # "p":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     .restart local v10    # "ident":J
     :catchall_1
@@ -35126,22 +31449,18 @@
     .param p9, "userHandle"    # I
 
     .prologue
-    .line 5610
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 5672
     :goto_0
     return-void
 
-    .line 5613
     :cond_0
     move/from16 v0, p9
 
     invoke-direct {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5615
     move/from16 v0, p9
 
     invoke-direct {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isKnoxWorkspace(I)Z
@@ -35150,14 +31469,12 @@
 
     if-eqz v2, :cond_3
 
-    .line 5616
     const-string v2, "DevicePolicyManagerService"
 
     const-string v3, "It is KnoxWorkspace skip enforceNotManagedProfile: setActivePasswordState"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5621
     :goto_1
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -35167,21 +31484,17 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5623
     move/from16 v0, p9
 
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v9
 
-    .line 5625
     .local v9, "p":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     invoke-static {p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->validateQualityConstant(I)V
 
-    .line 5627
     monitor-enter p0
 
-    .line 5629
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -35189,7 +31502,6 @@
 
     move-result-wide v10
 
-    .line 5632
     .local v10, "ident":J
     const v2, 0x61000
 
@@ -35204,25 +31516,18 @@
 
     if-nez v2, :cond_1
 
-    .line 5634
     const/4 p2, 0x0
 
-    .line 5635
     const/4 p3, 0x0
 
-    .line 5636
     const/16 p5, 0x0
 
-    .line 5637
     const/16 p4, 0x0
 
-    .line 5638
     const/16 p6, 0x0
 
-    .line 5639
     const/16 p8, 0x0
 
-    .line 5642
     :cond_1
     const/16 v2, 0x64
 
@@ -35230,7 +31535,6 @@
 
     if-lt v0, v2, :cond_2
 
-    .line 5644
     const/4 v2, 0x5
 
     const/4 v3, 0x1
@@ -35269,47 +31573,37 @@
 
     invoke-static/range {v2 .. v8}, Landroid/sec/enterprise/auditlog/AuditLog;->logAsUser(IIZILjava/lang/String;Ljava/lang/String;I)V
 
-    .line 5653
     :cond_2
     iput p1, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordQuality:I
 
-    .line 5654
     iput p2, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLength:I
 
-    .line 5655
     iput p3, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLetters:I
 
-    .line 5656
     move/from16 v0, p5
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordLowerCase:I
 
-    .line 5657
     move/from16 v0, p4
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordUpperCase:I
 
-    .line 5658
     move/from16 v0, p6
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNumeric:I
 
-    .line 5659
     move/from16 v0, p7
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordSymbols:I
 
-    .line 5660
     move/from16 v0, p8
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mActivePasswordNonLetter:I
 
-    .line 5661
     const/4 v2, 0x0
 
     iput v2, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mFailedPasswordAttempts:I
 
-    .line 5662
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -35318,17 +31612,14 @@
 
     invoke-direct {p0, v0, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 5663
     move/from16 v0, p9
 
     invoke-direct {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updatePasswordExpirationsLocked(I)V
 
-    .line 5664
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v2, v9}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setExpirationAlarmCheckLocked(Landroid/content/Context;Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 5665
     const-string v2, "android.app.action.ACTION_PASSWORD_CHANGED"
 
     const/4 v3, 0x0
@@ -35339,11 +31630,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 5669
     :try_start_2
     invoke-static {v10, v11}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5671
     monitor-exit p0
 
     goto/16 :goto_0
@@ -35358,7 +31647,6 @@
 
     throw v2
 
-    .line 5618
     .end local v9    # "p":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :cond_3
     const-string/jumbo v2, "set the active password"
@@ -35369,7 +31657,6 @@
 
     goto/16 :goto_1
 
-    .line 5669
     .restart local v9    # "p":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     .restart local v10    # "ident":J
     :catchall_1
@@ -35389,30 +31676,24 @@
     .param p2, "userHandle"    # I
 
     .prologue
-    .line 7356
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminUncheckedLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v0
 
-    .line 7357
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     if-nez v0, :cond_0
 
-    .line 7376
     :goto_0
     return-void
 
-    .line 7362
     :cond_0
     invoke-virtual {p0, p1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->findAdmin(Landroid/content/ComponentName;I)Landroid/app/admin/DeviceAdminInfo;
 
     move-result-object v1
 
-    .line 7363
     .local v1, "info":Landroid/app/admin/DeviceAdminInfo;
     if-nez v1, :cond_1
 
-    .line 7364
     new-instance v4, Ljava/lang/IllegalArgumentException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -35437,11 +31718,9 @@
 
     throw v4
 
-    .line 7367
     :cond_1
     monitor-enter p0
 
-    .line 7368
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -35449,7 +31728,6 @@
 
     move-result-wide v2
 
-    .line 7370
     .local v2, "ident":J
     :try_start_1
     iget-object v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
@@ -35460,7 +31738,6 @@
 
     invoke-virtual {v4, v6, v7}, Landroid/app/admin/DeviceAdminInfo;->setPermissions(J)V
 
-    .line 7371
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -35469,11 +31746,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 7373
     :try_start_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7375
     monitor-exit p0
 
     goto :goto_0
@@ -35488,7 +31763,6 @@
 
     throw v4
 
-    .line 7373
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v4
@@ -35508,19 +31782,15 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 8197
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v1
 
-    .line 8199
     .local v1, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     monitor-enter p0
 
-    .line 8201
     if-nez p1, :cond_0
 
-    .line 8202
     :try_start_0
     new-instance v4, Ljava/lang/NullPointerException;
 
@@ -35530,7 +31800,6 @@
 
     throw v4
 
-    .line 8225
     :catchall_0
     move-exception v4
 
@@ -35540,7 +31809,6 @@
 
     throw v4
 
-    .line 8206
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
@@ -35553,21 +31821,17 @@
 
     if-nez v4, :cond_1
 
-    .line 8207
     const-string v4, "DevicePolicyManagerService"
 
     const-string v5, "Not Email Admin not proceeding."
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8208
     monitor-exit p0
 
-    .line 8226
     :goto_0
     return-void
 
-    .line 8211
     :cond_1
     const/16 v4, 0x16
 
@@ -35575,7 +31839,6 @@
 
     move-result-object v0
 
-    .line 8214
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowThirdPartyList:Ljava/lang/String;
 
@@ -35585,21 +31848,18 @@
 
     if-nez v4, :cond_2
 
-    .line 8215
     invoke-virtual {p2}, Ljava/lang/String;->intern()Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowThirdPartyList:Ljava/lang/String;
 
-    .line 8216
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 8219
     .local v2, "ident":J
     const/4 v4, 0x0
 
@@ -35608,23 +31868,19 @@
     :try_start_2
     invoke-direct {p0, p3, v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 8220
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->manageAllowThirdPartyApps(I)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 8222
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8225
     .end local v2    # "ident":J
     :cond_2
     monitor-exit p0
 
     goto :goto_0
 
-    .line 8222
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v4
@@ -35643,16 +31899,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7773
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7774
     monitor-enter p0
 
-    .line 7775
     if-nez p1, :cond_0
 
-    .line 7776
     :try_start_0
     new-instance v4, Ljava/lang/NullPointerException;
 
@@ -35662,7 +31914,6 @@
 
     throw v4
 
-    .line 7793
     :catchall_0
     move-exception v4
 
@@ -35672,7 +31923,6 @@
 
     throw v4
 
-    .line 7778
     :cond_0
     const/16 v4, 0x11
 
@@ -35681,30 +31931,24 @@
 
     move-result-object v0
 
-    .line 7780
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v1, 0x0
 
-    .line 7781
     .local v1, "isBTchanged":Z
     iget v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowBluetoothMode:I
 
     if-eq v4, p2, :cond_1
 
-    .line 7782
     iput p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowBluetoothMode:I
 
-    .line 7783
     const/4 v1, 0x1
 
-    .line 7785
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7787
     .local v2, "ident":J
     const/4 v4, 0x0
 
@@ -35713,11 +31957,9 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7789
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7792
     .end local v2    # "ident":J
     :cond_1
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -35726,13 +31968,10 @@
 
     invoke-virtual {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 7793
     monitor-exit p0
 
-    .line 7794
     return-void
 
-    .line 7789
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v4
@@ -35751,16 +31990,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7676
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7677
     monitor-enter p0
 
-    .line 7678
     if-nez p1, :cond_0
 
-    .line 7679
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -35770,7 +32005,6 @@
 
     throw v1
 
-    .line 7693
     :catchall_0
     move-exception v1
 
@@ -35780,7 +32014,6 @@
 
     throw v1
 
-    .line 7681
     :cond_0
     const/16 v1, 0xf
 
@@ -35789,23 +32022,19 @@
 
     move-result-object v0
 
-    .line 7683
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowBrowser:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 7684
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowBrowser:Z
 
-    .line 7686
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7688
     .local v2, "ident":J
     const/4 v1, 0x0
 
@@ -35816,19 +32045,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7690
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7693
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7694
     return-void
 
-    .line 7690
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -35847,7 +32072,6 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7526
     if-nez p2, :cond_0
 
     const/4 v0, 0x1
@@ -35855,10 +32079,8 @@
     :goto_0
     invoke-virtual {p0, p1, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setCameraDisabled(Landroid/content/ComponentName;Z)V
 
-    .line 7527
     return-void
 
-    .line 7526
     :cond_0
     const/4 v0, 0x0
 
@@ -35872,16 +32094,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7834
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7835
     monitor-enter p0
 
-    .line 7836
     if-nez p1, :cond_0
 
-    .line 7837
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -35891,7 +32109,6 @@
 
     throw v1
 
-    .line 7851
     :catchall_0
     move-exception v1
 
@@ -35901,7 +32118,6 @@
 
     throw v1
 
-    .line 7839
     :cond_0
     const/16 v1, 0x12
 
@@ -35910,23 +32126,19 @@
 
     move-result-object v0
 
-    .line 7841
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowDesktopSync:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 7842
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowDesktopSync:Z
 
-    .line 7844
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7846
     .local v2, "ident":J
     const/4 v1, 0x0
 
@@ -35937,19 +32149,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7848
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7851
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7852
     return-void
 
-    .line 7848
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -35968,16 +32176,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7718
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7719
     monitor-enter p0
 
-    .line 7720
     if-nez p1, :cond_0
 
-    .line 7721
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -35987,7 +32191,6 @@
 
     throw v1
 
-    .line 7735
     :catchall_0
     move-exception v1
 
@@ -35997,7 +32200,6 @@
 
     throw v1
 
-    .line 7723
     :cond_0
     const/16 v1, 0x10
 
@@ -36006,23 +32208,19 @@
 
     move-result-object v0
 
-    .line 7725
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowInternetSharing:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 7726
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowInternetSharing:Z
 
-    .line 7728
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7730
     .local v2, "ident":J
     const/4 v1, 0x0
 
@@ -36033,19 +32231,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7732
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7735
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7736
     return-void
 
-    .line 7732
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -36064,16 +32258,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7889
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7890
     monitor-enter p0
 
-    .line 7891
     if-nez p1, :cond_0
 
-    .line 7892
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -36083,7 +32273,6 @@
 
     throw v1
 
-    .line 7906
     :catchall_0
     move-exception v1
 
@@ -36093,7 +32282,6 @@
 
     throw v1
 
-    .line 7894
     :cond_0
     const/16 v1, 0x13
 
@@ -36102,23 +32290,19 @@
 
     move-result-object v0
 
-    .line 7896
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowIrDA:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 7897
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowIrDA:Z
 
-    .line 7899
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7901
     .local v2, "ident":J
     const/4 v1, 0x0
 
@@ -36129,19 +32313,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7903
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7906
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7907
     return-void
 
-    .line 7903
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -36160,16 +32340,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7634
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7635
     monitor-enter p0
 
-    .line 7636
     if-nez p1, :cond_0
 
-    .line 7637
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -36179,7 +32355,6 @@
 
     throw v1
 
-    .line 7651
     :catchall_0
     move-exception v1
 
@@ -36189,7 +32364,6 @@
 
     throw v1
 
-    .line 7639
     :cond_0
     const/16 v1, 0xe
 
@@ -36198,23 +32372,19 @@
 
     move-result-object v0
 
-    .line 7641
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowPOPIMAPEmail:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 7642
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowPOPIMAPEmail:Z
 
-    .line 7644
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7646
     .local v2, "ident":J
     const/4 v1, 0x0
 
@@ -36225,19 +32395,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7648
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7651
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7652
     return-void
 
-    .line 7648
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -36256,16 +32422,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7420
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7421
     monitor-enter p0
 
-    .line 7422
     if-nez p1, :cond_0
 
-    .line 7423
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -36275,7 +32437,6 @@
 
     throw v1
 
-    .line 7437
     :catchall_0
     move-exception v1
 
@@ -36285,7 +32446,6 @@
 
     throw v1
 
-    .line 7425
     :cond_0
     const/16 v1, 0xb
 
@@ -36294,23 +32454,19 @@
 
     move-result-object v0
 
-    .line 7427
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowStorageCard:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 7428
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowStorageCard:Z
 
-    .line 7430
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7432
     .local v2, "ident":J
     const/4 v1, 0x0
 
@@ -36321,19 +32477,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7434
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7437
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7438
     return-void
 
-    .line 7434
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -36352,16 +32504,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7592
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7593
     monitor-enter p0
 
-    .line 7594
     if-nez p1, :cond_0
 
-    .line 7595
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -36371,7 +32519,6 @@
 
     throw v1
 
-    .line 7609
     :catchall_0
     move-exception v1
 
@@ -36381,7 +32528,6 @@
 
     throw v1
 
-    .line 7597
     :cond_0
     const/16 v1, 0xd
 
@@ -36390,23 +32536,19 @@
 
     move-result-object v0
 
-    .line 7599
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowTextMessaging:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 7600
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowTextMessaging:Z
 
-    .line 7602
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7604
     .local v2, "ident":J
     const/4 v1, 0x0
 
@@ -36417,19 +32559,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7606
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7609
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7610
     return-void
 
-    .line 7606
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -36448,13 +32586,10 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 8504
     monitor-enter p0
 
-    .line 8505
     if-nez p1, :cond_0
 
-    .line 8506
     :try_start_0
     new-instance v4, Ljava/lang/NullPointerException;
 
@@ -36464,7 +32599,6 @@
 
     throw v4
 
-    .line 8534
     :catchall_0
     move-exception v4
 
@@ -36474,7 +32608,6 @@
 
     throw v4
 
-    .line 8509
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
@@ -36487,25 +32620,20 @@
 
     if-nez v4, :cond_1
 
-    .line 8510
     const-string v4, "DevicePolicyManagerService"
 
     const-string v5, "Not Email Admin not proceeding."
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8511
     monitor-exit p0
 
-    .line 8535
     :goto_0
     return-void
 
-    .line 8513
     :cond_1
     const/4 v1, 0x0
 
-    .line 8514
     .local v1, "handle":Z
     const/16 v4, 0x19
 
@@ -36513,27 +32641,22 @@
 
     move-result-object v0
 
-    .line 8516
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowUnsginedApp:Z
 
     if-eq v4, p2, :cond_3
 
-    .line 8517
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowUnsginedApp:Z
 
-    .line 8518
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 8520
     .local v2, "ident":J
     if-nez p2, :cond_2
 
-    .line 8522
     :try_start_2
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -36547,14 +32670,11 @@
 
     invoke-static {v4, v5, v6}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 8525
     const/4 v1, 0x1
 
-    .line 8527
     :cond_2
     invoke-virtual {p0, v1, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->handleAllowUnsignedApp(ZI)V
 
-    .line 8529
     const/4 v4, 0x0
 
     const/4 v5, 0x0
@@ -36563,18 +32683,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 8531
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8534
     .end local v2    # "ident":J
     :cond_3
     monitor-exit p0
 
     goto :goto_0
 
-    .line 8531
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v4
@@ -36593,13 +32710,10 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 8616
     monitor-enter p0
 
-    .line 8617
     if-nez p1, :cond_0
 
-    .line 8618
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -36609,7 +32723,6 @@
 
     throw v1
 
-    .line 8641
     :catchall_0
     move-exception v1
 
@@ -36619,7 +32732,6 @@
 
     throw v1
 
-    .line 8621
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
@@ -36632,21 +32744,17 @@
 
     if-nez v1, :cond_1
 
-    .line 8622
     const-string v1, "DevicePolicyManagerService"
 
     const-string v4, "Not Email Admin not proceeding."
 
     invoke-static {v1, v4}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8623
     monitor-exit p0
 
-    .line 8642
     :goto_0
     return-void
 
-    .line 8625
     :cond_1
     const/16 v1, 0x1a
 
@@ -36654,25 +32762,20 @@
 
     move-result-object v0
 
-    .line 8628
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowUnsignedInstallationPkg:Z
 
     if-eq v1, p2, :cond_3
 
-    .line 8629
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowUnsignedInstallationPkg:Z
 
-    .line 8630
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 8632
     .local v2, "ident":J
     if-nez p2, :cond_2
 
-    .line 8633
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -36687,7 +32790,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8636
     :cond_2
     const/4 v1, 0x0
 
@@ -36698,18 +32800,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 8638
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8641
     .end local v2    # "ident":J
     :cond_3
     monitor-exit p0
 
     goto :goto_0
 
-    .line 8638
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -36728,16 +32827,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7534
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7535
     monitor-enter p0
 
-    .line 7536
     if-nez p1, :cond_0
 
-    .line 7537
     :try_start_0
     new-instance v4, Ljava/lang/NullPointerException;
 
@@ -36747,7 +32842,6 @@
 
     throw v4
 
-    .line 7553
     :catchall_0
     move-exception v4
 
@@ -36757,7 +32851,6 @@
 
     throw v4
 
-    .line 7539
     :cond_0
     const/16 v4, 0xc
 
@@ -36766,30 +32859,24 @@
 
     move-result-object v0
 
-    .line 7541
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v1, 0x0
 
-    .line 7542
     .local v1, "isWifichanged":Z
     iget-boolean v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowWifi:Z
 
     if-eq v4, p2, :cond_1
 
-    .line 7543
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->allowWifi:Z
 
-    .line 7544
     const/4 v1, 0x1
 
-    .line 7546
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7548
     .local v2, "ident":J
     const/4 v4, 0x0
 
@@ -36798,19 +32885,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7550
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7553
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7554
     return-void
 
-    .line 7550
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v4
@@ -36834,22 +32917,18 @@
     .param p8, "userHandle"    # I
 
     .prologue
-    .line 5477
     invoke-direct {p0, p8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isSupportFP(I)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 5507
     :goto_0
     return-void
 
-    .line 5478
     :cond_0
     invoke-direct {p0, p8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5479
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.BIND_DEVICE_ADMIN"
@@ -36858,16 +32937,13 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5481
     invoke-virtual {p0, p8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 5482
     .local v2, "p":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     monitor-enter p0
 
-    .line 5483
     :try_start_0
     iget v3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLength:I
 
@@ -36897,7 +32973,6 @@
 
     if-eq v3, p7, :cond_2
 
-    .line 5487
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -36905,45 +32980,34 @@
 
     move-result-wide v0
 
-    .line 5489
     .local v0, "ident":J
     :try_start_1
     iput p1, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLength:I
 
-    .line 5490
     iput p2, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLetters:I
 
-    .line 5491
     iput p4, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLowerCase:I
 
-    .line 5492
     iput p3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordUpperCase:I
 
-    .line 5493
     iput p5, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordNumeric:I
 
-    .line 5494
     iput p6, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordSymbols:I
 
-    .line 5495
     iput p7, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordNonLetter:I
 
-    .line 5496
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
     invoke-direct {p0, p8, v3, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 5497
     invoke-direct {p0, p8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updatePasswordExpirationsLocked(I)V
 
-    .line 5498
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v3, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setExpirationAlarmCheckLocked(Landroid/content/Context;Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 5499
     const-string v3, "android.app.action.ACTION_PASSWORD_CHANGED"
 
     const/4 v4, 0x0
@@ -36952,11 +33016,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 5503
     :try_start_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5506
     .end local v0    # "ident":J
     :cond_2
     monitor-exit p0
@@ -36972,7 +33034,6 @@
 
     throw v3
 
-    .line 5503
     .restart local v0    # "ident":J
     :catchall_1
     move-exception v3
@@ -36997,22 +33058,18 @@
     .param p8, "userHandle"    # I
 
     .prologue
-    .line 5512
     invoke-direct {p0, p8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isSupportFP(I)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 5537
     :goto_0
     return-void
 
-    .line 5513
     :cond_0
     invoke-direct {p0, p8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5514
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string v4, "android.permission.BIND_DEVICE_ADMIN"
@@ -37021,16 +33078,13 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5516
     invoke-virtual {p0, p8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
-    .line 5517
     .local v2, "p":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     monitor-enter p0
 
-    .line 5518
     :try_start_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -37038,45 +33092,34 @@
 
     move-result-wide v0
 
-    .line 5520
     .local v0, "ident":J
     :try_start_1
     iput p1, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLength:I
 
-    .line 5521
     iput p2, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLetters:I
 
-    .line 5522
     iput p4, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordLowerCase:I
 
-    .line 5523
     iput p3, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordUpperCase:I
 
-    .line 5524
     iput p5, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordNumeric:I
 
-    .line 5525
     iput p6, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordSymbols:I
 
-    .line 5526
     iput p7, v2, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAlternativePasswordNonLetter:I
 
-    .line 5527
     const/4 v3, 0x0
 
     const/4 v4, 0x0
 
     invoke-direct {p0, p8, v3, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 5528
     invoke-direct {p0, p8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updatePasswordExpirationsLocked(I)V
 
-    .line 5529
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {p0, v3, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setExpirationAlarmCheckLocked(Landroid/content/Context;Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 5530
     const-string v3, "android.app.action.ACTION_PASSWORD_CHANGED"
 
     const/4 v4, 0x0
@@ -37085,11 +33128,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 5534
     :try_start_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5536
     monitor-exit p0
 
     goto :goto_0
@@ -37104,7 +33145,6 @@
 
     throw v3
 
-    .line 5534
     .restart local v0    # "ident":J
     :catchall_1
     move-exception v3
@@ -37124,41 +33164,34 @@
     .param p3, "hidden"    # Z
 
     .prologue
-    .line 9632
     const-string v5, "ComponentName is null"
 
     invoke-static {p1, v5}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9633
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 9634
     .local v0, "callingUserId":I
     monitor-enter p0
 
-    .line 9635
     const/4 v5, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9637
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 9639
     .local v2, "id":J
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v1
 
-    .line 9640
     .local v1, "pm":Landroid/content/pm/IPackageManager;
     invoke-interface {v1, p2, p3, v0}, Landroid/content/pm/IPackageManager;->setApplicationHiddenSettingAsUser(Ljava/lang/String;ZI)Z
     :try_end_1
@@ -37167,7 +33200,6 @@
 
     move-result v5
 
-    .line 9645
     :try_start_2
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -37175,16 +33207,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 9647
     .end local v1    # "pm":Landroid/content/pm/IPackageManager;
     :goto_0
     return v5
 
-    .line 9641
     :catch_0
     move-exception v4
 
-    .line 9643
     .local v4, "re":Landroid/os/RemoteException;
     :try_start_3
     const-string v5, "DevicePolicyManagerService"
@@ -37195,18 +33224,15 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 9645
     :try_start_4
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9647
     const/4 v5, 0x0
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 9648
     .end local v2    # "id":J
     .end local v4    # "re":Landroid/os/RemoteException;
     :catchall_0
@@ -37218,7 +33244,6 @@
 
     throw v5
 
-    .line 9645
     .restart local v2    # "id":J
     :catchall_1
     move-exception v5
@@ -37238,12 +33263,10 @@
     .param p3, "settings"    # Landroid/os/Bundle;
 
     .prologue
-    .line 8861
     const-string v3, "ComponentName is null"
 
     invoke-static {p1, v3}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8862
     new-instance v2, Landroid/os/UserHandle;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -37252,24 +33275,20 @@
 
     invoke-direct {v2, v3}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 8863
     .local v2, "userHandle":Landroid/os/UserHandle;
     monitor-enter p0
 
-    .line 8864
     const/4 v3, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8866
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v0
 
-    .line 8868
     .local v0, "id":J
     :try_start_1
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -37278,17 +33297,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 8870
     :try_start_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 8872
     monitor-exit p0
 
-    .line 8873
     return-void
 
-    .line 8870
     :catchall_0
     move-exception v3
 
@@ -37296,7 +33311,6 @@
 
     throw v3
 
-    .line 8872
     .end local v0    # "id":J
     :catchall_1
     move-exception v3
@@ -37316,12 +33330,10 @@
     .param p4, "userHandle"    # I
 
     .prologue
-    .line 8877
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8878
     new-instance v0, Landroid/app/enterprise/ContextInfo;
 
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
@@ -37330,7 +33342,6 @@
 
     invoke-direct {v0, v1, p4}, Landroid/app/enterprise/ContextInfo;-><init>(II)V
 
-    .line 8879
     .local v0, "cxtInfo":Landroid/app/enterprise/ContextInfo;
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -37338,7 +33349,6 @@
 
     invoke-virtual {v1, v0, p1}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceComponentCheck(Landroid/app/enterprise/ContextInfo;Landroid/content/ComponentName;)V
 
-    .line 8880
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v1
@@ -37347,12 +33357,10 @@
 
     invoke-virtual {v1, v0, v4}, Landroid/app/enterprise/EnterpriseDeviceManager;->enforceActiveAdminPermissionByContext(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 8881
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 8883
     .local v2, "id":J
     :try_start_0
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -37365,13 +33373,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 8885
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 8887
     return-void
 
-    .line 8885
     :catchall_0
     move-exception v1
 
@@ -37386,32 +33391,26 @@
     .param p2, "required"    # Z
 
     .prologue
-    .line 6143
     iget-boolean v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v4, :cond_1
 
-    .line 6167
     :cond_0
     :goto_0
     return-void
 
-    .line 6146
     :cond_1
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6147
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 6148
     .local v1, "userHandle":I
     monitor-enter p0
 
-    .line 6149
     const/4 v4, -0x2
 
     :try_start_0
@@ -37419,37 +33418,30 @@
 
     move-result-object v0
 
-    .line 6151
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->requireAutoTime:Z
 
     if-eq v4, p2, :cond_2
 
-    .line 6152
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->requireAutoTime:Z
 
-    .line 6153
     const/4 v4, 0x0
 
     const/4 v5, 0x0
 
     invoke-direct {p0, v1, v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 6155
     :cond_2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6158
     if-eqz p2, :cond_0
 
-    .line 6159
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 6161
     .local v2, "ident":J
     :try_start_1
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -37466,12 +33458,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 6164
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 6155
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "ident":J
     :catchall_0
@@ -37484,7 +33474,6 @@
 
     throw v4
 
-    .line 6164
     .restart local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v2    # "ident":J
     :catchall_1
@@ -37502,19 +33491,15 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 8402
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v1
 
-    .line 8404
     .local v1, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     monitor-enter p0
 
-    .line 8405
     if-nez p1, :cond_0
 
-    .line 8406
     :try_start_0
     new-instance v4, Ljava/lang/NullPointerException;
 
@@ -37524,7 +33509,6 @@
 
     throw v4
 
-    .line 8428
     :catchall_0
     move-exception v4
 
@@ -37534,7 +33518,6 @@
 
     throw v4
 
-    .line 8410
     :cond_0
     :try_start_1
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
@@ -37547,21 +33530,17 @@
 
     if-nez v4, :cond_1
 
-    .line 8411
     const-string v4, "DevicePolicyManagerService"
 
     const-string v5, "Not Email Admin not proceeding."
 
     invoke-static {v4, v5}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 8412
     monitor-exit p0
 
-    .line 8429
     :goto_0
     return-void
 
-    .line 8414
     :cond_1
     const/16 v4, 0x17
 
@@ -37569,7 +33548,6 @@
 
     move-result-object v0
 
-    .line 8416
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->blockInRomList:Ljava/lang/String;
 
@@ -37579,21 +33557,18 @@
 
     if-nez v4, :cond_2
 
-    .line 8418
     invoke-virtual {p2}, Ljava/lang/String;->intern()Ljava/lang/String;
 
     move-result-object v4
 
     iput-object v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->blockInRomList:Ljava/lang/String;
 
-    .line 8420
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 8422
     .local v2, "ident":J
     const/4 v4, 0x0
 
@@ -37602,23 +33577,19 @@
     :try_start_2
     invoke-direct {p0, p3, v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 8423
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->manageBlockedApplications(I)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 8425
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8428
     .end local v2    # "ident":J
     :cond_2
     monitor-exit p0
 
     goto :goto_0
 
-    .line 8425
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v4
@@ -37636,25 +33607,20 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 9961
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 9973
     :goto_0
     return-void
 
-    .line 9964
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9965
     monitor-enter p0
 
-    .line 9966
     const/4 v1, -0x1
 
     :try_start_0
@@ -37662,16 +33628,13 @@
 
     move-result-object v0
 
-    .line 9968
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableBluetoothContactSharing:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 9969
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableBluetoothContactSharing:Z
 
-    .line 9970
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
@@ -37682,7 +33645,6 @@
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 9972
     :cond_1
     monitor-exit p0
 
@@ -37705,31 +33667,25 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 6197
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 6211
     :goto_0
     return-void
 
-    .line 6200
     :cond_0
     const-string v2, "ComponentName is null"
 
     invoke-static {p1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6201
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 6202
     .local v1, "userHandle":I
     monitor-enter p0
 
-    .line 6203
     const/16 v2, 0x8
 
     :try_start_0
@@ -37737,23 +33693,19 @@
 
     move-result-object v0
 
-    .line 6205
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCamera:Z
 
     if-eq v2, p2, :cond_1
 
-    .line 6206
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCamera:Z
 
-    .line 6207
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 6209
     :cond_1
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
@@ -37761,7 +33713,6 @@
 
     invoke-virtual {p0, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 6210
     monitor-exit p0
 
     goto :goto_0
@@ -37788,44 +33739,35 @@
     .end annotation
 
     .prologue
-    .line 5103
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 5104
     .local v1, "userHandle":I
     monitor-enter p0
 
-    .line 5105
     const/4 v2, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 5106
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
-    .line 5107
     .local v0, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iput-object p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mDelegatedCertInstallerPackage:Ljava/lang/String;
 
-    .line 5108
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 5109
     monitor-exit p0
 
-    .line 5110
     return-void
 
-    .line 5109
     .end local v0    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v2
@@ -37843,25 +33785,20 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 9869
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 9881
     :goto_0
     return-void
 
-    .line 9872
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9873
     monitor-enter p0
 
-    .line 9874
     const/4 v1, -0x1
 
     :try_start_0
@@ -37869,16 +33806,13 @@
 
     move-result-object v0
 
-    .line 9876
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCallerId:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 9877
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableCallerId:Z
 
-    .line 9878
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
@@ -37889,7 +33823,6 @@
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 9880
     :cond_1
     monitor-exit p0
 
@@ -37914,16 +33847,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 6592
     iget-boolean v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v3, :cond_0
 
-    .line 6629
     :goto_0
     return v2
 
-    .line 6595
     :cond_0
     if-eqz p2, :cond_1
 
@@ -37943,7 +33873,6 @@
 
     if-nez v2, :cond_2
 
-    .line 6597
     :cond_1
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -37975,7 +33904,6 @@
 
     throw v2
 
-    .line 6602
     :cond_2
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -38001,12 +33929,10 @@
 
     move-result v1
 
-    .line 6608
     .local v1, "isInitializerSystemApp":Z
     :goto_1
     if-nez v1, :cond_3
 
-    .line 6609
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string v3, "Only system app can be set as device initializer."
@@ -38015,17 +33941,14 @@
 
     throw v2
 
-    .line 6604
     .end local v1    # "isInitializerSystemApp":Z
     :catch_0
     move-exception v0
 
-    .line 6605
     .local v0, "e":Ljava/lang/Exception;
     :goto_2
     const/4 v1, 0x0
 
-    .line 6606
     .restart local v1    # "isInitializerSystemApp":Z
     const-string v2, "DevicePolicyManagerService"
 
@@ -38035,16 +33958,13 @@
 
     goto :goto_1
 
-    .line 6611
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_3
     monitor-enter p0
 
-    .line 6612
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCanSetDeviceInitializer(Landroid/content/ComponentName;)V
 
-    .line 6614
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-eqz v2, :cond_4
@@ -38057,7 +33977,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 6615
     new-instance v2, Ljava/lang/IllegalStateException;
 
     const-string v3, "Trying to set device initializer but device initializer is already set."
@@ -38066,7 +33985,6 @@
 
     throw v2
 
-    .line 6630
     :catchall_0
     move-exception v2
 
@@ -38076,39 +33994,33 @@
 
     throw v2
 
-    .line 6619
     :cond_4
     :try_start_2
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-nez v2, :cond_5
 
-    .line 6621
     invoke-static {p2}, Lcom/android/server/devicepolicy/DeviceOwner;->createWithDeviceInitializer(Landroid/content/ComponentName;)Lcom/android/server/devicepolicy/DeviceOwner;
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
-    .line 6627
     :goto_3
     const/4 v2, 0x0
 
     invoke-direct {p0, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->addDeviceInitializerToLockTaskPackagesLocked(I)V
 
-    .line 6628
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v2}, Lcom/android/server/devicepolicy/DeviceOwner;->writeOwnerFile()V
 
-    .line 6629
     const/4 v2, 0x1
 
     monitor-exit p0
 
     goto/16 :goto_0
 
-    .line 6624
     :cond_5
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
@@ -38118,7 +34030,6 @@
 
     goto :goto_3
 
-    .line 6604
     .end local v1    # "isInitializerSystemApp":Z
     :catch_1
     move-exception v0
@@ -38134,16 +34045,13 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 6401
     iget-boolean v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v6, :cond_0
 
-    .line 6444
     :goto_0
     return v5
 
-    .line 6404
     :cond_0
     if-eqz p1, :cond_1
 
@@ -38159,7 +34067,6 @@
 
     if-nez v5, :cond_2
 
-    .line 6406
     :cond_1
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
@@ -38191,22 +34098,18 @@
 
     throw v5
 
-    .line 6409
     :cond_2
     monitor-enter p0
 
-    .line 6410
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCanSetDeviceOwner()V
 
-    .line 6413
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 6415
     .local v2, "ident":J
     :try_start_1
     const-string v5, "backup"
@@ -38219,7 +34122,6 @@
 
     move-result-object v1
 
-    .line 6417
     .local v1, "ibm":Landroid/app/backup/IBackupManager;
     const/4 v5, 0x0
 
@@ -38230,39 +34132,32 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 6421
     :try_start_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6424
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-nez v5, :cond_3
 
-    .line 6426
     invoke-static {p1, p2}, Lcom/android/server/devicepolicy/DeviceOwner;->createWithDeviceOwner(Ljava/lang/String;Ljava/lang/String;)Lcom/android/server/devicepolicy/DeviceOwner;
 
     move-result-object v5
 
     iput-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
-    .line 6431
     :goto_1
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v5}, Lcom/android/server/devicepolicy/DeviceOwner;->writeOwnerFile()V
 
-    .line 6432
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateDeviceOwnerLocked()V
 
-    .line 6433
     new-instance v4, Landroid/content/Intent;
 
     const-string v5, "android.app.action.DEVICE_OWNER_CHANGED"
 
     invoke-direct {v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 6435
     .local v4, "intent":Landroid/content/Intent;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_2
@@ -38270,7 +34165,6 @@
 
     move-result-wide v2
 
-    .line 6437
     :try_start_3
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -38280,25 +34174,21 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 6439
     :try_start_4
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6442
     const-string/jumbo v5, "security.knox_afw_mode"
 
     const-string/jumbo v6, "true"
 
     invoke-static {v5, v6}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6444
     const/4 v5, 0x1
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 6445
     .end local v1    # "ibm":Landroid/app/backup/IBackupManager;
     .end local v2    # "ident":J
     .end local v4    # "intent":Landroid/content/Intent;
@@ -38311,12 +34201,10 @@
 
     throw v5
 
-    .line 6418
     .restart local v2    # "ident":J
     :catch_0
     move-exception v0
 
-    .line 6419
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_5
     new-instance v5, Ljava/lang/IllegalStateException;
@@ -38329,7 +34217,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 6421
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_1
     move-exception v5
@@ -38339,7 +34226,6 @@
 
     throw v5
 
-    .line 6429
     .restart local v1    # "ibm":Landroid/app/backup/IBackupManager;
     :cond_3
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
@@ -38348,7 +34234,6 @@
 
     goto :goto_1
 
-    .line 6439
     .restart local v4    # "intent":Landroid/content/Intent;
     :catchall_2
     move-exception v5
@@ -38366,7 +34251,6 @@
     .param p2, "policy"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     .prologue
-    .line 1489
     const/16 v20, 0x0
 
     move-object/from16 v0, p2
@@ -38385,17 +34269,14 @@
 
     move-result-wide v12
 
-    .line 1490
     .local v12, "expiration":J
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v14
 
-    .line 1491
     .local v14, "now":J
     sub-long v16, v12, v14
 
-    .line 1493
     .local v16, "timeToExpire":J
     const-wide/16 v20, 0x0
 
@@ -38403,17 +34284,14 @@
 
     if-nez v20, :cond_1
 
-    .line 1495
     const-wide/16 v8, 0x0
 
-    .line 1509
     .local v8, "alarmTime":J
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v18
 
-    .line 1511
     .local v18, "token":J
     :try_start_0
     const-string v20, "alarm"
@@ -38428,7 +34306,6 @@
 
     check-cast v10, Landroid/app/AlarmManager;
 
-    .line 1512
     .local v10, "am":Landroid/app/AlarmManager;
     const/16 v20, 0x15c3
 
@@ -38464,18 +34341,15 @@
 
     move-result-object v11
 
-    .line 1516
     .local v11, "pi":Landroid/app/PendingIntent;
     invoke-virtual {v10, v11}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 1517
     const-wide/16 v20, 0x0
 
     cmp-long v20, v8, v20
 
     if-eqz v20, :cond_0
 
-    .line 1518
     const/16 v20, 0x1
 
     move/from16 v0, v20
@@ -38484,14 +34358,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1521
     :cond_0
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 1523
     return-void
 
-    .line 1496
     .end local v8    # "alarmTime":J
     .end local v10    # "am":Landroid/app/AlarmManager;
     .end local v11    # "pi":Landroid/app/PendingIntent;
@@ -38503,7 +34374,6 @@
 
     if-gtz v20, :cond_2
 
-    .line 1498
     const-wide/32 v20, 0x5265c00
 
     add-long v8, v14, v20
@@ -38511,14 +34381,12 @@
     .restart local v8    # "alarmTime":J
     goto :goto_0
 
-    .line 1502
     .end local v8    # "alarmTime":J
     :cond_2
     const-wide/32 v20, 0x5265c00
 
     rem-long v6, v16, v20
 
-    .line 1503
     .local v6, "alarmInterval":J
     const-wide/16 v20, 0x0
 
@@ -38526,17 +34394,14 @@
 
     if-nez v20, :cond_3
 
-    .line 1504
     const-wide/32 v6, 0x5265c00
 
-    .line 1506
     :cond_3
     add-long v8, v14, v6
 
     .restart local v8    # "alarmTime":J
     goto :goto_0
 
-    .line 1521
     .end local v6    # "alarmInterval":J
     .restart local v18    # "token":J
     :catchall_0
@@ -38556,35 +34421,29 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 5775
     iget-boolean v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v9, :cond_0
 
     move-object v3, v8
 
-    .line 5823
     :goto_0
     return-object v3
 
-    .line 5778
     :cond_0
     monitor-enter p0
 
-    .line 5779
     :try_start_0
     const-string v9, "ComponentName is null"
 
     invoke-static {p1, v9}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5782
     const/4 v9, 0x0
 
     invoke-virtual {p0, v9}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v5
 
-    .line 5783
     .local v5, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     const/4 v9, 0x5
 
@@ -38592,7 +34451,6 @@
 
     move-result-object v0
 
-    .line 5788
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v9, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminMap:Ljava/util/HashMap;
 
@@ -38600,7 +34458,6 @@
 
     move-result-object v2
 
-    .line 5789
     .local v2, "compSet":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -38620,7 +34477,6 @@
 
     check-cast v3, Landroid/content/ComponentName;
 
-    .line 5790
     .local v3, "component":Landroid/content/ComponentName;
     iget-object v9, v5, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminMap:Ljava/util/HashMap;
 
@@ -38630,7 +34486,6 @@
 
     check-cast v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 5791
     .local v1, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v9, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->specifiesGlobalProxy:Z
 
@@ -38642,12 +34497,10 @@
 
     if-nez v9, :cond_1
 
-    .line 5794
     monitor-exit p0
 
     goto :goto_0
 
-    .line 5824
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v1    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v2    # "compSet":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
@@ -38663,7 +34516,6 @@
 
     throw v8
 
-    .line 5799
     .restart local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v2    # "compSet":Ljava/util/Set;, "Ljava/util/Set<Landroid/content/ComponentName;>;"
     .restart local v4    # "i$":Ljava/util/Iterator;
@@ -38676,7 +34528,6 @@
 
     if-eqz v9, :cond_3
 
-    .line 5800
     const-string v9, "DevicePolicyManagerService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -38709,33 +34560,27 @@
 
     invoke-static {v9, v10}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5802
     monitor-exit p0
 
     move-object v3, v8
 
     goto :goto_0
 
-    .line 5804
     :cond_3
     if-nez p2, :cond_4
 
-    .line 5805
     const/4 v9, 0x0
 
     iput-boolean v9, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->specifiesGlobalProxy:Z
 
-    .line 5806
     const/4 v9, 0x0
 
     iput-object v9, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxySpec:Ljava/lang/String;
 
-    .line 5807
     const/4 v9, 0x0
 
     iput-object v9, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxyExclusionList:Ljava/lang/String;
 
-    .line 5817
     :goto_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -38743,40 +34588,33 @@
 
     move-result-wide v6
 
-    .line 5819
     .local v6, "origId":J
     :try_start_2
     invoke-direct {p0, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->resetGlobalProxyLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 5821
     :try_start_3
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5823
     monitor-exit p0
 
     move-object v3, v8
 
     goto :goto_0
 
-    .line 5810
     .end local v6    # "origId":J
     :cond_4
     const/4 v9, 0x1
 
     iput-boolean v9, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->specifiesGlobalProxy:Z
 
-    .line 5811
     iput-object p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxySpec:Ljava/lang/String;
 
-    .line 5812
     iput-object p3, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->globalProxyExclusionList:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 5821
     .restart local v6    # "origId":J
     :catchall_1
     move-exception v8
@@ -38795,29 +34633,24 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 10097
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 10098
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10100
     monitor-enter p0
 
-    .line 10101
     const/4 v1, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10105
     sget-object v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_DEPRECATED:Ljava/util/Set;
 
     invoke-interface {v1, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -38826,7 +34659,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 10106
     const-string v1, "DevicePolicyManagerService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -38849,14 +34681,11 @@
 
     invoke-static {v1, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10107
     monitor-exit p0
 
-    .line 10130
     :goto_0
     return-void
 
-    .line 10110
     :cond_0
     sget-object v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->GLOBAL_SETTINGS_WHITELIST:Ljava/util/Set;
 
@@ -38866,7 +34695,6 @@
 
     if-nez v1, :cond_1
 
-    .line 10111
     new-instance v1, Ljava/lang/SecurityException;
 
     const-string v6, "Permission denial: device owners cannot update %1$s"
@@ -38887,7 +34715,6 @@
 
     throw v1
 
-    .line 10129
     :catchall_0
     move-exception v1
 
@@ -38897,7 +34724,6 @@
 
     throw v1
 
-    .line 10115
     :cond_1
     :try_start_1
     const-string/jumbo v1, "stay_on_while_plugged_in"
@@ -38908,7 +34734,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 10117
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
@@ -38917,7 +34742,6 @@
 
     move-result-wide v4
 
-    .line 10118
     .local v4, "timeMs":J
     const-wide/16 v6, 0x0
 
@@ -38931,12 +34755,10 @@
 
     if-gez v1, :cond_2
 
-    .line 10119
     monitor-exit p0
 
     goto :goto_0
 
-    .line 10123
     .end local v4    # "timeMs":J
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
@@ -38945,23 +34767,19 @@
 
     move-result-wide v2
 
-    .line 10125
     .local v2, "id":J
     :try_start_2
     invoke-static {v0, p2, p3}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 10127
     :try_start_3
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 10129
     monitor-exit p0
 
     goto :goto_0
 
-    .line 10127
     :catchall_1
     move-exception v1
 
@@ -38978,31 +34796,25 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 10210
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10211
     monitor-enter p0
 
-    .line 10212
     const/4 v4, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10213
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10214
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v2
 
-    .line 10215
     .local v2, "userId":I
     new-instance v3, Lcom/android/internal/widget/LockPatternUtils;
 
@@ -39010,13 +34822,11 @@
 
     invoke-direct {v3, v4}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 10217
     .local v3, "utils":Lcom/android/internal/widget/LockPatternUtils;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 10220
     .local v0, "ident":J
     if-eqz p2, :cond_0
 
@@ -39029,17 +34839,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 10221
     const/4 v4, 0x0
 
-    .line 10225
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 10227
     :goto_0
     return v4
 
-    .line 10213
     .end local v0    # "ident":J
     .end local v2    # "userId":I
     .end local v3    # "utils":Lcom/android/internal/widget/LockPatternUtils;
@@ -39053,7 +34859,6 @@
 
     throw v4
 
-    .line 10223
     .restart local v0    # "ident":J
     .restart local v2    # "userId":I
     .restart local v3    # "utils":Lcom/android/internal/widget/LockPatternUtils;
@@ -39063,15 +34868,12 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 10225
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 10227
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 10225
     :catchall_1
     move-exception v4
 
@@ -39086,27 +34888,22 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 6296
     iget-boolean v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v4, :cond_0
 
-    .line 6328
     :goto_0
     return-void
 
-    .line 6299
     :cond_0
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6300
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 6302
     .local v1, "userHandle":I
     invoke-direct {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isKnoxWorkspace(I)Z
 
@@ -39114,14 +34911,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 6303
     if-eqz p2, :cond_1
 
     and-int/lit8 v4, p2, 0x10
 
     if-nez v4, :cond_1
 
-    .line 6305
     const-string v4, "DevicePolicyManagerService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -39146,23 +34941,19 @@
 
     goto :goto_0
 
-    .line 6308
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 6310
     .local v2, "ident":J
     :try_start_0
     invoke-direct {p0, p1, p2, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setKeyguardDisabledFeaturesInternal(Landroid/content/ComponentName;II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 6312
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6316
     .end local v2    # "ident":J
     :cond_2
     invoke-direct {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isManagedProfile(I)Z
@@ -39171,14 +34962,11 @@
 
     if-eqz v4, :cond_3
 
-    .line 6317
     and-int/lit8 p2, p2, 0x38
 
-    .line 6319
     :cond_3
     monitor-enter p0
 
-    .line 6320
     const/16 v4, 0x9
 
     :try_start_1
@@ -39186,23 +34974,19 @@
 
     move-result-object v0
 
-    .line 6322
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v4, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
     if-eq v4, p2, :cond_4
 
-    .line 6323
     iput p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
-    .line 6324
     const/4 v4, 0x0
 
     const/4 v5, 0x0
 
     invoke-direct {p0, v1, v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 6326
     :cond_4
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
@@ -39210,7 +34994,6 @@
 
     invoke-virtual {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 6327
     monitor-exit p0
 
     goto :goto_0
@@ -39225,7 +35008,6 @@
 
     throw v4
 
-    .line 6312
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v4
@@ -39242,36 +35024,30 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 6255
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 6287
     :goto_0
     return-void
 
-    .line 6258
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6260
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isKnoxWorkspace(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 6261
     if-eqz p2, :cond_1
 
     and-int/lit8 v1, p2, 0x10
 
     if-nez v1, :cond_1
 
-    .line 6263
     const-string v1, "DevicePolicyManagerService"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -39294,7 +35070,6 @@
 
     invoke-static {v1, v4}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 6264
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -39325,23 +35100,19 @@
 
     throw v1
 
-    .line 6267
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 6269
     .local v2, "ident":J
     :try_start_0
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setKeyguardDisabledFeaturesInternal(Landroid/content/ComponentName;II)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 6271
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 6275
     .end local v2    # "ident":J
     :cond_2
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isManagedProfile(I)Z
@@ -39350,14 +35121,11 @@
 
     if-eqz v1, :cond_3
 
-    .line 6276
     and-int/lit8 p2, p2, 0x38
 
-    .line 6278
     :cond_3
     monitor-enter p0
 
-    .line 6279
     const/16 v1, 0x9
 
     :try_start_1
@@ -39365,23 +35133,19 @@
 
     move-result-object v0
 
-    .line 6281
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
     if-eq v1, p2, :cond_4
 
-    .line 6282
     iput p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disabledKeyguardFeatures:I
 
-    .line 6283
     const/4 v1, 0x0
 
     const/4 v4, 0x0
 
     invoke-direct {p0, p3, v1, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 6285
     :cond_4
     invoke-virtual {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
@@ -39389,7 +35153,6 @@
 
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 6286
     monitor-exit p0
 
     goto :goto_0
@@ -39404,7 +35167,6 @@
 
     throw v1
 
-    .line 6271
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -39425,21 +35187,17 @@
     .end annotation
 
     .prologue
-    .line 10008
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10009
     monitor-enter p0
 
-    .line 10010
     const/4 v1, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10012
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v1
@@ -39448,7 +35206,6 @@
 
     move-result v0
 
-    .line 10013
     .local v0, "userHandle":I
     new-instance v1, Ljava/util/ArrayList;
 
@@ -39460,13 +35217,10 @@
 
     invoke-direct {p0, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setLockTaskPackagesLocked(ILjava/util/List;)V
 
-    .line 10014
     monitor-exit p0
 
-    .line 10015
     return-void
 
-    .line 10014
     .end local v0    # "userHandle":I
     :catchall_0
     move-exception v1
@@ -39484,26 +35238,21 @@
     .param p2, "on"    # Z
 
     .prologue
-    .line 10163
     const-string v5, "ComponentName is null"
 
     invoke-static {p1, v5}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10164
     monitor-enter p0
 
-    .line 10165
     const/4 v5, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10166
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 10167
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -39511,7 +35260,6 @@
 
     move-result-wide v2
 
-    .line 10169
     .local v2, "identity":J
     :try_start_1
     const-string v5, "audio"
@@ -39524,7 +35272,6 @@
 
     move-result-object v0
 
-    .line 10171
     .local v0, "iAudioService":Landroid/media/IAudioService;
     const/4 v5, 0x0
 
@@ -39539,25 +35286,20 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 10175
     :try_start_2
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 10177
     .end local v0    # "iAudioService":Landroid/media/IAudioService;
     :goto_0
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 10178
     return-void
 
-    .line 10172
     :catch_0
     move-exception v1
 
-    .line 10173
     .local v1, "re":Landroid/os/RemoteException;
     :try_start_3
     const-string v5, "DevicePolicyManagerService"
@@ -39568,13 +35310,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 10175
     :try_start_4
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 10177
     .end local v1    # "re":Landroid/os/RemoteException;
     .end local v2    # "identity":J
     .end local v4    # "userId":I
@@ -39587,7 +35327,6 @@
 
     throw v5
 
-    .line 10175
     .restart local v2    # "identity":J
     .restart local v4    # "userId":I
     :catchall_1
@@ -39607,19 +35346,16 @@
     .param p2, "num"    # I
 
     .prologue
-    .line 4126
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_1
 
-    .line 4169
     :cond_0
     :goto_0
     return-void
 
-    .line 4129
     :cond_1
     const-string v2, "ComponentName is null"
 
@@ -39627,16 +35363,13 @@
 
     invoke-static {v0, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4130
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v8
 
-    .line 4131
     .local v8, "userHandle":I
     monitor-enter p0
 
-    .line 4134
     const/4 v2, 0x4
 
     :try_start_0
@@ -39646,7 +35379,6 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4136
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
@@ -39657,7 +35389,6 @@
 
     move-result-object v9
 
-    .line 4138
     .local v9, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v2, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
 
@@ -39665,12 +35396,10 @@
 
     if-eq v2, v0, :cond_2
 
-    .line 4139
     move/from16 v0, p2
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
 
-    .line 4140
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -39679,14 +35408,12 @@
 
     invoke-direct {v0, v8, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 4142
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v14
 
-    .line 4144
     .local v14, "ident":J
     const/4 v2, 0x5
 
@@ -39745,18 +35472,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4152
     :try_start_2
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4156
     .end local v14    # "ident":J
     :cond_2
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 4158
     :try_start_3
     new-instance v12, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
@@ -39766,13 +35490,11 @@
 
     invoke-direct {v12, v2}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;-><init>(Landroid/content/Context;)V
 
-    .line 4159
     .local v12, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDMService()Landroid/app/enterprise/IEnterpriseDeviceManager;
 
     move-result-object v11
 
-    .line 4160
     .local v11, "edm":Landroid/app/enterprise/IEnterpriseDeviceManager;
     if-eqz v11, :cond_0
 
@@ -39786,7 +35508,6 @@
 
     if-nez v8, :cond_0
 
-    .line 4162
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -39795,7 +35516,6 @@
 
     move-result v13
 
-    .line 4163
     .local v13, "result":I
     const-string v2, "Password"
 
@@ -39803,7 +35523,6 @@
 
     invoke-virtual {v12, v2, v3, v13}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;->SetIntTypePolicy(Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 4164
     const-string v2, "DevicePolicyManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -39830,20 +35549,17 @@
 
     goto/16 :goto_0
 
-    .line 4166
     .end local v11    # "edm":Landroid/app/enterprise/IEnterpriseDeviceManager;
     .end local v12    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     .end local v13    # "result":I
     :catch_0
     move-exception v10
 
-    .line 4167
     .local v10, "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 4152
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v14    # "ident":J
     :catchall_0
@@ -39854,7 +35570,6 @@
 
     throw v2
 
-    .line 4156
     .end local v9    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v14    # "ident":J
     :catchall_1
@@ -39874,61 +35589,50 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 4091
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 4121
     :goto_0
     return-void
 
-    .line 4094
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4095
     monitor-enter p0
 
-    .line 4098
     const/4 v0, 0x4
 
     :try_start_0
     invoke-virtual {p0, p1, v0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;II)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 4100
     const/4 v0, 0x1
 
     invoke-virtual {p0, p1, v0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;II)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
     move-result-object v7
 
-    .line 4102
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
 
     if-eq v0, p2, :cond_1
 
-    .line 4103
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumFailedPasswordsForWipe:I
 
-    .line 4104
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 4106
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 4108
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -39981,11 +35685,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 4116
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4120
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -40002,7 +35704,6 @@
 
     throw v0
 
-    .line 4116
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -40022,19 +35723,16 @@
     .param p2, "timeMs"    # J
 
     .prologue
-    .line 4661
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_1
 
-    .line 4713
     :cond_0
     :goto_0
     return-void
 
-    .line 4664
     :cond_1
     const-string v2, "ComponentName is null"
 
@@ -40042,16 +35740,13 @@
 
     invoke-static {v0, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4665
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v8
 
-    .line 4666
     .local v8, "userHandle":I
     monitor-enter p0
 
-    .line 4667
     const/4 v2, 0x3
 
     :try_start_0
@@ -40063,7 +35758,6 @@
 
     move-result-object v9
 
-    .line 4669
     .local v9, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-wide v2, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
@@ -40071,12 +35765,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 4670
     move-wide/from16 v0, p2
 
     iput-wide v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
-    .line 4671
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -40085,7 +35777,6 @@
 
     invoke-direct {v0, v8, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 4672
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
@@ -40096,14 +35787,12 @@
 
     invoke-virtual {v0, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateMaximumTimeToLockLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 4674
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v12
 
-    .line 4676
     .local v12, "ident":J
     const/4 v2, 0x5
 
@@ -40162,18 +35851,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4682
     :try_start_2
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4686
     .end local v12    # "ident":J
     :cond_2
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 4688
     :try_start_3
     new-instance v11, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
@@ -40183,7 +35869,6 @@
 
     invoke-direct {v11, v2}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;-><init>(Landroid/content/Context;)V
 
-    .line 4689
     .local v11, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDMService()Landroid/app/enterprise/IEnterpriseDeviceManager;
 
@@ -40199,7 +35884,6 @@
 
     if-nez v8, :cond_3
 
-    .line 4691
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -40208,7 +35892,6 @@
 
     move-result-wide v14
 
-    .line 4692
     .local v14, "result":J
     const-string v2, "Password"
 
@@ -40216,7 +35899,6 @@
 
     invoke-virtual {v11, v2, v3, v14, v15}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;->SetLongTypePolicy(Ljava/lang/String;Ljava/lang/String;J)I
 
-    .line 4693
     const-string v2, "DevicePolicyManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -40241,7 +35923,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 4700
     .end local v11    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     .end local v14    # "result":J
     :cond_3
@@ -40254,14 +35935,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 4703
     const-wide/16 v2, 0x0
 
     cmp-long v2, p2, v2
 
     if-lez v2, :cond_4
 
-    .line 4704
     const/16 v2, 0x10
 
     move-object/from16 v0, p0
@@ -40272,7 +35951,6 @@
 
     goto/16 :goto_0
 
-    .line 4682
     .restart local v12    # "ident":J
     :catchall_0
     move-exception v2
@@ -40282,7 +35960,6 @@
 
     throw v2
 
-    .line 4686
     .end local v9    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v12    # "ident":J
     :catchall_1
@@ -40294,18 +35971,15 @@
 
     throw v2
 
-    .line 4695
     .restart local v9    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catch_0
     move-exception v10
 
-    .line 4696
     .local v10, "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 4706
     .end local v10    # "e":Ljava/lang/Exception;
     :cond_4
     const-wide/16 v2, 0x0
@@ -40314,7 +35988,6 @@
 
     if-nez v2, :cond_0
 
-    .line 4708
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
@@ -40333,26 +36006,21 @@
     .param p4, "userHandle"    # I
 
     .prologue
-    .line 4617
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_1
 
-    .line 4656
     :cond_0
     :goto_0
     return-void
 
-    .line 4620
     :cond_1
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4621
     monitor-enter p0
 
-    .line 4622
     const/4 v0, 0x3
 
     :try_start_0
@@ -40360,7 +36028,6 @@
 
     move-result-object v7
 
-    .line 4624
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-wide v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
@@ -40368,31 +36035,26 @@
 
     if-eqz v0, :cond_2
 
-    .line 4625
     iput-wide p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->maximumTimeToUnlock:J
 
-    .line 4626
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p4, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 4627
     invoke-virtual {p0, p4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateMaximumTimeToLockLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 4629
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v8
 
-    .line 4631
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -40445,39 +36107,33 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4637
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4641
     .end local v8    # "ident":J
     :cond_2
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 4643
     invoke-direct {p0, p4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isKnoxWorkspace(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 4646
     const-wide/16 v0, 0x0
 
     cmp-long v0, p2, v0
 
     if-lez v0, :cond_3
 
-    .line 4647
     const/16 v0, 0x10
 
     invoke-direct {p0, p1, v0, p4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setKeyguardDisabledFeaturesUnchecked(Landroid/content/ComponentName;II)V
 
     goto :goto_0
 
-    .line 4637
     .restart local v8    # "ident":J
     :catchall_0
     move-exception v0
@@ -40487,7 +36143,6 @@
 
     throw v0
 
-    .line 4641
     .end local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v8    # "ident":J
     :catchall_1
@@ -40499,7 +36154,6 @@
 
     throw v0
 
-    .line 4649
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_3
     const-wide/16 v0, 0x0
@@ -40508,7 +36162,6 @@
 
     if-nez v0, :cond_0
 
-    .line 4651
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0, p4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setKeyguardDisabledFeaturesUnchecked(Landroid/content/ComponentName;II)V
@@ -40523,20 +36176,16 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 10922
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 10927
     :goto_0
     return-void
 
-    .line 10925
     :cond_0
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10926
     sput-boolean p2, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mNeedToGetAlternativePasswdForODE:Z
 
     goto :goto_0
@@ -40548,19 +36197,16 @@
     .param p2, "timeout"    # J
 
     .prologue
-    .line 3175
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_1
 
-    .line 3221
     :cond_0
     :goto_0
     return-void
 
-    .line 3178
     :cond_1
     const-string v2, "ComponentName is null"
 
@@ -40568,23 +36214,19 @@
 
     invoke-static {v0, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3179
     const-string v2, "Timeout must be >= 0 ms"
 
     move-wide/from16 v0, p2
 
     invoke-static {v0, v1, v2}, Lcom/android/internal/util/Preconditions;->checkArgumentNonnegative(JLjava/lang/String;)J
 
-    .line 3180
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v8
 
-    .line 3181
     .local v8, "userHandle":I
     monitor-enter p0
 
-    .line 3182
     const/4 v2, 0x6
 
     :try_start_0
@@ -40596,7 +36238,6 @@
 
     move-result-object v9
 
-    .line 3185
     .local v9, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const-wide/16 v2, 0x0
 
@@ -40610,24 +36251,20 @@
 
     add-long v12, p2, v2
 
-    .line 3186
     .local v12, "expiration":J
     :goto_1
     iput-wide v12, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationDate:J
 
-    .line 3187
     move-wide/from16 v0, p2
 
     iput-wide v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationTimeout:J
 
-    .line 3188
     const-wide/16 v2, 0x0
 
     cmp-long v2, p2, v2
 
     if-lez v2, :cond_2
 
-    .line 3189
     const-string v2, "DevicePolicyManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -40666,7 +36303,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3193
     :cond_2
     const/4 v2, 0x0
 
@@ -40676,7 +36312,6 @@
 
     invoke-direct {v0, v8, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3195
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -40691,14 +36326,12 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setExpirationAlarmCheckLocked(Landroid/content/Context;Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 3197
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v16
 
-    .line 3199
     .local v16, "ident":J
     const/4 v2, 0x5
 
@@ -40751,16 +36384,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3204
     :try_start_2
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3207
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 3209
     :try_start_3
     new-instance v14, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
@@ -40770,13 +36400,11 @@
 
     invoke-direct {v14, v2}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;-><init>(Landroid/content/Context;)V
 
-    .line 3210
     .local v14, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDMService()Landroid/app/enterprise/IEnterpriseDeviceManager;
 
     move-result-object v11
 
-    .line 3211
     .local v11, "edm":Landroid/app/enterprise/IEnterpriseDeviceManager;
     if-eqz v11, :cond_0
 
@@ -40790,7 +36418,6 @@
 
     if-nez v8, :cond_0
 
-    .line 3213
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -40799,7 +36426,6 @@
 
     move-result-wide v18
 
-    .line 3214
     .local v18, "result":J
     const-string v2, "Password"
 
@@ -40809,7 +36435,6 @@
 
     invoke-virtual {v14, v2, v3, v0, v1}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;->SetLongTypePolicy(Ljava/lang/String;Ljava/lang/String;J)I
 
-    .line 3215
     const-string v2, "DevicePolicyManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -40838,20 +36463,17 @@
 
     goto/16 :goto_0
 
-    .line 3218
     .end local v11    # "edm":Landroid/app/enterprise/IEnterpriseDeviceManager;
     .end local v14    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     .end local v18    # "result":J
     :catch_0
     move-exception v10
 
-    .line 3219
     .local v10, "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 3185
     .end local v10    # "e":Ljava/lang/Exception;
     .end local v12    # "expiration":J
     .end local v16    # "ident":J
@@ -40860,7 +36482,6 @@
 
     goto/16 :goto_1
 
-    .line 3204
     .restart local v12    # "expiration":J
     .restart local v16    # "ident":J
     :catchall_0
@@ -40871,7 +36492,6 @@
 
     throw v2
 
-    .line 3207
     .end local v9    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v12    # "expiration":J
     .end local v16    # "ident":J
@@ -40892,32 +36512,26 @@
     .param p4, "userHandle"    # I
 
     .prologue
-    .line 3138
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 3170
     :goto_0
     return-void
 
-    .line 3141
     :cond_0
     const-string v2, "ComponentName is null"
 
     invoke-static {p1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3142
     const-string v2, "Timeout must be >= 0 ms"
 
     move-wide/from16 v0, p2
 
     invoke-static {v0, v1, v2}, Lcom/android/internal/util/Preconditions;->checkArgumentNonnegative(JLjava/lang/String;)J
 
-    .line 3143
     monitor-enter p0
 
-    .line 3144
     const/4 v2, 0x6
 
     :try_start_0
@@ -40927,7 +36541,6 @@
 
     move-result-object v9
 
-    .line 3147
     .local v9, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const-wide/16 v2, 0x0
 
@@ -40941,24 +36554,20 @@
 
     add-long v10, p2, v2
 
-    .line 3148
     .local v10, "expiration":J
     :goto_1
     iput-wide v10, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationDate:J
 
-    .line 3149
     move-wide/from16 v0, p2
 
     iput-wide v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordExpirationTimeout:J
 
-    .line 3150
     const-wide/16 v2, 0x0
 
     cmp-long v2, p2, v2
 
     if-lez v2, :cond_1
 
-    .line 3151
     const-string v2, "DevicePolicyManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -40997,7 +36606,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3155
     :cond_1
     const/4 v2, 0x0
 
@@ -41007,7 +36615,6 @@
 
     invoke-direct {p0, v0, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3157
     iget-object v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     move/from16 v0, p4
@@ -41018,14 +36625,12 @@
 
     invoke-virtual {p0, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setExpirationAlarmCheckLocked(Landroid/content/Context;Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 3159
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v12
 
-    .line 3161
     .local v12, "ident":J
     const/4 v2, 0x5
 
@@ -41080,11 +36685,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3166
     :try_start_2
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3169
     monitor-exit p0
 
     goto/16 :goto_0
@@ -41101,14 +36704,12 @@
 
     throw v2
 
-    .line 3147
     .restart local v9    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_2
     const-wide/16 v10, 0x0
 
     goto/16 :goto_1
 
-    .line 3166
     .restart local v10    # "expiration":J
     .restart local v12    # "ident":J
     :catchall_1
@@ -41128,32 +36729,26 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 3072
     iget-boolean v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v6, :cond_1
 
-    .line 3097
     :cond_0
     :goto_0
     return-void
 
-    .line 3075
     :cond_1
     const-string v6, "ComponentName is null"
 
     invoke-static {p1, v6}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3076
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v5
 
-    .line 3077
     .local v5, "userHandle":I
     monitor-enter p0
 
-    .line 3078
     const/4 v6, 0x0
 
     :try_start_0
@@ -41161,29 +36756,24 @@
 
     move-result-object v0
 
-    .line 3080
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v6, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordHistoryLength:I
 
     if-eq v6, p2, :cond_2
 
-    .line 3081
     iput p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordHistoryLength:I
 
-    .line 3082
     const/4 v6, 0x0
 
     const/4 v7, 0x0
 
     invoke-direct {p0, v5, v6, v7}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3084
     :cond_2
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3086
     :try_start_1
     new-instance v3, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
@@ -41191,13 +36781,11 @@
 
     invoke-direct {v3, v6}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;-><init>(Landroid/content/Context;)V
 
-    .line 3087
     .local v3, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDMService()Landroid/app/enterprise/IEnterpriseDeviceManager;
 
     move-result-object v2
 
-    .line 3088
     .local v2, "edm":Landroid/app/enterprise/IEnterpriseDeviceManager;
     if-eqz v2, :cond_0
 
@@ -41209,12 +36797,10 @@
 
     if-nez v5, :cond_0
 
-    .line 3090
     invoke-virtual {p0, p1, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getPasswordHistoryLength(Landroid/content/ComponentName;I)I
 
     move-result v4
 
-    .line 3091
     .local v4, "result":I
     const-string v6, "Password"
 
@@ -41222,7 +36808,6 @@
 
     invoke-virtual {v3, v6, v7, v4}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;->SetIntTypePolicy(Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 3092
     const-string v6, "DevicePolicyManagerService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -41249,20 +36834,17 @@
 
     goto :goto_0
 
-    .line 3094
     .end local v2    # "edm":Landroid/app/enterprise/IEnterpriseDeviceManager;
     .end local v3    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     .end local v4    # "result":I
     :catch_0
     move-exception v1
 
-    .line 3095
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 3084
     .end local v0    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
@@ -41283,25 +36865,20 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 3055
     iget-boolean v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v1, :cond_0
 
-    .line 3067
     :goto_0
     return-void
 
-    .line 3058
     :cond_0
     const-string v1, "ComponentName is null"
 
     invoke-static {p1, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3059
     monitor-enter p0
 
-    .line 3060
     const/4 v1, 0x0
 
     :try_start_0
@@ -41309,23 +36886,19 @@
 
     move-result-object v0
 
-    .line 3062
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordHistoryLength:I
 
     if-eq v1, p2, :cond_1
 
-    .line 3063
     iput p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordHistoryLength:I
 
-    .line 3064
     const/4 v1, 0x0
 
     const/4 v2, 0x0
 
     invoke-direct {p0, p3, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3066
     :cond_1
     monitor-exit p0
 
@@ -41348,31 +36921,25 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 2988
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3014
     :goto_0
     return-void
 
-    .line 2991
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2992
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v6
 
-    .line 2993
     .local v6, "userHandle":I
     monitor-enter p0
 
-    .line 2994
     const/4 v0, 0x0
 
     :try_start_0
@@ -41380,30 +36947,25 @@
 
     move-result-object v7
 
-    .line 2996
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLength:I
 
     if-eq v0, p2, :cond_1
 
-    .line 2997
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLength:I
 
-    .line 2998
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v6, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3000
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3002
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -41454,11 +37016,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3009
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3013
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -41475,7 +37035,6 @@
 
     throw v0
 
-    .line 3009
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -41496,25 +37055,20 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 2958
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 2983
     :goto_0
     return-void
 
-    .line 2961
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2962
     monitor-enter p0
 
-    .line 2963
     const/4 v0, 0x0
 
     :try_start_0
@@ -41522,30 +37076,25 @@
 
     move-result-object v7
 
-    .line 2965
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLength:I
 
     if-eq v0, p2, :cond_1
 
-    .line 2966
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLength:I
 
-    .line 2967
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 2969
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 2971
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -41598,11 +37147,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 2978
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2982
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -41619,7 +37166,6 @@
 
     throw v0
 
-    .line 2978
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -41639,31 +37185,25 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 3598
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3624
     :goto_0
     return-void
 
-    .line 3601
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3602
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v6
 
-    .line 3603
     .local v6, "userHandle":I
     monitor-enter p0
 
-    .line 3604
     const/4 v0, 0x0
 
     :try_start_0
@@ -41671,30 +37211,25 @@
 
     move-result-object v7
 
-    .line 3606
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLetters:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3607
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLetters:I
 
-    .line 3608
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v6, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3610
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3612
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -41745,11 +37280,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3619
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3623
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -41766,7 +37299,6 @@
 
     throw v0
 
-    .line 3619
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -41787,25 +37319,20 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 3568
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3593
     :goto_0
     return-void
 
-    .line 3571
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3572
     monitor-enter p0
 
-    .line 3573
     const/4 v0, 0x0
 
     :try_start_0
@@ -41813,30 +37340,25 @@
 
     move-result-object v7
 
-    .line 3575
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLetters:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3576
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLetters:I
 
-    .line 3577
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3579
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3581
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -41889,11 +37411,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3588
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3592
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -41910,7 +37430,6 @@
 
     throw v0
 
-    .line 3588
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -41930,21 +37449,17 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 3504
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3505
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v6
 
-    .line 3506
     .local v6, "userHandle":I
     monitor-enter p0
 
-    .line 3507
     const/4 v0, 0x0
 
     :try_start_0
@@ -41952,30 +37467,25 @@
 
     move-result-object v7
 
-    .line 3509
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLowerCase:I
 
     if-eq v0, p2, :cond_0
 
-    .line 3510
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLowerCase:I
 
-    .line 3511
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v6, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3513
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v8
 
-    .line 3515
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -42026,19 +37536,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3522
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3526
     .end local v8    # "ident":J
     :cond_0
     monitor-exit p0
 
-    .line 3527
     return-void
 
-    .line 3522
     .restart local v8    # "ident":J
     :catchall_0
     move-exception v0
@@ -42047,7 +37553,6 @@
 
     throw v0
 
-    .line 3526
     .end local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v8    # "ident":J
     :catchall_1
@@ -42067,15 +37572,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 3477
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3478
     monitor-enter p0
 
-    .line 3479
     const/4 v0, 0x0
 
     :try_start_0
@@ -42083,30 +37585,25 @@
 
     move-result-object v7
 
-    .line 3481
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLowerCase:I
 
     if-eq v0, p2, :cond_0
 
-    .line 3482
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordLowerCase:I
 
-    .line 3483
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3485
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v8
 
-    .line 3487
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -42159,19 +37656,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3494
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3498
     .end local v8    # "ident":J
     :cond_0
     monitor-exit p0
 
-    .line 3499
     return-void
 
-    .line 3494
     .restart local v8    # "ident":J
     :catchall_0
     move-exception v0
@@ -42180,7 +37673,6 @@
 
     throw v0
 
-    .line 3498
     .end local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v8    # "ident":J
     :catchall_1
@@ -42199,31 +37691,25 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 3897
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3923
     :goto_0
     return-void
 
-    .line 3900
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3901
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v6
 
-    .line 3902
     .local v6, "userHandle":I
     monitor-enter p0
 
-    .line 3903
     const/4 v0, 0x0
 
     :try_start_0
@@ -42231,30 +37717,25 @@
 
     move-result-object v7
 
-    .line 3905
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNonLetter:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3906
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNonLetter:I
 
-    .line 3907
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v6, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3909
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3911
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -42305,11 +37786,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3918
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3922
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -42326,7 +37805,6 @@
 
     throw v0
 
-    .line 3918
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -42347,25 +37825,20 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 3868
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3893
     :goto_0
     return-void
 
-    .line 3871
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3872
     monitor-enter p0
 
-    .line 3873
     const/4 v0, 0x0
 
     :try_start_0
@@ -42373,30 +37846,25 @@
 
     move-result-object v7
 
-    .line 3875
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNonLetter:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3876
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNonLetter:I
 
-    .line 3877
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3879
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3881
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -42449,11 +37917,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3888
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3892
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -42470,7 +37936,6 @@
 
     throw v0
 
-    .line 3888
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -42490,31 +37955,25 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 3698
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3724
     :goto_0
     return-void
 
-    .line 3701
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3702
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v6
 
-    .line 3703
     .local v6, "userHandle":I
     monitor-enter p0
 
-    .line 3704
     const/4 v0, 0x0
 
     :try_start_0
@@ -42522,30 +37981,25 @@
 
     move-result-object v7
 
-    .line 3706
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNumeric:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3707
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNumeric:I
 
-    .line 3708
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v6, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3710
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3712
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -42596,11 +38050,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3719
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3723
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -42617,7 +38069,6 @@
 
     throw v0
 
-    .line 3719
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -42638,25 +38089,20 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 3668
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3693
     :goto_0
     return-void
 
-    .line 3671
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3672
     monitor-enter p0
 
-    .line 3673
     const/4 v0, 0x0
 
     :try_start_0
@@ -42664,30 +38110,25 @@
 
     move-result-object v7
 
-    .line 3675
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNumeric:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3676
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordNumeric:I
 
-    .line 3677
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3679
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3681
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -42740,11 +38181,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3688
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3692
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -42761,7 +38200,6 @@
 
     throw v0
 
-    .line 3688
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -42781,31 +38219,25 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 3798
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3824
     :goto_0
     return-void
 
-    .line 3801
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3802
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v6
 
-    .line 3803
     .local v6, "userHandle":I
     monitor-enter p0
 
-    .line 3804
     const/4 v0, 0x0
 
     :try_start_0
@@ -42813,30 +38245,25 @@
 
     move-result-object v7
 
-    .line 3806
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordSymbols:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3807
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordSymbols:I
 
-    .line 3808
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v6, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3810
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3812
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -42887,11 +38314,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3819
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3823
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -42908,7 +38333,6 @@
 
     throw v0
 
-    .line 3819
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -42929,25 +38353,20 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 3768
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3793
     :goto_0
     return-void
 
-    .line 3771
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3772
     monitor-enter p0
 
-    .line 3773
     const/4 v0, 0x0
 
     :try_start_0
@@ -42955,30 +38374,25 @@
 
     move-result-object v7
 
-    .line 3775
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordSymbols:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3776
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordSymbols:I
 
-    .line 3777
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3779
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3781
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -43031,11 +38445,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3788
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3792
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -43052,7 +38464,6 @@
 
     throw v0
 
-    .line 3788
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -43072,31 +38483,25 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 3410
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3436
     :goto_0
     return-void
 
-    .line 3413
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3414
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v6
 
-    .line 3415
     .local v6, "userHandle":I
     monitor-enter p0
 
-    .line 3416
     const/4 v0, 0x0
 
     :try_start_0
@@ -43104,30 +38509,25 @@
 
     move-result-object v7
 
-    .line 3418
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordUpperCase:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3419
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordUpperCase:I
 
-    .line 3420
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, v6, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3422
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3424
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -43178,11 +38578,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3431
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3435
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -43199,7 +38597,6 @@
 
     throw v0
 
-    .line 3431
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -43220,25 +38617,20 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 3380
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 3405
     :goto_0
     return-void
 
-    .line 3383
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3384
     monitor-enter p0
 
-    .line 3385
     const/4 v0, 0x0
 
     :try_start_0
@@ -43246,30 +38638,25 @@
 
     move-result-object v7
 
-    .line 3387
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordUpperCase:I
 
     if-eq v0, p2, :cond_1
 
-    .line 3388
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->minimumPasswordUpperCase:I
 
-    .line 3389
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 3391
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 3393
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -43322,11 +38709,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 3400
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 3404
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -43343,7 +38728,6 @@
 
     throw v0
 
-    .line 3400
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -43363,19 +38747,16 @@
     .param p2, "quality"    # I
 
     .prologue
-    .line 2878
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_1
 
-    .line 2917
     :cond_0
     :goto_0
     return-void
 
-    .line 2881
     :cond_1
     const-string v2, "ComponentName is null"
 
@@ -43383,19 +38764,15 @@
 
     invoke-static {v0, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2882
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v8
 
-    .line 2884
     .local v8, "userHandle":I
     invoke-static/range {p2 .. p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->validateQualityConstant(I)V
 
-    .line 2885
     monitor-enter p0
 
-    .line 2886
     const/4 v2, 0x0
 
     :try_start_0
@@ -43407,7 +38784,6 @@
 
     move-result-object v9
 
-    .line 2888
     .local v9, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v2, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
@@ -43415,12 +38791,10 @@
 
     if-eq v2, v0, :cond_2
 
-    .line 2889
     move/from16 v0, p2
 
     iput v0, v9, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
-    .line 2890
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -43429,14 +38803,12 @@
 
     invoke-direct {v0, v8, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 2892
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
     move-result-wide v14
 
-    .line 2894
     .local v14, "ident":J
     const/4 v2, 0x5
 
@@ -43495,18 +38867,15 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2900
     :try_start_2
     invoke-static {v14, v15}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2904
     .end local v14    # "ident":J
     :cond_2
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 2906
     :try_start_3
     new-instance v12, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
 
@@ -43516,13 +38885,11 @@
 
     invoke-direct {v12, v2}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;-><init>(Landroid/content/Context;)V
 
-    .line 2907
     .local v12, "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getEDMService()Landroid/app/enterprise/IEnterpriseDeviceManager;
 
     move-result-object v11
 
-    .line 2908
     .local v11, "edm":Landroid/app/enterprise/IEnterpriseDeviceManager;
     if-eqz v11, :cond_0
 
@@ -43536,7 +38903,6 @@
 
     if-nez v8, :cond_0
 
-    .line 2910
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -43545,7 +38911,6 @@
 
     move-result v13
 
-    .line 2911
     .local v13, "result":I
     const-string v2, "Password"
 
@@ -43553,7 +38918,6 @@
 
     invoke-virtual {v12, v2, v3, v13}, Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;->SetIntTypePolicy(Ljava/lang/String;Ljava/lang/String;I)I
 
-    .line 2912
     const-string v2, "DevicePolicyManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -43580,20 +38944,17 @@
 
     goto/16 :goto_0
 
-    .line 2914
     .end local v11    # "edm":Landroid/app/enterprise/IEnterpriseDeviceManager;
     .end local v12    # "gearPolicyManager":Lcom/samsung/android/sagearpolicymanager/SAGearPolicyManager;
     .end local v13    # "result":I
     :catch_0
     move-exception v10
 
-    .line 2915
     .local v10, "e":Ljava/lang/Exception;
     invoke-virtual {v10}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 2900
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v14    # "ident":J
     :catchall_0
@@ -43604,7 +38965,6 @@
 
     throw v2
 
-    .line 2904
     .end local v9    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v14    # "ident":J
     :catchall_1
@@ -43624,28 +38984,22 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 2846
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 2873
     :goto_0
     return-void
 
-    .line 2849
     :cond_0
     const-string v0, "ComponentName is null"
 
     invoke-static {p1, v0}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2850
     invoke-static {p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->validateQualityConstant(I)V
 
-    .line 2852
     monitor-enter p0
 
-    .line 2853
     const/4 v0, 0x0
 
     :try_start_0
@@ -43653,30 +39007,25 @@
 
     move-result-object v7
 
-    .line 2856
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
     if-eq v0, p2, :cond_1
 
-    .line 2857
     iput p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordQuality:I
 
-    .line 2858
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 2860
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 2862
     .local v8, "ident":J
     const/4 v0, 0x5
 
@@ -43729,11 +39078,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 2868
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2872
     .end local v8    # "ident":J
     :cond_1
     monitor-exit p0
@@ -43750,7 +39097,6 @@
 
     throw v0
 
-    .line 2868
     .restart local v7    # "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v8    # "ident":J
     :catchall_1
@@ -43771,16 +39117,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7378
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7379
     monitor-enter p0
 
-    .line 7380
     if-nez p1, :cond_0
 
-    .line 7381
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -43790,7 +39132,6 @@
 
     throw v1
 
-    .line 7395
     :catchall_0
     move-exception v1
 
@@ -43800,7 +39141,6 @@
 
     throw v1
 
-    .line 7383
     :cond_0
     const/16 v1, 0xa
 
@@ -43809,23 +39149,19 @@
 
     move-result-object v0
 
-    .line 7385
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordRecoverable:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 7386
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->passwordRecoverable:Z
 
-    .line 7388
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7390
     .local v2, "ident":J
     const/4 v1, 0x0
 
@@ -43836,19 +39172,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7392
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7395
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7396
     return-void
 
-    .line 7392
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -43873,29 +39205,24 @@
     .end annotation
 
     .prologue
-    .line 10538
     invoke-static {}, Landroid/os/Binder;->getCallingUserHandle()Landroid/os/UserHandle;
 
     move-result-object v5
 
-    .line 10539
     .local v5, "user":Landroid/os/UserHandle;
     monitor-enter p0
 
-    .line 10540
     const/4 v1, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10541
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v8
 
-    .line 10543
     .local v8, "ident":J
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
@@ -43915,23 +39242,19 @@
 
     move-result-object v6
 
-    .line 10545
     .local v6, "ai":Landroid/content/pm/ApplicationInfo;
     if-nez v6, :cond_0
 
     const/4 v10, 0x0
 
-    .line 10546
     .local v10, "targetSdkVersion":I
     :goto_0
     const/16 v1, 0x17
 
     if-ge v10, v1, :cond_1
 
-    .line 10547
     const/4 v1, 0x0
 
-    .line 10575
     :try_start_2
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -43944,7 +39267,6 @@
     :goto_1
     return v1
 
-    .line 10545
     .restart local v6    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_0
     :try_start_3
@@ -43952,7 +39274,6 @@
 
     goto :goto_0
 
-    .line 10549
     .restart local v10    # "targetSdkVersion":I
     :cond_1
     iget-object v1, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -43964,15 +39285,12 @@
 
     move-result-object v0
 
-    .line 10550
     .local v0, "packageManager":Landroid/content/pm/PackageManager;
     packed-switch p4, :pswitch_data_0
 
-    .line 10571
     :goto_2
     const/4 v1, 0x1
 
-    .line 10575
     :try_start_4
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -43980,7 +39298,6 @@
 
     goto :goto_1
 
-    .line 10577
     .end local v0    # "packageManager":Landroid/content/pm/PackageManager;
     .end local v6    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v8    # "ident":J
@@ -43994,7 +39311,6 @@
 
     throw v1
 
-    .line 10552
     .restart local v0    # "packageManager":Landroid/content/pm/PackageManager;
     .restart local v6    # "ai":Landroid/content/pm/ApplicationInfo;
     .restart local v8    # "ident":J
@@ -44003,7 +39319,6 @@
     :try_start_5
     invoke-virtual {v0, p2, p3, v5}, Landroid/content/pm/PackageManager;->grantRuntimePermission(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 10553
     const/4 v3, 0x4
 
     const/4 v4, 0x4
@@ -44019,18 +39334,15 @@
 
     goto :goto_2
 
-    .line 10572
     .end local v0    # "packageManager":Landroid/content/pm/PackageManager;
     .end local v6    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v10    # "targetSdkVersion":I
     :catch_0
     move-exception v7
 
-    .line 10573
     .local v7, "se":Ljava/lang/SecurityException;
     const/4 v1, 0x0
 
-    .line 10575
     :try_start_6
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
@@ -44040,7 +39352,6 @@
 
     goto :goto_1
 
-    .line 10559
     .end local v7    # "se":Ljava/lang/SecurityException;
     .restart local v0    # "packageManager":Landroid/content/pm/PackageManager;
     .restart local v6    # "ai":Landroid/content/pm/ApplicationInfo;
@@ -44049,7 +39360,6 @@
     :try_start_7
     invoke-virtual {v0, p2, p3, v5}, Landroid/content/pm/PackageManager;->revokeRuntimePermission(Ljava/lang/String;Ljava/lang/String;Landroid/os/UserHandle;)V
 
-    .line 10561
     const/4 v3, 0x4
 
     const/4 v4, 0x4
@@ -44065,7 +39375,6 @@
 
     goto :goto_2
 
-    .line 10575
     .end local v0    # "packageManager":Landroid/content/pm/PackageManager;
     .end local v6    # "ai":Landroid/content/pm/ApplicationInfo;
     .end local v10    # "targetSdkVersion":I
@@ -44079,7 +39388,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 10567
     .restart local v0    # "packageManager":Landroid/content/pm/PackageManager;
     .restart local v6    # "ai":Landroid/content/pm/ApplicationInfo;
     .restart local v10    # "targetSdkVersion":I
@@ -44100,7 +39408,6 @@
 
     goto :goto_2
 
-    .line 10550
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2
@@ -44120,50 +39427,40 @@
     .end annotation
 
     .prologue
-    .line 10515
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 10516
     .local v0, "userId":I
     monitor-enter p0
 
-    .line 10517
     const/4 v2, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10518
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v1
 
-    .line 10519
     .local v1, "userPolicy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget v2, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPermissionPolicy:I
 
     if-eq v2, p2, :cond_0
 
-    .line 10520
     iput p2, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPermissionPolicy:I
 
-    .line 10521
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
     invoke-direct {p0, v0, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 10523
     :cond_0
     monitor-exit p0
 
-    .line 10524
     return-void
 
-    .line 10523
     .end local v1    # "userPolicy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v2
@@ -44183,40 +39480,32 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 9137
     iget-boolean v11, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v11, :cond_0
 
-    .line 9177
     :goto_0
     return v10
 
-    .line 9140
     :cond_0
     const-string v11, "ComponentName is null"
 
     invoke-static {p1, v11}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9142
     if-eqz p2, :cond_3
 
-    .line 9143
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v9
 
-    .line 9144
     .local v9, "userId":I
     const/4 v3, 0x0
 
-    .line 9145
     .local v3, "enabledServices":Ljava/util/List;, "Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;"
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 9147
     .local v6, "id":J
     :try_start_0
     iget-object v11, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -44225,7 +39514,6 @@
 
     move-result-object v8
 
-    .line 9148
     .local v8, "user":Landroid/content/pm/UserInfo;
     invoke-virtual {v8}, Landroid/content/pm/UserInfo;->isManagedProfile()Z
 
@@ -44233,16 +39521,13 @@
 
     if-eqz v11, :cond_1
 
-    .line 9149
     iget v9, v8, Landroid/content/pm/UserInfo;->profileGroupId:I
 
-    .line 9151
     :cond_1
     invoke-direct {p0, v9}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getAccessibilityManagerForUser(I)Landroid/view/accessibility/AccessibilityManager;
 
     move-result-object v0
 
-    .line 9152
     .local v0, "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     const/4 v11, -0x1
 
@@ -44252,18 +39537,14 @@
 
     move-result-object v3
 
-    .line 9155
     invoke-static {v6, v7}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9158
     if-eqz v3, :cond_3
 
-    .line 9159
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 9160
     .local v2, "enabledPackages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -44283,7 +39564,6 @@
 
     check-cast v5, Landroid/accessibilityservice/AccessibilityServiceInfo;
 
-    .line 9161
     .local v5, "service":Landroid/accessibilityservice/AccessibilityServiceInfo;
     invoke-virtual {v5}, Landroid/accessibilityservice/AccessibilityServiceInfo;->getResolveInfo()Landroid/content/pm/ResolveInfo;
 
@@ -44297,7 +39577,6 @@
 
     goto :goto_1
 
-    .line 9155
     .end local v0    # "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     .end local v2    # "enabledPackages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v4    # "i$":Ljava/util/Iterator;
@@ -44310,7 +39589,6 @@
 
     throw v10
 
-    .line 9163
     .restart local v0    # "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     .restart local v2    # "enabledPackages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v4    # "i$":Ljava/util/Iterator;
@@ -44322,7 +39600,6 @@
 
     if-nez v11, :cond_3
 
-    .line 9164
     const-string v11, "DevicePolicyManagerService"
 
     const-string v12, "Cannot set permitted accessibility services, because it contains already enabled accesibility services."
@@ -44331,7 +39608,6 @@
 
     goto :goto_0
 
-    .line 9171
     .end local v0    # "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     .end local v2    # "enabledPackages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v3    # "enabledServices":Ljava/util/List;, "Ljava/util/List<Landroid/accessibilityservice/AccessibilityServiceInfo;>;"
@@ -44342,7 +39618,6 @@
     :cond_3
     monitor-enter p0
 
-    .line 9172
     const/4 v10, -0x1
 
     :try_start_1
@@ -44350,11 +39625,9 @@
 
     move-result-object v1
 
-    .line 9174
     .local v1, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iput-object p2, v1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedAccessiblityServices:Ljava/util/List;
 
-    .line 9175
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v10
@@ -44365,15 +39638,12 @@
 
     invoke-direct {p0, v10, v11, v12}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 9176
     monitor-exit p0
 
-    .line 9177
     const/4 v10, 0x1
 
     goto :goto_0
 
-    .line 9176
     .end local v1    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_1
     move-exception v10
@@ -44393,33 +39663,27 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 9287
     iget-boolean v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v7, :cond_1
 
-    .line 9325
     :cond_0
     :goto_0
     return v6
 
-    .line 9290
     :cond_1
     const-string v7, "ComponentName is null"
 
     invoke-static {p1, v7}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9294
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->checkCallerIsCurrentUserOrProfile()Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 9298
     if-eqz p2, :cond_3
 
-    .line 9302
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v8, "input_method"
@@ -44430,22 +39694,18 @@
 
     check-cast v5, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 9304
     .local v5, "inputMethodManager":Landroid/view/inputmethod/InputMethodManager;
     invoke-virtual {v5}, Landroid/view/inputmethod/InputMethodManager;->getEnabledInputMethodList()Ljava/util/List;
 
     move-result-object v1
 
-    .line 9306
     .local v1, "enabledImes":Ljava/util/List;, "Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;"
     if-eqz v1, :cond_3
 
-    .line 9307
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 9308
     .local v2, "enabledPackages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -44465,7 +39725,6 @@
 
     check-cast v4, Landroid/view/inputmethod/InputMethodInfo;
 
-    .line 9309
     .local v4, "ime":Landroid/view/inputmethod/InputMethodInfo;
     invoke-virtual {v4}, Landroid/view/inputmethod/InputMethodInfo;->getPackageName()Ljava/lang/String;
 
@@ -44475,7 +39734,6 @@
 
     goto :goto_1
 
-    .line 9311
     .end local v4    # "ime":Landroid/view/inputmethod/InputMethodInfo;
     :cond_2
     invoke-direct {p0, v2, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->checkPackagesInPermittedListOrSystem(Ljava/util/List;Ljava/util/List;)Z
@@ -44484,7 +39742,6 @@
 
     if-nez v7, :cond_3
 
-    .line 9312
     const-string v7, "DevicePolicyManagerService"
 
     const-string v8, "Cannot set permitted input methods, because it contains already enabled input method."
@@ -44493,7 +39750,6 @@
 
     goto :goto_0
 
-    .line 9319
     .end local v1    # "enabledImes":Ljava/util/List;, "Ljava/util/List<Landroid/view/inputmethod/InputMethodInfo;>;"
     .end local v2    # "enabledPackages":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v3    # "i$":Ljava/util/Iterator;
@@ -44501,7 +39757,6 @@
     :cond_3
     monitor-enter p0
 
-    .line 9320
     const/4 v6, -0x1
 
     :try_start_0
@@ -44509,11 +39764,9 @@
 
     move-result-object v0
 
-    .line 9322
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iput-object p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->permittedInputMethods:Ljava/util/List;
 
-    .line 9323
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v6
@@ -44524,15 +39777,12 @@
 
     invoke-direct {p0, v6, v7, v8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 9324
     monitor-exit p0
 
-    .line 9325
     const/4 v6, 0x1
 
     goto :goto_0
 
-    .line 9324
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v6
@@ -44549,42 +39799,34 @@
     .param p1, "who"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 6869
     iget-boolean v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v5, :cond_0
 
-    .line 6892
     :goto_0
     return-void
 
-    .line 6872
     :cond_0
     const-string v5, "ComponentName is null"
 
     invoke-static {p1, v5}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6873
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v3
 
-    .line 6874
     .local v3, "userHandle":I
     monitor-enter p0
 
-    .line 6876
     const/4 v5, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 6877
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 6879
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -44592,21 +39834,18 @@
 
     move-result-wide v0
 
-    .line 6881
     .local v0, "id":J
     :try_start_1
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v5, v4}, Landroid/os/UserManager;->setUserEnabled(I)V
 
-    .line 6882
     new-instance v2, Landroid/content/Intent;
 
     const-string v5, "android.intent.action.MANAGED_PROFILE_ADDED"
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 6883
     .local v2, "intent":Landroid/content/Intent;
     const-string v5, "android.intent.extra.USER"
 
@@ -44616,12 +39855,10 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 6884
     const/high16 v5, 0x50000000
 
     invoke-virtual {v2, v5}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 6887
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     sget-object v6, Landroid/os/UserHandle;->OWNER:Landroid/os/UserHandle;
@@ -44630,11 +39867,9 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 6889
     :try_start_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 6891
     monitor-exit p0
 
     goto :goto_0
@@ -44651,7 +39886,6 @@
 
     throw v5
 
-    .line 6889
     .restart local v0    # "id":J
     .restart local v4    # "userId":I
     :catchall_1
@@ -44671,28 +39905,23 @@
     .param p2, "profileName"    # Ljava/lang/String;
 
     .prologue
-    .line 6896
     const-string v3, "ComponentName is null"
 
     invoke-static {p1, v3}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6897
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v2
 
-    .line 6899
     .local v2, "userId":I
     const/4 v3, -0x1
 
     invoke-virtual {p0, p1, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 6901
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 6903
     .local v0, "id":J
     :try_start_0
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -44701,13 +39930,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6905
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 6907
     return-void
 
-    .line 6905
     :catchall_0
     move-exception v3
 
@@ -44723,19 +39949,15 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 6718
     iget-boolean v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v0, :cond_0
 
-    .line 6719
     const/4 v0, 0x0
 
-    .line 6740
     :goto_0
     return v0
 
-    .line 6721
     :cond_0
     if-eqz p1, :cond_1
 
@@ -44749,7 +39971,6 @@
 
     if-nez v0, :cond_2
 
-    .line 6723
     :cond_1
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
@@ -44785,47 +40006,39 @@
 
     throw v0
 
-    .line 6726
     :cond_2
     monitor-enter p0
 
-    .line 6727
     :try_start_0
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCanSetProfileOwner(I)V
 
-    .line 6728
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     if-nez v0, :cond_3
 
-    .line 6730
     invoke-static {p1, p2, p3}, Lcom/android/server/devicepolicy/DeviceOwner;->createWithProfileOwner(Landroid/content/ComponentName;Ljava/lang/String;I)Lcom/android/server/devicepolicy/DeviceOwner;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
-    .line 6736
     :goto_1
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DeviceOwner;->writeOwnerFile()V
 
-    .line 6738
     const-string/jumbo v0, "security.knox_afw_mode"
 
     const-string/jumbo v1, "true"
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6740
     const/4 v0, 0x1
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 6741
     :catchall_0
     move-exception v0
 
@@ -44835,7 +40048,6 @@
 
     throw v0
 
-    .line 6734
     :cond_3
     :try_start_1
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
@@ -44857,24 +40069,19 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 10836
     iget-boolean v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v5, :cond_1
 
-    .line 10866
     :cond_0
     :goto_0
     return v4
 
-    .line 10839
     :cond_1
     invoke-direct {p0, p4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 10840
     const/4 v1, 0x0
 
-    .line 10843
     .local v1, "mountService":Landroid/os/storage/IMountService;
     const-string/jumbo v5, "mount"
 
@@ -44882,19 +40089,15 @@
 
     move-result-object v3
 
-    .line 10844
     .local v3, "service":Landroid/os/IBinder;
     if-eqz v3, :cond_2
 
-    .line 10845
     invoke-static {v3}, Landroid/os/storage/IMountService$Stub;->asInterface(Landroid/os/IBinder;)Landroid/os/storage/IMountService;
 
     move-result-object v1
 
-    .line 10846
     if-nez v1, :cond_3
 
-    .line 10847
     const-string v5, "DevicePolicyManagerService"
 
     const-string v6, "Can\'t get mount interface"
@@ -44903,7 +40106,6 @@
 
     goto :goto_0
 
-    .line 10851
     :cond_2
     const-string v5, "DevicePolicyManagerService"
 
@@ -44913,7 +40115,6 @@
 
     goto :goto_0
 
-    .line 10856
     :cond_3
     :try_start_0
     invoke-interface {v1, p2, p3}, Landroid/os/storage/IMountService;->setPropertyIntoFooter(Ljava/lang/String;Ljava/lang/String;)I
@@ -44922,21 +40123,17 @@
 
     move-result v2
 
-    .line 10857
     .local v2, "ret":I
     if-nez v2, :cond_0
 
-    .line 10858
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 10862
     .end local v2    # "ret":I
     :catch_0
     move-exception v0
 
-    .line 10863
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "DevicePolicyManagerService"
 
@@ -44953,26 +40150,21 @@
     .param p2, "proxyInfo"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 5853
     monitor-enter p0
 
-    .line 5854
     const/4 v4, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 5855
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5856
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 5860
     .local v2, "token":J
     :try_start_1
     const-string/jumbo v4, "misc_policy"
@@ -44983,14 +40175,11 @@
 
     check-cast v1, Lcom/android/server/enterprise/general/MiscPolicy;
 
-    .line 5862
     .local v1, "miscPolicy":Lcom/android/server/enterprise/general/MiscPolicy;
     if-eqz v1, :cond_0
 
-    .line 5863
     invoke-virtual {v1}, Lcom/android/server/enterprise/general/MiscPolicy;->clearAllGlobalProxy()V
 
-    .line 5867
     :cond_0
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -45002,19 +40191,15 @@
 
     check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 5869
     .local v0, "connectivityManager":Landroid/net/ConnectivityManager;
     invoke-virtual {v0, p2}, Landroid/net/ConnectivityManager;->setGlobalProxy(Landroid/net/ProxyInfo;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 5871
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5873
     return-void
 
-    .line 5855
     .end local v0    # "connectivityManager":Landroid/net/ConnectivityManager;
     .end local v1    # "miscPolicy":Lcom/android/server/enterprise/general/MiscPolicy;
     .end local v2    # "token":J
@@ -45028,7 +40213,6 @@
 
     throw v4
 
-    .line 5871
     .restart local v2    # "token":J
     :catchall_1
     move-exception v4
@@ -45045,16 +40229,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 8102
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 8103
     monitor-enter p0
 
-    .line 8104
     if-nez p1, :cond_0
 
-    .line 8105
     :try_start_0
     new-instance v9, Ljava/lang/NullPointerException;
 
@@ -45064,7 +40244,6 @@
 
     throw v9
 
-    .line 8135
     :catchall_0
     move-exception v9
 
@@ -45074,7 +40253,6 @@
 
     throw v9
 
-    .line 8107
     :cond_0
     const/16 v9, 0xa
 
@@ -45083,46 +40261,39 @@
 
     move-result-object v0
 
-    .line 8110
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     const/4 v9, 0x1
 
     if-ne p2, v9, :cond_2
 
-    .line 8111
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 8113
     .local v2, "ident":J
     :try_start_2
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->convertUserHandleForRecovery(I)I
 
     move-result p3
 
-    .line 8114
     new-instance v5, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-direct {v5, v9}, Lcom/android/internal/widget/LockPatternUtils;-><init>(Landroid/content/Context;)V
 
-    .line 8115
     .local v5, "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
     invoke-virtual {v5, p3}, Lcom/android/internal/widget/LockPatternUtils;->getRecoveryPassword(I)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 8118
     .local v6, "mRecoveryPassword":Ljava/lang/String;
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v4
 
-    .line 8119
     .local v4, "ks":Landroid/security/KeyStore;
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
@@ -45134,12 +40305,10 @@
 
     if-eqz v9, :cond_1
 
-    .line 8120
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getProfiles(I)Ljava/util/List;
 
     move-result-object v8
 
-    .line 8122
     .local v8, "profiles":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v8}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -45159,13 +40328,11 @@
 
     check-cast v7, Landroid/content/pm/UserInfo;
 
-    .line 8123
     .local v7, "pi":Landroid/content/pm/UserInfo;
     iget v9, v7, Landroid/content/pm/UserInfo;->id:I
 
     invoke-virtual {v4, v9}, Landroid/security/KeyStore;->resetMDFPP(I)Z
 
-    .line 8124
     const-string v9, "DevicePolicyManagerService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -45194,7 +40361,6 @@
 
     goto :goto_0
 
-    .line 8132
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v4    # "ks":Landroid/security/KeyStore;
     .end local v5    # "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
@@ -45211,7 +40377,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 8129
     .restart local v4    # "ks":Landroid/security/KeyStore;
     .restart local v5    # "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
     .restart local v6    # "mRecoveryPassword":Ljava/lang/String;
@@ -45227,11 +40392,9 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 8132
     :try_start_5
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 8135
     .end local v2    # "ident":J
     .end local v4    # "ks":Landroid/security/KeyStore;
     .end local v5    # "lockPatternUtils":Lcom/android/internal/widget/LockPatternUtils;
@@ -45241,7 +40404,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 8137
     return-void
 .end method
 
@@ -45252,16 +40414,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7955
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7956
     monitor-enter p0
 
-    .line 7957
     if-nez p1, :cond_0
 
-    .line 7958
     :try_start_0
     new-instance v0, Ljava/lang/NullPointerException;
 
@@ -45271,7 +40429,6 @@
 
     throw v0
 
-    .line 7977
     :catchall_0
     move-exception v0
 
@@ -45281,7 +40438,6 @@
 
     throw v0
 
-    .line 7960
     :cond_0
     const/16 v0, 0x14
 
@@ -45290,23 +40446,19 @@
 
     move-result-object v7
 
-    .line 7962
     .local v7, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v0, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->requireStorageCardEncryption:Z
 
     if-eq v0, p2, :cond_2
 
-    .line 7963
     iput-boolean p2, v7, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->requireStorageCardEncryption:Z
 
-    .line 7965
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v8
 
-    .line 7967
     .local v8, "ident":J
     const/4 v0, 0x0
 
@@ -45315,10 +40467,8 @@
     :try_start_2
     invoke-direct {p0, p3, v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 7968
     if-eqz p2, :cond_1
 
-    .line 7969
     const/4 v0, 0x5
 
     const/4 v1, 0x1
@@ -45365,20 +40515,16 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7974
     :cond_1
     :try_start_3
     invoke-static {v8, v9}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7977
     .end local v8    # "ident":J
     :cond_2
     monitor-exit p0
 
-    .line 7978
     return-void
 
-    .line 7974
     .restart local v8    # "ident":J
     :catchall_1
     move-exception v0
@@ -45396,49 +40542,39 @@
     .param p2, "permissionProvider"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 8969
     const-string v2, "ComponentName is null"
 
     invoke-static {p1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8970
     monitor-enter p0
 
-    .line 8971
     const/4 v2, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 8973
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 8974
     .local v1, "userHandle":I
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
-    .line 8975
     .local v0, "userData":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iput-object p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mRestrictionsProvider:Landroid/content/ComponentName;
 
-    .line 8976
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 8977
     monitor-exit p0
 
-    .line 8978
     return-void
 
-    .line 8977
     .end local v0    # "userData":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     .end local v1    # "userHandle":I
     :catchall_0
@@ -45457,31 +40593,25 @@
     .param p2, "disabled"    # Z
 
     .prologue
-    .line 6074
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 6088
     :goto_0
     return-void
 
-    .line 6077
     :cond_0
     const-string v2, "ComponentName is null"
 
     invoke-static {p1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6078
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 6079
     .local v1, "userHandle":I
     monitor-enter p0
 
-    .line 6080
     const/4 v2, -0x1
 
     :try_start_0
@@ -45489,26 +40619,21 @@
 
     move-result-object v0
 
-    .line 6082
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableScreenCapture:Z
 
     if-eq v2, p2, :cond_1
 
-    .line 6083
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->disableScreenCapture:Z
 
-    .line 6084
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 6085
     invoke-direct {p0, v1, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateScreenCaptureDisabledInWindowManager(IZ)V
 
-    .line 6087
     :cond_1
     monitor-exit p0
 
@@ -45532,17 +40657,14 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 10134
     const-string v3, "ComponentName is null"
 
     invoke-static {p1, v3}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10135
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 10136
     .local v1, "callingUserId":I
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -45550,11 +40672,9 @@
 
     move-result-object v2
 
-    .line 10138
     .local v2, "contentResolver":Landroid/content/ContentResolver;
     monitor-enter p0
 
-    .line 10139
     const/4 v3, -0x1
 
     :try_start_0
@@ -45562,7 +40682,6 @@
 
     move-result-object v0
 
-    .line 10142
     .local v0, "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v3, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -45576,7 +40695,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 10143
     sget-object v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->SECURE_SETTINGS_DEVICEOWNER_WHITELIST:Ljava/util/Set;
 
     invoke-interface {v3, p2}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
@@ -45585,7 +40703,6 @@
 
     if-nez v3, :cond_1
 
-    .line 10144
     new-instance v3, Ljava/lang/SecurityException;
 
     const-string v6, "Permission denial: Device owners cannot update %1$s"
@@ -45606,7 +40723,6 @@
 
     throw v3
 
-    .line 10158
     .end local v0    # "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :catchall_0
     move-exception v3
@@ -45617,7 +40733,6 @@
 
     throw v3
 
-    .line 10147
     .restart local v0    # "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     :cond_0
     :try_start_1
@@ -45629,7 +40744,6 @@
 
     if-nez v3, :cond_1
 
-    .line 10148
     new-instance v3, Ljava/lang/SecurityException;
 
     const-string v6, "Permission denial: Profile owners cannot update %1$s"
@@ -45650,7 +40764,6 @@
 
     throw v3
 
-    .line 10152
     :cond_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -45658,24 +40771,19 @@
 
     move-result-wide v4
 
-    .line 10154
     .local v4, "id":J
     :try_start_2
     invoke-static {v2, p2, p3, v1}, Landroid/provider/Settings$Secure;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 10156
     :try_start_3
     invoke-static {v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 10158
     monitor-exit p0
 
-    .line 10159
     return-void
 
-    .line 10156
     :catchall_1
     move-exception v3
 
@@ -45693,16 +40801,12 @@
     .param p3, "userHandle"    # I
 
     .prologue
-    .line 7475
     invoke-direct {p0, p3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 7476
     monitor-enter p0
 
-    .line 7477
     if-nez p1, :cond_0
 
-    .line 7478
     :try_start_0
     new-instance v1, Ljava/lang/NullPointerException;
 
@@ -45712,7 +40816,6 @@
 
     throw v1
 
-    .line 7492
     :catchall_0
     move-exception v1
 
@@ -45722,7 +40825,6 @@
 
     throw v1
 
-    .line 7480
     :cond_0
     const/4 v1, 0x0
 
@@ -45731,23 +40833,19 @@
 
     move-result-object v0
 
-    .line 7482
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-boolean v1, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->simplePasswordEnabled:Z
 
     if-eq v1, p2, :cond_1
 
-    .line 7483
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->simplePasswordEnabled:Z
 
-    .line 7485
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v2
 
-    .line 7487
     .local v2, "ident":J
     const/4 v1, 0x0
 
@@ -45758,19 +40856,15 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 7489
     :try_start_3
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 7492
     .end local v2    # "ident":J
     :cond_1
     monitor-exit p0
 
-    .line 7493
     return-void
 
-    .line 7489
     .restart local v2    # "ident":J
     :catchall_1
     move-exception v1
@@ -45790,67 +40884,54 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 10232
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 10233
     .local v1, "userId":I
     monitor-enter p0
 
-    .line 10234
     const/4 v3, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10235
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v0
 
-    .line 10236
     .local v0, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-boolean v3, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mStatusBarDisabled:Z
 
     if-eq v3, p2, :cond_1
 
-    .line 10237
     invoke-direct {p0, p2, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setStatusBarDisabledInternal(ZI)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 10238
     monitor-exit p0
 
-    .line 10244
     :goto_0
     return v2
 
-    .line 10240
     :cond_0
     iput-boolean p2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mStatusBarDisabled:Z
 
-    .line 10241
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 10243
     :cond_1
     monitor-exit p0
 
-    .line 10244
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 10243
     .end local v0    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     :catchall_0
     move-exception v2
@@ -45868,21 +40949,17 @@
     .param p2, "encrypt"    # Z
 
     .prologue
-    .line 5924
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 5925
     const/4 v2, 0x0
 
-    .line 5977
     :goto_0
     return v2
 
-    .line 5927
     :cond_0
     const-string v2, "ComponentName is null"
 
@@ -45890,16 +40967,13 @@
 
     invoke-static {v0, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5928
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v8
 
-    .line 5929
     .local v8, "userHandle":I
     monitor-enter p0
 
-    .line 5932
     if-nez v8, :cond_1
 
     :try_start_0
@@ -45909,7 +40983,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 5934
     :cond_1
     const-string v2, "DevicePolicyManagerService"
 
@@ -45943,14 +41016,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5936
     const/4 v2, 0x0
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 5980
     :catchall_0
     move-exception v2
 
@@ -45960,7 +41031,6 @@
 
     throw v2
 
-    .line 5939
     :cond_2
     const/4 v2, 0x7
 
@@ -45973,7 +41043,6 @@
 
     move-result-object v10
 
-    .line 5943
     .local v10, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     invoke-direct/range {p0 .. p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->isEncryptionSupported()Z
 
@@ -45981,14 +41050,12 @@
 
     if-nez v2, :cond_3
 
-    .line 5944
     const/4 v2, 0x0
 
     monitor-exit p0
 
     goto :goto_0
 
-    .line 5948
     :cond_3
     iget-boolean v2, v10, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->encryptionRequested:Z
 
@@ -45996,12 +41063,10 @@
 
     if-eq v2, v0, :cond_4
 
-    .line 5949
     move/from16 v0, p2
 
     iput-boolean v0, v10, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->encryptionRequested:Z
 
-    .line 5950
     const/4 v2, 0x0
 
     const/4 v3, 0x0
@@ -46010,17 +41075,14 @@
 
     invoke-direct {v0, v8, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 5951
     if-eqz p2, :cond_4
 
-    .line 5952
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     move-result-wide v12
 
-    .line 5954
     .local v12, "ident":J
     const/4 v2, 0x5
 
@@ -46073,11 +41135,9 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 5960
     :try_start_3
     invoke-static {v12, v13}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5965
     .end local v12    # "ident":J
     :cond_4
     const/4 v2, 0x0
@@ -46088,11 +41148,9 @@
 
     move-result-object v15
 
-    .line 5967
     .local v15, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     const/4 v14, 0x0
 
-    .line 5968
     .local v14, "newRequested":Z
     iget-object v2, v15, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -46100,7 +41158,6 @@
 
     move-result v9
 
-    .line 5969
     .local v9, "N":I
     const/4 v11, 0x0
 
@@ -46108,7 +41165,6 @@
     :goto_1
     if-ge v11, v9, :cond_5
 
-    .line 5970
     iget-object v2, v15, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -46121,12 +41177,10 @@
 
     or-int/2addr v14, v2
 
-    .line 5969
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 5960
     .end local v9    # "N":I
     .end local v11    # "i":I
     .end local v14    # "newRequested":Z
@@ -46139,7 +41193,6 @@
 
     throw v2
 
-    .line 5974
     .end local v12    # "ident":J
     .restart local v9    # "N":I
     .restart local v11    # "i":I
@@ -46150,7 +41203,6 @@
 
     invoke-direct {v0, v14}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->setEncryptionRequested(Z)V
 
-    .line 5977
     if-eqz v14, :cond_6
 
     const/4 v2, 0x3
@@ -46174,7 +41226,6 @@
     .param p2, "policy"    # Landroid/app/admin/SystemUpdatePolicy;
 
     .prologue
-    .line 10424
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/app/admin/SystemUpdatePolicy;->isValid()Z
@@ -46183,7 +41234,6 @@
 
     if-nez v0, :cond_0
 
-    .line 10425
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string v1, "Invalid system update policy."
@@ -46192,36 +41242,29 @@
 
     throw v0
 
-    .line 10427
     :cond_0
     monitor-enter p0
 
-    .line 10428
     const/4 v0, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10429
     if-nez p2, :cond_1
 
-    .line 10430
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DeviceOwner;->clearSystemUpdatePolicy()V
 
-    .line 10434
     :goto_0
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
 
     invoke-virtual {v0}, Lcom/android/server/devicepolicy/DeviceOwner;->writeOwnerFile()V
 
-    .line 10435
     monitor-exit p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10436
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     new-instance v1, Landroid/content/Intent;
@@ -46234,10 +41277,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 10439
     return-void
 
-    .line 10432
     :cond_1
     :try_start_1
     iget-object v0, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mDeviceOwner:Lcom/android/server/devicepolicy/DeviceOwner;
@@ -46246,7 +41287,6 @@
 
     goto :goto_0
 
-    .line 10435
     :catchall_0
     move-exception v0
 
@@ -46264,41 +41304,33 @@
     .param p3, "args"    # Landroid/os/PersistableBundle;
 
     .prologue
-    .line 8893
     iget-boolean v2, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v2, :cond_0
 
-    .line 8907
     :goto_0
     return-void
 
-    .line 8896
     :cond_0
     const-string v2, "admin is null"
 
     invoke-static {p1, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8897
     const-string v2, "agent is null"
 
     invoke-static {p2, v2}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8898
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v1
 
-    .line 8899
     .local v1, "userHandle":I
     const-string/jumbo v2, "set trust agent configuration"
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceNotManagedProfile(ILjava/lang/String;)V
 
-    .line 8900
     monitor-enter p0
 
-    .line 8901
     const/16 v2, 0x9
 
     :try_start_0
@@ -46306,7 +41338,6 @@
 
     move-result-object v0
 
-    .line 8903
     .local v0, "ap":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v2, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->trustAgentInfos:Ljava/util/HashMap;
 
@@ -46320,21 +41351,18 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 8904
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
     invoke-direct {p0, v1, v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 8905
     invoke-virtual {p0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v2
 
     invoke-virtual {p0, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->syncDeviceCapabilitiesLocked(Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;)V
 
-    .line 8906
     monitor-exit p0
 
     goto :goto_0
@@ -46357,66 +41385,54 @@
     .param p3, "uninstallBlocked"    # Z
 
     .prologue
-    .line 9823
     const-string v5, "ComponentName is null"
 
     invoke-static {p1, v5}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9824
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v4
 
-    .line 9825
     .local v4, "userId":I
     monitor-enter p0
 
-    .line 9826
     const/4 v5, -0x1
 
     :try_start_0
     invoke-virtual {p0, p1, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9828
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v0
 
-    .line 9830
     .local v0, "id":J
     :try_start_1
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v2
 
-    .line 9831
     .local v2, "pm":Landroid/content/pm/IPackageManager;
     invoke-interface {v2, p2, p3, v4}, Landroid/content/pm/IPackageManager;->setBlockUninstallForUser(Ljava/lang/String;ZI)Z
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 9836
     :try_start_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9838
     .end local v2    # "pm":Landroid/content/pm/IPackageManager;
     :goto_0
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 9839
     return-void
 
-    .line 9832
     :catch_0
     move-exception v3
 
-    .line 9834
     .local v3, "re":Landroid/os/RemoteException;
     :try_start_3
     const-string v5, "DevicePolicyManagerService"
@@ -46427,13 +41443,11 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 9836
     :try_start_4
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 9838
     .end local v0    # "id":J
     .end local v3    # "re":Landroid/os/RemoteException;
     :catchall_0
@@ -46445,7 +41459,6 @@
 
     throw v5
 
-    .line 9836
     .restart local v0    # "id":J
     :catchall_1
     move-exception v5
@@ -46467,23 +41480,18 @@
 
     const/4 v7, 0x1
 
-    .line 6824
     iget-boolean v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v8, :cond_0
 
-    .line 6863
     :goto_0
     return v6
 
-    .line 6827
     :cond_0
     monitor-enter p0
 
-    .line 6828
     if-nez p1, :cond_1
 
-    .line 6829
     :try_start_0
     new-instance v6, Ljava/lang/NullPointerException;
 
@@ -46493,7 +41501,6 @@
 
     throw v6
 
-    .line 6864
     :catchall_0
     move-exception v6
 
@@ -46503,14 +41510,12 @@
 
     throw v6
 
-    .line 6831
     :cond_1
     :try_start_1
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v5
 
-    .line 6833
     .local v5, "userId":I
     const/4 v8, -0x1
 
@@ -46518,7 +41523,6 @@
 
     move-result-object v0
 
-    .line 6835
     .local v0, "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v8, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -46532,7 +41536,6 @@
 
     if-nez v8, :cond_2
 
-    .line 6836
     new-instance v6, Ljava/lang/SecurityException;
 
     const-string v7, "This method can only be called by device initializers"
@@ -46541,7 +41544,6 @@
 
     throw v6
 
-    .line 6840
     :cond_2
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -46549,7 +41551,6 @@
 
     move-result-wide v2
 
-    .line 6842
     .local v2, "id":J
     :try_start_2
     iget-object v8, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
@@ -46564,12 +41565,10 @@
 
     if-nez v8, :cond_3
 
-    .line 6843
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
     move-result-object v4
 
-    .line 6844
     .local v4, "ipm":Landroid/content/pm/IPackageManager;
     const/4 v8, 0x2
 
@@ -46577,15 +41576,12 @@
 
     invoke-interface {v4, p1, v8, v9, v5}, Landroid/content/pm/IPackageManager;->setComponentEnabledSetting(Landroid/content/ComponentName;III)V
 
-    .line 6848
     invoke-virtual {p0, p1, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removeActiveAdmin(Landroid/content/ComponentName;I)V
 
-    .line 6851
     .end local v4    # "ipm":Landroid/content/pm/IPackageManager;
     :cond_3
     if-nez v5, :cond_4
 
-    .line 6852
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v8}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -46598,7 +41594,6 @@
 
     invoke-static {v8, v9, v10}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 6855
     :cond_4
     iget-object v8, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -46615,11 +41610,9 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 6861
     :try_start_3
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 6863
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
@@ -46628,11 +41621,9 @@
 
     goto :goto_0
 
-    .line 6857
     :catch_0
     move-exception v1
 
-    .line 6858
     .local v1, "e":Landroid/os/RemoteException;
     :try_start_4
     const-string v7, "DevicePolicyManagerService"
@@ -46643,7 +41634,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 6861
     :try_start_5
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -46668,26 +41658,21 @@
     .param p2, "icon"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 10194
     monitor-enter p0
 
-    .line 10195
     :try_start_0
     const-string v3, "ComponentName is null"
 
     invoke-static {p1, v3}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 10196
     const/4 v3, -0x1
 
     invoke-virtual {p0, p1, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 10198
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v2
 
-    .line 10199
     .local v2, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
@@ -46695,7 +41680,6 @@
 
     move-result-wide v0
 
-    .line 10201
     .local v0, "id":J
     :try_start_1
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
@@ -46704,17 +41688,13 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 10203
     :try_start_2
     invoke-static {v0, v1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 10205
     monitor-exit p0
 
-    .line 10206
     return-void
 
-    .line 10203
     :catchall_0
     move-exception v3
 
@@ -46722,7 +41702,6 @@
 
     throw v3
 
-    .line 10205
     .end local v0    # "id":J
     .end local v2    # "userId":I
     :catchall_1
@@ -46742,7 +41721,6 @@
     .param p3, "enabled"    # Z
 
     .prologue
-    .line 9534
     const-string v18, "ComponentName is null"
 
     move-object/from16 v0, p1
@@ -46751,7 +41729,6 @@
 
     invoke-static {v0, v1}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9535
     new-instance v14, Landroid/os/UserHandle;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -46762,17 +41739,14 @@
 
     invoke-direct {v14, v0}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 9536
     .local v14, "user":Landroid/os/UserHandle;
     invoke-virtual {v14}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v15
 
-    .line 9537
     .local v15, "userHandle":I
     monitor-enter p0
 
-    .line 9538
     const/16 v18, -0x1
 
     :try_start_0
@@ -46786,7 +41760,6 @@
 
     move-result-object v4
 
-    .line 9540
     .local v4, "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v0, v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -46804,7 +41777,6 @@
 
     move-result v7
 
-    .line 9541
     .local v7, "isDeviceOwner":Z
     if-nez v7, :cond_0
 
@@ -46822,7 +41794,6 @@
 
     if-eqz v18, :cond_0
 
-    .line 9543
     new-instance v18, Ljava/lang/SecurityException;
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -46851,7 +41822,6 @@
 
     throw v18
 
-    .line 9626
     .end local v4    # "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v7    # "isDeviceOwner":Z
     :catchall_0
@@ -46863,7 +41833,6 @@
 
     throw v18
 
-    .line 9545
     .restart local v4    # "activeAdmin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v7    # "isDeviceOwner":Z
     :cond_0
@@ -46880,7 +41849,6 @@
 
     if-eqz v18, :cond_1
 
-    .line 9546
     new-instance v18, Ljava/lang/SecurityException;
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -46915,7 +41883,6 @@
 
     throw v18
 
-    .line 9548
     :cond_1
     move-object/from16 v0, p0
 
@@ -46931,11 +41898,9 @@
 
     move-result v5
 
-    .line 9550
     .local v5, "alreadyRestricted":Z
     const/4 v6, 0x0
 
-    .line 9551
     .local v6, "iAudioService":Landroid/media/IAudioService;
     const-string/jumbo v18, "no_unmute_microphone"
 
@@ -46961,7 +41926,6 @@
 
     if-eqz v18, :cond_3
 
-    .line 9553
     :cond_2
     const-string v18, "audio"
 
@@ -46973,7 +41937,6 @@
 
     move-result-object v6
 
-    .line 9557
     :cond_3
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_1
@@ -46981,13 +41944,11 @@
 
     move-result-wide v8
 
-    .line 9559
     .local v8, "id":J
     if-eqz p3, :cond_5
 
     if-nez v5, :cond_5
 
-    .line 9560
     :try_start_2
     const-string/jumbo v18, "no_unmute_microphone"
 
@@ -47001,7 +41962,6 @@
 
     if-eqz v18, :cond_8
 
-    .line 9561
     const/16 v18, 0x1
 
     move-object/from16 v0, p0
@@ -47020,7 +41980,6 @@
 
     invoke-interface {v6, v0, v1, v15}, Landroid/media/IAudioService;->setMicrophoneMute(ZLjava/lang/String;I)V
 
-    .line 9567
     :cond_4
     :goto_0
     const-string/jumbo v18, "no_config_wifi"
@@ -47035,7 +41994,6 @@
 
     if-eqz v18, :cond_9
 
-    .line 9568
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -47058,7 +42016,6 @@
 
     invoke-static {v0, v1, v2, v15}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 9597
     :cond_5
     :goto_1
     move-object/from16 v0, p0
@@ -47075,12 +42032,10 @@
 
     invoke-virtual {v0, v1, v2, v14}, Landroid/os/UserManager;->setUserRestriction(Ljava/lang/String;ZLandroid/os/UserHandle;)V
 
-    .line 9598
     move/from16 v0, p3
 
     if-eq v0, v5, :cond_6
 
-    .line 9599
     const-string/jumbo v18, "no_share_location"
 
     move-object/from16 v0, v18
@@ -47093,10 +42048,8 @@
 
     if-eqz v18, :cond_6
 
-    .line 9602
     const-string/jumbo v11, "sys.settings_secure_version"
 
-    .line 9603
     .local v11, "property":Ljava/lang/String;
     const-string/jumbo v18, "sys.settings_secure_version"
 
@@ -47114,7 +42067,6 @@
 
     add-long v16, v18, v20
 
-    .line 9604
     .local v16, "version":J
     const-string/jumbo v18, "sys.settings_secure_version"
 
@@ -47124,10 +42076,8 @@
 
     invoke-static/range {v18 .. v19}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 9606
     const-string/jumbo v10, "location_providers_allowed"
 
-    .line 9607
     .local v10, "name":Ljava/lang/String;
     sget-object v18, Landroid/provider/Settings$Secure;->CONTENT_URI:Landroid/net/Uri;
 
@@ -47137,7 +42087,6 @@
 
     move-result-object v13
 
-    .line 9608
     .local v13, "url":Landroid/net/Uri;
     move-object/from16 v0, p0
 
@@ -47161,7 +42110,6 @@
 
     invoke-virtual {v0, v13, v1, v2, v15}, Landroid/content/ContentResolver;->notifyChange(Landroid/net/Uri;Landroid/database/ContentObserver;ZI)V
 
-    .line 9611
     .end local v10    # "name":Ljava/lang/String;
     .end local v11    # "property":Ljava/lang/String;
     .end local v13    # "url":Landroid/net/Uri;
@@ -47171,7 +42119,6 @@
 
     if-eqz v5, :cond_7
 
-    .line 9612
     const-string/jumbo v18, "no_unmute_microphone"
 
     move-object/from16 v0, v18
@@ -47184,7 +42131,6 @@
 
     if-eqz v18, :cond_d
 
-    .line 9613
     const/16 v18, 0x0
 
     move-object/from16 v0, p0
@@ -47206,13 +42152,11 @@
     .catch Landroid/os/RemoteException; {:try_start_2 .. :try_end_2} :catch_0
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 9623
     :cond_7
     :goto_2
     :try_start_3
     invoke-static {v8, v9}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
-    .line 9625
     :goto_3
     const/16 v18, 0x0
 
@@ -47226,15 +42170,12 @@
 
     invoke-direct {v0, v15, v1, v2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->sendChangedNotification(IZZ)V
 
-    .line 9626
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 9627
     return-void
 
-    .line 9563
     :cond_8
     :try_start_4
     const-string/jumbo v18, "no_adjust_volume"
@@ -47249,7 +42190,6 @@
 
     if-eqz v18, :cond_4
 
-    .line 9564
     const/16 v18, 0x1
 
     const/16 v19, 0x0
@@ -47277,11 +42217,9 @@
 
     goto/16 :goto_0
 
-    .line 9620
     :catch_0
     move-exception v12
 
-    .line 9621
     .local v12, "re":Landroid/os/RemoteException;
     :try_start_5
     const-string v18, "DevicePolicyManagerService"
@@ -47296,7 +42234,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 9623
     :try_start_6
     invoke-static {v8, v9}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
     :try_end_6
@@ -47304,7 +42241,6 @@
 
     goto :goto_3
 
-    .line 9571
     .end local v12    # "re":Landroid/os/RemoteException;
     :cond_9
     :try_start_7
@@ -47320,7 +42256,6 @@
 
     if-eqz v18, :cond_a
 
-    .line 9572
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -47343,7 +42278,6 @@
 
     invoke-static {v0, v1, v2, v15}, Landroid/provider/Settings$Secure;->putIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)Z
 
-    .line 9575
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -47371,7 +42305,6 @@
 
     goto/16 :goto_1
 
-    .line 9623
     :catchall_1
     move-exception v18
 
@@ -47382,7 +42315,6 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 9578
     :cond_a
     :try_start_9
     const-string/jumbo v18, "no_debugging_features"
@@ -47397,10 +42329,8 @@
 
     if-eqz v18, :cond_b
 
-    .line 9580
     if-nez v15, :cond_5
 
-    .line 9581
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -47425,7 +42355,6 @@
 
     goto/16 :goto_1
 
-    .line 9584
     :cond_b
     const-string v18, "ensure_verify_apps"
 
@@ -47439,7 +42368,6 @@
 
     if-eqz v18, :cond_c
 
-    .line 9585
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -47462,7 +42390,6 @@
 
     invoke-static {v0, v1, v2, v15}, Landroid/provider/Settings$Global;->putStringForUser(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;I)Z
 
-    .line 9588
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -47487,7 +42414,6 @@
 
     goto/16 :goto_1
 
-    .line 9591
     :cond_c
     const-string/jumbo v18, "no_install_unknown_sources"
 
@@ -47501,7 +42427,6 @@
 
     if-eqz v18, :cond_5
 
-    .line 9592
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -47526,7 +42451,6 @@
 
     goto/16 :goto_1
 
-    .line 9615
     :cond_d
     const-string/jumbo v18, "no_adjust_volume"
 
@@ -47540,7 +42464,6 @@
 
     if-eqz v18, :cond_7
 
-    .line 9616
     const/16 v18, 0x0
 
     const/16 v19, 0x0
@@ -47576,53 +42499,43 @@
     .param p4, "originalIntent"    # Landroid/content/Intent;
 
     .prologue
-    .line 9909
     invoke-static {p1, p2, p3, p4}, Landroid/provider/ContactsContract$QuickContact;->rebuildManagedQuickContactsIntent(Ljava/lang/String;JLandroid/content/Intent;)Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 9911
     .local v1, "intent":Landroid/content/Intent;
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
 
     move-result v0
 
-    .line 9913
     .local v0, "callingUserId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 9915
     .local v2, "ident":J
     :try_start_0
     monitor-enter p0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_1
 
-    .line 9916
     :try_start_1
     invoke-virtual {p0, v0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getManagedUserId(I)I
 
     move-result v4
 
-    .line 9917
     .local v4, "managedUserId":I
     if-gez v4, :cond_0
 
-    .line 9918
     monitor-exit p0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 9931
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 9933
     :goto_0
     return-void
 
-    .line 9920
     :cond_0
     :try_start_2
     invoke-virtual {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getCrossProfileCallerIdDisabledForUser(I)Z
@@ -47631,17 +42544,14 @@
 
     if-eqz v5, :cond_1
 
-    .line 9925
     monitor-exit p0
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 9931
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 9927
     :cond_1
     :try_start_3
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -47652,17 +42562,14 @@
 
     invoke-static {v5, v1, v6}, Landroid/provider/ContactsInternal;->startQuickContactWithErrorToastForUser(Landroid/content/Context;Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 9929
     monitor-exit p0
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 9931
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 9929
     .end local v4    # "managedUserId":I
     :catchall_0
     move-exception v5
@@ -47677,7 +42584,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 9931
     :catchall_1
     move-exception v5
 
@@ -47692,42 +42598,34 @@
     .param p2, "userHandle"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 9474
     const-string v4, "ComponentName is null"
 
     invoke-static {p1, v4}, Lcom/android/internal/util/Preconditions;->checkNotNull(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 9475
     monitor-enter p0
 
-    .line 9476
     const/4 v4, -0x2
 
     :try_start_0
     invoke-virtual {p0, p1, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getActiveAdminForCallerLocked(Landroid/content/ComponentName;I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
 
-    .line 9478
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-wide v2
 
-    .line 9480
     .local v2, "id":J
     const/4 v1, 0x0
 
-    .line 9481
     .local v1, "userId":I
     if-eqz p2, :cond_0
 
-    .line 9482
     :try_start_1
     invoke-virtual {p2}, Landroid/os/UserHandle;->getIdentifier()I
 
     move-result v1
 
-    .line 9484
     :cond_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -47740,7 +42638,6 @@
 
     move-result v4
 
-    .line 9489
     :try_start_2
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -47751,11 +42648,9 @@
     :goto_0
     return v4
 
-    .line 9485
     :catch_0
     move-exception v0
 
-    .line 9486
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v4, "DevicePolicyManagerService"
@@ -47766,10 +42661,8 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 9487
     const/4 v4, 0x0
 
-    .line 9489
     :try_start_4
     invoke-static {v2, v3}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->restoreCallingIdentity(J)V
 
@@ -47777,7 +42670,6 @@
 
     goto :goto_0
 
-    .line 9491
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "userId":I
     .end local v2    # "id":J
@@ -47790,7 +42682,6 @@
 
     throw v4
 
-    .line 9489
     .restart local v1    # "userId":I
     .restart local v2    # "id":J
     :catchall_1
@@ -47811,7 +42702,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 2413
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -47832,7 +42722,6 @@
 
     move-result-object v2
 
-    .line 2414
     .local v2, "cameraPropertyForUser":Ljava/lang/String;
     const/4 v8, 0x0
 
@@ -47840,7 +42729,6 @@
 
     move-result v3
 
-    .line 2415
     .local v3, "systemState":Z
     iget v8, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserHandle:I
 
@@ -47848,7 +42736,6 @@
 
     move-result v1
 
-    .line 2418
     .local v1, "cameraDisabled":Z
     const-string/jumbo v8, "service.bt.security.policy.mode"
 
@@ -47858,7 +42745,6 @@
 
     move-result v4
 
-    .line 2419
     .local v4, "systemStateBT":I
     iget v8, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserHandle:I
 
@@ -47866,35 +42752,29 @@
 
     move-result v0
 
-    .line 2422
     .local v0, "btMode":I
     if-eq v1, v3, :cond_1
 
-    .line 2423
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 2425
     .local v6, "token":J
     if-eqz v1, :cond_2
 
     :try_start_0
     const-string v5, "1"
 
-    .line 2428
     .local v5, "value":Ljava/lang/String;
     :goto_0
     invoke-static {v2, v5}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2430
     if-eq v4, v0, :cond_0
 
     const/4 v8, 0x1
 
     if-ne v0, v8, :cond_0
 
-    .line 2431
     const-string/jumbo v8, "service.bt.security.policy.mode"
 
     const-string v9, "1"
@@ -47903,17 +42783,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2435
     :cond_0
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 2438
     .end local v5    # "value":Ljava/lang/String;
     .end local v6    # "token":J
     :cond_1
     return-void
 
-    .line 2425
     .restart local v6    # "token":J
     :cond_2
     :try_start_1
@@ -47923,7 +42800,6 @@
 
     goto :goto_0
 
-    .line 2435
     :catchall_0
     move-exception v8
 
@@ -47936,28 +42812,22 @@
     .locals 6
 
     .prologue
-    .line 2441
     iget-boolean v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v4, :cond_1
 
-    .line 2460
     :cond_0
     return-void
 
-    .line 2444
     :cond_1
     const/4 v4, 0x0
 
     invoke-virtual {p0, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
-    .line 2445
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->loadDeviceOwner()V
 
-    .line 2446
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->cleanUpOldUsers()V
 
-    .line 2448
     new-instance v4, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;
 
     iget-object v5, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHandler:Landroid/os/Handler;
@@ -47972,10 +42842,8 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService$SetupContentObserver;->register(Landroid/content/ContentResolver;)V
 
-    .line 2450
     invoke-virtual {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateUserSetupComplete()V
 
-    .line 2453
     iget-object v4, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     const/4 v5, 0x1
@@ -47984,13 +42852,11 @@
 
     move-result-object v3
 
-    .line 2454
     .local v3, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     invoke-interface {v3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 2455
     .local v0, "N":I
     const/4 v1, 0x0
 
@@ -47998,7 +42864,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 2456
     invoke-interface {v3, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -48007,7 +42872,6 @@
 
     iget v2, v4, Landroid/content/pm/UserInfo;->id:I
 
-    .line 2457
     .local v2, "userHandle":I
     const/4 v4, 0x0
 
@@ -48017,7 +42881,6 @@
 
     invoke-direct {p0, v2, v4}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->updateScreenCaptureDisabledInWindowManager(IZ)V
 
-    .line 2455
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
@@ -48029,10 +42892,8 @@
     .param p2, "aliases"    # [Ljava/lang/String;
 
     .prologue
-    .line 4917
     invoke-virtual {p0, p1}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCanManageCaCerts(Landroid/content/ComponentName;)V
 
-    .line 4919
     new-instance v6, Landroid/os/UserHandle;
 
     invoke-static {}, Landroid/os/UserHandle;->getCallingUserId()I
@@ -48041,13 +42902,11 @@
 
     invoke-direct {v6, v7}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 4920
     .local v6, "userHandle":Landroid/os/UserHandle;
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 4922
     .local v2, "id":J
     :try_start_0
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
@@ -48059,7 +42918,6 @@
 
     move-result-object v5
 
-    .line 4924
     .local v5, "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     const/4 v1, 0x0
 
@@ -48070,7 +42928,6 @@
 
     if-ge v1, v7, :cond_0
 
-    .line 4925
     invoke-virtual {v5}, Landroid/security/KeyChain$KeyChainConnection;->getService()Landroid/security/IKeyChainService;
 
     move-result-object v7
@@ -48082,12 +42939,10 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 4924
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 4930
     :cond_0
     :try_start_2
     invoke-virtual {v5}, Landroid/security/KeyChain$KeyChainConnection;->close()V
@@ -48095,23 +42950,19 @@
     .catch Ljava/lang/InterruptedException; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 4936
     :goto_1
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 4938
     .end local v1    # "i":I
     .end local v5    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :goto_2
     return-void
 
-    .line 4927
     .restart local v1    # "i":I
     .restart local v5    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catch_0
     move-exception v0
 
-    .line 4928
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_3
     const-string v7, "DevicePolicyManagerService"
@@ -48122,7 +42973,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 4930
     :try_start_4
     invoke-virtual {v5}, Landroid/security/KeyChain$KeyChainConnection;->close()V
     :try_end_4
@@ -48131,14 +42981,12 @@
 
     goto :goto_1
 
-    .line 4932
     .end local v0    # "e":Landroid/os/RemoteException;
     .end local v1    # "i":I
     .end local v5    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catch_1
     move-exception v4
 
-    .line 4933
     .local v4, "ie":Ljava/lang/InterruptedException;
     :try_start_5
     const-string v7, "DevicePolicyManagerService"
@@ -48147,7 +42995,6 @@
 
     invoke-static {v7, v8, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 4934
     invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
 
     move-result-object v7
@@ -48156,12 +43003,10 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 4936
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_2
 
-    .line 4930
     .end local v4    # "ie":Ljava/lang/InterruptedException;
     .restart local v1    # "i":I
     .restart local v5    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
@@ -48176,7 +43021,6 @@
     .catch Ljava/lang/InterruptedException; {:try_start_6 .. :try_end_6} :catch_1
     .catchall {:try_start_6 .. :try_end_6} :catchall_1
 
-    .line 4936
     .end local v1    # "i":I
     .end local v5    # "keyChainConnection":Landroid/security/KeyChain$KeyChainConnection;
     :catchall_1
@@ -48192,7 +43036,6 @@
     .param p1, "policy"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     .prologue
-    .line 4716
     const/4 v3, 0x0
 
     iget v6, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserHandle:I
@@ -48201,7 +43044,6 @@
 
     move-result-wide v4
 
-    .line 4717
     .local v4, "timeMs":J
     iget-wide v6, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mLastMaximumTimeToLock:J
 
@@ -48209,17 +43051,14 @@
 
     if-nez v3, :cond_0
 
-    .line 4756
     :goto_0
     return-void
 
-    .line 4721
     :cond_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v0
 
-    .line 4723
     .local v0, "ident":J
     const-wide/16 v6, 0x0
 
@@ -48227,15 +43066,12 @@
 
     if-gtz v3, :cond_1
 
-    .line 4724
     const-wide/32 v4, 0x7fffffff
 
-    .line 4732
     :goto_1
     :try_start_0
     iput-wide v4, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mLastMaximumTimeToLock:J
 
-    .line 4737
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v6, "persona"
@@ -48246,7 +43082,6 @@
 
     check-cast v2, Landroid/os/PersonaManager;
 
-    .line 4738
     .local v2, "persona":Landroid/os/PersonaManager;
     if-eqz v2, :cond_2
 
@@ -48258,27 +43093,23 @@
 
     if-eqz v3, :cond_2
 
-    .line 4739
     const-string v3, "DevicePolicyManagerService"
 
     const-string v6, "Setting a timeout in personamanager manager this time"
 
     invoke-static {v3, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4740
     iget v3, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserHandle:I
 
     invoke-virtual {v2, v4, v5, v3}, Landroid/os/PersonaManager;->setMaximumScreenOffTimeoutFromDeviceAdmin(JI)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4754
     :goto_2
     invoke-static {v0, v1}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto :goto_0
 
-    .line 4728
     .end local v2    # "persona":Landroid/os/PersonaManager;
     :cond_1
     :try_start_1
@@ -48298,7 +43129,6 @@
 
     goto :goto_1
 
-    .line 4754
     :catchall_0
     move-exception v3
 
@@ -48306,7 +43136,6 @@
 
     throw v3
 
-    .line 4742
     .restart local v2    # "persona":Landroid/os/PersonaManager;
     :cond_2
     :try_start_2
@@ -48316,7 +43145,6 @@
 
     invoke-static {v3, v6}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4743
     iget-object v3, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mPowerManagerInternal:Landroid/os/PowerManagerInternal;
 
     long-to-int v6, v4
@@ -48334,14 +43162,12 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 10276
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mUserManager:Landroid/os/UserManager;
 
     invoke-virtual {v7, v8}, Landroid/os/UserManager;->getUsers(Z)Ljava/util/List;
 
     move-result-object v6
 
-    .line 10277
     .local v6, "users":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/UserInfo;>;"
     iget-object v7, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
@@ -48349,13 +43175,11 @@
 
     move-result-object v4
 
-    .line 10278
     .local v4, "resolver":Landroid/content/ContentResolver;
     invoke-interface {v6}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 10279
     .local v0, "N":I
     const/4 v2, 0x0
 
@@ -48363,7 +43187,6 @@
     :goto_0
     if-ge v2, v0, :cond_1
 
-    .line 10281
     :try_start_0
     invoke-interface {v6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -48373,7 +43196,6 @@
 
     iget v5, v7, Landroid/content/pm/UserInfo;->id:I
 
-    .line 10282
     .local v5, "userHandle":I
     const-string/jumbo v7, "user_setup_complete"
 
@@ -48385,42 +43207,34 @@
 
     if-eqz v7, :cond_0
 
-    .line 10284
     invoke-virtual {p0, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->getUserData(I)Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     move-result-object v3
 
-    .line 10285
     .local v3, "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     iget-boolean v7, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserSetupComplete:Z
 
     if-nez v7, :cond_0
 
-    .line 10286
     const/4 v7, 0x1
 
     iput-boolean v7, v3, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mUserSetupComplete:Z
 
-    .line 10287
     monitor-enter p0
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 10289
     :try_start_1
     invoke-direct {p0, v5}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->removeDeviceInitializerFromLockTaskPackages(I)V
 
-    .line 10290
     const/4 v7, 0x0
 
     const/4 v8, 0x0
 
     invoke-direct {p0, v5, v7, v8}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->saveSettingsLocked(IZZ)V
 
-    .line 10291
     monitor-exit p0
 
-    .line 10279
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     .end local v5    # "userHandle":I
     :cond_0
@@ -48429,7 +43243,6 @@
 
     goto :goto_0
 
-    .line 10291
     .restart local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     .restart local v5    # "userHandle":I
     :catchall_0
@@ -48444,13 +43257,11 @@
     :try_end_2
     .catch Ljava/lang/RuntimeException; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 10294
     .end local v3    # "policy":Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
     .end local v5    # "userHandle":I
     :catch_0
     move-exception v1
 
-    .line 10295
     .local v1, "e":Ljava/lang/RuntimeException;
     const-string v7, "DevicePolicyManagerService"
 
@@ -48458,12 +43269,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10296
     invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
 
     goto :goto_1
 
-    .line 10299
     .end local v1    # "e":Ljava/lang/RuntimeException;
     :cond_1
     return-void
@@ -48474,15 +43283,12 @@
     .param p1, "policy"    # Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;
 
     .prologue
-    .line 2390
     iget v2, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPasswordOwner:I
 
     if-ltz v2, :cond_1
 
-    .line 2391
     const/4 v0, 0x0
 
-    .line 2392
     .local v0, "haveOwner":Z
     iget-object v2, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
@@ -48496,7 +43302,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 2393
     iget-object v2, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mAdminList:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -48513,14 +43318,11 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 2394
     const/4 v0, 0x1
 
-    .line 2398
     :cond_0
     if-nez v0, :cond_1
 
-    .line 2399
     const-string v2, "DevicePolicyManagerService"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -48551,18 +43353,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2401
     const/4 v2, -0x1
 
     iput v2, p1, Lcom/android/server/devicepolicy/DevicePolicyManagerService$DevicePolicyData;->mPasswordOwner:I
 
-    .line 2404
     .end local v0    # "haveOwner":Z
     .end local v1    # "i":I
     :cond_1
     return-void
 
-    .line 2392
     .restart local v0    # "haveOwner":Z
     .restart local v1    # "i":I
     :cond_2
@@ -48581,23 +43380,18 @@
 
     const/4 v8, 0x0
 
-    .line 5257
     iget-boolean v9, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mHasFeature:Z
 
     if-nez v9, :cond_0
 
-    .line 5306
     :goto_0
     return-void
 
-    .line 5260
     :cond_0
     invoke-direct {p0, p2}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->enforceCrossUserPermission(I)V
 
-    .line 5262
     monitor-enter p0
 
-    .line 5265
     const/4 v9, 0x0
 
     const/4 v10, 0x4
@@ -48607,7 +43401,6 @@
 
     move-result-object v0
 
-    .line 5269
     .local v0, "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     iget-object v9, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -48615,16 +43408,13 @@
 
     move-result-object v1
 
-    .line 5270
     .local v1, "cname":Landroid/content/ComponentName;
     if-eqz v1, :cond_2
 
-    .line 5271
     invoke-virtual {v1}, Landroid/content/ComponentName;->flattenToShortString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 5276
     .local v6, "source":Ljava/lang/String;
     :goto_1
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
@@ -48633,13 +43423,11 @@
 
     move-result-wide v2
 
-    .line 5278
     .local v2, "ident":J
     and-int/lit8 v9, p1, 0x2
 
     if-eqz v9, :cond_5
 
-    .line 5279
     :try_start_1
     iget-object v9, v0, Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;->info:Landroid/app/admin/DeviceAdminInfo;
 
@@ -48661,7 +43449,6 @@
 
     move v5, v7
 
-    .line 5281
     .local v5, "ownsInitialization":Z
     :goto_2
     if-nez p2, :cond_1
@@ -48680,7 +43467,6 @@
 
     if-nez v5, :cond_4
 
-    .line 5284
     :cond_1
     new-instance v8, Ljava/lang/SecurityException;
 
@@ -48692,7 +43478,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5303
     .end local v5    # "ownsInitialization":Z
     :catchall_0
     move-exception v8
@@ -48702,7 +43487,6 @@
 
     throw v8
 
-    .line 5305
     .end local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .end local v1    # "cname":Landroid/content/ComponentName;
     .end local v2    # "ident":J
@@ -48716,7 +43500,6 @@
 
     throw v8
 
-    .line 5273
     .restart local v0    # "admin":Lcom/android/server/devicepolicy/DevicePolicyManagerService$ActiveAdmin;
     .restart local v1    # "cname":Landroid/content/ComponentName;
     :cond_2
@@ -48736,10 +43519,8 @@
     :cond_3
     move v5, v8
 
-    .line 5279
     goto :goto_2
 
-    .line 5287
     .restart local v5    # "ownsInitialization":Z
     :cond_4
     :try_start_4
@@ -48753,14 +43534,11 @@
 
     check-cast v4, Landroid/service/persistentdata/PersistentDataBlockManager;
 
-    .line 5289
     .local v4, "manager":Landroid/service/persistentdata/PersistentDataBlockManager;
     if-eqz v4, :cond_5
 
-    .line 5290
     invoke-virtual {v4}, Landroid/service/persistentdata/PersistentDataBlockManager;->wipe()V
 
-    .line 5293
     .end local v4    # "manager":Landroid/service/persistentdata/PersistentDataBlockManager;
     .end local v5    # "ownsInitialization":Z
     :cond_5
@@ -48768,7 +43546,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 5299
     .local v7, "wipeExtRequested":Z
     :goto_3
     new-instance v8, Ljava/lang/StringBuilder;
@@ -48793,11 +43570,9 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 5303
     :try_start_5
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 5305
     monitor-exit p0
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
@@ -48808,7 +43583,6 @@
     :cond_6
     move v7, v8
 
-    .line 5293
     goto :goto_3
 .end method
 
@@ -48822,7 +43596,6 @@
 
     const/4 v6, 0x1
 
-    .line 5164
     invoke-static {}, Landroid/os/Environment;->isExternalStorageRemovable()Z
 
     move-result v8
@@ -48837,7 +43610,6 @@
 
     move v1, v6
 
-    .line 5165
     .local v1, "forceExtWipe":Z
     :goto_0
     invoke-virtual {p1}, Ljava/lang/Boolean;->booleanValue()Z
@@ -48848,14 +43620,12 @@
 
     move v0, v6
 
-    .line 5169
     .local v0, "flags":I
     :goto_1
     invoke-direct {p0}, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->findSDCard()Z
 
     move-result v3
 
-    .line 5172
     .local v3, "isExtSDSupported":Z
     and-int/lit8 v8, v0, 0x1
 
@@ -48863,7 +43633,6 @@
 
     move v4, v6
 
-    .line 5175
     .local v4, "isWipeExtRequested":Z
     :goto_2
     if-nez v1, :cond_0
@@ -48877,47 +43646,39 @@
 
     if-nez v7, :cond_5
 
-    .line 5176
     and-int/lit8 v7, v0, 0x1
 
     if-eqz v7, :cond_1
 
-    .line 5177
     new-instance v2, Landroid/content/Intent;
 
     const-string v7, "android.intent.action.MASTER_CLEAR"
 
     invoke-direct {v2, v7}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5178
     .local v2, "intent":Landroid/content/Intent;
     const-string v7, "android.intent.extra.REASON"
 
     invoke-virtual {v2, v7, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5179
     const/high16 v7, 0x10000000
 
     invoke-virtual {v2, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 5180
     const-string v7, "android.intent.extra.WIPE_EXTERNAL_STORAGE"
 
     invoke-virtual {v2, v7, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 5181
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mWakeLock:Landroid/os/PowerManager$WakeLock;
 
     const-wide/16 v8, 0x2710
 
     invoke-virtual {v6, v8, v9}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
-    .line 5182
     iget-object v6, p0, Lcom/android/server/devicepolicy/DevicePolicyManagerService;->mContext:Landroid/content/Context;
 
     invoke-virtual {v6, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 5219
     .end local v2    # "intent":Landroid/content/Intent;
     :cond_1
     :goto_3
@@ -48930,14 +43691,12 @@
     :cond_2
     move v1, v7
 
-    .line 5164
     goto :goto_0
 
     .restart local v1    # "forceExtWipe":Z
     :cond_3
     move v0, v7
 
-    .line 5165
     goto :goto_1
 
     .restart local v0    # "flags":I
@@ -48945,10 +43704,8 @@
     :cond_4
     move v4, v7
 
-    .line 5172
     goto :goto_2
 
-    .line 5202
     .restart local v4    # "isWipeExtRequested":Z
     :cond_5
     const-string v6, "DevicePolicyManagerService"
@@ -48957,10 +43714,8 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5203
     move-object v5, p2
 
-    .line 5204
     .local v5, "wipeReason":Ljava/lang/String;
     new-instance v6, Ljava/lang/Thread;
 

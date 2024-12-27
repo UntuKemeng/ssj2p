@@ -27,10 +27,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     new-instance v2, Lcom/android/server/enterprise/storage/EcppStorageProvider$EcppDbErrorHandler;
 
     invoke-direct {v2}, Lcom/android/server/enterprise/storage/EcppStorageProvider$EcppDbErrorHandler;-><init>()V
@@ -41,7 +39,6 @@
 
     iput-object v2, p0, Lcom/android/server/enterprise/storage/EcppStorageProvider;->mEcppDbHelper:Lcom/android/server/enterprise/storage/EcppStorageHelper;
 
-    .line 44
     :try_start_0
     iget-object v2, p0, Lcom/android/server/enterprise/storage/EcppStorageProvider;->mEcppDbHelper:Lcom/android/server/enterprise/storage/EcppStorageHelper;
 
@@ -49,7 +46,6 @@
 
     move-result-object v0
 
-    .line 45
     .local v0, "db":Landroid/database/sqlite/SQLiteDatabase;
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->enableWriteAheadLogging()Z
     :try_end_0
@@ -57,16 +53,13 @@
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
-    .line 57
     .end local v0    # "db":Landroid/database/sqlite/SQLiteDatabase;
     :goto_0
     return-void
 
-    .line 46
     :catch_0
     move-exception v1
 
-    .line 47
     .local v1, "e":Landroid/database/sqlite/SQLiteException;
     const-string v2, "EcppStorageProvider"
 
@@ -96,12 +89,10 @@
 
     goto :goto_0
 
-    .line 50
     .end local v1    # "e":Landroid/database/sqlite/SQLiteException;
     :catch_1
     move-exception v1
 
-    .line 51
     .local v1, "e":Ljava/lang/IllegalStateException;
     const-string v2, "EcppStorageProvider"
 
@@ -131,12 +122,10 @@
 
     goto :goto_0
 
-    .line 54
     .end local v1    # "e":Ljava/lang/IllegalStateException;
     :catch_2
     move-exception v1
 
-    .line 55
     .local v1, "e":Ljava/lang/Exception;
     const-string v2, "EcppStorageProvider"
 
@@ -172,22 +161,18 @@
     .param p1, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 173
     const-string v0, ""
 
-    .line 175
     .local v0, "adminName":Ljava/lang/String;
     if-nez p1, :cond_0
 
     move-object v1, v0
 
-    .line 186
     .end local v0    # "adminName":Ljava/lang/String;
     .local v1, "adminName":Ljava/lang/String;
     :goto_0
     return-object v1
 
-    .line 178
     .end local v1    # "adminName":Ljava/lang/String;
     .restart local v0    # "adminName":Ljava/lang/String;
     :cond_0
@@ -195,13 +180,11 @@
 
     move-result-object v4
 
-    .line 179
     .local v4, "pkgName":Ljava/lang/String;
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 180
     .local v2, "clsName":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -225,11 +208,9 @@
 
     move-result-object v3
 
-    .line 182
     .local v3, "compomentName":Ljava/lang/String;
     if-eqz v3, :cond_1
 
-    .line 183
     const-string v5, "\'"
 
     const-string v6, ""
@@ -241,7 +222,6 @@
     :cond_1
     move-object v1, v0
 
-    .line 186
     .end local v0    # "adminName":Ljava/lang/String;
     .restart local v1    # "adminName":Ljava/lang/String;
     goto :goto_0
@@ -255,7 +235,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 190
     const-string v2, "EcppStorageProvider"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -288,7 +267,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 193
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -307,13 +285,11 @@
 
     move-result-object v1
 
-    .line 194
     .local v1, "whereClause":Ljava/lang/String;
     invoke-direct {p0, p2}, Lcom/android/server/enterprise/storage/EcppStorageProvider;->getAdminName(Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 196
     .local v0, "adminName":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -327,7 +303,6 @@
 
     if-nez v2, :cond_0
 
-    .line 197
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -360,7 +335,6 @@
 
     move-result-object v1
 
-    .line 201
     :cond_0
     iget-object v2, p0, Lcom/android/server/enterprise/storage/EcppStorageProvider;->mEcppDbHelper:Lcom/android/server/enterprise/storage/EcppStorageHelper;
 
@@ -372,10 +346,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 202
     const/4 v2, 0x1
 
-    .line 205
     :goto_0
     return v2
 
@@ -391,7 +363,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 353
     const-string v2, "PASSWORD_POLICY"
 
     const-string v3, "allowBluetoothMode"
@@ -419,7 +390,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 383
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowBrowser"
@@ -445,7 +415,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 378
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowCamera"
@@ -471,7 +440,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 358
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowDesktopSync"
@@ -497,7 +465,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 347
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowInternetSharing"
@@ -523,7 +490,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 363
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowIrDA"
@@ -549,7 +515,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 373
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowPOPIMAPEmail"
@@ -575,7 +540,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 368
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowStorageCard"
@@ -601,7 +565,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 342
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowTextMessaging"
@@ -627,7 +590,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 337
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowWifi"
@@ -657,10 +619,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 151
     const-string v1, "0"
 
-    .line 152
     .local v1, "result":Ljava/lang/String;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -712,7 +672,6 @@
 
     move-result-object v2
 
-    .line 156
     .local v2, "whereClause":Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/enterprise/storage/EcppStorageProvider;->mEcppDbHelper:Lcom/android/server/enterprise/storage/EcppStorageHelper;
 
@@ -728,31 +687,25 @@
 
     move-result-object v0
 
-    .line 159
     .local v0, "cursor":Landroid/database/Cursor;
     if-eqz v0, :cond_1
 
-    .line 160
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 161
     invoke-interface {v0, v6}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 163
     :cond_0
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 169
     :goto_0
     return-object v1
 
-    .line 165
     :cond_1
     const-string v3, "EcppStorageProvider"
 
@@ -798,7 +751,6 @@
 
     const/4 v4, 0x0
 
-    .line 62
     const-string v6, "EcppStorageProvider"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -861,7 +813,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -880,17 +831,14 @@
 
     move-result-object v3
 
-    .line 66
     .local v3, "whereClause":Ljava/lang/String;
     invoke-direct {p0, p4}, Lcom/android/server/enterprise/storage/EcppStorageProvider;->getAdminName(Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 67
     .local v0, "adminName":Ljava/lang/String;
     const/4 v2, 0x1
 
-    .line 69
     .local v2, "result":Z
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -904,7 +852,6 @@
 
     if-nez v6, :cond_0
 
-    .line 70
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -937,7 +884,6 @@
 
     move-result-object v3
 
-    .line 74
     :cond_0
     iget-object v6, p0, Lcom/android/server/enterprise/storage/EcppStorageProvider;->mEcppDbHelper:Lcom/android/server/enterprise/storage/EcppStorageHelper;
 
@@ -951,18 +897,15 @@
 
     move-result-object v1
 
-    .line 77
     .local v1, "cursor":Landroid/database/Cursor;
     if-eqz v1, :cond_3
 
-    .line 78
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v6
 
     if-eqz v6, :cond_1
 
-    .line 79
     invoke-interface {v1, v4}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v6
@@ -975,12 +918,10 @@
 
     move v2, v4
 
-    .line 81
     :cond_1
     :goto_0
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 88
     :goto_1
     const-string v4, "EcppStorageProvider"
 
@@ -1024,16 +965,13 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 90
     return v2
 
     :cond_2
     move v2, v5
 
-    .line 79
     goto :goto_0
 
-    .line 83
     :cond_3
     const-string v4, "EcppStorageProvider"
 
@@ -1063,7 +1001,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     move v2, p5
 
     goto :goto_1
@@ -1077,7 +1014,6 @@
     .param p4, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 102
     const-wide/16 v6, 0x0
 
     move-object v1, p0
@@ -1108,7 +1044,6 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 114
     const-string v5, "EcppStorageProvider"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1171,10 +1106,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
     const-wide/16 v2, 0x0
 
-    .line 118
     .local v2, "result":J
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -1194,13 +1127,11 @@
 
     move-result-object v4
 
-    .line 119
     .local v4, "whereClause":Ljava/lang/String;
     invoke-direct {p0, p4}, Lcom/android/server/enterprise/storage/EcppStorageProvider;->getAdminName(Landroid/content/ComponentName;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 121
     .local v0, "adminName":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1214,7 +1145,6 @@
 
     if-nez v5, :cond_0
 
-    .line 122
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1247,7 +1177,6 @@
 
     move-result-object v4
 
-    .line 126
     :cond_0
     iget-object v5, p0, Lcom/android/server/enterprise/storage/EcppStorageProvider;->mEcppDbHelper:Lcom/android/server/enterprise/storage/EcppStorageHelper;
 
@@ -1263,27 +1192,22 @@
 
     move-result-object v1
 
-    .line 129
     .local v1, "cursor":Landroid/database/Cursor;
     if-eqz v1, :cond_2
 
-    .line 130
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 131
     invoke-interface {v1, v8}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v2
 
-    .line 133
     :cond_1
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 140
     :goto_0
     const-string v5, "EcppStorageProvider"
 
@@ -1327,10 +1251,8 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 142
     return-wide v2
 
-    .line 135
     :cond_2
     const-string v5, "EcppStorageProvider"
 
@@ -1360,7 +1282,6 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 137
     move-wide v2, p5
 
     goto :goto_0
@@ -1372,7 +1293,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 300
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "maximumFailedPasswordsForDisable"
@@ -1392,7 +1312,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 294
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "maximumFailedPasswordsForWipe"
@@ -1412,10 +1331,8 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 313
     if-nez p2, :cond_0
 
-    .line 314
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "maximumTimeToLockPassword"
@@ -1424,7 +1341,6 @@
 
     move-result-wide v0
 
-    .line 318
     :goto_0
     return-wide v0
 
@@ -1450,7 +1366,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 285
     const-string v2, "PASSWORD_POLICY"
 
     const-string/jumbo v3, "passwordExpirationDate"
@@ -1459,7 +1374,6 @@
 
     move-result-wide v0
 
-    .line 289
     .local v0, "passwordExpirationDate":J
     const-string v2, "EcppStorageProvider"
 
@@ -1483,7 +1397,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 290
     return-wide v0
 .end method
 
@@ -1493,10 +1406,8 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 325
     if-nez p2, :cond_0
 
-    .line 326
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "passwordExpirationTimeout"
@@ -1505,7 +1416,6 @@
 
     move-result-wide v0
 
-    .line 330
     :goto_0
     return-wide v0
 
@@ -1531,10 +1441,8 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 275
     if-nez p2, :cond_0
 
-    .line 276
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "passwordHistory"
@@ -1545,7 +1453,6 @@
 
     long-to-int v0, v0
 
-    .line 279
     :goto_0
     return v0
 
@@ -1571,7 +1478,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 209
     const-string v0, "EcppStorageProvider"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1604,7 +1510,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 211
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "passwordMinimumLength"
@@ -1624,7 +1529,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 216
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "passwordMinimumLetters"
@@ -1644,7 +1548,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 221
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "passwordMinimumLowerCase"
@@ -1664,7 +1567,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 227
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "passwordMinimumNonLetter"
@@ -1684,7 +1586,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 233
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "passwordMinimumNumeric"
@@ -1704,7 +1605,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 244
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "passwordMinimumSymbols"
@@ -1724,7 +1624,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 238
     const-string v0, "PASSWORD_POLICY"
 
     const-string/jumbo v1, "passwordMinimumUpperCase"
@@ -1744,7 +1643,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 259
     const-string v1, "PASSWORD_POLICY"
 
     const-string/jumbo v2, "passwordQuality"
@@ -1755,14 +1653,11 @@
 
     long-to-int v0, v2
 
-    .line 262
     .local v0, "quality":I
     if-gez v0, :cond_0
 
-    .line 263
     const/4 v0, 0x0
 
-    .line 266
     :cond_0
     return v0
 .end method
@@ -1773,7 +1668,6 @@
     .param p2, "admin"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 270
     const-string v1, "PASSWORD_POLICY"
 
     const-string v2, "allowSimplePassword"
@@ -1798,7 +1692,6 @@
     .param p1, "containerId"    # I
 
     .prologue
-    .line 306
     const-string v1, "PASSWORD_POLICY"
 
     const-string/jumbo v2, "passwordVisible"
@@ -1811,7 +1704,6 @@
 
     long-to-int v0, v2
 
-    .line 309
     .local v0, "ret":I
     if-eqz v0, :cond_0
 

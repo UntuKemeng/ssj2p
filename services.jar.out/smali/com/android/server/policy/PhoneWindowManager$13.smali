@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3174
     iput-object p1, p0, Lcom/android/server/policy/PhoneWindowManager$13;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 3177
     const-string v1, "android.app.action.DEBUG_RECONFIGURE"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,7 +50,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 3178
     const-string v1, "PWM_DEBUG"
 
     invoke-virtual {p2, v1}, Landroid/content/Intent;->getExtra(Ljava/lang/String;)Ljava/lang/Object;
@@ -65,14 +62,12 @@
 
     check-cast v0, [Z
 
-    .line 3179
     .local v0, "pwm_debug":[Z
     iget-object v1, p0, Lcom/android/server/policy/PhoneWindowManager$13;->this$0:Lcom/android/server/policy/PhoneWindowManager;
 
     # invokes: Lcom/android/server/policy/PhoneWindowManager;->reconfigureDebug([Z)V
     invoke-static {v1, v0}, Lcom/android/server/policy/PhoneWindowManager;->access$3800(Lcom/android/server/policy/PhoneWindowManager;[Z)V
 
-    .line 3181
     .end local v0    # "pwm_debug":[Z
     :cond_0
     return-void

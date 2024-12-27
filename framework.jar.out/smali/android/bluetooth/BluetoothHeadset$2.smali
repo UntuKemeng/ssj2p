@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1531
     iput-object p1, p0, Landroid/bluetooth/BluetoothHeadset$2;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothProfileServiceConnection$Stub;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1534
     # getter for: Landroid/bluetooth/BluetoothHeadset;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothHeadset;->access$000()Z
 
@@ -53,7 +51,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1535
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadset$2;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
@@ -64,7 +61,6 @@
     # setter for: Landroid/bluetooth/BluetoothHeadset;->mService:Landroid/bluetooth/IBluetoothHeadset;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothHeadset;->access$202(Landroid/bluetooth/BluetoothHeadset;Landroid/bluetooth/IBluetoothHeadset;)Landroid/bluetooth/IBluetoothHeadset;
 
-    .line 1536
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadset$2;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     # getter for: Landroid/bluetooth/BluetoothHeadset;->mHandler:Landroid/os/Handler;
@@ -87,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1538
     return-void
 .end method
 
@@ -96,7 +91,6 @@
     .param p1, "className"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1541
     # getter for: Landroid/bluetooth/BluetoothHeadset;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothHeadset;->access$000()Z
 
@@ -110,7 +104,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1542
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadset$2;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
@@ -121,7 +114,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1543
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadset$2;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     const/4 v1, 0x0
@@ -129,7 +121,6 @@
     # setter for: Landroid/bluetooth/BluetoothHeadset;->mService:Landroid/bluetooth/IBluetoothHeadset;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothHeadset;->access$202(Landroid/bluetooth/BluetoothHeadset;Landroid/bluetooth/IBluetoothHeadset;)Landroid/bluetooth/IBluetoothHeadset;
 
-    .line 1544
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadset$2;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     # getter for: Landroid/bluetooth/BluetoothHeadset;->mHandler:Landroid/os/Handler;
@@ -152,7 +143,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 1547
     :cond_1
     return-void
 .end method

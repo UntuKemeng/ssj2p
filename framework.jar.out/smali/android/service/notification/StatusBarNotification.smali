@@ -54,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 220
     new-instance v0, Landroid/service/notification/StatusBarNotification$1;
 
     invoke-direct {v0}, Landroid/service/notification/StatusBarNotification$1;-><init>()V
@@ -69,45 +68,38 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
 
-    .line 86
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->opPkg:Ljava/lang/String;
 
-    .line 87
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/service/notification/StatusBarNotification;->id:I
 
-    .line 88
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 89
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->tag:Ljava/lang/String;
 
-    .line 93
     :goto_0
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
@@ -115,66 +107,56 @@
 
     iput v0, p0, Landroid/service/notification/StatusBarNotification;->uid:I
 
-    .line 94
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/service/notification/StatusBarNotification;->initialPid:I
 
-    .line 95
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Landroid/service/notification/StatusBarNotification;->score:I
 
-    .line 96
     new-instance v0, Landroid/app/Notification;
 
     invoke-direct {v0, p1}, Landroid/app/Notification;-><init>(Landroid/os/Parcel;)V
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
-    .line 97
     invoke-static {p1}, Landroid/os/UserHandle;->readFromParcel(Landroid/os/Parcel;)Landroid/os/UserHandle;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->user:Landroid/os/UserHandle;
 
-    .line 98
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Landroid/service/notification/StatusBarNotification;->postTime:J
 
-    .line 99
     invoke-direct {p0}, Landroid/service/notification/StatusBarNotification;->key()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->key:Ljava/lang/String;
 
-    .line 100
     invoke-direct {p0}, Landroid/service/notification/StatusBarNotification;->groupKey()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->groupKey:Ljava/lang/String;
 
-    .line 101
     invoke-direct {p0}, Landroid/service/notification/StatusBarNotification;->appGroupKey()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->appGroupKey:Ljava/lang/String;
 
-    .line 102
     return-void
 
-    .line 91
     :cond_0
     const/4 v0, 0x0
 
@@ -196,7 +178,6 @@
     .param p9, "user"    # Landroid/os/UserHandle;
 
     .prologue
-    .line 59
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
@@ -223,7 +204,6 @@
 
     invoke-direct/range {v0 .. v11}, Landroid/service/notification/StatusBarNotification;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;IIILandroid/app/Notification;Landroid/os/UserHandle;J)V
 
-    .line 61
     return-void
 .end method
 
@@ -241,10 +221,8 @@
     .param p10, "postTime"    # J
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     if-nez p1, :cond_0
 
     new-instance v0, Ljava/lang/NullPointerException;
@@ -253,7 +231,6 @@
 
     throw v0
 
-    .line 67
     :cond_0
     if-nez p8, :cond_1
 
@@ -263,59 +240,45 @@
 
     throw v0
 
-    .line 69
     :cond_1
     iput-object p1, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
 
-    .line 70
     iput-object p2, p0, Landroid/service/notification/StatusBarNotification;->opPkg:Ljava/lang/String;
 
-    .line 71
     iput p3, p0, Landroid/service/notification/StatusBarNotification;->id:I
 
-    .line 72
     iput-object p4, p0, Landroid/service/notification/StatusBarNotification;->tag:Ljava/lang/String;
 
-    .line 73
     iput p5, p0, Landroid/service/notification/StatusBarNotification;->uid:I
 
-    .line 74
     iput p6, p0, Landroid/service/notification/StatusBarNotification;->initialPid:I
 
-    .line 75
     iput p7, p0, Landroid/service/notification/StatusBarNotification;->score:I
 
-    .line 76
     iput-object p8, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
-    .line 77
     iput-object p9, p0, Landroid/service/notification/StatusBarNotification;->user:Landroid/os/UserHandle;
 
-    .line 78
     iput-wide p10, p0, Landroid/service/notification/StatusBarNotification;->postTime:J
 
-    .line 79
     invoke-direct {p0}, Landroid/service/notification/StatusBarNotification;->key()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->key:Ljava/lang/String;
 
-    .line 80
     invoke-direct {p0}, Landroid/service/notification/StatusBarNotification;->groupKey()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->groupKey:Ljava/lang/String;
 
-    .line 81
     invoke-direct {p0}, Landroid/service/notification/StatusBarNotification;->appGroupKey()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/service/notification/StatusBarNotification;->appGroupKey:Ljava/lang/String;
 
-    .line 82
     return-void
 .end method
 
@@ -323,10 +286,8 @@
     .locals 3
 
     .prologue
-    .line 123
     const/4 v0, 0x0
 
-    .line 124
     .local v0, "key":Ljava/lang/String;
     iget-object v1, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
@@ -342,15 +303,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 127
     :cond_0
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->groupKey:Ljava/lang/String;
 
-    .line 142
     :goto_0
     return-object v0
 
-    .line 128
     :cond_1
     invoke-virtual {p0}, Landroid/service/notification/StatusBarNotification;->isAppGroupAllowedPackage()Z
 
@@ -358,12 +316,10 @@
 
     if-nez v1, :cond_2
 
-    .line 130
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->groupKey:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 131
     :cond_2
     iget-object v1, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
@@ -373,7 +329,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 133
     iget-object v1, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
     invoke-virtual {v1}, Landroid/app/Notification;->getAppGroup()Ljava/lang/String;
@@ -382,7 +337,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_3
     invoke-virtual {p0}, Landroid/service/notification/StatusBarNotification;->isClearable()Z
 
@@ -396,10 +350,8 @@
 
     if-eqz v1, :cond_4
 
-    .line 135
     const-string/jumbo v0, "ongoing"
 
-    .line 136
     iget-object v1, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
     const-string/jumbo v2, "ongoing"
@@ -408,11 +360,9 @@
 
     goto :goto_0
 
-    .line 138
     :cond_4
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
 
-    .line 139
     iget-object v1, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
     iget-object v2, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
@@ -426,7 +376,6 @@
     .locals 5
 
     .prologue
-    .line 109
     invoke-virtual {p0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
     move-result-object v2
@@ -435,7 +384,6 @@
 
     move-result-object v0
 
-    .line 110
     .local v0, "group":Ljava/lang/String;
     invoke-virtual {p0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
 
@@ -445,16 +393,13 @@
 
     move-result-object v1
 
-    .line 111
     .local v1, "sortKey":Ljava/lang/String;
     if-nez v0, :cond_0
 
     if-nez v1, :cond_0
 
-    .line 113
     iget-object v2, p0, Landroid/service/notification/StatusBarNotification;->key:Ljava/lang/String;
 
-    .line 115
     :goto_0
     return-object v2
 
@@ -552,7 +497,6 @@
     .locals 2
 
     .prologue
-    .line 105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -628,7 +572,6 @@
     .locals 12
 
     .prologue
-    .line 247
     new-instance v0, Landroid/service/notification/StatusBarNotification;
 
     iget-object v1, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
@@ -669,7 +612,6 @@
     .end annotation
 
     .prologue
-    .line 38
     invoke-virtual {p0}, Landroid/service/notification/StatusBarNotification;->clone()Landroid/service/notification/StatusBarNotification;
 
     move-result-object v0
@@ -681,12 +623,10 @@
     .locals 12
 
     .prologue
-    .line 238
     new-instance v8, Landroid/app/Notification;
 
     invoke-direct {v8}, Landroid/app/Notification;-><init>()V
 
-    .line 239
     .local v8, "no":Landroid/app/Notification;
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
@@ -694,7 +634,6 @@
 
     invoke-virtual {v0, v8, v1}, Landroid/app/Notification;->cloneInto(Landroid/app/Notification;Z)V
 
-    .line 240
     new-instance v0, Landroid/service/notification/StatusBarNotification;
 
     iget-object v1, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
@@ -724,7 +663,6 @@
     .locals 1
 
     .prologue
-    .line 217
     const/4 v0, 0x0
 
     return v0
@@ -734,7 +672,6 @@
     .locals 1
 
     .prologue
-    .line 362
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->appGroupKey:Ljava/lang/String;
 
     return-object v0
@@ -744,7 +681,6 @@
     .locals 1
 
     .prologue
-    .line 352
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->groupKey:Ljava/lang/String;
 
     return-object v0
@@ -754,7 +690,6 @@
     .locals 1
 
     .prologue
-    .line 292
     iget v0, p0, Landroid/service/notification/StatusBarNotification;->id:I
 
     return v0
@@ -764,7 +699,6 @@
     .locals 1
 
     .prologue
-    .line 313
     iget v0, p0, Landroid/service/notification/StatusBarNotification;->initialPid:I
 
     return v0
@@ -774,7 +708,6 @@
     .locals 1
 
     .prologue
-    .line 345
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->key:Ljava/lang/String;
 
     return-object v0
@@ -784,7 +717,6 @@
     .locals 1
 
     .prologue
-    .line 319
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
     return-object v0
@@ -794,7 +726,6 @@
     .locals 1
 
     .prologue
-    .line 308
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->opPkg:Ljava/lang/String;
 
     return-object v0
@@ -805,12 +736,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 370
     iget-object v2, p0, Landroid/service/notification/StatusBarNotification;->mContext:Landroid/content/Context;
 
     if-nez v2, :cond_0
 
-    .line 372
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -824,7 +753,6 @@
 
     move-result-object v0
 
-    .line 374
     .local v0, "ai":Landroid/content/pm/ApplicationInfo;
     const/4 v2, 0x4
 
@@ -836,7 +764,6 @@
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 380
     .end local v0    # "ai":Landroid/content/pm/ApplicationInfo;
     :cond_0
     :goto_0
@@ -844,20 +771,16 @@
 
     if-nez v2, :cond_1
 
-    .line 381
     iput-object p1, p0, Landroid/service/notification/StatusBarNotification;->mContext:Landroid/content/Context;
 
-    .line 383
     :cond_1
     iget-object v2, p0, Landroid/service/notification/StatusBarNotification;->mContext:Landroid/content/Context;
 
     return-object v2
 
-    .line 376
     :catch_0
     move-exception v1
 
-    .line 377
     .local v1, "e":Landroid/content/pm/PackageManager$NameNotFoundException;
     const/4 v2, 0x0
 
@@ -870,7 +793,6 @@
     .locals 1
 
     .prologue
-    .line 287
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
 
     return-object v0
@@ -880,7 +802,6 @@
     .locals 2
 
     .prologue
-    .line 333
     iget-wide v0, p0, Landroid/service/notification/StatusBarNotification;->postTime:J
 
     return-wide v0
@@ -890,7 +811,6 @@
     .locals 1
 
     .prologue
-    .line 338
     iget v0, p0, Landroid/service/notification/StatusBarNotification;->score:I
 
     return v0
@@ -900,7 +820,6 @@
     .locals 1
 
     .prologue
-    .line 298
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->tag:Ljava/lang/String;
 
     return-object v0
@@ -910,7 +829,6 @@
     .locals 1
 
     .prologue
-    .line 303
     iget v0, p0, Landroid/service/notification/StatusBarNotification;->uid:I
 
     return v0
@@ -920,7 +838,6 @@
     .locals 1
 
     .prologue
-    .line 326
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->user:Landroid/os/UserHandle;
 
     return-object v0
@@ -930,7 +847,6 @@
     .locals 1
 
     .prologue
-    .line 282
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->user:Landroid/os/UserHandle;
 
     invoke-virtual {v0}, Landroid/os/UserHandle;->getIdentifier()I
@@ -944,7 +860,6 @@
     .locals 7
 
     .prologue
-    .line 179
     const-string/jumbo v5, "media_session"
 
     invoke-static {v5}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -955,7 +870,6 @@
 
     move-result-object v4
 
-    .line 182
     .local v4, "sm":Landroid/media/session/ISessionManager;
     const/4 v5, 0x0
 
@@ -966,13 +880,11 @@
 
     move-result-object v0
 
-    .line 183
     .local v0, "binders":Ljava/util/List;, "Ljava/util/List<Landroid/os/IBinder;>;"
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 184
     .local v3, "size":I
     const/4 v1, 0x0
 
@@ -980,7 +892,6 @@
     :goto_0
     if-ge v1, v3, :cond_1
 
-    .line 185
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -991,7 +902,6 @@
 
     move-result-object v2
 
-    .line 186
     .local v2, "sc":Landroid/media/session/ISessionController;
     invoke-interface {v2}, Landroid/media/session/ISessionController;->getPackageName()Ljava/lang/String;
 
@@ -1007,10 +917,8 @@
 
     if-eqz v5, :cond_0
 
-    .line 187
     const/4 v5, 0x1
 
-    .line 193
     .end local v0    # "binders":Ljava/util/List;, "Ljava/util/List<Landroid/os/IBinder;>;"
     .end local v1    # "i":I
     .end local v2    # "sc":Landroid/media/session/ISessionController;
@@ -1018,7 +926,6 @@
     :goto_1
     return v5
 
-    .line 184
     .restart local v0    # "binders":Ljava/util/List;, "Ljava/util/List<Landroid/os/IBinder;>;"
     .restart local v1    # "i":I
     .restart local v2    # "sc":Landroid/media/session/ISessionController;
@@ -1028,7 +935,6 @@
 
     goto :goto_0
 
-    .line 190
     .end local v0    # "binders":Ljava/util/List;, "Ljava/util/List<Landroid/os/IBinder;>;"
     .end local v1    # "i":I
     .end local v2    # "sc":Landroid/media/session/ISessionController;
@@ -1036,7 +942,6 @@
     :catch_0
     move-exception v5
 
-    .line 193
     :cond_1
     const/4 v5, 0x0
 
@@ -1047,10 +952,8 @@
     .locals 10
 
     .prologue
-    .line 147
     iget-object v6, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
 
-    .line 148
     .local v6, "packageName":Ljava/lang/String;
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -1064,7 +967,6 @@
 
     move-result-object v1
 
-    .line 150
     .local v1, "disAllowedPackage":Ljava/lang/String;
     const-string v7, ";"
 
@@ -1072,7 +974,6 @@
 
     move-result-object v2
 
-    .line 152
     .local v2, "disAllowedPackages":[Ljava/lang/String;
     iget-object v7, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
@@ -1082,7 +983,6 @@
 
     if-nez v7, :cond_1
 
-    .line 153
     move-object v0, v2
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -1097,7 +997,6 @@
 
     aget-object v5, v0, v3
 
-    .line 154
     .local v5, "p":Ljava/lang/String;
     invoke-virtual {v6, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1105,10 +1004,8 @@
 
     if-eqz v7, :cond_0
 
-    .line 155
     const/4 v7, 0x0
 
-    .line 160
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
@@ -1116,7 +1013,6 @@
     :goto_1
     return v7
 
-    .line 153
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v3    # "i$":I
     .restart local v4    # "len$":I
@@ -1126,7 +1022,6 @@
 
     goto :goto_0
 
-    .line 160
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v3    # "i$":I
     .end local v4    # "len$":I
@@ -1141,7 +1036,6 @@
     .locals 1
 
     .prologue
-    .line 272
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
     iget v0, v0, Landroid/app/Notification;->flags:I
@@ -1173,7 +1067,6 @@
     .locals 1
 
     .prologue
-    .line 391
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
     iget v0, v0, Landroid/app/Notification;->twQuickPanelEvent:I
@@ -1197,7 +1090,6 @@
     .locals 1
 
     .prologue
-    .line 264
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
     iget v0, v0, Landroid/app/Notification;->flags:I
@@ -1221,10 +1113,8 @@
     .locals 2
 
     .prologue
-    .line 165
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
 
-    .line 167
     .local v0, "packageName":Ljava/lang/String;
     iget-object v1, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
@@ -1234,7 +1124,6 @@
 
     if-nez v1, :cond_1
 
-    .line 168
     const-string v1, "com.android.systemui"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1259,11 +1148,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 171
     :cond_0
     const/4 v1, 0x1
 
-    .line 174
     :goto_0
     return v1
 
@@ -1277,7 +1164,6 @@
     .locals 4
 
     .prologue
-    .line 254
     const-string v0, "StatusBarNotification(pkg=%s user=%s id=%d tag=%s score=%d key=%s: %s)"
 
     const/4 v1, 0x7
@@ -1347,71 +1233,57 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 198
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->pkg:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 199
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->opPkg:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 200
     iget v0, p0, Landroid/service/notification/StatusBarNotification;->id:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 201
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->tag:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 202
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 203
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->tag:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 207
     :goto_0
     iget v0, p0, Landroid/service/notification/StatusBarNotification;->uid:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 208
     iget v0, p0, Landroid/service/notification/StatusBarNotification;->initialPid:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 209
     iget v0, p0, Landroid/service/notification/StatusBarNotification;->score:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 210
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->notification:Landroid/app/Notification;
 
     invoke-virtual {v0, p1, p2}, Landroid/app/Notification;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 211
     iget-object v0, p0, Landroid/service/notification/StatusBarNotification;->user:Landroid/os/UserHandle;
 
     invoke-virtual {v0, p1, p2}, Landroid/os/UserHandle;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 213
     iget-wide v0, p0, Landroid/service/notification/StatusBarNotification;->postTime:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 214
     return-void
 
-    .line 205
     :cond_0
     const/4 v0, 0x0
 

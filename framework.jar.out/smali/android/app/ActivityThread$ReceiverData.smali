@@ -35,7 +35,6 @@
     .param p8, "sendingUser"    # I
 
     .prologue
-    .line 546
     const/4 v4, 0x0
 
     invoke-virtual {p1}, Landroid/content/Intent;->getBroadcastQueueHint()I
@@ -60,10 +59,8 @@
 
     invoke-direct/range {v0 .. v9}, Landroid/content/BroadcastReceiver$PendingResult;-><init>(ILjava/lang/String;Landroid/os/Bundle;IZZLandroid/os/IBinder;II)V
 
-    .line 548
     iput-object p1, p0, Landroid/app/ActivityThread$ReceiverData;->intent:Landroid/content/Intent;
 
-    .line 549
     return-void
 .end method
 
@@ -73,7 +70,6 @@
     .locals 2
 
     .prologue
-    .line 555
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

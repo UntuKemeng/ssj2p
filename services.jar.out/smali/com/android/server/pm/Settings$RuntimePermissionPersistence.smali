@@ -73,50 +73,42 @@
     .param p2, "lock"    # Ljava/lang/Object;
 
     .prologue
-    .line 5297
     iput-object p1, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5278
     new-instance v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$MyHandler;
 
     invoke-direct {v0, p0}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence$MyHandler;-><init>(Lcom/android/server/pm/Settings$RuntimePermissionPersistence;)V
 
     iput-object v0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mHandler:Landroid/os/Handler;
 
-    .line 5282
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mWriteScheduled:Landroid/util/SparseBooleanArray;
 
-    .line 5285
     new-instance v0, Landroid/util/SparseLongArray;
 
     invoke-direct {v0}, Landroid/util/SparseLongArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mLastNotWrittenMutationTimesMillis:Landroid/util/SparseLongArray;
 
-    .line 5289
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mFingerprints:Landroid/util/SparseArray;
 
-    .line 5293
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mDefaultPermissionsGranted:Landroid/util/SparseBooleanArray;
 
-    .line 5298
     iput-object p2, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mLock:Ljava/lang/Object;
 
-    .line 5299
     return-void
 .end method
 
@@ -126,7 +118,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 5273
     invoke-direct {p0, p1}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->onUserRemoved(I)V
 
     return-void
@@ -138,7 +129,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 5273
     invoke-direct {p0, p1}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->writePermissionsSync(I)V
 
     return-void
@@ -149,12 +139,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 5438
     iget-object v2, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v2, p1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 5440
     iget-object v2, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
 
     iget-object v2, v2, Lcom/android/server/pm/Settings;->mPackages:Landroid/util/ArrayMap;
@@ -181,13 +169,11 @@
 
     check-cast v1, Lcom/android/server/pm/SettingBase;
 
-    .line 5441
     .local v1, "sb":Lcom/android/server/pm/SettingBase;
     invoke-direct {p0, v1, p1}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->revokeRuntimePermissionsAndClearFlags(Lcom/android/server/pm/SettingBase;I)V
 
     goto :goto_0
 
-    .line 5444
     .end local v1    # "sb":Lcom/android/server/pm/SettingBase;
     :cond_0
     iget-object v2, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
@@ -215,13 +201,11 @@
 
     check-cast v1, Lcom/android/server/pm/SettingBase;
 
-    .line 5445
     .restart local v1    # "sb":Lcom/android/server/pm/SettingBase;
     invoke-direct {p0, v1, p1}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->revokeRuntimePermissionsAndClearFlags(Lcom/android/server/pm/SettingBase;I)V
 
     goto :goto_1
 
-    .line 5447
     .end local v1    # "sb":Lcom/android/server/pm/SettingBase;
     :cond_1
     return-void
@@ -240,12 +224,10 @@
     .end annotation
 
     .prologue
-    .line 5544
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v6
 
-    .line 5547
     .local v6, "outerDepth":I
     :cond_0
     :goto_0
@@ -268,7 +250,6 @@
 
     if-le v8, v6, :cond_8
 
-    .line 5548
     :cond_1
     const/4 v8, 0x3
 
@@ -278,7 +259,6 @@
 
     if-eq v7, v8, :cond_0
 
-    .line 5552
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v9
@@ -297,7 +277,6 @@
 
     goto :goto_0
 
-    .line 5554
     :pswitch_0
     const/4 v8, 0x0
 
@@ -307,7 +286,6 @@
 
     move-result-object v5
 
-    .line 5555
     .local v5, "name":Ljava/lang/String;
     iget-object v8, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
 
@@ -319,11 +297,9 @@
 
     check-cast v0, Lcom/android/server/pm/BasePermission;
 
-    .line 5556
     .local v0, "bp":Lcom/android/server/pm/BasePermission;
     if-nez v0, :cond_3
 
-    .line 5557
     const-string v8, "PackageManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -346,12 +322,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5558
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto :goto_0
 
-    .line 5552
     .end local v0    # "bp":Lcom/android/server/pm/BasePermission;
     .end local v5    # "name":Ljava/lang/String;
     :pswitch_1
@@ -367,7 +341,6 @@
 
     goto :goto_1
 
-    .line 5562
     .restart local v0    # "bp":Lcom/android/server/pm/BasePermission;
     .restart local v5    # "name":Ljava/lang/String;
     :cond_3
@@ -379,7 +352,6 @@
 
     move-result-object v4
 
-    .line 5563
     .local v4, "grantedStr":Ljava/lang/String;
     if-eqz v4, :cond_4
 
@@ -392,7 +364,6 @@
     :cond_4
     const/4 v3, 0x1
 
-    .line 5566
     .local v3, "granted":Z
     :goto_2
     const/4 v8, 0x0
@@ -403,7 +374,6 @@
 
     move-result-object v2
 
-    .line 5567
     .local v2, "flagsStr":Ljava/lang/String;
     if-eqz v2, :cond_6
 
@@ -413,22 +383,18 @@
 
     move-result v1
 
-    .line 5570
     .local v1, "flags":I
     :goto_3
     if-eqz v3, :cond_7
 
-    .line 5571
     invoke-virtual {p2, v0, p3}, Lcom/android/server/pm/PermissionsState;->grantRuntimePermission(Lcom/android/server/pm/BasePermission;I)I
 
-    .line 5572
     const/16 v8, 0xff
 
     invoke-virtual {p2, v0, p3, v8, v1}, Lcom/android/server/pm/PermissionsState;->updatePermissionFlags(Lcom/android/server/pm/BasePermission;III)Z
 
     goto/16 :goto_0
 
-    .line 5563
     .end local v1    # "flags":I
     .end local v2    # "flagsStr":Ljava/lang/String;
     .end local v3    # "granted":Z
@@ -437,7 +403,6 @@
 
     goto :goto_2
 
-    .line 5567
     .restart local v2    # "flagsStr":Ljava/lang/String;
     .restart local v3    # "granted":Z
     :cond_6
@@ -445,7 +410,6 @@
 
     goto :goto_3
 
-    .line 5575
     .restart local v1    # "flags":I
     :cond_7
     const/16 v8, 0xff
@@ -454,7 +418,6 @@
 
     goto/16 :goto_0
 
-    .line 5582
     .end local v0    # "bp":Lcom/android/server/pm/BasePermission;
     .end local v1    # "flags":I
     .end local v2    # "flagsStr":Ljava/lang/String;
@@ -464,7 +427,6 @@
     :cond_8
     return-void
 
-    .line 5552
     :pswitch_data_0
     .packed-switch 0x317b13
         :pswitch_1
@@ -494,12 +456,10 @@
 
     const/4 v11, 0x0
 
-    .line 5501
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getDepth()I
 
     move-result v3
 
-    .line 5504
     .local v3, "outerDepth":I
     :cond_0
     :goto_0
@@ -518,7 +478,6 @@
 
     if-le v7, v3, :cond_5
 
-    .line 5505
     :cond_1
     if-eq v6, v12, :cond_0
 
@@ -526,7 +485,6 @@
 
     if-eq v6, v7, :cond_0
 
-    .line 5509
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
 
     move-result-object v9
@@ -545,7 +503,6 @@
 
     goto :goto_0
 
-    .line 5511
     :pswitch_0
     const-string/jumbo v7, "fingerprint"
 
@@ -553,20 +510,17 @@
 
     move-result-object v1
 
-    .line 5512
     .local v1, "fingerprint":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mFingerprints:Landroid/util/SparseArray;
 
     invoke-virtual {v7, p2, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 5513
     sget-object v7, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
     invoke-virtual {v7, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    .line 5514
     .local v0, "defaultsGranted":Z
     iget-object v7, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mDefaultPermissionsGranted:Landroid/util/SparseBooleanArray;
 
@@ -574,7 +528,6 @@
 
     goto :goto_0
 
-    .line 5509
     .end local v0    # "defaultsGranted":Z
     .end local v1    # "fingerprint":Ljava/lang/String;
     :sswitch_0
@@ -616,7 +569,6 @@
 
     goto :goto_1
 
-    .line 5518
     :pswitch_1
     const-string/jumbo v7, "name"
 
@@ -624,7 +576,6 @@
 
     move-result-object v2
 
-    .line 5519
     .local v2, "name":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
 
@@ -636,11 +587,9 @@
 
     check-cast v4, Lcom/android/server/pm/PackageSetting;
 
-    .line 5520
     .local v4, "ps":Lcom/android/server/pm/PackageSetting;
     if-nez v4, :cond_3
 
-    .line 5521
     const-string v7, "PackageManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -663,12 +612,10 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5522
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 5525
     :cond_3
     invoke-virtual {v4}, Lcom/android/server/pm/PackageSetting;->getPermissionsState()Lcom/android/server/pm/PermissionsState;
 
@@ -678,7 +625,6 @@
 
     goto/16 :goto_0
 
-    .line 5529
     .end local v2    # "name":Ljava/lang/String;
     .end local v4    # "ps":Lcom/android/server/pm/PackageSetting;
     :pswitch_2
@@ -688,7 +634,6 @@
 
     move-result-object v2
 
-    .line 5530
     .restart local v2    # "name":Ljava/lang/String;
     iget-object v7, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
 
@@ -700,11 +645,9 @@
 
     check-cast v5, Lcom/android/server/pm/SharedUserSetting;
 
-    .line 5531
     .local v5, "sus":Lcom/android/server/pm/SharedUserSetting;
     if-nez v5, :cond_4
 
-    .line 5532
     const-string v7, "PackageManager"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -727,12 +670,10 @@
 
     invoke-static {v7, v9}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5533
     invoke-static {p1}, Lcom/android/internal/util/XmlUtils;->skipCurrentTag(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 5536
     :cond_4
     invoke-virtual {v5}, Lcom/android/server/pm/SharedUserSetting;->getPermissionsState()Lcom/android/server/pm/PermissionsState;
 
@@ -742,13 +683,11 @@
 
     goto/16 :goto_0
 
-    .line 5540
     .end local v2    # "name":Ljava/lang/String;
     .end local v5    # "sus":Lcom/android/server/pm/SharedUserSetting;
     :cond_5
     return-void
 
-    .line 5509
     :sswitch_data_0
     .sparse-switch
         0x1b1cc -> :sswitch_1
@@ -770,20 +709,16 @@
     .param p2, "userId"    # I
 
     .prologue
-    .line 5450
     if-nez p1, :cond_1
 
-    .line 5463
     :cond_0
     return-void
 
-    .line 5453
     :cond_1
     invoke-virtual {p1}, Lcom/android/server/pm/SettingBase;->getPermissionsState()Lcom/android/server/pm/PermissionsState;
 
     move-result-object v3
 
-    .line 5455
     .local v3, "permissionsState":Lcom/android/server/pm/PermissionsState;
     invoke-virtual {v3, p2}, Lcom/android/server/pm/PermissionsState;->getRuntimePermissionStates(I)Ljava/util/List;
 
@@ -808,7 +743,6 @@
 
     check-cast v2, Lcom/android/server/pm/PermissionsState$PermissionState;
 
-    .line 5456
     .local v2, "permissionState":Lcom/android/server/pm/PermissionsState$PermissionState;
     iget-object v4, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
 
@@ -824,14 +758,11 @@
 
     check-cast v0, Lcom/android/server/pm/BasePermission;
 
-    .line 5457
     .local v0, "bp":Lcom/android/server/pm/BasePermission;
     if-eqz v0, :cond_2
 
-    .line 5458
     invoke-virtual {v3, v0, p2}, Lcom/android/server/pm/PermissionsState;->revokeRuntimePermission(Lcom/android/server/pm/BasePermission;I)I
 
-    .line 5459
     const/16 v4, 0xff
 
     const/4 v5, 0x0
@@ -865,7 +796,6 @@
     .local p2, "permissionStates":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;"
     const/4 v4, 0x0
 
-    .line 5586
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -884,13 +814,11 @@
 
     check-cast v1, Lcom/android/server/pm/PermissionsState$PermissionState;
 
-    .line 5587
     .local v1, "permissionState":Lcom/android/server/pm/PermissionsState$PermissionState;
     const-string/jumbo v2, "item"
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5588
     const-string/jumbo v2, "name"
 
     invoke-virtual {v1}, Lcom/android/server/pm/PermissionsState$PermissionState;->getName()Ljava/lang/String;
@@ -899,7 +827,6 @@
 
     invoke-interface {p1, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5589
     const-string/jumbo v2, "granted"
 
     invoke-virtual {v1}, Lcom/android/server/pm/PermissionsState$PermissionState;->isGranted()Z
@@ -912,7 +839,6 @@
 
     invoke-interface {p1, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5591
     const-string/jumbo v2, "flags"
 
     invoke-virtual {v1}, Lcom/android/server/pm/PermissionsState$PermissionState;->getFlags()I
@@ -925,14 +851,12 @@
 
     invoke-interface {p1, v4, v2, v3}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5593
     const-string/jumbo v2, "item"
 
     invoke-interface {p1, v4, v2}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
     goto :goto_0
 
-    .line 5595
     .end local v1    # "permissionState":Lcom/android/server/pm/PermissionsState$PermissionState;
     :cond_0
     return-void
@@ -943,7 +867,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 5348
     new-instance v3, Landroid/util/AtomicFile;
 
     move-object/from16 v0, p0
@@ -965,19 +888,16 @@
 
     invoke-direct {v3, v0}, Landroid/util/AtomicFile;-><init>(Ljava/io/File;)V
 
-    .line 5350
     .local v3, "destination":Landroid/util/AtomicFile;
     new-instance v11, Landroid/util/ArrayMap;
 
     invoke-direct {v11}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 5351
     .local v11, "permissionsForPackage":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;>;"
     new-instance v12, Landroid/util/ArrayMap;
 
     invoke-direct {v12}, Landroid/util/ArrayMap;-><init>()V
 
-    .line 5353
     .local v12, "permissionsForSharedUser":Landroid/util/ArrayMap;, "Landroid/util/ArrayMap<Ljava/lang/String;Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;>;"
     move-object/from16 v0, p0
 
@@ -987,7 +907,6 @@
 
     monitor-enter v21
 
-    .line 5354
     :try_start_0
     move-object/from16 v0, p0
 
@@ -1001,7 +920,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
-    .line 5356
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
@@ -1018,7 +936,6 @@
 
     move-result v7
 
-    .line 5357
     .local v7, "packageCount":I
     const/4 v5, 0x0
 
@@ -1026,7 +943,6 @@
     :goto_0
     if-ge v5, v7, :cond_1
 
-    .line 5358
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
@@ -1047,7 +963,6 @@
 
     check-cast v8, Ljava/lang/String;
 
-    .line 5359
     .local v8, "packageName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1069,7 +984,6 @@
 
     check-cast v9, Lcom/android/server/pm/PackageSetting;
 
-    .line 5360
     .local v9, "packageSetting":Lcom/android/server/pm/PackageSetting;
     iget-object v0, v9, Lcom/android/server/pm/PackageSetting;->sharedUser:Lcom/android/server/pm/SharedUserSetting;
 
@@ -1077,12 +991,10 @@
 
     if-nez v20, :cond_0
 
-    .line 5361
     invoke-virtual {v9}, Lcom/android/server/pm/PackageSetting;->getPermissionsState()Lcom/android/server/pm/PermissionsState;
 
     move-result-object v13
 
-    .line 5362
     .local v13, "permissionsState":Lcom/android/server/pm/PermissionsState;
     move/from16 v0, p1
 
@@ -1090,7 +1002,6 @@
 
     move-result-object v14
 
-    .line 5364
     .local v14, "permissionsStates":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;"
     if-eqz v14, :cond_0
 
@@ -1100,10 +1011,8 @@
 
     if-nez v20, :cond_0
 
-    .line 5365
     invoke-virtual {v11, v8, v14}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5357
     .end local v13    # "permissionsState":Lcom/android/server/pm/PermissionsState;
     .end local v14    # "permissionsStates":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;"
     :cond_0
@@ -1111,7 +1020,6 @@
 
     goto :goto_0
 
-    .line 5370
     .end local v8    # "packageName":Ljava/lang/String;
     .end local v9    # "packageSetting":Lcom/android/server/pm/PackageSetting;
     :cond_1
@@ -1131,7 +1039,6 @@
 
     move-result v17
 
-    .line 5371
     .local v17, "sharedUserCount":I
     const/4 v5, 0x0
 
@@ -1140,7 +1047,6 @@
 
     if-ge v5, v0, :cond_3
 
-    .line 5372
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
@@ -1161,7 +1067,6 @@
 
     check-cast v18, Ljava/lang/String;
 
-    .line 5373
     .local v18, "sharedUserName":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1183,13 +1088,11 @@
 
     check-cast v16, Lcom/android/server/pm/SharedUserSetting;
 
-    .line 5374
     .local v16, "sharedUser":Lcom/android/server/pm/SharedUserSetting;
     invoke-virtual/range {v16 .. v16}, Lcom/android/server/pm/SharedUserSetting;->getPermissionsState()Lcom/android/server/pm/PermissionsState;
 
     move-result-object v13
 
-    .line 5375
     .restart local v13    # "permissionsState":Lcom/android/server/pm/PermissionsState;
     move/from16 v0, p1
 
@@ -1197,7 +1100,6 @@
 
     move-result-object v14
 
-    .line 5377
     .restart local v14    # "permissionsStates":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;"
     if-eqz v14, :cond_2
 
@@ -1207,18 +1109,15 @@
 
     if-nez v20, :cond_2
 
-    .line 5378
     move-object/from16 v0, v18
 
     invoke-virtual {v12, v0, v14}, Landroid/util/ArrayMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5371
     :cond_2
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 5381
     .end local v13    # "permissionsState":Lcom/android/server/pm/PermissionsState;
     .end local v14    # "permissionsStates":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;"
     .end local v16    # "sharedUser":Lcom/android/server/pm/SharedUserSetting;
@@ -1228,22 +1127,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 5383
     const/4 v6, 0x0
 
-    .line 5385
     .local v6, "out":Ljava/io/FileOutputStream;
     :try_start_1
     invoke-virtual {v3}, Landroid/util/AtomicFile;->startWrite()Ljava/io/FileOutputStream;
 
     move-result-object v6
 
-    .line 5387
     invoke-static {}, Landroid/util/Xml;->newSerializer()Lorg/xmlpull/v1/XmlSerializer;
 
     move-result-object v15
 
-    .line 5388
     .local v15, "serializer":Lorg/xmlpull/v1/XmlSerializer;
     sget-object v20, Ljava/nio/charset/StandardCharsets;->UTF_8:Ljava/nio/charset/Charset;
 
@@ -1255,7 +1150,6 @@
 
     invoke-interface {v15, v6, v0}, Lorg/xmlpull/v1/XmlSerializer;->setOutput(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 5389
     const-string/jumbo v20, "http://xmlpull.org/v1/doc/features.html#indent-output"
 
     const/16 v21, 0x1
@@ -1266,7 +1160,6 @@
 
     invoke-interface {v15, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->setFeature(Ljava/lang/String;Z)V
 
-    .line 5391
     const/16 v20, 0x0
 
     const/16 v21, 0x1
@@ -1281,7 +1174,6 @@
 
     invoke-interface {v15, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startDocument(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 5392
     const/16 v20, 0x0
 
     const-string/jumbo v21, "runtime-permissions"
@@ -1292,7 +1184,6 @@
 
     invoke-interface {v15, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5394
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mFingerprints:Landroid/util/SparseArray;
@@ -1309,11 +1200,9 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 5395
     .local v4, "fingerprint":Ljava/lang/String;
     if-eqz v4, :cond_4
 
-    .line 5396
     const/16 v20, 0x0
 
     const-string/jumbo v21, "fingerprint"
@@ -1324,26 +1213,22 @@
 
     invoke-interface {v15, v0, v1, v4}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5399
     :cond_4
     invoke-virtual {v11}, Landroid/util/ArrayMap;->size()I
 
     move-result v7
 
-    .line 5400
     const/4 v5, 0x0
 
     :goto_2
     if-ge v5, v7, :cond_5
 
-    .line 5401
     invoke-virtual {v11, v5}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Ljava/lang/String;
 
-    .line 5402
     .restart local v8    # "packageName":Ljava/lang/String;
     invoke-virtual {v11, v5}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
@@ -1351,7 +1236,6 @@
 
     check-cast v10, Ljava/util/List;
 
-    .line 5403
     .local v10, "permissionStates":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;"
     const/16 v20, 0x0
 
@@ -1363,7 +1247,6 @@
 
     invoke-interface {v15, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5404
     const/16 v20, 0x0
 
     const-string/jumbo v21, "name"
@@ -1374,12 +1257,10 @@
 
     invoke-interface {v15, v0, v1, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5405
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15, v10}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->writePermissions(Lorg/xmlpull/v1/XmlSerializer;Ljava/util/List;)V
 
-    .line 5406
     const/16 v20, 0x0
 
     const-string/jumbo v21, "pkg"
@@ -1393,12 +1274,10 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 5400
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_2
 
-    .line 5381
     .end local v4    # "fingerprint":Ljava/lang/String;
     .end local v5    # "i":I
     .end local v6    # "out":Ljava/io/FileOutputStream;
@@ -1417,7 +1296,6 @@
 
     throw v20
 
-    .line 5409
     .restart local v4    # "fingerprint":Ljava/lang/String;
     .restart local v5    # "i":I
     .restart local v6    # "out":Ljava/io/FileOutputStream;
@@ -1430,7 +1308,6 @@
 
     move-result v17
 
-    .line 5410
     const/4 v5, 0x0
 
     :goto_3
@@ -1438,14 +1315,12 @@
 
     if-ge v5, v0, :cond_6
 
-    .line 5411
     invoke-virtual {v12, v5}, Landroid/util/ArrayMap;->keyAt(I)Ljava/lang/Object;
 
     move-result-object v8
 
     check-cast v8, Ljava/lang/String;
 
-    .line 5412
     .restart local v8    # "packageName":Ljava/lang/String;
     invoke-virtual {v12, v5}, Landroid/util/ArrayMap;->valueAt(I)Ljava/lang/Object;
 
@@ -1453,7 +1328,6 @@
 
     check-cast v10, Ljava/util/List;
 
-    .line 5413
     .restart local v10    # "permissionStates":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;"
     const/16 v20, 0x0
 
@@ -1465,7 +1339,6 @@
 
     invoke-interface {v15, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->startTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5414
     const/16 v20, 0x0
 
     const-string/jumbo v21, "name"
@@ -1476,12 +1349,10 @@
 
     invoke-interface {v15, v0, v1, v8}, Lorg/xmlpull/v1/XmlSerializer;->attribute(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5415
     move-object/from16 v0, p0
 
     invoke-direct {v0, v15, v10}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->writePermissions(Lorg/xmlpull/v1/XmlSerializer;Ljava/util/List;)V
 
-    .line 5416
     const/16 v20, 0x0
 
     const-string/jumbo v21, "shared-user"
@@ -1492,12 +1363,10 @@
 
     invoke-interface {v15, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5410
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_3
 
-    .line 5419
     .end local v8    # "packageName":Ljava/lang/String;
     .end local v10    # "permissionStates":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PermissionsState$PermissionState;>;"
     :cond_6
@@ -1511,13 +1380,10 @@
 
     invoke-interface {v15, v0, v1}, Lorg/xmlpull/v1/XmlSerializer;->endTag(Ljava/lang/String;Ljava/lang/String;)Lorg/xmlpull/v1/XmlSerializer;
 
-    .line 5420
     invoke-interface {v15}, Lorg/xmlpull/v1/XmlSerializer;->endDocument()V
 
-    .line 5421
     invoke-virtual {v3, v6}, Landroid/util/AtomicFile;->finishWrite(Ljava/io/FileOutputStream;)V
 
-    .line 5423
     sget-object v20, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
     move-object/from16 v0, v20
@@ -1528,7 +1394,6 @@
 
     if-eqz v20, :cond_7
 
-    .line 5424
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mDefaultPermissionsGranted:Landroid/util/SparseBooleanArray;
@@ -1548,21 +1413,17 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 5432
     :cond_7
     invoke-static {v6}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
-    .line 5434
     .end local v4    # "fingerprint":Ljava/lang/String;
     .end local v15    # "serializer":Lorg/xmlpull/v1/XmlSerializer;
     :goto_4
     return-void
 
-    .line 5427
     :catch_0
     move-exception v19
 
-    .line 5428
     .local v19, "t":Ljava/lang/Throwable;
     :try_start_4
     const-string v20, "PackageManager"
@@ -1577,12 +1438,10 @@
 
     invoke-static {v0, v1, v2}, Landroid/util/Slog;->wtf(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 5430
     invoke-virtual {v3, v6}, Landroid/util/AtomicFile;->failWrite(Ljava/io/FileOutputStream;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 5432
     invoke-static {v6}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_4
@@ -1603,7 +1462,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 5302
     iget-object v0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mDefaultPermissionsGranted:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->get(I)Z
@@ -1618,7 +1476,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 5466
     iget-object v0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
 
     # invokes: Lcom/android/server/pm/Settings;->getUserRuntimePermissionsFile(I)Ljava/io/File;
@@ -1628,7 +1485,6 @@
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 5467
     return-void
 .end method
 
@@ -1637,17 +1493,14 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 5306
     iget-object v0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mFingerprints:Landroid/util/SparseArray;
 
     sget-object v1, Landroid/os/Build;->FINGERPRINT:Ljava/lang/String;
 
     invoke-virtual {v0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 5307
     invoke-virtual {p0, p1}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->writePermissionsForUserAsyncLPr(I)V
 
-    .line 5308
     return-void
 .end method
 
@@ -1656,7 +1509,6 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 5470
     iget-object v5, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->this$0:Lcom/android/server/pm/Settings;
 
     # invokes: Lcom/android/server/pm/Settings;->getUserRuntimePermissionsFile(I)Ljava/io/File;
@@ -1664,7 +1516,6 @@
 
     move-result-object v4
 
-    .line 5471
     .local v4, "permissionsFile":Ljava/io/File;
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
 
@@ -1672,11 +1523,9 @@
 
     if-nez v5, :cond_0
 
-    .line 5497
     :goto_0
     return-void
 
-    .line 5477
     :cond_0
     :try_start_0
     new-instance v5, Landroid/util/AtomicFile;
@@ -1689,38 +1538,32 @@
 
     move-result-object v2
 
-    .line 5484
     .local v2, "in":Ljava/io/FileInputStream;
     :try_start_1
     invoke-static {}, Landroid/util/Xml;->newPullParser()Lorg/xmlpull/v1/XmlPullParser;
 
     move-result-object v3
 
-    .line 5485
     .local v3, "parser":Lorg/xmlpull/v1/XmlPullParser;
     const/4 v5, 0x0
 
     invoke-interface {v3, v2, v5}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 5486
     invoke-direct {p0, v3, p1}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->parseRuntimePermissionsLPr(Lorg/xmlpull/v1/XmlPullParser;I)V
     :try_end_1
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 5495
     invoke-static {v2}, Llibcore/io/IoUtils;->closeQuietly(Ljava/lang/AutoCloseable;)V
 
     goto :goto_0
 
-    .line 5478
     .end local v2    # "in":Ljava/io/FileInputStream;
     .end local v3    # "parser":Lorg/xmlpull/v1/XmlPullParser;
     :catch_0
     move-exception v1
 
-    .line 5479
     .local v1, "fnfe":Ljava/io/FileNotFoundException;
     const-string v5, "PackageManager"
 
@@ -1730,7 +1573,6 @@
 
     goto :goto_0
 
-    .line 5488
     .end local v1    # "fnfe":Ljava/io/FileNotFoundException;
     .restart local v2    # "in":Ljava/io/FileInputStream;
     :catch_1
@@ -1738,13 +1580,11 @@
 
     move-object v0, v5
 
-    .line 5489
     .local v0, "e":Ljava/lang/Exception;
     :goto_1
     :try_start_2
     invoke-virtual {v4}, Ljava/io/File;->delete()Z
 
-    .line 5490
     const/4 v5, 0x6
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1767,7 +1607,6 @@
 
     invoke-static {v5, v6}, Lcom/android/server/pm/PackageManagerService;->reportSettingsProblem(ILjava/lang/String;)V
 
-    .line 5492
     new-instance v5, Ljava/lang/IllegalStateException;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1794,7 +1633,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 5495
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v5
@@ -1803,7 +1641,6 @@
 
     throw v5
 
-    .line 5488
     :catch_2
     move-exception v5
 
@@ -1817,12 +1654,10 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 5316
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 5318
     .local v2, "currentTimeMillis":J
     move-object/from16 v0, p0
 
@@ -1836,7 +1671,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 5319
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mHandler:Landroid/os/Handler;
@@ -1845,7 +1679,6 @@
 
     invoke-virtual {v9, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 5322
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mLastNotWrittenMutationTimesMillis:Landroid/util/SparseLongArray;
@@ -1856,11 +1689,9 @@
 
     move-result-wide v4
 
-    .line 5324
     .local v4, "lastNotWrittenMutationTimeMillis":J
     sub-long v10, v2, v4
 
-    .line 5326
     .local v10, "timeSinceLastNotWrittenMutationMillis":J
     const-wide/16 v14, 0x7d0
 
@@ -1868,7 +1699,6 @@
 
     if-ltz v9, :cond_0
 
-    .line 5327
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mHandler:Landroid/os/Handler;
@@ -1881,13 +1711,11 @@
 
     invoke-virtual {v9}, Landroid/os/Message;->sendToTarget()V
 
-    .line 5345
     .end local v4    # "lastNotWrittenMutationTimeMillis":J
     .end local v10    # "timeSinceLastNotWrittenMutationMillis":J
     :goto_0
     return-void
 
-    .line 5332
     .restart local v4    # "lastNotWrittenMutationTimeMillis":J
     .restart local v10    # "timeSinceLastNotWrittenMutationMillis":J
     :cond_0
@@ -1903,7 +1731,6 @@
 
     move-result-wide v6
 
-    .line 5334
     .local v6, "maxDelayMillis":J
     const-wide/16 v14, 0xc8
 
@@ -1911,7 +1738,6 @@
 
     move-result-wide v12
 
-    .line 5337
     .local v12, "writeDelayMillis":J
     move-object/from16 v0, p0
 
@@ -1923,7 +1749,6 @@
 
     move-result-object v8
 
-    .line 5338
     .local v8, "message":Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -1933,7 +1758,6 @@
 
     goto :goto_0
 
-    .line 5340
     .end local v4    # "lastNotWrittenMutationTimeMillis":J
     .end local v6    # "maxDelayMillis":J
     .end local v8    # "message":Landroid/os/Message;
@@ -1948,7 +1772,6 @@
 
     invoke-virtual {v9, v0, v2, v3}, Landroid/util/SparseLongArray;->put(IJ)V
 
-    .line 5341
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mHandler:Landroid/os/Handler;
@@ -1959,7 +1782,6 @@
 
     move-result-object v8
 
-    .line 5342
     .restart local v8    # "message":Landroid/os/Message;
     move-object/from16 v0, p0
 
@@ -1969,7 +1791,6 @@
 
     invoke-virtual {v9, v8, v14, v15}, Landroid/os/Handler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 5343
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mWriteScheduled:Landroid/util/SparseBooleanArray;
@@ -1988,14 +1809,11 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 5311
     iget-object v0, p0, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->mHandler:Landroid/os/Handler;
 
     invoke-virtual {v0, p1}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 5312
     invoke-direct {p0, p1}, Lcom/android/server/pm/Settings$RuntimePermissionPersistence;->writePermissionsSync(I)V
 
-    .line 5313
     return-void
 .end method

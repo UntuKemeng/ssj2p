@@ -37,21 +37,16 @@
     .param p4, "cr"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 89
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 90
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mKey:Ljava/lang/String;
 
-    .line 91
     iput-object p2, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mName:Ljava/lang/String;
 
-    .line 92
     iput-object p3, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mPath:Ljava/lang/String;
 
-    .line 93
     new-instance v0, Ljava/io/File;
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mPath:Ljava/lang/String;
@@ -64,10 +59,8 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mTmpDir:Ljava/io/File;
 
-    .line 94
     iput-object p4, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mContentResolver:Landroid/content/ContentResolver;
 
-    .line 95
     return-void
 .end method
 
@@ -76,7 +69,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mTmpDir:Ljava/io/File;
 
     return-object v0
@@ -87,7 +79,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mBlacklist:Ljava/lang/String;
 
     return-object v0
@@ -99,7 +90,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mBlacklist:Ljava/lang/String;
 
     return-object p1
@@ -110,7 +100,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;
 
     .prologue
-    .line 78
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mPath:Ljava/lang/String;
 
     return-object v0
@@ -120,7 +109,6 @@
     .locals 2
 
     .prologue
-    .line 137
     new-instance v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver$2;
 
     const-string v1, "BlacklistUpdater"
@@ -129,7 +117,6 @@
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver$2;->start()V
 
-    .line 176
     return-void
 .end method
 
@@ -139,7 +126,6 @@
     .locals 2
 
     .prologue
-    .line 133
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mKey:Ljava/lang/String;
@@ -156,12 +142,10 @@
     .param p1, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 98
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mTmpDir:Ljava/io/File;
 
     monitor-enter v1
 
-    .line 99
     if-eqz p1, :cond_0
 
     :try_start_0
@@ -169,7 +153,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 100
     iget-object v0, p0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->mBlacklist:Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -196,17 +179,14 @@
 
     monitor-exit v1
 
-    .line 104
     :goto_0
     return v0
 
-    .line 102
     :cond_0
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 103
     # getter for: Lcom/samsung/accessory/manager/authentication/CertBlacklister;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/CertBlacklister;->access$000()Z
 
@@ -220,13 +200,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 104
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 102
     :catchall_0
     move-exception v0
 
@@ -243,13 +221,10 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 128
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 129
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver;->writeBlacklist()V
 
-    .line 130
     return-void
 .end method
 
@@ -257,7 +232,6 @@
     .locals 2
 
     .prologue
-    .line 108
     new-instance v0, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver$1;
 
     const-string v1, "BlacklistReader"
@@ -266,6 +240,5 @@
 
     invoke-virtual {v0}, Lcom/samsung/accessory/manager/authentication/CertBlacklister$BlacklistObserver$1;->start()V
 
-    .line 124
     return-void
 .end method

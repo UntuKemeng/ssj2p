@@ -330,12 +330,10 @@
 
     const/16 v4, 0xe
 
-    .line 201
     const/16 v0, 0x190
 
     sput v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
-    .line 202
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -344,7 +342,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_SPD:I
 
-    .line 203
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -353,7 +350,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_SNB:I
 
-    .line 204
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -362,7 +358,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_HWP:I
 
-    .line 205
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -371,7 +366,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_HWPX:I
 
-    .line 206
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -380,7 +374,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_HWT:I
 
-    .line 207
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -389,7 +382,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XML:I
 
-    .line 208
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -398,7 +390,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_ASC:I
 
-    .line 209
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -407,7 +398,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_PPS:I
 
-    .line 210
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -416,7 +406,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_CSV:I
 
-    .line 211
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -425,7 +414,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_RTF:I
 
-    .line 212
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -434,7 +422,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_DOCX:I
 
-    .line 213
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -443,7 +430,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_DOCM:I
 
-    .line 214
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -452,7 +438,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_DOT:I
 
-    .line 215
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -461,7 +446,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_DOTX:I
 
-    .line 216
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -470,7 +454,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_HWDT:I
 
-    .line 217
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -479,7 +462,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XLSX:I
 
-    .line 218
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -488,7 +470,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XLT:I
 
-    .line 219
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -497,7 +478,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XLTX:I
 
-    .line 220
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -506,7 +486,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XLSM:I
 
-    .line 221
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -515,7 +494,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_PPTX:I
 
-    .line 222
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -524,7 +502,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_PPTM:I
 
-    .line 223
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -533,7 +510,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_POT:I
 
-    .line 224
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -542,7 +518,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_POTX:I
 
-    .line 225
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -551,7 +526,6 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_PPSX:I
 
-    .line 226
     sget v0, Landroid/media/MediaFile;->LAST_DOCUMENT_FILE_TYPE:I
 
     add-int/lit8 v1, v0, 0x1
@@ -560,42 +534,36 @@
 
     sput v0, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_MEMO:I
 
-    .line 239
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/media/MediaFile;->sFileTypeMap:Ljava/util/HashMap;
 
-    .line 241
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/media/MediaFile;->sMimeTypeMap:Ljava/util/HashMap;
 
-    .line 244
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/media/MediaFile;->sFileTypeToFormatMap:Ljava/util/HashMap;
 
-    .line 247
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/media/MediaFile;->sMimeTypeToFormatMap:Ljava/util/HashMap;
 
-    .line 250
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Landroid/media/MediaFile;->sFormatToMimeTypeMap:Ljava/util/HashMap;
 
-    .line 318
     const-string v0, "MP3"
 
     const/4 v1, 0x1
@@ -606,7 +574,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 319
     const-string v0, "MPGA"
 
     const/4 v1, 0x1
@@ -617,7 +584,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 320
     const-string v0, "M4A"
 
     const/4 v1, 0x2
@@ -626,7 +592,6 @@
 
     invoke-static {v0, v1, v2, v6}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 321
     const-string v0, "WAV"
 
     const/4 v1, 0x3
@@ -637,7 +602,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 322
     const-string v0, "AMR"
 
     const/4 v1, 0x4
@@ -646,7 +610,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 323
     const-string v0, "AWB"
 
     const/4 v1, 0x5
@@ -655,7 +618,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 325
     const-string v0, "3GP"
 
     const/16 v1, 0xa
@@ -664,7 +626,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 326
     const-string v0, "3GA"
 
     const/16 v1, 0xa
@@ -673,7 +634,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 327
     const-string v0, "ASF"
 
     const/4 v1, 0x6
@@ -682,7 +642,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 331
     const-string v0, "WMA"
 
     const/4 v1, 0x6
@@ -693,14 +652,12 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 337
     invoke-static {}, Landroid/media/MediaFile;->isQCPEnabled()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 339
     const-string v0, "QCP"
 
     const/16 v1, 0x12
@@ -709,7 +666,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 340
     const-string v0, "EVC"
 
     const/16 v1, 0x11
@@ -718,7 +674,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 344
     :cond_0
     invoke-static {}, Landroid/media/MediaFile;->isPlayReadyEnabled()Z
 
@@ -726,7 +681,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 345
     const-string v0, "PYA"
 
     const/16 v1, 0xb
@@ -735,7 +689,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 346
     const-string v0, "PYV"
 
     const/16 v1, 0xc9
@@ -744,7 +697,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 349
     :cond_1
     const-string v0, "AAC"
 
@@ -754,7 +706,6 @@
 
     invoke-static {v0, v7, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 350
     const-string v0, "AAC"
 
     const-string v1, "audio/m4a"
@@ -763,21 +714,18 @@
 
     invoke-static {v0, v7, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 351
     const-string v0, "MID"
 
     const-string v1, "audio/mid"
 
     invoke-static {v0, v4, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 352
     const-string v0, "MIDI"
 
     const-string v1, "audio/mid"
 
     invoke-static {v0, v4, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 353
     const-string v0, "DM"
 
     const/16 v1, 0x34
@@ -786,7 +734,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 354
     const-string v0, "DCF"
 
     const/16 v1, 0x35
@@ -795,7 +742,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 355
     const-string v0, "JPG"
 
     const-string/jumbo v1, "image/jpg"
@@ -804,7 +750,6 @@
 
     invoke-static {v0, v8, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 356
     const-string v0, "JPEG"
 
     const-string/jumbo v1, "image/jpg"
@@ -813,7 +758,6 @@
 
     invoke-static {v0, v8, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 357
     const-string v0, "BMP"
 
     const/16 v1, 0x22
@@ -824,7 +768,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 359
     const-string v0, "OGG"
 
     const/4 v1, 0x7
@@ -835,7 +778,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 360
     const-string v0, "OGG"
 
     const/4 v1, 0x7
@@ -846,7 +788,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 361
     const-string v0, "OGA"
 
     const/4 v1, 0x7
@@ -857,7 +798,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 362
     const-string v0, "AAC"
 
     const-string v1, "audio/aac"
@@ -866,7 +806,6 @@
 
     invoke-static {v0, v7, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 363
     const-string v0, "AAC"
 
     const-string v1, "audio/aac-adts"
@@ -875,7 +814,6 @@
 
     invoke-static {v0, v7, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 364
     const-string v0, "MKA"
 
     const/16 v1, 0x9
@@ -884,35 +822,30 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 366
     const-string v0, "MID"
 
     const-string v1, "audio/midi"
 
     invoke-static {v0, v4, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 367
     const-string v0, "MIDI"
 
     const-string v1, "audio/midi"
 
     invoke-static {v0, v4, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 368
     const-string v0, "XMF"
 
     const-string v1, "audio/midi"
 
     invoke-static {v0, v4, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 369
     const-string v0, "RTTTL"
 
     const-string v1, "audio/midi"
 
     invoke-static {v0, v4, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 370
     const-string v0, "SMF"
 
     const/16 v1, 0xf
@@ -921,7 +854,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 371
     const-string v0, "IMY"
 
     const/16 v1, 0x10
@@ -930,28 +862,24 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 372
     const-string v0, "RTX"
 
     const-string v1, "audio/midi"
 
     invoke-static {v0, v4, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 373
     const-string v0, "OTA"
 
     const-string v1, "audio/midi"
 
     invoke-static {v0, v4, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 374
     const-string v0, "MXMF"
 
     const-string v1, "audio/midi"
 
     invoke-static {v0, v4, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 376
     const-string v0, "MPEG"
 
     const/16 v1, 0x15
@@ -960,7 +888,6 @@
 
     invoke-static {v0, v1, v2, v6}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 377
     const-string v0, "MPG"
 
     const/16 v1, 0x15
@@ -969,7 +896,6 @@
 
     invoke-static {v0, v1, v2, v6}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 378
     const-string v0, "MP4"
 
     const/16 v1, 0x15
@@ -978,7 +904,6 @@
 
     invoke-static {v0, v1, v2, v6}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 379
     const-string v0, "M4V"
 
     const/16 v1, 0x16
@@ -987,7 +912,6 @@
 
     invoke-static {v0, v1, v2, v6}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 380
     const-string v0, "3GP"
 
     const/16 v1, 0x17
@@ -998,7 +922,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 381
     const-string v0, "3GPP"
 
     const/16 v1, 0x17
@@ -1009,7 +932,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 382
     const-string v0, "3G2"
 
     const/16 v1, 0x18
@@ -1020,7 +942,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 383
     const-string v0, "3GPP2"
 
     const/16 v1, 0x18
@@ -1031,7 +952,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 384
     const-string v0, "MKV"
 
     const/16 v1, 0x1b
@@ -1040,7 +960,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 385
     const-string v0, "WEBM"
 
     const/16 v1, 0x1e
@@ -1049,14 +968,12 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 386
     const-string v0, "TS"
 
     const-string/jumbo v1, "video/mp2ts"
 
     invoke-static {v0, v5, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 387
     const-string v0, "AVI"
 
     const/16 v1, 0x1d
@@ -1065,7 +982,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 389
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -1078,7 +994,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 391
     const-string v0, "RAM"
 
     const/16 v1, 0xcc
@@ -1087,7 +1002,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 392
     const-string v0, "RM"
 
     const/16 v1, 0xcc
@@ -1096,7 +1010,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 393
     const-string v0, "RMVB"
 
     const/16 v1, 0xcc
@@ -1105,7 +1018,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 398
     :cond_2
     const-string v0, "WMV"
 
@@ -1117,7 +1029,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 399
     const-string v0, "ASF"
 
     const/16 v1, 0x1a
@@ -1126,7 +1037,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 403
     const-string v0, "JPG"
 
     const-string/jumbo v1, "image/jpeg"
@@ -1135,7 +1045,6 @@
 
     invoke-static {v0, v8, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 404
     const-string v0, "JPEG"
 
     const-string/jumbo v1, "image/jpeg"
@@ -1144,7 +1053,6 @@
 
     invoke-static {v0, v8, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 405
     const-string v0, "GIF"
 
     const/16 v1, 0x20
@@ -1155,7 +1063,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 406
     const-string v0, "PNG"
 
     const/16 v1, 0x21
@@ -1166,7 +1073,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 407
     const-string v0, "BMP"
 
     const/16 v1, 0x22
@@ -1177,7 +1083,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 408
     const-string v0, "WBMP"
 
     const/16 v1, 0x23
@@ -1186,7 +1091,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 409
     const-string v0, "WEBP"
 
     const/16 v1, 0x24
@@ -1195,7 +1099,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 410
     const-string v0, "GOLF"
 
     const/16 v1, 0x25
@@ -1204,7 +1107,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 412
     const-string v0, "M3U"
 
     const/16 v1, 0x29
@@ -1215,7 +1117,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 413
     const-string v0, "M3U"
 
     const/16 v1, 0x29
@@ -1226,7 +1127,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 414
     const-string v0, "PLS"
 
     const/16 v1, 0x2a
@@ -1237,7 +1137,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 415
     const-string v0, "WPL"
 
     const/16 v1, 0x2b
@@ -1248,7 +1147,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 416
     const-string v0, "M3U8"
 
     const/16 v1, 0x2c
@@ -1257,7 +1155,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 417
     const-string v0, "M3U8"
 
     const/16 v1, 0x2c
@@ -1266,7 +1163,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 418
     const-string v0, "M3U8"
 
     const/16 v1, 0x2c
@@ -1275,7 +1171,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 420
     const-string v0, "FL"
 
     const/16 v1, 0x33
@@ -1284,7 +1179,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 422
     const-string v0, "TXT"
 
     const/16 v1, 0x64
@@ -1295,7 +1189,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 423
     const-string v0, "HTM"
 
     const/16 v1, 0x65
@@ -1306,7 +1199,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 424
     const-string v0, "HTML"
 
     const/16 v1, 0x65
@@ -1317,7 +1209,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 425
     const-string v0, "PDF"
 
     const/16 v1, 0x66
@@ -1326,7 +1217,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 426
     const-string v0, "DOC"
 
     const/16 v1, 0x68
@@ -1337,7 +1227,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 427
     const-string v0, "XLS"
 
     const/16 v1, 0x69
@@ -1348,7 +1237,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 428
     const-string v0, "PPT"
 
     const/16 v1, 0x6a
@@ -1359,7 +1247,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 429
     const-string v0, "FLAC"
 
     const/16 v1, 0xd
@@ -1370,7 +1257,6 @@
 
     invoke-static {v0, v1, v2, v3}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;I)V
 
-    .line 430
     const-string v0, "ZIP"
 
     const/16 v1, 0x6b
@@ -1379,7 +1265,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 431
     const-string v0, "MPG"
 
     const/16 v1, 0xc8
@@ -1388,7 +1273,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 432
     const-string v0, "MPEG"
 
     const/16 v1, 0xc8
@@ -1397,7 +1281,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 434
     const-string v0, "DIVX"
 
     const/16 v1, 0xca
@@ -1406,7 +1289,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 435
     const-string v0, "FLV"
 
     const/16 v1, 0xcd
@@ -1415,42 +1297,36 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 436
     const-string v0, "TP"
 
     const-string/jumbo v1, "video/mp2ts"
 
     invoke-static {v0, v5, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 437
     const-string v0, "TRP"
 
     const-string/jumbo v1, "video/mp2ts"
 
     invoke-static {v0, v5, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 438
     const-string v0, "M2TS"
 
     const-string/jumbo v1, "video/mp2ts"
 
     invoke-static {v0, v5, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 439
     const-string v0, "MTS"
 
     const-string/jumbo v1, "video/mp2ts"
 
     invoke-static {v0, v5, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 440
     const-string v0, "M2T"
 
     const-string/jumbo v1, "video/mp2ts"
 
     invoke-static {v0, v5, v1}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 444
     const-string v0, "P12"
 
     const/16 v1, 0x78
@@ -1459,7 +1335,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 445
     const-string v0, "PFX"
 
     const/16 v1, 0x79
@@ -1468,7 +1343,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 446
     const-string v0, "CRT"
 
     const/16 v1, 0x7a
@@ -1477,7 +1351,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 447
     const-string v0, "DER"
 
     const/16 v1, 0x7b
@@ -1486,7 +1359,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 448
     const-string v0, "PEM"
 
     const/16 v1, 0x7c
@@ -1495,7 +1367,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 449
     const-string v0, "CER"
 
     const/16 v1, 0x7d
@@ -1504,7 +1375,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 453
     const-string v0, "SPD"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_SPD:I
@@ -1513,7 +1383,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 454
     const-string v0, "SNB"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_SNB:I
@@ -1522,7 +1391,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 455
     const-string v0, "HWP"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_HWP:I
@@ -1531,7 +1399,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 456
     const-string v0, "HWPX"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_HWPX:I
@@ -1540,7 +1407,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 457
     const-string v0, "HWT"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_HWT:I
@@ -1549,7 +1415,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 458
     const-string v0, "XML"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XML:I
@@ -1558,7 +1423,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 459
     const-string v0, "ASC"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_ASC:I
@@ -1567,7 +1431,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 460
     const-string v0, "PPS"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_PPS:I
@@ -1576,7 +1439,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 461
     const-string v0, "CSV"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_CSV:I
@@ -1585,7 +1447,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 462
     const-string v0, "RTF"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_RTF:I
@@ -1594,7 +1455,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 463
     const-string v0, "DOCX"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_DOCX:I
@@ -1603,7 +1463,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 464
     const-string v0, "DOCM"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_DOCM:I
@@ -1612,7 +1471,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 465
     const-string v0, "DOT"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_DOT:I
@@ -1621,7 +1479,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 466
     const-string v0, "DOTX"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_DOTX:I
@@ -1630,7 +1487,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 467
     const-string v0, "HWDT"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_HWDT:I
@@ -1639,7 +1495,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 468
     const-string v0, "XLSX"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XLSX:I
@@ -1648,7 +1503,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 469
     const-string v0, "XLT"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XLT:I
@@ -1657,7 +1511,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 470
     const-string v0, "XLTX"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XLTX:I
@@ -1666,7 +1519,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 471
     const-string v0, "XLSM"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_XLSM:I
@@ -1675,7 +1527,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 472
     const-string v0, "PPTX"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_PPTX:I
@@ -1684,7 +1535,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 473
     const-string v0, "PPTM"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_PPTM:I
@@ -1693,7 +1543,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 474
     const-string v0, "POT"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_POT:I
@@ -1702,7 +1551,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 475
     const-string v0, "POTX"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_POTX:I
@@ -1711,7 +1559,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 476
     const-string v0, "PPSX"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_PPSX:I
@@ -1720,7 +1567,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 477
     const-string v0, "MEMO"
 
     sget v1, Landroid/media/MediaFile;->DOCUMENT_FILE_TYPE_MEMO:I
@@ -1729,7 +1575,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 483
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -1748,7 +1593,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 485
     const-string v0, "ISMA"
 
     const/16 v1, 0xc
@@ -1757,7 +1601,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 486
     const-string v0, "ISMV"
 
     const/16 v1, 0xcb
@@ -1766,7 +1609,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 489
     :cond_3
     const-string v0, "KOREA"
 
@@ -1776,7 +1618,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 490
     const-string v0, "SKM"
 
     const/16 v1, 0x155
@@ -1785,7 +1626,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 491
     const-string v0, "SKV"
 
     const/16 v1, 0x156
@@ -1794,7 +1634,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 492
     const-string v0, "SKA"
 
     const/16 v1, 0x12d
@@ -1803,7 +1642,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 493
     const-string v0, "K3G"
 
     const/16 v1, 0x154
@@ -1812,7 +1650,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 494
     const-string v0, "K3G"
 
     const/16 v1, 0x154
@@ -1821,7 +1658,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 495
     const-string v0, "K3G"
 
     const/16 v1, 0x142
@@ -1830,7 +1666,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 496
     const-string v0, "K3G"
 
     const/16 v1, 0x142
@@ -1839,7 +1674,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 497
     const-string v0, "AK3G"
 
     const/16 v1, 0x137
@@ -1848,7 +1682,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 498
     const-string v0, "AK3G"
 
     const/16 v1, 0x157
@@ -1857,7 +1690,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 499
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -1876,7 +1708,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 500
     const-string v0, "DCF"
 
     const/16 v1, 0x12c
@@ -1885,7 +1716,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 504
     :cond_4
     const-string v0, "Combination"
 
@@ -1897,7 +1727,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 505
     const-string v0, "MPD"
 
     const/16 v1, 0x2d
@@ -1906,7 +1735,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 507
     :cond_5
     return-void
 .end method
@@ -1915,10 +1743,8 @@
     .locals 0
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 229
     return-void
 .end method
 
@@ -1927,7 +1753,6 @@
     .param p0, "code"    # Ljava/lang/String;
 
     .prologue
-    .line 510
     if-eqz p0, :cond_0
 
     const-string/jumbo v0, "ro.csc.country_code"
@@ -1942,10 +1767,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 512
     const/4 v0, 0x1
 
-    .line 514
     :goto_0
     return v0
 
@@ -1962,7 +1785,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 518
     if-lt p0, v0, :cond_0
 
     const/16 v1, 0xd
@@ -2002,7 +1824,6 @@
     .param p0, "fileType"    # I
 
     .prologue
-    .line 538
     const/16 v0, 0x15
 
     if-lt p0, v0, :cond_0
@@ -2039,7 +1860,6 @@
     .param p2, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 254
     sget-object v0, Landroid/media/MediaFile;->sFileTypeMap:Ljava/util/HashMap;
 
     new-instance v1, Landroid/media/MediaFile$MediaFileType;
@@ -2048,7 +1868,6 @@
 
     invoke-virtual {v0, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 255
     sget-object v0, Landroid/media/MediaFile;->sMimeTypeMap:Ljava/util/HashMap;
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2057,7 +1876,6 @@
 
     invoke-virtual {v0, p2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 256
     return-void
 .end method
 
@@ -2069,10 +1887,8 @@
     .param p3, "mtpFormatCode"    # I
 
     .prologue
-    .line 259
     invoke-static {p0, p1, p2}, Landroid/media/MediaFile;->addFileType(Ljava/lang/String;ILjava/lang/String;)V
 
-    .line 260
     sget-object v0, Landroid/media/MediaFile;->sFileTypeToFormatMap:Ljava/util/HashMap;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2081,7 +1897,6 @@
 
     invoke-virtual {v0, p0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 261
     sget-object v0, Landroid/media/MediaFile;->sMimeTypeToFormatMap:Ljava/util/HashMap;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2090,7 +1905,6 @@
 
     invoke-virtual {v0, p2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 262
     sget-object v0, Landroid/media/MediaFile;->sFormatToMimeTypeMap:Ljava/util/HashMap;
 
     invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2099,7 +1913,6 @@
 
     invoke-virtual {v0, v1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 263
     return-void
 .end method
 
@@ -2108,33 +1921,27 @@
     .param p0, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 591
     const/16 v2, 0x2f
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v1
 
-    .line 592
     .local v1, "lastSlash":I
     if-ltz v1, :cond_0
 
-    .line 593
     add-int/lit8 v1, v1, 0x1
 
-    .line 594
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v2
 
     if-ge v1, v2, :cond_0
 
-    .line 595
     invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 599
     :cond_0
     const/16 v2, 0x2e
 
@@ -2142,18 +1949,15 @@
 
     move-result v0
 
-    .line 600
     .local v0, "lastDot":I
     if-lez v0, :cond_1
 
-    .line 601
     const/4 v2, 0x0
 
     invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 603
     :cond_1
     return-object p0
 .end method
@@ -2163,21 +1967,17 @@
     .param p0, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 576
     const/16 v1, 0x2e
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->lastIndexOf(I)I
 
     move-result v0
 
-    .line 577
     .local v0, "lastDot":I
     if-gez v0, :cond_0
 
-    .line 578
     const/4 v1, 0x0
 
-    .line 579
     :goto_0
     return-object v1
 
@@ -2210,7 +2010,6 @@
     .param p0, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 613
     sget-object v1, Landroid/media/MediaFile;->sMimeTypeMap:Ljava/util/HashMap;
 
     invoke-virtual {v1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2219,7 +2018,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 614
     .local v0, "value":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
@@ -2242,10 +2040,8 @@
     .param p1, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 623
     if-eqz p1, :cond_0
 
-    .line 624
     sget-object v3, Landroid/media/MediaFile;->sMimeTypeToFormatMap:Ljava/util/HashMap;
 
     invoke-virtual {v3, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2254,21 +2050,17 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 625
     .local v2, "value":Ljava/lang/Integer;
     if-eqz v2, :cond_0
 
-    .line 626
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
-    .line 637
     .end local v2    # "value":Ljava/lang/Integer;
     :goto_0
     return v3
 
-    .line 629
     :cond_0
     const/16 v3, 0x2e
 
@@ -2276,11 +2068,9 @@
 
     move-result v1
 
-    .line 630
     .local v1, "lastDot":I
     if-lez v1, :cond_1
 
-    .line 631
     add-int/lit8 v3, v1, 0x1
 
     invoke-virtual {p0, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -2293,7 +2083,6 @@
 
     move-result-object v0
 
-    .line 632
     .local v0, "extension":Ljava/lang/String;
     sget-object v3, Landroid/media/MediaFile;->sFileTypeToFormatMap:Ljava/util/HashMap;
 
@@ -2303,18 +2092,15 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 633
     .restart local v2    # "value":Ljava/lang/Integer;
     if-eqz v2, :cond_1
 
-    .line 634
     invoke-virtual {v2}, Ljava/lang/Integer;->intValue()I
 
     move-result v3
 
     goto :goto_0
 
-    .line 637
     .end local v0    # "extension":Ljava/lang/String;
     .end local v2    # "value":Ljava/lang/Integer;
     :cond_1
@@ -2328,12 +2114,10 @@
     .param p0, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 618
     invoke-static {p0}, Landroid/media/MediaFile;->getFileType(Ljava/lang/String;)Landroid/media/MediaFile$MediaFileType;
 
     move-result-object v0
 
-    .line 619
     .local v0, "mediaFileType":Landroid/media/MediaFile$MediaFileType;
     if-nez v0, :cond_0
 
@@ -2353,7 +2137,6 @@
     .param p0, "formatCode"    # I
 
     .prologue
-    .line 641
     sget-object v0, Landroid/media/MediaFile;->sFormatToMimeTypeMap:Ljava/util/HashMap;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2378,14 +2161,12 @@
 
     const/4 v1, 0x0
 
-    .line 527
     invoke-static {p0}, Landroid/media/MediaFile;->_isAudioFileType(I)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 528
     const-string v2, "KOREA"
 
     invoke-static {v2}, Landroid/media/MediaFile;->_checkCountryCode(Ljava/lang/String;)Z
@@ -2394,7 +2175,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 529
     const/16 v2, 0x12c
 
     if-lt p0, v2, :cond_1
@@ -2403,7 +2183,6 @@
 
     if-gt p0, v2, :cond_1
 
-    .line 534
     :cond_0
     :goto_0
     return v0
@@ -2411,13 +2190,11 @@
     :cond_1
     move v0, v1
 
-    .line 529
     goto :goto_0
 
     :cond_2
     move v0, v1
 
-    .line 532
     goto :goto_0
 .end method
 
@@ -2426,7 +2203,6 @@
     .param p0, "fileType"    # I
 
     .prologue
-    .line 561
     const/16 v0, 0x64
 
     if-lt p0, v0, :cond_0
@@ -2461,7 +2237,6 @@
     .param p0, "fileType"    # I
 
     .prologue
-    .line 571
     const/16 v0, 0x33
 
     if-lt p0, v0, :cond_0
@@ -2486,7 +2261,6 @@
     .param p0, "fileType"    # I
 
     .prologue
-    .line 556
     const/16 v0, 0x1f
 
     if-lt p0, v0, :cond_0
@@ -2511,12 +2285,10 @@
     .param p0, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 583
     invoke-static {p0}, Landroid/media/MediaFile;->getFileTypeForMimeType(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 584
     .local v0, "fileType":I
     invoke-static {v0}, Landroid/media/MediaFile;->isAudioFileType(I)Z
 
@@ -2559,7 +2331,6 @@
     .param p0, "fileType"    # I
 
     .prologue
-    .line 566
     const/16 v0, 0x29
 
     if-lt p0, v0, :cond_0
@@ -2583,14 +2354,12 @@
     .locals 2
 
     .prologue
-    .line 307
     new-instance v0, Ljava/io/File;
 
     const-string v1, "/system/lib/drm/libplayreadyplugin.so"
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 308
     .local v0, "libplayreadyplugin":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -2598,10 +2367,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 309
     const/4 v1, 0x1
 
-    .line 312
     :goto_0
     return v1
 
@@ -2615,7 +2382,6 @@
     .locals 2
 
     .prologue
-    .line 296
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -2634,10 +2400,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 298
     const/4 v0, 0x1
 
-    .line 301
     :goto_0
     return v0
 
@@ -2656,14 +2420,12 @@
 
     const/4 v1, 0x0
 
-    .line 545
     invoke-static {p0}, Landroid/media/MediaFile;->_isVideoFileType(I)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 546
     const-string v2, "KOREA"
 
     invoke-static {v2}, Landroid/media/MediaFile;->_checkCountryCode(Ljava/lang/String;)Z
@@ -2672,7 +2434,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 547
     const/16 v2, 0x154
 
     if-lt p0, v2, :cond_1
@@ -2681,7 +2442,6 @@
 
     if-gt p0, v2, :cond_1
 
-    .line 552
     :cond_0
     :goto_0
     return v0
@@ -2689,13 +2449,11 @@
     :cond_1
     move v0, v1
 
-    .line 547
     goto :goto_0
 
     :cond_2
     move v0, v1
 
-    .line 550
     goto :goto_0
 .end method
 
@@ -2703,18 +2461,15 @@
     .locals 5
 
     .prologue
-    .line 266
     invoke-static {}, Landroid/media/DecoderCapabilities;->getAudioDecoders()Ljava/util/List;
 
     move-result-object v2
 
-    .line 267
     .local v2, "decoders":Ljava/util/List;, "Ljava/util/List<Landroid/media/DecoderCapabilities$AudioDecoder;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 268
     .local v0, "count":I
     const/4 v3, 0x0
 
@@ -2722,35 +2477,29 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 269
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/media/DecoderCapabilities$AudioDecoder;
 
-    .line 270
     .local v1, "decoder":Landroid/media/DecoderCapabilities$AudioDecoder;
     sget-object v4, Landroid/media/DecoderCapabilities$AudioDecoder;->AUDIO_DECODER_WMA:Landroid/media/DecoderCapabilities$AudioDecoder;
 
     if-ne v1, v4, :cond_0
 
-    .line 271
     const/4 v4, 0x1
 
-    .line 274
     .end local v1    # "decoder":Landroid/media/DecoderCapabilities$AudioDecoder;
     :goto_1
     return v4
 
-    .line 268
     .restart local v1    # "decoder":Landroid/media/DecoderCapabilities$AudioDecoder;
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 274
     .end local v1    # "decoder":Landroid/media/DecoderCapabilities$AudioDecoder;
     :cond_1
     const/4 v4, 0x0
@@ -2762,18 +2511,15 @@
     .locals 5
 
     .prologue
-    .line 278
     invoke-static {}, Landroid/media/DecoderCapabilities;->getVideoDecoders()Ljava/util/List;
 
     move-result-object v2
 
-    .line 279
     .local v2, "decoders":Ljava/util/List;, "Ljava/util/List<Landroid/media/DecoderCapabilities$VideoDecoder;>;"
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 280
     .local v0, "count":I
     const/4 v3, 0x0
 
@@ -2781,35 +2527,29 @@
     :goto_0
     if-ge v3, v0, :cond_1
 
-    .line 281
     invoke-interface {v2, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Landroid/media/DecoderCapabilities$VideoDecoder;
 
-    .line 282
     .local v1, "decoder":Landroid/media/DecoderCapabilities$VideoDecoder;
     sget-object v4, Landroid/media/DecoderCapabilities$VideoDecoder;->VIDEO_DECODER_WMV:Landroid/media/DecoderCapabilities$VideoDecoder;
 
     if-ne v1, v4, :cond_0
 
-    .line 283
     const/4 v4, 0x1
 
-    .line 286
     .end local v1    # "decoder":Landroid/media/DecoderCapabilities$VideoDecoder;
     :goto_1
     return v4
 
-    .line 280
     .restart local v1    # "decoder":Landroid/media/DecoderCapabilities$VideoDecoder;
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 286
     .end local v1    # "decoder":Landroid/media/DecoderCapabilities$VideoDecoder;
     :cond_1
     const/4 v4, 0x0

@@ -61,80 +61,64 @@
 
     const/4 v4, 0x1
 
-    .line 41
     invoke-direct {p0, p1}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;-><init>(Landroid/content/Context;)V
 
-    .line 19
     const/high16 v1, 0x430c0000    # 140.0f
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleRadius:F
 
-    .line 22
     const/4 v1, 0x0
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextY:F
 
-    .line 23
     const/high16 v1, 0x43240000    # 164.0f
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextSize:F
 
-    .line 24
     const/high16 v1, 0x42300000    # 44.0f
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextSize:F
 
-    .line 25
     const/high16 v1, 0x43180000    # 152.0f
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextSizeSpecific:F
 
-    .line 26
     new-array v1, v3, [F
 
     fill-array-data v1, :array_0
 
     iput-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextXOffsetWhenOpen:[F
 
-    .line 28
     iput v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->textColor:I
 
-    .line 29
     const v1, -0x33007d00
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->paintColor:I
 
-    .line 30
     iput v4, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->shownFrameWhenOpen:I
 
-    .line 31
     new-array v1, v3, [I
 
     fill-array-data v1, :array_1
 
     iput-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextAlphaWhenOpen:[I
 
-    .line 32
     iput v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->handleMode:I
 
-    .line 36
     const-string v1, ""
 
     iput-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetBigText:Ljava/lang/String;
 
-    .line 37
     const-string v1, ""
 
     iput-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetSmallText:Ljava/lang/String;
 
-    .line 43
     const-string v1, "visualeffectScroll"
 
     const-string v2, "IndexScrollEffect : Constructor"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 45
     new-instance v1, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scale:F
@@ -143,7 +127,6 @@
 
     iput-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scrollPath:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;
 
-    .line 46
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scrollPath:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;
 
     invoke-virtual {v1}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->getPathTotal()I
@@ -152,7 +135,6 @@
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->animationTotalFrame:I
 
-    .line 47
     const-string v1, "visualeffectScroll"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -177,7 +159,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 49
     iget v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleRadius:F
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scale:F
@@ -186,7 +167,6 @@
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleRadius:F
 
-    .line 50
     iget v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextSize:F
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scale:F
@@ -195,7 +175,6 @@
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextSize:F
 
-    .line 51
     iget v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextSize:F
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scale:F
@@ -204,7 +183,6 @@
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextSize:F
 
-    .line 52
     iget v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextSizeSpecific:F
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scale:F
@@ -213,7 +191,6 @@
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextSizeSpecific:F
 
-    .line 53
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -224,7 +201,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 54
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextXOffsetWhenOpen:[F
 
     aget v2, v1, v0
@@ -235,12 +211,10 @@
 
     aput v2, v1, v0
 
-    .line 53
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 57
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->shapePaint:Landroid/graphics/Paint;
 
@@ -248,7 +222,6 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 59
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scrollPath:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;
 
     invoke-virtual {v1}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->getCircleCenterX()F
@@ -257,7 +230,6 @@
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleCenterX:F
 
-    .line 60
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scrollPath:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;
 
     invoke-virtual {v1}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->getCircleCenterY()F
@@ -266,59 +238,50 @@
 
     iput v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleCenterY:F
 
-    .line 62
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
-    .line 63
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v4}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 64
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Typeface;->DEFAULT:Landroid/graphics/Typeface;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 65
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextSize:F
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 66
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 67
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->textColor:I
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 69
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextPaint:Landroid/graphics/Paint;
 
-    .line 70
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v4}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 71
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextPaint:Landroid/graphics/Paint;
 
     const-string v2, "sans-serif-medium"
@@ -331,31 +294,26 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 72
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextPaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextSize:F
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 73
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextPaint:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Align;->LEFT:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 74
     iget-object v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextPaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->textColor:I
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 75
     return-void
 
-    .line 26
     nop
 
     :array_0
@@ -367,7 +325,6 @@
         0x43030000    # 131.0f
     .end array-data
 
-    .line 31
     :array_1
     .array-data 4
         0xff
@@ -384,14 +341,12 @@
     .param p2, "widthOffset"    # F
 
     .prologue
-    .line 174
     const/4 v0, 0x0
 
     cmpl-float v0, p2, v0
 
     if-lez v0, :cond_0
 
-    .line 175
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleCenterX:F
 
     iget v5, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleRadius:F
@@ -400,7 +355,6 @@
 
     sub-float v1, v0, p2
 
-    .line 176
     .local v1, "left":F
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleCenterY:F
 
@@ -408,7 +362,6 @@
 
     sub-float v2, v0, v5
 
-    .line 177
     .local v2, "top":F
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleCenterX:F
 
@@ -416,7 +369,6 @@
 
     add-float v3, v0, v5
 
-    .line 178
     .local v3, "right":F
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleCenterY:F
 
@@ -424,7 +376,6 @@
 
     add-float v4, v0, v5
 
-    .line 179
     .local v4, "bottom":F
     iget v5, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleRadius:F
 
@@ -436,7 +387,6 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Canvas;->drawRoundRect(FFFFFFLandroid/graphics/Paint;)V
 
-    .line 183
     .end local v1    # "left":F
     .end local v2    # "top":F
     .end local v3    # "right":F
@@ -444,7 +394,6 @@
     :goto_0
     return-void
 
-    .line 181
     :cond_0
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->circleCenterX:F
 
@@ -465,15 +414,12 @@
     .locals 1
 
     .prologue
-    .line 125
     invoke-super {p0}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->close()V
 
-    .line 126
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->currentWidthOffset:F
 
-    .line 127
     return-void
 .end method
 
@@ -488,22 +434,18 @@
 
     const/4 v10, 0x0
 
-    .line 131
     invoke-super {p0, p1}, Lcom/samsung/android/visualeffect/scroll/common/AbstractScrollEffect;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 134
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->animationCurrentFrame:I
 
     const/4 v9, -0x1
 
     if-ne v8, v9, :cond_1
 
-    .line 171
     :cond_0
     :goto_0
     return-void
 
-    .line 135
     :cond_1
     iget-object v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scrollPath:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;
 
@@ -513,11 +455,9 @@
 
     move-result-object v3
 
-    .line 136
     .local v3, "path":Landroid/graphics/Path;
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 138
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->handleMode:I
 
     if-gez v8, :cond_2
@@ -531,7 +471,6 @@
 
     if-ne v8, v12, :cond_5
 
-    .line 139
     :cond_3
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->viewWidth:F
 
@@ -539,13 +478,11 @@
 
     invoke-virtual {p1, v8, v9}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 148
     :goto_1
     iget-object v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->shapePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v3, v8}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 149
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->animationCurrentFrame:I
 
     iget v9, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->animationTotalFrame:I
@@ -554,16 +491,13 @@
 
     if-ne v8, v9, :cond_4
 
-    .line 150
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->currentWidthOffset:F
 
     invoke-direct {p0, p1, v8}, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->drawLastFrameCircle(Landroid/graphics/Canvas;F)V
 
-    .line 152
     :cond_4
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 155
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->animationCurrentFrame:I
 
     iget-object v9, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scrollPath:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;
@@ -578,7 +512,6 @@
 
     if-lt v8, v9, :cond_0
 
-    .line 157
     iget-object v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scrollPath:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;
 
     invoke-virtual {v8}, Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;->getPathTotal()I
@@ -591,13 +524,11 @@
 
     add-int/lit8 v6, v8, -0x1
 
-    .line 158
     .local v6, "textXOffsetIndex":I
     iget-object v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextXOffsetWhenOpen:[F
 
     aget v2, v8, v6
 
-    .line 159
     .local v2, "bigTextXOffset":F
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetWidthOffset:F
 
@@ -609,7 +540,6 @@
 
     sub-float v7, v8, v2
 
-    .line 160
     .local v7, "tx":F
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->handleMode:I
 
@@ -625,7 +555,6 @@
 
     move v0, v7
 
-    .line 161
     .end local v7    # "tx":F
     .local v0, "bX":F
     :goto_2
@@ -653,7 +582,6 @@
 
     sub-float v1, v8, v9
 
-    .line 162
     .local v1, "bY":F
     iget-object v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
@@ -663,14 +591,12 @@
 
     invoke-virtual {v8, v9}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 163
     iget-object v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetBigText:Ljava/lang/String;
 
     iget-object v9, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v8, v0, v1, v9}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 165
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->animationCurrentFrame:I
 
     iget-object v9, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->scrollPath:Lcom/samsung/android/visualeffect/scroll/common/IndexScrollPath;
@@ -683,7 +609,6 @@
 
     if-lt v8, v9, :cond_0
 
-    .line 166
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->handleMode:I
 
     if-gez v8, :cond_d
@@ -698,7 +623,6 @@
 
     sub-float v4, v8, v9
 
-    .line 167
     .local v4, "sX":F
     :goto_3
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextY:F
@@ -721,7 +645,6 @@
 
     sub-float v5, v8, v9
 
-    .line 168
     .local v5, "sY":F
     iget-object v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetSmallText:Ljava/lang/String;
 
@@ -731,7 +654,6 @@
 
     goto/16 :goto_0
 
-    .line 140
     .end local v0    # "bX":F
     .end local v1    # "bY":F
     .end local v2    # "bigTextXOffset":F
@@ -752,20 +674,17 @@
 
     if-nez v8, :cond_8
 
-    .line 141
     :cond_7
     iget v8, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->currentY:F
 
     invoke-virtual {p1, v10, v8}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 142
     const/high16 v8, 0x43340000    # 180.0f
 
     invoke-virtual {p1, v8, v10, v10}, Landroid/graphics/Canvas;->rotate(FFF)V
 
     goto/16 :goto_1
 
-    .line 144
     :cond_8
     const-string v8, "visualeffectScroll"
 
@@ -781,7 +700,6 @@
     :cond_9
     move v0, v7
 
-    .line 160
     goto :goto_2
 
     :cond_a
@@ -802,7 +720,6 @@
 
     goto/16 :goto_2
 
-    .line 166
     .end local v7    # "tx":F
     .restart local v0    # "bX":F
     .restart local v1    # "bY":F
@@ -841,7 +758,6 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 78
     iput v6, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->handleMode:I
 
     move-object v0, p0
@@ -856,10 +772,8 @@
 
     move-object v5, p5
 
-    .line 79
     invoke-virtual/range {v0 .. v6}, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->open(FFFLjava/lang/String;Ljava/lang/String;I)V
 
-    .line 80
     return-void
 .end method
 
@@ -877,7 +791,6 @@
 
     const/4 v5, 0x1
 
-    .line 83
     const-string v0, "visualeffectScroll"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -950,7 +863,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextY:F
 
     cmpl-float v0, v0, p2
@@ -961,7 +873,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 86
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->animationCurrentFrame:I
 
     if-eq v0, v3, :cond_0
@@ -972,7 +883,6 @@
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->animationCurrentFrame:I
 
-    .line 89
     :cond_0
     const-string v0, "\u0d10"
 
@@ -982,33 +892,25 @@
 
     if-eqz v0, :cond_3
 
-    .line 90
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextSizeSpecific:F
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 95
     :goto_0
     iput p6, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->handleMode:I
 
-    .line 97
     iput p1, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetY:F
 
-    .line 98
     iput-boolean v5, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->isOpen:Z
 
-    .line 99
     iput-boolean v5, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->isYMoving:Z
 
-    .line 100
     iput-boolean v5, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->isWidthMoving:Z
 
-    .line 101
     iput-boolean v5, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->isFrameMoving:Z
 
-    .line 102
     invoke-virtual {p0}, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->getWidth()I
 
     move-result v0
@@ -1017,7 +919,6 @@
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->viewWidth:F
 
-    .line 103
     iget v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->animationCurrentFrame:I
 
     if-ne v0, v3, :cond_1
@@ -1026,35 +927,27 @@
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->currentY:F
 
-    .line 104
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->startAnimation()V
 
-    .line 106
     iput p2, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextY:F
 
-    .line 107
     iput p3, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->rightMargin:F
 
-    .line 109
     if-eqz p4, :cond_2
 
     if-eqz p5, :cond_2
 
-    .line 110
     iput-object p4, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetBigText:Ljava/lang/String;
 
-    .line 111
     iput-object p5, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetSmallText:Ljava/lang/String;
 
-    .line 112
     invoke-virtual {p4}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-le v0, v5, :cond_4
 
-    .line 113
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p4, v5}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -1073,7 +966,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
-    .line 114
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->textBounds:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->width()I
@@ -1084,15 +976,12 @@
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetWidthOffset:F
 
-    .line 115
     iput v5, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->shownFrameWhenOpen:I
 
-    .line 121
     :cond_2
     :goto_1
     return-void
 
-    .line 92
     :cond_3
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
@@ -1102,13 +991,11 @@
 
     goto :goto_0
 
-    .line 117
     :cond_4
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->targetWidthOffset:F
 
-    .line 118
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextXOffsetWhenOpen:[F
 
     array-length v0, v0
@@ -1123,7 +1010,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 191
     const-string v0, "visualeffectScroll"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1146,12 +1032,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 192
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 193
     return-void
 .end method
 
@@ -1160,7 +1044,6 @@
     .param p1, "textSize"    # F
 
     .prologue
-    .line 201
     const-string v0, "visualeffectScroll"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1183,12 +1066,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->bigTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 203
     return-void
 .end method
 
@@ -1197,7 +1078,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 186
     const-string v0, "visualeffectScroll"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1220,12 +1100,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 187
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 188
     return-void
 .end method
 
@@ -1234,7 +1112,6 @@
     .param p1, "textSize"    # F
 
     .prologue
-    .line 196
     const-string v0, "visualeffectScroll"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1257,11 +1134,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     iget-object v0, p0, Lcom/samsung/android/visualeffect/scroll/IndexScrollEffect;->smallTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 198
     return-void
 .end method

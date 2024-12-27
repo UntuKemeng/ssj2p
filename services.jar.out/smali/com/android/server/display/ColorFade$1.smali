@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1048
     iput-object p1, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 1051
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
@@ -55,7 +53,6 @@
     # setter for: Lcom/android/server/display/ColorFade;->mDisplayWidth:I
     invoke-static {v0, v1}, Lcom/android/server/display/ColorFade;->access$002(Lcom/android/server/display/ColorFade;I)I
 
-    .line 1052
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
     iget-object v1, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
@@ -70,7 +67,6 @@
     # setter for: Lcom/android/server/display/ColorFade;->mDisplayHeight:I
     invoke-static {v0, v1}, Lcom/android/server/display/ColorFade;->access$202(Lcom/android/server/display/ColorFade;I)I
 
-    .line 1054
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
     # getter for: Lcom/android/server/display/ColorFade;->mSurface:Landroid/view/Surface;
@@ -89,7 +85,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1055
     :cond_0
     const-string v0, "ColorFade"
 
@@ -97,11 +92,9 @@
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1074
     :goto_0
     return-void
 
-    .line 1059
     :cond_1
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
@@ -119,19 +112,16 @@
 
     invoke-virtual {v0, v1}, Landroid/view/Surface;->copyFrom(Landroid/view/SurfaceControl;)V
 
-    .line 1061
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
     # invokes: Lcom/android/server/display/ColorFade;->destroyEglSurface()V
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->access$500(Lcom/android/server/display/ColorFade;)V
 
-    .line 1062
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
     # invokes: Lcom/android/server/display/ColorFade;->createEglSurface()Z
     invoke-static {v0}, Lcom/android/server/display/ColorFade;->access$600(Lcom/android/server/display/ColorFade;)Z
 
-    .line 1064
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
     # invokes: Lcom/android/server/display/ColorFade;->attachEglContext()Z
@@ -141,7 +131,6 @@
 
     if-nez v0, :cond_2
 
-    .line 1065
     const-string v0, "ColorFade"
 
     const-string/jumbo v1, "onResolutionChanged(): attachEglContext fail !!!"
@@ -150,7 +139,6 @@
 
     goto :goto_0
 
-    .line 1070
     :cond_2
     :try_start_0
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
@@ -171,7 +159,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1072
     iget-object v0, p0, Lcom/android/server/display/ColorFade$1;->this$0:Lcom/android/server/display/ColorFade;
 
     # invokes: Lcom/android/server/display/ColorFade;->detachEglContext()V

@@ -29,15 +29,12 @@
     .locals 4
 
     .prologue
-    .line 402
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 400
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
-    .line 403
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -48,7 +45,6 @@
 
     iput-wide v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mExpireMillis:J
 
-    .line 404
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .param p0, "x0"    # Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;
 
     .prologue
-    .line 396
     invoke-direct {p0}, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->isExpired()Z
 
     move-result v0
@@ -69,7 +64,6 @@
     .locals 4
 
     .prologue
-    .line 439
     iget-wide v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mExpireMillis:J
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -95,7 +89,6 @@
     .locals 2
 
     .prologue
-    .line 443
     iget v0, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/4 v1, 0x0
@@ -128,17 +121,14 @@
     .locals 1
 
     .prologue
-    .line 447
     invoke-direct {p0}, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->isInvalid()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 448
     const/4 v0, 0x0
 
-    .line 450
     :goto_0
     return v0
 
@@ -154,7 +144,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 407
     iget v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/high16 v5, 0x3f000000    # 0.5f
@@ -165,23 +154,19 @@
 
     iput v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
-    .line 411
     const-string v4, "_id"
 
     invoke-interface {p1, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 412
     .local v1, "idIdx":I
     if-ltz v1, :cond_4
 
-    .line 413
     invoke-interface {p1, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    .line 415
     .local v0, "id":I
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
@@ -202,12 +187,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 416
     const/4 v4, 0x0
 
     iput v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
-    .line 419
     :cond_0
     # getter for: Lcom/android/server/notification/ValidateNotificationPeople;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->access$000()Z
@@ -238,7 +221,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 426
     :cond_1
     :goto_0
     const-string/jumbo v4, "starred"
@@ -247,11 +229,9 @@
 
     move-result v3
 
-    .line 427
     .local v3, "starIdx":I
     if-ltz v3, :cond_6
 
-    .line 428
     invoke-interface {p1, v3}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v4
@@ -260,12 +240,10 @@
 
     const/4 v2, 0x1
 
-    .line 429
     .local v2, "isStarred":Z
     :goto_1
     if-eqz v2, :cond_2
 
-    .line 430
     iget v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
     const/high16 v5, 0x3f800000    # 1.0f
@@ -276,7 +254,6 @@
 
     iput v4, p0, Lcom/android/server/notification/ValidateNotificationPeople$LookupResult;->mAffinity:F
 
-    .line 432
     :cond_2
     # getter for: Lcom/android/server/notification/ValidateNotificationPeople;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->access$000()Z
@@ -307,19 +284,16 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 436
     .end local v2    # "isStarred":Z
     :cond_3
     :goto_2
     return-void
 
-    .line 421
     .end local v0    # "id":I
     .end local v3    # "starIdx":I
     :cond_4
     const/4 v0, -0x1
 
-    .line 422
     .restart local v0    # "id":I
     const-string v4, "ValidateNoPeople"
 
@@ -329,14 +303,12 @@
 
     goto :goto_0
 
-    .line 428
     .restart local v3    # "starIdx":I
     :cond_5
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 434
     :cond_6
     # getter for: Lcom/android/server/notification/ValidateNotificationPeople;->DEBUG:Z
     invoke-static {}, Lcom/android/server/notification/ValidateNotificationPeople;->access$000()Z

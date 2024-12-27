@@ -27,12 +27,10 @@
     .locals 1
 
     .prologue
-    .line 729
     const/16 v0, 0x36
 
     invoke-direct {p0, v0}, Landroid/graphics/ImageFilter;-><init>(I)V
 
-    .line 730
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 693
     invoke-super {p0}, Landroid/graphics/ImageFilter;->clone()Landroid/graphics/ImageFilter;
 
     move-result-object v0
@@ -60,14 +57,12 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 754
     const/4 v0, 0x1
 
     int-to-float v1, p1
 
     invoke-super {p0, v0, v1}, Landroid/graphics/ImageFilter;->setValue(IF)V
 
-    .line 755
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .param p1, "radius"    # F
 
     .prologue
-    .line 740
     const/4 v0, 0x0
 
     const/4 v1, 0x0
@@ -93,6 +87,5 @@
 
     invoke-super {p0, v0, v1}, Landroid/graphics/ImageFilter;->setValue(IF)V
 
-    .line 741
     return-void
 .end method

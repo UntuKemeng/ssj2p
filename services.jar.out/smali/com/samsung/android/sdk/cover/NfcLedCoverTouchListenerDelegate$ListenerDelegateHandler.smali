@@ -25,13 +25,10 @@
     .param p2, "listener"    # Lcom/samsung/android/sdk/cover/ScoverManager$NfcLedCoverTouchListener;
 
     .prologue
-    .line 61
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 62
     iput-object p2, p0, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$NfcLedCoverTouchListener;
 
-    .line 63
     return-void
 .end method
 
@@ -42,22 +39,18 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$NfcLedCoverTouchListener;
 
     if-eqz v0, :cond_0
 
-    .line 68
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 79
     :cond_0
     :goto_0
     return-void
 
-    .line 70
     :pswitch_0
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$NfcLedCoverTouchListener;
 
@@ -65,7 +58,6 @@
 
     goto :goto_0
 
-    .line 73
     :pswitch_1
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/NfcLedCoverTouchListenerDelegate$ListenerDelegateHandler;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$NfcLedCoverTouchListener;
 
@@ -73,7 +65,6 @@
 
     goto :goto_0
 
-    .line 68
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

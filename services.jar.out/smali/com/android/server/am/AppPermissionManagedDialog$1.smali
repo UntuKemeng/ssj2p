@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 290
     iput-object p1, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,12 +39,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 292
     iget v2, p1, Landroid/os/Message;->what:I
 
     if-nez v2, :cond_1
 
-    .line 294
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
@@ -65,16 +62,13 @@
     :try_end_0
     .catch Landroid/content/ActivityNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 340
     :cond_0
     :goto_0
     return-void
 
-    .line 295
     :catch_0
     move-exception v0
 
-    .line 296
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     const-string v2, "AppPermissionManagedDialog"
 
@@ -84,14 +78,12 @@
 
     goto :goto_0
 
-    .line 298
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     :cond_1
     iget v2, p1, Landroid/os/Message;->what:I
 
     if-ne v2, v4, :cond_5
 
-    .line 299
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     # getter for: Lcom/android/server/am/AppPermissionManagedDialog;->mDialogType:I
@@ -101,7 +93,6 @@
 
     if-ne v2, v4, :cond_4
 
-    .line 301
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     # getter for: Lcom/android/server/am/AppPermissionManagedDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -111,7 +102,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 302
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     # getter for: Lcom/android/server/am/AppPermissionManagedDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -121,7 +111,6 @@
 
     monitor-enter v3
 
-    .line 303
     :try_start_1
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
@@ -145,7 +134,6 @@
 
     if-ne v2, v4, :cond_2
 
-    .line 304
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     # getter for: Lcom/android/server/am/AppPermissionManagedDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -157,13 +145,11 @@
 
     iput-object v4, v2, Lcom/android/server/am/ProcessRecord;->crashDialog:Landroid/app/Dialog;
 
-    .line 306
     :cond_2
     monitor-exit v3
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 308
     :cond_3
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
@@ -176,7 +162,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/am/AppErrorResult;->set(I)V
 
-    .line 310
     :cond_4
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
@@ -184,7 +169,6 @@
 
     goto :goto_0
 
-    .line 306
     :catchall_0
     move-exception v2
 
@@ -195,7 +179,6 @@
 
     throw v2
 
-    .line 311
     :cond_5
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -203,7 +186,6 @@
 
     if-ne v2, v3, :cond_6
 
-    .line 312
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     # invokes: Lcom/android/server/am/AppPermissionManagedDialog;->setTitleAndMessageByApp()V
@@ -211,7 +193,6 @@
 
     goto :goto_0
 
-    .line 314
     :cond_6
     iget v2, p1, Landroid/os/Message;->what:I
 
@@ -219,31 +200,26 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 316
     :try_start_3
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 317
     .local v1, "in":Landroid/content/Intent;
     const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 318
     const/high16 v2, 0x8000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 319
     const-string v2, "com.sec.android.app.capabilitymanager"
 
     const-string v3, "com.sec.android.app.cm.ui.CMPermissionGroupListActivity"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 321
     const-string/jumbo v2, "packagename"
 
     iget-object v3, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
@@ -255,7 +231,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 322
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     # getter for: Lcom/android/server/am/AppPermissionManagedDialog;->mContext:Landroid/content/Context;
@@ -267,7 +242,6 @@
     :try_end_3
     .catch Landroid/content/ActivityNotFoundException; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 326
     .end local v1    # "in":Landroid/content/Intent;
     :goto_1
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
@@ -279,7 +253,6 @@
 
     if-ne v2, v4, :cond_9
 
-    .line 328
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     # getter for: Lcom/android/server/am/AppPermissionManagedDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -289,7 +262,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 329
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     # getter for: Lcom/android/server/am/AppPermissionManagedDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -299,7 +271,6 @@
 
     monitor-enter v3
 
-    .line 330
     :try_start_4
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
@@ -323,7 +294,6 @@
 
     if-ne v2, v4, :cond_7
 
-    .line 331
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
     # getter for: Lcom/android/server/am/AppPermissionManagedDialog;->mProc:Lcom/android/server/am/ProcessRecord;
@@ -335,13 +305,11 @@
 
     iput-object v4, v2, Lcom/android/server/am/ProcessRecord;->crashDialog:Landroid/app/Dialog;
 
-    .line 333
     :cond_7
     monitor-exit v3
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 335
     :cond_8
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
@@ -354,7 +322,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/am/AppErrorResult;->set(I)V
 
-    .line 337
     :cond_9
     iget-object v2, p0, Lcom/android/server/am/AppPermissionManagedDialog$1;->this$0:Lcom/android/server/am/AppPermissionManagedDialog;
 
@@ -362,11 +329,9 @@
 
     goto/16 :goto_0
 
-    .line 323
     :catch_1
     move-exception v0
 
-    .line 324
     .restart local v0    # "e":Landroid/content/ActivityNotFoundException;
     const-string v2, "AppPermissionManagedDialog"
 
@@ -376,7 +341,6 @@
 
     goto :goto_1
 
-    .line 333
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     :catchall_1
     move-exception v2

@@ -21,23 +21,18 @@
     .param p2, "entry"    # Ljava/lang/Class;
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     new-instance v0, Lorg/simpleframework/xml/transform/StringArrayTransform;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/transform/StringArrayTransform;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/transform/ArrayTransform;->split:Lorg/simpleframework/xml/transform/StringArrayTransform;
 
-    .line 73
     iput-object p1, p0, Lorg/simpleframework/xml/transform/ArrayTransform;->delegate:Lorg/simpleframework/xml/transform/Transform;
 
-    .line 74
     iput-object p2, p0, Lorg/simpleframework/xml/transform/ArrayTransform;->entry:Ljava/lang/Class;
 
-    .line 75
     return-void
 .end method
 
@@ -52,14 +47,12 @@
     .end annotation
 
     .prologue
-    .line 106
     iget-object v3, p0, Lorg/simpleframework/xml/transform/ArrayTransform;->entry:Ljava/lang/Class;
 
     invoke-static {v3, p2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 108
     .local v0, "array":Ljava/lang/Object;
     const/4 v1, 0x0
 
@@ -67,7 +60,6 @@
     :goto_0
     if-ge v1, p2, :cond_1
 
-    .line 109
     iget-object v3, p0, Lorg/simpleframework/xml/transform/ArrayTransform;->delegate:Lorg/simpleframework/xml/transform/Transform;
 
     aget-object v4, p1, v1
@@ -76,20 +68,16 @@
 
     move-result-object v2
 
-    .line 111
     .local v2, "item":Ljava/lang/Object;
     if-eqz v2, :cond_0
 
-    .line 112
     invoke-static {v0, v1, v2}, Ljava/lang/reflect/Array;->set(Ljava/lang/Object;ILjava/lang/Object;)V
 
-    .line 108
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 115
     .end local v2    # "item":Ljava/lang/Object;
     :cond_1
     return-object v0
@@ -106,10 +94,8 @@
     .end annotation
 
     .prologue
-    .line 145
     new-array v2, p2, [Ljava/lang/String;
 
-    .line 147
     .local v2, "list":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -117,16 +103,13 @@
     :goto_0
     if-ge v1, p2, :cond_1
 
-    .line 148
     invoke-static {p1, v1}, Ljava/lang/reflect/Array;->get(Ljava/lang/Object;I)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 150
     .local v0, "entry":Ljava/lang/Object;
     if-eqz v0, :cond_0
 
-    .line 151
     iget-object v3, p0, Lorg/simpleframework/xml/transform/ArrayTransform;->delegate:Lorg/simpleframework/xml/transform/Transform;
 
     invoke-interface {v3, v0}, Lorg/simpleframework/xml/transform/Transform;->write(Ljava/lang/Object;)Ljava/lang/String;
@@ -135,13 +118,11 @@
 
     aput-object v3, v2, v1
 
-    .line 147
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 154
     .end local v0    # "entry":Ljava/lang/Object;
     :cond_1
     iget-object v3, p0, Lorg/simpleframework/xml/transform/ArrayTransform;->split:Lorg/simpleframework/xml/transform/StringArrayTransform;
@@ -165,18 +146,15 @@
     .end annotation
 
     .prologue
-    .line 88
     iget-object v2, p0, Lorg/simpleframework/xml/transform/ArrayTransform;->split:Lorg/simpleframework/xml/transform/StringArrayTransform;
 
     invoke-virtual {v2, p1}, Lorg/simpleframework/xml/transform/StringArrayTransform;->read(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 89
     .local v1, "list":[Ljava/lang/String;
     array-length v0, v1
 
-    .line 91
     .local v0, "length":I
     invoke-direct {p0, v1, v0}, Lorg/simpleframework/xml/transform/ArrayTransform;->read([Ljava/lang/String;I)Ljava/lang/Object;
 
@@ -195,12 +173,10 @@
     .end annotation
 
     .prologue
-    .line 129
     invoke-static {p1}, Ljava/lang/reflect/Array;->getLength(Ljava/lang/Object;)I
 
     move-result v0
 
-    .line 131
     .local v0, "length":I
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/transform/ArrayTransform;->write(Ljava/lang/Object;I)Ljava/lang/String;
 

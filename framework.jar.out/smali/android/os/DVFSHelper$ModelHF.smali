@@ -25,37 +25,29 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 2273
     iput-object p1, p0, Landroid/os/DVFSHelper$ModelHF;->this$0:Landroid/os/DVFSHelper;
 
     invoke-direct {p0, p1}, Landroid/os/DVFSHelper$ModelJBP;-><init>(Landroid/os/DVFSHelper;)V
 
-    .line 2274
     const v0, 0x124f80
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelHF;->LIST_SCROLL_ARM_FREQ:I
 
-    .line 2275
     const v0, 0x1b7740
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelHF;->AMS_RESUME_ARM_FREQ:I
 
-    .line 2276
     const/4 v0, 0x4
 
     iput v0, p0, Landroid/os/DVFSHelper$ModelHF;->AMS_RESUME_CPU_CORE:I
 
-    .line 2277
     iput v1, p0, Landroid/os/DVFSHelper$ModelHF;->GALLERY_TOUCH_ARM_FREQ:I
 
-    .line 2278
     iput v1, p0, Landroid/os/DVFSHelper$ModelHF;->LAUNCHER_TOUCH_ARM_FREQ:I
 
-    .line 2280
     const/4 v0, 0x2
 
     sput v0, Landroid/os/DVFSHelper;->LIST_SCROLL_BOOSTER_CORE_NUM:I
 
-    .line 2281
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 227
     iput-object p1, p0, Landroid/bluetooth/BluetoothAvrcpController$2;->this$0:Landroid/bluetooth/BluetoothAvrcpController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 229
     # getter for: Landroid/bluetooth/BluetoothAvrcpController;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothAvrcpController;->access$000()Z
 
@@ -56,7 +54,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 230
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothAvrcpController$2;->this$0:Landroid/bluetooth/BluetoothAvrcpController;
 
@@ -67,7 +64,6 @@
     # setter for: Landroid/bluetooth/BluetoothAvrcpController;->mService:Landroid/bluetooth/IBluetoothAvrcpController;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothAvrcpController;->access$202(Landroid/bluetooth/BluetoothAvrcpController;Landroid/bluetooth/IBluetoothAvrcpController;)Landroid/bluetooth/IBluetoothAvrcpController;
 
-    .line 232
     iget-object v0, p0, Landroid/bluetooth/BluetoothAvrcpController$2;->this$0:Landroid/bluetooth/BluetoothAvrcpController;
 
     # getter for: Landroid/bluetooth/BluetoothAvrcpController;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -77,7 +73,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 233
     iget-object v0, p0, Landroid/bluetooth/BluetoothAvrcpController$2;->this$0:Landroid/bluetooth/BluetoothAvrcpController;
 
     # getter for: Landroid/bluetooth/BluetoothAvrcpController;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -91,7 +86,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/bluetooth/BluetoothProfile$ServiceListener;->onServiceConnected(ILandroid/bluetooth/BluetoothProfile;)V
 
-    .line 236
     :cond_1
     return-void
 .end method
@@ -101,7 +95,6 @@
     .param p1, "className"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 238
     # getter for: Landroid/bluetooth/BluetoothAvrcpController;->DBG:Z
     invoke-static {}, Landroid/bluetooth/BluetoothAvrcpController;->access$000()Z
 
@@ -115,7 +108,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     :cond_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothAvrcpController$2;->this$0:Landroid/bluetooth/BluetoothAvrcpController;
 
@@ -124,7 +116,6 @@
     # setter for: Landroid/bluetooth/BluetoothAvrcpController;->mService:Landroid/bluetooth/IBluetoothAvrcpController;
     invoke-static {v0, v1}, Landroid/bluetooth/BluetoothAvrcpController;->access$202(Landroid/bluetooth/BluetoothAvrcpController;Landroid/bluetooth/IBluetoothAvrcpController;)Landroid/bluetooth/IBluetoothAvrcpController;
 
-    .line 240
     iget-object v0, p0, Landroid/bluetooth/BluetoothAvrcpController$2;->this$0:Landroid/bluetooth/BluetoothAvrcpController;
 
     # getter for: Landroid/bluetooth/BluetoothAvrcpController;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -134,7 +125,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 241
     iget-object v0, p0, Landroid/bluetooth/BluetoothAvrcpController$2;->this$0:Landroid/bluetooth/BluetoothAvrcpController;
 
     # getter for: Landroid/bluetooth/BluetoothAvrcpController;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -146,7 +136,6 @@
 
     invoke-interface {v0, v1}, Landroid/bluetooth/BluetoothProfile$ServiceListener;->onServiceDisconnected(I)V
 
-    .line 243
     :cond_1
     return-void
 .end method

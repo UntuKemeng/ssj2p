@@ -44,17 +44,14 @@
     .end annotation
 
     .prologue
-    .line 91
     invoke-direct {p0}, Lorg/simpleframework/xml/core/TemplateParameter;-><init>()V
 
-    .line 92
     new-instance v0, Lorg/simpleframework/xml/core/ElementUnionParameter$Contact;
 
     invoke-direct {v0, p3, p1, p5}, Lorg/simpleframework/xml/core/ElementUnionParameter$Contact;-><init>(Lorg/simpleframework/xml/Element;Ljava/lang/reflect/Constructor;I)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->contact:Lorg/simpleframework/xml/core/ElementUnionParameter$Contact;
 
-    .line 93
     new-instance v0, Lorg/simpleframework/xml/core/ElementUnionLabel;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->contact:Lorg/simpleframework/xml/core/ElementUnionParameter$Contact;
@@ -63,7 +60,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->label:Lorg/simpleframework/xml/core/Label;
 
-    .line 94
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getExpression()Lorg/simpleframework/xml/core/Expression;
@@ -72,7 +68,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->expression:Lorg/simpleframework/xml/core/Expression;
 
-    .line 95
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getPath()Ljava/lang/String;
@@ -81,7 +76,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->path:Ljava/lang/String;
 
-    .line 96
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getType()Ljava/lang/Class;
@@ -90,7 +84,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->type:Ljava/lang/Class;
 
-    .line 97
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getName()Ljava/lang/String;
@@ -99,7 +92,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->name:Ljava/lang/String;
 
-    .line 98
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getKey()Ljava/lang/Object;
@@ -108,10 +100,8 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->key:Ljava/lang/Object;
 
-    .line 99
     iput p5, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->index:I
 
-    .line 100
     return-void
 .end method
 
@@ -121,7 +111,6 @@
     .locals 1
 
     .prologue
-    .line 168
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->contact:Lorg/simpleframework/xml/core/ElementUnionParameter$Contact;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/ElementUnionParameter$Contact;->getAnnotation()Ljava/lang/annotation/Annotation;
@@ -135,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 145
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->expression:Lorg/simpleframework/xml/core/Expression;
 
     return-object v0
@@ -145,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 179
     iget v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->index:I
 
     return v0
@@ -155,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->key:Ljava/lang/Object;
 
     return-object v0
@@ -165,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->name:Ljava/lang/String;
 
     return-object v0
@@ -175,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->path:Ljava/lang/String;
 
     return-object v0
@@ -185,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->type:Ljava/lang/Class;
 
     return-object v0
@@ -195,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 203
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->type:Ljava/lang/Class;
 
     invoke-virtual {v0}, Ljava/lang/Class;->isPrimitive()Z
@@ -209,7 +191,6 @@
     .locals 1
 
     .prologue
-    .line 191
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->isRequired()Z
@@ -223,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 214
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionParameter;->contact:Lorg/simpleframework/xml/core/ElementUnionParameter$Contact;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/ElementUnionParameter$Contact;->toString()Ljava/lang/String;

@@ -55,7 +55,6 @@
 
     const/4 v2, 0x0
 
-    .line 422
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "Foreground"
@@ -72,7 +71,6 @@
 
     sput-object v0, Landroid/os/BatteryStats$Uid;->PROCESS_STATE_NAMES:[Ljava/lang/String;
 
-    .line 437
     new-array v0, v5, [Ljava/lang/String;
 
     const-string/jumbo v1, "other"
@@ -96,10 +94,8 @@
     .locals 0
 
     .prologue
-    .line 317
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 575
     return-void
 .end method
 
@@ -230,7 +226,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 481
     const-wide/16 v0, 0x0
 
     return-wide v0

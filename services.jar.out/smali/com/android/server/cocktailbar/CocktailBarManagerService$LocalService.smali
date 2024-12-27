@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 93
     iput-object p1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$LocalService;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     invoke-direct {p0}, Lcom/samsung/android/cocktailbar/CocktailBarManagerInternal;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/cocktailbar/CocktailBarManagerService$1;
 
     .prologue
-    .line 93
     invoke-direct {p0, p1}, Lcom/android/server/cocktailbar/CocktailBarManagerService$LocalService;-><init>(Lcom/android/server/cocktailbar/CocktailBarManagerService;)V
 
     return-void
@@ -51,13 +49,11 @@
     .param p2, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 97
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$LocalService;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     # invokes: Lcom/android/server/cocktailbar/CocktailBarManagerService;->turnOffWakupCocktailBarFromPowerManagerInternal(ILjava/lang/String;)V
     invoke-static {v0, p1, p2}, Lcom/android/server/cocktailbar/CocktailBarManagerService;->access$300(Lcom/android/server/cocktailbar/CocktailBarManagerService;ILjava/lang/String;)V
 
-    .line 98
     return-void
 .end method
 
@@ -66,13 +62,11 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 112
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$LocalService;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     # invokes: Lcom/android/server/cocktailbar/CocktailBarManagerService;->updateCocktailBarStateFromWindowManagerInternal(I)V
     invoke-static {v0, p1}, Lcom/android/server/cocktailbar/CocktailBarManagerService;->access$600(Lcom/android/server/cocktailbar/CocktailBarManagerService;I)V
 
-    .line 113
     return-void
 .end method
 
@@ -81,13 +75,11 @@
     .param p1, "disable"    # Z
 
     .prologue
-    .line 107
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$LocalService;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     # invokes: Lcom/android/server/cocktailbar/CocktailBarManagerService;->updateSysfsGripDisableFromWindowManagerInternal(Z)V
     invoke-static {v0, p1}, Lcom/android/server/cocktailbar/CocktailBarManagerService;->access$500(Lcom/android/server/cocktailbar/CocktailBarManagerService;Z)V
 
-    .line 108
     return-void
 .end method
 
@@ -98,12 +90,10 @@
     .param p3, "reason"    # I
 
     .prologue
-    .line 102
     iget-object v0, p0, Lcom/android/server/cocktailbar/CocktailBarManagerService$LocalService;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerService;
 
     # invokes: Lcom/android/server/cocktailbar/CocktailBarManagerService;->wakupCocktailBarFromWindowManagerInternal(ZII)V
     invoke-static {v0, p1, p2, p3}, Lcom/android/server/cocktailbar/CocktailBarManagerService;->access$400(Lcom/android/server/cocktailbar/CocktailBarManagerService;ZII)V
 
-    .line 103
     return-void
 .end method

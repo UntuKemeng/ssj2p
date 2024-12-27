@@ -43,13 +43,10 @@
     .param p1, "elements"    # Lorg/simpleframework/xml/core/LabelMap;
 
     .prologue
-    .line 280
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 281
     iput-object p1, p0, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
-    .line 282
     return-void
 .end method
 
@@ -64,12 +61,10 @@
     .end annotation
 
     .prologue
-    .line 406
     invoke-interface {p2}, Lorg/simpleframework/xml/core/Label;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 408
     .local v0, "name":Ljava/lang/String;
     iget-object v1, p0, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
@@ -79,12 +74,10 @@
 
     if-nez v1, :cond_0
 
-    .line 409
     iget-object v1, p0, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
     invoke-virtual {v1, v0, p2}, Lorg/simpleframework/xml/core/LabelMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 411
     :cond_0
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->containsKey(Ljava/lang/Object;)Z
 
@@ -92,10 +85,8 @@
 
     if-nez v1, :cond_1
 
-    .line 412
     invoke-virtual {p0, p1, p2}, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 414
     :cond_1
     return-void
 .end method
@@ -110,12 +101,10 @@
     .end annotation
 
     .prologue
-    .line 424
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Label;->getContact()Lorg/simpleframework/xml/core/Contact;
 
     move-result-object v0
 
-    .line 425
     .local v0, "contact":Lorg/simpleframework/xml/core/Contact;
     const-class v2, Lorg/simpleframework/xml/Text;
 
@@ -125,18 +114,15 @@
 
     check-cast v1, Lorg/simpleframework/xml/Text;
 
-    .line 427
     .local v1, "value":Lorg/simpleframework/xml/Text;
     if-eqz v1, :cond_0
 
-    .line 428
     new-instance v2, Lorg/simpleframework/xml/core/TextListLabel;
 
     invoke-direct {v2, p1, v1}, Lorg/simpleframework/xml/core/TextListLabel;-><init>(Lorg/simpleframework/xml/core/Label;Lorg/simpleframework/xml/Text;)V
 
     iput-object v2, p0, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->text:Lorg/simpleframework/xml/core/Label;
 
-    .line 430
     :cond_0
     return-void
 .end method
@@ -146,37 +132,30 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 370
     :goto_0
     if-eqz p1, :cond_1
 
-    .line 371
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lorg/simpleframework/xml/core/Label;
 
-    .line 373
     .local v0, "label":Lorg/simpleframework/xml/core/Label;
     if-eqz v0, :cond_0
 
-    .line 378
     .end local v0    # "label":Lorg/simpleframework/xml/core/Label;
     :goto_1
     return-object v0
 
-    .line 376
     .restart local v0    # "label":Lorg/simpleframework/xml/core/Label;
     :cond_0
     invoke-virtual {p1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     move-result-object p1
 
-    .line 377
     goto :goto_0
 
-    .line 378
     .end local v0    # "label":Lorg/simpleframework/xml/core/Label;
     :cond_1
     const/4 v0, 0x0
@@ -189,20 +168,16 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 350
     iget-object v0, p0, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->text:Lorg/simpleframework/xml/core/Label;
 
     if-eqz v0, :cond_0
 
-    .line 351
     const-class v0, Ljava/lang/String;
 
     if-ne p1, v0, :cond_0
 
-    .line 352
     iget-object v0, p0, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->text:Lorg/simpleframework/xml/core/Label;
 
-    .line 355
     :goto_0
     return-object v0
 
@@ -218,7 +193,6 @@
     .locals 1
 
     .prologue
-    .line 293
     iget-object v0, p0, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->text:Lorg/simpleframework/xml/core/Label;
 
     if-eqz v0, :cond_0
@@ -247,7 +221,6 @@
     .end annotation
 
     .prologue
-    .line 304
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->values()Ljava/util/Collection;
 
     move-result-object v0
@@ -270,19 +243,15 @@
     .end annotation
 
     .prologue
-    .line 390
     new-instance v0, Lorg/simpleframework/xml/core/CacheLabel;
 
     invoke-direct {v0, p2}, Lorg/simpleframework/xml/core/CacheLabel;-><init>(Lorg/simpleframework/xml/core/Label;)V
 
-    .line 392
     .local v0, "cache":Lorg/simpleframework/xml/core/Label;
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->registerElement(Ljava/lang/Class;Lorg/simpleframework/xml/core/Label;)V
 
-    .line 393
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->registerText(Lorg/simpleframework/xml/core/Label;)V
 
-    .line 394
     return-void
 .end method
 
@@ -291,21 +260,17 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 331
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->resolveText(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Label;
 
     move-result-object v0
 
-    .line 333
     .local v0, "label":Lorg/simpleframework/xml/core/Label;
     if-nez v0, :cond_0
 
-    .line 334
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->resolveElement(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Label;
 
     move-result-object v0
 
-    .line 336
     .end local v0    # "label":Lorg/simpleframework/xml/core/Label;
     :cond_0
     return-object v0
@@ -315,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 316
     const-class v0, Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lorg/simpleframework/xml/core/GroupExtractor$Registry;->resolveText(Ljava/lang/Class;)Lorg/simpleframework/xml/core/Label;

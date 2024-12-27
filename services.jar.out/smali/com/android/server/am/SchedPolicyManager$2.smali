@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 471
     iput-object p1, p0, Lcom/android/server/am/SchedPolicyManager$2;->this$0:Lcom/android/server/am/SchedPolicyManager;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 474
     new-instance v0, Lcom/android/server/am/SchedPolicyManager$ScpmUpdateThread;
 
     iget-object v1, p0, Lcom/android/server/am/SchedPolicyManager$2;->this$0:Lcom/android/server/am/SchedPolicyManager;
@@ -49,6 +47,5 @@
 
     invoke-virtual {v0}, Lcom/android/server/am/SchedPolicyManager$ScpmUpdateThread;->start()V
 
-    .line 475
     return-void
 .end method

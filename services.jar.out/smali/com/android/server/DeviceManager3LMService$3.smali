@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 788
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$3;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     iput-object p2, p0, Lcom/android/server/DeviceManager3LMService$3;->val$notificationBar:Ljava/lang/String;
@@ -64,10 +63,8 @@
     .locals 8
 
     .prologue
-    .line 790
     const v0, 0x1080078
 
-    .line 791
     .local v0, "icon":I
     new-instance v1, Landroid/app/Notification;
 
@@ -79,7 +76,6 @@
 
     invoke-direct {v1, v0, v4, v6, v7}, Landroid/app/Notification;-><init>(ILjava/lang/CharSequence;J)V
 
-    .line 794
     .local v1, "notification":Landroid/app/Notification;
     iget-object v4, p0, Lcom/android/server/DeviceManager3LMService$3;->this$0:Lcom/android/server/DeviceManager3LMService;
 
@@ -95,7 +91,6 @@
 
     move-result-object v2
 
-    .line 796
     .local v2, "pendingIntent":Landroid/app/PendingIntent;
     iget v4, v1, Landroid/app/Notification;->flags:I
 
@@ -105,7 +100,6 @@
 
     iput v4, v1, Landroid/app/Notification;->flags:I
 
-    .line 798
     iget-object v4, p0, Lcom/android/server/DeviceManager3LMService$3;->val$text:Ljava/lang/String;
 
     if-nez v4, :cond_0
@@ -119,7 +113,6 @@
 
     if-nez v4, :cond_0
 
-    .line 799
     iget-object v4, p0, Lcom/android/server/DeviceManager3LMService$3;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     iget-object v4, v4, Lcom/android/server/DeviceManager3LMService;->mContext:Landroid/content/Context;
@@ -128,7 +121,6 @@
 
     move-result-object v3
 
-    .line 800
     .local v3, "res":Landroid/content/res/Resources;
     iget-object v4, p0, Lcom/android/server/DeviceManager3LMService$3;->this$0:Lcom/android/server/DeviceManager3LMService;
 
@@ -141,7 +133,6 @@
     # setter for: Lcom/android/server/DeviceManager3LMService;->mNotificationText:Ljava/lang/String;
     invoke-static {v4, v5}, Lcom/android/server/DeviceManager3LMService;->access$202(Lcom/android/server/DeviceManager3LMService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 803
     .end local v3    # "res":Landroid/content/res/Resources;
     :cond_0
     iget-object v4, p0, Lcom/android/server/DeviceManager3LMService$3;->this$0:Lcom/android/server/DeviceManager3LMService;
@@ -164,7 +155,6 @@
     :goto_0
     invoke-virtual {v1, v5, v6, v4, v2}, Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V
 
-    .line 805
     iget-object v4, p0, Lcom/android/server/DeviceManager3LMService$3;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     # getter for: Lcom/android/server/DeviceManager3LMService;->mNotificationManager:Landroid/app/NotificationManager;
@@ -180,10 +170,8 @@
 
     invoke-virtual {v4, v5, v6, v1, v7}, Landroid/app/NotificationManager;->notifyAsUser(Ljava/lang/String;ILandroid/app/Notification;Landroid/os/UserHandle;)V
 
-    .line 806
     return-void
 
-    .line 803
     :cond_1
     iget-object v4, p0, Lcom/android/server/DeviceManager3LMService$3;->val$text:Ljava/lang/String;
 

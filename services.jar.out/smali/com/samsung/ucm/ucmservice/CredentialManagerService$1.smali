@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 226
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$1;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -45,17 +44,14 @@
 
     const/4 v9, 0x0
 
-    .line 229
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 279
     :goto_0
     :pswitch_0
     return-void
 
-    .line 231
     :pswitch_1
     const-string v6, "UcmService"
 
@@ -63,7 +59,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     iget-object v6, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$1;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     # getter for: Lcom/samsung/ucm/ucmservice/CredentialManagerService;->mAppletsInfoLock:Ljava/lang/Object;
@@ -73,20 +68,17 @@
 
     monitor-enter v7
 
-    .line 233
     :try_start_0
     iget-object v6, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$1;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     # invokes: Lcom/samsung/ucm/ucmservice/CredentialManagerService;->writePersistentAppletsInfoLocked()V
     invoke-static {v6}, Lcom/samsung/ucm/ucmservice/CredentialManagerService;->access$100(Lcom/samsung/ucm/ucmservice/CredentialManagerService;)V
 
-    .line 235
     iget-object v6, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$1;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     # invokes: Lcom/samsung/ucm/ucmservice/CredentialManagerService;->readPersistentAppletsInfoLocked()V
     invoke-static {v6}, Lcom/samsung/ucm/ucmservice/CredentialManagerService;->access$200(Lcom/samsung/ucm/ucmservice/CredentialManagerService;)V
 
-    .line 236
     monitor-exit v7
 
     goto :goto_0
@@ -100,7 +92,6 @@
 
     throw v6
 
-    .line 239
     :pswitch_2
     iget-object v6, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$1;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
@@ -111,13 +102,11 @@
 
     goto :goto_0
 
-    .line 246
     :pswitch_3
     invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 247
     .local v0, "data":Landroid/os/Bundle;
     const-string v6, "packageName"
 
@@ -125,7 +114,6 @@
 
     move-result-object v4
 
-    .line 248
     .local v4, "packageName":Ljava/lang/String;
     const-string v6, "status"
 
@@ -133,7 +121,6 @@
 
     move-result-object v5
 
-    .line 249
     .local v5, "status":Ljava/lang/String;
     const-string v6, "errorCode"
 
@@ -141,7 +128,6 @@
 
     move-result v2
 
-    .line 251
     .local v2, "errorCode":I
     const-string v6, "UcmService"
 
@@ -185,7 +171,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 254
     if-eqz v5, :cond_1
 
     const-string v6, "success"
@@ -198,12 +183,10 @@
 
     if-nez v2, :cond_1
 
-    .line 255
     const-string v6, "event"
 
     invoke-virtual {v0, v6, v10}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 256
     iget-object v6, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$1;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     # invokes: Lcom/samsung/ucm/ucmservice/CredentialManagerService;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
@@ -213,7 +196,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 258
     :try_start_1
     iget-object v6, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$1;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
@@ -228,7 +210,6 @@
 
     move-result v3
 
-    .line 259
     .local v3, "notifyStatus":Z
     const-string v6, "UcmService"
 
@@ -254,7 +235,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 276
     .end local v3    # "notifyStatus":Z
     :cond_0
     :goto_1
@@ -265,11 +245,9 @@
 
     goto/16 :goto_0
 
-    .line 260
     :catch_0
     move-exception v1
 
-    .line 261
     .local v1, "e":Ljava/lang/Exception;
     const-string v6, "UcmService"
 
@@ -295,14 +273,12 @@
 
     goto :goto_1
 
-    .line 266
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     const-string v6, "event"
 
     invoke-virtual {v0, v6, v11}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 267
     iget-object v6, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$1;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     # invokes: Lcom/samsung/ucm/ucmservice/CredentialManagerService;->getUCMService()Lcom/sec/enterprise/knox/ucm/configurator/IUniversalCredentialManager;
@@ -312,7 +288,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 269
     :try_start_2
     iget-object v6, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$1;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
@@ -327,7 +302,6 @@
 
     move-result v3
 
-    .line 270
     .restart local v3    # "notifyStatus":Z
     const-string v6, "UcmService"
 
@@ -355,12 +329,10 @@
 
     goto :goto_1
 
-    .line 271
     .end local v3    # "notifyStatus":Z
     :catch_1
     move-exception v1
 
-    .line 272
     .restart local v1    # "e":Ljava/lang/Exception;
     const-string v6, "UcmService"
 
@@ -386,7 +358,6 @@
 
     goto :goto_1
 
-    .line 229
     nop
 
     :pswitch_data_0

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1760
     iput-object p1, p0, Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect$15;->this$1:Lcom/android/internal/policy/multiwindow/MinimizeAnimator$TrashAnimationEffect;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1773
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -49,14 +47,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1774
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::removeMinimizedIconAnimation() End of ScaleAnimation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1775
     :cond_0
     return-void
 .end method
@@ -66,7 +62,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1769
     return-void
 .end method
 
@@ -75,7 +70,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 1763
     # getter for: Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->DEBUG_MINIMIZE_REMOVE_ANIM:Z
     invoke-static {}, Lcom/android/internal/policy/multiwindow/MinimizeAnimator;->access$4300()Z
 
@@ -83,14 +77,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1764
     const-string v0, "MinimizeAnimator"
 
     const-string v1, "MinimizeAnimator::removeMinimizedIconAnimation() Start of ScaleAnimation"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1765
     :cond_0
     return-void
 .end method

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 593
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Lcom/android/server/accessibility/AccessibilityManagerService$1;
 
     .prologue
-    .line 593
     invoke-direct {p0}, Lcom/android/server/accessibility/AccessibilityManagerService$DirectAccessBrocastReceiver;-><init>()V
 
     return-void
@@ -44,12 +42,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 596
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 597
     .local v1, "action":Ljava/lang/String;
     const-string v9, "android.intent.action.CLOSE_SYSTEM_DIALOGS"
 
@@ -67,7 +63,6 @@
 
     if-eqz v9, :cond_4
 
-    .line 598
     :cond_0
     const-string v9, "android.intent.action.SCREEN_OFF"
 
@@ -77,7 +72,6 @@
 
     if-eqz v9, :cond_1
 
-    .line 599
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
@@ -94,13 +88,11 @@
 
     if-ne v9, v10, :cond_3
 
-    .line 600
     const/4 v9, 0x1
 
     # setter for: Lcom/android/server/accessibility/AccessibilityManagerService;->isMagnifierEnabled:Z
     invoke-static {v9}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$602(Z)Z
 
-    .line 601
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
@@ -111,7 +103,6 @@
 
     invoke-static {v9, v10, v11}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 606
     :cond_1
     :goto_0
     new-instance v5, Landroid/content/Intent;
@@ -120,24 +111,20 @@
 
     invoke-direct {v5, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 607
     .local v5, "mDirecAccessiIntent":Landroid/content/Intent;
     const/high16 v9, 0x4000000
 
     invoke-virtual {v5, v9}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 608
     sget-object v9, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
     invoke-virtual {p1, v5, v9}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 644
     .end local v5    # "mDirecAccessiIntent":Landroid/content/Intent;
     :cond_2
     :goto_1
     return-void
 
-    .line 603
     :cond_3
     const/4 v9, 0x0
 
@@ -146,7 +133,6 @@
 
     goto :goto_0
 
-    .line 610
     :cond_4
     const-string v9, "android.intent.action.BOOT_COMPLETED"
 
@@ -156,7 +142,6 @@
 
     if-eqz v9, :cond_6
 
-    .line 611
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v9
@@ -167,7 +152,6 @@
 
     if-ne v9, v10, :cond_2
 
-    .line 613
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
@@ -180,7 +164,6 @@
 
     move-result v8
 
-    .line 615
     .local v8, "testCheck":I
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -194,7 +177,6 @@
 
     move-result v3
 
-    .line 617
     .local v3, "isSetting":I
     const/4 v9, 0x1
 
@@ -204,7 +186,6 @@
 
     if-ne v3, v9, :cond_2
 
-    .line 618
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
@@ -217,7 +198,6 @@
 
     move-result v4
 
-    .line 620
     .local v4, "mCVDSeverity":F
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -231,7 +211,6 @@
 
     move-result v6
 
-    .line 622
     .local v6, "mUserParameter":F
     const-string/jumbo v9, "power"
 
@@ -241,7 +220,6 @@
 
     check-cast v7, Landroid/os/PowerManager;
 
-    .line 623
     .local v7, "powerManager":Landroid/os/PowerManager;
     const v9, 0x3f19999a    # 0.6f
 
@@ -260,7 +238,6 @@
 
     invoke-virtual {v7, v9, v10}, Landroid/os/PowerManager;->setColorWeaknessMode(ZLandroid/os/IBinder;)V
 
-    .line 625
     const-string v9, "accessibility"
 
     invoke-virtual {p1, v9}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -269,25 +246,21 @@
 
     check-cast v0, Landroid/view/accessibility/AccessibilityManager;
 
-    .line 626
     .local v0, "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     if-eqz v0, :cond_2
 
-    .line 627
     const/4 v9, 0x1
 
     invoke-virtual {v0, v9, v6}, Landroid/view/accessibility/AccessibilityManager;->setColorBlind(ZF)Z
 
     goto :goto_1
 
-    .line 623
     .end local v0    # "accessibilityManager":Landroid/view/accessibility/AccessibilityManager;
     :cond_5
     const/4 v9, 0x0
 
     goto :goto_2
 
-    .line 631
     .end local v3    # "isSetting":I
     .end local v4    # "mCVDSeverity":F
     .end local v6    # "mUserParameter":F
@@ -302,7 +275,6 @@
 
     if-eqz v9, :cond_7
 
-    .line 632
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->isMagnifierEnabled:Z
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$600()Z
 
@@ -310,7 +282,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 633
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9
@@ -321,7 +292,6 @@
 
     invoke-static {v9, v10, v11}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 635
     :try_start_0
     # getter for: Lcom/android/server/accessibility/AccessibilityManagerService;->mDisplayManager:Landroid/hardware/display/IDisplayManager;
     invoke-static {}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$400()Landroid/hardware/display/IDisplayManager;
@@ -336,17 +306,14 @@
 
     goto/16 :goto_1
 
-    .line 636
     :catch_0
     move-exception v2
 
-    .line 637
     .local v2, "e":Landroid/os/RemoteException;
     invoke-virtual {v2}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto/16 :goto_1
 
-    .line 640
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_7
     const-string v9, "android.intent.action.USER_SWITCHED"
@@ -357,7 +324,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 641
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v9

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 413
     iput-object p1, p0, Lcom/android/server/BatteryService$2$3;->this$1:Lcom/android/server/BatteryService$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
 
     const/4 v1, 0x1
 
-    .line 416
     iget-object v3, p0, Lcom/android/server/BatteryService$2$3;->this$1:Lcom/android/server/BatteryService$2;
 
     iget-object v3, v3, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
@@ -58,7 +56,6 @@
 
     move-result-object v0
 
-    .line 418
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     iget-object v3, p0, Lcom/android/server/BatteryService$2$3;->this$1:Lcom/android/server/BatteryService$2;
 
@@ -71,7 +68,6 @@
 
     monitor-enter v4
 
-    .line 419
     :try_start_0
     iget-object v3, p0, Lcom/android/server/BatteryService$2$3;->this$1:Lcom/android/server/BatteryService$2;
 
@@ -95,7 +91,6 @@
     # setter for: Lcom/android/server/BatteryService;->mLedChargingSettingsEnable:Z
     invoke-static {v5, v3}, Lcom/android/server/BatteryService;->access$802(Lcom/android/server/BatteryService;Z)Z
 
-    .line 420
     iget-object v3, p0, Lcom/android/server/BatteryService$2$3;->this$1:Lcom/android/server/BatteryService$2;
 
     iget-object v3, v3, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
@@ -116,7 +111,6 @@
     # setter for: Lcom/android/server/BatteryService;->mLedLowBatterySettingsEnable:Z
     invoke-static {v3, v1}, Lcom/android/server/BatteryService;->access$902(Lcom/android/server/BatteryService;Z)Z
 
-    .line 421
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$1000()Ljava/lang/String;
 
@@ -151,7 +145,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 422
     # getter for: Lcom/android/server/BatteryService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/BatteryService;->access$1000()Ljava/lang/String;
 
@@ -186,12 +179,10 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 441
     monitor-exit v4
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 443
     iget-object v1, p0, Lcom/android/server/BatteryService$2$3;->this$1:Lcom/android/server/BatteryService$2;
 
     iget-object v1, v1, Lcom/android/server/BatteryService$2;->this$0:Lcom/android/server/BatteryService;
@@ -203,7 +194,6 @@
 
     monitor-enter v2
 
-    .line 444
     :try_start_1
     iget-object v1, p0, Lcom/android/server/BatteryService$2$3;->this$1:Lcom/android/server/BatteryService$2;
 
@@ -216,27 +206,22 @@
 
     invoke-virtual {v1}, Lcom/android/server/BatteryService$Led;->updateLightsLocked()V
 
-    .line 445
     monitor-exit v2
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 446
     return-void
 
     :cond_0
     move v3, v2
 
-    .line 419
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 420
     goto :goto_1
 
-    .line 441
     :catchall_0
     move-exception v1
 
@@ -247,7 +232,6 @@
 
     throw v1
 
-    .line 445
     :catchall_1
     move-exception v1
 

@@ -41,18 +41,14 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 7069
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7066
     iput v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerDevType:I
 
-    .line 7067
     iput v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerGOIntentValue:I
 
-    .line 7070
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;
 
     .prologue
-    .line 7059
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerDev:Landroid/net/wifi/p2p/WifiP2pDevice;
 
     return-object v0
@@ -72,7 +67,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;
 
     .prologue
-    .line 7059
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->pkgName:Ljava/lang/String;
 
     return-object v0
@@ -84,7 +78,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 7059
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->pkgName:Ljava/lang/String;
 
     return-object p1
@@ -102,31 +95,22 @@
 
     const/4 v0, 0x0
 
-    .line 7091
     iput-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerDev:Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 7092
     iput-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->pkgName:Ljava/lang/String;
 
-    .line 7093
     iput v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->connectionReceived:I
 
-    .line 7094
     iput v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->isPersistent:I
 
-    .line 7095
     iput v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->isJoin:I
 
-    .line 7096
     iput-object v1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerManufacturer:Ljava/lang/String;
 
-    .line 7097
     iput v2, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerDevType:I
 
-    .line 7098
     iput v2, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerGOIntentValue:I
 
-    .line 7099
     return-void
 .end method
 
@@ -141,35 +125,26 @@
     .param p7, "typeStr"    # Ljava/lang/String;
 
     .prologue
-    .line 7074
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerDev:Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 7075
     iput-object p2, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->pkgName:Ljava/lang/String;
 
-    .line 7076
     iput p3, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->connectionReceived:I
 
-    .line 7077
     iput p4, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->isPersistent:I
 
-    .line 7078
     iput p5, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->isJoin:I
 
-    .line 7079
     iput-object p6, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerManufacturer:Ljava/lang/String;
 
-    .line 7080
     if-eqz p7, :cond_0
 
-    .line 7081
     const-string v2, "-"
 
     invoke-virtual {p7, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 7083
     .local v1, "tokens":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -184,18 +159,15 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7088
     .end local v1    # "tokens":[Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 7084
     .restart local v1    # "tokens":[Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 7085
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string v2, "WifiP2pService"
 
@@ -211,10 +183,8 @@
     .param p1, "val"    # I
 
     .prologue
-    .line 7102
     iput p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectReqInfo;->peerGOIntentValue:I
 
-    .line 7103
     return-void
 .end method
 
@@ -222,7 +192,6 @@
     .locals 2
 
     .prologue
-    .line 7106
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .param p2, "status"    # I
 
     .prologue
-    .line 46
     const-string v0, "BluetoothHealthCallback"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -59,7 +57,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 47
     return-void
 .end method
 
@@ -73,10 +70,8 @@
     .param p6, "channelId"    # I
 
     .prologue
-    .line 67
     if-eqz p2, :cond_0
 
-    .line 68
     const-string v0, "BluetoothHealthCallback"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -153,11 +148,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 76
     :goto_0
     return-void
 
-    .line 72
     :cond_0
     const-string v0, "BluetoothHealthCallback"
 

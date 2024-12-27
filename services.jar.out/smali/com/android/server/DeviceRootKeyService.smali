@@ -51,19 +51,16 @@
     .locals 1
 
     .prologue
-    .line 56
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lcom/android/server/DeviceRootKeyService;->mLock:Ljava/lang/Object;
 
-    .line 63
     const-string v0, "dk_native"
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
-    .line 64
     return-void
 .end method
 
@@ -76,18 +73,14 @@
 
     const/16 v3, 0x3e8
 
-    .line 95
     invoke-direct {p0}, Lcom/samsung/android/service/DeviceRootKeyService/IDeviceRootKeyService$Stub;-><init>()V
 
-    .line 60
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/DeviceRootKeyService;->isHexaData:Z
 
-    .line 96
     sput-object p1, Lcom/android/server/DeviceRootKeyService;->mContext:Landroid/content/Context;
 
-    .line 97
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lcom/android/server/DeviceRootKeyService$DRKSeviceSocketThread;
@@ -100,43 +93,36 @@
 
     iput-object v0, p0, Lcom/android/server/DeviceRootKeyService;->mThreadSocket:Ljava/lang/Thread;
 
-    .line 98
     iget-object v0, p0, Lcom/android/server/DeviceRootKeyService;->mThreadSocket:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 100
     new-instance v0, Lcom/android/server/DeviceRootKeyService$AllowList;
 
     invoke-direct {v0, p0}, Lcom/android/server/DeviceRootKeyService$AllowList;-><init>(Lcom/android/server/DeviceRootKeyService;)V
 
     sput-object v0, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
-    .line 101
     new-instance v0, Lcom/android/server/DeviceRootKeyService$AllowList;
 
     invoke-direct {v0, p0}, Lcom/android/server/DeviceRootKeyService$AllowList;-><init>(Lcom/android/server/DeviceRootKeyService;)V
 
     sput-object v0, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
-    .line 103
     invoke-direct {p0}, Lcom/android/server/DeviceRootKeyService;->init()V
 
-    .line 108
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string/jumbo v1, "system"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 112
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "com.sec.keyverifier"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 116
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "com.samsung.android.spayfw"
@@ -145,35 +131,30 @@
 
     invoke-virtual {v0, v1, v2}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 120
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "com.samsung.android.spayfw"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 126
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "com.samsung.android.softsim"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 130
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "com.samsung.android.sm"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 134
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "com.samsung.android.authservice"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 136
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -184,14 +165,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 140
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "com.samsung.android.app.devicerootkeyserviceclient"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 146
     :cond_0
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
@@ -199,28 +178,24 @@
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 150
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "/system/bin/sem_daemon"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 154
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "TigerService"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 158
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "TmsService.Process"
 
     invoke-virtual {v0, v1, v3}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 160
     const-string v0, "eng"
 
     sget-object v1, Landroid/os/Build;->TYPE:Ljava/lang/String;
@@ -231,35 +206,30 @@
 
     if-eqz v0, :cond_1
 
-    .line 164
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "dk_native_client_test"
 
     invoke-virtual {v0, v1, v4}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 168
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string/jumbo v1, "testprov"
 
     invoke-virtual {v0, v1, v4}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 172
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string v1, "/data/sem"
 
     invoke-virtual {v0, v1, v4}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 176
     sget-object v0, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     const-string/jumbo v1, "testMLDAP"
 
     invoke-virtual {v0, v1, v4}, Lcom/android/server/DeviceRootKeyService$AllowList;->add(Ljava/lang/String;I)V
 
-    .line 178
     :cond_1
     return-void
 .end method
@@ -272,7 +242,6 @@
     .param p3, "x3"    # Z
 
     .prologue
-    .line 30
     invoke-direct {p0, p1, p2, p3}, Lcom/android/server/DeviceRootKeyService;->hasAccessPermission(IIZ)Z
 
     move-result v0
@@ -286,7 +255,6 @@
     .param p1, "x1"    # [B
 
     .prologue
-    .line 30
     invoke-direct {p0, p1}, Lcom/android/server/DeviceRootKeyService;->verifyTestDrkCommand([B)[B
 
     move-result-object v0
@@ -300,7 +268,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 30
     iput-boolean p1, p0, Lcom/android/server/DeviceRootKeyService;->isHexaData:Z
 
     return p1
@@ -322,31 +289,25 @@
     .param p3, "isSocketThead"    # Z
 
     .prologue
-    .line 183
     const-string v1, ""
 
-    .line 186
     .local v1, "currentPkgName":Ljava/lang/String;
     if-eqz p3, :cond_0
 
-    .line 188
     invoke-direct {p0, p1}, Lcom/android/server/DeviceRootKeyService;->getProcessName(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 190
     sget-object v5, Lcom/android/server/DeviceRootKeyService;->mNativeProcessAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
 
     invoke-virtual {v5, v1, p2}, Lcom/android/server/DeviceRootKeyService$AllowList;->match(Ljava/lang/String;I)Z
 
     move-result v4
 
-    .line 207
     .local v4, "ret":Z
     :goto_0
     if-eqz v4, :cond_3
 
-    .line 208
     const-string v5, "DeviceRootKeyService"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -375,11 +336,9 @@
 
     invoke-static {v5, v6}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 212
     :goto_1
     return v4
 
-    .line 194
     .end local v4    # "ret":Z
     :cond_0
     sget-object v5, Lcom/android/server/DeviceRootKeyService;->mContext:Landroid/content/Context;
@@ -392,7 +351,6 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 196
     .local v0, "am":Landroid/app/ActivityManager;
     invoke-virtual {v0}, Landroid/app/ActivityManager;->getRunningAppProcesses()Ljava/util/List;
 
@@ -416,16 +374,13 @@
 
     check-cast v3, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 197
     .local v3, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v5, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v5, p1, :cond_1
 
-    .line 199
     iget-object v1, v3, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    .line 204
     .end local v3    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :cond_2
     sget-object v5, Lcom/android/server/DeviceRootKeyService;->mJavaPkgAllowList:Lcom/android/server/DeviceRootKeyService$AllowList;
@@ -437,7 +392,6 @@
     .restart local v4    # "ret":Z
     goto :goto_0
 
-    .line 210
     .end local v0    # "am":Landroid/app/ActivityManager;
     .end local v2    # "i$":Ljava/util/Iterator;
     :cond_3
@@ -516,12 +470,10 @@
 
     const/4 v6, 0x0
 
-    .line 274
     if-nez p3, :cond_0
 
     move v2, v5
 
-    .line 276
     .local v2, "isValidTlv":Z
     :goto_0
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
@@ -540,23 +492,19 @@
 
     move-object v5, v6
 
-    .line 317
     :goto_1
     return-object v5
 
-    .line 274
     .end local v2    # "isValidTlv":Z
     :cond_0
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 279
     .restart local v2    # "isValidTlv":Z
     :cond_1
     packed-switch p2, :pswitch_data_0
 
-    .line 316
     :pswitch_0
     const-string v5, "DeviceRootKeyService"
 
@@ -588,23 +536,18 @@
 
     move-object v5, v6
 
-    .line 317
     goto :goto_1
 
-    .line 283
     :pswitch_1
     if-eqz v2, :cond_4
 
-    .line 285
     invoke-direct {p0}, Lcom/android/server/DeviceRootKeyService;->tlvInit()I
 
     move-result v3
 
-    .line 287
     .local v3, "ret":I
     if-eqz v3, :cond_2
 
-    .line 289
     const-string v5, "DeviceRootKeyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -629,10 +572,8 @@
 
     move-object v5, v6
 
-    .line 290
     goto :goto_1
 
-    .line 293
     :cond_2
     invoke-virtual {p3}, Lcom/samsung/android/service/DeviceRootKeyService/Tlv;->getValidKeyList()Ljava/util/Set;
 
@@ -660,7 +601,6 @@
 
     move-result v4
 
-    .line 295
     .local v4, "tlvTag":I
     invoke-virtual {p3, v4}, Lcom/samsung/android/service/DeviceRootKeyService/Tlv;->getTlvValue(I)[B
 
@@ -672,7 +612,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 297
     const-string v5, "DeviceRootKeyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -697,10 +636,8 @@
 
     move-object v5, v6
 
-    .line 298
     goto/16 :goto_1
 
-    .line 304
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v3    # "ret":I
     .end local v4    # "tlvTag":I
@@ -712,7 +649,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 305
     :try_start_1
     invoke-direct {p0, p1, p2, v2}, Lcom/android/server/DeviceRootKeyService;->generateServiceKey(Ljava/lang/String;IZ)[B
 
@@ -722,7 +658,6 @@
 
     goto/16 :goto_1
 
-    .line 306
     :catchall_0
     move-exception v5
 
@@ -735,11 +670,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 308
     :catch_0
     move-exception v0
 
-    .line 310
     .local v0, "e":Ljava/lang/Exception;
     const-string v5, "DeviceRootKeyService"
 
@@ -789,10 +722,8 @@
 
     move-object v5, v6
 
-    .line 312
     goto/16 :goto_1
 
-    .line 279
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -809,7 +740,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 248
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v2
@@ -826,15 +756,12 @@
 
     if-nez v2, :cond_0
 
-    .line 268
     :goto_0
     return-object v1
 
-    .line 251
     :cond_0
     packed-switch p1, :pswitch_data_0
 
-    .line 267
     :pswitch_0
     const-string v2, "DeviceRootKeyService"
 
@@ -866,7 +793,6 @@
 
     goto :goto_0
 
-    .line 256
     :pswitch_1
     :try_start_0
     sget-object v3, Lcom/android/server/DeviceRootKeyService;->mLock:Ljava/lang/Object;
@@ -875,7 +801,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 257
     :try_start_1
     invoke-direct {p0, p1}, Lcom/android/server/DeviceRootKeyService;->readKeyUID(I)Ljava/lang/String;
 
@@ -887,7 +812,6 @@
 
     goto :goto_0
 
-    .line 258
     :catchall_0
     move-exception v2
 
@@ -900,11 +824,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 260
     :catch_0
     move-exception v0
 
-    .line 262
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "DeviceRootKeyService"
 
@@ -944,7 +866,6 @@
 
     goto :goto_0
 
-    .line 251
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1
@@ -961,10 +882,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 217
     const/4 v0, 0x0
 
-    .line 219
     .local v0, "ret":I
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
@@ -980,15 +899,12 @@
 
     if-nez v2, :cond_0
 
-    .line 242
     :goto_0
     return v1
 
-    .line 222
     :cond_0
     packed-switch p1, :pswitch_data_0
 
-    .line 233
     :pswitch_0
     const-string v2, "DeviceRootKeyService"
 
@@ -1020,30 +936,24 @@
 
     goto :goto_0
 
-    .line 227
     :pswitch_1
     sget-object v2, Lcom/android/server/DeviceRootKeyService;->mLock:Ljava/lang/Object;
 
     monitor-enter v2
 
-    .line 228
     :try_start_0
     invoke-direct {p0, p1}, Lcom/android/server/DeviceRootKeyService;->isExistDRK(I)I
 
     move-result v0
 
-    .line 229
     monitor-exit v2
 
-    .line 237
     if-nez v0, :cond_1
 
-    .line 238
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 229
     :catchall_0
     move-exception v1
 
@@ -1053,7 +963,6 @@
 
     throw v1
 
-    .line 241
     :cond_1
     const-string v2, "DeviceRootKeyService"
 
@@ -1089,7 +998,6 @@
 
     goto :goto_0
 
-    .line 222
     nop
 
     :pswitch_data_0
@@ -1105,24 +1013,19 @@
     .locals 2
 
     .prologue
-    .line 323
     sget-object v1, Lcom/android/server/DeviceRootKeyService;->mLock:Ljava/lang/Object;
 
     monitor-enter v1
 
-    .line 324
     :try_start_0
     invoke-direct {p0}, Lcom/android/server/DeviceRootKeyService;->finishSharingKey()V
 
-    .line 325
     monitor-exit v1
 
-    .line 327
     const/4 v0, 0x0
 
     return v0
 
-    .line 325
     :catchall_0
     move-exception v0
 
@@ -1138,7 +1041,6 @@
     .param p1, "keyBlob"    # [B
 
     .prologue
-    .line 332
     invoke-static {}, Landroid/os/Binder;->getCallingPid()I
 
     move-result v1
@@ -1155,23 +1057,18 @@
 
     if-nez v1, :cond_0
 
-    .line 333
     const/16 v1, -0x13
 
-    .line 346
     :goto_0
     return v1
 
-    .line 335
     :cond_0
     if-nez p1, :cond_1
 
-    .line 336
     const/4 v1, -0x2
 
     goto :goto_0
 
-    .line 339
     :cond_1
     :try_start_0
     sget-object v2, Lcom/android/server/DeviceRootKeyService;->mLock:Ljava/lang/Object;
@@ -1180,7 +1077,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 340
     :try_start_1
     iget-boolean v1, p0, Lcom/android/server/DeviceRootKeyService;->isHexaData:Z
 
@@ -1192,7 +1088,6 @@
 
     goto :goto_0
 
-    .line 341
     :catchall_0
     move-exception v1
 
@@ -1205,11 +1100,9 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 343
     :catch_0
     move-exception v0
 
-    .line 345
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "DeviceRootKeyService"
 
@@ -1237,7 +1130,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 346
     const/16 v1, -0xa
 
     goto :goto_0

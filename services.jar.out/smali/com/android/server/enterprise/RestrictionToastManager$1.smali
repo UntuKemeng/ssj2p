@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 169
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -33,12 +32,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 172
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 173
     .local v0, "action":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -50,7 +47,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 174
     const-string v2, "android.intent.extra.user_handle"
 
     const/4 v3, 0x0
@@ -59,12 +55,10 @@
 
     move-result v1
 
-    .line 175
     .local v1, "userId":I
     # invokes: Lcom/android/server/enterprise/RestrictionToastManager;->onUserSwitched(I)V
     invoke-static {v1}, Lcom/android/server/enterprise/RestrictionToastManager;->access$200(I)V
 
-    .line 177
     .end local v1    # "userId":I
     :cond_0
     return-void

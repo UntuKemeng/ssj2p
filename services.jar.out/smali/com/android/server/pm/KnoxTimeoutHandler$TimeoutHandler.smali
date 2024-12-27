@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 126
     iput-object p1, p0, Lcom/android/server/pm/KnoxTimeoutHandler$TimeoutHandler;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/pm/KnoxTimeoutHandler$1;
 
     .prologue
-    .line 126
     invoke-direct {p0, p1}, Lcom/android/server/pm/KnoxTimeoutHandler$TimeoutHandler;-><init>(Lcom/android/server/pm/KnoxTimeoutHandler;)V
 
     return-void
@@ -50,15 +48,12 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 129
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 130
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 156
     const-string v0, "KnoxTimeoutHandler"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -83,11 +78,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     :goto_0
     return-void
 
-    .line 132
     :pswitch_0
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$TimeoutHandler;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
@@ -98,7 +91,6 @@
 
     goto :goto_0
 
-    .line 136
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler$TimeoutHandler;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
@@ -111,7 +103,6 @@
 
     goto :goto_0
 
-    .line 140
     :pswitch_2
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$TimeoutHandler;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
@@ -122,7 +113,6 @@
 
     goto :goto_0
 
-    .line 144
     :pswitch_3
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$TimeoutHandler;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
@@ -133,7 +123,6 @@
 
     goto :goto_0
 
-    .line 148
     :pswitch_4
     iget-object v0, p0, Lcom/android/server/pm/KnoxTimeoutHandler$TimeoutHandler;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
@@ -142,7 +131,6 @@
 
     goto :goto_0
 
-    .line 152
     :pswitch_5
     iget-object v1, p0, Lcom/android/server/pm/KnoxTimeoutHandler$TimeoutHandler;->this$0:Lcom/android/server/pm/KnoxTimeoutHandler;
 
@@ -155,7 +143,6 @@
 
     goto :goto_0
 
-    .line 130
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

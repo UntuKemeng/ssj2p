@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 109
     iput-object p1, p0, Landroid/media/WFDUibcManager$1;->this$0:Landroid/media/WFDUibcManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 112
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 113
     .local v0, "action":Ljava/lang/String;
     # getter for: Landroid/media/WFDUibcManager;->DEBUG:Z
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Z
@@ -75,7 +72,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     :cond_0
     :try_start_0
     const-string v3, "com.samsung.intent.action.SEC_PRESENTATION_START"
@@ -86,7 +82,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 117
     const-string v3, "displayName"
 
     const/16 v4, 0x6f
@@ -95,7 +90,6 @@
 
     move-result v2
 
-    .line 118
     .local v2, "name":I
     iget-object v3, p0, Landroid/media/WFDUibcManager$1;->this$0:Landroid/media/WFDUibcManager;
 
@@ -110,7 +104,6 @@
     # setter for: Landroid/media/WFDUibcManager;->mPresentDisplayID:I
     invoke-static {v3, v4}, Landroid/media/WFDUibcManager;->access$102(Landroid/media/WFDUibcManager;I)I
 
-    .line 119
     # getter for: Landroid/media/WFDUibcManager;->DEBUG:Z
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Z
 
@@ -159,7 +152,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 128
     .end local v2    # "name":I
     :cond_1
     :goto_0
@@ -179,7 +171,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 129
     :cond_2
     iget-object v3, p0, Landroid/media/WFDUibcManager$1;->this$0:Landroid/media/WFDUibcManager;
 
@@ -188,7 +179,6 @@
     # setter for: Landroid/media/WFDUibcManager;->mIsSlideShowVideoPlaying:Z
     invoke-static {v3, v4}, Landroid/media/WFDUibcManager;->access$202(Landroid/media/WFDUibcManager;Z)Z
 
-    .line 130
     # getter for: Landroid/media/WFDUibcManager;->DEBUG:Z
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Z
 
@@ -202,12 +192,10 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 135
     :cond_3
     :goto_1
     return-void
 
-    .line 120
     :cond_4
     :try_start_1
     const-string v3, "com.samsung.intent.action.SEC_PRESENTATION_STOP"
@@ -218,7 +206,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 121
     const-string v3, "displayName"
 
     const/16 v4, 0x6f
@@ -227,7 +214,6 @@
 
     move-result v2
 
-    .line 122
     .restart local v2    # "name":I
     # getter for: Landroid/media/WFDUibcManager;->DEBUG:Z
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Z
@@ -279,12 +265,10 @@
 
     goto :goto_0
 
-    .line 124
     .end local v2    # "name":I
     :catch_0
     move-exception v1
 
-    .line 125
     .local v1, "e":Ljava/lang/RuntimeException;
     const-string v3, "WFDUibcManager"
 
@@ -314,7 +298,6 @@
 
     goto :goto_0
 
-    .line 131
     .end local v1    # "e":Ljava/lang/RuntimeException;
     :cond_5
     const-string v3, "com.samsung.android.video.END_PRESENTATION"
@@ -333,7 +316,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 132
     :cond_6
     iget-object v3, p0, Landroid/media/WFDUibcManager$1;->this$0:Landroid/media/WFDUibcManager;
 
@@ -342,7 +324,6 @@
     # setter for: Landroid/media/WFDUibcManager;->mIsSlideShowVideoPlaying:Z
     invoke-static {v3, v4}, Landroid/media/WFDUibcManager;->access$202(Landroid/media/WFDUibcManager;Z)Z
 
-    .line 133
     # getter for: Landroid/media/WFDUibcManager;->DEBUG:Z
     invoke-static {}, Landroid/media/WFDUibcManager;->access$000()Z
 

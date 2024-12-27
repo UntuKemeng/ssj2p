@@ -18,13 +18,10 @@
     .param p1, "type"    # Ljava/lang/Class;
 
     .prologue
-    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 51
     iput-object p1, p0, Lorg/simpleframework/xml/strategy/ObjectValue;->type:Ljava/lang/Class;
 
-    .line 52
     return-void
 .end method
 
@@ -34,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 95
     const/4 v0, 0x0
 
     return v0
@@ -44,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 84
     iget-object v0, p0, Lorg/simpleframework/xml/strategy/ObjectValue;->type:Ljava/lang/Class;
 
     return-object v0
@@ -54,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget-object v0, p0, Lorg/simpleframework/xml/strategy/ObjectValue;->value:Ljava/lang/Object;
 
     return-object v0
@@ -64,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 106
     const/4 v0, 0x0
 
     return v0
@@ -75,9 +68,7 @@
     .param p1, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 73
     iput-object p1, p0, Lorg/simpleframework/xml/strategy/ObjectValue;->value:Ljava/lang/Object;
 
-    .line 74
     return-void
 .end method

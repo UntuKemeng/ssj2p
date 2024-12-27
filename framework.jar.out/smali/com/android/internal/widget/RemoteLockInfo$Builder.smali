@@ -45,39 +45,28 @@
 
     const/4 v2, 0x0
 
-    .line 70
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 62
     iput-object v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mMessage:Ljava/lang/CharSequence;
 
-    .line 63
     iput-object v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mPhoneNumber:Ljava/lang/CharSequence;
 
-    .line 64
     iput-boolean v2, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mEnableEmergencyCall:Z
 
-    .line 65
     iput-object v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mClientName:Ljava/lang/CharSequence;
 
-    .line 66
     iput v2, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mAllowFailCount:I
 
-    .line 67
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mLockTimeOut:J
 
-    .line 68
     iput v2, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mPermanentBlockCount:I
 
-    .line 71
     iput p1, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mLockType:I
 
-    .line 72
     iput-boolean p2, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mLockState:Z
 
-    .line 73
     return-void
 .end method
 
@@ -86,7 +75,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/RemoteLockInfo$Builder;
 
     .prologue
-    .line 59
     iget v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mLockType:I
 
     return v0
@@ -97,7 +85,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/RemoteLockInfo$Builder;
 
     .prologue
-    .line 59
     iget-boolean v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mLockState:Z
 
     return v0
@@ -108,7 +95,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/RemoteLockInfo$Builder;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mMessage:Ljava/lang/CharSequence;
 
     return-object v0
@@ -119,7 +105,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/RemoteLockInfo$Builder;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mPhoneNumber:Ljava/lang/CharSequence;
 
     return-object v0
@@ -130,7 +115,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/RemoteLockInfo$Builder;
 
     .prologue
-    .line 59
     iget-boolean v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mEnableEmergencyCall:Z
 
     return v0
@@ -141,7 +125,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/RemoteLockInfo$Builder;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mClientName:Ljava/lang/CharSequence;
 
     return-object v0
@@ -152,7 +135,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/RemoteLockInfo$Builder;
 
     .prologue
-    .line 59
     iget v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mAllowFailCount:I
 
     return v0
@@ -163,7 +145,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/RemoteLockInfo$Builder;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mLockTimeOut:J
 
     return-wide v0
@@ -174,7 +155,6 @@
     .param p0, "x0"    # Lcom/android/internal/widget/RemoteLockInfo$Builder;
 
     .prologue
-    .line 59
     iget v0, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mPermanentBlockCount:I
 
     return v0
@@ -186,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 111
     new-instance v0, Lcom/android/internal/widget/RemoteLockInfo;
 
     invoke-direct {v0, p0}, Lcom/android/internal/widget/RemoteLockInfo;-><init>(Lcom/android/internal/widget/RemoteLockInfo$Builder;)V
@@ -199,10 +178,8 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 96
     iput p1, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mAllowFailCount:I
 
-    .line 97
     return-object p0
 .end method
 
@@ -211,10 +188,8 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 106
     iput p1, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mPermanentBlockCount:I
 
-    .line 107
     return-object p0
 .end method
 
@@ -223,10 +198,8 @@
     .param p1, "name"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 91
     iput-object p1, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mClientName:Ljava/lang/CharSequence;
 
-    .line 92
     return-object p0
 .end method
 
@@ -235,10 +208,8 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 86
     iput-boolean p1, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mEnableEmergencyCall:Z
 
-    .line 87
     return-object p0
 .end method
 
@@ -247,10 +218,8 @@
     .param p1, "time"    # J
 
     .prologue
-    .line 101
     iput-wide p1, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mLockTimeOut:J
 
-    .line 102
     return-object p0
 .end method
 
@@ -259,10 +228,8 @@
     .param p1, "msg"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 76
     iput-object p1, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mMessage:Ljava/lang/CharSequence;
 
-    .line 77
     return-object p0
 .end method
 
@@ -271,9 +238,7 @@
     .param p1, "number"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 81
     iput-object p1, p0, Lcom/android/internal/widget/RemoteLockInfo$Builder;->mPhoneNumber:Ljava/lang/CharSequence;
 
-    .line 82
     return-object p0
 .end method

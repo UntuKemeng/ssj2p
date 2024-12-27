@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3116
     iput-object p1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$7;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     invoke-direct {p0}, Lcom/samsung/android/writingbuddy/IWritingBuddyClient$Stub;-><init>()V
@@ -44,7 +43,6 @@
     .end annotation
 
     .prologue
-    .line 3120
     const-string v4, "WritingBuddyImpl"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -67,7 +65,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3122
     iget-object v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$7;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # getter for: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mParentView:Landroid/view/View;
@@ -79,13 +76,11 @@
 
     move-result-object v1
 
-    .line 3124
     .local v1, "context":Landroid/content/Context;
     if-eqz p2, :cond_0
 
     if-eqz v1, :cond_0
 
-    .line 3126
     :try_start_0
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -95,7 +90,6 @@
 
     move-result-object v0
 
-    .line 3127
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     iget-object v4, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$7;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
@@ -110,36 +104,30 @@
 
     move-result-object v3
 
-    .line 3128
     .local v3, "msg":Landroid/os/Message;
     invoke-virtual {v3}, Landroid/os/Message;->sendToTarget()V
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 3151
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     .end local v3    # "msg":Landroid/os/Message;
     :cond_0
     :goto_0
     return-void
 
-    .line 3129
     :catch_0
     move-exception v2
 
-    .line 3131
     .local v2, "e":Ljava/io/FileNotFoundException;
     invoke-virtual {v2}, Ljava/io/FileNotFoundException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 3132
     .end local v2    # "e":Ljava/io/FileNotFoundException;
     :catch_1
     move-exception v2
 
-    .line 3134
     .local v2, "e":Ljava/io/IOException;
     invoke-virtual {v2}, Ljava/io/IOException;->printStackTrace()V
 
@@ -157,7 +145,6 @@
     .end annotation
 
     .prologue
-    .line 3169
     const-string v1, "WritingBuddyImpl"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -184,7 +171,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3170
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$7;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # getter for: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
@@ -200,11 +186,9 @@
 
     move-result-object v0
 
-    .line 3171
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3172
     return-void
 .end method
 
@@ -220,14 +204,12 @@
     .end annotation
 
     .prologue
-    .line 3162
     const-string v1, "WritingBuddyImpl"
 
     const-string v2, "mServiceCallback onTextDeleted()"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3163
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$7;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # getter for: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
@@ -241,11 +223,9 @@
 
     move-result-object v0
 
-    .line 3164
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3165
     return-void
 .end method
 
@@ -262,14 +242,12 @@
     .end annotation
 
     .prologue
-    .line 3155
     const-string v1, "WritingBuddyImpl"
 
     const-string v2, "mServiceCallback onTextInserted()"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3156
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$7;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # getter for: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
@@ -283,11 +261,9 @@
 
     move-result-object v0
 
-    .line 3157
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3158
     return-void
 .end method
 
@@ -301,7 +277,6 @@
     .end annotation
 
     .prologue
-    .line 3176
     const-string v1, "WritingBuddyImpl"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -328,7 +303,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3177
     iget-object v1, p0, Lcom/samsung/android/writingbuddy/WritingBuddyImpl$7;->this$0:Lcom/samsung/android/writingbuddy/WritingBuddyImpl;
 
     # getter for: Lcom/samsung/android/writingbuddy/WritingBuddyImpl;->mHandler:Landroid/os/Handler;
@@ -342,10 +316,8 @@
 
     move-result-object v0
 
-    .line 3178
     .local v0, "msg":Landroid/os/Message;
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 3179
     return-void
 .end method

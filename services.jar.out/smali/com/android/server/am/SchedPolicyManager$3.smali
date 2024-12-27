@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 501
     iput-object p1, p0, Lcom/android/server/am/SchedPolicyManager$3;->this$0:Lcom/android/server/am/SchedPolicyManager;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 504
     iget-object v0, p0, Lcom/android/server/am/SchedPolicyManager$3;->this$0:Lcom/android/server/am/SchedPolicyManager;
 
     # invokes: Lcom/android/server/am/SchedPolicyManager;->checkScpmWithHandler()V
     invoke-static {v0}, Lcom/android/server/am/SchedPolicyManager;->access$600(Lcom/android/server/am/SchedPolicyManager;)V
 
-    .line 505
     return-void
 .end method

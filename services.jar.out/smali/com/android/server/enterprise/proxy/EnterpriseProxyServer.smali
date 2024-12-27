@@ -109,7 +109,6 @@
     .locals 3
 
     .prologue
-    .line 128
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -140,53 +139,43 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 152
     invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
 
-    .line 118
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mIsRunning:Z
 
-    .line 125
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mContext:Landroid/content/Context;
 
-    .line 153
     invoke-static {}, Ljava/util/concurrent/Executors;->newCachedThreadPool()Ljava/util/concurrent/ExecutorService;
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mThreadExecutor:Ljava/util/concurrent/ExecutorService;
 
-    .line 154
     const/4 v1, -0x1
 
     iput v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mPort:I
 
-    .line 155
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mContext:Landroid/content/Context;
 
-    .line 156
     new-instance v1, Ljava/util/Timer;
 
     invoke-direct {v1}, Ljava/util/Timer;-><init>()V
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mCacheCleanerTimer:Ljava/util/Timer;
 
-    .line 158
     new-instance v0, Landroid/os/HandlerThread;
 
     const-string v1, "EnterpriseProxyHandler"
 
     invoke-direct {v0, v1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 159
     .local v0, "handlerThread":Landroid/os/HandlerThread;
     invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    .line 160
     new-instance v1, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$EnterpriseProxyHandler;
 
     invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
@@ -197,10 +186,8 @@
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mHandler:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$EnterpriseProxyHandler;
 
-    .line 162
     invoke-direct {p0}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->initCaches()V
 
-    .line 163
     return-void
 .end method
 
@@ -208,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 98
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyAuthenticationTypeCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object v0
@@ -221,7 +207,6 @@
     .param p2, "x2"    # [Ljava/lang/String;
 
     .prologue
-    .line 98
     invoke-direct {p0, p1, p2}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->getRequiredAuthenticationType(Ljava/lang/String;[Ljava/lang/String;)Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
 
     move-result-object v0
@@ -233,7 +218,6 @@
     .locals 1
 
     .prologue
-    .line 98
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyCredentialsCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object v0
@@ -244,7 +228,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
     .prologue
-    .line 98
     invoke-direct {p0}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->getConnectivityManagerService()Lcom/android/server/ConnectivityService;
 
     move-result-object v0
@@ -256,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 98
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyInfoCache:Landroid/net/ProxyInfo;
 
     return-object v0
@@ -267,7 +249,6 @@
     .param p0, "x0"    # Landroid/net/ProxyInfo;
 
     .prologue
-    .line 98
     sput-object p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyInfoCache:Landroid/net/ProxyInfo;
 
     return-object p0
@@ -278,7 +259,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mConnectivityService:Lcom/android/server/ConnectivityService;
 
     return-object v0
@@ -289,7 +269,6 @@
     .param p0, "x0"    # Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
     .prologue
-    .line 98
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -299,7 +278,6 @@
     .locals 1
 
     .prologue
-    .line 98
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sAuthenticationStateCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     return-object v0
@@ -311,7 +289,6 @@
     .param p1, "x1"    # Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$DialogReturnInformation;
 
     .prologue
-    .line 98
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->onCredentialsReceived(Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$DialogReturnInformation;)V
 
     return-void
@@ -326,18 +303,15 @@
 
     const/4 v2, 0x2
 
-    .line 1157
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1158
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v1, "HEAD "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1159
     array-length v1, p0
 
     if-le v1, v2, :cond_0
@@ -351,12 +325,10 @@
     :goto_0
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1160
     const-string v1, " "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1161
     array-length v1, p0
 
     if-le v1, v2, :cond_1
@@ -366,35 +338,28 @@
     :goto_1
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1162
     const-string v1, "\r\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1163
     const-string v1, "Connection: keep-alive"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1164
     const-string v1, "\r\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1165
     const-string v1, "Proxy-Connection: keep-alive"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1166
     const-string v1, "\r\n"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1168
     return-object v0
 
-    .line 1159
     :cond_0
     const/4 v1, 0x0
 
@@ -406,7 +371,6 @@
 
     goto :goto_0
 
-    .line 1161
     :cond_1
     aget-object v1, p0, v3
 
@@ -420,20 +384,16 @@
     .param p3, "callback"    # Landroid/sec/enterprise/proxy/IProxyCredentialsCallback;
 
     .prologue
-    .line 1010
     invoke-virtual {p2}, Lcom/android/server/enterprise/proxy/auth/AuthenticationState;->getProxyAuthenticator()Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
 
     move-result-object v2
 
-    .line 1011
     .local v2, "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     const/4 v0, -0x1
 
-    .line 1013
     .local v0, "authenticationState":I
     if-eqz v2, :cond_0
 
-    .line 1014
     invoke-virtual {p2}, Lcom/android/server/enterprise/proxy/auth/AuthenticationState;->getRequestLine()Ljava/lang/String;
 
     move-result-object v4
@@ -444,7 +404,6 @@
 
     move-result-object v3
 
-    .line 1016
     .local v3, "splitLine":[Ljava/lang/String;
     invoke-virtual {p2}, Lcom/android/server/enterprise/proxy/auth/AuthenticationState;->getProxy()Ljava/net/Proxy;
 
@@ -454,7 +413,6 @@
 
     move-result v0
 
-    .line 1019
     const-string v4, "EnterpriseProxyServer"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -477,16 +435,13 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1021
     if-eqz p3, :cond_0
 
-    .line 1023
     :try_start_0
     invoke-interface {p3, v0}, Landroid/sec/enterprise/proxy/IProxyCredentialsCallback;->onAuthenticationResult(I)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1030
     .end local v3    # "splitLine":[Ljava/lang/String;
     :cond_0
     :goto_0
@@ -497,12 +452,10 @@
     :goto_1
     return v4
 
-    .line 1024
     .restart local v3    # "splitLine":[Ljava/lang/String;
     :catch_0
     move-exception v1
 
-    .line 1025
     .local v1, "e":Landroid/os/RemoteException;
     const-string v4, "EnterpriseProxyServer"
 
@@ -512,7 +465,6 @@
 
     goto :goto_0
 
-    .line 1030
     .end local v1    # "e":Landroid/os/RemoteException;
     .end local v3    # "splitLine":[Ljava/lang/String;
     :cond_1
@@ -526,10 +478,8 @@
     .param p0, "urlString"    # Ljava/lang/String;
 
     .prologue
-    .line 1179
     if-eqz p0, :cond_0
 
-    .line 1181
     const-string/jumbo v0, "http://"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -538,7 +488,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1182
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -567,7 +516,6 @@
 
     move-result-object p0
 
-    .line 1186
     :cond_0
     return-object p0
 .end method
@@ -576,7 +524,6 @@
     .locals 4
 
     .prologue
-    .line 1085
     const-string v2, "activity"
 
     invoke-static {v2}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -585,17 +532,14 @@
 
     check-cast v0, Lcom/android/server/am/ActivityManagerService;
 
-    .line 1086
     .local v0, "ams":Lcom/android/server/am/ActivityManagerService;
     new-instance v1, Landroid/app/ActivityManager$MemoryInfo;
 
     invoke-direct {v1}, Landroid/app/ActivityManager$MemoryInfo;-><init>()V
 
-    .line 1087
     .local v1, "memInfo":Landroid/app/ActivityManager$MemoryInfo;
     invoke-virtual {v0, v1}, Lcom/android/server/am/ActivityManagerService;->getMemoryInfo(Landroid/app/ActivityManager$MemoryInfo;)V
 
-    .line 1089
     iget-wide v2, v1, Landroid/app/ActivityManager$MemoryInfo;->availMem:J
 
     return-wide v2
@@ -605,12 +549,10 @@
     .locals 1
 
     .prologue
-    .line 923
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mConnectivityService:Lcom/android/server/ConnectivityService;
 
     if-nez v0, :cond_0
 
-    .line 924
     const-string v0, "connectivity"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -621,7 +563,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mConnectivityService:Lcom/android/server/ConnectivityService;
 
-    .line 927
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mConnectivityService:Lcom/android/server/ConnectivityService;
 
@@ -633,19 +574,16 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 145
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sEnterpriseProxyServer:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
     if-nez v0, :cond_0
 
-    .line 146
     new-instance v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
     invoke-direct {v0, p0}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sEnterpriseProxyServer:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
-    .line 149
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sEnterpriseProxyServer:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
 
@@ -662,7 +600,6 @@
     .end annotation
 
     .prologue
-    .line 1061
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->getLine(Ljava/io/InputStream;Z)Ljava/lang/String;
@@ -683,7 +620,6 @@
     .end annotation
 
     .prologue
-    .line 1076
     const/4 v0, -0x1
 
     invoke-static {p0, p1, v0}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->getLine(Ljava/io/InputStream;ZI)Ljava/lang/String;
@@ -709,37 +645,30 @@
 
     const/4 v8, 0x0
 
-    .line 1105
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1106
     .local v0, "buffer":Ljava/lang/StringBuilder;
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
 
     move-result v1
 
-    .line 1107
     .local v1, "byteBuffer":I
     if-gez v1, :cond_1
 
-    .line 1108
     if-eqz p1, :cond_0
 
     const/4 v5, 0x0
 
-    .line 1133
     :goto_0
     return-object v5
 
-    .line 1109
     :cond_0
     const-string v5, ""
 
     goto :goto_0
 
-    .line 1113
     :cond_1
     invoke-static {}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->getAvailableMemory()J
 
@@ -753,7 +682,6 @@
 
     float-to-long v6, v9
 
-    .line 1115
     .local v6, "maxLineSize":J
     const/4 v9, -0x1
 
@@ -761,24 +689,20 @@
 
     move v4, v5
 
-    .line 1116
     .local v4, "checkContentLength":Z
     :goto_1
     const-wide/16 v2, 0x2
 
-    .line 1118
     .local v2, "bytesRead":J
     :cond_2
     const/16 v9, 0xd
 
     if-eq v1, v9, :cond_3
 
-    .line 1119
     int-to-char v9, v1
 
     invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 1122
     :cond_3
     if-eqz v4, :cond_6
 
@@ -790,7 +714,6 @@
 
     if-ltz v9, :cond_6
 
-    .line 1133
     :cond_4
     :goto_2
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -804,10 +727,8 @@
     :cond_5
     move v4, v8
 
-    .line 1115
     goto :goto_1
 
-    .line 1124
     .restart local v2    # "bytesRead":J
     .restart local v4    # "checkContentLength":Z
     :cond_6
@@ -815,7 +736,6 @@
 
     if-lez v9, :cond_7
 
-    .line 1125
     const-string v9, "EnterpriseProxyServer"
 
     const-string v10, "Read more bytes (%d) than the maximum supported (%d) for a single line"
@@ -842,23 +762,19 @@
 
     invoke-static {v9, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1127
     const-string v5, ""
 
     goto :goto_0
 
-    .line 1129
     :cond_7
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
 
     move-result v1
 
-    .line 1130
     const-wide/16 v10, 0x2
 
     add-long/2addr v2, v10
 
-    .line 1131
     const/16 v9, 0xa
 
     if-eq v1, v9, :cond_4
@@ -874,31 +790,25 @@
     .param p2, "requestLine"    # [Ljava/lang/String;
 
     .prologue
-    .line 798
     new-instance v9, Lcom/android/server/enterprise/proxy/auth/NoCredentialsAuthenticator;
 
     invoke-direct {v9}, Lcom/android/server/enterprise/proxy/auth/NoCredentialsAuthenticator;-><init>()V
 
-    .line 801
     .local v9, "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     const/4 v8, 0x0
 
-    .line 802
     .local v8, "line":Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 803
     .local v1, "authType":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 804
     .local v2, "authTypeList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 807
     .local v3, "authenticationRequired":Z
     const-string v14, ":"
 
@@ -908,7 +818,6 @@
 
     move-result-object v12
 
-    .line 808
     .local v12, "splitProxy":[Ljava/lang/String;
     new-instance v11, Ljava/net/Socket;
 
@@ -931,7 +840,6 @@
     .local v11, "server":Ljava/net/Socket;
     const/4 v15, 0x0
 
-    .line 809
     :try_start_1
     invoke-static/range {p2 .. p2}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->buildHeadRequest([Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -943,19 +851,16 @@
 
     invoke-static {v11, v14}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sendLine(Ljava/net/Socket;Ljava/lang/String;)V
 
-    .line 810
     invoke-virtual {v11}, Ljava/net/Socket;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v6
 
-    .line 813
     .local v6, "is":Ljava/io/InputStream;
     :cond_0
     invoke-static {v6}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->getLine(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 814
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
     move-result v14
@@ -964,7 +869,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 815
     const-string v14, "Proxy-Authenticate:"
 
     invoke-virtual {v8, v14}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -973,7 +877,6 @@
 
     if-eqz v14, :cond_1
 
-    .line 816
     const-string v14, " "
 
     invoke-virtual {v8, v14}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -988,10 +891,8 @@
 
     move-result-object v1
 
-    .line 817
     invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 821
     :cond_1
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
@@ -1007,7 +908,6 @@
 
     if-eqz v14, :cond_2
 
-    .line 822
     const-string v14, " "
 
     invoke-virtual {v8, v14}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
@@ -1026,7 +926,6 @@
 
     move-result v3
 
-    .line 824
     :cond_2
     invoke-virtual {v8}, Ljava/lang/String;->length()I
     :try_end_1
@@ -1037,7 +936,6 @@
 
     if-gtz v14, :cond_0
 
-    .line 825
     if-eqz v11, :cond_3
 
     if-eqz v15, :cond_4
@@ -1048,7 +946,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 829
     :cond_3
     :goto_0
     :try_start_3
@@ -1077,7 +974,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 830
     .local v7, "item":Ljava/lang/String;
     if-eqz v7, :cond_7
 
@@ -1097,7 +993,6 @@
 
     if-eqz v14, :cond_7
 
-    .line 832
     new-instance v9, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMAuthenticator;
 
     invoke-direct {v9}, Lcom/android/server/enterprise/proxy/auth/ntlm/NTLMAuthenticator;-><init>()V
@@ -1109,12 +1004,10 @@
     :goto_2
     move-object v10, v9
 
-    .line 837
     .end local v9    # "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     .restart local v10    # "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     goto :goto_1
 
-    .line 825
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v7    # "item":Ljava/lang/String;
     .end local v10    # "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
@@ -1130,7 +1023,6 @@
 
     goto :goto_0
 
-    .line 838
     .end local v2    # "authTypeList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v3    # "authenticationRequired":Z
     .end local v6    # "is":Ljava/io/InputStream;
@@ -1140,7 +1032,6 @@
     :catch_1
     move-exception v4
 
-    .line 839
     .local v4, "e":Ljava/io/IOException;
     :goto_3
     const-string v14, "EnterpriseProxyServer"
@@ -1169,10 +1060,8 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 840
     invoke-virtual {v4}, Ljava/io/IOException;->printStackTrace()V
 
-    .line 843
     .end local v4    # "e":Ljava/io/IOException;
     :goto_4
     const-string v15, "EnterpriseProxyServer"
@@ -1222,10 +1111,8 @@
 
     invoke-static {v15, v14}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 846
     return-object v9
 
-    .line 825
     .restart local v2    # "authTypeList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v3    # "authenticationRequired":Z
     .restart local v6    # "is":Ljava/io/InputStream;
@@ -1239,7 +1126,6 @@
 
     goto/16 :goto_0
 
-    .line 808
     .end local v6    # "is":Ljava/io/InputStream;
     :catch_2
     move-exception v14
@@ -1249,7 +1135,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 825
     :catchall_0
     move-exception v15
 
@@ -1291,7 +1176,6 @@
 
     goto :goto_7
 
-    .line 833
     .end local v9    # "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     .restart local v5    # "i$":Ljava/util/Iterator;
     .restart local v6    # "is":Ljava/io/InputStream;
@@ -1317,7 +1201,6 @@
 
     if-eqz v14, :cond_a
 
-    .line 835
     new-instance v9, Lcom/android/server/enterprise/proxy/auth/basic/BasicAuthenticator;
 
     invoke-direct {v9}, Lcom/android/server/enterprise/proxy/auth/basic/BasicAuthenticator;-><init>()V
@@ -1334,12 +1217,10 @@
     :cond_8
     move-object v9, v10
 
-    .line 841
     .end local v10    # "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     .restart local v9    # "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     goto :goto_4
 
-    .line 843
     .end local v2    # "authTypeList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v3    # "authenticationRequired":Z
     .end local v5    # "i$":Ljava/util/Iterator;
@@ -1351,7 +1232,6 @@
 
     goto :goto_5
 
-    .line 838
     .end local v9    # "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     .restart local v2    # "authTypeList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .restart local v3    # "authenticationRequired":Z
@@ -1369,7 +1249,6 @@
     .restart local v9    # "proxyAuthenticator":Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
     goto/16 :goto_3
 
-    .line 825
     .end local v5    # "i$":Ljava/util/Iterator;
     .end local v6    # "is":Ljava/io/InputStream;
     :catchall_1
@@ -1396,14 +1275,12 @@
     .param p2, "current"    # Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;
 
     .prologue
-    .line 858
     if-eqz p2, :cond_0
 
     invoke-interface {p2}, Lcom/android/server/enterprise/proxy/auth/ProxyAuthenticator;->getType()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 859
     .local v0, "currentAuth":Ljava/lang/String;
     :goto_0
     sget-object v1, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sAuthPriorities:Ljava/util/List;
@@ -1425,14 +1302,12 @@
     :goto_1
     return v1
 
-    .line 858
     .end local v0    # "currentAuth":Ljava/lang/String;
     :cond_0
     const-string v0, ""
 
     goto :goto_0
 
-    .line 859
     .restart local v0    # "currentAuth":Ljava/lang/String;
     :cond_1
     const/4 v1, 0x0
@@ -1444,45 +1319,38 @@
     .locals 1
 
     .prologue
-    .line 166
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sAuthenticationStateCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     if-nez v0, :cond_0
 
-    .line 167
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sAuthenticationStateCache:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 169
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyAuthenticationTypeCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     if-nez v0, :cond_1
 
-    .line 170
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyAuthenticationTypeCache:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 172
     :cond_1
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyCredentialsCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     if-nez v0, :cond_2
 
-    .line 173
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v0}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
     sput-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyCredentialsCache:Ljava/util/concurrent/ConcurrentHashMap;
 
-    .line 175
     :cond_2
     return-void
 .end method
@@ -1492,27 +1360,22 @@
     .param p1, "info"    # Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$DialogReturnInformation;
 
     .prologue
-    .line 965
     invoke-virtual {p1}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$DialogReturnInformation;->getBundle()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 966
     .local v0, "bundle":Landroid/os/Bundle;
     invoke-virtual {p1}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$DialogReturnInformation;->getCallback()Landroid/sec/enterprise/proxy/IProxyCredentialsCallback;
 
     move-result-object v1
 
-    .line 968
     .local v1, "callback":Landroid/sec/enterprise/proxy/IProxyCredentialsCallback;
     if-nez v0, :cond_1
 
-    .line 1006
     :cond_0
     :goto_0
     return-void
 
-    .line 970
     :cond_1
     const-string/jumbo v10, "result"
 
@@ -1520,7 +1383,6 @@
 
     move-result v7
 
-    .line 971
     .local v7, "result":I
     const-string/jumbo v10, "proxy"
 
@@ -1528,7 +1390,6 @@
 
     move-result-object v6
 
-    .line 972
     .local v6, "proxyString":Ljava/lang/String;
     const-string v10, "credentials"
 
@@ -1536,7 +1397,6 @@
 
     move-result-object v3
 
-    .line 974
     .local v3, "credentials":Ljava/lang/String;
     sget-object v10, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sAuthenticationStateCache:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -1546,7 +1406,6 @@
 
     check-cast v9, Ljava/util/List;
 
-    .line 976
     .local v9, "stateCacheList":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/enterprise/proxy/auth/AuthenticationState;>;"
     if-eqz v9, :cond_0
 
@@ -1556,7 +1415,6 @@
 
     if-nez v10, :cond_0
 
-    .line 977
     if-nez v7, :cond_3
 
     const/4 v10, 0x0
@@ -1573,14 +1431,12 @@
 
     if-eqz v10, :cond_3
 
-    .line 979
     const-string v10, "EnterpriseProxyServer"
 
     const-string/jumbo v11, "onCredentialsReceived: retrying proxy connection"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 981
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -1599,7 +1455,6 @@
 
     check-cast v8, Lcom/android/server/enterprise/proxy/auth/AuthenticationState;
 
-    .line 983
     .local v8, "stateCache":Lcom/android/server/enterprise/proxy/auth/AuthenticationState;
     new-instance v5, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$ProxyConnection;
 
@@ -1607,7 +1462,6 @@
 
     invoke-direct {v5, p0, v8, v3, v10}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$ProxyConnection;-><init>(Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;Lcom/android/server/enterprise/proxy/auth/AuthenticationState;Ljava/lang/String;Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$1;)V
 
-    .line 984
     .local v5, "parser":Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$ProxyConnection;
     iget-object v10, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mThreadExecutor:Ljava/util/concurrent/ExecutorService;
 
@@ -1615,7 +1469,6 @@
 
     goto :goto_1
 
-    .line 988
     .end local v5    # "parser":Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$ProxyConnection;
     .end local v8    # "stateCache":Lcom/android/server/enterprise/proxy/auth/AuthenticationState;
     :cond_2
@@ -1625,21 +1478,18 @@
 
     goto :goto_0
 
-    .line 989
     .end local v4    # "i$":Ljava/util/Iterator;
     :cond_3
     const/4 v10, -0x2
 
     if-ne v7, v10, :cond_0
 
-    .line 990
     const-string v10, "EnterpriseProxyServer"
 
     const-string/jumbo v11, "onCredentialsReceived: canceling dialog"
 
     invoke-static {v10, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 992
     invoke-interface {v9}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v4
@@ -1659,17 +1509,14 @@
 
     check-cast v8, Lcom/android/server/enterprise/proxy/auth/AuthenticationState;
 
-    .line 994
     .restart local v8    # "stateCache":Lcom/android/server/enterprise/proxy/auth/AuthenticationState;
     invoke-virtual {v8}, Lcom/android/server/enterprise/proxy/auth/AuthenticationState;->getSource()Ljava/net/Socket;
 
     move-result-object v2
 
-    .line 995
     .local v2, "clientConnection":Ljava/net/Socket;
     if-eqz v2, :cond_4
 
-    .line 997
     :try_start_0
     invoke-virtual {v2}, Ljava/net/Socket;->close()V
     :try_end_0
@@ -1677,13 +1524,11 @@
 
     goto :goto_2
 
-    .line 998
     :catch_0
     move-exception v10
 
     goto :goto_2
 
-    .line 1003
     .end local v2    # "clientConnection":Ljava/net/Socket;
     .end local v8    # "stateCache":Lcom/android/server/enterprise/proxy/auth/AuthenticationState;
     :cond_5
@@ -1705,27 +1550,22 @@
     .end annotation
 
     .prologue
-    .line 1141
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Ljava/io/OutputStream;->write([B)V
 
-    .line 1142
     const/16 v0, 0xd
 
     invoke-virtual {p0, v0}, Ljava/io/OutputStream;->write(I)V
 
-    .line 1143
     const/16 v0, 0xa
 
     invoke-virtual {p0, v0}, Ljava/io/OutputStream;->write(I)V
 
-    .line 1144
     invoke-virtual {p0}, Ljava/io/OutputStream;->flush()V
 
-    .line 1145
     return-void
 .end method
 
@@ -1740,14 +1580,12 @@
     .end annotation
 
     .prologue
-    .line 1137
     invoke-virtual {p0}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sendLine(Ljava/io/OutputStream;Ljava/lang/String;)V
 
-    .line 1138
     return-void
 .end method
 
@@ -1757,7 +1595,6 @@
     .locals 1
 
     .prologue
-    .line 876
     monitor-enter p0
 
     const/4 v0, 0x1
@@ -1767,12 +1604,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 877
     monitor-exit p0
 
     return-void
 
-    .line 876
     :catchall_0
     move-exception v0
 
@@ -1786,7 +1621,6 @@
     .param p1, "clearCredentials"    # Z
 
     .prologue
-    .line 880
     monitor-enter p0
 
     :try_start_0
@@ -1796,38 +1630,31 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 882
     if-eqz p1, :cond_0
 
-    .line 883
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyCredentialsCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 885
     :cond_0
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sAuthenticationStateCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 886
     sget-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyAuthenticationTypeCache:Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-virtual {v0}, Ljava/util/concurrent/ConcurrentHashMap;->clear()V
 
-    .line 887
     const/4 v0, 0x0
 
     sput-object v0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sProxyInfoCache:Landroid/net/ProxyInfo;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 888
     monitor-exit p0
 
     return-void
 
-    .line 880
     :catchall_0
     move-exception v0
 
@@ -1840,7 +1667,6 @@
     .locals 1
 
     .prologue
-    .line 935
     iget v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mPort:I
 
     return v0
@@ -1850,7 +1676,6 @@
     .locals 2
 
     .prologue
-    .line 931
     iget v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mPort:I
 
     const/4 v1, -0x1
@@ -1874,12 +1699,10 @@
     .param p2, "callback"    # Landroid/sec/enterprise/proxy/IProxyCredentialsCallback;
 
     .prologue
-    .line 956
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mHandler:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$EnterpriseProxyHandler;
 
     if-eqz v1, :cond_0
 
-    .line 957
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mHandler:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$EnterpriseProxyHandler;
 
     const/4 v2, 0x1
@@ -1892,13 +1715,11 @@
 
     move-result-object v0
 
-    .line 960
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mHandler:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$EnterpriseProxyHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$EnterpriseProxyHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 962
     .end local v0    # "msg":Landroid/os/Message;
     :cond_0
     return-void
@@ -1910,7 +1731,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 254
     :try_start_0
     new-instance v4, Ljava/net/ServerSocket;
 
@@ -1920,7 +1740,6 @@
 
     iput-object v4, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mServerSocket:Ljava/net/ServerSocket;
 
-    .line 256
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mServerSocket:Ljava/net/ServerSocket;
 
     invoke-virtual {v4}, Ljava/net/ServerSocket;->getLocalPort()I
@@ -1929,7 +1748,6 @@
 
     invoke-virtual {p0, v4}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->setPort(I)V
 
-    .line 258
     const-string v4, "EnterpriseProxyServer"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1956,7 +1774,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 260
     :goto_0
     iget-boolean v4, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mIsRunning:Z
     :try_end_0
@@ -1965,7 +1782,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 262
     :try_start_1
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mServerSocket:Ljava/net/ServerSocket;
 
@@ -1973,7 +1789,6 @@
 
     move-result-object v3
 
-    .line 265
     .local v3, "socket":Ljava/net/Socket;
     invoke-virtual {v3}, Ljava/net/Socket;->getInetAddress()Ljava/net/InetAddress;
 
@@ -1985,14 +1800,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 266
     new-instance v2, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$ProxyConnection;
 
     const/4 v4, 0x0
 
     invoke-direct {v2, p0, v3, v4}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$ProxyConnection;-><init>(Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;Ljava/net/Socket;Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$1;)V
 
-    .line 267
     .local v2, "parser":Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$ProxyConnection;
     iget-object v4, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mThreadExecutor:Ljava/util/concurrent/ExecutorService;
 
@@ -2003,13 +1816,11 @@
 
     goto :goto_0
 
-    .line 271
     .end local v2    # "parser":Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$ProxyConnection;
     .end local v3    # "socket":Ljava/net/Socket;
     :catch_0
     move-exception v0
 
-    .line 272
     .local v0, "e":Ljava/io/IOException;
     :try_start_2
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
@@ -2019,12 +1830,10 @@
 
     goto :goto_0
 
-    .line 275
     .end local v0    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v0
 
-    .line 276
     .local v0, "e":Ljava/net/SocketException;
     const-string v4, "EnterpriseProxyServer"
 
@@ -2048,16 +1857,13 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 281
     .end local v0    # "e":Ljava/net/SocketException;
     :cond_0
     :goto_1
     iput-boolean v7, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mIsRunning:Z
 
-    .line 282
     return-void
 
-    .line 269
     .restart local v3    # "socket":Ljava/net/Socket;
     :cond_1
     :try_start_3
@@ -2068,12 +1874,10 @@
 
     goto :goto_0
 
-    .line 277
     .end local v3    # "socket":Ljava/net/Socket;
     :catch_2
     move-exception v1
 
-    .line 278
     .local v1, "e1":Ljava/io/IOException;
     const-string v4, "EnterpriseProxyServer"
 
@@ -2105,7 +1909,6 @@
     .param p1, "callback"    # Lcom/android/server/enterprise/proxy/EnterpriseProxyCallback;
 
     .prologue
-    .line 916
     monitor-enter p0
 
     :try_start_0
@@ -2115,23 +1918,19 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 917
     iget v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mPort:I
 
     invoke-interface {p1, v0}, Lcom/android/server/enterprise/proxy/EnterpriseProxyCallback;->setProxyPort(I)V
 
-    .line 919
     :cond_0
     iput-object p1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mCallback:Lcom/android/server/enterprise/proxy/EnterpriseProxyCallback;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 920
     monitor-exit p0
 
     return-void
 
-    .line 916
     :catchall_0
     move-exception v0
 
@@ -2145,7 +1944,6 @@
     .param p1, "port"    # I
 
     .prologue
-    .line 909
     monitor-enter p0
 
     :try_start_0
@@ -2153,23 +1951,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 910
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mCallback:Lcom/android/server/enterprise/proxy/EnterpriseProxyCallback;
 
     invoke-interface {v0, p1}, Lcom/android/server/enterprise/proxy/EnterpriseProxyCallback;->setProxyPort(I)V
 
-    .line 912
     :cond_0
     iput p1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mPort:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 913
     monitor-exit p0
 
     return-void
 
-    .line 909
     :catchall_0
     move-exception v0
 
@@ -2182,7 +1976,6 @@
     .locals 8
 
     .prologue
-    .line 863
     monitor-enter p0
 
     :try_start_0
@@ -2192,24 +1985,20 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 865
     iget-boolean v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mIsRunning:Z
 
     if-nez v0, :cond_0
 
-    .line 866
     const-string v0, "EnterpriseProxyServer"
 
     const-string v1, "Enterprise Proxy server not running, starting it"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 868
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mIsRunning:Z
 
-    .line 869
     iget-object v0, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mCacheCleanerTimer:Ljava/util/Timer;
 
     new-instance v1, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer$CacheCleaner;
@@ -2234,18 +2023,15 @@
 
     invoke-virtual/range {v0 .. v5}, Ljava/util/Timer;->schedule(Ljava/util/TimerTask;JJ)V
 
-    .line 871
     invoke-virtual {p0}, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->start()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 873
     :cond_0
     monitor-exit p0
 
     return-void
 
-    .line 863
     :catchall_0
     move-exception v0
 
@@ -2258,7 +2044,6 @@
     .locals 3
 
     .prologue
-    .line 891
     monitor-enter p0
 
     :try_start_0
@@ -2268,30 +2053,25 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 893
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mIsRunning:Z
 
-    .line 894
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mServerSocket:Ljava/net/ServerSocket;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-eqz v1, :cond_0
 
-    .line 896
     :try_start_1
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mServerSocket:Ljava/net/ServerSocket;
 
     invoke-virtual {v1}, Ljava/net/ServerSocket;->close()V
 
-    .line 897
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mServerSocket:Ljava/net/ServerSocket;
 
-    .line 898
     const/4 v1, 0x0
 
     sput-object v1, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->sEnterpriseProxyServer:Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;
@@ -2299,7 +2079,6 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 903
     :cond_0
     :goto_0
     :try_start_2
@@ -2307,24 +2086,20 @@
 
     if-eqz v1, :cond_1
 
-    .line 904
     iget-object v1, p0, Lcom/android/server/enterprise/proxy/EnterpriseProxyServer;->mCacheCleanerTimer:Ljava/util/Timer;
 
     invoke-virtual {v1}, Ljava/util/Timer;->cancel()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 906
     :cond_1
     monitor-exit p0
 
     return-void
 
-    .line 899
     :catch_0
     move-exception v0
 
-    .line 900
     .local v0, "e":Ljava/io/IOException;
     :try_start_3
     invoke-virtual {v0}, Ljava/io/IOException;->printStackTrace()V
@@ -2333,7 +2108,6 @@
 
     goto :goto_0
 
-    .line 891
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v1

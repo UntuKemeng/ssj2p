@@ -29,30 +29,24 @@
     .end annotation
 
     .prologue
-    .line 82
     invoke-direct {p0}, Lorg/simpleframework/xml/core/TemplateLabel;-><init>()V
 
-    .line 83
     new-instance v0, Lorg/simpleframework/xml/core/GroupExtractor;
 
     invoke-direct {v0, p1, p2, p4}, Lorg/simpleframework/xml/core/GroupExtractor;-><init>(Lorg/simpleframework/xml/core/Contact;Ljava/lang/annotation/Annotation;Lorg/simpleframework/xml/stream/Format;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->extractor:Lorg/simpleframework/xml/core/GroupExtractor;
 
-    .line 84
     new-instance v0, Lorg/simpleframework/xml/core/ElementLabel;
 
     invoke-direct {v0, p1, p3, p4}, Lorg/simpleframework/xml/core/ElementLabel;-><init>(Lorg/simpleframework/xml/core/Contact;Lorg/simpleframework/xml/Element;Lorg/simpleframework/xml/stream/Format;)V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
-    .line 85
     iput-object p1, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->contact:Lorg/simpleframework/xml/core/Contact;
 
-    .line 86
     iput-object p2, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->union:Lorg/simpleframework/xml/ElementUnion;
 
-    .line 87
     return-void
 .end method
 
@@ -62,7 +56,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getAnnotation()Ljava/lang/annotation/Annotation;
@@ -76,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 110
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->contact:Lorg/simpleframework/xml/core/Contact;
 
     return-object v0
@@ -92,22 +84,18 @@
     .end annotation
 
     .prologue
-    .line 177
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ElementUnionLabel;->getExpression()Lorg/simpleframework/xml/core/Expression;
 
     move-result-object v0
 
-    .line 178
     .local v0, "expression":Lorg/simpleframework/xml/core/Expression;
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ElementUnionLabel;->getContact()Lorg/simpleframework/xml/core/Contact;
 
     move-result-object v1
 
-    .line 180
     .local v1, "type":Lorg/simpleframework/xml/strategy/Type;
     if-nez v1, :cond_0
 
-    .line 181
     new-instance v2, Lorg/simpleframework/xml/core/UnionException;
 
     const-string v3, "Union %s was not declared on a field or method"
@@ -126,7 +114,6 @@
 
     throw v2
 
-    .line 183
     :cond_0
     new-instance v2, Lorg/simpleframework/xml/core/CompositeUnion;
 
@@ -146,7 +133,6 @@
     .end annotation
 
     .prologue
-    .line 235
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getDecorator()Lorg/simpleframework/xml/core/Decorator;
@@ -165,7 +151,6 @@
     .end annotation
 
     .prologue
-    .line 248
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getDependent()Lorg/simpleframework/xml/strategy/Type;
@@ -185,7 +170,6 @@
     .end annotation
 
     .prologue
-    .line 222
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/core/Label;->getEmpty(Lorg/simpleframework/xml/core/Context;)Ljava/lang/Object;
@@ -204,7 +188,6 @@
     .end annotation
 
     .prologue
-    .line 260
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getEntry()Ljava/lang/String;
@@ -223,12 +206,10 @@
     .end annotation
 
     .prologue
-    .line 297
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->path:Lorg/simpleframework/xml/core/Expression;
 
     if-nez v0, :cond_0
 
-    .line 298
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getExpression()Lorg/simpleframework/xml/core/Expression;
@@ -237,7 +218,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->path:Lorg/simpleframework/xml/core/Expression;
 
-    .line 300
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->path:Lorg/simpleframework/xml/core/Expression;
 
@@ -254,12 +234,10 @@
     .end annotation
 
     .prologue
-    .line 136
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ElementUnionLabel;->getContact()Lorg/simpleframework/xml/core/Contact;
 
     move-result-object v0
 
-    .line 138
     .local v0, "contact":Lorg/simpleframework/xml/strategy/Type;
     iget-object v1, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->extractor:Lorg/simpleframework/xml/core/GroupExtractor;
 
@@ -269,7 +247,6 @@
 
     if-nez v1, :cond_0
 
-    .line 139
     new-instance v1, Lorg/simpleframework/xml/core/UnionException;
 
     const-string v2, "No type matches %s in %s for %s"
@@ -296,7 +273,6 @@
 
     throw v1
 
-    .line 141
     :cond_0
     iget-object v1, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->extractor:Lorg/simpleframework/xml/core/GroupExtractor;
 
@@ -316,7 +292,6 @@
     .end annotation
 
     .prologue
-    .line 273
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getName()Ljava/lang/String;
@@ -335,7 +310,6 @@
     .end annotation
 
     .prologue
-    .line 195
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->extractor:Lorg/simpleframework/xml/core/GroupExtractor;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/GroupExtractor;->getNames()[Ljava/lang/String;
@@ -349,7 +323,6 @@
     .locals 1
 
     .prologue
-    .line 313
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getOverride()Ljava/lang/String;
@@ -368,7 +341,6 @@
     .end annotation
 
     .prologue
-    .line 285
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getPath()Ljava/lang/String;
@@ -387,7 +359,6 @@
     .end annotation
 
     .prologue
-    .line 208
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->extractor:Lorg/simpleframework/xml/core/GroupExtractor;
 
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/GroupExtractor;->getPaths()[Ljava/lang/String;
@@ -401,7 +372,6 @@
     .locals 1
 
     .prologue
-    .line 327
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->getType()Ljava/lang/Class;
@@ -421,12 +391,10 @@
     .end annotation
 
     .prologue
-    .line 155
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ElementUnionLabel;->getContact()Lorg/simpleframework/xml/core/Contact;
 
     move-result-object v0
 
-    .line 157
     .local v0, "contact":Lorg/simpleframework/xml/strategy/Type;
     iget-object v1, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->extractor:Lorg/simpleframework/xml/core/GroupExtractor;
 
@@ -436,7 +404,6 @@
 
     if-nez v1, :cond_0
 
-    .line 158
     new-instance v1, Lorg/simpleframework/xml/core/UnionException;
 
     const-string v2, "No type matches %s in %s for %s"
@@ -463,7 +430,6 @@
 
     throw v1
 
-    .line 160
     :cond_0
     iget-object v1, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->extractor:Lorg/simpleframework/xml/core/GroupExtractor;
 
@@ -473,14 +439,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 161
     new-instance v1, Lorg/simpleframework/xml/core/OverrideType;
 
     invoke-direct {v1, v0, p1}, Lorg/simpleframework/xml/core/OverrideType;-><init>(Lorg/simpleframework/xml/strategy/Type;Ljava/lang/Class;)V
 
     move-object v0, v1
 
-    .line 163
     .end local v0    # "contact":Lorg/simpleframework/xml/strategy/Type;
     :cond_1
     return-object v0
@@ -490,7 +454,6 @@
     .locals 1
 
     .prologue
-    .line 340
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->isCollection()Z
@@ -504,7 +467,6 @@
     .locals 1
 
     .prologue
-    .line 352
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->isData()Z
@@ -518,7 +480,6 @@
     .locals 1
 
     .prologue
-    .line 365
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->isInline()Z
@@ -532,7 +493,6 @@
     .locals 1
 
     .prologue
-    .line 378
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Label;->isRequired()Z
@@ -546,7 +506,6 @@
     .locals 1
 
     .prologue
-    .line 97
     const/4 v0, 0x1
 
     return v0
@@ -556,7 +515,6 @@
     .locals 1
 
     .prologue
-    .line 391
     iget-object v0, p0, Lorg/simpleframework/xml/core/ElementUnionLabel;->label:Lorg/simpleframework/xml/core/Label;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

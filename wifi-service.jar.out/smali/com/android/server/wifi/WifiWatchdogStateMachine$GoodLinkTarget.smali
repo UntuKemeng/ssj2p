@@ -30,18 +30,13 @@
     .param p3, "time"    # I
 
     .prologue
-    .line 7344
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7345
     iput p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$GoodLinkTarget;->RSSI_ADJ_DBM:I
 
-    .line 7346
     iput p2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$GoodLinkTarget;->SAMPLE_COUNT:I
 
-    .line 7347
     iput p3, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$GoodLinkTarget;->REDUCE_TIME_MS:I
 
-    .line 7348
     return-void
 .end method

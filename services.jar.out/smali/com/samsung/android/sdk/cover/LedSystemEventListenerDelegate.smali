@@ -29,20 +29,16 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 22
     invoke-direct {p0}, Lcom/samsung/android/cover/INfcLedCoverTouchListenerCallback$Stub;-><init>()V
 
-    .line 23
     iput-object p1, p0, Lcom/samsung/android/sdk/cover/LedSystemEventListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$LedSystemEventListener;
 
-    .line 25
     if-nez p2, :cond_0
 
     invoke-virtual {p3}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 28
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     new-instance v1, Lcom/samsung/android/sdk/cover/LedSystemEventListenerDelegate$ListenerDelegateHandler;
@@ -53,10 +49,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/sdk/cover/LedSystemEventListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/LedSystemEventListenerDelegate$ListenerDelegateHandler;
 
-    .line 29
     return-void
 
-    .line 25
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_0
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -72,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 32
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/LedSystemEventListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$LedSystemEventListener;
 
     return-object v0
@@ -87,7 +80,6 @@
     .end annotation
 
     .prologue
-    .line 38
     return-void
 .end method
 
@@ -100,7 +92,6 @@
     .end annotation
 
     .prologue
-    .line 43
     return-void
 .end method
 
@@ -115,7 +106,6 @@
     .end annotation
 
     .prologue
-    .line 47
     iget-object v1, p0, Lcom/samsung/android/sdk/cover/LedSystemEventListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/LedSystemEventListenerDelegate$ListenerDelegateHandler;
 
     const/4 v2, 0x0
@@ -124,16 +114,12 @@
 
     move-result-object v0
 
-    .line 48
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 49
     iput-object p2, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 50
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 51
     return-void
 .end method

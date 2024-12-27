@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 162
     iput-object p1, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
 
     invoke-direct {p0}, Landroid/app/IProcessObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "pid"    # I
 
     .prologue
-    .line 165
     iget-object v2, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
 
     # getter for: Lcom/samsung/android/allaroundsensing/AllAroundSensingService;->mActivityManager:Landroid/app/ActivityManager;
@@ -68,16 +66,13 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 166
     .local v1, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     iget v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
     if-ne v2, p1, :cond_0
 
-    .line 167
     iget-object v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->processName:Ljava/lang/String;
 
-    .line 170
     .end local v1    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
     return-object v2
@@ -93,7 +88,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 173
     iget-object v2, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
 
     # getter for: Lcom/samsung/android/allaroundsensing/AllAroundSensingService;->mActivityManager:Landroid/app/ActivityManager;
@@ -123,7 +117,6 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 174
     .local v1, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     if-eqz p1, :cond_0
 
@@ -135,10 +128,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 175
     iget v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->pid:I
 
-    .line 178
     .end local v1    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
     return v2
@@ -154,7 +145,6 @@
     .param p1, "packageName"    # Ljava/lang/String;
 
     .prologue
-    .line 181
     iget-object v2, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
 
     # getter for: Lcom/samsung/android/allaroundsensing/AllAroundSensingService;->mActivityManager:Landroid/app/ActivityManager;
@@ -184,7 +174,6 @@
 
     check-cast v1, Landroid/app/ActivityManager$RunningAppProcessInfo;
 
-    .line 182
     .local v1, "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     if-eqz p1, :cond_0
 
@@ -196,10 +185,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 183
     iget v2, v1, Landroid/app/ActivityManager$RunningAppProcessInfo;->uid:I
 
-    .line 186
     .end local v1    # "processInfo":Landroid/app/ActivityManager$RunningAppProcessInfo;
     :goto_0
     return v2
@@ -221,7 +208,6 @@
 
     const/4 v11, 0x0
 
-    .line 191
     iget-object v8, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
 
     # getter for: Lcom/samsung/android/allaroundsensing/AllAroundSensingService;->mHandler:Lcom/samsung/android/allaroundsensing/AllAroundSensingService$ScrControlHandler;
@@ -231,39 +217,31 @@
 
     if-nez v8, :cond_1
 
-    .line 222
     :cond_0
     :goto_0
     return-void
 
-    .line 194
     :cond_1
     const/4 v2, 0x0
 
-    .line 195
     .local v2, "packageName":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 196
     .local v0, "className":Ljava/lang/String;
     move v3, p1
 
-    .line 197
     .local v3, "pid":I
     move v5, p2
 
-    .line 198
     .local v5, "uid":I
     const/4 v8, -0x1
 
     if-eq v3, v8, :cond_2
 
-    .line 199
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v6
 
-    .line 200
     .local v6, "time":J
     iget-object v8, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
 
@@ -274,7 +252,6 @@
 
     invoke-virtual {v8, v9}, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$ScrControlHandler;->removeMessages(I)V
 
-    .line 201
     iget-object v8, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
 
     # getter for: Lcom/samsung/android/allaroundsensing/AllAroundSensingService;->mHandler:Lcom/samsung/android/allaroundsensing/AllAroundSensingService$ScrControlHandler;
@@ -290,7 +267,6 @@
 
     goto :goto_0
 
-    .line 204
     .end local v6    # "time":J
     :cond_2
     iget-object v8, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
@@ -304,7 +280,6 @@
 
     move-result-object v4
 
-    .line 205
     .local v4, "tasks":Ljava/util/List;, "Ljava/util/List<Landroid/app/ActivityManager$RunningTaskInfo;>;"
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -312,7 +287,6 @@
 
     if-lez v8, :cond_0
 
-    .line 208
     invoke-interface {v4, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -325,7 +299,6 @@
 
     move-result-object v2
 
-    .line 209
     invoke-interface {v4, v11}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -338,17 +311,14 @@
 
     move-result-object v0
 
-    .line 210
     invoke-virtual {p0, v2}, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->getPidFromPackageName(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 211
     invoke-virtual {p0, v2}, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->getUidFromPackageName(Ljava/lang/String;)I
 
     move-result v5
 
-    .line 212
     const-string v8, "AllAroundSensingService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -381,12 +351,10 @@
 
     invoke-static {v8, v9}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 214
     if-eqz v2, :cond_0
 
     if-eqz v0, :cond_0
 
-    .line 215
     iget-object v8, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
 
     # getter for: Lcom/samsung/android/allaroundsensing/AllAroundSensingService;->mHandler:Lcom/samsung/android/allaroundsensing/AllAroundSensingService$ScrControlHandler;
@@ -398,11 +366,9 @@
 
     move-result-object v1
 
-    .line 216
     .local v1, "msg":Landroid/os/Message;
     iput v11, v1, Landroid/os/Message;->what:I
 
-    .line 217
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -421,13 +387,10 @@
 
     iput-object v8, v1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 218
     iput v3, v1, Landroid/os/Message;->arg1:I
 
-    .line 219
     iput v5, v1, Landroid/os/Message;->arg2:I
 
-    .line 220
     iget-object v8, p0, Lcom/samsung/android/allaroundsensing/AllAroundSensingService$1;->this$0:Lcom/samsung/android/allaroundsensing/AllAroundSensingService;
 
     # getter for: Lcom/samsung/android/allaroundsensing/AllAroundSensingService;->mHandler:Lcom/samsung/android/allaroundsensing/AllAroundSensingService$ScrControlHandler;
@@ -446,7 +409,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 226
     return-void
 .end method
 
@@ -462,6 +424,5 @@
     .end annotation
 
     .prologue
-    .line 230
     return-void
 .end method

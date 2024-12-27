@@ -30,16 +30,12 @@
     .param p2, "max"    # I
 
     .prologue
-    .line 2263
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2264
     iput p1, p0, Landroid/provider/Settings$System$InclusiveIntegerRangeValidator;->mMin:I
 
-    .line 2265
     iput p2, p0, Landroid/provider/Settings$System$InclusiveIntegerRangeValidator;->mMax:I
 
-    .line 2266
     return-void
 .end method
 
@@ -52,13 +48,11 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2271
     :try_start_0
     invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 2272
     .local v1, "intValue":I
     iget v3, p0, Landroid/provider/Settings$System$InclusiveIntegerRangeValidator;->mMin:I
 
@@ -72,17 +66,14 @@
 
     const/4 v2, 0x1
 
-    .line 2274
     .end local v1    # "intValue":I
     :cond_0
     :goto_0
     return v2
 
-    .line 2273
     :catch_0
     move-exception v0
 
-    .line 2274
     .local v0, "e":Ljava/lang/NumberFormatException;
     goto :goto_0
 .end method

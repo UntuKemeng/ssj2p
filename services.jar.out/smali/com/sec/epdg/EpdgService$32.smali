@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5832
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$32;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 5835
     const-string v1, "[EPDGService]"
 
     const-string v2, "Cdma NOT available"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5836
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2800()Lcom/sec/epdg/EpdgTimers;
 
@@ -63,35 +60,29 @@
 
     if-eqz v1, :cond_1
 
-    .line 5837
     const-string v1, "[EPDGService]"
 
     const-string v2, "Ignore Cdma Off because TEPDG1XSCANNING timer is running"
 
     invoke-static {v1, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5860
     :cond_0
     :goto_0
     return-void
 
-    .line 5841
     :cond_1
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getIsCsAvailable()Z
 
     move-result v0
 
-    .line 5842
     .local v0, "oldCdmaState":Z
     invoke-static {v3}, Lcom/sec/epdg/EpdgService;->setIsCsAvailable(Z)V
 
-    .line 5844
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$32;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->sendEpdgRegisterBroadcast(Z)V
     invoke-static {v1, v3}, Lcom/sec/epdg/EpdgService;->access$3000(Lcom/sec/epdg/EpdgService;Z)V
 
-    .line 5846
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$32;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->isHandoverRequiredOnCdmaIndication()Z
@@ -101,7 +92,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 5852
     # getter for: Lcom/sec/epdg/EpdgService;->mImsListener:Lcom/sec/epdg/handover/EpdgImsListener;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1100()Lcom/sec/epdg/handover/EpdgImsListener;
 
@@ -141,7 +131,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 5857
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgTimer:Lcom/sec/epdg/EpdgTimers;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$2800()Lcom/sec/epdg/EpdgTimers;
 
@@ -151,7 +140,6 @@
 
     invoke-virtual {v1, v2}, Lcom/sec/epdg/EpdgTimers;->startTimer(Lcom/sec/epdg/EpdgTimers$EpdgTimerType;)Z
 
-    .line 5859
     :cond_2
     iget-object v1, p0, Lcom/sec/epdg/EpdgService$32;->this$0:Lcom/sec/epdg/EpdgService;
 

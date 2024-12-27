@@ -46,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 925
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$1;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     iput-object p2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$1;->val$crypto:Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;
@@ -80,7 +79,6 @@
     .locals 13
 
     .prologue
-    .line 927
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$1;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$1;->val$crypto:Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;
@@ -106,6 +104,5 @@
     # invokes: Lcom/samsung/android/camera/iris/SemIrisManager;->checkAuthViewWindowToken(Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;Landroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;Landroid/os/Handler;ILandroid/os/Bundle;Landroid/view/View;J[B)V
     invoke-static/range {v1 .. v12}, Lcom/samsung/android/camera/iris/SemIrisManager;->access$300(Lcom/samsung/android/camera/iris/SemIrisManager;Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;Landroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;Landroid/os/Handler;ILandroid/os/Bundle;Landroid/view/View;J[B)V
 
-    .line 928
     return-void
 .end method

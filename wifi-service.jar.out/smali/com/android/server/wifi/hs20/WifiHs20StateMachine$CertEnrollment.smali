@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1624
     iput-object p1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,10 +36,8 @@
     .locals 3
 
     .prologue
-    .line 1627
     invoke-super {p0}, Lcom/android/internal/util/State;->enter()V
 
-    .line 1628
     const-string v0, "HS20StateMachine"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -67,7 +64,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1629
     iget-object v0, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget-object v1, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
@@ -81,7 +77,6 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->executeCommand(II)V
     invoke-static {v0, v1, v2}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$6300(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;II)V
 
-    .line 1630
     return-void
 .end method
 
@@ -92,24 +87,19 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1634
     const/4 v0, 0x0
 
-    .line 1635
     .local v0, "bRetVal":Z
     const/4 v1, 0x0
 
-    .line 1636
     .local v1, "requestReason":Ljava/lang/String;
     iget v2, p1, Landroid/os/Message;->what:I
 
     sparse-switch v2, :sswitch_data_0
 
-    .line 1682
     :goto_0
     return v0
 
-    .line 1638
     :sswitch_0
     const-string v2, "HS20StateMachine"
 
@@ -117,19 +107,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1639
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->deferMessage(Landroid/os/Message;)V
     invoke-static {v2, p1}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$7500(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Landroid/os/Message;)V
 
-    .line 1640
     const/4 v0, 0x1
 
-    .line 1641
     goto :goto_0
 
-    .line 1643
     :sswitch_1
     const-string v2, "HS20StateMachine"
 
@@ -137,19 +123,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1644
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->deferMessage(Landroid/os/Message;)V
     invoke-static {v2, p1}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$7600(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Landroid/os/Message;)V
 
-    .line 1645
     const/4 v0, 0x1
 
-    .line 1646
     goto :goto_0
 
-    .line 1648
     :sswitch_2
     const-string v2, "HS20StateMachine"
 
@@ -157,12 +139,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1649
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iput v4, v2, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->statusProvisioning:I
 
-    .line 1650
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
     iget-object v3, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
@@ -175,13 +155,10 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$7700(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1651
     const/4 v0, 0x1
 
-    .line 1652
     goto :goto_0
 
-    .line 1654
     :sswitch_3
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -195,41 +172,32 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$7800(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1655
     const/4 v0, 0x1
 
-    .line 1656
     goto :goto_0
 
-    .line 1658
     :sswitch_4
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     if-nez v2, :cond_1
 
-    .line 1659
     const-string v1, "Certificate enrollment completed"
 
-    .line 1664
     :cond_0
     :goto_1
     const/4 v0, 0x1
 
-    .line 1665
     goto :goto_0
 
-    .line 1660
     :cond_1
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     if-ne v2, v4, :cond_0
 
-    .line 1661
     const-string v1, "Certificate enrollment failed"
 
     goto :goto_1
 
-    .line 1667
     :sswitch_5
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -237,14 +205,12 @@
 
     iput v3, v2, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->cmd:I
 
-    .line 1668
     iget v2, p1, Landroid/os/Message;->arg1:I
 
     packed-switch v2, :pswitch_data_0
 
     goto :goto_0
 
-    .line 1670
     :pswitch_0
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -258,13 +224,10 @@
     # invokes: Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v2, v3}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->access$7900(Lcom/android/server/wifi/hs20/WifiHs20StateMachine;Lcom/android/internal/util/IState;)V
 
-    .line 1671
     const/4 v0, 0x1
 
-    .line 1672
     goto :goto_0
 
-    .line 1678
     :sswitch_6
     iget-object v2, p0, Lcom/android/server/wifi/hs20/WifiHs20StateMachine$CertEnrollment;->this$0:Lcom/android/server/wifi/hs20/WifiHs20StateMachine;
 
@@ -272,12 +235,10 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wifi/hs20/WifiHs20StateMachine;->sendMessage(I)V
 
-    .line 1679
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1636
     nop
 
     :sswitch_data_0
@@ -291,7 +252,6 @@
         0x1b76 -> :sswitch_1
     .end sparse-switch
 
-    .line 1668
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_0

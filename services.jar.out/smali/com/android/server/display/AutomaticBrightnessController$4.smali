@@ -46,18 +46,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1293
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1302
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->mAccelerationDistrust:I
 
-    .line 1303
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->mTiltDistrust:I
 
-    .line 1304
     const/4 v0, 0x5
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->mCnt:I
@@ -70,39 +66,33 @@
     .param p1, "deviation"    # F
 
     .prologue
-    .line 1322
     const/high16 v0, 0x3fc00000    # 1.5f
 
     cmpl-float v0, p1, v0
 
     if-lez v0, :cond_1
 
-    .line 1323
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->mAccelerationDistrust:I
 
     const/4 v1, 0x5
 
     if-ge v0, v1, :cond_0
 
-    .line 1324
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->mAccelerationDistrust:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->mAccelerationDistrust:I
 
-    .line 1329
     :cond_0
     :goto_0
     return-void
 
-    .line 1326
     :cond_1
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->mAccelerationDistrust:I
 
     if-lez v0, :cond_0
 
-    .line 1327
     iget v0, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->mAccelerationDistrust:I
 
     add-int/lit8 v0, v0, -0x1
@@ -119,7 +109,6 @@
     .param p3, "alpha"    # F
 
     .prologue
-    .line 1307
     mul-float v0, p3, p1
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -139,7 +128,6 @@
     .param p2, "magnitude"    # F
 
     .prologue
-    .line 1318
     div-float v0, p1, p2
 
     float-to-double v0, v0
@@ -164,7 +152,6 @@
     .param p3, "z"    # F
 
     .prologue
-    .line 1310
     mul-float v0, p1, p1
 
     mul-float v1, p2, p2
@@ -194,7 +181,6 @@
     .param p2, "accuracy"    # I
 
     .prologue
-    .line 1362
     return-void
 .end method
 
@@ -203,14 +189,12 @@
     .param p1, "event"    # Landroid/hardware/SensorEvent;
 
     .prologue
-    .line 1340
     iget-object v7, p1, Landroid/hardware/SensorEvent;->values:[F
 
     const/4 v8, 0x0
 
     aget v4, v7, v8
 
-    .line 1341
     .local v4, "x":F
     iget-object v7, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -218,7 +202,6 @@
 
     aget v5, v7, v8
 
-    .line 1342
     .local v5, "y":F
     iget-object v7, p1, Landroid/hardware/SensorEvent;->values:[F
 
@@ -226,13 +209,11 @@
 
     aget v6, v7, v8
 
-    .line 1343
     .local v6, "z":F
     invoke-direct {p0, v4, v5, v6}, Lcom/android/server/display/AutomaticBrightnessController$4;->vectorMagnitude(FFF)F
 
     move-result v2
 
-    .line 1344
     .local v2, "magnitude":F
     const v7, 0x411ce80a
 
@@ -242,41 +223,33 @@
 
     move-result v1
 
-    .line 1346
     .local v1, "deviation":F
     invoke-direct {p0, v1}, Lcom/android/server/display/AutomaticBrightnessController$4;->handleAccelerationDistrust(F)V
 
-    .line 1347
     const/high16 v7, 0x3fc00000    # 1.5f
 
     cmpg-float v7, v2, v7
 
     if-gez v7, :cond_0
 
-    .line 1358
     :goto_0
     return-void
 
-    .line 1352
     :cond_0
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 1353
     .local v0, "alpha":F
     iget v7, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->mAccelerationDistrust:I
 
     if-lez v7, :cond_1
 
-    .line 1354
     const v0, 0x3dba2e8c
 
-    .line 1356
     :cond_1
     invoke-direct {p0, v6, v2}, Lcom/android/server/display/AutomaticBrightnessController$4;->tiltAngle(FF)F
 
     move-result v3
 
-    .line 1357
     .local v3, "newTiltAngle":F
     iget-object v7, p0, Lcom/android/server/display/AutomaticBrightnessController$4;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 

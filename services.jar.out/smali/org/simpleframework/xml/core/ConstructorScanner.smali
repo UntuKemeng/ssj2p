@@ -34,30 +34,24 @@
     .end annotation
 
     .prologue
-    .line 69
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ConstructorScanner;->signatures:Ljava/util/List;
 
-    .line 71
     new-instance v0, Lorg/simpleframework/xml/core/ParameterMap;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/core/ParameterMap;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ConstructorScanner;->registry:Lorg/simpleframework/xml/core/ParameterMap;
 
-    .line 72
     iput-object p2, p0, Lorg/simpleframework/xml/core/ConstructorScanner;->support:Lorg/simpleframework/xml/core/Support;
 
-    .line 73
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/core/ConstructorScanner;->scan(Lorg/simpleframework/xml/core/Detail;)V
 
-    .line 74
     return-void
 .end method
 
@@ -71,7 +65,6 @@
     .end annotation
 
     .prologue
-    .line 139
     new-instance v2, Lorg/simpleframework/xml/core/SignatureScanner;
 
     iget-object v5, p0, Lorg/simpleframework/xml/core/ConstructorScanner;->registry:Lorg/simpleframework/xml/core/ParameterMap;
@@ -80,7 +73,6 @@
 
     invoke-direct {v2, p1, v5, v6}, Lorg/simpleframework/xml/core/SignatureScanner;-><init>(Ljava/lang/reflect/Constructor;Lorg/simpleframework/xml/core/ParameterMap;Lorg/simpleframework/xml/core/Support;)V
 
-    .line 141
     .local v2, "scanner":Lorg/simpleframework/xml/core/SignatureScanner;
     invoke-virtual {v2}, Lorg/simpleframework/xml/core/SignatureScanner;->isValid()Z
 
@@ -88,12 +80,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 142
     invoke-virtual {v2}, Lorg/simpleframework/xml/core/SignatureScanner;->getSignatures()Ljava/util/List;
 
     move-result-object v1
 
-    .line 144
     .local v1, "list":Ljava/util/List;, "Ljava/util/List<Lorg/simpleframework/xml/core/Signature;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -113,20 +103,16 @@
 
     check-cast v3, Lorg/simpleframework/xml/core/Signature;
 
-    .line 145
     .local v3, "signature":Lorg/simpleframework/xml/core/Signature;
     invoke-virtual {v3}, Lorg/simpleframework/xml/core/Signature;->size()I
 
     move-result v4
 
-    .line 147
     .local v4, "size":I
     if-nez v4, :cond_0
 
-    .line 148
     iput-object v3, p0, Lorg/simpleframework/xml/core/ConstructorScanner;->primary:Lorg/simpleframework/xml/core/Signature;
 
-    .line 150
     :cond_0
     iget-object v5, p0, Lorg/simpleframework/xml/core/ConstructorScanner;->signatures:Ljava/util/List;
 
@@ -134,7 +120,6 @@
 
     goto :goto_0
 
-    .line 153
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "list":Ljava/util/List;, "Ljava/util/List<Lorg/simpleframework/xml/core/Signature;>;"
     .end local v3    # "signature":Lorg/simpleframework/xml/core/Signature;
@@ -153,12 +138,10 @@
     .end annotation
 
     .prologue
-    .line 119
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Detail;->getConstructors()[Ljava/lang/reflect/Constructor;
 
     move-result-object v1
 
-    .line 121
     .local v1, "array":[Ljava/lang/reflect/Constructor;
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Detail;->isInstantiable()Z
 
@@ -166,7 +149,6 @@
 
     if-nez v5, :cond_0
 
-    .line 122
     new-instance v5, Lorg/simpleframework/xml/core/ConstructorException;
 
     const-string v6, "Can not construct inner %s"
@@ -183,7 +165,6 @@
 
     throw v5
 
-    .line 124
     :cond_0
     move-object v0, v1
 
@@ -199,7 +180,6 @@
 
     aget-object v2, v0, v3
 
-    .line 125
     .local v2, "factory":Ljava/lang/reflect/Constructor;
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Detail;->isPrimitive()Z
 
@@ -207,16 +187,13 @@
 
     if-nez v5, :cond_1
 
-    .line 126
     invoke-direct {p0, v2}, Lorg/simpleframework/xml/core/ConstructorScanner;->scan(Ljava/lang/reflect/Constructor;)V
 
-    .line 124
     :cond_1
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 129
     .end local v2    # "factory":Ljava/lang/reflect/Constructor;
     :cond_2
     return-void
@@ -228,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Lorg/simpleframework/xml/core/ConstructorScanner;->registry:Lorg/simpleframework/xml/core/ParameterMap;
 
     return-object v0
@@ -238,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 85
     iget-object v0, p0, Lorg/simpleframework/xml/core/ConstructorScanner;->primary:Lorg/simpleframework/xml/core/Signature;
 
     return-object v0
@@ -257,7 +232,6 @@
     .end annotation
 
     .prologue
-    .line 97
     new-instance v0, Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/simpleframework/xml/core/ConstructorScanner;->signatures:Ljava/util/List;

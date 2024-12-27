@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 691
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$9;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 694
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 696
     .local v0, "action":Ljava/lang/String;
     const-string v7, "android.intent.action.BATTERY_CHANGED"
 
@@ -54,7 +51,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 697
     const-string v7, "plugged"
 
     const/4 v8, -0x1
@@ -63,13 +59,11 @@
 
     move-result v1
 
-    .line 699
     .local v1, "chargePlug":I
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
 
-    .line 700
     .local v4, "now":J
     iget-object v7, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$9;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
@@ -86,12 +80,10 @@
 
     const-wide/16 v2, 0x0
 
-    .line 703
     .local v2, "elapsedTimeFromLastCharging":J
     :goto_0
     const/4 v6, 0x0
 
-    .line 705
     .local v6, "startAuth":Z
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->USE_SCHEDULED_AUTHENTICATION_WEHN_CHARGING:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$2300()Z
@@ -126,7 +118,6 @@
 
     if-ne v1, v7, :cond_6
 
-    .line 710
     :cond_0
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$000()Z
@@ -160,7 +151,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 711
     :cond_1
     const-wide/32 v8, 0x5265c00
 
@@ -168,10 +158,8 @@
 
     if-lez v7, :cond_2
 
-    .line 712
     const/4 v6, 0x1
 
-    .line 725
     :cond_2
     :goto_1
     iget-object v7, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$9;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
@@ -179,7 +167,6 @@
     # setter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->mCurrentPowerSouce:I
     invoke-static {v7, v1}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$2502(Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;I)I
 
-    .line 727
     if-eqz v6, :cond_4
 
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->isAuthenticatonAllowed()Z
@@ -199,7 +186,6 @@
 
     if-lt v7, v8, :cond_4
 
-    .line 729
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$000()Z
 
@@ -216,14 +202,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 730
     :cond_3
     iget-object v7, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$9;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     # setter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->mLastAuthenticationTime:J
     invoke-static {v7, v4, v5}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$2202(Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;J)J
 
-    .line 731
     iget-object v7, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$9;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     const/4 v8, 0x3
@@ -231,7 +215,6 @@
     # setter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->mAuthType:I
     invoke-static {v7, v8}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$802(Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;I)I
 
-    .line 732
     iget-object v7, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$9;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
     const/4 v8, 0x1
@@ -241,7 +224,6 @@
     # invokes: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->startAuthentication(ZJ)V
     invoke-static {v7, v8, v10, v11}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$700(Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;ZJ)V
 
-    .line 735
     .end local v1    # "chargePlug":I
     .end local v2    # "elapsedTimeFromLastCharging":J
     .end local v4    # "now":J
@@ -249,7 +231,6 @@
     :cond_4
     return-void
 
-    .line 700
     .restart local v1    # "chargePlug":I
     .restart local v4    # "now":J
     :cond_5
@@ -264,7 +245,6 @@
 
     goto/16 :goto_0
 
-    .line 714
     .restart local v2    # "elapsedTimeFromLastCharging":J
     .restart local v6    # "startAuth":Z
     :cond_6
@@ -283,7 +263,6 @@
 
     if-eq v1, v7, :cond_2
 
-    .line 716
     # getter for: Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->DBG:Z
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;->access$000()Z
 
@@ -300,7 +279,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 717
     :cond_7
     iget-object v7, p0, Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator$9;->this$0:Lcom/samsung/accessory/manager/authentication/cover/CoverAuthenticator;
 
@@ -324,7 +302,6 @@
 
     if-nez v7, :cond_2
 
-    .line 720
     :cond_8
     const/4 v6, 0x1
 

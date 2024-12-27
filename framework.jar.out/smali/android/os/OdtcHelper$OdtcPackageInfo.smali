@@ -29,21 +29,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 225
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 226
     const/16 v0, 0x45
 
     iput-char v0, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->appType:C
 
-    .line 227
     iput-short v1, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->healthFactor:S
 
-    .line 228
     iput v1, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->memConsumed:I
 
-    .line 229
     return-void
 .end method
 
@@ -54,21 +49,16 @@
     .param p3, "memConsumed"    # I
 
     .prologue
-    .line 231
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 232
     iput-char p1, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->appType:C
 
-    .line 233
     int-to-short v0, p2
 
     iput-short v0, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->healthFactor:S
 
-    .line 234
     iput p3, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->memConsumed:I
 
-    .line 235
     return-void
 .end method
 
@@ -77,7 +67,6 @@
     .param p0, "x0"    # Landroid/os/OdtcHelper$OdtcPackageInfo;
 
     .prologue
-    .line 220
     iget-char v0, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->appType:C
 
     return v0
@@ -88,7 +77,6 @@
     .param p0, "x0"    # Landroid/os/OdtcHelper$OdtcPackageInfo;
 
     .prologue
-    .line 220
     iget-short v0, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->healthFactor:S
 
     return v0
@@ -99,7 +87,6 @@
     .param p0, "x0"    # Landroid/os/OdtcHelper$OdtcPackageInfo;
 
     .prologue
-    .line 220
     iget v0, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->memConsumed:I
 
     return v0
@@ -111,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 238
     iget-char v0, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->appType:C
 
     return v0
@@ -121,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 242
     iget-short v0, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->healthFactor:S
 
     return v0
@@ -131,7 +116,6 @@
     .locals 1
 
     .prologue
-    .line 246
     iget v0, p0, Landroid/os/OdtcHelper$OdtcPackageInfo;->memConsumed:I
 
     return v0

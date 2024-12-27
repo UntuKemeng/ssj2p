@@ -29,15 +29,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1552
     iput-object p1, p0, Lcom/android/internal/telephony/Am$InstrumentationWatcher;->this$0:Lcom/android/internal/telephony/Am;
 
     invoke-direct {p0}, Landroid/app/IInstrumentationWatcher$Stub;-><init>()V
 
-    .line 1553
     iput-boolean v0, p0, Lcom/android/internal/telephony/Am$InstrumentationWatcher;->mFinished:Z
 
-    .line 1554
     iput-boolean v0, p0, Lcom/android/internal/telephony/Am$InstrumentationWatcher;->mRawMode:Z
 
     return-void
@@ -49,7 +46,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/Am$1;
 
     .prologue
-    .line 1552
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/Am$InstrumentationWatcher;-><init>(Lcom/android/internal/telephony/Am;)V
 
     return-void
@@ -64,13 +60,10 @@
     .param p3, "results"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1589
     monitor-enter p0
 
-    .line 1591
     const/4 v2, 0x0
 
-    .line 1592
     .local v2, "pretty":Ljava/lang/String;
     :try_start_0
     iget-boolean v3, p0, Lcom/android/internal/telephony/Am$InstrumentationWatcher;->mRawMode:Z
@@ -79,42 +72,33 @@
 
     if-eqz p3, :cond_0
 
-    .line 1593
     const-string v3, "stream"
 
     invoke-virtual {p3, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1595
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 1596
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v3, v2}, Ljava/io/PrintStream;->println(Ljava/lang/String;)V
 
-    .line 1606
     :goto_0
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/android/internal/telephony/Am$InstrumentationWatcher;->mFinished:Z
 
-    .line 1607
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 1608
     monitor-exit p0
 
-    .line 1609
     return-void
 
-    .line 1598
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 1599
     invoke-virtual {p3}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -137,7 +121,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1600
     .local v1, "key":Ljava/lang/String;
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -177,7 +160,6 @@
 
     goto :goto_1
 
-    .line 1608
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "key":Ljava/lang/String;
     :catchall_0
@@ -189,7 +171,6 @@
 
     throw v3
 
-    .line 1604
     :cond_2
     :try_start_1
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -226,13 +207,10 @@
     .param p3, "results"    # Landroid/os/Bundle;
 
     .prologue
-    .line 1566
     monitor-enter p0
 
-    .line 1568
     const/4 v2, 0x0
 
-    .line 1569
     .local v2, "pretty":Ljava/lang/String;
     :try_start_0
     iget-boolean v3, p0, Lcom/android/internal/telephony/Am$InstrumentationWatcher;->mRawMode:Z
@@ -241,37 +219,29 @@
 
     if-eqz p3, :cond_0
 
-    .line 1570
     const-string v3, "stream"
 
     invoke-virtual {p3, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1572
     :cond_0
     if-eqz v2, :cond_1
 
-    .line 1573
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
     invoke-virtual {v3, v2}, Ljava/io/PrintStream;->print(Ljava/lang/String;)V
 
-    .line 1583
     :goto_0
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 1584
     monitor-exit p0
 
-    .line 1585
     return-void
 
-    .line 1575
     :cond_1
     if-eqz p3, :cond_2
 
-    .line 1576
     invoke-virtual {p3}, Landroid/os/Bundle;->keySet()Ljava/util/Set;
 
     move-result-object v3
@@ -294,7 +264,6 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1577
     .local v1, "key":Ljava/lang/String;
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
 
@@ -334,7 +303,6 @@
 
     goto :goto_1
 
-    .line 1584
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "key":Ljava/lang/String;
     :catchall_0
@@ -346,7 +314,6 @@
 
     throw v3
 
-    .line 1581
     :cond_2
     :try_start_1
     sget-object v3, Ljava/lang/System;->out:Ljava/io/PrintStream;
@@ -381,10 +348,8 @@
     .param p1, "rawMode"    # Z
 
     .prologue
-    .line 1562
     iput-boolean p1, p0, Lcom/android/internal/telephony/Am$InstrumentationWatcher;->mRawMode:Z
 
-    .line 1563
     return-void
 .end method
 
@@ -392,10 +357,8 @@
     .locals 4
 
     .prologue
-    .line 1612
     monitor-enter p0
 
-    .line 1613
     :goto_0
     :try_start_0
     iget-boolean v1, p0, Lcom/android/internal/telephony/Am$InstrumentationWatcher;->mFinished:Z
@@ -404,7 +367,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1615
     :try_start_1
     iget-object v1, p0, Lcom/android/internal/telephony/Am$InstrumentationWatcher;->this$0:Lcom/android/internal/telephony/Am;
 
@@ -426,7 +388,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1616
     const/4 v1, 0x0
 
     :try_start_2
@@ -434,11 +395,9 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1624
     :goto_1
     return v1
 
-    .line 1618
     :cond_0
     const-wide/16 v2, 0x3e8
 
@@ -450,11 +409,9 @@
 
     goto :goto_0
 
-    .line 1619
     :catch_0
     move-exception v0
 
-    .line 1620
     .local v0, "e":Ljava/lang/InterruptedException;
     :try_start_4
     new-instance v1, Ljava/lang/IllegalStateException;
@@ -463,7 +420,6 @@
 
     throw v1
 
-    .line 1623
     .end local v0    # "e":Ljava/lang/InterruptedException;
     :catchall_0
     move-exception v1
@@ -480,7 +436,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 1624
     const/4 v1, 0x1
 
     goto :goto_1

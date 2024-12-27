@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 852
     iput-object p1, p0, Lcom/android/server/connectivity/NetworkMonitor$2;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     invoke-direct {p0}, Landroid/net/ICaptivePortal$Stub;-><init>()V
@@ -38,12 +37,10 @@
     .param p1, "response"    # I
 
     .prologue
-    .line 855
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 856
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$2;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
     # getter for: Lcom/android/server/connectivity/NetworkMonitor;->mContext:Landroid/content/Context;
@@ -57,7 +54,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->enforceCallingPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 860
     :cond_0
     iget-object v0, p0, Lcom/android/server/connectivity/NetworkMonitor$2;->this$0:Lcom/android/server/connectivity/NetworkMonitor;
 
@@ -65,6 +61,5 @@
 
     invoke-virtual {v0, v1, p1}, Lcom/android/server/connectivity/NetworkMonitor;->sendMessage(II)V
 
-    .line 861
     return-void
 .end method

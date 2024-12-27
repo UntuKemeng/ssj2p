@@ -45,26 +45,22 @@
     .locals 1
 
     .prologue
-    .line 832
     iput-object p1, p0, Lcom/android/server/DeviceRootKeyService$AllowList;->this$0:Lcom/android/server/DeviceRootKeyService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 833
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/DeviceRootKeyService$AllowList;->allowName:Ljava/util/ArrayList;
 
-    .line 834
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/DeviceRootKeyService$AllowList;->allowUID:Ljava/util/ArrayList;
 
-    .line 835
     return-void
 .end method
 
@@ -76,12 +72,10 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 839
     iget-object v0, p0, Lcom/android/server/DeviceRootKeyService$AllowList;->allowName:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 840
     iget-object v0, p0, Lcom/android/server/DeviceRootKeyService$AllowList;->allowUID:Ljava/util/ArrayList;
 
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -90,7 +84,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 841
     return-void
 .end method
 
@@ -100,7 +93,6 @@
     .param p2, "uid"    # I
 
     .prologue
-    .line 845
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -113,7 +105,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 847
     iget-object v1, p0, Lcom/android/server/DeviceRootKeyService$AllowList;->allowName:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -142,20 +133,16 @@
 
     if-ne v1, p2, :cond_0
 
-    .line 848
     const/4 v1, 0x1
 
-    .line 851
     :goto_1
     return v1
 
-    .line 845
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 851
     :cond_1
     const/4 v1, 0x0
 

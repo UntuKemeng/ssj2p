@@ -36,23 +36,18 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 532
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 533
     iput-object p1, p0, Landroid/widget/DatePicker$AbstractDatePickerDelegate;->mDelegator:Landroid/widget/DatePicker;
 
-    .line 534
     iput-object p2, p0, Landroid/widget/DatePicker$AbstractDatePickerDelegate;->mContext:Landroid/content/Context;
 
-    .line 536
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Landroid/widget/DatePicker$AbstractDatePickerDelegate;->setCurrentLocale(Ljava/util/Locale;)V
 
-    .line 537
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 559
     return-void
 .end method
 
@@ -72,17 +66,14 @@
     .param p1, "valid"    # Z
 
     .prologue
-    .line 552
     iget-object v0, p0, Landroid/widget/DatePicker$AbstractDatePickerDelegate;->mValidationCallback:Landroid/widget/DatePicker$ValidationCallback;
 
     if-eqz v0, :cond_0
 
-    .line 553
     iget-object v0, p0, Landroid/widget/DatePicker$AbstractDatePickerDelegate;->mValidationCallback:Landroid/widget/DatePicker$ValidationCallback;
 
     invoke-interface {v0, p1}, Landroid/widget/DatePicker$ValidationCallback;->onValidationChanged(Z)V
 
-    .line 555
     :cond_0
     return-void
 .end method
@@ -92,7 +83,6 @@
     .param p1, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 540
     iget-object v0, p0, Landroid/widget/DatePicker$AbstractDatePickerDelegate;->mCurrentLocale:Ljava/util/Locale;
 
     invoke-virtual {p1, v0}, Ljava/util/Locale;->equals(Ljava/lang/Object;)Z
@@ -101,13 +91,10 @@
 
     if-nez v0, :cond_0
 
-    .line 541
     iput-object p1, p0, Landroid/widget/DatePicker$AbstractDatePickerDelegate;->mCurrentLocale:Ljava/util/Locale;
 
-    .line 542
     invoke-virtual {p0, p1}, Landroid/widget/DatePicker$AbstractDatePickerDelegate;->onLocaleChanged(Ljava/util/Locale;)V
 
-    .line 544
     :cond_0
     return-void
 .end method
@@ -117,9 +104,7 @@
     .param p1, "callback"    # Landroid/widget/DatePicker$ValidationCallback;
 
     .prologue
-    .line 548
     iput-object p1, p0, Landroid/widget/DatePicker$AbstractDatePickerDelegate;->mValidationCallback:Landroid/widget/DatePicker$ValidationCallback;
 
-    .line 549
     return-void
 .end method

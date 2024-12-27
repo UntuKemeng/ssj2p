@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 435
     iput-object p1, p0, Landroid/widget/Toolbar$3;->this$0:Landroid/widget/Toolbar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 437
     iget-object v2, p0, Landroid/widget/Toolbar$3;->this$0:Landroid/widget/Toolbar;
 
     invoke-virtual {v2}, Landroid/widget/Toolbar;->getContext()Landroid/content/Context;
@@ -52,7 +50,6 @@
 
     move-result v0
 
-    .line 438
     .local v0, "DISPLAY_ID":I
     sget-object v2, Lcom/samsung/android/dualscreen/DualScreen;->MAIN:Lcom/samsung/android/dualscreen/DualScreen;
 
@@ -62,14 +59,12 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 439
     sget-object v2, Lcom/samsung/android/dualscreen/DualScreen;->MAIN:Lcom/samsung/android/dualscreen/DualScreen;
 
     invoke-static {v2}, Lcom/samsung/android/dualscreen/DualScreenManager;->getTopRunningTaskInfo(Lcom/samsung/android/dualscreen/DualScreen;)Lcom/samsung/android/dualscreen/TaskInfo;
 
     move-result-object v1
 
-    .line 440
     .local v1, "taskInfo":Lcom/samsung/android/dualscreen/TaskInfo;
     invoke-virtual {v1}, Lcom/samsung/android/dualscreen/TaskInfo;->isCoupled()Z
 
@@ -77,7 +72,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 441
     invoke-virtual {v1}, Lcom/samsung/android/dualscreen/TaskInfo;->getTaskId()I
 
     move-result v2
@@ -86,13 +80,11 @@
 
     invoke-static {v2, v3}, Lcom/samsung/android/dualscreen/DualScreenManager;->sendShrinkRequest(ILcom/samsung/android/dualscreen/DualScreen;)V
 
-    .line 453
     .end local v1    # "taskInfo":Lcom/samsung/android/dualscreen/TaskInfo;
     :cond_0
     :goto_0
     return-void
 
-    .line 443
     .restart local v1    # "taskInfo":Lcom/samsung/android/dualscreen/TaskInfo;
     :cond_1
     invoke-virtual {v1}, Lcom/samsung/android/dualscreen/TaskInfo;->getTaskId()I
@@ -103,7 +95,6 @@
 
     goto :goto_0
 
-    .line 445
     .end local v1    # "taskInfo":Lcom/samsung/android/dualscreen/TaskInfo;
     :cond_2
     sget-object v2, Lcom/samsung/android/dualscreen/DualScreen;->SUB:Lcom/samsung/android/dualscreen/DualScreen;
@@ -114,14 +105,12 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 446
     sget-object v2, Lcom/samsung/android/dualscreen/DualScreen;->SUB:Lcom/samsung/android/dualscreen/DualScreen;
 
     invoke-static {v2}, Lcom/samsung/android/dualscreen/DualScreenManager;->getTopRunningTaskInfo(Lcom/samsung/android/dualscreen/DualScreen;)Lcom/samsung/android/dualscreen/TaskInfo;
 
     move-result-object v1
 
-    .line 447
     .restart local v1    # "taskInfo":Lcom/samsung/android/dualscreen/TaskInfo;
     invoke-virtual {v1}, Lcom/samsung/android/dualscreen/TaskInfo;->isCoupled()Z
 
@@ -129,7 +118,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 448
     invoke-virtual {v1}, Lcom/samsung/android/dualscreen/TaskInfo;->getTaskId()I
 
     move-result v2
@@ -140,7 +128,6 @@
 
     goto :goto_0
 
-    .line 450
     :cond_3
     invoke-virtual {v1}, Lcom/samsung/android/dualscreen/TaskInfo;->getTaskId()I
 

@@ -47,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 58
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -60,7 +59,6 @@
 
     sput-object v0, Landroid/content/pm/LauncherActivityInfo;->pkgList:Ljava/lang/String;
 
-    .line 59
     sget-object v0, Landroid/content/pm/LauncherActivityInfo;->pkgList:Ljava/lang/String;
 
     const-string v1, "\\s+"
@@ -73,7 +71,6 @@
 
     sput-object v0, Landroid/content/pm/LauncherActivityInfo;->pkgList2:Ljava/lang/String;
 
-    .line 60
     new-instance v0, Ljava/util/ArrayList;
 
     sget-object v1, Landroid/content/pm/LauncherActivityInfo;->pkgList2:Ljava/lang/String;
@@ -92,7 +89,6 @@
 
     sput-object v0, Landroid/content/pm/LauncherActivityInfo;->dualAppslist:Ljava/util/ArrayList;
 
-    .line 61
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
 
     move-result-object v0
@@ -113,20 +109,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 81
     iput-object p1, p0, Landroid/content/pm/LauncherActivityInfo;->mContext:Landroid/content/Context;
 
-    .line 82
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
 
-    .line 83
     const-string/jumbo v0, "persona"
 
     invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -137,7 +129,6 @@
 
     iput-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mPersona:Landroid/os/PersonaManager;
 
-    .line 84
     return-void
 .end method
 
@@ -149,31 +140,24 @@
     .param p4, "firstInstallTime"    # J
 
     .prologue
-    .line 72
     invoke-direct {p0, p1}, Landroid/content/pm/LauncherActivityInfo;-><init>(Landroid/content/Context;)V
 
-    .line 73
     iput-object p2, p0, Landroid/content/pm/LauncherActivityInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
-    .line 74
     iget-object v0, p2, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iput-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
-    .line 75
     invoke-static {p2}, Landroid/content/pm/LauncherApps;->getComponentName(Landroid/content/pm/ResolveInfo;)Landroid/content/ComponentName;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mComponentName:Landroid/content/ComponentName;
 
-    .line 76
     iput-object p3, p0, Landroid/content/pm/LauncherActivityInfo;->mUser:Landroid/os/UserHandle;
 
-    .line 77
     iput-wide p4, p0, Landroid/content/pm/LauncherActivityInfo;->mFirstInstallTime:J
 
-    .line 78
     return-void
 .end method
 
@@ -183,12 +167,10 @@
     .param p2, "density"    # I
 
     .prologue
-    .line 186
     if-eqz p2, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 188
     :try_start_0
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
 
@@ -200,7 +182,6 @@
 
     move-result-object v0
 
-    .line 190
     .local v0, "resources":Landroid/content/res/Resources;
     invoke-virtual {v0, p1, p2}, Landroid/content/res/Resources;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
     :try_end_0
@@ -209,23 +190,19 @@
 
     move-result-object v1
 
-    .line 194
     .end local v0    # "resources":Landroid/content/res/Resources;
     :goto_0
     return-object v1
 
-    .line 191
     :catch_0
     move-exception v1
 
-    .line 194
     :cond_0
     :goto_1
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 191
     :catch_1
     move-exception v1
 
@@ -237,10 +214,8 @@
     .param p1, "density"    # I
 
     .prologue
-    .line 154
     const/4 v1, 0x0
 
-    .line 155
     .local v1, "icon":Landroid/graphics/drawable/Drawable;
     iget-object v3, p0, Landroid/content/pm/LauncherActivityInfo;->mContext:Landroid/content/Context;
 
@@ -254,7 +229,6 @@
 
     move-result-object v0
 
-    .line 156
     .local v0, "appIconPack":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -266,7 +240,6 @@
 
     if-nez v3, :cond_0
 
-    .line 157
     iget-object v3, p0, Landroid/content/pm/LauncherActivityInfo;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v4, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
@@ -275,29 +248,24 @@
 
     move-result-object v1
 
-    .line 159
     :cond_0
     if-nez v1, :cond_1
 
-    .line 160
     iget-object v3, p0, Landroid/content/pm/LauncherActivityInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
     invoke-virtual {v3}, Landroid/content/pm/ResolveInfo;->getIconResourceInternal()I
 
     move-result v2
 
-    .line 161
     .local v2, "iconRes":I
     invoke-direct {p0, v2, p1}, Landroid/content/pm/LauncherActivityInfo;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 165
     .end local v2    # "iconRes":I
     :cond_1
     if-nez v1, :cond_2
 
-    .line 166
     iget-object v3, p0, Landroid/content/pm/LauncherActivityInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
     iget-object v4, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
@@ -306,7 +274,6 @@
 
     move-result-object v1
 
-    .line 170
     :cond_2
     sget-object v3, Landroid/content/pm/LauncherActivityInfo;->sProtectHide:Ljava/lang/String;
 
@@ -332,14 +299,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 171
     iget-object v3, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v3, v1}, Landroid/content/pm/PackageManager;->getLockedBadgedIcon(Landroid/graphics/drawable/Drawable;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 173
     .end local v1    # "icon":Landroid/graphics/drawable/Drawable;
     :cond_3
     return-object v1
@@ -351,7 +316,6 @@
     .locals 1
 
     .prologue
-    .line 204
     iget-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -365,7 +329,6 @@
     .locals 1
 
     .prologue
-    .line 212
     iget-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -378,12 +341,10 @@
     .param p1, "density"    # I
 
     .prologue
-    .line 240
     invoke-direct {p0, p1}, Landroid/content/pm/LauncherActivityInfo;->getOriginalIcon(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 242
     .local v0, "originalIcon":Landroid/graphics/drawable/Drawable;
     const-string v1, "LauncherActivityInfo"
 
@@ -411,7 +372,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
     const-string v1, "com.sec.knox.shortcutsms"
 
     iget-object v2, p0, Landroid/content/pm/LauncherActivityInfo;->mActivityInfo:Landroid/content/pm/ActivityInfo;
@@ -436,12 +396,10 @@
 
     if-nez v1, :cond_1
 
-    .line 246
     instance-of v1, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v1, :cond_0
 
-    .line 247
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPersona:Landroid/os/PersonaManager;
 
     iget-object v2, p0, Landroid/content/pm/LauncherActivityInfo;->mContext:Landroid/content/Context;
@@ -456,7 +414,6 @@
 
     move-result-object v0
 
-    .line 248
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v2, p0, Landroid/content/pm/LauncherActivityInfo;->mUser:Landroid/os/UserHandle;
@@ -465,11 +422,9 @@
 
     move-result-object v1
 
-    .line 259
     :goto_0
     return-object v1
 
-    .line 250
     :cond_0
     const-string v1, "LauncherActivityInfo"
 
@@ -495,7 +450,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 255
     :cond_1
     const-string v1, "com.sec.knox.shortcutsms"
 
@@ -509,7 +463,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 256
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPersona:Landroid/os/PersonaManager;
 
     iget-object v2, p0, Landroid/content/pm/LauncherActivityInfo;->mContext:Landroid/content/Context;
@@ -527,7 +480,6 @@
     :cond_2
     move-object v1, v0
 
-    .line 259
     goto :goto_0
 .end method
 
@@ -538,12 +490,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 273
     invoke-direct {p0, p1}, Landroid/content/pm/LauncherActivityInfo;->getOriginalIcon(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 274
     .local v0, "originalIcon":Landroid/graphics/drawable/Drawable;
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mContext:Landroid/content/Context;
 
@@ -559,7 +509,6 @@
 
     if-nez v1, :cond_0
 
-    .line 275
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v2, p0, Landroid/content/pm/LauncherActivityInfo;->mActivityInfo:Landroid/content/pm/ActivityInfo;
@@ -576,14 +525,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 276
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v1, v0, v4}, Landroid/content/pm/PackageManager;->getDrawableForIconTray(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 283
     :cond_0
     :goto_0
     const-string v1, "LauncherActivityInfo"
@@ -612,7 +559,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 285
     const-string v1, "com.sec.knox.shortcutsms"
 
     iget-object v2, p0, Landroid/content/pm/LauncherActivityInfo;->mActivityInfo:Landroid/content/pm/ActivityInfo;
@@ -637,12 +583,10 @@
 
     if-nez v1, :cond_3
 
-    .line 287
     instance-of v1, v0, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v1, :cond_2
 
-    .line 288
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPersona:Landroid/os/PersonaManager;
 
     iget-object v2, p0, Landroid/content/pm/LauncherActivityInfo;->mContext:Landroid/content/Context;
@@ -657,7 +601,6 @@
 
     move-result-object v0
 
-    .line 289
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
 
     iget-object v2, p0, Landroid/content/pm/LauncherActivityInfo;->mUser:Landroid/os/UserHandle;
@@ -666,11 +609,9 @@
 
     move-result-object v1
 
-    .line 300
     :goto_1
     return-object v1
 
-    .line 278
     :cond_1
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
 
@@ -684,7 +625,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 279
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
 
     invoke-virtual {v1, v0, v4}, Landroid/content/pm/PackageManager;->getDrawableForIconTray(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
@@ -693,7 +633,6 @@
 
     goto :goto_0
 
-    .line 291
     :cond_2
     const-string v1, "LauncherActivityInfo"
 
@@ -719,7 +658,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 296
     :cond_3
     const-string v1, "com.sec.knox.shortcutsms"
 
@@ -733,7 +671,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 297
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPersona:Landroid/os/PersonaManager;
 
     iget-object v2, p0, Landroid/content/pm/LauncherActivityInfo;->mContext:Landroid/content/Context;
@@ -751,7 +688,6 @@
     :cond_4
     move-object v1, v0
 
-    .line 300
     goto :goto_1
 .end method
 
@@ -759,7 +695,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mComponentName:Landroid/content/ComponentName;
 
     return-object v0
@@ -769,7 +704,6 @@
     .locals 2
 
     .prologue
-    .line 221
     iget-wide v0, p0, Landroid/content/pm/LauncherActivityInfo;->mFirstInstallTime:J
 
     return-wide v0
@@ -780,10 +714,8 @@
     .param p1, "density"    # I
 
     .prologue
-    .line 128
     const/4 v1, 0x0
 
-    .line 129
     .local v1, "icon":Landroid/graphics/drawable/Drawable;
     iget-object v3, p0, Landroid/content/pm/LauncherActivityInfo;->mContext:Landroid/content/Context;
 
@@ -797,7 +729,6 @@
 
     move-result-object v0
 
-    .line 130
     .local v0, "appIconPack":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -809,7 +740,6 @@
 
     if-nez v3, :cond_0
 
-    .line 131
     iget-object v3, p0, Landroid/content/pm/LauncherActivityInfo;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v4, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
@@ -818,29 +748,24 @@
 
     move-result-object v1
 
-    .line 133
     :cond_0
     if-nez v1, :cond_1
 
-    .line 134
     iget-object v3, p0, Landroid/content/pm/LauncherActivityInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
     invoke-virtual {v3}, Landroid/content/pm/ResolveInfo;->getIconResource()I
 
     move-result v2
 
-    .line 135
     .local v2, "iconRes":I
     invoke-direct {p0, v2, p1}, Landroid/content/pm/LauncherActivityInfo;->getDrawableForDensity(II)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 138
     .end local v2    # "iconRes":I
     :cond_1
     if-nez v1, :cond_2
 
-    .line 139
     iget-object v3, p0, Landroid/content/pm/LauncherActivityInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
     iget-object v4, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
@@ -849,7 +774,6 @@
 
     move-result-object v1
 
-    .line 141
     :cond_2
     return-object v1
 .end method
@@ -858,7 +782,6 @@
     .locals 2
 
     .prologue
-    .line 116
     iget-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mResolveInfo:Landroid/content/pm/ResolveInfo;
 
     iget-object v1, p0, Landroid/content/pm/LauncherActivityInfo;->mPm:Landroid/content/pm/PackageManager;
@@ -874,7 +797,6 @@
     .locals 1
 
     .prologue
-    .line 229
     iget-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mActivityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v0, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
@@ -886,7 +808,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-object v0, p0, Landroid/content/pm/LauncherActivityInfo;->mUser:Landroid/os/UserHandle;
 
     return-object v0

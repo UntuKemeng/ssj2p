@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .end annotation
 
     .prologue
-    .line 44
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/AtomicLongTransform;->read(Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicLong;
 
     move-result-object v0
@@ -54,12 +52,10 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 57
     invoke-static {p1}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
 
     move-result-object v0
 
-    .line 58
     .local v0, "number":Ljava/lang/Long;
     new-instance v1, Ljava/util/concurrent/atomic/AtomicLong;
 
@@ -82,7 +78,6 @@
     .end annotation
 
     .prologue
-    .line 44
     check-cast p1, Ljava/util/concurrent/atomic/AtomicLong;
 
     .end local p1    # "x0":Ljava/lang/Object;
@@ -98,7 +93,6 @@
     .param p1, "value"    # Ljava/util/concurrent/atomic/AtomicLong;
 
     .prologue
-    .line 72
     invoke-virtual {p1}, Ljava/util/concurrent/atomic/AtomicLong;->toString()Ljava/lang/String;
 
     move-result-object v0

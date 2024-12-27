@@ -23,14 +23,11 @@
     .locals 1
 
     .prologue
-    .line 258
     iput-object p1, p0, Lcom/sec/enterprise/knox/sdp/SdpUtil$EngineRemovedEvent;->this$0:Lcom/sec/enterprise/knox/sdp/SdpUtil;
 
-    .line 259
     const/4 v0, 0x2
 
     invoke-direct {p0, p1, v0}, Lcom/sec/enterprise/knox/sdp/SdpUtil$SdpEvent;-><init>(Lcom/sec/enterprise/knox/sdp/SdpUtil;I)V
 
-    .line 261
     return-void
 .end method

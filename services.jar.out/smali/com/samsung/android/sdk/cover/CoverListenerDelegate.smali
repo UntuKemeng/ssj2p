@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 16
     const-class v0, Lcom/samsung/android/sdk/cover/ScoverManager;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -49,20 +48,16 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lcom/samsung/android/cover/ICoverManagerCallback$Stub;-><init>()V
 
-    .line 34
     iput-object p1, p0, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 
-    .line 36
     if-nez p2, :cond_0
 
     invoke-virtual {p3}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 39
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     new-instance v1, Lcom/samsung/android/sdk/cover/CoverListenerDelegate$ListenerDelegateHandler;
@@ -73,10 +68,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/CoverListenerDelegate$ListenerDelegateHandler;
 
-    .line 40
     return-void
 
-    .line 36
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_0
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -90,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 15
     sget-object v0, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -108,26 +100,21 @@
     .end annotation
 
     .prologue
-    .line 53
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v0
 
-    .line 54
     .local v0, "msg":Landroid/os/Message;
     const/4 v1, 0x0
 
     iput v1, v0, Landroid/os/Message;->what:I
 
-    .line 55
     iput-object p1, v0, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 56
     iget-object v1, p0, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/CoverListenerDelegate$ListenerDelegateHandler;
 
     invoke-virtual {v1, v0}, Lcom/samsung/android/sdk/cover/CoverListenerDelegate$ListenerDelegateHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 57
     return-void
 .end method
 
@@ -135,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 
     return-object v0
@@ -150,7 +136,6 @@
     .end annotation
 
     .prologue
-    .line 67
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/CoverListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$StateListener;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;

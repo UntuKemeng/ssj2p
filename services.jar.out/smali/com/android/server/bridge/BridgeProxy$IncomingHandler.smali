@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 942
     iput-object p1, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/bridge/BridgeProxy$1;
 
     .prologue
-    .line 942
     invoke-direct {p0, p1}, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;-><init>(Lcom/android/server/bridge/BridgeProxy;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 945
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     const-string/jumbo v2, "handleMessage"
@@ -58,19 +55,15 @@
     # invokes: Lcom/android/server/bridge/BridgeProxy;->checkCallerPermissionFor(Ljava/lang/String;)I
     invoke-static {v1, v2}, Lcom/android/server/bridge/BridgeProxy;->access$1800(Lcom/android/server/bridge/BridgeProxy;Ljava/lang/String;)I
 
-    .line 946
     iget v1, p1, Landroid/os/Message;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 976
     invoke-super {p0, p1}, Landroid/os/Handler;->handleMessage(Landroid/os/Message;)V
 
-    .line 978
     :goto_0
     return-void
 
-    .line 948
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
@@ -81,7 +74,6 @@
 
     monitor-enter v2
 
-    .line 951
     :try_start_0
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
@@ -92,7 +84,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 953
     :try_start_1
     iget-object v3, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
@@ -114,7 +105,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 958
     :goto_1
     :try_start_2
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
@@ -149,7 +139,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 959
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->resultLock:Ljava/lang/Object;
@@ -159,7 +148,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
-    .line 960
     monitor-exit v2
 
     goto :goto_0
@@ -173,11 +161,9 @@
 
     throw v1
 
-    .line 954
     :catch_0
     move-exception v0
 
-    .line 955
     .local v0, "e":Ljava/lang/Exception;
     :try_start_3
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
@@ -205,14 +191,12 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 956
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
     goto :goto_1
 
-    .line 963
     .end local v0    # "e":Ljava/lang/Exception;
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
@@ -224,7 +208,6 @@
 
     monitor-enter v2
 
-    .line 964
     :try_start_4
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
@@ -235,7 +218,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 966
     :try_start_5
     iget-object v3, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
@@ -257,7 +239,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_1
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 971
     :goto_2
     :try_start_6
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
@@ -292,7 +273,6 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 972
     iget-object v1, p0, Lcom/android/server/bridge/BridgeProxy$IncomingHandler;->this$0:Lcom/android/server/bridge/BridgeProxy;
 
     # getter for: Lcom/android/server/bridge/BridgeProxy;->resultLock:Ljava/lang/Object;
@@ -302,7 +282,6 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->notify()V
 
-    .line 973
     monitor-exit v2
 
     goto/16 :goto_0
@@ -316,11 +295,9 @@
 
     throw v1
 
-    .line 967
     :catch_1
     move-exception v0
 
-    .line 968
     .restart local v0    # "e":Ljava/lang/Exception;
     :try_start_7
     # getter for: Lcom/android/server/bridge/BridgeProxy;->TAG:Ljava/lang/String;
@@ -348,14 +325,12 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 969
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_1
 
     goto :goto_2
 
-    .line 946
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

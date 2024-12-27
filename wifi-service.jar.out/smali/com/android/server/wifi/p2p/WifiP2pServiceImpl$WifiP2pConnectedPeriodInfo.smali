@@ -31,23 +31,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 7116
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->this$0:Lcom/android/server/wifi/p2p/WifiP2pServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7117
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->peerDev:Landroid/net/wifi/p2p/WifiP2pDevice;
 
-    .line 7118
     iput-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->pkgName:Ljava/lang/String;
 
-    .line 7119
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->startTime:J
 
-    .line 7120
     return-void
 .end method
 
@@ -56,7 +51,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;
 
     .prologue
-    .line 7111
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->pkgName:Ljava/lang/String;
 
     return-object v0
@@ -68,7 +62,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 7111
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->pkgName:Ljava/lang/String;
 
     return-object p1
@@ -79,7 +72,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;
 
     .prologue
-    .line 7111
     iget-wide v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->startTime:J
 
     return-wide v0
@@ -91,7 +83,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 7111
     iput-wide p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->startTime:J
 
     return-wide p1
@@ -102,7 +93,6 @@
     .param p0, "x0"    # Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;
 
     .prologue
-    .line 7111
     iget-object v0, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->peerDev:Landroid/net/wifi/p2p/WifiP2pDevice;
 
     return-object v0
@@ -114,7 +104,6 @@
     .param p1, "x1"    # Landroid/net/wifi/p2p/WifiP2pDevice;
 
     .prologue
-    .line 7111
     iput-object p1, p0, Lcom/android/server/wifi/p2p/WifiP2pServiceImpl$WifiP2pConnectedPeriodInfo;->peerDev:Landroid/net/wifi/p2p/WifiP2pDevice;
 
     return-object p1

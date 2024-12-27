@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 106
     iput-object p1, p0, Lcom/android/server/cover/CoverHideAnimator$3;->this$0:Lcom/android/server/cover/CoverHideAnimator;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/android/server/cover/CoverHideAnimator$3;->this$0:Lcom/android/server/cover/CoverHideAnimator;
 
     # getter for: Lcom/android/server/cover/CoverHideAnimator;->TAG:Ljava/lang/String;
@@ -50,15 +48,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     iget-object v0, p0, Lcom/android/server/cover/CoverHideAnimator$3;->this$0:Lcom/android/server/cover/CoverHideAnimator;
 
     # invokes: Lcom/android/server/cover/CoverHideAnimator;->removeViewFromWindow()V
     invoke-static {v0}, Lcom/android/server/cover/CoverHideAnimator;->access$800(Lcom/android/server/cover/CoverHideAnimator;)V
 
-    .line 114
     invoke-super {p0, p1}, Landroid/animation/AnimatorListenerAdapter;->onAnimationEnd(Landroid/animation/Animator;)V
 
-    .line 115
     return-void
 .end method

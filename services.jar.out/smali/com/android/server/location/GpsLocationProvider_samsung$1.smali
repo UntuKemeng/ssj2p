@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1880
     iput-object p1, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .locals 6
 
     .prologue
-    .line 1883
     :cond_0
     :goto_0
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
@@ -54,13 +52,11 @@
 
     if-eqz v4, :cond_2
 
-    .line 1886
     const/16 v4, 0x5dc
 
     :try_start_0
     new-array v0, v4, [B
 
-    .line 1887
     .local v0, "buf":[B
     new-instance v3, Ljava/net/DatagramPacket;
 
@@ -68,7 +64,6 @@
 
     invoke-direct {v3, v0, v4}, Ljava/net/DatagramPacket;-><init>([BI)V
 
-    .line 1888
     .local v3, "packet":Ljava/net/DatagramPacket;
     new-instance v4, Ljava/net/DatagramSocket;
 
@@ -78,40 +73,34 @@
 
     iput-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->socket:Ljava/net/DatagramSocket;
 
-    .line 1889
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->socket:Ljava/net/DatagramSocket;
 
     const v5, 0xea60
 
     invoke-virtual {v4, v5}, Ljava/net/DatagramSocket;->setSoTimeout(I)V
 
-    .line 1894
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->socket:Ljava/net/DatagramSocket;
 
     invoke-virtual {v4, v3}, Ljava/net/DatagramSocket;->receive(Ljava/net/DatagramPacket;)V
 
-    .line 1895
     const-string v4, "GpsLocationProvider_ex"
 
     const-string/jumbo v5, "received data through 7275 UDP port"
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1896
     invoke-virtual {v3}, Ljava/net/DatagramPacket;->getLength()I
 
     move-result v4
 
     if-lez v4, :cond_1
 
-    .line 1897
     new-instance v2, Landroid/content/Intent;
 
     const-string v4, "android.intent.action.AGPS_UDP_RECEIVED"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1898
     .local v2, "intent":Landroid/content/Intent;
     const-string/jumbo v4, "packet_data"
 
@@ -121,7 +110,6 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[B)Landroid/content/Intent;
 
-    .line 1899
     const-string/jumbo v4, "packet_length"
 
     invoke-virtual {v3}, Ljava/net/DatagramPacket;->getLength()I
@@ -130,14 +118,12 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1900
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->this$0:Lcom/android/server/location/GpsLocationProvider_samsung;
 
     iget-object v4, v4, Lcom/android/server/location/GpsLocationProvider_samsung;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4, v2}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 1902
     .end local v2    # "intent":Landroid/content/Intent;
     :cond_1
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->socket:Ljava/net/DatagramSocket;
@@ -148,26 +134,22 @@
 
     goto :goto_0
 
-    .line 1903
     .end local v0    # "buf":[B
     .end local v3    # "packet":Ljava/net/DatagramPacket;
     :catch_0
     move-exception v1
 
-    .line 1904
     .local v1, "e":Ljava/io/IOException;
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->socket:Ljava/net/DatagramSocket;
 
     if-eqz v4, :cond_0
 
-    .line 1905
     iget-object v4, p0, Lcom/android/server/location/GpsLocationProvider_samsung$1;->socket:Ljava/net/DatagramSocket;
 
     invoke-virtual {v4}, Ljava/net/DatagramSocket;->close()V
 
     goto :goto_0
 
-    .line 1909
     .end local v1    # "e":Ljava/io/IOException;
     :cond_2
     return-void

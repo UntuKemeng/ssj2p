@@ -20,10 +20,8 @@
     .param p1, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 78
     invoke-direct {p0, p1}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 79
     return-void
 .end method
 
@@ -33,10 +31,8 @@
     .prologue
     const/4 v7, 0x6
 
-    .line 125
     const/4 v1, 0x0
 
-    .line 126
     .local v1, "operatorNumeric":Ljava/lang/String;
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$300()Landroid/content/Context;
@@ -51,18 +47,14 @@
 
     check-cast v3, Landroid/telephony/TelephonyManager;
 
-    .line 128
     .local v3, "tm":Landroid/telephony/TelephonyManager;
     if-eqz v3, :cond_3
 
-    .line 129
     const/4 v0, 0x0
 
-    .line 130
     .local v0, "imsi":Ljava/lang/String;
     const/4 v2, -0x1
 
-    .line 131
     .local v2, "subscription":I
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->isDualSimModel()Ljava/lang/Boolean;
 
@@ -74,7 +66,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 132
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$300()Landroid/content/Context;
 
@@ -88,7 +79,6 @@
 
     move-result-object v0
 
-    .line 136
     :goto_0
     if-eqz v0, :cond_2
 
@@ -106,7 +96,6 @@
 
     if-le v4, v7, :cond_2
 
-    .line 137
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$200()Ljava/lang/String;
 
@@ -132,12 +121,10 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 139
     invoke-static {}, Lcom/sec/epdg/EpdgUtils;->getSimOperator()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 140
     if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -154,7 +141,6 @@
 
     if-gt v4, v7, :cond_1
 
-    .line 142
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$200()Ljava/lang/String;
 
@@ -180,13 +166,11 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 155
     .end local v0    # "imsi":Ljava/lang/String;
     .end local v2    # "subscription":I
     :goto_1
     return-object v1
 
-    .line 134
     .restart local v0    # "imsi":Ljava/lang/String;
     .restart local v2    # "subscription":I
     :cond_0
@@ -201,7 +185,6 @@
 
     goto :goto_0
 
-    .line 144
     :cond_1
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$200()Ljava/lang/String;
@@ -212,12 +195,10 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 148
     :cond_2
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$200()Ljava/lang/String;
@@ -228,12 +209,10 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
     const/4 v1, 0x0
 
     goto :goto_1
 
-    .line 152
     .end local v0    # "imsi":Ljava/lang/String;
     .end local v2    # "subscription":I
     :cond_3
@@ -246,7 +225,6 @@
 
     invoke-static {v4, v5}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
     const/4 v1, 0x0
 
     goto :goto_1
@@ -262,7 +240,6 @@
 
     const/4 v4, 0x0
 
-    .line 159
     new-instance v0, Landroid/net/Uri$Builder;
 
     invoke-direct {v0}, Landroid/net/Uri$Builder;-><init>()V
@@ -295,20 +272,16 @@
 
     move-result-object v1
 
-    .line 162
     .local v1, "uri":Landroid/net/Uri;
     const/4 v7, 0x0
 
-    .line 164
     .local v7, "operatorNumeric":Ljava/lang/String;
     invoke-direct {p0}, Lcom/sec/epdg/EpdgSettingsWriter$SettingsWriteHandler;->getOperatorNumeric()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 165
     if-nez v7, :cond_0
 
-    .line 166
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$200()Ljava/lang/String;
 
@@ -320,11 +293,9 @@
 
     move v0, v9
 
-    .line 188
     :goto_0
     return v0
 
-    .line 169
     :cond_0
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$300()Landroid/content/Context;
@@ -367,7 +338,6 @@
 
     move-result-object v6
 
-    .line 171
     .local v6, "c":Landroid/database/Cursor;
     if-eqz v6, :cond_1
 
@@ -377,14 +347,11 @@
 
     if-gtz v0, :cond_3
 
-    .line 172
     :cond_1
     if-eqz v6, :cond_2
 
-    .line 173
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 175
     :cond_2
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$200()Ljava/lang/String;
@@ -395,10 +362,8 @@
 
     invoke-static {v0, v2}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 176
     const-string v7, "00101"
 
-    .line 177
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$300()Landroid/content/Context;
 
@@ -440,14 +405,11 @@
 
     move-result-object v6
 
-    .line 180
     :cond_3
     if-eqz v6, :cond_4
 
-    .line 181
     invoke-interface {v6}, Landroid/database/Cursor;->close()V
 
-    .line 183
     :cond_4
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mContext:Landroid/content/Context;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$300()Landroid/content/Context;
@@ -486,16 +448,13 @@
 
     move-result v8
 
-    .line 185
     .local v8, "ret":I
     if-gtz v8, :cond_5
 
     move v0, v9
 
-    .line 186
     goto/16 :goto_0
 
-    .line 188
     :cond_5
     const/4 v0, 0x1
 
@@ -511,16 +470,13 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 83
     iget v6, p1, Landroid/os/Message;->what:I
 
     packed-switch v6, :pswitch_data_0
 
-    .line 122
     :goto_0
     return-void
 
-    .line 85
     :pswitch_0
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mWriteHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$000()Landroid/os/Handler;
@@ -533,7 +489,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 87
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mList:Ljava/util/ArrayList;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$100()Ljava/util/ArrayList;
 
@@ -547,7 +502,6 @@
 
     goto :goto_0
 
-    .line 90
     :cond_0
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mList:Ljava/util/ArrayList;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$100()Ljava/util/ArrayList;
@@ -556,18 +510,15 @@
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->trimToSize()V
 
-    .line 91
     iget-object v4, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v4, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;
 
-    .line 92
     .local v4, "setting":Lcom/sec/epdg/EpdgSettingsWriter$SettingData;
     new-instance v5, Landroid/content/ContentValues;
 
     invoke-direct {v5}, Landroid/content/ContentValues;-><init>()V
 
-    .line 93
     .local v5, "values":Landroid/content/ContentValues;
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mList:Ljava/util/ArrayList;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$100()Ljava/util/ArrayList;
@@ -582,11 +533,9 @@
 
     new-array v2, v6, [Ljava/lang/String;
 
-    .line 94
     .local v2, "projection":[Ljava/lang/String;
     const/4 v1, 0x0
 
-    .line 95
     .local v1, "index":I
     const/4 v1, 0x0
 
@@ -602,7 +551,6 @@
 
     if-ge v1, v6, :cond_2
 
-    .line 96
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mList:Ljava/util/ArrayList;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$100()Ljava/util/ArrayList;
 
@@ -614,23 +562,19 @@
 
     check-cast v0, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;
 
-    .line 97
     .local v0, "data":Lcom/sec/epdg/EpdgSettingsWriter$SettingData;
     if-eqz v0, :cond_1
 
-    .line 98
     iget-object v6, v0, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;->key:Ljava/lang/String;
 
     aput-object v6, v2, v1
 
-    .line 99
     iget-object v6, v0, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;->key:Ljava/lang/String;
 
     iget-object v7, v0, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;->val:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 100
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$200()Ljava/lang/String;
 
@@ -670,51 +614,43 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 95
     :cond_1
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 103
     .end local v0    # "data":Lcom/sec/epdg/EpdgSettingsWriter$SettingData;
     :cond_2
     iget-object v6, v4, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;->key:Ljava/lang/String;
 
     aput-object v6, v2, v1
 
-    .line 104
     iget-object v6, v4, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;->key:Ljava/lang/String;
 
     iget-object v7, v4, Lcom/sec/epdg/EpdgSettingsWriter$SettingData;->val:Ljava/lang/String;
 
     invoke-virtual {v5, v6, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 105
     add-int/lit8 v1, v1, 0x1
 
-    .line 106
     invoke-direct {p0, v5, v2}, Lcom/sec/epdg/EpdgSettingsWriter$SettingsWriteHandler;->writeSettings(Landroid/content/ContentValues;[Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
-    .line 107
     iget v6, p1, Landroid/os/Message;->arg1:I
 
     const/4 v7, 0x3
 
     if-ge v6, v7, :cond_3
 
-    .line 108
     iget v6, p1, Landroid/os/Message;->arg1:I
 
     add-int/lit8 v6, v6, 0x1
 
     iput v6, p1, Landroid/os/Message;->arg1:I
 
-    .line 109
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mWriteHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$000()Landroid/os/Handler;
 
@@ -724,23 +660,19 @@
 
     move-result-object v3
 
-    .line 110
     .local v3, "retryMsg":Landroid/os/Message;
     iget v6, p1, Landroid/os/Message;->what:I
 
     iput v6, v3, Landroid/os/Message;->what:I
 
-    .line 111
     iget v6, p1, Landroid/os/Message;->arg1:I
 
     iput v6, v3, Landroid/os/Message;->arg1:I
 
-    .line 112
     iget-object v6, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     iput-object v6, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 113
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mWriteHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgSettingsWriter;->access$000()Landroid/os/Handler;
 
@@ -752,7 +684,6 @@
 
     goto/16 :goto_0
 
-    .line 117
     .end local v3    # "retryMsg":Landroid/os/Message;
     :cond_3
     # getter for: Lcom/sec/epdg/EpdgSettingsWriter;->mList:Ljava/util/ArrayList;
@@ -764,7 +695,6 @@
 
     goto/16 :goto_0
 
-    .line 83
     nop
 
     :pswitch_data_0

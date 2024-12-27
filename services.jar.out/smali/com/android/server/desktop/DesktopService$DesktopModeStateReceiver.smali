@@ -33,21 +33,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 385
     iput-object p1, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 386
     iput v0, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mUSBMouseConnectedstate:I
 
-    .line 387
     iput v0, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mUSBKeyboardConnectedstate:I
 
-    .line 388
     iput v0, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mBTMouseConnectedState:I
 
-    .line 389
     iput v0, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mBTKeyboardConnectedState:I
 
     return-void
@@ -59,7 +54,6 @@
     .param p2, "x1"    # Lcom/android/server/desktop/DesktopService$1;
 
     .prologue
-    .line 385
     invoke-direct {p0, p1}, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;-><init>(Lcom/android/server/desktop/DesktopService;)V
 
     return-void
@@ -73,18 +67,15 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 393
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 394
     .local v0, "action":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 396
     .local v2, "data":Ljava/lang/String;
     # getter for: Lcom/android/server/desktop/DesktopService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/desktop/DesktopService;->access$400()Ljava/lang/String;
@@ -111,7 +102,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 398
     const-string v7, "com.samsung.android.intent.action.KNOXDESKTOP_STATE_CHANGED"
 
     invoke-virtual {v7, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -120,7 +110,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 399
     # getter for: Lcom/android/server/desktop/DesktopService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/desktop/DesktopService;->access$400()Ljava/lang/String;
 
@@ -152,13 +141,11 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     # invokes: Lcom/android/server/desktop/DesktopService;->stopLoadingScreen()V
     invoke-static {v7}, Lcom/android/server/desktop/DesktopService;->access$700(Lcom/android/server/desktop/DesktopService;)V
 
-    .line 403
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     invoke-virtual {v7}, Lcom/android/server/desktop/DesktopService;->isKnoxDesktopMode()Z
@@ -167,19 +154,16 @@
 
     if-nez v7, :cond_0
 
-    .line 404
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     const/4 v8, 0x1
 
     invoke-virtual {v7, v8}, Lcom/android/server/desktop/DesktopService;->turnOnMainLCD(Z)V
 
-    .line 478
     :cond_0
     :goto_0
     return-void
 
-    .line 406
     :cond_1
     const-string v7, "android.intent.action.USBHID_MOUSE_EVENT"
 
@@ -189,7 +173,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 407
     const-string v7, "android.intent.extra.device_state"
 
     const/4 v8, 0x0
@@ -198,7 +181,6 @@
 
     move-result v5
 
-    .line 410
     .local v5, "mouseState":I
     # getter for: Lcom/android/server/desktop/DesktopService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/desktop/DesktopService;->access$400()Ljava/lang/String;
@@ -225,15 +207,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 412
     iget v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mUSBMouseConnectedstate:I
 
     if-eq v7, v5, :cond_2
 
-    .line 413
     iput v5, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mUSBMouseConnectedstate:I
 
-    .line 414
     iget-object v8, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     const/4 v7, 0x1
@@ -246,7 +225,6 @@
     # setter for: Lcom/android/server/desktop/DesktopService;->mIsUSBMouseConnected:Z
     invoke-static {v8, v7}, Lcom/android/server/desktop/DesktopService;->access$802(Lcom/android/server/desktop/DesktopService;Z)Z
 
-    .line 417
     :cond_2
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
@@ -255,13 +233,11 @@
 
     goto :goto_0
 
-    .line 414
     :cond_3
     const/4 v7, 0x0
 
     goto :goto_1
 
-    .line 418
     .end local v5    # "mouseState":I
     :cond_4
     const-string v7, "android.intent.action.USBHID_KEYBOARD_EVENT"
@@ -272,7 +248,6 @@
 
     if-eqz v7, :cond_8
 
-    .line 419
     const-string v7, "android.intent.extra.device_state"
 
     const/4 v8, 0x0
@@ -281,7 +256,6 @@
 
     move-result v4
 
-    .line 422
     .local v4, "keyboardState":I
     # getter for: Lcom/android/server/desktop/DesktopService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/desktop/DesktopService;->access$400()Ljava/lang/String;
@@ -308,15 +282,12 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 424
     iget v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mUSBKeyboardConnectedstate:I
 
     if-eq v7, v4, :cond_5
 
-    .line 425
     iput v4, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mUSBKeyboardConnectedstate:I
 
-    .line 426
     iget-object v8, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     const/4 v7, 0x1
@@ -329,7 +300,6 @@
     # setter for: Lcom/android/server/desktop/DesktopService;->mIsUSBKeyboardConnected:Z
     invoke-static {v8, v7}, Lcom/android/server/desktop/DesktopService;->access$902(Lcom/android/server/desktop/DesktopService;Z)Z
 
-    .line 429
     :cond_5
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
@@ -368,7 +338,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 431
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     # invokes: Lcom/android/server/desktop/DesktopService;->updateKnoxDesktopModeState()V
@@ -376,13 +345,11 @@
 
     goto/16 :goto_0
 
-    .line 426
     :cond_7
     const/4 v7, 0x0
 
     goto :goto_2
 
-    .line 435
     .end local v4    # "keyboardState":I
     :cond_8
     const-string v7, "android.bluetooth.input.profile.action.CONNECTION_STATE_CHANGED"
@@ -393,7 +360,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 436
     const-string v7, "android.bluetooth.profile.extra.isKeyboard"
 
     const/4 v8, 0x0
@@ -402,7 +368,6 @@
 
     move-result v3
 
-    .line 437
     .local v3, "isBTKeyboard":Z
     const-string v7, "android.bluetooth.profile.extra.STATE"
 
@@ -412,7 +377,6 @@
 
     move-result v1
 
-    .line 438
     .local v1, "currState":I
     const-string v7, "android.bluetooth.profile.extra.PREVIOUS_STATE"
 
@@ -422,11 +386,9 @@
 
     move-result v6
 
-    .line 440
     .local v6, "prevState":I
     if-nez v3, :cond_d
 
-    .line 441
     # getter for: Lcom/android/server/desktop/DesktopService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/desktop/DesktopService;->access$400()Ljava/lang/String;
 
@@ -462,12 +424,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 444
     const/4 v7, 0x2
 
     if-ne v1, v7, :cond_a
 
-    .line 445
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     const/4 v8, 0x1
@@ -475,12 +435,10 @@
     # setter for: Lcom/android/server/desktop/DesktopService;->mIsBTMouseConnected:Z
     invoke-static {v7, v8}, Lcom/android/server/desktop/DesktopService;->access$1102(Lcom/android/server/desktop/DesktopService;Z)Z
 
-    .line 453
     :cond_9
     :goto_3
     iput v1, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mBTMouseConnectedState:I
 
-    .line 455
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     # invokes: Lcom/android/server/desktop/DesktopService;->updateKnoxDesktopModeState()V
@@ -488,7 +446,6 @@
 
     goto/16 :goto_0
 
-    .line 446
     :cond_a
     const/4 v7, 0x2
 
@@ -528,7 +485,6 @@
 
     if-eq v7, v8, :cond_9
 
-    .line 450
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     const/4 v8, 0x0
@@ -538,7 +494,6 @@
 
     goto :goto_3
 
-    .line 457
     :cond_d
     # getter for: Lcom/android/server/desktop/DesktopService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/desktop/DesktopService;->access$400()Ljava/lang/String;
@@ -575,12 +530,10 @@
 
     invoke-static {v7, v8}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 460
     const/4 v7, 0x2
 
     if-ne v1, v7, :cond_10
 
-    .line 461
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     const/4 v8, 0x1
@@ -588,12 +541,10 @@
     # setter for: Lcom/android/server/desktop/DesktopService;->mIsBTKeyboardConnected:Z
     invoke-static {v7, v8}, Lcom/android/server/desktop/DesktopService;->access$1302(Lcom/android/server/desktop/DesktopService;Z)Z
 
-    .line 469
     :cond_e
     :goto_4
     iput v1, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->mBTKeyboardConnectedState:I
 
-    .line 471
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     # getter for: Lcom/android/server/desktop/DesktopService;->mIsKnoxDesktopMode:Z
@@ -631,7 +582,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 473
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     # invokes: Lcom/android/server/desktop/DesktopService;->updateKnoxDesktopModeState()V
@@ -639,7 +589,6 @@
 
     goto/16 :goto_0
 
-    .line 462
     :cond_10
     const/4 v7, 0x2
 
@@ -679,7 +628,6 @@
 
     if-eq v7, v8, :cond_e
 
-    .line 466
     iget-object v7, p0, Lcom/android/server/desktop/DesktopService$DesktopModeStateReceiver;->this$0:Lcom/android/server/desktop/DesktopService;
 
     const/4 v8, 0x0

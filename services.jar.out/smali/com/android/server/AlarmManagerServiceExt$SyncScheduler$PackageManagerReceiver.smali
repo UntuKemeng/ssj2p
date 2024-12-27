@@ -24,36 +24,29 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 3544
     iput-object p1, p0, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver;->this$1:Lcom/android/server/AlarmManagerServiceExt$SyncScheduler;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 3545
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 3546
     .local v0, "pkgFilter":Landroid/content/IntentFilter;
     const-string v1, "android.intent.action.PACKAGE_ADDED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 3547
     const-string v1, "android.intent.action.PACKAGE_REMOVED"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 3548
     const-string/jumbo v1, "package"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addDataScheme(Ljava/lang/String;)V
 
-    .line 3549
     invoke-virtual {p2, p0, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 3550
     # getter for: Lcom/android/server/AlarmManagerServiceExt;->APP_SYNC_LOG:Z
     invoke-static {}, Lcom/android/server/AlarmManagerServiceExt;->access$100()Z
 
@@ -67,7 +60,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3551
     :cond_0
     return-void
 .end method
@@ -82,7 +74,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 3555
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v3
@@ -95,18 +86,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 3556
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 3557
     .local v2, "uri":Landroid/net/Uri;
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, v5}, Landroid/os/Handler;-><init>(Z)V
 
-    .line 3558
     .local v0, "nHandler":Landroid/os/Handler;
     new-instance v3, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$1;
 
@@ -114,14 +102,12 @@
 
     invoke-virtual {v0, v3}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 3608
     .end local v0    # "nHandler":Landroid/os/Handler;
     .end local v2    # "uri":Landroid/net/Uri;
     :cond_0
     :goto_0
     return-void
 
-    .line 3589
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -135,12 +121,10 @@
 
     if-eqz v3, :cond_0
 
-    .line 3590
     invoke-virtual {p2}, Landroid/content/Intent;->getData()Landroid/net/Uri;
 
     move-result-object v2
 
-    .line 3591
     .restart local v2    # "uri":Landroid/net/Uri;
     const-string v3, "android.intent.extra.UID"
 
@@ -150,13 +134,11 @@
 
     move-result v1
 
-    .line 3592
     .local v1, "uid":I
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0, v5}, Landroid/os/Handler;-><init>(Z)V
 
-    .line 3593
     .restart local v0    # "nHandler":Landroid/os/Handler;
     new-instance v3, Lcom/android/server/AlarmManagerServiceExt$SyncScheduler$PackageManagerReceiver$2;
 

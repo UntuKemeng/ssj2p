@@ -55,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 63
     new-instance v0, Landroid/sec/enterprise/proxy/EnterpriseProxyConstants$1;
 
     invoke-direct {v0}, Landroid/sec/enterprise/proxy/EnterpriseProxyConstants$1;-><init>()V
@@ -69,7 +68,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -40,19 +40,14 @@
     .param p4, "nai"    # Lcom/android/server/connectivity/NetworkAgentInfo;
 
     .prologue
-    .line 80
     invoke-direct {p0}, Lcom/android/server/net/BaseNetworkObserver;-><init>()V
 
-    .line 81
     iput-object p2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNMService:Landroid/os/INetworkManagementService;
 
-    .line 82
     iput-object p3, p0, Lcom/android/server/connectivity/Nat464Xlat;->mHandler:Landroid/os/Handler;
 
-    .line 83
     iput-object p4, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
-    .line 84
     return-void
 .end method
 
@@ -62,18 +57,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 123
     iput-object v0, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIface:Ljava/lang/String;
 
-    .line 124
     iput-object v0, p0, Lcom/android/server/connectivity/Nat464Xlat;->mBaseIface:Ljava/lang/String;
 
-    .line 125
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIsRunning:Z
 
-    .line 126
     return-void
 .end method
 
@@ -82,7 +73,6 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 235
     :try_start_0
     iget-object v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNMService:Landroid/os/INetworkManagementService;
 
@@ -90,7 +80,6 @@
 
     move-result-object v0
 
-    .line 236
     .local v0, "config":Landroid/net/InterfaceConfiguration;
     invoke-virtual {v0}, Landroid/net/InterfaceConfiguration;->getLinkAddress()Landroid/net/LinkAddress;
     :try_end_0
@@ -99,16 +88,13 @@
 
     move-result-object v2
 
-    .line 239
     .end local v0    # "config":Landroid/net/InterfaceConfiguration;
     :goto_0
     return-object v2
 
-    .line 237
     :catch_0
     move-exception v1
 
-    .line 238
     .local v1, "e":Ljava/lang/Exception;
     :goto_1
     const-string v2, "Nat464Xlat"
@@ -133,12 +119,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 237
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v1
@@ -150,7 +134,6 @@
     .locals 3
 
     .prologue
-    .line 256
     const-string/jumbo v1, "ro.debug_level"
 
     const-string v2, "0x4f4c"
@@ -159,7 +142,6 @@
 
     move-result-object v0
 
-    .line 258
     .local v0, "sysLoglevel":Ljava/lang/String;
     const-string v1, "0x4f4c"
 
@@ -169,10 +151,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 259
     const/4 v1, 0x0
 
-    .line 261
     :goto_0
     return v1
 
@@ -187,18 +167,15 @@
     .param p1, "clatAddress"    # Landroid/net/LinkAddress;
 
     .prologue
-    .line 216
     new-instance v1, Landroid/net/LinkProperties;
 
     invoke-direct {v1}, Landroid/net/LinkProperties;-><init>()V
 
-    .line 217
     .local v1, "stacked":Landroid/net/LinkProperties;
     iget-object v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIface:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/net/LinkProperties;->setInterfaceName(Ljava/lang/String;)V
 
-    .line 225
     new-instance v0, Landroid/net/RouteInfo;
 
     new-instance v2, Landroid/net/LinkAddress;
@@ -217,14 +194,11 @@
 
     invoke-direct {v0, v2, v3, v4}, Landroid/net/RouteInfo;-><init>(Landroid/net/LinkAddress;Ljava/net/InetAddress;Ljava/lang/String;)V
 
-    .line 228
     .local v0, "ipv4Default":Landroid/net/RouteInfo;
     invoke-virtual {v1, v0}, Landroid/net/LinkProperties;->addRoute(Landroid/net/RouteInfo;)Z
 
-    .line 229
     invoke-virtual {v1, p1}, Landroid/net/LinkProperties;->addLinkAddress(Landroid/net/LinkAddress;)Z
 
-    .line 230
     return-object v1
 .end method
 
@@ -234,7 +208,6 @@
     .param p2, "on"    # Z
 
     .prologue
-    .line 244
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
     iget-object v1, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
@@ -247,11 +220,9 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 253
     :goto_0
     return-void
 
-    .line 248
     :cond_0
     :try_start_0
     const-string v2, "Nat464Xlat"
@@ -285,7 +256,6 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 249
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNMService:Landroid/os/INetworkManagementService;
 
     invoke-interface {v1, p1, p2}, Landroid/os/INetworkManagementService;->setInterfaceIpv6NdOffload(Ljava/lang/String;Z)V
@@ -295,11 +265,9 @@
 
     goto :goto_0
 
-    .line 250
     :catch_0
     move-exception v0
 
-    .line 251
     .local v0, "e":Ljava/lang/Exception;
     :goto_2
     const-string v1, "Nat464Xlat"
@@ -336,7 +304,6 @@
 
     goto :goto_0
 
-    .line 248
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     :try_start_1
@@ -347,7 +314,6 @@
 
     goto :goto_1
 
-    .line 250
     :catch_1
     move-exception v0
 
@@ -363,14 +329,12 @@
 
     const/4 v5, 0x1
 
-    .line 92
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
     invoke-virtual {v6}, Landroid/net/NetworkInfo;->getType()I
 
     move-result v3
 
-    .line 93
     .local v3, "netType":I
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->networkInfo:Landroid/net/NetworkInfo;
 
@@ -378,7 +342,6 @@
 
     move-result v0
 
-    .line 94
     .local v0, "connected":Z
     iget-object v6, p0, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
@@ -390,7 +353,6 @@
 
     move-result v2
 
-    .line 98
     .local v2, "hasIPv4Address":Z
     :goto_0
     invoke-static {}, Lcom/android/server/connectivity/Nat464Xlat;->isDebugLevelNotLow()Z
@@ -399,7 +361,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 99
     const-string v6, "Nat464Xlat"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -442,7 +403,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :cond_0
     const-string/jumbo v6, "persist.net.doxlat"
 
@@ -450,18 +410,15 @@
 
     move-result v1
 
-    .line 104
     .local v1, "doXlat":Z
     if-nez v1, :cond_1
 
-    .line 105
     const-string v6, "Nat464Xlat"
 
     const-string v7, "Android Xlat is disabled"
 
     invoke-static {v6, v7}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 107
     :cond_1
     if-eqz v0, :cond_4
 
@@ -485,7 +442,6 @@
     :cond_5
     move v2, v4
 
-    .line 94
     goto :goto_0
 .end method
 
@@ -494,7 +450,6 @@
     .param p1, "lp"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 187
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mHandler:Landroid/os/Handler;
 
     const v2, 0x81003
@@ -503,7 +458,6 @@
 
     move-result-object v0
 
-    .line 188
     .local v0, "msg":Landroid/os/Message;
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
@@ -511,7 +465,6 @@
 
     iput-object v1, v0, Landroid/os/Message;->replyTo:Landroid/os/Messenger;
 
-    .line 189
     const-string v1, "Nat464Xlat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -534,10 +487,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 190
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 191
     return-void
 .end method
 
@@ -548,7 +499,6 @@
     .param p1, "oldLp"    # Landroid/net/LinkProperties;
 
     .prologue
-    .line 199
     iget-object v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
     iget-object v2, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->clatd:Lcom/android/server/connectivity/Nat464Xlat;
@@ -581,7 +531,6 @@
 
     if-nez v2, :cond_1
 
-    .line 203
     const-string v2, "Nat464Xlat"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -606,10 +555,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 204
     if-eqz p1, :cond_1
 
-    .line 205
     invoke-virtual {p1}, Landroid/net/LinkProperties;->getStackedLinks()Ljava/util/List;
 
     move-result-object v2
@@ -632,7 +579,6 @@
 
     check-cast v1, Landroid/net/LinkProperties;
 
-    .line 206
     .local v1, "stacked":Landroid/net/LinkProperties;
     iget-object v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIface:Ljava/lang/String;
 
@@ -646,14 +592,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 207
     iget-object v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
     iget-object v2, v2, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
 
     invoke-virtual {v2, v1}, Landroid/net/LinkProperties;->addStackedLink(Landroid/net/LinkProperties;)Z
 
-    .line 213
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "stacked":Landroid/net/LinkProperties;
     :cond_1
@@ -666,7 +610,6 @@
     .param p2, "up"    # Z
 
     .prologue
-    .line 268
     invoke-virtual {p0}, Lcom/android/server/connectivity/Nat464Xlat;->isStarted()Z
 
     move-result v2
@@ -683,7 +626,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 269
     const-string v2, "Nat464Xlat"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -724,7 +666,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 271
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -749,41 +690,34 @@
 
     invoke-static {v2, v3}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 273
     iget-boolean v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIsRunning:Z
 
     if-nez v2, :cond_0
 
-    .line 274
     invoke-direct {p0, p1}, Lcom/android/server/connectivity/Nat464Xlat;->getLinkAddress(Ljava/lang/String;)Landroid/net/LinkAddress;
 
     move-result-object v0
 
-    .line 275
     .local v0, "clatAddress":Landroid/net/LinkAddress;
     if-nez v0, :cond_1
 
-    .line 286
     .end local v0    # "clatAddress":Landroid/net/LinkAddress;
     :cond_0
     :goto_0
     return-void
 
-    .line 278
     .restart local v0    # "clatAddress":Landroid/net/LinkAddress;
     :cond_1
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIsRunning:Z
 
-    .line 279
     iget-object v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mBaseIface:Ljava/lang/String;
 
     const/4 v3, 0x0
 
     invoke-direct {p0, v2, v3}, Lcom/android/server/connectivity/Nat464Xlat;->maybeSetIpv6NdOffload(Ljava/lang/String;Z)V
 
-    .line 280
     new-instance v1, Landroid/net/LinkProperties;
 
     iget-object v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -792,7 +726,6 @@
 
     invoke-direct {v1, v2}, Landroid/net/LinkProperties;-><init>(Landroid/net/LinkProperties;)V
 
-    .line 281
     .local v1, "lp":Landroid/net/LinkProperties;
     invoke-direct {p0, v0}, Lcom/android/server/connectivity/Nat464Xlat;->makeLinkProperties(Landroid/net/LinkAddress;)Landroid/net/LinkProperties;
 
@@ -800,7 +733,6 @@
 
     invoke-virtual {v1, v2}, Landroid/net/LinkProperties;->addStackedLink(Landroid/net/LinkProperties;)Z
 
-    .line 282
     const-string v2, "Nat464Xlat"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -837,7 +769,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 283
     invoke-direct {p0, v1}, Lcom/android/server/connectivity/Nat464Xlat;->updateConnectivityService(Landroid/net/LinkProperties;)V
 
     goto :goto_0
@@ -848,7 +779,6 @@
     .param p1, "iface"    # Ljava/lang/String;
 
     .prologue
-    .line 290
     invoke-virtual {p0}, Lcom/android/server/connectivity/Nat464Xlat;->isStarted()Z
 
     move-result v1
@@ -863,7 +793,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 291
     const-string v1, "Nat464Xlat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -904,18 +833,15 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 293
     iget-boolean v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIsRunning:Z
 
     if-eqz v1, :cond_0
 
-    .line 302
     :try_start_0
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNMService:Landroid/os/INetworkManagementService;
 
     invoke-interface {v1, p0}, Landroid/os/INetworkManagementService;->unregisterObserver(Landroid/net/INetworkManagementEventObserver;)V
 
-    .line 303
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNMService:Landroid/os/INetworkManagementService;
 
     iget-object v2, p0, Lcom/android/server/connectivity/Nat464Xlat;->mBaseIface:Ljava/lang/String;
@@ -925,7 +851,6 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 307
     :goto_0
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mBaseIface:Ljava/lang/String;
 
@@ -933,7 +858,6 @@
 
     invoke-direct {p0, v1, v2}, Lcom/android/server/connectivity/Nat464Xlat;->maybeSetIpv6NdOffload(Ljava/lang/String;Z)V
 
-    .line 308
     new-instance v0, Landroid/net/LinkProperties;
 
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
@@ -942,24 +866,19 @@
 
     invoke-direct {v0, v1}, Landroid/net/LinkProperties;-><init>(Landroid/net/LinkProperties;)V
 
-    .line 309
     .local v0, "lp":Landroid/net/LinkProperties;
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIface:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/net/LinkProperties;->removeStackedLink(Ljava/lang/String;)Z
 
-    .line 310
     invoke-direct {p0}, Lcom/android/server/connectivity/Nat464Xlat;->clear()V
 
-    .line 311
     invoke-direct {p0, v0}, Lcom/android/server/connectivity/Nat464Xlat;->updateConnectivityService(Landroid/net/LinkProperties;)V
 
-    .line 314
     .end local v0    # "lp":Landroid/net/LinkProperties;
     :cond_0
     return-void
 
-    .line 304
     :catch_0
     move-exception v1
 
@@ -975,7 +894,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-object v0, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIface:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -995,25 +913,21 @@
     .locals 4
 
     .prologue
-    .line 132
     invoke-virtual {p0}, Lcom/android/server/connectivity/Nat464Xlat;->isStarted()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 133
     const-string v1, "Nat464Xlat"
 
     const-string/jumbo v2, "startClat: already started"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     :goto_0
     return-void
 
-    .line 137
     :cond_0
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
@@ -1021,7 +935,6 @@
 
     if-nez v1, :cond_1
 
-    .line 138
     const-string v1, "Nat464Xlat"
 
     const-string/jumbo v2, "startClat: Can\'t start clat with null LinkProperties"
@@ -1030,7 +943,6 @@
 
     goto :goto_0
 
-    .line 143
     :cond_1
     :try_start_0
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNMService:Landroid/os/INetworkManagementService;
@@ -1039,7 +951,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 149
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNetwork:Lcom/android/server/connectivity/NetworkAgentInfo;
 
     iget-object v1, v1, Lcom/android/server/connectivity/NetworkAgentInfo;->linkProperties:Landroid/net/LinkProperties;
@@ -1050,12 +961,10 @@
 
     iput-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mBaseIface:Ljava/lang/String;
 
-    .line 150
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mBaseIface:Ljava/lang/String;
 
     if-nez v1, :cond_2
 
-    .line 151
     const-string v1, "Nat464Xlat"
 
     const-string/jumbo v2, "startClat: Can\'t start clat on null interface"
@@ -1064,11 +973,9 @@
 
     goto :goto_0
 
-    .line 144
     :catch_0
     move-exception v0
 
-    .line 145
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "Nat464Xlat"
 
@@ -1096,7 +1003,6 @@
 
     goto :goto_0
 
-    .line 154
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1121,7 +1027,6 @@
 
     iput-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mIface:Ljava/lang/String;
 
-    .line 157
     const-string v1, "Nat464Xlat"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1146,7 +1051,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 159
     :try_start_1
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNMService:Landroid/os/INetworkManagementService;
 
@@ -1159,11 +1063,9 @@
 
     goto/16 :goto_0
 
-    .line 160
     :catch_1
     move-exception v0
 
-    .line 161
     .local v0, "e":Ljava/lang/Exception;
     :goto_1
     const-string v1, "Nat464Xlat"
@@ -1190,7 +1092,6 @@
 
     goto/16 :goto_0
 
-    .line 160
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v0
@@ -1202,21 +1103,18 @@
     .locals 4
 
     .prologue
-    .line 169
     invoke-virtual {p0}, Lcom/android/server/connectivity/Nat464Xlat;->isStarted()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 170
     const-string v1, "Nat464Xlat"
 
     const-string v2, "Stopping clatd"
 
     invoke-static {v1, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1241,7 +1139,6 @@
 
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 175
     :try_start_0
     iget-object v1, p0, Lcom/android/server/connectivity/Nat464Xlat;->mNMService:Landroid/os/INetworkManagementService;
 
@@ -1252,15 +1149,12 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 184
     :goto_0
     return-void
 
-    .line 176
     :catch_0
     move-exception v0
 
-    .line 177
     .local v0, "e":Ljava/lang/Exception;
     :goto_1
     const-string v1, "Nat464Xlat"
@@ -1287,7 +1181,6 @@
 
     goto :goto_0
 
-    .line 182
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     const-string v1, "Nat464Xlat"
@@ -1298,7 +1191,6 @@
 
     goto :goto_0
 
-    .line 176
     :catch_1
     move-exception v0
 

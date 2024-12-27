@@ -61,7 +61,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 60
     invoke-static {}, Landroid/os/Debug;->isProductShip()I
 
     move-result v1
@@ -83,36 +82,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 88
     invoke-direct {p0, p1}, Lcom/android/internal/policy/PhoneWindow;-><init>(Landroid/content/Context;)V
 
-    .line 74
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopManager:Lcom/samsung/android/desktop/DesktopManager;
 
-    .line 82
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopViewHeight:I
 
-    .line 84
     iput-boolean v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mIsDesktopViewBlocked:Z
 
-    .line 85
     iput-boolean v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mIsMultiWindowBlocked:Z
 
-    .line 90
     iput-object p1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mContext:Landroid/content/Context;
 
-    .line 91
     invoke-virtual {p1}, Landroid/content/Context;->getUserId()I
 
     move-result v0
 
     iput v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mUsderId:I
 
-    .line 92
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "multiwindow_facade"
@@ -125,21 +116,18 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
 
-    .line 100
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mContext:Landroid/content/Context;
 
     instance-of v0, v0, Landroid/app/Activity;
 
     if-eqz v0, :cond_2
 
-    .line 101
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mContext:Landroid/content/Context;
 
     check-cast v0, Landroid/app/Activity;
 
     iput-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mActivity:Landroid/app/Activity;
 
-    .line 102
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v0}, Landroid/app/Activity;->getActivityToken()Landroid/os/IBinder;
@@ -148,13 +136,11 @@
 
     iput-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mToken:Landroid/os/IBinder;
 
-    .line 106
     :goto_0
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mContext:Landroid/content/Context;
 
     invoke-direct {p0, v0}, Lcom/android/internal/policy/DesktopPhoneWindow;->updateDesktopViewBlocked(Landroid/content/Context;)V
 
-    .line 108
     invoke-direct {p0}, Lcom/android/internal/policy/DesktopPhoneWindow;->getProperContextDT()Landroid/content/Context;
 
     move-result-object v0
@@ -173,7 +159,6 @@
 
     iput v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopViewHeight:I
 
-    .line 110
     sget-boolean v0, Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -202,7 +187,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     :cond_0
     sget-boolean v0, Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
 
@@ -236,11 +220,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     :cond_1
     return-void
 
-    .line 104
     :cond_2
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mContext:Landroid/content/Context;
 
@@ -258,7 +240,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/DesktopPhoneWindow;
 
     .prologue
-    .line 58
     iget v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mWindowHeaderFocusedColor:I
 
     return v0
@@ -270,7 +251,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 58
     iput p1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mWindowHeaderFocusedColor:I
 
     return p1
@@ -281,7 +261,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/DesktopPhoneWindow;
 
     .prologue
-    .line 58
     iget v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mWindowHeaderUnFocusedColor:I
 
     return v0
@@ -292,7 +271,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/DesktopPhoneWindow;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Lcom/android/internal/policy/DesktopPhoneWindow;->hideInputMethod()Z
 
     move-result v0
@@ -306,7 +284,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 58
     iput p1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mWindowHeaderUnFocusedColor:I
 
     return p1
@@ -317,7 +294,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/DesktopPhoneWindow;
 
     .prologue
-    .line 58
     iget-boolean v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mIsDesktopViewBlocked:Z
 
     return v0
@@ -328,7 +304,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/DesktopPhoneWindow;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Lcom/android/internal/policy/DesktopPhoneWindow;->isDesktopModeDT()Z
 
     move-result v0
@@ -341,7 +316,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/DesktopPhoneWindow;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Lcom/android/internal/policy/DesktopPhoneWindow;->getProperContextDT()Landroid/content/Context;
 
     move-result-object v0
@@ -353,7 +327,6 @@
     .locals 1
 
     .prologue
-    .line 58
     sget-boolean v0, Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
 
     return v0
@@ -364,7 +337,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/DesktopPhoneWindow;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mActivity:Landroid/app/Activity;
 
     return-object v0
@@ -375,7 +347,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/DesktopPhoneWindow;
 
     .prologue
-    .line 58
     iget-boolean v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mIsMultiWindowBlocked:Z
 
     return v0
@@ -387,7 +358,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 58
     invoke-direct {p0, p1}, Lcom/android/internal/policy/DesktopPhoneWindow;->requestMultiWindowState(I)V
 
     return-void
@@ -398,7 +368,6 @@
     .param p0, "x0"    # Lcom/android/internal/policy/DesktopPhoneWindow;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mToken:Landroid/os/IBinder;
 
     return-object v0
@@ -408,7 +377,6 @@
     .locals 2
 
     .prologue
-    .line 186
     iget-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     if-nez v1, :cond_0
@@ -417,14 +385,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 187
     iget-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mActivity:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getMultiWindowStyle()Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
     move-result-object v0
 
-    .line 188
     .local v0, "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     new-instance v1, Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -432,7 +398,6 @@
 
     iput-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
-    .line 190
     .end local v0    # "style":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     :cond_0
     iget-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mMultiWindowStyle:Lcom/samsung/android/multiwindow/MultiWindowStyle;
@@ -444,7 +409,6 @@
     .locals 1
 
     .prologue
-    .line 205
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -454,21 +418,17 @@
     .locals 2
 
     .prologue
-    .line 145
     invoke-static {}, Landroid/view/inputmethod/InputMethodManager;->peekInstance()Landroid/view/inputmethod/InputMethodManager;
 
     move-result-object v0
 
-    .line 146
     .local v0, "imm":Landroid/view/inputmethod/InputMethodManager;
     if-eqz v0, :cond_0
 
-    .line 147
     invoke-virtual {v0}, Landroid/view/inputmethod/InputMethodManager;->forceHideSoftInput()Z
 
     move-result v1
 
-    .line 149
     :goto_0
     return v1
 
@@ -482,7 +442,6 @@
     .locals 1
 
     .prologue
-    .line 179
     const/4 v0, 0x0
 
     return v0
@@ -495,7 +454,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 214
     sget-boolean v1, Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
 
     if-eqz v1, :cond_0
@@ -534,13 +492,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 216
     :cond_0
     iget-boolean v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mIsMultiWindowBlocked:Z
 
     if-eqz v1, :cond_1
 
-    .line 217
     const-string v1, "DesktopPhoneWindow"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -575,11 +531,9 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 232
     :goto_0
     return-void
 
-    .line 221
     :cond_1
     new-instance v0, Lcom/samsung/android/multiwindow/MultiWindowStyle;
 
@@ -589,39 +543,32 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;-><init>(Lcom/samsung/android/multiwindow/MultiWindowStyle;)V
 
-    .line 222
     .local v0, "requestStyle":Lcom/samsung/android/multiwindow/MultiWindowStyle;
     packed-switch p1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 224
     :pswitch_0
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1, v4}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setType(IZ)V
 
-    .line 225
     invoke-virtual {v0, v4}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setZone(I)V
 
-    .line 226
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1, v4}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setOption(IZ)V
 
-    .line 227
     const/16 v1, 0x800
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setOption(IZ)V
 
-    .line 228
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1, v4}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->setOption(IZ)V
 
-    .line 229
     iget-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mMultiWindowFacade:Lcom/samsung/android/multiwindow/MultiWindowFacade;
 
     iget-object v2, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mToken:Landroid/os/IBinder;
@@ -630,7 +577,6 @@
 
     goto :goto_0
 
-    .line 222
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -641,14 +587,12 @@
     .locals 4
 
     .prologue
-    .line 153
     new-instance v2, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;
 
     invoke-direct {v2, p0}, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;-><init>(Lcom/android/internal/policy/DesktopPhoneWindow;)V
 
     iput-object v2, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeader:Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;
 
-    .line 154
     iget-object v2, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeader:Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;
 
     invoke-virtual {v2}, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->generateWindowHeaderView()Landroid/view/View;
@@ -657,7 +601,6 @@
 
     iput-object v2, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeaderView:Landroid/view/View;
 
-    .line 155
     new-instance v1, Landroid/view/ViewGroup$MarginLayoutParams;
 
     const/4 v2, -0x1
@@ -666,7 +609,6 @@
 
     invoke-direct {v1, v2, v3}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    .line 158
     .local v1, "lp":Landroid/view/ViewGroup$MarginLayoutParams;
     iget-object v2, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeader:Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;
 
@@ -674,25 +616,21 @@
 
     invoke-virtual {v2, v3}, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->updateWindowHeaderViewVisibility(I)V
 
-    .line 160
     invoke-virtual {p0}, Lcom/android/internal/policy/DesktopPhoneWindow;->getDecorView()Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Lcom/android/internal/policy/PhoneWindow$DecorView;
 
-    .line 161
     .local v0, "decorView":Lcom/android/internal/policy/PhoneWindow$DecorView;
     iget-object v2, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeaderView:Landroid/view/View;
 
     invoke-virtual {v0, v2, v1}, Lcom/android/internal/policy/PhoneWindow$DecorView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 162
     iget-object v2, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeaderView:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->bringToFront()V
 
-    .line 163
     return-void
 .end method
 
@@ -701,12 +639,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 124
     invoke-virtual {p1}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 125
     .local v0, "packageName":Ljava/lang/String;
     const-string v1, "com.sec.android.app.desktoplauncher"
 
@@ -724,13 +660,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 127
     :cond_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mIsDesktopViewBlocked:Z
 
-    .line 128
     sget-boolean v1, Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
 
     if-eqz v1, :cond_1
@@ -757,7 +691,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 130
     :cond_1
     return-void
 .end method
@@ -768,7 +701,6 @@
     .locals 3
 
     .prologue
-    .line 134
     new-instance v0, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopDecorView;
 
     iget-object v1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mContext:Landroid/content/Context;
@@ -785,16 +717,13 @@
     .param p1, "decor"    # Lcom/android/internal/policy/PhoneWindow$DecorView;
 
     .prologue
-    .line 139
     invoke-super {p0, p1}, Lcom/android/internal/policy/PhoneWindow;->generateLayout(Lcom/android/internal/policy/PhoneWindow$DecorView;)Landroid/view/ViewGroup;
 
     move-result-object v0
 
-    .line 140
     .local v0, "ret":Landroid/view/ViewGroup;
     invoke-direct {p0}, Lcom/android/internal/policy/DesktopPhoneWindow;->setupDesktopWindowHeader()V
 
-    .line 141
     return-object v0
 .end method
 
@@ -804,26 +733,22 @@
     .param p2, "notifyReason"    # I
 
     .prologue
-    .line 167
     and-int/lit8 v0, p2, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 168
     invoke-virtual {p1}, Lcom/samsung/android/multiwindow/MultiWindowStyle;->isNormal()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 169
     iget-object v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mDesktopWindowHeader:Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lcom/android/internal/policy/DesktopPhoneWindow$DesktopWindowHeader;->updateWindowHeaderViewVisibility(I)V
 
-    .line 172
     :cond_0
     return-void
 .end method
@@ -833,12 +758,10 @@
     .param p1, "blocked"    # Z
 
     .prologue
-    .line 117
     iget-boolean v0, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mIsMultiWindowBlocked:Z
 
     if-eq v0, p1, :cond_1
 
-    .line 118
     sget-boolean v0, Lcom/android/internal/policy/DesktopPhoneWindow;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -882,15 +805,12 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 119
     :cond_0
     iput-boolean p1, p0, Lcom/android/internal/policy/DesktopPhoneWindow;->mIsMultiWindowBlocked:Z
 
-    .line 121
     :cond_1
     return-void
 
-    .line 118
     :cond_2
     const-string v0, "Support"
 

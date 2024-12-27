@@ -56,15 +56,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2280
     iput-object p1, p0, Lcom/android/server/LpnetManagerService$DBManager;->this$0:Lcom/android/server/LpnetManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2281
     iput-object p2, p0, Lcom/android/server/LpnetManagerService$DBManager;->mCtx:Landroid/content/Context;
 
-    .line 2282
     return-void
 .end method
 
@@ -81,16 +78,13 @@
     .param p7, "extras"    # Ljava/lang/String;
 
     .prologue
-    .line 2346
     const-wide/16 v2, -0x1
 
-    .line 2348
     .local v2, "ret":J
     invoke-virtual {p0, p1}, Lcom/android/server/LpnetManagerService$DBManager;->dbRead(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
-    .line 2349
     .local v0, "c":Landroid/database/Cursor;
     if-eqz v0, :cond_0
 
@@ -100,33 +94,27 @@
 
     if-lez v4, :cond_0
 
-    .line 2350
     invoke-virtual/range {p0 .. p7}, Lcom/android/server/LpnetManagerService$DBManager;->dbUpdate(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v4
 
     int-to-long v2, v4
 
-    .line 2383
     :goto_0
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    .line 2384
     return-wide v2
 
-    .line 2354
     :cond_0
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2355
     .local v1, "values":Landroid/content/ContentValues;
     const-string/jumbo v4, "package_name"
 
     invoke-virtual {v1, v4, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2356
     iget-object v4, p0, Lcom/android/server/LpnetManagerService$DBManager;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mDefaultPackages:Ljava/util/HashSet;
@@ -140,14 +128,12 @@
 
     if-eqz v4, :cond_1
 
-    .line 2357
     const-string/jumbo v4, "isDefaultFreezed"
 
     const-string v5, "1"
 
     invoke-virtual {v1, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2361
     :goto_1
     iget-object v4, p0, Lcom/android/server/LpnetManagerService$DBManager;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -158,7 +144,6 @@
 
     monitor-enter v5
 
-    .line 2362
     :try_start_0
     iget-object v4, p0, Lcom/android/server/LpnetManagerService$DBManager;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -173,37 +158,31 @@
 
     if-eqz v4, :cond_2
 
-    .line 2363
     const-string/jumbo v4, "isSMFreezed"
 
     const-string v6, "1"
 
     invoke-virtual {v1, v4, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2367
     :goto_2
     monitor-exit v5
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 2369
     const-string/jumbo v4, "isUserForceStopped"
 
     invoke-virtual {v1, v4, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2370
     const-string/jumbo v4, "lastUsedTime"
 
     invoke-virtual {v1, v4, p5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2371
     const-string/jumbo v4, "versionMgmt"
 
     const-string v5, ""
 
     invoke-virtual {v1, v4, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2372
     iget-object v4, p0, Lcom/android/server/LpnetManagerService$DBManager;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mPkgLock:Ljava/lang/Object;
@@ -213,7 +192,6 @@
 
     monitor-enter v5
 
-    .line 2373
     :try_start_1
     iget-object v4, p0, Lcom/android/server/LpnetManagerService$DBManager;->this$0:Lcom/android/server/LpnetManagerService;
 
@@ -228,20 +206,17 @@
 
     if-eqz v4, :cond_3
 
-    .line 2374
     const-string v4, "extras"
 
     const-string v6, "1"
 
     invoke-virtual {v1, v4, v6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2378
     :goto_3
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 2381
     iget-object v4, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v5, "AppFreezer"
@@ -254,7 +229,6 @@
 
     goto :goto_0
 
-    .line 2359
     :cond_1
     const-string/jumbo v4, "isDefaultFreezed"
 
@@ -264,7 +238,6 @@
 
     goto :goto_1
 
-    .line 2365
     :cond_2
     :try_start_2
     const-string/jumbo v4, "isSMFreezed"
@@ -275,7 +248,6 @@
 
     goto :goto_2
 
-    .line 2367
     :catchall_0
     move-exception v4
 
@@ -285,7 +257,6 @@
 
     throw v4
 
-    .line 2376
     :cond_3
     :try_start_3
     const-string v4, "extras"
@@ -296,7 +267,6 @@
 
     goto :goto_3
 
-    .line 2378
     :catchall_1
     move-exception v4
 
@@ -311,17 +281,14 @@
     .locals 1
 
     .prologue
-    .line 2333
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 2334
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDbHelper:Lcom/android/server/LpnetManagerService$DBManager$DatabaseHelper;
 
     invoke-virtual {v0}, Lcom/android/server/LpnetManagerService$DBManager$DatabaseHelper;->close()V
 
-    .line 2335
     return-void
 .end method
 
@@ -330,10 +297,8 @@
     .param p1, "pkgName"    # Ljava/lang/String;
 
     .prologue
-    .line 2339
     const-wide/16 v0, -0x1
 
-    .line 2340
     .local v0, "ret":J
     iget-object v2, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -371,7 +336,6 @@
 
     int-to-long v0, v2
 
-    .line 2341
     return-wide v0
 .end method
 
@@ -386,10 +350,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2324
     const-string v0, "/data/data/com.samsung.android.sm.provider/databases/sm.db"
 
-    .line 2325
     .local v0, "myPath":Ljava/lang/String;
     new-instance v1, Lcom/android/server/LpnetManagerService$DBManager$DatabaseHelper;
 
@@ -399,7 +361,6 @@
 
     iput-object v1, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDbHelper:Lcom/android/server/LpnetManagerService$DBManager$DatabaseHelper;
 
-    .line 2326
     iget-object v1, p0, Lcom/android/server/LpnetManagerService$DBManager;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mContext:Landroid/content/Context;
@@ -411,7 +372,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2327
     iget-object v1, p0, Lcom/android/server/LpnetManagerService$DBManager;->this$0:Lcom/android/server/LpnetManagerService;
 
     # getter for: Lcom/android/server/LpnetManagerService;->mContext:Landroid/content/Context;
@@ -423,7 +383,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Context;->enforceCallingOrSelfPermission(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2328
     const/4 v1, 0x0
 
     invoke-static {v0, v3, v1}, Landroid/database/sqlite/SQLiteDatabase;->openDatabase(Ljava/lang/String;Landroid/database/sqlite/SQLiteDatabase$CursorFactory;I)Landroid/database/sqlite/SQLiteDatabase;
@@ -432,7 +391,6 @@
 
     iput-object v1, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 2330
     return-void
 .end method
 
@@ -452,7 +410,6 @@
 
     const/4 v5, 0x0
 
-    .line 2416
     const/4 v0, 0x7
 
     new-array v2, v0, [Ljava/lang/String;
@@ -495,17 +452,14 @@
 
     aput-object v1, v2, v0
 
-    .line 2427
     .local v2, "projection":[Ljava/lang/String;
     const-string/jumbo v3, "package_name=?"
 
-    .line 2429
     .local v3, "selection":Ljava/lang/String;
     new-array v4, v7, [Ljava/lang/String;
 
     aput-object p1, v4, v6
 
-    .line 2432
     .local v4, "selectionArgs":[Ljava/lang/String;
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -519,13 +473,11 @@
 
     move-result-object v8
 
-    .line 2433
     .local v8, "c":Landroid/database/Cursor;
     if-eqz v8, :cond_0
 
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
 
-    .line 2434
     :cond_0
     return-object v8
 .end method
@@ -536,7 +488,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2444
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v1, "AppFreezer"
@@ -569,12 +520,10 @@
     .param p7, "extras"    # Ljava/lang/String;
 
     .prologue
-    .line 2390
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 2391
     .local v2, "values":Landroid/content/ContentValues;
     if-eqz p1, :cond_0
 
@@ -582,7 +531,6 @@
 
     invoke-virtual {v2, v3, p1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2392
     :cond_0
     if-eqz p2, :cond_1
 
@@ -590,7 +538,6 @@
 
     invoke-virtual {v2, v3, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2393
     :cond_1
     if-eqz p3, :cond_2
 
@@ -598,7 +545,6 @@
 
     invoke-virtual {v2, v3, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2394
     :cond_2
     if-eqz p4, :cond_3
 
@@ -606,7 +552,6 @@
 
     invoke-virtual {v2, v3, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2395
     :cond_3
     if-eqz p5, :cond_4
 
@@ -614,7 +559,6 @@
 
     invoke-virtual {v2, v3, p5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2396
     :cond_4
     if-eqz p6, :cond_5
 
@@ -622,7 +566,6 @@
 
     invoke-virtual {v2, v3, p6}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2397
     :cond_5
     if-eqz p7, :cond_6
 
@@ -630,11 +573,9 @@
 
     invoke-virtual {v2, v3, p7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2400
     :cond_6
     const-string/jumbo v0, "package_name=?"
 
-    .line 2402
     .local v0, "selection":Ljava/lang/String;
     const/4 v3, 0x1
 
@@ -644,7 +585,6 @@
 
     aput-object p1, v1, v3
 
-    .line 2405
     .local v1, "selectionArgs":[Ljava/lang/String;
     iget-object v3, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -663,13 +603,11 @@
     .param p2, "newVersion"    # I
 
     .prologue
-    .line 2448
     iget-object v0, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDbHelper:Lcom/android/server/LpnetManagerService$DBManager$DatabaseHelper;
 
     iget-object v1, p0, Lcom/android/server/LpnetManagerService$DBManager;->mDb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0, v1, p1, p2}, Lcom/android/server/LpnetManagerService$DBManager$DatabaseHelper;->onUpgrade(Landroid/database/sqlite/SQLiteDatabase;II)V
 
-    .line 2449
     return-void
 .end method

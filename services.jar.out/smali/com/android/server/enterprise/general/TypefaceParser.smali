@@ -50,34 +50,24 @@
 
     const/4 v0, 0x0
 
-    .line 52
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
-    .line 82
     iput-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_font:Z
 
-    .line 84
     iput-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_sans:Z
 
-    .line 86
     iput-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_serif:Z
 
-    .line 88
     iput-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_monospace:Z
 
-    .line 90
     iput-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_file:Z
 
-    .line 92
     iput-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_filename:Z
 
-    .line 94
     iput-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_droidname:Z
 
-    .line 100
     iput-object v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFont:Lcom/android/server/enterprise/general/Typeface;
 
-    .line 102
     iput-object v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFontFile:Lcom/android/server/enterprise/general/TypefaceFile;
 
     return-void
@@ -92,12 +82,10 @@
     .param p3, "length"    # I
 
     .prologue
-    .line 312
     iget-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_filename:Z
 
     if-eqz v0, :cond_1
 
-    .line 314
     iget-object v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFontFile:Lcom/android/server/enterprise/general/TypefaceFile;
 
     new-instance v1, Ljava/lang/String;
@@ -106,18 +94,15 @@
 
     invoke-virtual {v0, v1}, Lcom/android/server/enterprise/general/TypefaceFile;->setFileName(Ljava/lang/String;)V
 
-    .line 324
     :cond_0
     :goto_0
     return-void
 
-    .line 318
     :cond_1
     iget-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_droidname:Z
 
     if-eqz v0, :cond_0
 
-    .line 320
     iget-object v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFontFile:Lcom/android/server/enterprise/general/TypefaceFile;
 
     new-instance v1, Ljava/lang/String;
@@ -138,7 +123,6 @@
     .end annotation
 
     .prologue
-    .line 140
     return-void
 .end method
 
@@ -156,7 +140,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 230
     const-string/jumbo v0, "font"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -165,15 +148,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 232
     iput-boolean v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_font:Z
 
-    .line 296
     :cond_0
     :goto_0
     return-void
 
-    .line 236
     :cond_1
     const-string/jumbo v0, "sans"
 
@@ -183,12 +163,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 238
     iput-boolean v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_sans:Z
 
     goto :goto_0
 
-    .line 242
     :cond_2
     const-string/jumbo v0, "serif"
 
@@ -198,12 +176,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 244
     iput-boolean v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_serif:Z
 
     goto :goto_0
 
-    .line 248
     :cond_3
     const-string/jumbo v0, "monospace"
 
@@ -213,12 +189,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 250
     iput-boolean v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_monospace:Z
 
     goto :goto_0
 
-    .line 254
     :cond_4
     const-string/jumbo v0, "file"
 
@@ -228,20 +202,16 @@
 
     if-eqz v0, :cond_7
 
-    .line 256
     iput-boolean v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_file:Z
 
-    .line 258
     iget-object v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFontFile:Lcom/android/server/enterprise/general/TypefaceFile;
 
     if-eqz v0, :cond_0
 
-    .line 260
     iget-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_sans:Z
 
     if-eqz v0, :cond_5
 
-    .line 262
     iget-object v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFont:Lcom/android/server/enterprise/general/Typeface;
 
     iget-object v0, v0, Lcom/android/server/enterprise/general/Typeface;->mSansFonts:Ljava/util/List;
@@ -252,13 +222,11 @@
 
     goto :goto_0
 
-    .line 266
     :cond_5
     iget-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_serif:Z
 
     if-eqz v0, :cond_6
 
-    .line 268
     iget-object v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFont:Lcom/android/server/enterprise/general/Typeface;
 
     iget-object v0, v0, Lcom/android/server/enterprise/general/Typeface;->mSerifFonts:Ljava/util/List;
@@ -269,13 +237,11 @@
 
     goto :goto_0
 
-    .line 272
     :cond_6
     iget-boolean v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_monospace:Z
 
     if-eqz v0, :cond_0
 
-    .line 274
     iget-object v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFont:Lcom/android/server/enterprise/general/Typeface;
 
     iget-object v0, v0, Lcom/android/server/enterprise/general/Typeface;->mMonospaceFonts:Ljava/util/List;
@@ -286,7 +252,6 @@
 
     goto :goto_0
 
-    .line 282
     :cond_7
     const-string/jumbo v0, "filename"
 
@@ -296,12 +261,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 284
     iput-boolean v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_filename:Z
 
     goto :goto_0
 
-    .line 288
     :cond_8
     const-string v0, "droidname"
 
@@ -311,7 +274,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 290
     iput-boolean v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_droidname:Z
 
     goto :goto_0
@@ -321,7 +283,6 @@
     .locals 1
 
     .prologue
-    .line 118
     iget-object v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFont:Lcom/android/server/enterprise/general/Typeface;
 
     return-object v0
@@ -336,14 +297,12 @@
     .end annotation
 
     .prologue
-    .line 128
     new-instance v0, Lcom/android/server/enterprise/general/Typeface;
 
     invoke-direct {v0}, Lcom/android/server/enterprise/general/Typeface;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFont:Lcom/android/server/enterprise/general/Typeface;
 
-    .line 130
     return-void
 .end method
 
@@ -362,7 +321,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 160
     const-string/jumbo v1, "font"
 
     invoke-virtual {p2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -371,29 +329,24 @@
 
     if-eqz v1, :cond_1
 
-    .line 162
     iput-boolean v2, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_font:Z
 
-    .line 164
     const-string v1, "displayname"
 
     invoke-interface {p4, v1}, Lorg/xml/sax/Attributes;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 166
     .local v0, "attrValue":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/enterprise/general/TypefaceParser;->mFont:Lcom/android/server/enterprise/general/Typeface;
 
     invoke-virtual {v1, v0}, Lcom/android/server/enterprise/general/Typeface;->setName(Ljava/lang/String;)V
 
-    .line 210
     .end local v0    # "attrValue":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 170
     :cond_1
     const-string/jumbo v1, "sans"
 
@@ -403,12 +356,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 172
     iput-boolean v2, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_sans:Z
 
     goto :goto_0
 
-    .line 176
     :cond_2
     const-string/jumbo v1, "serif"
 
@@ -418,12 +369,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 178
     iput-boolean v2, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_serif:Z
 
     goto :goto_0
 
-    .line 182
     :cond_3
     const-string/jumbo v1, "monospace"
 
@@ -433,12 +382,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 184
     iput-boolean v2, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_monospace:Z
 
     goto :goto_0
 
-    .line 188
     :cond_4
     const-string/jumbo v1, "file"
 
@@ -448,10 +395,8 @@
 
     if-eqz v1, :cond_5
 
-    .line 190
     iput-boolean v2, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_file:Z
 
-    .line 192
     new-instance v1, Lcom/android/server/enterprise/general/TypefaceFile;
 
     invoke-direct {v1}, Lcom/android/server/enterprise/general/TypefaceFile;-><init>()V
@@ -460,7 +405,6 @@
 
     goto :goto_0
 
-    .line 196
     :cond_5
     const-string/jumbo v1, "filename"
 
@@ -470,12 +414,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 198
     iput-boolean v2, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_filename:Z
 
     goto :goto_0
 
-    .line 202
     :cond_6
     const-string v1, "droidname"
 
@@ -485,7 +427,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 204
     iput-boolean v2, p0, Lcom/android/server/enterprise/general/TypefaceParser;->in_droidname:Z
 
     goto :goto_0

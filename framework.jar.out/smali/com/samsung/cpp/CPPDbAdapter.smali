@@ -172,13 +172,10 @@
     .param p1, "_context"    # Landroid/content/Context;
 
     .prologue
-    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     iput-object p1, p0, Lcom/samsung/cpp/CPPDbAdapter;->context:Landroid/content/Context;
 
-    .line 155
     new-instance v0, Lcom/samsung/cpp/CPPDbAdapter$DbHelper;
 
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->context:Landroid/content/Context;
@@ -187,7 +184,6 @@
 
     iput-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mDbHelper:Lcom/samsung/cpp/CPPDbAdapter$DbHelper;
 
-    .line 156
     new-instance v0, Lcom/samsung/cpp/CPPDbAdapter$GeoDbHelper;
 
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->context:Landroid/content/Context;
@@ -196,21 +192,18 @@
 
     iput-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mGeoDbHelper:Lcom/samsung/cpp/CPPDbAdapter$GeoDbHelper;
 
-    .line 157
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->arrayUtc:Landroid/util/LongSparseArray;
 
-    .line 158
     new-instance v0, Landroid/util/LongSparseArray;
 
     invoke-direct {v0}, Landroid/util/LongSparseArray;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->arrayUtcKey:Landroid/util/LongSparseArray;
 
-    .line 159
     return-void
 .end method
 
@@ -219,7 +212,6 @@
     .param p0, "iData"    # I
 
     .prologue
-    .line 1016
     const/4 v1, 0x4
 
     invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
@@ -240,7 +232,6 @@
 
     move-result-object v0
 
-    .line 1017
     .local v0, "bData":[B
     const/4 v1, 0x0
 
@@ -258,19 +249,16 @@
     .param p1, "sqb"    # Landroid/database/sqlite/SQLiteQueryBuilder;
 
     .prologue
-    .line 1006
     const-string v0, "CPPDbAdapter"
 
     const-string v1, "joinReqTables()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1007
     const-string v0, "Request_Table LEFT OUTER JOIN Patch_Table ON (Request_Table._req_id = Patch_Table.req_id)"
 
     invoke-virtual {p1, v0}, Landroid/database/sqlite/SQLiteQueryBuilder;->setTables(Ljava/lang/String;)V
 
-    .line 1009
     return-void
 .end method
 
@@ -284,14 +272,11 @@
     .param p5, "fcn"    # I
 
     .prologue
-    .line 632
     const/4 v9, 0x0
 
-    .line 633
     .local v9, "mCursor":Landroid/database/Cursor;
     const/4 v8, 0x0
 
-    .line 635
     .local v8, "exist":Z
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -377,13 +362,11 @@
 
     move-result-object v3
 
-    .line 637
     .local v3, "_selection":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 639
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -403,19 +386,16 @@
 
     move-result-object v9
 
-    .line 640
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 642
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 646
     if-eqz v9, :cond_0
 
     :try_start_1
@@ -427,17 +407,13 @@
 
     if-eqz v0, :cond_0
 
-    .line 647
     const/4 v8, 0x1
 
-    .line 649
     :cond_0
     if-eqz v9, :cond_1
 
-    .line 650
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 653
     :cond_1
     const-string v0, "CPPDbAdapter"
 
@@ -461,10 +437,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 654
     return v8
 
-    .line 642
     :catchall_0
     move-exception v0
 
@@ -474,13 +448,11 @@
 
     throw v0
 
-    .line 649
     :catchall_1
     move-exception v0
 
     if-eqz v9, :cond_2
 
-    .line 650
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -497,14 +469,11 @@
     .param p6, "fcn"    # I
 
     .prologue
-    .line 694
     const/4 v10, 0x0
 
-    .line 695
     .local v10, "mCursor":Landroid/database/Cursor;
     const/4 v9, 0x0
 
-    .line 697
     .local v9, "exist":Z
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -638,13 +607,11 @@
 
     move-result-object v4
 
-    .line 700
     .local v4, "_selection":Ljava/lang/String;
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 702
     :try_start_0
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -664,19 +631,16 @@
 
     move-result-object v10
 
-    .line 703
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 705
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 709
     if-eqz v10, :cond_0
 
     :try_start_1
@@ -686,7 +650,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 710
     invoke-interface {v10}, Landroid/database/Cursor;->getCount()I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
@@ -697,26 +660,20 @@
 
     if-le v1, v2, :cond_0
 
-    .line 711
     const/4 v9, 0x1
 
-    .line 714
     :cond_0
     if-eqz v10, :cond_1
 
-    .line 715
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 717
     :cond_1
     if-nez v9, :cond_2
 
-    .line 718
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 720
     :try_start_2
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -726,19 +683,16 @@
 
     invoke-virtual {v1, v2, v4, v3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 721
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 723
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 726
     :cond_2
     const-string v1, "CPPDbAdapter"
 
@@ -762,10 +716,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 727
     return v9
 
-    .line 705
     :catchall_0
     move-exception v1
 
@@ -775,19 +727,16 @@
 
     throw v1
 
-    .line 714
     :catchall_1
     move-exception v1
 
     if-eqz v10, :cond_3
 
-    .line 715
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
     :cond_3
     throw v1
 
-    .line 723
     :catchall_2
     move-exception v1
 
@@ -808,23 +757,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 658
     new-instance v0, Landroid/database/sqlite/SQLiteQueryBuilder;
 
     invoke-direct {v0}, Landroid/database/sqlite/SQLiteQueryBuilder;-><init>()V
 
-    .line 659
     .local v0, "sqb":Landroid/database/sqlite/SQLiteQueryBuilder;
     invoke-direct {p0, v0}, Lcom/samsung/cpp/CPPDbAdapter;->joinReqTables(Landroid/database/sqlite/SQLiteQueryBuilder;)V
 
-    .line 660
     const/4 v8, 0x0
 
-    .line 661
     .local v8, "mCursor":Landroid/database/Cursor;
     const/4 v7, 0x0
 
-    .line 663
     .local v7, "exist":Z
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -955,18 +899,15 @@
 
     move-object v6, v1
 
-    .line 667
     invoke-virtual/range {v0 .. v6}, Landroid/database/sqlite/SQLiteQueryBuilder;->buildQuery([Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v9
 
-    .line 669
     .local v9, "query":Ljava/lang/String;
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 671
     :try_start_0
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -976,19 +917,16 @@
 
     move-result-object v8
 
-    .line 672
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 674
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 678
     if-eqz v8, :cond_0
 
     :try_start_1
@@ -1000,17 +938,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 679
     const/4 v7, 0x1
 
-    .line 681
     :cond_0
     if-eqz v8, :cond_1
 
-    .line 682
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 685
     :cond_1
     const-string v1, "CPPDbAdapter"
 
@@ -1034,10 +968,8 @@
 
     invoke-static {v1, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 686
     return v7
 
-    .line 674
     :catchall_0
     move-exception v1
 
@@ -1047,13 +979,11 @@
 
     throw v1
 
-    .line 681
     :catchall_1
     move-exception v1
 
     if-eqz v8, :cond_2
 
-    .line 682
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -1071,16 +1001,13 @@
     .param p8, "version"    # J
 
     .prologue
-    .line 732
     move-wide/from16 v24, p8
 
-    .line 734
     .local v24, "value":J
     new-instance v12, Ljava/util/GregorianCalendar;
 
     invoke-direct {v12}, Ljava/util/GregorianCalendar;-><init>()V
 
-    .line 735
     .local v12, "gc":Ljava/util/GregorianCalendar;
     const-string v2, "%d%02d%02d"
 
@@ -1136,17 +1063,14 @@
 
     move-result-object v15
 
-    .line 736
     .local v15, "str":Ljava/lang/String;
     invoke-static {v15}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v20
 
-    .line 738
     .local v20, "today":J
     const/4 v14, 0x0
 
-    .line 740
     .local v14, "mCursor":Landroid/database/Cursor;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -1276,7 +1200,6 @@
 
     move-result-object v5
 
-    .line 744
     .local v5, "_selection":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1284,7 +1207,6 @@
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 746
     :try_start_0
     move-object/from16 v0, p0
 
@@ -1306,7 +1228,6 @@
 
     move-result-object v14
 
-    .line 747
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -1315,14 +1236,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 749
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 753
     if-eqz v14, :cond_0
 
     :try_start_1
@@ -1332,7 +1251,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 755
     const/4 v13, 0x0
 
     .local v13, "i":I
@@ -1343,7 +1261,6 @@
 
     if-ge v13, v2, :cond_0
 
-    .line 756
     const-string v2, "up_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1356,7 +1273,6 @@
 
     int-to-long v10, v2
 
-    .line 757
     .local v10, "expireDate":J
     const-string v2, "patch_ver_d"
 
@@ -1372,28 +1288,23 @@
 
     move-wide/from16 v18, v0
 
-    .line 759
     .local v18, "patchVer":J
     cmp-long v2, v20, v10
 
     if-lez v2, :cond_4
 
-    .line 760
     cmp-long v2, p8, v18
 
     if-lez v2, :cond_2
 
-    .line 762
     move-wide/from16 v24, p8
 
-    .line 763
     const-string v2, "CPPDbAdapter"
 
     const-string v3, "checkExistedPatchResp() Send request to server"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 787
     :goto_1
     invoke-interface {v14}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_1
@@ -1403,21 +1314,17 @@
 
     if-nez v2, :cond_5
 
-    .line 792
     .end local v10    # "expireDate":J
     .end local v13    # "i":I
     .end local v18    # "patchVer":J
     :cond_0
     if-eqz v14, :cond_1
 
-    .line 793
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 795
     :cond_1
     return-wide v24
 
-    .line 749
     :catchall_0
     move-exception v2
 
@@ -1429,14 +1336,12 @@
 
     throw v2
 
-    .line 766
     .restart local v10    # "expireDate":J
     .restart local v13    # "i":I
     .restart local v18    # "patchVer":J
     :cond_2
     move-wide/from16 v24, v18
 
-    .line 767
     :try_start_2
     const-string v2, "CPPDbAdapter"
 
@@ -1448,7 +1353,6 @@
 
     goto :goto_1
 
-    .line 792
     .end local v10    # "expireDate":J
     .end local v13    # "i":I
     .end local v18    # "patchVer":J
@@ -1457,13 +1361,11 @@
 
     if-eqz v14, :cond_3
 
-    .line 793
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
     :cond_3
     throw v2
 
-    .line 771
     .restart local v10    # "expireDate":J
     .restart local v13    # "i":I
     .restart local v18    # "patchVer":J
@@ -1479,13 +1381,11 @@
 
     move-result-wide v16
 
-    .line 772
     .local v16, "patchId":J
     new-instance v22, Landroid/content/ContentValues;
 
     invoke-direct/range {v22 .. v22}, Landroid/content/ContentValues;-><init>()V
 
-    .line 773
     .local v22, "updateInfo":Landroid/content/ContentValues;
     const-string v2, "req_id_d"
 
@@ -1497,7 +1397,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 774
     const-string v2, "sn_d"
 
     invoke-static/range {p4 .. p4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1508,7 +1407,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 776
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -1517,7 +1415,6 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 778
     :try_start_4
     move-object/from16 v0, p0
 
@@ -1545,7 +1442,6 @@
 
     move-result v23
 
-    .line 779
     .local v23, "updated":I
     const-string v2, "CPPDbAdapter"
 
@@ -1571,7 +1467,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 780
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -1580,7 +1475,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 782
     :try_start_5
     move-object/from16 v0, p0
 
@@ -1588,12 +1482,10 @@
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 784
     const-wide/16 v24, 0x0
 
     goto/16 :goto_1
 
-    .line 782
     .end local v23    # "updated":I
     :catchall_2
     move-exception v2
@@ -1608,7 +1500,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 755
     .end local v16    # "patchId":J
     .end local v22    # "updateInfo":Landroid/content/ContentValues;
     :cond_5
@@ -1621,24 +1512,20 @@
     .locals 2
 
     .prologue
-    .line 171
     const-string v0, "CPPDbAdapter"
 
     const-string v1, "Close mdb!!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 172
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 173
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->close()V
 
-    .line 174
     return-void
 .end method
 
@@ -1646,12 +1533,10 @@
     .locals 4
 
     .prologue
-    .line 841
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 843
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1663,7 +1548,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 844
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v1, "Patch_Table"
@@ -1676,22 +1560,18 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 846
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 848
     const-string v0, "CPPDbAdapter"
 
     const-string v1, "deleteAllReq()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 849
     return-void
 
-    .line 846
     :catchall_0
     move-exception v0
 
@@ -1710,7 +1590,6 @@
     .param p4, "fcn"    # I
 
     .prologue
-    .line 939
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1831,13 +1710,11 @@
 
     move-result-object v0
 
-    .line 943
     .local v0, "_selection":Ljava/lang/String;
     iget-object v2, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 945
     :try_start_0
     iget-object v2, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1849,7 +1726,6 @@
 
     move-result v1
 
-    .line 946
     .local v1, "deleted":I
     const-string v2, "CPPDbAdapter"
 
@@ -1873,22 +1749,18 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 947
     iget-object v2, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 949
     iget-object v2, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 951
     return-void
 
-    .line 949
     .end local v1    # "deleted":I
     :catchall_0
     move-exception v2
@@ -1905,12 +1777,10 @@
     .param p1, "geoId"    # I
 
     .prologue
-    .line 1094
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 1096
     :try_start_0
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1940,7 +1810,6 @@
 
     move-result v0
 
-    .line 1097
     .local v0, "_tempGeo":I
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -1948,12 +1817,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1099
     iget-object v1, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v1}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 1102
     const-string v1, "CPPDbAdapter"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1986,10 +1853,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1103
     return-void
 
-    .line 1099
     .end local v0    # "_tempGeo":I
     :catchall_0
     move-exception v1
@@ -2006,12 +1871,10 @@
     .param p1, "reqId"    # J
 
     .prologue
-    .line 855
     iget-object v2, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 857
     :try_start_0
     iget-object v2, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2041,7 +1904,6 @@
 
     move-result v0
 
-    .line 858
     .local v0, "_tempPatch":I
     iget-object v2, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2071,7 +1933,6 @@
 
     move-result v1
 
-    .line 859
     .local v1, "_tempRequest":I
     iget-object v2, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2079,12 +1940,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 861
     iget-object v2, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 864
     const-string v2, "CPPDbAdapter"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -2127,10 +1986,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 865
     return-void
 
-    .line 861
     .end local v0    # "_tempPatch":I
     .end local v1    # "_tempRequest":I
     :catchall_0
@@ -2149,14 +2006,11 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 868
     const-wide/16 v14, 0x0
 
-    .line 869
     .local v14, "reqId":J
     const/4 v12, 0x0
 
-    .line 870
     .local v12, "mCursor":Landroid/database/Cursor;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2184,7 +2038,6 @@
 
     move-result-object v5
 
-    .line 872
     .local v5, "selection":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2192,7 +2045,6 @@
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 874
     :try_start_0
     move-object/from16 v0, p0
 
@@ -2214,7 +2066,6 @@
 
     move-result-object v12
 
-    .line 875
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -2223,14 +2074,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 877
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 881
     if-eqz v12, :cond_2
 
     :try_start_1
@@ -2240,7 +2089,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 882
     const-string v2, "req_id"
 
     invoke-interface {v12, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -2251,7 +2099,6 @@
 
     move-result-wide v14
 
-    .line 883
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -2260,7 +2107,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 885
     :try_start_2
     move-object/from16 v0, p0
 
@@ -2292,7 +2138,6 @@
 
     move-result v10
 
-    .line 886
     .local v10, "_tempPatch":I
     move-object/from16 v0, p0
 
@@ -2324,7 +2169,6 @@
 
     move-result v11
 
-    .line 887
     .local v11, "_tempRequest":I
     const-string v2, "CPPDbAdapter"
 
@@ -2368,7 +2212,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 888
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -2377,7 +2220,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 890
     :try_start_3
     move-object/from16 v0, p0
 
@@ -2387,20 +2229,16 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 895
     .end local v10    # "_tempPatch":I
     .end local v11    # "_tempRequest":I
     :goto_0
     if-eqz v12, :cond_0
 
-    .line 896
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
-    .line 898
     :cond_0
     return-void
 
-    .line 877
     :catchall_0
     move-exception v2
 
@@ -2412,7 +2250,6 @@
 
     throw v2
 
-    .line 890
     :catchall_1
     move-exception v2
 
@@ -2427,19 +2264,16 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 895
     :catchall_2
     move-exception v2
 
     if-eqz v12, :cond_1
 
-    .line 896
     invoke-interface {v12}, Landroid/database/Cursor;->close()V
 
     :cond_1
     throw v2
 
-    .line 893
     :cond_2
     :try_start_5
     const-string v2, "CPPDbAdapter"
@@ -2480,14 +2314,11 @@
     .param p1, "reqId"    # J
 
     .prologue
-    .line 901
     const/4 v10, 0x0
 
-    .line 902
     .local v10, "mCursor":Landroid/database/Cursor;
     const/4 v8, 0x0
 
-    .line 903
     .local v8, "deleted":I
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2507,13 +2338,11 @@
 
     move-result-object v3
 
-    .line 905
     .local v3, "selection":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 907
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2533,19 +2362,16 @@
 
     move-result-object v10
 
-    .line 908
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 910
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 914
     if-eqz v10, :cond_1
 
     :try_start_1
@@ -2555,12 +2381,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 915
     new-instance v11, Landroid/content/ContentValues;
 
     invoke-direct {v11}, Landroid/content/ContentValues;-><init>()V
 
-    .line 916
     .local v11, "updateInfo":Landroid/content/ContentValues;
     const-string v0, "req_id_d"
 
@@ -2572,7 +2396,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 917
     const-string v0, "sn_d"
 
     const/4 v1, -0x1
@@ -2583,14 +2406,12 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 919
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_2
 
-    .line 921
     const/4 v9, 0x0
 
     .local v9, "i":I
@@ -2602,7 +2423,6 @@
 
     if-ge v9, v0, :cond_0
 
-    .line 922
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     const-string v1, "Resp_Patch_Table"
@@ -2615,14 +2435,12 @@
 
     move-result v8
 
-    .line 923
     invoke-interface {v10}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    .line 926
     :cond_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2630,7 +2448,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    .line 928
     :try_start_3
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2638,16 +2455,13 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_2
 
-    .line 932
     .end local v9    # "i":I
     .end local v11    # "updateInfo":Landroid/content/ContentValues;
     :cond_1
     if-eqz v10, :cond_2
 
-    .line 933
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 935
     :cond_2
     const-string v0, "CPPDbAdapter"
 
@@ -2681,10 +2495,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 936
     return-void
 
-    .line 910
     :catchall_0
     move-exception v0
 
@@ -2694,7 +2506,6 @@
 
     throw v0
 
-    .line 921
     .restart local v9    # "i":I
     .restart local v11    # "updateInfo":Landroid/content/ContentValues;
     :cond_3
@@ -2702,7 +2513,6 @@
 
     goto :goto_0
 
-    .line 928
     :catchall_1
     move-exception v0
 
@@ -2715,7 +2525,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_2
 
-    .line 932
     .end local v9    # "i":I
     .end local v11    # "updateInfo":Landroid/content/ContentValues;
     :catchall_2
@@ -2723,7 +2532,6 @@
 
     if-eqz v10, :cond_4
 
-    .line 933
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
     :cond_4
@@ -2735,18 +2543,15 @@
     .param p1, "geoId"    # J
 
     .prologue
-    .line 1040
     const-wide/16 v0, 0x0
 
     invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v8
 
-    .line 1041
     .local v8, "lat":Ljava/lang/Double;
     const/4 v9, 0x0
 
-    .line 1042
     .local v9, "mCursor":Landroid/database/Cursor;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2766,13 +2571,11 @@
 
     move-result-object v3
 
-    .line 1044
     .local v3, "_selection":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 1046
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2792,19 +2595,16 @@
 
     move-result-object v9
 
-    .line 1047
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1049
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 1053
     if-eqz v9, :cond_0
 
     :try_start_1
@@ -2814,7 +2614,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1054
     const-string v0, "geo_lat"
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -2831,14 +2630,11 @@
 
     move-result-object v8
 
-    .line 1057
     :cond_0
     if-eqz v9, :cond_1
 
-    .line 1058
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 1060
     :cond_1
     const-string v0, "CPPDbAdapter"
 
@@ -2872,7 +2668,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1062
     invoke-virtual {v8}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v0
@@ -2887,7 +2682,6 @@
 
     return-object v0
 
-    .line 1049
     :catchall_0
     move-exception v0
 
@@ -2897,13 +2691,11 @@
 
     throw v0
 
-    .line 1057
     :catchall_1
     move-exception v0
 
     if-eqz v9, :cond_2
 
-    .line 1058
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -2915,18 +2707,15 @@
     .param p1, "geoId"    # J
 
     .prologue
-    .line 1066
     const-wide/16 v0, 0x0
 
     invoke-static {v0, v1}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
     move-result-object v8
 
-    .line 1067
     .local v8, "lon":Ljava/lang/Double;
     const/4 v9, 0x0
 
-    .line 1068
     .local v9, "mCursor":Landroid/database/Cursor;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -2946,13 +2735,11 @@
 
     move-result-object v3
 
-    .line 1070
     .local v3, "_selection":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 1072
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -2972,19 +2759,16 @@
 
     move-result-object v9
 
-    .line 1073
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1075
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 1079
     if-eqz v9, :cond_0
 
     :try_start_1
@@ -2994,7 +2778,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1080
     const-string v0, "geo_lon"
 
     invoke-interface {v9, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3011,14 +2794,11 @@
 
     move-result-object v8
 
-    .line 1083
     :cond_0
     if-eqz v9, :cond_1
 
-    .line 1084
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
-    .line 1086
     :cond_1
     const-string v0, "CPPDbAdapter"
 
@@ -3052,7 +2832,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1088
     invoke-virtual {v8}, Ljava/lang/Double;->doubleValue()D
 
     move-result-wide v0
@@ -3067,7 +2846,6 @@
 
     return-object v0
 
-    .line 1075
     :catchall_0
     move-exception v0
 
@@ -3077,13 +2855,11 @@
 
     throw v0
 
-    .line 1083
     :catchall_1
     move-exception v0
 
     if-eqz v9, :cond_2
 
-    .line 1084
     invoke-interface {v9}, Landroid/database/Cursor;->close()V
 
     :cond_2
@@ -3100,7 +2876,6 @@
     .end annotation
 
     .prologue
-    .line 397
     const-string v0, "CPPDbAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3123,7 +2898,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 400
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3142,13 +2916,11 @@
 
     move-result-object v3
 
-    .line 401
     .local v3, "_selection":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 403
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -3168,7 +2940,6 @@
 
     move-result-object v8
 
-    .line 404
     .local v8, "mCursor":Landroid/database/Cursor;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -3176,15 +2947,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 406
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 408
     return-object v8
 
-    .line 406
     .end local v8    # "mCursor":Landroid/database/Cursor;
     :catchall_0
     move-exception v0
@@ -3207,7 +2975,6 @@
     .end annotation
 
     .prologue
-    .line 382
     const-string v0, "CPPDbAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -3240,7 +3007,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 385
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3263,13 +3029,11 @@
 
     move-result-object v3
 
-    .line 386
     .local v3, "_selection":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 388
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -3289,7 +3053,6 @@
 
     move-result-object v8
 
-    .line 389
     .local v8, "mCursor":Landroid/database/Cursor;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -3297,15 +3060,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 391
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 393
     return-object v8
 
-    .line 391
     .end local v8    # "mCursor":Landroid/database/Cursor;
     :catchall_0
     move-exception v0
@@ -3327,7 +3087,6 @@
     .end annotation
 
     .prologue
-    .line 550
     const-string v2, "CPPDbAdapter"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -3352,14 +3111,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 551
     const/16 v2, 0x8
 
     new-array v13, v2, [B
 
     fill-array-data v13, :array_0
 
-    .line 552
     .local v13, "init":[B
     const/4 v2, 0x2
 
@@ -3369,7 +3126,6 @@
 
     fill-array-data v21, :array_1
 
-    .line 553
     .local v21, "zeroUtc":[B
     const/4 v2, 0x4
 
@@ -3379,15 +3135,12 @@
 
     fill-array-data v20, :array_2
 
-    .line 554
     .local v20, "zeroOtk":[B
     const/16 v17, 0x0
 
-    .line 557
     .local v17, "result":[B
     const/4 v14, 0x0
 
-    .line 559
     .local v14, "mC1":Landroid/database/Cursor;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -3409,7 +3162,6 @@
 
     move-result-object v5
 
-    .line 560
     .local v5, "q1":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3417,7 +3169,6 @@
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 562
     :try_start_0
     move-object/from16 v0, p0
 
@@ -3439,7 +3190,6 @@
 
     move-result-object v14
 
-    .line 563
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -3449,14 +3199,12 @@
     .catch Landroid/database/SQLException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 567
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v2}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 570
     :goto_0
     if-eqz v14, :cond_2
 
@@ -3472,7 +3220,6 @@
 
     if-nez v2, :cond_2
 
-    .line 572
     const/high16 v2, 0x80000
 
     :try_start_1
@@ -3486,7 +3233,6 @@
 
     move-result-object v10
 
-    .line 573
     .local v10, "bb":Ljava/nio/ByteBuffer;
     const-string v2, "CPPDbAdapter"
 
@@ -3514,20 +3260,16 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 575
     invoke-virtual {v10, v13}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 577
     const/4 v2, 0x1
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 579
     move-object/from16 v0, v21
 
     invoke-virtual {v10, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 581
     const-string v2, "rat_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3538,7 +3280,6 @@
 
     move-result v16
 
-    .line 582
     .local v16, "rat":I
     move/from16 v0, v16
 
@@ -3546,7 +3287,6 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 584
     const-string v2, "sn_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3561,12 +3301,10 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 586
     move-object/from16 v0, v20
 
     invoke-virtual {v10, v0}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 588
     const-string v2, "up_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3579,32 +3317,27 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 590
     invoke-interface {v14}, Landroid/database/Cursor;->getCount()I
 
     move-result v15
 
-    .line 591
     .local v15, "numPatch":I
     int-to-short v2, v15
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 593
     const/4 v12, 0x0
 
     .local v12, "i":I
     :goto_1
     if-ge v12, v15, :cond_0
 
-    .line 594
     const-string v2, "CPPDbAdapter"
 
     const-string v3, "Get Patch Table Start"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 595
     const-string v2, "patch_class_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3619,7 +3352,6 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 596
     const-string v2, "patch_ver_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3632,7 +3364,6 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 597
     const-string v2, "patch_lat_index_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3645,7 +3376,6 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 598
     const-string v2, "patch_lon_index_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3658,7 +3388,6 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 599
     const-string v2, "fcn_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3671,7 +3400,6 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 600
     const-string v2, "numcell_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3684,7 +3412,6 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
 
-    .line 601
     const-string v2, "patch_length_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3697,7 +3424,6 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
 
-    .line 602
     const-string v2, "cell_data_d"
 
     invoke-interface {v14, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -3710,14 +3436,12 @@
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->put([B)Ljava/nio/ByteBuffer;
 
-    .line 604
     invoke-interface {v14}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 608
     :cond_0
     const-string v2, "CPPDbAdapter"
 
@@ -3745,12 +3469,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 609
     invoke-virtual {v10}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v18
 
-    .line 610
     .local v18, "size":I
     move/from16 v0, v18
 
@@ -3758,12 +3480,10 @@
 
     move-object/from16 v17, v0
 
-    .line 611
     const/4 v2, 0x0
 
     invoke-virtual {v10, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 612
     const/4 v2, 0x0
 
     move-object/from16 v0, v17
@@ -3774,7 +3494,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 616
     .end local v10    # "bb":Ljava/nio/ByteBuffer;
     .end local v12    # "i":I
     .end local v15    # "numPatch":I
@@ -3783,7 +3502,6 @@
     :goto_2
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 623
     const-string v2, "CPPDbAdapter"
 
     const-string v3, "getRespForCp() Finish"
@@ -3792,22 +3510,18 @@
 
     move-object/from16 v2, v17
 
-    .line 624
     :goto_3
     return-object v2
 
-    .line 564
     :catch_0
     move-exception v19
 
-    .line 565
     .local v19, "sq":Landroid/database/SQLException;
     :try_start_2
     invoke-virtual/range {v19 .. v19}, Landroid/database/SQLException;->printStackTrace()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 567
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -3828,7 +3542,6 @@
 
     throw v2
 
-    .line 593
     .restart local v10    # "bb":Ljava/nio/ByteBuffer;
     .restart local v12    # "i":I
     .restart local v15    # "numPatch":I
@@ -3838,7 +3551,6 @@
 
     goto/16 :goto_1
 
-    .line 613
     .end local v10    # "bb":Ljava/nio/ByteBuffer;
     .end local v12    # "i":I
     .end local v15    # "numPatch":I
@@ -3846,27 +3558,22 @@
     :catch_1
     move-exception v11
 
-    .line 614
     .local v11, "e":Ljava/lang/Exception;
     invoke-virtual {v11}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_2
 
-    .line 618
     .end local v11    # "e":Ljava/lang/Exception;
     :cond_2
     if-eqz v14, :cond_3
 
-    .line 619
     invoke-interface {v14}, Landroid/database/Cursor;->close()V
 
-    .line 621
     :cond_3
     const/4 v2, 0x0
 
     goto :goto_3
 
-    .line 551
     nop
 
     :array_0
@@ -3881,14 +3588,12 @@
         0x3at
     .end array-data
 
-    .line 552
     :array_1
     .array-data 1
         0x0t
         0x0t
     .end array-data
 
-    .line 553
     nop
 
     :array_2
@@ -3905,16 +3610,13 @@
     .param p1, "input"    # Lcom/samsung/cpp/CPPositioningService$RequestCPGeoFenceRegister;
 
     .prologue
-    .line 1021
     const-wide/16 v0, 0x0
 
-    .line 1022
     .local v0, "geoId":J
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 1023
     .local v2, "geoValues":Landroid/content/ContentValues;
     const-string v3, "geo_lat"
 
@@ -3926,7 +3628,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 1024
     const-string v3, "geo_lon"
 
     iget-wide v4, p1, Lcom/samsung/cpp/CPPositioningService$RequestCPGeoFenceRegister;->mLongitude:D
@@ -3937,7 +3638,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Double;)V
 
-    .line 1025
     const-string v3, "geo_mode"
 
     iget v4, p1, Lcom/samsung/cpp/CPPositioningService$RequestCPGeoFenceRegister;->mGeoMode:I
@@ -3948,7 +3648,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1026
     const-string v3, "geo_radius"
 
     iget v4, p1, Lcom/samsung/cpp/CPPositioningService$RequestCPGeoFenceRegister;->mRadius:I
@@ -3959,7 +3658,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1027
     const-string v3, "geo_period"
 
     iget v4, p1, Lcom/samsung/cpp/CPPositioningService$RequestCPGeoFenceRegister;->mPeriod:I
@@ -3970,12 +3668,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 1029
     iget-object v3, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 1031
     :try_start_0
     iget-object v3, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -3987,24 +3683,20 @@
 
     move-result-wide v0
 
-    .line 1032
     iget-object v3, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1034
     iget-object v3, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v3}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 1036
     long-to-int v3, v0
 
     return v3
 
-    .line 1034
     :catchall_0
     move-exception v3
 
@@ -4020,25 +3712,20 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 215
     const-string v4, "CPPDbAdapter"
 
     const-string v10, "insertReq() Start"
 
     invoke-static {v4, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 218
     const-wide/16 v32, 0x0
 
-    .line 219
     .local v32, "reqId":J
     const/16 v21, 0x0
 
-    .line 220
     .local v21, "existedPatch":I
     const/16 v20, 0x0
 
-    .line 221
     .local v20, "existedLarge":I
     const/4 v15, 0x0
 
@@ -4051,19 +3738,16 @@
     .local v13, "lat2":I
     move v12, v15
 
-    .line 222
     .local v12, "lat1":I
     new-instance v35, Landroid/content/ContentValues;
 
     invoke-direct/range {v35 .. v35}, Landroid/content/ContentValues;-><init>()V
 
-    .line 223
     .local v35, "reqValues":Landroid/content/ContentValues;
     new-instance v31, Landroid/content/ContentValues;
 
     invoke-direct/range {v31 .. v31}, Landroid/content/ContentValues;-><init>()V
 
-    .line 226
     .local v31, "patchValues":Landroid/content/ContentValues;
     :try_start_0
     invoke-static/range {p1 .. p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -4076,13 +3760,11 @@
 
     move-result-object v17
 
-    .line 228
     .local v17, "bb":Ljava/nio/ByteBuffer;
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v5
 
-    .line 229
     .local v5, "rat":I
     const-string v4, "RAT"
 
@@ -4094,12 +3776,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 230
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v28
 
-    .line 231
     .local v28, "mode":I
     const-string v4, "MODE"
 
@@ -4111,12 +3791,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 232
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v24
 
-    .line 233
     .local v24, "latency":I
     const-string v4, "LATENCY"
 
@@ -4128,12 +3806,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 234
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v36
 
-    .line 235
     .local v36, "sN":I
     const-string v4, "db_req_sn"
 
@@ -4145,12 +3821,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 236
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v34
 
-    .line 237
     .local v34, "reqType":I
     const-string v4, "req_type"
 
@@ -4162,12 +3836,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 238
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v18
 
-    .line 239
     .local v18, "dbType":I
     const-string v4, "db_type"
 
@@ -4179,12 +3851,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 240
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v30
 
-    .line 241
     .local v30, "patchClass":I
     const-string v4, "patch_class"
 
@@ -4196,12 +3866,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 242
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v26
 
-    .line 243
     .local v26, "mcc":I
     const-string v4, "mcc"
 
@@ -4213,12 +3881,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 244
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v27
 
-    .line 245
     .local v27, "mnc":I
     const-string v4, "mnc"
 
@@ -4230,7 +3896,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 246
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v4
@@ -4239,7 +3904,6 @@
 
     and-int v37, v4, v10
 
-    .line 247
     .local v37, "tac":I
     const-string v4, "tac"
 
@@ -4251,7 +3915,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 248
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v4
@@ -4262,7 +3925,6 @@
 
     and-long v6, v10, v40
 
-    .line 249
     .local v6, "gci":J
     const-string v4, "gci"
 
@@ -4274,12 +3936,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 250
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v8
 
-    .line 251
     .local v8, "pci":I
     const-string v4, "pci"
 
@@ -4291,7 +3951,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 252
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v4
@@ -4300,7 +3959,6 @@
 
     and-int v9, v4, v10
 
-    .line 253
     .local v9, "fcn":I
     const-string v4, "fcn"
 
@@ -4312,12 +3970,10 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 254
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v29
 
-    .line 255
     .local v29, "numPatch":I
     const-string v4, "is_sending"
 
@@ -4331,7 +3987,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 257
     const-string v4, "CPPDbAdapter"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -4378,7 +4033,6 @@
 
     invoke-static {v4, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 258
     const-string v4, "CPPDbAdapter"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -4517,7 +4171,6 @@
 
     invoke-static {v4, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 262
     const-wide/16 v10, 0x0
 
     cmp-long v4, v6, v10
@@ -4526,14 +4179,12 @@
 
     move-object/from16 v4, p0
 
-    .line 263
     invoke-virtual/range {v4 .. v9}, Lcom/samsung/cpp/CPPDbAdapter;->checkExistedGciReq(IJII)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 264
     const-string v4, "CPPDbAdapter"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -4564,10 +4215,8 @@
 
     invoke-static {v4, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 265
     const-wide/16 v10, 0x0
 
-    .line 378
     .end local v5    # "rat":I
     .end local v6    # "gci":J
     .end local v8    # "pci":I
@@ -4586,7 +4235,6 @@
     :goto_0
     return-wide v10
 
-    .line 269
     .restart local v5    # "rat":I
     .restart local v6    # "gci":J
     .restart local v8    # "pci":I
@@ -4605,7 +4253,6 @@
     :cond_0
     if-nez v28, :cond_1
 
-    .line 270
     const-string v4, "MODE"
 
     const-string v10, "0"
@@ -4614,7 +4261,6 @@
 
     invoke-virtual {v0, v4, v10}, Lcom/samsung/cpp/CPPDbAdapter;->deleteReqByValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 273
     :cond_1
     move-object/from16 v0, p0
 
@@ -4624,7 +4270,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 275
     :try_start_1
     move-object/from16 v0, p0
 
@@ -4640,7 +4285,6 @@
 
     move-result-wide v32
 
-    .line 277
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -4649,7 +4293,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 279
     :try_start_2
     move-object/from16 v0, p0
 
@@ -4657,7 +4300,6 @@
 
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 282
     const-string v4, "CPPDbAdapter"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -4684,13 +4326,10 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 284
     if-lez v29, :cond_2
 
-    .line 285
     packed-switch v28, :pswitch_data_0
 
-    .line 377
     .end local v5    # "rat":I
     .end local v6    # "gci":J
     .end local v8    # "pci":I
@@ -4716,10 +4355,8 @@
 
     move-wide/from16 v10, v32
 
-    .line 378
     goto :goto_0
 
-    .line 279
     .restart local v5    # "rat":I
     .restart local v6    # "gci":J
     .restart local v8    # "pci":I
@@ -4749,7 +4386,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 374
     .end local v5    # "rat":I
     .end local v6    # "gci":J
     .end local v8    # "pci":I
@@ -4768,13 +4404,11 @@
     :catch_0
     move-exception v19
 
-    .line 375
     .local v19, "e":Ljava/lang/Exception;
     invoke-virtual/range {v19 .. v19}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_1
 
-    .line 288
     .end local v19    # "e":Ljava/lang/Exception;
     .restart local v5    # "rat":I
     .restart local v6    # "gci":J
@@ -4802,7 +4436,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 289
     :try_start_4
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getInt()I
 
@@ -4812,23 +4445,19 @@
 
     move-wide/from16 v38, v0
 
-    .line 290
     .local v38, "version":J
     rem-int/lit8 v4, v22, 0x2
 
     if-nez v4, :cond_4
 
-    .line 291
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v12
 
-    .line 292
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v14
 
-    .line 297
     :goto_3
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -4838,7 +4467,6 @@
 
     and-int v16, v4, v10
 
-    .line 299
     .local v16, "patch_fcn":I
     const/4 v4, 0x1
 
@@ -4856,7 +4484,6 @@
 
     if-nez v4, :cond_5
 
-    .line 300
     const-string v4, "req_id"
 
     invoke-static/range {v32 .. v33}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -4867,7 +4494,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 301
     const-string v4, "version"
 
     invoke-static/range {v38 .. v39}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -4878,7 +4504,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 302
     const-string v4, "latIndex"
 
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4889,7 +4514,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 303
     const-string v4, "lonIndex"
 
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4900,7 +4524,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 304
     const-string v4, "patch_fcn"
 
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -4911,7 +4534,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 306
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -4920,7 +4542,6 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 308
     :try_start_5
     move-object/from16 v0, p0
 
@@ -4934,7 +4555,6 @@
 
     invoke-virtual {v4, v10, v11, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 309
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -4943,7 +4563,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_1
 
-    .line 311
     :try_start_6
     move-object/from16 v0, p0
 
@@ -4951,7 +4570,6 @@
 
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 313
     const-string v4, "CPPDbAdapter"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -5038,7 +4656,6 @@
 
     invoke-static {v4, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 316
     const-string v4, "latIndex"
 
     invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5049,7 +4666,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 317
     const-string v4, "lonIndex"
 
     invoke-static {v15}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5060,7 +4676,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 319
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -5069,7 +4684,6 @@
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_0
 
-    .line 321
     :try_start_7
     move-object/from16 v0, p0
 
@@ -5083,7 +4697,6 @@
 
     invoke-virtual {v4, v10, v11, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 322
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -5092,7 +4705,6 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_2
 
-    .line 324
     :try_start_8
     move-object/from16 v0, p0
 
@@ -5100,7 +4712,6 @@
 
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 327
     const-string v4, "CPPDbAdapter"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -5187,27 +4798,23 @@
 
     invoke-static {v4, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     :cond_3
     add-int/lit8 v22, v22, 0x1
 
     goto/16 :goto_2
 
-    .line 294
     .end local v16    # "patch_fcn":I
     :cond_4
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v13
 
-    .line 295
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v15
 
     goto/16 :goto_3
 
-    .line 311
     .restart local v16    # "patch_fcn":I
     :catchall_1
     move-exception v4
@@ -5220,7 +4827,6 @@
 
     throw v4
 
-    .line 324
     :catchall_2
     move-exception v4
 
@@ -5232,7 +4838,6 @@
 
     throw v4
 
-    .line 329
     :cond_5
     const/4 v4, 0x1
 
@@ -5250,29 +4855,24 @@
 
     if-eqz v4, :cond_3
 
-    .line 330
     add-int/lit8 v20, v20, 0x1
 
-    .line 331
     div-int/lit8 v4, v29, 0x2
 
     move/from16 v0, v20
 
     if-ne v4, v0, :cond_3
 
-    .line 332
     move-object/from16 v0, p0
 
     move-wide/from16 v1, v32
 
     invoke-virtual {v0, v1, v2}, Lcom/samsung/cpp/CPPDbAdapter;->deleteReqById(J)V
 
-    .line 333
     const-wide/16 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 341
     .end local v16    # "patch_fcn":I
     .end local v22    # "i":I
     .end local v38    # "version":J
@@ -5287,7 +4887,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 342
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v4
@@ -5296,19 +4895,16 @@
 
     move-wide/from16 v38, v0
 
-    .line 343
     .restart local v38    # "version":J
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v23
 
-    .line 344
     .local v23, "latIndex":I
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v25
 
-    .line 345
     .local v25, "lonIndex":I
     invoke-virtual/range {v17 .. v17}, Ljava/nio/ByteBuffer;->getShort()S
 
@@ -5318,7 +4914,6 @@
 
     and-int v16, v4, v10
 
-    .line 347
     .restart local v16    # "patch_fcn":I
     move-object/from16 v0, p0
 
@@ -5334,7 +4929,6 @@
 
     if-nez v4, :cond_7
 
-    .line 348
     const-string v4, "req_id"
 
     invoke-static/range {v32 .. v33}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -5345,7 +4939,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 349
     const-string v4, "version"
 
     invoke-static/range {v38 .. v39}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -5356,7 +4949,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 350
     const-string v4, "latIndex"
 
     invoke-static/range {v23 .. v23}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5367,7 +4959,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 351
     const-string v4, "lonIndex"
 
     invoke-static/range {v25 .. v25}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5378,7 +4969,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 352
     const-string v4, "patch_fcn"
 
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -5389,7 +4979,6 @@
 
     invoke-virtual {v0, v4, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 354
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -5398,7 +4987,6 @@
     :try_end_8
     .catch Ljava/lang/Exception; {:try_start_8 .. :try_end_8} :catch_0
 
-    .line 356
     :try_start_9
     move-object/from16 v0, p0
 
@@ -5412,7 +5000,6 @@
 
     invoke-virtual {v4, v10, v11, v0}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 357
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -5421,7 +5008,6 @@
     :try_end_9
     .catchall {:try_start_9 .. :try_end_9} :catchall_3
 
-    .line 359
     :try_start_a
     move-object/from16 v0, p0
 
@@ -5429,7 +5015,6 @@
 
     invoke-virtual {v4}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 361
     const-string v4, "CPPDbAdapter"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -5520,13 +5105,11 @@
 
     invoke-static {v4, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 341
     :cond_6
     add-int/lit8 v22, v22, 0x1
 
     goto/16 :goto_4
 
-    .line 359
     :catchall_3
     move-exception v4
 
@@ -5538,18 +5121,15 @@
 
     throw v4
 
-    .line 364
     :cond_7
     add-int/lit8 v21, v21, 0x1
 
-    .line 365
     move/from16 v0, v29
 
     move/from16 v1, v21
 
     if-ne v0, v1, :cond_6
 
-    .line 366
     move-object/from16 v0, p0
 
     move-wide/from16 v1, v32
@@ -5558,12 +5138,10 @@
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_0
 
-    .line 367
     const-wide/16 v10, 0x0
 
     goto/16 :goto_0
 
-    .line 285
     nop
 
     :pswitch_data_0
@@ -5583,7 +5161,6 @@
     .param p4, "reqId"    # J
 
     .prologue
-    .line 438
     const-string v23, "CPPDbAdapter"
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -5656,17 +5233,14 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 441
     const/4 v12, 0x0
 
     .local v12, "latIndex":I
     const/4 v14, 0x0
 
-    .line 445
     .local v14, "lonIndex":I
     const/4 v11, 0x0
 
-    .line 447
     .local v11, "isDbFull":Z
     new-instance v23, Ljava/io/File;
 
@@ -5684,7 +5258,6 @@
 
     iput-object v0, v1, Lcom/samsung/cpp/CPPDbAdapter;->DBfile:Ljava/io/File;
 
-    .line 448
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPDbAdapter;->DBfile:Ljava/io/File;
@@ -5695,7 +5268,6 @@
 
     move-result-wide v4
 
-    .line 449
     .local v4, "DBSize":J
     move-object/from16 v0, p0
 
@@ -5719,10 +5291,8 @@
 
     if-gtz v23, :cond_0
 
-    .line 450
     const/4 v11, 0x1
 
-    .line 452
     :cond_0
     move-object/from16 v0, p0
 
@@ -5740,7 +5310,6 @@
 
     check-cast v18, Ljava/lang/Long;
 
-    .line 453
     .local v18, "objUtc":Ljava/lang/Long;
     move-object/from16 v0, p0
 
@@ -5758,13 +5327,11 @@
 
     check-cast v19, Ljava/lang/Integer;
 
-    .line 455
     .local v19, "objUtcKey":Ljava/lang/Integer;
     new-instance v21, Landroid/content/ContentValues;
 
     invoke-direct/range {v21 .. v21}, Landroid/content/ContentValues;-><init>()V
 
-    .line 457
     .local v21, "patchValues":Landroid/content/ContentValues;
     const-string v23, "CPPDbAdapter"
 
@@ -5776,12 +5343,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 459
     if-eqz v18, :cond_1
 
     if-nez v19, :cond_2
 
-    .line 461
     :cond_1
     const-string v23, "CPPDbAdapter"
 
@@ -5793,11 +5358,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 547
     :goto_0
     return-void
 
-    .line 466
     :cond_2
     :try_start_0
     invoke-static/range {p1 .. p1}, Ljava/nio/ByteBuffer;->wrap([B)Ljava/nio/ByteBuffer;
@@ -5814,17 +5377,14 @@
 
     move-result-object v6
 
-    .line 468
     .local v6, "bb":Ljava/nio/ByteBuffer;
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->get()B
 
     move-result v22
 
-    .line 470
     .local v22, "sN":I
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->getInt()I
 
-    .line 471
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v23
@@ -5835,13 +5395,11 @@
 
     move-wide/from16 v24, v0
 
-    .line 472
     .local v24, "uP":J
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v17
 
-    .line 473
     .local v17, "numPatch":I
     const-string v23, "CPPDbAdapter"
 
@@ -5915,10 +5473,8 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 475
     if-nez v17, :cond_3
 
-    .line 476
     const-string v23, "CPPDbAdapter"
 
     const-string v26, "insertResp() numPatch == 0, end insert"
@@ -5933,7 +5489,6 @@
 
     goto :goto_0
 
-    .line 542
     .end local v6    # "bb":Ljava/nio/ByteBuffer;
     .end local v17    # "numPatch":I
     .end local v22    # "sN":I
@@ -5941,11 +5496,9 @@
     :catch_0
     move-exception v8
 
-    .line 543
     .local v8, "e":Ljava/lang/Exception;
     invoke-virtual {v8}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 546
     .end local v8    # "e":Ljava/lang/Exception;
     :goto_1
     const-string v23, "CPPDbAdapter"
@@ -5960,7 +5513,6 @@
 
     goto/16 :goto_0
 
-    .line 481
     .restart local v6    # "bb":Ljava/nio/ByteBuffer;
     .restart local v17    # "numPatch":I
     .restart local v22    # "sN":I
@@ -5974,7 +5526,6 @@
 
     if-ge v10, v0, :cond_4
 
-    .line 482
     :try_start_1
     const-string v23, "CPPDbAdapter"
 
@@ -6010,7 +5561,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 484
     const-string v23, "rat_d"
 
     invoke-static/range {p3 .. p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6025,7 +5575,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 486
     const-string v23, "sn_d"
 
     invoke-static/range {v22 .. v22}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6040,7 +5589,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 488
     const-string v23, "up_d"
 
     invoke-static/range {v24 .. v25}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -6055,7 +5603,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 490
     const-string v23, "req_id_d"
 
     invoke-static/range {p4 .. p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -6070,7 +5617,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 492
     const-string v23, "patch_class_d"
 
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->get()B
@@ -6089,7 +5635,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Byte;)V
 
-    .line 494
     const-string v23, "patch_ver_d"
 
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->getInt()I
@@ -6108,7 +5653,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 496
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v23
@@ -6117,7 +5661,6 @@
 
     and-int v13, v23, v26
 
-    .line 497
     .local v13, "latTemp":I
     invoke-virtual/range {v19 .. v19}, Ljava/lang/Integer;->intValue()I
 
@@ -6125,7 +5668,6 @@
 
     xor-int v12, v13, v23
 
-    .line 498
     const-string v23, "patch_lat_index_d"
 
     invoke-static {v12}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6140,7 +5682,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 500
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v23
@@ -6149,7 +5690,6 @@
 
     and-int v15, v23, v26
 
-    .line 501
     .local v15, "lonTemp":I
     invoke-virtual/range {v19 .. v19}, Ljava/lang/Integer;->intValue()I
 
@@ -6157,7 +5697,6 @@
 
     xor-int v14, v15, v23
 
-    .line 502
     const-string v23, "patch_lon_index_d"
 
     invoke-static {v14}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -6172,10 +5711,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 504
     if-eqz v11, :cond_5
 
-    .line 505
     const-string v23, "CPPDbAdapter"
 
     const-string v26, "insertResp() isDbFull"
@@ -6186,12 +5723,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 506
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v12, v14}, Lcom/samsung/cpp/CPPDbAdapter;->reduceDbVol(II)V
 
-    .line 541
     .end local v13    # "latTemp":I
     .end local v15    # "lonTemp":I
     :cond_4
@@ -6227,7 +5762,6 @@
 
     goto/16 :goto_1
 
-    .line 510
     .restart local v13    # "latTemp":I
     .restart local v15    # "lonTemp":I
     :cond_5
@@ -6239,7 +5773,6 @@
 
     and-int v9, v23, v26
 
-    .line 511
     .local v9, "fcn":I
     const-string v23, "fcn_d"
 
@@ -6255,12 +5788,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 513
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->getShort()S
 
     move-result v16
 
-    .line 514
     .local v16, "numCells":I
     const-string v23, "numcell_d"
 
@@ -6276,12 +5807,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 516
     invoke-virtual {v6}, Ljava/nio/ByteBuffer;->getInt()I
 
     move-result v20
 
-    .line 517
     .local v20, "patchLength":I
     const-string v23, "patch_length_d"
 
@@ -6297,7 +5826,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 519
     const-string v23, "CPPDbAdapter"
 
     new-instance v26, Ljava/lang/StringBuilder;
@@ -6378,7 +5906,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 521
     const v23, 0x13880
 
     move/from16 v0, v20
@@ -6387,12 +5914,10 @@
 
     if-gt v0, v1, :cond_6
 
-    .line 522
     move/from16 v0, v20
 
     new-array v7, v0, [B
 
-    .line 523
     .local v7, "cellData":[B
     const/16 v23, 0x0
 
@@ -6402,7 +5927,6 @@
 
     invoke-virtual {v6, v7, v0, v1}, Ljava/nio/ByteBuffer;->get([BII)Ljava/nio/ByteBuffer;
 
-    .line 524
     const-string v23, "cell_data_d"
 
     move-object/from16 v0, v21
@@ -6411,14 +5935,12 @@
 
     invoke-virtual {v0, v1, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    .line 526
     move-object/from16 v0, p0
 
     move/from16 v1, p3
 
     invoke-virtual {v0, v1, v12, v14, v9}, Lcom/samsung/cpp/CPPDbAdapter;->deleteExistedDb(IIII)V
 
-    .line 528
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -6429,7 +5951,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 530
     :try_start_2
     move-object/from16 v0, p0
 
@@ -6451,7 +5972,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
 
-    .line 531
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -6462,7 +5982,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 533
     :try_start_3
     move-object/from16 v0, p0
 
@@ -6472,12 +5991,10 @@
 
     invoke-virtual/range {v23 .. v23}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 481
     add-int/lit8 v10, v10, 0x1
 
     goto/16 :goto_2
 
-    .line 533
     :catchall_0
     move-exception v23
 
@@ -6491,7 +6008,6 @@
 
     throw v23
 
-    .line 536
     .end local v7    # "cellData":[B
     :cond_6
     const-string v23, "CPPDbAdapter"
@@ -6504,7 +6020,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 537
     const-string v23, "CPPDbAdapter"
 
     const-string v26, "insertResp() Finish"
@@ -6525,7 +6040,6 @@
     .param p1, "reqId"    # J
 
     .prologue
-    .line 412
     const-string v0, "CPPDbAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -6548,14 +6062,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 413
     const/4 v8, 0x0
 
-    .line 414
     .local v8, "mCursor":Landroid/database/Cursor;
     const/4 v9, 0x0
 
-    .line 416
     .local v9, "reqType":I
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -6575,13 +6086,11 @@
 
     move-result-object v3
 
-    .line 417
     .local v3, "_selection":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 419
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -6601,19 +6110,16 @@
 
     move-result-object v8
 
-    .line 420
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 422
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 426
     if-eqz v8, :cond_0
 
     :try_start_1
@@ -6623,7 +6129,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 427
     const-string v0, "req_type"
 
     invoke-interface {v8, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -6636,14 +6141,11 @@
 
     move-result v9
 
-    .line 429
     :cond_0
     if-eqz v8, :cond_1
 
-    .line 430
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 432
     :cond_1
     const-string v0, "CPPDbAdapter"
 
@@ -6667,7 +6169,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 434
     if-lez v9, :cond_3
 
     const/4 v0, 0x1
@@ -6675,7 +6176,6 @@
     :goto_0
     return v0
 
-    .line 422
     :catchall_0
     move-exception v0
 
@@ -6685,19 +6185,16 @@
 
     throw v0
 
-    .line 429
     :catchall_1
     move-exception v0
 
     if-eqz v8, :cond_2
 
-    .line 430
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     :cond_2
     throw v0
 
-    .line 434
     :cond_3
     const/4 v0, 0x0
 
@@ -6713,14 +6210,12 @@
     .end annotation
 
     .prologue
-    .line 162
     const-string v0, "CPPDbAdapter"
 
     const-string v1, "DbAdapter.open()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mDbHelper:Lcom/samsung/cpp/CPPDbAdapter$DbHelper;
 
     invoke-virtual {v0}, Lcom/samsung/cpp/CPPDbAdapter$DbHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
@@ -6729,14 +6224,12 @@
 
     iput-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 164
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     const-wide/32 v2, 0x1e00000
 
     invoke-virtual {v0, v2, v3}, Landroid/database/sqlite/SQLiteDatabase;->setMaximumSize(J)J
 
-    .line 165
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mGeoDbHelper:Lcom/samsung/cpp/CPPDbAdapter$GeoDbHelper;
 
     invoke-virtual {v0}, Lcom/samsung/cpp/CPPDbAdapter$GeoDbHelper;->getWritableDatabase()Landroid/database/sqlite/SQLiteDatabase;
@@ -6745,14 +6238,12 @@
 
     iput-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mgdb:Landroid/database/sqlite/SQLiteDatabase;
 
-    .line 166
     const-string v0, "CPPDbAdapter"
 
     const-string v1, "DbAdapter.open() -- completed"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 167
     return-object p0
 .end method
 
@@ -6762,7 +6253,6 @@
     .param p2, "lonIndex"    # I
 
     .prologue
-    .line 954
     const-string v11, "CPPDbAdapter"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -6799,22 +6289,17 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 955
     add-int/lit8 v8, p1, -0x32
 
-    .line 956
     .local v8, "latUnder":I
     add-int/lit8 v7, p1, 0x32
 
-    .line 957
     .local v7, "latOver":I
     add-int/lit8 v10, p2, -0x32
 
-    .line 958
     .local v10, "lonUnder":I
     add-int/lit8 v9, p2, 0x32
 
-    .line 960
     .local v9, "lonOver":I
     new-instance v11, Ljava/io/File;
 
@@ -6826,7 +6311,6 @@
 
     iput-object v11, v0, Lcom/samsung/cpp/CPPDbAdapter;->DBfile:Ljava/io/File;
 
-    .line 963
     const/4 v6, 0x0
 
     .local v6, "i":I
@@ -6835,7 +6319,6 @@
 
     if-ge v6, v11, :cond_0
 
-    .line 964
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -6956,7 +6439,6 @@
 
     move-result-object v4
 
-    .line 968
     .local v4, "_selection":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -6964,7 +6446,6 @@
 
     invoke-virtual {v11}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 970
     :try_start_0
     move-object/from16 v0, p0
 
@@ -6978,7 +6459,6 @@
 
     move-result v5
 
-    .line 971
     .local v5, "deleted":I
     const-string v11, "CPPDbAdapter"
 
@@ -7002,7 +6482,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 972
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -7011,14 +6490,12 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 974
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v11}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 977
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/samsung/cpp/CPPDbAdapter;->DBfile:Ljava/io/File;
@@ -7027,7 +6504,6 @@
 
     move-result-wide v2
 
-    .line 978
     .local v2, "DBSize":J
     move-object/from16 v0, p0
 
@@ -7047,7 +6523,6 @@
 
     if-gtz v11, :cond_1
 
-    .line 979
     const-string v11, "CPPDbAdapter"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -7070,7 +6545,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 998
     .end local v2    # "DBSize":J
     .end local v4    # "_selection":Ljava/lang/String;
     .end local v5    # "deleted":I
@@ -7081,10 +6555,8 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 999
     return-void
 
-    .line 974
     .restart local v4    # "_selection":Ljava/lang/String;
     :catchall_0
     move-exception v11
@@ -7097,7 +6569,6 @@
 
     throw v11
 
-    .line 981
     .restart local v2    # "DBSize":J
     .restart local v5    # "deleted":I
     :cond_1
@@ -7105,14 +6576,12 @@
 
     if-ne v6, v11, :cond_2
 
-    .line 982
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v11}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 984
     :try_start_1
     move-object/from16 v0, p0
 
@@ -7128,7 +6597,6 @@
 
     move-result v5
 
-    .line 985
     const-string v11, "CPPDbAdapter"
 
     new-instance v12, Ljava/lang/StringBuilder;
@@ -7151,7 +6619,6 @@
 
     invoke-static {v11, v12}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 986
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
@@ -7160,20 +6627,17 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 988
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v11}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 963
     :goto_1
     add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_0
 
-    .line 988
     :catchall_1
     move-exception v11
 
@@ -7185,17 +6649,13 @@
 
     throw v11
 
-    .line 991
     :cond_2
     add-int/lit8 v8, v8, 0xa
 
-    .line 992
     add-int/lit8 v7, v7, -0xa
 
-    .line 993
     add-int/lit8 v10, v10, 0xa
 
-    .line 994
     add-int/lit8 v9, v9, -0xa
 
     goto :goto_1
@@ -7207,7 +6667,6 @@
     .param p3, "isSending"    # Z
 
     .prologue
-    .line 803
     const-string v0, "CPPDbAdapter"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -7240,16 +6699,13 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 804
     const/4 v8, 0x0
 
-    .line 805
     .local v8, "mCursor":Landroid/database/Cursor;
     new-instance v9, Landroid/content/ContentValues;
 
     invoke-direct {v9}, Landroid/content/ContentValues;-><init>()V
 
-    .line 806
     .local v9, "updateInfo":Landroid/content/ContentValues;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -7273,13 +6729,11 @@
 
     move-result-object v3
 
-    .line 807
     .local v3, "_selection":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->beginTransaction()V
 
-    .line 809
     :try_start_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -7299,19 +6753,16 @@
 
     move-result-object v8
 
-    .line 810
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 812
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->endTransaction()V
 
-    .line 816
     if-eqz v8, :cond_0
 
     :try_start_1
@@ -7321,10 +6772,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 817
     if-eqz p3, :cond_2
 
-    .line 818
     const-string v0, "is_sending"
 
     const/4 v1, 0x1
@@ -7335,7 +6784,6 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 822
     :goto_0
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -7343,7 +6791,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 824
     :try_start_2
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -7365,14 +6812,12 @@
 
     invoke-virtual {v0, v1, v9, v2, v4}, Landroid/database/sqlite/SQLiteDatabase;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 825
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
     invoke-virtual {v0}, Landroid/database/sqlite/SQLiteDatabase;->setTransactionSuccessful()V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
-    .line 827
     :try_start_3
     iget-object v0, p0, Lcom/samsung/cpp/CPPDbAdapter;->mdb:Landroid/database/sqlite/SQLiteDatabase;
 
@@ -7380,18 +6825,14 @@
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 831
     :cond_0
     if-eqz v8, :cond_1
 
-    .line 832
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
-    .line 834
     :cond_1
     return-void
 
-    .line 812
     :catchall_0
     move-exception v0
 
@@ -7401,7 +6842,6 @@
 
     throw v0
 
-    .line 820
     :cond_2
     :try_start_4
     const-string v0, "is_sending"
@@ -7418,19 +6858,16 @@
 
     goto :goto_0
 
-    .line 831
     :catchall_1
     move-exception v0
 
     if-eqz v8, :cond_3
 
-    .line 832
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
 
     :cond_3
     throw v0
 
-    .line 827
     :catchall_2
     move-exception v0
 

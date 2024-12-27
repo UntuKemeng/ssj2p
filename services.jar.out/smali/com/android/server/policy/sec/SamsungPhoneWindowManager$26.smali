@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4801
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$26;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,10 +39,8 @@
     .locals 6
 
     .prologue
-    .line 4804
     const/4 v0, 0x0
 
-    .line 4805
     .local v0, "aodIntent":Landroid/content/Intent;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$26;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
@@ -52,11 +49,9 @@
 
     packed-switch v3, :pswitch_data_0
 
-    .line 4827
     :goto_0
     return-void
 
-    .line 4807
     :pswitch_0
     new-instance v1, Landroid/content/Intent;
 
@@ -68,7 +63,6 @@
     .local v1, "aodIntent":Landroid/content/Intent;
     move-object v0, v1
 
-    .line 4821
     .end local v1    # "aodIntent":Landroid/content/Intent;
     .restart local v0    # "aodIntent":Landroid/content/Intent;
     :goto_1
@@ -102,7 +96,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4822
     :cond_0
     new-instance v3, Landroid/content/ComponentName;
 
@@ -114,7 +107,6 @@
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 4823
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$26;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -127,17 +119,14 @@
 
     goto :goto_0
 
-    .line 4824
     :catch_0
     move-exception v2
 
-    .line 4825
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 4811
     .end local v2    # "e":Ljava/lang/Exception;
     :pswitch_1
     :try_start_1
@@ -151,12 +140,10 @@
     .restart local v1    # "aodIntent":Landroid/content/Intent;
     move-object v0, v1
 
-    .line 4812
     .end local v1    # "aodIntent":Landroid/content/Intent;
     .restart local v0    # "aodIntent":Landroid/content/Intent;
     goto :goto_1
 
-    .line 4815
     :pswitch_2
     new-instance v1, Landroid/content/Intent;
 
@@ -170,12 +157,10 @@
     .restart local v1    # "aodIntent":Landroid/content/Intent;
     move-object v0, v1
 
-    .line 4816
     .end local v1    # "aodIntent":Landroid/content/Intent;
     .restart local v0    # "aodIntent":Landroid/content/Intent;
     goto :goto_1
 
-    .line 4805
     nop
 
     :pswitch_data_0

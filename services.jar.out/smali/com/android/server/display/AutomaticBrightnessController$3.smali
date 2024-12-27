@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 779
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$3;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 782
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController$3;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-virtual {v0}, Lcom/android/server/display/AutomaticBrightnessController;->isAmbientLuxValid()Z
@@ -51,26 +49,22 @@
 
     if-nez v0, :cond_0
 
-    .line 783
     const-string v0, "AutomaticBrightnessController"
 
     const-string v1, "[DAB] Light sensor update is timed out!"
 
     invoke-static {v0, v1}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 784
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController$3;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # setter for: Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLuxValid:Z
     invoke-static {v0, v2}, Lcom/android/server/display/AutomaticBrightnessController;->access$1702(Lcom/android/server/display/AutomaticBrightnessController;Z)Z
 
-    .line 785
     iget-object v0, p0, Lcom/android/server/display/AutomaticBrightnessController$3;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     # invokes: Lcom/android/server/display/AutomaticBrightnessController;->updateAutoBrightnessSEC(Z)V
     invoke-static {v0, v2}, Lcom/android/server/display/AutomaticBrightnessController;->access$1800(Lcom/android/server/display/AutomaticBrightnessController;Z)V
 
-    .line 787
     :cond_0
     return-void
 .end method

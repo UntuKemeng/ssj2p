@@ -38,19 +38,16 @@
     .locals 1
 
     .prologue
-    .line 164
     iput-object p1, p0, Lorg/simpleframework/xml/stream/OutputStack$Sequence;->this$0:Lorg/simpleframework/xml/stream/OutputStack;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 165
     invoke-virtual {p1}, Lorg/simpleframework/xml/stream/OutputStack;->size()I
 
     move-result v0
 
     iput v0, p0, Lorg/simpleframework/xml/stream/OutputStack$Sequence;->cursor:I
 
-    .line 166
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 190
     iget v0, p0, Lorg/simpleframework/xml/stream/OutputStack$Sequence;->cursor:I
 
     if-lez v0, :cond_0
@@ -80,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 152
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/OutputStack$Sequence;->next()Lorg/simpleframework/xml/stream/OutputNode;
 
     move-result-object v0
@@ -92,14 +87,12 @@
     .locals 2
 
     .prologue
-    .line 176
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/OutputStack$Sequence;->hasNext()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 177
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputStack$Sequence;->this$0:Lorg/simpleframework/xml/stream/OutputStack;
 
     iget v1, p0, Lorg/simpleframework/xml/stream/OutputStack$Sequence;->cursor:I
@@ -114,7 +107,6 @@
 
     check-cast v0, Lorg/simpleframework/xml/stream/OutputNode;
 
-    .line 179
     :goto_0
     return-object v0
 
@@ -128,13 +120,11 @@
     .locals 2
 
     .prologue
-    .line 199
     iget-object v0, p0, Lorg/simpleframework/xml/stream/OutputStack$Sequence;->this$0:Lorg/simpleframework/xml/stream/OutputStack;
 
     iget v1, p0, Lorg/simpleframework/xml/stream/OutputStack$Sequence;->cursor:I
 
     invoke-virtual {v0, v1}, Lorg/simpleframework/xml/stream/OutputStack;->purge(I)Lorg/simpleframework/xml/stream/OutputNode;
 
-    .line 200
     return-void
 .end method

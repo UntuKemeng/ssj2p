@@ -41,27 +41,20 @@
     .param p6, "type"    # I
 
     .prologue
-    .line 151
     iput-object p1, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->this$0:Lcom/android/server/cover/StateNotifier;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 152
     iput-object p2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
-    .line 153
     iput-object p3, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->component:Landroid/content/ComponentName;
 
-    .line 154
     iput p4, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->pid:I
 
-    .line 155
     iput p5, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->uid:I
 
-    .line 156
     iput p6, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
-    .line 157
     return-void
 .end method
 
@@ -71,7 +64,6 @@
     .locals 3
 
     .prologue
-    .line 161
     const-string v0, "CoverManager.StateNotifier"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -96,7 +88,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->this$0:Lcom/android/server/cover/StateNotifier;
 
     # getter for: Lcom/android/server/cover/StateNotifier;->mListeners:Ljava/util/ArrayList;
@@ -106,7 +97,6 @@
 
     monitor-enter v1
 
-    .line 163
     :try_start_0
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->this$0:Lcom/android/server/cover/StateNotifier;
 
@@ -117,22 +107,18 @@
 
     invoke-virtual {v0, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 164
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 165
     iget-object v0, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     const/4 v1, 0x0
 
     invoke-interface {v0, p0, v1}, Landroid/os/IBinder;->unlinkToDeath(Landroid/os/IBinder$DeathRecipient;I)Z
 
-    .line 166
     return-void
 
-    .line 164
     :catchall_0
     move-exception v0
 
@@ -149,24 +135,20 @@
     .param p1, "covered"    # Z
 
     .prologue
-    .line 223
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v2, :cond_1
 
-    .line 224
     const-string v2, "CoverManager.StateNotifier"
 
     const-string/jumbo v3, "null listener received CoverState!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 238
     :cond_0
     :goto_0
     return-void
 
-    .line 227
     :cond_1
     iget v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
@@ -174,7 +156,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 229
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
@@ -182,23 +163,19 @@
 
     move-result-object v0
 
-    .line 231
     .local v0, "callback":Lcom/samsung/android/cover/ICoverWindowStateListenerCallback;
     if-eqz v0, :cond_0
 
-    .line 232
     invoke-interface {v0, p1}, Lcom/samsung/android/cover/ICoverWindowStateListenerCallback;->onCoverAppCovered(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 234
     .end local v0    # "callback":Lcom/samsung/android/cover/ICoverWindowStateListenerCallback;
     :catch_0
     move-exception v1
 
-    .line 235
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "CoverManager.StateNotifier"
 
@@ -214,24 +191,20 @@
     .param p1, "attached"    # Z
 
     .prologue
-    .line 205
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v2, :cond_1
 
-    .line 206
     const-string v2, "CoverManager.StateNotifier"
 
     const-string/jumbo v3, "null listener received CoverState!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 220
     :cond_0
     :goto_0
     return-void
 
-    .line 209
     :cond_1
     iget v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
@@ -239,7 +212,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 211
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
@@ -247,23 +219,19 @@
 
     move-result-object v0
 
-    .line 213
     .local v0, "callback":Lcom/samsung/android/cover/ICoverStateListenerCallback;
     if-eqz v0, :cond_0
 
-    .line 214
     invoke-interface {v0, p1}, Lcom/samsung/android/cover/ICoverStateListenerCallback;->onCoverAttachStateChanged(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 216
     .end local v0    # "callback":Lcom/samsung/android/cover/ICoverStateListenerCallback;
     :catch_0
     move-exception v1
 
-    .line 217
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "CoverManager.StateNotifier"
 
@@ -279,24 +247,20 @@
     .param p1, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 169
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v2, :cond_1
 
-    .line 170
     const-string v2, "CoverManager.StateNotifier"
 
     const-string/jumbo v3, "null listener received CoverState!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 184
     :cond_0
     :goto_0
     return-void
 
-    .line 173
     :cond_1
     iget v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
@@ -304,7 +268,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 175
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
@@ -312,23 +275,19 @@
 
     move-result-object v0
 
-    .line 177
     .local v0, "callback":Lcom/samsung/android/cover/ICoverManagerCallback;
     if-eqz v0, :cond_0
 
-    .line 178
     invoke-interface {v0, p1}, Lcom/samsung/android/cover/ICoverManagerCallback;->coverCallback(Lcom/samsung/android/cover/CoverState;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 180
     .end local v0    # "callback":Lcom/samsung/android/cover/ICoverManagerCallback;
     :catch_0
     move-exception v1
 
-    .line 181
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "CoverManager.StateNotifier"
 
@@ -344,24 +303,20 @@
     .param p1, "switchState"    # Z
 
     .prologue
-    .line 187
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
     if-nez v2, :cond_1
 
-    .line 188
     const-string v2, "CoverManager.StateNotifier"
 
     const-string/jumbo v3, "null listener received CoverState!"
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 202
     :cond_0
     :goto_0
     return-void
 
-    .line 191
     :cond_1
     iget v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->type:I
 
@@ -369,7 +324,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 193
     :try_start_0
     iget-object v2, p0, Lcom/android/server/cover/StateNotifier$CoverStateListenerInfo;->token:Landroid/os/IBinder;
 
@@ -377,23 +331,19 @@
 
     move-result-object v0
 
-    .line 195
     .local v0, "callback":Lcom/samsung/android/cover/ICoverStateListenerCallback;
     if-eqz v0, :cond_0
 
-    .line 196
     invoke-interface {v0, p1}, Lcom/samsung/android/cover/ICoverStateListenerCallback;->onCoverSwitchStateChanged(Z)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 198
     .end local v0    # "callback":Lcom/samsung/android/cover/ICoverStateListenerCallback;
     :catch_0
     move-exception v1
 
-    .line 199
     .local v1, "e":Landroid/os/RemoteException;
     const-string v2, "CoverManager.StateNotifier"
 

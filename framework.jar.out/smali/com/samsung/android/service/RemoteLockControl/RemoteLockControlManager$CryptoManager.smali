@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1207
     iput-object p1, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$CryptoManager;->this$0:Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +44,8 @@
     .end annotation
 
     .prologue
-    .line 1243
     const/4 v1, 0x0
 
-    .line 1245
     .local v1, "ciphertext":[B
     :try_start_0
     new-instance v3, Ljavax/crypto/spec/SecretKeySpec;
@@ -57,7 +54,6 @@
 
     invoke-direct {v3, p2, v4}, Ljavax/crypto/spec/SecretKeySpec;-><init>([BLjava/lang/String;)V
 
-    .line 1246
     .local v3, "keySpec":Ljavax/crypto/spec/SecretKeySpec;
     const-string v4, "AES/CBC/PKCS5Padding"
 
@@ -65,7 +61,6 @@
 
     move-result-object v0
 
-    .line 1247
     .local v0, "cipher":Ljavax/crypto/Cipher;
     const/4 v4, 0x1
 
@@ -75,28 +70,23 @@
 
     invoke-virtual {v0, v4, v3, v5}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
 
-    .line 1248
     invoke-virtual {v0, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v1
 
-    .line 1257
     .end local v0    # "cipher":Ljavax/crypto/Cipher;
     .end local v3    # "keySpec":Ljavax/crypto/spec/SecretKeySpec;
     :goto_0
     return-object v1
 
-    .line 1251
     :catch_0
     move-exception v2
 
-    .line 1253
     .local v2, "e":Ljava/lang/Exception;
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1254
     iget-object v4, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$CryptoManager;->this$0:Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;
 
     const/4 v5, -0x8
@@ -120,10 +110,8 @@
     .end annotation
 
     .prologue
-    .line 1218
     const/4 v3, 0x0
 
-    .line 1220
     .local v3, "ciphertext":[B
     :try_start_0
     const-string v7, "X.509"
@@ -132,13 +120,11 @@
 
     move-result-object v1
 
-    .line 1221
     .local v1, "certFactory":Ljava/security/cert/CertificateFactory;
     new-instance v5, Ljava/io/ByteArrayInputStream;
 
     invoke-direct {v5, p2}, Ljava/io/ByteArrayInputStream;-><init>([B)V
 
-    .line 1222
     .local v5, "in":Ljava/io/InputStream;
     invoke-virtual {v1, v5}, Ljava/security/cert/CertificateFactory;->generateCertificate(Ljava/io/InputStream;)Ljava/security/cert/Certificate;
 
@@ -146,13 +132,11 @@
 
     check-cast v0, Ljava/security/cert/X509Certificate;
 
-    .line 1223
     .local v0, "cert":Ljava/security/cert/X509Certificate;
     invoke-virtual {v0}, Ljava/security/cert/X509Certificate;->getPublicKey()Ljava/security/PublicKey;
 
     move-result-object v6
 
-    .line 1225
     .local v6, "key":Ljava/security/PublicKey;
     const-string v7, "RSA/ECB/OAEPWithSHA1AndMGF1Padding"
 
@@ -160,20 +144,17 @@
 
     move-result-object v2
 
-    .line 1226
     .local v2, "cipher":Ljavax/crypto/Cipher;
     const/4 v7, 0x1
 
     invoke-virtual {v2, v7, v6}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    .line 1227
     invoke-virtual {v2, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v3
 
-    .line 1236
     .end local v0    # "cert":Ljava/security/cert/X509Certificate;
     .end local v1    # "certFactory":Ljava/security/cert/CertificateFactory;
     .end local v2    # "cipher":Ljavax/crypto/Cipher;
@@ -182,15 +163,12 @@
     :goto_0
     return-object v3
 
-    .line 1230
     :catch_0
     move-exception v4
 
-    .line 1232
     .local v4, "e":Ljava/lang/Exception;
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1233
     iget-object v7, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$CryptoManager;->this$0:Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;
 
     const/4 v8, -0x8
@@ -208,16 +186,13 @@
     .param p1, "buf"    # [B
 
     .prologue
-    .line 1299
     new-instance v0, Ljava/security/SecureRandom;
 
     invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
 
-    .line 1300
     .local v0, "srand":Ljava/security/SecureRandom;
     invoke-virtual {v0, p1}, Ljava/security/SecureRandom;->nextBytes([B)V
 
-    .line 1301
     return-void
 .end method
 
@@ -232,14 +207,11 @@
     .end annotation
 
     .prologue
-    .line 1262
     const/4 v3, 0x0
 
-    .line 1263
     .local v3, "result":[B
     const-string v0, "HmacSHA256"
 
-    .line 1267
     .local v0, "HMAC_SHA256_ALGORITHM":Ljava/lang/String;
     :try_start_0
     const-string v4, "HmacSHA256"
@@ -248,7 +220,6 @@
 
     move-result-object v2
 
-    .line 1268
     .local v2, "mac":Ljavax/crypto/Mac;
     new-instance v4, Ljavax/crypto/spec/SecretKeySpec;
 
@@ -258,27 +229,22 @@
 
     invoke-virtual {v2, v4}, Ljavax/crypto/Mac;->init(Ljava/security/Key;)V
 
-    .line 1269
     invoke-virtual {v2, p1}, Ljavax/crypto/Mac;->doFinal([B)[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v3
 
-    .line 1277
     .end local v2    # "mac":Ljavax/crypto/Mac;
     :goto_0
     return-object v3
 
-    .line 1271
     :catch_0
     move-exception v1
 
-    .line 1273
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1274
     iget-object v4, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$CryptoManager;->this$0:Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;
 
     const/4 v5, -0x8
@@ -301,10 +267,8 @@
     .end annotation
 
     .prologue
-    .line 1282
     const/4 v2, 0x0
 
-    .line 1284
     .local v2, "output":[B
     :try_start_0
     const-string v3, "SHA-256"
@@ -313,7 +277,6 @@
 
     move-result-object v1
 
-    .line 1285
     .local v1, "md":Ljava/security/MessageDigest;
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
@@ -321,27 +284,22 @@
 
     invoke-virtual {v1, v3}, Ljava/security/MessageDigest;->update([B)V
 
-    .line 1286
     invoke-virtual {v1}, Ljava/security/MessageDigest;->digest()[B
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v2
 
-    .line 1294
     .end local v1    # "md":Ljava/security/MessageDigest;
     :goto_0
     return-object v2
 
-    .line 1288
     :catch_0
     move-exception v0
 
-    .line 1290
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 1291
     iget-object v3, p0, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager$CryptoManager;->this$0:Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;
 
     const/4 v4, -0x8
@@ -359,7 +317,6 @@
     .param p1, "serverCert"    # [B
 
     .prologue
-    .line 1212
     # getter for: Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;->mVkm:Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;
     invoke-static {}, Lcom/samsung/android/service/RemoteLockControl/RemoteLockControlManager;->access$200()Lcom/samsung/android/service/vaultkeeper/VaultKeeperManager;
 

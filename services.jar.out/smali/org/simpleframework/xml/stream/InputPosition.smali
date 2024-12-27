@@ -16,13 +16,10 @@
     .param p1, "source"    # Lorg/simpleframework/xml/stream/EventNode;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput-object p1, p0, Lorg/simpleframework/xml/stream/InputPosition;->source:Lorg/simpleframework/xml/stream/EventNode;
 
-    .line 46
     return-void
 .end method
 
@@ -32,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Lorg/simpleframework/xml/stream/InputPosition;->source:Lorg/simpleframework/xml/stream/EventNode;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/stream/EventNode;->getLine()I
@@ -46,7 +42,6 @@
     .locals 4
 
     .prologue
-    .line 68
     const-string v0, "line %s"
 
     const/4 v1, 0x1

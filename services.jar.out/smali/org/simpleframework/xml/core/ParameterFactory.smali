@@ -21,17 +21,14 @@
     .param p1, "support"    # Lorg/simpleframework/xml/core/Support;
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     invoke-virtual {p1}, Lorg/simpleframework/xml/core/Support;->getFormat()Lorg/simpleframework/xml/stream/Format;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ParameterFactory;->format:Lorg/simpleframework/xml/stream/Format;
 
-    .line 65
     return-void
 .end method
 
@@ -45,12 +42,10 @@
     .end annotation
 
     .prologue
-    .line 138
     instance-of v0, p1, Lorg/simpleframework/xml/Element;
 
     if-eqz v0, :cond_0
 
-    .line 139
     new-instance v0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     const-class v1, Lorg/simpleframework/xml/core/ElementParameter;
@@ -59,17 +54,14 @@
 
     invoke-direct {v0, v1, v2}, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;-><init>(Ljava/lang/Class;Ljava/lang/Class;)V
 
-    .line 163
     :goto_0
     return-object v0
 
-    .line 141
     :cond_0
     instance-of v0, p1, Lorg/simpleframework/xml/ElementList;
 
     if-eqz v0, :cond_1
 
-    .line 142
     new-instance v0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     const-class v1, Lorg/simpleframework/xml/core/ElementListParameter;
@@ -80,13 +72,11 @@
 
     goto :goto_0
 
-    .line 144
     :cond_1
     instance-of v0, p1, Lorg/simpleframework/xml/ElementArray;
 
     if-eqz v0, :cond_2
 
-    .line 145
     new-instance v0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     const-class v1, Lorg/simpleframework/xml/core/ElementArrayParameter;
@@ -97,13 +87,11 @@
 
     goto :goto_0
 
-    .line 147
     :cond_2
     instance-of v0, p1, Lorg/simpleframework/xml/ElementMapUnion;
 
     if-eqz v0, :cond_3
 
-    .line 148
     new-instance v0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     const-class v1, Lorg/simpleframework/xml/core/ElementMapUnionParameter;
@@ -116,13 +104,11 @@
 
     goto :goto_0
 
-    .line 150
     :cond_3
     instance-of v0, p1, Lorg/simpleframework/xml/ElementListUnion;
 
     if-eqz v0, :cond_4
 
-    .line 151
     new-instance v0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     const-class v1, Lorg/simpleframework/xml/core/ElementListUnionParameter;
@@ -135,13 +121,11 @@
 
     goto :goto_0
 
-    .line 153
     :cond_4
     instance-of v0, p1, Lorg/simpleframework/xml/ElementUnion;
 
     if-eqz v0, :cond_5
 
-    .line 154
     new-instance v0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     const-class v1, Lorg/simpleframework/xml/core/ElementUnionParameter;
@@ -154,13 +138,11 @@
 
     goto :goto_0
 
-    .line 156
     :cond_5
     instance-of v0, p1, Lorg/simpleframework/xml/ElementMap;
 
     if-eqz v0, :cond_6
 
-    .line 157
     new-instance v0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     const-class v1, Lorg/simpleframework/xml/core/ElementMapParameter;
@@ -171,13 +153,11 @@
 
     goto :goto_0
 
-    .line 159
     :cond_6
     instance-of v0, p1, Lorg/simpleframework/xml/Attribute;
 
     if-eqz v0, :cond_7
 
-    .line 160
     new-instance v0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     const-class v1, Lorg/simpleframework/xml/core/AttributeParameter;
@@ -188,13 +168,11 @@
 
     goto :goto_0
 
-    .line 162
     :cond_7
     instance-of v0, p1, Lorg/simpleframework/xml/Text;
 
     if-eqz v0, :cond_8
 
-    .line 163
     new-instance v0, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     const-class v1, Lorg/simpleframework/xml/core/TextParameter;
@@ -205,7 +183,6 @@
 
     goto :goto_0
 
-    .line 165
     :cond_8
     new-instance v0, Lorg/simpleframework/xml/core/PersistenceException;
 
@@ -234,18 +211,15 @@
     .end annotation
 
     .prologue
-    .line 118
     invoke-direct {p0, p1}, Lorg/simpleframework/xml/core/ParameterFactory;->getBuilder(Ljava/lang/annotation/Annotation;)Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
 
     move-result-object v0
 
-    .line 119
     .local v0, "builder":Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/ParameterFactory$ParameterBuilder;->getConstructor()Ljava/lang/reflect/Constructor;
 
     move-result-object v1
 
-    .line 121
     .local v1, "factory":Ljava/lang/reflect/Constructor;
     invoke-virtual {v1}, Ljava/lang/reflect/Constructor;->isAccessible()Z
 
@@ -253,12 +227,10 @@
 
     if-nez v2, :cond_0
 
-    .line 122
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Constructor;->setAccessible(Z)V
 
-    .line 124
     :cond_0
     return-object v1
 .end method
@@ -277,7 +249,6 @@
     .end annotation
 
     .prologue
-    .line 80
     const/4 v0, 0x0
 
     invoke-virtual {p0, p1, p2, v0, p3}, Lorg/simpleframework/xml/core/ParameterFactory;->getInstance(Ljava/lang/reflect/Constructor;Ljava/lang/annotation/Annotation;Ljava/lang/annotation/Annotation;I)Lorg/simpleframework/xml/core/Parameter;
@@ -310,16 +281,13 @@
 
     const/4 v2, 0x0
 
-    .line 97
     invoke-direct {p0, p2}, Lorg/simpleframework/xml/core/ParameterFactory;->getConstructor(Ljava/lang/annotation/Annotation;)Ljava/lang/reflect/Constructor;
 
     move-result-object v0
 
-    .line 99
     .local v0, "builder":Ljava/lang/reflect/Constructor;
     if-eqz p3, :cond_0
 
-    .line 100
     const/4 v1, 0x5
 
     new-array v1, v1, [Ljava/lang/Object;
@@ -346,7 +314,6 @@
 
     check-cast v1, Lorg/simpleframework/xml/core/Parameter;
 
-    .line 102
     :goto_0
     return-object v1
 

@@ -25,7 +25,6 @@
     .locals 2
 
     .prologue
-    .line 75
     const-string v0, "eng"
 
     const-string/jumbo v1, "ro.build.type"
@@ -50,19 +49,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 77
     invoke-direct {p0}, Lcom/sec/enterprise/knox/container/IRCPPolicy$Stub;-><init>()V
 
-    .line 73
     iput-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 74
     iput-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 78
     iput-object p1, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mContext:Landroid/content/Context;
 
-    .line 79
     new-instance v0, Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget-object v1, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mContext:Landroid/content/Context;
@@ -71,7 +65,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
-    .line 80
     return-void
 .end method
 
@@ -81,7 +74,6 @@
     .param p2, "permission"    # Ljava/lang/String;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->getEDM()Landroid/app/enterprise/EnterpriseDeviceManager;
 
     move-result-object v0
@@ -102,7 +94,6 @@
     .end annotation
 
     .prologue
-    .line 99
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
@@ -111,7 +102,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 100
     new-instance v0, Ljava/lang/SecurityException;
 
     const-string v1, "Not a system service. This API only allowed by SYSTEM_UID"
@@ -120,7 +110,6 @@
 
     throw v0
 
-    .line 102
     :cond_0
     return-void
 .end method
@@ -131,7 +120,6 @@
     .param p2, "policyProperty"    # Ljava/lang/String;
 
     .prologue
-    .line 177
     iget-object v2, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mContext:Landroid/content/Context;
 
     const-string/jumbo v3, "persona"
@@ -142,13 +130,11 @@
 
     check-cast v1, Landroid/os/PersonaManager;
 
-    .line 178
     .local v1, "personaManager":Landroid/os/PersonaManager;
     invoke-virtual {v1, p1}, Landroid/os/PersonaManager;->exists(I)Z
 
     move-result v0
 
-    .line 179
     .local v0, "isPersona":Z
     const-string/jumbo v2, "knox-import-data"
 
@@ -158,14 +144,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 180
     const-string/jumbo v2, "true"
 
-    .line 202
     :goto_0
     return-object v2
 
-    .line 181
     :cond_0
     const-string/jumbo v2, "knox-export-data"
 
@@ -175,21 +158,17 @@
 
     if-eqz v2, :cond_2
 
-    .line 182
     if-eqz v0, :cond_1
 
-    .line 183
     const-string/jumbo v2, "false"
 
     goto :goto_0
 
-    .line 185
     :cond_1
     const-string/jumbo v2, "true"
 
     goto :goto_0
 
-    .line 187
     :cond_2
     const-string/jumbo v2, "knox-sanitize-data"
 
@@ -199,21 +178,17 @@
 
     if-eqz v2, :cond_4
 
-    .line 188
     if-eqz v0, :cond_3
 
-    .line 189
     const-string/jumbo v2, "false"
 
     goto :goto_0
 
-    .line 191
     :cond_3
     const-string/jumbo v2, "true"
 
     goto :goto_0
 
-    .line 194
     :cond_4
     const-string/jumbo v2, "knox-sanitize-data-lockscreen"
 
@@ -223,21 +198,17 @@
 
     if-eqz v2, :cond_6
 
-    .line 195
     if-eqz v0, :cond_5
 
-    .line 196
     const-string/jumbo v2, "false"
 
     goto :goto_0
 
-    .line 198
     :cond_5
     const-string/jumbo v2, "true"
 
     goto :goto_0
 
-    .line 202
     :cond_6
     const/4 v2, 0x0
 
@@ -248,12 +219,10 @@
     .locals 2
 
     .prologue
-    .line 83
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
     if-nez v0, :cond_0
 
-    .line 84
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mContext:Landroid/content/Context;
 
     const-string v1, "enterprise_policy"
@@ -266,7 +235,6 @@
 
     iput-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
-    .line 87
     :cond_0
     iget-object v0, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEDM:Landroid/app/enterprise/EnterpriseDeviceManager;
 
@@ -297,19 +265,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 239
     const-string v6, "com.sec.enterprise.knox.permission.KNOX_RCP_SYNC_MGMT"
 
     invoke-direct {p0, p1, v6}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->enforceSecurityPermission(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
     move-result-object p1
 
-    .line 240
     sget-boolean v6, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v6, :cond_0
 
-    .line 241
     const-string v6, "KnoxMUMRCPPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -334,7 +299,6 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 244
     :cond_0
     if-eqz p3, :cond_1
 
@@ -352,11 +316,9 @@
 
     if-eqz v6, :cond_2
 
-    .line 262
     :cond_1
     return-object v4
 
-    .line 247
     :cond_2
     const/4 v6, 0x1
 
@@ -368,13 +330,11 @@
 
     aput-object v7, v0, v6
 
-    .line 249
     .local v0, "columns":[Ljava/lang/String;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 250
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v6, "adminUid"
 
@@ -386,24 +346,20 @@
 
     invoke-virtual {v1, v6, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 251
     const-string/jumbo v6, "propertyName"
 
     invoke-virtual {v1, v6, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 252
     const-string/jumbo v6, "propertyValue"
 
     invoke-virtual {v1, v6, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 253
     iget-object v6, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v6, p2, v0, v1}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getValuesList(Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Ljava/util/List;
 
     move-result-object v3
 
-    .line 255
     .local v3, "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v3, :cond_1
 
@@ -413,12 +369,10 @@
 
     if-lez v6, :cond_1
 
-    .line 256
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 257
     .local v4, "providerStrings":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v3}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -438,7 +392,6 @@
 
     check-cast v5, Landroid/content/ContentValues;
 
-    .line 258
     .local v5, "values":Landroid/content/ContentValues;
     const-string/jumbo v6, "name"
 
@@ -463,10 +416,8 @@
 
     const/4 v8, 0x0
 
-    .line 210
     invoke-direct {p0}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->enforceSystemUid()V
 
-    .line 212
     if-eqz p3, :cond_0
 
     invoke-virtual {p3}, Ljava/lang/String;->isEmpty()Z
@@ -485,12 +436,10 @@
 
     if-nez p2, :cond_1
 
-    .line 235
     :cond_0
     :goto_0
     return-object v6
 
-    .line 216
     :cond_1
     iget-object v7, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -498,7 +447,6 @@
 
     move-result-object v0
 
-    .line 217
     .local v0, "adminList":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     if-eqz v0, :cond_0
 
@@ -508,7 +456,6 @@
 
     if-nez v7, :cond_0
 
-    .line 221
     const/4 v6, 0x1
 
     new-array v1, v6, [Ljava/lang/String;
@@ -517,24 +464,20 @@
 
     aput-object v6, v1, v8
 
-    .line 224
     .local v1, "columns":[Ljava/lang/String;
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 225
     .local v2, "cv":Landroid/content/ContentValues;
     const-string/jumbo v6, "name"
 
     invoke-virtual {v2, v6, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 226
     const-string/jumbo v6, "propertyName"
 
     invoke-virtual {v2, v6, p4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 227
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v3
@@ -553,20 +496,17 @@
 
     check-cast v5, Ljava/lang/Long;
 
-    .line 228
     .local v5, "uid":Ljava/lang/Long;
     const-string v6, "adminUid"
 
     invoke-virtual {v2, v6, v5}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 229
     iget-object v6, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     invoke-virtual {v6, p1, v1, v2}, Lcom/android/server/enterprise/storage/EdmStorageProvider;->getValuesList(Ljava/lang/String;[Ljava/lang/String;Landroid/content/ContentValues;)Ljava/util/List;
 
     move-result-object v4
 
-    .line 231
     .local v4, "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v4, :cond_2
 
@@ -576,7 +516,6 @@
 
     if-lez v6, :cond_2
 
-    .line 232
     invoke-interface {v4, v8}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -591,7 +530,6 @@
 
     goto :goto_0
 
-    .line 235
     .end local v4    # "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     .end local v5    # "uid":Ljava/lang/Long;
     :cond_3
@@ -624,7 +562,6 @@
     .end annotation
 
     .prologue
-    .line 105
     .local p3, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v18, "KnoxMUMRCPPolicyService"
 
@@ -632,7 +569,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 106
     const-string v18, "com.sec.enterprise.knox.permission.KNOX_RCP_SYNC_MGMT"
 
     move-object/from16 v0, p0
@@ -645,7 +581,6 @@
 
     move-result-object v11
 
-    .line 108
     .local v11, "lCtxInfo":Landroid/app/enterprise/ContextInfo;
     if-eqz p3, :cond_0
 
@@ -671,7 +606,6 @@
 
     if-eqz v18, :cond_2
 
-    .line 110
     :cond_0
     const-string v18, "KnoxMUMRCPPolicyService"
 
@@ -679,15 +613,12 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 111
     const/4 v13, 0x0
 
-    .line 171
     :cond_1
     :goto_0
     return v13
 
-    .line 113
     :cond_2
     const/16 v18, 0x2
 
@@ -719,36 +650,30 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->removeAll(Ljava/util/Collection;)Z
 
-    .line 114
     invoke-interface/range {p3 .. p3}, Ljava/util/List;->isEmpty()Z
 
     move-result v18
 
     if-eqz v18, :cond_3
 
-    .line 115
     const-string v18, "KnoxMUMRCPPolicyService"
 
     const-string/jumbo v19, "setRCPSyncPolicy: bad arguments after filtering.."
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 116
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 118
     :cond_3
     const/4 v13, 0x0
 
-    .line 119
     .local v13, "result":Z
     new-instance v15, Landroid/content/ContentValues;
 
     invoke-direct {v15}, Landroid/content/ContentValues;-><init>()V
 
-    .line 120
     .local v15, "where":Landroid/content/ContentValues;
     const-string v18, "adminUid"
 
@@ -766,7 +691,6 @@
 
     invoke-virtual {v15, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 121
     const-string/jumbo v18, "propertyName"
 
     move-object/from16 v0, v18
@@ -775,12 +699,10 @@
 
     invoke-virtual {v15, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 122
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 124
     .local v4, "arrList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v14, Ljava/util/TreeSet;
 
@@ -788,7 +710,6 @@
 
     invoke-direct {v14, v0}, Ljava/util/TreeSet;-><init>(Ljava/util/Collection;)V
 
-    .line 125
     .local v14, "set":Ljava/util/Set;, "Ljava/util/Set<Ljava/lang/String;>;"
     invoke-interface {v14}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -808,7 +729,6 @@
 
     check-cast v10, Ljava/lang/String;
 
-    .line 126
     .local v10, "item":Ljava/lang/String;
     const-string/jumbo v18, "name"
 
@@ -816,7 +736,6 @@
 
     invoke-virtual {v15, v0, v10}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -831,16 +750,13 @@
 
     move-result v5
 
-    .line 129
     .local v5, "count":I
     if-lez v5, :cond_6
 
-    .line 131
     new-instance v7, Landroid/content/ContentValues;
 
     invoke-direct {v7}, Landroid/content/ContentValues;-><init>()V
 
-    .line 132
     .local v7, "cv":Landroid/content/ContentValues;
     const-string/jumbo v18, "propertyValue"
 
@@ -850,7 +766,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 133
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -865,19 +780,16 @@
 
     move-result v13
 
-    .line 140
     .end local v7    # "cv":Landroid/content/ContentValues;
     :goto_2
     if-nez v13, :cond_7
 
-    .line 141
     const-string v18, "KnoxMUMRCPPolicyService"
 
     const-string v19, "Setting RCP data sync policy failed."
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 150
     .end local v5    # "count":I
     .end local v10    # "item":Ljava/lang/String;
     :cond_4
@@ -887,12 +799,10 @@
 
     if-nez v18, :cond_1
 
-    .line 151
     new-instance v8, Landroid/content/Intent;
 
     invoke-direct {v8}, Landroid/content/Intent;-><init>()V
 
-    .line 152
     .local v8, "i":Landroid/content/Intent;
     const-string/jumbo v18, "samsung.knox.intent.action.RCP_POLICY_CHANGED"
 
@@ -900,12 +810,10 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 153
     new-instance v12, Landroid/os/Bundle;
 
     invoke-direct {v12}, Landroid/os/Bundle;-><init>()V
 
-    .line 154
     .local v12, "policyChangedBundle":Landroid/os/Bundle;
     const-string/jumbo v18, "personaId"
 
@@ -921,14 +829,12 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 155
     const-string/jumbo v18, "syncerList"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v12, v0, v4}, Landroid/os/Bundle;->putStringArrayList(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 156
     const-string/jumbo v18, "policyName"
 
     move-object/from16 v0, v18
@@ -937,7 +843,6 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 157
     const-string/jumbo v18, "policyValue"
 
     move-object/from16 v0, v18
@@ -946,19 +851,16 @@
 
     invoke-virtual {v12, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 158
     const-string/jumbo v18, "policyChangedBundle"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v8, v0, v12}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 159
     sget-boolean v18, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v18, :cond_5
 
-    .line 160
     const-string v18, "KnoxMUMRCPPolicyService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -987,7 +889,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     const-string v18, "KnoxMUMRCPPolicyService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -1012,7 +913,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 162
     const-string v18, "KnoxMUMRCPPolicyService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -1039,7 +939,6 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 163
     const-string v18, "KnoxMUMRCPPolicyService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -1066,13 +965,11 @@
 
     invoke-static/range {v18 .. v19}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 166
     :cond_5
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v16
 
-    .line 167
     .local v16, "token":J
     new-instance v6, Landroid/os/UserHandle;
 
@@ -1084,7 +981,6 @@
 
     invoke-direct {v6, v0}, Landroid/os/UserHandle;-><init>(I)V
 
-    .line 168
     .local v6, "currentUser":Landroid/os/UserHandle;
     move-object/from16 v0, p0
 
@@ -1096,12 +992,10 @@
 
     invoke-virtual {v0, v8, v6}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 169
     invoke-static/range {v16 .. v17}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     goto/16 :goto_0
 
-    .line 136
     .end local v6    # "currentUser":Landroid/os/UserHandle;
     .end local v8    # "i":Landroid/content/Intent;
     .end local v12    # "policyChangedBundle":Landroid/os/Bundle;
@@ -1117,7 +1011,6 @@
 
     invoke-virtual {v15, v0, v1}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 137
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
@@ -1134,11 +1027,9 @@
 
     goto/16 :goto_2
 
-    .line 145
     :cond_7
     invoke-virtual {v4, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 146
     const-string v18, "KnoxMUMRCPPolicyService"
 
     new-instance v19, Ljava/lang/StringBuilder;
@@ -1178,24 +1069,19 @@
 
     const/4 v10, 0x0
 
-    .line 520
     const-string v8, "android.permission.sec.MDM_ENTERPRISE_CONTAINER"
 
     invoke-direct {p0, p1, v8}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->enforceSecurityPermission(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 521
     if-eqz p1, :cond_1
 
-    .line 522
     const/4 v4, 0x0
 
-    .line 523
     .local v4, "result":Z
     new-instance v5, Landroid/content/ContentValues;
 
     invoke-direct {v5}, Landroid/content/ContentValues;-><init>()V
 
-    .line 524
     .local v5, "where":Landroid/content/ContentValues;
     const-string v8, "cid"
 
@@ -1207,7 +1093,6 @@
 
     invoke-virtual {v5, v8, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 525
     const-string v8, "adminUid"
 
     iget v11, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -1218,19 +1103,16 @@
 
     invoke-virtual {v5, v8, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 526
     const-string/jumbo v8, "propertyName"
 
     const-string v11, "EnforceMoveAppsToContainer"
 
     invoke-virtual {v5, v8, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 527
     sget-boolean v8, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v8, :cond_0
 
-    .line 528
     const-string v8, "KnoxMUMRCPPolicyService"
 
     new-instance v11, Ljava/lang/StringBuilder;
@@ -1273,7 +1155,6 @@
 
     invoke-static {v8, v11}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 531
     :cond_0
     iget-object v8, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1283,7 +1164,6 @@
 
     move-result v1
 
-    .line 532
     .local v1, "count":I
     const-string v11, "KnoxMUMRCPPolicyService"
 
@@ -1312,15 +1192,12 @@
 
     invoke-static {v11, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 533
     if-lez v1, :cond_3
 
-    .line 535
     new-instance v2, Landroid/content/ContentValues;
 
     invoke-direct {v2}, Landroid/content/ContentValues;-><init>()V
 
-    .line 536
     .local v2, "cv":Landroid/content/ContentValues;
     const-string/jumbo v8, "propertyValue"
 
@@ -1330,7 +1207,6 @@
 
     invoke-virtual {v2, v8, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 537
     iget-object v8, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v11, "CONTAINER_POLICY"
@@ -1339,12 +1215,10 @@
 
     move-result v4
 
-    .line 544
     .end local v2    # "cv":Landroid/content/ContentValues;
     :goto_1
     if-nez v4, :cond_4
 
-    .line 545
     const-string v8, "KnoxMUMRCPPolicyService"
 
     new-instance v9, Ljava/lang/StringBuilder;
@@ -1367,7 +1241,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 569
     .end local v1    # "count":I
     .end local v4    # "result":Z
     .end local v5    # "where":Landroid/content/ContentValues;
@@ -1381,10 +1254,8 @@
     :cond_2
     move v8, v10
 
-    .line 532
     goto :goto_0
 
-    .line 540
     :cond_3
     const-string/jumbo v8, "propertyValue"
 
@@ -1394,7 +1265,6 @@
 
     invoke-virtual {v5, v8, v11}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 541
     iget-object v8, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v11, "CONTAINER_POLICY"
@@ -1405,24 +1275,20 @@
 
     goto :goto_1
 
-    .line 549
     :cond_4
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 550
     .local v3, "i":Landroid/content/Intent;
     const-string/jumbo v8, "samsung.knox.intent.action.RCP_POLICY_CHANGED"
 
     invoke-virtual {v3, v8}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 551
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 552
     .local v0, "bundle":Landroid/os/Bundle;
     const-string/jumbo v8, "personaId"
 
@@ -1430,29 +1296,24 @@
 
     invoke-virtual {v0, v8, v10}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 553
     const-string/jumbo v8, "policyName"
 
     const-string v10, "EnforceMoveAppsToContainer"
 
     invoke-virtual {v0, v8, v10}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 554
     const-string/jumbo v8, "policyValue"
 
     invoke-virtual {v0, v8, p2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 555
     const-string v8, "MoveAppsToContainerBundle"
 
     invoke-virtual {v3, v8, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
-    .line 556
     sget-boolean v8, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v8, :cond_5
 
-    .line 557
     const-string v8, "KnoxMUMRCPPolicyService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1477,14 +1338,12 @@
 
     invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 558
     const-string v8, "KnoxMUMRCPPolicyService"
 
     const-string v10, "Intent data policyName: EnforceMoveAppsToContainer"
 
     invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     const-string v8, "KnoxMUMRCPPolicyService"
 
     new-instance v10, Ljava/lang/StringBuilder;
@@ -1507,13 +1366,11 @@
 
     invoke-static {v8, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 562
     :cond_5
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v6
 
-    .line 563
     .local v6, "token":J
     iget-object v8, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mContext:Landroid/content/Context;
 
@@ -1521,12 +1378,10 @@
 
     invoke-virtual {v8, v3, v10}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 564
     invoke-static {v6, v7}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
     move v10, v9
 
-    .line 565
     goto/16 :goto_2
 .end method
 
@@ -1540,24 +1395,19 @@
 
     const/4 v6, 0x0
 
-    .line 366
     const-string v4, "android.permission.sec.MDM_ENTERPRISE_CONTAINER"
 
     invoke-direct {p0, p1, v4}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->enforceSecurityPermission(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 367
     if-eqz p1, :cond_1
 
-    .line 368
     const/4 v2, 0x0
 
-    .line 369
     .local v2, "result":Z
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 370
     .local v3, "where":Landroid/content/ContentValues;
     const-string v4, "cid"
 
@@ -1569,7 +1419,6 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 371
     const-string v4, "adminUid"
 
     iget v7, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -1580,19 +1429,16 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 372
     const-string/jumbo v4, "propertyName"
 
     const-string v7, "EnforceMoveFilesToContainer"
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 373
     sget-boolean v4, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v4, :cond_0
 
-    .line 374
     const-string v4, "KnoxMUMRCPPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1635,7 +1481,6 @@
 
     invoke-static {v4, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     :cond_0
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1645,7 +1490,6 @@
 
     move-result v0
 
-    .line 378
     .local v0, "count":I
     const-string v7, "KnoxMUMRCPPolicyService"
 
@@ -1674,15 +1518,12 @@
 
     invoke-static {v7, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 379
     if-lez v0, :cond_3
 
-    .line 381
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 382
     .local v1, "cv":Landroid/content/ContentValues;
     const-string/jumbo v4, "propertyValue"
 
@@ -1692,7 +1533,6 @@
 
     invoke-virtual {v1, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 383
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "CONTAINER_POLICY"
@@ -1701,12 +1541,10 @@
 
     move-result v2
 
-    .line 390
     .end local v1    # "cv":Landroid/content/ContentValues;
     :goto_1
     if-nez v2, :cond_4
 
-    .line 391
     const-string v4, "KnoxMUMRCPPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1729,7 +1567,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 398
     .end local v0    # "count":I
     .end local v2    # "result":Z
     .end local v3    # "where":Landroid/content/ContentValues;
@@ -1743,10 +1580,8 @@
     :cond_2
     move v4, v6
 
-    .line 378
     goto :goto_0
 
-    .line 386
     :cond_3
     const-string/jumbo v4, "propertyValue"
 
@@ -1756,7 +1591,6 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 387
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "CONTAINER_POLICY"
@@ -1770,7 +1604,6 @@
     :cond_4
     move v6, v5
 
-    .line 394
     goto :goto_2
 .end method
 
@@ -1784,24 +1617,19 @@
 
     const/4 v6, 0x0
 
-    .line 443
     const-string v4, "android.permission.sec.MDM_ENTERPRISE_CONTAINER"
 
     invoke-direct {p0, p1, v4}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->enforceSecurityPermission(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 444
     if-eqz p1, :cond_1
 
-    .line 445
     const/4 v2, 0x0
 
-    .line 446
     .local v2, "result":Z
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 447
     .local v3, "where":Landroid/content/ContentValues;
     const-string v4, "cid"
 
@@ -1813,7 +1641,6 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 448
     const-string v4, "adminUid"
 
     iget v7, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -1824,19 +1651,16 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 449
     const-string/jumbo v4, "propertyName"
 
     const-string v7, "EnforceMoveFilesToOwner"
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 450
     sget-boolean v4, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v4, :cond_0
 
-    .line 451
     const-string v4, "KnoxMUMRCPPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1879,7 +1703,6 @@
 
     invoke-static {v4, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 454
     :cond_0
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -1889,7 +1712,6 @@
 
     move-result v0
 
-    .line 455
     .local v0, "count":I
     const-string v7, "KnoxMUMRCPPolicyService"
 
@@ -1918,15 +1740,12 @@
 
     invoke-static {v7, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 456
     if-lez v0, :cond_3
 
-    .line 458
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 459
     .local v1, "cv":Landroid/content/ContentValues;
     const-string/jumbo v4, "propertyValue"
 
@@ -1936,7 +1755,6 @@
 
     invoke-virtual {v1, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 460
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "CONTAINER_POLICY"
@@ -1945,12 +1763,10 @@
 
     move-result v2
 
-    .line 467
     .end local v1    # "cv":Landroid/content/ContentValues;
     :goto_1
     if-nez v2, :cond_4
 
-    .line 468
     const-string v4, "KnoxMUMRCPPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1973,7 +1789,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 475
     .end local v0    # "count":I
     .end local v2    # "result":Z
     .end local v3    # "where":Landroid/content/ContentValues;
@@ -1987,10 +1802,8 @@
     :cond_2
     move v4, v6
 
-    .line 455
     goto :goto_0
 
-    .line 463
     :cond_3
     const-string/jumbo v4, "propertyValue"
 
@@ -2000,7 +1813,6 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
 
-    .line 464
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "CONTAINER_POLICY"
@@ -2014,7 +1826,6 @@
     :cond_4
     move v6, v5
 
-    .line 471
     goto :goto_2
 .end method
 
@@ -2028,24 +1839,19 @@
 
     const/4 v6, 0x0
 
-    .line 666
     const-string v4, "com.sec.enterprise.knox.permission.KNOX_RCP_SYNC_MGMT"
 
     invoke-direct {p0, p1, v4}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->enforceSecurityPermission(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 667
     if-eqz p1, :cond_4
 
-    .line 668
     const/4 v2, 0x0
 
-    .line 669
     .local v2, "result":Z
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 670
     .local v3, "where":Landroid/content/ContentValues;
     const-string v4, "cid"
 
@@ -2057,7 +1863,6 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 671
     const-string v4, "adminUid"
 
     iget v7, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -2068,26 +1873,22 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 672
     const-string/jumbo v4, "name"
 
     const-string v7, "Clipboard"
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 673
     const-string/jumbo v4, "propertyName"
 
     const-string/jumbo v7, "knox-import-data"
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 674
     sget-boolean v4, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v4, :cond_0
 
-    .line 675
     const-string v4, "KnoxMUMRCPPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2130,7 +1931,6 @@
 
     invoke-static {v4, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 680
     :cond_0
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2140,7 +1940,6 @@
 
     move-result v0
 
-    .line 681
     .local v0, "count":I
     const-string v7, "KnoxMUMRCPPolicyService"
 
@@ -2169,15 +1968,12 @@
 
     invoke-static {v7, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 682
     if-lez v0, :cond_2
 
-    .line 684
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 685
     .local v1, "cv":Landroid/content/ContentValues;
     const-string/jumbo v4, "propertyValue"
 
@@ -2187,7 +1983,6 @@
 
     invoke-virtual {v1, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 686
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "RCP_DATA"
@@ -2196,12 +1991,10 @@
 
     move-result v2
 
-    .line 693
     .end local v1    # "cv":Landroid/content/ContentValues;
     :goto_1
     if-nez v2, :cond_3
 
-    .line 694
     const-string v4, "KnoxMUMRCPPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2224,7 +2017,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 700
     .end local v0    # "count":I
     .end local v2    # "result":Z
     .end local v3    # "where":Landroid/content/ContentValues;
@@ -2237,10 +2029,8 @@
     :cond_1
     move v4, v6
 
-    .line 681
     goto :goto_0
 
-    .line 689
     :cond_2
     const-string/jumbo v4, "propertyValue"
 
@@ -2250,7 +2040,6 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 690
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "RCP_DATA"
@@ -2264,10 +2053,8 @@
     :cond_3
     move v6, v5
 
-    .line 697
     goto :goto_2
 
-    .line 699
     .end local v0    # "count":I
     .end local v2    # "result":Z
     .end local v3    # "where":Landroid/content/ContentValues;
@@ -2291,24 +2078,19 @@
 
     const/4 v6, 0x0
 
-    .line 629
     const-string v4, "com.sec.enterprise.knox.permission.KNOX_RCP_SYNC_MGMT"
 
     invoke-direct {p0, p1, v4}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->enforceSecurityPermission(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;)Landroid/app/enterprise/ContextInfo;
 
-    .line 630
     if-eqz p1, :cond_4
 
-    .line 631
     const/4 v2, 0x0
 
-    .line 632
     .local v2, "result":Z
     new-instance v3, Landroid/content/ContentValues;
 
     invoke-direct {v3}, Landroid/content/ContentValues;-><init>()V
 
-    .line 633
     .local v3, "where":Landroid/content/ContentValues;
     const-string v4, "cid"
 
@@ -2320,7 +2102,6 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 634
     const-string v4, "adminUid"
 
     iget v7, p1, Landroid/app/enterprise/ContextInfo;->mCallerUid:I
@@ -2331,26 +2112,22 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 635
     const-string/jumbo v4, "name"
 
     const-string v7, "Clipboard"
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 636
     const-string/jumbo v4, "propertyName"
 
     const-string/jumbo v7, "knox-export-data"
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 637
     sget-boolean v4, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v4, :cond_0
 
-    .line 638
     const-string v4, "KnoxMUMRCPPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -2393,7 +2170,6 @@
 
     invoke-static {v4, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 641
     :cond_0
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2403,7 +2179,6 @@
 
     move-result v0
 
-    .line 642
     .local v0, "count":I
     const-string v7, "KnoxMUMRCPPolicyService"
 
@@ -2432,15 +2207,12 @@
 
     invoke-static {v7, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 643
     if-lez v0, :cond_2
 
-    .line 645
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 646
     .local v1, "cv":Landroid/content/ContentValues;
     const-string/jumbo v4, "propertyValue"
 
@@ -2450,7 +2222,6 @@
 
     invoke-virtual {v1, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 647
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "RCP_DATA"
@@ -2459,12 +2230,10 @@
 
     move-result v2
 
-    .line 654
     .end local v1    # "cv":Landroid/content/ContentValues;
     :goto_1
     if-nez v2, :cond_3
 
-    .line 655
     const-string v4, "KnoxMUMRCPPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2487,7 +2256,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 661
     .end local v0    # "count":I
     .end local v2    # "result":Z
     .end local v3    # "where":Landroid/content/ContentValues;
@@ -2500,10 +2268,8 @@
     :cond_1
     move v4, v6
 
-    .line 642
     goto :goto_0
 
-    .line 650
     :cond_2
     const-string/jumbo v4, "propertyValue"
 
@@ -2513,7 +2279,6 @@
 
     invoke-virtual {v3, v4, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 651
     iget-object v4, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     const-string v7, "RCP_DATA"
@@ -2527,10 +2292,8 @@
     :cond_3
     move v6, v5
 
-    .line 658
     goto :goto_2
 
-    .line 660
     .end local v0    # "count":I
     .end local v2    # "result":Z
     .end local v3    # "where":Landroid/content/ContentValues;
@@ -2551,30 +2314,24 @@
     .param p3, "property"    # Ljava/lang/String;
 
     .prologue
-    .line 274
     const-string v5, "KnoxMUMRCPPolicyService"
 
     const-string/jumbo v6, "getAllowChangeDataSyncPolicy"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 275
     const/4 v4, 0x0
 
-    .line 276
     .local v4, "userId":I
     if-eqz p1, :cond_0
 
-    .line 277
     iget v4, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
 
-    .line 282
     :goto_0
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 283
     .local v2, "token":J
     const-string v5, "RCP_DATA"
 
@@ -2582,21 +2339,16 @@
 
     move-result-object v1
 
-    .line 284
     .local v1, "retval":Ljava/lang/String;
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 285
     if-nez v1, :cond_1
 
-    .line 286
     const/4 v5, 0x0
 
-    .line 288
     :goto_1
     return v5
 
-    .line 279
     .end local v1    # "retval":Ljava/lang/String;
     .end local v2    # "token":J
     :cond_0
@@ -2604,7 +2356,6 @@
 
     move-result v0
 
-    .line 280
     .local v0, "callingUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
@@ -2612,7 +2363,6 @@
 
     goto :goto_0
 
-    .line 288
     .end local v0    # "callingUid":I
     .restart local v1    # "retval":Ljava/lang/String;
     .restart local v2    # "token":J
@@ -2631,7 +2381,6 @@
     .param p3, "property"    # Ljava/lang/String;
 
     .prologue
-    .line 292
     const-string v0, "RCP_DATA"
 
     invoke-direct {p0, v0, p1, p2, p3}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->getPropertyValue(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -2660,14 +2409,12 @@
     .end annotation
 
     .prologue
-    .line 297
     const-string v0, "KnoxMUMRCPPolicyService"
 
     const-string/jumbo v1, "getListFromAllowChangeDataSyncPolicy"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 298
     const-string v0, "RCP_DATA"
 
     invoke-static {p3}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
@@ -2688,31 +2435,26 @@
     .param p3, "property"    # Ljava/lang/String;
 
     .prologue
-    .line 309
     const-string v5, "KnoxMUMRCPPolicyService"
 
     const-string/jumbo v6, "getNotificationSyncPolicy"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 310
     invoke-static {}, Landroid/os/Binder;->getCallingUid()I
 
     move-result v0
 
-    .line 311
     .local v0, "callingUid":I
     invoke-static {v0}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v4
 
-    .line 312
     .local v4, "userId":I
     invoke-static {}, Landroid/os/Binder;->clearCallingIdentity()J
 
     move-result-wide v2
 
-    .line 313
     .local v2, "token":J
     const-string v5, "RCP_NOTIFICATION"
 
@@ -2720,11 +2462,9 @@
 
     move-result-object v1
 
-    .line 314
     .local v1, "retval":Ljava/lang/String;
     invoke-static {v2, v3}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    .line 315
     return-object v1
 .end method
 
@@ -2735,7 +2475,6 @@
     .param p3, "property"    # Ljava/lang/String;
 
     .prologue
-    .line 319
     const-string v0, "RCP_NOTIFICATION"
 
     invoke-direct {p0, v0, p1, p2, p3}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->getPropertyValue(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
@@ -2765,7 +2504,6 @@
     .end annotation
 
     .prologue
-    .line 324
     const-string v0, "RCP_NOTIFICATION"
 
     invoke-direct {p0, p1, v0, p2, p3}, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->getListFromSyncPolicy(Landroid/app/enterprise/ContextInfo;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/List;
@@ -2784,23 +2522,19 @@
 
     const/4 v7, 0x0
 
-    .line 481
     if-eqz p1, :cond_4
 
-    .line 482
     new-array v0, v6, [Ljava/lang/String;
 
     const-string/jumbo v5, "propertyValue"
 
     aput-object v5, v0, v7
 
-    .line 485
     .local v0, "columns":[Ljava/lang/String;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 486
     .local v1, "cv":Landroid/content/ContentValues;
     const-string/jumbo v5, "propertyName"
 
@@ -2808,7 +2542,6 @@
 
     invoke-virtual {v1, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 487
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v8, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
@@ -2817,7 +2550,6 @@
 
     move-result v2
 
-    .line 488
     .local v2, "ownerUid":I
     const-string v5, "adminUid"
 
@@ -2827,7 +2559,6 @@
 
     invoke-virtual {v1, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 489
     const-string v5, "cid"
 
     iget v8, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
@@ -2838,12 +2569,10 @@
 
     invoke-virtual {v1, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 490
     sget-boolean v5, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v5, :cond_0
 
-    .line 491
     const-string v5, "KnoxMUMRCPPolicyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2884,7 +2613,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 494
     :cond_0
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -2894,7 +2622,6 @@
 
     move-result-object v3
 
-    .line 496
     .local v3, "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v3, :cond_3
 
@@ -2904,12 +2631,10 @@
 
     if-lez v5, :cond_3
 
-    .line 497
     sget-boolean v5, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v5, :cond_1
 
-    .line 498
     const-string v8, "KnoxMUMRCPPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -2944,7 +2669,6 @@
 
     invoke-static {v8, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 500
     :cond_1
     invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -2958,7 +2682,6 @@
 
     move-result-object v4
 
-    .line 501
     .local v4, "ret":Ljava/lang/String;
     const-string v5, "1"
 
@@ -2970,7 +2693,6 @@
 
     move v5, v6
 
-    .line 513
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -2987,10 +2709,8 @@
     :cond_2
     move v5, v7
 
-    .line 504
     goto :goto_0
 
-    .line 508
     .end local v4    # "ret":Ljava/lang/String;
     :cond_3
     const-string v5, "KnoxMUMRCPPolicyService"
@@ -3001,10 +2721,8 @@
 
     move v5, v7
 
-    .line 509
     goto :goto_0
 
-    .line 512
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -3018,7 +2736,6 @@
 
     move v5, v7
 
-    .line 513
     goto :goto_0
 .end method
 
@@ -3031,23 +2748,19 @@
 
     const/4 v7, 0x0
 
-    .line 329
     if-eqz p1, :cond_3
 
-    .line 330
     new-array v0, v6, [Ljava/lang/String;
 
     const-string/jumbo v5, "propertyValue"
 
     aput-object v5, v0, v7
 
-    .line 333
     .local v0, "columns":[Ljava/lang/String;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 334
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v5, "cid"
 
@@ -3059,14 +2772,12 @@
 
     invoke-virtual {v1, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 335
     const-string/jumbo v5, "propertyName"
 
     const-string v8, "EnforceMoveFilesToContainer"
 
     invoke-virtual {v1, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 336
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v8, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
@@ -3075,7 +2786,6 @@
 
     move-result v2
 
-    .line 337
     .local v2, "ownerUid":I
     const-string v5, "adminUid"
 
@@ -3085,12 +2795,10 @@
 
     invoke-virtual {v1, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 338
     sget-boolean v5, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v5, :cond_0
 
-    .line 339
     const-string v5, "KnoxMUMRCPPolicyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3131,7 +2839,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 342
     :cond_0
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3141,7 +2848,6 @@
 
     move-result-object v3
 
-    .line 344
     .local v3, "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v3, :cond_2
 
@@ -3151,7 +2857,6 @@
 
     if-lez v5, :cond_2
 
-    .line 345
     const-string v8, "KnoxMUMRCPPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3186,7 +2891,6 @@
 
     invoke-static {v8, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 346
     invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
@@ -3199,7 +2903,6 @@
 
     move-result-object v4
 
-    .line 347
     .local v4, "ret":Ljava/lang/String;
     const-string v5, "1"
 
@@ -3211,7 +2914,6 @@
 
     move v5, v6
 
-    .line 359
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -3228,10 +2930,8 @@
     :cond_1
     move v5, v7
 
-    .line 350
     goto :goto_0
 
-    .line 354
     .end local v4    # "ret":Ljava/lang/String;
     :cond_2
     const-string v5, "KnoxMUMRCPPolicyService"
@@ -3242,10 +2942,8 @@
 
     move v5, v6
 
-    .line 355
     goto :goto_0
 
-    .line 358
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -3259,7 +2957,6 @@
 
     move v5, v6
 
-    .line 359
     goto :goto_0
 .end method
 
@@ -3272,23 +2969,19 @@
 
     const/4 v7, 0x0
 
-    .line 404
     if-eqz p1, :cond_4
 
-    .line 405
     new-array v0, v6, [Ljava/lang/String;
 
     const-string/jumbo v5, "propertyValue"
 
     aput-object v5, v0, v7
 
-    .line 408
     .local v0, "columns":[Ljava/lang/String;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 409
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v5, "cid"
 
@@ -3300,14 +2993,12 @@
 
     invoke-virtual {v1, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 410
     const-string/jumbo v5, "propertyName"
 
     const-string v8, "EnforceMoveFilesToOwner"
 
     invoke-virtual {v1, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 411
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v8, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
@@ -3316,7 +3007,6 @@
 
     move-result v2
 
-    .line 412
     .local v2, "ownerUid":I
     const-string v5, "adminUid"
 
@@ -3326,12 +3016,10 @@
 
     invoke-virtual {v1, v5, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 413
     sget-boolean v5, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v5, :cond_0
 
-    .line 414
     const-string v5, "KnoxMUMRCPPolicyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3372,7 +3060,6 @@
 
     invoke-static {v5, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 417
     :cond_0
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3382,7 +3069,6 @@
 
     move-result-object v3
 
-    .line 419
     .local v3, "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v3, :cond_3
 
@@ -3392,12 +3078,10 @@
 
     if-lez v5, :cond_3
 
-    .line 420
     sget-boolean v5, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v5, :cond_1
 
-    .line 421
     const-string v8, "KnoxMUMRCPPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3432,7 +3116,6 @@
 
     invoke-static {v8, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 423
     :cond_1
     invoke-interface {v3, v7}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3446,7 +3129,6 @@
 
     move-result-object v4
 
-    .line 424
     .local v4, "ret":Ljava/lang/String;
     const-string v5, "1"
 
@@ -3458,7 +3140,6 @@
 
     move v5, v6
 
-    .line 436
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -3475,10 +3156,8 @@
     :cond_2
     move v5, v7
 
-    .line 427
     goto :goto_0
 
-    .line 431
     .end local v4    # "ret":Ljava/lang/String;
     :cond_3
     const-string v5, "KnoxMUMRCPPolicyService"
@@ -3489,10 +3168,8 @@
 
     move v5, v7
 
-    .line 432
     goto :goto_0
 
-    .line 435
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -3506,7 +3183,6 @@
 
     move v5, v7
 
-    .line 436
     goto :goto_0
 .end method
 
@@ -3519,23 +3195,19 @@
 
     const/4 v6, 0x0
 
-    .line 705
     if-eqz p1, :cond_3
 
-    .line 706
     new-array v0, v5, [Ljava/lang/String;
 
     const-string/jumbo v7, "propertyValue"
 
     aput-object v7, v0, v6
 
-    .line 709
     .local v0, "columns":[Ljava/lang/String;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 710
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v7, "cid"
 
@@ -3547,21 +3219,18 @@
 
     invoke-virtual {v1, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 711
     const-string/jumbo v7, "name"
 
     const-string v8, "Clipboard"
 
     invoke-virtual {v1, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 712
     const-string/jumbo v7, "propertyName"
 
     const-string/jumbo v8, "knox-import-data"
 
     invoke-virtual {v1, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 713
     iget-object v7, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v8, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
@@ -3570,7 +3239,6 @@
 
     move-result v2
 
-    .line 714
     .local v2, "ownerUid":I
     const-string v7, "adminUid"
 
@@ -3580,12 +3248,10 @@
 
     invoke-virtual {v1, v7, v8}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 715
     sget-boolean v7, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v7, :cond_0
 
-    .line 716
     const-string v7, "KnoxMUMRCPPolicyService"
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -3626,7 +3292,6 @@
 
     invoke-static {v7, v8}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 721
     :cond_0
     iget-object v7, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3636,7 +3301,6 @@
 
     move-result-object v3
 
-    .line 723
     .local v3, "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v3, :cond_3
 
@@ -3646,12 +3310,10 @@
 
     if-lez v7, :cond_3
 
-    .line 724
     sget-boolean v5, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v5, :cond_1
 
-    .line 725
     const-string v7, "KnoxMUMRCPPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3686,7 +3348,6 @@
 
     invoke-static {v7, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 728
     :cond_1
     invoke-interface {v3, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3700,13 +3361,11 @@
 
     move-result-object v4
 
-    .line 729
     .local v4, "result":Ljava/lang/String;
     if-nez v4, :cond_2
 
     move v5, v6
 
-    .line 736
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -3715,7 +3374,6 @@
     :goto_0
     return v5
 
-    .line 732
     .restart local v0    # "columns":[Ljava/lang/String;
     .restart local v1    # "cv":Landroid/content/ContentValues;
     .restart local v2    # "ownerUid":I
@@ -3728,7 +3386,6 @@
 
     goto :goto_0
 
-    .line 735
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -3751,10 +3408,8 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 596
     if-eqz p1, :cond_3
 
-    .line 597
     const/4 v5, 0x1
 
     new-array v0, v5, [Ljava/lang/String;
@@ -3763,13 +3418,11 @@
 
     aput-object v5, v0, v6
 
-    .line 600
     .local v0, "columns":[Ljava/lang/String;
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 601
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v5, "cid"
 
@@ -3781,21 +3434,18 @@
 
     invoke-virtual {v1, v5, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 602
     const-string/jumbo v5, "name"
 
     const-string v7, "Clipboard"
 
     invoke-virtual {v1, v5, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 603
     const-string/jumbo v5, "propertyName"
 
     const-string/jumbo v7, "knox-export-data"
 
     invoke-virtual {v1, v5, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 604
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
     iget v7, p1, Landroid/app/enterprise/ContextInfo;->mContainerId:I
@@ -3804,7 +3454,6 @@
 
     move-result v2
 
-    .line 605
     .local v2, "ownerUid":I
     const-string v5, "adminUid"
 
@@ -3814,12 +3463,10 @@
 
     invoke-virtual {v1, v5, v7}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 606
     sget-boolean v5, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v5, :cond_0
 
-    .line 607
     const-string v5, "KnoxMUMRCPPolicyService"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -3860,7 +3507,6 @@
 
     invoke-static {v5, v7}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 610
     :cond_0
     iget-object v5, p0, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->mEdmStorageProvider:Lcom/android/server/enterprise/storage/EdmStorageProvider;
 
@@ -3870,7 +3516,6 @@
 
     move-result-object v3
 
-    .line 612
     .local v3, "providerList":Ljava/util/List;, "Ljava/util/List<Landroid/content/ContentValues;>;"
     if-eqz v3, :cond_3
 
@@ -3880,12 +3525,10 @@
 
     if-lez v5, :cond_3
 
-    .line 613
     sget-boolean v5, Lcom/android/server/enterprise/container/KnoxMUMRCPPolicyService;->isEngMode:Z
 
     if-eqz v5, :cond_1
 
-    .line 614
     const-string v7, "KnoxMUMRCPPolicyService"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -3920,7 +3563,6 @@
 
     invoke-static {v7, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 616
     :cond_1
     invoke-interface {v3, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -3934,13 +3576,11 @@
 
     move-result-object v4
 
-    .line 617
     .local v4, "result":Ljava/lang/String;
     if-nez v4, :cond_2
 
     move v5, v6
 
-    .line 624
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -3949,7 +3589,6 @@
     :goto_0
     return v5
 
-    .line 620
     .restart local v0    # "columns":[Ljava/lang/String;
     .restart local v1    # "cv":Landroid/content/ContentValues;
     .restart local v2    # "ownerUid":I
@@ -3962,7 +3601,6 @@
 
     goto :goto_0
 
-    .line 623
     .end local v0    # "columns":[Ljava/lang/String;
     .end local v1    # "cv":Landroid/content/ContentValues;
     .end local v2    # "ownerUid":I
@@ -3977,7 +3615,6 @@
 
     move v5, v6
 
-    .line 624
     goto :goto_0
 .end method
 
@@ -3986,7 +3623,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 576
     return-void
 .end method
 
@@ -3995,7 +3631,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 581
     return-void
 .end method
 
@@ -4004,7 +3639,6 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 591
     return-void
 .end method
 
@@ -4027,7 +3661,6 @@
     .end annotation
 
     .prologue
-    .line 268
     .local p2, "providerNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v0, "KnoxMUMRCPPolicyService"
 
@@ -4035,7 +3668,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 269
     const-string v2, "RCP_DATA"
 
     invoke-static {p4}, Ljava/lang/Boolean;->toString(Z)Ljava/lang/String;
@@ -4077,7 +3709,6 @@
     .end annotation
 
     .prologue
-    .line 303
     .local p2, "packageNames":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const-string v0, "KnoxMUMRCPPolicyService"
 
@@ -4085,7 +3716,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 304
     const-string v2, "RCP_NOTIFICATION"
 
     move-object v0, p0
@@ -4109,6 +3739,5 @@
     .locals 0
 
     .prologue
-    .line 586
     return-void
 .end method

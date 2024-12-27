@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/samsung/android/share/SShareShareLink$2;->this$0:Lcom/samsung/android/share/SShareShareLink;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 83
     iget-object v0, p0, Lcom/samsung/android/share/SShareShareLink$2;->this$0:Lcom/samsung/android/share/SShareShareLink;
 
     invoke-virtual {v0}, Lcom/samsung/android/share/SShareShareLink;->shareLinkTipClick()V
 
-    .line 84
     return-void
 .end method

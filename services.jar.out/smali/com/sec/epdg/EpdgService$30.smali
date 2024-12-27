@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5789
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$30;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,31 +39,26 @@
     .locals 2
 
     .prologue
-    .line 5792
     const-string v0, "[EPDGService]"
 
     const-string v1, "LTE NOT available"
 
     invoke-static {v0, v1}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 5793
     const/4 v0, 0x0
 
     invoke-static {v0}, Lcom/sec/epdg/EpdgService;->setIsLteAvailable(Z)V
 
-    .line 5794
     invoke-static {}, Lcom/sec/epdg/EpdgService;->isEpdgAvailable()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 5800
     :cond_0
     :goto_0
     return-void
 
-    .line 5797
     :cond_1
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$30;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -83,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5798
     iget-object v0, p0, Lcom/sec/epdg/EpdgService$30;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->startTEPDGLTETimerIfRequired()V

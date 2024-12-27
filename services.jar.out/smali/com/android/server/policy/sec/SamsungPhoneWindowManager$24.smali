@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 4660
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$24;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iput-object p2, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$24;->val$feature:Ljava/lang/String;
@@ -48,13 +47,11 @@
     .locals 5
 
     .prologue
-    .line 4664
     :try_start_0
     new-instance v1, Landroid/content/ContentValues;
 
     invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
 
-    .line 4665
     .local v1, "cv":Landroid/content/ContentValues;
     const-string v3, "app_id"
 
@@ -68,42 +65,35 @@
 
     invoke-virtual {v1, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4666
     const-string/jumbo v3, "feature"
 
     iget-object v4, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$24;->val$feature:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4667
     const-string v3, "extra"
 
     iget-object v4, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$24;->val$extra:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 4669
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 4670
     .local v0, "broadcastIntent":Landroid/content/Intent;
     const-string v3, "com.samsung.android.providers.context.log.action.USE_APP_FEATURE_SURVEY"
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4671
     const-string v3, "data"
 
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 4672
     const-string v3, "com.samsung.android.providers.context"
 
     invoke-virtual {v0, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4673
     iget-object v3, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$24;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v3, v3, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mContext:Landroid/content/Context;
@@ -113,17 +103,14 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 4683
     .end local v0    # "broadcastIntent":Landroid/content/Intent;
     .end local v1    # "cv":Landroid/content/ContentValues;
     :goto_0
     return-void
 
-    .line 4678
     :catch_0
     move-exception v2
 
-    .line 4679
     .local v2, "e":Ljava/lang/Exception;
     :try_start_1
     const-string v3, "SamsungWindowManager"
@@ -132,14 +119,12 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4680
     invoke-virtual {v2}, Ljava/lang/Exception;->printStackTrace()V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 4681
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v3

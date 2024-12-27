@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 99
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -40,16 +39,13 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 102
     iget v4, p1, Landroid/os/Message;->what:I
 
     packed-switch v4, :pswitch_data_0
 
-    .line 129
     :goto_0
     return-void
 
-    .line 104
     :pswitch_0
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
@@ -58,7 +54,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->broadcastDefaultDataSubIdChanged(I)V
     invoke-static {v4, v5}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->access$600(Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;I)V
 
-    .line 107
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->mPhone:Lcom/android/internal/telephony/Phone;
@@ -72,13 +67,11 @@
 
     goto :goto_0
 
-    .line 111
     :pswitch_1
     iget-object v2, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v2, Landroid/os/Message;
 
-    .line 112
     .local v2, "replyMsg":Landroid/os/Message;
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
@@ -104,12 +97,10 @@
 
     invoke-virtual {v4, v5}, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;->log(Ljava/lang/String;)V
 
-    .line 113
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
 
     move-result v3
 
-    .line 114
     .local v3, "subId":I
     const-string v4, "ril.dds.command_slot"
 
@@ -119,7 +110,6 @@
 
     move-result v1
 
-    .line 115
     .local v1, "propertyCommandSlot":I
     invoke-static {v3}, Landroid/telephony/SubscriptionManager;->getPhoneId(I)I
 
@@ -151,7 +141,6 @@
 
     if-eq v1, v4, :cond_1
 
-    .line 118
     :cond_0
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
@@ -187,7 +176,6 @@
 
     goto :goto_0
 
-    .line 121
     :cond_1
     iget-object v4, p0, Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine$1;->this$0:Lcom/android/internal/telephony/dataconnection/DcSwitchStateMachine;
 
@@ -204,7 +192,6 @@
 
     check-cast v0, Lcom/android/internal/telephony/PhoneBase;
 
-    .line 122
     .local v0, "pb":Lcom/android/internal/telephony/PhoneBase;
     iget-object v4, v0, Lcom/android/internal/telephony/PhoneBase;->mCi:Lcom/android/internal/telephony/CommandsInterface;
 
@@ -212,7 +199,6 @@
 
     goto/16 :goto_0
 
-    .line 102
     nop
 
     :pswitch_data_0

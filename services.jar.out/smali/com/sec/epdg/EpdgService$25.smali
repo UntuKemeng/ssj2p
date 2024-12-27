@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5581
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$25;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +41,11 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 5584
     const/4 v0, 0x1
 
     # invokes: Lcom/sec/epdg/EpdgService;->setIsWifiRssiInPollingZone(Z)V
     invoke-static {v0}, Lcom/sec/epdg/EpdgService;->access$11700(Z)V
 
-    .line 5592
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
     move-result-object v0
@@ -63,7 +60,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5593
     # invokes: Lcom/sec/epdg/EpdgService;->getIsImsCallConnected()Z
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$9500()Z
 
@@ -83,10 +79,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 5595
     invoke-static {v2}, Lcom/sec/epdg/EpdgService;->setIsEpdgAvailable(Z)V
 
-    .line 5603
     :goto_0
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -99,10 +93,8 @@
     # invokes: Lcom/sec/epdg/EpdgService;->startWifiRssiIntentDelayTimerIfRequired(Ljava/lang/String;)V
     invoke-static {v0}, Lcom/sec/epdg/EpdgService;->access$7800(Ljava/lang/String;)V
 
-    .line 5604
     return-void
 
-    .line 5597
     :cond_0
     const-string v0, "[EPDGService]"
 
@@ -112,7 +104,6 @@
 
     goto :goto_0
 
-    .line 5601
     :cond_1
     invoke-static {v2}, Lcom/sec/epdg/EpdgService;->setIsEpdgAvailable(Z)V
 

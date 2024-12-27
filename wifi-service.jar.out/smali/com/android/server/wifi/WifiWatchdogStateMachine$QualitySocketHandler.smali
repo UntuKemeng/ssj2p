@@ -34,27 +34,20 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 2696
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
-    .line 2697
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 2690
     const-string v0, "WifiWatchdogStateMachine.QualitySocketHandler"
 
     iput-object v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->TAG:Ljava/lang/String;
 
-    .line 2692
     iput-wide v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxPacketsBeforeQC:J
 
-    .line 2693
     iput-wide v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxBytesBeforeQC:J
 
-    .line 2694
     iput-wide v2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mQCStartTime:J
 
-    .line 2698
     return-void
 .end method
 
@@ -74,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 3003
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -108,11 +100,9 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3005
     :cond_0
     const/4 v2, 0x0
 
-    .line 3006
     .local v2, "addr":Ljava/net/InetAddress;
     move-object/from16 v0, p0
 
@@ -125,7 +115,6 @@
 
     if-eqz v14, :cond_6
 
-    .line 3007
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -139,7 +128,6 @@
 
     move-result-object v2
 
-    .line 3011
     :goto_0
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -200,7 +188,6 @@
 
     invoke-static {v15, v14}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3013
     :cond_1
     new-instance v13, Ljava/net/URL;
 
@@ -208,18 +195,14 @@
 
     invoke-direct {v13, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 3014
     .local v13, "url":Ljava/net/URL;
     const/16 v10, 0x50
 
-    .line 3015
     .local v10, "port":I
     if-eqz p5, :cond_2
 
-    .line 3016
     const/16 v10, 0x1bb
 
-    .line 3018
     :cond_2
     invoke-virtual {v13}, Ljava/net/URL;->getPort()I
 
@@ -233,7 +216,6 @@
 
     move-result v10
 
-    .line 3019
     :cond_3
     move-object/from16 v0, p0
 
@@ -255,7 +237,6 @@
 
     move-result v10
 
-    .line 3020
     :cond_4
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -292,7 +273,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3021
     :cond_5
     const-string v14, "http"
 
@@ -318,7 +298,6 @@
 
     if-nez v14, :cond_8
 
-    .line 3022
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->TAG:Ljava/lang/String;
@@ -327,14 +306,12 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3023
     new-instance v14, Ljava/net/SocketException;
 
     invoke-direct {v14}, Ljava/net/SocketException;-><init>()V
 
     throw v14
 
-    .line 3009
     .end local v10    # "port":I
     .end local v13    # "url":Ljava/net/URL;
     :cond_6
@@ -344,19 +321,16 @@
 
     goto/16 :goto_0
 
-    .line 3011
     :cond_7
     const-string v14, " "
 
     goto/16 :goto_1
 
-    .line 3026
     .restart local v10    # "port":I
     .restart local v13    # "url":Ljava/net/URL;
     :cond_8
     const-string v4, "/"
 
-    .line 3027
     .local v4, "file":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -369,7 +343,6 @@
 
     if-eqz v14, :cond_c
 
-    .line 3028
     const-string v14, ""
 
     invoke-virtual {v13}, Ljava/net/URL;->getFile()Ljava/lang/String;
@@ -382,7 +355,6 @@
 
     if-nez v14, :cond_b
 
-    .line 3029
     const-string v14, "http://%s%s"
 
     const/4 v15, 0x2
@@ -413,7 +385,6 @@
 
     move-result-object v4
 
-    .line 3037
     :cond_9
     :goto_2
     move-object/from16 v0, p0
@@ -433,11 +404,9 @@
 
     move-result-object v5
 
-    .line 3039
     .local v5, "ipaddr":Ljava/net/InetAddress;
     if-nez p1, :cond_d
 
-    .line 3040
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -453,7 +422,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3041
     :cond_a
     new-instance v14, Ljava/net/SocketException;
 
@@ -461,7 +429,6 @@
 
     throw v14
 
-    .line 3031
     .end local v5    # "ipaddr":Ljava/net/InetAddress;
     :cond_b
     const-string v14, "http://%s/"
@@ -488,7 +455,6 @@
 
     goto :goto_2
 
-    .line 3033
     :cond_c
     const-string v14, ""
 
@@ -502,14 +468,12 @@
 
     if-nez v14, :cond_9
 
-    .line 3034
     invoke-virtual {v13}, Ljava/net/URL;->getFile()Ljava/lang/String;
 
     move-result-object v4
 
     goto :goto_2
 
-    .line 3045
     .restart local v5    # "ipaddr":Ljava/net/InetAddress;
     :cond_d
     const-string v14, "wlan0"
@@ -522,7 +486,6 @@
 
     iput-wide v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxPacketsBeforeQC:J
 
-    .line 3046
     const-string v14, "wlan0"
 
     invoke-static {v14}, Landroid/net/TrafficStats;->getRxBytes(Ljava/lang/String;)J
@@ -533,26 +496,21 @@
 
     iput-wide v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxBytesBeforeQC:J
 
-    .line 3049
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v6
 
-    .line 3050
     .local v6, "message1":Landroid/os/Message;
     move/from16 v0, p4
 
     iput v0, v6, Landroid/os/Message;->arg1:I
 
-    .line 3051
     if-nez p4, :cond_11
 
-    .line 3052
     const v14, 0x2102d
 
     iput v14, v6, Landroid/os/Message;->what:I
 
-    .line 3053
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -579,7 +537,6 @@
 
     invoke-virtual {v14, v6, v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine$CaptivePortalHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3054
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -593,7 +550,6 @@
 
     iput v15, v14, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->qcStep:I
 
-    .line 3061
     :goto_3
     move-object/from16 v0, p0
 
@@ -606,7 +562,6 @@
 
     if-eqz v14, :cond_12
 
-    .line 3062
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->TAG:Ljava/lang/String;
@@ -615,14 +570,12 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3063
     const/4 v14, 0x1
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v14}, Ljava/net/Socket;->setReuseAddress(Z)V
 
-    .line 3064
     new-instance v14, Ljava/net/InetSocketAddress;
 
     const/16 v15, 0x5603
@@ -633,7 +586,6 @@
 
     invoke-virtual {v0, v14}, Ljava/net/Socket;->bind(Ljava/net/SocketAddress;)V
 
-    .line 3070
     :goto_4
     :try_start_0
     sget-object v14, Llibcore/io/Libcore;->os:Llibcore/io/Os;
@@ -652,7 +604,6 @@
     :try_end_0
     .catch Landroid/system/ErrnoException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 3076
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -666,7 +617,6 @@
 
     const/16 v12, 0x1388
 
-    .line 3077
     .local v12, "timeout":I
     :goto_5
     if-lez p4, :cond_e
@@ -682,10 +632,8 @@
 
     if-eqz v14, :cond_e
 
-    .line 3078
     const/16 v12, 0x3e8
 
-    .line 3080
     :cond_e
     move-object/from16 v0, p0
 
@@ -696,7 +644,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mFirstRequest:Z
     invoke-static {v14, v15}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$17802(Lcom/android/server/wifi/WifiWatchdogStateMachine;Z)Z
 
-    .line 3082
     new-instance v14, Ljava/net/InetSocketAddress;
 
     invoke-direct {v14, v2, v10}, Ljava/net/InetSocketAddress;-><init>(Ljava/net/InetAddress;I)V
@@ -705,7 +652,6 @@
 
     invoke-virtual {v0, v14, v12}, Ljava/net/Socket;->connect(Ljava/net/SocketAddress;I)V
 
-    .line 3084
     if-lez p4, :cond_15
 
     move-object/from16 v0, p0
@@ -719,7 +665,6 @@
 
     if-eqz v14, :cond_15
 
-    .line 3085
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -735,7 +680,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3087
     :cond_f
     move-object/from16 v0, p0
 
@@ -750,19 +694,16 @@
 
     invoke-virtual {v14, v15}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 3152
     :cond_10
     :goto_6
     return-void
 
-    .line 3056
     .end local v12    # "timeout":I
     :cond_11
     const v14, 0x2105d
 
     iput v14, v6, Landroid/os/Message;->what:I
 
-    .line 3057
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -789,7 +730,6 @@
 
     invoke-virtual {v14, v6, v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3058
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -805,7 +745,6 @@
 
     goto/16 :goto_3
 
-    .line 3066
     :cond_12
     new-instance v14, Ljava/net/InetSocketAddress;
 
@@ -819,11 +758,9 @@
 
     goto/16 :goto_4
 
-    .line 3071
     :catch_0
     move-exception v3
 
-    .line 3072
     .local v3, "errnoException":Landroid/system/ErrnoException;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -834,7 +771,6 @@
 
     invoke-virtual {v3}, Landroid/system/ErrnoException;->printStackTrace()V
 
-    .line 3073
     :cond_13
     new-instance v14, Ljava/net/SocketException;
 
@@ -842,7 +778,6 @@
 
     throw v14
 
-    .line 3076
     .end local v3    # "errnoException":Landroid/system/ErrnoException;
     :cond_14
     move-object/from16 v0, p0
@@ -860,19 +795,16 @@
 
     goto/16 :goto_5
 
-    .line 3091
     .restart local v12    # "timeout":I
     :cond_15
     if-eqz p5, :cond_16
 
     move-object/from16 v14, p1
 
-    .line 3092
     check-cast v14, Ljavax/net/ssl/SSLSocket;
 
     invoke-virtual {v14}, Ljavax/net/ssl/SSLSocket;->startHandshake()V
 
-    .line 3094
     :cond_16
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -889,7 +821,6 @@
 
     invoke-static {v14, v15}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3096
     :cond_17
     move-object/from16 v0, p0
 
@@ -904,29 +835,23 @@
 
     invoke-virtual {v14, v15}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 3098
     if-eqz p4, :cond_18
 
-    .line 3099
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v7
 
-    .line 3100
     .local v7, "message2":Landroid/os/Message;
     const v14, 0x2105e
 
     iput v14, v7, Landroid/os/Message;->what:I
 
-    .line 3101
     move/from16 v0, p4
 
     iput v0, v7, Landroid/os/Message;->arg1:I
 
-    .line 3102
     if-eqz p5, :cond_1b
 
-    .line 3103
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -972,7 +897,6 @@
 
     invoke-virtual {v14, v7, v0, v1}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3111
     .end local v7    # "message2":Landroid/os/Message;
     :cond_18
     :goto_7
@@ -986,7 +910,6 @@
 
     iput-wide v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxPacketsBeforeQC:J
 
-    .line 3112
     const-string v14, "wlan0"
 
     invoke-static {v14}, Landroid/net/TrafficStats;->getRxBytes(Ljava/lang/String;)J
@@ -997,18 +920,15 @@
 
     iput-wide v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxBytesBeforeQC:J
 
-    .line 3114
     invoke-virtual/range {p1 .. p1}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v11
 
-    .line 3115
     .local v11, "theOutput":Ljava/io/OutputStream;
     new-instance v9, Ljava/io/OutputStreamWriter;
 
     invoke-direct {v9, v11}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
-    .line 3116
     .local v9, "out":Ljava/io/OutputStreamWriter;
     move-object/from16 v0, p0
 
@@ -1023,7 +943,6 @@
 
     if-nez v14, :cond_19
 
-    .line 3117
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1041,7 +960,6 @@
 
     iput-object v15, v14, Lcom/android/server/wifi/WifiWatchdogStateMachine$ParameterManager;->mPropertiesModelName:Ljava/lang/String;
 
-    .line 3119
     :cond_19
     move-object/from16 v0, p0
 
@@ -1056,7 +974,6 @@
 
     if-nez v14, :cond_1a
 
-    .line 3120
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1074,11 +991,9 @@
 
     iput-object v15, v14, Lcom/android/server/wifi/WifiWatchdogStateMachine$ParameterManager;->mPropertiesOsVersion:Ljava/lang/String;
 
-    .line 3122
     :cond_1a
     const/4 v8, 0x0
 
-    .line 3123
     .local v8, "modelName":Ljava/lang/String;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -1087,7 +1002,6 @@
 
     if-eqz v14, :cond_1d
 
-    .line 3124
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1101,7 +1015,6 @@
 
     if-eqz v14, :cond_1c
 
-    .line 3125
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1113,7 +1026,6 @@
 
     iget-object v8, v14, Lcom/android/server/wifi/WifiWatchdogStateMachine$ParameterManager;->mUserAgentModelName:Ljava/lang/String;
 
-    .line 3134
     :goto_8
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -1141,7 +1053,6 @@
 
     invoke-virtual {v9, v14}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3135
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1172,17 +1083,14 @@
 
     invoke-virtual {v9, v14}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3136
     const-string v14, "Connection: close\r\n"
 
     invoke-virtual {v9, v14}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3137
     const-string v14, "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\r\n"
 
     invoke-virtual {v9, v14}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3138
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -1230,31 +1138,24 @@
 
     invoke-virtual {v9, v14}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3140
     const-string v14, "Accept-Encoding: gzip,deflate,sdch\r\n"
 
     invoke-virtual {v9, v14}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3141
     const-string v14, "Accept-Language: en-GB,en;q=0.8,en-US;q=0.6,en;q=0.4\r\n"
 
     invoke-virtual {v9, v14}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3142
     const-string v14, "\r\n"
 
     invoke-virtual {v9, v14}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3143
     invoke-virtual {v9}, Ljava/io/OutputStreamWriter;->flush()V
 
-    .line 3144
     invoke-virtual {v11}, Ljava/io/OutputStream;->flush()V
 
-    .line 3146
     if-nez p4, :cond_1f
 
-    .line 3147
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1268,7 +1169,6 @@
 
     iput v15, v14, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->qcStep:I
 
-    .line 3151
     :goto_9
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -1287,7 +1187,6 @@
 
     goto/16 :goto_6
 
-    .line 3106
     .end local v8    # "modelName":Ljava/lang/String;
     .end local v9    # "out":Ljava/io/OutputStreamWriter;
     .end local v11    # "theOutput":Ljava/io/OutputStream;
@@ -1325,7 +1224,6 @@
 
     goto/16 :goto_7
 
-    .line 3127
     .end local v7    # "message2":Landroid/os/Message;
     .restart local v8    # "modelName":Ljava/lang/String;
     .restart local v9    # "out":Ljava/io/OutputStreamWriter;
@@ -1335,7 +1233,6 @@
 
     goto/16 :goto_8
 
-    .line 3129
     :cond_1d
     move-object/from16 v0, p0
 
@@ -1350,7 +1247,6 @@
 
     if-eqz v14, :cond_1e
 
-    .line 3130
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1364,13 +1260,11 @@
 
     goto/16 :goto_8
 
-    .line 3132
     :cond_1e
     const-string v8, "GT-I9500"
 
     goto/16 :goto_8
 
-    .line 3149
     :cond_1f
     move-object/from16 v0, p0
 
@@ -1402,7 +1296,6 @@
     .end annotation
 
     .prologue
-    .line 3157
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -1440,7 +1333,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3158
     :cond_0
     const-string v19, "wlan0"
 
@@ -1454,7 +1346,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxPacketsBeforeQC:J
 
-    .line 3159
     const-string v19, "wlan0"
 
     invoke-static/range {v19 .. v19}, Landroid/net/TrafficStats;->getRxBytes(Ljava/lang/String;)J
@@ -1467,12 +1358,10 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxBytesBeforeQC:J
 
-    .line 3161
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v13
 
-    .line 3162
     .local v13, "message":Landroid/os/Message;
     const v19, 0x2105c
 
@@ -1480,12 +1369,10 @@
 
     iput v0, v13, Landroid/os/Message;->what:I
 
-    .line 3163
     move/from16 v0, p3
 
     iput v0, v13, Landroid/os/Message;->arg1:I
 
-    .line 3164
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1522,7 +1409,6 @@
 
     invoke-virtual {v0, v13, v1, v2}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3166
     new-instance v18, Ljava/net/URL;
 
     move-object/from16 v0, v18
@@ -1531,7 +1417,6 @@
 
     invoke-direct {v0, v1}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 3167
     .local v18, "url":Ljava/net/URL;
     invoke-virtual/range {v18 .. v18}, Ljava/net/URL;->getHost()Ljava/lang/String;
 
@@ -1541,7 +1426,6 @@
 
     move-result-object v5
 
-    .line 3168
     .local v5, "addrList":[Ljava/net/InetAddress;
     move-object/from16 v0, p0
 
@@ -1558,10 +1442,8 @@
 
     invoke-virtual/range {v19 .. v20}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 3170
     const/4 v11, 0x0
 
-    .line 3171
     .local v11, "ipv4Count":I
     move-object v6, v5
 
@@ -1577,7 +1459,6 @@
 
     aget-object v9, v6, v8
 
-    .line 3172
     .local v9, "inet":Ljava/net/InetAddress;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -1616,7 +1497,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3173
     :cond_1
     instance-of v0, v9, Ljava/net/Inet4Address;
 
@@ -1626,17 +1506,14 @@
 
     add-int/lit8 v11, v11, 0x1
 
-    .line 3171
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 3176
     .end local v9    # "inet":Ljava/net/InetAddress;
     :cond_2
     if-nez v11, :cond_3
 
-    .line 3177
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->TAG:Ljava/lang/String;
@@ -1647,14 +1524,12 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3178
     new-instance v19, Ljava/net/UnknownHostException;
 
     invoke-direct/range {v19 .. v19}, Ljava/net/UnknownHostException;-><init>()V
 
     throw v19
 
-    .line 3182
     :cond_3
     new-instance v16, Ljava/util/Random;
 
@@ -1668,7 +1543,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/util/Random;-><init>(J)V
 
-    .line 3183
     .local v16, "rand":Ljava/util/Random;
     move-object/from16 v0, v16
 
@@ -1678,7 +1552,6 @@
 
     aget-object v4, v5, v19
 
-    .line 3184
     .local v4, "addr":Ljava/net/InetAddress;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -1717,11 +1590,9 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3186
     :cond_4
     const/16 v15, 0x50
 
-    .line 3187
     .local v15, "port":I
     invoke-virtual/range {v18 .. v18}, Ljava/net/URL;->getPort()I
 
@@ -1739,7 +1610,6 @@
 
     move-result v15
 
-    .line 3188
     :cond_5
     const-string v19, "http"
 
@@ -1753,7 +1623,6 @@
 
     if-nez v19, :cond_6
 
-    .line 3189
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->TAG:Ljava/lang/String;
@@ -1764,18 +1633,15 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3190
     new-instance v19, Ljava/net/SocketException;
 
     invoke-direct/range {v19 .. v19}, Ljava/net/SocketException;-><init>()V
 
     throw v19
 
-    .line 3192
     :cond_6
     const-string v7, "/"
 
-    .line 3193
     .local v7, "file":Ljava/lang/String;
     const-string v19, ""
 
@@ -1793,7 +1659,6 @@
 
     move-result-object v7
 
-    .line 3195
     :cond_7
     move-object/from16 v0, p0
 
@@ -1814,11 +1679,9 @@
 
     move-result-object v10
 
-    .line 3197
     .local v10, "ipaddr":Ljava/net/InetAddress;
     if-nez p1, :cond_9
 
-    .line 3198
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -1836,7 +1699,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3199
     :cond_8
     new-instance v19, Ljava/net/SocketException;
 
@@ -1844,7 +1706,6 @@
 
     throw v19
 
-    .line 3202
     :cond_9
     const-string v19, "wlan0"
 
@@ -1858,7 +1719,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxPacketsBeforeQC:J
 
-    .line 3203
     const-string v19, "wlan0"
 
     invoke-static/range {v19 .. v19}, Landroid/net/TrafficStats;->getRxBytes(Ljava/lang/String;)J
@@ -1871,7 +1731,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxBytesBeforeQC:J
 
-    .line 3205
     new-instance v19, Ljava/net/InetSocketAddress;
 
     const/16 v20, 0x0
@@ -1888,7 +1747,6 @@
 
     invoke-virtual {v0, v1}, Ljava/net/Socket;->bind(Ljava/net/SocketAddress;)V
 
-    .line 3206
     new-instance v19, Ljava/net/InetSocketAddress;
 
     move-object/from16 v0, v19
@@ -1918,7 +1776,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/net/Socket;->connect(Ljava/net/SocketAddress;I)V
 
-    .line 3207
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -1936,25 +1793,21 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3209
     :cond_a
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v13
 
-    .line 3210
     const v19, 0x2105b
 
     move/from16 v0, v19
 
     iput v0, v13, Landroid/os/Message;->what:I
 
-    .line 3211
     move/from16 v0, p3
 
     iput v0, v13, Landroid/os/Message;->arg1:I
 
-    .line 3212
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -1995,7 +1848,6 @@
 
     invoke-virtual {v0, v13, v1, v2}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 3213
     const-string v19, "wlan0"
 
     invoke-static/range {v19 .. v19}, Landroid/net/TrafficStats;->getRxPackets(Ljava/lang/String;)J
@@ -2008,7 +1860,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxPacketsBeforeQC:J
 
-    .line 3214
     const-string v19, "wlan0"
 
     invoke-static/range {v19 .. v19}, Landroid/net/TrafficStats;->getRxBytes(Ljava/lang/String;)J
@@ -2021,7 +1872,6 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxBytesBeforeQC:J
 
-    .line 3215
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v20
@@ -2032,12 +1882,10 @@
 
     iput-wide v0, v2, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mQCStartTime:J
 
-    .line 3217
     invoke-virtual/range {p1 .. p1}, Ljava/net/Socket;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v17
 
-    .line 3218
     .local v17, "theOutput":Ljava/io/OutputStream;
     new-instance v14, Ljava/io/OutputStreamWriter;
 
@@ -2045,7 +1893,6 @@
 
     invoke-direct {v14, v0}, Ljava/io/OutputStreamWriter;-><init>(Ljava/io/OutputStream;)V
 
-    .line 3219
     .local v14, "out":Ljava/io/OutputStreamWriter;
     new-instance v19, Ljava/lang/StringBuilder;
 
@@ -2077,7 +1924,6 @@
 
     invoke-virtual {v14, v0}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3220
     new-instance v19, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v19 .. v19}, Ljava/lang/StringBuilder;-><init>()V
@@ -2110,27 +1956,22 @@
 
     invoke-virtual {v14, v0}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3221
     const-string v19, "Connection: close\r\n"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v14, v0}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3224
     const-string v19, "\r\n"
 
     move-object/from16 v0, v19
 
     invoke-virtual {v14, v0}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 3225
     invoke-virtual {v14}, Ljava/io/OutputStreamWriter;->flush()V
 
-    .line 3226
     invoke-virtual/range {v17 .. v17}, Ljava/io/OutputStream;->flush()V
 
-    .line 3228
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -2148,7 +1989,6 @@
 
     invoke-static/range {v19 .. v20}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3229
     :cond_b
     return-void
 .end method
@@ -2159,7 +1999,6 @@
     .locals 6
 
     .prologue
-    .line 2707
     const-string v1, "wlan0"
 
     invoke-static {v1}, Landroid/net/TrafficStats;->getRxBytes(Ljava/lang/String;)J
@@ -2172,7 +2011,6 @@
 
     long-to-int v0, v2
 
-    .line 2708
     .local v0, "bytes":I
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -2203,7 +2041,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2709
     :cond_0
     return v0
 .end method
@@ -2212,7 +2049,6 @@
     .locals 6
 
     .prologue
-    .line 2701
     const-string v1, "wlan0"
 
     invoke-static {v1}, Landroid/net/TrafficStats;->getRxPackets(Ljava/lang/String;)J
@@ -2225,7 +2061,6 @@
 
     long-to-int v0, v2
 
-    .line 2702
     .local v0, "packets":I
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -2256,7 +2091,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2703
     :cond_0
     return v0
 .end method
@@ -2266,35 +2100,29 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2714
     move-object/from16 v0, p1
 
     iget v4, v0, Landroid/os/Message;->what:I
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 2998
     :cond_0
     :goto_0
     return-void
 
-    .line 2716
     :sswitch_0
     const/16 v32, 0x0
 
-    .line 2717
     .local v32, "needSkip":Z
     move-object/from16 v0, p1
 
     iget v8, v0, Landroid/os/Message;->arg1:I
 
-    .line 2718
     .local v8, "id":I
     move-object/from16 v0, p1
 
     iget v6, v0, Landroid/os/Message;->arg2:I
 
-    .line 2719
     .local v6, "ip":I
     move-object/from16 v0, p1
 
@@ -2302,7 +2130,6 @@
 
     check-cast v7, Ljava/lang/String;
 
-    .line 2720
     .local v7, "qcUrl":Ljava/lang/String;
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -2335,7 +2162,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2721
     :cond_1
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -2379,23 +2205,18 @@
 
     invoke-virtual {v4}, Landroid/widget/Toast;->show()V
 
-    .line 2723
     :cond_2
     const/16 v37, 0x0
 
-    .line 2724
     .local v37, "rtt":I
     const/16 v36, 0x0
 
-    .line 2726
     .local v36, "resultBytes":I
     const/16 v43, 0x0
 
-    .line 2727
     .local v43, "urlCheck":Ljava/net/URL;
     const/16 v28, 0x0
 
-    .line 2729
     .local v28, "isSSLSocket":Z
     :try_start_0
     new-instance v44, Ljava/net/URL;
@@ -2406,7 +2227,6 @@
     :try_end_0
     .catch Ljava/net/MalformedURLException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2730
     .end local v43    # "urlCheck":Ljava/net/URL;
     .local v44, "urlCheck":Ljava/net/URL;
     :try_start_1
@@ -2424,7 +2244,6 @@
 
     move-object/from16 v43, v44
 
-    .line 2735
     .end local v44    # "urlCheck":Ljava/net/URL;
     .restart local v43    # "urlCheck":Ljava/net/URL;
     :goto_1
@@ -2471,7 +2290,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2737
     :cond_3
     const/4 v4, 0x1
 
@@ -2530,7 +2348,6 @@
 
     if-nez v4, :cond_9
 
-    .line 2739
     :cond_4
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -2539,7 +2356,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 2740
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->TAG:Ljava/lang/String;
@@ -2578,7 +2394,6 @@
 
     invoke-static {v5, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2741
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->TAG:Ljava/lang/String;
@@ -2622,11 +2437,9 @@
     .catch Ljava/lang/AssertionError; {:try_start_2 .. :try_end_2} :catch_3
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 2743
     :cond_5
     const/16 v32, 0x1
 
-    .line 2883
     :cond_6
     :goto_4
     move-object/from16 v0, p0
@@ -2642,11 +2455,9 @@
 
     move-result v33
 
-    .line 2884
     .local v33, "ongoingId":I
     if-eqz v32, :cond_2c
 
-    .line 2885
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -2664,32 +2475,27 @@
 
     goto/16 :goto_0
 
-    .line 2731
     .end local v33    # "ongoingId":I
     :catch_0
     move-exception v23
 
-    .line 2732
     .local v23, "ex":Ljava/net/MalformedURLException;
     :goto_5
     const/16 v43, 0x0
 
     goto/16 :goto_1
 
-    .line 2740
     .end local v23    # "ex":Ljava/net/MalformedURLException;
     :cond_7
     const/4 v4, 0x0
 
     goto :goto_2
 
-    .line 2741
     :cond_8
     const/4 v4, 0x0
 
     goto :goto_3
 
-    .line 2745
     :cond_9
     const/16 v26, 0x0
 
@@ -2711,17 +2517,14 @@
 
     if-ge v0, v4, :cond_6
 
-    .line 2746
     if-eqz v28, :cond_b
 
-    .line 2747
     invoke-static {}, Ljavax/net/ssl/SSLSocketFactory;->getDefault()Ljavax/net/SocketFactory;
 
     move-result-object v24
 
     check-cast v24, Ljavax/net/ssl/SSLSocketFactory;
 
-    .line 2748
     .local v24, "factory":Ljavax/net/ssl/SSLSocketFactory;
     move-object/from16 v0, p0
 
@@ -2736,7 +2539,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSSLSocket:Ljavax/net/ssl/SSLSocket;
     invoke-static {v5, v4}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16802(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljavax/net/ssl/SSLSocket;)Ljavax/net/ssl/SSLSocket;
 
-    .line 2749
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -2752,7 +2554,6 @@
 
     invoke-direct/range {v4 .. v9}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->sendGetMethod(Ljava/net/Socket;ILjava/lang/String;IZ)V
 
-    .line 2755
     .end local v24    # "factory":Ljavax/net/ssl/SSLSocketFactory;
     :goto_7
     move-object/from16 v0, p0
@@ -2779,7 +2580,6 @@
 
     if-eqz v4, :cond_d
 
-    .line 2756
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -2793,14 +2593,12 @@
 
     move/from16 v36, v0
 
-    .line 2745
     :cond_a
     :goto_8
     add-int/lit8 v26, v26, 0x1
 
     goto :goto_6
 
-    .line 2751
     :cond_b
     move-object/from16 v0, p0
 
@@ -2813,7 +2611,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSocket:Ljava/net/Socket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16702(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2752
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -2836,12 +2633,10 @@
 
     goto :goto_7
 
-    .line 2872
     .end local v26    # "i":I
     :catch_1
     move-exception v41
 
-    .line 2873
     .local v41, "ste":Ljava/net/SocketTimeoutException;
     :try_start_4
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
@@ -2859,7 +2654,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2874
     :cond_c
     const-string v4, "wlan0"
 
@@ -2892,7 +2686,6 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 2883
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -2906,11 +2699,9 @@
 
     move-result v33
 
-    .line 2884
     .restart local v33    # "ongoingId":I
     if-eqz v32, :cond_34
 
-    .line 2885
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -2928,7 +2719,6 @@
 
     goto/16 :goto_0
 
-    .line 2759
     .end local v33    # "ongoingId":I
     .end local v41    # "ste":Ljava/net/SocketTimeoutException;
     .restart local v26    # "i":I
@@ -2951,19 +2741,15 @@
 
     move-object/from16 v17, v0
 
-    .line 2760
     .local v17, "buffer":[C
     const/16 v29, 0x0
 
-    .line 2761
     .local v29, "length":I
     const/16 v27, 0x0
 
-    .line 2762
     .local v27, "in":Ljava/io/InputStream;
     if-eqz v28, :cond_10
 
-    .line 2763
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -2977,7 +2763,6 @@
 
     move-result-object v27
 
-    .line 2767
     :goto_9
     new-instance v16, Ljava/io/BufferedReader;
 
@@ -2991,13 +2776,11 @@
 
     invoke-direct {v0, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 2768
     .local v16, "br":Ljava/io/BufferedReader;
     invoke-virtual/range {v16 .. v16}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v30
 
-    .line 2770
     .local v30, "line":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3012,7 +2795,6 @@
 
     iput v5, v4, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->qcStep:I
 
-    .line 2772
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -3026,7 +2808,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2775
     const-string v4, "wlan0"
 
     invoke-static {v4}, Landroid/net/TrafficStats;->getRxPackets(Ljava/lang/String;)J
@@ -3037,7 +2818,6 @@
 
     iput-wide v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxPacketsBeforeQC:J
 
-    .line 2776
     const-string v4, "wlan0"
 
     invoke-static {v4}, Landroid/net/TrafficStats;->getRxBytes(Ljava/lang/String;)J
@@ -3048,7 +2828,6 @@
 
     iput-wide v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mRxBytesBeforeQC:J
 
-    .line 2777
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v4
@@ -3057,25 +2836,21 @@
 
     iput-wide v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->mQCStartTime:J
 
-    .line 2780
     invoke-static {}, Landroid/os/Message;->obtain()Landroid/os/Message;
 
     move-result-object v31
 
-    .line 2781
     .local v31, "message":Landroid/os/Message;
     move-object/from16 v0, v31
 
     iput v8, v0, Landroid/os/Message;->arg1:I
 
-    .line 2782
     const v4, 0x2105b
 
     move-object/from16 v0, v31
 
     iput v4, v0, Landroid/os/Message;->what:I
 
-    .line 2783
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -3106,7 +2881,6 @@
 
     invoke-virtual {v4, v0, v1, v2}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->sendMessageDelayed(Landroid/os/Message;J)Z
 
-    .line 2785
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -3140,7 +2914,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2787
     :cond_e
     move-object/from16 v0, p0
 
@@ -3164,7 +2937,6 @@
 
     if-nez v4, :cond_11
 
-    .line 2789
     if-eqz v30, :cond_11
 
     const-string v4, "204"
@@ -3187,7 +2959,6 @@
 
     if-eqz v4, :cond_11
 
-    .line 2791
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -3219,7 +2990,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2792
     :cond_f
     move-object/from16 v0, p0
 
@@ -3234,10 +3004,8 @@
 
     const v36, 0xf423e
 
-    .line 2793
     goto/16 :goto_4
 
-    .line 2765
     .end local v16    # "br":Ljava/io/BufferedReader;
     .end local v30    # "line":Ljava/lang/String;
     .end local v31    # "message":Landroid/os/Message;
@@ -3257,7 +3025,6 @@
 
     goto/16 :goto_9
 
-    .line 2797
     .restart local v16    # "br":Ljava/io/BufferedReader;
     .restart local v30    # "line":Ljava/lang/String;
     .restart local v31    # "message":Landroid/os/Message;
@@ -3300,7 +3067,6 @@
 
     if-eq v4, v5, :cond_1e
 
-    .line 2800
     :cond_12
     move-object/from16 v0, p0
 
@@ -3315,10 +3081,8 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2801
     const/16 v34, 0x0
 
-    .line 2803
     .local v34, "redirectURL":Ljava/lang/String;
     :cond_13
     invoke-virtual/range {v16 .. v16}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -3333,7 +3097,6 @@
 
     if-lez v4, :cond_15
 
-    .line 2805
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -3367,7 +3130,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2806
     :cond_14
     invoke-virtual/range {v30 .. v30}, Ljava/lang/String;->length()I
 
@@ -3395,7 +3157,6 @@
 
     if-eqz v4, :cond_13
 
-    .line 2808
     const/16 v4, 0x9
 
     move-object/from16 v0, v30
@@ -3408,7 +3169,6 @@
 
     move-result-object v34
 
-    .line 2809
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -3442,11 +3202,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2813
     :cond_15
     if-eqz v28, :cond_19
 
-    .line 2814
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -3458,7 +3216,6 @@
 
     invoke-virtual {v4}, Ljavax/net/ssl/SSLSocket;->close()V
 
-    .line 2815
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -3468,10 +3225,8 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSSLSocket:Ljavax/net/ssl/SSLSocket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16802(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljavax/net/ssl/SSLSocket;)Ljavax/net/ssl/SSLSocket;
 
-    .line 2816
     if-nez v34, :cond_1d
 
-    .line 2817
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -3487,7 +3242,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2818
     :cond_16
     new-instance v4, Ljava/net/SocketException;
 
@@ -3500,7 +3254,6 @@
     .catch Ljava/lang/AssertionError; {:try_start_5 .. :try_end_5} :catch_3
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 2875
     .end local v16    # "br":Ljava/io/BufferedReader;
     .end local v17    # "buffer":[C
     .end local v26    # "i":I
@@ -3512,7 +3265,6 @@
     :catch_2
     move-exception v21
 
-    .line 2876
     .local v21, "ee":Ljava/lang/Exception;
     :try_start_6
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
@@ -3548,7 +3300,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2877
     :cond_17
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -3561,11 +3312,9 @@
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 
-    .line 2878
     :cond_18
     const/16 v36, -0x1
 
-    .line 2883
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -3579,11 +3328,9 @@
 
     move-result v33
 
-    .line 2884
     .restart local v33    # "ongoingId":I
     if-eqz v32, :cond_3c
 
-    .line 2885
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -3601,7 +3348,6 @@
 
     goto/16 :goto_0
 
-    .line 2821
     .end local v21    # "ee":Ljava/lang/Exception;
     .end local v33    # "ongoingId":I
     .restart local v16    # "br":Ljava/io/BufferedReader;
@@ -3640,7 +3386,6 @@
 
     invoke-virtual {v4}, Ljava/net/Socket;->shutdownInput()V
 
-    .line 2822
     :cond_1a
     move-object/from16 v0, p0
 
@@ -3653,7 +3398,6 @@
 
     invoke-virtual {v4}, Ljava/net/Socket;->close()V
 
-    .line 2823
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -3663,10 +3407,8 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSocket:Ljava/net/Socket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16702(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2824
     if-nez v34, :cond_1d
 
-    .line 2825
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -3682,7 +3424,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2826
     :cond_1b
     new-instance v4, Ljava/net/SocketException;
 
@@ -3695,7 +3436,6 @@
     .catch Ljava/lang/AssertionError; {:try_start_7 .. :try_end_7} :catch_3
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 2879
     .end local v16    # "br":Ljava/io/BufferedReader;
     .end local v17    # "buffer":[C
     .end local v26    # "i":I
@@ -3707,7 +3447,6 @@
     :catch_3
     move-exception v15
 
-    .line 2880
     .local v15, "ae":Ljava/lang/AssertionError;
     :try_start_8
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
@@ -3743,11 +3482,9 @@
     :try_end_8
     .catchall {:try_start_8 .. :try_end_8} :catchall_0
 
-    .line 2881
     :cond_1c
     const/16 v36, -0x1
 
-    .line 2883
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -3761,11 +3498,9 @@
 
     move-result v33
 
-    .line 2884
     .restart local v33    # "ongoingId":I
     if-eqz v32, :cond_44
 
-    .line 2885
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -3783,7 +3518,6 @@
 
     goto/16 :goto_0
 
-    .line 2830
     .end local v15    # "ae":Ljava/lang/AssertionError;
     .end local v33    # "ongoingId":I
     .restart local v16    # "br":Ljava/io/BufferedReader;
@@ -3815,13 +3549,10 @@
 
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2831
     const/16 v32, 0x1
 
-    .line 2832
     goto/16 :goto_4
 
-    .line 2834
     .end local v34    # "redirectURL":Ljava/lang/String;
     :cond_1e
     move-object/from16 v0, p0
@@ -3837,7 +3568,6 @@
 
     const/16 v39, 0x1400
 
-    .line 2836
     .local v39, "size":I
     move-object/from16 v0, p0
 
@@ -3863,7 +3593,6 @@
 
     if-eqz v4, :cond_29
 
-    .line 2837
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -3877,12 +3606,10 @@
 
     move/from16 v42, v0
 
-    .line 2841
     .local v42, "targetBytes":I
     :goto_a
     move/from16 v35, v42
 
-    .line 2842
     .local v35, "remainBytes":I
     :cond_1f
     :goto_b
@@ -3905,13 +3632,10 @@
 
     if-eq v0, v4, :cond_21
 
-    .line 2843
     sub-int v35, v35, v20
 
-    .line 2844
     add-int v29, v29, v20
 
-    .line 2845
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -3957,11 +3681,9 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2846
     :cond_20
     if-gtz v35, :cond_2b
 
-    .line 2849
     :cond_21
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
@@ -3979,7 +3701,6 @@
 
     add-int v37, v37, v4
 
-    .line 2850
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -4019,13 +3740,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2851
     :cond_22
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->getRxBytesDuringQC()I
 
     move-result v18
 
-    .line 2852
     .local v18, "bytes":I
     move/from16 v0, v29
 
@@ -4066,7 +3785,6 @@
 
     if-eqz v4, :cond_24
 
-    .line 2854
     :cond_23
     move-object/from16 v0, p0
 
@@ -4102,7 +3820,6 @@
 
     add-int v36, v36, v4
 
-    .line 2856
     :cond_24
     move/from16 v0, v36
 
@@ -4110,10 +3827,8 @@
 
     if-ge v0, v1, :cond_25
 
-    .line 2857
     move/from16 v36, v18
 
-    .line 2859
     :cond_25
     move-object/from16 v0, p0
 
@@ -4148,7 +3863,6 @@
 
     if-nez v4, :cond_28
 
-    .line 2860
     :cond_26
     move/from16 v0, v36
 
@@ -4156,7 +3870,6 @@
 
     if-ge v0, v1, :cond_28
 
-    .line 2861
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -4172,15 +3885,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2862
     :cond_27
     move/from16 v36, v42
 
-    .line 2865
     :cond_28
     if-eqz v27, :cond_a
 
-    .line 2866
     invoke-virtual/range {v27 .. v27}, Ljava/io/InputStream;->close()V
     :try_end_9
     .catch Ljava/net/SocketTimeoutException; {:try_start_9 .. :try_end_9} :catch_1
@@ -4190,7 +3900,6 @@
 
     goto/16 :goto_8
 
-    .line 2883
     .end local v16    # "br":Ljava/io/BufferedReader;
     .end local v17    # "buffer":[C
     .end local v18    # "bytes":I
@@ -4219,11 +3928,9 @@
 
     move-result v33
 
-    .line 2884
     .restart local v33    # "ongoingId":I
     if-eqz v32, :cond_4c
 
-    .line 2885
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -4241,7 +3948,6 @@
 
     goto/16 :goto_0
 
-    .line 2839
     .end local v33    # "ongoingId":I
     .restart local v16    # "br":Ljava/io/BufferedReader;
     .restart local v17    # "buffer":[C
@@ -4312,7 +4018,6 @@
 
     goto :goto_c
 
-    .line 2847
     .restart local v20    # "count":I
     .restart local v35    # "remainBytes":I
     .restart local v42    # "targetBytes":I
@@ -4327,7 +4032,6 @@
 
     goto/16 :goto_b
 
-    .line 2887
     .end local v16    # "br":Ljava/io/BufferedReader;
     .end local v17    # "buffer":[C
     .end local v20    # "count":I
@@ -4343,7 +4047,6 @@
     :cond_2c
     if-nez v33, :cond_2d
 
-    .line 2888
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -4383,7 +4086,6 @@
 
     goto/16 :goto_0
 
-    .line 2892
     :cond_2d
     move-object/from16 v0, p0
 
@@ -4396,7 +4098,6 @@
 
     if-eqz v4, :cond_2f
 
-    .line 2894
     :try_start_b
     move-object/from16 v0, p0
 
@@ -4424,7 +4125,6 @@
 
     invoke-virtual {v4}, Ljava/net/Socket;->shutdownInput()V
 
-    .line 2895
     :cond_2e
     move-object/from16 v0, p0
 
@@ -4439,7 +4139,6 @@
     :try_end_b
     .catch Ljava/lang/Exception; {:try_start_b .. :try_end_b} :catch_11
 
-    .line 2899
     :cond_2f
     :goto_d
     move-object/from16 v0, p0
@@ -4451,7 +4150,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSocket:Ljava/net/Socket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16702(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2900
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -4463,7 +4161,6 @@
 
     if-eqz v4, :cond_30
 
-    .line 2902
     :try_start_c
     move-object/from16 v0, p0
 
@@ -4478,7 +4175,6 @@
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_10
 
-    .line 2906
     :cond_30
     :goto_e
     move-object/from16 v0, p0
@@ -4490,7 +4186,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSSLSocket:Ljavax/net/ssl/SSLSocket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16802(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljavax/net/ssl/SSLSocket;)Ljavax/net/ssl/SSLSocket;
 
-    .line 2907
     move/from16 v0, v33
 
     if-ne v8, v0, :cond_33
@@ -4512,7 +4207,6 @@
 
     if-nez v4, :cond_33
 
-    .line 2909
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -4544,7 +4238,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2910
     :cond_31
     move-object/from16 v0, p0
 
@@ -4565,7 +4258,6 @@
 
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2914
     :cond_32
     :goto_f
     move-object/from16 v0, p0
@@ -4581,7 +4273,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2915
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -4595,7 +4286,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2916
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -4609,7 +4299,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2917
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -4625,7 +4314,6 @@
 
     goto/16 :goto_0
 
-    .line 2912
     :cond_33
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -4668,12 +4356,10 @@
 
     goto :goto_f
 
-    .line 2887
     .restart local v41    # "ste":Ljava/net/SocketTimeoutException;
     :cond_34
     if-nez v33, :cond_35
 
-    .line 2888
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -4713,7 +4399,6 @@
 
     goto/16 :goto_0
 
-    .line 2892
     :cond_35
     move-object/from16 v0, p0
 
@@ -4726,7 +4411,6 @@
 
     if-eqz v4, :cond_37
 
-    .line 2894
     :try_start_d
     move-object/from16 v0, p0
 
@@ -4754,7 +4438,6 @@
 
     invoke-virtual {v4}, Ljava/net/Socket;->shutdownInput()V
 
-    .line 2895
     :cond_36
     move-object/from16 v0, p0
 
@@ -4769,7 +4452,6 @@
     :try_end_d
     .catch Ljava/lang/Exception; {:try_start_d .. :try_end_d} :catch_f
 
-    .line 2899
     :cond_37
     :goto_10
     move-object/from16 v0, p0
@@ -4781,7 +4463,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSocket:Ljava/net/Socket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16702(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2900
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -4793,7 +4474,6 @@
 
     if-eqz v4, :cond_38
 
-    .line 2902
     :try_start_e
     move-object/from16 v0, p0
 
@@ -4808,7 +4488,6 @@
     :try_end_e
     .catch Ljava/lang/Exception; {:try_start_e .. :try_end_e} :catch_e
 
-    .line 2906
     :cond_38
     :goto_11
     move-object/from16 v0, p0
@@ -4820,7 +4499,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSSLSocket:Ljavax/net/ssl/SSLSocket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16802(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljavax/net/ssl/SSLSocket;)Ljavax/net/ssl/SSLSocket;
 
-    .line 2907
     move/from16 v0, v33
 
     if-ne v8, v0, :cond_3b
@@ -4842,7 +4520,6 @@
 
     if-nez v4, :cond_3b
 
-    .line 2909
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -4874,7 +4551,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2910
     :cond_39
     move-object/from16 v0, p0
 
@@ -4895,7 +4571,6 @@
 
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2914
     :cond_3a
     :goto_12
     move-object/from16 v0, p0
@@ -4911,7 +4586,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2915
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -4925,7 +4599,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2916
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -4939,7 +4612,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2917
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -4955,7 +4627,6 @@
 
     goto/16 :goto_0
 
-    .line 2912
     :cond_3b
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -4998,13 +4669,11 @@
 
     goto :goto_12
 
-    .line 2887
     .end local v41    # "ste":Ljava/net/SocketTimeoutException;
     .restart local v21    # "ee":Ljava/lang/Exception;
     :cond_3c
     if-nez v33, :cond_3d
 
-    .line 2888
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -5044,7 +4713,6 @@
 
     goto/16 :goto_0
 
-    .line 2892
     :cond_3d
     move-object/from16 v0, p0
 
@@ -5057,7 +4725,6 @@
 
     if-eqz v4, :cond_3f
 
-    .line 2894
     :try_start_f
     move-object/from16 v0, p0
 
@@ -5085,7 +4752,6 @@
 
     invoke-virtual {v4}, Ljava/net/Socket;->shutdownInput()V
 
-    .line 2895
     :cond_3e
     move-object/from16 v0, p0
 
@@ -5100,7 +4766,6 @@
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_d
 
-    .line 2899
     :cond_3f
     :goto_13
     move-object/from16 v0, p0
@@ -5112,7 +4777,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSocket:Ljava/net/Socket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16702(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2900
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5124,7 +4788,6 @@
 
     if-eqz v4, :cond_40
 
-    .line 2902
     :try_start_10
     move-object/from16 v0, p0
 
@@ -5139,7 +4802,6 @@
     :try_end_10
     .catch Ljava/lang/Exception; {:try_start_10 .. :try_end_10} :catch_c
 
-    .line 2906
     :cond_40
     :goto_14
     move-object/from16 v0, p0
@@ -5151,7 +4813,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSSLSocket:Ljavax/net/ssl/SSLSocket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16802(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljavax/net/ssl/SSLSocket;)Ljavax/net/ssl/SSLSocket;
 
-    .line 2907
     move/from16 v0, v33
 
     if-ne v8, v0, :cond_43
@@ -5173,7 +4834,6 @@
 
     if-nez v4, :cond_43
 
-    .line 2909
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -5205,7 +4865,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2910
     :cond_41
     move-object/from16 v0, p0
 
@@ -5226,7 +4885,6 @@
 
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2914
     :cond_42
     :goto_15
     move-object/from16 v0, p0
@@ -5242,7 +4900,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2915
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5256,7 +4913,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2916
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5270,7 +4926,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2917
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5286,7 +4941,6 @@
 
     goto/16 :goto_0
 
-    .line 2912
     :cond_43
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -5329,13 +4983,11 @@
 
     goto :goto_15
 
-    .line 2887
     .end local v21    # "ee":Ljava/lang/Exception;
     .restart local v15    # "ae":Ljava/lang/AssertionError;
     :cond_44
     if-nez v33, :cond_45
 
-    .line 2888
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -5375,7 +5027,6 @@
 
     goto/16 :goto_0
 
-    .line 2892
     :cond_45
     move-object/from16 v0, p0
 
@@ -5388,7 +5039,6 @@
 
     if-eqz v4, :cond_47
 
-    .line 2894
     :try_start_11
     move-object/from16 v0, p0
 
@@ -5416,7 +5066,6 @@
 
     invoke-virtual {v4}, Ljava/net/Socket;->shutdownInput()V
 
-    .line 2895
     :cond_46
     move-object/from16 v0, p0
 
@@ -5431,7 +5080,6 @@
     :try_end_11
     .catch Ljava/lang/Exception; {:try_start_11 .. :try_end_11} :catch_b
 
-    .line 2899
     :cond_47
     :goto_16
     move-object/from16 v0, p0
@@ -5443,7 +5091,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSocket:Ljava/net/Socket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16702(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2900
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5455,7 +5102,6 @@
 
     if-eqz v4, :cond_48
 
-    .line 2902
     :try_start_12
     move-object/from16 v0, p0
 
@@ -5470,7 +5116,6 @@
     :try_end_12
     .catch Ljava/lang/Exception; {:try_start_12 .. :try_end_12} :catch_a
 
-    .line 2906
     :cond_48
     :goto_17
     move-object/from16 v0, p0
@@ -5482,7 +5127,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSSLSocket:Ljavax/net/ssl/SSLSocket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16802(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljavax/net/ssl/SSLSocket;)Ljavax/net/ssl/SSLSocket;
 
-    .line 2907
     move/from16 v0, v33
 
     if-ne v8, v0, :cond_4b
@@ -5504,7 +5148,6 @@
 
     if-nez v4, :cond_4b
 
-    .line 2909
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -5536,7 +5179,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2910
     :cond_49
     move-object/from16 v0, p0
 
@@ -5557,7 +5199,6 @@
 
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2914
     :cond_4a
     :goto_18
     move-object/from16 v0, p0
@@ -5573,7 +5214,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2915
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5587,7 +5227,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2916
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5601,7 +5240,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2917
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5617,7 +5255,6 @@
 
     goto/16 :goto_0
 
-    .line 2912
     :cond_4b
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -5660,12 +5297,10 @@
 
     goto :goto_18
 
-    .line 2887
     .end local v15    # "ae":Ljava/lang/AssertionError;
     :cond_4c
     if-nez v33, :cond_4d
 
-    .line 2888
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -5705,7 +5340,6 @@
 
     goto/16 :goto_0
 
-    .line 2892
     :cond_4d
     move-object/from16 v0, p0
 
@@ -5718,7 +5352,6 @@
 
     if-eqz v5, :cond_4f
 
-    .line 2894
     :try_start_13
     move-object/from16 v0, p0
 
@@ -5746,7 +5379,6 @@
 
     invoke-virtual {v5}, Ljava/net/Socket;->shutdownInput()V
 
-    .line 2895
     :cond_4e
     move-object/from16 v0, p0
 
@@ -5761,7 +5393,6 @@
     :try_end_13
     .catch Ljava/lang/Exception; {:try_start_13 .. :try_end_13} :catch_9
 
-    .line 2899
     :cond_4f
     :goto_19
     move-object/from16 v0, p0
@@ -5773,7 +5404,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSocket:Ljava/net/Socket;
     invoke-static {v5, v9}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16702(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2900
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5785,7 +5415,6 @@
 
     if-eqz v5, :cond_50
 
-    .line 2902
     :try_start_14
     move-object/from16 v0, p0
 
@@ -5800,7 +5429,6 @@
     :try_end_14
     .catch Ljava/lang/Exception; {:try_start_14 .. :try_end_14} :catch_8
 
-    .line 2906
     :cond_50
     :goto_1a
     move-object/from16 v0, p0
@@ -5812,7 +5440,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mQCSSLSocket:Ljavax/net/ssl/SSLSocket;
     invoke-static {v5, v9}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$16802(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljavax/net/ssl/SSLSocket;)Ljavax/net/ssl/SSLSocket;
 
-    .line 2907
     move/from16 v0, v33
 
     if-ne v8, v0, :cond_53
@@ -5834,7 +5461,6 @@
 
     if-nez v5, :cond_53
 
-    .line 2909
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
 
@@ -5866,7 +5492,6 @@
 
     invoke-static {v5, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2910
     :cond_51
     move-object/from16 v0, p0
 
@@ -5887,7 +5512,6 @@
 
     invoke-virtual {v5}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2914
     :cond_52
     :goto_1b
     move-object/from16 v0, p0
@@ -5903,7 +5527,6 @@
 
     invoke-virtual {v5, v9}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2915
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5917,7 +5540,6 @@
 
     invoke-virtual {v5, v9}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2916
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5931,7 +5553,6 @@
 
     invoke-virtual {v5, v9}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2917
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -5945,10 +5566,8 @@
 
     invoke-virtual {v5, v9}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualityResultHandler;->removeMessages(I)V
 
-    .line 2918
     throw v4
 
-    .line 2912
     :cond_53
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$400()Z
@@ -5991,7 +5610,6 @@
 
     goto :goto_1b
 
-    .line 2922
     .end local v6    # "ip":I
     .end local v7    # "qcUrl":Ljava/lang/String;
     .end local v8    # "id":I
@@ -6017,13 +5635,11 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2923
     :cond_54
     move-object/from16 v0, p1
 
     iget v11, v0, Landroid/os/Message;->arg2:I
 
-    .line 2924
     .local v11, "captivePortalIp":I
     move-object/from16 v0, p1
 
@@ -6031,19 +5647,15 @@
 
     check-cast v12, Ljava/lang/String;
 
-    .line 2925
     .local v12, "captivePortalUrl":Ljava/lang/String;
     const/16 v25, 0x0
 
-    .line 2926
     .local v25, "firstLine":Ljava/lang/String;
     const/16 v40, -0x1
 
-    .line 2927
     .local v40, "statusCode":I
     const/16 v38, 0x0
 
-    .line 2930
     .local v38, "sameLocation":Z
     :try_start_15
     move-object/from16 v0, p0
@@ -6057,7 +5669,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCaptivePortalSocket:Ljava/net/Socket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$7102(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2931
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6075,14 +5686,12 @@
 
     invoke-direct/range {v9 .. v14}, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->sendGetMethod(Ljava/net/Socket;ILjava/lang/String;IZ)V
 
-    .line 2932
     const/16 v4, 0x32
 
     new-array v0, v4, [C
 
     move-object/from16 v17, v0
 
-    .line 2933
     .restart local v17    # "buffer":[C
     move-object/from16 v0, p0
 
@@ -6097,7 +5706,6 @@
 
     move-result-object v27
 
-    .line 2934
     .restart local v27    # "in":Ljava/io/InputStream;
     new-instance v16, Ljava/io/BufferedReader;
 
@@ -6111,13 +5719,11 @@
 
     invoke-direct {v0, v4}, Ljava/io/BufferedReader;-><init>(Ljava/io/Reader;)V
 
-    .line 2935
     .restart local v16    # "br":Ljava/io/BufferedReader;
     invoke-virtual/range {v16 .. v16}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
 
     move-result-object v25
 
-    .line 2936
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6131,7 +5737,6 @@
 
     iput v5, v4, Lcom/android/server/wifi/WifiWatchdogStateMachine$QcFailHistory;->qcStep:I
 
-    .line 2937
     if-eqz v25, :cond_58
 
     invoke-virtual/range {v25 .. v25}, Ljava/lang/String;->length()I
@@ -6142,7 +5747,6 @@
 
     if-le v4, v5, :cond_58
 
-    .line 2938
     const/16 v4, 0x9
 
     const/16 v5, 0xc
@@ -6157,7 +5761,6 @@
 
     move-result v19
 
-    .line 2939
     .local v19, "code":I
     move-object/from16 v0, p0
 
@@ -6186,7 +5789,6 @@
     # invokes: Lcom/android/server/wifi/WifiWatchdogStateMachine;->logd(Ljava/lang/String;)V
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$17400(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/lang/String;)V
 
-    .line 2940
     const/16 v4, 0x64
 
     move/from16 v0, v19
@@ -6199,17 +5801,13 @@
 
     if-ge v0, v4, :cond_58
 
-    .line 2941
     move/from16 v40, v19
 
-    .line 2942
     const/16 v30, 0x0
 
-    .line 2943
     .restart local v30    # "line":Ljava/lang/String;
     const/16 v34, 0x0
 
-    .line 2945
     .restart local v34    # "redirectURL":Ljava/lang/String;
     :cond_55
     invoke-virtual/range {v16 .. v16}, Ljava/io/BufferedReader;->readLine()Ljava/lang/String;
@@ -6224,7 +5822,6 @@
 
     if-lez v4, :cond_57
 
-    .line 2947
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -6258,7 +5855,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2948
     :cond_56
     invoke-virtual/range {v30 .. v30}, Ljava/lang/String;->length()I
 
@@ -6286,7 +5882,6 @@
 
     if-eqz v4, :cond_55
 
-    .line 2950
     const/16 v4, 0x9
 
     move-object/from16 v0, v30
@@ -6299,7 +5894,6 @@
 
     move-result-object v34
 
-    .line 2951
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
 
@@ -6333,7 +5927,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2955
     :cond_57
     if-eqz v34, :cond_58
 
@@ -6345,7 +5938,6 @@
 
     if-eqz v4, :cond_58
 
-    .line 2956
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->TAG:Ljava/lang/String;
@@ -6372,23 +5964,18 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2957
     const/16 v38, 0x1
 
-    .line 2962
     .end local v19    # "code":I
     .end local v30    # "line":Ljava/lang/String;
     .end local v34    # "redirectURL":Ljava/lang/String;
     :cond_58
     if-eqz v27, :cond_59
 
-    .line 2963
     invoke-virtual/range {v27 .. v27}, Ljava/io/InputStream;->close()V
 
-    .line 2964
     const/16 v27, 0x0
 
-    .line 2966
     :cond_59
     if-gez v40, :cond_5d
 
@@ -6401,14 +5988,12 @@
     .catch Ljava/lang/Exception; {:try_start_15 .. :try_end_15} :catch_4
     .catchall {:try_start_15 .. :try_end_15} :catchall_1
 
-    .line 2967
     .end local v16    # "br":Ljava/io/BufferedReader;
     .end local v17    # "buffer":[C
     .end local v27    # "in":Ljava/io/InputStream;
     :catch_4
     move-exception v22
 
-    .line 2968
     .local v22, "eee":Ljava/lang/Exception;
     :try_start_16
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
@@ -6444,7 +6029,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2969
     :cond_5a
     # getter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->SMARTCM_DBG:Z
     invoke-static {}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$000()Z
@@ -6455,7 +6039,6 @@
 
     invoke-virtual/range {v22 .. v22}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 2970
     :cond_5b
     move-object/from16 v0, p0
 
@@ -6470,7 +6053,6 @@
 
     invoke-virtual {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine$CaptivePortalHandler;->removeMessages(I)V
 
-    .line 2971
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6494,7 +6076,6 @@
     :try_end_16
     .catchall {:try_start_16 .. :try_end_16} :catchall_1
 
-    .line 2973
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6506,7 +6087,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2975
     :try_start_17
     move-object/from16 v0, p0
 
@@ -6534,7 +6114,6 @@
 
     invoke-virtual {v4}, Ljava/net/Socket;->shutdownInput()V
 
-    .line 2976
     :cond_5c
     move-object/from16 v0, p0
 
@@ -6549,7 +6128,6 @@
     :try_end_17
     .catch Ljava/lang/Exception; {:try_start_17 .. :try_end_17} :catch_6
 
-    .line 2979
     :goto_1c
     move-object/from16 v0, p0
 
@@ -6560,7 +6138,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCaptivePortalSocket:Ljava/net/Socket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$7102(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2980
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6591,7 +6168,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2985
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6616,7 +6192,6 @@
 
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2989
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6632,7 +6207,6 @@
 
     goto/16 :goto_0
 
-    .line 2973
     .end local v22    # "eee":Ljava/lang/Exception;
     .restart local v16    # "br":Ljava/io/BufferedReader;
     .restart local v17    # "buffer":[C
@@ -6649,7 +6223,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2975
     :try_start_18
     move-object/from16 v0, p0
 
@@ -6677,7 +6250,6 @@
 
     invoke-virtual {v4}, Ljava/net/Socket;->shutdownInput()V
 
-    .line 2976
     :cond_5e
     move-object/from16 v0, p0
 
@@ -6692,7 +6264,6 @@
     :try_end_18
     .catch Ljava/lang/Exception; {:try_start_18 .. :try_end_18} :catch_7
 
-    .line 2979
     :goto_1e
     move-object/from16 v0, p0
 
@@ -6703,7 +6274,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCaptivePortalSocket:Ljava/net/Socket;
     invoke-static {v4, v5}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$7102(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2980
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6734,7 +6304,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 2985
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6759,7 +6328,6 @@
 
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2989
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6775,7 +6343,6 @@
 
     goto/16 :goto_0
 
-    .line 2985
     :cond_5f
     const/4 v4, 0x0
 
@@ -6790,7 +6357,6 @@
 
     goto/16 :goto_1d
 
-    .line 2973
     .end local v22    # "eee":Ljava/lang/Exception;
     :catchall_1
     move-exception v4
@@ -6808,7 +6374,6 @@
 
     if-eqz v4, :cond_62
 
-    .line 2975
     :try_start_19
     move-object/from16 v0, p0
 
@@ -6836,7 +6401,6 @@
 
     invoke-virtual {v4}, Ljava/net/Socket;->shutdownInput()V
 
-    .line 2976
     :cond_61
     move-object/from16 v0, p0
 
@@ -6851,7 +6415,6 @@
     :try_end_19
     .catch Ljava/lang/Exception; {:try_start_19 .. :try_end_19} :catch_5
 
-    .line 2979
     :goto_20
     move-object/from16 v0, p0
 
@@ -6862,7 +6425,6 @@
     # setter for: Lcom/android/server/wifi/WifiWatchdogStateMachine;->mCaptivePortalSocket:Ljava/net/Socket;
     invoke-static {v4, v9}, Lcom/android/server/wifi/WifiWatchdogStateMachine;->access$7102(Lcom/android/server/wifi/WifiWatchdogStateMachine;Ljava/net/Socket;)Ljava/net/Socket;
 
-    .line 2980
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6893,7 +6455,6 @@
 
     if-eqz v4, :cond_62
 
-    .line 2985
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6918,7 +6479,6 @@
 
     invoke-virtual {v4}, Landroid/os/Message;->sendToTarget()V
 
-    .line 2989
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lcom/android/server/wifi/WifiWatchdogStateMachine$QualitySocketHandler;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
@@ -6935,13 +6495,11 @@
     :cond_62
     throw v5
 
-    .line 2985
     :cond_63
     const/4 v4, 0x0
 
     goto :goto_21
 
-    .line 2977
     :catch_5
     move-exception v4
 
@@ -6962,7 +6520,6 @@
 
     goto/16 :goto_1e
 
-    .line 2903
     .end local v11    # "captivePortalIp":I
     .end local v12    # "captivePortalUrl":Ljava/lang/String;
     .end local v16    # "br":Ljava/io/BufferedReader;
@@ -6985,26 +6542,22 @@
 
     goto/16 :goto_1a
 
-    .line 2896
     :catch_9
     move-exception v5
 
     goto/16 :goto_19
 
-    .line 2903
     .restart local v15    # "ae":Ljava/lang/AssertionError;
     :catch_a
     move-exception v4
 
     goto/16 :goto_17
 
-    .line 2896
     :catch_b
     move-exception v4
 
     goto/16 :goto_16
 
-    .line 2903
     .end local v15    # "ae":Ljava/lang/AssertionError;
     .restart local v21    # "ee":Ljava/lang/Exception;
     :catch_c
@@ -7012,13 +6565,11 @@
 
     goto/16 :goto_14
 
-    .line 2896
     :catch_d
     move-exception v4
 
     goto/16 :goto_13
 
-    .line 2903
     .end local v21    # "ee":Ljava/lang/Exception;
     .restart local v41    # "ste":Ljava/net/SocketTimeoutException;
     :catch_e
@@ -7026,26 +6577,22 @@
 
     goto/16 :goto_11
 
-    .line 2896
     :catch_f
     move-exception v4
 
     goto/16 :goto_10
 
-    .line 2903
     .end local v41    # "ste":Ljava/net/SocketTimeoutException;
     :catch_10
     move-exception v4
 
     goto/16 :goto_e
 
-    .line 2896
     :catch_11
     move-exception v4
 
     goto/16 :goto_d
 
-    .line 2731
     .end local v33    # "ongoingId":I
     .end local v43    # "urlCheck":Ljava/net/URL;
     .restart local v44    # "urlCheck":Ljava/net/URL;
@@ -7058,7 +6605,6 @@
     .restart local v43    # "urlCheck":Ljava/net/URL;
     goto/16 :goto_5
 
-    .line 2714
     nop
 
     :sswitch_data_0

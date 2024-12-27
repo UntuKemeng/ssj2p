@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2959
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-direct {p0}, Landroid/os/storage/StorageEventListener;-><init>()V
@@ -38,31 +37,26 @@
     .param p1, "fsUuid"    # Ljava/lang/String;
 
     .prologue
-    .line 2999
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    .line 3000
     const-string v3, "PackageManager"
 
     const-string v4, "Forgetting internal storage is probably a mistake; ignoring"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3016
     :goto_0
     return-void
 
-    .line 3005
     :cond_0
     sget-object v4, Lcom/android/server/pm/PackageManagerService;->mPackages:Landroid/util/ArrayMap;
 
     monitor-enter v4
 
-    .line 3006
     :try_start_0
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
@@ -72,7 +66,6 @@
 
     move-result-object v1
 
-    .line 3007
     .local v1, "packages":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PackageSetting;>;"
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -92,7 +85,6 @@
 
     check-cast v2, Lcom/android/server/pm/PackageSetting;
 
-    .line 3008
     .local v2, "ps":Lcom/android/server/pm/PackageSetting;
     const-string v3, "PackageManager"
 
@@ -124,7 +116,6 @@
 
     invoke-static {v3, v5}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 3009
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v5, v2, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
@@ -147,7 +138,6 @@
 
     goto :goto_1
 
-    .line 3015
     .end local v0    # "i$":Ljava/util/Iterator;
     .end local v1    # "packages":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PackageSetting;>;"
     .end local v2    # "ps":Lcom/android/server/pm/PackageSetting;
@@ -160,7 +150,6 @@
 
     throw v3
 
-    .line 3013
     .restart local v0    # "i$":Ljava/util/Iterator;
     .restart local v1    # "packages":Ljava/util/List;, "Ljava/util/List<Lcom/android/server/pm/PackageSetting;>;"
     :cond_1
@@ -171,14 +160,12 @@
 
     invoke-virtual {v3, p1}, Lcom/android/server/pm/Settings;->onVolumeForgotten(Ljava/lang/String;)V
 
-    .line 3014
     iget-object v3, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v3, v3, Lcom/android/server/pm/PackageManagerService;->mSettings:Lcom/android/server/pm/Settings;
 
     invoke-virtual {v3}, Lcom/android/server/pm/Settings;->writeLPr()V
 
-    .line 3015
     monitor-exit v4
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -201,48 +188,40 @@
 
     const/4 v3, 0x0
 
-    .line 2962
     iget v1, p1, Landroid/os/storage/VolumeInfo;->type:I
 
     if-ne v1, v4, :cond_0
 
-    .line 2963
     iget v1, p1, Landroid/os/storage/VolumeInfo;->state:I
 
     if-ne v1, v2, :cond_2
 
-    .line 2964
     invoke-virtual {p1}, Landroid/os/storage/VolumeInfo;->getFsUuid()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2968
     .local v0, "volumeUuid":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     # invokes: Lcom/android/server/pm/PackageManagerService;->reconcileUsers(Ljava/lang/String;)V
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerService;->access$2700(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;)V
 
-    .line 2969
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     # invokes: Lcom/android/server/pm/PackageManagerService;->reconcileApps(Ljava/lang/String;)V
     invoke-static {v1, v0}, Lcom/android/server/pm/PackageManagerService;->access$2800(Lcom/android/server/pm/PackageManagerService;Ljava/lang/String;)V
 
-    .line 2973
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mInstallerService:Lcom/android/server/pm/PackageInstallerService;
 
     invoke-virtual {v1, v0}, Lcom/android/server/pm/PackageInstallerService;->onPrivateVolumeMounted(Ljava/lang/String;)V
 
-    .line 2975
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     # invokes: Lcom/android/server/pm/PackageManagerService;->loadPrivatePackages(Landroid/os/storage/VolumeInfo;)V
     invoke-static {v1, p1}, Lcom/android/server/pm/PackageManagerService;->access$2900(Lcom/android/server/pm/PackageManagerService;Landroid/os/storage/VolumeInfo;)V
 
-    .line 2982
     .end local v0    # "volumeUuid":Ljava/lang/String;
     :cond_0
     :goto_0
@@ -250,7 +229,6 @@
 
     if-nez v1, :cond_1
 
-    .line 2983
     iget-object v1, p1, Landroid/os/storage/VolumeInfo;->disk:Landroid/os/storage/DiskInfo;
 
     if-eqz v1, :cond_1
@@ -263,41 +241,34 @@
 
     if-eqz v1, :cond_1
 
-    .line 2984
     iget v1, p1, Landroid/os/storage/VolumeInfo;->state:I
 
     if-ne v1, v2, :cond_3
 
-    .line 2985
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     # setter for: Lcom/android/server/pm/PackageManagerService;->mPreMounted:Z
     invoke-static {v1, v4}, Lcom/android/server/pm/PackageManagerService;->access$3102(Lcom/android/server/pm/PackageManagerService;Z)Z
 
-    .line 2986
     const-string v1, "PackageManager"
 
     const-string/jumbo v2, "sd card is mounted, updateExteranlMediaStatus"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2987
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v1, v4, v3}, Lcom/android/server/pm/PackageManagerService;->updateExternalMediaStatus(ZZ)V
 
-    .line 2995
     :cond_1
     :goto_1
     return-void
 
-    .line 2977
     :cond_2
     iget v1, p1, Landroid/os/storage/VolumeInfo;->state:I
 
     if-ne v1, v5, :cond_0
 
-    .line 2978
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     # invokes: Lcom/android/server/pm/PackageManagerService;->unloadPrivatePackages(Landroid/os/storage/VolumeInfo;)V
@@ -305,26 +276,22 @@
 
     goto :goto_0
 
-    .line 2988
     :cond_3
     iget v1, p1, Landroid/os/storage/VolumeInfo;->state:I
 
     if-ne v1, v5, :cond_1
 
-    .line 2989
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     # setter for: Lcom/android/server/pm/PackageManagerService;->mPreMounted:Z
     invoke-static {v1, v3}, Lcom/android/server/pm/PackageManagerService;->access$3102(Lcom/android/server/pm/PackageManagerService;Z)Z
 
-    .line 2990
     const-string v1, "PackageManager"
 
     const-string/jumbo v2, "sd card is unmounted, updateExteranlMediaStatus"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2991
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$2;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     invoke-virtual {v1, v3, v3}, Lcom/android/server/pm/PackageManagerService;->updateExternalMediaStatus(ZZ)V

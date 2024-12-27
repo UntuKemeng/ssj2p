@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 3562
     iput-object p1, p0, Lcom/android/internal/widget/LockPatternUtils$verifyCardCallback$1;->this$0:Lcom/android/internal/widget/LockPatternUtils$verifyCardCallback;
 
     invoke-direct {p0}, Lcom/sec/smartcard/pinservice/ISmartCardVerifyCallback$Stub;-><init>()V
@@ -38,11 +37,9 @@
     .param p1, "status"    # I
 
     .prologue
-    .line 3565
     iget-object v0, p0, Lcom/android/internal/widget/LockPatternUtils$verifyCardCallback$1;->this$0:Lcom/android/internal/widget/LockPatternUtils$verifyCardCallback;
 
     invoke-virtual {v0, p1}, Lcom/android/internal/widget/LockPatternUtils$verifyCardCallback;->onComplete(I)V
 
-    .line 3566
     return-void
 .end method

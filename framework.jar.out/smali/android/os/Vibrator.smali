@@ -32,17 +32,14 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     invoke-static {}, Landroid/app/ActivityThread;->currentPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/Vibrator;->mPackageName:Ljava/lang/String;
 
-    .line 46
     return-void
 .end method
 
@@ -51,17 +48,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     invoke-virtual {p1}, Landroid/content/Context;->getOpPackageName()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Landroid/os/Vibrator;->mPackageName:Ljava/lang/String;
 
-    .line 53
     return-void
 .end method
 
@@ -74,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 380
     const/16 v0, 0x270f
 
     return v0
@@ -87,7 +80,6 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x0
 
     return v0
@@ -97,7 +89,6 @@
     .locals 0
 
     .prologue
-    .line 401
     return-void
 .end method
 
@@ -105,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 411
     const/4 v0, -0x2
 
     return v0
@@ -116,7 +106,6 @@
     .param p1, "magnitude"    # I
 
     .prologue
-    .line 392
     return-void
 .end method
 
@@ -128,7 +117,6 @@
     .param p4, "magnitude"    # I
 
     .prologue
-    .line 304
     return-void
 .end method
 
@@ -140,7 +128,6 @@
     .param p4, "magnitudeType"    # Landroid/os/Vibrator$MagnitudeTypes;
 
     .prologue
-    .line 323
     return-void
 .end method
 
@@ -151,7 +138,6 @@
     .param p3, "magnitude"    # I
 
     .prologue
-    .line 286
     return-void
 .end method
 
@@ -162,7 +148,6 @@
     .param p3, "magnitudeType"    # Landroid/os/Vibrator$MagnitudeTypes;
 
     .prologue
-    .line 299
     return-void
 .end method
 
@@ -177,21 +162,18 @@
     .param p1, "milliseconds"    # J
 
     .prologue
-    .line 80
     const-string v0, "Vibrator"
 
     const-string v1, "Called vibrate(long) API!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 81
     const/4 v0, 0x0
 
     check-cast v0, Landroid/media/AudioAttributes;
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/os/Vibrator;->vibrate(JLandroid/media/AudioAttributes;)V
 
-    .line 82
     return-void
 .end method
 
@@ -201,7 +183,6 @@
     .param p3, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 96
     const-string v0, "Vibrator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -260,7 +241,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 99
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v2
@@ -275,7 +255,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/os/Vibrator;->vibrate(ILjava/lang/String;JLandroid/media/AudioAttributes;)V
 
-    .line 100
     return-void
 .end method
 
@@ -286,7 +265,6 @@
     .param p4, "magnitudeType"    # Landroid/os/Vibrator$MagnitudeTypes;
 
     .prologue
-    .line 339
     return-void
 .end method
 
@@ -296,7 +274,6 @@
     .param p3, "magnitudeType"    # Landroid/os/Vibrator$MagnitudeTypes;
 
     .prologue
-    .line 232
     return-void
 .end method
 
@@ -306,21 +283,18 @@
     .param p2, "repeat"    # I
 
     .prologue
-    .line 123
     const-string v0, "Vibrator"
 
     const-string v1, "Called vibrate(long[], int) API!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 124
     const/4 v0, 0x0
 
     check-cast v0, Landroid/media/AudioAttributes;
 
     invoke-virtual {p0, p1, p2, v0}, Landroid/os/Vibrator;->vibrate([JILandroid/media/AudioAttributes;)V
 
-    .line 125
     return-void
 .end method
 
@@ -331,7 +305,6 @@
     .param p3, "magnitude"    # I
 
     .prologue
-    .line 256
     return-void
 .end method
 
@@ -342,7 +315,6 @@
     .param p3, "attributes"    # Landroid/media/AudioAttributes;
 
     .prologue
-    .line 152
     const-string v0, "Vibrator"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -401,7 +373,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 155
     invoke-static {}, Landroid/os/Process;->myUid()I
 
     move-result v1
@@ -418,7 +389,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/os/Vibrator;->vibrate(ILjava/lang/String;[JILandroid/media/AudioAttributes;)V
 
-    .line 156
     return-void
 .end method
 
@@ -430,7 +400,6 @@
     .param p4, "magnitudeType"    # Landroid/os/Vibrator$MagnitudeTypes;
 
     .prologue
-    .line 368
     return-void
 .end method
 
@@ -441,7 +410,6 @@
     .param p3, "magnitudeType"    # Landroid/os/Vibrator$MagnitudeTypes;
 
     .prologue
-    .line 281
     return-void
 .end method
 
@@ -451,7 +419,6 @@
     .param p2, "magnitude"    # I
 
     .prologue
-    .line 424
     return-void
 .end method
 
@@ -461,7 +428,6 @@
     .param p2, "magnitudeType"    # Landroid/os/Vibrator$MagnitudeTypes;
 
     .prologue
-    .line 418
     return-void
 .end method
 
@@ -471,7 +437,6 @@
     .param p2, "magnitude"    # I
 
     .prologue
-    .line 436
     return-void
 .end method
 
@@ -481,6 +446,5 @@
     .param p2, "magnitudeType"    # Landroid/os/Vibrator$MagnitudeTypes;
 
     .prologue
-    .line 430
     return-void
 .end method

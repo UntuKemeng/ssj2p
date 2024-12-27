@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 2284
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$20$1;->this$1:Lcom/android/server/policy/GlobalActions$20;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2301
     return-void
 .end method
 
@@ -50,14 +48,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2296
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$20$1;->this$1:Lcom/android/server/policy/GlobalActions$20;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$20;->val$action:Lcom/android/server/policy/GlobalActions$Action;
 
     invoke-interface {v0}, Lcom/android/server/policy/GlobalActions$Action;->onPress()V
 
-    .line 2297
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2292
     return-void
 .end method
 
@@ -75,6 +70,5 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2288
     return-void
 .end method

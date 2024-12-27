@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1447
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$2;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1451
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -54,12 +52,10 @@
     .prologue
     const/4 v9, -0x1
 
-    .line 1456
     move-object v3, p1
 
     check-cast v3, Landroid/content/Intent;
 
-    .line 1457
     .local v3, "intent":Landroid/content/Intent;
     const-string v6, "[EPDGService]"
 
@@ -87,14 +83,12 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1458
     const-string v6, "NetworkType"
 
     invoke-virtual {v3, v6, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 1459
     .local v4, "networkType":I
     const-string v6, "ErrorReason"
 
@@ -102,7 +96,6 @@
 
     move-result v2
 
-    .line 1461
     .local v2, "errorReason":I
     invoke-static {}, Lcom/sec/epdg/EpdgService;->getEpdgSettings()Lcom/sec/epdg/EpdgSettings;
 
@@ -112,7 +105,6 @@
 
     move-result-object v0
 
-    .line 1462
     .local v0, "apnType":Ljava/lang/String;
     iget-object v6, p0, Lcom/sec/epdg/EpdgService$2;->this$0:Lcom/sec/epdg/EpdgService;
 
@@ -121,7 +113,6 @@
 
     move-result-object v5
 
-    .line 1464
     .local v5, "sm":Lcom/sec/epdg/IPSecDataConnSM;
     if-eqz v5, :cond_1
 
@@ -143,19 +134,16 @@
 
     if-eqz v6, :cond_1
 
-    .line 1465
     const/4 v6, 0x1
 
     if-ne v4, v6, :cond_2
 
-    .line 1466
     const-string v6, "[EPDGService]"
 
     const-string v7, "VoWiFi call is drop or not established properly, send DPD to check peer alive or not"
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1467
     const/16 v6, 0x57a
 
     if-eq v2, v6, :cond_0
@@ -164,7 +152,6 @@
 
     if-ne v2, v6, :cond_1
 
-    .line 1468
     :cond_0
     const-string v6, "[EPDGService]"
 
@@ -172,7 +159,6 @@
 
     invoke-static {v6, v7}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1469
     invoke-virtual {v5}, Lcom/sec/epdg/IPSecDataConnSM;->getHandler()Landroid/os/Handler;
 
     move-result-object v6
@@ -183,17 +169,14 @@
 
     move-result-object v1
 
-    .line 1470
     .local v1, "dpdmsg":Landroid/os/Message;
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1476
     .end local v1    # "dpdmsg":Landroid/os/Message;
     :cond_1
     :goto_0
     return-void
 
-    .line 1473
     :cond_2
     const-string v6, "[EPDGService]"
 

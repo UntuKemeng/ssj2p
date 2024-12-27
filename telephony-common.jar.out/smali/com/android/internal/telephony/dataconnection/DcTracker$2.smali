@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4018
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DcTracker$2;->this$0:Lcom/android/internal/telephony/dataconnection/DcTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,9 +41,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4020
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 4021
     return-void
 .end method

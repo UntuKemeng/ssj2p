@@ -2524,7 +2524,6 @@
 
     const/4 v3, 0x0
 
-    .line 1727
     const/16 v0, 0xf
 
     new-array v0, v0, [Ljava/lang/String;
@@ -2613,7 +2612,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/EdmStorageDefs;->FIREWALL_RULE_COLUMNS:[Ljava/lang/String;
 
-    .line 1745
     new-array v0, v5, [Ljava/lang/String;
 
     const-string v1, "adminUid"
@@ -2626,7 +2624,6 @@
 
     sput-object v0, Lcom/android/server/enterprise/storage/EdmStorageDefs;->FIREWALL_POLICY_STATUS_COLUMNS:[Ljava/lang/String;
 
-    .line 1750
     new-array v0, v6, [Ljava/lang/String;
 
     const-string v1, "adminUid"
@@ -2650,7 +2647,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

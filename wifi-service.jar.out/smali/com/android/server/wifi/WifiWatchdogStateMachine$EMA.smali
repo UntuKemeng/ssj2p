@@ -28,20 +28,16 @@
     .param p2, "coefficient"    # D
 
     .prologue
-    .line 7401
     iput-object p1, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$EMA;->this$0:Lcom/android/server/wifi/WifiWatchdogStateMachine;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 7402
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$EMA;->mValue:J
 
-    .line 7403
     iput-wide p2, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$EMA;->mAlpha:D
 
-    .line 7404
     return-void
 .end method
 
@@ -52,18 +48,15 @@
     .param p1, "newValue"    # J
 
     .prologue
-    .line 7407
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-gtz v0, :cond_0
 
-    .line 7410
     :goto_0
     return-void
 
-    .line 7409
     :cond_0
     iget-wide v0, p0, Lcom/android/server/wifi/WifiWatchdogStateMachine$EMA;->mAlpha:D
 

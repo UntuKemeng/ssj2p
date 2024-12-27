@@ -75,10 +75,8 @@
     .locals 1
 
     .prologue
-    .line 618
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 638
     new-instance v0, Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList;
 
     invoke-direct {v0}, Lcom/samsung/android/multidisplay/common/UnRestrictedArrayList;-><init>()V
@@ -94,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 653
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

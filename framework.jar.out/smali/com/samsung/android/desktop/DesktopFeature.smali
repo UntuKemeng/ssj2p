@@ -18,12 +18,10 @@
     .locals 1
 
     .prologue
-    .line 11
     const/4 v0, 0x1
 
     sput-byte v0, Lcom/samsung/android/desktop/DesktopFeature;->BUTTON_ACTION_PRESSED:B
 
-    .line 12
     const/4 v0, 0x0
 
     sput-byte v0, Lcom/samsung/android/desktop/DesktopFeature;->BUTTON_ACTION_RELEASED:B
@@ -35,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

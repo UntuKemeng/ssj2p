@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 1178
     invoke-static {}, Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;->values()[Lcom/android/server/location/GpsLocationProvider_samsung$Vendor;
 
     move-result-object v0

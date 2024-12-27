@@ -29,21 +29,16 @@
     .param p2, "fidoRequestData"    # [B
 
     .prologue
-    .line 513
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 588
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mFidoResultData:[B
 
-    .line 514
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
-    .line 515
     iput-object p2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mFidoRequestData:[B
 
-    .line 516
     return-void
 .end method
 
@@ -53,21 +48,16 @@
     .param p2, "fidoRequestData"    # [B
 
     .prologue
-    .line 519
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 588
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mFidoResultData:[B
 
-    .line 520
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
-    .line 521
     iput-object p2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mFidoRequestData:[B
 
-    .line 522
     return-void
 .end method
 
@@ -77,21 +67,16 @@
     .param p2, "fidoRequestData"    # [B
 
     .prologue
-    .line 525
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 588
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mFidoResultData:[B
 
-    .line 526
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
-    .line 527
     iput-object p2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mFidoRequestData:[B
 
-    .line 528
     return-void
 .end method
 
@@ -101,7 +86,6 @@
     .param p1, "x1"    # [B
 
     .prologue
-    .line 511
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->setFidoResultData([B)V
 
     return-void
@@ -112,10 +96,8 @@
     .param p1, "fidoResultData"    # [B
 
     .prologue
-    .line 583
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mFidoResultData:[B
 
-    .line 584
     return-void
 .end method
 
@@ -125,7 +107,6 @@
     .locals 1
 
     .prologue
-    .line 543
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
     instance-of v0, v0, Ljavax/crypto/Cipher;
@@ -149,7 +130,6 @@
     .locals 1
 
     .prologue
-    .line 569
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mFidoRequestData:[B
 
     return-object v0
@@ -159,7 +139,6 @@
     .locals 1
 
     .prologue
-    .line 579
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mFidoResultData:[B
 
     return-object v0
@@ -169,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 551
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
     instance-of v0, v0, Ljavax/crypto/Mac;
@@ -193,7 +171,6 @@
     .locals 2
 
     .prologue
-    .line 559
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
     if-eqz v0, :cond_0
@@ -217,7 +194,6 @@
     .locals 1
 
     .prologue
-    .line 535
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->mCrypto:Ljava/lang/Object;
 
     instance-of v0, v0, Ljava/security/Signature;

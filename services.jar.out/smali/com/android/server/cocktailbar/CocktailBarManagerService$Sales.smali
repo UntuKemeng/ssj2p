@@ -25,7 +25,6 @@
     .locals 2
 
     .prologue
-    .line 117
     const-string/jumbo v0, "ro.csc.sales_code"
 
     const-string v1, "NONE"
@@ -44,7 +43,6 @@
 
     sput-object v0, Lcom/android/server/cocktailbar/CocktailBarManagerService$Sales;->SALES_CODE:Ljava/lang/String;
 
-    .line 118
     const-string v0, "DCM"
 
     sget-object v1, Lcom/android/server/cocktailbar/CocktailBarManagerService$Sales;->SALES_CODE:Ljava/lang/String;
@@ -62,7 +60,6 @@
     .locals 0
 
     .prologue
-    .line 116
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

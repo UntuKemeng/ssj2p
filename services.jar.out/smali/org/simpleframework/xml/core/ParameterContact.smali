@@ -50,12 +50,10 @@
     .end annotation
 
     .prologue
-    .line 71
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     .local p1, "label":Ljava/lang/annotation/Annotation;, "TT;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     invoke-virtual {p2}, Ljava/lang/reflect/Constructor;->getParameterAnnotations()[[Ljava/lang/annotation/Annotation;
 
     move-result-object v0
@@ -64,23 +62,18 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ParameterContact;->labels:[Ljava/lang/annotation/Annotation;
 
-    .line 73
     invoke-virtual {p2}, Ljava/lang/reflect/Constructor;->getDeclaringClass()Ljava/lang/Class;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ParameterContact;->owner:Ljava/lang/Class;
 
-    .line 74
     iput-object p2, p0, Lorg/simpleframework/xml/core/ParameterContact;->factory:Ljava/lang/reflect/Constructor;
 
-    .line 75
     iput p3, p0, Lorg/simpleframework/xml/core/ParameterContact;->index:I
 
-    .line 76
     iput-object p1, p0, Lorg/simpleframework/xml/core/ParameterContact;->label:Ljava/lang/annotation/Annotation;
 
-    .line 77
     return-void
 .end method
 
@@ -91,7 +84,6 @@
     .param p1, "source"    # Ljava/lang/Object;
 
     .prologue
-    .line 147
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     const/4 v0, 0x0
 
@@ -102,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 87
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/core/ParameterContact;->label:Ljava/lang/annotation/Annotation;
 
@@ -122,7 +113,6 @@
     .end annotation
 
     .prologue
-    .line 173
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     .local p1, "type":Ljava/lang/Class;, "Ljava/lang/Class<TA;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/core/ParameterContact;->labels:[Ljava/lang/annotation/Annotation;
@@ -139,13 +129,11 @@
 
     aget-object v3, v0, v2
 
-    .line 174
     .local v3, "label":Ljava/lang/annotation/Annotation;
     invoke-interface {v3}, Ljava/lang/annotation/Annotation;->annotationType()Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 176
     .local v1, "expect":Ljava/lang/Class;
     invoke-virtual {v1, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -153,13 +141,11 @@
 
     if-eqz v5, :cond_0
 
-    .line 180
     .end local v1    # "expect":Ljava/lang/Class;
     .end local v3    # "label":Ljava/lang/annotation/Annotation;
     :goto_1
     return-object v3
 
-    .line 173
     .restart local v1    # "expect":Ljava/lang/Class;
     .restart local v3    # "label":Ljava/lang/annotation/Annotation;
     :cond_0
@@ -167,7 +153,6 @@
 
     goto :goto_0
 
-    .line 180
     .end local v1    # "expect":Ljava/lang/Class;
     .end local v3    # "label":Ljava/lang/annotation/Annotation;
     :cond_1
@@ -180,7 +165,6 @@
     .locals 1
 
     .prologue
-    .line 133
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/core/ParameterContact;->owner:Ljava/lang/Class;
 
@@ -191,7 +175,6 @@
     .locals 2
 
     .prologue
-    .line 110
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/core/ParameterContact;->factory:Ljava/lang/reflect/Constructor;
 
@@ -208,7 +191,6 @@
     .locals 2
 
     .prologue
-    .line 122
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/core/ParameterContact;->factory:Ljava/lang/reflect/Constructor;
 
@@ -228,7 +210,6 @@
     .locals 2
 
     .prologue
-    .line 98
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/core/ParameterContact;->factory:Ljava/lang/reflect/Constructor;
 
@@ -247,7 +228,6 @@
     .locals 1
 
     .prologue
-    .line 192
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     const/4 v0, 0x0
 
@@ -260,7 +240,6 @@
     .param p2, "value"    # Ljava/lang/Object;
 
     .prologue
-    .line 160
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     return-void
 .end method
@@ -269,7 +248,6 @@
     .locals 4
 
     .prologue
-    .line 203
     .local p0, "this":Lorg/simpleframework/xml/core/ParameterContact;, "Lorg/simpleframework/xml/core/ParameterContact<TT;>;"
     const-string v0, "parameter %s of constructor %s"
 

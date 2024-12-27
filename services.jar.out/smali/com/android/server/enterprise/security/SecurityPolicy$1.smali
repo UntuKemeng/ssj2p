@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 257
     iput-object p1, p0, Lcom/android/server/enterprise/security/SecurityPolicy$1;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,12 +38,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 260
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 261
     .local v0, "action":Ljava/lang/String;
     const-string v3, "android.intent.extra.user_handle"
 
@@ -54,7 +51,6 @@
 
     move-result v2
 
-    .line 264
     .local v2, "userId":I
     :try_start_0
     const-string v3, "android.intent.action.BOOT_COMPLETED"
@@ -73,7 +69,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 266
     :cond_0
     iget-object v3, p0, Lcom/android/server/enterprise/security/SecurityPolicy$1;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
@@ -82,7 +77,6 @@
     # setter for: Lcom/android/server/enterprise/security/SecurityPolicy;->mBootCompleted:Z
     invoke-static {v3, v4}, Lcom/android/server/enterprise/security/SecurityPolicy;->access$002(Lcom/android/server/enterprise/security/SecurityPolicy;Z)Z
 
-    .line 269
     iget-object v3, p0, Lcom/android/server/enterprise/security/SecurityPolicy$1;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     # invokes: Lcom/android/server/enterprise/security/SecurityPolicy;->getService()Landroid/os/PersonaManager;
@@ -105,12 +99,10 @@
 
     if-eqz v3, :cond_2
 
-    .line 296
     :cond_1
     :goto_0
     return-void
 
-    .line 273
     :cond_2
     iget-object v3, p0, Lcom/android/server/enterprise/security/SecurityPolicy$1;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
@@ -120,10 +112,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 275
     if-nez v2, :cond_1
 
-    .line 276
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
@@ -134,14 +124,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 278
     const-string v3, "SecurityPolicy"
 
     const-string v4, "Saving Device safe mode to true in generic table"
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 279
     iget-object v3, p0, Lcom/android/server/enterprise/security/SecurityPolicy$1;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     const/4 v4, 0x1
@@ -153,17 +141,14 @@
 
     goto :goto_0
 
-    .line 293
     :catch_0
     move-exception v1
 
-    .line 294
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto :goto_0
 
-    .line 281
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_3
     :try_start_1
@@ -176,14 +161,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 283
     const-string v3, "SecurityPolicy"
 
     const-string v4, "Sending broadcast: edm.intent.action.LAST_BOOT_SAFE_MODE"
 
     invoke-static {v3, v4}, Lcom/android/server/enterprise/log/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 285
     new-instance v3, Landroid/content/Intent;
 
     const-string v4, "edm.intent.action.LAST_BOOT_SAFE_MODE"
@@ -192,7 +175,6 @@
 
     invoke-virtual {p1, v3}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 287
     iget-object v3, p0, Lcom/android/server/enterprise/security/SecurityPolicy$1;->this$0:Lcom/android/server/enterprise/security/SecurityPolicy;
 
     const/4 v4, 0x0

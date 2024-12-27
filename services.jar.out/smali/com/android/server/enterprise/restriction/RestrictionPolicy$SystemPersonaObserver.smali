@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 497
     iput-object p1, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/enterprise/restriction/RestrictionPolicy$1;
 
     .prologue
-    .line 497
     invoke-direct {p0, p1}, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPersonaObserver;-><init>(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
 
     return-void
@@ -50,7 +48,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 523
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 499
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -82,7 +78,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 501
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # getter for: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mPersonaMgr:Landroid/os/PersonaManager;
@@ -96,13 +91,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 502
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # invokes: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceStatusBarExpansion()V
     invoke-static {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->access$300(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
 
-    .line 504
     :cond_0
     return-void
 .end method
@@ -112,7 +105,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 507
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -135,7 +127,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 509
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # getter for: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mPersonaMgr:Landroid/os/PersonaManager;
@@ -149,13 +140,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 510
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # invokes: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceStatusBarExpansion()V
     invoke-static {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->access$300(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
 
-    .line 512
     :cond_0
     return-void
 .end method
@@ -165,7 +154,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 515
     const-string v0, "RestrictionPolicy"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -188,7 +176,6 @@
 
     invoke-static {v0, v1}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 517
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # getter for: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->mPersonaMgr:Landroid/os/PersonaManager;
@@ -202,13 +189,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 518
     iget-object v0, p0, Lcom/android/server/enterprise/restriction/RestrictionPolicy$SystemPersonaObserver;->this$0:Lcom/android/server/enterprise/restriction/RestrictionPolicy;
 
     # invokes: Lcom/android/server/enterprise/restriction/RestrictionPolicy;->enforceStatusBarExpansion()V
     invoke-static {v0}, Lcom/android/server/enterprise/restriction/RestrictionPolicy;->access$300(Lcom/android/server/enterprise/restriction/RestrictionPolicy;)V
 
-    .line 520
     :cond_0
     return-void
 .end method
@@ -220,6 +205,5 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 526
     return-void
 .end method

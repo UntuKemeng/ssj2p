@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 649
     iput-object p1, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$2;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$StateListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "state"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 652
     iget-object v0, p0, Lcom/samsung/android/displaysolution/MdnieScenarioControlService$2;->this$0:Lcom/samsung/android/displaysolution/MdnieScenarioControlService;
 
     invoke-virtual {p1}, Lcom/samsung/android/cover/CoverState;->getSwitchState()Z
@@ -48,6 +46,5 @@
     # setter for: Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->mCoverState:Z
     invoke-static {v0, v1}, Lcom/samsung/android/displaysolution/MdnieScenarioControlService;->access$3002(Lcom/samsung/android/displaysolution/MdnieScenarioControlService;Z)Z
 
-    .line 653
     return-void
 .end method

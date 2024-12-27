@@ -23,17 +23,14 @@
     .locals 1
 
     .prologue
-    .line 558
     iput-object p1, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
-    .line 559
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 560
     return-void
 .end method
 
@@ -48,10 +45,8 @@
 
     const/4 v1, 0x0
 
-    .line 564
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 566
     iget-object v3, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mIntensityLock:Ljava/lang/Object;
@@ -61,7 +56,6 @@
 
     monitor-enter v3
 
-    .line 567
     :try_start_0
     iget-object v4, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
@@ -74,7 +68,6 @@
 
     move-result-object v0
 
-    .line 568
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     iget-object v4, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
@@ -89,7 +82,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mSmartGlowIntensitySetting:I
     invoke-static {v4, v5}, Lcom/android/server/lights/LightsService;->access$202(Lcom/android/server/lights/LightsService;I)I
 
-    .line 569
     iget-object v4, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
     const-string/jumbo v5, "ml_repeat_value"
@@ -103,7 +95,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mSmartGlowRepeatSetting:I
     invoke-static {v4, v5}, Lcom/android/server/lights/LightsService;->access$3002(Lcom/android/server/lights/LightsService;I)I
 
-    .line 570
     iget-object v4, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
     const-string/jumbo v5, "ml_battery_charging"
@@ -122,7 +113,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mSmartGlowChargingStatusEnable:Z
     invoke-static {v4, v1}, Lcom/android/server/lights/LightsService;->access$1402(Lcom/android/server/lights/LightsService;Z)Z
 
-    .line 572
     iget-object v1, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mSmartGlowIntensitySetting:I
@@ -143,7 +133,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 573
     iget-object v1, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
     const/4 v2, 0x0
@@ -151,7 +140,6 @@
     # setter for: Lcom/android/server/lights/LightsService;->mSmartGlowIntensitySetting:I
     invoke-static {v1, v2}, Lcom/android/server/lights/LightsService;->access$202(Lcom/android/server/lights/LightsService;I)I
 
-    .line 575
     :cond_1
     const-string v1, "LightsService"
 
@@ -182,7 +170,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 576
     const-string v1, "LightsService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -212,7 +199,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 577
     const-string v1, "LightsService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -242,7 +228,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 578
     iget-object v1, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
     # getter for: Lcom/android/server/lights/LightsService;->mSmartGlowIntensitySetting:I
@@ -252,7 +237,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 579
     const-string v1, "/sys/class/leds/led_1/intensity"
 
     iget-object v2, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
@@ -264,7 +248,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/PowerManagerUtil;->fileWriteInt(Ljava/lang/String;I)V
 
-    .line 580
     const-string v1, "/sys/class/leds/led_2/intensity"
 
     iget-object v2, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
@@ -276,7 +259,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/PowerManagerUtil;->fileWriteInt(Ljava/lang/String;I)V
 
-    .line 581
     const-string v1, "/sys/class/leds/led_3/intensity"
 
     iget-object v2, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
@@ -288,7 +270,6 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/PowerManagerUtil;->fileWriteInt(Ljava/lang/String;I)V
 
-    .line 582
     const-string v1, "/sys/class/leds/led_4/intensity"
 
     iget-object v2, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
@@ -300,14 +281,11 @@
 
     invoke-static {v1, v2}, Lcom/android/server/power/PowerManagerUtil;->fileWriteInt(Ljava/lang/String;I)V
 
-    .line 586
     :goto_0
     monitor-exit v3
 
-    .line 587
     return-void
 
-    .line 584
     :cond_2
     iget-object v1, p0, Lcom/android/server/lights/LightsService$SmartGlowSettingsObserver;->this$0:Lcom/android/server/lights/LightsService;
 
@@ -325,7 +303,6 @@
 
     goto :goto_0
 
-    .line 586
     .end local v0    # "contentResolver":Landroid/content/ContentResolver;
     :catchall_0
     move-exception v1

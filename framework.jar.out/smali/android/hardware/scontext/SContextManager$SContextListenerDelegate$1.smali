@@ -26,7 +26,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 1501
     iput-object p1, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->this$1:Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
     iput-object p3, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->val$this$0:Landroid/hardware/scontext/SContextManager;
@@ -43,7 +42,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 1504
     iget-object v3, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->this$1:Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
     # getter for: Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->mListener:Landroid/hardware/scontext/SContextListener;
@@ -53,28 +51,22 @@
 
     if-eqz v3, :cond_0
 
-    .line 1505
     iget-object v1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
     check-cast v1, Landroid/hardware/scontext/SContextEvent;
 
-    .line 1506
     .local v1, "scontextEvent":Landroid/hardware/scontext/SContextEvent;
     if-eqz v1, :cond_0
 
-    .line 1507
     iget-object v0, v1, Landroid/hardware/scontext/SContextEvent;->scontext:Landroid/hardware/scontext/SContext;
 
-    .line 1508
     .local v0, "scontext":Landroid/hardware/scontext/SContext;
     if-eqz v0, :cond_0
 
-    .line 1509
     invoke-virtual {v0}, Landroid/hardware/scontext/SContext;->getType()I
 
     move-result v2
 
-    .line 1510
     .local v2, "type":I
     iget-object v3, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->this$1:Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
@@ -85,14 +77,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 1511
     const-string v3, "SContextManager"
 
     const-string v4, "Data is received so remove listener related HistoryData"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1512
     iget-object v3, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->this$1:Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
     # getter for: Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->mListener:Landroid/hardware/scontext/SContextListener;
@@ -102,7 +92,6 @@
 
     invoke-interface {v3, v1}, Landroid/hardware/scontext/SContextListener;->onSContextChanged(Landroid/hardware/scontext/SContextEvent;)V
 
-    .line 1513
     iget-object v3, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->this$1:Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
     iget-object v3, v3, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->this$0:Landroid/hardware/scontext/SContextManager;
@@ -116,7 +105,6 @@
 
     invoke-virtual {v3, v4, v2}, Landroid/hardware/scontext/SContextManager;->unregisterListener(Landroid/hardware/scontext/SContextListener;I)V
 
-    .line 1529
     .end local v0    # "scontext":Landroid/hardware/scontext/SContext;
     .end local v1    # "scontextEvent":Landroid/hardware/scontext/SContextEvent;
     .end local v2    # "type":I
@@ -124,7 +112,6 @@
     :goto_0
     return-void
 
-    .line 1515
     .restart local v0    # "scontext":Landroid/hardware/scontext/SContext;
     .restart local v1    # "scontextEvent":Landroid/hardware/scontext/SContextEvent;
     .restart local v2    # "type":I
@@ -140,7 +127,6 @@
 
     if-nez v3, :cond_2
 
-    .line 1516
     iget-object v3, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->this$1:Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
     # getter for: Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->mListener:Landroid/hardware/scontext/SContextListener;
@@ -152,7 +138,6 @@
 
     goto :goto_0
 
-    .line 1518
     :cond_2
     iget-object v3, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->this$1:Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
@@ -165,7 +150,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1519
     iget-object v3, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->this$1:Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
     iget-object v3, v3, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->this$0:Landroid/hardware/scontext/SContextManager;
@@ -188,14 +172,12 @@
 
     if-eqz v3, :cond_0
 
-    .line 1520
     const-string v3, "SContextManager"
 
     const-string v4, "Listener is already registered and history data is sent to Application"
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1521
     iget-object v3, p0, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate$1;->this$1:Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;
 
     iget-object v3, v3, Landroid/hardware/scontext/SContextManager$SContextListenerDelegate;->this$0:Landroid/hardware/scontext/SContextManager;

@@ -26,13 +26,10 @@
     .param p4, "flags"    # I
 
     .prologue
-    .line 2418
     iput-object p1, p0, Lcom/android/server/RCPManagerService$PersonaObserver;->this$0:Lcom/android/server/RCPManagerService;
 
-    .line 2419
     invoke-direct {p0, p2, p3, p4}, Landroid/content/pm/AbstractPersonaObserver;-><init>(Landroid/content/Context;II)V
 
-    .line 2420
     return-void
 .end method
 
@@ -41,7 +38,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService$PersonaObserver;
 
     .prologue
-    .line 2416
     iget v0, p0, Lcom/android/server/RCPManagerService$PersonaObserver;->containerId:I
 
     return v0
@@ -52,7 +48,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService$PersonaObserver;
 
     .prologue
-    .line 2416
     iget v0, p0, Lcom/android/server/RCPManagerService$PersonaObserver;->containerId:I
 
     return v0
@@ -63,7 +58,6 @@
     .param p0, "x0"    # Lcom/android/server/RCPManagerService$PersonaObserver;
 
     .prologue
-    .line 2416
     iget v0, p0, Lcom/android/server/RCPManagerService$PersonaObserver;->containerId:I
 
     return v0
@@ -77,7 +71,6 @@
     .param p2, "enabled"    # Z
 
     .prologue
-    .line 2455
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -103,7 +96,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2456
     sget-object v0, Landroid/content/pm/PersonaAttribute;->PASSWORD_CHANGE_REQUEST:Landroid/content/pm/PersonaAttribute;
 
     invoke-virtual {p1, v0}, Landroid/content/pm/PersonaAttribute;->equals(Ljava/lang/Object;)Z
@@ -120,7 +112,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2458
     :cond_0
     iget-object v0, p0, Lcom/android/server/RCPManagerService$PersonaObserver;->this$0:Lcom/android/server/RCPManagerService;
 
@@ -135,7 +126,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2464
     :cond_1
     return-void
 .end method
@@ -145,7 +135,6 @@
     .param p1, "state"    # Z
 
     .prologue
-    .line 2450
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -155,7 +144,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2451
     return-void
 .end method
 
@@ -163,7 +151,6 @@
     .locals 2
 
     .prologue
-    .line 2424
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -173,7 +160,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2425
     return-void
 .end method
 
@@ -183,7 +169,6 @@
     .param p2, "oldState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 2430
     # getter for: Lcom/android/server/RCPManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/RCPManagerService;->access$000()Ljava/lang/String;
 
@@ -219,7 +204,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2431
     sget-object v0, Landroid/content/pm/PersonaState;->LOCKED:Landroid/content/pm/PersonaState;
 
     invoke-virtual {p1, v0}, Landroid/content/pm/PersonaState;->equals(Ljava/lang/Object;)Z
@@ -244,7 +228,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2434
     :cond_0
     iget-object v0, p0, Lcom/android/server/RCPManagerService$PersonaObserver;->this$0:Lcom/android/server/RCPManagerService;
 
@@ -259,12 +242,10 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 2446
     :cond_1
     :goto_0
     return-void
 
-    .line 2439
     :cond_2
     sget-object v0, Landroid/content/pm/PersonaState;->LOCKED:Landroid/content/pm/PersonaState;
 
@@ -282,7 +263,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2440
     iget-object v0, p0, Lcom/android/server/RCPManagerService$PersonaObserver;->this$0:Lcom/android/server/RCPManagerService;
 
     # getter for: Lcom/android/server/RCPManagerService;->taskHandler:Landroid/os/Handler;

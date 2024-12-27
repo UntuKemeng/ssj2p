@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 1638
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$3;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     iput-object p2, p0, Lcom/samsung/android/camera/iris/SemIrisManager$3;->val$powerManager:Landroid/os/PowerManager;
@@ -51,7 +50,6 @@
     .end annotation
 
     .prologue
-    .line 1642
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$3;->val$powerManager:Landroid/os/PowerManager;
 
     const/4 v2, 0x1
@@ -62,11 +60,9 @@
 
     move-result-object v0
 
-    .line 1643
     .local v0, "wakeLock":Landroid/os/PowerManager$WakeLock;
     invoke-virtual {v0}, Landroid/os/PowerManager$WakeLock;->acquire()V
 
-    .line 1644
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager$3;->this$0:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     # getter for: Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
@@ -80,6 +76,5 @@
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 1654
     return-void
 .end method

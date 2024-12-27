@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 10420
     iput-object p1, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     invoke-direct {p0}, Landroid/app/backup/IFullBackupRestoreObserver$Stub;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/server/backup/BackupManagerService$1;
 
     .prologue
-    .line 10420
     invoke-direct {p0, p1}, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;-><init>(Lcom/android/server/backup/BackupManagerService;)V
 
     return-void
@@ -55,14 +53,12 @@
     .end annotation
 
     .prologue
-    .line 10429
     const-string v0, "BackupManagerService"
 
     const-string/jumbo v1, "full edm backup onBackupPackage"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10430
     return-void
 .end method
 
@@ -75,14 +71,12 @@
     .end annotation
 
     .prologue
-    .line 10434
     const-string v0, "BackupManagerService"
 
     const-string/jumbo v1, "full edm backup onEndBackup"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10435
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     # getter for: Lcom/android/server/backup/BackupManagerService;->isEdmBackupFail:Z
@@ -92,7 +86,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 10436
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     const/4 v1, -0x2
@@ -100,11 +93,9 @@
     # invokes: Lcom/android/server/backup/BackupManagerService;->resetEdmBackupTags(I)V
     invoke-static {v0, v1}, Lcom/android/server/backup/BackupManagerService;->access$3500(Lcom/android/server/backup/BackupManagerService;I)V
 
-    .line 10439
     :goto_0
     return-void
 
-    .line 10438
     :cond_0
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 
@@ -125,14 +116,12 @@
     .end annotation
 
     .prologue
-    .line 10453
     const-string v0, "BackupManagerService"
 
     const-string/jumbo v1, "full edm backup onEndRestore"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10454
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     # getter for: Lcom/android/server/backup/BackupManagerService;->isEdmRestoreFail:Z
@@ -142,7 +131,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 10455
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     const/4 v1, -0x2
@@ -150,11 +138,9 @@
     # invokes: Lcom/android/server/backup/BackupManagerService;->resetEdmRestoreTags(I)V
     invoke-static {v0, v1}, Lcom/android/server/backup/BackupManagerService;->access$3600(Lcom/android/server/backup/BackupManagerService;I)V
 
-    .line 10458
     :goto_0
     return-void
 
-    .line 10457
     :cond_0
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 
@@ -176,14 +162,12 @@
     .end annotation
 
     .prologue
-    .line 10448
     const-string v0, "BackupManagerService"
 
     const-string/jumbo v1, "full edm backup onRestorePackage"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10449
     return-void
 .end method
 
@@ -196,14 +180,12 @@
     .end annotation
 
     .prologue
-    .line 10424
     const-string v0, "BackupManagerService"
 
     const-string/jumbo v1, "full edm backup started"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10425
     return-void
 .end method
 
@@ -216,14 +198,12 @@
     .end annotation
 
     .prologue
-    .line 10443
     const-string v0, "BackupManagerService"
 
     const-string/jumbo v1, "full edm backup onStartRestore"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10444
     return-void
 .end method
 
@@ -238,14 +218,12 @@
     .prologue
     const/4 v2, -0x2
 
-    .line 10462
     const-string v0, "BackupManagerService"
 
     const-string/jumbo v1, "full edm backup onTimeout"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10463
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     # getter for: Lcom/android/server/backup/BackupManagerService;->isEdmBackupRequest:Z
@@ -255,17 +233,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 10464
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 
     # invokes: Lcom/android/server/backup/BackupManagerService;->resetEdmBackupTags(I)V
     invoke-static {v0, v2}, Lcom/android/server/backup/BackupManagerService;->access$3500(Lcom/android/server/backup/BackupManagerService;I)V
 
-    .line 10468
     :goto_0
     return-void
 
-    .line 10466
     :cond_0
     iget-object v0, p0, Lcom/android/server/backup/BackupManagerService$EdmFullObserver;->this$0:Lcom/android/server/backup/BackupManagerService;
 

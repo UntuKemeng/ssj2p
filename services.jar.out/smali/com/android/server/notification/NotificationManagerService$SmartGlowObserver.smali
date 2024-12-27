@@ -52,13 +52,10 @@
     .param p2, "handler"    # Landroid/os/Handler;
 
     .prologue
-    .line 1013
     iput-object p1, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
-    .line 1014
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 998
     const-string/jumbo v0, "ml_pn_package"
 
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -67,7 +64,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_PACKAGE_LIST:Landroid/net/Uri;
 
-    .line 1000
     const-string/jumbo v0, "ml_status"
 
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -76,7 +72,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_ON_OFF_STATUS:Landroid/net/Uri;
 
-    .line 1002
     const-string/jumbo v0, "ml_pn_status"
 
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -85,7 +80,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_PRIORITY_NOTIFIER_ON_OFF_STATUS:Landroid/net/Uri;
 
-    .line 1004
     const-string/jumbo v0, "ml_color_1"
 
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -94,7 +88,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_KEY_COLOR_1:Landroid/net/Uri;
 
-    .line 1006
     const-string/jumbo v0, "ml_color_2"
 
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -103,7 +96,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_KEY_COLOR_2:Landroid/net/Uri;
 
-    .line 1008
     const-string/jumbo v0, "ml_color_3"
 
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -112,7 +104,6 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_KEY_COLOR_3:Landroid/net/Uri;
 
-    .line 1010
     const-string/jumbo v0, "ml_color_4"
 
     invoke-static {v0}, Landroid/provider/Settings$Global;->getUriFor(Ljava/lang/String;)Landroid/net/Uri;
@@ -121,14 +112,12 @@
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_KEY_COLOR_4:Landroid/net/Uri;
 
-    .line 1036
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->smartLightPackages:Ljava/util/HashMap;
 
-    .line 1015
     return-void
 .end method
 
@@ -137,7 +126,6 @@
     .param p1, "appPackageName"    # Ljava/lang/String;
 
     .prologue
-    .line 1069
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->smartLightPackages:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -146,7 +134,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1070
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->smartLightPackages:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -159,7 +146,6 @@
 
     move-result v0
 
-    .line 1072
     :goto_0
     return v0
 
@@ -173,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 1066
     iget-object v0, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->smartGlowString:Ljava/lang/String;
 
     return-object v0
@@ -184,7 +169,6 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1044
     iget-object v9, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v9}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -195,7 +179,6 @@
 
     move-result-object v5
 
-    .line 1045
     .local v5, "resolver":Landroid/content/ContentResolver;
     const-string/jumbo v9, "ml_status"
 
@@ -219,7 +202,6 @@
 
     const/4 v6, 0x1
 
-    .line 1046
     .local v6, "smartGlowEnabled":Z
     :goto_0
     iget-object v9, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
@@ -227,7 +209,6 @@
     # setter for: Lcom/android/server/notification/NotificationManagerService;->mSmartGlowEnabled:Z
     invoke-static {v9, v6}, Lcom/android/server/notification/NotificationManagerService;->access$2602(Lcom/android/server/notification/NotificationManagerService;Z)Z
 
-    .line 1047
     const-string/jumbo v9, "ml_pn_package"
 
     invoke-static {v5, v9}, Landroid/provider/Settings$Global;->getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;
@@ -236,10 +217,8 @@
 
     iput-object v9, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->smartGlowString:Ljava/lang/String;
 
-    .line 1048
     iget-object v8, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->smartGlowString:Ljava/lang/String;
 
-    .line 1049
     .local v8, "updatedSmartString":Ljava/lang/String;
     const-string v9, "NotificationService"
 
@@ -263,15 +242,12 @@
 
     invoke-static {v9, v10}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1050
     iget-object v9, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->smartLightPackages:Ljava/util/HashMap;
 
     invoke-virtual {v9}, Ljava/util/HashMap;->clear()V
 
-    .line 1051
     if-eqz v8, :cond_2
 
-    .line 1052
     const-string v9, ";"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -280,14 +256,12 @@
 
     if-eqz v9, :cond_1
 
-    .line 1053
     const-string v9, ";"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 1054
     .local v4, "packages":[Ljava/lang/String;
     move-object v0, v4
 
@@ -303,7 +277,6 @@
 
     aget-object v1, v0, v2
 
-    .line 1055
     .local v1, "colorPackage":Ljava/lang/String;
     const-string v9, ":"
 
@@ -311,7 +284,6 @@
 
     move-result-object v7
 
-    .line 1056
     .local v7, "specificColorPackage":[Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->smartLightPackages:Ljava/util/HashMap;
 
@@ -351,12 +323,10 @@
 
     invoke-virtual {v9, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1054
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1045
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "colorPackage":Ljava/lang/String;
     .end local v2    # "i$":I
@@ -370,7 +340,6 @@
 
     goto :goto_0
 
-    .line 1058
     .restart local v6    # "smartGlowEnabled":Z
     .restart local v8    # "updatedSmartString":Ljava/lang/String;
     :cond_1
@@ -382,14 +351,12 @@
 
     if-eqz v9, :cond_2
 
-    .line 1059
     const-string v9, ":"
 
     invoke-virtual {v8, v9}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 1060
     .restart local v7    # "specificColorPackage":[Ljava/lang/String;
     iget-object v9, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->smartLightPackages:Ljava/util/HashMap;
 
@@ -429,7 +396,6 @@
 
     invoke-virtual {v9, v10, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1063
     .end local v7    # "specificColorPackage":[Ljava/lang/String;
     :cond_2
     return-void
@@ -443,10 +409,8 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 1040
     invoke-direct {p0, p2}, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->updatePackages(Landroid/net/Uri;)V
 
-    .line 1041
     return-void
 .end method
 
@@ -458,7 +422,6 @@
 
     const/4 v2, -0x1
 
-    .line 1017
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->this$0:Lcom/android/server/notification/NotificationManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/notification/NotificationManagerService;->getContext()Landroid/content/Context;
@@ -469,47 +432,38 @@
 
     move-result-object v0
 
-    .line 1018
     .local v0, "resolver":Landroid/content/ContentResolver;
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_PACKAGE_LIST:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1020
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_ON_OFF_STATUS:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1022
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_PRIORITY_NOTIFIER_ON_OFF_STATUS:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1024
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_KEY_COLOR_1:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1026
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_KEY_COLOR_2:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1028
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_KEY_COLOR_3:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1030
     iget-object v1, p0, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->SMART_GLOW_KEY_COLOR_4:Landroid/net/Uri;
 
     invoke-virtual {v0, v1, v3, p0, v2}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;I)V
 
-    .line 1032
     const/4 v1, 0x0
 
     invoke-direct {p0, v1}, Lcom/android/server/notification/NotificationManagerService$SmartGlowObserver;->updatePackages(Landroid/net/Uri;)V
 
-    .line 1033
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 758
     iput-object p1, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$2;->this$0:Lcom/android/server/accessibility/SamsungMagnifierWindow;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 761
     const-string v0, "android.intent.action.CONFIGURATION_CHANGED"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 762
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->LOG_TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$000()Ljava/lang/String;
 
@@ -114,7 +111,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 763
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$2;->this$0:Lcom/android/server/accessibility/SamsungMagnifierWindow;
 
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->mContext:Landroid/content/Context;
@@ -143,7 +139,6 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)Z
 
-    .line 764
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$2;->this$0:Lcom/android/server/accessibility/SamsungMagnifierWindow;
 
     # getter for: Lcom/android/server/accessibility/SamsungMagnifierWindow;->mContext:Landroid/content/Context;
@@ -172,13 +167,11 @@
 
     invoke-static {v0, v1, v2}, Landroid/provider/Settings$System;->putFloat(Landroid/content/ContentResolver;Ljava/lang/String;F)Z
 
-    .line 765
     iget-object v0, p0, Lcom/android/server/accessibility/SamsungMagnifierWindow$2;->this$0:Lcom/android/server/accessibility/SamsungMagnifierWindow;
 
     # invokes: Lcom/android/server/accessibility/SamsungMagnifierWindow;->configChanged()V
     invoke-static {v0}, Lcom/android/server/accessibility/SamsungMagnifierWindow;->access$400(Lcom/android/server/accessibility/SamsungMagnifierWindow;)V
 
-    .line 767
     :cond_0
     return-void
 .end method

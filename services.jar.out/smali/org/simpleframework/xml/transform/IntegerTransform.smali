@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 55
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -54,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 42
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/transform/IntegerTransform;->read(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -67,7 +64,6 @@
     .param p1, "value"    # Ljava/lang/Integer;
 
     .prologue
-    .line 69
     invoke-virtual {p1}, Ljava/lang/Integer;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -85,7 +81,6 @@
     .end annotation
 
     .prologue
-    .line 42
     check-cast p1, Ljava/lang/Integer;
 
     .end local p1    # "x0":Ljava/lang/Object;

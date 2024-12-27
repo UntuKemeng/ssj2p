@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 107
     iput-object p1, p0, Lcom/android/server/am/SchedPolicyManager$1;->this$0:Lcom/android/server/am/SchedPolicyManager;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -40,7 +39,6 @@
     .param p2, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 110
     iget-object v0, p0, Lcom/android/server/am/SchedPolicyManager$1;->this$0:Lcom/android/server/am/SchedPolicyManager;
 
     iget-object v1, p0, Lcom/android/server/am/SchedPolicyManager$1;->this$0:Lcom/android/server/am/SchedPolicyManager;
@@ -53,12 +51,10 @@
     # setter for: Lcom/android/server/am/SchedPolicyManager;->mDefaultIMEPackage:Ljava/lang/String;
     invoke-static {v0, v1}, Lcom/android/server/am/SchedPolicyManager;->access$002(Lcom/android/server/am/SchedPolicyManager;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 111
     iget-object v0, p0, Lcom/android/server/am/SchedPolicyManager$1;->this$0:Lcom/android/server/am/SchedPolicyManager;
 
     # invokes: Lcom/android/server/am/SchedPolicyManager;->init()V
     invoke-static {v0}, Lcom/android/server/am/SchedPolicyManager;->access$200(Lcom/android/server/am/SchedPolicyManager;)V
 
-    .line 112
     return-void
 .end method

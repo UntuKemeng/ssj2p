@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 10343
     iput-object p1, p0, Lcom/android/server/pm/PersonaManagerService$10;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     iput-object p2, p0, Lcom/android/server/pm/PersonaManagerService$10;->val$info:Landroid/content/pm/PersonaInfo;
@@ -42,21 +41,18 @@
     .param p1, "userId"    # I
 
     .prologue
-    .line 10366
     const-string v0, "PersonaManagerService"
 
     const-string v1, " abort"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10367
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$10;->val$info:Landroid/content/pm/PersonaInfo;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Landroid/content/pm/PersonaInfo;->isRestarting:Z
 
-    .line 10368
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$10;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaDbLock:Ljava/lang/Object;
@@ -66,7 +62,6 @@
 
     monitor-enter v1
 
-    .line 10369
     :try_start_0
     iget-object v0, p0, Lcom/android/server/pm/PersonaManagerService$10;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -75,13 +70,10 @@
     # invokes: Lcom/android/server/pm/PersonaManagerService;->writeUserLocked(Landroid/content/pm/PersonaInfo;)V
     invoke-static {v0, v2}, Lcom/android/server/pm/PersonaManagerService;->access$1100(Lcom/android/server/pm/PersonaManagerService;Landroid/content/pm/PersonaInfo;)V
 
-    .line 10370
     monitor-exit v1
 
-    .line 10371
     return-void
 
-    .line 10370
     :catchall_0
     move-exception v0
 
@@ -99,24 +91,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 10347
     const-string v1, "PersonaManagerService"
 
     const-string v2, " user stopped"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10348
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$10;->val$info:Landroid/content/pm/PersonaInfo;
 
     iput-boolean v3, v1, Landroid/content/pm/PersonaInfo;->isRestarting:Z
 
-    .line 10349
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$10;->val$info:Landroid/content/pm/PersonaInfo;
 
     iput-boolean v3, v1, Landroid/content/pm/PersonaInfo;->needsRestart:Z
 
-    .line 10350
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$10;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     # getter for: Lcom/android/server/pm/PersonaManagerService;->mPersonaDbLock:Ljava/lang/Object;
@@ -126,7 +114,6 @@
 
     monitor-enter v2
 
-    .line 10351
     :try_start_0
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$10;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
@@ -135,19 +122,16 @@
     # invokes: Lcom/android/server/pm/PersonaManagerService;->writeUserLocked(Landroid/content/pm/PersonaInfo;)V
     invoke-static {v1, v3}, Lcom/android/server/pm/PersonaManagerService;->access$1100(Lcom/android/server/pm/PersonaManagerService;Landroid/content/pm/PersonaInfo;)V
 
-    .line 10352
     monitor-exit v2
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 10354
     iget-object v1, p0, Lcom/android/server/pm/PersonaManagerService$10;->this$0:Lcom/android/server/pm/PersonaManagerService;
 
     sget-object v2, Landroid/content/pm/PersonaNewEvent;->USER_LOCK:Landroid/content/pm/PersonaNewEvent;
 
     invoke-virtual {v1, v2, p1}, Lcom/android/server/pm/PersonaManagerService;->fireEvent(Landroid/content/pm/PersonaNewEvent;I)Landroid/content/pm/PersonaState;
 
-    .line 10357
     :try_start_1
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -157,11 +141,9 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 10362
     :goto_0
     return-void
 
-    .line 10352
     :catchall_0
     move-exception v1
 
@@ -172,11 +154,9 @@
 
     throw v1
 
-    .line 10358
     :catch_0
     move-exception v0
 
-    .line 10359
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "PersonaManagerService"
 

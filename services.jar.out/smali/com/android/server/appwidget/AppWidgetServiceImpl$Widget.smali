@@ -35,10 +35,8 @@
     .locals 1
 
     .prologue
-    .line 4103
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4110
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;->transactionError:Ljava/lang/String;
@@ -51,7 +49,6 @@
     .param p1, "x0"    # Lcom/android/server/appwidget/AppWidgetServiceImpl$1;
 
     .prologue
-    .line 4103
     invoke-direct {p0}, Lcom/android/server/appwidget/AppWidgetServiceImpl$Widget;-><init>()V
 
     return-void
@@ -65,7 +62,6 @@
     .prologue
     const/16 v2, 0x3a
 
-    .line 4114
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

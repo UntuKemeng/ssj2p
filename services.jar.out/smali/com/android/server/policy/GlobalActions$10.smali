@@ -30,7 +30,6 @@
     .param p6, "x4"    # I
 
     .prologue
-    .line 1594
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     iput-boolean p7, p0, Lcom/android/server/policy/GlobalActions$10;->val$isLatinSBike:Z
@@ -60,7 +59,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 1596
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -74,7 +72,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 1597
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -109,17 +106,14 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 1636
     :goto_1
     return-void
 
-    .line 1597
     :cond_0
     const v3, 0x1040aa0
 
     goto :goto_0
 
-    .line 1600
     :cond_1
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -130,7 +124,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1601
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -153,7 +146,6 @@
 
     goto :goto_1
 
-    .line 1604
     :cond_2
     new-instance v2, Landroid/app/AlertDialog$Builder;
 
@@ -166,7 +158,6 @@
 
     invoke-direct {v2, v3}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1605
     .local v2, "builder":Landroid/app/AlertDialog$Builder;
     iget-boolean v3, p0, Lcom/android/server/policy/GlobalActions$10;->val$isLatinSBike:Z
 
@@ -174,12 +165,10 @@
 
     const v0, 0x1040aa2
 
-    .line 1606
     .local v0, "alertMsgTxt":I
     :goto_2
     const v1, 0x1040a9b
 
-    .line 1607
     .local v1, "alertPositiveButtonTxt":I
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -202,36 +191,30 @@
 
     if-ne v3, v6, :cond_3
 
-    .line 1608
     iget-boolean v3, p0, Lcom/android/server/policy/GlobalActions$10;->val$isLatinSBike:Z
 
     if-eqz v3, :cond_5
 
     const v0, 0x1040aa3
 
-    .line 1609
     :goto_3
     const v1, 0x1040a9c
 
-    .line 1611
     :cond_3
     invoke-virtual {v2, v0}, Landroid/app/AlertDialog$Builder;->setMessage(I)Landroid/app/AlertDialog$Builder;
 
-    .line 1612
     const v3, 0x1040a9d
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, v3, v4}, Landroid/app/AlertDialog$Builder;->setNegativeButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1613
     new-instance v3, Lcom/android/server/policy/GlobalActions$10$1;
 
     invoke-direct {v3, p0}, Lcom/android/server/policy/GlobalActions$10$1;-><init>(Lcom/android/server/policy/GlobalActions$10;)V
 
     invoke-virtual {v2, v1, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(ILandroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 1633
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     invoke-virtual {v2}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
@@ -241,7 +224,6 @@
     # setter for: Lcom/android/server/policy/GlobalActions;->mBikeModeDialog:Landroid/app/AlertDialog;
     invoke-static {v3, v4}, Lcom/android/server/policy/GlobalActions;->access$4202(Lcom/android/server/policy/GlobalActions;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
-    .line 1634
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mBikeModeDialog:Landroid/app/AlertDialog;
@@ -257,7 +239,6 @@
 
     invoke-virtual {v3, v4}, Landroid/view/Window;->setType(I)V
 
-    .line 1635
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mBikeModeDialog:Landroid/app/AlertDialog;
@@ -269,7 +250,6 @@
 
     goto/16 :goto_1
 
-    .line 1605
     .end local v0    # "alertMsgTxt":I
     .end local v1    # "alertPositiveButtonTxt":I
     :cond_4
@@ -277,7 +257,6 @@
 
     goto :goto_2
 
-    .line 1608
     .restart local v0    # "alertMsgTxt":I
     .restart local v1    # "alertPositiveButtonTxt":I
     :cond_5
@@ -291,7 +270,6 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 1639
     return-void
 .end method
 
@@ -299,7 +277,6 @@
     .locals 1
 
     .prologue
-    .line 1646
     const/4 v0, 0x0
 
     return v0
@@ -311,7 +288,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1650
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$10;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -360,7 +336,6 @@
     .locals 1
 
     .prologue
-    .line 1642
     const/4 v0, 0x1
 
     return v0

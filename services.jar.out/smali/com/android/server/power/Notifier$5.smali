@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 518
     iput-object p1, p0, Lcom/android/server/power/Notifier$5;->this$0:Lcom/android/server/power/Notifier;
 
     iput p2, p0, Lcom/android/server/power/Notifier$5;->val$why:I
@@ -46,7 +45,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 521
     const/16 v0, 0xaa8
 
     const/4 v1, 0x4
@@ -87,7 +85,6 @@
 
     invoke-static {v0, v1}, Landroid/util/EventLog;->writeEvent(I[Ljava/lang/Object;)I
 
-    .line 522
     iget-object v0, p0, Lcom/android/server/power/Notifier$5;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mPolicy:Landroid/view/WindowManagerPolicy;
@@ -99,7 +96,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/WindowManagerPolicy;->finishedGoingToSleep(I)V
 
-    .line 524
     iget-object v0, p0, Lcom/android/server/power/Notifier$5;->this$0:Lcom/android/server/power/Notifier;
 
     # getter for: Lcom/android/server/power/Notifier;->mScreenOffIntent:Landroid/content/Intent;
@@ -113,6 +109,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 526
     return-void
 .end method

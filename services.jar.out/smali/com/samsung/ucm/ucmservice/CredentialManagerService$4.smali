@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 536
     iput-object p1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$4;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/ISystemPersonaObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 551
     return-void
 .end method
 
@@ -47,7 +45,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 539
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 543
     return-void
 .end method
 
@@ -65,7 +61,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 547
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .param p3, "newState"    # Landroid/content/pm/PersonaState;
 
     .prologue
-    .line 555
     const-string v1, "UcmService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -119,7 +113,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 557
     :try_start_0
     sget-object v1, Landroid/content/pm/PersonaState;->DELETING:Landroid/content/pm/PersonaState;
 
@@ -129,7 +122,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 558
     iget-object v1, p0, Lcom/samsung/ucm/ucmservice/CredentialManagerService$4;->this$0:Lcom/samsung/ucm/ucmservice/CredentialManagerService;
 
     # invokes: Lcom/samsung/ucm/ucmservice/CredentialManagerService;->updateMDMPolicies(I)V
@@ -137,16 +129,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 563
     :cond_0
     :goto_0
     return-void
 
-    .line 560
     :catch_0
     move-exception v0
 
-    .line 561
     .local v0, "e":Ljava/lang/Exception;
     const-string v1, "UcmService"
 

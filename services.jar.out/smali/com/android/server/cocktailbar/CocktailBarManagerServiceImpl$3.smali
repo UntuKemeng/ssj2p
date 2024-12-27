@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1498
     iput-object p1, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl$3;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 1501
     invoke-static {p2}, Lcom/android/internal/widget/IRemoteViewsFactory$Stub;->asInterface(Landroid/os/IBinder;)Lcom/android/internal/widget/IRemoteViewsFactory;
 
     move-result-object v0
 
-    .line 1503
     .local v0, "cb":Lcom/android/internal/widget/IRemoteViewsFactory;
     :try_start_0
     invoke-interface {v0}, Lcom/android/internal/widget/IRemoteViewsFactory;->onDataSetChangedAsync()V
@@ -55,7 +52,6 @@
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1509
     :goto_0
     iget-object v2, p0, Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl$3;->this$0:Lcom/android/server/cocktailbar/CocktailBarManagerServiceImpl;
 
@@ -66,25 +62,20 @@
 
     invoke-virtual {v2, p0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
 
-    .line 1510
     return-void
 
-    .line 1504
     :catch_0
     move-exception v1
 
-    .line 1505
     .local v1, "e":Landroid/os/RemoteException;
     invoke-virtual {v1}, Landroid/os/RemoteException;->printStackTrace()V
 
     goto :goto_0
 
-    .line 1506
     .end local v1    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v1
 
-    .line 1507
     .local v1, "e":Ljava/lang/RuntimeException;
     invoke-virtual {v1}, Ljava/lang/RuntimeException;->printStackTrace()V
 
@@ -96,6 +87,5 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 1515
     return-void
 .end method

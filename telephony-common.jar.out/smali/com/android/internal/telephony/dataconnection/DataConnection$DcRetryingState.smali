@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 2250
     iput-object p1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     invoke-direct {p0}, Lcom/android/internal/util/State;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lcom/android/internal/telephony/dataconnection/DataConnection$1;
 
     .prologue
-    .line 2250
     invoke-direct {p0, p1}, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;-><init>(Lcom/android/internal/telephony/dataconnection/DataConnection;)V
 
     return-void
@@ -49,7 +47,6 @@
     .locals 5
 
     .prologue
-    .line 2253
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DataConnection;->mConnectionParams:Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;
@@ -77,7 +74,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 2257
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -129,14 +125,12 @@
 
     move-result-object v0
 
-    .line 2261
     .local v0, "s":Ljava/lang/String;
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->logAndAddLogRec(Ljava/lang/String;)V
     invoke-static {v1, v0}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$4700(Lcom/android/internal/telephony/dataconnection/DataConnection;Ljava/lang/String;)V
 
-    .line 2263
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DataConnection;->mInactiveState:Lcom/android/internal/telephony/dataconnection/DataConnection$DcInactiveState;
@@ -148,7 +142,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/dataconnection/DataConnection$DcInactiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/dataconnection/DcFailCause;)V
 
-    .line 2264
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     iget-object v2, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -161,13 +154,11 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static {v1, v2}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$4800(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 2285
     .end local v0    # "s":Ljava/lang/String;
     :cond_1
     :goto_0
     return-void
 
-    .line 2267
     :cond_2
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
@@ -201,7 +192,6 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2271
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     const-string v2, "lostDataConnection"
@@ -209,7 +199,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->notifyAllOfDisconnectDcRetrying(Ljava/lang/String;)V
     invoke-static {v1, v2}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$4900(Lcom/android/internal/telephony/dataconnection/DataConnection;Ljava/lang/String;)V
 
-    .line 2274
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DataConnection;->mDcController:Lcom/android/internal/telephony/dataconnection/DcController;
@@ -221,14 +210,12 @@
 
     invoke-virtual {v1, v2}, Lcom/android/internal/telephony/dataconnection/DcController;->removeActiveDcByCid(Lcom/android/internal/telephony/dataconnection/DataConnection;)V
 
-    .line 2275
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     const/4 v2, -0x1
 
     iput v2, v1, Lcom/android/internal/telephony/dataconnection/DataConnection;->mCid:I
 
-    .line 2277
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DataConnection;->mNetworkAgent:Landroid/net/NetworkAgent;
@@ -238,7 +225,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2278
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DataConnection;->mNetworkInfo:Landroid/net/NetworkInfo;
@@ -272,7 +258,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/net/NetworkInfo;->setDetailedState(Landroid/net/NetworkInfo$DetailedState;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2280
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     # getter for: Lcom/android/internal/telephony/dataconnection/DataConnection;->mNetworkAgent:Landroid/net/NetworkAgent;
@@ -289,7 +274,6 @@
 
     invoke-virtual {v1, v2}, Landroid/net/NetworkAgent;->sendNetworkInfo(Landroid/net/NetworkInfo;)V
 
-    .line 2281
     iget-object v1, p0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
 
     const/4 v2, 0x0
@@ -305,7 +289,6 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 2291
     move-object/from16 v0, p1
 
     iget v0, v0, Landroid/os/Message;->what:I
@@ -314,7 +297,6 @@
 
     sparse-switch v20, :sswitch_data_0
 
-    .line 2551
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -357,15 +339,12 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2553
     const/16 v16, 0x0
 
-    .line 2557
     .local v16, "retVal":Z
     :goto_0
     return v16
 
-    .line 2293
     .end local v16    # "retVal":Z
     :sswitch_0
     move-object/from16 v0, p1
@@ -374,13 +353,11 @@
 
     check-cast v4, Landroid/os/AsyncResult;
 
-    .line 2294
     .local v4, "ar":Landroid/os/AsyncResult;
     iget-object v10, v4, Landroid/os/AsyncResult;->result:Ljava/lang/Object;
 
     check-cast v10, Landroid/util/Pair;
 
-    .line 2295
     .local v10, "drsRatPair":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     iget-object v0, v10, Landroid/util/Pair;->first:Ljava/lang/Object;
 
@@ -392,7 +369,6 @@
 
     move-result v9
 
-    .line 2296
     .local v9, "drs":I
     iget-object v0, v10, Landroid/util/Pair;->second:Ljava/lang/Object;
 
@@ -404,7 +380,6 @@
 
     move-result v15
 
-    .line 2297
     .local v15, "rat":I
     move-object/from16 v0, p0
 
@@ -436,7 +411,6 @@
 
     if-ne v9, v0, :cond_0
 
-    .line 2299
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -483,15 +457,12 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2371
     :goto_1
     const/16 v16, 0x1
 
-    .line 2372
     .restart local v16    # "retVal":Z
     goto :goto_0
 
-    .line 2305
     .end local v16    # "retVal":Z
     :cond_0
     move-object/from16 v0, p0
@@ -526,14 +497,11 @@
 
     if-eqz v20, :cond_1
 
-    .line 2306
     const/16 v16, 0x0
 
-    .line 2307
     .restart local v16    # "retVal":Z
     goto/16 :goto_0
 
-    .line 2312
     .end local v16    # "retVal":Z
     :cond_1
     invoke-static {}, Lcom/android/internal/telephony/TelephonyFeatures;->isUsaCdmaModel()Z
@@ -542,7 +510,6 @@
 
     if-eqz v20, :cond_7
 
-    .line 2314
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -556,7 +523,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 2315
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -577,15 +543,12 @@
     # setter for: Lcom/android/internal/telephony/dataconnection/DataConnection;->mPrevDataRat:I
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$5002(Lcom/android/internal/telephony/dataconnection/DataConnection;I)I
 
-    .line 2318
     :cond_2
     const/16 v19, 0x0
 
-    .line 2319
     .local v19, "wasCdma":Z
     const/4 v11, 0x0
 
-    .line 2320
     .local v11, "isLte":Z
     move-object/from16 v0, p0
 
@@ -644,11 +607,9 @@
 
     if-lt v0, v1, :cond_4
 
-    .line 2323
     :cond_3
     const/16 v19, 0x1
 
-    .line 2325
     :cond_4
     const/16 v20, 0xd
 
@@ -662,17 +623,14 @@
 
     if-ne v15, v0, :cond_6
 
-    .line 2327
     :cond_5
     const/4 v11, 0x1
 
-    .line 2330
     :cond_6
     if-eqz v19, :cond_7
 
     if-eqz v11, :cond_7
 
-    .line 2331
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -683,7 +641,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2332
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -699,7 +656,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection$DcInactiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/dataconnection/DcFailCause;)V
 
-    .line 2333
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -720,7 +676,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$5100(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 2338
     .end local v11    # "isLte":Z
     .end local v19    # "wasCdma":Z
     :cond_7
@@ -806,7 +761,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2343
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -820,7 +774,6 @@
 
     if-eqz v20, :cond_8
 
-    .line 2344
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -836,7 +789,6 @@
 
     iput v15, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mRilRat:I
 
-    .line 2346
     :cond_8
     move-object/from16 v0, p0
 
@@ -849,7 +801,6 @@
     # setter for: Lcom/android/internal/telephony/dataconnection/DataConnection;->mRilRat:I
     invoke-static {v0, v15}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$2402(Lcom/android/internal/telephony/dataconnection/DataConnection;I)I
 
-    .line 2366
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -865,13 +816,11 @@
 
     move-result-object v18
 
-    .line 2367
     .local v18, "ss":Landroid/telephony/ServiceState;
     invoke-virtual/range {v18 .. v18}, Landroid/telephony/ServiceState;->getDataNetworkType()I
 
     move-result v12
 
-    .line 2368
     .local v12, "networkType":I
     move-object/from16 v0, p0
 
@@ -896,7 +845,6 @@
 
     goto/16 :goto_1
 
-    .line 2375
     .end local v4    # "ar":Landroid/os/AsyncResult;
     .end local v9    # "drs":I
     .end local v10    # "drsRatPair":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
@@ -918,7 +866,6 @@
 
     if-eqz v20, :cond_b
 
-    .line 2376
     const-string v20, "ril.datacross.slotid"
 
     const/16 v21, -0x1
@@ -927,7 +874,6 @@
 
     move-result v17
 
-    .line 2377
     .local v17, "slotId":I
     invoke-static {}, Landroid/telephony/SubscriptionManager;->getDefaultDataSubId()I
 
@@ -937,7 +883,6 @@
 
     move-result v13
 
-    .line 2378
     .local v13, "phoneId":I
     const/16 v20, -0x1
 
@@ -996,7 +941,6 @@
 
     if-eq v13, v0, :cond_b
 
-    .line 2380
     :cond_a
     move-object/from16 v0, p0
 
@@ -1065,7 +1009,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2382
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1092,7 +1035,6 @@
 
     invoke-virtual/range {v20 .. v22}, Lcom/android/internal/telephony/dataconnection/DataConnection$DcInactiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;Lcom/android/internal/telephony/dataconnection/DcFailCause;)V
 
-    .line 2384
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1113,14 +1055,11 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$5200(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 2385
     const/16 v16, 0x1
 
-    .line 2386
     .restart local v16    # "retVal":Z
     goto/16 :goto_0
 
-    .line 2390
     .end local v13    # "phoneId":I
     .end local v16    # "retVal":Z
     .end local v17    # "slotId":I
@@ -1149,7 +1088,6 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 2391
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1164,7 +1102,6 @@
 
     invoke-virtual/range {v20 .. v20}, Lcom/android/internal/telephony/RetryManager;->increaseRetryCount()V
 
-    .line 2393
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1228,10 +1165,8 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2399
     const/4 v5, 0x1
 
-    .line 2400
     .local v5, "bDoRetry":Z
     move-object/from16 v0, p0
 
@@ -1246,7 +1181,6 @@
 
     if-eqz v20, :cond_e
 
-    .line 2401
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1262,11 +1196,9 @@
 
     iget-object v3, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mApnContext:Lcom/android/internal/telephony/dataconnection/ApnContext;
 
-    .line 2402
     .local v3, "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     if-eqz v3, :cond_d
 
-    .line 2403
     const-string v20, "VD2"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -1340,10 +1272,8 @@
 
     if-eqz v20, :cond_f
 
-    .line 2407
     const/4 v5, 0x0
 
-    .line 2408
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1361,7 +1291,6 @@
 
     invoke-virtual/range {v20 .. v22}, Lcom/android/internal/telephony/PhoneBase;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2409
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1372,7 +1301,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2436
     :cond_d
     :goto_2
     if-eqz v5, :cond_e
@@ -1394,7 +1322,6 @@
 
     if-eqz v20, :cond_e
 
-    .line 2437
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1415,7 +1342,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->onConnect(Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;)V
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$4300(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;)V
 
-    .line 2438
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1436,18 +1362,15 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$5300(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 2448
     .end local v3    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     .end local v5    # "bDoRetry":Z
     :cond_e
     :goto_3
     const/16 v16, 0x1
 
-    .line 2449
     .restart local v16    # "retVal":Z
     goto/16 :goto_0
 
-    .line 2410
     .end local v16    # "retVal":Z
     .restart local v3    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     .restart local v5    # "bDoRetry":Z
@@ -1571,7 +1494,6 @@
 
     if-eqz v20, :cond_11
 
-    .line 2416
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1589,7 +1511,6 @@
 
     invoke-virtual/range {v20 .. v22}, Lcom/android/internal/telephony/PhoneBase;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2417
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1602,7 +1523,6 @@
 
     goto/16 :goto_2
 
-    .line 2418
     :cond_11
     move-object/from16 v0, p0
 
@@ -1625,7 +1545,6 @@
 
     if-eqz v20, :cond_12
 
-    .line 2419
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1645,7 +1564,6 @@
 
     move-result v14
 
-    .line 2420
     .local v14, "radioTech":I
     const/16 v20, 0xe
 
@@ -1659,7 +1577,6 @@
 
     if-eq v14, v0, :cond_d
 
-    .line 2421
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1708,12 +1625,10 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2422
     const/4 v5, 0x0
 
     goto/16 :goto_2
 
-    .line 2424
     .end local v14    # "radioTech":I
     :cond_12
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -1767,7 +1682,6 @@
 
     if-nez v20, :cond_d
 
-    .line 2428
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1787,7 +1701,6 @@
 
     move-result v7
 
-    .line 2429
     .local v7, "curRadioTech":I
     const-string v20, "ims"
 
@@ -1807,7 +1720,6 @@
 
     if-eq v7, v0, :cond_d
 
-    .line 2430
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1856,12 +1768,10 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2431
     const/4 v5, 0x0
 
     goto/16 :goto_2
 
-    .line 2444
     .end local v3    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     .end local v5    # "bDoRetry":Z
     .end local v7    # "curRadioTech":I
@@ -1922,7 +1832,6 @@
 
     goto/16 :goto_3
 
-    .line 2453
     :sswitch_2
     move-object/from16 v0, p0
 
@@ -1934,7 +1843,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2455
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1961,7 +1869,6 @@
 
     invoke-virtual/range {v20 .. v22}, Lcom/android/internal/telephony/dataconnection/DataConnection$DcInactiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;Lcom/android/internal/telephony/dataconnection/DcFailCause;)V
 
-    .line 2457
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -1982,14 +1889,11 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$5400(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 2458
     const/16 v16, 0x1
 
-    .line 2459
     .restart local v16    # "retVal":Z
     goto/16 :goto_0
 
-    .line 2462
     .end local v16    # "retVal":Z
     :sswitch_3
     move-object/from16 v0, p1
@@ -1998,7 +1902,6 @@
 
     check-cast v6, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;
 
-    .line 2464
     .local v6, "cp":Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;
     move-object/from16 v0, p0
 
@@ -2075,7 +1978,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2469
     const-string v20, "ORG"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -2187,15 +2089,12 @@
 
     if-eqz v20, :cond_17
 
-    .line 2473
     :cond_15
     iget-object v3, v6, Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;->mApnContext:Lcom/android/internal/telephony/dataconnection/ApnContext;
 
-    .line 2474
     .restart local v3    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     if-eqz v3, :cond_17
 
-    .line 2475
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2247,7 +2146,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2476
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2303,7 +2201,6 @@
 
     if-ne v0, v1, :cond_17
 
-    .line 2479
     :cond_16
     move-object/from16 v0, p0
 
@@ -2315,14 +2212,11 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2480
     const/16 v16, 0x1
 
-    .line 2481
     .restart local v16    # "retVal":Z
     goto/16 :goto_0
 
-    .line 2485
     .end local v3    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     .end local v16    # "retVal":Z
     :cond_17
@@ -2341,7 +2235,6 @@
 
     if-eqz v20, :cond_18
 
-    .line 2486
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2362,7 +2255,6 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->onConnect(Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;)V
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$4300(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;)V
 
-    .line 2487
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2383,15 +2275,12 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$5500(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 2495
     :goto_4
     const/16 v16, 0x1
 
-    .line 2496
     .restart local v16    # "retVal":Z
     goto/16 :goto_0
 
-    .line 2490
     .end local v16    # "retVal":Z
     :cond_18
     move-object/from16 v0, p0
@@ -2404,7 +2293,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2492
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2426,7 +2314,6 @@
 
     goto :goto_4
 
-    .line 2499
     .end local v6    # "cp":Lcom/android/internal/telephony/dataconnection/DataConnection$ConnectionParams;
     :sswitch_4
     move-object/from16 v0, p1
@@ -2435,11 +2322,9 @@
 
     check-cast v8, Lcom/android/internal/telephony/dataconnection/DataConnection$DisconnectParams;
 
-    .line 2501
     .local v8, "dp":Lcom/android/internal/telephony/dataconnection/DataConnection$DisconnectParams;
     if-eqz v8, :cond_1c
 
-    .line 2502
     const-string v20, "VD2"
 
     invoke-static {}, Lcom/sec/android/app/CscFeature;->getInstance()Lcom/sec/android/app/CscFeature;
@@ -2568,15 +2453,12 @@
 
     if-eqz v20, :cond_1a
 
-    .line 2508
     :cond_19
     iget-object v3, v8, Lcom/android/internal/telephony/dataconnection/DataConnection$DisconnectParams;->mApnContext:Lcom/android/internal/telephony/dataconnection/ApnContext;
 
-    .line 2509
     .restart local v3    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     if-eqz v3, :cond_1a
 
-    .line 2510
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2628,7 +2510,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2511
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2660,7 +2541,6 @@
 
     if-eqz v20, :cond_1a
 
-    .line 2513
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2678,7 +2558,6 @@
 
     invoke-virtual/range {v20 .. v22}, Lcom/android/internal/telephony/PhoneBase;->setSystemProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2514
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2690,7 +2569,6 @@
     # setter for: Lcom/android/internal/telephony/dataconnection/DataConnection;->mDcRetryFailCause:Lcom/android/internal/telephony/dataconnection/DcFailCause;
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$902(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/telephony/dataconnection/DcFailCause;)Lcom/android/internal/telephony/dataconnection/DcFailCause;
 
-    .line 2515
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2701,7 +2579,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2520
     .end local v3    # "apnContext":Lcom/android/internal/telephony/dataconnection/ApnContext;
     :cond_1a
     move-object/from16 v0, p0
@@ -2744,7 +2621,6 @@
 
     if-nez v20, :cond_1b
 
-    .line 2523
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2799,7 +2675,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2526
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2815,7 +2690,6 @@
 
     invoke-virtual {v0, v8}, Lcom/android/internal/telephony/dataconnection/DataConnection$DcInactiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/dataconnection/DataConnection$DisconnectParams;)V
 
-    .line 2527
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2836,15 +2710,12 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$5600(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 2536
     :goto_5
     const/16 v16, 0x1
 
-    .line 2537
     .restart local v16    # "retVal":Z
     goto/16 :goto_0
 
-    .line 2529
     .end local v16    # "retVal":Z
     :cond_1b
     move-object/from16 v0, p0
@@ -2857,7 +2728,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2530
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2875,7 +2745,6 @@
 
     goto :goto_5
 
-    .line 2533
     :cond_1c
     move-object/from16 v0, p0
 
@@ -2887,7 +2756,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2534
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2905,7 +2773,6 @@
 
     goto :goto_5
 
-    .line 2541
     .end local v8    # "dp":Lcom/android/internal/telephony/dataconnection/DataConnection$DisconnectParams;
     :sswitch_5
     move-object/from16 v0, p0
@@ -2950,7 +2817,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->log(Ljava/lang/String;)V
 
-    .line 2544
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2966,7 +2832,6 @@
 
     invoke-virtual/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection$DcInactiveState;->setEnterNotificationParams(Lcom/android/internal/telephony/dataconnection/DcFailCause;)V
 
-    .line 2545
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lcom/android/internal/telephony/dataconnection/DataConnection$DcRetryingState;->this$0:Lcom/android/internal/telephony/dataconnection/DataConnection;
@@ -2987,14 +2852,11 @@
     # invokes: Lcom/android/internal/telephony/dataconnection/DataConnection;->transitionTo(Lcom/android/internal/util/IState;)V
     invoke-static/range {v20 .. v21}, Lcom/android/internal/telephony/dataconnection/DataConnection;->access$5700(Lcom/android/internal/telephony/dataconnection/DataConnection;Lcom/android/internal/util/IState;)V
 
-    .line 2546
     const/16 v16, 0x1
 
-    .line 2547
     .restart local v16    # "retVal":Z
     goto/16 :goto_0
 
-    .line 2291
     :sswitch_data_0
     .sparse-switch
         0x40000 -> :sswitch_3

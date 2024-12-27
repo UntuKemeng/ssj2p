@@ -21,11 +21,9 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 44
     .local p0, "this":Lorg/simpleframework/xml/stream/Stack;, "Lorg/simpleframework/xml/stream/Stack<TT;>;"
     invoke-direct {p0, p1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 45
     return-void
 .end method
 
@@ -40,20 +38,16 @@
     .end annotation
 
     .prologue
-    .line 87
     .local p0, "this":Lorg/simpleframework/xml/stream/Stack;, "Lorg/simpleframework/xml/stream/Stack<TT;>;"
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/Stack;->size()I
 
     move-result v0
 
-    .line 89
     .local v0, "size":I
     if-gtz v0, :cond_0
 
-    .line 90
     const/4 v1, 0x0
 
-    .line 92
     :goto_0
     return-object v1
 
@@ -76,20 +70,16 @@
     .end annotation
 
     .prologue
-    .line 55
     .local p0, "this":Lorg/simpleframework/xml/stream/Stack;, "Lorg/simpleframework/xml/stream/Stack<TT;>;"
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/Stack;->size()I
 
     move-result v0
 
-    .line 57
     .local v0, "size":I
     if-gtz v0, :cond_0
 
-    .line 58
     const/4 v1, 0x0
 
-    .line 60
     :goto_0
     return-object v1
 
@@ -112,12 +102,10 @@
     .end annotation
 
     .prologue
-    .line 105
     .local p0, "this":Lorg/simpleframework/xml/stream/Stack;, "Lorg/simpleframework/xml/stream/Stack<TT;>;"
     .local p1, "value":Ljava/lang/Object;, "TT;"
     invoke-virtual {p0, p1}, Lorg/simpleframework/xml/stream/Stack;->add(Ljava/lang/Object;)Z
 
-    .line 106
     return-object p1
 .end method
 
@@ -130,20 +118,16 @@
     .end annotation
 
     .prologue
-    .line 71
     .local p0, "this":Lorg/simpleframework/xml/stream/Stack;, "Lorg/simpleframework/xml/stream/Stack<TT;>;"
     invoke-virtual {p0}, Lorg/simpleframework/xml/stream/Stack;->size()I
 
     move-result v0
 
-    .line 73
     .local v0, "size":I
     if-gtz v0, :cond_0
 
-    .line 74
     const/4 v1, 0x0
 
-    .line 76
     :goto_0
     return-object v1
 

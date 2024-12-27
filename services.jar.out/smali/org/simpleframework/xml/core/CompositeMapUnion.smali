@@ -34,36 +34,28 @@
     .end annotation
 
     .prologue
-    .line 83
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 84
     invoke-interface {p2}, Lorg/simpleframework/xml/core/Group;->getElements()Lorg/simpleframework/xml/core/LabelMap;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
-    .line 85
     invoke-interface {p1}, Lorg/simpleframework/xml/core/Context;->getStyle()Lorg/simpleframework/xml/stream/Style;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->style:Lorg/simpleframework/xml/stream/Style;
 
-    .line 86
     iput-object p1, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->context:Lorg/simpleframework/xml/core/Context;
 
-    .line 87
     iput-object p2, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->group:Lorg/simpleframework/xml/core/Group;
 
-    .line 88
     iput-object p4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->type:Lorg/simpleframework/xml/strategy/Type;
 
-    .line 89
     iput-object p3, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->path:Lorg/simpleframework/xml/core/Expression;
 
-    .line 90
     return-void
 .end method
 
@@ -80,20 +72,17 @@
     .end annotation
 
     .prologue
-    .line 216
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->context:Lorg/simpleframework/xml/core/Context;
 
     invoke-interface {p4, v4}, Lorg/simpleframework/xml/core/Label;->getConverter(Lorg/simpleframework/xml/core/Context;)Lorg/simpleframework/xml/core/Converter;
 
     move-result-object v0
 
-    .line 217
     .local v0, "converter":Lorg/simpleframework/xml/core/Converter;
     invoke-static {p2, p3}, Ljava/util/Collections;->singletonMap(Ljava/lang/Object;Ljava/lang/Object;)Ljava/util/Map;
 
     move-result-object v1
 
-    .line 219
     .local v1, "map":Ljava/util/Map;
     invoke-interface {p4}, Lorg/simpleframework/xml/core/Label;->isInline()Z
 
@@ -101,12 +90,10 @@
 
     if-nez v4, :cond_0
 
-    .line 220
     invoke-interface {p4}, Lorg/simpleframework/xml/core/Label;->getName()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 221
     .local v2, "name":Ljava/lang/String;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->style:Lorg/simpleframework/xml/stream/Style;
 
@@ -114,7 +101,6 @@
 
     move-result-object v3
 
-    .line 223
     .local v3, "root":Ljava/lang/String;
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/OutputNode;->isCommitted()Z
 
@@ -122,16 +108,13 @@
 
     if-nez v4, :cond_0
 
-    .line 224
     invoke-interface {p1, v3}, Lorg/simpleframework/xml/stream/OutputNode;->setName(Ljava/lang/String;)V
 
-    .line 227
     .end local v2    # "name":Ljava/lang/String;
     .end local v3    # "root":Ljava/lang/String;
     :cond_0
     invoke-interface {v0, p1, v1}, Lorg/simpleframework/xml/core/Converter;->write(Lorg/simpleframework/xml/stream/OutputNode;Ljava/lang/Object;)V
 
-    .line 228
     return-void
 .end method
 
@@ -146,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 188
     invoke-interface {p2}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v5
@@ -168,22 +150,18 @@
 
     move-result-object v2
 
-    .line 189
     .local v2, "key":Ljava/lang/Object;
     invoke-interface {p2, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 191
     .local v1, "item":Ljava/lang/Object;
     if-eqz v1, :cond_0
 
-    .line 192
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v4
 
-    .line 193
     .local v4, "real":Ljava/lang/Class;
     iget-object v5, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->group:Lorg/simpleframework/xml/core/Group;
 
@@ -191,11 +169,9 @@
 
     move-result-object v3
 
-    .line 195
     .local v3, "label":Lorg/simpleframework/xml/core/Label;
     if-nez v3, :cond_1
 
-    .line 196
     new-instance v5, Lorg/simpleframework/xml/core/UnionException;
 
     const-string v6, "Value of %s not declared in %s with annotation %s"
@@ -224,13 +200,11 @@
 
     throw v5
 
-    .line 198
     :cond_1
     invoke-direct {p0, p1, v2, v1, v3}, Lorg/simpleframework/xml/core/CompositeMapUnion;->write(Lorg/simpleframework/xml/stream/OutputNode;Ljava/lang/Object;Ljava/lang/Object;Lorg/simpleframework/xml/core/Label;)V
 
     goto :goto_0
 
-    .line 201
     .end local v1    # "item":Ljava/lang/Object;
     .end local v2    # "key":Ljava/lang/Object;
     .end local v3    # "label":Lorg/simpleframework/xml/core/Label;
@@ -251,12 +225,10 @@
     .end annotation
 
     .prologue
-    .line 104
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 105
     .local v3, "name":Ljava/lang/String;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->path:Lorg/simpleframework/xml/core/Expression;
 
@@ -264,7 +236,6 @@
 
     move-result-object v1
 
-    .line 106
     .local v1, "element":Ljava/lang/String;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
@@ -274,7 +245,6 @@
 
     check-cast v2, Lorg/simpleframework/xml/core/Label;
 
-    .line 107
     .local v2, "label":Lorg/simpleframework/xml/core/Label;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->context:Lorg/simpleframework/xml/core/Context;
 
@@ -282,7 +252,6 @@
 
     move-result-object v0
 
-    .line 109
     .local v0, "converter":Lorg/simpleframework/xml/core/Converter;
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/core/Converter;->read(Lorg/simpleframework/xml/stream/InputNode;)Ljava/lang/Object;
 
@@ -302,12 +271,10 @@
     .end annotation
 
     .prologue
-    .line 125
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 126
     .local v3, "name":Ljava/lang/String;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->path:Lorg/simpleframework/xml/core/Expression;
 
@@ -315,7 +282,6 @@
 
     move-result-object v1
 
-    .line 127
     .local v1, "element":Ljava/lang/String;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
@@ -325,7 +291,6 @@
 
     check-cast v2, Lorg/simpleframework/xml/core/Label;
 
-    .line 128
     .local v2, "label":Lorg/simpleframework/xml/core/Label;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->context:Lorg/simpleframework/xml/core/Context;
 
@@ -333,7 +298,6 @@
 
     move-result-object v0
 
-    .line 130
     .local v0, "converter":Lorg/simpleframework/xml/core/Converter;
     invoke-interface {v0, p1, p2}, Lorg/simpleframework/xml/core/Converter;->read(Lorg/simpleframework/xml/stream/InputNode;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -352,12 +316,10 @@
     .end annotation
 
     .prologue
-    .line 145
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/InputNode;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 146
     .local v3, "name":Ljava/lang/String;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->path:Lorg/simpleframework/xml/core/Expression;
 
@@ -365,7 +327,6 @@
 
     move-result-object v1
 
-    .line 147
     .local v1, "element":Ljava/lang/String;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
@@ -375,7 +336,6 @@
 
     check-cast v2, Lorg/simpleframework/xml/core/Label;
 
-    .line 148
     .local v2, "label":Lorg/simpleframework/xml/core/Label;
     iget-object v4, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->context:Lorg/simpleframework/xml/core/Context;
 
@@ -383,7 +343,6 @@
 
     move-result-object v0
 
-    .line 150
     .local v0, "converter":Lorg/simpleframework/xml/core/Converter;
     invoke-interface {v0, p1}, Lorg/simpleframework/xml/core/Converter;->validate(Lorg/simpleframework/xml/stream/InputNode;)Z
 
@@ -403,12 +362,10 @@
     .end annotation
 
     .prologue
-    .line 164
     move-object v0, p2
 
     check-cast v0, Ljava/util/Map;
 
-    .line 166
     .local v0, "map":Ljava/util/Map;
     iget-object v1, p0, Lorg/simpleframework/xml/core/CompositeMapUnion;->group:Lorg/simpleframework/xml/core/Group;
 
@@ -418,22 +375,18 @@
 
     if-eqz v1, :cond_2
 
-    .line 167
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 168
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/core/CompositeMapUnion;->write(Lorg/simpleframework/xml/stream/OutputNode;Ljava/util/Map;)V
 
-    .line 175
     :cond_0
     :goto_0
     return-void
 
-    .line 169
     :cond_1
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/OutputNode;->isCommitted()Z
 
@@ -441,12 +394,10 @@
 
     if-nez v1, :cond_0
 
-    .line 170
     invoke-interface {p1}, Lorg/simpleframework/xml/stream/OutputNode;->remove()V
 
     goto :goto_0
 
-    .line 173
     :cond_2
     invoke-direct {p0, p1, v0}, Lorg/simpleframework/xml/core/CompositeMapUnion;->write(Lorg/simpleframework/xml/stream/OutputNode;Ljava/util/Map;)V
 

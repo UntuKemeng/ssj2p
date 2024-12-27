@@ -83,7 +83,6 @@
     .locals 3
 
     .prologue
-    .line 41
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;
@@ -135,51 +134,42 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 15
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
-    .line 45
     invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentElement:Ljava/lang/Boolean;
 
-    .line 47
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
 
-    .line 48
     new-instance v0, Lcom/samsung/appdisabler/ImsiItem;
 
     invoke-direct {v0}, Lcom/samsung/appdisabler/ImsiItem;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
-    .line 51
     const/16 v0, 0x12c
 
     iput v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->timeoutInSeconds:I
 
-    .line 53
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->itemsList:Ljava/util/ArrayList;
 
-    .line 57
     iput-boolean v1, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
-    .line 62
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->errorsFromAllItems:Ljava/lang/StringBuilder;
 
-    .line 64
     iput-boolean v1, p0, Lcom/samsung/appdisabler/XmlItemHandler;->parsingFaild:Z
 
     return-void
@@ -189,12 +179,10 @@
     .locals 1
 
     .prologue
-    .line 312
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->parsingFaild:Z
 
-    .line 313
     return-void
 .end method
 
@@ -202,19 +190,15 @@
     .locals 3
 
     .prologue
-    .line 283
     iget-object v1, p0, Lcom/samsung/appdisabler/XmlItemHandler;->locator:Lorg/xml/sax/Locator;
 
     if-nez v1, :cond_0
 
-    .line 285
     const-string v0, ""
 
-    .line 289
     :goto_0
     return-object v0
 
-    .line 287
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -240,7 +224,6 @@
 
     move-result-object v0
 
-    .line 289
     .local v0, "lineInfo":Ljava/lang/String;
     goto :goto_0
 .end method
@@ -249,19 +232,15 @@
     .locals 3
 
     .prologue
-    .line 267
     iget-object v1, p0, Lcom/samsung/appdisabler/XmlItemHandler;->locator:Lorg/xml/sax/Locator;
 
     if-nez v1, :cond_0
 
-    .line 269
     const-string v0, ""
 
-    .line 273
     :goto_0
     return-object v0
 
-    .line 271
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -295,7 +274,6 @@
 
     move-result-object v0
 
-    .line 273
     .local v0, "info":Ljava/lang/String;
     goto :goto_0
 .end method
@@ -307,21 +285,17 @@
     .param p1, "error"    # Ljava/lang/String;
 
     .prologue
-    .line 323
     iget-boolean v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->parsingFaild:Z
 
     if-nez v0, :cond_0
 
-    .line 325
     invoke-direct {p0}, Lcom/samsung/appdisabler/XmlItemHandler;->appendHeaderToErrorMsg()V
 
-    .line 327
     :cond_0
     iget-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->errorsFromAllItems:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 328
     return-void
 .end method
 
@@ -337,7 +311,6 @@
     .end annotation
 
     .prologue
-    .line 241
     iget-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentElement:Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
@@ -346,7 +319,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 242
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -371,7 +343,6 @@
 
     iput-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
 
-    .line 244
     :cond_0
     return-void
 .end method
@@ -385,7 +356,6 @@
     .end annotation
 
     .prologue
-    .line 248
     iget-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->itemsList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -394,17 +364,14 @@
 
     if-nez v0, :cond_0
 
-    .line 249
     const-string v0, "There where no elements in xml file!"
 
     invoke-virtual {p0, v0}, Lcom/samsung/appdisabler/XmlItemHandler;->appendParserError(Ljava/lang/String;)V
 
-    .line 250
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->parsingFaild:Z
 
-    .line 252
     :cond_0
     return-void
 .end method
@@ -423,14 +390,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 121
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v3
 
     iput-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentElement:Ljava/lang/Boolean;
 
-    .line 124
     const-string v3, "timeout_in_seconds"
 
     invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -439,7 +404,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 126
     :try_start_0
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
 
@@ -451,16 +415,13 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 235
     :cond_0
     :goto_0
     return-void
 
-    .line 127
     :catch_0
     move-exception v0
 
-    .line 128
     .local v0, "e":Ljava/lang/NumberFormatException;
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
@@ -500,7 +461,6 @@
 
     invoke-virtual {v3, v4}, Lcom/samsung/appdisabler/ImsiItem;->appendErrorMsg(Ljava/lang/String;)V
 
-    .line 129
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -531,7 +491,6 @@
 
     goto :goto_0
 
-    .line 131
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :cond_1
     const-string v3, "package_to_hide"
@@ -542,7 +501,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 132
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
@@ -551,7 +509,6 @@
 
     goto :goto_0
 
-    .line 133
     :cond_2
     const-string v3, "sim_numeric"
 
@@ -561,7 +518,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 134
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
@@ -570,7 +526,6 @@
 
     goto :goto_0
 
-    .line 135
     :cond_3
     const-string v3, "imsi_numeric_base"
 
@@ -580,12 +535,10 @@
 
     if-eqz v3, :cond_5
 
-    .line 136
     iget-boolean v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
     if-nez v3, :cond_4
 
-    .line 137
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -614,7 +567,6 @@
 
     goto/16 :goto_0
 
-    .line 140
     :cond_4
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
@@ -626,7 +578,6 @@
 
     if-nez v3, :cond_0
 
-    .line 141
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -655,7 +606,6 @@
 
     goto/16 :goto_0
 
-    .line 143
     :cond_5
     const-string v3, "imsi_range_start"
 
@@ -665,12 +615,10 @@
 
     if-eqz v3, :cond_7
 
-    .line 144
     iget-boolean v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
     if-nez v3, :cond_6
 
-    .line 145
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -699,7 +647,6 @@
 
     goto/16 :goto_0
 
-    .line 148
     :cond_6
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
@@ -711,7 +658,6 @@
 
     if-nez v3, :cond_0
 
-    .line 149
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -740,7 +686,6 @@
 
     goto/16 :goto_0
 
-    .line 151
     :cond_7
     const-string v3, "imsi_range_end"
 
@@ -750,12 +695,10 @@
 
     if-eqz v3, :cond_9
 
-    .line 152
     iget-boolean v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
     if-nez v3, :cond_8
 
-    .line 153
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -784,7 +727,6 @@
 
     goto/16 :goto_0
 
-    .line 156
     :cond_8
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
@@ -796,7 +738,6 @@
 
     if-nez v3, :cond_0
 
-    .line 157
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -825,7 +766,6 @@
 
     goto/16 :goto_0
 
-    .line 159
     :cond_9
     const-string v3, "imsi_mvno_base"
 
@@ -835,12 +775,10 @@
 
     if-eqz v3, :cond_c
 
-    .line 160
     iget-boolean v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
     if-nez v3, :cond_a
 
-    .line 161
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -869,7 +807,6 @@
 
     goto/16 :goto_0
 
-    .line 164
     :cond_a
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
@@ -881,7 +818,6 @@
 
     if-nez v3, :cond_b
 
-    .line 165
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -910,7 +846,6 @@
 
     goto/16 :goto_0
 
-    .line 167
     :cond_b
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
@@ -918,7 +853,6 @@
 
     goto/16 :goto_0
 
-    .line 169
     :cond_c
     const-string v3, "imsi_mvno_range_start"
 
@@ -928,12 +862,10 @@
 
     if-eqz v3, :cond_e
 
-    .line 170
     iget-boolean v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
     if-nez v3, :cond_d
 
-    .line 171
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -962,7 +894,6 @@
 
     goto/16 :goto_0
 
-    .line 174
     :cond_d
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
@@ -974,7 +905,6 @@
 
     if-nez v3, :cond_0
 
-    .line 175
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1003,7 +933,6 @@
 
     goto/16 :goto_0
 
-    .line 177
     :cond_e
     const-string v3, "imsi_mvno_range_end"
 
@@ -1013,12 +942,10 @@
 
     if-eqz v3, :cond_10
 
-    .line 178
     iget-boolean v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
     if-nez v3, :cond_f
 
-    .line 179
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1047,7 +974,6 @@
 
     goto/16 :goto_0
 
-    .line 182
     :cond_f
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
@@ -1059,7 +985,6 @@
 
     if-nez v3, :cond_0
 
-    .line 183
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1088,7 +1013,6 @@
 
     goto/16 :goto_0
 
-    .line 185
     :cond_10
     const-string v3, "item"
 
@@ -1098,7 +1022,6 @@
 
     if-eqz v3, :cond_12
 
-    .line 186
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
     invoke-virtual {v3}, Lcom/samsung/appdisabler/ImsiNumeric;->validate()Z
@@ -1107,19 +1030,16 @@
 
     if-eqz v3, :cond_11
 
-    .line 187
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
     invoke-virtual {v3, v4}, Lcom/samsung/appdisabler/ImsiItem;->setImsiNumericBase(Lcom/samsung/appdisabler/ImsiNumeric;)V
 
-    .line 188
     iput-boolean v5, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
     goto/16 :goto_0
 
-    .line 190
     :cond_11
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
@@ -1149,7 +1069,6 @@
 
     goto/16 :goto_0
 
-    .line 192
     :cond_12
     const-string v3, "sim_spn"
 
@@ -1159,7 +1078,6 @@
 
     if-eqz v3, :cond_13
 
-    .line 193
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
@@ -1168,7 +1086,6 @@
 
     goto/16 :goto_0
 
-    .line 194
     :cond_13
     const-string v3, "sim_gid1"
 
@@ -1178,7 +1095,6 @@
 
     if-eqz v3, :cond_14
 
-    .line 195
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
@@ -1187,7 +1103,6 @@
 
     goto/16 :goto_0
 
-    .line 196
     :cond_14
     const-string v3, "network_numeric"
 
@@ -1197,7 +1112,6 @@
 
     if-eqz v3, :cond_15
 
-    .line 197
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
@@ -1206,7 +1120,6 @@
 
     goto/16 :goto_0
 
-    .line 198
     :cond_15
     const-string v3, "add_shortcut_to_homescreen"
 
@@ -1216,7 +1129,6 @@
 
     if-eqz v3, :cond_16
 
-    .line 199
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
@@ -1225,7 +1137,6 @@
 
     goto/16 :goto_0
 
-    .line 200
     :cond_16
     const-string v3, "hide_after_timeout"
 
@@ -1235,7 +1146,6 @@
 
     if-eqz v3, :cond_17
 
-    .line 201
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
@@ -1244,7 +1154,6 @@
 
     goto/16 :goto_0
 
-    .line 202
     :cond_17
     const-string v3, "force_application_turn_off"
 
@@ -1254,7 +1163,6 @@
 
     if-eqz v3, :cond_18
 
-    .line 203
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
@@ -1263,7 +1171,6 @@
 
     goto/16 :goto_0
 
-    .line 204
     :cond_18
     const-string v3, "application"
 
@@ -1273,21 +1180,18 @@
 
     if-eqz v3, :cond_1b
 
-    .line 205
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->itemsList:Ljava/util/ArrayList;
 
     iget-object v4, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 207
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     invoke-virtual {v3}, Lcom/samsung/appdisabler/ImsiItem;->validate()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 208
     .local v2, "validationErrors":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/String;->isEmpty()Z
 
@@ -1295,21 +1199,17 @@
 
     if-nez v3, :cond_1a
 
-    .line 210
     iget-boolean v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->parsingFaild:Z
 
     if-nez v3, :cond_19
 
-    .line 212
     invoke-direct {p0}, Lcom/samsung/appdisabler/XmlItemHandler;->appendHeaderToErrorMsg()V
 
-    .line 215
     :cond_19
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->parsingFaild:Z
 
-    .line 216
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->errorsFromAllItems:Ljava/lang/StringBuilder;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1344,12 +1244,10 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 217
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->errorsFromAllItems:Ljava/lang/StringBuilder;
 
     invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 218
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->errorsFromAllItems:Ljava/lang/StringBuilder;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1384,7 +1282,6 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 222
     :cond_1a
     new-instance v3, Lcom/samsung/appdisabler/ImsiItem;
 
@@ -1394,7 +1291,6 @@
 
     goto/16 :goto_0
 
-    .line 223
     .end local v2    # "validationErrors":Ljava/lang/String;
     :cond_1b
     const-string v3, "applications"
@@ -1421,7 +1317,6 @@
 
     if-nez v3, :cond_0
 
-    .line 226
     const-string v3, "code"
 
     invoke-virtual {v3, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1430,14 +1325,12 @@
 
     if-eqz v3, :cond_1c
 
-    .line 227
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->errorsFromAllItems:Ljava/lang/StringBuilder;
 
     invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 228
     .local v1, "errors":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
 
@@ -1445,12 +1338,10 @@
 
     if-nez v3, :cond_0
 
-    .line 229
     invoke-static {v1}, Lcom/samsung/appdisabler/Utils;->LogE(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 232
     .end local v1    # "errors":Ljava/lang/String;
     :cond_1c
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1473,7 +1364,6 @@
 
     invoke-static {v3}, Lcom/samsung/appdisabler/Utils;->LogE(Ljava/lang/String;)V
 
-    .line 233
     iget-object v3, p0, Lcom/samsung/appdisabler/XmlItemHandler;->errorsFromAllItems:Ljava/lang/StringBuilder;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1530,7 +1420,6 @@
     .end annotation
 
     .prologue
-    .line 73
     iget-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->itemsList:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -1539,15 +1428,12 @@
 
     if-nez v0, :cond_0
 
-    .line 74
     const-string v0, "XML getItemsList empty"
 
     invoke-static {v0}, Lcom/samsung/appdisabler/Utils;->LogW(Ljava/lang/String;)V
 
-    .line 75
     const/4 v0, 0x0
 
-    .line 78
     :goto_0
     return-object v0
 
@@ -1561,7 +1447,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->timeoutInSeconds:I
 
     return v0
@@ -1571,19 +1456,16 @@
     .locals 1
 
     .prologue
-    .line 298
     iget-boolean v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->parsingFaild:Z
 
     if-eqz v0, :cond_0
 
-    .line 300
     iget-object v0, p0, Lcom/samsung/appdisabler/XmlItemHandler;->errorsFromAllItems:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 303
     :goto_0
     return-object v0
 
@@ -1598,10 +1480,8 @@
     .param p1, "locator"    # Lorg/xml/sax/Locator;
 
     .prologue
-    .line 256
     iput-object p1, p0, Lcom/samsung/appdisabler/XmlItemHandler;->locator:Lorg/xml/sax/Locator;
 
-    .line 257
     return-void
 .end method
 
@@ -1620,24 +1500,20 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 89
     invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v5
 
     iput-object v5, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentElement:Ljava/lang/Boolean;
 
-    .line 90
     const-string v5, ""
 
     iput-object v5, p0, Lcom/samsung/appdisabler/XmlItemHandler;->currentValue:Ljava/lang/String;
 
-    .line 91
     iget-boolean v5, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
     if-eqz v5, :cond_3
 
-    .line 92
     sget-object v0, Lcom/samsung/appdisabler/XmlItemHandler;->IMSI_PART:[Ljava/lang/String;
 
     .local v0, "arr$":[Ljava/lang/String;
@@ -1652,7 +1528,6 @@
 
     aget-object v4, v0, v2
 
-    .line 93
     .local v4, "tag":Ljava/lang/String;
     invoke-virtual {v4, p2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1660,7 +1535,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 114
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v2    # "i$":I
     .end local v3    # "len$":I
@@ -1669,7 +1543,6 @@
     :goto_1
     return-void
 
-    .line 92
     .restart local v0    # "arr$":[Ljava/lang/String;
     .restart local v2    # "i$":I
     .restart local v3    # "len$":I
@@ -1679,7 +1552,6 @@
 
     goto :goto_0
 
-    .line 98
     .end local v4    # "tag":Ljava/lang/String;
     :cond_2
     new-instance v5, Ljava/lang/StringBuilder;
@@ -1714,13 +1586,11 @@
 
     move-result-object v1
 
-    .line 99
     .local v1, "errorMsg":Ljava/lang/String;
     iget-object v5, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     invoke-virtual {v5, v1}, Lcom/samsung/appdisabler/ImsiItem;->appendErrorMsg(Ljava/lang/String;)V
 
-    .line 100
     iget-object v5, p0, Lcom/samsung/appdisabler/XmlItemHandler;->item:Lcom/samsung/appdisabler/ImsiItem;
 
     const-string v6, "\n"
@@ -1729,7 +1599,6 @@
 
     goto :goto_1
 
-    .line 101
     .end local v0    # "arr$":[Ljava/lang/String;
     .end local v1    # "errorMsg":Ljava/lang/String;
     .end local v2    # "i$":I
@@ -1743,19 +1612,16 @@
 
     if-eqz v5, :cond_4
 
-    .line 102
     new-instance v5, Lcom/samsung/appdisabler/ImsiNumeric;
 
     invoke-direct {v5}, Lcom/samsung/appdisabler/ImsiNumeric;-><init>()V
 
     iput-object v5, p0, Lcom/samsung/appdisabler/XmlItemHandler;->imsiNumericBase:Lcom/samsung/appdisabler/ImsiNumeric;
 
-    .line 103
     iput-boolean v6, p0, Lcom/samsung/appdisabler/XmlItemHandler;->readingImsiNumeric:Z
 
     goto :goto_1
 
-    .line 104
     :cond_4
     const-string v5, "package_to_hide"
 
@@ -1885,7 +1751,6 @@
 
     if-nez v5, :cond_0
 
-    .line 111
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
@@ -1914,7 +1779,6 @@
 
     invoke-static {v5}, Lcom/samsung/appdisabler/Utils;->LogE(Ljava/lang/String;)V
 
-    .line 112
     iget-object v5, p0, Lcom/samsung/appdisabler/XmlItemHandler;->errorsFromAllItems:Ljava/lang/StringBuilder;
 
     new-instance v6, Ljava/lang/StringBuilder;

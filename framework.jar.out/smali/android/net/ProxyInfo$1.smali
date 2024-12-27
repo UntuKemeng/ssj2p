@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 482
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,26 +44,20 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 484
     const/4 v4, 0x0
 
-    .line 485
     .local v4, "host":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 487
     .local v5, "port":I
     const/4 v6, 0x0
 
-    .line 488
     .local v6, "username":Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 492
     .local v7, "password":Ljava/lang/String;
     const/16 v16, 0x0
 
-    .line 495
     .local v16, "enterpriseProxy":I
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readByte()B
 
@@ -72,7 +65,6 @@
 
     if-eqz v10, :cond_0
 
-    .line 496
     sget-object v10, Landroid/net/Uri;->CREATOR:Landroid/os/Parcelable$Creator;
 
     move-object/from16 v0, p1
@@ -83,13 +75,11 @@
 
     check-cast v19, Landroid/net/Uri;
 
-    .line 497
     .local v19, "url":Landroid/net/Uri;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v17
 
-    .line 498
     .local v17, "localPort":I
     new-instance v18, Landroid/net/ProxyInfo;
 
@@ -101,27 +91,23 @@
 
     invoke-direct {v0, v1, v2}, Landroid/net/ProxyInfo;-><init>(Landroid/net/Uri;I)V
 
-    .line 500
     .local v18, "proxyInfo":Landroid/net/ProxyInfo;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v16
 
-    .line 501
     move-object/from16 v0, v18
 
     move/from16 v1, v16
 
     invoke-virtual {v0, v1}, Landroid/net/ProxyInfo;->setEnterpriseProxy(I)V
 
-    .line 535
     .end local v17    # "localPort":I
     .end local v18    # "proxyInfo":Landroid/net/ProxyInfo;
     .end local v19    # "url":Landroid/net/Uri;
     :goto_0
     return-object v18
 
-    .line 505
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readByte()B
 
@@ -129,55 +115,45 @@
 
     if-eqz v10, :cond_1
 
-    .line 506
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 507
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 509
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v16
 
-    .line 512
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v10
 
     if-eqz v10, :cond_1
 
-    .line 513
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 514
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 518
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 519
     .local v8, "exclList":Ljava/lang/String;
     invoke-virtual/range {p1 .. p1}, Landroid/os/Parcel;->readStringArray()[Ljava/lang/String;
 
     move-result-object v9
 
-    .line 521
     .local v9, "parsedExclList":[Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 523
     .local v3, "proxyProperties":Landroid/net/ProxyInfo;
     if-eqz v6, :cond_2
 
@@ -189,7 +165,6 @@
 
     if-nez v10, :cond_2
 
-    .line 524
     new-instance v3, Landroid/net/ProxyInfo;
 
     .end local v3    # "proxyProperties":Landroid/net/ProxyInfo;
@@ -197,7 +172,6 @@
 
     invoke-direct/range {v3 .. v10}, Landroid/net/ProxyInfo;-><init>(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Landroid/net/ProxyInfo$1;)V
 
-    .line 532
     .restart local v3    # "proxyProperties":Landroid/net/ProxyInfo;
     :goto_1
     move/from16 v0, v16
@@ -206,10 +180,8 @@
 
     move-object/from16 v18, v3
 
-    .line 535
     goto :goto_0
 
-    .line 527
     :cond_2
     new-instance v3, Landroid/net/ProxyInfo;
 
@@ -237,7 +209,6 @@
     .param p1, "x0"    # Landroid/os/Parcel;
 
     .prologue
-    .line 482
     invoke-virtual {p0, p1}, Landroid/net/ProxyInfo$1;->createFromParcel(Landroid/os/Parcel;)Landroid/net/ProxyInfo;
 
     move-result-object v0
@@ -250,7 +221,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 539
     new-array v0, p1, [Landroid/net/ProxyInfo;
 
     return-object v0
@@ -261,7 +231,6 @@
     .param p1, "x0"    # I
 
     .prologue
-    .line 482
     invoke-virtual {p0, p1}, Landroid/net/ProxyInfo$1;->newArray(I)[Landroid/net/ProxyInfo;
 
     move-result-object v0

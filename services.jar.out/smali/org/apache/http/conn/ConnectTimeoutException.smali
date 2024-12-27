@@ -8,7 +8,6 @@
     .locals 2
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/io/InterruptedIOException;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;
@@ -25,7 +24,6 @@
     .param p1, "arg0"    # Ljava/lang/String;
 
     .prologue
-    .line 6
     invoke-direct {p0}, Ljava/io/InterruptedIOException;-><init>()V
 
     new-instance v0, Ljava/lang/RuntimeException;

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 552
     iput-object p1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-direct {p0}, Landroid/content/pm/IKnoxModeChangeObserver$Stub;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "personaId"    # I
 
     .prologue
-    .line 558
     const-string v1, "AccessibilityManagerService"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -61,19 +59,16 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 559
     const/16 v1, 0x64
 
     if-lt p1, v1, :cond_1
 
-    .line 560
     const-string v1, "AccessibilityManagerService"
 
     const-string v2, "Current application is running in KNOX mode."
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 561
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     const/4 v2, 0x1
@@ -81,31 +76,26 @@
     # setter for: Lcom/android/server/accessibility/AccessibilityManagerService;->isTopActivityInKnoxMode:Z
     invoke-static {v1, v2}, Lcom/android/server/accessibility/AccessibilityManagerService;->access$502(Lcom/android/server/accessibility/AccessibilityManagerService;Z)Z
 
-    .line 562
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     invoke-virtual {v1}, Lcom/android/server/accessibility/AccessibilityManagerService;->checkUniversalSwitchState()Z
 
     move-result v0
 
-    .line 563
     .local v0, "universalSwitchEnabled":Z
     if-eqz v0, :cond_0
 
-    .line 564
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 
     const-string v2, "KNOX_MODE_ENABLED_BROADCAST"
 
     invoke-virtual {v1, v2}, Lcom/android/server/accessibility/AccessibilityManagerService;->sendKnoxModeEnabledBroadCast(Ljava/lang/String;)V
 
-    .line 570
     .end local v0    # "universalSwitchEnabled":Z
     :cond_0
     :goto_0
     return-void
 
-    .line 567
     :cond_1
     iget-object v1, p0, Lcom/android/server/accessibility/AccessibilityManagerService$4;->this$0:Lcom/android/server/accessibility/AccessibilityManagerService;
 

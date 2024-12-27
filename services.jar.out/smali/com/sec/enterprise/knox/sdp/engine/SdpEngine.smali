@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 35
     const/4 v0, 0x0
 
     sput-object v0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->_instance:Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;
@@ -32,10 +31,8 @@
     .locals 1
 
     .prologue
-    .line 127
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 128
     const-string v0, "sdp"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -48,7 +45,6 @@
 
     iput-object v0, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
-    .line 130
     return-void
 .end method
 
@@ -61,10 +57,8 @@
     .end annotation
 
     .prologue
-    .line 486
     const/16 v1, -0x63
 
-    .line 487
     .local v1, "res":I
     const-string v3, "sdp"
 
@@ -76,11 +70,9 @@
 
     move-result-object v2
 
-    .line 489
     .local v2, "service":Lcom/sec/sdp/ISdpManagerService;
     if-eqz v2, :cond_0
 
-    .line 491
     const/4 v3, 0x0
 
     :try_start_0
@@ -88,10 +80,8 @@
 
     move-result v1
 
-    .line 492
     if-eqz v1, :cond_0
 
-    .line 493
     new-instance v3, Lcom/sec/enterprise/knox/sdp/exception/SdpLicenseRequiredException;
 
     invoke-direct {v3}, Lcom/sec/enterprise/knox/sdp/exception/SdpLicenseRequiredException;-><init>()V
@@ -100,11 +90,9 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 494
     :catch_0
     move-exception v0
 
-    .line 495
     .local v0, "re":Landroid/os/RemoteException;
     const-string v3, "SdpEngine"
 
@@ -112,7 +100,6 @@
 
     invoke-static {v3, v4, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 498
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_0
     return-void
@@ -127,22 +114,18 @@
     .end annotation
 
     .prologue
-    .line 54
     invoke-static {}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->enforcePermission()V
 
-    .line 55
     sget-object v0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->_instance:Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;
 
     if-nez v0, :cond_0
 
-    .line 56
     new-instance v0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;
 
     invoke-direct {v0}, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;-><init>()V
 
     sput-object v0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->_instance:Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;
 
-    .line 58
     :cond_0
     sget-object v0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->_instance:Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;
 
@@ -168,16 +151,13 @@
     .end annotation
 
     .prologue
-    .line 85
     const/16 v1, -0xf
 
-    .line 86
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 88
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -187,12 +167,10 @@
 
     move-result v1
 
-    .line 93
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 94
     const-string v2, "SdpEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -215,18 +193,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 95
     sparse-switch v1, :sswitch_data_0
 
-    .line 115
     :cond_1
     return-void
 
-    .line 89
     :catch_0
     move-exception v0
 
-    .line 90
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -236,7 +210,6 @@
 
     goto :goto_0
 
-    .line 102
     .end local v0    # "re":Landroid/os/RemoteException;
     :sswitch_0
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;
@@ -245,7 +218,6 @@
 
     throw v2
 
-    .line 104
     :sswitch_1
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineExistsException;
 
@@ -253,7 +225,6 @@
 
     throw v2
 
-    .line 106
     :sswitch_2
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
 
@@ -261,7 +232,6 @@
 
     throw v2
 
-    .line 108
     :sswitch_3
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpNotSupportedException;
 
@@ -269,7 +239,6 @@
 
     throw v2
 
-    .line 110
     :sswitch_4
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInvalidPasswordException;
 
@@ -277,7 +246,6 @@
 
     throw v2
 
-    .line 112
     :sswitch_5
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInvalidResetTokenException;
 
@@ -285,7 +253,6 @@
 
     throw v2
 
-    .line 95
     nop
 
     :sswitch_data_0
@@ -317,16 +284,13 @@
     .end annotation
 
     .prologue
-    .line 426
     const/16 v1, -0xf
 
-    .line 427
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 429
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -336,12 +300,10 @@
 
     move-result v1
 
-    .line 434
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 435
     const-string v2, "SdpEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -364,21 +326,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 436
     packed-switch v1, :pswitch_data_0
 
-    .line 442
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;
 
     invoke-direct {v2}, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;-><init>()V
 
     throw v2
 
-    .line 430
     :catch_0
     move-exception v0
 
-    .line 431
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -388,7 +346,6 @@
 
     goto :goto_0
 
-    .line 438
     .end local v0    # "re":Landroid/os/RemoteException;
     :pswitch_0
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
@@ -397,7 +354,6 @@
 
     throw v2
 
-    .line 440
     :pswitch_1
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineNotExistsException;
 
@@ -405,11 +361,9 @@
 
     throw v2
 
-    .line 445
     :cond_1
     return-void
 
-    .line 436
     nop
 
     :pswitch_data_0
@@ -432,16 +386,13 @@
     .end annotation
 
     .prologue
-    .line 464
     const/16 v1, -0xf
 
-    .line 465
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 467
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -451,12 +402,10 @@
 
     move-result v1
 
-    .line 472
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 473
     const-string v2, "SdpEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -479,21 +428,17 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 474
     packed-switch v1, :pswitch_data_0
 
-    .line 480
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;
 
     invoke-direct {v2}, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;-><init>()V
 
     throw v2
 
-    .line 468
     :catch_0
     move-exception v0
 
-    .line 469
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -503,7 +448,6 @@
 
     goto :goto_0
 
-    .line 476
     .end local v0    # "re":Landroid/os/RemoteException;
     :pswitch_0
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
@@ -512,7 +456,6 @@
 
     throw v2
 
-    .line 478
     :pswitch_1
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineNotExistsException;
 
@@ -520,11 +463,9 @@
 
     throw v2
 
-    .line 483
     :cond_1
     return-void
 
-    .line 474
     nop
 
     :pswitch_data_0
@@ -539,16 +480,13 @@
     .param p1, "alias"    # Ljava/lang/String;
 
     .prologue
-    .line 398
     const/4 v1, -0x7
 
-    .line 399
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 401
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -558,7 +496,6 @@
 
     move-result v1
 
-    .line 406
     :cond_0
     :goto_0
     const/4 v2, -0x6
@@ -570,11 +507,9 @@
     :goto_1
     return v2
 
-    .line 402
     :catch_0
     move-exception v0
 
-    .line 403
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -584,7 +519,6 @@
 
     goto :goto_0
 
-    .line 406
     .end local v0    # "re":Landroid/os/RemoteException;
     :cond_1
     const/4 v2, 0x0
@@ -604,16 +538,13 @@
     .end annotation
 
     .prologue
-    .line 227
     const/16 v1, -0xf
 
-    .line 228
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 230
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -623,12 +554,10 @@
 
     move-result v1
 
-    .line 235
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 236
     const-string v2, "SdpEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -651,18 +580,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 237
     sparse-switch v1, :sswitch_data_0
 
-    .line 251
     :cond_1
     return-void
 
-    .line 231
     :catch_0
     move-exception v0
 
-    .line 232
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -672,7 +597,6 @@
 
     goto :goto_0
 
-    .line 244
     .end local v0    # "re":Landroid/os/RemoteException;
     :sswitch_0
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;
@@ -681,7 +605,6 @@
 
     throw v2
 
-    .line 246
     :sswitch_1
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineNotExistsException;
 
@@ -689,7 +612,6 @@
 
     throw v2
 
-    .line 248
     :sswitch_2
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
 
@@ -697,7 +619,6 @@
 
     throw v2
 
-    .line 237
     nop
 
     :sswitch_data_0
@@ -725,16 +646,13 @@
     .end annotation
 
     .prologue
-    .line 365
     const/16 v1, -0xf
 
-    .line 366
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 368
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -744,12 +662,10 @@
 
     move-result v1
 
-    .line 373
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 374
     const-string v2, "SdpEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -772,18 +688,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 375
     sparse-switch v1, :sswitch_data_0
 
-    .line 389
     :cond_1
     return-void
 
-    .line 369
     :catch_0
     move-exception v0
 
-    .line 370
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -793,7 +705,6 @@
 
     goto :goto_0
 
-    .line 382
     .end local v0    # "re":Landroid/os/RemoteException;
     :sswitch_0
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;
@@ -802,7 +713,6 @@
 
     throw v2
 
-    .line 384
     :sswitch_1
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineNotExistsException;
 
@@ -810,7 +720,6 @@
 
     throw v2
 
-    .line 386
     :sswitch_2
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
 
@@ -818,7 +727,6 @@
 
     throw v2
 
-    .line 375
     nop
 
     :sswitch_data_0
@@ -846,16 +754,13 @@
     .end annotation
 
     .prologue
-    .line 143
     const/16 v1, -0xf
 
-    .line 144
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 146
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -865,12 +770,10 @@
 
     move-result v1
 
-    .line 151
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 152
     const-string v2, "SdpEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -893,18 +796,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 153
     sparse-switch v1, :sswitch_data_0
 
-    .line 167
     :cond_1
     return-void
 
-    .line 147
     :catch_0
     move-exception v0
 
-    .line 148
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -914,7 +813,6 @@
 
     goto :goto_0
 
-    .line 160
     .end local v0    # "re":Landroid/os/RemoteException;
     :sswitch_0
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;
@@ -923,7 +821,6 @@
 
     throw v2
 
-    .line 162
     :sswitch_1
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineNotExistsException;
 
@@ -931,7 +828,6 @@
 
     throw v2
 
-    .line 164
     :sswitch_2
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
 
@@ -939,7 +835,6 @@
 
     throw v2
 
-    .line 153
     nop
 
     :sswitch_data_0
@@ -971,16 +866,13 @@
     .end annotation
 
     .prologue
-    .line 321
     const/16 v1, -0xf
 
-    .line 322
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 324
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -990,12 +882,10 @@
 
     move-result v1
 
-    .line 329
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 330
     const-string v2, "SdpEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1018,18 +908,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 331
     sparse-switch v1, :sswitch_data_0
 
-    .line 349
     :cond_1
     return-void
 
-    .line 325
     :catch_0
     move-exception v0
 
-    .line 326
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -1039,7 +925,6 @@
 
     goto :goto_0
 
-    .line 338
     .end local v0    # "re":Landroid/os/RemoteException;
     :sswitch_0
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;
@@ -1048,7 +933,6 @@
 
     throw v2
 
-    .line 340
     :sswitch_1
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineNotExistsException;
 
@@ -1056,7 +940,6 @@
 
     throw v2
 
-    .line 342
     :sswitch_2
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInvalidPasswordException;
 
@@ -1064,7 +947,6 @@
 
     throw v2
 
-    .line 344
     :sswitch_3
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInvalidResetTokenException;
 
@@ -1072,7 +954,6 @@
 
     throw v2
 
-    .line 346
     :sswitch_4
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
 
@@ -1080,7 +961,6 @@
 
     throw v2
 
-    .line 331
     nop
 
     :sswitch_data_0
@@ -1113,16 +993,13 @@
     .end annotation
 
     .prologue
-    .line 272
     const/16 v1, -0xf
 
-    .line 273
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 275
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -1132,12 +1009,10 @@
 
     move-result v1
 
-    .line 280
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 281
     const-string v2, "SdpEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1160,18 +1035,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 282
     sparse-switch v1, :sswitch_data_0
 
-    .line 301
     :cond_1
     return-void
 
-    .line 276
     :catch_0
     move-exception v0
 
-    .line 277
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -1181,7 +1052,6 @@
 
     goto :goto_0
 
-    .line 290
     .end local v0    # "re":Landroid/os/RemoteException;
     :sswitch_0
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;
@@ -1190,7 +1060,6 @@
 
     throw v2
 
-    .line 292
     :sswitch_1
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineNotExistsException;
 
@@ -1198,7 +1067,6 @@
 
     throw v2
 
-    .line 294
     :sswitch_2
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineLockedException;
 
@@ -1206,7 +1074,6 @@
 
     throw v2
 
-    .line 296
     :sswitch_3
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInvalidPasswordException;
 
@@ -1214,7 +1081,6 @@
 
     throw v2
 
-    .line 298
     :sswitch_4
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
 
@@ -1222,7 +1088,6 @@
 
     throw v2
 
-    .line 282
     nop
 
     :sswitch_data_0
@@ -1255,16 +1120,13 @@
     .end annotation
 
     .prologue
-    .line 185
     const/16 v1, -0xf
 
-    .line 186
     .local v1, "res":I
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
     if-eqz v2, :cond_0
 
-    .line 188
     :try_start_0
     iget-object v2, p0, Lcom/sec/enterprise/knox/sdp/engine/SdpEngine;->mSdpService:Lcom/sec/sdp/ISdpManagerService;
 
@@ -1274,12 +1136,10 @@
 
     move-result v1
 
-    .line 193
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 194
     const-string v2, "SdpEngine"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1302,18 +1162,14 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 195
     sparse-switch v1, :sswitch_data_0
 
-    .line 214
     :cond_1
     return-void
 
-    .line 189
     :catch_0
     move-exception v0
 
-    .line 190
     .local v0, "re":Landroid/os/RemoteException;
     const-string v2, "SdpEngine"
 
@@ -1323,7 +1179,6 @@
 
     goto :goto_0
 
-    .line 203
     .end local v0    # "re":Landroid/os/RemoteException;
     :sswitch_0
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInternalException;
@@ -1332,7 +1187,6 @@
 
     throw v2
 
-    .line 205
     :sswitch_1
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpEngineNotExistsException;
 
@@ -1340,7 +1194,6 @@
 
     throw v2
 
-    .line 207
     :sswitch_2
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpInvalidPasswordException;
 
@@ -1348,7 +1201,6 @@
 
     throw v2
 
-    .line 211
     :sswitch_3
     new-instance v2, Lcom/sec/enterprise/knox/sdp/exception/SdpAccessDeniedException;
 
@@ -1356,7 +1208,6 @@
 
     throw v2
 
-    .line 195
     nop
 
     :sswitch_data_0

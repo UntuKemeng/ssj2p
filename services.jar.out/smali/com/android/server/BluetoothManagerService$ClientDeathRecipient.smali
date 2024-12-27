@@ -30,17 +30,14 @@
     .locals 1
 
     .prologue
-    .line 837
     iput-object p1, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->this$0:Lcom/android/server/BluetoothManagerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 838
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->mIsSamsungApp:Z
 
-    .line 839
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->mToken:Landroid/os/IBinder;
@@ -54,7 +51,6 @@
     .locals 6
 
     .prologue
-    .line 848
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -68,21 +64,18 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 849
     :cond_0
     # getter for: Lcom/android/server/BluetoothManagerService;->mBleAppCount:I
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$200()I
 
     move-result v1
 
-    .line 850
     .local v1, "prevBleAppCount":I
     # getter for: Lcom/android/server/BluetoothManagerService;->mSamsungBleAppCount:I
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$300()I
 
     move-result v2
 
-    .line 851
     .local v2, "prevSamsungAppCount":I
     # getter for: Lcom/android/server/BluetoothManagerService;->mBleAppCount:I
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$200()I
@@ -94,13 +87,11 @@
     # --operator for: Lcom/android/server/BluetoothManagerService;->mBleAppCount:I
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$206()I
 
-    .line 852
     :cond_1
     iget-object v3, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->mToken:Landroid/os/IBinder;
 
     if-eqz v3, :cond_3
 
-    .line 853
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -132,7 +123,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 854
     :cond_2
     iget-object v3, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->this$0:Lcom/android/server/BluetoothManagerService;
 
@@ -142,13 +132,11 @@
 
     invoke-interface {v3, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 856
     :cond_3
     iget-boolean v3, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->mIsSamsungApp:Z
 
     if-eqz v3, :cond_7
 
-    .line 857
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -162,7 +150,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 858
     :cond_4
     # getter for: Lcom/android/server/BluetoothManagerService;->mSamsungBleAppCount:I
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$300()I
@@ -174,13 +161,11 @@
     # --operator for: Lcom/android/server/BluetoothManagerService;->mSamsungBleAppCount:I
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$306()I
 
-    .line 859
     :cond_5
     iget-object v3, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->mToken:Landroid/os/IBinder;
 
     if-eqz v3, :cond_7
 
-    .line 860
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -212,7 +197,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 861
     :cond_6
     iget-object v3, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->this$0:Lcom/android/server/BluetoothManagerService;
 
@@ -222,11 +206,9 @@
 
     invoke-interface {v3, v4}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 864
     :cond_7
     if-le v1, v2, :cond_a
 
-    .line 865
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -240,7 +222,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 867
     :cond_8
     :try_start_0
     # getter for: Lcom/android/server/BluetoothManagerService;->mBleAppCount:I
@@ -279,7 +260,6 @@
 
     if-eq v3, v4, :cond_a
 
-    .line 868
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -293,7 +273,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 869
     :cond_9
     iget-object v3, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->this$0:Lcom/android/server/BluetoothManagerService;
 
@@ -301,7 +280,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 877
     :cond_a
     :goto_0
     # getter for: Lcom/android/server/BluetoothManagerService;->mBleAppCount:I
@@ -311,7 +289,6 @@
 
     if-nez v3, :cond_c
 
-    .line 878
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -325,7 +302,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 880
     :cond_b
     :try_start_1
     iget-object v3, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->this$0:Lcom/android/server/BluetoothManagerService;
@@ -337,7 +313,6 @@
 
     if-eqz v3, :cond_c
 
-    .line 881
     iget-object v3, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->this$0:Lcom/android/server/BluetoothManagerService;
 
     # getter for: Lcom/android/server/BluetoothManagerService;->mBluetooth:Landroid/bluetooth/IBluetooth;
@@ -349,16 +324,13 @@
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 887
     :cond_c
     :goto_1
     return-void
 
-    .line 871
     :catch_0
     move-exception v0
 
-    .line 872
     .local v0, "e":Landroid/os/RemoteException;
     const-string v3, "BluetoothManagerService"
 
@@ -368,12 +340,10 @@
 
     goto :goto_0
 
-    .line 883
     .end local v0    # "e":Landroid/os/RemoteException;
     :catch_1
     move-exception v0
 
-    .line 884
     .restart local v0    # "e":Landroid/os/RemoteException;
     const-string v3, "BluetoothManagerService"
 
@@ -390,7 +360,6 @@
     .param p2, "isSamsungApp"    # Z
 
     .prologue
-    .line 842
     # getter for: Lcom/android/server/BluetoothManagerService;->DBG:Z
     invoke-static {}, Lcom/android/server/BluetoothManagerService;->access$100()Z
 
@@ -430,13 +399,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 843
     :cond_0
     iput-boolean p2, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->mIsSamsungApp:Z
 
-    .line 844
     iput-object p1, p0, Lcom/android/server/BluetoothManagerService$ClientDeathRecipient;->mToken:Landroid/os/IBinder;
 
-    .line 845
     return-void
 .end method

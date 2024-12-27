@@ -29,16 +29,13 @@
     .locals 2
 
     .prologue
-    .line 130
     invoke-direct {p0}, Ljava/util/HashMap;-><init>()V
 
-    .line 133
     const-string v0, "BAE0000000000000"
 
     const-string v1, "VZW"
 
     invoke-virtual {p0, v0, v1}, Lcom/sec/epdg/EpdgConstants$2;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     return-void
 .end method

@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 179
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .param p1, "x0"    # Lorg/simpleframework/xml/core/Collector$1;
 
     .prologue
-    .line 179
     invoke-direct {p0}, Lorg/simpleframework/xml/core/Collector$Registry;-><init>()V
 
     return-void
@@ -61,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 189
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/Collector$Registry;->keySet()Ljava/util/Set;
 
     move-result-object v0

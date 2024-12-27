@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 5395
     iput-object p1, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$10;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,22 +43,17 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 5397
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 5399
     packed-switch p2, :pswitch_data_0
 
-    .line 5417
     :goto_0
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$10;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     iput-object v6, v2, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;->mRescanDialog:Landroid/app/AlertDialog;
 
-    .line 5418
     return-void
 
-    .line 5401
     :pswitch_0
     new-instance v1, Landroid/content/Intent;
 
@@ -67,7 +61,6 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 5402
     .local v1, "intent":Landroid/content/Intent;
     const-string v2, "com.android.phone"
 
@@ -75,19 +68,16 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5403
     const/high16 v2, 0x10000000
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 5404
     const-string v2, "search-type"
 
     const-string v3, "manual"
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 5406
     :try_start_0
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$10;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
@@ -103,11 +93,9 @@
 
     goto :goto_0
 
-    .line 5407
     :catch_0
     move-exception v0
 
-    .line 5408
     .local v0, "e":Landroid/content/ActivityNotFoundException;
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$10;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
@@ -133,7 +121,6 @@
 
     goto :goto_0
 
-    .line 5413
     .end local v0    # "e":Landroid/content/ActivityNotFoundException;
     .end local v1    # "intent":Landroid/content/Intent;
     :pswitch_1
@@ -143,7 +130,6 @@
 
     invoke-static {v2, v3}, Landroid/telephony/Rlog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 5414
     iget-object v2, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$10;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
 
     iget-object v3, p0, Lcom/android/internal/telephony/gsm/GsmServiceStateTracker$10;->this$0:Lcom/android/internal/telephony/gsm/GsmServiceStateTracker;
@@ -160,7 +146,6 @@
 
     goto :goto_0
 
-    .line 5399
     nop
 
     :pswitch_data_0

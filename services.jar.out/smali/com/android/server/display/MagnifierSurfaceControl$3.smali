@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 1228
     iput-object p1, p0, Lcom/android/server/display/MagnifierSurfaceControl$3;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     invoke-direct {p0, p2}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -39,10 +38,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 1230
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 1231
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$3;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
     iget-object v2, p0, Lcom/android/server/display/MagnifierSurfaceControl$3;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
@@ -67,7 +64,6 @@
     # setter for: Lcom/android/server/display/MagnifierSurfaceControl;->scaleSize:I
     invoke-static {v1, v2}, Lcom/android/server/display/MagnifierSurfaceControl;->access$4202(Lcom/android/server/display/MagnifierSurfaceControl;I)I
 
-    .line 1233
     :try_start_0
     iget-object v1, p0, Lcom/android/server/display/MagnifierSurfaceControl$3;->this$0:Lcom/android/server/display/MagnifierSurfaceControl;
 
@@ -124,15 +120,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1237
     :goto_0
     return-void
 
-    .line 1234
     :catch_0
     move-exception v0
 
-    .line 1235
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 

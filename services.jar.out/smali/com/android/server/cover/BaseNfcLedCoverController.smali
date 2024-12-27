@@ -116,18 +116,14 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 107
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/cover/BaseNfcLedCoverController;->mIsLedCoverAttached:Z
 
-    .line 108
     iput-object p2, p0, Lcom/android/server/cover/BaseNfcLedCoverController;->mContext:Landroid/content/Context;
 
-    .line 110
     const-string/jumbo v0, "power"
 
     invoke-virtual {p2, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -138,14 +134,12 @@
 
     iput-object v0, p0, Lcom/android/server/cover/BaseNfcLedCoverController;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 111
     invoke-static {p2}, Landroid/nfc/NfcAdapter;->getDefaultAdapter(Landroid/content/Context;)Landroid/nfc/NfcAdapter;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/server/cover/BaseNfcLedCoverController;->mNfcAdapter:Landroid/nfc/NfcAdapter;
 
-    .line 112
     return-void
 .end method
 
@@ -156,7 +150,6 @@
     .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
-    .line 129
     return-void
 .end method
 
@@ -167,27 +160,22 @@
     .param p3, "args"    # [Ljava/lang/String;
 
     .prologue
-    .line 151
     const-string v0, " Current NfcLedCoverController state:"
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 152
     const-string v0, "  mIsLEDCoverAttached="
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->print(Ljava/lang/String;)V
 
-    .line 153
     iget-boolean v0, p0, Lcom/android/server/cover/BaseNfcLedCoverController;->mIsLedCoverAttached:Z
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Z)V
 
-    .line 154
     const-string v0, "  "
 
     invoke-virtual {p2, v0}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    .line 155
     return-void
 .end method
 
@@ -196,23 +184,18 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 161
     if-nez p1, :cond_0
 
-    .line 162
     const-string/jumbo v2, "null"
 
-    .line 168
     :goto_0
     return-object v2
 
-    .line 164
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 165
     .local v1, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
@@ -222,7 +205,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 166
     const-string v2, "%02X"
 
     const/4 v3, 0x1
@@ -251,12 +233,10 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 165
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 168
     :cond_1
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -269,7 +249,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-boolean v0, p0, Lcom/android/server/cover/BaseNfcLedCoverController;->mCoverUIBinderAlive:Z
 
     return v0
@@ -287,7 +266,6 @@
     .end annotation
 
     .prologue
-    .line 122
     return-void
 .end method
 
@@ -296,7 +274,6 @@
     .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
-    .line 132
     return-void
 .end method
 
@@ -306,7 +283,6 @@
     .param p2, "data"    # [B
 
     .prologue
-    .line 118
     return-void
 .end method
 
@@ -314,7 +290,6 @@
     .locals 0
 
     .prologue
-    .line 138
     return-void
 .end method
 
@@ -323,7 +298,6 @@
     .param p1, "data"    # Landroid/os/Bundle;
 
     .prologue
-    .line 135
     return-void
 .end method
 
@@ -332,12 +306,10 @@
     .param p1, "disabled"    # Z
 
     .prologue
-    .line 141
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 142
     .local v0, "data":Landroid/os/Bundle;
     const-string v1, "event_type"
 
@@ -345,15 +317,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 144
     const-string/jumbo v1, "lcd_off_disabled_by_cover"
 
     invoke-virtual {v0, v1, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 147
     invoke-virtual {p0, v0}, Lcom/android/server/cover/BaseNfcLedCoverController;->sendSystemEvent(Landroid/os/Bundle;)V
 
-    .line 148
     return-void
 .end method
 
@@ -362,7 +331,6 @@
     .param p1, "binder"    # Landroid/os/IBinder;
 
     .prologue
-    .line 125
     const/4 v0, 0x0
 
     return v0
@@ -374,6 +342,5 @@
     .param p2, "coverState"    # Lcom/samsung/android/cover/CoverState;
 
     .prologue
-    .line 115
     return-void
 .end method

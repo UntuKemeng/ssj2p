@@ -41,17 +41,14 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 224
     iput-object p1, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->this$0:Landroid/os/CustomFrequencyManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 225
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mInvalidParam:Z
 
-    .line 227
     :try_start_0
     const-string v1, "CustomFrequencyManager"
 
@@ -96,14 +93,12 @@
     # invokes: Landroid/os/CustomFrequencyManager;->logOnEng(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2}, Landroid/os/CustomFrequencyManager;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 229
     if-eq p2, v4, :cond_0
 
     const/16 v1, 0x9
 
     if-ne p2, v1, :cond_1
 
-    .line 230
     :cond_0
     iget-object v1, p1, Landroid/os/CustomFrequencyManager;->mService:Landroid/os/ICustomFrequencyManager;
 
@@ -113,7 +108,6 @@
 
     if-nez v1, :cond_3
 
-    .line 231
     const-string v1, "CustomFrequencyManager"
 
     const-string v2, "GPUFrequencyRequest : invalid frequency range"
@@ -121,16 +115,13 @@
     # invokes: Landroid/os/CustomFrequencyManager;->logOnEng(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2}, Landroid/os/CustomFrequencyManager;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 232
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mInvalidParam:Z
 
-    .line 273
     :goto_0
     return-void
 
-    .line 235
     :cond_1
     const/16 v1, 0xa
 
@@ -140,7 +131,6 @@
 
     if-ne p2, v1, :cond_6
 
-    .line 237
     :cond_2
     iget-object v1, p1, Landroid/os/CustomFrequencyManager;->mService:Landroid/os/ICustomFrequencyManager;
 
@@ -150,7 +140,6 @@
 
     if-nez v1, :cond_3
 
-    .line 238
     const-string v1, "CustomFrequencyManager"
 
     const-string v2, "SysBusFrequencyRequest : invalid frequency range"
@@ -158,7 +147,6 @@
     # invokes: Landroid/os/CustomFrequencyManager;->logOnEng(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2}, Landroid/os/CustomFrequencyManager;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mInvalidParam:Z
@@ -167,27 +155,21 @@
 
     goto :goto_0
 
-    .line 250
     :catch_0
     move-exception v0
 
-    .line 251
     .local v0, "e":Ljava/lang/Exception;
     # invokes: Landroid/os/CustomFrequencyManager;->printExceptionTrace(Ljava/lang/Exception;)V
     invoke-static {v0}, Landroid/os/CustomFrequencyManager;->access$100(Ljava/lang/Exception;)V
 
-    .line 253
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_3
     iput p2, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mType:I
 
-    .line 254
     iput p3, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mFrequency:I
 
-    .line 255
     iput-wide p4, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mTimeoutMs:J
 
-    .line 256
     const-string v1, "CustomFrequencyManager"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -211,7 +193,6 @@
     # invokes: Landroid/os/CustomFrequencyManager;->logOnEng(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2}, Landroid/os/CustomFrequencyManager;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 258
     # getter for: Landroid/os/CustomFrequencyManager;->mContext:Landroid/content/Context;
     invoke-static {}, Landroid/os/CustomFrequencyManager;->access$200()Landroid/content/Context;
 
@@ -219,7 +200,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 259
     const-string v1, "android"
 
     # getter for: Landroid/os/CustomFrequencyManager;->mContext:Landroid/content/Context;
@@ -237,7 +217,6 @@
 
     if-eqz v1, :cond_4
 
-    .line 260
     # getter for: Landroid/os/CustomFrequencyManager;->mServerAppToken:Landroid/os/IBinder;
     invoke-static {}, Landroid/os/CustomFrequencyManager;->access$300()Landroid/os/IBinder;
 
@@ -256,7 +235,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 261
     # getter for: Landroid/os/CustomFrequencyManager;->mServerAppToken:Landroid/os/IBinder;
     invoke-static {}, Landroid/os/CustomFrequencyManager;->access$300()Landroid/os/IBinder;
 
@@ -264,27 +242,23 @@
 
     iput-object v1, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mToken:Landroid/os/IBinder;
 
-    .line 269
     :cond_4
     :goto_1
     iget-object v1, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mToken:Landroid/os/IBinder;
 
     if-nez v1, :cond_5
 
-    .line 270
     new-instance v1, Landroid/os/Binder;
 
     invoke-direct {v1}, Landroid/os/Binder;-><init>()V
 
     iput-object v1, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mToken:Landroid/os/IBinder;
 
-    .line 272
     :cond_5
     iput-object p6, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mPkgName:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 242
     :cond_6
     const/4 v1, 0x7
 
@@ -294,7 +268,6 @@
 
     if-ne p2, v1, :cond_3
 
-    .line 244
     :cond_7
     :try_start_1
     iget-object v1, p1, Landroid/os/CustomFrequencyManager;->mService:Landroid/os/ICustomFrequencyManager;
@@ -305,7 +278,6 @@
 
     if-nez v1, :cond_3
 
-    .line 245
     const-string v1, "CustomFrequencyManager"
 
     const-string v2, "CPUDVFSControlRequest : invalid frequency range"
@@ -313,7 +285,6 @@
     # invokes: Landroid/os/CustomFrequencyManager;->logOnEng(Ljava/lang/String;Ljava/lang/String;)V
     invoke-static {v1, v2}, Landroid/os/CustomFrequencyManager;->access$000(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 246
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mInvalidParam:Z
@@ -322,12 +293,10 @@
 
     goto/16 :goto_0
 
-    .line 263
     :cond_8
     # invokes: Landroid/os/CustomFrequencyManager;->createServerAppToken()V
     invoke-static {}, Landroid/os/CustomFrequencyManager;->access$400()V
 
-    .line 264
     # getter for: Landroid/os/CustomFrequencyManager;->mServerAppToken:Landroid/os/IBinder;
     invoke-static {}, Landroid/os/CustomFrequencyManager;->access$300()Landroid/os/IBinder;
 
@@ -344,15 +313,12 @@
     .locals 1
 
     .prologue
-    .line 287
     iget-boolean v0, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mInvalidParam:Z
 
     if-nez v0, :cond_0
 
-    .line 288
     invoke-virtual {p0}, Landroid/os/CustomFrequencyManager$FrequencyRequest;->cancelFrequencyRequestImpl()V
 
-    .line 290
     :cond_0
     return-void
 .end method
@@ -364,15 +330,12 @@
     .locals 1
 
     .prologue
-    .line 281
     iget-boolean v0, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mInvalidParam:Z
 
     if-nez v0, :cond_0
 
-    .line 282
     invoke-virtual {p0}, Landroid/os/CustomFrequencyManager$FrequencyRequest;->doFrequencyRequestImpl()V
 
-    .line 284
     :cond_0
     return-void
 .end method
@@ -384,7 +347,6 @@
     .locals 1
 
     .prologue
-    .line 276
     iget v0, p0, Landroid/os/CustomFrequencyManager$FrequencyRequest;->mType:I
 
     return v0

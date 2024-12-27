@@ -11,17 +11,14 @@
     .param p3, "observable"    # Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;
 
     .prologue
-    .line 55
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, p3}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;-><init>(ILandroid/content/Context;Landroid/os/Looper;Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/ISensorHubResetObservable;)V
 
-    .line 57
     const-string v0, "ActivityCalibrationRunner is created"
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 58
     return-void
 .end method
 
@@ -31,13 +28,10 @@
     .locals 0
 
     .prologue
-    .line 168
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 169
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->clear()V
 
-    .line 170
     return-void
 .end method
 
@@ -45,13 +39,10 @@
     .locals 0
 
     .prologue
-    .line 157
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 158
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->disable()V
 
-    .line 159
     return-void
 .end method
 
@@ -59,13 +50,10 @@
     .locals 0
 
     .prologue
-    .line 144
     invoke-static {}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->trace()V
 
-    .line 145
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->enable()V
 
-    .line 146
     return-void
 .end method
 
@@ -73,7 +61,6 @@
     .locals 1
 
     .prologue
-    .line 98
     sget-object v0, Lcom/samsung/android/contextaware/ContextList$ContextType;->SENSORHUB_RUNNER_ACTIVITY_CALIBRATION:Lcom/samsung/android/contextaware/ContextList$ContextType;
 
     invoke-virtual {v0}, Lcom/samsung/android/contextaware/ContextList$ContextType;->getCode()Ljava/lang/String;
@@ -87,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 181
     invoke-virtual {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityCalibrationRunner;->checkFaultDetectionResult()Z
 
     move-result v0
@@ -98,7 +84,6 @@
 
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->debug(Ljava/lang/String;)V
 
-    .line 182
     invoke-super {p0}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/LibTypeProvider;->getFaultDetectionResult()Landroid/os/Bundle;
 
     move-result-object v0
@@ -110,7 +95,6 @@
     .locals 1
 
     .prologue
-    .line 109
     const/16 v0, 0x3c
 
     return v0
@@ -120,7 +104,6 @@
     .locals 0
 
     .prologue
-    .line 120
     return-object p0
 .end method
 
@@ -128,7 +111,6 @@
     .locals 0
 
     .prologue
-    .line 132
     return-object p0
 .end method
 
@@ -136,7 +118,6 @@
     .locals 0
 
     .prologue
-    .line 193
     return-object p0
 .end method
 
@@ -152,28 +133,23 @@
     .end annotation
 
     .prologue
-    .line 69
     .local p2, "value":Ljava/lang/Object;, "TE;"
     const/4 v2, 0x1
 
-    .line 70
     .local v2, "result":Z
     const/4 v3, 0x2
 
     new-array v1, v3, [B
 
-    .line 72
     .local v1, "dataPacket":[B
     const/16 v3, 0x59
 
     if-ne p1, v3, :cond_0
 
-    .line 73
     const-string v3, "CALIBRATION_CURRENT_STATE"
 
     invoke-static {v3}, Lcom/samsung/android/contextaware/utilbundle/logger/CaLogger;->info(Ljava/lang/String;)V
 
-    .line 75
     check-cast p2, Lcom/samsung/android/contextaware/manager/ContextAwarePropertyBundle;
 
     .end local p2    # "value":Ljava/lang/Object;, "TE;"
@@ -183,25 +159,21 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 77
     .local v0, "data":Ljava/lang/String;
     invoke-static {v0}, Lcom/samsung/android/contextaware/utilbundle/CaConvertUtil;->stringToByteArray(Ljava/lang/String;)[B
 
     move-result-object v1
 
-    .line 81
     const/16 v3, 0x18
 
     invoke-virtual {p0, v3, v1}, Lcom/samsung/android/contextaware/dataprovider/sensorhubprovider/builtin/ActivityCalibrationRunner;->sendCommonValueToSensorHub(B[B)Z
 
     move-result v2
 
-    .line 87
     .end local v0    # "data":Ljava/lang/String;
     :goto_0
     return v2
 
-    .line 84
     .restart local p2    # "value":Ljava/lang/Object;, "TE;"
     :cond_0
     const/4 v2, 0x0

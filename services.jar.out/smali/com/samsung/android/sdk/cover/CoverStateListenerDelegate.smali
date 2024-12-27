@@ -33,20 +33,16 @@
     .param p3, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 31
     invoke-direct {p0}, Lcom/samsung/android/cover/ICoverStateListenerCallback$Stub;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListener;
 
-    .line 34
     if-nez p2, :cond_0
 
     invoke-virtual {p3}, Landroid/content/Context;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v0
 
-    .line 37
     .local v0, "looper":Landroid/os/Looper;
     :goto_0
     new-instance v1, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate$ListenerDelegateHandler;
@@ -57,10 +53,8 @@
 
     iput-object v1, p0, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate$ListenerDelegateHandler;
 
-    .line 38
     return-void
 
-    .line 34
     .end local v0    # "looper":Landroid/os/Looper;
     :cond_0
     invoke-virtual {p2}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -76,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 46
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListener;
 
     return-object v0
@@ -91,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;->mListener:Lcom/samsung/android/sdk/cover/ScoverManager$CoverStateListener;
 
     invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
@@ -115,7 +107,6 @@
 
     const/4 v2, 0x0
 
-    .line 57
     iget-object v3, p0, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate$ListenerDelegateHandler;
 
     if-eqz p1, :cond_0
@@ -129,13 +120,11 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 59
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 57
     goto :goto_0
 .end method
 
@@ -151,7 +140,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 51
     iget-object v2, p0, Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate;->mHandler:Lcom/samsung/android/sdk/cover/CoverStateListenerDelegate$ListenerDelegateHandler;
 
     if-eqz p1, :cond_0
@@ -165,12 +153,10 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 53
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 51
     goto :goto_0
 .end method

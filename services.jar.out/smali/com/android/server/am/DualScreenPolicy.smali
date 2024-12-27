@@ -87,12 +87,10 @@
     .locals 1
 
     .prologue
-    .line 71
     sget-boolean v0, Lcom/samsung/android/dualscreen/DualScreenManager;->DEBUG:Z
 
     sput-boolean v0, Lcom/android/server/am/DualScreenPolicy;->DEBUG:Z
 
-    .line 92
     const/4 v0, 0x3
 
     new-array v0, v0, [I
@@ -122,47 +120,36 @@
 
     const/4 v1, 0x0
 
-    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     iput-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 74
     iput-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
-    .line 77
     iput-boolean v1, p0, Lcom/android/server/am/DualScreenPolicy;->mTalkBackEnabled:Z
 
-    .line 79
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mBrowserAppList:Ljava/util/ArrayList;
 
-    .line 80
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/am/DualScreenPolicy;->mNeedToUpdatePackageList:Z
 
-    .line 84
     iput-boolean v1, p0, Lcom/android/server/am/DualScreenPolicy;->mSingleScreenState:Z
 
-    .line 86
     iput v1, p0, Lcom/android/server/am/DualScreenPolicy;->mExpandedHomeStatus:I
 
-    .line 162
     iput-object p1, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
-    .line 163
     iget-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     iput-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
-    .line 164
     new-instance v0, Lcom/android/server/am/DualScreenPolicy$DualScreenPolicyHandler;
 
     iget-object v1, p1, Lcom/android/server/am/ActivityManagerService;->mHandler:Lcom/android/server/am/ActivityManagerService$MainHandler;
@@ -175,7 +162,6 @@
 
     iput-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mHandler:Lcom/android/server/am/DualScreenPolicy$DualScreenPolicyHandler;
 
-    .line 165
     return-void
 .end method
 
@@ -184,7 +170,6 @@
     .param p0, "x0"    # Lcom/android/server/am/DualScreenPolicy;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     return-object v0
@@ -201,14 +186,12 @@
 
     const/4 v2, 0x1
 
-    .line 356
     and-int/lit8 v4, p1, 0x1
 
     if-ne v4, v2, :cond_0
 
     move v0, v2
 
-    .line 357
     .local v0, "mainScreenOn":Z
     :goto_0
     and-int/lit8 v4, p1, 0x2
@@ -217,7 +200,6 @@
 
     move v1, v2
 
-    .line 359
     .local v1, "subScreenOn":Z
     :goto_1
     iget-object v4, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
@@ -231,7 +213,6 @@
     :goto_2
     aput v4, v6, v3
 
-    .line 360
     iget-object v3, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v3, v3, Lcom/android/server/am/ActivityManagerService;->mScreenState:[I
@@ -241,7 +222,6 @@
     :goto_3
     aput v5, v3, v2
 
-    .line 361
     return-void
 
     .end local v0    # "mainScreenOn":Z
@@ -249,27 +229,23 @@
     :cond_0
     move v0, v3
 
-    .line 356
     goto :goto_0
 
     .restart local v0    # "mainScreenOn":Z
     :cond_1
     move v1, v3
 
-    .line 357
     goto :goto_1
 
     .restart local v1    # "subScreenOn":Z
     :cond_2
     move v4, v2
 
-    .line 359
     goto :goto_2
 
     :cond_3
     move v5, v2
 
-    .line 360
     goto :goto_3
 .end method
 
@@ -278,7 +254,6 @@
     .param p0, "ar"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 684
     const/4 v0, 0x1
 
     return v0
@@ -296,7 +271,6 @@
 
     const/4 v0, 0x0
 
-    .line 507
     iget-object v2, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v2, v1}, Lcom/android/server/am/ActivityManagerService;->isScreenOn(I)Z
@@ -305,24 +279,20 @@
 
     if-nez v2, :cond_0
 
-    .line 508
     const-string v1, "DualScreenPolicy"
 
     const-string v2, "canBeLinkedApp Case : SUBSCREEN is off"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 565
     :goto_0
     return v0
 
-    .line 512
     :cond_0
     if-eqz p4, :cond_1
 
     if-nez p2, :cond_2
 
-    .line 513
     :cond_1
     const-string v1, "DualScreenPolicy"
 
@@ -332,7 +302,6 @@
 
     goto :goto_0
 
-    .line 516
     :cond_2
     const-string v2, "android"
 
@@ -350,7 +319,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 517
     :cond_3
     const-string v1, "DualScreenPolicy"
 
@@ -360,7 +328,6 @@
 
     goto :goto_0
 
-    .line 521
     :cond_4
     const-string v2, "com.google.android.setupwizard"
 
@@ -378,7 +345,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 522
     :cond_5
     const-string v1, "DualScreenPolicy"
 
@@ -388,7 +354,6 @@
 
     goto :goto_0
 
-    .line 525
     :cond_6
     iget-object v2, p1, Lcom/android/server/am/ActivityRecord;->intent:Landroid/content/Intent;
 
@@ -400,7 +365,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 526
     const-string v1, "DualScreenPolicy"
 
     const-string v2, "canBeLinkedApp Case : From Launcher"
@@ -409,7 +373,6 @@
 
     goto :goto_0
 
-    .line 530
     :cond_7
     invoke-virtual {p2}, Lcom/android/server/am/ActivityRecord;->isHomeActivity()Z
 
@@ -423,7 +386,6 @@
 
     if-nez v2, :cond_8
 
-    .line 531
     const-string v1, "DualScreenPolicy"
 
     const-string v2, "canbeLinkedApp Case : called from HomeActivity"
@@ -432,11 +394,9 @@
 
     goto :goto_0
 
-    .line 535
     :cond_8
     if-eqz p3, :cond_9
 
-    .line 536
     const-string v1, "DualScreenPolicy"
 
     const-string v2, "canBeLinkedApp Case : exist resultTo"
@@ -445,13 +405,11 @@
 
     goto :goto_0
 
-    .line 540
     :cond_9
     iget-object v2, p1, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     if-eqz v2, :cond_b
 
-    .line 541
     const-class v2, Lcom/android/internal/app/ResolverActivity;
 
     invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -484,7 +442,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 542
     :cond_a
     const-string v1, "DualScreenPolicy"
 
@@ -494,7 +451,6 @@
 
     goto/16 :goto_0
 
-    .line 546
     :cond_b
     iget-object v2, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -518,7 +474,6 @@
 
     if-ne v2, v3, :cond_c
 
-    .line 549
     const-string v1, "DualScreenPolicy"
 
     const-string v2, "canBeLinkedApp Case : In FixedScreenMode."
@@ -527,7 +482,6 @@
 
     goto/16 :goto_0
 
-    .line 553
     :cond_c
     invoke-virtual {p0}, Lcom/android/server/am/DualScreenPolicy;->isTalkBackEnabled()Z
 
@@ -535,7 +489,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 554
     const-string v1, "DualScreenPolicy"
 
     const-string v2, "canBeLinkedApp Case : Voice Assistant Enabled."
@@ -544,7 +497,6 @@
 
     goto/16 :goto_0
 
-    .line 558
     :cond_d
     iget-object v2, p1, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
@@ -560,7 +512,6 @@
 
     if-nez v2, :cond_e
 
-    .line 559
     const-string v2, "android.intent.action.MAIN"
 
     iget-object v3, p1, Lcom/android/server/am/ActivityRecord;->intent:Landroid/content/Intent;
@@ -581,7 +532,6 @@
 
     if-eqz v2, :cond_e
 
-    .line 560
     const-string v0, "DualScreenPolicy"
 
     const-string v2, "canBeLinkedApp Case : true"
@@ -590,10 +540,8 @@
 
     move v0, v1
 
-    .line 561
     goto/16 :goto_0
 
-    .line 564
     :cond_e
     const-string v1, "DualScreenPolicy"
 
@@ -610,10 +558,8 @@
     .param p1, "medataDataKey"    # Ljava/lang/String;
 
     .prologue
-    .line 493
     if-eqz p0, :cond_1
 
-    .line 494
     iget-object v0, p0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz v0, :cond_0
@@ -626,18 +572,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 495
     iget-object v0, p0, Landroid/content/pm/ActivityInfo;->metaData:Landroid/os/Bundle;
 
     invoke-virtual {v0, p1}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 502
     :goto_0
     return v0
 
-    .line 498
     :cond_0
     iget-object v0, p0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
@@ -655,7 +598,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 499
     iget-object v0, p0, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
 
     iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
@@ -666,7 +608,6 @@
 
     goto :goto_0
 
-    .line 502
     :cond_1
     const/4 v0, 0x0
 
@@ -679,23 +620,18 @@
     .param p1, "targetActivityOrientation"    # I
 
     .prologue
-    .line 711
     move v0, p1
 
-    .line 712
     .local v0, "orientation":I
     packed-switch p1, :pswitch_data_0
 
-    .line 738
     :pswitch_0
     move v0, p0
 
-    .line 741
     :cond_0
     :goto_0
     return v0
 
-    .line 717
     :pswitch_1
     if-eqz p0, :cond_1
 
@@ -711,13 +647,11 @@
 
     if-ne p0, v1, :cond_0
 
-    .line 721
     :cond_1
     move v0, p0
 
     goto :goto_0
 
-    .line 729
     :pswitch_2
     const/4 v1, 0x1
 
@@ -735,13 +669,11 @@
 
     if-ne p0, v1, :cond_0
 
-    .line 733
     :cond_2
     move v0, p0
 
     goto :goto_0
 
-    .line 712
     nop
 
     :pswitch_data_0
@@ -769,36 +701,30 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 909
     iget-object v6, p1, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
     if-nez v6, :cond_1
 
-    .line 930
     :cond_0
     :goto_0
     return v5
 
-    .line 912
     :cond_1
     iget-boolean v6, p0, Lcom/android/server/am/DualScreenPolicy;->mNeedToUpdatePackageList:Z
 
     if-eqz v6, :cond_2
 
-    .line 913
     new-instance v3, Landroid/content/Intent;
 
     const-string v6, "android.intent.action.MAIN"
 
     invoke-direct {v3, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 914
     .local v3, "queryIntent":Landroid/content/Intent;
     const-string v6, "android.intent.category.APP_BROWSER"
 
     invoke-virtual {v3, v6}, Landroid/content/Intent;->addCategory(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 916
     :try_start_0
     invoke-static {}, Landroid/app/AppGlobals;->getPackageManager()Landroid/content/pm/IPackageManager;
 
@@ -818,25 +744,21 @@
 
     move-result-object v2
 
-    .line 918
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     iget-object v6, p0, Lcom/android/server/am/DualScreenPolicy;->mBrowserAppList:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 919
     iget-object v6, p0, Lcom/android/server/am/DualScreenPolicy;->mBrowserAppList:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 920
     const/4 v6, 0x0
 
     iput-boolean v6, p0, Lcom/android/server/am/DualScreenPolicy;->mNeedToUpdatePackageList:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 925
     .end local v2    # "list":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .end local v3    # "queryIntent":Landroid/content/Intent;
     :cond_2
@@ -861,7 +783,6 @@
 
     check-cast v4, Landroid/content/pm/ResolveInfo;
 
-    .line 926
     .local v4, "rInfo":Landroid/content/pm/ResolveInfo;
     iget-object v6, p1, Lcom/android/server/am/ActivityRecord;->info:Landroid/content/pm/ActivityInfo;
 
@@ -877,19 +798,16 @@
 
     if-eqz v6, :cond_3
 
-    .line 927
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 921
     .end local v1    # "i$":Ljava/util/Iterator;
     .end local v4    # "rInfo":Landroid/content/pm/ResolveInfo;
     .restart local v3    # "queryIntent":Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 922
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -906,7 +824,6 @@
 
     const/4 v3, 0x0
 
-    .line 688
     if-eqz p0, :cond_0
 
     if-nez p1, :cond_2
@@ -914,25 +831,21 @@
     :cond_0
     move v2, v3
 
-    .line 707
     :cond_1
     :goto_0
     return v2
 
-    .line 692
     :cond_2
     iget-object v4, p0, Lcom/android/server/am/ActivityRecord;->task:Lcom/android/server/am/TaskRecord;
 
     if-eqz v4, :cond_4
 
-    .line 693
     iget-object v4, p1, Lcom/android/server/am/ActivityRecord;->task:Lcom/android/server/am/TaskRecord;
 
     invoke-virtual {v4}, Lcom/android/server/am/TaskRecord;->getParentCoupledTask()Lcom/android/server/am/TaskRecord;
 
     move-result-object v1
 
-    .line 694
     .local v1, "targetParentTask":Lcom/android/server/am/TaskRecord;
     iget-object v4, p1, Lcom/android/server/am/ActivityRecord;->task:Lcom/android/server/am/TaskRecord;
 
@@ -940,11 +853,9 @@
 
     move-result-object v0
 
-    .line 696
     .local v0, "targetChildTask":Lcom/android/server/am/TaskRecord;
     if-eqz v1, :cond_3
 
-    .line 697
     iget-object v4, p0, Lcom/android/server/am/ActivityRecord;->task:Lcom/android/server/am/TaskRecord;
 
     iget v4, v4, Lcom/android/server/am/TaskRecord;->taskId:I
@@ -953,11 +864,9 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 701
     :cond_3
     if-eqz v0, :cond_4
 
-    .line 702
     iget-object v4, p0, Lcom/android/server/am/ActivityRecord;->task:Lcom/android/server/am/TaskRecord;
 
     iget v4, v4, Lcom/android/server/am/TaskRecord;->taskId:I
@@ -971,7 +880,6 @@
     :cond_4
     move v2, v3
 
-    .line 707
     goto :goto_0
 .end method
 
@@ -980,7 +888,6 @@
     .param p0, "aInfo"    # Landroid/content/pm/ActivityInfo;
 
     .prologue
-    .line 485
     const-string v0, "com.samsung.android.sdk.dualscreen.fullview.launchWithPriority"
 
     invoke-static {p0, v0}, Lcom/android/server/am/DualScreenPolicy;->getBooleanMetaData(Landroid/content/pm/ActivityInfo;Ljava/lang/String;)Z
@@ -995,7 +902,6 @@
     .param p0, "aInfo"    # Landroid/content/pm/ActivityInfo;
 
     .prologue
-    .line 489
     const-string v0, "com.samsung.android.sdk.dualscreen.fullview.enable"
 
     invoke-static {p0, v0}, Lcom/android/server/am/DualScreenPolicy;->getBooleanMetaData(Landroid/content/pm/ActivityInfo;Ljava/lang/String;)Z
@@ -1012,17 +918,13 @@
     .prologue
     const/4 v7, 0x3
 
-    .line 643
     if-nez p0, :cond_0
 
-    .line 644
     const/4 v5, 0x0
 
-    .line 679
     :goto_0
     return-object v5
 
-    .line 646
     :cond_0
     new-instance v5, Lcom/samsung/android/dualscreen/TaskInfo;
 
@@ -1030,50 +932,40 @@
 
     invoke-direct {v5, v6}, Lcom/samsung/android/dualscreen/TaskInfo;-><init>(I)V
 
-    .line 648
     .local v5, "ti":Lcom/samsung/android/dualscreen/TaskInfo;
     invoke-virtual {p0}, Lcom/android/server/am/TaskRecord;->getType()I
 
     move-result v4
 
-    .line 649
     .local v4, "taskType":I
     if-lt v4, v7, :cond_1
 
-    .line 650
     if-ne v4, v7, :cond_4
 
-    .line 651
     const/4 v4, 0x0
 
-    .line 658
     :cond_1
     :goto_1
     invoke-virtual {v5, v4}, Lcom/samsung/android/dualscreen/TaskInfo;->setTaskType(I)V
 
-    .line 660
     iget-object v6, p0, Lcom/android/server/am/TaskRecord;->stack:Lcom/android/server/am/ActivityStack;
 
     if-eqz v6, :cond_6
 
-    .line 661
     iget-object v6, p0, Lcom/android/server/am/TaskRecord;->stack:Lcom/android/server/am/ActivityStack;
 
     invoke-virtual {v6}, Lcom/android/server/am/ActivityStack;->getDisplayId()I
 
     move-result v1
 
-    .line 662
     .local v1, "displayId":I
     invoke-static {v1}, Lcom/samsung/android/multidisplay/dualscreen/DualScreenUtils;->displayIdToScreen(I)Lcom/samsung/android/dualscreen/DualScreen;
 
     move-result-object v3
 
-    .line 663
     .local v3, "screen":Lcom/samsung/android/dualscreen/DualScreen;
     invoke-virtual {v5, v3}, Lcom/samsung/android/dualscreen/TaskInfo;->setScreen(Lcom/samsung/android/dualscreen/DualScreen;)V
 
-    .line 667
     .end local v1    # "displayId":I
     .end local v3    # "screen":Lcom/samsung/android/dualscreen/DualScreen;
     :goto_2
@@ -1081,36 +973,29 @@
 
     invoke-virtual {v5, v6}, Lcom/samsung/android/dualscreen/TaskInfo;->setFixed(Z)V
 
-    .line 669
     invoke-virtual {p0}, Lcom/android/server/am/TaskRecord;->getParentCoupledTask()Lcom/android/server/am/TaskRecord;
 
     move-result-object v2
 
-    .line 670
     .local v2, "parentTask":Lcom/android/server/am/TaskRecord;
     invoke-virtual {p0}, Lcom/android/server/am/TaskRecord;->getChildCoupledTask()Lcom/android/server/am/TaskRecord;
 
     move-result-object v0
 
-    .line 672
     .local v0, "childTask":Lcom/android/server/am/TaskRecord;
     if-eqz v2, :cond_2
 
-    .line 673
     iget v6, v2, Lcom/android/server/am/TaskRecord;->taskId:I
 
     invoke-virtual {v5, v6}, Lcom/samsung/android/dualscreen/TaskInfo;->setParentCoupledTaskId(I)V
 
-    .line 675
     :cond_2
     if-eqz v0, :cond_3
 
-    .line 676
     iget v6, v0, Lcom/android/server/am/TaskRecord;->taskId:I
 
     invoke-virtual {v5, v6}, Lcom/samsung/android/dualscreen/TaskInfo;->setChildCoupledTaskId(I)V
 
-    .line 678
     :cond_3
     iget-boolean v6, p0, Lcom/android/server/am/TaskRecord;->canMoveTaskToScreen:Z
 
@@ -1118,7 +1003,6 @@
 
     goto :goto_0
 
-    .line 652
     .end local v0    # "childTask":Lcom/android/server/am/TaskRecord;
     .end local v2    # "parentTask":Lcom/android/server/am/TaskRecord;
     :cond_4
@@ -1126,23 +1010,19 @@
 
     if-ne v4, v6, :cond_5
 
-    .line 653
     const/4 v4, 0x1
 
     goto :goto_1
 
-    .line 654
     :cond_5
     const/4 v6, 0x6
 
     if-ne v4, v6, :cond_1
 
-    .line 655
     const/4 v4, 0x6
 
     goto :goto_1
 
-    .line 665
     :cond_6
     sget-object v6, Lcom/samsung/android/dualscreen/DualScreen;->UNKNOWN:Lcom/samsung/android/dualscreen/DualScreen;
 
@@ -1156,40 +1036,33 @@
     .param p0, "screenState"    # I
 
     .prologue
-    .line 364
     packed-switch p0, :pswitch_data_0
 
-    .line 374
     const-string v0, "UNKNOWN"
 
     :goto_0
     return-object v0
 
-    .line 366
     :pswitch_0
     const-string v0, "ALL_SCREEN_ON"
 
     goto :goto_0
 
-    .line 368
     :pswitch_1
     const-string v0, "ALL_SCREEN_OFF"
 
     goto :goto_0
 
-    .line 370
     :pswitch_2
     const-string v0, "MAIN_SCREEN_ON"
 
     goto :goto_0
 
-    .line 372
     :pswitch_3
     const-string v0, "SUB_SCREEN_ON"
 
     goto :goto_0
 
-    .line 364
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -1206,16 +1079,13 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 293
     if-eqz p1, :cond_0
 
     if-eq p1, v4, :cond_0
 
-    .line 308
     :goto_0
     return-void
 
-    .line 298
     :cond_0
     invoke-static {p1}, Lcom/android/server/am/ActivityStackSupervisor;->convertDisplayIdToScreenZone(I)I
 
@@ -1223,13 +1093,11 @@
 
     rsub-int/lit8 v1, v2, 0x3
 
-    .line 299
     .local v1, "oppositeDisplayZone":I
     invoke-static {v1}, Lcom/android/server/am/ActivityStackSupervisor;->convertScreenZoneToDisplayId(I)I
 
     move-result v0
 
-    .line 301
     .local v0, "oppositeDisplayId":I
     iget-object v2, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -1237,10 +1105,8 @@
 
     invoke-virtual {v2, v0, v3}, Lcom/android/server/am/ActivityStackSupervisor;->sendShrinkRequestToAllResumedActivityLocked(II)V
 
-    .line 304
     if-ne p1, v4, :cond_1
 
-    .line 305
     iget-object v2, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v2, v2, Lcom/android/server/am/ActivityManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -1249,7 +1115,6 @@
 
     invoke-virtual {v2, v3}, Lcom/android/server/wm/WindowManagerService;->moveInputMethodWindowsToDisplayIfNeededLocked(Z)V
 
-    .line 307
     :cond_1
     iget-object v2, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
@@ -1271,12 +1136,10 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 327
     iget-boolean v5, p0, Lcom/android/server/am/DualScreenPolicy;->mSingleScreenState:Z
 
     if-eq v5, p1, :cond_1
 
-    .line 328
     const-string v5, "DualScreenPolicy"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1311,15 +1174,12 @@
 
     invoke-static {v5, v6}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
     if-eqz p1, :cond_2
 
-    .line 330
     iget-object v5, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v2, v5, Lcom/android/server/am/ActivityStackSupervisor;->mExpandedHomeTask:Lcom/android/server/am/TaskRecord;
 
-    .line 331
     .local v2, "expandedHomeTask":Lcom/android/server/am/TaskRecord;
     if-eqz v2, :cond_0
 
@@ -1333,31 +1193,26 @@
 
     if-eqz v5, :cond_0
 
-    .line 332
     iget-object v5, v2, Lcom/android/server/am/TaskRecord;->stack:Lcom/android/server/am/ActivityStack;
 
     invoke-virtual {v5, v8}, Lcom/android/server/am/ActivityStack;->topRunningActivityLocked(Lcom/android/server/am/ActivityRecord;)Lcom/android/server/am/ActivityRecord;
 
     move-result-object v4
 
-    .line 333
     .local v4, "topActivity":Lcom/android/server/am/ActivityRecord;
     invoke-virtual {v2, v8}, Lcom/android/server/am/TaskRecord;->topRunningActivityLocked(Lcom/android/server/am/ActivityRecord;)Lcom/android/server/am/ActivityRecord;
 
     move-result-object v1
 
-    .line 334
     .local v1, "expandedHomeActivity":Lcom/android/server/am/ActivityRecord;
     if-eqz v4, :cond_0
 
     if-ne v4, v1, :cond_0
 
-    .line 335
     invoke-virtual {v1}, Lcom/android/server/am/ActivityRecord;->getDisplayId()I
 
     move-result v0
 
-    .line 336
     .local v0, "displayId":I
     if-ltz v0, :cond_0
 
@@ -1365,14 +1220,12 @@
 
     if-gt v0, v5, :cond_0
 
-    .line 337
     sget-object v5, Lcom/android/server/am/DualScreenPolicy;->FLAG_EXPANEDED_HOME_STATUS:[I
 
     aget v5, v5, v0
 
     iput v5, p0, Lcom/android/server/am/DualScreenPolicy;->mExpandedHomeStatus:I
 
-    .line 351
     .end local v0    # "displayId":I
     .end local v1    # "expandedHomeActivity":Lcom/android/server/am/ActivityRecord;
     .end local v2    # "expandedHomeTask":Lcom/android/server/am/TaskRecord;
@@ -1381,15 +1234,12 @@
     :goto_0
     iput-boolean p1, p0, Lcom/android/server/am/DualScreenPolicy;->mSingleScreenState:Z
 
-    .line 353
     :cond_1
     return-void
 
-    .line 342
     :cond_2
     const/4 v3, 0x0
 
-    .line 343
     .local v3, "result":Z
     const/4 v0, 0x2
 
@@ -1397,15 +1247,12 @@
     :goto_1
     if-ltz v0, :cond_3
 
-    .line 344
     invoke-virtual {p0, v0}, Lcom/android/server/am/DualScreenPolicy;->moveExpandedHomeTaskToActiveScreenLocked(I)Z
 
     move-result v3
 
-    .line 345
     if-eqz v3, :cond_4
 
-    .line 349
     :cond_3
     const/4 v5, 0x0
 
@@ -1413,7 +1260,6 @@
 
     goto :goto_0
 
-    .line 343
     :cond_4
     add-int/lit8 v0, v0, -0x1
 
@@ -1432,12 +1278,10 @@
     .param p6, "sourceToken"    # Landroid/os/IBinder;
 
     .prologue
-    .line 379
     new-instance v0, Lcom/android/server/am/DualScreenAttrs;
 
     invoke-direct {v0}, Lcom/android/server/am/DualScreenAttrs;-><init>()V
 
-    .line 481
     .local v0, "attrs":Lcom/android/server/am/DualScreenAttrs;
     return-object v0
 .end method
@@ -1447,7 +1291,6 @@
     .param p1, "targetStack"    # Lcom/android/server/am/ActivityStack;
 
     .prologue
-    .line 749
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
@@ -1458,7 +1301,6 @@
 
     move-result-object v13
 
-    .line 750
     .local v13, "resolver":Landroid/content/ContentResolver;
     const-string v1, "dual_screen_fullview_shrink_mode"
 
@@ -1470,16 +1312,13 @@
 
     move-result v10
 
-    .line 752
     .local v10, "fullViewShrinkMode":I
     if-nez v10, :cond_1
 
-    .line 808
     :cond_0
     :goto_0
     return-void
 
-    .line 756
     :cond_1
     move-object/from16 v0, p0
 
@@ -1489,28 +1328,22 @@
 
     move-object/from16 v16, v0
 
-    .line 757
     .local v16, "tasks":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lcom/android/server/am/TaskRecord;>;"
     invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->size()I
 
     move-result v9
 
-    .line 758
     .local v9, "N":I
     if-lez v9, :cond_0
 
-    .line 762
     const/16 v17, 0x0
 
-    .line 763
     .local v17, "topTask":Lcom/android/server/am/TaskRecord;
     const/4 v2, 0x0
 
-    .line 764
     .local v2, "nextTask":Lcom/android/server/am/TaskRecord;
     const/4 v14, 0x0
 
-    .line 766
     .local v14, "screenZone":I
     move-object/from16 v0, p0
 
@@ -1518,7 +1351,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 767
     move-object/from16 v0, p0
 
     iget v1, v0, Lcom/android/server/am/DualScreenPolicy;->mExpandedHomeStatus:I
@@ -1527,10 +1359,8 @@
 
     if-ne v1, v4, :cond_5
 
-    .line 768
     or-int/lit8 v14, v14, 0x1
 
-    .line 776
     :cond_2
     :goto_1
     add-int/lit8 v11, v9, -0x1
@@ -1539,7 +1369,6 @@
     :goto_2
     if-ltz v11, :cond_4
 
-    .line 777
     move-object/from16 v0, v16
 
     invoke-virtual {v0, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1548,35 +1377,27 @@
 
     check-cast v18, Lcom/android/server/am/TaskRecord;
 
-    .line 778
     .local v18, "tr":Lcom/android/server/am/TaskRecord;
     invoke-virtual/range {v18 .. v18}, Lcom/android/server/am/TaskRecord;->getScreenZone()I
 
     move-result v15
 
-    .line 780
     .local v15, "taskScreenZone":I
     if-eqz v15, :cond_7
 
-    .line 781
     if-nez v17, :cond_3
 
-    .line 782
     move-object/from16 v17, v18
 
-    .line 785
     :cond_3
     or-int/2addr v14, v15
 
-    .line 787
     const/4 v1, 0x3
 
     if-ne v14, v1, :cond_7
 
-    .line 788
     move-object/from16 v2, v18
 
-    .line 794
     .end local v15    # "taskScreenZone":I
     .end local v18    # "tr":Lcom/android/server/am/TaskRecord;
     :cond_4
@@ -1600,7 +1421,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 798
     invoke-virtual {v2}, Lcom/android/server/am/TaskRecord;->getScreenZone()I
 
     move-result v1
@@ -1609,26 +1429,22 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 799
     invoke-virtual/range {v17 .. v17}, Lcom/android/server/am/TaskRecord;->getScreenZone()I
 
     move-result v1
 
     rsub-int/lit8 v12, v1, 0x3
 
-    .line 800
     .local v12, "oppositeDisplayZone":I
     invoke-static {v12}, Lcom/android/server/am/ActivityStackSupervisor;->convertScreenZoneToDisplayId(I)I
 
     move-result v3
 
-    .line 801
     .local v3, "displayId":I
     const/4 v1, -0x1
 
     if-eq v3, v1, :cond_0
 
-    .line 802
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
@@ -1647,14 +1463,12 @@
 
     invoke-virtual/range {v1 .. v8}, Lcom/android/server/am/ActivityStackSupervisor;->moveTaskToScreenLocked(Lcom/android/server/am/TaskRecord;IZZZZZ)V
 
-    .line 803
     invoke-virtual {v2}, Lcom/android/server/am/TaskRecord;->isExpandHomeTask()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 804
     const/4 v1, 0x6
 
     move-object/from16 v0, v17
@@ -1663,7 +1477,6 @@
 
     goto/16 :goto_0
 
-    .line 769
     .end local v3    # "displayId":I
     .end local v11    # "i":I
     .end local v12    # "oppositeDisplayZone":I
@@ -1676,12 +1489,10 @@
 
     if-ne v1, v4, :cond_6
 
-    .line 770
     or-int/lit8 v14, v14, 0x2
 
     goto :goto_1
 
-    .line 771
     :cond_6
     move-object/from16 v0, p0
 
@@ -1691,12 +1502,10 @@
 
     if-ne v1, v4, :cond_2
 
-    .line 772
     or-int/lit8 v14, v14, 0x3
 
     goto :goto_1
 
-    .line 776
     .restart local v11    # "i":I
     .restart local v15    # "taskScreenZone":I
     .restart local v18    # "tr":Lcom/android/server/am/TaskRecord;
@@ -1710,7 +1519,6 @@
     .locals 0
 
     .prologue
-    .line 1005
     return-void
 .end method
 
@@ -1722,10 +1530,8 @@
 
     const/4 v3, 0x0
 
-    .line 319
     const/4 v0, 0x0
 
-    .line 320
     .local v0, "screenState":I
     iget-object v1, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
@@ -1740,7 +1546,6 @@
     :goto_0
     or-int/2addr v0, v1
 
-    .line 321
     iget-object v1, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v1, v2}, Lcom/android/server/am/ActivityManagerService;->isCurrentScreenOn(I)Z
@@ -1754,13 +1559,11 @@
     :cond_0
     or-int/2addr v0, v3
 
-    .line 323
     return v0
 
     :cond_1
     move v1, v3
 
-    .line 320
     goto :goto_0
 .end method
 
@@ -1772,10 +1575,8 @@
 
     const/4 v3, 0x0
 
-    .line 311
     const/4 v0, 0x0
 
-    .line 312
     .local v0, "screenState":I
     iget-object v1, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
@@ -1790,7 +1591,6 @@
     :goto_0
     or-int/2addr v0, v1
 
-    .line 313
     iget-object v1, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     invoke-virtual {v1, v2}, Lcom/android/server/am/ActivityManagerService;->isScreenOn(I)Z
@@ -1804,13 +1604,11 @@
     :cond_0
     or-int/2addr v0, v3
 
-    .line 315
     return v0
 
     :cond_1
     move v1, v3
 
-    .line 312
     goto :goto_0
 .end method
 
@@ -1820,25 +1618,21 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 175
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     iget-boolean v7, v7, Lcom/android/server/am/ActivityManagerService;->mShuttingDown:Z
 
     if-eqz v7, :cond_1
 
-    .line 290
     :cond_0
     :goto_0
     return-void
 
-    .line 179
     :cond_1
     invoke-virtual {p0}, Lcom/android/server/am/DualScreenPolicy;->getScreenStateLocked()I
 
     move-result v0
 
-    .line 181
     .local v0, "currentScreenState":I
     const-string v7, "DualScreenPolicy"
 
@@ -1890,19 +1684,16 @@
 
     invoke-static {v7, v8}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 183
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     iget-boolean v7, v7, Lcom/android/server/am/ActivityManagerService;->mIsBackWindowShown:Z
 
     if-eqz v7, :cond_4
 
-    .line 184
     const/4 v7, 0x5
 
     if-ne p2, v7, :cond_4
 
-    .line 185
     const/4 v7, 0x1
 
     if-eq p1, v7, :cond_2
@@ -1911,7 +1702,6 @@
 
     if-ne p1, v7, :cond_3
 
-    .line 188
     :cond_2
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
@@ -1921,27 +1711,21 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/am/ActivityManagerService;->setBackWindowShownLocked(ZI)V
 
-    .line 191
     :cond_3
     invoke-direct {p0, p1}, Lcom/android/server/am/DualScreenPolicy;->applyMultipleScreenState(I)V
 
     goto :goto_0
 
-    .line 196
     :cond_4
     if-eq v0, p1, :cond_0
 
-    .line 200
     invoke-direct {p0, p1}, Lcom/android/server/am/DualScreenPolicy;->applyMultipleScreenState(I)V
 
-    .line 202
     const/4 v4, -0x1
 
-    .line 203
     .local v4, "prevBackWindowDisplayId":I
     const/4 v3, 0x0
 
-    .line 205
     .local v3, "needToScreenStateChanged":Z
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
@@ -1949,12 +1733,10 @@
 
     if-eqz v7, :cond_5
 
-    .line 206
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     iget v4, v7, Lcom/android/server/am/ActivityManagerService;->mBackWindowDisplayId:I
 
-    .line 207
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     const/4 v8, 0x0
@@ -1963,33 +1745,27 @@
 
     invoke-virtual {v7, v8, v9}, Lcom/android/server/am/ActivityManagerService;->setBackWindowShownLocked(ZI)V
 
-    .line 209
     invoke-virtual {p0, v4}, Lcom/android/server/am/DualScreenPolicy;->isActiveDisplayLocked(I)Z
 
     move-result v7
 
     if-eqz v7, :cond_5
 
-    .line 210
     const/4 v3, 0x1
 
-    .line 214
     :cond_5
     packed-switch v0, :pswitch_data_0
 
-    .line 286
     :cond_6
     :goto_1
     if-eqz v3, :cond_0
 
-    .line 287
     const-string v7, "DualScreenPolicy"
 
     const-string/jumbo v8, "needToScreenStateChanged due to BackWindow"
 
     invoke-static {v7, v8}, Landroid/util/secutil/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 288
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     const/4 v8, 0x2
@@ -1998,7 +1774,6 @@
 
     goto/16 :goto_0
 
-    .line 216
     :pswitch_0
     const/4 v7, 0x1
 
@@ -2008,69 +1783,58 @@
 
     if-ne p1, v7, :cond_9
 
-    .line 219
     :cond_7
     const/4 v7, 0x1
 
     invoke-direct {p0, v7}, Lcom/android/server/am/DualScreenPolicy;->setSingleScreenStateLocked(Z)V
 
-    .line 220
     const/4 v7, 0x1
 
     if-ne p1, v7, :cond_8
 
     const/4 v1, 0x0
 
-    .line 221
     .local v1, "displayId":I
     :goto_2
     invoke-virtual {p0, v1}, Lcom/android/server/am/DualScreenPolicy;->moveExpandedHomeTaskToActiveScreenLocked(I)Z
 
     goto :goto_1
 
-    .line 220
     .end local v1    # "displayId":I
     :cond_8
     const/4 v1, 0x1
 
     goto :goto_2
 
-    .line 222
     :cond_9
     const/4 v7, 0x3
 
     if-ne p1, v7, :cond_6
 
-    .line 223
     const/4 v7, 0x0
 
     invoke-direct {p0, v7}, Lcom/android/server/am/DualScreenPolicy;->setSingleScreenStateLocked(Z)V
 
     goto :goto_1
 
-    .line 228
     :pswitch_1
     const/4 v7, 0x2
 
     if-ne p1, v7, :cond_a
 
-    .line 230
     const/4 v7, 0x1
 
     invoke-virtual {p0, v7}, Lcom/android/server/am/DualScreenPolicy;->moveExpandedHomeTaskToActiveScreenLocked(I)Z
 
     goto :goto_1
 
-    .line 231
     :cond_a
     const/4 v7, 0x3
 
     if-ne p1, v7, :cond_6
 
-    .line 232
     iget v2, p0, Lcom/android/server/am/DualScreenPolicy;->mExpandedHomeStatus:I
 
-    .line 233
     .local v2, "expandedHomeStatus":I
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -2082,7 +1846,6 @@
 
     move-result-object v5
 
-    .line 234
     .local v5, "topActivityOnMain":Lcom/android/server/am/ActivityRecord;
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -2094,7 +1857,6 @@
 
     move-result-object v6
 
-    .line 235
     .local v6, "topActivityOnSub":Lcom/android/server/am/ActivityRecord;
     if-eqz v5, :cond_b
 
@@ -2112,7 +1874,6 @@
 
     if-eqz v7, :cond_b
 
-    .line 237
     iget-object v7, v6, Lcom/android/server/am/ActivityRecord;->task:Lcom/android/server/am/TaskRecord;
 
     if-eqz v7, :cond_b
@@ -2135,20 +1896,17 @@
 
     if-eqz v7, :cond_b
 
-    .line 239
     const/4 v7, 0x1
 
     const/4 v8, 0x1
 
     invoke-virtual {p0, v7, v8}, Lcom/android/server/am/DualScreenPolicy;->setFullViewHomeStatusLocked(ZI)V
 
-    .line 242
     :cond_b
     const/4 v7, 0x0
 
     invoke-direct {p0, v7}, Lcom/android/server/am/DualScreenPolicy;->setSingleScreenStateLocked(Z)V
 
-    .line 243
     const/4 v7, 0x2
 
     if-ne p2, v7, :cond_6
@@ -2157,7 +1915,6 @@
 
     if-ne v2, v7, :cond_6
 
-    .line 244
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     const/16 v8, 0xca
@@ -2166,7 +1923,6 @@
 
     goto/16 :goto_1
 
-    .line 251
     .end local v2    # "expandedHomeStatus":I
     .end local v5    # "topActivityOnMain":Lcom/android/server/am/ActivityRecord;
     .end local v6    # "topActivityOnSub":Lcom/android/server/am/ActivityRecord;
@@ -2175,23 +1931,19 @@
 
     if-ne p1, v7, :cond_c
 
-    .line 253
     const/4 v7, 0x0
 
     invoke-virtual {p0, v7}, Lcom/android/server/am/DualScreenPolicy;->moveExpandedHomeTaskToActiveScreenLocked(I)Z
 
     goto/16 :goto_1
 
-    .line 254
     :cond_c
     const/4 v7, 0x3
 
     if-ne p1, v7, :cond_6
 
-    .line 255
     iget v2, p0, Lcom/android/server/am/DualScreenPolicy;->mExpandedHomeStatus:I
 
-    .line 256
     .restart local v2    # "expandedHomeStatus":I
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -2203,7 +1955,6 @@
 
     move-result-object v5
 
-    .line 257
     .restart local v5    # "topActivityOnMain":Lcom/android/server/am/ActivityRecord;
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
@@ -2215,7 +1966,6 @@
 
     move-result-object v6
 
-    .line 258
     .restart local v6    # "topActivityOnSub":Lcom/android/server/am/ActivityRecord;
     if-eqz v5, :cond_d
 
@@ -2233,7 +1983,6 @@
 
     if-nez v7, :cond_d
 
-    .line 260
     iget-object v7, v5, Lcom/android/server/am/ActivityRecord;->task:Lcom/android/server/am/TaskRecord;
 
     if-eqz v7, :cond_d
@@ -2256,20 +2005,17 @@
 
     if-eqz v7, :cond_d
 
-    .line 262
     const/4 v7, 0x1
 
     const/4 v8, 0x0
 
     invoke-virtual {p0, v7, v8}, Lcom/android/server/am/DualScreenPolicy;->setFullViewHomeStatusLocked(ZI)V
 
-    .line 265
     :cond_d
     const/4 v7, 0x0
 
     invoke-direct {p0, v7}, Lcom/android/server/am/DualScreenPolicy;->setSingleScreenStateLocked(Z)V
 
-    .line 266
     const/4 v7, 0x2
 
     if-ne p2, v7, :cond_6
@@ -2278,7 +2024,6 @@
 
     if-ne v2, v7, :cond_6
 
-    .line 267
     iget-object v7, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     const/16 v8, 0xca
@@ -2287,7 +2032,6 @@
 
     goto/16 :goto_1
 
-    .line 274
     .end local v2    # "expandedHomeStatus":I
     .end local v5    # "topActivityOnMain":Lcom/android/server/am/ActivityRecord;
     .end local v6    # "topActivityOnSub":Lcom/android/server/am/ActivityRecord;
@@ -2300,20 +2044,17 @@
 
     if-ne p1, v7, :cond_6
 
-    .line 277
     :cond_e
     const/4 v7, 0x1
 
     invoke-direct {p0, v7}, Lcom/android/server/am/DualScreenPolicy;->setSingleScreenStateLocked(Z)V
 
-    .line 278
     const/4 v7, 0x1
 
     if-ne p1, v7, :cond_f
 
     const/4 v1, 0x0
 
-    .line 279
     .restart local v1    # "displayId":I
     :goto_3
     invoke-virtual {p0, v1}, Lcom/android/server/am/DualScreenPolicy;->moveExpandedHomeTaskToActiveScreenLocked(I)Z
@@ -2322,19 +2063,16 @@
 
     if-nez v7, :cond_6
 
-    .line 280
     invoke-direct {p0, v1}, Lcom/android/server/am/DualScreenPolicy;->sendShrinkRequestIfNeededLocked(I)V
 
     goto/16 :goto_1
 
-    .line 278
     .end local v1    # "displayId":I
     :cond_f
     const/4 v1, 0x1
 
     goto :goto_3
 
-    .line 214
     nop
 
     :pswitch_data_0
@@ -2353,25 +2091,20 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 950
     invoke-virtual {p0}, Lcom/android/server/am/DualScreenPolicy;->getScreenStateLocked()I
 
     move-result v1
 
-    .line 953
     .local v1, "screenState":I
     packed-switch p1, :pswitch_data_0
 
-    .line 966
     :cond_0
     :goto_0
     return v2
 
-    .line 955
     :pswitch_0
     const/4 v0, 0x1
 
-    .line 966
     .local v0, "screenFlag":I
     :goto_1
     and-int v3, v1, v0
@@ -2382,25 +2115,20 @@
 
     goto :goto_0
 
-    .line 958
     .end local v0    # "screenFlag":I
     :pswitch_1
     const/4 v0, 0x2
 
-    .line 959
     .restart local v0    # "screenFlag":I
     goto :goto_1
 
-    .line 961
     .end local v0    # "screenFlag":I
     :pswitch_2
     const/4 v0, 0x3
 
-    .line 962
     .restart local v0    # "screenFlag":I
     goto :goto_1
 
-    .line 953
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -2413,7 +2141,6 @@
     .locals 1
 
     .prologue
-    .line 905
     iget-boolean v0, p0, Lcom/android/server/am/DualScreenPolicy;->mTalkBackEnabled:Z
 
     return v0
@@ -2427,7 +2154,6 @@
     .param p4, "preArrangeHomeTask"    # Z
 
     .prologue
-    .line 812
     return p3
 .end method
 
@@ -2440,7 +2166,6 @@
 
     const/4 v4, 0x0
 
-    .line 970
     iget v0, p0, Lcom/android/server/am/DualScreenPolicy;->mExpandedHomeStatus:I
 
     sget-object v2, Lcom/android/server/am/DualScreenPolicy;->FLAG_EXPANEDED_HOME_STATUS:[I
@@ -2455,23 +2180,19 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 971
     iget-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     iget-object v1, v0, Lcom/android/server/am/ActivityStackSupervisor;->mExpandedHomeTask:Lcom/android/server/am/TaskRecord;
 
-    .line 972
     .local v1, "expandedHomeTask":Lcom/android/server/am/TaskRecord;
     if-eqz v1, :cond_0
 
-    .line 973
     const/4 v0, 0x0
 
     invoke-virtual {v1, v0}, Lcom/android/server/am/TaskRecord;->topRunningActivityLocked(Lcom/android/server/am/ActivityRecord;)Lcom/android/server/am/ActivityRecord;
 
     move-result-object v6
 
-    .line 974
     .local v6, "expandedHomeActivity":Lcom/android/server/am/ActivityRecord;
     if-eqz v6, :cond_0
 
@@ -2481,7 +2202,6 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 975
     iget-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mStackSupervisor:Lcom/android/server/am/ActivityStackSupervisor;
 
     move v2, p1
@@ -2490,7 +2210,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lcom/android/server/am/ActivityStackSupervisor;->moveTaskToScreenLocked(Lcom/android/server/am/TaskRecord;IZZZ)V
 
-    .line 980
     .end local v1    # "expandedHomeTask":Lcom/android/server/am/TaskRecord;
     .end local v6    # "expandedHomeActivity":Lcom/android/server/am/ActivityRecord;
     :cond_0
@@ -2509,7 +2228,6 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 168
     iget-object v1, p0, Lcom/android/server/am/DualScreenPolicy;->mHandler:Lcom/android/server/am/DualScreenPolicy$DualScreenPolicyHandler;
 
     const/4 v2, 0x0
@@ -2518,19 +2236,15 @@
 
     move-result-object v0
 
-    .line 169
     .local v0, "msg":Landroid/os/Message;
     iput p1, v0, Landroid/os/Message;->arg1:I
 
-    .line 170
     iput p2, v0, Landroid/os/Message;->arg2:I
 
-    .line 171
     iget-object v1, p0, Lcom/android/server/am/DualScreenPolicy;->mHandler:Lcom/android/server/am/DualScreenPolicy$DualScreenPolicyHandler;
 
     invoke-virtual {v1, v0}, Lcom/android/server/am/DualScreenPolicy$DualScreenPolicyHandler;->sendMessage(Landroid/os/Message;)Z
 
-    .line 172
     return-void
 .end method
 
@@ -2539,14 +2253,11 @@
     .param p1, "expandedDisplayOrienation"    # Ljava/lang/String;
 
     .prologue
-    .line 1053
     const/4 v0, -0x2
 
-    .line 1054
     .local v0, "policyExpandedDisplayOrientation":I
     if-eqz p1, :cond_0
 
-    .line 1055
     const-string/jumbo v1, "unspecified"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -2555,15 +2266,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 1056
     const/4 v0, -0x1
 
-    .line 1089
     :cond_0
     :goto_0
     return v0
 
-    .line 1057
     :cond_1
     const-string v1, "behind"
 
@@ -2573,12 +2281,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 1058
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 1059
     :cond_2
     const-string/jumbo v1, "landscape"
 
@@ -2588,12 +2294,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 1060
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1061
     :cond_3
     const-string/jumbo v1, "portrait"
 
@@ -2603,12 +2307,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 1062
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1063
     :cond_4
     const-string/jumbo v1, "reverseLandscape"
 
@@ -2618,12 +2320,10 @@
 
     if-eqz v1, :cond_5
 
-    .line 1064
     const/16 v0, 0x8
 
     goto :goto_0
 
-    .line 1065
     :cond_5
     const-string/jumbo v1, "reversePortrait"
 
@@ -2633,12 +2333,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 1066
     const/16 v0, 0x9
 
     goto :goto_0
 
-    .line 1067
     :cond_6
     const-string/jumbo v1, "sensorLandscape"
 
@@ -2648,12 +2346,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 1068
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 1069
     :cond_7
     const-string/jumbo v1, "sensorPortrait"
 
@@ -2663,12 +2359,10 @@
 
     if-eqz v1, :cond_8
 
-    .line 1070
     const/4 v0, 0x7
 
     goto :goto_0
 
-    .line 1071
     :cond_8
     const-string/jumbo v1, "userLandscape"
 
@@ -2678,12 +2372,10 @@
 
     if-eqz v1, :cond_9
 
-    .line 1072
     const/16 v0, 0xb
 
     goto :goto_0
 
-    .line 1073
     :cond_9
     const-string/jumbo v1, "userPortrait"
 
@@ -2693,12 +2385,10 @@
 
     if-eqz v1, :cond_a
 
-    .line 1074
     const/16 v0, 0xc
 
     goto :goto_0
 
-    .line 1075
     :cond_a
     const-string/jumbo v1, "sensor"
 
@@ -2708,12 +2398,10 @@
 
     if-eqz v1, :cond_b
 
-    .line 1076
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 1077
     :cond_b
     const-string/jumbo v1, "fullSensor"
 
@@ -2723,12 +2411,10 @@
 
     if-eqz v1, :cond_c
 
-    .line 1078
     const/16 v0, 0xa
 
     goto :goto_0
 
-    .line 1079
     :cond_c
     const-string/jumbo v1, "nosensor"
 
@@ -2738,12 +2424,10 @@
 
     if-eqz v1, :cond_d
 
-    .line 1080
     const/4 v0, 0x5
 
     goto/16 :goto_0
 
-    .line 1081
     :cond_d
     const-string/jumbo v1, "user"
 
@@ -2753,12 +2437,10 @@
 
     if-eqz v1, :cond_e
 
-    .line 1082
     const/4 v0, 0x2
 
     goto/16 :goto_0
 
-    .line 1083
     :cond_e
     const-string/jumbo v1, "fullUser"
 
@@ -2768,12 +2450,10 @@
 
     if-eqz v1, :cond_f
 
-    .line 1084
     const/16 v0, 0xd
 
     goto/16 :goto_0
 
-    .line 1085
     :cond_f
     const-string/jumbo v1, "locked"
 
@@ -2783,7 +2463,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1086
     const/16 v0, 0xe
 
     goto/16 :goto_0
@@ -2798,12 +2477,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 598
     sget-boolean v3, Lcom/android/server/am/DualScreenPolicy;->DEBUG:Z
 
     if-eqz v3, :cond_0
 
-    .line 599
     const-string v3, "DualScreenPolicy"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2826,7 +2503,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 600
     const-string v3, "DualScreenPolicy"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2849,7 +2525,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 601
     const-string v3, "DualScreenPolicy"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2872,7 +2547,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 602
     const-string v3, "DualScreenPolicy"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2897,7 +2571,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 604
     const-string v3, "DualScreenPolicy"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -2926,7 +2599,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 607
     :cond_0
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -2940,7 +2612,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 609
     if-eqz p2, :cond_4
 
     invoke-virtual {p1}, Landroid/content/Intent;->getFlags()I
@@ -2961,12 +2632,10 @@
 
     if-eqz v3, :cond_4
 
-    .line 639
     :cond_1
     :goto_0
     return v2
 
-    .line 616
     :cond_2
     if-eqz p3, :cond_4
 
@@ -2992,18 +2661,15 @@
 
     if-nez v3, :cond_4
 
-    .line 620
     iget-object v3, p3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v0, v3, Landroid/content/pm/ActivityInfo;->name:Ljava/lang/String;
 
-    .line 621
     .local v0, "className":Ljava/lang/String;
     iget-object v3, p3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v1, v3, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 622
     .local v1, "packageName":Ljava/lang/String;
     if-eqz p2, :cond_3
 
@@ -3025,14 +2691,12 @@
 
     if-nez v3, :cond_3
 
-    .line 626
     invoke-virtual {p1}, Landroid/content/Intent;->getLaunchParams()Lcom/samsung/android/dualscreen/DualScreenLaunchParams;
 
     move-result-object v3
 
     invoke-virtual {v3, v2}, Lcom/samsung/android/dualscreen/DualScreenLaunchParams;->setFromOppositeLaunchApp(Z)V
 
-    .line 629
     :cond_3
     sget-boolean v3, Lcom/samsung/android/multidisplay/dualscreen/DualScreenFeatures;->SUPPORT_DISPLAY_CHOOSER:Z
 
@@ -3080,7 +2744,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 639
     .end local v0    # "className":Ljava/lang/String;
     .end local v1    # "packageName":Ljava/lang/String;
     :cond_4
@@ -3095,7 +2758,6 @@
     .param p2, "displayId"    # I
 
     .prologue
-    .line 745
     iget-object v0, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mWindowManager:Lcom/android/server/wm/WindowManagerService;
@@ -3104,7 +2766,6 @@
 
     invoke-virtual {v0, v1, p2}, Lcom/android/server/wm/WindowManagerService;->setAppTokenDisplayId(Landroid/view/IApplicationToken;I)V
 
-    .line 746
     return-void
 .end method
 
@@ -3113,7 +2774,6 @@
     .param p1, "ar"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 934
     invoke-virtual {p1}, Lcom/android/server/am/ActivityRecord;->isExpandHomeActivity()Z
 
     move-result v0
@@ -3124,7 +2784,6 @@
 
     invoke-virtual {p0, v0, v1}, Lcom/android/server/am/DualScreenPolicy;->setFullViewHomeStatusLocked(ZI)V
 
-    .line 935
     return-void
 .end method
 
@@ -3134,20 +2793,16 @@
     .param p2, "displayId"    # I
 
     .prologue
-    .line 938
     iget-boolean v0, p0, Lcom/android/server/am/DualScreenPolicy;->mSingleScreenState:Z
 
     if-nez v0, :cond_0
 
-    .line 947
     :goto_0
     return-void
 
-    .line 942
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 943
     iget v0, p0, Lcom/android/server/am/DualScreenPolicy;->mExpandedHomeStatus:I
 
     sget-object v1, Lcom/android/server/am/DualScreenPolicy;->FLAG_EXPANEDED_HOME_STATUS:[I
@@ -3160,7 +2815,6 @@
 
     goto :goto_0
 
-    .line 945
     :cond_1
     iget v0, p0, Lcom/android/server/am/DualScreenPolicy;->mExpandedHomeStatus:I
 
@@ -3182,18 +2836,15 @@
     .param p1, "talkBackEnabled"    # Z
 
     .prologue
-    .line 896
     iget-object v1, p0, Lcom/android/server/am/DualScreenPolicy;->mActivityService:Lcom/android/server/am/ActivityManagerService;
 
     monitor-enter v1
 
-    .line 897
     :try_start_0
     iget-boolean v0, p0, Lcom/android/server/am/DualScreenPolicy;->mTalkBackEnabled:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 898
     const-string v2, "DualScreenPolicy"
 
     new-instance v0, Ljava/lang/StringBuilder;
@@ -3221,23 +2872,18 @@
 
     invoke-static {v2, v0}, Landroid/util/secutil/Slog;->secD(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 899
     iput-boolean p1, p0, Lcom/android/server/am/DualScreenPolicy;->mTalkBackEnabled:Z
 
-    .line 901
     :cond_0
     monitor-exit v1
 
-    .line 902
     return-void
 
-    .line 898
     :cond_1
     const-string v0, "disabled"
 
     goto :goto_0
 
-    .line 901
     :catchall_0
     move-exception v0
 
@@ -3253,7 +2899,6 @@
     .param p1, "next"    # Lcom/android/server/am/ActivityRecord;
 
     .prologue
-    .line 1000
     return-void
 .end method
 
@@ -3263,7 +2908,6 @@
     .param p2, "screen"    # Lcom/samsung/android/dualscreen/DualScreen;
 
     .prologue
-    .line 569
     sget-boolean v0, Lcom/android/server/am/DualScreenPolicy;->DEBUG:Z
 
     if-eqz v0, :cond_0
@@ -3290,7 +2934,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 571
     :cond_0
     return-void
 .end method

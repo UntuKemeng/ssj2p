@@ -37,18 +37,15 @@
     .locals 1
 
     .prologue
-    .line 66
     .local p0, "this":Lorg/simpleframework/xml/util/Dictionary;, "Lorg/simpleframework/xml/util/Dictionary<TT;>;"
     invoke-direct {p0}, Ljava/util/AbstractSet;-><init>()V
 
-    .line 67
     new-instance v0, Lorg/simpleframework/xml/util/Dictionary$Table;
 
     invoke-direct {v0}, Lorg/simpleframework/xml/util/Dictionary$Table;-><init>()V
 
     iput-object v0, p0, Lorg/simpleframework/xml/util/Dictionary;->map:Lorg/simpleframework/xml/util/Dictionary$Table;
 
-    .line 68
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p1, "x0"    # Ljava/lang/Object;
 
     .prologue
-    .line 53
     .local p0, "this":Lorg/simpleframework/xml/util/Dictionary;, "Lorg/simpleframework/xml/util/Dictionary<TT;>;"
     check-cast p1, Lorg/simpleframework/xml/util/Entry;
 
@@ -80,7 +76,6 @@
     .end annotation
 
     .prologue
-    .line 78
     .local p0, "this":Lorg/simpleframework/xml/util/Dictionary;, "Lorg/simpleframework/xml/util/Dictionary<TT;>;"
     .local p1, "item":Lorg/simpleframework/xml/util/Entry;, "TT;"
     iget-object v0, p0, Lorg/simpleframework/xml/util/Dictionary;->map:Lorg/simpleframework/xml/util/Dictionary$Table;
@@ -118,7 +113,6 @@
     .end annotation
 
     .prologue
-    .line 113
     .local p0, "this":Lorg/simpleframework/xml/util/Dictionary;, "Lorg/simpleframework/xml/util/Dictionary<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/util/Dictionary;->map:Lorg/simpleframework/xml/util/Dictionary$Table;
 
@@ -142,7 +136,6 @@
     .end annotation
 
     .prologue
-    .line 100
     .local p0, "this":Lorg/simpleframework/xml/util/Dictionary;, "Lorg/simpleframework/xml/util/Dictionary<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/util/Dictionary;->map:Lorg/simpleframework/xml/util/Dictionary$Table;
 
@@ -169,7 +162,6 @@
     .end annotation
 
     .prologue
-    .line 126
     .local p0, "this":Lorg/simpleframework/xml/util/Dictionary;, "Lorg/simpleframework/xml/util/Dictionary<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/util/Dictionary;->map:Lorg/simpleframework/xml/util/Dictionary$Table;
 
@@ -186,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 89
     .local p0, "this":Lorg/simpleframework/xml/util/Dictionary;, "Lorg/simpleframework/xml/util/Dictionary<TT;>;"
     iget-object v0, p0, Lorg/simpleframework/xml/util/Dictionary;->map:Lorg/simpleframework/xml/util/Dictionary$Table;
 

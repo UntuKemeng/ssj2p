@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1583
     iput-object p1, p0, Lcom/sec/epdg/EpdgService$8;->this$0:Lcom/sec/epdg/EpdgService;
 
     invoke-direct {p0}, Lcom/sec/epdg/EpdgBroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1586
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0, p2}, Landroid/content/Intent;-><init>(Landroid/content/Intent;)V
@@ -52,12 +50,10 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 1591
     move-object v0, p1
 
     check-cast v0, Landroid/content/Intent;
 
-    .line 1592
     .local v0, "intent":Landroid/content/Intent;
     const-string v2, "[EPDGService]"
 
@@ -85,7 +81,6 @@
 
     invoke-static {v2, v3}, Lcom/sec/epdg/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1593
     # getter for: Lcom/sec/epdg/EpdgService;->mEpdgHandler:Landroid/os/Handler;
     invoke-static {}, Lcom/sec/epdg/EpdgService;->access$1900()Landroid/os/Handler;
 
@@ -95,13 +90,11 @@
 
     move-result-object v1
 
-    .line 1594
     .local v1, "msg":Landroid/os/Message;
     const/16 v2, 0x52
 
     iput v2, v1, Landroid/os/Message;->what:I
 
-    .line 1595
     iget-object v2, p0, Lcom/sec/epdg/EpdgService$8;->this$0:Lcom/sec/epdg/EpdgService;
 
     # invokes: Lcom/sec/epdg/EpdgService;->isWifiConnected()Z
@@ -111,14 +104,11 @@
 
     if-eqz v2, :cond_0
 
-    .line 1596
     invoke-virtual {v1}, Landroid/os/Message;->sendToTarget()V
 
-    .line 1600
     :goto_0
     return-void
 
-    .line 1598
     :cond_0
     const-string v2, "[EPDGService]"
 

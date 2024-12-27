@@ -27,10 +27,8 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/util/LinkedHashMap;-><init>()V
 
-    .line 47
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .param p1, "ordinal"    # I
 
     .prologue
-    .line 70
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ParameterMap;->getAll()Ljava/util/List;
 
     move-result-object v0
@@ -68,12 +65,10 @@
     .end annotation
 
     .prologue
-    .line 82
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ParameterMap;->values()Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 84
     .local v0, "list":Ljava/util/Collection;, "Ljava/util/Collection<Lorg/simpleframework/xml/core/Parameter;>;"
     invoke-interface {v0}, Ljava/util/Collection;->isEmpty()Z
 
@@ -81,12 +76,10 @@
 
     if-nez v1, :cond_0
 
-    .line 85
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 87
     :goto_0
     return-object v1
 
@@ -111,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 57
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ParameterMap;->values()Ljava/util/Collection;
 
     move-result-object v0

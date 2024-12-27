@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 4516
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$41$1;->this$1:Lcom/android/server/policy/GlobalActions$41;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 4520
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$41$1;->this$1:Lcom/android/server/policy/GlobalActions$41;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$41;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -54,14 +52,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 4521
     const-string v0, "GlobalActions"
 
     const-string/jumbo v1, "handleMessage : MESSAGE_DISMISS : Call mDialog.dismiss()"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4522
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$41$1;->this$1:Lcom/android/server/policy/GlobalActions$41;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$41;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -73,7 +69,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;->dismiss()V
 
-    .line 4523
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$41$1;->this$1:Lcom/android/server/policy/GlobalActions$41;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$41;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -83,15 +78,12 @@
     # setter for: Lcom/android/server/policy/GlobalActions;->mDialog:Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;
     invoke-static {v0, v1}, Lcom/android/server/policy/GlobalActions;->access$4702(Lcom/android/server/policy/GlobalActions;Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;)Lcom/android/server/policy/GlobalActions$GlobalActionsDialog;
 
-    .line 4524
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmDlg:Z
     invoke-static {v2}, Lcom/android/server/policy/GlobalActions;->access$4502(Z)Z
 
-    .line 4525
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsConfirmLandDlg:Z
     invoke-static {v2}, Lcom/android/server/policy/GlobalActions;->access$4602(Z)Z
 
-    .line 4526
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$41$1;->this$1:Lcom/android/server/policy/GlobalActions$41;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$41;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -99,7 +91,6 @@
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsScreenOFF:Z
     invoke-static {v0, v2}, Lcom/android/server/policy/GlobalActions;->access$7902(Lcom/android/server/policy/GlobalActions;Z)Z
 
-    .line 4527
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsMiniCoverOpened:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$300()Z
 
@@ -107,11 +98,9 @@
 
     if-nez v0, :cond_0
 
-    .line 4528
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsMiniDialogMode:Z
     invoke-static {v2}, Lcom/android/server/policy/GlobalActions;->access$4802(Z)Z
 
-    .line 4531
     :cond_0
     # getter for: Lcom/android/server/policy/GlobalActions;->mIsMiniDialogMode:Z
     invoke-static {}, Lcom/android/server/policy/GlobalActions;->access$4800()Z
@@ -127,22 +116,18 @@
 
     if-eqz v0, :cond_2
 
-    .line 4532
     const-string v0, "GlobalActions"
 
     const-string/jumbo v1, "showing dialog because mIsMiniDialogMode and mIsMiniCoverOpened are true."
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4533
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsMiniDialogMode:Z
     invoke-static {v2}, Lcom/android/server/policy/GlobalActions;->access$4802(Z)Z
 
-    .line 4534
     # setter for: Lcom/android/server/policy/GlobalActions;->mIsMiniCoverOpened:Z
     invoke-static {v2}, Lcom/android/server/policy/GlobalActions;->access$302(Z)Z
 
-    .line 4535
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$41$1;->this$1:Lcom/android/server/policy/GlobalActions$41;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$41;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -154,7 +139,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4536
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$41$1;->this$1:Lcom/android/server/policy/GlobalActions$41;
 
     iget-object v0, v0, Lcom/android/server/policy/GlobalActions$41;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -166,7 +150,6 @@
 
     invoke-virtual {v0}, Lcom/android/server/policy/GlobalActions$MyAdapter;->notifyDataSetChanged()V
 
-    .line 4538
     :cond_1
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$41$1;->this$1:Lcom/android/server/policy/GlobalActions$41;
 
@@ -175,7 +158,6 @@
     # invokes: Lcom/android/server/policy/GlobalActions;->handleShow()V
     invoke-static {v0}, Lcom/android/server/policy/GlobalActions;->access$9200(Lcom/android/server/policy/GlobalActions;)V
 
-    .line 4540
     :cond_2
     return-void
 .end method

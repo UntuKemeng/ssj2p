@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 72
     const-string v0, "3"
 
     return-object v0
@@ -49,22 +47,18 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 40
     const-string v2, "N/A"
 
-    .line 41
     .local v2, "version":Ljava/lang/String;
     if-nez p0, :cond_0
 
     move-object v3, v2
 
-    .line 67
     .end local v2    # "version":Ljava/lang/String;
     .local v3, "version":Ljava/lang/String;
     :goto_0
     return-object v3
 
-    .line 45
     .end local v3    # "version":Ljava/lang/String;
     .restart local v2    # "version":Ljava/lang/String;
     :cond_0
@@ -77,7 +71,6 @@
 
     check-cast v1, Landroid/os/PersonaManager;
 
-    .line 46
     .local v1, "pm":Landroid/os/PersonaManager;
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxContainerVersion()Landroid/os/PersonaManager$KnoxContainerVersion;
 
@@ -95,19 +88,16 @@
 
     if-ge v4, v5, :cond_1
 
-    .line 47
     const-string v2, "1.0.0"
 
     .end local v1    # "pm":Landroid/os/PersonaManager;
     :goto_1
     move-object v3, v2
 
-    .line 67
     .end local v2    # "version":Ljava/lang/String;
     .restart local v3    # "version":Ljava/lang/String;
     goto :goto_0
 
-    .line 48
     .end local v3    # "version":Ljava/lang/String;
     .restart local v1    # "pm":Landroid/os/PersonaManager;
     .restart local v2    # "version":Ljava/lang/String;
@@ -128,12 +118,10 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 49
     const-string v2, "2.1.1"
 
     goto :goto_1
 
-    .line 50
     :cond_2
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxContainerVersion()Landroid/os/PersonaManager$KnoxContainerVersion;
 
@@ -151,12 +139,10 @@
 
     if-ge v4, v5, :cond_3
 
-    .line 51
     const-string v2, "2.4.0"
 
     goto :goto_1
 
-    .line 52
     :cond_3
     invoke-static {}, Landroid/os/PersonaManager;->getKnoxContainerVersion()Landroid/os/PersonaManager$KnoxContainerVersion;
 
@@ -174,12 +160,10 @@
 
     if-ge v4, v5, :cond_4
 
-    .line 53
     const-string v2, "2.4.1"
 
     goto :goto_1
 
-    .line 55
     :cond_4
     const-string v2, "2.5.0"
     :try_end_0
@@ -189,16 +173,13 @@
 
     goto :goto_1
 
-    .line 56
     .end local v1    # "pm":Landroid/os/PersonaManager;
     :catch_0
     move-exception v0
 
-    .line 57
     .local v0, "e":Ljava/lang/NullPointerException;
     invoke-virtual {v0}, Ljava/lang/NullPointerException;->printStackTrace()V
 
-    .line 58
     const-string v4, "SSOVersion"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -227,16 +208,13 @@
 
     goto :goto_1
 
-    .line 59
     .end local v0    # "e":Ljava/lang/NullPointerException;
     :catch_1
     move-exception v0
 
-    .line 60
     .local v0, "e":Ljava/lang/RuntimeException;
     invoke-virtual {v0}, Ljava/lang/RuntimeException;->printStackTrace()V
 
-    .line 61
     const-string v4, "SSOVersion"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -265,16 +243,13 @@
 
     goto :goto_1
 
-    .line 62
     .end local v0    # "e":Ljava/lang/RuntimeException;
     :catch_2
     move-exception v0
 
-    .line 63
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 64
     const-string v4, "SSOVersion"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -309,7 +284,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 77
     const-string v0, "SSOVersion"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -336,7 +310,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     const-string/jumbo v0, "net.knoxsso.version"
 
     invoke-static {p0}, Lcom/android/server/enterprise/sso/SSOVersion;->getVersion(Landroid/content/Context;)Ljava/lang/String;
@@ -345,6 +318,5 @@
 
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 79
     return-void
 .end method

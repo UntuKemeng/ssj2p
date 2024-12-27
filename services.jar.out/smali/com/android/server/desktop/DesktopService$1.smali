@@ -24,7 +24,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 190
     iput-object p1, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
 
     invoke-direct {p0, p2}, Landroid/os/FileObserver;-><init>(Ljava/lang/String;)V
@@ -40,17 +39,14 @@
     .param p2, "path"    # Ljava/lang/String;
 
     .prologue
-    .line 193
     and-int/lit16 v0, p1, 0xfff
 
     sparse-switch v0, :sswitch_data_0
 
-    .line 212
     :cond_0
     :goto_0
     return-void
 
-    .line 195
     :sswitch_0
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
 
@@ -69,12 +65,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 196
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
 
     invoke-virtual {v0}, Lcom/android/server/desktop/DesktopService;->isDesktopDockConnected()Z
 
-    .line 197
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
 
     # getter for: Lcom/android/server/desktop/DesktopService;->mIsDesktopDockConnected:Z
@@ -84,7 +78,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 198
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
 
     iget-object v1, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
@@ -99,7 +92,6 @@
 
     goto :goto_0
 
-    .line 204
     :sswitch_1
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
 
@@ -118,12 +110,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 205
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
 
     invoke-virtual {v0}, Lcom/android/server/desktop/DesktopService;->isDesktopDockConnected()Z
 
-    .line 206
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
 
     # getter for: Lcom/android/server/desktop/DesktopService;->mIsDesktopDockConnected:Z
@@ -133,7 +123,6 @@
 
     if-nez v0, :cond_0
 
-    .line 207
     iget-object v0, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
 
     iget-object v1, p0, Lcom/android/server/desktop/DesktopService$1;->this$0:Lcom/android/server/desktop/DesktopService;
@@ -148,7 +137,6 @@
 
     goto :goto_0
 
-    .line 193
     :sswitch_data_0
     .sparse-switch
         0x100 -> :sswitch_0

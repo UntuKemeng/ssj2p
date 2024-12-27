@@ -113,50 +113,40 @@
     .locals 1
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->imei:Ljava/lang/String;
 
-    .line 24
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->imei2:Ljava/lang/String;
 
-    .line 28
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->rlcId:Ljava/lang/String;
 
-    .line 32
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->msgId:Ljava/lang/String;
 
-    .line 36
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->oprtId:Ljava/lang/String;
 
-    .line 40
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->data:Ljava/lang/String;
 
-    .line 44
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->token:Ljava/lang/String;
 
-    .line 48
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->resultDev:Ljava/lang/String;
 
-    .line 52
     const-string v0, ""
 
     iput-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->ver:Ljava/lang/String;
@@ -170,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->data:Ljava/lang/String;
 
     return-object v0
@@ -180,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->imei:Ljava/lang/String;
 
     return-object v0
@@ -190,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 68
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->imei2:Ljava/lang/String;
 
     return-object v0
@@ -200,7 +187,6 @@
     .locals 1
 
     .prologue
-    .line 77
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->msgId:Ljava/lang/String;
 
     return-object v0
@@ -210,7 +196,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->oprtId:Ljava/lang/String;
 
     return-object v0
@@ -220,7 +205,6 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->resultDev:Ljava/lang/String;
 
     return-object v0
@@ -230,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->rlcId:Ljava/lang/String;
 
     return-object v0
@@ -240,7 +223,6 @@
     .locals 1
 
     .prologue
-    .line 105
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->token:Ljava/lang/String;
 
     return-object v0
@@ -250,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 57
     iget-object v0, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->ver:Ljava/lang/String;
 
     return-object v0
@@ -261,10 +242,8 @@
     .param p1, "data"    # Ljava/lang/String;
 
     .prologue
-    .line 92
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->data:Ljava/lang/String;
 
-    .line 93
     return-void
 .end method
 
@@ -273,7 +252,6 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 97
     if-eqz p1, :cond_0
 
     :try_start_0
@@ -293,22 +271,18 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 102
     :cond_0
     :goto_0
     return-void
 
-    .line 98
     :catch_0
     move-exception v0
 
-    .line 99
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     const-string v1, ""
 
     iput-object v1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->data:Ljava/lang/String;
 
-    .line 100
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
     goto :goto_0
@@ -319,10 +293,8 @@
     .param p1, "imei"    # Ljava/lang/String;
 
     .prologue
-    .line 65
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->imei:Ljava/lang/String;
 
-    .line 66
     return-void
 .end method
 
@@ -331,7 +303,6 @@
     .param p1, "imei2"    # Ljava/lang/String;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->imei2:Ljava/lang/String;
 
     return-void
@@ -342,10 +313,8 @@
     .param p1, "msgId"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->msgId:Ljava/lang/String;
 
-    .line 81
     return-void
 .end method
 
@@ -354,10 +323,8 @@
     .param p1, "oprtId"    # Ljava/lang/String;
 
     .prologue
-    .line 86
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->oprtId:Ljava/lang/String;
 
-    .line 87
     return-void
 .end method
 
@@ -366,10 +333,8 @@
     .param p1, "resultDev"    # Ljava/lang/String;
 
     .prologue
-    .line 125
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->resultDev:Ljava/lang/String;
 
-    .line 126
     return-void
 .end method
 
@@ -378,10 +343,8 @@
     .param p1, "rlcId"    # Ljava/lang/String;
 
     .prologue
-    .line 74
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->rlcId:Ljava/lang/String;
 
-    .line 75
     return-void
 .end method
 
@@ -390,10 +353,8 @@
     .param p1, "token"    # Ljava/lang/String;
 
     .prologue
-    .line 108
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->token:Ljava/lang/String;
 
-    .line 109
     return-void
 .end method
 
@@ -402,7 +363,6 @@
     .param p1, "token"    # [B
 
     .prologue
-    .line 113
     if-eqz p1, :cond_0
 
     :try_start_0
@@ -422,22 +382,18 @@
     :try_end_0
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 118
     :cond_0
     :goto_0
     return-void
 
-    .line 114
     :catch_0
     move-exception v0
 
-    .line 115
     .local v0, "e":Ljava/io/UnsupportedEncodingException;
     const-string v1, ""
 
     iput-object v1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->token:Ljava/lang/String;
 
-    .line 116
     invoke-virtual {v0}, Ljava/io/UnsupportedEncodingException;->printStackTrace()V
 
     goto :goto_0
@@ -448,7 +404,6 @@
     .param p1, "ver"    # Ljava/lang/String;
 
     .prologue
-    .line 59
     iput-object p1, p0, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->ver:Ljava/lang/String;
 
     return-void
@@ -458,18 +413,15 @@
     .locals 3
 
     .prologue
-    .line 129
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 130
     .local v0, "builder":Ljava/lang/StringBuilder;
     const-string v1, "<request>"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 131
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->getImei()Ljava/lang/String;
 
     move-result-object v1
@@ -498,7 +450,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 132
     :cond_0
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->getImei2()Ljava/lang/String;
 
@@ -528,7 +479,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 133
     :cond_1
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->getRlcId()Ljava/lang/String;
 
@@ -558,7 +508,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 134
     :cond_2
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->getMsgId()Ljava/lang/String;
 
@@ -588,7 +537,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 135
     :cond_3
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->getOprtId()Ljava/lang/String;
 
@@ -618,7 +566,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 136
     :cond_4
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->getData()Ljava/lang/String;
 
@@ -648,7 +595,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 137
     :cond_5
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->getToken()Ljava/lang/String;
 
@@ -678,7 +624,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 138
     :cond_6
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->getVer()Ljava/lang/String;
 
@@ -708,7 +653,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 139
     :cond_7
     invoke-virtual {p0}, Lcom/samsung/android/rlc/vo/DeviceApiRequestVO;->getResultDev()Ljava/lang/String;
 
@@ -738,13 +682,11 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 140
     :cond_8
     const-string v1, "</request>"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 141
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1

@@ -46,7 +46,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 40
     const-class v0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -55,13 +54,10 @@
 
     sput-object v0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
 
-    .line 48
     sput-boolean v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mSystemReady:Z
 
-    .line 56
     sput-boolean v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isbootcomplete:Z
 
-    .line 57
     sput-boolean v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->isTwiceReset:Z
 
     return-void
@@ -74,57 +70,46 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 59
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 50
     iput-object v6, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mFileObserver:Landroid/os/FileObserver;
 
-    .line 51
     iput-object v6, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->usbManager:Landroid/hardware/usb/UsbManager;
 
-    .line 53
     const-string/jumbo v4, "mass_storage"
 
     iput-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->CDFS_FUNCTION_STRING:Ljava/lang/String;
 
-    .line 54
     const-string/jumbo v4, "mass_storage,adb"
 
     iput-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->CDFS_ADB_FUNCTION_STRING:Ljava/lang/String;
 
-    .line 95
     new-instance v4, Lcom/android/server/KiesConnectivity/KiesUsbObserver$1;
 
     invoke-direct {v4, p0}, Lcom/android/server/KiesConnectivity/KiesUsbObserver$1;-><init>(Lcom/android/server/KiesConnectivity/KiesUsbObserver;)V
 
     iput-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mBr:Landroid/content/BroadcastReceiver;
 
-    .line 110
     new-instance v4, Lcom/android/server/KiesConnectivity/KiesUsbObserver$2;
 
     invoke-direct {v4, p0}, Lcom/android/server/KiesConnectivity/KiesUsbObserver$2;-><init>(Lcom/android/server/KiesConnectivity/KiesUsbObserver;)V
 
     iput-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->br:Landroid/content/BroadcastReceiver;
 
-    .line 125
     new-instance v4, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;
 
     invoke-direct {v4, p0}, Lcom/android/server/KiesConnectivity/KiesUsbObserver$3;-><init>(Lcom/android/server/KiesConnectivity/KiesUsbObserver;)V
 
     iput-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 307
     new-instance v4, Lcom/android/server/KiesConnectivity/KiesUsbObserver$4;
 
     invoke-direct {v4, p0}, Lcom/android/server/KiesConnectivity/KiesUsbObserver$4;-><init>(Lcom/android/server/KiesConnectivity/KiesUsbObserver;)V
 
     iput-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mCDFSEventObserver:Landroid/os/UEventObserver;
 
-    .line 60
     iput-object p1, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mContext:Landroid/content/Context;
 
-    .line 61
     new-instance v4, Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     iget-object v5, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mContext:Landroid/content/Context;
@@ -133,7 +118,6 @@
 
     iput-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
-    .line 62
     iget-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     invoke-virtual {v4}, Lcom/android/server/KiesConnectivity/KiesUsbManager;->getHandler()Landroid/os/Handler;
@@ -142,14 +126,12 @@
 
     iput-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mHandler:Landroid/os/Handler;
 
-    .line 63
     iget-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mCDFSEventObserver:Landroid/os/UEventObserver;
 
     const-string v5, "SWITCH_NAME=USB_MESSAGE"
 
     invoke-virtual {v4, v5}, Landroid/os/UEventObserver;->startObserving(Ljava/lang/String;)V
 
-    .line 64
     const-string/jumbo v4, "usb"
 
     invoke-virtual {p1, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -160,64 +142,53 @@
 
     iput-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->usbManager:Landroid/hardware/usb/UsbManager;
 
-    .line 67
     new-instance v3, Landroid/content/IntentFilter;
 
     invoke-direct {v3}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 68
     .local v3, "lIntentFilter":Landroid/content/IntentFilter;
     const-string v4, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v3, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 69
     iget-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->br:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v4, v5, v3, v6, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 71
     new-instance v2, Landroid/content/IntentFilter;
 
     invoke-direct {v2}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 72
     .local v2, "filter":Landroid/content/IntentFilter;
     const-string v4, "android.hardware.usb.action.USB_STATE"
 
     invoke-virtual {v2, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 73
     iget-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v4, v5, v2, v6, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 76
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 77
     .local v0, "DIfilter":Landroid/content/IntentFilter;
     const-string v4, "android.intent.action.ACTION_POWER_DISCONNECTED"
 
     invoke-virtual {v0, v4}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 78
     iget-object v4, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mContext:Landroid/content/Context;
 
     iget-object v5, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mBr:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v4, v5, v0, v6, v6}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;)Landroid/content/Intent;
 
-    .line 80
     const/4 v1, 0x0
 
-    .line 90
     .local v1, "config":Ljava/lang/String;
     return-void
 .end method
@@ -229,7 +200,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 38
     invoke-direct {p0, p1, p2}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->sendMsg(II)V
 
     return-void
@@ -239,7 +209,6 @@
     .locals 1
 
     .prologue
-    .line 38
     sget-object v0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -250,7 +219,6 @@
     .param p0, "x0"    # Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mKiesUsbManager:Lcom/android/server/KiesConnectivity/KiesUsbManager;
 
     return-object v0
@@ -261,7 +229,6 @@
     .param p0, "x0"    # Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->getUsbCDFSMode()I
 
     move-result v0
@@ -273,7 +240,6 @@
     .locals 5
 
     .prologue
-    .line 248
     const-string/jumbo v2, "sys.usb.config"
 
     const-string/jumbo v3, "none"
@@ -282,7 +248,6 @@
 
     move-result-object v0
 
-    .line 249
     .local v0, "config":Ljava/lang/String;
     sget-object v2, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
 
@@ -306,7 +271,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
     const-string/jumbo v2, "mass_storage"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -323,16 +287,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 252
     :cond_0
     const/16 v1, 0x7d0
 
-    .line 258
     .local v1, "usbMode":I
     :goto_0
     return v1
 
-    .line 255
     .end local v1    # "usbMode":I
     :cond_1
     const/4 v1, -0x1
@@ -345,7 +306,6 @@
     .locals 5
 
     .prologue
-    .line 231
     const-string/jumbo v2, "sys.usb.config"
 
     const-string/jumbo v3, "none"
@@ -354,7 +314,6 @@
 
     move-result-object v0
 
-    .line 232
     .local v0, "config":Ljava/lang/String;
     sget-object v2, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
 
@@ -378,7 +337,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 234
     const-string/jumbo v2, "mass_storage,mtp"
 
     invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -395,16 +353,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 235
     :cond_0
     const/16 v1, 0x7d0
 
-    .line 241
     .local v1, "usbMode":I
     :goto_0
     return v1
 
-    .line 238
     .end local v1    # "usbMode":I
     :cond_1
     const/4 v1, -0x1
@@ -421,10 +376,8 @@
 
     const/4 v2, 0x0
 
-    .line 264
     const/4 v0, 0x0
 
-    .line 266
     .local v0, "enabled":I
     iget-object v3, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mContext:Landroid/content/Context;
 
@@ -438,10 +391,8 @@
 
     move-result v0
 
-    .line 268
     if-ne v0, v1, :cond_0
 
-    .line 271
     :goto_0
     return v1
 
@@ -459,16 +410,13 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 279
     move v0, p2
 
-    .line 281
     .local v0, "arg1":I
     if-eq p1, v1, :cond_0
 
     if-ne p2, v1, :cond_1
 
-    .line 282
     :cond_0
     sget-object v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
 
@@ -476,17 +424,14 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 302
     :goto_0
     return-void
 
-    .line 286
     :cond_1
     const/16 v1, 0x7d0
 
     if-eq p2, v1, :cond_2
 
-    .line 287
     sget-object v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "sendMsg -> UsbMode is not mtp"
@@ -495,19 +440,15 @@
 
     goto :goto_0
 
-    .line 291
     :cond_2
     iget-object v1, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mHandler:Landroid/os/Handler;
 
     if-eqz v1, :cond_4
 
-    .line 293
     if-nez p1, :cond_3
 
-    .line 294
     const/4 v0, 0x0
 
-    .line 296
     :cond_3
     sget-object v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
 
@@ -541,7 +482,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 297
     iget-object v1, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mHandler:Landroid/os/Handler;
 
     iget-object v2, p0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mHandler:Landroid/os/Handler;
@@ -556,7 +496,6 @@
 
     goto :goto_0
 
-    .line 300
     :cond_4
     sget-object v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
 
@@ -571,7 +510,6 @@
     .locals 3
 
     .prologue
-    .line 343
     const-class v1, Lcom/android/server/KiesConnectivity/KiesUsbObserver;
 
     monitor-enter v1
@@ -581,7 +519,6 @@
     :try_start_0
     sput-boolean v0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->mSystemReady:Z
 
-    .line 344
     sget-object v0, Lcom/android/server/KiesConnectivity/KiesUsbObserver;->TAG:Ljava/lang/String;
 
     const-string/jumbo v2, "systemReady done"
@@ -590,12 +527,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 345
     monitor-exit v1
 
     return-void
 
-    .line 343
     :catchall_0
     move-exception v0
 

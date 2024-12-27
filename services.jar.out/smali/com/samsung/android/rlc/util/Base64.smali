@@ -18,21 +18,18 @@
     .prologue
     const/16 v1, 0x40
 
-    .line 24
     new-array v0, v1, [B
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lcom/samsung/android/rlc/util/Base64;->ENCODE_TABLE:[B
 
-    .line 34
     new-array v0, v1, [B
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lcom/samsung/android/rlc/util/Base64;->URL_SAFE_ENCODE_TABLE:[B
 
-    .line 44
     const/16 v0, 0x7b
 
     new-array v0, v0, [B
@@ -43,7 +40,6 @@
 
     return-void
 
-    .line 24
     :array_0
     .array-data 1
         0x41t
@@ -112,7 +108,6 @@
         0x2ft
     .end array-data
 
-    .line 34
     :array_1
     .array-data 1
         0x41t
@@ -181,7 +176,6 @@
         0x5ft
     .end array-data
 
-    .line 44
     :array_2
     .array-data 1
         -0x1t
@@ -314,7 +308,6 @@
     .locals 0
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -330,10 +323,8 @@
     .end annotation
 
     .prologue
-    .line 159
     const/4 v2, 0x0
 
-    .line 162
     .local v2, "in2":[B
     :try_start_0
     array-length v5, p0
@@ -342,7 +333,6 @@
 
     rsub-int/lit8 v4, v5, 0x4
 
-    .line 163
     .local v4, "padN":I
     array-length v5, p0
 
@@ -350,7 +340,6 @@
 
     new-array v2, v5, [B
 
-    .line 164
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -359,10 +348,8 @@
 
     invoke-static {p0, v5, v2, v6, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 165
     array-length v3, v2
 
-    .line 166
     .local v3, "j":I
     const/4 v1, 0x0
 
@@ -370,7 +357,6 @@
     :goto_0
     if-ge v1, v4, :cond_0
 
-    .line 167
     add-int/lit8 v3, v3, -0x1
 
     const/16 v5, 0x3d
@@ -379,26 +365,21 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 166
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 169
     .end local v1    # "i":I
     .end local v3    # "j":I
     .end local v4    # "padN":I
     :catch_0
     move-exception v0
 
-    .line 170
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
-    .line 171
     throw v0
 
-    .line 174
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "i":I
     .restart local v3    # "j":I
@@ -412,10 +393,8 @@
     .param p0, "in"    # Ljava/lang/String;
 
     .prologue
-    .line 233
     const/4 v1, 0x0
 
-    .line 236
     .local v1, "out":[B
     :try_start_0
     const-string v2, "UTF-8"
@@ -430,15 +409,12 @@
 
     move-result-object v1
 
-    .line 241
     :goto_0
     return-object v1
 
-    .line 237
     :catch_0
     move-exception v0
 
-    .line 238
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -460,26 +436,21 @@
 
     const/4 v9, 0x1
 
-    .line 185
     const/4 v5, 0x0
 
-    .line 188
     .local v5, "out":[B
     :try_start_0
     array-length v11, p0
 
     if-nez v11, :cond_0
 
-    .line 189
     const/4 v9, 0x0
 
     new-array v9, v9, [B
 
-    .line 222
     :goto_0
     return-object v9
 
-    .line 191
     :cond_0
     array-length v11, p0
 
@@ -487,7 +458,6 @@
 
     if-ne v11, v9, :cond_2
 
-    .line 192
     new-instance v9, Ljava/lang/Exception;
 
     const-string v10, "Input length is invalid."
@@ -496,11 +466,9 @@
 
     throw v9
 
-    .line 218
     :catch_0
     move-exception v0
 
-    .line 219
     .local v0, "e":Ljava/lang/Exception;
     const/4 v5, 0x0
 
@@ -508,10 +476,8 @@
     :cond_1
     move-object v9, v5
 
-    .line 222
     goto :goto_0
 
-    .line 194
     :cond_2
     array-length v11, p0
 
@@ -519,16 +485,13 @@
 
     if-eqz v11, :cond_3
 
-    .line 195
     invoke-static {p0}, Lcom/samsung/android/rlc/util/Base64;->correctInput([B)[B
 
     move-result-object p0
 
-    .line 198
     :cond_3
     array-length v2, p0
 
-    .line 199
     .local v2, "inN":I
     add-int/lit8 v11, v2, -0x2
 
@@ -536,7 +499,6 @@
 
     if-ne v11, v13, :cond_4
 
-    .line 200
     .local v7, "padN":I
     :goto_1
     mul-int/lit8 v9, v2, 0x3
@@ -545,23 +507,19 @@
 
     sub-int v6, v9, v7
 
-    .line 202
     .local v6, "outN":I
     new-array v5, v6, [B
 
-    .line 204
     const/4 v9, 0x4
 
     new-array v8, v9, [B
 
-    .line 205
     .local v8, "temp":[B
     const/4 v1, 0x0
 
     .local v1, "i":I
     const/4 v3, 0x0
 
-    .line 206
     .local v3, "j":I
     const/4 v1, 0x0
 
@@ -572,7 +530,6 @@
     :goto_2
     if-ge v1, v2, :cond_1
 
-    .line 207
     rem-int/lit8 v9, v1, 0x4
 
     sget-object v10, Lcom/samsung/android/rlc/util/Base64;->DECODE_TABLE:[B
@@ -583,12 +540,10 @@
 
     aput-byte v10, v8, v9
 
-    .line 208
     rem-int/lit8 v9, v1, 0x4
 
     if-ne v9, v12, :cond_6
 
-    .line 209
     add-int/lit8 v3, v4, 0x1
 
     .end local v4    # "j":I
@@ -615,10 +570,8 @@
 
     aput-byte v9, v5, v4
 
-    .line 210
     if-ge v3, v6, :cond_7
 
-    .line 211
     add-int/lit8 v4, v3, 0x1
 
     .end local v3    # "j":I
@@ -645,11 +598,9 @@
 
     aput-byte v9, v5, v3
 
-    .line 213
     :goto_3
     if-ge v4, v6, :cond_6
 
-    .line 214
     add-int/lit8 v3, v4, 0x1
 
     .end local v4    # "j":I
@@ -674,7 +625,6 @@
 
     aput-byte v9, v5, v4
 
-    .line 206
     :goto_4
     add-int/lit8 v1, v1, 0x1
 
@@ -684,7 +634,6 @@
     .restart local v4    # "j":I
     goto :goto_2
 
-    .line 199
     .end local v1    # "i":I
     .end local v4    # "j":I
     .end local v6    # "outN":I
@@ -733,10 +682,8 @@
     .param p0, "in"    # Ljava/lang/String;
 
     .prologue
-    .line 118
     const/4 v1, 0x0
 
-    .line 121
     .local v1, "out":[B
     :try_start_0
     const-string v2, "UTF-8"
@@ -751,15 +698,12 @@
 
     move-result-object v1
 
-    .line 126
     :goto_0
     return-object v1
 
-    .line 122
     :catch_0
     move-exception v0
 
-    .line 123
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -772,10 +716,8 @@
     .param p1, "urlSafe"    # Z
 
     .prologue
-    .line 139
     const/4 v1, 0x0
 
-    .line 142
     .local v1, "out":[B
     :try_start_0
     const-string v2, "UTF-8"
@@ -790,15 +732,12 @@
 
     move-result-object v1
 
-    .line 147
     :goto_0
     return-object v1
 
-    .line 143
     :catch_0
     move-exception v0
 
-    .line 144
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -810,7 +749,6 @@
     .param p0, "in"    # [B
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lcom/samsung/android/rlc/util/Base64;->encode([BZ)[B
@@ -828,22 +766,18 @@
     .prologue
     const/4 v12, 0x2
 
-    .line 74
     const/4 v6, 0x0
 
-    .line 77
     .local v6, "out":[B
     if-eqz p1, :cond_1
 
     :try_start_0
     sget-object v1, Lcom/samsung/android/rlc/util/Base64;->URL_SAFE_ENCODE_TABLE:[B
 
-    .line 79
     .local v1, "encodeTable":[B
     :goto_0
     array-length v3, p0
 
-    .line 80
     .local v3, "inN":I
     add-int/lit8 v10, v3, 0x2
 
@@ -853,7 +787,6 @@
 
     sub-int v8, v10, v3
 
-    .line 81
     .local v8, "padN":I
     add-int/lit8 v10, v3, 0x2
 
@@ -867,23 +800,19 @@
 
     div-int/lit8 v7, v10, 0x3
 
-    .line 83
     .local v7, "outN":I
     new-array v6, v7, [B
 
-    .line 85
     const/4 v10, 0x3
 
     new-array v9, v10, [B
 
-    .line 86
     .local v9, "temp":[B
     const/4 v2, 0x0
 
     .local v2, "i":I
     const/4 v4, 0x0
 
-    .line 87
     .local v4, "j":I
     const/4 v2, 0x0
 
@@ -896,23 +825,19 @@
 
     if-ge v2, v10, :cond_4
 
-    .line 88
     if-ge v2, v3, :cond_2
 
-    .line 89
     rem-int/lit8 v10, v2, 0x3
 
     aget-byte v11, p0, v2
 
     aput-byte v11, v9, v10
 
-    .line 93
     :goto_2
     rem-int/lit8 v10, v2, 0x3
 
     if-ne v10, v12, :cond_0
 
-    .line 94
     add-int/lit8 v4, v5, 0x1
 
     .end local v5    # "j":I
@@ -929,7 +854,6 @@
 
     aput-byte v10, v6, v5
 
-    .line 95
     add-int/lit8 v5, v4, 0x1
 
     .end local v4    # "j":I
@@ -956,7 +880,6 @@
 
     aput-byte v10, v6, v4
 
-    .line 96
     add-int/lit8 v4, v5, 0x1
 
     .end local v5    # "j":I
@@ -983,7 +906,6 @@
 
     aput-byte v10, v6, v5
 
-    .line 97
     add-int/lit8 v5, v4, 0x1
 
     .end local v4    # "j":I
@@ -1001,7 +923,6 @@
     :cond_0
     move v4, v5
 
-    .line 87
     .end local v5    # "j":I
     .restart local v4    # "j":I
     add-int/lit8 v2, v2, 0x1
@@ -1012,7 +933,6 @@
     .restart local v5    # "j":I
     goto :goto_1
 
-    .line 77
     .end local v1    # "encodeTable":[B
     .end local v2    # "i":I
     .end local v3    # "inN":I
@@ -1025,7 +945,6 @@
 
     goto :goto_0
 
-    .line 91
     .restart local v1    # "encodeTable":[B
     .restart local v2    # "i":I
     .restart local v3    # "inN":I
@@ -1042,7 +961,6 @@
 
     goto :goto_2
 
-    .line 103
     .end local v1    # "encodeTable":[B
     .end local v2    # "i":I
     .end local v3    # "inN":I
@@ -1053,16 +971,13 @@
     :catch_0
     move-exception v0
 
-    .line 104
     .local v0, "e":Ljava/lang/Exception;
     const/4 v6, 0x0
 
-    .line 107
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_3
     return-object v6
 
-    .line 100
     .restart local v1    # "encodeTable":[B
     .restart local v2    # "i":I
     .restart local v3    # "inN":I
@@ -1080,7 +995,6 @@
     :goto_3
     if-ge v2, v8, :cond_3
 
-    .line 101
     add-int/lit8 v4, v4, -0x1
 
     const/16 v10, 0x3d
@@ -1089,7 +1003,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 100
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3

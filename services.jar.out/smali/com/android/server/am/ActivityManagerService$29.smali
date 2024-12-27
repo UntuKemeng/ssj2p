@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 26445
     iput-object p1, p0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     iput-object p2, p0, Lcom/android/server/am/ActivityManagerService$29;->val$heapdumpFile:Ljava/io/File;
@@ -48,7 +47,6 @@
     .locals 8
 
     .prologue
-    .line 26448
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$29;->this$0:Lcom/android/server/am/ActivityManagerService;
 
     invoke-static {}, Landroid/app/ActivityThread;->currentActivityThread()Landroid/app/ActivityThread;
@@ -69,17 +67,14 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Lcom/android/server/am/ActivityManagerService;->revokeUriPermission(Landroid/app/IApplicationThread;Landroid/net/Uri;II)V
 
-    .line 26454
     const/4 v1, 0x0
 
-    .line 26456
     .local v1, "fd":Landroid/os/ParcelFileDescriptor;
     :try_start_0
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$29;->val$heapdumpFile:Ljava/io/File;
 
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 26457
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$29;->val$heapdumpFile:Ljava/io/File;
 
     const/high16 v4, 0x2e000000
@@ -88,7 +83,6 @@
 
     move-result-object v1
 
-    .line 26462
     iget-object v3, p0, Lcom/android/server/am/ActivityManagerService$29;->val$myProc:Lcom/android/server/am/ProcessRecord;
 
     iget-object v2, v3, Lcom/android/server/am/ProcessRecord;->thread:Landroid/app/IApplicationThread;
@@ -96,11 +90,9 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 26463
     .local v2, "thread":Landroid/app/IApplicationThread;
     if-eqz v2, :cond_0
 
-    .line 26468
     const/4 v3, 0x1
 
     :try_start_1
@@ -116,38 +108,31 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 26475
     :cond_0
     :goto_0
     if-eqz v1, :cond_1
 
-    .line 26477
     :try_start_2
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 26482
     .end local v2    # "thread":Landroid/app/IApplicationThread;
     :cond_1
     :goto_1
     return-void
 
-    .line 26472
     :catch_0
     move-exception v0
 
-    .line 26473
     .local v0, "e":Ljava/io/FileNotFoundException;
     :try_start_3
     invoke-virtual {v0}, Ljava/io/FileNotFoundException;->printStackTrace()V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 26475
     if-eqz v1, :cond_1
 
-    .line 26477
     :try_start_4
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_4
@@ -155,31 +140,26 @@
 
     goto :goto_1
 
-    .line 26478
     :catch_1
     move-exception v3
 
     goto :goto_1
 
-    .line 26475
     .end local v0    # "e":Ljava/io/FileNotFoundException;
     :catchall_0
     move-exception v3
 
     if-eqz v1, :cond_2
 
-    .line 26477
     :try_start_5
     invoke-virtual {v1}, Landroid/os/ParcelFileDescriptor;->close()V
     :try_end_5
     .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
 
-    .line 26479
     :cond_2
     :goto_2
     throw v3
 
-    .line 26478
     .restart local v2    # "thread":Landroid/app/IApplicationThread;
     :catch_2
     move-exception v3
@@ -192,7 +172,6 @@
 
     goto :goto_2
 
-    .line 26469
     .restart local v2    # "thread":Landroid/app/IApplicationThread;
     :catch_4
     move-exception v3

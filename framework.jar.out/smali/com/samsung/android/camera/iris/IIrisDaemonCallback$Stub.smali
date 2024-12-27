@@ -46,15 +46,12 @@
     .locals 1
 
     .prologue
-    .line 18
     invoke-direct {p0}, Landroid/os/Binder;-><init>()V
 
-    .line 19
     const-string v0, "com.samsung.android.camera.iris.IIrisDaemonCallback"
 
     invoke-virtual {p0, p0, v0}, Lcom/samsung/android/camera/iris/IIrisDaemonCallback$Stub;->attachInterface(Landroid/os/IInterface;Ljava/lang/String;)V
 
-    .line 20
     return-void
 .end method
 
@@ -63,17 +60,13 @@
     .param p0, "obj"    # Landroid/os/IBinder;
 
     .prologue
-    .line 27
     if-nez p0, :cond_0
 
-    .line 28
     const/4 v0, 0x0
 
-    .line 34
     :goto_0
     return-object v0
 
-    .line 30
     :cond_0
     const-string v1, "com.samsung.android.camera.iris.IIrisDaemonCallback"
 
@@ -81,7 +74,6 @@
 
     move-result-object v0
 
-    .line 31
     .local v0, "iin":Landroid/os/IInterface;
     if-eqz v0, :cond_1
 
@@ -89,12 +81,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 32
     check-cast v0, Lcom/samsung/android/camera/iris/IIrisDaemonCallback;
 
     goto :goto_0
 
-    .line 34
     :cond_1
     new-instance v0, Lcom/samsung/android/camera/iris/IIrisDaemonCallback$Stub$Proxy;
 
@@ -110,7 +100,6 @@
     .locals 0
 
     .prologue
-    .line 38
     return-object p0
 .end method
 
@@ -129,10 +118,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 42
     sparse-switch p1, :sswitch_data_0
 
-    .line 148
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
     move-result v0
@@ -140,7 +127,6 @@
     :goto_0
     return v0
 
-    .line 46
     :sswitch_0
     const-string v1, "com.samsung.android.camera.iris.IIrisDaemonCallback"
 
@@ -148,30 +134,25 @@
 
     goto :goto_0
 
-    .line 51
     :sswitch_1
     const-string v1, "com.samsung.android.camera.iris.IIrisDaemonCallback"
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 53
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 55
     .local v2, "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 57
     .local v4, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 59
     .local v5, "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -180,15 +161,12 @@
     .local v6, "_arg3":I
     move-object v1, p0
 
-    .line 60
     invoke-virtual/range {v1 .. v6}, Lcom/samsung/android/camera/iris/IIrisDaemonCallback$Stub;->onEnrollResult(JIII)V
 
-    .line 61
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 66
     .end local v2    # "_arg0":J
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":I
@@ -198,12 +176,10 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 68
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 70
     .restart local v2    # "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -211,7 +187,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 71
     sget-object v1, Lcom/samsung/android/camera/iris/EyeInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-interface {v1, p2}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
@@ -220,17 +195,14 @@
 
     check-cast v4, Lcom/samsung/android/camera/iris/EyeInfo;
 
-    .line 76
     .local v4, "_arg1":Lcom/samsung/android/camera/iris/EyeInfo;
     :goto_1
     invoke-virtual {p0, v2, v3, v4}, Lcom/samsung/android/camera/iris/IIrisDaemonCallback$Stub;->onAcquired(JLcom/samsung/android/camera/iris/EyeInfo;)V
 
-    .line 77
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 74
     .end local v4    # "_arg1":Lcom/samsung/android/camera/iris/EyeInfo;
     :cond_0
     const/4 v4, 0x0
@@ -238,7 +210,6 @@
     .restart local v4    # "_arg1":Lcom/samsung/android/camera/iris/EyeInfo;
     goto :goto_1
 
-    .line 82
     .end local v2    # "_arg0":J
     .end local v4    # "_arg1":Lcom/samsung/android/camera/iris/EyeInfo;
     :sswitch_3
@@ -246,24 +217,20 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 84
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 86
     .restart local v2    # "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 88
     .local v4, "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 90
     .restart local v5    # "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
@@ -272,15 +239,12 @@
     .local v6, "_arg3":[B
     move-object v1, p0
 
-    .line 91
     invoke-virtual/range {v1 .. v6}, Lcom/samsung/android/camera/iris/IIrisDaemonCallback$Stub;->onAuthenticated(JII[B)V
 
-    .line 92
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 97
     .end local v2    # "_arg0":J
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":I
@@ -290,27 +254,22 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 99
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 101
     .restart local v2    # "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 102
     .restart local v4    # "_arg1":I
     invoke-virtual {p0, v2, v3, v4}, Lcom/samsung/android/camera/iris/IIrisDaemonCallback$Stub;->onError(JI)V
 
-    .line 103
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 108
     .end local v2    # "_arg0":J
     .end local v4    # "_arg1":I
     :sswitch_5
@@ -318,33 +277,27 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 110
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 112
     .restart local v2    # "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v4
 
-    .line 114
     .restart local v4    # "_arg1":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 115
     .restart local v5    # "_arg2":I
     invoke-virtual {p0, v2, v3, v4, v5}, Lcom/samsung/android/camera/iris/IIrisDaemonCallback$Stub;->onRemoved(JII)V
 
-    .line 116
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 121
     .end local v2    # "_arg0":J
     .end local v4    # "_arg1":I
     .end local v5    # "_arg2":I
@@ -353,24 +306,20 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 123
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 125
     .restart local v2    # "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v4
 
-    .line 127
     .local v4, "_arg1":[B
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v5
 
-    .line 129
     .restart local v5    # "_arg2":I
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
@@ -379,15 +328,12 @@
     .local v6, "_arg3":I
     move-object v1, p0
 
-    .line 130
     invoke-virtual/range {v1 .. v6}, Lcom/samsung/android/camera/iris/IIrisDaemonCallback$Stub;->onIRImageProcessed(J[BII)V
 
-    .line 131
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 136
     .end local v2    # "_arg0":J
     .end local v4    # "_arg1":[B
     .end local v5    # "_arg2":I
@@ -397,33 +343,27 @@
 
     invoke-virtual {p2, v1}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 138
     invoke-virtual {p2}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v2
 
-    .line 140
     .restart local v2    # "_arg0":J
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v4
 
-    .line 142
     .local v4, "_arg1":Ljava/lang/String;
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v5
 
-    .line 143
     .local v5, "_arg2":Ljava/lang/String;
     invoke-virtual {p0, v2, v3, v4, v5}, Lcom/samsung/android/camera/iris/IIrisDaemonCallback$Stub;->onIRPropertyChanged(JLjava/lang/String;Ljava/lang/String;)V
 
-    .line 144
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 42
     nop
 
     :sswitch_data_0

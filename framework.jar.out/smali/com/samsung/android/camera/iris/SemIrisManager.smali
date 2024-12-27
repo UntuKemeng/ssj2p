@@ -262,7 +262,6 @@
     .locals 1
 
     .prologue
-    .line 467
     const/4 v0, 0x0
 
     sput-object v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mSemIrisManager:Lcom/samsung/android/camera/iris/SemIrisManager;
@@ -275,39 +274,32 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2002
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 471
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mToken:Landroid/os/IBinder;
 
-    .line 480
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthBegin:J
 
-    .line 481
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
     invoke-direct {v0}, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mGetterHandler:Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
-    .line 1948
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager$4;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/camera/iris/SemIrisManager$4;-><init>(Lcom/samsung/android/camera/iris/SemIrisManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mServiceReceiver:Lcom/samsung/android/camera/iris/IIrisServiceReceiver;
 
-    .line 2003
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
-    .line 2005
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;
 
     const/4 v1, 0x0
@@ -316,10 +308,8 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
 
-    .line 2007
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
-    .line 2008
     return-void
 .end method
 
@@ -329,54 +319,44 @@
     .param p2, "service"    # Lcom/samsung/android/camera/iris/IIrisService;
 
     .prologue
-    .line 1804
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 471
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mToken:Landroid/os/IBinder;
 
-    .line 480
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthBegin:J
 
-    .line 481
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
     invoke-direct {v0}, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;-><init>()V
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mGetterHandler:Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
-    .line 1948
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager$4;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/camera/iris/SemIrisManager$4;-><init>(Lcom/samsung/android/camera/iris/SemIrisManager;)V
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mServiceReceiver:Lcom/samsung/android/camera/iris/IIrisServiceReceiver;
 
-    .line 1805
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
-    .line 1806
     iput-object p2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
-    .line 1807
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-nez v0, :cond_0
 
-    .line 1808
     const-string v0, "SemIrisManager"
 
     const-string v1, "SemIrisManagerService was null"
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1810
     :cond_0
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;
 
@@ -386,7 +366,6 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
 
-    .line 1811
     return-void
 .end method
 
@@ -395,7 +374,6 @@
     .param p0, "x0"    # Lcom/samsung/android/camera/iris/SemIrisManager;
 
     .prologue
-    .line 69
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->cancelEnrollment()V
 
     return-void
@@ -407,7 +385,6 @@
     .param p1, "x1"    # Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;
 
     .prologue
-    .line 69
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/iris/SemIrisManager;->cancelAuthentication(Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;)V
 
     return-void
@@ -418,7 +395,6 @@
     .param p0, "x0"    # Lcom/samsung/android/camera/iris/SemIrisManager;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mRemovalIris:Lcom/samsung/android/camera/iris/Iris;
 
     return-object v0
@@ -430,7 +406,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 69
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/iris/SemIrisManager;->getErrorString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -443,7 +418,6 @@
     .param p0, "x0"    # Lcom/samsung/android/camera/iris/SemIrisManager;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -454,7 +428,6 @@
     .param p0, "x0"    # Lcom/samsung/android/camera/iris/SemIrisManager;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mCryptoObject:Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;
 
     return-object v0
@@ -465,7 +438,6 @@
     .param p0, "x0"    # Lcom/samsung/android/camera/iris/SemIrisManager;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mRequestCallback:Lcom/samsung/android/camera/iris/SemIrisManager$RequestCallback;
 
     return-object v0
@@ -477,7 +449,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 69
     invoke-direct {p0, p1}, Lcom/samsung/android/camera/iris/SemIrisManager;->getAcquiredString(I)Ljava/lang/String;
 
     move-result-object v0
@@ -500,7 +471,6 @@
     .param p11, "x10"    # [B
 
     .prologue
-    .line 69
     invoke-direct/range {p0 .. p11}, Lcom/samsung/android/camera/iris/SemIrisManager;->checkAuthViewWindowToken(Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;Landroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;Landroid/os/Handler;ILandroid/os/Bundle;Landroid/view/View;J[B)V
 
     return-void
@@ -517,7 +487,6 @@
     .param p6, "x6"    # Landroid/view/View;
 
     .prologue
-    .line 69
     invoke-direct/range {p0 .. p6}, Lcom/samsung/android/camera/iris/SemIrisManager;->checkEnrollViewWindowToken([BLandroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;Landroid/os/Bundle;Landroid/view/View;)V
 
     return-void
@@ -528,7 +497,6 @@
     .param p0, "x0"    # Lcom/samsung/android/camera/iris/SemIrisManager;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
 
     return-object v0
@@ -539,7 +507,6 @@
     .param p0, "x0"    # Lcom/samsung/android/camera/iris/SemIrisManager;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
 
     return-object v0
@@ -550,7 +517,6 @@
     .param p0, "x0"    # Lcom/samsung/android/camera/iris/SemIrisManager;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthenticationCallback:Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;
 
     return-object v0
@@ -561,7 +527,6 @@
     .param p0, "x0"    # Lcom/samsung/android/camera/iris/SemIrisManager;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mRemovalCallback:Lcom/samsung/android/camera/iris/SemIrisManager$RemovalCallback;
 
     return-object v0
@@ -572,17 +537,13 @@
     .param p0, "byteArray"    # [B
 
     .prologue
-    .line 2058
     if-nez p0, :cond_0
 
-    .line 2059
     const/4 v5, 0x0
 
-    .line 2066
     :goto_0
     return-object v5
 
-    .line 2062
     :cond_0
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -592,7 +553,6 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 2063
     .local v4, "sb":Ljava/lang/StringBuilder;
     move-object v0, p0
 
@@ -608,7 +568,6 @@
 
     aget-byte v1, v0, v2
 
-    .line 2064
     .local v1, "b":B
     const-string v5, "%02x"
 
@@ -632,12 +591,10 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2063
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 2066
     .end local v1    # "b":B
     :cond_1
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -653,22 +610,18 @@
     .param p1, "len"    # I
 
     .prologue
-    .line 1485
     array-length v2, p0
 
     if-gt p1, v2, :cond_0
 
     if-gez p1, :cond_1
 
-    .line 1486
     :cond_0
     const/4 v2, 0x0
 
-    .line 1492
     :goto_0
     return-object v2
 
-    .line 1488
     :cond_1
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -676,7 +629,6 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 1489
     .local v1, "sb":Ljava/lang/StringBuilder;
     const/4 v0, 0x0
 
@@ -684,7 +636,6 @@
     :goto_1
     if-ge v0, p1, :cond_2
 
-    .line 1490
     const-string v2, "%c"
 
     const/4 v3, 0x1
@@ -709,12 +660,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1489
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1492
     :cond_2
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -728,32 +677,27 @@
     .param p1, "cryptoObject"    # Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;
 
     .prologue
-    .line 1837
     const-string v1, "SemIrisManager"
 
     const-string v2, "cancelAuthentication"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1838
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1847
     :cond_0
     :goto_0
     return-void
 
-    .line 1841
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_0
 
-    .line 1843
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -771,11 +715,9 @@
 
     goto :goto_0
 
-    .line 1844
     :catch_0
     move-exception v0
 
-    .line 1845
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -790,32 +732,27 @@
     .locals 3
 
     .prologue
-    .line 1823
     const-string v1, "SemIrisManager"
 
     const-string v2, "cancelEnrollment"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1824
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1834
     :cond_0
     :goto_0
     return-void
 
-    .line 1827
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_0
 
-    .line 1829
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -827,11 +764,9 @@
 
     goto :goto_0
 
-    .line 1830
     :catch_0
     move-exception v0
 
-    .line 1831
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -856,14 +791,12 @@
     .param p11, "fidoRequestData"    # [B
 
     .prologue
-    .line 913
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mGetterHandler:Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
     if-nez v2, :cond_0
 
-    .line 914
     new-instance v2, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
     invoke-direct {v2}, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;-><init>()V
@@ -872,7 +805,6 @@
 
     iput-object v2, v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mGetterHandler:Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
-    .line 916
     :cond_0
     invoke-virtual/range {p8 .. p8}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
@@ -880,7 +812,6 @@
 
     if-nez v2, :cond_3
 
-    .line 917
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -897,24 +828,20 @@
 
     if-ltz v2, :cond_2
 
-    .line 918
     const-string v2, "SemIrisManager"
 
     const-string v3, "checkAuthViewWindowToken is null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 919
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mGetterHandler:Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
     invoke-virtual {v2}, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;->removeAllGetterCallbacks()V
 
-    .line 920
     if-eqz p4, :cond_1
 
-    .line 921
     const/16 v2, 0xb
 
     const/16 v3, 0xb
@@ -929,12 +856,10 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;->onAuthenticationError(ILjava/lang/CharSequence;)V
 
-    .line 960
     :cond_1
     :goto_0
     return-void
 
-    .line 925
     :cond_2
     move-object/from16 v0, p0
 
@@ -970,7 +895,6 @@
 
     goto :goto_0
 
-    .line 932
     :cond_3
     move-object/from16 v0, p0
 
@@ -978,13 +902,11 @@
 
     invoke-virtual {v2}, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;->removeAllGetterCallbacks()V
 
-    .line 934
     :try_start_0
     invoke-virtual/range {p8 .. p8}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v5
 
-    .line 936
     .local v5, "mWindowToken":Landroid/os/IBinder;
     const/4 v2, 0x2
 
@@ -992,7 +914,6 @@
 
     move-object/from16 v20, v0
 
-    .line 937
     .local v20, "position":[I
     move-object/from16 v0, p8
 
@@ -1000,27 +921,23 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 938
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mToken:Landroid/os/IBinder;
 
     if-nez v2, :cond_4
 
-    .line 939
     const-string v2, "SemIrisManager"
 
     const-string/jumbo v3, "mToken null"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 941
     :cond_4
     invoke-virtual/range {p0 .. p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->getMinimumIrisViewSize()Landroid/util/Size;
 
     move-result-object v19
 
-    .line 943
     .local v19, "mAuthViewSize":Landroid/util/Size;
     invoke-virtual/range {p8 .. p8}, Landroid/view/View;->getWidth()I
 
@@ -1042,11 +959,9 @@
 
     if-ge v2, v3, :cond_6
 
-    .line 944
     :cond_5
     if-eqz p4, :cond_6
 
-    .line 945
     const/16 v2, 0xa
 
     const/16 v3, 0xa
@@ -1061,7 +976,6 @@
 
     invoke-virtual {v0, v2, v3}, Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;->onAuthenticationError(ILjava/lang/CharSequence;)V
 
-    .line 949
     :cond_6
     move-object/from16 v0, p0
 
@@ -1115,14 +1029,12 @@
 
     goto/16 :goto_0
 
-    .line 951
     .end local v5    # "mWindowToken":Landroid/os/IBinder;
     .end local v19    # "mAuthViewSize":Landroid/util/Size;
     .end local v20    # "position":[I
     :catch_0
     move-exception v18
 
-    .line 952
     .local v18, "e":Landroid/os/RemoteException;
     const-string v2, "SemIrisManager"
 
@@ -1130,10 +1042,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 953
     if-eqz p4, :cond_1
 
-    .line 956
     const/4 v2, 0x1
 
     const/4 v3, 0x1
@@ -1161,19 +1071,16 @@
     .param p6, "irisView"    # Landroid/view/View;
 
     .prologue
-    .line 1065
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mGetterHandler:Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
     if-nez v1, :cond_0
 
-    .line 1066
     new-instance v1, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
     invoke-direct {v1}, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;-><init>()V
 
     iput-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mGetterHandler:Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
-    .line 1068
     :cond_0
     invoke-virtual/range {p6 .. p6}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
@@ -1181,7 +1088,6 @@
 
     if-nez v1, :cond_2
 
-    .line 1069
     iget-object v9, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mGetterHandler:Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
     new-instance v1, Lcom/samsung/android/camera/iris/SemIrisManager$2;
@@ -1204,48 +1110,40 @@
 
     invoke-virtual {v9, v1}, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;->postGetterCallback(Ljava/lang/Runnable;)V
 
-    .line 1094
     :cond_1
     :goto_0
     return-void
 
-    .line 1076
     :cond_2
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mGetterHandler:Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;
 
     invoke-virtual {v1}, Lcom/samsung/android/camera/iris/SemIrisManager$GetterHandler;->removeAllGetterCallbacks()V
 
-    .line 1078
     :try_start_0
     invoke-virtual/range {p6 .. p6}, Landroid/view/View;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v3
 
-    .line 1080
     .local v3, "mWindowToken":Landroid/os/IBinder;
     const/4 v1, 0x2
 
     new-array v14, v1, [I
 
-    .line 1081
     .local v14, "position":[I
     move-object/from16 v0, p6
 
     invoke-virtual {v0, v14}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 1082
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mToken:Landroid/os/IBinder;
 
     if-nez v1, :cond_3
 
-    .line 1083
     const-string v1, "SemIrisManager"
 
     const-string/jumbo v2, "mToken null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1084
     :cond_3
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -1285,13 +1183,11 @@
 
     goto :goto_0
 
-    .line 1085
     .end local v3    # "mWindowToken":Landroid/os/IBinder;
     .end local v14    # "position":[I
     :catch_0
     move-exception v13
 
-    .line 1086
     .local v13, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -1299,10 +1195,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1087
     if-eqz p4, :cond_1
 
-    .line 1090
     const/4 v1, 0x1
 
     const/4 v2, 0x1
@@ -1322,7 +1216,6 @@
     .locals 5
 
     .prologue
-    .line 2011
     monitor-enter p0
 
     :try_start_0
@@ -1332,7 +1225,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2014
     :try_start_1
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -1349,7 +1241,6 @@
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 2022
     :cond_0
     :goto_0
     :try_start_2
@@ -1357,13 +1248,10 @@
 
     if-nez v1, :cond_1
 
-    .line 2023
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->startIrisService()V
 
-    .line 2024
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->waitForService()V
 
-    .line 2027
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
     :try_end_2
@@ -1378,18 +1266,15 @@
 
     return v1
 
-    .line 2015
     :catch_0
     move-exception v0
 
-    .line 2016
     .local v0, "e":Landroid/os/RemoteException;
     :try_start_3
     instance-of v1, v0, Landroid/os/DeadObjectException;
 
     if-eqz v1, :cond_0
 
-    .line 2017
     const/4 v1, 0x0
 
     iput-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
@@ -1398,7 +1283,6 @@
 
     goto :goto_0
 
-    .line 2011
     .end local v0    # "e":Landroid/os/RemoteException;
     :catchall_0
     move-exception v1
@@ -1407,7 +1291,6 @@
 
     throw v1
 
-    .line 2027
     :cond_2
     const/4 v1, 0x0
 
@@ -1421,18 +1304,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1904
     iget-object v4, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 1905
     .local v1, "mPm":Landroid/content/pm/PackageManager;
     const/4 v2, 0x0
 
-    .line 1908
     .local v2, "mRes":Landroid/content/res/Resources;
     :try_start_0
     const-string v4, "com.samsung.android.server.iris"
@@ -1443,26 +1323,21 @@
 
     move-result-object v2
 
-    .line 1914
     :goto_0
     if-nez v2, :cond_0
 
-    .line 1915
     const-string v4, "SemIrisManager"
 
     const-string/jumbo v5, "mRes is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1944
     :goto_1
     return-object v3
 
-    .line 1909
     :catch_0
     move-exception v0
 
-    .line 1910
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "SemIrisManager"
 
@@ -1486,12 +1361,10 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1911
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1920
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     packed-switch p1, :pswitch_data_0
@@ -1499,7 +1372,6 @@
     :pswitch_0
     goto :goto_1
 
-    .line 1922
     :pswitch_1
     :try_start_1
     const-string v4, "iris_acquired_move_closer"
@@ -1518,7 +1390,6 @@
 
     goto :goto_1
 
-    .line 1924
     :pswitch_2
     const-string v4, "iris_acquired_move_farther"
 
@@ -1536,7 +1407,6 @@
 
     goto :goto_1
 
-    .line 1926
     :pswitch_3
     const-string v4, "iris_acquired_open_wider"
 
@@ -1554,7 +1424,6 @@
 
     goto :goto_1
 
-    .line 1928
     :pswitch_4
     const-string v4, "iris_acquired_move_somewhere_darker"
 
@@ -1572,7 +1441,6 @@
 
     goto :goto_1
 
-    .line 1930
     :pswitch_5
     const-string v4, "iris_acquired_change_your_position"
 
@@ -1592,11 +1460,9 @@
 
     goto :goto_1
 
-    .line 1942
     :catch_1
     move-exception v0
 
-    .line 1943
     .local v0, "e":Landroid/content/res/Resources$NotFoundException;
     const-string v4, "SemIrisManager"
 
@@ -1622,7 +1488,6 @@
 
     goto/16 :goto_1
 
-    .line 1920
     nop
 
     :pswitch_data_0
@@ -1644,7 +1509,6 @@
     .locals 3
 
     .prologue
-    .line 1815
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -1658,15 +1522,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1818
     :goto_0
     return v1
 
-    .line 1816
     :catch_0
     move-exception v0
 
-    .line 1817
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -1674,7 +1535,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1818
     const/16 v1, -0x2710
 
     goto :goto_0
@@ -1687,18 +1547,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1850
     iget-object v4, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v4}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
-    .line 1851
     .local v1, "mPm":Landroid/content/pm/PackageManager;
     const/4 v2, 0x0
 
-    .line 1853
     .local v2, "mRes":Landroid/content/res/Resources;
     :try_start_0
     const-string v4, "com.samsung.android.server.iris"
@@ -1709,26 +1566,21 @@
 
     move-result-object v2
 
-    .line 1858
     :goto_0
     if-nez v2, :cond_0
 
-    .line 1859
     const-string v4, "SemIrisManager"
 
     const-string/jumbo v5, "mRes is null"
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1898
     :goto_1
     return-object v3
 
-    .line 1854
     :catch_0
     move-exception v0
 
-    .line 1855
     .local v0, "e":Ljava/lang/Exception;
     const-string v4, "SemIrisManager"
 
@@ -1752,17 +1604,14 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1856
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 1864
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     packed-switch p1, :pswitch_data_0
 
-    .line 1894
     :pswitch_0
     :try_start_1
     const-string v4, "iris_error_unable_to_process"
@@ -1781,7 +1630,6 @@
 
     goto :goto_1
 
-    .line 1866
     :pswitch_1
     const-string v4, "iris_error_unable_to_process"
 
@@ -1799,7 +1647,6 @@
 
     goto :goto_1
 
-    .line 1868
     :pswitch_2
     const-string v4, "iris_error_sensor_no_response"
 
@@ -1817,7 +1664,6 @@
 
     goto :goto_1
 
-    .line 1870
     :pswitch_3
     const-string v4, "iris_error_no_space"
 
@@ -1835,7 +1681,6 @@
 
     goto :goto_1
 
-    .line 1872
     :pswitch_4
     const-string v4, "iris_error_timeout"
 
@@ -1853,7 +1698,6 @@
 
     goto :goto_1
 
-    .line 1874
     :pswitch_5
     const-string v4, "iris_error_canceled"
 
@@ -1871,7 +1715,6 @@
 
     goto :goto_1
 
-    .line 1876
     :pswitch_6
     const-string v4, "iris_error_lockout"
 
@@ -1889,7 +1732,6 @@
 
     goto/16 :goto_1
 
-    .line 1878
     :pswitch_7
     const-string v4, "iris_error_unable_to_remove"
 
@@ -1907,19 +1749,16 @@
 
     goto/16 :goto_1
 
-    .line 1880
     :pswitch_8
     const-string v3, ""
 
     goto/16 :goto_1
 
-    .line 1882
     :pswitch_9
     const-string v3, ""
 
     goto/16 :goto_1
 
-    .line 1884
     :pswitch_a
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1973,7 +1812,6 @@
 
     goto/16 :goto_1
 
-    .line 1887
     :pswitch_b
     const-string v4, "iris_error_auth_view_size"
 
@@ -1991,7 +1829,6 @@
 
     goto/16 :goto_1
 
-    .line 1889
     :pswitch_c
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2045,7 +1882,6 @@
 
     goto/16 :goto_1
 
-    .line 1892
     :pswitch_d
     const-string v4, "iris_error_evicted"
 
@@ -2065,11 +1901,9 @@
 
     goto/16 :goto_1
 
-    .line 1896
     :catch_1
     move-exception v0
 
-    .line 1897
     .local v0, "e":Landroid/content/res/Resources$NotFoundException;
     const-string v4, "SemIrisManager"
 
@@ -2095,7 +1929,6 @@
 
     goto/16 :goto_1
 
-    .line 1864
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_2
@@ -2120,7 +1953,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1991
     const-class v1, Lcom/samsung/android/camera/iris/SemIrisManager;
 
     monitor-enter v1
@@ -2138,25 +1970,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 1992
     sget-object v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mSemIrisManager:Lcom/samsung/android/camera/iris/SemIrisManager;
 
     if-nez v0, :cond_0
 
-    .line 1993
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager;
 
     invoke-direct {v0, p0}, Lcom/samsung/android/camera/iris/SemIrisManager;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mSemIrisManager:Lcom/samsung/android/camera/iris/SemIrisManager;
 
-    .line 1995
     :cond_0
     sget-object v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mSemIrisManager:Lcom/samsung/android/camera/iris/SemIrisManager;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1997
     :goto_0
     monitor-exit v1
 
@@ -2167,7 +1995,6 @@
 
     goto :goto_0
 
-    .line 1991
     :catchall_0
     move-exception v0
 
@@ -2184,7 +2011,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 1433
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v0
@@ -2193,27 +2019,22 @@
 
     move-object v0, v10
 
-    .line 1449
     :goto_0
     return-object v0
 
-    .line 1436
     :cond_0
     const/16 v0, 0x100
 
     new-array v4, v0, [B
 
-    .line 1437
     .local v4, "outBuf":[B
     const/4 v9, 0x0
 
-    .line 1439
     .local v9, "size":I
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v0, :cond_1
 
-    .line 1441
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -2239,21 +2060,17 @@
 
     move-result v9
 
-    .line 1446
     :cond_1
     :goto_1
     if-gtz v9, :cond_2
 
     move-object v0, v10
 
-    .line 1447
     goto :goto_0
 
-    .line 1442
     :catch_0
     move-exception v8
 
-    .line 1443
     .local v8, "e":Landroid/os/RemoteException;
     const-string v0, "SemIrisManager"
 
@@ -2263,7 +2080,6 @@
 
     goto :goto_1
 
-    .line 1449
     .end local v8    # "e":Landroid/os/RemoteException;
     :cond_2
     invoke-static {v4, v9}, Ljava/util/Arrays;->copyOf([BI)[B
@@ -2277,13 +2093,11 @@
     .locals 5
 
     .prologue
-    .line 2032
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 2033
     .local v1, "intent":Landroid/content/Intent;
     new-instance v2, Landroid/content/ComponentName;
 
@@ -2295,7 +2109,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
 
-    .line 2034
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
     sget-object v3, Landroid/os/UserHandle;->CURRENT_OR_SELF:Landroid/os/UserHandle;
@@ -2304,16 +2117,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2038
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 2035
     :catch_0
     move-exception v0
 
-    .line 2036
     .local v0, "e":Ljava/lang/Exception;
     const-string v2, "SemIrisManager"
 
@@ -2347,10 +2157,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 854
     if-eqz p1, :cond_1
 
-    .line 855
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;
 
     invoke-virtual {p1}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
@@ -2361,12 +2169,10 @@
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
 
-    .line 859
     :cond_0
     :goto_0
     return-void
 
-    .line 856
     :cond_1
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mHandler:Landroid/os/Handler;
 
@@ -2382,7 +2188,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 857
     new-instance v0, Lcom/samsung/android/camera/iris/SemIrisManager$MyHandler;
 
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
@@ -2402,7 +2207,6 @@
     .locals 4
 
     .prologue
-    .line 2042
     const/4 v0, 0x1
 
     .local v0, "count":I
@@ -2411,7 +2215,6 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 2043
     const-string/jumbo v1, "samsung.iris"
 
     invoke-static {v1}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -2424,23 +2227,19 @@
 
     iput-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
-    .line 2045
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_1
 
-    .line 2046
     const-string v1, "SemIrisManager"
 
     const-string v2, "Service connected!"
 
     invoke-static {v1, v2}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2055
     :cond_0
     return-void
 
-    .line 2050
     :cond_1
     const-wide/16 v2, 0x32
 
@@ -2449,13 +2248,11 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2042
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2052
     :catch_0
     move-exception v1
 
@@ -2469,24 +2266,20 @@
     .param p1, "callback"    # Lcom/samsung/android/camera/iris/SemIrisManager$LockoutResetCallback;
 
     .prologue
-    .line 1632
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 1662
     :goto_0
     return-void
 
-    .line 1635
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v2, :cond_1
 
-    .line 1637
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
@@ -2498,7 +2291,6 @@
 
     check-cast v1, Landroid/os/PowerManager;
 
-    .line 1638
     .local v1, "powerManager":Landroid/os/PowerManager;
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -2512,12 +2304,10 @@
 
     goto :goto_0
 
-    .line 1656
     .end local v1    # "powerManager":Landroid/os/PowerManager;
     :catch_0
     move-exception v0
 
-    .line 1657
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "SemIrisManager"
 
@@ -2527,7 +2317,6 @@
 
     goto :goto_0
 
-    .line 1660
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     const-string v2, "SemIrisManager"
@@ -2551,10 +2340,8 @@
     .param p8, "irisView"    # Landroid/view/View;
 
     .prologue
-    .line 867
     if-nez p4, :cond_0
 
-    .line 868
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     const-string v4, "Must supply an authentication callback"
@@ -2563,30 +2350,25 @@
 
     throw v3
 
-    .line 871
     :cond_0
     if-eqz p2, :cond_3
 
-    .line 872
     invoke-virtual/range {p2 .. p2}, Landroid/os/CancellationSignal;->isCanceled()Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 873
     const-string v3, "SemIrisManager"
 
     const-string v4, "authentication already canceled"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 905
     :cond_1
     :goto_0
     return-void
 
-    .line 876
     :cond_2
     new-instance v3, Lcom/samsung/android/camera/iris/SemIrisManager$OnAuthenticationCancelListener;
 
@@ -2600,7 +2382,6 @@
 
     invoke-virtual {v0, v3}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 880
     :cond_3
     invoke-direct/range {p0 .. p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
@@ -2608,14 +2389,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 883
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v3, :cond_1
 
-    .line 885
     :try_start_0
     move-object/from16 v0, p0
 
@@ -2623,35 +2402,30 @@
 
     invoke-direct {v0, v1}, Lcom/samsung/android/camera/iris/SemIrisManager;->useHandler(Landroid/os/Handler;)V
 
-    .line 886
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v3, v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
 
-    .line 887
     move-object/from16 v0, p4
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthenticationCallback:Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;
 
-    .line 888
     move-object/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lcom/samsung/android/camera/iris/SemIrisManager;->mCryptoObject:Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;
 
-    .line 889
     if-eqz p1, :cond_4
 
     invoke-virtual/range {p1 .. p1}, Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;->getOpId()J
 
     move-result-wide v10
 
-    .line 890
     .local v10, "sessionId":J
     :goto_1
     if-eqz p1, :cond_5
@@ -2664,12 +2438,10 @@
 
     move-result-object v17
 
-    .line 891
     .local v17, "fidoRequestData":[B
     :goto_2
     if-nez p8, :cond_6
 
-    .line 892
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
@@ -2712,13 +2484,11 @@
 
     goto :goto_0
 
-    .line 897
     .end local v10    # "sessionId":J
     .end local v17    # "fidoRequestData":[B
     :catch_0
     move-exception v2
 
-    .line 898
     .local v2, "e":Landroid/os/RemoteException;
     const-string v3, "SemIrisManager"
 
@@ -2726,7 +2496,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 902
     const/4 v3, 0x1
 
     const/4 v4, 0x1
@@ -2743,21 +2512,18 @@
 
     goto :goto_0
 
-    .line 889
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_4
     const-wide/16 v10, 0x0
 
     goto :goto_1
 
-    .line 890
     .restart local v10    # "sessionId":J
     :cond_5
     const/16 v17, 0x0
 
     goto :goto_2
 
-    .line 894
     .restart local v17    # "fidoRequestData":[B
     :cond_6
     :try_start_1
@@ -2791,7 +2557,6 @@
 
     move-object/from16 v30, v17
 
-    .line 895
     invoke-direct/range {v19 .. v30}, Lcom/samsung/android/camera/iris/SemIrisManager;->checkAuthViewWindowToken(Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;Landroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;Landroid/os/Handler;ILandroid/os/Bundle;Landroid/view/View;J[B)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
@@ -2809,7 +2574,6 @@
     .param p6, "irisView"    # Landroid/view/View;
 
     .prologue
-    .line 846
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v6
@@ -2832,7 +2596,6 @@
 
     invoke-virtual/range {v0 .. v8}, Lcom/samsung/android/camera/iris/SemIrisManager;->authenticate(Lcom/samsung/android/camera/iris/SemIrisManager$CryptoObject;Landroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;Landroid/os/Handler;ILandroid/os/Bundle;Landroid/view/View;)V
 
-    .line 847
     return-void
 .end method
 
@@ -2841,28 +2604,23 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 1305
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1316
     :cond_0
     :goto_0
     return-void
 
-    .line 1307
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_0
 
-    .line 1309
     if-eqz p1, :cond_2
 
-    .line 1310
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -2884,11 +2642,9 @@
 
     goto :goto_0
 
-    .line 1313
     :catch_0
     move-exception v0
 
-    .line 1314
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -2898,7 +2654,6 @@
 
     goto :goto_0
 
-    .line 1312
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_2
     :try_start_1
@@ -2933,10 +2688,8 @@
     .param p6, "irisView"    # Landroid/view/View;
 
     .prologue
-    .line 1024
     if-nez p4, :cond_0
 
-    .line 1025
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     const-string v2, "Must supply an enrollment callback"
@@ -2945,30 +2698,25 @@
 
     throw v1
 
-    .line 1028
     :cond_0
     if-eqz p2, :cond_3
 
-    .line 1029
     invoke-virtual/range {p2 .. p2}, Landroid/os/CancellationSignal;->isCanceled()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 1030
     const-string v1, "SemIrisManager"
 
     const-string v2, "enrollment already canceled"
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1057
     :cond_1
     :goto_0
     return-void
 
-    .line 1033
     :cond_2
     new-instance v1, Lcom/samsung/android/camera/iris/SemIrisManager$OnEnrollCancelListener;
 
@@ -2980,7 +2728,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/CancellationSignal;->setOnCancelListener(Landroid/os/CancellationSignal$OnCancelListener;)V
 
-    .line 1037
     :cond_3
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
@@ -2988,26 +2735,21 @@
 
     if-eqz v1, :cond_1
 
-    .line 1040
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_1
 
-    .line 1042
     const/4 v1, 0x0
 
     :try_start_0
     iput-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mAuthenticationCallback:Lcom/samsung/android/camera/iris/SemIrisManager$AuthenticationCallback;
 
-    .line 1043
     move-object/from16 v0, p4
 
     iput-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mEnrollmentCallback:Lcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;
 
-    .line 1044
     if-nez p6, :cond_4
 
-    .line 1045
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mToken:Landroid/os/IBinder;
@@ -3040,11 +2782,9 @@
 
     goto :goto_0
 
-    .line 1049
     :catch_0
     move-exception v13
 
-    .line 1050
     .local v13, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -3052,7 +2792,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1054
     const/4 v1, 0x1
 
     const/4 v2, 0x1
@@ -3067,7 +2806,6 @@
 
     goto :goto_0
 
-    .line 1047
     .end local v13    # "e":Landroid/os/RemoteException;
     :cond_4
     :try_start_1
@@ -3087,7 +2825,6 @@
     .param p5, "irisView"    # Landroid/view/View;
 
     .prologue
-    .line 1018
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -3104,7 +2841,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/samsung/android/camera/iris/SemIrisManager;->enroll([BLandroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;Landroid/os/Bundle;Landroid/view/View;)V
 
-    .line 1019
     return-void
 .end method
 
@@ -3118,7 +2854,6 @@
     .param p6, "irisViewType"    # I
 
     .prologue
-    .line 998
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -3135,7 +2870,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lcom/samsung/android/camera/iris/SemIrisManager;->enroll([BLandroid/os/CancellationSignal;ILcom/samsung/android/camera/iris/SemIrisManager$EnrollmentCallback;Landroid/os/Bundle;Landroid/view/View;)V
 
-    .line 999
     return-void
 .end method
 
@@ -3145,24 +2879,20 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 1591
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1603
     :goto_0
     return-wide v2
 
-    .line 1594
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_1
 
-    .line 1596
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -3180,11 +2910,9 @@
 
     goto :goto_0
 
-    .line 1597
     :catch_0
     move-exception v0
 
-    .line 1598
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -3194,7 +2922,6 @@
 
     goto :goto_0
 
-    .line 1601
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     const-string v1, "SemIrisManager"
@@ -3210,42 +2937,34 @@
     .locals 9
 
     .prologue
-    .line 1324
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v6
 
     if-nez v6, :cond_1
 
-    .line 1325
     const/4 v5, 0x0
 
-    .line 1347
     :cond_0
     :goto_0
     return-object v5
 
-    .line 1327
     :cond_1
     new-instance v5, Landroid/util/SparseArray;
 
     invoke-direct {v5}, Landroid/util/SparseArray;-><init>()V
 
-    .line 1328
     .local v5, "localSparseArray":Landroid/util/SparseArray;
     const/4 v4, 0x0
 
-    .line 1329
     .local v4, "irisList":Ljava/util/List;, "Ljava/util/List<Lcom/samsung/android/camera/iris/Iris;>;"
     const/4 v2, 0x1
 
-    .line 1331
     .local v2, "index":I
     iget-object v6, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v6, :cond_2
 
-    .line 1333
     :try_start_0
     iget-object v6, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -3265,7 +2984,6 @@
 
     move-result-object v4
 
-    .line 1339
     :cond_2
     :goto_1
     invoke-interface {v4}, Ljava/util/List;->size()I
@@ -3278,17 +2996,14 @@
 
     if-nez v6, :cond_4
 
-    .line 1340
     :cond_3
     const/4 v5, 0x0
 
     goto :goto_0
 
-    .line 1334
     :catch_0
     move-exception v0
 
-    .line 1335
     .local v0, "e":Landroid/os/RemoteException;
     const-string v6, "SemIrisManager"
 
@@ -3298,7 +3013,6 @@
 
     goto :goto_1
 
-    .line 1342
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_4
     invoke-interface {v4}, Ljava/util/List;->iterator()Ljava/util/Iterator;
@@ -3319,7 +3033,6 @@
 
     check-cast v3, Lcom/samsung/android/camera/iris/Iris;
 
-    .line 1343
     .local v3, "ir":Lcom/samsung/android/camera/iris/Iris;
     invoke-virtual {v3}, Lcom/samsung/android/camera/iris/Iris;->getIrisId()I
 
@@ -3341,10 +3054,8 @@
 
     invoke-virtual {v5, v2, v6}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1344
     add-int/lit8 v2, v2, 0x1
 
-    .line 1345
     goto :goto_2
 .end method
 
@@ -3361,7 +3072,6 @@
     .end annotation
 
     .prologue
-    .line 1210
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -3389,25 +3099,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1191
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 1199
     :cond_0
     :goto_0
     return-object v1
 
-    .line 1193
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v2, :cond_0
 
-    .line 1195
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -3425,11 +3131,9 @@
 
     goto :goto_0
 
-    .line 1196
     :catch_0
     move-exception v0
 
-    .line 1197
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "SemIrisManager"
 
@@ -3444,20 +3148,16 @@
     .locals 8
 
     .prologue
-    .line 1259
     const/4 v4, 0x0
 
-    .line 1260
     .local v4, "width":I
     const/4 v1, 0x0
 
-    .line 1261
     .local v1, "height":I
     new-instance v0, Landroid/util/DisplayMetrics;
 
     invoke-direct {v0}, Landroid/util/DisplayMetrics;-><init>()V
 
-    .line 1262
     .local v0, "displaymetrics":Landroid/util/DisplayMetrics;
     iget-object v5, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
@@ -3475,10 +3175,8 @@
 
     invoke-virtual {v5, v0}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    .line 1263
     const v3, 0x3fe38e39
 
-    .line 1264
     .local v3, "scale":F
     iget v5, v0, Landroid/util/DisplayMetrics;->density:F
 
@@ -3486,7 +3184,6 @@
 
     move-result v2
 
-    .line 1266
     .local v2, "roundDensity":I
     iget v5, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
@@ -3494,19 +3191,16 @@
 
     if-ge v5, v6, :cond_0
 
-    .line 1267
     iget v5, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     div-int v4, v5, v2
 
-    .line 1268
     int-to-float v5, v4
 
     div-float/2addr v5, v3
 
     float-to-int v1, v5
 
-    .line 1274
     :goto_0
     new-instance v5, Landroid/util/Size;
 
@@ -3518,13 +3212,11 @@
 
     return-object v5
 
-    .line 1270
     :cond_0
     iget v5, v0, Landroid/util/DisplayMetrics;->heightPixels:I
 
     div-int v4, v5, v2
 
-    .line 1271
     int-to-float v5, v4
 
     div-float/2addr v5, v3
@@ -3540,25 +3232,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1220
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 1228
     :cond_0
     :goto_0
     return v1
 
-    .line 1222
     :cond_1
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v2, :cond_0
 
-    .line 1224
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -3580,11 +3268,9 @@
 
     goto :goto_0
 
-    .line 1225
     :catch_0
     move-exception v0
 
-    .line 1226
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "SemIrisManager"
 
@@ -3603,7 +3289,6 @@
 
     const/4 v2, 0x0
 
-    .line 1378
     const/16 v1, 0x3ea
 
     move-object v0, p0
@@ -3616,7 +3301,6 @@
 
     move-result v6
 
-    .line 1379
     .local v6, "ret":I
     if-lez v6, :cond_0
 
@@ -3630,15 +3314,12 @@
     .locals 5
 
     .prologue
-    .line 1238
     iget-object v3, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v3, :cond_0
 
-    .line 1240
     const-wide/16 v0, 0x0
 
-    .line 1241
     .local v0, "deviceId":J
     :try_start_0
     iget-object v3, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
@@ -3655,17 +3336,14 @@
 
     move-result v3
 
-    .line 1248
     .end local v0    # "deviceId":J
     :goto_0
     return v3
 
-    .line 1242
     .restart local v0    # "deviceId":J
     :catch_0
     move-exception v2
 
-    .line 1243
     .local v2, "e":Landroid/os/RemoteException;
     const-string v3, "SemIrisManager"
 
@@ -3673,7 +3351,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1244
     iget-object v3, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -3688,7 +3365,6 @@
 
     goto :goto_0
 
-    .line 1247
     .end local v0    # "deviceId":J
     .end local v2    # "e":Landroid/os/RemoteException;
     :cond_0
@@ -3698,7 +3374,6 @@
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1248
     iget-object v3, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mContext:Landroid/content/Context;
 
     invoke-virtual {v3}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -3718,10 +3393,8 @@
     .locals 4
 
     .prologue
-    .line 1122
     const/4 v1, 0x0
 
-    .line 1123
     .local v1, "result":I
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
@@ -3729,20 +3402,16 @@
 
     if-nez v2, :cond_0
 
-    .line 1124
     const/4 v2, 0x0
 
-    .line 1132
     :goto_0
     return v2
 
-    .line 1126
     :cond_0
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v2, :cond_1
 
-    .line 1128
     :try_start_0
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -3758,14 +3427,11 @@
     :goto_1
     move v2, v1
 
-    .line 1132
     goto :goto_0
 
-    .line 1129
     :catch_0
     move-exception v0
 
-    .line 1130
     .local v0, "e":Landroid/os/RemoteException;
     const-string v2, "SemIrisManager"
 
@@ -3780,10 +3446,8 @@
     .locals 6
 
     .prologue
-    .line 1103
     const-wide/16 v2, 0x0
 
-    .line 1104
     .local v2, "result":J
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
@@ -3791,20 +3455,16 @@
 
     if-nez v1, :cond_0
 
-    .line 1105
     const-wide/16 v4, 0x0
 
-    .line 1113
     :goto_0
     return-wide v4
 
-    .line 1107
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_1
 
-    .line 1109
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -3820,14 +3480,11 @@
     :goto_1
     move-wide v4, v2
 
-    .line 1113
     goto :goto_0
 
-    .line 1110
     :catch_0
     move-exception v0
 
-    .line 1111
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -3846,32 +3503,26 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 1145
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1158
     :cond_0
     :goto_0
     return-void
 
-    .line 1147
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_0
 
-    .line 1149
     :try_start_0
     iput-object p2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mRemovalCallback:Lcom/samsung/android/camera/iris/SemIrisManager$RemovalCallback;
 
-    .line 1150
     iput-object p1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mRemovalIris:Lcom/samsung/android/camera/iris/Iris;
 
-    .line 1151
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     iget-object v2, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mToken:Landroid/os/IBinder;
@@ -3892,11 +3543,9 @@
 
     goto :goto_0
 
-    .line 1152
     :catch_0
     move-exception v0
 
-    .line 1153
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -3904,10 +3553,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1154
     if-eqz p2, :cond_0
 
-    .line 1155
     invoke-direct {p0, v6}, Lcom/samsung/android/camera/iris/SemIrisManager;->getErrorString(I)Ljava/lang/String;
 
     move-result-object v1
@@ -3923,24 +3570,20 @@
     .param p2, "newName"    # Ljava/lang/String;
 
     .prologue
-    .line 1170
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1181
     :goto_0
     return-void
 
-    .line 1172
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_1
 
-    .line 1174
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -3954,11 +3597,9 @@
 
     goto :goto_0
 
-    .line 1175
     :catch_0
     move-exception v0
 
-    .line 1176
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -3968,7 +3609,6 @@
 
     goto :goto_0
 
-    .line 1179
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     const-string v1, "SemIrisManager"
@@ -3991,46 +3631,37 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1353
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1372
     :goto_0
     return v0
 
-    .line 1356
     :cond_0
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v0, :cond_3
 
-    .line 1358
     if-nez p2, :cond_1
 
-    .line 1359
     const/4 v0, 0x0
 
     :try_start_0
     new-array p2, v0, [B
 
-    .line 1361
     :cond_1
     if-nez p3, :cond_2
 
-    .line 1362
     const/4 v0, 0x0
 
     new-array p3, v0, [B
 
-    .line 1364
     :cond_2
     iput-object p5, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mRequestCallback:Lcom/samsung/android/camera/iris/SemIrisManager$RequestCallback;
 
-    .line 1365
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mToken:Landroid/os/IBinder;
@@ -4057,11 +3688,9 @@
 
     goto :goto_0
 
-    .line 1366
     :catch_0
     move-exception v8
 
-    .line 1367
     .local v8, "e":Landroid/os/RemoteException;
     const-string v0, "SemIrisManager"
 
@@ -4069,14 +3698,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1372
     .end local v8    # "e":Landroid/os/RemoteException;
     :goto_1
     const/4 v0, -0x2
 
     goto :goto_0
 
-    .line 1370
     :cond_3
     const-string v0, "SemIrisManager"
 
@@ -4095,7 +3722,6 @@
 
     const/4 v2, 0x0
 
-    .line 1578
     const/16 v1, 0x7d4
 
     move-object v0, p0
@@ -4110,7 +3736,6 @@
 
     if-gez v0, :cond_0
 
-    .line 1581
     :goto_0
     return v4
 
@@ -4128,7 +3753,6 @@
 
     const/4 v2, 0x0
 
-    .line 1570
     const/16 v1, 0x7d2
 
     move-object v0, p0
@@ -4143,7 +3767,6 @@
 
     if-gez v0, :cond_0
 
-    .line 1573
     :goto_0
     return v4
 
@@ -4159,26 +3782,21 @@
     .prologue
     const/4 v14, 0x0
 
-    .line 1520
     const/16 v0, 0xa
 
     new-array v4, v0, [B
 
-    .line 1521
     .local v4, "outBuf":[B
     const/4 v13, 0x0
 
-    .line 1522
     .local v13, "size":I
     const/4 v10, 0x0
 
-    .line 1524
     .local v10, "id":Ljava/lang/String;
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v0, :cond_0
 
-    .line 1526
     :try_start_0
     iget-object v0, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -4204,34 +3822,28 @@
 
     move-result v13
 
-    .line 1531
     :cond_0
     :goto_0
     if-gtz v13, :cond_1
 
-    .line 1532
     const/4 v0, 0x1
 
     new-array v11, v0, [I
 
-    .line 1533
     .local v11, "result":[I
     aput v14, v11, v14
 
     move-object v12, v11
 
-    .line 1541
     .end local v11    # "result":[I
     .local v12, "result":[I
     :goto_1
     return-object v12
 
-    .line 1527
     .end local v12    # "result":[I
     :catch_0
     move-exception v8
 
-    .line 1528
     .local v8, "e":Landroid/os/RemoteException;
     const-string v0, "SemIrisManager"
 
@@ -4241,12 +3853,10 @@
 
     goto :goto_0
 
-    .line 1536
     .end local v8    # "e":Landroid/os/RemoteException;
     :cond_1
     new-array v11, v13, [I
 
-    .line 1537
     .restart local v11    # "result":[I
     const/4 v9, 0x0
 
@@ -4254,7 +3864,6 @@
     :goto_2
     if-ge v9, v13, :cond_2
 
-    .line 1538
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -4277,14 +3886,12 @@
 
     move-result-object v10
 
-    .line 1539
     invoke-static {v10}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v0
 
     aput v0, v11, v9
 
-    .line 1537
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_2
@@ -4292,7 +3899,6 @@
     :cond_2
     move-object v12, v11
 
-    .line 1541
     .end local v11    # "result":[I
     .restart local v12    # "result":[I
     goto :goto_1
@@ -4306,7 +3912,6 @@
 
     const/4 v2, 0x0
 
-    .line 1554
     const/16 v1, 0x7d0
 
     move-object v0, p0
@@ -4321,7 +3926,6 @@
 
     if-gez v0, :cond_0
 
-    .line 1557
     :goto_0
     return v4
 
@@ -4337,12 +3941,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1418
     const/16 v0, 0x100
 
     new-array v3, v0, [B
 
-    .line 1419
     .local v3, "outBuf":[B
     const/4 v1, 0x5
 
@@ -4356,11 +3958,9 @@
 
     move-result v6
 
-    .line 1420
     .local v6, "size":I
     if-gtz v6, :cond_0
 
-    .line 1423
     :goto_0
     return-object v2
 
@@ -4378,7 +3978,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1429
     const/4 v1, 0x6
 
     const/4 v4, 0x0
@@ -4402,12 +4001,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1497
     const/16 v0, 0x100
 
     new-array v3, v0, [B
 
-    .line 1498
     .local v3, "outBuf":[B
     const/16 v1, 0xc
 
@@ -4421,47 +4018,38 @@
 
     move-result v10
 
-    .line 1499
     .local v10, "size":I
     if-gtz v10, :cond_1
 
-    .line 1513
     :cond_0
     :goto_0
     return-object v2
 
-    .line 1502
     :cond_1
     invoke-static {v3, v10}, Lcom/samsung/android/camera/iris/SemIrisManager;->bytesToString([BI)Ljava/lang/String;
 
     move-result-object v11
 
-    .line 1503
     .local v11, "src":Ljava/lang/String;
     if-eqz v11, :cond_0
 
-    .line 1504
     new-instance v12, Ljava/util/StringTokenizer;
 
     const-string v0, ":"
 
     invoke-direct {v12, v11, v0}, Ljava/util/StringTokenizer;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1505
     .local v12, "st":Ljava/util/StringTokenizer;
     invoke-virtual {v12}, Ljava/util/StringTokenizer;->countTokens()I
 
     move-result v6
 
-    .line 1506
     .local v6, "count":I
     new-array v9, v6, [Ljava/lang/String;
 
-    .line 1507
     .local v9, "result":[Ljava/lang/String;
     const/4 v7, 0x0
 
-    .line 1508
     .local v7, "i":I
     :goto_1
     invoke-virtual {v12}, Ljava/util/StringTokenizer;->hasMoreTokens()Z
@@ -4470,7 +4058,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1509
     add-int/lit8 v8, v7, 0x1
 
     .end local v7    # "i":I
@@ -4490,7 +4077,6 @@
     :cond_2
     move-object v2, v9
 
-    .line 1511
     goto :goto_0
 .end method
 
@@ -4500,12 +4086,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1408
     const/16 v0, 0x100
 
     new-array v3, v0, [B
 
-    .line 1409
     .local v3, "outBuf":[B
     const/4 v1, 0x4
 
@@ -4519,11 +4103,9 @@
 
     move-result v6
 
-    .line 1410
     .local v6, "size":I
     if-gtz v6, :cond_0
 
-    .line 1413
     :goto_0
     return-object v2
 
@@ -4543,7 +4125,6 @@
 
     const/4 v2, 0x0
 
-    .line 1546
     const/16 v1, 0x7d1
 
     move-object v0, p0
@@ -4558,7 +4139,6 @@
 
     if-gez v0, :cond_0
 
-    .line 1549
     :goto_0
     return v4
 
@@ -4576,7 +4156,6 @@
 
     const/4 v1, 0x0
 
-    .line 1384
     move-object v0, p0
 
     move-object v3, v2
@@ -4591,7 +4170,6 @@
 
     if-gez v0, :cond_0
 
-    .line 1387
     :goto_0
     return v1
 
@@ -4609,7 +4187,6 @@
 
     const/4 v2, 0x0
 
-    .line 1562
     const/16 v1, 0x7d3
 
     move-object v0, p0
@@ -4624,7 +4201,6 @@
 
     if-gez v0, :cond_0
 
-    .line 1565
     :goto_0
     return v4
 
@@ -4641,12 +4217,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1468
     const/16 v0, 0x2800
 
     new-array v3, v0, [B
 
-    .line 1469
     .local v3, "outBuf":[B
     const/16 v1, 0x9
 
@@ -4660,11 +4234,9 @@
 
     move-result v6
 
-    .line 1470
     .local v6, "size":I
     if-gtz v6, :cond_0
 
-    .line 1473
     :goto_0
     return-object v5
 
@@ -4686,7 +4258,6 @@
 
     const/4 v2, 0x0
 
-    .line 1392
     move-object v0, p0
 
     move-object v3, v2
@@ -4699,7 +4270,6 @@
 
     if-gez v0, :cond_0
 
-    .line 1395
     :goto_0
     return v4
 
@@ -4717,7 +4287,6 @@
 
     const/4 v2, 0x0
 
-    .line 1400
     const/4 v1, 0x2
 
     move-object v0, p0
@@ -4732,7 +4301,6 @@
 
     if-gez v0, :cond_0
 
-    .line 1403
     :goto_0
     return v4
 
@@ -4753,10 +4321,8 @@
 
     const/4 v2, 0x0
 
-    .line 1454
     if-nez p1, :cond_0
 
-    .line 1455
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->getCurrentUserId()I
 
     move-result v4
@@ -4775,11 +4341,9 @@
 
     move v0, v9
 
-    .line 1463
     :goto_0
     return v0
 
-    .line 1459
     :cond_0
     invoke-virtual {p1}, Ljava/lang/String;->getBytes()[B
 
@@ -4805,10 +4369,8 @@
 
     move v0, v9
 
-    .line 1460
     goto :goto_0
 
-    .line 1463
     :cond_1
     const/4 v0, 0x1
 
@@ -4824,7 +4386,6 @@
 
     const/4 v4, 0x0
 
-    .line 1478
     const/16 v1, 0xa
 
     move-object v0, p0
@@ -4839,7 +4400,6 @@
 
     if-gez v0, :cond_0
 
-    .line 1481
     :goto_0
     return v4
 
@@ -4854,24 +4414,20 @@
     .param p1, "token"    # [B
 
     .prologue
-    .line 1614
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 1626
     :goto_0
     return-void
 
-    .line 1617
     :cond_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_1
 
-    .line 1619
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -4881,11 +4437,9 @@
 
     goto :goto_0
 
-    .line 1620
     :catch_0
     move-exception v0
 
-    .line 1621
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 
@@ -4895,7 +4449,6 @@
 
     goto :goto_0
 
-    .line 1624
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_1
     const-string v1, "SemIrisManager"
@@ -4912,25 +4465,21 @@
     .param p1, "irisViewType"    # I
 
     .prologue
-    .line 1288
     invoke-direct {p0}, Lcom/samsung/android/camera/iris/SemIrisManager;->ensureServiceConnected()Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 1296
     :cond_0
     :goto_0
     return-void
 
-    .line 1290
     :cond_1
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
     if-eqz v1, :cond_0
 
-    .line 1292
     :try_start_0
     iget-object v1, p0, Lcom/samsung/android/camera/iris/SemIrisManager;->mService:Lcom/samsung/android/camera/iris/IIrisService;
 
@@ -4950,11 +4499,9 @@
 
     goto :goto_0
 
-    .line 1293
     :catch_0
     move-exception v0
 
-    .line 1294
     .local v0, "e":Landroid/os/RemoteException;
     const-string v1, "SemIrisManager"
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 595
     iput-object p1, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
 
     iput-object p2, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->val$binder:Landroid/os/IBinder;
@@ -44,7 +43,6 @@
     .locals 4
 
     .prologue
-    .line 598
     # getter for: Lcom/android/server/aod/AODManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->access$100()Ljava/lang/String;
 
@@ -54,21 +52,18 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 599
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
 
     const/4 v2, 0x1
 
     iput-boolean v2, v1, Lcom/android/server/aod/AODManagerService$AODConnection;->mConnected:Z
 
-    .line 600
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
 
     iget-object v1, v1, Lcom/android/server/aod/AODManagerService$AODConnection;->mService:Lcom/samsung/android/aod/IAlwaysOnDisplayService;
 
     if-nez v1, :cond_0
 
-    .line 601
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
 
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->val$binder:Landroid/os/IBinder;
@@ -79,7 +74,6 @@
 
     iput-object v2, v1, Lcom/android/server/aod/AODManagerService$AODConnection;->mService:Lcom/samsung/android/aod/IAlwaysOnDisplayService;
 
-    .line 603
     :try_start_0
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
 
@@ -97,7 +91,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 607
     :goto_0
     # getter for: Lcom/android/server/aod/AODManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->access$100()Ljava/lang/String;
@@ -148,7 +141,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 608
     sget-object v1, Lcom/android/server/aod/AODManagerService$4;->$SwitchMap$com$android$server$aod$AODManagerService$AODConnectionCause:[I
 
     iget-object v2, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
@@ -167,16 +159,13 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 622
     :cond_0
     :goto_1
     return-void
 
-    .line 604
     :catch_0
     move-exception v0
 
-    .line 605
     .local v0, "e":Landroid/os/RemoteException;
     # getter for: Lcom/android/server/aod/AODManagerService;->TAG:Ljava/lang/String;
     invoke-static {}, Lcom/android/server/aod/AODManagerService;->access$100()Ljava/lang/String;
@@ -189,7 +178,6 @@
 
     goto :goto_0
 
-    .line 610
     .end local v0    # "e":Landroid/os/RemoteException;
     :pswitch_0
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
@@ -200,7 +188,6 @@
 
     goto :goto_1
 
-    .line 613
     :pswitch_1
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
 
@@ -210,7 +197,6 @@
 
     goto :goto_1
 
-    .line 616
     :pswitch_2
     iget-object v1, p0, Lcom/android/server/aod/AODManagerService$AODConnection$1;->this$1:Lcom/android/server/aod/AODManagerService$AODConnection;
 
@@ -225,7 +211,6 @@
 
     goto :goto_1
 
-    .line 608
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 1502
     iput-object p1, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,7 +38,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 1505
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     iget-object v2, v2, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -48,7 +46,6 @@
 
     move-result-object v0
 
-    .line 1506
     .local v0, "info":Lcom/android/internal/net/LegacyVpnInfo;
     const-string v2, "LegacyVpnRunner"
 
@@ -56,7 +53,6 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1508
     if-eqz v0, :cond_0
 
     iget v2, v0, Lcom/android/internal/net/LegacyVpnInfo;->state:I
@@ -65,13 +61,11 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1510
     :try_start_0
     invoke-static {}, Landroid/security/KeyStore;->getInstance()Landroid/security/KeyStore;
 
     move-result-object v1
 
-    .line 1511
     .local v1, "keystore":Landroid/security/KeyStore;
     invoke-virtual {v1}, Landroid/security/KeyStore;->isEmptyForSystemCredential()Z
 
@@ -79,7 +73,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1512
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     iget-object v2, v2, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -95,7 +88,6 @@
 
     invoke-virtual {v2}, Landroid/net/ConnectivityManager;->updateLockdownVpn()Z
 
-    .line 1513
     iget-object v2, p0, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner$2;->this$1:Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;
 
     iget-object v2, v2, Lcom/android/server/connectivity/Vpn$LegacyVpnRunner;->this$0:Lcom/android/server/connectivity/Vpn;
@@ -126,13 +118,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1519
     .end local v1    # "keystore":Landroid/security/KeyStore;
     :cond_0
     :goto_0
     return-void
 
-    .line 1515
     :catch_0
     move-exception v2
 

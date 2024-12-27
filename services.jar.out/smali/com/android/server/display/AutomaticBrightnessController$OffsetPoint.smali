@@ -42,35 +42,27 @@
     .prologue
     const/high16 v1, 0x40200000    # 2.5f
 
-    .line 1895
     iput-object p1, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->this$0:Lcom/android/server/display/AutomaticBrightnessController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1886
     iput v1, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->BOUNDARY_RATIO:F
 
-    .line 1896
     monitor-enter p0
 
-    .line 1897
     :try_start_0
     iput p2, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->mLux:F
 
-    .line 1898
     iput p3, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->mOffset:F
 
-    .line 1899
     div-float v0, p2, v1
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->mLowBoundary:F
 
-    .line 1900
     mul-float v0, p2, v1
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->mHighBoundary:F
 
-    .line 1901
     # getter for: Lcom/android/server/display/AutomaticBrightnessController;->mDynamicAutoBrightnessConfig:Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
     invoke-static {p1}, Lcom/android/server/display/AutomaticBrightnessController;->access$3800(Lcom/android/server/display/AutomaticBrightnessController;)Lcom/android/server/display/DisplayPowerController$DynamicAutoBrightnessConfig;
 
@@ -84,16 +76,12 @@
 
     iput v0, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->mOrgCd:F
 
-    .line 1902
     iput p4, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->mOffsetType:I
 
-    .line 1903
     monitor-exit p0
 
-    .line 1904
     return-void
 
-    .line 1903
     :catchall_0
     move-exception v0
 
@@ -110,13 +98,10 @@
     .locals 4
 
     .prologue
-    .line 1907
     monitor-enter p0
 
-    .line 1908
     const/4 v0, 0x0
 
-    .line 1909
     .local v0, "type":Ljava/lang/String;
     :try_start_0
     iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->mOffsetType:I
@@ -125,7 +110,6 @@
 
     const-string v0, "F"
 
-    .line 1914
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -196,7 +180,6 @@
 
     return-object v1
 
-    .line 1910
     :cond_0
     iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->mOffsetType:I
 
@@ -208,7 +191,6 @@
 
     goto :goto_0
 
-    .line 1911
     :cond_1
     iget v1, p0, Lcom/android/server/display/AutomaticBrightnessController$OffsetPoint;->mOffsetType:I
 
@@ -220,19 +202,16 @@
 
     goto :goto_0
 
-    .line 1912
     :cond_2
     const-string v0, "-"
 
     goto :goto_0
 
-    .line 1914
     :cond_3
     const-string v1, ""
 
     goto :goto_1
 
-    .line 1915
     :catchall_0
     move-exception v1
 

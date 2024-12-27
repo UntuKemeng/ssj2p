@@ -22,13 +22,10 @@
     .param p1, "model"    # Lorg/simpleframework/xml/core/Model;
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     iput-object p1, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
-    .line 65
     return-void
 .end method
 
@@ -44,18 +41,15 @@
     .end annotation
 
     .prologue
-    .line 120
     iget-object v1, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
     invoke-interface {v1}, Lorg/simpleframework/xml/core/Model;->getExpression()Lorg/simpleframework/xml/core/Expression;
 
     move-result-object v0
 
-    .line 122
     .local v0, "path":Lorg/simpleframework/xml/core/Expression;
     if-nez v0, :cond_0
 
-    .line 125
     .end local p1    # "name":Ljava/lang/String;
     :goto_0
     return-object p1
@@ -78,12 +72,10 @@
     .end annotation
 
     .prologue
-    .line 199
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->attributes:Lorg/simpleframework/xml/core/LabelMap;
 
     if-nez v0, :cond_0
 
-    .line 200
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Model;->getAttributes()Lorg/simpleframework/xml/core/LabelMap;
@@ -92,7 +84,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->attributes:Lorg/simpleframework/xml/core/LabelMap;
 
-    .line 202
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->attributes:Lorg/simpleframework/xml/core/LabelMap;
 
@@ -109,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 236
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ModelSection;->getElements()Lorg/simpleframework/xml/core/LabelMap;
 
     move-result-object v0
@@ -130,12 +120,10 @@
     .end annotation
 
     .prologue
-    .line 215
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
     if-nez v0, :cond_0
 
-    .line 216
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Model;->getElements()Lorg/simpleframework/xml/core/LabelMap;
@@ -144,7 +132,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
-    .line 218
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->elements:Lorg/simpleframework/xml/core/LabelMap;
 
@@ -160,12 +147,10 @@
     .end annotation
 
     .prologue
-    .line 170
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->models:Lorg/simpleframework/xml/core/ModelMap;
 
     if-nez v0, :cond_0
 
-    .line 171
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Model;->getModels()Lorg/simpleframework/xml/core/ModelMap;
@@ -174,7 +159,6 @@
 
     iput-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->models:Lorg/simpleframework/xml/core/ModelMap;
 
-    .line 173
     :cond_0
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->models:Lorg/simpleframework/xml/core/ModelMap;
 
@@ -185,7 +169,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Model;->getName()Ljava/lang/String;
@@ -205,18 +188,15 @@
     .end annotation
 
     .prologue
-    .line 101
     iget-object v1, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
     invoke-interface {v1}, Lorg/simpleframework/xml/core/Model;->getExpression()Lorg/simpleframework/xml/core/Expression;
 
     move-result-object v0
 
-    .line 103
     .local v0, "path":Lorg/simpleframework/xml/core/Expression;
     if-nez v0, :cond_0
 
-    .line 106
     .end local p1    # "name":Ljava/lang/String;
     :goto_0
     return-object p1
@@ -234,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 87
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Model;->getPrefix()Ljava/lang/String;
@@ -254,12 +233,10 @@
     .end annotation
 
     .prologue
-    .line 254
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ModelSection;->getModels()Lorg/simpleframework/xml/core/ModelMap;
 
     move-result-object v1
 
-    .line 255
     .local v1, "map":Lorg/simpleframework/xml/core/ModelMap;
     invoke-virtual {v1, p1}, Lorg/simpleframework/xml/core/ModelMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -267,25 +244,20 @@
 
     check-cast v0, Lorg/simpleframework/xml/core/ModelList;
 
-    .line 257
     .local v0, "list":Lorg/simpleframework/xml/core/ModelList;
     if-eqz v0, :cond_0
 
-    .line 258
     invoke-virtual {v0}, Lorg/simpleframework/xml/core/ModelList;->take()Lorg/simpleframework/xml/core/Model;
 
     move-result-object v2
 
-    .line 260
     .local v2, "model":Lorg/simpleframework/xml/core/Model;
     if-eqz v2, :cond_0
 
-    .line 261
     new-instance v3, Lorg/simpleframework/xml/core/ModelSection;
 
     invoke-direct {v3, v2}, Lorg/simpleframework/xml/core/ModelSection;-><init>(Lorg/simpleframework/xml/core/Model;)V
 
-    .line 264
     .end local v2    # "model":Lorg/simpleframework/xml/core/Model;
     :goto_0
     return-object v3
@@ -305,7 +277,6 @@
     .end annotation
 
     .prologue
-    .line 186
     iget-object v0, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
     invoke-interface {v0}, Lorg/simpleframework/xml/core/Model;->getText()Lorg/simpleframework/xml/core/Label;
@@ -325,7 +296,6 @@
     .end annotation
 
     .prologue
-    .line 157
     invoke-virtual {p0}, Lorg/simpleframework/xml/core/ModelSection;->getModels()Lorg/simpleframework/xml/core/ModelMap;
 
     move-result-object v0
@@ -360,12 +330,10 @@
     .end annotation
 
     .prologue
-    .line 138
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 140
     .local v2, "list":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v3, p0, Lorg/simpleframework/xml/core/ModelSection;->model:Lorg/simpleframework/xml/core/Model;
 
@@ -387,13 +355,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 141
     .local v0, "element":Ljava/lang/String;
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 143
     .end local v0    # "element":Ljava/lang/String;
     :cond_0
     invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;

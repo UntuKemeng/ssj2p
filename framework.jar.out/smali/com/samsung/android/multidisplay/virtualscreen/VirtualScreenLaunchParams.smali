@@ -44,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 77
     new-instance v0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams$1;
 
     invoke-direct {v0}, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams$1;-><init>()V
@@ -60,26 +59,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object v1, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mBounds:Landroid/graphics/Rect;
 
-    .line 50
     const/4 v0, -0x1
 
     iput v0, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mDisplayId:I
 
-    .line 51
     iput-object v1, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mBounds:Landroid/graphics/Rect;
 
-    .line 52
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mFlags:I
 
-    .line 53
     return-void
 .end method
 
@@ -88,18 +81,14 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mBounds:Landroid/graphics/Rect;
 
-    .line 56
     invoke-virtual {p0, p1}, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->readFromParcel(Landroid/os/Parcel;)V
 
-    .line 57
     return-void
 .end method
 
@@ -109,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     return v0
@@ -120,14 +108,12 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 72
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mDisplayId:I
 
-    .line 73
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -144,14 +130,12 @@
 
     iput-object v0, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mBounds:Landroid/graphics/Rect;
 
-    .line 74
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
     iput v0, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mFlags:I
 
-    .line 75
     return-void
 .end method
 
@@ -159,20 +143,17 @@
     .locals 6
 
     .prologue
-    .line 91
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/16 v1, 0x80
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 92
     .local v0, "b":Ljava/lang/StringBuilder;
     const-string v1, "Params{"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 93
     const-string/jumbo v1, "mDisplayId="
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -183,7 +164,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 94
     const-string v1, ", "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -194,7 +174,6 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 95
     const-string v1, ", mFlags=0x"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -223,12 +202,10 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 96
     const-string v1, ")}"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 97
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v1
@@ -242,23 +219,19 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 66
     iget v0, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mDisplayId:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 67
     iget-object v0, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mBounds:Landroid/graphics/Rect;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 68
     iget v0, p0, Lcom/samsung/android/multidisplay/virtualscreen/VirtualScreenLaunchParams;->mFlags:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 69
     return-void
 .end method

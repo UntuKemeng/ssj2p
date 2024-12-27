@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 6467
     iput-object p1, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$7;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -39,19 +38,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 6469
     const-string v7, "ApplicationPolicy"
 
     const-string/jumbo v8, "registerECContainerRemovalListener"
 
     invoke-static {v7, v8}, Lcom/android/server/enterprise/log/Log;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6471
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object v0
 
-    .line 6472
     .local v0, "bundle":Landroid/os/Bundle;
     const-string/jumbo v7, "personaid"
 
@@ -59,7 +55,6 @@
 
     move-result v5
 
-    .line 6473
     .local v5, "personaId":I
     const-string/jumbo v7, "owneruid"
 
@@ -67,7 +62,6 @@
 
     move-result v4
 
-    .line 6474
     .local v4, "ownerUid":I
     const-string/jumbo v7, "isEC"
 
@@ -75,7 +69,6 @@
 
     move-result v3
 
-    .line 6475
     .local v3, "isEC":Z
     const-string v7, "ApplicationPolicy"
 
@@ -109,21 +102,17 @@
 
     invoke-static {v7, v8}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6476
     if-eqz v3, :cond_1
 
-    .line 6477
     iget-object v7, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$7;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     # invokes: Lcom/android/server/enterprise/application/ApplicationPolicy;->clearApplicationNameForUid(I)V
     invoke-static {v7, v4}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$3100(Lcom/android/server/enterprise/application/ApplicationPolicy;I)V
 
-    .line 6479
     invoke-static {v4}, Landroid/os/UserHandle;->getUserId(I)I
 
     move-result v6
 
-    .line 6480
     .local v6, "userId":I
     const-string v7, "ApplicationPolicy"
 
@@ -147,7 +136,6 @@
 
     invoke-static {v7, v8}, Lcom/android/server/enterprise/log/Log;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 6482
     # getter for: Lcom/android/server/enterprise/application/ApplicationPolicy;->mAppIconChangedPkgNameMap:Ljava/util/HashMap;
     invoke-static {}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$3200()Ljava/util/HashMap;
 
@@ -155,7 +143,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 6483
     # getter for: Lcom/android/server/enterprise/application/ApplicationPolicy;->mAppIconChangedPkgNameMap:Ljava/util/HashMap;
     invoke-static {}, Lcom/android/server/enterprise/application/ApplicationPolicy;->access$3200()Ljava/util/HashMap;
 
@@ -171,7 +158,6 @@
 
     check-cast v1, Ljava/util/List;
 
-    .line 6484
     .local v1, "icons":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_0
     :goto_0
@@ -183,12 +169,10 @@
 
     if-nez v7, :cond_1
 
-    .line 6485
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
     move-result-object v2
 
-    .line 6486
     .local v2, "iconsIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
 
@@ -196,7 +180,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 6487
     iget-object v8, p0, Lcom/android/server/enterprise/application/ApplicationPolicy$7;->this$0:Lcom/android/server/enterprise/application/ApplicationPolicy;
 
     invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -212,7 +195,6 @@
 
     goto :goto_0
 
-    .line 6496
     .end local v1    # "icons":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     .end local v2    # "iconsIterator":Ljava/util/Iterator;, "Ljava/util/Iterator<Ljava/lang/String;>;"
     .end local v6    # "userId":I

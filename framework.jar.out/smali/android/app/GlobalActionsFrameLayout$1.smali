@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 115
     iput-object p1, p0, Landroid/app/GlobalActionsFrameLayout$1;->this$0:Landroid/app/GlobalActionsFrameLayout;
 
     iput-object p2, p0, Landroid/app/GlobalActionsFrameLayout$1;->val$tempView:Landroid/view/View;
@@ -44,13 +43,11 @@
     .locals 2
 
     .prologue
-    .line 119
     iget-object v0, p0, Landroid/app/GlobalActionsFrameLayout$1;->val$tempView:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 121
     return-void
 .end method

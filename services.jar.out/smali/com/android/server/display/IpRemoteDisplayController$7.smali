@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 350
     iput-object p1, p0, Lcom/android/server/display/IpRemoteDisplayController$7;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 2
 
     .prologue
-    .line 359
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$7;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mWifiDisplayOnSetting:Z
@@ -50,20 +48,17 @@
 
     if-eqz v0, :cond_0
 
-    .line 360
     const-string v0, "IpRemoteDisplayController"
 
     const-string/jumbo v1, "onHeadSetConnected! we will disconnect WFD!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$7;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # invokes: Lcom/android/server/display/IpRemoteDisplayController;->disconnect()V
     invoke-static {v0}, Lcom/android/server/display/IpRemoteDisplayController;->access$700(Lcom/android/server/display/IpRemoteDisplayController;)V
 
-    .line 363
     :cond_0
     return-void
 .end method
@@ -73,7 +68,6 @@
     .param p1, "level"    # I
 
     .prologue
-    .line 374
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$7;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mRemoteDisplayConnected:Z
@@ -83,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 375
     const-string v0, "IpRemoteDisplayController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -106,7 +99,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 377
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$7;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mListener:Lcom/android/server/display/IpRemoteDisplayController$Listener;
@@ -116,7 +108,6 @@
 
     invoke-interface {v0, p1}, Lcom/android/server/display/IpRemoteDisplayController$Listener;->onQosLevelChanged(I)V
 
-    .line 378
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$7;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     const/4 v1, 0x5
@@ -124,7 +115,6 @@
     # invokes: Lcom/android/server/display/IpRemoteDisplayController;->sendDisplayEventToExtendedListener(II)V
     invoke-static {v0, p1, v1}, Lcom/android/server/display/IpRemoteDisplayController;->access$1400(Lcom/android/server/display/IpRemoteDisplayController;II)V
 
-    .line 380
     :cond_0
     return-void
 .end method
@@ -133,20 +123,17 @@
     .locals 2
 
     .prologue
-    .line 353
     const-string v0, "IpRemoteDisplayController"
 
     const-string/jumbo v1, "onTerminateRequested! we will disconnect WFD!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$7;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # invokes: Lcom/android/server/display/IpRemoteDisplayController;->disconnect()V
     invoke-static {v0}, Lcom/android/server/display/IpRemoteDisplayController;->access$700(Lcom/android/server/display/IpRemoteDisplayController;)V
 
-    .line 355
     return-void
 .end method
 
@@ -155,7 +142,6 @@
     .param p1, "nRtpType"    # I
 
     .prologue
-    .line 384
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$7;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mRemoteDisplayConnected:Z
@@ -165,7 +151,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 385
     const-string v0, "IpRemoteDisplayController"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -188,7 +173,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 387
     :cond_0
     return-void
 .end method
@@ -197,7 +181,6 @@
     .locals 2
 
     .prologue
-    .line 367
     iget-object v0, p0, Lcom/android/server/display/IpRemoteDisplayController$7;->this$0:Lcom/android/server/display/IpRemoteDisplayController;
 
     # getter for: Lcom/android/server/display/IpRemoteDisplayController;->mRemoteDisplayConnected:Z
@@ -207,14 +190,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 368
     const-string v0, "IpRemoteDisplayController"
 
     const-string/jumbo v1, "onWeakNetwork!"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 370
     :cond_0
     return-void
 .end method

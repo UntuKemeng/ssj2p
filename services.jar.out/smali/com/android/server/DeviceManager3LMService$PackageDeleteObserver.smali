@@ -27,12 +27,10 @@
     .locals 1
 
     .prologue
-    .line 2343
     iput-object p1, p0, Lcom/android/server/DeviceManager3LMService$PackageDeleteObserver;->this$0:Lcom/android/server/DeviceManager3LMService;
 
     invoke-direct {p0}, Landroid/content/pm/IPackageDeleteObserver$Stub;-><init>()V
 
-    .line 2345
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/DeviceManager3LMService$PackageDeleteObserver;->doneFlag:Z
@@ -46,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 2360
     const/4 v0, 0x1
 
     return v0
@@ -63,6 +60,5 @@
     .end annotation
 
     .prologue
-    .line 2349
     return-void
 .end method

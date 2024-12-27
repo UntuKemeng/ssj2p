@@ -53,20 +53,16 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 53
     invoke-direct {p0}, Landroid/service/ISEDenialService$Stub;-><init>()V
 
-    .line 54
     iput-object p1, p0, Lcom/android/server/SEDenialService;->mContext:Landroid/content/Context;
 
-    .line 55
     const-string v0, "SecurityLogAgent:SEDenialService"
 
     const-string v1, "Started FileObserver"
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 56
     new-instance v0, Lcom/android/server/SEDenialService$AuditFileObserver;
 
     const-string v1, "/data/misc/audit/"
@@ -77,12 +73,10 @@
 
     iput-object v0, p0, Lcom/android/server/SEDenialService;->auditObserver:Lcom/android/server/SEDenialService$AuditFileObserver;
 
-    .line 57
     iget-object v0, p0, Lcom/android/server/SEDenialService;->auditObserver:Lcom/android/server/SEDenialService$AuditFileObserver;
 
     invoke-virtual {v0}, Lcom/android/server/SEDenialService$AuditFileObserver;->startWatching()V
 
-    .line 58
     return-void
 .end method
 
@@ -91,7 +85,6 @@
     .param p0, "x0"    # Lcom/android/server/SEDenialService;
 
     .prologue
-    .line 35
     iget-object v0, p0, Lcom/android/server/SEDenialService;->mContext:Landroid/content/Context;
 
     return-object v0

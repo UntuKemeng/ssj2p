@@ -20,19 +20,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 10
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
     iput-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiNumericBase:Ljava/lang/String;
 
-    .line 12
     iput-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiRangeStart:Ljava/lang/String;
 
-    .line 13
     iput-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiRangeEnd:Ljava/lang/String;
 
-    .line 15
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->usingMvno:Z
@@ -46,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 18
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiNumericBase:Ljava/lang/String;
 
     return-object v0
@@ -56,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 47
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiRangeEnd:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -76,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 32
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiRangeStart:Ljava/lang/String;
 
     return-object v0
@@ -86,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-boolean v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->usingMvno:Z
 
     return v0
@@ -97,18 +88,14 @@
     .param p1, "imsiNumericBase"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiNumericBase:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 25
     iput-object p1, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiNumericBase:Ljava/lang/String;
 
-    .line 26
     const/4 v0, 0x1
 
-    .line 29
     :goto_0
     return v0
 
@@ -123,18 +110,14 @@
     .param p1, "imsiRangeEnd"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiRangeEnd:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 54
     iput-object p1, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiRangeEnd:Ljava/lang/String;
 
-    .line 55
     const/4 v0, 0x1
 
-    .line 58
     :goto_0
     return v0
 
@@ -149,18 +132,14 @@
     .param p1, "imsiRangeStart"    # Ljava/lang/String;
 
     .prologue
-    .line 38
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiRangeStart:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 39
     iput-object p1, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiRangeStart:Ljava/lang/String;
 
-    .line 40
     const/4 v0, 0x1
 
-    .line 43
     :goto_0
     return v0
 
@@ -174,12 +153,10 @@
     .locals 1
 
     .prologue
-    .line 77
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->usingMvno:Z
 
-    .line 78
     return-void
 .end method
 
@@ -187,7 +164,6 @@
     .locals 3
 
     .prologue
-    .line 87
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -315,7 +291,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Lcom/samsung/appdisabler/ImsiNumeric;->imsiNumericBase:Ljava/lang/String;
 
     if-eqz v0, :cond_0
@@ -324,11 +299,9 @@
 
     if-nez v0, :cond_1
 
-    .line 70
     :cond_0
     const/4 v0, 0x0
 
-    .line 73
     :goto_0
     return v0
 

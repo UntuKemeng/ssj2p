@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Landroid/bluetooth/IBluetoothGattCallback$Stub;-><init>()V
 
     return-void
@@ -35,7 +34,6 @@
     .end annotation
 
     .prologue
-    .line 48
     .local p1, "batchResults":Ljava/util/List;, "Ljava/util/List<Landroid/bluetooth/le/ScanResult;>;"
     return-void
 .end method
@@ -57,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 81
     return-void
 .end method
 
@@ -77,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 86
     return-void
 .end method
 
@@ -88,7 +84,6 @@
     .param p3, "status"    # I
 
     .prologue
-    .line 136
     return-void
 .end method
 
@@ -105,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 40
     return-void
 .end method
 
@@ -120,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 35
     return-void
 .end method
 
@@ -136,7 +129,6 @@
     .end annotation
 
     .prologue
-    .line 120
     return-void
 .end method
 
@@ -159,7 +151,6 @@
     .end annotation
 
     .prologue
-    .line 96
     return-void
 .end method
 
@@ -181,7 +172,6 @@
     .end annotation
 
     .prologue
-    .line 102
     return-void
 .end method
 
@@ -196,7 +186,6 @@
     .end annotation
 
     .prologue
-    .line 90
     return-void
 .end method
 
@@ -211,7 +200,6 @@
     .end annotation
 
     .prologue
-    .line 124
     return-void
 .end method
 
@@ -231,7 +219,6 @@
     .end annotation
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -252,7 +239,6 @@
     .end annotation
 
     .prologue
-    .line 71
     return-void
 .end method
 
@@ -272,7 +258,6 @@
     .end annotation
 
     .prologue
-    .line 59
     return-void
 .end method
 
@@ -289,7 +274,6 @@
     .end annotation
 
     .prologue
-    .line 53
     return-void
 .end method
 
@@ -304,7 +288,6 @@
     .end annotation
 
     .prologue
-    .line 132
     return-void
 .end method
 
@@ -320,7 +303,6 @@
     .end annotation
 
     .prologue
-    .line 116
     return-void
 .end method
 
@@ -340,7 +322,6 @@
     .end annotation
 
     .prologue
-    .line 107
     return-void
 .end method
 
@@ -356,7 +337,6 @@
     .end annotation
 
     .prologue
-    .line 111
     return-void
 .end method
 
@@ -370,7 +350,6 @@
     .end annotation
 
     .prologue
-    .line 128
     return-void
 .end method
 
@@ -384,7 +363,6 @@
     .end annotation
 
     .prologue
-    .line 44
     return-void
 .end method
 
@@ -399,6 +377,5 @@
     .end annotation
 
     .prologue
-    .line 75
     return-void
 .end method

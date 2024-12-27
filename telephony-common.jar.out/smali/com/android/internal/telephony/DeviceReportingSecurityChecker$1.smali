@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 94
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -35,14 +34,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 97
     const-string v1, "DeviceReportingSecurityChecker"
 
     const-string v2, "onReceive mSimStateReceiver"
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 98
     # getter for: Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->mTelephonyManager:Landroid/telephony/TelephonyManager;
     invoke-static {}, Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->access$000()Landroid/telephony/TelephonyManager;
 
@@ -52,13 +49,11 @@
 
     move-result v0
 
-    .line 100
     .local v0, "simState":I
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_1
 
-    .line 101
     # invokes: Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->isTMOSIM()Z
     invoke-static {}, Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->access$100()Z
 
@@ -66,13 +61,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 102
     const/4 v1, 0x1
 
     # setter for: Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->mIsTmoSim:Z
     invoke-static {v1}, Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->access$202(Z)Z
 
-    .line 111
     :goto_0
     const-string v1, "DeviceReportingSecurityChecker"
 
@@ -101,10 +94,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 112
     return-void
 
-    .line 104
     :cond_0
     const-string v1, "DeviceReportingSecurityChecker"
 
@@ -112,13 +103,11 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
     # setter for: Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->mIsTmoSim:Z
     invoke-static {v3}, Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->access$202(Z)Z
 
     goto :goto_0
 
-    .line 108
     :cond_1
     const-string v1, "DeviceReportingSecurityChecker"
 
@@ -126,7 +115,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 109
     # setter for: Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->mIsTmoSim:Z
     invoke-static {v3}, Lcom/android/internal/telephony/DeviceReportingSecurityChecker;->access$202(Z)Z
 

@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 26906
     iput-object p1, p0, Lcom/android/server/pm/PackageManagerService$41;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iput p2, p0, Lcom/android/server/pm/PackageManagerService$41;->val$appOp:I
@@ -48,7 +47,6 @@
     .locals 4
 
     .prologue
-    .line 26909
     iget-object v1, p0, Lcom/android/server/pm/PackageManagerService$41;->this$0:Lcom/android/server/pm/PackageManagerService;
 
     iget-object v1, v1, Lcom/android/server/pm/PackageManagerService;->mContext:Landroid/content/Context;
@@ -61,7 +59,6 @@
 
     check-cast v0, Landroid/app/AppOpsManager;
 
-    .line 26910
     .local v0, "appOps":Landroid/app/AppOpsManager;
     iget v1, p0, Lcom/android/server/pm/PackageManagerService$41;->val$appOp:I
 
@@ -71,7 +68,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/app/AppOpsManager;->setUidMode(III)V
 
-    .line 26911
     const-string v1, "CMAASA"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -96,6 +92,5 @@
 
     invoke-static {v1, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 26913
     return-void
 .end method

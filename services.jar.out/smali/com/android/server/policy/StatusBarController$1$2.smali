@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 71
     iput-object p1, p0, Lcom/android/server/policy/StatusBarController$1$2;->this$1:Lcom/android/server/policy/StatusBarController$1;
 
     iput-object p2, p0, Lcom/android/server/policy/StatusBarController$1$2;->val$openAnimation:Landroid/view/animation/Animation;
@@ -56,7 +55,6 @@
     .locals 9
 
     .prologue
-    .line 75
     :try_start_0
     iget-object v6, p0, Lcom/android/server/policy/StatusBarController$1$2;->this$1:Lcom/android/server/policy/StatusBarController$1;
 
@@ -66,11 +64,9 @@
 
     move-result-object v3
 
-    .line 76
     .local v3, "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     if-eqz v3, :cond_2
 
-    .line 77
     iget-object v6, p0, Lcom/android/server/policy/StatusBarController$1$2;->this$1:Lcom/android/server/policy/StatusBarController$1;
 
     iget-object v6, v6, Lcom/android/server/policy/StatusBarController$1;->this$0:Lcom/android/server/policy/StatusBarController;
@@ -84,7 +80,6 @@
 
     move-result-wide v4
 
-    .line 79
     .local v4, "startTime":J
     iget-object v6, p0, Lcom/android/server/policy/StatusBarController$1$2;->val$closeAnimation:Landroid/view/animation/Animation;
 
@@ -97,7 +92,6 @@
     :cond_0
     const-wide/16 v0, 0x78
 
-    .line 81
     .local v0, "duration":J
     :goto_0
     const-string v6, "2016B"
@@ -110,7 +104,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 82
     iget-object v6, p0, Lcom/android/server/policy/StatusBarController$1$2;->val$closeAnimation:Landroid/view/animation/Animation;
 
     if-eqz v6, :cond_1
@@ -119,7 +112,6 @@
 
     if-eqz v6, :cond_1
 
-    .line 83
     iget-object v6, p0, Lcom/android/server/policy/StatusBarController$1$2;->val$closeToken:Landroid/os/IBinder;
 
     if-eqz v6, :cond_4
@@ -134,15 +126,12 @@
 
     if-eqz v6, :cond_4
 
-    .line 84
     const-wide/16 v0, 0x64
 
-    .line 89
     :cond_1
     :goto_1
     invoke-interface {v3, v4, v5, v0, v1}, Lcom/android/internal/statusbar/IStatusBarService;->appTransitionStarting(JJ)V
 
-    .line 96
     .end local v0    # "duration":J
     .end local v3    # "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     .end local v4    # "startTime":J
@@ -150,7 +139,6 @@
     :goto_2
     return-void
 
-    .line 79
     .restart local v3    # "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     .restart local v4    # "startTime":J
     :cond_3
@@ -158,7 +146,6 @@
 
     goto :goto_0
 
-    .line 85
     .restart local v0    # "duration":J
     :cond_4
     iget-object v6, p0, Lcom/android/server/policy/StatusBarController$1$2;->val$openToken:Landroid/os/IBinder;
@@ -177,19 +164,16 @@
 
     if-eqz v6, :cond_1
 
-    .line 86
     const-wide/16 v0, 0xc8
 
     goto :goto_1
 
-    .line 91
     .end local v0    # "duration":J
     .end local v3    # "statusbar":Lcom/android/internal/statusbar/IStatusBarService;
     .end local v4    # "startTime":J
     :catch_0
     move-exception v2
 
-    .line 92
     .local v2, "e":Landroid/os/RemoteException;
     iget-object v6, p0, Lcom/android/server/policy/StatusBarController$1$2;->this$1:Lcom/android/server/policy/StatusBarController$1;
 
@@ -201,7 +185,6 @@
 
     invoke-static {v6, v7, v2}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 94
     iget-object v6, p0, Lcom/android/server/policy/StatusBarController$1$2;->this$1:Lcom/android/server/policy/StatusBarController$1;
 
     iget-object v6, v6, Lcom/android/server/policy/StatusBarController$1;->this$0:Lcom/android/server/policy/StatusBarController;

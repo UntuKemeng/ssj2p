@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 7242
     iput-object p1, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-direct {p0}, Lcom/samsung/android/cover/CoverManager$CoverStateListener;-><init>()V
@@ -38,7 +37,6 @@
     .param p1, "attach"    # Z
 
     .prologue
-    .line 7249
     iget-object v4, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # getter for: Lcom/android/server/power/PowerManagerService;->mFeatureCoverSysfs:Z
@@ -48,10 +46,8 @@
 
     if-eqz v4, :cond_1
 
-    .line 7251
     if-eqz p1, :cond_2
 
-    .line 7252
     :try_start_0
     iget-object v4, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
@@ -64,11 +60,9 @@
 
     move-result-object v1
 
-    .line 7253
     .local v1, "state":Lcom/samsung/android/cover/CoverState;
     if-eqz v1, :cond_0
 
-    .line 7254
     iget-object v4, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     invoke-virtual {v1}, Lcom/samsung/android/cover/CoverState;->getType()I
@@ -78,7 +72,6 @@
     # setter for: Lcom/android/server/power/PowerManagerService;->mCoverType:I
     invoke-static {v4, v5}, Lcom/android/server/power/PowerManagerService;->access$11202(Lcom/android/server/power/PowerManagerService;I)I
 
-    .line 7259
     .end local v1    # "state":Lcom/samsung/android/cover/CoverState;
     :cond_0
     :goto_0
@@ -123,20 +116,17 @@
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 7264
     :goto_1
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
     move-result-wide v2
 
-    .line 7265
     .local v2, "time":J
     iget-object v4, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     # setter for: Lcom/android/server/power/PowerManagerService;->mlastSetCoverTypeTime:J
     invoke-static {v4, v2, v3}, Lcom/android/server/power/PowerManagerService;->access$11302(Lcom/android/server/power/PowerManagerService;J)J
 
-    .line 7266
     iget-object v4, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -167,12 +157,10 @@
     # setter for: Lcom/android/server/power/PowerManagerService;->mlastUpdateCoverTypeReason:Ljava/lang/String;
     invoke-static {v4, v5}, Lcom/android/server/power/PowerManagerService;->access$11402(Lcom/android/server/power/PowerManagerService;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 7268
     .end local v2    # "time":J
     :cond_1
     return-void
 
-    .line 7257
     :cond_2
     :try_start_1
     iget-object v4, p0, Lcom/android/server/power/PowerManagerService$9;->this$0:Lcom/android/server/power/PowerManagerService;
@@ -186,11 +174,9 @@
 
     goto :goto_0
 
-    .line 7260
     :catch_0
     move-exception v0
 
-    .line 7261
     .local v0, "e":Ljava/lang/NullPointerException;
     const-string v4, "PowerManagerService"
 
@@ -206,6 +192,5 @@
     .param p1, "swtichState"    # Z
 
     .prologue
-    .line 7245
     return-void
 .end method

@@ -55,7 +55,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 26
     const-class v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getSimpleName()Ljava/lang/String;
@@ -64,18 +63,14 @@
 
     sput-object v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->TAG:Ljava/lang/String;
 
-    .line 39
     sput-boolean v1, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mIsFelicaAllowed:Z
 
-    .line 40
     sput-boolean v1, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mIsMdmAllowed:Z
 
-    .line 41
     const/4 v0, 0x0
 
     sput-boolean v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mPendingFelicaNotification:Z
 
-    .line 45
     const/4 v0, -0x1
 
     sput v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mCoverVersion:I
@@ -90,43 +85,34 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     iput-boolean v0, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mFelicaReceiverInitialized:Z
 
-    .line 43
     iput-boolean v0, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mBootCompleted:Z
 
-    .line 202
     new-instance v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$1;
 
     invoke-direct {v0, p0}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$1;-><init>(Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;)V
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mFelicaReceiver:Landroid/content/BroadcastReceiver;
 
-    .line 120
     iput-object p1, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mContext:Landroid/content/Context;
 
-    .line 121
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     sput-object v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mCr:Landroid/content/ContentResolver;
 
-    .line 122
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->registerObservers()V
 
-    .line 124
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->getMdmPolicy()Z
 
     move-result v0
 
     sput-boolean v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mIsMdmAllowed:Z
 
-    .line 125
     return-void
 .end method
 
@@ -134,7 +120,6 @@
     .locals 1
 
     .prologue
-    .line 25
     invoke-static {}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->getMdmPolicy()Z
 
     move-result v0
@@ -146,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 25
     sget-object v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mNfcRestrictionPolicyListener:Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$NfcRestrictionPolicyListener;
 
     return-object v0
@@ -157,7 +141,6 @@
     .param p0, "x0"    # Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->getNfcAdapter()V
 
     return-void
@@ -167,7 +150,6 @@
     .locals 1
 
     .prologue
-    .line 25
     sget-object v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->TAG:Ljava/lang/String;
 
     return-object v0
@@ -177,7 +159,6 @@
     .locals 1
 
     .prologue
-    .line 138
     new-instance v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$MdmStateObserver;
 
     invoke-direct {v0}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$MdmStateObserver;-><init>()V
@@ -189,7 +170,6 @@
     .locals 1
 
     .prologue
-    .line 72
     sget-boolean v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mIsFelicaAllowed:Z
 
     if-nez v0, :cond_0
@@ -198,36 +178,29 @@
 
     if-nez v0, :cond_0
 
-    .line 73
     const/4 v0, 0x3
 
-    .line 79
     :goto_0
     return v0
 
-    .line 74
     :cond_0
     sget-boolean v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mIsFelicaAllowed:Z
 
     if-nez v0, :cond_1
 
-    .line 75
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 76
     :cond_1
     sget-boolean v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mIsMdmAllowed:Z
 
     if-nez v0, :cond_2
 
-    .line 77
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 79
     :cond_2
     const/4 v0, 0x0
 
@@ -238,14 +211,12 @@
     .locals 11
 
     .prologue
-    .line 91
     const-class v10, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;
 
     monitor-enter v10
 
     const/4 v6, 0x1
 
-    .line 93
     .local v6, "allowed":Z
     :try_start_0
     const-string v0, "content://com.sec.knox.provider/RestrictionPolicy2"
@@ -254,7 +225,6 @@
 
     move-result-object v1
 
-    .line 94
     .local v1, "uri":Landroid/net/Uri;
     sget-object v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mCr:Landroid/content/ContentResolver;
 
@@ -270,16 +240,13 @@
 
     move-result-object v8
 
-    .line 97
     .local v8, "restrictionCr":Landroid/database/Cursor;
     if-eqz v8, :cond_1
 
-    .line 98
     invoke-interface {v8}, Landroid/database/Cursor;->moveToFirst()Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 101
     :try_start_1
     const-string v0, "isNFCEnabled"
 
@@ -291,7 +258,6 @@
 
     move-result-object v9
 
-    .line 104
     .local v9, "result":Ljava/lang/String;
     const-string v0, "true"
 
@@ -304,10 +270,8 @@
 
     if-eqz v0, :cond_2
 
-    .line 105
     const/4 v6, 0x1
 
-    .line 112
     :cond_0
     :goto_0
     :try_start_2
@@ -315,7 +279,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 116
     .end local v9    # "result":Ljava/lang/String;
     :cond_1
     :goto_1
@@ -323,7 +286,6 @@
 
     return v6
 
-    .line 106
     .restart local v9    # "result":Ljava/lang/String;
     :cond_2
     :try_start_3
@@ -338,24 +300,20 @@
 
     if-eqz v0, :cond_0
 
-    .line 107
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 109
     .end local v9    # "result":Ljava/lang/String;
     :catch_0
     move-exception v7
 
-    .line 110
     .local v7, "e":Landroid/database/CursorIndexOutOfBoundsException;
     :try_start_4
     invoke-virtual {v7}, Landroid/database/CursorIndexOutOfBoundsException;->printStackTrace()V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_1
 
-    .line 112
     :try_start_5
     invoke-interface {v8}, Landroid/database/Cursor;->close()V
     :try_end_5
@@ -363,7 +321,6 @@
 
     goto :goto_1
 
-    .line 91
     .end local v1    # "uri":Landroid/net/Uri;
     .end local v7    # "e":Landroid/database/CursorIndexOutOfBoundsException;
     .end local v8    # "restrictionCr":Landroid/database/Cursor;
@@ -374,7 +331,6 @@
 
     throw v0
 
-    .line 112
     .restart local v1    # "uri":Landroid/net/Uri;
     .restart local v8    # "restrictionCr":Landroid/database/Cursor;
     :catchall_1
@@ -392,7 +348,6 @@
     .locals 1
 
     .prologue
-    .line 175
     const-string v0, "nfc"
 
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
@@ -405,7 +360,6 @@
 
     iput-object v0, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mNfcAdapter:Landroid/nfc/INfcAdapter;
 
-    .line 177
     return-void
 .end method
 
@@ -413,7 +367,6 @@
     .locals 1
 
     .prologue
-    .line 171
     sget v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mCoverVersion:I
 
     return v0
@@ -423,7 +376,6 @@
     .locals 1
 
     .prologue
-    .line 84
     sget-boolean v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mIsFelicaAllowed:Z
 
     if-eqz v0, :cond_0
@@ -432,10 +384,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 85
     const/4 v0, 0x1
 
-    .line 87
     :goto_0
     return v0
 
@@ -449,7 +399,6 @@
     .locals 4
 
     .prologue
-    .line 142
     sget-object v0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mCr:Landroid/content/ContentResolver;
 
     const-string v1, "content://com.sec.knox.provider/RestrictionPolicy2/isNFCEnabled"
@@ -466,7 +415,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 147
     return-void
 .end method
 
@@ -478,15 +426,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 181
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->getNfcAdapter()V
 
-    .line 182
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mNfcAdapter:Landroid/nfc/INfcAdapter;
 
     if-eqz v2, :cond_2
 
-    .line 184
     :try_start_0
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mNfcAdapter:Landroid/nfc/INfcAdapter;
 
@@ -496,53 +441,44 @@
 
     if-ne v2, v4, :cond_0
 
-    .line 185
     const/4 v2, 0x0
 
     sput-boolean v2, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mIsFelicaAllowed:Z
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 194
     :cond_0
     :goto_0
     iget-boolean v2, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mFelicaReceiverInitialized:Z
 
     if-nez v2, :cond_1
 
-    .line 195
     new-instance v1, Landroid/content/IntentFilter;
 
     const-string v2, "android.nfc.action.ADAPTER_STATE_CHANGED"
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 196
     .local v1, "filter":Landroid/content/IntentFilter;
     const-string v2, "com.sec.android.nfc.AUTH_READY"
 
     invoke-virtual {v1, v2}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 197
     iget-object v2, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mContext:Landroid/content/Context;
 
     iget-object v3, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mFelicaReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 198
     iput-boolean v4, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mFelicaReceiverInitialized:Z
 
-    .line 200
     .end local v1    # "filter":Landroid/content/IntentFilter;
     :cond_1
     return-void
 
-    .line 187
     :catch_0
     move-exception v0
 
-    .line 188
     .local v0, "e":Landroid/os/RemoteException;
     sget-object v2, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->TAG:Ljava/lang/String;
 
@@ -552,7 +488,6 @@
 
     goto :goto_0
 
-    .line 191
     .end local v0    # "e":Landroid/os/RemoteException;
     :cond_2
     sget-object v2, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->TAG:Ljava/lang/String;
@@ -568,12 +503,10 @@
     .locals 1
 
     .prologue
-    .line 128
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mBootCompleted:Z
 
-    .line 135
     return-void
 .end method
 
@@ -581,16 +514,13 @@
     .locals 2
 
     .prologue
-    .line 162
     :try_start_0
     invoke-direct {p0}, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->getNfcAdapter()V
 
-    .line 163
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mNfcAdapter:Landroid/nfc/INfcAdapter;
 
     if-eqz v1, :cond_0
 
-    .line 164
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mNfcAdapter:Landroid/nfc/INfcAdapter;
 
     invoke-interface {v1}, Landroid/nfc/INfcAdapter;->getCoverVersion()I
@@ -601,16 +531,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 168
     :cond_0
     :goto_0
     return-void
 
-    .line 165
     :catch_0
     move-exception v0
 
-    .line 166
     .local v0, "e":Landroid/os/RemoteException;
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
@@ -622,10 +549,8 @@
     .param p1, "listener"    # Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$NfcRestrictionPolicyListener;
 
     .prologue
-    .line 52
     sput-object p1, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mNfcRestrictionPolicyListener:Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver$NfcRestrictionPolicyListener;
 
-    .line 53
     return-void
 .end method
 
@@ -633,21 +558,17 @@
     .locals 3
 
     .prologue
-    .line 150
     iget-boolean v1, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mBootCompleted:Z
 
     if-nez v1, :cond_0
 
-    .line 151
     const/4 v1, 0x1
 
     sput-boolean v1, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mPendingFelicaNotification:Z
 
-    .line 158
     :goto_0
     return-void
 
-    .line 153
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -655,18 +576,15 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 154
     .local v0, "intent":Landroid/content/Intent;
     const-string v1, "com.sec.android.app.applinker"
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 155
     const/16 v1, 0x20
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 156
     iget-object v1, p0, Lcom/samsung/accessory/manager/authentication/cover/RestrictionPolicyOberver;->mContext:Landroid/content/Context;
 
     sget-object v2, Landroid/os/UserHandle;->CURRENT:Landroid/os/UserHandle;

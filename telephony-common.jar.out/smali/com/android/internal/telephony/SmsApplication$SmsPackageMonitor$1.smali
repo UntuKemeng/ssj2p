@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 646
     iput-object p1, p0, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor$1;->this$0:Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor;
 
     iput-object p2, p0, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor$1;->val$packageManager:Landroid/content/pm/PackageManager;
@@ -52,14 +51,12 @@
     .locals 3
 
     .prologue
-    .line 649
     const-string v0, "SmsApplication"
 
     const-string v1, "onPackageChanged: run"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 650
     iget-object v0, p0, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor$1;->val$packageManager:Landroid/content/pm/PackageManager;
 
     iget-object v1, p0, Lcom/android/internal/telephony/SmsApplication$SmsPackageMonitor$1;->val$componentName:Landroid/content/ComponentName;
@@ -69,13 +66,11 @@
     # invokes: Lcom/android/internal/telephony/SmsApplication;->configurePreferredActivity(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;I)V
     invoke-static {v0, v1, v2}, Lcom/android/internal/telephony/SmsApplication;->access$000(Landroid/content/pm/PackageManager;Landroid/content/ComponentName;I)V
 
-    .line 651
     const-string v0, "SmsApplication"
 
     const-string v1, "onPackageChanged: end"
 
     invoke-static {v0, v1}, Landroid/telephony/Rlog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 652
     return-void
 .end method

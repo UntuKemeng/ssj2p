@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 733
     iput-object p1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$8;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 735
     iget-object v1, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$8;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     if-eq p1, v0, :cond_0
@@ -55,7 +53,6 @@
     # setter for: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mIsRingingOrOffhook:Z
     invoke-static {v1, v0}, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->access$302(Lcom/android/server/policy/sec/SamsungPhoneWindowManager;Z)Z
 
-    .line 736
     iget-object v0, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$8;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     # getter for: Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mIsRingingOrOffhook:Z
@@ -65,18 +62,15 @@
 
     if-nez v0, :cond_1
 
-    .line 737
     iget-object v0, p0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager$8;->this$0:Lcom/android/server/policy/sec/SamsungPhoneWindowManager;
 
     iget-object v0, v0, Lcom/android/server/policy/sec/SamsungPhoneWindowManager;->mPWM:Lcom/android/server/policy/PhoneWindowManager;
 
     invoke-virtual {v0}, Lcom/android/server/policy/PhoneWindowManager;->requestTraversalForCoverView()V
 
-    .line 739
     :cond_1
     return-void
 
-    .line 735
     :cond_2
     const/4 v0, 0x0
 

@@ -38,7 +38,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 1299
     iput-object p1, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
     move-object v0, p0
@@ -55,18 +54,14 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/android/server/policy/GlobalActions$ToggleAction;-><init>(IIIII)V
 
-    .line 1301
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions$5;->mIsFirstEmergency:Z
 
-    .line 1302
     iput-boolean v6, p0, Lcom/android/server/policy/GlobalActions$5;->mShowConditionalEmergency:Z
 
-    .line 1303
     iput-boolean v6, p0, Lcom/android/server/policy/GlobalActions$5;->mIsVT:Z
 
-    .line 1304
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -94,7 +89,6 @@
     .param p1, "buttonOn"    # Z
 
     .prologue
-    .line 1332
     const-string v0, "GlobalActions"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -117,7 +111,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1333
     return-void
 .end method
 
@@ -125,7 +118,6 @@
     .locals 1
 
     .prologue
-    .line 1390
     iget-object v0, p0, Lcom/android/server/policy/GlobalActions$5;->telephonyManager:Landroid/telephony/TelephonyManager;
 
     invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->isVideoCall()Z
@@ -134,15 +126,12 @@
 
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions$5;->mIsVT:Z
 
-    .line 1391
     iget-boolean v0, p0, Lcom/android/server/policy/GlobalActions$5;->mIsVT:Z
 
     if-eqz v0, :cond_0
 
-    .line 1392
     const/4 v0, 0x0
 
-    .line 1395
     :goto_0
     return v0
 
@@ -162,14 +151,12 @@
 
     const/4 v2, 0x1
 
-    .line 1307
     const-string v3, "GlobalActions"
 
     const-string/jumbo v4, "in onPress of LongLifeMode"
 
     invoke-static {v3, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1308
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
     const-string v4, "com.android.service.GlobalAction"
@@ -180,7 +167,6 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lcom/android/server/policy/GlobalActions;->insertLog(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1310
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # invokes: Lcom/android/server/policy/GlobalActions;->isFMMlocked()Z
@@ -190,7 +176,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 1311
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -211,11 +196,9 @@
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 1324
     :goto_0
     return-void
 
-    .line 1315
     :cond_0
     iget-object v3, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -257,7 +240,6 @@
 
     if-eq v3, v2, :cond_2
 
-    .line 1316
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -299,7 +281,6 @@
 
     goto :goto_1
 
-    .line 1320
     :cond_2
     new-instance v0, Landroid/content/Intent;
 
@@ -307,7 +288,6 @@
 
     invoke-direct {v0, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1321
     .local v0, "intent":Landroid/content/Intent;
     const-string v3, "enabled"
 
@@ -329,14 +309,12 @@
     :cond_3
     invoke-virtual {v0, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 1322
     const-string/jumbo v1, "flag"
 
     const/16 v2, 0x10
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 1323
     iget-object v1, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -354,7 +332,6 @@
     .param p1, "on"    # Z
 
     .prologue
-    .line 1327
     const-string v0, "GlobalActions"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -377,7 +354,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1328
     return-void
 .end method
 
@@ -385,7 +361,6 @@
     .locals 1
 
     .prologue
-    .line 1340
     const/4 v0, 0x0
 
     return v0
@@ -395,24 +370,20 @@
     .locals 1
 
     .prologue
-    .line 1344
     iget-boolean v0, p0, Lcom/android/server/policy/GlobalActions$5;->mIsFirstEmergency:Z
 
     if-eqz v0, :cond_0
 
-    .line 1345
     invoke-virtual {p0}, Lcom/android/server/policy/GlobalActions$5;->showConditionalInternal()Z
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions$5;->mShowConditionalEmergency:Z
 
-    .line 1346
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/android/server/policy/GlobalActions$5;->mIsFirstEmergency:Z
 
-    .line 1348
     :cond_0
     iget-boolean v0, p0, Lcom/android/server/policy/GlobalActions$5;->mShowConditionalEmergency:Z
 
@@ -427,14 +398,12 @@
 
     const/4 v7, 0x0
 
-    .line 1353
     const-string/jumbo v8, "ril.domesticOtaStart"
 
     invoke-static {v8}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1354
     .local v1, "domesticOtaStart":Ljava/lang/String;
     const-string/jumbo v8, "true"
 
@@ -444,24 +413,20 @@
 
     if-eqz v8, :cond_1
 
-    .line 1355
     sget-boolean v6, Lcom/android/server/policy/GlobalActions;->SAFE_DEBUG:Z
 
     if-eqz v6, :cond_0
 
-    .line 1356
     const-string v6, "GlobalActions"
 
     const-string v8, "EmergencyMode is disable on OTA mode"
 
     invoke-static {v6, v8}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1385
     :cond_0
     :goto_0
     return v7
 
-    .line 1362
     :cond_1
     invoke-static {}, Lcom/samsung/android/feature/FloatingFeature;->getInstance()Lcom/samsung/android/feature/FloatingFeature;
 
@@ -475,7 +440,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 1363
     const-string/jumbo v8, "lock"
 
     iget-object v9, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
@@ -501,7 +465,6 @@
 
     if-nez v8, :cond_0
 
-    .line 1366
     iget-object v8, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -513,11 +476,9 @@
 
     move-result-object v2
 
-    .line 1367
     .local v2, "emMgr":Lcom/sec/android/emergencymode/EmergencyManager;
     if-eqz v2, :cond_4
 
-    .line 1368
     iget-object v8, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
     # getter for: Lcom/android/server/policy/GlobalActions;->mContext:Landroid/content/Context;
@@ -533,7 +494,6 @@
 
     move-result v3
 
-    .line 1369
     .local v3, "isKioskMode":Z
     iget-object v8, p0, Lcom/android/server/policy/GlobalActions$5;->this$0:Lcom/android/server/policy/GlobalActions;
 
@@ -556,7 +516,6 @@
 
     move v4, v6
 
-    .line 1370
     .local v4, "kidsModeEnabled":Z
     :goto_1
     invoke-virtual {v2}, Lcom/sec/android/emergencymode/EmergencyManager;->isEmergencyMode()Z
@@ -575,14 +534,12 @@
 
     move v5, v6
 
-    .line 1371
     .local v5, "upsmModeEnabled":Z
     :goto_2
     invoke-virtual {v2}, Lcom/sec/android/emergencymode/EmergencyManager;->canSetMode()Z
 
     move-result v0
 
-    .line 1372
     .local v0, "canSetMode":Z
     const-string v8, "GlobalActions"
 
@@ -636,7 +593,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1376
     if-eqz v0, :cond_0
 
     if-nez v5, :cond_0
@@ -647,7 +603,6 @@
 
     move v7, v6
 
-    .line 1377
     goto/16 :goto_0
 
     .end local v0    # "canSetMode":Z
@@ -656,17 +611,14 @@
     :cond_2
     move v4, v7
 
-    .line 1369
     goto :goto_1
 
     .restart local v4    # "kidsModeEnabled":Z
     :cond_3
     move v5, v7
 
-    .line 1370
     goto :goto_2
 
-    .line 1380
     .end local v3    # "isKioskMode":Z
     .end local v4    # "kidsModeEnabled":Z
     :cond_4
@@ -678,7 +630,6 @@
 
     goto/16 :goto_0
 
-    .line 1383
     .end local v2    # "emMgr":Lcom/sec/android/emergencymode/EmergencyManager;
     :cond_5
     const-string v6, "GlobalActions"
@@ -694,7 +645,6 @@
     .locals 1
 
     .prologue
-    .line 1336
     const/4 v0, 0x1
 
     return v0

@@ -24,7 +24,6 @@
     .param p2, "x0"    # Landroid/os/Looper;
 
     .prologue
-    .line 1571
     iput-object p1, p0, Landroid/bluetooth/BluetoothHeadset$3;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
@@ -41,17 +40,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1574
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 1589
     :cond_0
     :goto_0
     return-void
 
-    .line 1576
     :pswitch_0
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadset$3;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
@@ -62,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1577
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadset$3;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     # getter for: Landroid/bluetooth/BluetoothHeadset;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -76,7 +71,6 @@
 
     goto :goto_0
 
-    .line 1583
     :pswitch_1
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadset$3;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
@@ -87,7 +81,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1584
     iget-object v0, p0, Landroid/bluetooth/BluetoothHeadset$3;->this$0:Landroid/bluetooth/BluetoothHeadset;
 
     # getter for: Landroid/bluetooth/BluetoothHeadset;->mServiceListener:Landroid/bluetooth/BluetoothProfile$ServiceListener;
@@ -99,7 +92,6 @@
 
     goto :goto_0
 
-    .line 1574
     nop
 
     :pswitch_data_0
